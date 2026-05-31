@@ -1,0 +1,137 @@
+name: Emma and Samantha
+display_name: Friendly Harem
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Friendly_Harem"
+short: "{image=notify emma}{image=notify samantha} · Friendly Harem"
+type: harem
+description: "Dating both Emma and Samantha, how will this end?"
+participants:
+  - emma
+  - samantha
+
+conditions:
+  - emma.love >= 125
+  - samantha.love >= 125
+
+outcomes:
+  emma:
+    description: Emma left.
+    conditions:
+      - emma.is_gone_forever
+    icon: fail
+  samanthaleft:
+    description: Unfortunately, Samantha left, dashing my hopes for a harem.
+    conditions:
+      - samantha.is_gone_forever
+    icon: fail
+  friendly_harem:
+    description: Emma and Sam agreed to agreed to marry me!
+    conditions:
+      - Harem.together(emma, samantha, name='friendly')
+      - emma.flags.engagedmike
+      - samantha.flags.engagedmike
+
+steps:
+  samantha_divorced_check:
+    name: Samantha must be divorced
+    conditions:
+      - emma.love >= 125
+      - samantha.love >= 125
+    outcome:
+      condition: samantha.flags.divorced
+      hide: True
+
+  emma_samantha_showdown_check:
+    name: Have a hot coffee with Emma and Samantha within 7 days
+    conditions:
+      - emma.love >= 125
+      - samantha.love >= 125
+      - samantha.flags.divorced
+    outcome:
+      condition: Person.showdown(emma, samantha)
+      hide: True
+
+  emma_samantha_showdown:
+    name: Go on a date at the mall with Emma
+    related_event: emma_samantha_showdown
+    conditions:
+      - Person.showdown(emma, samantha)
+    outcomes:
+      success:
+        conditions:
+          - "'emma_samantha_showdown' in DONE"
+          - Harem.find_by_name('friendly')
+      fail:
+        next: None
+        conditions:
+          - "'emma_samantha_showdown' in DONE"
+          - "emma.is_gone_forever or samantha.is_gone_forever"
+
+  emma_loose:
+    name: Ensure Emma can handle what's coming
+    condition: Harem.find_by_name('friendly')
+    percentage:
+      value: emma.sexperience + emma.flags.loose
+      scale: 15 if hero.has_skill("hung") else 5 if hero.has_skill("smalldick") else 10
+      invert: True
+    outcome:
+      hide: True
+      condition: not emma_too_small(10)
+
+  wait_threesome:
+    name: Wait a little
+    condition: Harem.find_by_name('friendly')
+    percentage:
+      value: game.timers.friendly_delay
+      scale: 2
+      invert: True
+    outcome:
+      hide: True
+      conditions:
+        - Harem.find_by_name('friendly')
+        - not game.flags.friendly_delay
+      next:
+        - emma_samantha_threesome
+        - emma_samantha_threesome_home_harem
+
+  emma_samantha_threesome:
+    name: Be home in the afternoon or evening
+    related_event: emma_samantha_threesome
+    conditions:
+      - "'emma_samantha_showdown' in DONE"
+      - Harem.find_by_name('friendly')
+      - not Harem.find(samantha, name='home')
+      - not game.flags.friendly_delay
+    outcomes:
+      hidden:
+        condition: Harem.find(samantha, name='home')
+        hide: True
+        next: None
+      done:
+        condition: '"emma_samantha_threesome" in DONE'
+        next: None
+
+  emma_samantha_threesome_home_harem:
+    name: Be home in the afternoon or evening. Sam must be at home.
+    related_event: emma_samantha_threesome
+    conditions:
+      - "'emma_samantha_showdown' in DONE"
+      - Harem.find_by_name('friendly')
+      - Harem.find(samantha, name='home')
+      - not game.flags.friendly_delay
+    outcomes:
+      hidden:
+        condition: not Harem.find(samantha, name='home')
+        hide: True
+        next: None
+      done:
+        condition: '"emma_samantha_threesome" in DONE'
+        next: propose_emma_samantha
+
+  propose_emma_samantha:
+    name: Propose to Emma and Samantha
+    conditions:
+      - Harem.together(emma, samantha, name='friendly')
+    outcome:
+      conditions:
+        - emma.flags.engagedmike
+        - samantha.flags.engagedmike

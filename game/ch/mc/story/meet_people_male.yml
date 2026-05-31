@@ -1,0 +1,358 @@
+name: Meet People
+# This should always be second when shown.
+sort: "0002"
+type: generic
+description: "Meet everyone in the game!"
+participants:
+  - hero
+condition: hero.is_male
+
+outcome:
+  condition: all(step.complete for step in self.parent.steps.values() if step.status != 0)
+  description: "I've met every new person in the game!"
+
+steps:
+  alexis:
+    condition: hero.is_male
+    name: Meet Alexis by getting promoted 3 times
+    related_event: alexis_event_01
+    outcomes:
+      success:
+        conditions:
+          - '"alexis_event_01" in DONE'
+          - game.flags.alexisstart
+        next: None
+      fail:
+        icon: fail
+        conditions:
+          - '"alexis_event_01" in DONE'
+          - not game.flags.alexisstart
+        next: None
+
+  alexis_full:
+    conditions:
+      - demo
+      - '"alexis_start" in DONE'
+    icon: stalled
+    name: Get the full version to continue with Alexis
+    outcome:
+      condition: not demo
+      next: None
+
+  anna:
+    condition: hero.is_male
+    name: Meet Anna in the studio or at a performance
+    outcomes:
+      success:
+        condition: 'game.flags.performance >= 2 or game.flags.band >= 2'
+        next: None
+      fail:
+        icon: fail
+        conditions:
+          - '"sasha_b_event_04" in DONE'
+          - not game.flags.performance
+          - not game.flags.band
+        next: None
+
+  anna_full:
+    conditions:
+      - demo
+      - 'game.flags.performance >= 2 or game.flags.band >= 2'
+    icon: stalled
+    name: Get the full version to continue with Anna
+    outcome:
+      condition: not demo
+      next: None
+
+  charm20:
+    conditions:
+      - hero.is_male
+      - not demo
+    name: Get charming enough for Audrey to notice me
+    outcome:
+      condition: hero.charm >= 20
+      next: None
+    percentage:
+      scale: 20
+      value: hero.charm.val
+
+  fitness20:
+    conditions:
+      - hero.is_male
+      - not demo
+    name: Get fit enough for Audrey to notice me
+    outcome:
+      condition: hero.fitness >= 20
+      next: None
+    percentage:
+      scale: 20
+      value: hero.fitness.val
+
+  audrey:
+    conditions:
+      - hero.is_male
+      - hero.charm >= 20
+      - hero.fitness >= 20
+      - not demo
+    name: Meet Audrey in the pub
+    related_event: audrey_event_01
+    outcome:
+      condition: '"audrey_event_01" in DONE'
+      next: None
+
+  ayesha:
+    condition: hero.is_male
+    name: Meet Ayesha at the gym on Monday, Wednesday or Friday after meeting Hanna
+    related_event: ayesha_teaser
+    outcome:
+      condition: '"ayesha_teaser" in DONE'
+      next: None
+
+  ayesha_show:
+    conditions:
+      - hero.is_male
+      - '"ayesha_teaser" in DONE'
+    name: "Go to Ayesha's show with [bree.name] on a weekend afternoon"
+    related_event: ayesha_teaser_2
+    outcome:
+      condition: '"ayesha_teaser_2" in DONE'
+      next: None
+
+  ayesha_full:
+    conditions:
+      - demo
+      - '"ayesha_teaser_2" in DONE'
+    icon: stalled
+    name: Get the full version to continue with Ayesha
+    outcome:
+      condition: not demo
+      next: None
+
+  cassidy:
+    conditions:
+      - hero.is_male
+      - not demo
+    name: Meet Cassidy by getting promoted twice and attending the office party
+    outcome:
+      condition: '"office_party" in DONE'
+      next: None
+
+  cherie:
+    conditions:
+      - '"cassidy_investigation_complete" in DONE'
+      - not demo
+      - not cassidy.hidden
+    name: Meet Cherie by getting Cassidy to invite you to a party at her mansion
+    outcomes:
+      fail:
+        condition: not demo and (game.flags.cherie_missed or cassidy.is_gone_forever or (Person.find("cherie") and cherie.flags.missed))
+        icon: fail
+      success:
+        condition: '"cherie_first_meeting_appointment" in DONE'
+
+  hanna:
+    condition: hero.is_male
+    name: Meet Hanna in the gym after 8 days have passed
+    related_event: hanna_event_01
+    outcome:
+      condition: '"hanna_event_01" in DONE'
+      next: None
+
+  hanna_full:
+    conditions:
+      - demo
+      - '"hanna_event_01" in DONE'
+    icon: stalled
+    name: Get the full version to continue with Hanna
+    outcome:
+      condition: not demo
+      next: None
+
+  harmony:
+    condition: hero.is_male
+    name: Meet Harmony in the church by attending mass
+    related_event: harmony_event_01
+    outcomes:
+      success:
+        conditions:
+          - '"harmony_event_01" in DONE'
+          - game.flags.harmonystart
+        next: None
+      fail:
+        icon: fail
+        conditions:
+          - '"harmony_event_01" in DONE'
+          - not game.flags.harmonystart
+        next: None
+
+  harmony_full:
+    conditions:
+      - demo
+      - '"harmony_event_01" in DONE'
+      - game.flags.harmonystart
+    icon: stalled
+    name: Get the full version to continue with Harmony
+    outcome:
+      condition: not demo
+      next: None
+
+  kleio:
+    condition: hero.is_male
+    name: Meet Kleio in the studio or at a performance
+    outcomes:
+      success:
+        condition: 'game.flags.performance >= 2 or game.flags.band >= 2'
+        next: None
+      fail:
+        icon: fail
+        conditions:
+          - '"sasha_b_event_04" in DONE'
+          - not game.flags.performance
+          - not game.flags.band
+        next: None
+
+  kleio_full:
+    conditions:
+      - demo
+      - 'game.flags.performance >= 2 or game.flags.band >= 2'
+    icon: stalled
+    name: Get the full version to continue with Kleio
+    outcome:
+      condition: not demo
+      next: None
+
+  kylie:
+    condition: hero.is_male
+    name: Meet Kylie in the university after 7 days have passed
+    related_event: kylie_event_01
+    outcome:
+      condition: '"kylie_event_01" in DONE'
+      next: None
+
+  kylie_full:
+    conditions:
+      - demo
+      - '"kylie_event_01" in DONE'
+    icon: stalled
+    name: Get the full version to continue with Kylie
+    outcome:
+      condition: not demo
+      next: None
+
+  lavish:
+    conditions:
+      - hero.is_male
+      - not demo
+    name: Meet Lavish by getting promoted twice and attending the office party
+    outcome:
+      condition: '"office_party" in DONE'
+      next: None
+
+  lexi:
+    condition: hero.is_male
+    name: Meet Lexi in the city after 9 days have passed
+    related_event: lexi_event_01
+    outcomes:
+      success:
+        condition: '"lexi_event_01" in DONE'
+        next: None
+      fail:
+        icon: fail
+        conditions:
+          - '"lexi_event_01" in DONE'
+          - not game.flags.lexiStart
+        next: None
+
+  lexi_full:
+    conditions:
+      - demo
+      - '"lexi_event_01" in DONE'
+    icon: stalled
+    name: Get the full version to continue with Lexi
+    outcome:
+      condition: not demo
+      next: None
+
+  morgan:
+    condition: hero.is_male
+    name: Meet Morgan by going at the cinema before Kleio calls me
+    related_event: morgan_event_01
+    outcomes:
+      fail:
+        conditions:
+          - '"morgan_event_01" not in DONE'
+          - '"kleio_event_01" in DONE'
+        icon: fail
+        next: none
+      success:
+        condition: '"morgan_event_01" in DONE'
+        next: None
+
+  morgan_full:
+    conditions:
+      - demo
+      - '"morgan_event_01" in DONE'
+    icon: stalled
+    name: Get the full version to continue with Morgan
+    outcome:
+      condition: not demo
+      next: None
+
+  palla:
+    condition: hero.is_male
+    name: Meet Palla in the mall after 10 days have passed
+    related_event: palla_event_01
+    outcome:
+      condition: '"palla_event_01" in DONE'
+      next: None
+
+  palla_full:
+    conditions:
+      - demo
+      - '"palla_event_01" in DONE'
+    icon: stalled
+    name: Get the full version to continue with Palla
+    outcome:
+      condition: not demo
+      next: None
+
+  scottie:
+    condition: hero.is_male
+    name: Meet Scottie at home after 10 days have passed
+    related_event: scottie_appears
+    outcome:
+      condition: '"scottie_appears" in DONE'
+      next: None
+
+  shiori:
+    condition: hero.is_male
+    name: Meet Shiori at work
+    related_event: shiori_teaser
+    outcomes:
+      success:
+        condition: '"shiori_teaser" in DONE'
+        next: None
+      fail:
+        icon: fail
+        conditions:
+          - '"shiori_teaser" in DONE'
+          - not game.flags.hiringshiori
+        next: None
+
+  shiori_full:
+    conditions:
+      - demo
+      - '"shiori_teaser" in DONE'
+    icon: stalled
+    name: Get the full version to continue with Shiori
+    outcome:
+      condition: not demo
+      next: None
+
+  the_master:
+    condition: not hero.has_skill("martial_arts")
+    name: Meet The Master on the beach
+    related_event: mike_meet_the_master
+    outcome:
+      condition: '"mike_meet_the_master" in DONE'
+      next: None

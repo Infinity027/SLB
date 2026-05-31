@@ -1,0 +1,436 @@
+name: Reunited Deathless Harpies
+display_name: Band Harem - Amy
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Band_Harem"
+short: "{image=notify sasha}{image=notify kleio}{image=notify anna}{image=notify amy} · Band Harem"
+type: harem
+description: The comeback of the lost member!
+
+participants:
+  - hero
+  - amy
+  - anna
+  - kleio
+  - sasha
+conditions:
+  - '"amy_event_01" in DONE'
+  - '"kleioannafoursome2" in DONE'
+  - Harem.together(anna, kleio, sasha, name='band')
+
+start:
+  - band_harem_amy_event_01
+  - band_harem_amy_event_03
+  - band_harem_amy_event_05
+
+outcomes:
+  rejoin_refused:
+    description: Most of the girls doesn't want Amy to re-join the band.
+    conditions:
+      - "len([g for g in [anna, kleio, sasha] if g.flags.amy_accepted is False]) >= 2"
+    icon: fail
+  dont_help_amy:
+    description: Amy wanted to re-join the Deathless Harpies but I told her it was not a great idea
+    conditions:
+      - '"band_harem_amy_event_07" in DONE'
+      - not amy.flags.help_join_band
+    icon: fail
+  no_peace:
+    description: Amy didn't had a great time with the band members. I don't think she'll be okay to re-join the group.
+    conditions:
+      - '"band_harem_amy_event_02" in DONE'
+      - '"band_harem_amy_event_04" in DONE'
+      - '"band_harem_amy_event_06" in DONE'
+      - "len([peace_flags for peace_flags in [amy.flags.peace_with_anna, amy.flags.peace_with_kleio, amy.flags.peace_with_sasha, amy.flags.possible_peace_with_anna, amy.flags.possible_peace_with_kleio, amy.flags.possible_peace_with_sasha] if peace_flags]) < 2"
+    icon: fail
+  annakleiogone:
+    description: Anna and Kleio have both left and are no longer part of my life.
+    conditions:
+      - anna.is_gone_forever
+      - kleio.is_gone_forever
+    icon: fail
+  annasashagone:
+    description: Anna and Sasha have both left and are no longer part of my life.
+    conditions:
+      - anna.is_gone_forever
+      - sasha.is_gone_forever
+    icon: fail
+  kleiosashagone:
+    description: Kleio and Sasha have both left and are no longer part of my life.
+    conditions:
+      - kleio.is_gone_forever
+      - sasha.is_gone_forever
+    icon: fail
+  annakleiosashagone:
+    description: Anna, Kleio and Sasha have all left and are no longer part of my life.
+    conditions:
+      - anna.is_gone_forever
+      - kleio.is_gone_forever
+      - sasha.is_gone_forever
+    icon: fail
+  amygone:
+    description: Amy has left and is no longer part of my life.
+    conditions:
+      - amy.is_gone_forever
+    icon: fail
+  annagone:
+    description: Anna has left and is no longer part of my life.
+    conditions:
+      - anna.is_gone_forever
+    icon: fail
+  kleiogone:
+    description: Kleio has left and is no longer part of my life.
+    conditions:
+      - kleio.is_gone_forever
+    icon: fail
+  sashagone:
+    description: Sasha has left and is no longer part of my life.
+    conditions:
+      - sasha.is_gone_forever
+    icon: fail
+  fully_completed_harem:
+    conditions:
+      - Harem.together(amy, anna, kleio, sasha, name='band')
+      - amy.flags.engagedmike
+      - anna.flags.engagedmike
+      - kleio.flags.engagedmike
+      - sasha.flags.engagedmike
+    description: Amy, Anna, Kleio and Sasha agreed to marry me!
+
+steps:
+  band_harem_amy_event_01:
+    name: Go on a date with Kleio at the pub
+    related_event: band_harem_amy_event_01
+    outcome:
+      condition: '"band_harem_amy_event_01" in DONE'
+
+  band_harem_amy_event_02:
+    name: Go on a date with Kleio at the pub once again and reconcile her with Amy
+    related_event: band_harem_amy_event_02
+    condition: '"band_harem_amy_event_01" in DONE'
+    outcomes:
+      failure:
+        conditions:
+          - '"band_harem_amy_event_02" in DONE'
+          - '"band_harem_amy_event_04" not in DONE or "band_harem_amy_event_06" not in DONE'
+          - not amy.flags.peace_with_kleio and not amy.flags.possible_peace_with_kleio
+        icon: fail
+        next: None
+      notalldone:
+        conditions:
+          - '"band_harem_amy_event_02" in DONE'
+          - '"band_harem_amy_event_04" not in DONE or "band_harem_amy_event_06" not in DONE'
+          - amy.flags.peace_with_kleio or amy.flags.possible_peace_with_kleio
+        next: None
+      alldone:
+        conditions:
+          - '"band_harem_amy_event_02" in DONE'
+          - '"band_harem_amy_event_04" in DONE'
+          - '"band_harem_amy_event_06" in DONE'
+          - amy.flags.peace_with_kleio or amy.flags.possible_peace_with_kleio
+        next: band_harem_amy_event_07
+      complete_failure:
+        conditions:
+          - '"band_harem_amy_event_02" in DONE'
+          - '"band_harem_amy_event_04" in DONE'
+          - '"band_harem_amy_event_06" in DONE'
+          - not amy.flags.peace_with_kleio and not amy.flags.possible_peace_with_kleio
+        icon: fail
+        next: band_harem_amy_event_07
+
+  band_harem_amy_event_03:
+    name: Go on a date with Anna at the waterpark
+    related_event: band_harem_amy_event_03
+    outcome:
+      condition: '"band_harem_amy_event_03" in DONE'
+
+  band_harem_amy_event_04:
+    name: Go on a date with Anna at the waterpark once again and reconcile her with Amy
+    related_event: band_harem_amy_event_04
+    condition: '"band_harem_amy_event_03" in DONE'
+    outcomes:
+      failure:
+        conditions:
+          - '"band_harem_amy_event_04" in DONE'
+          - '"band_harem_amy_event_02" not in DONE or "band_harem_amy_event_06" not in DONE'
+          - not amy.flags.peace_with_anna
+          - not amy.flags.possible_peace_with_anna
+        icon: fail
+        next: None
+      notalldone:
+        conditions:
+          - '"band_harem_amy_event_04" in DONE'
+          - '"band_harem_amy_event_02" not in DONE or "band_harem_amy_event_06" not in DONE'
+          - amy.flags.peace_with_anna or amy.flags.possible_peace_with_anna
+        next: None
+      alldone:
+        conditions:
+          - '"band_harem_amy_event_02" in DONE'
+          - '"band_harem_amy_event_04" in DONE'
+          - '"band_harem_amy_event_06" in DONE'
+          - amy.flags.peace_with_anna or amy.flags.possible_peace_with_anna
+        next: band_harem_amy_event_07
+      complete_failure:
+        conditions:
+          - '"band_harem_amy_event_02" in DONE'
+          - '"band_harem_amy_event_04" in DONE'
+          - '"band_harem_amy_event_06" in DONE'
+          - not amy.flags.peace_with_anna
+          - not amy.flags.possible_peace_with_anna
+        icon: fail
+        next: band_harem_amy_event_07
+
+  band_harem_amy_event_05:
+    name: Go on a date with Sasha at the amusement park
+    related_event: band_harem_amy_event_05
+    outcome:
+      condition: '"band_harem_amy_event_05" in DONE'
+
+  band_harem_amy_event_06:
+    name: Go on a date with Sasha at the amusement park once again and reconcile her with Amy
+    related_event: band_harem_amy_event_06
+    condition: '"band_harem_amy_event_05" in DONE'
+    outcomes:
+      failure:
+        conditions:
+          - '"band_harem_amy_event_06" in DONE'
+          - '"band_harem_amy_event_02" not in DONE or "band_harem_amy_event_04" not in DONE'
+          - not amy.flags.peace_with_sasha
+          - not amy.flags.possible_peace_with_sasha
+        icon: fail
+        next: None
+      notalldone:
+        conditions:
+          - '"band_harem_amy_event_06" in DONE'
+          - '"band_harem_amy_event_02" not in DONE or "band_harem_amy_event_04" not in DONE'
+          - amy.flags.peace_with_sasha or amy.flags.possible_peace_with_sasha
+        next: None
+      alldone:
+        conditions:
+          - '"band_harem_amy_event_02" in DONE'
+          - '"band_harem_amy_event_04" in DONE'
+          - '"band_harem_amy_event_06" in DONE'
+          - amy.flags.peace_with_sasha or amy.flags.possible_peace_with_sasha
+        next: band_harem_amy_event_07
+      complete_failure:
+        conditions:
+          - '"band_harem_amy_event_02" in DONE'
+          - '"band_harem_amy_event_04" in DONE'
+          - '"band_harem_amy_event_06" in DONE'
+          - not amy.flags.peace_with_sasha
+          - not amy.flags.possible_peace_with_sasha
+        icon: fail
+        next: band_harem_amy_event_07
+
+  band_harem_amy_event_07:
+    name: Talk to Amy
+    related_event: band_harem_amy_event_07
+    conditions:
+      - '"band_harem_amy_event_02" in DONE'
+      - '"band_harem_amy_event_04" in DONE'
+      - '"band_harem_amy_event_06" in DONE'
+    outcomes:
+      no_peace:
+        description: The girls didn't want Amy in the band again.
+        condition: "len([peace_flags for peace_flags in [amy.flags.peace_with_anna, amy.flags.peace_with_kleio, amy.flags.peace_with_sasha, amy.flags.possible_peace_with_anna, amy.flags.possible_peace_with_kleio, amy.flags.possible_peace_with_sasha] if peace_flags]) < 2"
+        next: None
+        icon: fail
+      help:
+        description: I'll help Amy re-join the Deathless Harpies
+        conditions:
+          - '"band_harem_amy_event_07" in DONE'
+          - amy.flags.help_join_band
+        next:
+          - band_harem_amy_event_08
+          - band_harem_amy_event_09
+          - band_harem_amy_event_10
+      nohelp:
+        description: I don't want Amy in the Deathless Harpies
+        conditions:
+          - '"band_harem_amy_event_07" in DONE'
+          - not amy.flags.help_join_band
+        next: None
+        icon: fail
+
+  band_harem_amy_event_08:
+    name: Ask Kleio if Amy can re-join the band
+    related_event: band_harem_amy_event_08
+    conditions:
+      - '"band_harem_amy_event_07" in DONE'
+      - amy.flags.help_join_band
+    outcomes:
+      rejoin_refused:
+        condition: "len([g for g in [anna, kleio, sasha] if g.flags.amy_accepted is False]) >= 2"
+        icon: fail
+        next: None
+      rejoin_complete_kleio_agree:
+        description: Kleio agreed for Amy to be part of the band again. With her vote Amy is a member of the band again!
+        conditions:
+          - '"band_harem_amy_event_08" in DONE'
+          - '"band_harem_amy_event_09" in DONE'
+          - '"band_harem_amy_event_10" in DONE'
+          - kleio.flags.amy_accepted
+          - "len([g for g in [anna, kleio, sasha] if g.flags.amy_accepted]) >= 2"
+        next: band_amy_stalled
+      rejoin_complete_kleio_disagree:
+        description: Even though Kleio refused to let Amy join the band, most of group agreed for her to be part of the band again.
+        conditions:
+          - '"band_harem_amy_event_08" in DONE'
+          - '"band_harem_amy_event_09" in DONE'
+          - '"band_harem_amy_event_10" in DONE'
+          - not kleio.flags.amy_accepted
+          - "len([g for g in [anna, kleio, sasha] if g.flags.amy_accepted]) >= 2"
+        next: band_amy_stalled
+      kleio_agree:
+        description: Kleio agreed for Amy to be part of the band again
+        conditions:
+          - '"band_harem_amy_event_08" in DONE'
+          - kleio.flags.amy_accepted
+        next: None
+      kleio_refused:
+        description: Kleio refused to let Amy join the band.
+        conditions:
+          - '"band_harem_amy_event_08" in DONE'
+          - not kleio.flags.amy_accepted
+        icon: fail
+        next: None
+
+  band_harem_amy_event_09:
+    name: Ask Anna if Amy can re-join the band
+    related_event: band_harem_amy_event_09
+    conditions:
+      - '"band_harem_amy_event_07" in DONE'
+      - amy.flags.help_join_band
+    outcomes:
+      rejoin_refused:
+        condition: "len([g for g in [anna, kleio, sasha] if g.flags.amy_accepted is False]) >= 2"
+        icon: fail
+        next: None
+      rejoin_complete_anna_agree:
+        description: Anna agreed for Amy to be part of the band again. With her vote Amy is a member of the band again!
+        conditions:
+          - '"band_harem_amy_event_08" in DONE'
+          - '"band_harem_amy_event_09" in DONE'
+          - '"band_harem_amy_event_10" in DONE'
+          - anna.flags.amy_accepted
+          - "len([g for g in [anna, kleio, sasha] if g.flags.amy_accepted]) >= 2"
+        next: band_amy_stalled
+      rejoin_complete_anna_disagree:
+        description: Even though Anna refused to let Amy join the band, most of group agreed for her to be part of the band again.
+        conditions:
+          - '"band_harem_amy_event_08" in DONE'
+          - '"band_harem_amy_event_09" in DONE'
+          - '"band_harem_amy_event_10" in DONE'
+          - not anna.flags.amy_accepted
+          - "len([g for g in [anna, kleio, sasha] if g.flags.amy_accepted]) >= 2"
+        next: band_amy_stalled
+      anna_agree:
+        description: Anna agreed for Amy to be part of the band again
+        conditions:
+          - '"band_harem_amy_event_09" in DONE'
+          - anna.flags.amy_accepted
+        next: None
+      anna_refused:
+        description: Anna refused to let Amy join the band.
+        conditions:
+          - '"band_harem_amy_event_09" in DONE'
+          - not anna.flags.amy_accepted
+        icon: fail
+        next: None
+
+  band_harem_amy_event_10:
+    name: Ask Sasha if Amy can re-join the band
+    related_event: band_harem_amy_event_10
+    conditions:
+      - '"band_harem_amy_event_07" in DONE'
+      - amy.flags.help_join_band
+    outcomes:
+      rejoin_refused:
+        condition: "len([g for g in [anna, kleio, sasha] if g.flags.amy_accepted is False]) >= 2"
+        icon: fail
+        next: None
+      rejoin_complete_sasha_agree:
+        description: Sasha agreed for Amy to be part of the band again. With her vote Amy is a member of the band again!
+        conditions:
+          - '"band_harem_amy_event_08" in DONE'
+          - '"band_harem_amy_event_09" in DONE'
+          - '"band_harem_amy_event_10" in DONE'
+          - sasha.flags.amy_accepted
+          - "len([g for g in [anna, kleio, sasha] if g.flags.amy_accepted]) >= 2"
+      rejoin_complete_sasha_disagree:
+        description: Even though Sasha refused to let Amy join the band, most of group agreed for her to be part of the band again.
+        conditions:
+          - '"band_harem_amy_event_08" in DONE'
+          - '"band_harem_amy_event_09" in DONE'
+          - '"band_harem_amy_event_10" in DONE'
+          - not sasha.flags.amy_accepted
+          - "len([g for g in [anna, kleio, sasha] if g.flags.amy_accepted]) >= 2"
+      sasha_agree:
+        description: Sasha agreed for Amy to be part of the band again
+        conditions:
+          - '"band_harem_amy_event_10" in DONE'
+          - sasha.flags.amy_accepted
+        next: None
+      sasha_refused:
+        description: Sasha refused to let Amy join the band.
+        conditions:
+          - '"band_harem_amy_event_10" in DONE'
+          - not sasha.flags.amy_accepted
+        icon: fail
+        next: None
+
+  band_harem_amy_event_11:
+    name: Big party at the studio to welcome Amy into the band
+    related_event: band_harem_amy_event_11
+    outcome:
+      condition: '"band_harem_amy_event_11" in DONE'
+
+#  band_amy_stalled:
+#    name: That's all of Band Harem story for now
+#    icon: stalled
+#    outcome:
+#      condition: False
+#      next: None
+
+  amy_concert_naked:
+    name: Ask Amy how she feels about playing naked
+    related_event: amy_concert_naked
+    conditions:
+      - '"gig" in DONE'
+      - Person.find("amy")
+      - 'Harem.find_by_name("band") and Harem.find_by_name("band").is_active("amy")'
+    outcomes:
+      complete:
+        conditions:
+          - Person.find("amy")
+          - '"amy_concert_naked" in DONE'
+          - amy.flags.agree_concert_naked
+        next: None
+      refused:
+        description: Amy refused to play naked, so we're not doing it.
+        conditions:
+          - 'Person.find("amy")'
+          - '"amy_concert_naked" in DONE'
+          - not amy.flags.agree_concert_naked
+        icon: fail
+        next: None
+      refused_before_asking:
+        conditions:
+          - 'Person.find("amy")'
+          - any(g.flags.agree_concert_naked is False for g in (anna, kleio, sasha))
+        hide: True
+        next: None
+      hidden:
+        conditions:
+          - 'not Person.find("amy")'
+        hide: True
+        next: None
+
+  propose_amy_anna_kleio_sasha:
+    name: Propose to Amy, Anna, Kleio and Sasha
+    conditions:
+      - Harem.together(amy, anna, kleio, sasha, name='band')
+    outcome:
+      conditions:
+        - amy.flags.engagedmike
+        - anna.flags.engagedmike
+        - kleio.flags.engagedmike
+        - sasha.flags.engagedmike

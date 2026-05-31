@@ -1,0 +1,380 @@
+name: Lexi
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Lexi/FemaleMC"
+short: "{image=notify lexi} · Lexi"
+description: "I met Lexi on the street, where she lured me into an alley and her friend tried to mug me."
+participants:
+  - lexi
+conditions:
+  - hero.is_female
+  - '"lexi_female_event_01" in DONE'
+
+outcomes:
+  gone:
+    condition: lexi.is_gone_forever
+    description: Lexi has left and is no longer part of my life.
+    icon: fail
+  engaged:
+    condition: lexi.flags.engagedmc
+    description: Lexi has agreed to marry me!
+
+steps:
+  lexi_female_event_02:
+    name: Have a good black coffee at the coffeeshop.
+    related_event: lexi_female_event_02
+    condition: '"lexi_female_event_01" in DONE'
+    outcomes:
+      gone:
+        description: I told Lexi to fuck off.
+        icon: fail
+        conditions:
+          - '"lexi_female_event_02" in DONE'
+          - lexi.is_gone_forever
+      success:
+        description: I listened Lexi's story.
+        conditions:
+          - '"lexi_female_event_02" in DONE'
+          - not lexi.hidden
+
+  love20:
+    name: Get to know Lexi better
+    conditions:
+      - '"lexi_female_event_02" in DONE'
+      - not lexi.hidden
+    percentage:
+      value: lexi.love.val
+      scale: 20
+    outcome:
+      hide: True
+      condition: lexi.love >= 20
+
+  lexi_female_event_03:
+    name: Wait for Lexi to call
+    related_event: lexi_female_event_03
+    conditions:
+      - '"lexi_female_event_02" in DONE'
+      - not lexi.hidden
+      - lexi.love >= 20
+    outcome:
+      condition: '"lexi_female_event_03" in DONE'
+
+  love40:
+    name: Get to know Lexi better
+    condition: '"lexi_female_event_03" in DONE'
+    percentage:
+      value: lexi.love.val
+      scale: 40
+    outcome:
+      hide: True
+      condition: lexi.love >= 40
+      next:
+        - lexi_female_event_04
+        - lexi_female_event_04b
+
+  lexi_female_event_04:
+    name: Wait for Lexi to call on a Spring or Summer evening
+    related_event: lexi_female_event_04
+    toggle: True
+    conditions:
+      - '"lexi_female_event_03" in DONE'
+      - lexi.love >= 40
+      - game.season in [0, 1]
+    outcomes:
+      complete:
+        condition: '"lexi_female_event_04" in DONE'
+        next: love60
+      hidden:
+        condition: '"lexi_female_event_04b" in DONE'
+        hide: True
+        next: None
+
+  lexi_female_event_04b:
+    name: Go at the mall in the morning or afternoon
+    related_event: lexi_female_event_04b
+    toggle: True
+    conditions:
+      - '"lexi_female_event_03" in DONE'
+      - lexi.love >= 40
+      - game.season in [0, 2, 3]
+    outcomes:
+      complete:
+        condition: '"lexi_female_event_04b" in DONE'
+        next: love60
+      hidden:
+        condition: '"lexi_female_event_04" in DONE'
+        hide: True
+        next: None
+
+  love60:
+    name: Get to know Lexi better
+    condition: '"lexi_female_event_04" in DONE or "lexi_female_event_04b" in DONE'
+    percentage:
+      value: lexi.love.val
+      scale: 60
+    outcome:
+      hide: True
+      condition: lexi.love >= 60
+
+  lexi_female_event_05:
+    name: Go on a date at the mall with Lexi
+    related_event: lexi_female_event_05
+    conditions:
+      - '"lexi_female_event_04" in DONE or "lexi_female_event_04b" in DONE'
+      - lexi.love >= 60
+    outcome:
+      condition: '"lexi_female_event_05" in DONE'
+
+  love80:
+    name: Get to know Lexi better
+    condition: '"lexi_female_event_05" in DONE'
+    percentage:
+      value: lexi.love.val
+      scale: 80
+    outcome:
+      hide: True
+      condition: lexi.love >= 80
+
+  lexi_female_event_06:
+    name: Go on a mall date with Lexi
+    related_event: lexi_female_event_06
+    conditions:
+      - '"lexi_female_event_05" in DONE'
+      - lexi.love >= 80
+    outcome:
+      condition: '"lexi_female_event_06" in DONE'
+
+  love100:
+    name: Get to know Lexi better
+    condition: '"lexi_female_event_06" in DONE'
+    percentage:
+      value: lexi.love.val
+      scale: 100
+    outcome:
+      hide: True
+      condition: lexi.love >= 100
+
+  lexi_female_event_07:
+    name: Have a drink with Lexi
+    related_event: lexi_female_event_07
+    conditions:
+      - '"lexi_female_event_06" in DONE'
+      - lexi.love >= 100
+    outcome:
+      condition: '"lexi_female_event_07" in DONE'
+
+  love120:
+    name: Get to know Lexi better
+    condition: '"lexi_female_event_07" in DONE'
+    percentage:
+      value: lexi.love.val
+      scale: 120
+    outcome:
+      hide: True
+      condition: lexi.love >= 120
+
+  lexi_female_event_08:
+    name: Go on a mall date with Lexi
+    related_event: lexi_female_event_08
+    conditions:
+      - '"lexi_female_event_07" in DONE'
+      - lexi.love >= 120
+    outcome:
+      condition: '"lexi_female_event_08" in DONE'
+
+  love140:
+    name: Get to know Lexi better
+    condition: '"lexi_female_event_08" in DONE'
+    percentage:
+      value: lexi.love.val
+      scale: 140
+    outcome:
+      hide: True
+      condition: lexi.love >= 140
+      next:
+        - lexi_female_event_09
+        - lexi_female_event_09b
+        - lexi_female_event_09c
+
+  # University path
+
+  lexi_female_event_09:
+    name: Take Lexi to the University
+    related_event: lexi_female_event_09
+    conditions:
+      - '"lexi_female_event_08" in DONE'
+      - lexi.love >= 140
+      - lexi.flags.suggested_university
+    outcomes:
+      complete:
+        conditions:
+          - '"lexi_female_event_09" in DONE'
+          - lexi.flags.suggested_university
+      others:
+        conditions:
+          - '"lexi_female_event_08" in DONE'
+          - not lexi.flags.suggested_university
+        hide: True
+        next: None
+
+  love160:
+    name: Get to know Lexi better
+    condition: '"lexi_female_event_09" in DONE'
+    percentage:
+      value: lexi.love.val
+      scale: 160
+    outcome:
+      hide: True
+      condition: lexi.love >= 160
+
+  lexi_female_event_10:
+    name: Study with Lexi at University
+    related_event: lexi_female_event_10
+    conditions:
+      - '"lexi_female_event_09" in DONE'
+      - lexi.love >= 160
+    outcome:
+      condition: '"lexi_female_event_10" in DONE'
+
+  lexi_female_event_10_repeated:
+    name: Keep studying with Lexi towards graduation
+    related_event: lexi_female_event_10_repeat
+    conditions:
+      - '"lexi_female_event_10" in DONE'
+    percentage:
+      value: lexi.flags.helped_study
+      scale: 10
+    outcome:
+      condition: lexi.flags.helped_study >= 10
+      description: Lexi and I studied hard to graduate. I think we might be successful.
+      next: lexi_female_event_11
+
+  lexi_female_event_11:
+    name: Celebrate with Lexi at the pub
+    related_event: lexi_female_event_11
+    conditions:
+      - lexi.flags.helped_study >= 10
+      - lexi.love >= 180
+    outcome:
+      condition: "'lexi_female_event_11' in DONE"
+      description: Lexi and I graduated! We celebrated by hanging out at the pub.
+      next: lexi_female_event_stalled
+
+  # Sex work path
+  lexi_female_event_09b:
+    name: Work with Lexi
+    related_event: lexi_female_event_09b
+    conditions:
+      - '"lexi_female_event_08" in DONE'
+      - lexi.love >= 140
+      - lexi.flags.suggested_sex_work
+    outcomes:
+      complete:
+        conditions:
+          - '"lexi_female_event_09b" in DONE'
+          - lexi.flags.suggested_sex_work
+      others:
+        conditions:
+          - '"lexi_female_event_08" in DONE'
+          - not lexi.flags.suggested_sex_work
+        hide: True
+        next: None
+
+  love160b:
+    name: Get to know Lexi better
+    condition: '"lexi_female_event_09b" in DONE'
+    percentage:
+      value: lexi.love.val
+      scale: 160
+    outcome:
+      hide: True
+      condition: lexi.love >= 160
+
+
+  lexi_female_event_10b:
+    name: Meet Lexi's pimp after a work shift
+    related_event: lexi_female_event_10b
+    conditions:
+      - '"lexi_female_event_09b" in DONE'
+      - lexi.love >= 160
+    outcomes:
+      pimped1:
+        condition: lexi.flags.fought_danny_lost
+        description: I tried to stand up to Danny, but lost. I guess we work for him now
+        next: lexi_female_event_stalled
+      pimped2:
+        condition: lexi.flags.submitted_to_danny
+        description: I submitted to Danny when he approached Lexi and I. I work for him now
+        next: lexi_female_event_stalled
+      fought:
+        condition: lexi.flags.fought_danny_won
+        description: I fought Danny when he approached Lexi and I. I kicked his ass
+        next: lexi_female_event_stalled
+
+  # Debt paid path
+  lexi_female_event_09c:
+    name: Go on a date with Lexi in the evening
+    related_event: lexi_female_event_09c
+    conditions:
+      - '"lexi_female_event_08" in DONE'
+      - lexi.love >= 140
+      - lexi.flags.paid_debt
+    outcomes:
+      complete:
+        conditions:
+          - '"lexi_female_event_09c" in DONE'
+          - lexi.flags.paid_debt
+      others:
+        conditions:
+          - '"lexi_female_event_08" in DONE'
+          - not lexi.flags.paid_debt
+        hide: True
+        next: None
+
+  love180c:
+    name: Get to know Lexi better
+    condition: '"lexi_female_event_09c" in DONE'
+    percentage:
+      value: lexi.love.val
+      scale: 180
+    outcome:
+      hide: True
+      condition: lexi.love >= 180
+
+  wait_lexi_event_11c:
+    name: Wait a little
+    conditions:
+      - '"lexi_female_event_09c" in DONE'
+      - lexi.flags.delay
+    percentage:
+      value: lexi.timers.delay
+      scale: 3
+      invert: True
+    outcome:
+      hide: True
+      conditions:
+        - not lexi.flags.delay
+
+  lexi_female_event_11c:
+    name: Have a talk with Lexi
+    related_event: lexi_female_event_11c
+    conditions:
+      - lexi.love >= 180
+      - '"lexi_female_event_09c" in DONE'
+    outcome:
+      condition: '"lexi_female_event_11c" in DONE'
+
+  love200c:
+    name: Get to know Lexi better
+    condition: '"lexi_female_event_11c" in DONE'
+    percentage:
+      value: lexi.love.val
+      scale: 200
+    outcome:
+      hide: True
+      condition: lexi.love >= 200
+
+
+  lexi_female_event_stalled:
+    icon: stalled
+    name: That's all of Lexi's story for now
+    outcome:
+      condition: False

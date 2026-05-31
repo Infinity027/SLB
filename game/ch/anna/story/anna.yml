@@ -1,0 +1,381 @@
+name: Anna
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Anna"
+short: "{image=notify anna} · Anna"
+description: "Anna is a member of the Deathless Harpies, Sasha's band."
+participants:
+  - anna
+condition: '"anna_start" in DONE or "anna_start2" in DONE'
+
+start:
+  - love40
+  - sub40
+
+outcomes:
+  gone:
+    description: Anna has left and is no longer part of my life.
+    condition: anna.is_gone_forever
+    icon: fail
+  engaged:
+    description: Anna has agreed to marry me!
+    condition: anna.flags.engagedmike
+
+steps:
+  love40:
+    name: Get to know Anna better
+    percentage:
+      value: anna.love.val
+      scale: 40
+    outcome:
+      hide: True
+      conditions: anna.love >= 40
+
+  anna_event_01:
+    name: Wait for Anna to call me
+    related_event: anna_event_01
+    outcome:
+      description: Anna drunk-dialed me
+      condition: '"anna_event_01" in DONE'
+      next:
+        - love60
+
+  love60:
+    name: Get to know Anna better
+    percentage:
+      value: anna.love.val
+      scale: 60
+    outcome:
+      hide: True
+      conditions: anna.love >= 60
+      next:
+        - anna_event_02_talk
+
+  anna_event_02_talk:
+    name: Talk about TV with Anna
+    outcome:
+      description: We agreed to watch a horror movie together, I should wait for Anna at home tonight
+      condition: anna.flags.horrorMovieDate
+      next:
+        - anna_event_02
+
+  anna_event_02:
+    name: Watch a movie with Anna
+    related_event: anna_event_02
+    outcome:
+      description: We watched a shitty horror movie together
+      condition: '"anna_event_02" in DONE'
+      next:
+        - love80
+
+  love80:
+    name: Get to know Anna better
+    percentage:
+      value: anna.love.val
+      scale: 80
+    outcome:
+      hide: True
+      conditions: anna.love >= 80
+      next:
+        - anna_event_03
+
+  anna_event_03:
+    name: Take Anna on a pub date
+    related_event: anna_event_03
+    outcome:
+      description: We were attacked by fans at the pub
+      condition: '"anna_event_03" in DONE'
+      next:
+        - love100
+
+  love100:
+    name: Get to know Anna better
+    percentage:
+      value: anna.love.val
+      scale: 100
+    outcome:
+      hide: True
+      conditions: anna.love >= 100
+      next:
+        - anna_event_04
+
+  anna_event_04:
+    name: Take Anna on a pub date
+    related_event: anna_event_04
+    outcome:
+      description: We met Gwendoline at the pub
+      condition: '"anna_event_04" in DONE'
+      next:
+        - love120
+
+  love120:
+    name: Get to know Anna better
+    percentage:
+      value: anna.love.val
+      scale: 120
+    outcome:
+      hide: True
+      conditions: anna.love >= 120
+      next:
+        - anna_event_05
+
+  anna_event_05:
+    name: Talk to Anna at the pub or on the street
+    related_event: anna_event_05
+    outcome:
+      description: We met Gwendoline again
+      condition: '"anna_event_05" in DONE'
+      next:
+        - love130
+
+  love130:
+    name: Get to know Anna better
+    percentage:
+      value: anna.love.val
+      scale: 130
+    outcome:
+      hide: True
+      conditions: anna.love >= 130
+      next:
+        - anna_event_06
+
+  anna_event_06:
+    name: Take Anna on a restaurant date
+    related_event: anna_event_06
+    conditions:
+      - anna.love >= 130
+      - not kleio.hidden
+    outcome:
+      description: Anna got in a fight with Kleio
+      condition: '"anna_event_06" in DONE'
+      next:
+        - talk_to_kleio
+
+  talk_to_kleio:
+    name: Talk to Kleio
+    related_event: kleio_talk_anna
+    conditions:
+      - '"anna_event_06" in DONE'
+      - not kleio.hidden
+    outcome:
+      condition: '"kleio_talk_anna" in DONE'
+      next:
+        - talk_to_anna
+
+  talk_to_anna:
+    name: Talk to Anna
+    related_event: anna_talk_kleio
+    outcome:
+      hide: True
+      condition: '"anna_talk_kleio" in DONE'
+      next:
+        - love140
+
+  love140:
+    name: Get to know Anna better
+    percentage:
+      value: anna.love.val
+      scale: 140
+    outcome:
+      hide: True
+      conditions: anna.love >= 140
+      next:
+        - anna_event_07
+
+  anna_event_07:
+    name: Wait for Anna to call me
+    related_event: anna_event_07
+    conditions:
+      - anna.love >= 140
+      - not kleio.hidden
+    outcome:
+      description: Anna and Kleio fixed their relationship
+      condition: '"anna_event_07" in DONE'
+      next:
+        - love150
+
+  love150:
+    name: Get to know Anna better
+    percentage:
+      value: anna.love.val
+      scale: 150
+    outcome:
+      hide: True
+      conditions: anna.love >= 150
+      next:
+        - anna_event_08
+
+  anna_event_08:
+    name: Take Anna on a date
+    related_event: anna_event_08
+    outcome:
+      condition: '"anna_event_08" in DONE'
+
+  love160:
+     name: Get to know Anna better
+     percentage:
+       value: anna.love.val
+       scale: 160
+     outcome:
+       hide: True
+       conditions: anna.love >= 160
+
+  anna_event_09:
+    name: Hang out with Anna
+    related_event: anna_event_09
+    outcome:
+      condition: '"anna_event_09" in DONE'
+
+  love170:
+    name: Get to know Anna better
+    percentage:
+      value: anna.love.val
+      scale: 170
+    outcome:
+      hide: True
+      conditions: anna.love >= 170
+
+  anna_event_10:
+    name: Take Anna on a date
+    related_event: anna_event_10
+    outcome:
+      condition: '"anna_event_10" in DONE'
+
+  love180:
+    name: Get to know Anna better
+    percentage:
+      value: anna.love.val
+      scale: 180
+    outcome:
+      hide: True
+      conditions: anna.love >= 180
+
+  anna_event_11:
+    name: Take Anna on a date at home
+    related_event: anna_event_11
+    outcome:
+      condition: '"anna_event_11" in DONE'
+
+  love190:
+    name: Get to know Anna better
+    percentage:
+      value: anna.love.val
+      scale: 190
+    outcome:
+      hide: True
+      conditions: anna.love >= 190
+
+  anna_event_12:
+    name: Take Anna on a date at the pub
+    related_event: anna_event_12
+    outcome:
+      condition: '"anna_event_12" in DONE'
+
+  love200:
+    name: Get to know Anna better
+    percentage:
+      value: anna.love.val
+      scale: 200
+    outcome:
+      hide: True
+      conditions: anna.love >= 200
+
+  anna_event_13:
+    name: Talk to Anna at the pub
+    related_event: anna_event_13
+    outcome:
+      condition: '"anna_event_13" in DONE'
+      next: None
+
+  sub40:
+    name: Make Anna more submissive
+    percentage:
+      value: anna.sub.val
+      scale: 40
+    outcome:
+      hide: True
+      condition: anna.sub >= 40
+
+  anna_sub_event_01:
+    name: Eat pastries with Anna during a date at the mall.
+    related_event: anna_sub_event_01
+    condition: anna.sub >= 40
+    outcome:
+      condition: '"anna_sub_event_01" in DONE'
+
+  sub80:
+    name: Make Anna more submissive
+    percentage:
+      value: anna.sub.val
+      scale: 80
+    outcome:
+      hide: True
+      condition: anna.sub >= 80
+
+  anna_sub_event_02:
+    name: Watch tv with Anna during a date at home.
+    related_event: anna_sub_event_02
+    conditions:
+      - anna.sub >= 80
+      - '"anna_sub_event_01" in DONE'
+    outcome:
+      condition: '"anna_sub_event_02" in DONE'
+      next: None
+
+  date:
+    name: Go on a date with Anna
+    condition: True
+    outcome:
+      condition: anna.flags.dates >= 1
+      next: birthday_date
+
+  birthday_date:
+    name: Take Anna out on a night date for her birthday
+    condition: anna.flags.dates >= 1
+    outcome:
+      condition: '"anna_birthday_date_male" in DONE'
+      next: None
+
+  sex:
+    name: Have sex with Anna
+    condition: True
+    outcome:
+      condition: anna.sexperience >= 1
+      next: None
+
+  love:
+    name: Get Anna to fall in love with me
+    condition: True
+    percentage:
+      value: anna.love.val
+      scale: 200
+    outcome:
+      condition: anna.love.val == 200
+      next: None
+
+  ring:
+    name: Buy a wedding ring
+    condition: True
+    outcome:
+      condition: hero.has_item("wedding_ring")
+
+  propose:
+    name: Propose to Anna
+    condition: hero.has_item("wedding_ring")
+    outcome:
+      condition: anna.flags.engagedmike
+      next: None
+
+  preg:
+    name: Get Anna pregnant
+    optional: True
+    condition: True
+    outcome:
+      condition: anna.flags.pregnancies_number > 0
+      next: None
+
+  slave:
+    name: Make Anna my sex slave
+    optional: True
+    condition: True
+    outcome:
+      condition: anna.is_sex_slave
+      next: None

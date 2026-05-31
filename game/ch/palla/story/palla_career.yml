@@ -1,0 +1,448 @@
+name: Palla's Career
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Palla#Palla’s_Career"
+short: "{image=notify palla} · Palla's career"
+description: "Guide Palla through her career."
+start:
+  - career100
+  - find_job
+  - stuck_career
+  - change_job
+participants:
+  - palla
+conditions:
+  - '"palla_event_14" in DONE'
+  - palla.flags.career
+
+outcomes:
+  maxcareer:
+    condition: palla.career.val >= 100
+    description: Palla reached her highest career level.
+  leftgame:
+    condition: palla.is_gone_forever
+    description: Palla is gone from my life.
+    icon: fail
+
+steps:
+  career100:
+    name: Guide Palla through her whole career.
+    conditions:
+      - '"palla_event_14" in DONE'
+      - palla.flags.career
+    percentage:
+      value: palla.career.val
+      scale: 100
+    outcome:
+      condition: palla.career.val >= 100
+
+  find_job:
+    name: Look for a job.
+    toggle: True
+    conditions:
+      - not palla.flags.job
+      - not AVAILABLE_JOBS.get('palla')
+    outcome:
+      condition: False
+
+  stuck_career:
+    name: Palla's career will no longer advance in her job.
+    toggle: True
+    conditions:
+      - palla.flags.job and palla.career >= JOBS.get(palla.flags.job).career_max
+    outcome:
+      condition: False
+
+  change_job:
+    name: Palla can change her job.
+    toggle: True
+    conditions:
+      - not palla.flags.job
+      - AVAILABLE_JOBS.get('palla')
+    outcome:
+      next:
+        - career10
+      condition: palla.flags.job == 'nova'
+
+  career10:
+    name: Guide Palla through her career.
+    percentage:
+      value: palla.career.val
+      scale: 10
+    outcome:
+      hide: True
+      condition: palla.career.val >= 10
+      next:
+        - better_job_01
+
+  better_job_01:
+    name: Find a better job for Palla.
+    conditions:
+      - palla.career >= 10
+    outcomes:
+      complete:
+        conditions:
+          - set(['heirloom', 'boreale']).issubset(set(AVAILABLE_JOBS.get('palla', [])))
+        hide: True
+        next:
+          - change_better_job_01
+      already_done:
+        conditions:
+          - set(['heirloom', 'boreale']) & set(DONE_JOBS.get('palla', set()))
+        hide: True
+        next:
+          - change_better_job_01
+
+  change_better_job_01:
+    name: Change Palla's job.
+    conditions:
+      - palla.career >= 10
+      - set(['heirloom', 'boreale']).issubset(set(AVAILABLE_JOBS.get('palla', [])))
+    outcomes:
+      complete:
+        conditions:
+          - palla.flags.job in ['heirloom', 'boreale']
+        next:
+          - career15
+      already_done:
+        conditions:
+          - set(['heirloom', 'boreale']) & set(DONE_JOBS.get('palla', set()))
+        next:
+          - career15
+
+  career15:
+    name: Guide Palla through her career.
+    percentage:
+      value: palla.career.val
+      scale: 15
+    outcome:
+      hide: True
+      condition: palla.career.val >= 15
+      next:
+        - better_job_02
+
+  better_job_02:
+    name: Find a better job for Palla. 2
+    toggle: True
+    conditions:
+      - '"palla_career_event_02" in DONE'
+    outcomes:
+      complete:
+        conditions:
+          - set(['chronicle', 'spellbound', 'flair']).issubset(set(AVAILABLE_JOBS.get('palla', [])))
+        hide: True
+        next:
+          - change_better_job_02
+      already_done:
+        conditions:
+          - set(['chronicle', 'spellbound', 'flair']) & set(DONE_JOBS.get('palla', set()))
+        hide: True
+        next:
+          - change_better_job_02
+
+  change_better_job_02:
+    name: Change Palla's job.
+    conditions:
+       - palla.career >= 15
+       - set(['chronicle', 'spellbound', 'flair']).issubset(set(AVAILABLE_JOBS.get('palla', [])))
+    outcomes:
+      complete:
+        next:
+          - career35
+        conditions:
+          - palla.flags.job in ['chronicle', 'spellbound', 'flair']
+      already_done:
+        conditions:
+          - set(['chronicle', 'spellbound', 'flair']) & set(DONE_JOBS.get('palla', set()))
+        next:
+          - career35
+
+  career35:
+    name: Guide Palla through her career.
+    percentage:
+      value: palla.career.val
+      scale: 35
+    outcome:
+      hide: True
+      condition: palla.career.val >= 35
+
+  better_job_03:
+    name: Find a better job for Palla. 3
+    toggle: True
+    conditions:
+      - '"palla_career_event_03" in DONE'
+    outcomes:
+      complete:
+        conditions:
+          - set(['grandeur', 'prodigy', 'escape']).issubset(set(AVAILABLE_JOBS.get('palla', [])))
+        hide: True
+        next:
+          - change_better_job_03
+      already_done:
+        conditions:
+          - set(['grandeur', 'prodigy', 'escape']) & set(DONE_JOBS.get('palla', set()))
+        hide: True
+        next:
+          - change_better_job_03
+
+  change_better_job_03:
+    name: Change Palla's job.
+    conditions:
+      - palla.career >= 35
+      - set(['grandeur', 'prodigy', 'escape']).issubset(set(AVAILABLE_JOBS.get('palla', [])))
+    outcomes:
+      complete:
+        conditions:
+          - palla.flags.job in ['grandeur', 'prodigy', 'escape']
+        next:
+          - career50
+      already_done:
+        conditions:
+          - set(['grandeur', 'prodigy', 'escape']) & set(DONE_JOBS.get('palla', set()))
+        next:
+          - career50
+
+  career50:
+    name: Guide Palla through her career.
+    percentage:
+      value: palla.career.val
+      scale: 50
+    outcome:
+      hide: True
+      condition: palla.career.val >= 50
+
+  better_job_04:
+    name: Find a better job for Palla. 4
+    toggle: True
+    conditions:
+      - '"palla_career_event_04" in DONE'
+    outcomes:
+      complete:
+        conditions:
+          - set(['minds_eye', 'aurore', 'anomalie']).issubset(set(AVAILABLE_JOBS.get('palla', [])))
+        hide: True
+        next:
+          - change_better_job_04
+      already_done:
+        conditions:
+          - set(['minds_eye', 'aurore', 'anomalie']) & set(DONE_JOBS.get('palla', set()))
+        hide: True
+        next:
+          - change_better_job_04
+
+  change_better_job_04:
+    name: Change Palla's job.
+    conditions:
+      - palla.career >= 50
+      - set(['minds_eye', 'aurore', 'anomalie']).issubset(set(AVAILABLE_JOBS.get('palla', [])))
+    outcomes:
+      stalled:
+        next: None
+        icon: stalled
+        conditions:
+          - palla.career >= 100
+      changed:
+        next: None
+        conditions:
+          - palla.flags.job in ['minds_eye', 'aurore', 'anomalie']
+      already_done:
+        conditions:
+          - set(['minds_eye', 'aurore', 'anomalie']) & set(DONE_JOBS.get('palla', set()))
+        next: None
+
+  fired1:
+    name: Find Palla a new job after she got fired.
+    conditions:
+      - '"palla_fired_talk_01" in DONE'
+      - palla.flags.firedcount > 0
+    outcome:
+      next: None
+      conditions:
+        - '"palla_fired_talk_01" in DONE'
+        - palla.flags.job
+
+  fired2:
+    name: Find Palla a new job after she got fired again.
+    conditions:
+      - '"palla_fired_talk_02" in DONE'
+      - palla.flags.firedcount > 1
+    outcome:
+      next: None
+      conditions:
+        - '"palla_fired_talk_02" in DONE'
+        - palla.flags.job
+
+  fired3:
+    name: Find Palla a new job after she got fired yet again
+    conditions:
+      - '"palla_fired_talk_02" in DONE'
+      - palla.flags.firedcount > 2
+    outcome:
+      next: None
+      conditions:
+        - '"palla_fired_talk_03" in DONE'
+        - palla.flags.job
+
+  alternate_job_01:
+    name: Look for a job in an alternate line of work.
+    conditions:
+      - palla.flags.pornmaybe
+    outcome:
+      conditions:
+        - palla.flags.hawtbitchestalk
+
+  talk_alternative_job_01:
+    name: Talk to Palla about hawtbitches.com.
+    conditions:
+      - palla.flags.hawtbitchestalk
+    outcomes:
+      complete:
+        conditions:
+          - "'hawtbitches' in AVAILABLE_JOBS.get('palla', [])"
+      already_done:
+        conditions:
+          - set(['hawtbitches']) & set(DONE_JOBS.get('palla', set()))
+
+  change_alternate_job_01:
+    name: Tell Palla to work for hawtbitches.com.
+    conditions:
+      - "'hawtbitches' in AVAILABLE_JOBS.get('palla', [])"
+    outcomes:
+      complete:
+        conditions:
+          - palla.flags.job == 'hawtbitches'
+      already_done:
+        conditions:
+          - set(['hawtbitches']) & set(DONE_JOBS.get('palla', set()))
+
+  alternate_job_02:
+    name: Look for other opportunities.
+    conditions:
+      - palla.flags.pornnudes
+      - palla.career >= 25
+    outcomes:
+      complete:
+        conditions:
+          - "'sexypalla' in AVAILABLE_JOBS.get('palla', [])"
+      already_done:
+        conditions:
+          - set(['sexypalla']) & set(DONE_JOBS.get('palla', set()))
+
+  change_alternate_job_02:
+    name: Palla can have her own website sexypalla.xxx.
+    conditions:
+      - "'sexypalla' in AVAILABLE_JOBS.get('palla', [])"
+    outcomes:
+      complete:
+        conditions:
+          - palla.flags.job == 'sexypalla'
+      already_done:
+        conditions:
+          - set(['sexypalla']) & set(DONE_JOBS.get('palla', set()))
+
+  alternate_job_03:
+    name: Look for other opportunities.
+    conditions:
+      - palla.flags.pornnudes
+      - palla.career >= 50
+    outcome:
+      conditions:
+        - palla.flags.onlychixtalk
+
+  talk_alternative_job_03:
+    name: Talk to Palla about onlychix.xxx.
+    related_event: palla_event_onlychix
+    conditions:
+      - palla.flags.onlychixtalk
+    outcomes:
+      agreed:
+        conditions:
+          - '"palla_event_onlychix" in DONE'
+          - "'onlychix' in AVAILABLE_JOBS.get('palla', [])"
+      refused:
+        icon: fail
+        next: None
+        conditions:
+          - '"palla_event_onlychix" in DONE'
+          - "'onlychix' not in AVAILABLE_JOBS.get('palla', [])"
+      already_done:
+        conditions:
+          - set(['onlychix']) & set(DONE_JOBS.get('palla', set()))
+
+  change_alternate_job_03:
+    name: Change Palla's work for onlychix.xxx.
+    conditions:
+      - "'onlychix' in AVAILABLE_JOBS.get('palla', [])"
+    outcomes:
+      complete:
+        conditions:
+          - palla.flags.job == 'onlychix'
+      already_done:
+        conditions:
+          - set(['onlychix']) & set(DONE_JOBS.get('palla', set()))
+
+  alternate_job_04:
+    name: Look for other opportunities.
+    conditions:
+      - palla.flags.pornsex
+      - palla.career >= 60
+    outcome:
+      conditions:
+        - palla.flags.fucktoybitchestalk
+
+  talk_alternative_job_04:
+    name: Talk to Palla about fucktoybitches.adult.
+    related_event: palla_event_fucktoybitches
+    conditions:
+      - palla.flags.fucktoybitchestalk
+    outcomes:
+      agreed:
+        conditions:
+          - '"palla_event_fucktoybitches" in DONE'
+          - "'fucktoybitches' in AVAILABLE_JOBS.get('palla', [])"
+      refused:
+        icon: fail
+        next: None
+        conditions:
+          - '"palla_event_fucktoybitches" in DONE'
+          - "'fucktoybitches' not in AVAILABLE_JOBS.get('palla', [])"
+      already_done:
+        conditions:
+          - set(['fucktoybitches']) & set(DONE_JOBS.get('palla', set()))
+
+  change_alternate_job_04:
+    name: Change Palla's work for fucktoybitches.adult.
+    conditions:
+      - "'fucktoybitches' in AVAILABLE_JOBS.get('palla', [])"
+    outcomes:
+      complete:
+        conditions:
+          - palla.flags.job == 'fucktoybitches'
+      already_done:
+        conditions:
+          - set(['fucktoybitches']) & set(DONE_JOBS.get('palla', set()))
+
+  alternate_job_05:
+    name: Look for other opportunities.
+    conditions:
+      - palla.flags.pornfuck
+      - palla.career >= 90
+    outcomes:
+      complete:
+        conditions:
+          - "'pallapoundin' in AVAILABLE_JOBS.get('palla', [])"
+      already_done:
+        conditions:
+          - set(['pallapoundin']) & set(DONE_JOBS.get('palla', set()))
+
+  change_alternate_job_05:
+    name: Palla can have a lead role in a movie.
+    conditions:
+      - "'pallapoundin' in AVAILABLE_JOBS.get('palla', [])"
+    outcomes:
+      complete:
+        next: None
+        conditions:
+          - palla.flags.job == 'pallapoundin'
+      already_done:
+        next: None
+        conditions:
+          - set(['pallapoundin']) & set(DONE_JOBS.get('palla', set()))

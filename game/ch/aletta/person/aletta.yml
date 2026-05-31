@@ -1,0 +1,150 @@
+---
+name: Aletta
+family_name: Applebaum
+class: Girl
+age: 32
+status: boss
+gender: female
+flags:
+ nokiss: true
+ nodate: true
+ hidden: true
+attributes:
+  love:
+    min: 0
+    max: 1
+    default: 0
+  sub:
+    min: -100
+    max: 10
+    default: 0
+  lesbian:
+    min: 0
+    max: 20
+    default: 0
+  sexperience:
+    min: 0
+    max: null
+    default: 0
+piercings:
+  ears:
+    outfits:
+      - date
+    pierced: true
+  navel:
+    outfits:
+      - naked
+      - swimsuit
+      - sexyswimsuit
+      - underwear
+      - sport
+  clit:
+    outfits:
+      - naked
+  nipples:
+    outfits:
+      - naked
+  tongue:
+    expressions:
+      - happy
+  lips:
+    expressions:
+      - happy
+      - angry
+      - blush
+      - normal
+      - sad
+  nose: { }
+birthday:
+  - winter
+  - 14
+traits:
+  - dominant
+  - not_family
+  - workaholic
+  - outdoorsy
+  - not_geek
+  - not_playful
+  - not_pacifist
+  - fertile
+desire_factors:
+  - shooting
+  - shooting
+  - charm
+  - not_waterpark
+  - not_sweets
+  - not_home
+  - career
+  - restaurant
+  - forest
+heronickname:
+    Young man: aletta.flags.mikeNickname in nickname_young_man
+    Boss Buck: aletta.flags.mikeNickname in nickname_boss_buck
+    Cow-boy: aletta.flags.mikeNickname in nickname_cow_boy
+schedule:
+  default:
+    '12345':
+      '6':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '8':
+        - room: gymmachine
+          activity: train
+          clothes: sport
+      '19':
+        - room: alettaoffice
+          activity: work
+          clothes: work
+      '23':
+        - room: cinema
+          activity: wait
+          clothes: casual
+      '24':
+        - room: street2
+          activity: walk
+          clothes: casual
+        - room: None
+          activity: None
+          clothes: underwear
+    '6':
+      '9':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '18':
+        - room: alettaoffice
+          activity: work
+          clothes: work
+      '21':
+        - room: None
+          activity: None
+          clothes: underwear
+      '23':
+        - room: vip
+          activity: dance
+          clothes: date
+    '7':
+      '5':
+        - room: vip
+          activity: dance
+          clothes: date
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '10':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '18':
+        - room: beach
+          activity: swim
+          clothes: swimsuit
+          seasons: "1"
+        - room: forest
+          activity: run
+          clothes: sport
+      '23':
+        - room: None
+          activity: None
+          clothes: underwear

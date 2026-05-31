@@ -1,0 +1,354 @@
+name: Cherie
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Cherie"
+short: "{image=notify cherie} · Cherie"
+description: "Cherie is Cassidy's step mother and Dwayne's wife. She's a bit older, but still pretty hot, and her marriage to Dwayne seems to be in a bad place."
+participants:
+  - cherie
+# Set a basic activation condition for the DLC, adjust as needed
+conditions:
+  - hero.is_male
+  - game.flags.dwaynefired or game.flags.dwaynedead  # Dwayne's death OR firing is required to start Cherie's story
+
+outcomes:
+  cherie_confession:
+    description: Cherie confessed killing Dwayne
+    condition: 'cherie.flags.cherie_response == "cherie_confess"'
+    icon: fail
+  gone:
+    description: Cherie left her job and is no longer part of my life.
+    conditions:
+      - cherie.is_gone_forever
+    icon: fail
+  engaged:
+    description: Cherie has agreed to marry me!
+    condition: cherie.flags.engagedmike
+
+steps:
+  cherie_event_01:
+    name: Wait for a phone call in your bedroom
+    related_event: cherie_event_01
+    outcome:
+      condition: '"cherie_event_01" in DONE'
+
+  love20:
+    name: Get to know Cherie better
+    condition: '"cherie_event_01" in DONE'
+    percentage:
+      value: cherie.love.val
+      scale: 20
+    outcome:
+      hide: True
+      condition: cherie.love >= 20
+
+  cherie_event_02:
+    name: Attend Dwayne's funeral between 8 and 11
+    related_event: cherie_event_02
+    conditions:
+      - cherie.love >= 20
+      - '"cherie_event_01" in DONE'
+    outcome:
+      next:
+        - love40
+      condition: '"cherie_event_02" in DONE'
+
+  love40:
+    name: Get to know Cherie better
+    condition: '"cherie_event_02" in DONE'
+    percentage:
+      value: cherie.love.val
+      scale: 40
+    outcome:
+      hide: True
+      condition: cherie.love >= 40
+
+  cherie_event_03:
+    name: Take a step back by going for a run in the park
+    related_event: cherie_event_03
+    conditions:
+      - cherie.love >= 40
+      - '"cherie_event_02" in DONE'
+    outcome:
+      next:
+        - love60
+      condition: '"cherie_event_03" in DONE'
+
+  love60:
+    name: Get to know Cherie better
+    condition: '"cherie_event_03" in DONE'
+    percentage:
+      value: cherie.love.val
+      scale: 60
+    outcome:
+      hide: True
+      condition: cherie.love >= 60
+
+  cherie_event_04:
+    name: Cherie is throwing a glamorous charity gala between 18 and 21
+    related_event: cherie_event_04
+    conditions:
+      - cherie.love >= 60
+      - '"cherie_event_03" in DONE'
+    outcome:
+      condition: '"cherie_event_04" in DONE'
+
+  cherie_event_05:
+    name: Be summoned to Cherie's office
+    related_event: cherie_event_05
+    conditions:
+      - '"cherie_event_04" in DONE'
+    outcome:
+      condition: '"cherie_event_05" in DONE'
+
+  cherie_event_06:
+    name: Wait Cherie's call while you are home in the evening
+    related_event: cherie_event_06
+    conditions:
+      - '"cherie_event_05" in DONE'
+    outcome:
+      condition: '"cherie_event_06" in DONE'
+      next:
+        - cherie_event_07_1
+        - cherie_event_07_2
+        - sub25
+
+  cherie_event_07_1:
+    name: Talk to Cherie late after work
+    related_event: cherie_event_07_1
+    conditions:
+      - '"cherie_event_06" in DONE'
+    outcomes:
+      complete:
+        conditions:
+          - '"cherie_event_07_1" in DONE'
+          - '"cherie_event_07_2" in DONE'
+        next:
+          - cherie_event_08_1
+          - cherie_event_08_2
+      complete_wait_07_2:
+        conditions:
+          - '"cherie_event_07_1" in DONE'
+          - '"cherie_event_07_2" not in DONE'
+        next: None
+
+  cherie_event_07_2:
+    name: Talk to Aletta at work
+    related_event: cherie_event_07_2
+    conditions:
+      - '"cherie_event_06" in DONE'
+    outcomes:
+      complete:
+        conditions:
+          - '"cherie_event_07_2" in DONE'
+          - '"cherie_event_07_1" in DONE'
+        next:
+          - cherie_event_08_1
+          - cherie_event_08_2
+      complete_wait_07_1:
+        conditions:
+          - '"cherie_event_07_2" in DONE'
+          - '"cherie_event_07_1" not in DONE'
+        next: None
+
+  cherie_event_08_1:
+    name: Be home in the afternoon or evening
+    related_event: cherie_event_08_1
+    conditions:
+      - '"cherie_event_07_1" in DONE'
+      - '"cherie_event_07_2" in DONE'
+    outcomes:
+      complete:
+        conditions:
+          - '"cherie_event_08_1" in DONE'
+          - '"cherie_event_08_2" in DONE'
+        next: cherie_event_09
+      complete_wait_08_2:
+        conditions:
+          - '"cherie_event_08_1" in DONE'
+          - '"cherie_event_08_2" not in DONE'
+        next: None
+
+  cherie_event_08_2:
+    name: Work as usual
+    related_event: cherie_event_08_2
+    conditions:
+      - '"cherie_event_07_1" in DONE'
+      - '"cherie_event_07_2" in DONE'
+    outcomes:
+      complete:
+        conditions:
+          - '"cherie_event_08_1" in DONE'
+          - '"cherie_event_08_2" in DONE'
+          - 'cherie.flags.cherie_response == "denial"'
+        next: cherie_event_09
+      complete_wait_08_1:
+        conditions:
+          - '"cherie_event_08_1" not in DONE'
+          - '"cherie_event_08_2" in DONE'
+          - 'cherie.flags.cherie_response == "denial"'
+        next: None
+      betrayal:
+        description: Cherie put Dwayne's death on Aletta
+        conditions:
+          - '"cherie_event_08_1" in DONE'
+          - '"cherie_event_08_2" in DONE'
+          - 'cherie.flags.cherie_response == "betrayal"'
+        next: cherie_event_09
+      betrayal_wait_08_1:
+        description: Cherie put Dwayne's death on Aletta
+        conditions:
+          - '"cherie_event_08_1" not in DONE'
+          - '"cherie_event_08_2" in DONE'
+          - 'cherie.flags.cherie_response == "betrayal"'
+        next: cherie_event_09
+      cherie_confess:
+        description: Cherie confessed killing Dwayne
+        conditions:
+          - '"cherie_event_08_2" in DONE'
+          - 'cherie.flags.cherie_response == "cherie_confess"'
+        next: cherie_confession
+
+  cherie_event_09:
+    name: Be at the office in the afternoon
+    related_event: cherie_event_09
+    conditions:
+      - '"aletta_event_08" in DONE'
+      - '"cherie_event_08_1" in DONE'
+      - '"cherie_event_08_2" in DONE'
+    outcomes:
+      complete:
+        conditions:
+          - '"cherie_event_09" in DONE'
+          - not cherie.is_gone_forever
+        next: cherie_stalled
+      cherie_confess:
+        description: Cherie confessed killing Dwayne
+        conditions:
+          - '"cherie_event_09" in DONE'
+          - cherie.is_gone_forever
+        next: cherie_confession
+
+  cherie_event_10:
+    name: Take Cherie on a date to the beach
+    related_event: cherie_event_10
+    conditions:
+      - '"cherie_event_09" in DONE'
+    outcome:
+      condition: '"cherie_event_10" in DONE'
+      next: None
+
+  sub25:
+    name: Make Cherie more submissive
+    condition: '"cherie_event_06" in DONE'
+    percentage:
+      value: cherie.sub.val
+      scale: 25
+    outcome:
+      hide: True
+      conditions: cherie.sub >= 25
+
+  cherie_sub_event_01:
+    name: At the office, while working, explain to Cherie that she wants to be controlled
+    related_event: cherie_sub_event_01
+    conditions:
+      - cherie.sub >= 25
+      - cherie.sexperience >= 1
+      - '"cherie_event_06" in DONE'
+    outcome:
+      condition: '"cherie_sub_event_01" in DONE'
+
+  sub50:
+    name: Make Cherie more submissive
+    percentage:
+      value: cherie.sub.val
+      scale: 50
+    outcome:
+      hide: True
+      conditions: cherie.sub >= 50
+
+  cherie_sub_event_02:
+    name: Give a visit to Cherie at her home during afternoon
+    related_event: cherie_sub_event_02
+    conditions:
+      - cherie.sub >= 50
+      - '"cherie_sub_event_01" in DONE'
+    outcome:
+      condition: '"cherie_sub_event_02" in DONE'
+
+  sub75:
+    name: Make Cherie more submissive
+    percentage:
+      value: cherie.sub.val
+      scale: 75
+    outcome:
+      hide: True
+      conditions: cherie.sub >= 75
+
+  cherie_sub_event_03:
+    name: At the office, while working, have a slave collar to give
+    related_event: cherie_sub_event_03
+    conditions:
+      - cherie.sub >= 75
+      - '"cherie_sub_event_02" in DONE'
+    outcome:
+      condition: '"cherie_sub_event_03" in DONE'
+
+  date:
+    name: Go on a date with Cherie
+    condition: True
+    outcome:
+      condition: cherie.flags.dates >= 1
+      next: None
+#      next: birthday_date
+#
+#  birthday_date:
+#    name: Take Cherie out on a night date for her birthday
+#    condition: cherie.flags.dates >= 1
+#    outcome:
+#      condition: '"cherie_birthday_date_male" in DONE'
+#      next: None
+
+  sex:
+    name: Have sex with Cherie
+    condition: True
+    outcome:
+      condition: cherie.sexperience >= 1
+      next: None
+
+  love:
+    name: Get Cherie to fall in love with me
+    condition: True
+    percentage:
+      value: cherie.love.val
+      scale: 200
+    outcome:
+      condition: cherie.love.val == 200
+      next: None
+
+  ring:
+    name: Buy a wedding ring
+    condition: True
+    outcome:
+      condition: hero.has_item("wedding_ring")
+
+  propose:
+    name: Propose to Cherie
+    condition: hero.has_item("wedding_ring")
+    outcome:
+      condition: cherie.flags.engagedmike
+      next: None
+
+  preg:
+    name: Get Cherie pregnant
+    optional: True
+    condition: True
+    outcome:
+      condition: cherie.flags.pregnancies_number > 0
+      next: None
+
+  slave:
+    name: Make Cherie my sex slave
+    optional: True
+    condition: True
+    outcome:
+      condition: cherie.is_sex_slave
+      next: None

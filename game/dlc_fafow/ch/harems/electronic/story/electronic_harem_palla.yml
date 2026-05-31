@@ -1,0 +1,84 @@
+name: Electronic Harem - Palla
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Electronics_Harem"
+short: "{image=notify amy}{image=notify palla}{image=notify shawn} · Electronic Harem"
+type: harem
+description: "After the threesome Amy and I had with Shawn, he wants to add Palla to the mix."
+participants:
+  - amy
+  - shawn
+  - palla
+conditions:
+  - hero.is_male
+  - '"electronic_harem_event_06" in DONE'
+  - game.flags.electronic_foursome
+
+outcomes:
+  success:
+    description: I fulfilled Shawn's dream by arranging him a foursome with Amy and Palla.
+    conditions:
+      - '"electronic_harem_event_09" in DONE'
+  amydisagree:
+    description: Amy did not agree to have a foursome with Shawn, Palla and me...
+    conditions:
+      - not game.flags.electronic_foursome
+      - '"electronic_harem_event_08" in DONE'
+    icon: fail
+  palladisagree:
+    description: Palla did not agree to have a foursome with Amy, Shawn and me...
+    conditions:
+      - not game.flags.electronic_foursome
+      - '"electronic_harem_event_07" in DONE'
+    icon: fail
+
+steps:
+  electronic_harem_event_07:
+    name: I have to ask Palla if she's okay having a foursome with Amy, Shawn and me.
+    related_event: electronic_harem_event_07
+    conditions:
+      - "'electronic_harem_event_06' in DONE"
+      - game.flags.electronic_foursome
+    outcomes:
+      agree:
+        description: Palla agreed to have a foursome with Amy, Shawn and me!
+        conditions:
+          - game.flags.electronic_foursome
+          - '"electronic_harem_event_07" in DONE'
+      disagree:
+        conditions:
+          - not game.flags.electronic_foursome
+          - '"electronic_harem_event_07" in DONE'
+        next: None
+
+  electronic_harem_event_08:
+    name: Now that Palla has agree, I need to talk to Amy.
+    related_event: electronic_harem_event_08
+    conditions:
+      - "'electronic_harem_event_07' in DONE"
+      - game.flags.electronic_foursome
+    outcomes:
+      agree:
+        description: Amy agreed to have a foursome with Amy, Shawn and me!
+        conditions:
+          - game.flags.electronic_foursome
+          - '"electronic_harem_event_08" in DONE'
+      disagree:
+        conditions:
+          - not game.flags.electronic_foursome
+          - '"electronic_harem_event_08" in DONE'
+        next: None
+
+  electronic_harem_event_09:
+    name: Participate to the foursome between 19 and 2.
+    related_event: electronic_foursome
+    conditions:
+      - "'electronic_harem_event_08' in DONE"
+      - "not 'electronic_harem_event_09' in DONE"
+      - game.flags.electronic_foursome
+      - amy.love >= 170
+      - amy.sub >= 90
+      - not amy.hidden
+      - palla.love >= 170
+      - palla.sub >= 90
+      - not palla.hidden
+    outcome:
+      condition: '"electronic_harem_event_09" in DONE'

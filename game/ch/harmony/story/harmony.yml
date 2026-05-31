@@ -1,0 +1,533 @@
+name: Harmony
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Harmony"
+short: "{image=notify harmony} · Harmony"
+description: "Harmony is a girl I met at church."
+participants:
+  - harmony
+condition: '"harmony_start" in DONE'
+
+outcomes:
+  nun:
+    description: Harmony became a nun
+    condition: '"harmony_event_07_religious" in DONE'
+  gone:
+    description: Harmony has left and is no longer part of my life.
+    condition: harmony.is_gone_forever
+    icon: fail
+  engaged:
+    condition: harmony.flags.engagedmike
+    description: Harmony has agreed to marry me!
+
+steps:
+  harmony_event_03:
+    name: Go to bible study
+    related_event: harmony_event_03
+    condition: '"harmony_start" in DONE'
+    outcome:
+      condition: '"harmony_event_03" in DONE'
+
+  love20:
+    name: Get to know Harmony better
+    condition: '"harmony_event_03" in DONE'
+    percentage:
+      value: harmony.love.val
+      scale: 40
+    outcome:
+      hide: True
+      condition: harmony.love >= 40
+
+  harmony_event_04:
+    name: Go to bible study
+    related_event: harmony_event_04
+    conditions:
+      - '"harmony_event_03" in DONE'
+      - harmony.love >= 40
+    outcome:
+      condition: '"harmony_event_04" in DONE'
+
+  love30:
+    name: Get to know Harmony better
+    condition: '"harmony_event_04" in DONE'
+    percentage:
+      value: harmony.love.val
+      scale: 60
+    outcome:
+      hide: True
+      condition: harmony.love >= 60
+
+  harmony_event_05:
+    name: Go to bible study
+    related_event: harmony_event_05
+    conditions:
+      - '"harmony_event_04" in DONE'
+      - harmony.love >= 60
+    outcome:
+      condition: '"harmony_event_05" in DONE'
+
+  love40:
+    name: Get to know Harmony better
+    condition: '"harmony_event_05" in DONE'
+    percentage:
+      value: harmony.love.val
+      scale: 80
+    outcome:
+      hide: True
+      condition: harmony.love >= 80
+
+  harmony_event_06:
+    name: Go to bible study
+    related_event: harmony_event_06
+    conditions:
+      - '"harmony_event_05" in DONE'
+      - harmony.love >= 80
+    outcome:
+      condition: '"harmony_event_06" in DONE'
+
+  love50:
+    name: Get to know Harmony better
+    condition: '"harmony_event_06" in DONE'
+    percentage:
+      value: harmony.love.val
+      scale: 100
+    outcome:
+      hide: True
+      condition: harmony.love >= 100
+
+  harmony_event_07:
+    name: Invite Harmony on a date
+    related_event: harmony_event_07
+    conditions:
+      - '"harmony_event_06" in DONE'
+      - harmony.love >= 100
+    outcome:
+      condition: '"harmony_event_07" in DONE'
+
+  harmony_event_08:
+    name: Go to my date with Harmony on Saturday
+    related_event: harmony_event_08
+    condition: '"harmony_event_07" in DONE'
+    outcome:
+      condition: '"harmony_event_08" in DONE'
+
+  love60:
+    name: Get to know Harmony better
+    condition: '"harmony_event_08" in DONE'
+    percentage:
+      value: harmony.love.val
+      scale: 120
+    outcome:
+      hide: True
+      condition: harmony.love >= 120
+
+  harmony_event_09:
+    name: Invite Harmony on another date
+    related_event: harmony_event_09
+    conditions:
+      - '"harmony_event_08" in DONE'
+      - harmony.love >= 120
+    outcome:
+      condition: '"harmony_event_09" in DONE'
+
+  harmony_event_10:
+    name: Go to my date with Harmony at the mall
+    related_event: harmony_event_10
+    condition: '"harmony_event_09" in DONE'
+    outcome:
+      condition: '"harmony_event_10" in DONE'
+
+  love70:
+    name: Get to know Harmony better
+    condition: '"harmony_event_10" in DONE'
+    percentage:
+      value: harmony.love.val
+      scale: 140
+    outcome:
+      hide: True
+      condition: harmony.love >= 140
+
+  harmony_event_01_vanilla:
+    name: Invite Harmony on another date
+    related_event: harmony_event_01_vanilla
+    toggle: True
+    conditions:
+      - "'harmony_event_10' in DONE"
+      - "harmony.love >= 140"
+      - "not 'religious' in harmony.traits and not 'slutty' in harmony.traits"
+    outcome:
+      condition: '"harmony_event_01_vanilla" in DONE'
+      next:
+        - harmony_event_02_vanilla
+
+  harmony_event_02_vanilla:
+    name: Go to my date with Harmony at home
+    toggle: True
+    conditions:
+      - "'harmony_event_01_vanilla' in DONE"
+      - "harmony.love >= 140"
+      - "not 'religious' in harmony.traits and not 'slutty' in harmony.traits"
+    outcome:
+      condition: '"harmony_event_02_vanilla" in DONE'
+      next:
+        - love75
+
+  harmony_event_01_slutty:
+    name: Invite Harmony on another date
+    related_event: harmony_event_01_slutty
+    toggle: True
+    conditions:
+      - "'harmony_event_10' in DONE"
+      - "harmony.love >= 140"
+      - "'slutty' in harmony.traits"
+    outcome:
+      condition: '"harmony_event_01_slutty" in DONE'
+      next:
+        - harmony_event_02_slutty
+
+  harmony_event_02_slutty:
+    name: Go to my date with Harmony at home
+    toggle: True
+    conditions:
+      - "'harmony_event_01_slutty' in DONE"
+      - "harmony.love >= 140"
+      - "'slutty' in harmony.traits"
+    outcome:
+      condition: '"harmony_event_02_slutty" in DONE'
+      next:
+        - love75
+
+  love75:
+    name: Get to know Harmony better
+    percentage:
+      value: harmony.love.val
+      scale: 150
+    outcome:
+      hide: True
+      conditions: harmony.love >= 150
+
+  harmony_event_03_vanilla:
+    name: Invite Harmony on another date
+    related_event: harmony_event_03_vanilla
+    toggle: True
+    conditions:
+      - "'harmony_event_02_vanilla' in DONE"
+      - "harmony.love >= 150"
+      - "not 'religious' in harmony.traits and not 'slutty' in harmony.traits"
+    outcome:
+      condition: '"harmony_event_03_vanilla" in DONE'
+      next:
+        - harmony_event_04_vanilla
+
+  harmony_event_04_vanilla:
+    name: Go to my date with Harmony's parents at the coffee shop
+    toggle: True
+    conditions:
+      - "'harmony_event_03_vanilla' in DONE"
+      - "harmony.love >= 150"
+      - "not 'religious' in harmony.traits and not 'slutty' in harmony.traits"
+    outcome:
+      condition: '"harmony_event_04_vanilla" in DONE'
+      next:
+        - love85
+
+  harmony_event_01_religious:
+    name: Invite Harmony on another date
+    related_event: harmony_event_01_religious
+    toggle: True
+    conditions:
+      - "'harmony_event_10' in DONE"
+      - "harmony.love >= 140"
+      - "'religious' in harmony.traits"
+    outcome:
+      condition: '"harmony_event_01_religious" in DONE'
+      next:
+        - harmony_event_02_religious
+
+  harmony_event_02_religious:
+    name: Go to my date with Harmony's parents at the coffee shop
+    toggle: True
+    conditions:
+      - "'harmony_event_01_religious' in DONE"
+      - "harmony.love >= 140"
+      - "'religious' in harmony.traits"
+    outcome:
+      condition: '"harmony_event_02_religious" in DONE'
+      next:
+        - love85
+
+  harmony_event_03_slutty:
+    name: Go on a date with Harmony at the nightclub
+    related_event: harmony_event_03_slutty
+    toggle: True
+    conditions:
+      - "'harmony_event_02_slutty' in DONE"
+      - "harmony.love >= 150"
+      - "harmony.sub >= 70"
+      - "'slutty' in harmony.traits"
+    outcome:
+      condition: '"harmony_event_03_slutty" in DONE'
+      next:
+        - love85
+
+  love85:
+    name: Get to know Harmony better
+    percentage:
+      value: harmony.love.val
+      scale: 170
+    outcome:
+      hide: True
+      conditions: harmony.love >= 170
+
+  harmony_event_05_vanilla:
+    name: Invite Harmony on another date
+    related_event: harmony_event_05_vanilla
+    toggle: True
+    conditions:
+      - "'harmony_event_04_vanilla' in DONE"
+      - "harmony.love >= 170"
+      - "not 'religious' in harmony.traits and not 'slutty' in harmony.traits"
+    outcome:
+      condition: '"harmony_event_05_vanilla" in DONE'
+      next:
+        - harmony_event_06_vanilla
+
+  harmony_event_06_vanilla:
+    name: Introduce Harmony to Angela
+    related_event: harmony_event_06_vanilla
+    toggle: True
+    conditions:
+      - "'harmony_event_05_vanilla' in DONE"
+      - "harmony.love >= 170"
+    outcome:
+      condition: '"harmony_event_06_vanilla" in DONE'
+      next:
+        - love90
+
+  harmony_event_03_religious:
+    name: Invite Harmony on another date
+    related_event: harmony_event_03_religious
+    toggle: True
+    conditions:
+      - "'harmony_event_02_religious' in DONE"
+      - "harmony.love >= 170"
+      - "'religious' in harmony.traits"
+    outcome:
+      condition: '"harmony_event_03_religious" in DONE'
+      next:
+        - harmony_event_04_religious
+
+  harmony_event_04_religious:
+    name: Introduce Harmony to Angela
+    related_event: harmony_event_04_religious
+    toggle: True
+    conditions:
+      - "'harmony_event_03_religious' in DONE"
+      - "harmony.love >= 170"
+    outcome:
+      condition: '"harmony_event_04_religious" in DONE'
+      next:
+        - love90
+
+  love90:
+    name: Get to know Harmony better
+    percentage:
+      value: harmony.love.val
+      scale: 180
+    outcome:
+      hide: True
+      conditions: harmony.love >= 180
+
+  harmony_event_07_vanilla:
+    name: Go on a date with Harmony at the park
+    related_event: harmony_event_07_vanilla
+    toggle: True
+    conditions:
+      - "'harmony_event_06_vanilla' in DONE"
+      - "harmony.love >= 180"
+      - "not 'religious' in harmony.traits and not 'slutty' in harmony.traits"
+    outcome:
+      condition: '"harmony_event_07_vanilla" in DONE'
+      next: None
+
+  harmony_event_05_religious:
+    name: Talk to Harmony
+    related_event: harmony_event_05_religious
+    toggle: True
+    conditions:
+      - "'harmony_event_04_religious' in DONE"
+      - "harmony.love >= 180"
+      - "'religious' in harmony.traits"
+    outcome:
+      condition: '"harmony_event_05_religious" in DONE'
+      next:
+        - wait_some_time
+
+  wait_some_time:
+    name: Wait a little
+    conditions:
+      - harmony.flags.storyDelay
+      - '"harmony_event_05_religious" in DONE'
+    percentage:
+      value: harmony.timers.storyDelay
+      scale: 3
+    outcome:
+      condition: not harmony.flags.storyDelay
+      hide: True
+      next:
+        - harmony_event_06_religious
+
+  harmony_event_06_religious:
+    name: Talk to Harmony
+    related_event: harmony_event_06_religious
+    toggle: True
+    conditions:
+      - "'harmony_event_05_religious' in DONE"
+      - "harmony.love >= 180"
+      - "not harmony.flags.storyDelay"
+      - "'religious' in harmony.traits"
+    outcome:
+      condition: '"harmony_event_06_religious" in DONE'
+      next:
+        - love95
+
+  harmony_event_04_slutty:
+    name: Go on a date with Harmony at the nightclub
+    related_event: harmony_event_04_slutty
+    toggle: True
+    conditions:
+      - "'harmony_event_03_slutty' in DONE"
+      - "harmony.love >= 170"
+      - "harmony.sub >= 90"
+      - "'slutty' in harmony.traits"
+    outcome:
+      condition: '"harmony_event_04_slutty" in DONE'
+      next:
+        - love95
+        - harmony_stripclub_event_01
+
+  love95:
+    name: Get to know Harmony better
+    percentage:
+      value: harmony.love.val
+      scale: 190
+    outcome:
+      hide: True
+      conditions: harmony.love >= 190
+
+  harmony_event_07_religious:
+    name: Wait for Harmony to give news
+    related_event: harmony_event_07_religious
+    toggle: True
+    conditions:
+      - "'harmony_event_06_religious' in DONE"
+      - "harmony.love >= 190"
+      - "'religious' in harmony.traits"
+    outcome:
+      condition: '"harmony_event_07_religious" in DONE'
+      next: nun
+
+  harmony_event_05_slutty:
+    name: Invite Harmony on another date
+    related_event: harmony_event_05_slutty
+    toggle: True
+    conditions:
+      - "'harmony_event_04_slutty' in DONE"
+      - "harmony.love >= 190"
+      - "harmony.sub >= 100"
+      - "'slutty' in harmony.traits"
+    outcome:
+      condition: '"harmony_event_05_slutty" in DONE'
+      next:
+        - harmony_event_06_slutty
+
+  harmony_event_06_slutty:
+    name: Go to my date with Harmony at the strip club
+    toggle: True
+    conditions:
+      - "'harmony_event_05_slutty' in DONE"
+      - "harmony.love >= 190"
+      - "harmony.sub >= 100"
+      - "'slutty' in harmony.traits"
+    outcome:
+      condition: '"harmony_event_06_slutty" in DONE'
+      next: harmony_stripclub_event_02
+
+  harmony_stripclub_event_01:
+    name: Go see Harmony
+    related_event: harmony_stripclub_event_01
+    conditions:
+      - "'harmony_event_04_slutty' in DONE"
+      - "harmony.purity <= 10"
+    outcome:
+      condition: '"harmony_stripclub_event_01" in DONE'
+      next: None
+
+  harmony_stripclub_event_02:
+    name: Go see Harmony at the strip club
+    related_event: harmony_stripclub_event_02
+    conditions:
+      - "'harmony_stripclub_event_01' in DONE"
+      - "'harmony_event_06_slutty' in DONE"
+      - "harmony.purity <= 5"
+    outcome:
+      condition: '"harmony_stripclub_event_02" in DONE'
+      next: None
+
+  date:
+    name: Go on a date with Harmony
+    condition: True
+    outcome:
+      condition: harmony.flags.dates >= 1
+      next: birthday_date
+
+  birthday_date:
+    name: Take Harmony out on a night date for her birthday
+    condition: harmony.flags.dates >= 1
+    outcome:
+      condition: '"harmony_birthday_date_male" in DONE'
+      next: None
+
+  sex:
+    name: Have sex with Harmony
+    condition: True
+    outcome:
+      condition: harmony.sexperience >= 1
+      next: None
+
+  love:
+    name: Get Harmony to fall in love with me
+    condition: True
+    percentage:
+      value: harmony.love.val
+      scale: 200
+    outcome:
+      condition: harmony.love.val == 200
+      next: None
+
+  ring:
+    name: Buy a wedding ring
+    condition: True
+    outcome:
+      condition: hero.has_item("wedding_ring")
+
+  propose:
+    name: Propose to Harmony
+    condition: hero.has_item("wedding_ring")
+    outcome:
+      condition: harmony.flags.engagedmike
+      next: None
+
+  preg:
+    name: Get Harmony pregnant
+    optional: True
+    condition: True
+    outcome:
+      condition: harmony.flags.pregnancies_number > 0
+      next: None
+
+  slave:
+    name: Make Harmony my sex slave
+    optional: True
+    condition: True
+    outcome:
+      condition: harmony.is_sex_slave
+      next: None

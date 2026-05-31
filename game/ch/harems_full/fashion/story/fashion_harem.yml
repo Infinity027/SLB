@@ -1,0 +1,51 @@
+name: Palla and Sasha
+display_name: Fashion Harem
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Fashion_Harem"
+short: "{image=notify palla}{image=notify sasha} · Fashion Harem"
+type: harem
+description: "Sasha won some contest on the internet."
+start:
+  - sasha_not_working
+  - quiet_place
+  - best_customer_service
+
+participants:
+  - sasha
+  - palla
+conditions:
+  - '"palla_event_03b" in DONE'
+  - Person.showdown(sasha, palla)
+  - sasha.love >= 50
+
+outcome:
+  condition: '"best_customer_service" in DONE'
+  description: "I went to see Sasha at the clothes shop."
+
+steps:
+  sasha_not_working:
+    name: Sasha's not working.
+    related_event: best_customer_service
+    toggle: True
+    conditions:
+      - sasha.room != "clothesshop"
+    outcome:
+      condition: '"best_customer_service" in DONE'
+
+  quiet_place:
+    name: Find a quieter place to read the article.
+    related_event: best_customer_service
+    toggle: True
+    conditions:
+      - game.room in ["clothesshop", "mall1", "mall2"]
+    outcome:
+      condition: '"best_customer_service" in DONE'
+
+  best_customer_service:
+    name: Read more about this contest.
+    related_event: best_customer_service
+    toggle: True
+    conditions:
+      - sasha.room == "clothesshop"
+      - game.room not in ["clothesshop", "mall1", "mall2"]
+    outcome:
+      condition: '"best_customer_service" in DONE'

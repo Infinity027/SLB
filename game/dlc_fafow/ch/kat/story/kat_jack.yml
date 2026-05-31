@@ -1,0 +1,292 @@
+name: Jack's favorite streamer
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Kat"
+short: "{image=notify kat}{image=notify jack} · Jack's streamer"
+description: "Jack told me he found a new streamer girl he really likes. Turns out it is Kat!"
+participants:
+  - kat
+  - jack
+conditions:
+  - hero.is_male
+  - "'kat_event_02' in DONE"
+
+outcomes:
+  wedding_mc_only:
+    description: Kat has agreed to marry me! But not Jack...
+    conditions:
+      - '"kat_jack_propose_male" in DONE'
+      - not Harem.together(jack, kat, name='exclusive_fan')
+  wedding_jack_only:
+    description: Kat has agreed to marry Jack. But not me...
+    conditions:
+      - '"kat_jack_propose_male" in DONE'
+      - kat.is_gone_forever
+    icon: fail
+  nowedding:
+    description: Jack wanted us to marry Kat together, but I turned down the offer.
+    conditions:
+      - '"kat_jack_08" in DONE'
+      - not jack.flags.trouple_wedding
+    icon: fail
+  nomeeting:
+    description: Jack wanted me to arrange a meeting for him with Kat but I said no.
+    conditions:
+      - '"kat_jack_02" in DONE'
+      - not jack.flags.will_meet_kat
+    icon: fail
+  kat_refuse_threesome:
+    description: Kat refused the idea of a threesome
+    conditions:
+      - '"kat_jack_06" in DONE'
+      - not kat.flags.agree_kat_jack_threesome
+    icon: fail
+  mike_threesome_not_ready:
+    description: I'm not ready to have a threesome with Jack and Kat
+    conditions:
+      - '"kat_jack_05" in DONE'
+      - not jack.flags.ready_kat_jack_threesome
+    icon: fail
+  gone:
+    description: Kat has left and is no longer part of my life.
+    conditions:
+      - kat.is_gone_forever
+    icon: fail
+  engaged:
+    description: Kat has agreed to marry me and Jack!
+    conditions:
+      - kat.flags.engagedmike
+      - jack.flags.engagedmike
+
+steps:
+  love60:
+    name: Get to know Kat better
+    percentage:
+      value: kat.love.val
+      scale: 60
+    outcome:
+      hide: True
+      conditions: kat.love >= 60
+
+  kat_jack_01:
+    name: Meet Jack in the street between 10 and 16 to go to a streamer signing session
+    related_event: kat_jack_01
+    conditions:
+      - '"kat_event_02" in DONE'
+      - kat.love >= 60
+    outcome:
+      condition: '"kat_jack_01" in DONE'
+
+  love100:
+    name: Get to know Kat better
+    percentage:
+      value: kat.love.val
+      scale: 100
+    outcome:
+      hide: True
+      conditions: kat.love >= 100
+
+  kat_jack_02:
+    name: I saw Jack in the street recently. I wonder how he's doing.
+    related_event: kat_jack_02
+    conditions:
+      - '"kat_jack_01" in DONE'
+      - kat.love >= 100
+    outcomes:
+      gonnameet:
+        conditions:
+          - '"kat_jack_02" in DONE'
+          - jack.flags.will_meet_kat
+      notgonnameet:
+        icon: fail
+        conditions:
+          - '"kat_jack_02" in DONE'
+          - not jack.flags.will_meet_kat
+        next: None
+
+  love120:
+    name: Get to know Kat better
+    percentage:
+      value: kat.love.val
+      scale: 120
+    outcome:
+      hide: True
+      conditions: kat.love >= 120
+
+  sub20:
+    name: Make Kat more submissive
+    percentage:
+      value: kat.sub.val
+      scale: 20
+    outcome:
+      hide: True
+      condition: kat.sub >= 20
+
+  kat_jack_03:
+    name: Talk about meeting Jack to Kat.
+    related_event: kat_jack_03
+    conditions:
+      - '"kat_jack_02" in DONE'
+      - kat.love >= 120
+      - kat.sub >= 20
+      - jack.flags.will_meet_kat
+    outcome:
+      condition: '"kat_jack_03" in DONE'
+
+  love135:
+    name: Get to know Kat better
+    percentage:
+      value: kat.love.val
+      scale: 135
+    outcome:
+      hide: True
+      conditions: kat.love >= 135
+
+  kat_jack_04:
+    name: Meet Kat and Jack at coffee shop between 8 and 17 to present these two.
+    related_event: kat_jack_04
+    conditions:
+      - '"kat_event_03" in DONE'
+      - kat.love >= 135
+    outcome:
+      condition: '"kat_jack_04" in DONE'
+
+  love140:
+    name: Get to know Kat better
+    percentage:
+      value: kat.love.val
+      scale: 140
+    outcome:
+      hide: True
+      conditions: kat.love >= 140
+
+  sub50:
+    name: Make Kat more submissive
+    percentage:
+      value: kat.sub.val
+      scale: 50
+    outcome:
+      hide: True
+      condition: kat.sub >= 50
+
+  kat_jack_05:
+    name: Meet Jack in the street 10 and 16.
+    related_event: kat_jack_05
+    conditions:
+      - '"kat_event_04" in DONE'
+      - kat.love >= 140
+      - kat.sub >= 50
+    outcomes:
+      complete:
+        conditions:
+          - '"kat_jack_05" in DONE'
+          - jack.flags.ready_kat_jack_threesome
+      failed:
+        conditions:
+          - '"kat_jack_05" in DONE'
+          - not jack.flags.ready_kat_jack_threesome
+        next: None
+        icon: fail
+
+  love145:
+    name: Get to know Kat better
+    percentage:
+      value: kat.love.val
+      scale: 145
+    outcome:
+      hide: True
+      conditions: kat.love >= 145
+
+  kat_jack_06:
+    name: Find Kat to talk about the threesome with Jack.
+    related_event: kat_jack_06
+    conditions:
+      - '"kat_event_05" in DONE'
+      - kat.love >= 145
+      - kat.sub >= 50
+      - jack.flags.ready_kat_jack_threesome
+    outcomes:
+      complete:
+        conditions:
+          - '"kat_jack_06" in DONE'
+          - kat.flags.agree_kat_jack_threesome
+      failed:
+        conditions:
+          - '"kat_jack_06" in DONE'
+          - not kat.flags.agree_kat_jack_threesome
+        next: None
+        icon: fail
+
+  love160:
+    name: Get to know Kat better
+    percentage:
+      value: kat.love.val
+      scale: 160
+    outcome:
+      hide: True
+      conditions: kat.love >= 160
+
+  sub75:
+    name: Make Kat more submissive
+    percentage:
+      value: kat.sub.val
+      scale: 75
+    outcome:
+      hide: True
+      condition: kat.sub >= 75
+
+  kat_jack_07:
+    name: Call Kat while alone at home.
+    related_event: kat_jack_07
+    conditions:
+      - '"kat_jack_06" in DONE'
+      - kat.love >= 160
+      - kat.sub >= 75
+      - kat.flags.agree_kat_jack_threesome
+    outcome:
+      condition: '"kat_jack_07" in DONE'
+      next:
+        - love180
+        - kat_jack_special
+
+  love180:
+    name: Get to know Kat better
+    percentage:
+      value: kat.love.val
+      scale: 180
+    outcome:
+      hide: True
+      conditions: kat.love >= 180
+
+  kat_jack_08:
+    name: Encounter Jack in the streets, the mall or the park.
+    related_event: kat_jack_08
+    conditions:
+      - '"kat_jack_07" in DONE'
+      - kat.love >= 180
+    outcome:
+      condition: '"kat_jack_08" in DONE'
+      next: None
+
+  propose:
+    name: Propose to Kat
+    condition: hero.has_item("wedding_ring")
+    outcome:
+      condition: kat.flags.engagedmike
+      next: None
+
+
+  kat_jack_special:
+    name: Encounter Jack and Kat at the mall.
+    related_event: jack_kat_special
+    conditions:
+      - '"kat_jack_07" in DONE'
+      - kat.flags.agree_kat_jack_threesome
+    outcomes:
+      complete:
+        condition: '"jack_kat_special" in DONE'
+        next: None
+      passed:
+        conditions:
+          - '"kat_jack_08" in DONE'
+          - not jack.flags.trouple_wedding
+        next: None
+        hide: True

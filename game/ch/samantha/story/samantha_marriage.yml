@@ -1,0 +1,270 @@
+name: Samantha's Marriage
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Samantha#Samantha’s_wedding"
+short: "{image=notify samantha} · Marriage"
+description: "Samantha and Ryan are married, but all is not well in paradise. I can increase my influence on her either encourage her to divorce or stay with Ryan for other reasons."
+participants:
+  - samantha
+condition: '"samantha_event_B01" in DONE'
+
+outcomes:
+  divorce:
+    condition: samantha.flags.divorced
+    description: Samantha and Ryan got divorced.
+  gone:
+    condition: samantha.is_gone_forever
+    description: Samantha has left and is no longer part of my life.
+    icon: fail
+
+steps:
+  love120:
+    name: Get to know Samantha better
+    condition: '"samantha_event_B01" in DONE'
+    percentage:
+      value: samantha.love.val
+      scale: 120
+    outcome:
+      hide: True
+      condition: samantha.love >= 120
+
+  samantha_event_B02:
+    name: Talk to Samantha about her marriage
+    related_event: samantha_event_B02
+    conditions:
+      - '"samantha_event_B01" in DONE'
+    outcome:
+      condition: '"samantha_event_B02" in DONE'
+
+  love140:
+    name: Get to know Samantha better
+    condition: '"samantha_event_B02" in DONE'
+    percentage:
+      value: samantha.love.val
+      scale: 140
+    outcome:
+      hide: True
+      conditions: samantha.love >= 140
+
+  samantha_event_B03:
+    name: Samantha will call in the evening when I'm home
+    related_event: samantha_event_B03
+    conditions:
+      - '"samantha_event_B02" in DONE'
+    outcomes:
+      threesome:
+        description: We enjoyed the time together
+        conditions:
+          - '"samantha_event_B03" in DONE'
+          - not samantha.flags.knows_ryancheats
+          - not samantha.flags.unknown_father
+          - not samantha.pregnant
+        next: clove160
+      threesome_and_pregnant:
+        description: We enjoyed the time together
+        conditions:
+          - '"samantha_event_B03" in DONE'
+          - not samantha.flags.knows_ryancheats
+          - samantha.flags.unknown_father
+          - samantha.pregnant or "samantha_wedding_baby" in DONE
+        next:
+          - clove160
+          - samantha_event_B04
+      revenge:
+        description: Samantha found out I knew about cheating and left crying
+        conditions:
+          - '"samantha_event_B03" in DONE'
+          - samantha.flags.knows_ryancheats
+          - not samantha.flags.excused
+          - not samantha.flags.unknown_father
+          - not samantha.pregnant
+        next: samantha_event_D01_wait
+      revenge_and_pregnant:
+        description: Samantha found out I knew about cheating and left crying
+        conditions:
+          - '"samantha_event_B03" in DONE'
+          - samantha.flags.knows_ryancheats
+          - not samantha.flags.excused
+          - samantha.flags.unknown_father
+          - samantha.pregnant or "samantha_wedding_baby" in DONE
+        next:
+          - samantha_event_D01_wait
+          - samantha_event_B04
+      divorce:
+        description: Samantha found out I knew about cheating and she seemed to accept my apology
+        conditions:
+          - '"samantha_event_B03" in DONE'
+          - samantha.flags.knows_ryancheats
+          - samantha.flags.excused
+        next: elove160
+
+  samantha_event_B04:
+    name: Be home if the afternoon or evening
+    related_event: samantha_event_B04
+    conditions:
+      - '"samantha_event_B03" in DONE'
+      - samantha.flags.unknown_father
+    outcome:
+      description: Surprise! Samantha told me she is pregnant
+      next: None
+      condition: '"samantha_event_B04" in DONE'
+
+  clove160:
+    name: Get to know Samantha better
+    conditions:
+      - '"samantha_event_B03" in DONE'
+      - samantha.flags.excused
+    percentage:
+      value: samantha.love.val
+      scale: 160
+    outcome:
+      hide: True
+      conditions: samantha.love >= 160
+
+  samantha_event_C01:
+    name: Wait for Samantha to call
+    related_event: samantha_event_C01
+    conditions:
+      - '"samantha_event_B03" in DONE'
+      - samantha.flags.excused
+    outcomes:
+      complete:
+        condition: '"samantha_event_C01" in DONE'
+      divorced:
+        condition: samantha.flags.divorced
+        icon: fail
+        next: None
+
+  clove170:
+    name: Get to know Samantha better
+    percentage:
+      value: samantha.love.val
+      scale: 170
+    outcome:
+      hide: True
+      conditions: samantha.love >= 170
+
+  samantha_event_C02:
+    name: See Samantha in the bakery
+    related_event: samantha_event_C02
+    outcomes:
+      threesome:
+        description: Samantha and Ryan offered a threesome and I said I was interested
+        conditions:
+          - '"samantha_event_C02" in DONE'
+          - game.flags.sam_ryan_threesome
+      declined:
+        description: Samantha and Ryan offered a threesome and I said no.
+        next: None
+        conditions:
+          - '"samantha_event_C02" in DONE'
+          - not game.flags.sam_ryan_threesome
+
+  clove180:
+    name: Get to know Samantha better
+    percentage:
+      value: samantha.love.val
+      scale: 180
+    outcome:
+      hide: True
+      conditions: samantha.love >= 180
+
+  samantha_event_C03:
+    name: Have a threesome with Ryan and Samantha at home on Friday evening
+    related_event: samantha_event_C03
+    outcome:
+      condition: '"samantha_event_C03" in DONE'
+      next: None
+
+  samantha_event_D01_wait:
+    name: Samantha cheated on Ryan with me. This story is done.
+    conditions:
+      - '"samantha_event_B03" in DONE'
+      - samantha.flags.knows_ryancheats
+      - samantha.flags.cuck_ryan
+    outcome:
+      condition: True
+      icon: stalled
+      next: None
+
+  elove160:
+    name: Get to know Samantha better
+    conditions:
+      - '"samantha_event_D05" in DONE or "samantha_event_D05B" in DONE or samantha.flags.excused'
+    percentage:
+      value: samantha.love.val
+      scale: 160
+    outcome:
+      hide: True
+      conditions: samantha.love >= 160
+
+  samantha_event_E01:
+    name: Wait for Samantha to call
+    related_event: samantha_event_E01
+    conditions:
+      - '"samantha_event_D05" in DONE or "samantha_event_D05B" in DONE or samantha.flags.excused'
+    outcome:
+      description: Samantha and Ryan are getting divorced. Ryan did not take it well.
+      condition: '"samantha_event_E01" in DONE'
+      next: divorce
+
+  kiss:
+    name: Kiss Samantha
+    conditions:
+      - '"samantha_event_B03" in DONE'
+      - samantha.flags.knows_ryancheats
+      - samantha.flags.cuck_ryan
+    outcome:
+      condition: samantha.flags.kiss >= 1
+      next: None
+
+  date:
+    name: Go on a date with Samantha
+    condition: True
+    outcome:
+      condition: samantha.flags.dates >= 1
+      next: None
+
+  sex:
+    name: Have sex with Samantha
+    condition: True
+    outcome:
+      condition: samantha.sexperience >= 1
+      next: None
+
+  love:
+    name: Get Samantha to fall in love with me
+    condition: True
+    percentage:
+      value: samantha.love.val
+      scale: 200
+    outcome:
+      condition: samantha.love.val == 200
+      next: None
+
+  ring:
+    name: Buy a wedding ring
+    condition: True
+    outcome:
+      condition: hero.has_item("wedding_ring")
+
+  propose:
+    name: Propose to Samantha
+    condition: hero.has_item("wedding_ring")
+    outcome:
+      condition: samantha.flags.engagedmike
+      next: None
+
+  preg:
+    name: Get Samantha pregnant
+    optional: True
+    condition: True
+    outcome:
+      condition: samantha.flags.pregnancies_number > 0
+      next: None
+
+  slave:
+    name: Make Samantha my sex slave
+    optional: True
+    condition: True
+    outcome:
+      condition: samantha.is_sex_slave
+      next: None

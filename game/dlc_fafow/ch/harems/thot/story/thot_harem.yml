@@ -1,0 +1,192 @@
+name: Thot Harem
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Thot_Harem"
+short: "{image=notify alexis}{image=notify reona} · Thot Harem"
+type: harem
+description: "Things are going well with both Alexis and Reona. I'm not sure what will happen when they meet."
+participants:
+  - alexis
+  - reona
+conditions:
+  - alexis.love >= 40
+  - reona.love >= 40
+  - '"alexis_event_02" in DONE'
+  - '"reona_event_01" in DONE'
+
+outcomes:
+  audrey_join:
+    description: Audrey joined that horny group of ours.
+    conditions:
+      - '"thot_harem_event_06" in DONE'
+  alexis_left:
+    description: Unfortunately, Alexis left.
+    conditions:
+      - alexis.is_gone_forever
+    icon: fail
+  reona_left:
+    description: Unfortunately, Reona left.
+    conditions:
+      - reona.is_gone_forever
+    icon: fail
+  thot_harem_alexis_reona:
+    conditions:
+      - Harem.together(alexis, reona, name='thot')
+      - alexis.flags.engagedmike
+      - reona.flags.engagedmike
+    description: Alexis and Reona agreed to marry me!
+  thot_harem_alexis_audrey_reona:
+    conditions:
+      - Harem.together(alexis, audrey, reona, name='thot')
+      - alexis.flags.engagedmike
+      - audrey.flags.engagedmike
+      - reona.flags.engagedmike
+    description: Alexis, Audrey and Reona agreed to marry me!
+
+steps:
+  thot_harem_event_01:
+    name: Go on a date with Alexis at the mall while Reona is somewhere in it
+    related_event: thot_harem_event_01
+    conditions:
+      - alexis.love >= 40
+      - reona.love >= 40
+      - '"alexis_event_02" in DONE'
+      - '"reona_event_02" in DONE'
+    outcome:
+      condition: '"thot_harem_event_01" in DONE'
+
+  reona_love_100:
+    name: Get to know Reona better
+    percentage:
+      value: reona.love.val
+      scale: 100
+    outcome:
+      hide: True
+      conditions: reona.love >= 100
+
+  thot_harem_event_02:
+    name: Go see Reona
+    related_event: thot_harem_event_02
+    conditions:
+      - reona.love >= 100
+      - '"thot_harem_event_01" in DONE'
+    outcome:
+      condition: '"thot_harem_event_02" in DONE'
+
+  reona_love_130:
+    name: Get to know Reona better
+    percentage:
+      value: reona.love.val
+      scale: 130
+    outcome:
+      hide: True
+      conditions: reona.love >= 130
+
+  thot_harem_event_03:
+    name: Go to the northside of the mall while Reona is around
+    related_event: thot_harem_event_03
+    conditions:
+      - reona.love >= 130
+      - alexis.love >= 130
+      - '"thot_harem_event_02" in DONE'
+    outcome:
+      condition: '"thot_harem_event_03" in DONE'
+
+  thot_harem_event_04:
+    name: "On a spring or summer evening, be in the livingroom while [bree.name] and Sasha are not here"
+    related_event: thot_harem_event_04
+    conditions:
+      - reona.love >= 170
+      - alexis.love >= 170
+      - '"thot_harem_event_03" in DONE'
+    outcomes:
+      audrey_gone:
+        condition: audrey.is_gone_forever
+        next: None
+      success:
+        condition: '"thot_harem_event_04" in DONE'
+
+  alexis_love_200:
+    name: Get to know Alexis better
+    percentage:
+      value: alexis.love.val
+      scale: 200
+    outcome:
+      hide: True
+      conditions: alexis.love >= 200
+
+  alexis_sub_90:
+    name: Make Alexis more submissive
+    percentage:
+      value: alexis.sub.val
+      scale: 90
+    outcome:
+      hide: True
+      condition: anna.sub >= 90
+
+  reona_love_200:
+    name: Get to know Reona better
+    percentage:
+      value: reona.love.val
+      scale: 200
+    outcome:
+      hide: True
+      conditions: reona.love >= 200
+
+  reona_sub_90:
+    name: Make Reona more submissive
+    percentage:
+      value: reona.sub.val
+      scale: 90
+    outcome:
+      hide: True
+      condition: anna.sub >= 90
+
+  audrey_love_200:
+    name: Get to know Audrey better
+    percentage:
+      value: audrey.love.val
+      scale: 200
+    outcome:
+      hide: True
+      conditions: audrey.love >= 200
+
+  audrey_sub_90:
+    name: Make Audrey more submissive
+    percentage:
+      value: audrey.sub.val
+      scale: 90
+    outcome:
+      hide: True
+      condition: anna.sub >= 90
+
+  thot_harem_event_05:
+    name: Invite Alexis or Reona on a date together
+    conditions:
+      - not audrey.is_gone_forever
+      - reona.love >= 200
+      - alexis.love >= 200
+      - audrey.love >= 200
+      - reona.sub >= 90
+      - alexis.sub >= 90
+      - audrey.sub >= 90
+      - '"thot_harem_event_04" in DONE'
+    outcomes:
+      complete:
+        conditions:
+          - '"thot_harem_event_05" in DONE'
+          - '"thot_harem_event_06" not in DONE'
+        next: thot_harem_stalled
+      full:
+        conditions:
+          - '"thot_harem_event_05" in DONE'
+          - '"thot_harem_event_06" in DONE'
+
+  thot_harem_event_06:
+    name: Have fun with Alexis, Audrey and Reona
+    outcome:
+      condition: '"thot_harem_event_06" in DONE'
+
+#  thot_harem_stalled:
+#    icon: stalled
+#    name: That's all of Thot Harem story for now.
+#    outcome:
+#      condition: False

@@ -1,0 +1,283 @@
+name: Morgan and Kleio
+display_name: Pixie Harem
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Pixie_Harem"
+short: "{image=notify morgan}{image=notify kleio} · Pixie Harem"
+type: harem
+description: "It turns out that Morgan was Kleio's girlfriend, and she is the one that dumped Kleio via text."
+participants:
+  - kleio
+  - morgan
+condition: '"morgan_kleio_event_01" in DONE'
+
+start:
+  - charm50
+  - propose_kleio_morgan
+
+outcomes:
+  bothgone:
+    description: Kleio and Morgan have both left and are no longer part of my life.
+    conditions:
+      - kleio.is_gone_forever
+      - morgan.is_gone_forever
+    icon: fail
+  kgone:
+    description: Kleio has left and is no longer part of my life.
+    conditions:
+      - kleio.is_gone_forever
+    icon: fail
+  mgone:
+    description: Morgan has left and is no longer part of my life.
+    conditions:
+      - morgan.is_gone_forever
+    icon: fail
+  harem_refused:
+    description: I didn't think a relationship with both Kleio and Morgan was a good idea.
+    icon: fail
+    conditions:
+      - '"morgan_kleio_event_03_alternate" in DONE'
+      - 'not Harem.together("kleio", "morgan", name="pixie")'
+  pixie_harem:
+    conditions:
+      - Harem.together(kleio, morgan, name='pixie')
+      - kleio.flags.engagedmike
+      - morgan.flags.engagedmike
+    description: Kleio and Morgan agreed to marry me!
+
+steps:
+  charm50:
+    name: Be charming enough to talk to the girls about this
+    outcome:
+      next:
+        - mlove50
+        - klove50
+      condition: hero.charm >= 50
+
+  mlove50:
+    name: Get to know Morgan better
+    percentage:
+      value: morgan.love.val
+      scale: 50
+    outcome:
+      hide: True
+      conditions: morgan.love >= 50
+
+  morgan_kleio_event_02A:
+    name: Talk to Morgan about her breakup
+    related_event: morgan_kleio_event_02A
+    outcome:
+      condition: '"morgan_kleio_event_02A" in DONE'
+
+  msex1:
+    name: Have sex with Morgan
+    outcome:
+      next:
+        - mlove125
+        - mlesbian9
+      hide: True
+      condition: morgan.sexperience >= 1
+
+  mlove125:
+    name: Get to know Morgan better
+    percentage:
+      value: morgan.love.val
+      scale: 125
+    outcomes:
+      success:
+        hide: True
+        conditions:
+          - morgan.sexperience >= 1
+          - morgan.love >= 125
+          - morgan.lesbian >= 9
+          - kleio.sexperience >= 1
+          - kleio.love >= 125
+          - kleio.lesbian >= 9
+        next:
+          - morgan_kleio_event_03
+          - morgan_kleio_event_03_alternate
+      small_success:
+        hide: True
+        conditions:
+          - morgan.love >= 125
+        next: None
+
+  mlesbian9:
+    name: Make sure Morgan likes girls
+    percentage:
+      value: morgan.lesbian.val
+      scale: 9
+    outcomes:
+      success:
+        hide: True
+        conditions:
+          - morgan.sexperience >= 1
+          - morgan.love >= 125
+          - morgan.lesbian >= 9
+          - kleio.sexperience >= 1
+          - kleio.love >= 125
+          - kleio.lesbian >= 9
+        next:
+          - morgan_kleio_event_03
+          - morgan_kleio_event_03_alternate
+      small_success:
+        hide: True
+        conditions:
+          - morgan.lesbian >= 9
+        next: None
+
+  klove50:
+    name: Get to know Kleio better
+    percentage:
+      value: kleio.love.val
+      scale: 50
+    outcome:
+      hide: True
+      conditions: kleio.love >= 50
+
+  morgan_kleio_event_02B:
+    name: Talk to Kleio about her breakup
+    related_event: morgan_kleio_event_02B
+    outcome:
+      next: ksex1
+      condition: '"morgan_kleio_event_02B" in DONE'
+
+  ksex1:
+    name: Have sex with Kleio
+    outcome:
+      next:
+        - klove125
+        - klesbian9
+      hide: True
+      condition: kleio.sexperience >= 1
+
+  klove125:
+    name: Get to know Kleio better
+    percentage:
+      value: kleio.love.val
+      scale: 125
+    outcomes:
+      success:
+        hide: True
+        conditions:
+          - morgan.sexperience >= 1
+          - morgan.love >= 125
+          - morgan.lesbian >= 9
+          - kleio.sexperience >= 1
+          - kleio.love >= 125
+          - kleio.lesbian >= 9
+        next:
+          - morgan_kleio_event_03
+          - morgan_kleio_event_03_alternate
+      small_success:
+        hide: True
+        conditions:
+          - kleio.love >= 125
+        next: None
+
+  klesbian9:
+    name: Make sure Kleio likes girls
+    percentage:
+      value: kleio.lesbian.val
+      scale: 9
+    outcomes:
+      success:
+        hide: True
+        conditions:
+          - morgan.sexperience >= 1
+          - morgan.love >= 125
+          - morgan.lesbian >= 9
+          - kleio.sexperience >= 1
+          - kleio.love >= 125
+          - kleio.lesbian >= 9
+        next:
+          - morgan_kleio_event_03
+          - morgan_kleio_event_03_alternate
+      small_success:
+        hide: True
+        conditions:
+          - kleio.lesbian >= 9
+        next: None
+
+  morgan_kleio_event_03:
+    name: Meet Morgan and Kleio in the pub
+    related_event: morgan_kleio_event_03
+    conditions:
+      - '"morgan_kleio_event_02A" in DONE'
+      - '"morgan_kleio_event_02B" in DONE'
+      - '"morgan_kleio_event_03_alternate" not in DONE'
+      - morgan.sexperience >= 1
+      - morgan.love >= 125
+      - morgan.lesbian >= 9
+      - kleio.sexperience >= 1
+      - kleio.love >= 125
+      - kleio.lesbian >= 9
+    outcomes:
+      fail:
+        next: None
+        icon: fail
+        conditions:
+          - '"morgan_kleio_event_03" in DONE'
+          - kleio.is_gone_forever or morgan.is_gone_forever
+      success:
+        conditions:
+          - '"morgan_kleio_event_03" in DONE'
+          - 'Harem.together("kleio", "morgan", name="pixie")'
+        next: morgan_kleio_event_04
+      03_alternate_done:
+        next: None
+        hide: True
+        condition: '"morgan_kleio_event_03_alternate" in DONE'
+
+  morgan_kleio_event_03_alternate:
+    name: Interact with Kleio
+    related_event: morgan_kleio_event_03_alternate
+    conditions:
+      - '"morgan_kleio_event_02A" in DONE'
+      - '"morgan_kleio_event_02B" in DONE'
+      - '"morgan_kleio_event_03" not in DONE'
+      - morgan.sexperience >= 1
+      - morgan.love >= 125
+      - morgan.lesbian >= 9
+      - kleio.sexperience >= 1
+      - kleio.love >= 125
+      - kleio.lesbian >= 9
+    outcomes:
+      fail:
+        next: None
+        icon: fail
+        conditions:
+          - '"morgan_kleio_event_03_alternate" in DONE'
+          - 'not Harem.together("kleio", "morgan", name="pixie")'
+      success:
+        conditions:
+          - '"morgan_kleio_event_03_alternate" in DONE'
+          - 'Harem.together("kleio", "morgan", name="pixie")'
+        next: morgan_kleio_event_04
+      03_done:
+        next: None
+        hide: True
+        condition: '"morgan_kleio_event_03" in DONE'
+
+  morgan_kleio_event_04:
+    name: Have a few drinks with Kleio and Morgan at the pub
+    related_event: morgan_kleio_event_04
+    outcome:
+      condition: '"morgan_kleio_event_04" in DONE'
+
+  morgan_kleio_event_05:
+    name: Have a few drinks while Kleio and Morgan are at the pub
+    related_event: morgan_kleio_event_05
+    outcomes:
+      success:
+        conditions:
+           - '"morgan_kleio_event_05" in DONE'
+           - '"pixie_second_threesome" in DONE'
+        next: None
+
+  propose_kleio_morgan:
+    name: Propose to Kleio and Morgan
+    conditions:
+      - Harem.together("kleio", "morgan", name="pixie")
+    outcome:
+      conditions:
+        - morgan.flags.engagedmike
+        - kleio.flags.engagedmike

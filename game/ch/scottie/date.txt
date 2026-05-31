@@ -1,0 +1,223 @@
+[
+    <renpy.ast.Label 
+        .block = [
+            <renpy.ast.Say 
+                .col_offset = 0,
+                .filename = 'game/ch/scottie/date.rpy',
+                .linenumber = 2,
+                .name_serial = 290528,
+                .name_version = 1697835650,
+                .what = "Scottie tears into the burger like he's trying to prove a point.",
+                .who_fast = False
+            >,
+            <renpy.ast.Say 
+                .col_offset = 0,
+                .filename = 'game/ch/scottie/date.rpy',
+                .linenumber = 3,
+                .name_serial = 290529,
+                .name_version = 1697835650,
+                .what = "The trouble is that I'm not sure if it's that he's a red-blooded, meat-eater.",
+                .who_fast = False
+            >,
+            <renpy.ast.Say 
+                .col_offset = 0,
+                .filename = 'game/ch/scottie/date.rpy',
+                .linenumber = 4,
+                .name_serial = 290530,
+                .name_version = 1697835650,
+                .what = "Or else that he hasn't had a decent meal in more than a day!",
+                .who_fast = False
+            >,
+            <renpy.ast.Return 
+                .col_offset = 0,
+                .filename = 'game/ch/scottie/date.rpy',
+                .linenumber = 5,
+                .name_serial = 290531,
+                .name_version = 1697835650
+            >
+        ],
+        .col_offset = 0,
+        .filename = 'game/ch/scottie/date.rpy',
+        .linenumber = 1
+    >,
+    <renpy.ast.Label 
+        .block = [
+            <renpy.ast.Say 
+                .col_offset = 0,
+                .filename = 'game/ch/scottie/date.rpy',
+                .linenumber = 8,
+                .name_serial = 290532,
+                .name_version = 1697835650,
+                .what = 'His drink in one hand, Scottie seems to instantly relax and loosen up.',
+                .who_fast = False
+            >,
+            <renpy.ast.Say 
+                .col_offset = 0,
+                .filename = 'game/ch/scottie/date.rpy',
+                .linenumber = 9,
+                .name_serial = 290533,
+                .name_version = 1697835650,
+                .what = 'He leans back in his chair, regarding me with a smile.',
+                .who_fast = False
+            >,
+            <renpy.ast.Say 
+                .col_offset = 0,
+                .filename = 'game/ch/scottie/date.rpy',
+                .linenumber = 10,
+                .name_serial = 290534,
+                .name_version = 1697835650,
+                .what = 'Which, oddly for him, is almost suave.',
+                .who_fast = False
+            >,
+            <renpy.ast.Return 
+                .col_offset = 0,
+                .filename = 'game/ch/scottie/date.rpy',
+                .linenumber = 11,
+                .name_serial = 290535,
+                .name_version = 1697835650
+            >
+        ],
+        .col_offset = 0,
+        .filename = 'game/ch/scottie/date.rpy',
+        .linenumber = 7
+    >,
+    <renpy.ast.Label 
+        .block = [
+            <renpy.ast.Say 
+                .col_offset = 0,
+                .filename = 'game/ch/scottie/date.rpy',
+                .linenumber = 14,
+                .name_serial = 290536,
+                .name_version = 1697835650,
+                .what = 'Scottie groans audibly when I suggest that we play darts.',
+                .who_fast = False
+            >,
+            <renpy.ast.Say 
+                .col_offset = 0,
+                .filename = 'game/ch/scottie/date.rpy',
+                .linenumber = 15,
+                .name_serial = 290537,
+                .name_version = 1697835650,
+                .what = 'And then he proceeds to moan throughout the game too.',
+                .who_fast = False
+            >,
+            <renpy.ast.Say 
+                .col_offset = 0,
+                .filename = 'game/ch/scottie/date.rpy',
+                .linenumber = 16,
+                .name_serial = 290538,
+                .name_version = 1697835650,
+                .what = 'Not even trying to pretend for the sake of my feelings.',
+                .who_fast = False
+            >,
+            <renpy.ast.Say 
+                .col_offset = 0,
+                .filename = 'game/ch/scottie/date.rpy',
+                .linenumber = 17,
+                .name_serial = 290539,
+                .name_version = 1697835650,
+                .what = "My guess is that he's either short-sighted, or that he just sucks.",
+                .who_fast = False
+            >,
+            <renpy.ast.Return 
+                .col_offset = 0,
+                .filename = 'game/ch/scottie/date.rpy',
+                .linenumber = 18,
+                .name_serial = 290540,
+                .name_version = 1697835650
+            >
+        ],
+        .col_offset = 0,
+        .filename = 'game/ch/scottie/date.rpy',
+        .linenumber = 13
+    >,
+    <renpy.ast.Label 
+        .block = [
+            <renpy.ast.Say 
+                .col_offset = 0,
+                .filename = 'game/ch/scottie/date.rpy',
+                .linenumber = 21,
+                .name_serial = 290541,
+                .name_version = 1697835650,
+                .what = 'Scottie tries to pass himself off as some kind of pool wizard.',
+                .who_fast = False
+            >,
+            <renpy.ast.Say 
+                .col_offset = 0,
+                .filename = 'game/ch/scottie/date.rpy',
+                .linenumber = 22,
+                .name_serial = 290542,
+                .name_version = 1697835650,
+                .what = "But he's so bad that it's almost painful to watch.",
+                .who_fast = False
+            >,
+            <renpy.ast.Say 
+                .col_offset = 0,
+                .filename = 'game/ch/scottie/date.rpy',
+                .linenumber = 23,
+                .name_serial = 290543,
+                .name_version = 1697835650,
+                .what = 'He takes an age to line up his cue, and then botches the easiest of shots every time!',
+                .who_fast = False
+            >,
+            <renpy.ast.Return 
+                .col_offset = 0,
+                .filename = 'game/ch/scottie/date.rpy',
+                .linenumber = 24,
+                .name_serial = 290544,
+                .name_version = 1697835650
+            >
+        ],
+        .col_offset = 0,
+        .filename = 'game/ch/scottie/date.rpy',
+        .linenumber = 20
+    >,
+    <renpy.ast.Label 
+        .block = [
+            <renpy.ast.Say 
+                .col_offset = 0,
+                .filename = 'game/ch/scottie/date.rpy',
+                .linenumber = 27,
+                .name_serial = 290545,
+                .name_version = 1697835650,
+                .what = 'The mention of another round gets a roar of approval from Scottie.',
+                .who_fast = False
+            >,
+            <renpy.ast.Say 
+                .col_offset = 0,
+                .filename = 'game/ch/scottie/date.rpy',
+                .linenumber = 28,
+                .name_serial = 290546,
+                .name_version = 1697835650,
+                .what = 'He actually lifts his empty glass in the air and cheers.',
+                .who_fast = False
+            >,
+            <renpy.ast.Say 
+                .col_offset = 0,
+                .filename = 'game/ch/scottie/date.rpy',
+                .linenumber = 29,
+                .name_serial = 290547,
+                .name_version = 1697835650,
+                .what = "Even more so when he learns that I'm going to be the one paying for it!",
+                .who_fast = False
+            >,
+            <renpy.ast.Return 
+                .col_offset = 0,
+                .filename = 'game/ch/scottie/date.rpy',
+                .linenumber = 30,
+                .name_serial = 290548,
+                .name_version = 1697835650
+            >
+        ],
+        .col_offset = 0,
+        .filename = 'game/ch/scottie/date.rpy',
+        .linenumber = 26
+    >,
+    <renpy.ast.Return 
+        .col_offset = 0,
+        .filename = 'game/ch/scottie/date.rpy',
+        .linenumber = 31,
+        .name_serial = 290549,
+        .name_version = 1697835650
+    >
+]

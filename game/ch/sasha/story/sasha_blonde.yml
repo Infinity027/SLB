@@ -1,0 +1,38 @@
+name: Sasha as a Blonde
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Sasha#Sasha_likes_blondes"
+short: "{image=notify sasha} · Blonde"
+description: Sasha is jealous of Bree's beautiful blonde hair.
+condition: game.flags.LikesBlondes
+participants:
+  - sasha
+
+outcomes:
+  blonde:
+    description: Sasha dyed her hair blonde.
+    conditions:
+      - '"sasha_likes_blondes_2" in DONE'
+      - game.flags.LikesBlondes
+  brunette:
+    description: Sasha dyed her hair blonde, but I told her to go back.
+    conditions:
+      - '"sasha_likes_blondes_2" in DONE'
+      - not game.flags.LikesBlondes
+      - not game.flags.LikesBlondesDelay
+  gone:
+    condition: sasha.is_gone_forever
+    hide_story: True
+
+steps:
+  sasha_likes_blondes_2:
+    name: Wait to see what Sasha does.
+    related_event: sasha_likes_blondes_2
+    condition: game.flags.LikesBlondes
+    outcome:
+      condition: '"sasha_likes_blondes_2" in DONE'
+
+  sasha_likes_blondes_3:
+    name: Wait for Sasha to dye her hair back.
+    condition: game.flags.LikesBlondesDelay > 0
+    outcome:
+      next: brunette
+      condition: not game.flags.LikesBlondesDelay

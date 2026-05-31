@@ -1,0 +1,173 @@
+---
+name: Amy
+class: Girl
+age: 21
+status: friend
+gender: female
+flags:
+  hidden: True
+  nokiss: True
+  nodate: True
+  nosex: True
+  slapassmod: -15
+attributes:
+  love:
+    min: 0
+    max: 20
+    default: 0
+  sub:
+    min: 0
+    max: 10
+    default: 0
+  lesbian:
+    min: 0
+    max: 20
+    default: 10
+  sexperience:
+    min: 0
+    max: null
+    default: 0
+piercings:
+  navel:
+    pierced: false
+  clit:
+    pierced: true
+  nipples:
+    pierced: false
+  nose:
+    pierced: true
+birthday:
+  - fall
+  - 18
+traits:
+  - rebel
+  - trashy
+  - music
+  - not_princess
+  - not_family
+desire_factors:
+  - charm
+  - knowledge
+  - fitness
+  - playful
+  - not_home
+  - not_park
+heronickname:
+  Second string: amy.flags.mikeNickname in nickname_second_string
+schedule:
+  default:
+    '12345':
+      '2':
+        - room: pub
+          activity: drink
+          clothes: casual
+      '3':
+        - room: amyhome
+          activity: casual
+          clothes: naked
+      '9':
+        - room: amyhome
+          activity: sleep
+          clothes: naked
+      '11':
+        - room: electronic
+          activity: work
+          clothes: work
+      '13':
+        - room: coffeeshop
+          activity: eat
+          clothes: work
+      '18':
+        - room: electronic
+          activity: work
+          clothes: work
+      '20':
+        - room: pub
+          activity: drink
+          clothes: casual
+      '21':
+        - room: alley
+          activity: stuff
+          clothes: casual
+      '24':
+        - room: nightclubbar
+          activity: drink
+          clothes: date
+    '6':
+      '1':
+        - room: pub
+          activity: drink
+          clothes: casual
+      '2':
+        - room: amyhome
+          activity: none
+          clothes: casual
+      '8':
+        - room: amyhome
+          activity: sleep
+          clothes: naked
+      '10':
+        - room: bookstore
+          activity: read
+          clothes: casual
+      '11':
+        - room: clothesshop
+          activity: shopping
+          clothes: casual
+      '13':
+        - room: pub
+          activity: eat
+          clothes: casual
+      '18':
+        - room: electronic
+          activity: work
+          clothes: work
+      '20':
+        - room: cinema
+          activity: movie
+          clothes: casual
+      '21':
+        - room: sexshop
+          activity: shopping
+          clothes: casual
+      '23':
+        - room: nightclubbar
+          activity: drink
+          clothes: date
+    '7':
+      '4':
+        - room: pub
+          activity: drink
+          clothes: casual
+      '10':
+        - room: amyhome
+          activity: sleep
+          clothes: naked
+      '12':
+        - room: amyhome
+          activity: none
+          clothes: casual
+      '15':
+        - room: amyhome
+          activity: none
+          clothes: casual
+      '16':
+        - room: bakery
+          activity: eat
+          clothes: casual
+      '18':
+        - room: bookstore
+          activity: read
+          clothes: casual
+      '20':
+        - room: cemetry
+          activity: dance
+          clothes: casual
+      '22':
+        - room: cinema
+          activity: movie
+          clothes: casual
+      '23':
+        - room: alley
+          activity: stuff
+          clothes: casual

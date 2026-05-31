@@ -1,0 +1,74 @@
+name: The Dream Girl
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Emma"
+short: Dream Girl
+description:
+  - description: I looked all over for the dream girl, but she's nowhere to be found.
+    conditions:
+      - '"look_for_emma_park" in DONE'
+      - '"look_for_emma_mall" in DONE'
+      - '"look_for_emma_gym" in DONE'
+      - '"look_for_emma_university" in DONE'
+  - description: I had this really intense dream about a girl, and then I saw her in the park! Who is the dream girl?
+    condition: True
+condition: '"emma_event_01" in DONE'
+
+outcomes:
+  found:
+    condition: '"emma_event_02" in DONE'
+    description: I finally found her! Her name is Emma and somehow she's one of Samantha's best friends.
+  justadream:
+    description: She was just a dream, and eventually she'll fade from my memory like they always do.
+    conditions:
+      - '"emma_event_01" in DONE'
+      - emma.is_gone_forever
+    icon: fail
+
+steps:
+  emma_look_park:
+    name: Look for the dream girl in the park
+    related_event: look_for_emma_park
+    condition: '"emma_event_01" in DONE'
+    outcome:
+      icon: fail
+      description: I did not find her in the park.
+      condition: '"look_for_emma_park" in DONE'
+
+  emma_look_mall:
+    name: Look for the dream girl in the mall
+    related_event: look_for_emma_mall
+    condition: '"emma_event_01" in DONE'
+    outcome:
+      icon: fail
+      description: I did not find her in the mall.
+      condition: '"look_for_emma_mall" in DONE'
+
+  emma_look_gym:
+    name: Look for the dream girl in the gym
+    related_event: look_for_emma_gym
+    condition: '"emma_event_01" in DONE'
+    outcome:
+      icon: fail
+      description: I did not find her in the gym.
+      condition: '"look_for_emma_gym" in DONE'
+
+  emma_look_university:
+    name: Look for the dream girl in the university
+    related_event: look_for_emma_university
+    condition: '"emma_event_01" in DONE'
+    outcome:
+      icon: fail
+      description: I did not find her in the university.
+      condition: '"look_for_emma_university" in DONE'
+
+  emma_does_not_exist:
+    name: I'm out of ideas. Maybe I only imagined seeing her?
+    icon: stalled
+    related_event: emma_event_02
+    conditions:
+      - '"look_for_emma_park" in DONE'
+      - '"look_for_emma_mall" in DONE'
+      - '"look_for_emma_gym" in DONE'
+      - '"look_for_emma_university" in DONE'
+    outcome:
+      description: And then she turns up in a place I was not expecting!
+      condition: '"emma_event_02" in DONE'

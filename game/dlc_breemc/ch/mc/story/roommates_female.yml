@@ -1,0 +1,81 @@
+name: The Roommates
+short: "{image=notify sasha}{image=notify mike} · Home"
+sort: "0003"
+type: generic
+description: "I just moved in. I should get to know my roommates, Sasha and [mike.name]"
+participants:
+  - hero
+  - mike
+  - sasha
+condition: hero.is_female
+
+outcome:
+  condition: all(step.complete for step in self.parent.steps.values() if not step.optional)
+  description: "I've gotten used to the new roommates, and have a pretty good feel for how life will go."
+
+steps:
+  mike_tv:
+    name: "Watch TV with [mike.name]"
+    related_event: watch_tv_with_mike
+    condition: True
+    outcome:
+      condition: '"watch_tv_with_mike" in DONE'
+
+  sasha_tv:
+    name: Watch TV with Sasha
+    related_event: watch_tv_with_sasha
+    toggle: True
+    condition: not sasha.is_gone_forever
+    outcome:
+      condition: '"watch_tv_with_sasha" in DONE'
+
+  watch_tv_with_everyone:
+    name: "Watch TV with [mike.name] and Sasha"
+    condition: True
+    outcome:
+      condition: '"watch_tv_with_everyone_female" in DONE'
+
+  have_a_meal_with_mike:
+    name: "Have a meal with [mike.name]"
+    condition: True
+    outcome:
+      condition: 'hero.flags.mike_meal or hero.flags.meal_mike'
+
+  have_a_meal_with_sasha:
+    name: Have a meal with Sasha
+    condition: True
+    outcome:
+      condition: 'hero.flags.sasha_meal or hero.flags.meal_sasha'
+
+  have_a_meal_with_everyone:
+    name: "Have a meal with [mike.name] and Sasha"
+    condition: True
+    outcome:
+      condition: 'hero.flags.mike_sasha_meal or hero.flags.meal_mike_sasha'
+
+  do_chores:
+    name: Do my chores
+    condition: True
+    percentage:
+      value: game.flags.chores
+      scale: 100
+    outcome:
+      description: I did my chores this week, but I have to keep doing them?!
+      condition: game.flags.chores >= 100
+
+  sasha_masturbation:
+    name: Peep on Sasha masturbating in her bedroom
+    related_event: sasha_masturbation_female
+    optional: True
+    condition: True
+    outcome:
+      condition: '"sasha_masturbation_female" in DONE'
+
+  month:
+    name: Play through the first month
+    condition: True
+    percentage:
+      value: game.days_played
+      scale: 30
+    outcome:
+      condition: game.days_played >= 30

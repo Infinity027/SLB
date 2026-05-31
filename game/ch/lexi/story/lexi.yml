@@ -1,0 +1,399 @@
+name: Lexi
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Lexi"
+short: "{image=notify lexi} · Lexi"
+description: "I met Lexi on the street, where she lured me into an alley and her friend tried to mug me."
+participants:
+  - lexi
+conditions:
+  - hero.is_male
+  - '"lexi_event_01" in DONE'
+  - 'game.flags.lexiStart or "lexi_event_02" in DONE or "lexi_event_02b" in DONE'
+
+outcomes:
+  gone:
+    conditions:
+      - lexi.is_gone_forever
+    description: Lexi has left and is no longer part of my life.
+    icon: fail
+  engaged:
+    condition: lexi.flags.engagedmike
+    description: Lexi has agreed to marry me!
+
+steps:
+  lexi_start:
+    name: Meet Lexi in the nightclub
+    related_event: lexi_start
+    condition: '"lexi_event_01" in DONE'
+    outcomes:
+      bj:
+        description: Lexi gave me a blowjob and stole my wallet
+        conditions:
+          - '"lexi_start" in DONE'
+          - lexi.flags.walletamount
+        next:
+          - lexi_event_02
+          - lexi_event_02b
+          - lexi_wait_for_winter
+      nobj:
+        description: Lexi offered me a blowjob and I declined.
+        icon: fail
+        next: gone
+        conditions:
+          - '"lexi_start" in DONE'
+          - not lexi.flags.walletamount
+
+  lexi_event_02:
+    name: Wait for Lexi to call
+    related_event: lexi_event_02
+    toggle: True
+    conditions:
+      - '"lexi_start" in DONE'
+      - game.season in [0, 1]
+    outcomes:
+      complete:
+        condition: '"lexi_event_02" in DONE'
+        next: lexi_look_wait
+      stalled:
+        conditions: '"lexi_event_02b" in DONE'
+        hide: True
+
+  lexi_wait_for_winter:
+    name: Winter is coming
+    toggle: True
+    conditions:
+      - '"lexi_start" in DONE'
+      - game.season == 2
+    outcomes:
+      complete:
+        condition: '"lexi_event_02" in DONE'
+        hide: True
+      stalled:
+        conditions: '"lexi_event_02b" in DONE'
+        hide: True
+
+  lexi_event_02b:
+    name: Wait for Lexi to call
+    related_event: lexi_event_02b
+    toggle: True
+    conditions:
+      - '"lexi_start" in DONE'
+      - game.season == 3
+      - game.day < 25
+    outcomes:
+      complete:
+        condition: '"lexi_event_02b" in DONE'
+        next: lexi_look_wait
+      stalled:
+        conditions: '"lexi_event_02" in DONE'
+        hide: True
+
+  lexi_look_wait:
+    name: Wait a few days
+    condition: '"lexi_event_02" in DONE or "lexi_event_02b" in DONE'
+    percentage:
+      value: lexi.timers.DannyDelay
+      scale: 7
+      invert: True
+    outcome:
+      hide: True
+      conditions:
+        - not lexi.flags.DannyDelay
+
+  lexi_look_wait_friday_saturday:
+    name: Wait Friday or Saturday evening
+    related_event: lexi_event_03_look
+    conditions:
+      - '"lexi_event_02" in DONE or "lexi_event_02b" in DONE'
+      - not lexi.flags.DannyDelay
+    outcome:
+      hide: True
+      conditions:
+        - '"lexi_event_03_look" in DONE'
+
+  lexi_look_park:
+    name: Look for Lexi in the park
+    condition: 'lexi.flags.looking'
+    outcome:
+      icon: fail
+      description: I did not find her in the park.
+      condition: lexi.flags.lookpark
+
+  lexi_look_mall:
+    name: Look for Lexi in the mall
+    condition: 'lexi.flags.looking'
+    outcome:
+      icon: fail
+      description: I did not find her in the mall.
+      condition: lexi.flags.lookmall
+
+  lexi_look_alley:
+    name: Look for Lexi in the alley
+    condition: 'lexi.flags.looking'
+    outcome:
+      icon: fail
+      description: I did not find her in the alley.
+      condition: lexi.flags.lookalley
+
+  lexi_look_club:
+    name: Look for Lexi in the nightclub
+    condition: 'lexi.flags.looking'
+    outcome:
+      icon: fail
+      description: I did not find her in the nightclub.
+      condition: lexi.flags.lookclub
+
+  lexi_vehicle:
+    name: Get a car so I can better search for Lexi
+    outcome:
+      hide: True
+      condition: hero.has_motor_vehicle
+
+  lexi_look_city:
+    name: Spend your lunch hour looking for Lexi in the city
+    related_event: lexi_event_04
+    conditions:
+      - 'lexi.flags.lookpark'
+      - 'lexi.flags.lookmall'
+      - 'lexi.flags.lookalley'
+      - 'lexi.flags.lookclub'
+    outcomes:
+      fight:
+        description: I won't let Danny keep hurting Lexi like that
+        conditions:
+          - "'lexi_event_04' in DONE"
+          - "lexi.love.max != 0"
+      fail:
+        icon: fail
+        next: None
+        description: Lexi now belongs to Danny
+        conditions:
+          - "'lexi_event_04' in DONE"
+          - lexi.is_gone_forever
+
+  love120:
+    name: Get to know Lexi better
+    percentage:
+      value: lexi.love.val
+      scale: 120
+    outcome:
+      hide: True
+      conditions: lexi.love >= 120
+
+  lexi_event_05:
+    name: Wait for it...
+    related_event: lexi_event_05
+    outcomes:
+      win:
+        description: Danny showed up at my house, but I sent him packing
+        next:
+          - love140
+          - lexi_strong
+        conditions:
+          - "'lexi_event_05' in DONE"
+          - "lexi.love.max != 0"
+      lose:
+        icon: fail
+        description: Danny showed up at my house and kicked my ass. I better leave her alone from now on.
+        next: None
+        conditions:
+          - "'lexi_event_05' in DONE"
+          - lexi.is_gone_forever
+
+  lexi_strong:
+    name: Get stronger before I run into Danny again
+    percentage:
+      value: hero.fitness.val + (15 * hero.has_skill("martial_arts"))
+      scale: 75
+    outcome:
+      hide: True
+      condition: (hero.fitness.val + (15 * hero.has_skill("martial_arts"))) >= 75
+
+  love140:
+    name: Get to know Lexi better
+    percentage:
+      value: lexi.love.val
+      scale: 140
+    outcome:
+      hide: True
+      conditions: lexi.love >= 140
+
+  lexi_event_06:
+    name: Make sure to wake up early
+    related_event: lexi_event_06
+    outcomes:
+      camila_helped:
+        description: Danny won't bother Lexi anymore
+        conditions:
+          - "'lexi_event_06' in DONE"
+          - lexi.flags.bypass_danny_corpse
+      danny_killed:
+        description: Danny won't bother Lexi anymore
+        conditions:
+          - "'lexi_event_06' in DONE"
+          - not lexi.flags.bypass_danny_corpse
+
+  love160:
+    name: Get to know Lexi better
+    percentage:
+      value: lexi.love.val
+      scale: 160
+    outcomes:
+      danny_corpse:
+        hide: True
+        conditions:
+          - lexi.love >= 160
+          - not lexi.flags.bypass_danny_corpse
+      not_danny_corpse:
+        hide: True
+        conditions:
+          - lexi.love >= 160
+          - lexi.flags.bypass_danny_corpse
+        next: love200
+
+  lexi_event_07:
+    name: Get rid of Danny's body in a discreet place.
+    conditions:
+      - "'lexi_event_06' in DONE"
+      - not lexi.flags.bypass_danny_corpse
+      - game.flags.dannydead
+    outcome:
+      description: Get that shit out of our lives
+      condition: "'lexi_event_07b' in DONE or 'lexi_event_07a' in DONE"
+
+  love180:
+    name: Get to know Lexi better
+    percentage:
+      value: lexi.love.val
+      scale: 180
+    outcomes:
+      danny_corpse:
+        hide: True
+        conditions:
+          - lexi.love >= 180
+          - not lexi.flags.bypass_danny_corpse
+      not_danny_corpse:
+        hide: True
+        conditions:
+          - lexi.love >= 180
+          - lexi.flags.bypass_danny_corpse
+        next: love200
+
+  lexi_event_08:
+    name: Talk to Lexi
+    related_event: lexi_event_08
+    conditions:
+      - "'lexi_event_07b' in DONE or 'lexi_event_07a' in DONE"
+      - not lexi.flags.bypass_danny_corpse
+    outcome:
+      description: Lexi told me how she feels
+      condition: "'lexi_event_08' in DONE"
+
+  love200:
+    name: Get to know Lexi better
+    percentage:
+      value: lexi.love.val
+      scale: 200
+    outcome:
+      hide: True
+      conditions: lexi.love >= 200
+
+  date_lexi_meet_jack:
+    name: Take Lexi on a date in the mall
+    related_event: date_lexi_meet_jack
+    outcome:
+      condition: '"date_lexi_meet_jack" in DONE'
+      next: None
+
+  lexi_aletta_nightclub:
+    name: Work in my office in the afternoon
+    related_event: lexi_dwayne_event
+    optional: True
+    conditions:
+      - "not aletta.sexperience"
+      - "lexi.sexperience"
+      - '"aletta_event_05" in DONE'
+      - 'not game.flags.dwaynedead'
+      - 'game.flags.promoted'
+    outcomes:
+      fight:
+        description: I met Lexi in the nightclub after work
+        conditions:
+          - "'lexi_dwayne_event' in DONE"
+        next: None
+      fail:
+        icon: fail
+        conditions:
+          - "aletta.sexperience"
+          - 'game.flags.dwaynedead'
+          - "'lexi_dwayne_event' in DONE"
+        next: None
+
+  lexi_fuck_bathroom:
+    name: Fuck Lexi in the shower
+    optional: True
+    conditions:
+      - lexi.love >= 150
+      - Harem.find(lexi, name='home')
+    outcome:
+      condition: lexi.flags.showersex
+      next: None
+
+  date:
+    name: Go on a date with Lexi
+    condition: True
+    outcome:
+      condition: lexi.flags.dates >= 1
+      next: birthday_date
+
+  birthday_date:
+    name: Take Lexi out on a afternoon date for her birthday
+    condition: lexi.flags.dates >= 1
+    outcome:
+      condition: '"lexi_birthday_date_male" in DONE'
+      next: None
+
+  sex:
+    name: Have sex with Lexi
+    condition: True
+    outcome:
+      condition: lexi.sexperience >= 1
+      next: None
+
+  love:
+    name: Get Lexi to fall in love with me
+    condition: True
+    percentage:
+      value: lexi.love.val
+      scale: 200
+    outcome:
+      condition: lexi.love.val == 200
+      next: None
+
+  ring:
+    name: Buy a wedding ring
+    condition: True
+    outcome:
+      condition: hero.has_item("wedding_ring")
+
+  propose:
+    name: Propose to Lexi
+    condition: hero.has_item("wedding_ring")
+    outcome:
+      condition: lexi.flags.engagedmike
+      next: None
+
+  preg:
+    name: Get Lexi pregnant
+    optional: True
+    condition: True
+    outcome:
+      condition: lexi.flags.pregnancies_number > 0
+      next: None
+
+  slave:
+    name: Make Lexi my sex slave
+    optional: True
+    condition: True
+    outcome:
+      condition: lexi.is_sex_slave
+      next: None

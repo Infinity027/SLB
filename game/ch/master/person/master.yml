@@ -1,0 +1,139 @@
+---
+name: Master
+class: Guy
+age: 93
+status: sensei
+gender: male
+flags:
+  nokiss: True
+  nodate: True
+  hidden: True
+attributes:
+  love:
+    min: 0
+    max: 20
+    default: 0
+  sub:
+    min: 0
+    max: 50
+    default: 0
+  sexperience:
+    min: 0
+    max: null
+    default: 0
+birthday:
+  - summer
+  - 3
+traits:
+  - pervy
+  - pervy
+  - pervy
+  - high_libido
+  - low fertility
+  - dreamer
+  - fitness
+  - beach
+  - sporty
+desire_factors:
+  - martial_arts
+  - sextoy
+  - not_clothes
+  - not_underwear
+  - not_underwear
+  - beach
+  - high_libido
+schedule:
+  default:
+    '12345':
+      '9':
+        - room: masterhouse
+          activity: train
+          clothes: sport
+      '17':
+        - room: mall1
+          activity: shopping
+          clothes: casual
+        - room: mall2
+          activity: shopping
+          clothes: casual
+      '18':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '20':
+        - room: sexshop
+          activity: shop
+          clothes: casual
+      '24':
+        - room: None
+          activity: sleep
+          clothes: underwear
+    '6':
+      '9':
+        - room: masterhouse
+          activity: train
+          clothes: sport
+      '11':
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '14':
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: waterpark
+          activity: swim
+          clothes: swimsuit
+          seasons: "01"
+      '16':
+        - room: waterpark
+          activity: swim
+          clothes: swimsuit
+          seasons: "01"
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '18':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '21':
+        - room: pubexterior
+          activity: drink
+          clothes: casual
+      '23':
+        - room: pubexterior
+          activity: drink
+          clothes: casual
+        - room: nightclub
+          activity: dance
+          clothes: date
+    '7':
+      '5':
+        - room: nightclub
+          activity: dance
+          clothes: date
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '9':
+        - room: masterhouse
+          activity: train
+          clothes: sport
+      '16':
+        - room: park
+          activity: smoke
+          clothes: casual
+      '23':
+        - room: pubexterior
+          activity: drink
+          clothes: casual

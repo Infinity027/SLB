@@ -1,0 +1,88 @@
+- id: action
+  description: Action movie
+  cinema: true
+  traits:
+    artsy: -1
+    pacifist: -2
+    rebel: 2
+    tomboy: 1
+- id: cartoon
+  traits:
+    family: 2
+    innocent: 1
+    playful: 1
+    workaholic: -1
+- id: discovery
+  description: Discovery channel
+  traits:
+    bitchy: -1
+    bookworm: 2
+    dumb: -2
+    outdoorsy: 1
+    religious: -1
+- id: fashion
+  description: Fashion show
+  traits:
+    artsy: 1
+    girly: 1
+    princess: 2
+    poor: -2
+    rebel: -1
+    tomboy: -1
+    trashy: 1
+- id: horror
+  description: Horror movie
+  cinema: true
+  traits:
+    family: -1
+    girly: -1
+    innocent: -1
+    playful: -1
+    princess: -1
+    tomboy: 1
+    yandere: 1
+- id: music
+  description: Music channel
+  traits:
+    artsy: 1
+    music: 2
+- id: news
+  traits:
+    bitchy: -1
+    lazy: -1
+    rebel: -1
+    workaholic: 2
+- id: porn
+  traits:
+    innocent: -2
+    kinky: 2
+    religious: -2
+    slutty: 2
+- id: reality
+  description: Reality show
+  traits:
+    artsy: -1
+    dumb: 1
+    outdoorsy: -1
+    rebel: -1
+    slutty: 1
+    trashy: 2
+    workaholic: -2
+- id: romcom
+  description: Romantic comedy
+  cinema: true
+  traits:
+    family: 1
+    flirty: 2
+    girly: 1
+    pacifist: 1
+    princess: 2
+    yandere: 2
+- id: sci-fi
+  description: Sci-Fi movie
+  cinema: true
+  traits:
+    geek: 2
+    outdoorsy: -1
+    religious: -1
+    workaholic: -1

@@ -1,0 +1,663 @@
+---
+name: Minami
+family_name: Seeker
+class: Girl
+age: 18
+status: adopted sister
+gender: female
+birthday:
+- summer
+- 25
+flags:
+ noproposedate: true
+ nodate: true
+ nokiss: true
+ nosex: true
+ nopropose: true
+ nospank: true
+ nosweettalk: true
+ birthdayknown_male: true
+ randomChat: true
+ noFlirtyText: true
+ noDirtyText: true
+ hidden: true
+attributes:
+  love:
+    min: 0
+    max: 200
+    default: 200
+  sub:
+    min: 0
+    max: 50
+    default: 0
+  lesbian:
+    min: 0
+    max: 15
+    default: 0
+  siscon:
+    min: 0
+    max: 20
+    default: 0
+  sexperience:
+    min: 0
+    max: null
+    default: 0
+piercings:
+  navel:
+    outfits:
+    - naked
+    - swimsuit
+    - sexyswimsuit
+    - underwear
+    - sport
+  clit:
+    outfits:
+    - naked
+    - bottomless
+  nipples:
+    outfits:
+    - naked
+    - topless
+  nose: {}
+  ears: {}
+traits:
+- flirty
+- playful
+- geek
+- fertile
+- girly
+desire_factors:
+- knowledge
+- fitness
+- charm
+- mall
+- not_hung
+- manga
+heronickname:
+  Onii-chan: minami.flags.mikeNickname in nickname_onii_chan
+  Nii-san: minami.flags.mikeNickname in nickname_nii_san
+  Bro-bro: minami.flags.mikeNickname in nickname_bro_bro
+  "[hero.name]": minami.flags.mikeNickname in nickname_hero_name
+schedule:
+  default:
+    '1':
+      '6':
+      - room: bedroom5
+        activity: sleep
+        clothes: sleep
+      '7':
+      - room: bedroom5
+        activity: dress
+        clothes: underwear
+      - room: bathroom
+        activity: brush
+        clothes: underwear
+      '8':
+      - room: bathroom
+        activity: shower
+        clothes: naked
+      - room: kitchen
+        activity: meal
+        clothes: sleep
+      '10':
+      - room: university
+        activity: work
+        clothes: casual
+      '11':
+      - room: classroom
+        activity: work
+        clothes: casual
+      - room: library
+        activity: work
+        clothes: casual
+      '13':
+      - room: dininghall
+        activity: meal
+        clothes: casual
+      - room: kitchen
+        activity: meal
+        clothes: casual
+      '14':
+      - room: university
+        activity: work
+        clothes: casual
+      '17':
+      - room: library
+        activity: work
+        clothes: casual
+      - room: classroom
+        activity: work
+        clothes: casual
+      - room: bookstore
+        activity: shop
+        clothes: casual
+      - room: pool
+        activity: read
+        clothes: swimsuit
+        seasons: '01'
+      - room: bedroom5
+        activity: read
+        clothes: casual
+      '18':
+      - room: bedroom5
+        activity: play
+        clothes: casual
+      '19':
+      - room: bedroom5
+        activity: read
+        clothes: casual
+      - room: livingroom
+        activity: tv
+        clothes: casual
+      '20':
+      - room: kitchen
+        activity: meal
+        clothes: casual
+      - room: street
+        activity: walk
+        clothes: casual
+      '22':
+      - room: kitchen
+        activity: read
+        clothes: sleep
+      - room: bedroom5
+        activity: read
+        clothes: underwear
+      - room: livingroom
+        activity: tv
+        clothes: sleep
+      '23':
+      - room: bathroom
+        activity: brush
+        clothes: underwear
+
+    '2':
+      '6':
+      - room: bedroom5
+        activity: sleep
+        clothes: sleep
+      '7':
+      - room: bathroom
+        activity: shower
+        clothes: naked
+      - room: bedroom5
+        activity: dress
+        clothes: underwear
+      '8':
+      - room: kitchen
+        activity: meal
+        clothes: sleep
+      - room: bathroom
+        activity: brush
+        clothes: underwear
+      '10':
+      - room: university
+        activity: work
+        clothes: casual
+      '11':
+      - room: classroom
+        activity: work
+        clothes: casual
+      - room: library
+        activity: work
+        clothes: casual
+      '13':
+      - room: dininghall
+        activity: meal
+        clothes: casual
+      - room: kitchen
+        activity: meal
+        clothes: casual
+      '14':
+      - room: university
+        activity: work
+        clothes: casual
+      '17':
+      - room: library
+        activity: work
+        clothes: casual
+      - room: classroom
+        activity: work
+        clothes: casual
+      - room: bookstore
+        activity: shop
+        clothes: casual
+      - room: pool
+        activity: read
+        clothes: swimsuit
+        seasons: '01'
+      - room: bedroom5
+        activity: read
+        clothes: casual
+      '18':
+      - room: bedroom5
+        activity: play
+        clothes: casual
+      '19':
+      - room: bedroom5
+        activity: read
+        clothes: casual
+      - room: livingroom
+        activity: tv
+        clothes: casual
+      '20':
+      - room: kitchen
+        activity: meal
+        clothes: casual
+      - room: street
+        activity: walk
+        clothes: casual
+      '22':
+      - room: kitchen
+        activity: read
+        clothes: sleep
+      - room: bedroom5
+        activity: read
+        clothes: underwear
+      - room: livingroom
+        activity: tv
+        clothes: sleep
+      '23':
+      - room: bathroom
+        activity: shower
+        clothes: naked
+
+    '3':
+      '6':
+      - room: bedroom5
+        activity: sleep
+        clothes: sleep
+      '7':
+      - room: bedroom5
+        activity: dress
+        clothes: underwear
+      - room: bathroom
+        activity: shower
+        clothes: naked
+      - room: bathroom
+        activity: brush
+        clothes: underwear
+      '8':
+      - room: bathroom
+        activity: brush
+        clothes: underwear
+      - room: kitchen
+        activity: meal
+        clothes: sleep
+      '10':
+      - room: university
+        activity: work
+        clothes: casual
+      '11':
+      - room: classroom
+        activity: work
+        clothes: casual
+      - room: library
+        activity: work
+        clothes: casual
+      '13':
+      - room: dininghall
+        activity: meal
+        clothes: casual
+      - room: kitchen
+        activity: meal
+        clothes: casual
+      '14':
+      - room: university
+        activity: work
+        clothes: casual
+      '17':
+      - room: library
+        activity: work
+        clothes: casual
+      - room: classroom
+        activity: work
+        clothes: casual
+      - room: bookstore
+        activity: shop
+        clothes: casual
+      - room: pool
+        activity: read
+        clothes: swimsuit
+        seasons: '01'
+      - room: bedroom5
+        activity: read
+        clothes: casual
+      '18':
+      - room: bedroom5
+        activity: play
+        clothes: casual
+      '19':
+      - room: bedroom5
+        activity: read
+        clothes: casual
+      - room: livingroom
+        activity: tv
+        clothes: casual
+      '20':
+      - room: kitchen
+        activity: meal
+        clothes: casual
+      - room: street
+        activity: walk
+        clothes: casual
+      '22':
+      - room: kitchen
+        activity: read
+        clothes: sleep
+      - room: bedroom5
+        activity: read
+        clothes: underwear
+      - room: livingroom
+        activity: tv
+        clothes: sleep
+      '23':
+      - room: bathroom
+        activity: shower
+        clothes: naked
+
+    '4':
+      '6':
+      - room: bedroom5
+        activity: sleep
+        clothes: sleep
+      '7':
+      - room: bathroom
+        activity: brush
+        clothes: underwear
+      - room: bedroom5
+        activity: dress
+        clothes: underwear
+      '8':
+      - room: kitchen
+        activity: meal
+        clothes: sleep
+      - room: bathroom
+        activity: shower
+        clothes: naked
+      '10':
+      - room: university
+        activity: work
+        clothes: casual
+      '11':
+      - room: classroom
+        activity: work
+        clothes: casual
+      - room: library
+        activity: work
+        clothes: casual
+      '13':
+      - room: dininghall
+        activity: meal
+        clothes: casual
+      - room: kitchen
+        activity: meal
+        clothes: casual
+      '14':
+      - room: university
+        activity: work
+        clothes: casual
+      '17':
+      - room: library
+        activity: work
+        clothes: casual
+      - room: classroom
+        activity: work
+        clothes: casual
+      - room: bookstore
+        activity: shop
+        clothes: casual
+      - room: pool
+        activity: read
+        clothes: swimsuit
+        seasons: '01'
+      - room: bedroom5
+        activity: read
+        clothes: casual
+      '18':
+      - room: bedroom5
+        activity: play
+        clothes: casual
+      '19':
+      - room: bedroom5
+        activity: read
+        clothes: casual
+      - room: livingroom
+        activity: tv
+        clothes: casual
+      '20':
+      - room: kitchen
+        activity: meal
+        clothes: casual
+      - room: street
+        activity: walk
+        clothes: casual
+      '22':
+      - room: kitchen
+        activity: read
+        clothes: sleep
+      - room: bedroom5
+        activity: read
+        clothes: underwear
+      - room: livingroom
+        activity: tv
+        clothes: sleep
+      '23':
+      - room: bathroom
+        activity: brush
+        clothes: underwear
+
+    '5':
+      '6':
+      - room: bedroom5
+        activity: sleep
+        clothes: underwear
+      '7':
+      - room: bedroom5
+        activity: sleep
+        clothes: underwear
+      - room: bathroom
+        activity: brush
+        clothes: underwear
+      '8':
+      - room: bathroom
+        activity: shower
+        clothes: naked
+      - room: kitchen
+        activity: meal
+        clothes: sleep
+      '10':
+      - room: university
+        activity: work
+        clothes: casual
+      '11':
+      - room: classroom
+        activity: work
+        clothes: casual
+      '13':
+      - room: dininghall
+        activity: eat_uni
+        clothes: casual
+      - room: kitchen
+        activity: meal
+        clothes: casual
+      '14':
+      - room: university
+        activity: work
+        clothes: casual
+      '17':
+      - room: classroom
+        activity: work
+        clothes: casual
+      - room: street
+        activity: walk
+        clothes: casual
+      '18':
+      - room: bookstore
+        activity: shop
+        clothes: casual
+      - room: electronic
+        activity: shop
+        clothes: casual
+      - room: livingroom
+        activity: read
+        clothes: casual
+      '19':
+      - room: bedroom5
+        activity: read
+        clothes: casual
+      '20':
+      - room: kitchen
+        activity: meal
+        clothes: casual
+      '23':
+      - room: nightclub
+        activity: dance
+        clothes: date
+        conditions:
+          - game.days_played % 2 == 1
+      - room: cinema
+        activity: watch
+        clothes: casual
+      - room: livingroom
+        activity: tv
+        clothes: sleep
+      - room: bedroom5
+        activity: read
+        clothes: underwear
+
+    '6':
+      '9':
+      - room: bedroom5
+        activity: sleep
+        clothes: underwear
+      '10':
+      - room: bedroom5
+        activity: sleep
+        clothes: underwear
+      - room: bathroom
+        activity: shower
+        clothes: naked
+      - room: bathroom
+        activity: brush
+        clothes: underwear
+      '11':
+      - room: bathroom
+        activity: shower
+        clothes: naked
+      - room: bathroom
+        activity: brush
+        clothes: underwear
+      - room: kitchen
+        activity: meal
+        clothes: sleep
+      '12':
+      - room: house
+        activity: play
+        clothes: casual
+      - room: livingroom
+        activity: play
+        clothes: sleep
+      - room: kitchen
+        activity: dishes
+        clothes: sleep
+      '14':
+      - room: livingroom
+        activity: play
+        clothes: casual
+      - room: gym
+        activity: train
+        clothes: sport
+      - room: park
+        activity: run
+        clothes: sport
+      - room: street
+        activity: run
+        clothes: sport
+      '17':
+      - room: pool
+        activity: read
+        clothes: swimsuit
+        seasons: '01'
+      - room: bedroom5
+        activity: play
+        clothes: casual
+        seasons: '23'
+      '19':
+      - room: pool
+        activity: read
+        clothes: swimsuit
+        seasons: '01'
+      - room: bedroom5
+        activity: read
+        clothes: casual
+        seasons: '23'
+      '20':
+      - room: kitchen
+        activity: meal
+        clothes: casual
+      '23':
+      - room: nightclub
+        activity: dance
+        clothes: date
+        conditions:
+          - game.days_played % 2 == 0
+      - room: pubplay
+        activity: drink
+        clothes: casual
+
+    '7':
+      '10':
+      - room: bedroom5
+        activity: sleep
+        clothes: underwear
+      '11':
+      - room: bathroom
+        activity: shower
+        clothes: naked
+      - room: bedroom5
+        activity: sleep
+        clothes: underwear
+      '12':
+      - room: bathroom
+        activity: shower
+        clothes: naked
+      - room: kitchen
+        activity: meal
+        clothes: sleep
+      '13':
+      - room: kitchen
+        activity: dishes
+        clothes: sleep
+      '17':
+      - room: pool
+        activity: sunbath
+        clothes: swimsuit
+        seasons: '01'
+      - room: bedroom5
+        activity: play
+        clothes: sleep
+        seasons: '23'
+      '19':
+      - room: bedroom5
+        activity: read
+        clothes: sleep
+      - room: park
+        activity: read
+        clothes: casual
+      '20':
+      - room: kitchen
+        activity: meal
+        clothes: casual
+      '21':
+      - room: kitchen
+        activity: dishes
+        clothes: casual
+      '22':
+      - room: bathroom
+        activity: brush
+        clothes: underwear
+      '23':
+      - room: bedroom5
+        activity: sleep
+        clothes: underwear

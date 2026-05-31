@@ -1,0 +1,86 @@
+name: Criminal Harem
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Criminal_Harem"
+short: "{image=notify camila}{image=notify lexi} · Criminal Harem"
+type: harem
+description: "Lexi needed help to get out of jail. Maybe Camila can influence her behaviour, if she's not influenced by Lexi's first..."
+participants:
+  - hero
+  - camila
+  - lexi
+conditions:
+  - "'criminal_harem_event_01' in DONE"
+outcomes:
+  camila_left:
+    description: Camila didn't enjoy the fact I lied to her and now she's gone.
+    conditions:
+      - camila.is_gone_forever
+    icon: fail
+  camila_lie:
+    description: I convinced Camila that Lexi and I aren't close. Hopefully the two of them will not meet again.
+    conditions:
+      - game.flags.CriminalRequest == "lie"
+    icon: fail
+  criminal_harem:
+    conditions:
+      - Harem.together('camila', 'lexi', name='criminal')
+      - camila.flags.engagedmike
+      - lexi.flags.engagedmike
+    description: Camila and Lexi agreed to marry me!
+
+steps:
+  criminal_harem_event_01:
+    name: Go find Lexi to the police station
+    related_event: criminal_harem_event_01
+    conditions:
+      - not game.flags.CriminalRequest
+    outcome:
+      condition: '"criminal_harem_event_01" in DONE'
+
+  criminal_harem_event_02:
+    name: Talk to Camila about Lexi bail
+    related_event: criminal_harem_event_02
+    conditions:
+      - game.flags.CriminalRequest == 1
+    outcomes:
+      complete:
+        conditions:
+          - '"criminal_harem_event_02" in DONE'
+          - not camila.is_gone_forever
+      gone:
+        conditions:
+          - '"criminal_harem_event_02" in DONE'
+          - camila.is_gone_forever
+        next: None
+
+  criminal_harem_event_03:
+    name: Be on a date with Lexi at the nightclub between 2 and 4
+    related_event: criminal_harem_event_03
+    conditions:
+      - Harem.together('camila', 'lexi', name='criminal')
+      - game.flags.CriminalRequest == 2
+    outcome:
+      condition: '"criminal_harem_event_03" in DONE'
+
+  criminal_harem_event_04:
+    name: Ask Camila and Lexi on a date
+    conditions:
+      - Harem.together('camila', 'lexi', name='criminal')
+      - '"criminal_harem_event_03" in DONE'
+    outcome:
+      condition: '"criminal_harem_event_04" in DONE'
+
+#  criminal_stalled:
+#    name: That's all of Criminal Harem story for now
+#    icon: stalled
+#    outcome:
+#      condition: False
+#      next: None
+
+  propose_camila_lexi:
+    name: Propose to Camila and Lexi
+    conditions:
+      - Harem.together('camila', 'lexi', name='criminal')
+    outcome:
+      conditions:
+        - camila.flags.engagedmike
+        - lexi.flags.engagedmike

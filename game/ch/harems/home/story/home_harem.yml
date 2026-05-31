@@ -1,0 +1,169 @@
+name: Home Harem
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Home_Harem"
+short: "{image=notify sasha}{image=notify bree} · Home Harem"
+type: harem
+description: "Having slept with both [bree.name] and Sasha, can I keep a relationship with both of them going?"
+participants:
+  - hero
+  - bree
+  - sasha
+  - minami
+  - samantha
+conditions:
+  - bree.sexperience >= 1
+  - sasha.sexperience >= 1
+
+outcomes:
+  breeleft:
+    description: "Unfortunately, [bree.name] left, dashing my hopes for a harem."
+    conditions:
+      - bree.is_gone_forever
+    icon: fail
+  sashaleft:
+    description: Unfortunately, Sasha left, dashing my hopes for a harem.
+    conditions:
+      - sasha.is_gone_forever
+    icon: fail
+  home_harem_bree_sasha:
+    conditions:
+      - Harem.together(bree, sasha, name='home')
+      - bree.flags.engagedmike
+      - sasha.flags.engagedmike
+    description: "[bree.name] and Sasha agreed to marry me!"
+
+steps:
+  bles:
+    name: "Make sure [bree.name] is amenable to sex with other women"
+    condition: True
+    percentage:
+      value: bree.lesbian.val
+      scale: 10
+    outcome:
+      condition: bree.lesbian >= 10
+
+  blestoomuch:
+    name: "Make sure [bree.name] is amenable to sex with men"
+    condition: bree.lesbian > 11
+    percentage:
+      value: 20 - bree.lesbian.val
+      scale: 10
+    outcome:
+      condition: bree.lesbian <= 10
+
+  sles:
+    name: Make sure Sasha is amenable to sex with other women
+    condition: True
+    percentage:
+      value: sasha.lesbian.val
+      scale: 10
+    outcome:
+      condition: sasha.lesbian >= 10
+
+  slestoomuch:
+    name: Make sure Sasha is amenable to sex with men
+    condition: sasha.lesbian > 11
+    percentage:
+      value: 20 - sasha.lesbian.val
+      scale: 10
+    outcome:
+      condition: sasha.lesbian <= 10
+
+  bsub:
+    name: "Ensure [bree.name] is submissive enough"
+    condition: bree.sub < 25
+    percentage:
+      value: bree.sub.val
+      scale: 25
+    outcome:
+      condition: bree.sub >= 25
+
+  ssub:
+    name: Ensure Sasha is submissive enough
+    condition: sasha.sub < 25
+    percentage:
+      value: sasha.sub.val
+      scale: 25
+    outcome:
+      condition: sasha.sub >= 25
+
+  sasha_slave:
+    name: Make Sasha your sex slave if you have the band harem
+    conditions:
+      - Harem.find(sasha, name='band')
+      - '"bree_sasha_showdown" not in DONE'
+    outcome:
+      condition: sasha.is_sex_slave
+
+  bree_sasha_sex:
+    name: "Have sex with [bree.name] & Sasha within 7 days"
+    conditions:
+      - bree.sexperience >= 1
+      - sasha.sexperience >= 1
+      - 'not Person.showdown(sasha, bree)'
+      - '"bree_sasha_showdown" not in DONE'
+    toggle: True
+    outcome:
+      condition: Person.showdown(sasha, bree)
+
+  bree_sasha_showdown:
+    name: "Meet [bree.name] and Sasha in the same room"
+    related_event: bree_sasha_showdown
+    conditions:
+      - Person.showdown(sasha, bree)
+    outcomes:
+      success:
+        next:
+          - bj3_porn
+          - bj_birthday
+          - bree_sasha_shower
+          - bree_sasha_threesome
+        conditions:
+          - '"bree_sasha_showdown" in DONE'
+          - "Harem.find_by_name('home')"
+      fail:
+        next: None
+        conditions:
+          - '"bree_sasha_showdown" in DONE'
+          - 'bree.hidden or sasha.hidden'
+
+  bree_sasha_threesome:
+    name: "Have a threesome with [bree.name] and Sasha"
+    outcome:
+      condition: game.flags.bree_sasha_threesome
+
+  bj3_porn:
+    name: "Get a blowjob from Sasha and [bree.name] while watching porn"
+    outcome:
+      condition: game.flags.threebj
+
+  bj_birthday:
+    name: "Get a special birthday blowjob from Sasha and [bree.name]"
+    related_event: 3bj_birthday
+    outcome:
+      condition: '"3bj_birthday" in DONE'
+
+  bree_sasha_shower:
+    name: "Fuck [bree.name] and Sasha together in the shower"
+    outcome:
+      condition: "game.flags.bree_sasha_shower or game.flags.shower_ffm"
+
+  home_harem_pegging_bree_sasha:
+    name: "Let Sasha take charge with [bree.name]"
+    related_event: home_harem_pegging_bree_sasha
+    outcome:
+      condition: '"home_harem_pegging_bree_sasha" in DONE'
+
+  peep_bree_sasha_pool:
+    name: Peep on Bree and Sasha in the pool
+    optional: True
+    outcome:
+      condition: '"home_harem_bree_sasha_sunscreen" in DONE'
+
+  propose_bree_sasha:
+    name: "Propose to [bree.name] and Sasha"
+    conditions:
+      - Harem.together(bree, sasha, name='home')
+    outcome:
+      conditions:
+        - bree.flags.engagedmike
+        - sasha.flags.engagedmike

@@ -1,0 +1,146 @@
+---
+name: Danny
+class: Guy
+age: 35
+status: criminal
+gender: male
+flags:
+  nokiss: True
+  nodate: True
+  hidden: True
+attributes:
+  love:
+    min: 0
+    max: 20
+    default: 0
+  sub:
+    min: 0
+    max: 50
+    default: 0
+  sexperience:
+    min: 0
+    max: null
+    default: 0
+birthday:
+  - spring
+  - 12
+traits:
+  - dominant
+  - rebel
+  - sporty
+  - fitness
+  - trashy
+  - not_pacifist
+  - not_playful
+  - not_family
+  - not_geek
+desire_factors:
+  - submissive
+  - money
+  - money
+  - pub
+  - shooting
+  - jewelry
+  - purse
+  - not_video_games
+schedule:
+  default:
+    '135':
+      '3':
+        - room: alley
+          activity: work
+          clothes: casual
+      '10':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '13':
+        - room: gym
+          activity: train
+          clothes: sport
+      '18':
+        - room: pub
+          activity: drink
+          clothes: casual
+      '20':
+        - room: stripclub
+          activity: shop
+          clothes: casual
+      '24':
+        - room: alley
+          activity: work
+          clothes: casual
+    '24':
+      '3':
+        - room: park
+          activity: work
+          clothes: casual
+      '10':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '13':
+        - room: gym
+          activity: train
+          clothes: sport
+      '14':
+        - room: street
+          activity: walk
+          clothes: casual
+      '18':
+        - room: pub
+          activity: drink
+          clothes: casual
+      '20':
+        - room: stripclub
+          activity: shop
+          clothes: casual
+      '24':
+        - room: park
+          activity: work
+          clothes: casual
+    '6':
+      '3':
+        - room: park
+          activity: work
+          clothes: casual
+      '10':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '13':
+        - room: gym
+          activity: train
+          clothes: sport
+      '14':
+        - room: street
+          activity: walk
+          clothes: casual
+      '20':
+        - room: pub
+          activity: drink
+          clothes: casual
+      '24':
+        - room: alley
+          activity: work
+          clothes: casual
+    '7':
+      '5':
+        - room: nightclubbar
+          activity: drink
+          clothes: date
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '10':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '16':
+        - room: park
+          activity: smoke
+          clothes: casual
+      '23':
+        - room: pub
+          activity: drink
+          clothes: casual

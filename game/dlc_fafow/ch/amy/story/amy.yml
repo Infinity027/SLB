@@ -1,0 +1,516 @@
+name: Amy
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Amy"
+short: "{image=notify amy} · Amy"
+description: "Amy is working at the electronic store."
+participants:
+  - amy
+conditions:
+  - hero.is_male
+  - "'amy_teaser' in DONE"
+  - game.flags.amyStart
+
+outcomes:
+  gone:
+    description: Amy has left her job and is no longer part of my life.
+    conditions:
+      - amy.is_gone_forever
+    icon: fail
+  engaged:
+    description: Amy has agreed to marry me!
+    condition: amy.flags.engagedmike
+
+steps:
+  amy_event_01:
+    name: Go see Amy at the electronic store
+    related_event: amy_event_01
+    conditions:
+      - "'amy_teaser' in DONE"
+      - not amy.flags.amydelay
+    outcome:
+      next: love40
+      condition: '"amy_event_01" in DONE'
+
+  love40:
+    name: Get to know Amy better
+    condition: '"amy_event_01" in DONE'
+    percentage:
+      value: amy.love.val
+      scale: 40
+    outcome:
+      hide: True
+      condition: amy.love >= 40
+
+  amy_event_02:
+    name: Go see Amy at the electronic store Tuesday or Thursday
+    related_event: amy_teaser_kiss
+    conditions:
+      - "'amy_event_01' in DONE"
+      - amy.love >= 40
+      - not amy.flags.amydelay
+    outcome:
+      next: love60
+      condition: '"amy_teaser_kiss" in DONE'
+
+  love60:
+    name: Get to know Amy better
+    condition: '"amy_teaser_kiss" in DONE'
+    percentage:
+      value: amy.love.val
+      scale: 60
+    outcome:
+      hide: True
+      condition: amy.love >= 60
+
+  amy_event_03:
+    name: Go see Amy at the electronic store
+    related_event: amy_event_03
+    conditions:
+      - "'amy_teaser_kiss' in DONE"
+      - amy.love >= 60
+      - not amy.flags.amydelay
+    outcomes:
+      complete:
+        next: love80
+        condition: '"amy_event_03" in DONE'
+      success:
+        next: love80
+        condition: '"amy_event_03" in DONE'
+      banned:
+        next: banned_from_electronic_store
+        conditions:
+          - '"amy_event_03" in DONE'
+          - Room.find('electronic').hidden
+
+  banned_from_electronic_store:
+    name: Shawn banned me from the Electronic Store. I'll have to wait for him to calm down...
+    conditions:
+      - '"amy_event_03" in DONE'
+      - Room.find('electronic').hidden
+    percentage:
+      value: 15 - hero.timers.electronic_ban
+      scale: 15
+    outcome:
+      hide: True
+      next: love80
+      condition: not Room.find('electronic').hidden
+
+  love80:
+    name: Get to know Amy better
+    condition: '"amy_event_03" in DONE'
+    percentage:
+      value: amy.love.val
+      scale: 80
+    outcome:
+      hide: True
+      condition: amy.love >= 80
+
+  amy_event_04:
+    name: Go to the beach Saturday between 9 and 13 or Sunday between 16 and 17
+    related_event: amy_event_04
+    conditions:
+      - "'amy_event_03' in DONE"
+      - amy.love >= 80
+      - not amy.flags.amydelay
+    outcome:
+      next: love100
+      condition: '"amy_event_04" in DONE'
+
+  love100:
+    name: Get to know Amy better
+    condition: '"amy_event_04" in DONE'
+    percentage:
+      value: amy.love.val
+      scale: 100
+    outcome:
+      hide: True
+      condition: amy.love >= 100
+
+  amy_event_05:
+    name: Go see Amy at the electronic store
+    related_event: amy_teaser_sex
+    conditions:
+      - "'amy_event_04' in DONE"
+      - amy.love >= 100
+      - not amy.flags.amydelay
+    outcomes:
+      not_banned:
+        next:
+          - love120
+          - sub10
+        condition: '"amy_teaser_sex" in DONE'
+      banned:
+          icon: fail
+          description: I want to see Amy but I'm banned from the Electronic Store...
+          conditions:
+            - '"amy_event_03" in DONE'
+            - Room.find('electronic').hidden
+          next : None
+
+  love120:
+    name: Get to know Amy better
+    condition: '"amy_teaser_sex" in DONE'
+    percentage:
+      value: amy.love.val
+      scale: 120
+    outcome:
+      hide: True
+      condition: amy.love >= 120
+
+  amy_event_06:
+    name: Go on a date with Amy at the cinema
+    related_event: amy_event_06
+    conditions:
+      - "'amy_teaser_sex' in DONE"
+      - amy.love >= 120
+    outcome:
+      next: love140
+      condition: '"amy_event_06" in DONE'
+
+  love140:
+    name: Get to know Amy better
+    conditions:
+      - '"amy_event_06" in DONE'
+      - amy.love.max >= 140
+    percentage:
+      value: amy.love.val
+      scale: 140
+    outcome:
+      hide: True
+      condition: amy.love >= 140
+
+  amy_event_07:
+    name: Wait for Amy's call
+    related_event: amy_event_07
+    conditions:
+      - "'amy_event_06' in DONE"
+      - amy.love >= 140
+      - not amy.flags.amydelay
+    outcome:
+      hide: True
+      next: amy_event_07_date
+      condition: '"amy_event_07" in DONE'
+
+  amy_event_07_date:
+    name: Go to your date with Amy at the cemetery
+    toggle: True
+    conditions:
+      - "'amy_event_07' in DONE"
+    outcome:
+      next: love160
+      condition: '"amy_event_07_date" in DONE'
+
+  love160:
+    name: Get to know Amy better
+    conditions:
+      - '"amy_event_07" in DONE'
+      - amy.love.max >= 160
+    percentage:
+      value: amy.love.val
+      scale: 160
+    outcome:
+      hide: True
+      condition: amy.love >= 160
+
+  amy_event_08:
+    name: Wait for Amy's call
+    related_event: amy_event_08
+    conditions:
+      - "'amy_event_07' in DONE"
+      - amy.love >= 160
+      - not amy.flags.amydelay
+    outcome:
+      description: Amy tried to leave town but I stopped her in time.
+      condition: '"amy_event_08" in DONE'
+
+  amy_event_09:
+    name: Wait for Amy's call
+    related_event: amy_event_09
+    conditions:
+      - "'amy_event_08' in DONE"
+      - not amy.flags.amydelay
+    outcome:
+      next: love180
+      condition: '"amy_event_09" in DONE'
+
+  love180:
+    name: Get to know Amy better
+    conditions:
+      - '"amy_event_08" in DONE'
+      - amy.love.max >= 180
+    percentage:
+      value: amy.love.val
+      scale: 180
+    outcome:
+      hide: True
+      condition: amy.love >= 180
+
+  amy_event_10:
+    name: Wait for Amy's message
+    related_event: amy_event_10
+    conditions:
+      - "'amy_event_09' in DONE"
+      - not amy.flags.amydelay
+      - amy.love >= 180
+    outcome:
+      next: love200
+      condition: '"amy_event_10" in DONE'
+
+  love200:
+    name: Get to know Amy better
+    conditions:
+      - '"amy_event_08" in DONE'
+      - amy.love.max >= 200
+    percentage:
+      value: amy.love.val
+      scale: 200
+    outcome:
+      hide: True
+      condition: amy.love >= 200
+
+  sub10:
+    name: Make Amy more submissive
+    condition: '"amy_teaser_sex" in DONE'
+    percentage:
+      value: amy.sub.val
+      scale: 10
+    outcome:
+      hide: True
+      conditions: amy.sub >= 10
+
+  amy_kink_01:
+    name: Go on a date with Amy at the restaurant
+    related_event: amy_kink_01
+    conditions:
+      - '"amy_teaser_sex" in DONE'
+      - amy.sub >= 10
+    outcome:
+      next: sub20
+      condition: '"amy_kink_01" in DONE'
+
+  sub20:
+    name: Make Amy more submissive
+    condition: '"amy_kink_01" in DONE'
+    percentage:
+      value: amy.sub.val
+      scale: 20
+    outcome:
+      hide: True
+      conditions: amy.sub >= 20
+
+  amy_kink_02:
+    name: Ask Amy if she wants to hang out tomorrow
+    related_event: amy_kink_02
+    conditions:
+      - '"amy_kink_01" in DONE'
+      - amy.sub >= 20
+      - amy.love >= 100
+      - not amy.flags.amydelay
+    outcome:
+      hide: True
+      next: amy_kink_02_date
+      condition: '"amy_kink_02" in DONE'
+
+  amy_kink_02_date:
+    name: Meet Amy at the cinema at 17:00 precisely
+    toggle: True
+    conditions:
+      - '"amy_kink_02" in DONE'
+    outcomes:
+      not_slapped:
+        icon: fail
+        description: I didn't agree to spank Amy.
+        next: None
+        conditions:
+          - '"amy_kink_02_date" in DONE'
+          - amy.sub.max < 40
+      slapped:
+        next: sub40
+        conditions:
+          - '"amy_kink_02_date" in DONE'
+          - amy.sub.max >= 40
+
+  sub40:
+    name: Make Amy more submissive
+    condition: '"amy_kink_02" in DONE'
+    percentage:
+      value: amy.sub.val
+      scale: 40
+    outcome:
+      hide: True
+      conditions: amy.sub >= 40
+
+  amy_kink_03:
+    name: Talk to Amy
+    related_event: amy_kink_03
+    conditions:
+      - '"amy_kink_02_date" in DONE'
+      - amy.sub >= 40
+      - amy.love >= 120
+      - not amy.flags.amydelay
+    outcomes:
+      no_police:
+        description: I decided to not help Amy fixing her ticket problem
+        icon: fail
+        next: None
+        conditions:
+          - '"amy_kink_03" in DONE'
+          - amy.flags.police_ticket is False
+      police:
+        hide: True
+        next: amy_kink_03_police
+        conditions:
+          - '"amy_kink_03" in DONE'
+          - amy.flags.police_ticket is True
+
+  amy_kink_03_police:
+    name: Go to the police station to fix Amy's ticket problem
+    related_event: amy_kink_03_police
+    conditions:
+      - '"amy_kink_03" in DONE'
+    outcomes:
+      fail:
+        description: I did not succeed to fix Amy's ticket problem
+        icon: fail
+        next: None
+        conditions:
+          - '"amy_kink_03_police" in DONE'
+          - amy.sub.max < 60
+      success:
+        next: sub60
+        conditions:
+          - '"amy_kink_03_police" in DONE'
+          - amy.sub.max >= 60
+
+  sub60:
+    name: Make Amy more submissive
+    condition: '"amy_kink_03" in DONE'
+    percentage:
+      value: amy.sub.val
+      scale: 60
+    outcome:
+      hide: True
+      conditions: amy.sub >= 60
+
+  amy_kink_04:
+    name: Go on a date with Amy
+    related_event: amy_kink_04
+    conditions:
+      - '"amy_kink_03" in DONE'
+      - amy.sub >= 60
+      - amy.love >= 130
+      - not amy.flags.amydelay
+    outcomes:
+      fail:
+        description: Amy seems a little distant. Maybe I should have check on her when she was sick...
+        icon: fail
+        next: None
+        conditions:
+          - '"amy_kink_04" in DONE'
+          - amy.sub.max < 80
+      success:
+        next: sub80
+        conditions:
+          - '"amy_kink_04" in DONE'
+          - amy.sub.max >= 80
+
+  sub80:
+    name: Make Amy more submissive
+    condition: '"amy_kink_04" in DONE'
+    percentage:
+      value: amy.sub.val
+      scale: 80
+    outcome:
+      hide: True
+      conditions: amy.sub >= 80
+
+  amy_kink_05:
+    name: Talk to Amy
+    related_event: amy_kink_05
+    conditions:
+      - '"amy_kink_04" in DONE'
+      - amy.sub >= 80
+      - amy.love >= 150
+    outcomes:
+      fail:
+        description: I refused to let Amy being my sub.
+        icon: fail
+        next: None
+        conditions:
+          - '"amy_kink_05" in DONE'
+          - amy.sub.max < 100
+      success:
+        next: sub100
+        conditions:
+          - '"amy_kink_05" in DONE'
+          - amy.sub.max >= 100
+
+  sub100:
+    name: Make Amy more submissive
+    condition: '"amy_kink_05" in DONE'
+    percentage:
+      value: amy.sub.val
+      scale: 100
+    outcome:
+      hide: True
+      next: None
+      conditions: amy.sub >= 100
+
+  date:
+    name: Go on a date with Amy
+    condition: True
+    outcome:
+      condition: amy.flags.dates >= 1
+      next: birthday_date
+
+  birthday_date:
+    name: Take Amy out on a night date for her birthday
+    condition: amy.flags.dates >= 1
+    outcome:
+      condition: '"amy_birthday_date_male" in DONE'
+      next: None
+
+  sex:
+    name: Have sex with Amy
+    condition: True
+    outcome:
+      condition: amy.sexperience >= 1
+      next: None
+
+  love:
+    name: Get Amy to fall in love with me
+    condition: True
+    percentage:
+      value: amy.love.val
+      scale: 200
+    outcome:
+      condition: amy.love.val == 200
+      next: None
+
+  ring:
+    name: Buy a wedding ring
+    condition: True
+    outcome:
+      condition: hero.has_item("wedding_ring")
+
+  propose:
+    name: Propose to Amy
+    condition: hero.has_item("wedding_ring")
+    outcome:
+      condition: amy.flags.engagedmike
+      next: None
+
+  preg:
+    name: Get Amy pregnant
+    optional: True
+    condition: True
+    outcome:
+      condition: amy.flags.pregnancies_number > 0
+      next: None
+
+  slave:
+    name: Make Amy my sex slave
+    optional: True
+    condition: True
+    outcome:
+      condition: amy.is_sex_slave
+      next: None

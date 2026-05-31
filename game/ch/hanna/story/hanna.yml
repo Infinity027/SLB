@@ -1,0 +1,404 @@
+name: Hanna
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Hanna"
+short: "{image=notify hanna} · Hanna"
+description: "Hanna is the daughter of the owner of the gym."
+
+participants:
+  - hanna
+condition: '"hanna_event_02" in DONE'
+
+outcomes:
+  gone:
+    description: Hanna has left and is no longer part of my life.
+    conditions:
+      - hanna.is_gone_forever
+      - '"hanna_event_07c" not in DONE'
+    icon: fail
+  sold:
+    description: Hanna sold the gym and left town
+    conditions:
+      - hanna.is_gone_forever
+      - '"hanna_event_07c" in DONE'
+    icon: fail
+  engaged:
+    condition: hanna.flags.engagedmike
+    description: Hanna has agreed to marry me!
+
+steps:
+  love40:
+    name: Get to know Hanna better
+    condition: '"hanna_event_02" in DONE'
+    percentage:
+      value: hanna.love.val
+      scale: 40
+    outcome:
+      hide: True
+      conditions: hanna.love >= 40
+
+  fitness50:
+    name: Be fit enough for Hanna to notice me
+    outcome:
+      hide: True
+      condition: hero.fitness >= 50
+
+  hanna_event_03:
+    name: Take a shower at the gym
+    related_event: hanna_event_03
+    outcome:
+      condition: '"hanna_event_03" in DONE'
+
+  love60:
+    name: Get to know Hanna better
+    percentage:
+      value: hanna.love.val
+      scale: 60
+    outcome:
+      hide: True
+      conditions: hanna.love >= 60
+
+  fitness60:
+    name: Be fit enough for Hanna to notice me
+    outcome:
+      hide: True
+      condition: hero.fitness >= 60
+
+  hanna_event_04:
+    name: Race Hanna at the park
+    related_event: hanna_event_04
+    outcome:
+      condition: '"hanna_event_04" in DONE'
+
+  love80:
+    name: Get to know Hanna better
+    percentage:
+      value: hanna.love.val
+      scale: 80
+    outcome:
+      hide: True
+      conditions: hanna.love >= 80
+
+  fitness70:
+    name: Be fit enough for Hanna to notice me
+    outcome:
+      hide: True
+      condition: hero.fitness >= 70
+
+  hanna_event_05:
+    name: Work out with Hanna at the gym
+    related_event: hanna_event_05
+    outcome:
+      condition: '"hanna_event_05" in DONE'
+
+  love100:
+    name: Get to know Hanna better
+    percentage:
+      value: hanna.love.val
+      scale: 100
+    outcome:
+      hide: True
+      conditions: hanna.love >= 100
+
+  fitness80:
+    name: Be fit enough for Hanna to notice me
+    outcome:
+      hide: True
+      condition: hero.fitness >= 80
+
+  hanna_event_06:
+    name: Talk with Hanna about the gym
+    related_event: hanna_event_06
+    outcomes:
+      lend:
+        description: I gave Hanna some money to help her
+        condition: hanna.flags.gymSolution == "lend"
+        next: love120a
+      lewd:
+        description: I told Hanna to make the gym sexier
+        condition: hanna.flags.gymSolution == "lewd"
+        next: love120b
+      sell:
+        description: I told Hanna to sell the gym
+        condition: hanna.flags.gymSolution == "sell"
+        next: love120c
+
+  # Lend (a)
+  love120a:
+    name: Get to know Hanna better
+    percentage:
+      value: hanna.love.val
+      scale: 120
+    outcome:
+      hide: True
+      conditions: hanna.love >= 120
+
+  hanna_event_07a:
+    name: Talk to Hanna about the gym
+    related_event: hanna_event_07a
+    outcome:
+      description: Hanna thanked me for the help
+      condition: '"hanna_event_07a" in DONE'
+
+  love140a:
+    name: Get to know Hanna better
+    percentage:
+      value: hanna.love.val
+      scale: 140
+    outcome:
+      hide: True
+      conditions: hanna.love >= 140
+
+  hanna_return_on_investment_a:
+    name: Meet Hanna at the gym
+    related_event: hanna_gym_profits
+    conditions:
+      - "'hanna_event_07a' in DONE"
+    outcome:
+      description: Hanna gave me a share of her profits
+      condition: "'hanna_gym_profits' in DONE"
+
+  love160a:
+    name: Get to know Hanna better
+    percentage:
+      value: hanna.love.val
+      scale: 160
+    outcome:
+      hide: True
+      conditions: hanna.love >= 160
+
+  hanna_event_08a:
+    name: Talk to Hanna.
+    related_event: hanna_event_08a
+    conditions:
+      - '"hanna_event_07a" in DONE'
+      - hanna.flags.repay >= 4
+    outcome:
+      condition: "'hanna_event_08a' in DONE"
+
+  hanna_event_09a:
+    name: Go to your date with Hanna.
+    condition: "'hanna_event_08a' in DONE"
+    outcome:
+      condition: "'hanna_event_09a' in DONE"
+
+  love200a:
+    name: Get to know Hanna better
+    percentage:
+      value: hanna.love.val
+      scale: 200
+    outcome:
+      hide: True
+      conditions: hanna.love >= 200
+
+  hanna_event_10a:
+    name: Pass a good time with Hanna during a date
+    related_event: hanna_event_10a
+    conditions:
+      - "'hanna_event_09a' in DONE"
+      - not hanna.flags.engagedmike
+    outcome:
+      condition: "'hanna_event_10a' in DONE"
+      next: None
+
+  # Lewd (b)
+  love120b:
+    name: Get to know Hanna better
+    percentage:
+      value: hanna.love.val
+      scale: 120
+    outcome:
+      hide: True
+      conditions: hanna.love >= 120
+
+  hanna_event_07b:
+    name: Talk to Hanna about the gym
+    related_event: hanna_event_07b
+    outcome:
+      description: Hanna followed my advice
+      condition: '"hanna_event_07b" in DONE'
+      next:
+        - love140b
+        - hanna_sub_event_01
+        - hanna_return_on_investment_b
+
+  love140b:
+    name: Get to know Hanna better
+    percentage:
+      value: hanna.love.val
+      scale: 140
+    outcome:
+      hide: True
+      conditions: hanna.love >= 140
+
+  hanna_event_08b:
+    name: Take Hanna on a date.
+    related_event: hanna_event_08
+    condition: "'hanna_event_07b' in DONE"
+    outcome:
+      condition: "'hanna_event_08' in DONE"
+
+  love160b:
+    name: Get to know Hanna better
+    percentage:
+      value: hanna.love.val
+      scale: 160
+    outcome:
+      hide: True
+      conditions: hanna.love >= 160
+
+  hanna_event_09b:
+    name: Take Hanna on a date at the strip club.
+    related_event: hanna_event_09
+    condition: "'hanna_event_08' in DONE"
+    outcome:
+      condition: "'hanna_event_09' in DONE"
+
+  love170b:
+    name: Get to know Hanna better
+    percentage:
+      value: hanna.love.val
+      scale: 170
+    outcome:
+      hide: True
+      conditions: hanna.love >= 170
+
+  hanna_event_10b:
+    name: Workout at the gym when Hanna is here
+    related_event: hanna_event_10
+    condition: "'hanna_event_09' in DONE"
+    outcome:
+      condition: "'hanna_event_10' in DONE"
+
+  love180b:
+    name: Get to know Hanna better
+    percentage:
+      value: hanna.love.val
+      scale: 180
+    outcome:
+      hide: True
+      conditions: hanna.love >= 180
+
+  hanna_event_11b:
+    name: Wait for hanna on your front porch
+    related_event: hanna_event_11
+    condition: "'hanna_event_10' in DONE"
+    outcome:
+      condition: "'hanna_event_11' in DONE"
+      next: None
+
+  hanna_return_on_investment_b:
+    name: Meet Hanna at the gym
+    related_event: hanna_gym_profits_alternate
+    conditions:
+      - "'hanna_event_07b' in DONE"
+    outcome:
+      condition: "'hanna_gym_profits_alternate' in DONE"
+      next: None
+
+  # Sell
+  love120c:
+    name: Get to know Hanna better
+    percentage:
+      value: hanna.love.val
+      scale: 120
+    outcome:
+      hide: True
+      conditions: hanna.love >= 120
+
+  hanna_event_07c:
+    name: Talk to Hanna about the gym
+    related_event: hanna_event_07c
+    outcome:
+      description: Hanna sold the gym and left town
+      condition: '"hanna_event_07c" in DONE'
+      next: None
+
+  # Sub
+  hanna_sub_event_01:
+    name: Be at the gym while Hanna is around
+    related_event: hanna_sub_event_01
+    outcome:
+      condition: "'hanna_sub_event_01' in DONE"
+
+  sub90:
+    name: Make Hanna more submissive
+    condition: '"hanna_sub_event_01" in DONE'
+    percentage:
+      value: hanna.sub.val
+      scale: 90
+    outcome:
+      hide: True
+      conditions: hanna.sub >= 90
+
+  collared:
+    name: Hanna must be collared
+    condition: hanna.sub >= 90
+    outcome:
+      hide: True
+      condition: hanna.is_collared
+
+  hanna_sub_event_02:
+    name: Take Hanna on a date at home
+    related_event: hanna_sub_event_02
+    outcome:
+      condition: "'hanna_sub_event_02' in DONE"
+      next: None
+
+  date:
+    name: Go on a date with Hanna
+    condition: True
+    outcome:
+      condition: hanna.flags.dates >= 1
+      next: birthday_date
+
+  birthday_date:
+    name: Take Hanna out on a night date for her birthday
+    condition: hanna.flags.dates >= 1
+    outcome:
+      condition: '"hanna_birthday_date_male" in DONE'
+      next: None
+
+  sex:
+    name: Have sex with Hanna
+    condition: True
+    outcome:
+      condition: hanna.sexperience >= 1
+      next: None
+
+  love:
+    name: Get Hanna to fall in love with me
+    condition: True
+    percentage:
+      value: hanna.love.val
+      scale: 200
+    outcome:
+      condition: hanna.love.val == 200
+      next: None
+
+  ring:
+    name: Buy a wedding ring
+    condition: True
+    outcome:
+      condition: hero.has_item("wedding_ring")
+
+  propose:
+    name: Propose to Hanna
+    condition: hero.has_item("wedding_ring")
+    outcome:
+      condition: hanna.flags.engagedmike
+      next: None
+
+  preg:
+    name: Get Hanna pregnant
+    optional: True
+    condition: True
+    outcome:
+      condition: hanna.flags.pregnancies_number > 0
+      next: None
+
+  slave:
+    name: Make Hanna my sex slave
+    optional: True
+    condition: True
+    outcome:
+      condition: hanna.is_sex_slave
+      next: None

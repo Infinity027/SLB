@@ -1,0 +1,127 @@
+name: Sasha's Boobjob
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Sasha#Sasha_breast_complex"
+short: "{image=notify sasha} · Boobjob"
+description: Sasha might feel a bit inadequate with her breast size.
+condition: '"sasha_breast_complex_1" in DONE'
+participants:
+  - sasha
+
+outcomes:
+  boobjob:
+    description: Sasha has much bigger tits now, and they're fun to play with.
+    conditions:
+      - '"sasha_breast_complex_5" in DONE'
+      - sasha.flags.boobjob
+  smoltits:
+    description: Sasha decided not to make a change.
+    conditions:
+      - '"sasha_breast_complex_3" in DONE'
+      - not sasha.flags.BreastComplex
+  gone:
+    condition: sasha.is_gone_forever
+    hide_story: True
+
+steps:
+  love100:
+    name: Get to know Sasha better
+    condition: '"sasha_breast_complex_1" in DONE'
+    percentage:
+      value: sasha.love.val
+      scale: 100
+    outcome:
+      hide: True
+      condition: sasha.love >= 100
+
+  sub75:
+    name: Make Sasha more submissive
+    condition: True
+    percentage:
+      value: sasha.sub.val
+      scale: 75
+    outcome:
+      hide: True
+      conditions: sasha.sub >= 75
+
+  sasha_breast_complex_2:
+    name: Play in the pool with Bree and Sasha
+    related_event: sasha_breast_complex_2
+    conditions:
+      - sasha.sub >= 75
+      - sasha.love >= 100
+    outcome:
+      description: Sasha took specific note of Bree's much more ample chest
+      condition: '"sasha_breast_complex_2" in DONE'
+
+  love150:
+    name: Get to know Sasha better
+    percentage:
+      value: sasha.love.val
+      scale: 150
+    outcome:
+      hide: True
+      condition: sasha.love >= 150
+
+  sasha_breast_complex_3:
+    name: See Sasha in the bathroom
+    related_event: sasha_breast_complex_3
+    outcomes:
+      big:
+        description: I told Sasha I liked bigger tits
+        conditions:
+          - '"sasha_breast_complex_3" in DONE'
+          - sasha.flags.BreastComplex
+      small:
+        description: I told Sasha I liked small tits
+        next: smoltits
+        conditions:
+          - '"sasha_breast_complex_3" in DONE'
+          - not sasha.flags.BreastComplex
+
+  wait_step_4:
+    name: Wait for Sasha
+    conditions:
+      - '"sasha_breast_complex_3" in DONE'
+      - '"sasha_breast_complex_4" not in DONE'
+      - sasha.flags.BreastComplex
+    percentage:
+      value: game.timers.BreastComplexDelay
+      scale: 3
+      invert: True
+    outcome:
+      hide: True
+      conditions: not game.flags.BreastComplexDelay
+
+  sasha_breast_complex_4:
+    name: Wait for Sasha to approach me
+    related_event: sasha_breast_complex_4
+    outcomes:
+      big:
+        description: Sasha left to go get the surgery
+        conditions:
+          - '"sasha_breast_complex_4" in DONE'
+          - sasha.flags.BreastComplex
+      small:
+        description: I told Sasha not to get breast surgery
+        next: smoltits
+        conditions:
+          - '"sasha_breast_complex_4" in DONE'
+          - not sasha.flags.BreastComplex
+
+  wait_step_5:
+    name: Wait for Sasha
+    conditions:
+      - '"sasha_breast_complex_4" in DONE'
+      - sasha.flags.BreastComplex
+    percentage:
+      value: game.timers.BreastComplexDelay
+      scale: 7
+      invert: True
+    outcome:
+      hide: True
+      conditions: not game.flags.BreastComplexDelay
+
+  sasha_breast_complex_5:
+    name: Wait for Sasha to come back from the surgery
+    related_event: sasha_breast_complex_5
+    outcome:
+      condition: '"sasha_breast_complex_5" in DONE'

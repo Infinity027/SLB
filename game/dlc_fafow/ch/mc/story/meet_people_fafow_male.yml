@@ -1,0 +1,65 @@
+name: Meet People - FAFOW
+# This should always be fourth when shown.
+sort: "0004"
+type: generic
+description: "Meet Amy, Kat and Reona!"
+participants:
+  - hero
+condition: hero.is_male
+
+outcomes:
+  all_complete:
+    condition: all(step.complete for step in self.parent.steps.values() if step.status != 0)
+    description: "I've met Amy, Kat and Reona!"
+  almost_all_complete:
+    condition: all(step.complete for step in self.parent.steps.values())
+    description: "I've met almost everyone"
+
+steps:
+  amy:
+    condition: hero.is_male
+    name: Meet Amy at the electronic store after 33 days
+    related_event: amy_teaser
+    outcomes:
+      success:
+        conditions:
+          - '"amy_teaser" in DONE'
+          - game.flags.amyStart
+        next: None
+      fail:
+        icon: fail
+        conditions:
+          - '"amy_teaser" in DONE'
+          - not game.flags.amyStart
+        next: None
+  kat:
+    condition: hero.is_male
+    name: Meet Thyra after playing videogames
+    related_event: bree_event_11
+    outcomes:
+      success:
+        conditions:
+          - '"bree_event_11" in DONE'
+          - not kat.hidden
+        next: None
+      fail:
+        icon: fail
+        conditions:
+          - '"bree_event_11" in DONE'
+          - kat.hidden
+        next: None
+      maid:
+        icon: fail
+        conditions:
+          - '"bree_event_04" in DONE'
+        next: None
+  reona:
+    condition: hero.is_male
+    name: Meet Reona at the university
+    related_event: reona_teaser
+    outcomes:
+      success:
+        conditions:
+          - '"reona_teaser" in DONE'
+          - game.flags.alexisstart
+        next: None

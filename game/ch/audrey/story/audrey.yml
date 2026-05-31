@@ -1,0 +1,482 @@
+name: Audrey
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Audrey"
+short: "{image=notify audrey} · Audrey"
+description: "Audrey is my coworker. She's fairly useless at work; she can be nice, but she is trouble."
+participants:
+  - office
+  - audrey
+conditions:
+  - hero.is_male
+  - hero.charm >= 20
+  - hero.fitness >= 20
+outcomes:
+  gone:
+    description: Audrey has left and is no longer part of my life.
+    condition: audrey.is_gone_forever
+    icon: fail
+  skipped:
+    description: I still see Audrey at work from time to time, but that's it.
+    icon: fail
+  engaged:
+    condition: audrey.flags.engagedmike
+    description: Audrey has agreed to marry me!
+steps:
+  fitness20:
+    name: Be fit enough for Audrey to notice me
+    condition: '"audrey_event_01" in DONE or "audrey_event_01b" in DONE'
+    percentage:
+      value: hero.fitness.val
+      scale: 20
+    outcome:
+      hide: True
+      condition: hero.fitness >= 20
+
+  charm20:
+    name: Be charming enough for Audrey to notice me
+    condition: True
+    percentage:
+      value: hero.charm.val
+      scale: 20
+    outcome:
+      hide: True
+      condition: hero.charm >= 20
+      next:
+        - audrey_event_01
+        - audrey_event_01b
+
+  audrey_event_01:
+    name: Find Audrey in the pub
+    related_event: audrey_event_01
+    toggle: True
+    conditions:
+      - hero.charm >= 20
+      - hero.fitness >= 20
+      - not hero.flags.dannydead
+    outcomes:
+      helped:
+        conditions:
+          - '"audrey_event_01" in DONE'
+          - not audrey.hidden
+        next: love40
+      other_complete:
+        conditions:
+          - '"audrey_event_01b" in DONE'
+          - not audrey.hidden
+        hide: True
+        next: love40
+      didnothelp:
+        next: skipped
+        conditions:
+          - '"audrey_event_01" in DONE'
+          - '"audrey_event_02" not in DONE'
+          - audrey.hidden
+      other_skipped:
+        conditions:
+          - '"audrey_event_01b" in DONE'
+          - '"audrey_event_02" not in DONE'
+          - audrey.hidden
+        hide: True
+        next: None
+
+  audrey_event_01b:
+    name: Find Audrey in the pub
+    related_event: audrey_event_01b
+    toggle: True
+    conditions:
+      - hero.charm >= 20
+      - hero.fitness >= 20
+      - hero.flags.dannydead
+    outcomes:
+      helped:
+        conditions:
+          - '"audrey_event_01b" in DONE'
+          - not audrey.hidden
+      other_complete:
+        conditions:
+          - '"audrey_event_01" in DONE'
+          - not audrey.hidden
+        hide: True
+        next: love40
+      didnothelp:
+        next: skipped
+        conditions:
+          - '"audrey_event_01b" in DONE'
+          - '"audrey_event_02" not in DONE'
+          - audrey.hidden
+      other_skipped:
+        conditions:
+          - '"audrey_event_01" in DONE'
+          - '"audrey_event_02" not in DONE'
+          - audrey.hidden
+        hide: True
+        next: None
+
+  love40:
+    name: Get to know Audrey better
+    percentage:
+      value: audrey.love.val
+      scale: 40
+    outcome:
+      hide: True
+      conditions: audrey.love >= 40
+
+  audrey_event_02:
+    name: See Audrey at the office
+    related_event: audrey_event_02
+    outcome:
+      condition: '"audrey_event_02" in DONE'
+
+  love60:
+    name: Get to know Audrey better
+    percentage:
+      value: audrey.love.val
+      scale: 60
+    outcome:
+      hide: True
+      conditions: audrey.love >= 60
+
+  audrey_event_03:
+    name: See Audrey at the gym
+    related_event: audrey_event_03
+    outcome:
+      condition: '"audrey_event_03" in DONE'
+
+  love80:
+    name: Get to know Audrey better
+    percentage:
+      value: audrey.love.val
+      scale: 80
+    outcome:
+      hide: True
+      conditions: audrey.love >= 80
+      next:
+        - audrey_event_04
+        - audrey_event_04b
+
+  audrey_event_04:
+    name: Meet Audrey at the waterpark on Saturday or Sunday
+    related_event: audrey_event_04
+    toggle: True
+    conditions:
+      - game.season in [0, 1]
+      - audrey.love >= 80
+    outcomes:
+      complete:
+        condition: '"audrey_event_04" in DONE'
+        next: love100
+      stalled:
+        hide: True
+        condition: '"audrey_event_04b" in DONE'
+
+  audrey_event_04b:
+    name: Meet Audrey at the park on Saturday or Sunday
+    related_event: audrey_event_04b
+    toggle: True
+    conditions:
+      - game.season in [2, 3]
+      - audrey.love >= 80
+    outcomes:
+      complete:
+        condition: '"audrey_event_04b" in DONE'
+        next: love100
+      stalled:
+        hide: True
+        condition: '"audrey_event_04" in DONE'
+
+  love100:
+    name: Get to know Audrey better
+    percentage:
+      value: audrey.love.val
+      scale: 100
+    outcome:
+      hide: True
+      conditions: audrey.love >= 100
+
+  audrey_event_05:
+    name: Wait for Audrey to call on Friday night at 19:00
+    related_event: audrey_event_05
+    outcomes:
+      dated:
+        description: I went to the restaurant with Audrey
+        conditions:
+          - '"audrey_event_05" in DONE'
+
+  charm50:
+    name: Be charming enough for Audrey to come back
+    percentage:
+      value: hero.charm.val
+      scale: 50
+    outcome:
+      condition: hero.charm >= 50
+      hide: True
+      next:
+        - audrey_event_06
+
+  audrey_event_06:
+    name: Wait for Audrey to show up at the office
+    related_event: audrey_event_06
+    outcome:
+      condition: '"audrey_event_06" in DONE'
+
+  love120:
+    name: Get to know Audrey better
+    percentage:
+      value: audrey.love.val
+      scale: 120
+    outcome:
+      hide: True
+      conditions: audrey.love >= 120
+
+  charm60:
+    name: Be charming enough for Audrey to come back
+    percentage:
+      value: hero.charm.val
+      scale: 60
+    outcome:
+      condition: hero.charm >= 60
+      hide: True
+
+  audrey_event_07:
+    name: Work at the office
+    related_event: audrey_event_07
+    conditions:
+      - audrey.love >= 120
+      - hero.charm >= 60
+    outcome:
+      condition: '"audrey_event_07" in DONE'
+
+  love140:
+    name: Get to know Audrey better
+    percentage:
+      value: audrey.love.val
+      scale: 140
+    outcome:
+      hide: True
+      conditions: audrey.love >= 140
+
+  audrey_event_08:
+    name: Work in your personal office while Audrey is around
+    related_event: audrey_event_08
+    conditions:
+      - audrey.love >= 140
+      - hero.charm >= 60
+    outcome:
+      condition: '"audrey_event_08" in DONE'
+
+  love160:
+    name: Get to know Audrey better
+    percentage:
+      value: audrey.love.val
+      scale: 160
+    outcome:
+      hide: True
+      conditions: audrey.love >= 160
+
+  audrey_event_09:
+    name: Ask Audrey to come in your office
+    related_event: audrey_event_09
+    conditions:
+      - '"audrey_event_08" in DONE'
+      - audrey.love >= 160
+    outcome:
+      condition: '"audrey_event_09" in DONE'
+
+  lovescared:
+    name: Audrey avoids me
+    conditions:
+      - '"audrey_event_09" in DONE'
+    outcome:
+      hide: True
+      conditions:
+        - '"audrey_event_09" in DONE'
+        - not audrey.flags.scaredloved
+
+  audrey_event_10:
+    name: Wait for Audrey to come at me
+    related_event: audrey_event_10
+    conditions:
+      - not audrey.flags.scaredloved
+      - '"audrey_event_09" in DONE'
+    outcome:
+      condition: '"audrey_event_10" in DONE'
+
+  audrey_sub_event_01:
+    name: Have a nice evening date with Audrey
+    related_event: audrey_sub_event_01
+    conditions:
+      - audrey.sub >= 15
+      - audrey.sexperience >= 1
+    outcome:
+      condition: '"audrey_sub_event_01" in DONE'
+
+  audrey_sub_event_02:
+    name: Go on a date with Audrey at the cinema
+    related_event: audrey_sub_event_02
+    conditions:
+      - audrey.sub >= 25
+      - audrey.sexperience >= 2
+    outcome:
+      condition: '"audrey_sub_event_02" in DONE'
+
+  audrey_sub_event_03:
+    name: Work hard at the office
+    related_event: audrey_sub_event_03
+    conditions:
+      - audrey.sub >= 75
+      - audrey.sexperience >= 5
+    outcome:
+      condition: '"audrey_sub_event_03" in DONE'
+      next: None
+
+  # Not sure if this should be a separate story or not.
+  audrey_spanking_start:
+    name: Work at the office
+    related_event: audrey_spanking_start
+    conditions:
+      - audrey.love >= 90
+      - audrey.sub >= 25
+      - '"shiori_scold_3" in DONE'
+    outcomes:
+      nospanking:
+        description: Audrey tried to goad me into punishing her, and I declined to take the bait.
+        icon: fail
+        next: None
+        conditions:
+          - '"audrey_spanking_start" in DONE'
+          - not audrey.flags.spanking
+      spanking:
+        description: Audrey told me she wanted me to spank her, and I accepted.
+        next: [love110, sub50]
+        conditions:
+          - '"audrey_spanking_start" in DONE'
+          - audrey.flags.spanking
+
+  love110:
+    name: Get to know Audrey better
+    percentage:
+      value: audrey.love.val
+      scale: 110
+    outcome:
+      hide: True
+      conditions: audrey.love >= 110
+
+  sub50:
+    name: Make Audrey more submissive
+    percentage:
+      value: audrey.sub.val
+      scale: 50
+    outcome:
+      hide: True
+      conditions: audrey.sub >= 50
+
+  audrey_spanking_1:
+    name: Work at the office
+    related_event: audrey_spanking_1
+    conditions:
+      - audrey.love >= 110
+      - audrey.sub >= 50
+    outcomes:
+      complete:
+        next: [love130, sub75]
+        condition: '"audrey_spanking_1" in DONE'
+      failed:
+        next: [love130, sub75]
+        icon: fail
+        conditions:
+          - '"audrey_spanking_start" in DONE'
+          - not audrey.flags.spanking
+
+  love130:
+    name: Get to know Audrey better
+    percentage:
+      value: audrey.love.val
+      scale: 130
+    outcome:
+      hide: True
+      conditions: audrey.love >= 130
+
+  sub75:
+    name: Make Audrey more submissive
+    percentage:
+      value: audrey.sub.val
+      scale: 75
+    outcome:
+      hide: True
+      conditions: audrey.sub >= 75
+
+  audrey_spanking_2:
+    name: Work at the office
+    related_event: audrey_spanking_2
+    conditions:
+      - audrey.love >= 130
+      - audrey.sub >= 75
+    outcomes:
+      complete:
+        next: None
+        condition: '"audrey_spanking_2" in DONE'
+      failed:
+        next: None
+        icon: fail
+        conditions:
+          - '"audrey_spanking_start" in DONE'
+          - not audrey.flags.spanking
+
+  date:
+    name: Go on a date with Audrey
+    condition: True
+    outcome:
+      condition: audrey.flags.dates >= 1
+      next: birthday_date
+
+  birthday_date:
+    name: Take Audrey out on a afternoon date for her birthday
+    condition: audrey.flags.dates >= 1
+    outcome:
+      condition: '"audrey_birthday_date_male" in DONE'
+      next: None
+
+  sex:
+    name: Have sex with Audrey
+    condition: True
+    outcome:
+      condition: audrey.sexperience >= 1
+      next: None
+
+  love:
+    name: Get Audrey to fall in love with me
+    condition: True
+    percentage:
+      value: audrey.love.val
+      scale: 200
+    outcome:
+      condition: audrey.love.val == 200
+      next: None
+
+  ring:
+    name: Buy a wedding ring
+    condition: True
+    outcome:
+      condition: hero.has_item("wedding_ring")
+
+  propose:
+    name: Propose to Audrey
+    condition: hero.has_item("wedding_ring")
+    outcome:
+      condition: audrey.flags.engagedmike
+      next: None
+
+  preg:
+    name: Get Audrey pregnant
+    optional: True
+    condition: True
+    outcome:
+      condition: audrey.flags.pregnancies_number > 0
+      next: None
+
+  slave:
+    name: Make Audrey my sex slave
+    optional: True
+    condition: True
+    outcome:
+      condition: audrey.is_sex_slave
+      next: None

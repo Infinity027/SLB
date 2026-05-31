@@ -1,0 +1,149 @@
+name: Electronic Harem
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Electronics_Harem"
+short: "{image=notify amy}{image=notify shawn} · Electronic Harem"
+type: harem
+description: "Shawn is mad that I have a thing going on with Amy. Maybe I can sort things out with him."
+participants:
+  - amy
+  - shawn
+conditions:
+  - hero.is_male
+  - "'amy_teaser_sex' in DONE"
+  - amy.love.max >= 120
+
+outcomes:
+  success:
+    description: I had a threesome with Amy and Shawn.
+    conditions:
+      - Harem.find(amy, name='electronic')
+      - '"electronic_harem_event_06" in DONE'
+  shawnrejectthreesome:
+    description: Shawn refused to have a threesome with Amy.
+    conditions:
+      - "'electronic_harem_event_05' in DONE"
+      - not Harem.find(amy, name='electronic')
+    icon: fail
+  amyrejectthreesome:
+    description: Amy refused to have a threesome with Shawn and was really mad that I even suggest it.
+    conditions:
+      - "'electronic_harem_event_04' in DONE"
+      - not Harem.find(amy, name='electronic')
+    icon: fail
+  nomore:
+    description: Amy and I had fun but we will keep Shawn out of our relation now.
+    conditions:
+      - "'electronic_harem_event_04' in DONE"
+      - not amy.flags.agree_electronic_threesome
+    icon: fail
+  noshare:
+    description: Shawn wanted me to share Amy but this will not happen
+    conditions:
+      - "'electronic_harem_event_01' in DONE"
+      - not Harem.find(amy, name='electronic')
+    icon: fail
+
+steps:
+  electronic_harem_event_01:
+    name: Go at the pub between 22 and 4 while Amy is not there
+    related_event: electronic_harem_event_01
+    conditions:
+      - "'amy_teaser_sex' in DONE"
+      - amy.love >= 120
+      - not amy.flags.amydelay
+    outcomes:
+      drunk:
+        description: I'm having trouble remembering last night... Did I really offer to share Amy with Shawn?
+        conditions:
+          - '"electronic_harem_event_01" in DONE'
+          - Harem.find(amy, name='electronic')
+      notdrunk:
+        condition: '"electronic_harem_event_01" in DONE'
+        next: None
+
+  electronic_harem_event_02:
+    name: Talk to Amy
+    related_event: electronic_harem_event_02
+    conditions:
+      - "'electronic_harem_event_01' in DONE"
+      - Harem.find(amy, name='electronic')
+      - not amy.flags.amydelay
+    outcomes:
+      agree:
+        conditions:
+          - Harem.find(amy, name='electronic')
+          - '"electronic_harem_event_02" in DONE'
+      disagree:
+        conditions:
+          - not Harem.find(amy, name='electronic')
+          - '"electronic_harem_event_02" in DONE'
+        next: None
+
+  electronic_harem_event_03:
+    name: Go to the Electronic store on a Sunday
+    related_event: electronic_harem_event_03
+    conditions:
+      - "'electronic_harem_event_02' in DONE"
+    outcome:
+      condition: '"electronic_harem_event_03" in DONE'
+
+  electronic_harem_event_04:
+    name: Talk to Amy
+    related_event: electronic_harem_event_04
+    conditions:
+      - amy.love >= 130
+      - amy.sub >= 20
+      - "'electronic_harem_event_03' in DONE"
+      - not amy.flags.electronic_harem_delay
+    outcomes:
+      3some:
+        description: I suggest Amy to offer Shawn a threesome for his birthday.
+        conditions:
+          - amy.flags.agree_electronic_threesome
+          - '"electronic_harem_event_04" in DONE'
+      stophere:
+        conditions:
+          - not amy.flags.agree_electronic_threesome
+          - '"electronic_harem_event_04" in DONE'
+        next: None
+
+  electronic_harem_event_05:
+    name: Go to the pub between 19 and 21 any day except Sunday
+    related_event: electronic_harem_event_05
+    conditions:
+      - "'electronic_harem_event_04' in DONE"
+      - amy.love >= 140
+      - amy.sub >= 50
+      - not amy.flags.amydelay
+      - amy.flags.agree_electronic_threesome
+      - not amy.flags.electronic_harem_delay
+    outcomes:
+      agree:
+        conditions:
+          - Harem.find(amy, name='electronic')
+          - '"electronic_harem_event_05" in DONE'
+      disagree:
+        conditions:
+          - not Harem.find(amy, name='electronic')
+          - '"electronic_harem_event_05" in DONE'
+        next: None
+
+  electronic_harem_event_06:
+    name: Shawn want to meet after he's done with work. I'll surely find him at the pub between 19 and 23.
+    related_event: electronic_harem_event_06
+    conditions:
+      - "'electronic_harem_event_05' in DONE"
+      - "'palla_event_10' in DONE"
+      - not palla.is_gone_forever
+      - Harem.find(amy, name='electronic')
+      - not amy.flags.electronic_harem_delay
+    outcomes:
+      agree:
+        conditions:
+          - game.flags.electronic_foursome
+          - '"electronic_harem_event_06" in DONE'
+      disagree:
+        description: I refused to have a foursome with Amy, Shawn and Palla.
+        conditions:
+          - not game.flags.electronic_foursome
+          - '"electronic_harem_event_06" in DONE'
+        next: None

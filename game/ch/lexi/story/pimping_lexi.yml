@@ -1,0 +1,157 @@
+name: Pimping Lexi
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Lexi#Pimping_Lexi"
+short: "{image=notify lexi} · Pimp"
+description: "My friends took an interest in Lexi."
+participants:
+  - lexi
+conditions:
+  - hero.is_male
+  - '"date_lexi_meet_jack" in DONE'
+
+outcomes:
+  nopimp_jack:
+    description: I am not going to pimp Lexi out.
+    conditions:
+      - '"date_lexi_meet_jack_2" in DONE'
+      - not game.flags.pimpingjack
+  nopimp_ryan:
+    description: I am not going to pimp Lexi out.
+    conditions:
+      - '"date_lexi_meet_ryan_2" in DONE'
+      - not game.flags.pimpingryan
+  nopimp_master:
+    description: I am not going to pimp Lexi out.
+    conditions:
+      - '"date_lexi_meet_master_1" in DONE'
+      - not game.flags.pimpingmaster
+  pimp:
+    description: The guys met Lexi as they were supposed to do
+    condition: '"date_lexi_meet_ryan_3" in DONE'
+
+steps:
+  date_lexi_meet_jack_2:
+    name: Wait for Jack to call
+    related_event: date_lexi_meet_jack_2
+    condition: '"date_lexi_meet_jack" in DONE'
+    outcomes:
+      pimp:
+        description: Jack offered 500{image=gui/icons/icon_money.png} to have sex with Lexi. I agreed
+        conditions:
+          - '"date_lexi_meet_jack_2" in DONE'
+          - game.flags.pimpingjack
+        next:
+          - date_lexi_meet_jack_3
+          - date_lexi_meet_ryan_1
+          - date_lexi_meet_master_1
+      nopimp:
+        next: complete
+        conditions:
+          - '"date_lexi_meet_jack_2" in DONE'
+          - not lexi.flags.pimpingjack
+
+  date_lexi_meet_jack_3:
+    name: Introduce Lexi to Jack during a mall date
+    related_event: date_lexi_meet_jack_3
+    outcome:
+      condition: '"date_lexi_meet_jack_3" in DONE'
+
+  date_lexi_meet_jack_4:
+    name: "Meet Lexi in the city between 17:00 and 19:00 to complete the deal"
+    related_event: date_lexi_meet_jack_4
+    outcome:
+      condition: '"date_lexi_meet_jack_4" in DONE'
+      next: None
+
+  date_lexi_meet_ryan_1:
+    name: Take Lexi on a date in the mall
+    related_event: date_lexi_meet_ryan_1
+    outcomes:
+      complete:
+        condition: '"date_lexi_meet_ryan_1" in DONE'
+      failed:
+        condition: game.flags.ryandead
+        next: None
+
+  date_lexi_meet_ryan_2:
+    name: Wait for some time after Ryan's encounter
+    related_event: date_lexi_meet_ryan_2
+    outcomes:
+      complete:
+        conditions:
+          - '"date_lexi_meet_ryan_2" in DONE'
+          - game.flags.pimpingryan
+      denied:
+        conditions:
+          - '"date_lexi_meet_ryan_2" in DONE'
+          - not game.flags.pimpingryan
+        next: None
+      failed:
+        condition: game.flags.ryandead
+        next: None
+
+  date_lexi_meet_ryan_3:
+    name: Wait for some time after Ryan's encounter
+    related_event: date_lexi_meet_ryan_3
+    outcomes:
+      complete:
+        conditions:
+          - '"date_lexi_meet_ryan_2" in DONE'
+          - lexi.flags.lordofthepimp
+        next:
+          - date_lexi_pimping_stalled_1
+      denied:
+        conditions:
+          - '"date_lexi_meet_ryan_2" in DONE'
+          - not lexi.flags.lordofthepimp
+        next: None
+      failed:
+        condition: game.flags.ryandead
+        next: None
+
+  date_lexi_meet_master_1:
+    name: Take Lexi on a date at the beach
+    related_event: date_lexi_meet_master_1
+    outcomes:
+      complete:
+        conditions:
+          - '"date_lexi_meet_master_1" in DONE'
+          - game.flags.pimpingmaster
+      denied:
+        conditions:
+          - '"date_lexi_meet_master_1" in DONE'
+          - not game.flags.pimpingmaster
+        next: None
+
+  date_lexi_meet_master_2:
+    name: Take Lexi on a date at the beach again
+    related_event: date_lexi_meet_master_2
+    outcomes:
+      complete:
+        conditions:
+          - '"date_lexi_meet_master_2" in DONE'
+          - game.flags.pimpingmaster
+      denied:
+        conditions:
+          - '"date_lexi_meet_master_2" in DONE'
+          - not game.flags.pimpingmaster
+        next: None
+
+  date_lexi_meet_master_3:
+    name: Take Lexi on a date at the beach one more time
+    related_event: date_lexi_meet_master_3
+    outcomes:
+      complete:
+        conditions:
+          - '"date_lexi_meet_master_3" in DONE'
+          - game.flags.pimpingmaster
+      denied:
+        conditions:
+          - '"date_lexi_meet_master_3" in DONE'
+          - not game.flags.pimpingmaster
+        next: None
+
+#  date_lexi_pimping_stalled_1:
+#    icon: stalled
+#    name: That's all of for this story for now
+#    outcome:
+#      condition: False

@@ -1,0 +1,193 @@
+name: Samantha's Wedding
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Samantha#Samantha’s_wedding"
+short: "{image=notify samantha} · Wedding"
+description: Samantha returned to my life, and she's getting married to Ryan. I still have kind of a crush on her, though.
+participants:
+  - samantha
+condition: hero.is_male
+
+outcomes:
+  happilymarried:
+    description: Samantha and Ryan got married.
+    conditions:
+      - '"samantha_event_B01" in DONE'
+      - not hero.flags.knows_ryancheats
+  unhappilymarried:
+    description: Samantha and Ryan got married, despite Ryan's lack of discretion.
+    conditions:
+      - '"samantha_event_B01" in DONE'
+      - hero.flags.knows_ryancheats
+  dumped:
+    description: Samantha and Ryan did not get married, as Samantha found out about Ryan cheating.
+    condition: '"samantha_event_A02" in DONE'
+  gone:
+    condition: samantha.is_gone_forever
+    description: Samantha has left and is no longer part of my life.
+    icon: fail
+
+steps:
+  wait7:
+    name: Give Samantha and Ryan some time alone
+    condition: hero.is_male
+    percentage:
+      value: game.days_played
+      scale: 7
+    outcome:
+      condition: game.days_played >= 7
+
+  samantha_event_01:
+    name: I hope I run into Samantha somewhere
+    related_event: samantha_event_01
+    condition: game.days_played >= 7
+    outcome:
+      description: I ran into Samantha in the city
+      condition: '"samantha_event_01" in DONE'
+
+  love40:
+    name: Get to know Samantha better
+    condition: '"samantha_event_01" in DONE'
+    percentage:
+      value: samantha.love.val
+      scale: 40
+    outcome:
+      hide: True
+      conditions: samantha.love >= 40
+
+  samantha_event_02:
+    name: Meet up with Samantha in the bakery
+    related_event: samantha_event_02
+    conditions:
+      - '"samantha_event_01" in DONE'
+    outcome:
+      condition: '"samantha_event_02" in DONE'
+
+  love60:
+    name: Get to know Samantha better
+    condition: '"samantha_event_02" in DONE'
+    percentage:
+      value: samantha.love.val
+      scale: 60
+    outcome:
+      hide: True
+      condition: samantha.love >= 60
+
+  samantha_event_03:
+    name: Meet up with Samantha in the park
+    related_event: samantha_event_03
+    conditions:
+      - '"samantha_event_02" in DONE'
+    outcome:
+      next:
+        - samantha_event_04
+        - samantha_event_B01
+      condition: '"samantha_event_03" in DONE'
+
+  samantha_event_04:
+    name: "See Ryan cheating in the nightclub before its too late!"
+    related_event: samantha_event_04
+    condition: '"samantha_event_03" in DONE'
+    optional: True
+    percentage:
+      value: 7 - samantha.timers.weddingtime
+      scale: 7
+    outcomes:
+      complete:
+        condition: '"samantha_event_04" in DONE'
+      missed:
+        description: I did not see Ryan cheating in the nightclub.
+        icon: fail
+        next: None
+        conditions:
+          - '"samantha_event_04" not in DONE'
+          - '"samantha_wedding_flag" in DONE'
+
+  tellaboutryan:
+    name: "Tell Sam about Ryan"
+    condition: '"samantha_event_04" in DONE'
+    optional: True
+    outcomes:
+      told:
+        description: I told Sam about Ryan cheating
+        next: samantha_event_B01
+        conditions:
+          - '"samantha_event_05" in DONE'
+          - samantha.flags.knows_ryancheats
+      ignored:
+        description: I decided not to tell Sam about Ryan cheating
+        conditions:
+          - '"samantha_event_05" in DONE'
+          - not samantha.flags.knows_ryancheats
+      skipped:
+        description: I went to the wedding without talking to Samantha about Ryan
+        conditions:
+          - '"samantha_event_B01" in DONE'
+
+  samantha_event_B01:
+    name: "Attend Samantha's wedding on Sunday"
+    related_event: samantha_event_B01
+    outcomes:
+      sex:
+        description: Sam found out about Ryan cheating and offered to give me a blowjob after the ceremony
+        next: None
+        conditions:
+          - '"samantha_event_B01" in DONE'
+          - '"samantha_event_B03" not in DONE'
+          - samantha.flags.knows_ryancheats
+          - samantha.flags.cuck_ryan
+      sex2:
+        description: Sam found out about Ryan cheating and offered to give me a blowjob after the ceremony but I refused
+        next: None
+        conditions:
+          - '"samantha_event_B01" in DONE'
+          - '"samantha_event_B03" not in DONE'
+          - samantha.flags.knows_ryancheats
+          - not samantha.flags.cuck_ryan
+      natalie:
+        description: I saw Natalie and Ryan having sex in the bathroom
+        next: None
+        conditions:
+          - '"samantha_event_B01" in DONE'
+          - hero.flags.knows_ryancheats
+          - samantha.flags.natalie
+      attended:
+        next: None
+        conditions:
+          - '"samantha_event_B01" in DONE'
+          - not hero.flags.knows_ryancheats
+      cancelled:
+        next: None
+        conditions:
+          - '"samantha_event_05" in DONE'
+          - samantha.flags.knows_ryancheats
+        icon: fail
+
+  samantha_event_A01:
+    name: Wait for Samantha to call.
+    related_event: samantha_event_A01
+    outcomes:
+      sex:
+        description: Samantha called and we had sex
+        conditions:
+          - '"samantha_event_A01" in DONE'
+          - samantha.sexperience > 1
+      complete:
+        description: Samantha called and cried about Ryan
+        condition: '"samantha_event_A01" in DONE'
+
+  love50:
+    name: Get to know Samantha better
+    percentage:
+      value: samantha.love.val
+      scale: 50
+    outcome:
+      hide: True
+      condition: samantha.love >= 50
+
+  samantha_event_A02:
+    name: Meet up with Samantha in the bakery
+    related_event: samantha_event_A02
+    outcomes:
+      complete:
+        description: Samantha broke up with Ryan!
+        conditions:
+          - '"samantha_event_A02" in DONE'

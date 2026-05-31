@@ -1,0 +1,177 @@
+name: Sasha and Audrey
+display_name: Jealous Harem
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Jealous_Harem"
+short: "{image=notify sasha}{image=notify audrey} · Jealous Harem"
+type: harem
+description:
+  - description: "Sasha, Audrey, and I had a threesome."
+    condition: Harem.find_by_name("jealous")
+  - description: "Everyone is on board, and we have a date set to make this threesome a reality."
+    condition: '"jealous_harem_03" in DONE'
+  - description: "Audrey has a thing for Sasha. So much so that she wants a threesome with the two of us."
+    condition: '"jealous_harem_01" in DONE'
+  - description: "Audrey flirted with me while I was on a date with Sasha, which caused HUGE problems."
+    condition: True
+
+participants:
+  - hero
+  - sasha
+  - audrey
+conditions:
+  - '"sasha_nightclub_showdown" in DONE'
+
+outcomes:
+  sasha_said_no:
+    description: Sasha didn't want to have a threesome.
+    icon: fail
+  refusal:
+    description: I refused Audrey's offer of a threesome.
+    icon: fail
+  cheated:
+    description: I cheated on Sasha one too many times to make this threesome happen.
+    icon: fail
+  jealous_harem:
+    description: Oddly Audrey and Sasha came to an agreement. I am a bit worried.
+    conditions:
+      - Harem.together('sasha','audrey', name='jealous')
+
+steps:
+  jealous_cheat:
+    name: You should never see this
+    related_event: sasha_nightclub_showdown
+    condition: True
+    outcomes:
+      success:
+        hide: True
+        next:
+          - audrey_love
+          - audrey_lesbian
+        conditions:
+          - '"sasha_nightclub_showdown" in DONE'
+          - not sasha.flags.cheated_too_much
+      fail:
+        hide: True
+        next: cheated
+        conditions:
+          - '"sasha_nightclub_showdown" in DONE'
+          - sasha.flags.cheated_too_much
+
+  audrey_love:
+    name: Make Audrey love me more
+    condition: '"sasha_nightclub_showdown" in DONE'
+    percentage:
+      value: audrey.love.val
+      scale: 100
+    outcome:
+      hide: True
+      condition: audrey.love >= 100
+
+  audrey_lesbian:
+    name: Make Audrey more interested in sex with other women
+    condition: '"sasha_nightclub_showdown" in DONE'
+    percentage:
+      value: audrey.lesbian.val
+      scale: MIN_LES_GIRL_SEX
+    outcome:
+      hide: True
+      condition: audrey.lesbian.val >= MIN_LES_GIRL_SEX
+
+  jealous_wait_for_audrey:
+    name: Wait for it
+    related_event: jealous_harem_01
+    conditions:
+      - '"sasha_nightclub_showdown" in DONE'
+      - audrey.love >= 50
+      - audrey.lesbian.val >= MIN_LES_GIRL_SEX
+    outcomes:
+      success:
+        next:
+          - love_3some
+          - sub_3some
+          - lesbian_3some
+          - jealous_harem_02
+        description: Audrey asked for a threesome with Sasha, and I thought it was a good idea
+        conditions:
+          - '"jealous_harem_01" in DONE'
+          - sasha.flags.audreythreesome >= 1
+      fail:
+        icon: fail
+        next: refusal
+        description: Audrey asked for a threesome and I said no
+        conditions:
+          - '"jealous_harem_01" in DONE'
+          - not sasha.flags.audreythreesome
+
+  love_3some:
+    name: Make Sasha love me more
+    conditions:
+      - '"jealous_harem_01" in DONE'
+      - sasha.flags.audreythreesome >= 1
+    percentage:
+      value: sasha.love.val
+      scale: 100
+    outcomes:
+      complete:
+        hide: True
+        condition: sasha.love >= 100
+
+  sub_3some:
+    name: Make Sasha more submissive
+    conditions:
+      - '"jealous_harem_01" in DONE'
+      - sasha.flags.audreythreesome >= 1
+    percentage:
+      value: sasha.sub.val
+      scale: 75
+    outcomes:
+      complete:
+        hide: True
+        condition: sasha.sub >= 75
+
+  lesbian_3some:
+    name: Make Sasha more interested in sex with other women
+    conditions:
+      - '"jealous_harem_01" in DONE'
+      - sasha.flags.audreythreesome >= 1
+    percentage:
+      value: sasha.lesbian.val
+      scale: 8
+    outcomes:
+      complete:
+        hide: True
+        condition: sasha.lesbian >= MIN_LES_GIRL_SEX
+
+  jealous_harem_02:
+    name: Ask Sasha if she'd be down for a threesome
+    related_event: jealous_harem_02
+    conditions:
+      - '"jealous_harem_01" in DONE'
+      - sasha.flags.audreythreesome >= 1
+      - sasha.love >= 100
+      - sasha.sub >= 75
+      - sasha.lesbian.val >= MIN_LES_GIRL_SEX
+    outcomes:
+      success:
+        next: jealous_harem_03
+        description: Sasha liked the idea of a threesome with Audrey.
+        conditions:
+          - '"jealous_harem_02" in DONE'
+          - sasha.flags.audreythreesome >= 2
+      fail:
+        icon: fail
+        next: sasha_said_no
+        description: Sasha got upset at me for suggesting a threesome.
+        conditions:
+          - '"jealous_harem_02" in DONE'
+          - not sasha.flags.audreythreesome
+
+  jealous_harem_03:
+    name: Go tell Audrey the good news
+    related_event: jealous_harem_03
+    conditions:
+      - '"jealous_harem_02" in DONE'
+      - sasha.flags.audreythreesome >= 2
+    outcome:
+      description: We have a threesome planned for Saturday afternoon.
+      condition: '"jealous_harem_03" in DONE'
+      next: None

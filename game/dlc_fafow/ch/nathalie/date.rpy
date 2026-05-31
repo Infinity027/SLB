@@ -1,0 +1,30 @@
+
+label nathalie_date_amusement_ice_cream_male:
+    "Nathalie" "Oh my..."
+    "Nathalie" "Why did it have to be so hot today?"
+    "I turn to see Natalie trying to fan herself with one hand."
+    "And it doesn't take me long to realise that she's right."
+    "The day's gotten really hot without me noticing."
+    "I guess I must have been distracted by all the fun we've been having."
+    mike.say "Now you mention it, Natalie..."
+    mike.say "It really is pretty hot!"
+    mike.say "Maybe we should go get an ice-cream or something?"
+    "The mention of ice-cream seems to brighten Natalie's mood."
+    "She nods eagerly, already taking hold of my hand."
+    "Nathalie" "Can we, [hero.name]?"
+    "Nathalie" "That sound so good right now!"
+    "I nod as I begin to lead Natalie through the crowds."
+    "And then I make straight for the first ice-cream stand that I see."
+    "Luckily for us, the line is pretty short, so we don't have long to wait."
+    "Natalie points out the one that she wants and I place our order."
+    "And soon enough we're walking away, already licking at our ice-creams."
+    "Nathalie" "Mmmm..."
+    "Nathalie" "I really needed this, [hero.name]..."
+    "Nathalie" "Thanks so much for suggesting it!"
+    "I nod and smile, doing the best to look like I'm just accepting the compliment."
+    "But Natalie looks so hot as she lets out a sigh of genuine relief."
+    "And I can't help wanting to see if I can make her reproduce the sound."
+    "You know, maybe when we're in more of a horizontal position?"
+    return
+return
+# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

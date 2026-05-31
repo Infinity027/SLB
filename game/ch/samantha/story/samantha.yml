@@ -1,0 +1,133 @@
+name: Samantha
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Samantha"
+short: "{image=notify samantha} · Samantha"
+description: "Now that Samantha is free of Ryan, I am free to pursue a relationship with her."
+participants:
+  - samantha
+condition: '"samantha_event_A02" in DONE or samantha.flags.divorced'
+
+outcomes:
+  left:
+    conditions:
+      - '"samantha_preg_talk" in DONE'
+      - samantha.is_gone_forever
+    description: I told Samantha the baby was probably Ryan's and she left. She is gone forever.
+    icon: fail
+  dumped:
+    conditions:
+        - samantha.is_gone_forever
+        - '"samantha_event_A04" in DONE'
+    description: Sam found that I cheated on her and left. She is gone forever.
+    icon: fail
+  engaged:
+    condition: samantha.flags.engagedmike
+    description: Samantha has agreed to marry me!
+
+steps:
+  date:
+    name: Go on a date with Samantha
+    condition: True
+    outcome:
+      condition: samantha.flags.dates >= 1
+      next: birthday_date
+
+  birthday_date:
+    name: Take Samantha out on a night date for her birthday
+    condition: samantha.flags.dates >= 1
+    outcome:
+      condition: '"samantha_birthday_date_male" in DONE'
+      next: None
+
+  sex:
+    name: Have sex with Samantha
+    condition: True
+    outcome:
+      condition: samantha.sexperience >= 1
+      next: None
+
+  samantha_fuck_bathroom:
+    name: Fuck Samantha in the shower
+    conditions:
+      - samantha.love >= 150
+      - Harem.find(samantha, name='home')
+    outcome:
+      condition: samantha.flags.showersex
+      next: None
+
+  love:
+    name: Get Samantha to fall in love with me
+    condition: True
+    percentage:
+      value: samantha.love.val
+      scale: 200
+    outcome:
+      condition: samantha.love.val == 200
+      next: None
+
+  engaged:
+    name: Propose to Samantha
+    outcome:
+      condition: samantha.flags.engagedmike
+
+  preg:
+    name: "Get Samantha pregnant"
+    optional: True
+    condition: True
+    outcome:
+      condition: samantha.flags.pregnancies_number > 0
+
+  slave:
+    name: "Make Samantha my sex slave"
+    optional: True
+    condition: True
+    outcome:
+      condition: samantha.is_sex_slave
+      next: None
+
+  love150:
+    name: Renew with Sam
+    conditions:
+      - '"samantha_event_A02" in DONE'
+    percentage:
+      value: samantha.love.val
+      scale: 150
+    outcome:
+      hide: True
+      condition: samantha.love >= 150
+
+  samantha_event_A03:
+    name: Talk to Samantha
+    related_event: samantha_event_A03
+    conditions:
+      - '"samantha_event_A02" in DONE'
+    outcomes:
+      complete:
+        condition: '"samantha_event_A03" in DONE'
+
+  love170:
+    name: Spend time with Samantha
+    percentage:
+      value: samantha.love.val
+      scale: 170
+    outcome:
+      hide: True
+      condition: samantha.love >= 170
+
+  samantha_event_A04:
+    name: Samantha is worried about our relationship
+    related_event: samantha_event_A04
+    conditions:
+      - '"samantha_event_A03" in DONE'
+    outcomes:
+      exclusive:
+        description: Sam and I are in faithful and exclusive relationship
+        conditions:
+          - '"samantha_event_A04" in DONE'
+          - "samantha.flags.girlfriend"
+        next: None
+      complete:
+        description: If I'm honest with her, Sam accepts that I see other girls
+        conditions:
+          - '"samantha_event_A04" in DONE'
+          - "samantha.flags.nonexclusive"
+        next: None

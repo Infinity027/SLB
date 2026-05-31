@@ -1,0 +1,315 @@
+---
+name: Cassidy
+family_name: Jackson
+class: Girl
+age: 23
+status: friend
+gender: female
+flags:
+  nokiss: True
+  nodate: True
+  nobreakup: True
+  hidden: True
+attributes:
+  love:
+    min: 0
+    max: 40
+    default: 0
+  sub:
+    min: -100
+    max: 100
+    default: 0
+  lesbian:
+    min: 0
+    max: 20
+    default: 0
+  sexperience:
+    min: 0
+    max: null
+    default: 0
+piercings:
+  ears:
+    outfits:
+      - date
+    pierced: true
+  navel:
+    outfits:
+      - naked
+      - swimsuit
+      - sexyswimsuit
+      - sport
+      - bottomless
+  clit:
+    outfits:
+      - naked
+      - bottomless
+  nipples:
+    outfits:
+      - naked
+      - topless
+  tongue:
+    expressions:
+      - happy
+  lips:
+    expressions:
+      - happy
+      - sad
+      - angry
+      - cry
+      - normal
+  eyebrow:
+    expressions:
+      - happy
+      - sad
+      - angry
+      - cry
+      - normal
+  nose: { }
+birthday:
+  - spring
+  - 9
+traits:
+  - princess
+  - playful
+  - dominant
+  - not_geek
+desire_factors:
+  - dance
+  - charm
+  - fitness
+  - not_home
+  - not_park
+  - beach
+  - flowers
+  - jewelry
+heronickname:
+  Servant: cassidy.flags.mikeNickname in nickname_servant
+  Little one: cassidy.flags.mikeNickname in nickname_little_one
+  Peasant: cassidy.flags.mikeNickname in nickname_peasant
+  My rock: cassidy.flags.mikeNickname in nickname_my_rock
+  Bitch: cassidy.flags.mikeNickname == "Bitch"
+  Slave: cassidy.flags.mikeNickname == "Slave"
+schedule:
+  default:
+    '1234':
+      '11':
+        - room: None
+          activity: sleep
+          clothes: naked
+      '17':
+        - room: beach
+          activity: sunbath
+          clothes: swimsuit
+          seasons: "1"
+        - room: None
+          activity: sleep
+          clothes: naked
+      '18':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '19':
+        - room: beach
+          activity: sunbath
+          clothes: swimsuit
+          seasons: "1"
+        - room: gymreception
+          activity: none
+          clothes: sport
+      '20':
+        - room: sexshop
+          activity: shop
+          clothes: casual
+        - room: beach
+          activity: sunbath
+          clothes: swimsuit
+          seasons: "1"
+        - room: gymreception
+          activity: none
+          clothes: sport
+      '24':
+        - room: vip
+          activity: dance
+          clothes: date
+        - room: None
+          activity: None
+          clothes: naked
+    '567':
+      '24':
+        - room: None
+          activity: traveling
+          clothes: casual
+  assistant:
+    '12345':
+      '11':
+        - room: None
+          activity: sleep
+          clothes: naked
+      '14':
+        - room: ceo
+          conditions:
+            - hero.flags.isceo
+          activity: play
+          clothes: casual
+        - room: personal
+          conditions:
+            - not hero.flags.isceo
+          activity: play
+          clothes: casual
+      '16':
+        - room: bakery
+          activity: shop
+          clothes: casual
+      '19':
+        - room: ceo
+          conditions:
+            - hero.flags.isceo
+          activity: play
+          clothes: casual
+        - room: personal
+          conditions:
+            - not hero.flags.isceo
+          activity: play
+          clothes: casual
+      '21':
+        - room: beach
+          activity: sunbath
+          clothes: swimsuit
+          seasons: "1"
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: sexshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: gymreception
+          activity: none
+          clothes: sport
+      '24':
+        - room: vip
+          activity: dance
+          clothes: date
+        - room: None
+          activity: None
+          clothes: naked
+    '6':
+      '3':
+        - room: vip
+          activity: dance
+          clothes: date
+      '11':
+        - room: None
+          activity: sleep
+          clothes: naked
+      '14':
+        - room: beach
+          activity: sunbath
+          clothes: swimsuit
+          seasons: "1"
+        - room: gymreception
+          activity: none
+          clothes: sport
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '16':
+        - room: sexshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: cinema
+          activity: watch
+          clothes: casual
+      '18':
+        - room: beach
+          activity: sunbath
+          clothes: swimsuit
+          seasons: "1"
+        - room: sexshop
+          activity: shop
+          clothes: casual
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: gymreception
+          activity: none
+          clothes: sport
+      '21':
+        - room: None
+          activity: None
+          clothes: naked
+      '23':
+        - room: vip
+          activity: dance
+          clothes: date
+    '7':
+      '5':
+        - room: vip
+          activity: dance
+          clothes: date
+        - room: None
+          activity: sleep
+          clothes: naked
+      '10':
+        - room: None
+          activity: sleep
+          clothes: naked
+      '12':
+        - room: beach
+          activity: sunbath
+          clothes: swimsuit
+          seasons: "1"
+        - room: gymreception
+          activity: none
+          clothes: sport
+        - room: None
+          activity: sleep
+          clothes: naked
+      '14':
+        - room: beach
+          activity: sunbath
+          clothes: swimsuit
+          seasons: "1"
+        - room: gymreception
+          activity: none
+          clothes: sport
+      '16':
+        - room: beach
+          activity: sunbath
+          clothes: swimsuit
+          seasons: "1"
+        - room: gymreception
+          activity: none
+          clothes: sport
+      '18':
+        - room: beach
+          activity: sunbath
+          clothes: swimsuit
+          seasons: "1"
+        - room: gymreception
+          activity: none
+          clothes: sport
+      '23':
+        - room: vip
+          activity: dance
+          clothes: date
+        - room: None
+          activity: None
+          clothes: naked

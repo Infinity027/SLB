@@ -1,0 +1,180 @@
+name: Audrey and Palla
+display_name: Bitchy Harem
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Bitchy_Harem"
+short: "{image=notify audrey}{image=notify palla} · Bitchy Harem"
+type: harem
+description: "Audrey found out about Palla and I."
+participants:
+  - audrey
+  - palla
+
+conditions:
+  - '"palla_event_08" in DONE'
+  - 'not palla.flags.noaudrey'
+
+start:
+  - palla_love160
+  - palla_les10
+  - audrey_love140
+  - audrey_les10
+  - audrey_sex
+
+outcomes:
+  refused:
+    description: I don't want to be part of such a toxic relationship.
+    conditions:
+      - '"palla_audrey_date_apology" in DONE or "palla_audrey_date_areyoumad" in DONE'
+      - not Harem.together(audrey, palla, name='bitchy')
+    icon: fail
+  small_harem:
+    conditions:
+      - Harem.together(audrey, palla, name='bitchy')
+      - audrey.flags.engagedmike
+      - palla.flags.engagedmike
+    description: Audrey and Palla agreed to marry me!
+  full_harem:
+    conditions:
+      - Harem.together(audrey, palla, cassidy, name='bitchy')
+    description: Cassidy joined the fun.
+  audrey_left:
+    condition: audrey.is_gone_forever
+    description: Audrey has left town. I'll try to focus on my relationship with Palla then...
+    icon: fail
+  palla_left:
+    condition: palla.is_gone_forever
+    description: Palla has left town. I'll try to focus on my relationship with Audrey then...
+    icon: fail
+
+steps:
+  palla_love160:
+    name: Get to know Palla better
+    percentage:
+      value: palla.love.val
+      scale: 160
+    outcome:
+      hide: True
+      condition: palla.love >= 160
+
+  audrey_love140:
+    name: Get to know Audrey better
+    percentage:
+      value: audrey.love.val
+      scale: 140
+    outcome:
+      hide: True
+      condition: audrey.love >= 140
+
+  audrey_sex:
+    name: Have sex with Audrey
+    condition: True
+    outcome:
+      hide: True
+      condition: audrey.sexperience >= 1
+
+  audrey_les10:
+    name: Make sure Audrey is amenable to sex with other women
+    condition: True
+    percentage:
+      value: audrey.lesbian.val
+      scale: 10
+    outcome:
+      hide: True
+      condition: audrey.lesbian >= 10
+
+  palla_les10:
+    name: Make sure Palla is amenable to sex with other women
+    condition: True
+    percentage:
+      value: palla.lesbian.val
+      scale: 10
+    outcome:
+      hide: True
+      condition: palla.lesbian >= 10
+
+  palla_audrey_date:
+    name: Take Palla on a date at the restaurant
+    related_event: palla_audrey_date
+    conditions:
+      - palla.love >= 160
+      - palla.lesbian >= 10
+      - audrey.love >= 140
+      - audrey.lesbian >= 10
+      - audrey.sexperience >= 1
+    outcomes:
+      refused:
+        description: Audrey showed up in the restaurant while I was with Palla.
+        conditions:
+          - '"palla_audrey_date" in DONE'
+          - palla.flags.nothreesome
+        next:
+          - palla_audrey_date_areyoumad
+      complete:
+        description: Audrey showed up in the restaurant while I was with Palla.
+        conditions:
+          - '"palla_audrey_date" in DONE'
+          - not palla.flags.nothreesome
+        next:
+          - palla_audrey_date_apology
+
+  palla_audrey_date_areyoumad:
+    name: Palla seems mad. I should probably talk to her.
+    related_event: palla_audrey_date_areyoumad
+    conditions:
+      - '"palla_audrey_date" in DONE'
+      - palla.flags.nothreesome
+    outcomes:
+      success:
+        description: I agreed to try again with Audrey and Palla.
+        conditions:
+          - '"palla_audrey_date_areyoumad" in DONE'
+          - Harem.together(audrey, palla, name='bitchy')
+      fail:
+        description: I'm not interested in such a relationship with Audrey and Palla.
+        next: None
+        conditions:
+          - '"palla_audrey_date_areyoumad" in DONE'
+          - not Harem.together(audrey, palla, name='bitchy')
+      hide:
+        next: None
+        conditions:
+          - '"palla_audrey_date_apology" in DONE'
+        hide: True
+
+  palla_audrey_date_apology:
+    name: Palla wants to talk.
+    related_event: palla_audrey_date_apology
+    conditions:
+      - '"palla_audrey_date" in DONE'
+      - not palla.flags.nothreesome
+    outcomes:
+      success:
+        description: I agreed to try again with Audrey and Palla.
+        conditions:
+          - '"palla_audrey_date_apology" in DONE'
+          - Harem.together(audrey, palla, name='bitchy')
+        next: None
+      fail:
+        description: I'm not interested in such a relationship with Audrey and Palla.
+        next: None
+        conditions:
+          - '"palla_audrey_date_apology" in DONE'
+          - not Harem.together(audrey, palla, name='bitchy')
+      hide:
+        next: None
+        conditions:
+          - '"palla_audrey_date_areyoumad" in DONE'
+        hide: True
+
+  propose_audrey_palla:
+    name: Propose to Audrey and Palla
+    conditions:
+      - Harem.together(audrey, palla, name='bitchy')
+    outcomes:
+      complete:
+        conditions:
+          - audrey.flags.engagedmike
+          - palla.flags.engagedmike
+      hidden:
+        conditions:
+          - Harem.find('cassidy', name="bitchy")
+        hide: True

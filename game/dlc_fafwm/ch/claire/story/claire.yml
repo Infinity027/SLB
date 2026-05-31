@@ -1,0 +1,318 @@
+name: Claire
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Claire"
+short: "{image=notify claire} · Claire"
+description: "Claire is Adam's step mother, my childhood best friend. She's soft, sweet, and reminds me some of my best teenage years."
+participants:
+  - claire
+conditions:
+  - hero.is_male
+
+outcomes:
+  gone:
+    description: Claire has left and is no longer part of my life.
+    conditions:
+      - claire.is_gone_forever
+  engaged:
+    description: Claire has agreed to marry me!
+    condition: claire.flags.engagedmike
+
+steps:
+  claire_event_01:
+    name: On Sunday, between 9 and 11, depart from the street to attend the Engagement Ceremony of your childhood friend Adam & her fiancée Lily
+    related_event: claire_event_01
+    outcome:
+      condition: '"claire_event_01" in DONE'
+
+  love20:
+    name: Get to know Claire better
+    condition: '"claire_event_01" in DONE'
+    percentage:
+      value: claire.love.val
+      scale: 20
+    outcome:
+      hide: True
+      condition: claire.love >= 20
+
+  claire_event_02:
+    name: Wait for it
+    related_event: claire_event_02
+    conditions:
+      - claire.love >= 20
+      - '"claire_event_01" in DONE'
+    outcome:
+      next:
+        - love40
+      condition: '"claire_event_02" in DONE'
+
+  love40:
+    name: Get to know Claire better
+    condition: '"claire_event_02" in DONE'
+    percentage:
+      value: claire.love.val
+      scale: 40
+    outcome:
+      hide: True
+      condition: claire.love >= 40
+
+  claire_event_03:
+    name: Wait a little
+    related_event: claire_event_03
+    conditions:
+      - claire.love >= 40
+      - '"claire_event_02" in DONE'
+    outcome:
+      next:
+        - love60
+      condition: '"claire_event_03" in DONE'
+
+  love60:
+    name: Get to know Claire better
+    condition: '"claire_event_03" in DONE'
+    percentage:
+      value: claire.love.val
+      scale: 60
+    outcome:
+      hide: True
+      condition: claire.love >= 60
+
+  claire_event_04:
+    name: Meet the Beauty and the Pig at the Mall
+    related_event: claire_event_04
+    conditions:
+      - claire.love >= 60
+      - '"claire_event_03" in DONE'
+    outcome:
+      next:
+        - love80
+        - sub25
+      condition: '"claire_event_04" in DONE'
+
+  love80:
+    name: Get to know Claire better
+    condition: '"claire_event_04" in DONE'
+    percentage:
+      value: claire.love.val
+      scale: 80
+    outcome:
+      hide: True
+      condition: claire.love >= 80
+
+  claire_event_05:
+    name: Claire will call you back
+    related_event: claire_event_05
+    conditions:
+      - claire.love >= 80
+      - '"claire_event_04" in DONE'
+    outcome:
+      next:
+        - love80
+      condition: '"claire_event_05" in DONE'
+
+  love100:
+    name: Get to know Claire better
+    condition: '"claire_event_05" in DONE'
+    percentage:
+      value: claire.love.val
+      scale: 100
+    outcome:
+      hide: True
+      condition: claire.love >= 100
+
+  claire_event_06:
+    name: Adam will contact you one afternoon
+    related_event: claire_event_06
+    conditions:
+      - claire.love >= 100
+      - '"claire_event_05" in DONE'
+    outcome:
+      next:
+        - love100
+        - sub50
+      condition: '"claire_event_06" in DONE'
+
+  love120:
+    name: Get to know Claire better
+    condition: '"claire_event_06" in DONE'
+    percentage:
+      value: claire.love.val
+      scale: 120
+    outcome:
+      hide: True
+      condition: claire.love >= 120
+
+  claire_event_07:
+    name: Meet Claire in secret at the coffeeshop to talk about your relationship
+    related_event: claire_event_07
+    conditions:
+      - claire.love >= 120
+      - '"claire_event_06" in DONE'
+    outcome:
+      next:
+        - love140
+      condition: '"claire_event_07" in DONE'
+
+  love140:
+    name: Get to know Claire better
+    condition: '"claire_event_07" in DONE'
+    percentage:
+      value: claire.love.val
+      scale: 140
+    outcome:
+      hide: True
+      condition: claire.love >= 140
+
+  claire_event_08:
+    name: Wait for Claire to text you
+    related_event: claire_event_08
+    conditions:
+      - claire.love >= 140
+      - '"claire_event_07" in DONE'
+    outcome:
+      next:
+        - love160
+        - sub75
+      condition: '"claire_event_08" in DONE'
+
+  love160:
+    name: Get to know Claire better
+    condition: '"claire_event_08" in DONE'
+    percentage:
+      value: claire.love.val
+      scale: 160
+    outcome:
+      hide: True
+      condition: claire.love >= 160
+
+  claire_event_09:
+    name: Have a discussion with Claire
+    related_event: claire_event_09
+    conditions:
+      - claire.love >= 160
+      - '"claire_event_08" in DONE'
+    outcome:
+      condition: '"claire_event_09" in DONE'
+      next: None
+
+  sub25:
+    name: Make Claire more submissive
+    condition: '"claire_event_04" in DONE'
+    percentage:
+      value: claire.sub.val
+      scale: 25
+    outcome:
+      hide: True
+      conditions: claire.sub >= 25
+
+  claire_sub_event_01:
+    name: Have a nice date with Claire
+    related_event: claire_sub_event_01
+    conditions:
+      - claire.sub >= 25
+      - '"claire_event_04" in DONE'
+    outcome:
+      condition: '"claire_sub_event_01" in DONE'
+      next: None
+
+  sub50:
+    name: Make Claire more submissive
+    condition: '"claire_event_06" in DONE'
+    percentage:
+      value: claire.sub.val
+      scale: 50
+    outcome:
+      hide: True
+      conditions: claire.sub >= 50
+
+  claire_sub_event_02:
+    name: Have a nice date with Claire
+    related_event: claire_sub_event_02
+    conditions:
+      - claire.sub >= 50
+      - claire.sexperience >= 2
+      - '"claire_event_06" in DONE'
+    outcome:
+      condition: '"claire_sub_event_02" in DONE'
+      next: None
+
+  sub75:
+    name: Make Claire more submissive
+    condition: '"claire_event_08" in DONE'
+    percentage:
+      value: claire.sub.val
+      scale: 75
+    outcome:
+      hide: True
+      conditions: claire.sub >= 75
+
+  claire_sub_event_03:
+    name: Go for a run in the park
+    related_event: claire_sub_event_03
+    conditions:
+      - claire.sub >= 75
+      - claire.sexperience >= 5
+      - '"claire_event_08" in DONE'
+    outcome:
+      condition: '"claire_sub_event_03" in DONE'
+      next: None
+
+  date:
+    name: Go on a date with Claire
+    condition: True
+    outcome:
+      condition: claire.flags.dates >= 1
+      next: None
+
+#      next: birthday_date
+#
+#  birthday_date:
+#    name: Take Claire out on a night date for her birthday
+#    condition: claire.flags.dates >= 1
+#    outcome:
+#      condition: '"claire_birthday_date_male" in DONE'
+#      next: None
+
+  sex:
+    name: Have sex with Claire
+    condition: True
+    outcome:
+      condition: claire.sexperience >= 1
+      next: None
+
+  love:
+    name: Get Claire to fall in love with me
+    condition: True
+    percentage:
+      value: claire.love.val
+      scale: 200
+    outcome:
+      condition: claire.love.val == 200
+      next: None
+
+  ring:
+    name: Buy a wedding ring
+    condition: True
+    outcome:
+      condition: hero.has_item("wedding_ring")
+
+  propose:
+    name: Propose to Claire
+    condition: hero.has_item("wedding_ring")
+    outcome:
+      condition: claire.flags.engagedmike
+      next: None
+
+  preg:
+    name: Get Claire pregnant
+    optional: True
+    condition: True
+    outcome:
+      condition: claire.flags.pregnancies_number > 0
+      next: None
+
+  slave:
+    name: Make Claire my sex slave
+    optional: True
+    condition: True
+    outcome:
+      condition: claire.is_sex_slave
+      next: None

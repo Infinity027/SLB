@@ -1,0 +1,231 @@
+name: Milf Harem
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Milf_Harem"
+short: "{image=notify cherie}{image=notify claire}{image=notify kiara} · Milf Harem"
+type: harem
+description: "There's several Milfs around. Might be worth to make a move"
+participants:
+  - cherie
+  - claire
+  - kiara
+conditions:
+  - hero.is_male
+  - '"cherie_event_06" in DONE'
+  - '"claire_event_06" in DONE'
+  - '"kiara_event_06" in DONE'
+  - cherie.sexperience >= 1
+  - claire.sexperience >= 1
+  - kiara.sexperience >= 1
+start:
+  - cherie_les
+  - claire_les
+  - kiara_les
+
+
+outcomes:
+  cherie_gone:
+    description: Cherie has left and is no longer part of my life.
+    conditions:
+      - cherie.is_gone_forever
+    icon: fail
+  claire_gone:
+    description: Claire has left and is no longer part of my life.
+    conditions:
+      - claire.is_gone_forever
+    icon: fail
+  kiara_gone:
+    description: Kiara has left and is no longer part of my life.
+    conditions:
+      - kiara.is_gone_forever
+    icon: fail
+  milf_harem_cherie_claire_kiara:
+    conditions:
+      - Harem.together(cherie, claire, kiara, name='milf')
+      - cherie.flags.engagedmike
+      - claire.flags.engagedmike
+      - kiara.flags.engagedmike
+    description: Cherie, Claire and Kiara agreed to marry me!
+
+
+steps:
+  cherie_les:
+    name: Make sure Cherie is amenable to sex with other women
+    condition: True
+    percentage:
+      value: cherie.lesbian.val
+      scale: 9
+    outcome:
+      condition: cherie.lesbian >= 9
+      hide: True
+      next: cherie_sub
+
+  claire_les:
+    name: Make sure Claire is amenable to sex with other women
+    condition: True
+    percentage:
+      value: claire.lesbian.val
+      scale: 9
+    outcome:
+      condition: claire.lesbian >= 9
+      hide: True
+      next: claire_sub
+
+  kiara_les:
+    name: Make sure Kiara is amenable to sex with other women
+    condition: True
+    percentage:
+      value: kiara.lesbian.val
+      scale: 9
+    outcome:
+      condition: kiara.lesbian >= 9
+      hide: True
+      next: kiara_sub
+
+  cherie_sub:
+    name: Ensure Cherie is submissive or dominant enough
+    condition: cherie.sub < 25 or cherie.sub > -25
+    percentage:
+      value: cherie.sub.abs
+      scale: 25
+    outcomes:
+      complete:
+        conditions:
+          - cherie.sub >= 25 or cherie.sub <= -25
+          - claire.sub >= 25
+          - kiara.sub >= 25 or kiara.sub <= -25
+        next: milf_harem_event_01
+      uncomplete:
+        conditions:
+          - cherie.sub >= 25 or cherie.sub <= -25
+          - not claire.sub < 25 or not (kiara.sub < 25 or kiara.sub > -25)
+        next: None
+
+  claire_sub:
+    name: Ensure Claire is submissive enough
+    condition: claire.sub < 25
+    percentage:
+      value: claire.sub.val
+      scale: 25
+    outcomes:
+      complete:
+        conditions:
+          - claire.sub >= 25
+          - cherie.sub >= 25 or cherie.sub <= -25
+          - kiara.sub >= 25 or kiara.sub <= -25
+        next: milf_harem_event_01
+      uncomplete:
+        conditions:
+          - claire.sub >= 25
+          - not (cherie.sub < 25 or cherie.sub > -25) or not (kiara.sub < 25 or kiara.sub > -25)
+        next: None
+
+  kiara_sub:
+    name: Ensure Kiara is submissive or dominant enough
+    condition: kiara.sub < 25 or kiara.sub > -25
+    percentage:
+      value: kiara.sub.abs
+      scale: 25
+    outcomes:
+      complete:
+        conditions:
+          - kiara.sub >= 25 or kiara.sub <= -25
+          - claire.sub >= 25
+          - cherie.sub >= 25
+        next: milf_harem_event_01
+      uncomplete:
+        conditions:
+          - kiara.sub >= 25 or kiara.sub <= -25
+          - not claire.sub < 25 or not (cherie.sub < 25 or cherie.sub > -25)
+        next: None
+
+  milf_harem_event_01:
+    name: I'm feeling bad about Claire. Maybe I should call her this evening.
+    related_event: milf_harem_event_01
+    conditions:
+      - '"claire_event_06" in DONE'
+      - '"kiara_event_06" in DONE'
+      - Person.showdown(claire, kiara)
+    outcomes:
+      complete_finish:
+        conditions:
+          - '"milf_harem_event_01" in DONE'
+          - Harem.together(claire, kiara, name="milf")
+          - '"milf_harem_event_02" in DONE'
+        next: milf_harem_event_03
+      complete_unfinish:
+        conditions:
+          - '"milf_harem_event_01" in DONE'
+          - Harem.together(claire, kiara, name="milf")
+          - '"milf_harem_event_02" not in DONE'
+        next: milf_harem_event_02
+      failed:
+        conditions:
+          - '"milf_harem_event_01" in DONE'
+          - not Harem.together(claire, kiara, name="milf")
+        icon: fail
+        next: None
+
+  milf_harem_event_02:
+    name: Work at the office around lunch.
+    related_event: milf_harem_event_02
+    conditions:
+      - '"claire_event_06" in DONE'
+      - '"cherie_event_06" in DONE'
+      - Person.showdown(cherie, claire)
+    outcomes:
+      complete_finish:
+        conditions:
+          - '"milf_harem_event_02" in DONE'
+          - Harem.together(cherie, claire, name="milf")
+          - '"milf_harem_event_01" in DONE'
+        next: milf_harem_event_03
+      complete_unfinish:
+        conditions:
+          - '"milf_harem_event_02" in DONE'
+          - Harem.together(cherie, claire, name="milf")
+          - '"milf_harem_event_01" not in DONE'
+        next: milf_harem_event_01
+      failed:
+        conditions:
+          - '"milf_harem_event_02" in DONE'
+          - not Harem.together(cherie, claire, name="milf")
+        icon: fail
+        next: None
+
+  milf_harem_event_03:
+    name: Chill at home. Maybe Claire will keep Cherie and Kiara from knowing about your relationships.
+    related_event: milf_harem_event_03
+    conditions:
+      - '"milf_harem_event_01" in DONE'
+      - '"milf_harem_event_02" in DONE'
+      - Person.showdown(cherie, claire, kiara)
+    outcomes:
+      complete:
+        conditions:
+          - '"milf_harem_event_03" in DONE'
+          - Harem.together(cherie, claire, kiara, name="milf")
+      failed:
+        conditions:
+          - '"milf_harem_event_03" in DONE'
+          - not Harem.together(cherie, claire, kiara, name="milf")
+        icon: fail
+        next: None
+
+  milf_harem_event_04:
+    name: Go to the Nightclub.
+    related_event: milf_harem_event_04
+    conditions:
+      - '"milf_harem_event_03" in DONE'
+      - Harem.together(cherie, claire, kiara, name="milf")
+    outcome:
+      conditions:
+        - '"milf_harem_event_04" in DONE'
+
+  milf_harem_event_05:
+    name: Go to the Beach between 10 and 16.
+    related_event: milf_harem_event_05
+    conditions:
+      - '"milf_harem_event_04" in DONE'
+      - Harem.together(cherie, claire, kiara, name="milf")
+    outcome:
+      conditions:
+        - '"milf_harem_event_05" in DONE'

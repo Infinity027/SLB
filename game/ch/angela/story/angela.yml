@@ -1,0 +1,52 @@
+name: Angela
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Angela"
+short: "{image=notify angela} · Angela"
+description: "Angela is my mother. "
+participants:
+  - angela
+conditions:
+  - hero.is_male
+  - '"angela_visit" in DONE'
+
+outcomes:
+  missed:
+    description: We had a great meal.
+    conditions:
+      - '"angela_bj_bruce" in DONE'
+      - not game.flags.angelaBlow
+  complete:
+    description: Angela story is complete.
+    condition: angela.flags.complete
+  gone:
+    description: Angela has left and is no longer part of my life.
+    condition: angela.is_gone_forever
+    icon: fail
+
+steps:
+  angela_bj_bruce:
+    name: Take Minami or Bree on a date at the restaurant.
+    related_event: angela_bj_bruce
+    conditions:
+      - '"angela_visit" in DONE'
+      - 'not (bree.hidden and minami.hidden)'
+    outcomes:
+      nice_date:
+        conditions:
+          - '"angela_bj_bruce" in DONE'
+          - not game.flags.angelaBlow
+        description: We had a great meal.
+        next: None
+      complete:
+        conditions:
+          - '"angela_bj_bruce" in DONE'
+          - game.flags.angelaBlow
+        description: We saw mom and Bree's dad at the restaurant.
+
+  angela_bruce_investigation:
+    name: I should call Mom, Dad or Bree's dad about what I saw.
+    condition: game.flags.angelaBlow
+    outcomes:
+      complete:
+        condition: not game.flags.angelaBlow
+        description: I had answers about what happened.
+        next: None

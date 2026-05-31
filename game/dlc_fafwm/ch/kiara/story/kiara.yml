@@ -1,0 +1,353 @@
+name: Kiara
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Kiara"
+short: "{image=notify kiara} · Kiara"
+description: "Kiara is the stunning manager of the Maid Cafe where [bree.name] is working."
+participants:
+  - kiara
+conditions:
+  - hero.is_male
+  - "'bree_event_09b' in DONE"
+
+outcomes:
+  gone:
+    description: Kiara has left and is no longer part of my life.
+    conditions:
+      - kiara.is_gone_forever
+  engaged:
+    description: Kiara has agreed to marry me!
+    condition: kiara.flags.engagedmike
+
+steps:
+
+  charm50:
+    name: Be charming enough for Kiara to notice me
+    percentage:
+      value: hero.charm.val
+      scale: 50
+    outcome:
+      hide: True
+      condition: hero.charm >= 50
+
+  love20:
+    name: Get to know Kiara better
+    condition: '"bree_event_09b" in DONE'
+    percentage:
+      value: kiara.love.val
+      scale: 20
+    outcome:
+      hide: True
+      condition: kiara.love >= 20
+
+  kiara_event_02:
+    name: Go to the maidcafé just before it closes for the day
+    related_event: kiara_event_02
+    conditions:
+      - "'bree_event_09b' in DONE"
+      - hero.charm >= 50
+    outcome:
+      next: love40
+      condition: '"kiara_event_02" in DONE'
+
+  love40:
+    name: Get to know Kiara better
+    conditions:
+      - '"kiara_event_02" in DONE'
+      - kiara.love.max >= 40
+    percentage:
+      value: kiara.love.val
+      scale: 40
+    outcome:
+      hide: True
+      condition: kiara.love >= 40
+
+  kiara_event_03:
+    name: Relax at the strip club
+    related_event: kiara_event_03
+    conditions:
+      - "'kiara_event_02' in DONE"
+    outcome:
+      next: love60
+      condition: '"kiara_event_03" in DONE'
+
+  love60:
+    name: Get to know Kiara better
+    conditions:
+      - '"kiara_event_03" in DONE'
+    percentage:
+      value: kiara.love.val
+      scale: 60
+    outcome:
+      hide: True
+      condition: kiara.love >= 60
+
+  kiara_event_04:
+    name: Wait for Kiara's call one evening
+    related_event: kiara_event_04
+    conditions:
+      - "'kiara_event_03' in DONE"
+    outcome:
+      next: love80
+      condition: '"kiara_event_04" in DONE'
+
+  love80:
+    name: Get to know Kiara better
+    conditions:
+      - '"kiara_event_04" in DONE'
+    percentage:
+      value: kiara.love.val
+      scale: 80
+    outcome:
+      hide: True
+      condition: kiara.love >= 80
+
+  kiara_event_05:
+    name: Prepare for a party in Kiara's private lounge
+    related_event: kiara_event_05
+    conditions:
+      - "'kiara_event_04' in DONE"
+    outcome:
+      next: love100
+      condition: '"kiara_event_05" in DONE'
+
+  love100:
+    name: Get to know Kiara better
+    conditions:
+      - '"kiara_event_05" in DONE'
+    percentage:
+      value: kiara.love.val
+      scale: 100
+    outcome:
+      hide: True
+      condition: kiara.love >= 100
+
+  kiara_event_06:
+    name: Manage the club until Kiara is back
+    related_event: kiara_event_06
+    conditions:
+      - "'kiara_event_05' in DONE"
+    outcome:
+      next:
+        - love120
+        - sub25
+      condition: '"kiara_event_06" in DONE'
+
+  love120:
+    name: Get to know Kiara better
+    conditions:
+      - '"kiara_event_06" in DONE'
+    percentage:
+      value: kiara.love.val
+      scale: 120
+    outcome:
+      hide: True
+      condition: kiara.love >= 120
+
+  kiara_event_07:
+    name: Go on a date with Kiara at the mall
+    related_event: kiara_event_07
+    conditions:
+      - "'kiara_event_06' in DONE"
+      - kiara.sub <= -1
+    outcomes:
+      complete:
+        next: love140
+        condition: '"kiara_event_07" in DONE'
+      skipped:
+        condition: kiara.sub >= -1
+        next: kiara_event_07b
+        hide: True
+
+  kiara_event_07b:
+    name: Go on a date with Kiara at the mall
+    related_event: kiara_event_07b
+    conditions:
+      - "'kiara_event_06' in DONE"
+      - kiara.sub >= 0
+    outcome:
+      next: love140
+      condition: '"kiara_event_07b" in DONE'
+
+  love140:
+    name: Get to know Kiara better
+    conditions:
+      - '"kiara_event_07" in DONE or "kiara_event_07b" in DONE'
+    percentage:
+      value: kiara.love.val
+      scale: 140
+    outcome:
+      hide: True
+      condition: kiara.love >= 140
+
+  kiara_event_08:
+    name: Go to the nightclub between 22 and 4 to do some job
+    related_event: kiara_event_08
+    conditions:
+      - "'kiara_event_07' in DONE"
+    outcomes:
+      complete:
+        next: love160
+        condition: '"kiara_event_08" in DONE'
+      skipped:
+        condition: "'kiara_event_07b' in DONE"
+        next: kiara_event_08b
+        hide: True
+
+  kiara_event_08b:
+    name: Go to the park between 10 and 18 to have a picnic with Kiara while it's not winter
+    related_event: kiara_event_08b
+    conditions:
+      - "'kiara_event_07b' in DONE"
+    outcome:
+      next: love160
+      condition: '"kiara_event_08b" in DONE'
+
+  love160:
+    name: Get to know Kiara better
+    conditions:
+      - '"kiara_event_08" in DONE or "kiara_event_08b" in DONE'
+    percentage:
+      value: kiara.love.val
+      scale: 160
+    outcome:
+      hide: True
+      condition: kiara.love >= 160
+
+  kiara_event_09:
+    name: Listen to Kiara's proposal at the nightclub between 22 and 4
+    related_event: kiara_event_09
+    conditions:
+      - "'kiara_event_08' in DONE"
+    outcomes:
+      complete:
+        condition: '"kiara_event_09" in DONE'
+        next: None
+      skipped:
+        condition: "'kiara_event_08b' in DONE"
+        next: kiara_event_09b
+        hide: True
+
+  kiara_event_09b:
+    name: At home between 22 and 2, be ready to help Kiara to face some major drawback
+    related_event: kiara_event_09b
+    conditions:
+      - "'kiara_event_08b' in DONE"
+    outcome:
+      condition: '"kiara_event_09b" in DONE'
+      next: None
+
+  sub25:
+    name: Make Kiara more submissive
+    condition: '"kiara_event_06" in DONE'
+    percentage:
+      value: kiara.sub.val
+      scale: 25
+    outcome:
+      hide: True
+      conditions: kiara.sub >= 25
+
+  kiara_sub_event_01:
+    name: Let's meet KIara
+    related_event: kiara_sub_event_01
+    conditions:
+      - kiara.sub >= 25
+      - kiara.sexperience >= 1
+      - '"kiara_event_06" in DONE'
+    outcome:
+      condition: '"kiara_sub_event_01" in DONE'
+
+  sub50:
+    name: Make Kiara more submissive
+    percentage:
+      value: kiara.sub.val
+      scale: 50
+    outcome:
+      hide: True
+      conditions: kiara.sub >= 50
+
+  kiara_sub_event_02:
+    name: Meet Kiara at home, maidcafe or nightclub
+    related_event: kiara_sub_event_02
+    conditions:
+      - kiara.sub >= 50
+      - '"kiara_sub_event_01" in DONE'
+    outcome:
+      condition: '"kiara_sub_event_02" in DONE'
+
+  sub75:
+    name: Make Kiara more submissive
+    percentage:
+      value: kiara.sub.val
+      scale: 75
+    outcome:
+      hide: True
+      conditions: kiara.sub >= 75
+
+  kiara_sub_event_03:
+    name: Meet Kiara at one of her workplaces
+    related_event: kiara_sub_event_03
+    conditions:
+      - kiara.sub >= 75
+      - '"kiara_sub_event_02" in DONE'
+    outcome:
+      condition: '"kiara_sub_event_03" in DONE'
+
+  date:
+    name: Go on a date with Kiara
+    condition: True
+    outcome:
+      condition: kiara.flags.dates >= 1
+      next: None
+#      next: birthday_date
+#
+#  birthday_date:
+#    name: Take Kiara out on a night date for her birthday
+#    condition: kiara.flags.dates >= 1
+#    outcome:
+#      condition: '"kiara_birthday_date_male" in DONE'
+#      next: None
+
+  sex:
+    name: Have sex with Kiara
+    condition: True
+    outcome:
+      condition: kiara.sexperience >= 1
+      next: None
+
+  love:
+    name: Get Kiara to fall in love with me
+    condition: True
+    percentage:
+      value: kiara.love.val
+      scale: 200
+    outcome:
+      condition: kiara.love.val == 200
+      next: None
+
+  ring:
+    name: Buy a wedding ring
+    condition: True
+    outcome:
+      condition: hero.has_item("wedding_ring")
+
+  propose:
+    name: Propose to Kiara
+    condition: hero.has_item("wedding_ring")
+    outcome:
+      condition: kiara.flags.engagedmike
+      next: None
+
+  preg:
+    name: Get Kiara pregnant
+    optional: True
+    condition: True
+    outcome:
+      condition: kiara.flags.pregnancies_number > 0
+      next: None
+
+  slave:
+    name: Make Kiara my sex slave
+    optional: True
+    condition: True
+    outcome:
+      condition: kiara.is_sex_slave
+      next: None

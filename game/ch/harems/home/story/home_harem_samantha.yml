@@ -1,0 +1,129 @@
+name: Home Harem - Samantha
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Home_Harem#The_one_that_joined_the_fun"
+short: "{image=notify samantha} · Home Harem"
+type: harem
+description:
+  - description: Samantha came back to me and agreed to an open relationship. I can maybe push her further.
+  - description: Samantha is now part of the harem.
+    condition: Harem.find(samantha, name='home')
+conditions:
+  - samantha.sexperience >= 1
+  - samantha.flags.nonexclusive
+  - "'samantha_event_A04' in DONE"
+  - Harem.find(sasha, name='home')
+outcomes:
+  samanthaleft:
+    description: Unfortunately, Samantha left, dashing my hopes for a harem.
+    conditions:
+      - samantha.is_gone_forever
+    icon: fail
+  home_harem_bree_sasha_samantha:
+    conditions:
+      - Harem.together(bree, sasha, samantha, name='home')
+      - bree.flags.engagedmike
+      - sasha.flags.engagedmike
+      - samantha.flags.engagedmike
+    description: "[bree.name], Sasha and Samantha agreed to marry me!"
+
+steps:
+  should_not_happen_sam:
+    icon: stalled
+    name: "Issue with Samantha joining the home harem. Contact devs ([game.flags.ongoinghomeharem!c])"
+    toggle: True
+    conditions:
+      - "game.flags.ongoinghomeharem not in ['samantha', 'lexi', 'minami']"
+    outcomes:
+      complete:
+        hide: True
+        condition: Harem.find(samantha, name='home')
+      ongoing:
+        hide: True
+        condition: "game.flags.ongoinghomeharem in ['samantha', 'lexi', 'minami']"
+      broke_and_apologize:
+        hide: True
+        conditions:
+          - "'samantha_event_A04' in DONE"
+          - game.flags.ongoinghomeharem is False
+      gone:
+        hide: True
+        condition: samantha.is_gone_forever
+
+  add_samantha_home_harem:
+    icon: stalled
+    name: "I can't let Samantha join the home harem right now ([game.flags.ongoinghomeharem!c] ongoing)"
+    toggle: True
+    conditions:
+      - "game.flags.ongoinghomeharem in ['lexi', 'minami']"
+    outcome:
+      hide: True
+      condition: Harem.find(samantha, name='home')
+
+  ask_the_girls_about_sam:
+    name: Ask the girls about including Sam in our relationship
+    toggle: True
+    conditions:
+      - samantha.sexperience >= 1
+      - samantha.flags.nonexclusive
+      - "'samantha_event_A04' in DONE"
+      - Harem.find(sasha, name='home')
+      - "game.flags.ongoinghomeharem in ['samantha', False]"
+    outcomes:
+      complete:
+        conditions:
+          - "bree.flags.sam_home_harem"
+          - "sasha.flags.sam_home_harem"
+          - "minami.flags.sam_home_harem if Harem.find(minami, name='home') else True"
+      already_in_harem:
+        conditions:
+          - Harem.find(samantha, name='home')
+        next:
+          - call_sam_about_harem
+          - meet_sam_about_harem
+
+  call_sam_about_harem:
+    name: Call Sam to talk about the home situation
+    related_event: introduce_sam_to_girls
+    conditions:
+      - bree.flags.sam_home_harem
+      - sasha.flags.sam_home_harem
+      - "minami.flags.sam_home_harem if Harem.find(minami, name='home') else True"
+    outcomes:
+      complete:
+        conditions:
+          - '"introduce_sam_to_girls" in DONE'
+          - Harem.find(samantha, name='home')
+        next: propose_bree_sasha_samantha
+      met:
+        conditions:
+          - '"home_harem_confession_to_sam" in DONE'
+        hide: True
+        next: None
+
+  meet_sam_about_harem:
+    name: Meet Sam to talk about the home situation
+    related_event: home_harem_confession_to_sam
+    conditions:
+      - bree.flags.sam_home_harem
+      - sasha.flags.sam_home_harem
+      - "minami.flags.sam_home_harem if Harem.find(minami, name='home') else True"
+    outcomes:
+      complete:
+        conditions:
+          - '"home_harem_confession_to_sam" in DONE'
+          - Harem.find(samantha, name='home')
+        next: propose_bree_sasha_samantha
+      called:
+        conditions:
+          - '"introduce_sam_to_girls" in DONE'
+        hide: True
+        next: None
+
+  propose_bree_sasha_samantha:
+    name: "Propose to [bree.name], Sasha and Samantha"
+    conditions:
+      - "Harem.together(bree, sasha, samantha, name='home')"
+    outcome:
+      conditions:
+        - bree.flags.engagedmike
+        - sasha.flags.engagedmike
+        - samantha.flags.engagedmike

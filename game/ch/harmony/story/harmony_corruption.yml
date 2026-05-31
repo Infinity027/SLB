@@ -1,0 +1,113 @@
+name: Harmony corruption
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Harmony"
+short: "{image=notify harmony} · Corruption"
+description: "Maybe I could help Harmony loosen up a little."
+participants:
+  - harmony
+condition: '"harmony_start" in DONE'
+
+outcomes:
+  religious:
+    description: Harmony became a nun.
+    condition: '"harmony_event_07_religious" in DONE'
+    icon: fail
+  complete:
+    description: The end of our date was... unexpected.
+    condition: '"harmony_purity_06" in DONE'
+  gone:
+    description: Harmony has left and is no longer part of my life.
+    condition: harmony.is_gone_forever
+    icon: fail
+
+steps:
+  purity80:
+    name: Corrupt Harmony some more
+    condition: '"harmony_start" in DONE'
+    percentage:
+      value: harmony.purity.val
+      scale: 80
+    outcome:
+      hide: True
+      conditions: harmony.purity <= 80
+
+  harmony_purity_01:
+    name: Talk to Harmony
+    related_event: harmony_purity_01
+    conditions:
+      - '"harmony_start" in DONE'
+      - harmony.purity <= 80
+    outcome:
+      condition: '"harmony_purity_01" in DONE'
+
+  harmony_purity_02:
+    name: Go help Harmony on sunday
+    condition: '"harmony_purity_01" in DONE'
+    outcome:
+      condition: '"harmony_purity_02" in DONE'
+
+  purity70:
+    name: Corrupt Harmony some more
+    condition: '"harmony_purity_02" in DONE'
+    percentage:
+      value: harmony.purity.val
+      scale: 70
+      invert: True
+    outcome:
+      hide: True
+      conditions: harmony.purity <= 70
+
+  harmony_purity_03:
+    name: Invite harmony on a date
+    related_event: harmony_purity_03
+    conditions:
+      - '"harmony_purity_02" in DONE'
+      - harmony.purity <= 70
+    outcome:
+      condition: '"harmony_purity_03" in DONE'
+
+  harmony_purity_04:
+    name: Go on my date with Harmony on sunday
+    condition: '"harmony_purity_03" in DONE'
+    outcome:
+      condition: '"harmony_purity_04" in DONE'
+
+  purity50:
+    name: Corrupt Harmony some more
+    condition: '"harmony_purity_04" in DONE'
+    percentage:
+      value: harmony.purity.val
+      scale: 50
+      invert: True
+    outcome:
+      hide: True
+      conditions: harmony.purity <= 50
+
+  harmony_purity_05:
+    name: Attend mass on sunday
+    related_event: harmony_purity_05
+    conditions:
+      - '"harmony_purity_04" in DONE'
+      - harmony.purity <= 50
+    outcome:
+      condition: '"harmony_purity_05" in DONE'
+
+  purity30:
+    name: Corrupt Harmony some more
+    condition: '"harmony_purity_05" in DONE'
+    percentage:
+      value: harmony.purity.val
+      scale: 30
+      invert: True
+    outcome:
+      hide: True
+      conditions: harmony.purity <= 30
+
+  harmony_purity_06:
+    name: Go on a date with Harmony at the Nightclub on saturday or sunday
+    related_event: harmony_purity_06
+    conditions:
+      - '"harmony_purity_05" in DONE'
+      - harmony.purity <= 30
+    outcome:
+      condition: '"harmony_purity_06" in DONE'
+      next: None

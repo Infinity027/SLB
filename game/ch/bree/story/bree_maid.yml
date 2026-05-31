@@ -1,0 +1,292 @@
+name: "Bree - Maid"
+display_name: "[bree.name] - Maid"
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Bree#Maid_path"
+short: "{image=notify bree} · [bree.name]"
+description: "[bree.name] needs a job."
+participants:
+  - bree
+conditions:
+  - hero.is_male
+  - "'bree_event_03' in DONE"
+
+outcomes:
+  gone:
+    description: "[bree.name] has moved out and is no longer part of my life."
+    condition: bree.is_gone_forever
+    icon: fail
+  failed:
+    description: "[bree.name] decided to become a pro gamer."
+    conditions:
+      - "'bree_event_05' in DONE"
+    hide_story: True
+  complete:
+    description: "[bree.name] works in the maid cafe."
+    conditions:
+      - '"bree_event_14c" in DONE or "bree_event_14c_alternate" in DONE'
+
+
+steps:
+  love80:
+    name: "Get to know [bree.name] better"
+    conditions:
+      - hero.is_male
+      - "'bree_event_03' in DONE"
+    percentage:
+      value: bree.love.val
+      scale: 80
+    outcome:
+      hide: True
+      condition: bree.love >= 80
+
+  sub25:
+    name: "Make [bree.name] more submissive"
+    percentage:
+      value: bree.sub.val
+      scale: 25
+    outcome:
+      hide: True
+      condition: bree.sub >= 25
+
+  bree_event_04:
+    name: "Wait for [bree.name] to talk to me in the living room in the afternoon"
+    related_event: bree_event_04
+    outcome:
+      description: "[bree.name] is having trouble making rent, and has a job interview at a new cafe"
+      condition: '"bree_event_04" in DONE'
+
+  love100:
+    name: "Get to know [bree.name] better"
+    percentage:
+      value: bree.love.val
+      scale: 100
+    outcome:
+      hide: True
+      next: bree_event_05b
+      condition: bree.love >= 100
+
+  bree_event_05b:
+    name: "Help [bree.name] practice cooking for her job interview"
+    related_event: bree_event_05b
+    outcome:
+      condition: '"bree_event_05b" in DONE'
+
+  love110:
+    name: "Get to know [bree.name] better"
+    percentage:
+      value: bree.love.val
+      scale: 110
+    outcome:
+      hide: True
+      condition: bree.love >= 110
+
+  bree_event_06b:
+    name: "Let [bree.name] cook for you again"
+    related_event: bree_event_06b
+    outcome:
+      condition: '"bree_event_06b" in DONE'
+
+  love120:
+    name: "Get to know [bree.name] better"
+    percentage:
+      value: bree.love.val
+      scale: 120
+    outcome:
+      hide: True
+      condition: bree.love >= 120
+
+  bree_event_07b:
+    name: "Go with [bree.name] to her interview at the maid cafe"
+    related_event: bree_event_07b
+    outcome:
+      condition: '"bree_event_07b" in DONE'
+
+  love130:
+    name: "Get to know [bree.name] better"
+    percentage:
+      value: bree.love.val
+      scale: 130
+    outcome:
+      hide: True
+      condition: bree.love >= 130
+
+  bree_event_08b:
+    name: "Go see [bree.name] at the maid cafe around closing time"
+    related_event: bree_event_08b
+    outcome:
+      condition: '"bree_event_08b" in DONE'
+      next:
+        - bree_event_09c
+        - love140
+
+  love140:
+    name: "Get to know [bree.name] better"
+    percentage:
+      value: bree.love.val
+      scale: 140
+    outcome:
+      hide: True
+      condition: bree.love >= 140
+
+  bree_event_09b:
+    name: "Go see [bree.name] at the maid cafe"
+    related_event: bree_event_09b
+    outcome:
+      condition: '"bree_event_09b" in DONE'
+
+  love150:
+    name: "Get to know [bree.name] better"
+    percentage:
+      value: bree.love.val
+      scale: 150
+    outcome:
+      hide: True
+      condition: bree.love >= 150
+
+  bree_event_10b:
+    name: "Wait at home for the end of [bree.name]'s shift"
+    related_event: bree_event_10b
+    outcome:
+      condition: '"bree_event_10b" in DONE'
+
+  love160:
+    name: "Get to know [bree.name] better"
+    percentage:
+      value: bree.love.val
+      scale: 160
+    outcome:
+      hide: True
+      condition: bree.love >= 160
+
+  bree_event_11b:
+    name: "Wait at home for the end of [bree.name]'s shift again"
+    related_event: bree_event_11b
+    outcome:
+      condition: '"bree_event_11b" in DONE'
+
+  love170:
+    name: "Get to know [bree.name] better"
+    percentage:
+      value: bree.love.val
+      scale: 170
+    outcome:
+      hide: True
+      condition: bree.love >= 170
+
+  bree_event_12b:
+    name: "Help [bree.name] at the maid cafe"
+    related_event: bree_event_12b
+    outcome:
+      condition: '"bree_event_12b" in DONE'
+
+  love180:
+    name: "Get to know [bree.name] better"
+    percentage:
+      value: bree.love.val
+      scale: 180
+    outcome:
+      hide: True
+      condition: bree.love >= 180
+
+  bree_event_13b:
+    name: "Talk to [bree.name] in the livingroom"
+    related_event: bree_event_13b
+    outcome:
+      condition: '"bree_event_13b" in DONE'
+
+  love190:
+    name: "Get to know [bree.name] better"
+    percentage:
+      value: bree.love.val
+      scale: 190
+    outcome:
+      hide: True
+      condition: bree.love >= 190
+
+  bree_event_14b:
+    name: "Meet [bree.name]'s dad"
+    related_event: bree_event_14b
+    outcome:
+      condition: '"bree_event_14b" in DONE'
+
+  love200:
+    name: "Get to know [bree.name] better"
+    percentage:
+      value: bree.love.val
+      scale: 200
+    outcome:
+      hide: True
+      condition: bree.love >= 200
+      next: None
+
+  bree_event_09c:
+    name: "Come back home after work when [bree.name] is in the kitchen"
+    related_event: bree_event_09c
+    condition: '"bree_event_08b" in DONE'
+    outcome:
+      condition: '"bree_event_09c" in DONE'
+
+  bree_event_11c:
+    name: "Watch TV with [bree.name] in the evening"
+    related_event: bree_event_11c
+    conditions:
+      - '"bree_event_09c" in DONE'
+      - '"bree_event_10b" in DONE'
+    outcome:
+      condition: '"bree_event_11c" in DONE'
+      next:
+        - bree_event_14c
+        - bree_event_14c_fall
+        - bree_event_14c_alternate
+
+  bree_event_14c:
+    name: "Take [bree.name] on a date at the beach"
+    related_event: bree_event_14c
+    toggle: True
+    conditions:
+      - '"bree_event_14c" not in DONE'
+      - '"bree_event_14c_alternate" not in DONE'
+      - "game.season in [0, 1]"
+      - '"bree_event_13b" in DONE'
+      - '"bree_event_11c" in DONE'
+    outcomes:
+      14c_complete:
+        condition: '"bree_event_14c" in DONE'
+        next: complete
+      14c_alternate_complete:
+        condition: '"bree_event_14c_alternate" in DONE'
+        next: complete
+
+  bree_event_14c_fall:
+      name: "Wait for winter"
+      toggle: True
+      conditions:
+        - '"bree_event_14c" not in DONE'
+        - '"bree_event_14c_alternate" not in DONE'
+        - "game.season == 2"
+        - '"bree_event_13b" in DONE'
+        - '"bree_event_11c" in DONE'
+      outcomes:
+        14c_complete:
+          condition: '"bree_event_14c" in DONE'
+          next: complete
+        14c_alternate_complete:
+          condition: '"bree_event_14c_alternate" in DONE'
+          next: complete
+
+  bree_event_14c_alternate:
+    name: "Take [bree.name] on a date at the mall"
+    related_event: bree_event_14c_alternate
+    toggle: True
+    conditions:
+      - '"bree_event_14c" not in DONE'
+      - '"bree_event_14c_alternate" not in DONE'
+      - "game.season == 3"
+      - '"bree_event_13b" in DONE'
+      - '"bree_event_11c" in DONE'
+    outcomes:
+      14c_complete:
+        condition: '"bree_event_14c" in DONE'
+        next: complete
+      14c_alternate_complete:
+        condition: '"bree_event_14c_alternate" in DONE'
+        next: complete

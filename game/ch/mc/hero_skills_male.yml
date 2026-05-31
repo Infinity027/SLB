@@ -1,0 +1,10 @@
+- id: hung
+  display_name: Hung
+  conditions:
+    - "hero.is_male"
+  transferable: False
+- id: smalldick
+  display_name: Small Dick
+  conditions:
+    - "hero.is_male"
+  transferable: False

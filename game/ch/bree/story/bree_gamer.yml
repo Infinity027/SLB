@@ -1,0 +1,332 @@
+name: "Bree - Gamer"
+display_name: "[bree.name] - Gamer"
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Bree#Gamer_path"
+short: "{image=notify bree} · [bree.name]"
+description: "[bree.name] needs a job."
+participants:
+  - bree
+conditions:
+  - hero.is_male
+  - 'hero.has_skill("video_games")'
+  - "'bree_event_03' in DONE"
+
+outcomes:
+  gone:
+    description: "[bree.name] has moved out and is no longer part of my life."
+    condition: bree.is_gone_forever
+    icon: fail
+  failed:
+    description: "[bree.name] works at the maid cafe."
+    conditions:
+      - "'bree_event_04' in DONE"
+    hide_story: True
+  complete:
+    description: "We both worked hard to increase [bree.name]'s video skills. It paid, in multiple ways!"
+    conditions:
+      - '"bree_event_18" in DONE'
+
+steps:
+  love80:
+    name: "Get to know [bree.name] better"
+    conditions:
+      - hero.is_male
+      - 'hero.has_skill("video_games")'
+      - "'bree_event_03' in DONE"
+    percentage:
+      value: bree.love.val
+      scale: 80
+    outcome:
+      hide: True
+      condition: bree.love >= 80
+
+  bree_event_05:
+    name: "Talk to [bree.name] in the living room in the evening"
+    related_event: bree_event_05
+    conditions:
+      - "'bree_event_03' in DONE"
+      - 'hero.has_skill("video_games")'
+      - bree.love >= 80
+    outcome:
+      description: "[bree.name] practiced for an arcade competition"
+      condition: '"bree_event_05" in DONE'
+
+  love100:
+    name: "Get to know [bree.name] better"
+    condition: '"bree_event_05" in DONE'
+    percentage:
+      value: bree.love.val
+      scale: 100
+    outcome:
+      hide: True
+      condition: bree.love >= 100
+
+  sex:
+    name: "Have sex with [bree.name]"
+    conditions:
+      - bree.love >= 100
+      - '"bree_event_05" in DONE'
+    outcome:
+      condition: bree.sexperience >= 1
+
+  sub50:
+    name: "Make [bree.name] more submissive"
+    percentage:
+      value: bree.sub.val
+      scale: 50
+    outcome:
+      hide: True
+      condition: bree.sub >= 50
+
+  bree_event_06:
+    name: "Talk to [bree.name] in the living room again"
+    related_event: bree_event_06
+    conditions:
+      - '"bree_event_05" in DONE'
+      - bree.love >= 100
+      - bree.sub >= 50
+    outcome:
+      description: "I fucked [bree.name] while she played video games"
+      condition: '"bree_event_06" in DONE'
+
+  love110:
+    name: "Get to know [bree.name] better"
+    condition: '"bree_event_06" in DONE'
+    percentage:
+      value: bree.love.val
+      scale: 110
+    outcome:
+      hide: True
+      condition: bree.love >= 110
+
+  bree_event_07:
+    name: "Talk to [bree.name] in the living room once more"
+    related_event: bree_event_07
+    conditions:
+      - '"bree_event_06" in DONE'
+      - bree.love >= 110
+    outcome:
+      description: "[bree.name] gave me a blowjob while she played video games"
+      condition: '"bree_event_07" in DONE'
+
+  love120:
+    name: "Get to know [bree.name] better"
+    condition: '"bree_event_07" in DONE'
+    percentage:
+      value: bree.love.val
+      scale: 120
+    outcome:
+      hide: True
+      condition: bree.love >= 120
+
+  bree_event_08:
+    name: Go to the arcade tournament
+    related_event: bree_event_08
+    conditions:
+      - '"bree_event_07" in DONE'
+      - bree.love >= 120
+    outcome:
+      description: We won the arcade tournament
+      condition: '"bree_event_08" in DONE'
+
+  love130:
+    name: "Get to know [bree.name] better"
+    condition: '"bree_event_08" in DONE'
+    percentage:
+      value: bree.love.val
+      scale: 130
+    outcome:
+      hide: True
+      condition: bree.love >= 130
+
+  bree_event_09:
+    name: "I should talk to [bree.name] when she's in the living room"
+    related_event: bree_event_09
+    conditions:
+      - '"bree_event_08" in DONE'
+      - bree.love >= 130
+    outcome:
+      description: "[bree.name] Scissorhands"
+      condition: '"bree_event_09" in DONE'
+
+  love140:
+    name: "Get to know [bree.name] better"
+    condition: '"bree_event_09" in DONE'
+    percentage:
+      value: bree.love.val
+      scale: 140
+    outcome:
+      hide: True
+      condition: bree.love >= 140
+
+  wait_bree_event_10:
+    name: Wait a little
+    conditions:
+      - '"bree_event_09" in DONE'
+      - bree.flags.breedelay
+    percentage:
+      value: bree.timers.breedelay
+      scale: 1
+      invert: True
+    outcome:
+      hide: True
+      conditions:
+        - '"bree_event_09" in DONE'
+        - not bree.flags.breedelay
+
+  bree_event_10:
+    name: Play video games during the day
+    related_event: bree_event_10
+    conditions:
+      - '"bree_event_09" in DONE'
+      - not bree.flags.breedelay
+      - bree.love >= 140
+    outcome:
+      description: "[bree.name] knows about your pixelated spouse"
+      condition: '"bree_event_10" in DONE'
+
+  love150:
+    name: "Get to know [bree.name] better"
+    condition: '"bree_event_10" in DONE'
+    percentage:
+      value: bree.love.val
+      scale: 150
+    outcome:
+      hide: True
+      condition: bree.love >= 150
+
+  bree_event_11:
+    name: Meet Thyra (or not)
+    related_event: bree_event_11
+    conditions:
+      - '"bree_event_10" in DONE'
+      - bree.love >= 150
+    outcomes:
+      meeting:
+          description: We met Thyra IRL
+          conditions:
+            - '"bree_event_11" in DONE'
+            - bree.flags.meetthyra
+      nomeeting:
+          icon: fail
+          description: "[bree.name] convinced me to avoid meeting Thyra"
+          conditions:
+            - '"bree_event_11" in DONE'
+            - not bree.flags.meetthyra
+
+  love160:
+    name: "Get to know [bree.name] better"
+    condition: '"bree_event_11" in DONE'
+    percentage:
+      value: bree.love.val
+      scale: 160
+    outcome:
+      hide: True
+      condition: bree.love >= 160
+
+  bree_event_12:
+    name: "Meet [bree.name]'s dad"
+    related_event: bree_event_12
+    conditions:
+      - '"bree_event_11" in DONE'
+      - bree.love >= 160
+    outcome:
+      description: "I survived [bree.name]'s dad."
+      condition: '"bree_event_12" in DONE'
+
+  love170:
+    name: "Get to know [bree.name] better"
+    condition: '"bree_event_12" in DONE'
+    percentage:
+      value: bree.love.val
+      scale: 170
+    outcome:
+      hide: True
+      condition: bree.love >= 170
+
+  bree_event_13:
+    name: "Watch TV with [bree.name]"
+    related_event: bree_event_13
+    conditions:
+      - '"bree_event_12" in DONE'
+      - bree.love >= 170
+    outcome:
+      description: "I watched TV late with [bree.name]."
+      condition: '"bree_event_13" in DONE'
+
+  love180:
+    name: "Get to know [bree.name] better"
+    condition: '"bree_event_13" in DONE'
+    percentage:
+      value: bree.love.val
+      scale: 180
+    outcome:
+      hide: True
+      condition: bree.love >= 180
+
+  bree_event_14:
+    name: "[bree.name] seems focused in the livingroom, I should see what's going on"
+    related_event: bree_event_14
+    conditions:
+      - '"bree_event_13" in DONE'
+      - bree.love >= 180
+    outcome:
+      description: "[bree.name] asked help for her dissertation."
+      condition: '"bree_event_14" in DONE'
+
+  love190:
+    name: "Get to know [bree.name] better"
+    condition: '"bree_event_14" in DONE'
+    percentage:
+      value: bree.love.val
+      scale: 190
+    outcome:
+      hide: True
+      condition: bree.love >= 190
+
+  bree_event_15:
+    name: "Talk to [bree.name] in the living room one more time"
+    related_event: bree_event_15
+    conditions:
+      - '"bree_event_14" in DONE'
+      - bree.love >= 190
+    outcome:
+      description: "I have seen [bree.name]'s year book."
+      condition: '"bree_event_15" in DONE'
+
+  love200:
+    name: "Get to know [bree.name] better"
+    condition: '"bree_event_15" in DONE'
+    percentage:
+      value: bree.love.val
+      scale: 200
+    outcome:
+      hide: True
+      condition: bree.love >= 200
+
+  bree_event_16:
+    name: "[bree.name] looks worried in the living room"
+    related_event: bree_event_16
+    conditions:
+      - '"bree_event_15" in DONE'
+      - bree.love >= 200
+    outcome:
+      description: A new Zbox at home.
+      condition: '"bree_event_16" in DONE'
+
+
+  bree_event_17:
+    name: "Play video games while only [bree.name] is at home"
+    related_event: bree_event_17
+    conditions:
+      - "'bree_event_16' in DONE"
+    outcome:
+      condition: '"bree_event_17" in DONE'
+
+  bree_event_18:
+    name: "Improve video game skill while only [bree.name] is at home"
+    related_event: bree_event_18
+    conditions:
+      - "'bree_event_17' in DONE"
+    outcome:
+      condition: '"bree_event_18" in DONE'
+      next: None

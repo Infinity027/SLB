@@ -1,0 +1,23 @@
+name: Halloween Party
+short: "{image=notify askhalloween} · Halloween"
+description: "We are hosting a Halloween Party this year!"
+condition: game.flags.party_planned
+
+outcomes:
+  success:
+    description: I found a girl to be my date at the party
+    conditions:
+      - "'halloween_event' in DONE"
+      - game.flags.halloween_girl
+  fail:
+    description: I found no girl to be my date at the party
+    conditions:
+      - "'halloween_event' in DONE"
+      - not game.flags.halloween_girl
+    icon: fail
+
+steps:
+  halloween_event:
+    name: Invite a girl to be your date at the party
+    outcome:
+      condition: game.flags.halloween_girl

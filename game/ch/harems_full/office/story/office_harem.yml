@@ -1,0 +1,590 @@
+name: Office Harem
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Office_Harem"
+short: "{image=notify aletta}{image=notify audrey}{image=notify lavish}{image=notify shiori} · Office Harem"
+type: harem
+description: "I'm now the CEO of the company?"
+participants:
+  - hero
+  - aletta
+  - audrey
+  - lavish
+  - shiori
+conditions:
+  - hero.flags.isceo
+
+outcomes:
+  audreyleft:
+    description: Unfortunately, Audrey left.
+    conditions:
+      - audrey.is_gone_forever
+    icon: fail
+  aletta_and_lavish_and_shiori_left:
+    description: Unfortunately, only Audrey still agrees to see me.
+    conditions:
+      - hero.flags.isceo
+      - aletta.is_gone_forever
+      - lavish.is_gone_forever
+      - shiori.is_gone_forever
+    icon: fail
+  office_harem_aletta_audrey_lavish_shiori:
+    conditions:
+      - Harem.together(aletta, audrey, lavish, shiori, name="office")
+      - aletta.flags.engagedmike
+      - audrey.flags.engagedmike
+      - lavish.flags.engagedmike
+      - shiori.flags.engagedmike
+    description: Aletta, Audrey, Lavish and Shiori agreed to marry me!
+  office_harem_audrey_lavish_shiori:
+    conditions:
+      - Harem.together(aletta, audrey, lavish, shiori, name="office")
+      - not Harem.together(aletta, audrey, lavish, shiori, name="office")
+      - audrey.flags.engagedmike
+      - lavish.flags.engagedmike
+      - shiori.flags.engagedmike
+    description: Audrey, Lavish and Shiori agreed to marry me!
+  office_harem_aletta_lavish_shiori:
+    conditions:
+      - Harem.together(aletta, lavish, shiori, name="office")
+      - not Harem.together(aletta, audrey, lavish, shiori, name="office")
+      - aletta.flags.engagedmike
+      - lavish.flags.engagedmike
+      - shiori.flags.engagedmike
+    description: Aletta, Lavish and Shiori agreed to marry me!
+  office_harem_aletta_audrey_shiori:
+    conditions:
+      - Harem.together(aletta, audrey, shiori, name="office")
+      - not Harem.together(aletta, audrey, lavish, shiori, name="office")
+      - aletta.flags.engagedmike
+      - audrey.flags.engagedmike
+      - shiori.flags.engagedmike
+    description: Aletta, Audrey and Shiori agreed to marry me!
+  office_harem_aletta_audrey_lavish:
+    conditions:
+      - Harem.together(aletta, audrey, lavish, name="office")
+      - not Harem.together(aletta, audrey, lavish, shiori, name="office")
+      - aletta.flags.engagedmike
+      - audrey.flags.engagedmike
+      - lavish.flags.engagedmike
+    description: Aletta, Audrey and Lavish agreed to marry me!
+  office_harem_lavish_shiori:
+    conditions:
+      - Harem.together(lavish, shiori, name="office")
+      - not Harem.together(aletta, audrey, lavish, shiori, name="office")
+      - lavish.flags.engagedmike
+      - shiori.flags.engagedmike
+    description: Lavish and Shiori agreed to marry me!
+  office_harem_audrey_shiori:
+    conditions:
+      - Harem.together(audrey, shiori, name="office")
+      - audrey.flags.engagedmike
+      - shiori.flags.engagedmike
+    description: Audrey and Shiori agreed to marry me!
+  office_harem_audrey_lavish:
+    conditions:
+      - Harem.together(audrey, lavish, name="office")
+      - audrey.flags.engagedmike
+      - lavish.flags.engagedmike
+    description: Audrey and Lavish agreed to marry me!
+  office_harem_aletta_shiori:
+    conditions:
+      - Harem.together(aletta, shiori, name="office")
+      - aletta.flags.engagedmike
+      - shiori.flags.engagedmike
+    description:  Aletta and Shiori agreed to marry me!
+  office_harem_aletta_lavish:
+    conditions:
+      - Harem.together(aletta, lavish, name="office")
+      - aletta.flags.engagedmike
+      - lavish.flags.engagedmike
+    description: Aletta and Lavish agreed to marry me!
+  office_harem_aletta_audrey:
+    conditions:
+      - Harem.together(aletta, audrey, name="office")
+      - aletta.flags.engagedmike
+      - audrey.flags.engagedmike
+    description: Aletta and Audrey agreed to marry me!
+
+
+steps:
+  prepare_blissard_meeting:
+    name: I have to work on Blissard's deal. They may try to con me.
+    condition: hero.flags.isceo
+    outcome:
+      condition: 'not hero.flags.workonblissard'
+      hide: True
+
+  blissard_meeting:
+    name: Seal the deal with Blissard Games.
+    conditions:
+      - hero.flags.isceo
+      - 'not hero.flags.workonblissard'
+    outcomes:
+      complete:
+        description: Blissard signed the deal.
+        condition: game.flags.blissardsealed
+      failure:
+        icon: fail
+        description: Blissard res.
+        condition: game.flags.blissardsealed
+
+  audrey_sex:
+    name: Have sex with Audrey 3 times
+    condition: True
+    outcome:
+      condition: audrey.sexperience >= 3
+
+  lavish_sex:
+    name: Have sex with Lavish 3 times
+    condition: True
+    outcome:
+      condition: lavish.sexperience >= 3
+
+  shiori_sex:
+    name: Have sex with Shiori 3 times
+    condition: True
+    outcome:
+      condition: shiori.sexperience >= 3
+
+  aletta_sex:
+    name: Have sex with Aletta 3 times
+    conditions:
+      - '"office_audrey_lavish_shiori_01" in DONE'
+    outcome:
+      condition: aletta.sexperience >= 3
+
+  office_audrey_shiori_showdown_check:
+    name: Have a hot coffee with Audrey and Shiori within 7 days
+    conditions:
+      - hero.flags.isceo
+      - audrey.sexperience >= 3
+      - shiori.sexperience >= 3
+    outcomes:
+      complete:
+        condition: Person.showdown(audrey, shiori)
+        hide: True
+      already_done:
+        condition: '"office_audrey_shiori_01" in DONE or "office_audrey_shiori_showdown" in DONE'
+        hide: True
+      harem_already_formed:
+        condition: Harem.together(audrey, shiori, name='office')
+        hide: True
+
+  office_harem_audrey_shiori_showdown:
+    name: Shiori brings coffee in my office every morning when I work
+    related_event: office_audrey_shiori_showdown
+    conditions:
+      - hero.flags.isceo
+      - Person.showdown(audrey, shiori)
+    outcomes:
+      complete:
+        conditions:
+          - '"office_audrey_shiori_01" in DONE or "office_audrey_shiori_showdown" in DONE'
+          - Harem.together(audrey, shiori, name='office')
+      failure:
+        icon: fail
+        conditions:
+          - '"office_audrey_shiori_01" in DONE or "office_audrey_shiori_showdown" in DONE'
+          - not Harem.together(audrey, shiori, name='office')
+        next: None
+      harem_already_formed:
+        condition: Harem.together(audrey, shiori, name='office')
+        hide: True
+
+  office_audrey_shiori_wait:
+    name: Wait for some news about Audrey and Shiori
+    conditions:
+      - '"office_audrey_shiori_01" in DONE or "office_audrey_shiori_showdown" in DONE'
+      - Harem.together(audrey, shiori, name='office')
+      - game.flags.officeharemaudshidelay
+    outcome:
+      hide: True
+      conditions:
+        - not game.flags.officeharemaudshidelay
+
+  office_harem_audrey_shiori_02:
+    name: Work in the morning
+    related_event: office_audrey_shiori_02
+    conditions:
+      - not game.flags.officeharemaudshidelay
+      - Harem.together(audrey, shiori, name='office')
+    outcome:
+      condition: '"office_audrey_shiori_02" in DONE'
+      next: None
+
+  office_audrey_lavish_showdown_check:
+    name: Have a hot coffee with Audrey and Lavish within 7 days
+    conditions:
+      - hero.flags.isceo
+      - audrey.sexperience >= 3
+      - lavish.sexperience >= 3
+    outcomes:
+      complete:
+        condition: Person.showdown(audrey, lavish)
+        hide: True
+      already_done:
+        condition: '"office_audrey_lavish_showdown" in DONE'
+        hide: True
+      harem_already_formed:
+        condition: Harem.together(audrey, lavish, name='office')
+        hide: True
+
+  office_audrey_lavish_showdown:
+    name: Take Lavish on a date at the restaurant
+    related_event: office_audrey_lavish_showdown
+    conditions:
+      - hero.flags.isceo
+      - Person.showdown(audrey, lavish)
+    outcomes:
+      complete:
+        conditions:
+          - '"office_audrey_lavish_showdown" in DONE'
+          - Harem.together(audrey, lavish, name='office')
+      failure:
+        icon: fail
+        conditions:
+          - '"office_audrey_lavish_showdown" in DONE'
+          - not Harem.together(audrey, lavish, name='office')
+        next: None
+      harem_already_formed:
+        condition: Harem.together(audrey, lavish, name='office')
+        hide: True
+
+  office_audrey_lavish_wait:
+    name: Wait for some news about Audrey and Lavish
+    conditions:
+      - '"office_audrey_lavish_showdown" in DONE'
+      - Harem.together(audrey, lavish, name='office')
+      - game.flags.officeharemaudlavdelay
+    outcome:
+      hide: True
+      conditions:
+        - not game.flags.officeharemaudlavdelay
+
+  office_audrey_lavish_01:
+    name: Go for a nice work day.
+    related_event: office_audrey_lavish_01
+    conditions:
+      - not game.flags.officeharemaudlavdelay
+      - Harem.together(audrey, lavish, name='office')
+    outcome:
+       condition: '"office_audrey_lavish_01" in DONE'
+
+  office_lavish_shiori_01:
+    name: Go for a nice work day, again.
+    related_event: office_lavish_shiori_01
+    conditions:
+      - '"office_audrey_shiori_02" in DONE'
+      - '"office_audrey_lavish_01" in DONE'
+      - Harem.together(lavish, shiori, name='office')
+    outcome:
+      condition: '"office_lavish_shiori_01" in DONE'
+
+  office_audrey_lavish_shiori_showdown_check:
+    name: Have a hot coffee with Audrey, Lavish and Shiori within 7 days
+    conditions:
+      - hero.flags.isceo
+      - audrey.sexperience >= 3
+      - lavish.sexperience >= 3
+      - shiori.sexperience >= 3
+      - '"office_audrey_shiori_02" in DONE'
+      - '"office_audrey_lavish_01" in DONE'
+      - '"office_lavish_shiori_01" in DONE'
+    outcomes:
+      complete:
+        condition: Person.showdown(audrey, lavish, shiori)
+        hide: True
+      already_done:
+        condition: '"office_audrey_lavish_shiori_showdown" in DONE'
+        hide: True
+
+  office_audrey_lavish_shiori_showdown:
+    name: Take Audrey on a date at the beach
+    related_event: office_audrey_lavish_shiori_showdown
+    conditions:
+      - hero.flags.isceo
+      - '"office_audrey_shiori_02" in DONE'
+      - '"office_audrey_lavish_01" in DONE'
+      - '"office_lavish_shiori_01" in DONE'
+    outcomes:
+      complete:
+        conditions:
+          - '"office_audrey_lavish_shiori_showdown" in DONE'
+          - Harem.together(audrey, lavish, shiori, name='office')
+      failure:
+        icon: fail
+        conditions:
+          - '"office_audrey_lavish_shiori_showdown" in DONE'
+          - not Harem.together(audrey, lavish, shiori, name='office')
+        next: None
+
+  office_audrey_lavish_shiori_wait:
+    name: Wait for some news about Audrey, Lavish and Shiori
+    conditions:
+      - '"office_audrey_lavish_shiori_showdown" in DONE'
+      - Harem.together(audrey, lavish, shiori, name='office')
+      - game.flags.officeharemfourdelay
+    outcome:
+      hide: True
+      conditions:
+        - not game.flags.officeharemfourdelay
+
+  office_harem_audrey_lavish_shiori_01:
+    name: Go for a nice work day, once more.
+    related_event: office_audrey_lavish_shiori_01
+    conditions:
+      - not game.flags.officeharemfourdelay
+      - Harem.together(audrey, lavish, shiori, name='office')
+    outcome:
+      condition: '"office_audrey_lavish_shiori_01" in DONE'
+
+  office_aletta_audrey_lavish_shiori_showdown_check:
+    name: Have a hot coffee with Aletta, Audrey, Lavish and Shiori within 7 days
+    conditions:
+      - aletta.sexperience >= 3
+      - audrey.sexperience >= 3
+      - lavish.sexperience >= 3
+      - shiori.sexperience >= 3
+      - Harem.together(audrey, lavish, shiori, name='office')
+    outcomes:
+      complete:
+        condition: Person.showdown(aletta, audrey, shiori, lavish)
+        hide: True
+      already_done:
+        condition: '"office_aletta_audrey_lavish_shiori_showdown" in DONE'
+        hide: True
+
+  office_aletta_audrey_lavish_shiori_showdown:
+    name: Work in the office
+    related_event: office_aletta_audrey_lavish_shiori_showdown
+    conditions:
+      - Harem.together(audrey, lavish, shiori, name='office')
+      - '"office_audrey_lavish_shiori_01" in DONE'
+      - aletta.sexperience >= 3
+    outcomes:
+      complete:
+        conditions:
+          - hero.flags.isceo
+          - '"office_aletta_audrey_lavish_shiori_showdown" in DONE'
+          - Harem.together(aletta, audrey, lavish, shiori, name='office')
+      failure:
+        icon: fail
+        conditions:
+          - '"office_aletta_audrey_lavish_shiori_showdown" in DONE'
+          - not Harem.together(aletta, audrey, lavish, shiori, name='office')
+        next: None
+
+  office_aletta_audrey_lavish_shiori_wait:
+    name: Wait for some news
+    conditions:
+      - '"office_aletta_audrey_lavish_shiori_showdown" in DONE'
+      - Harem.together(aletta, audrey, lavish, shiori, name='office')
+      - game.flags.officeharemfivedelay
+    outcome:
+      hide: True
+      conditions:
+        - not game.flags.officeharemfivedelay
+
+  office_harem_aletta_audrey_lavish_shiori_01:
+    name: Go for a nice day of work
+    related_event: office_aletta_audrey_lavish_shiori_01
+    conditions:
+      - not game.flags.officeharemfivedelay
+      - Harem.together(aletta, audrey, lavish, shiori, name='office')
+    outcome:
+      condition: '"office_aletta_audrey_lavish_shiori_01" in DONE'
+      next: None
+
+  propose_aletta_audrey_lavish_shiori:
+    name: Propose to Aletta, Audrey, Lavish and Shiori.
+    conditions:
+      - Harem.together(aletta, audrey, lavish, shiori, name="office")
+    outcome:
+      conditions:
+        - aletta.flags.engagedmike
+        - audrey.flags.engagedmike
+        - lavish.flags.engagedmike
+        - shiori.flags.engagedmike
+
+  propose_audrey_lavish_shiori:
+    name: Propose to Audrey, Lavish and Shiori.
+    conditions:
+      - Harem.together(audrey, lavish, shiori, name="office")
+      - not Harem.find(aletta, name='office')
+    outcomes:
+      complete:
+        conditions:
+          - audrey.flags.engagedmike
+          - lavish.flags.engagedmike
+          - shiori.flags.engagedmike
+      hidden:
+        conditions:
+          - Harem.find(aletta, name='office')
+        hide: True
+
+  propose_aletta_lavish_shiori:
+    name: Propose to Aletta, Lavish and Shiori.
+    conditions:
+      - Harem.together(aletta, lavish, shiori, name="office")
+      - not Harem.find(audrey, name='office')
+    outcomes:
+      complete:
+        conditions:
+          - aletta.flags.engagedmike
+          - lavish.flags.engagedmike
+          - shiori.flags.engagedmike
+      hidden:
+        conditions:
+          - Harem.find(audrey, name='office')
+        hide: True
+
+  propose_aletta_audrey_shiori:
+    name: Propose to Aletta, Audrey and Shiori.
+    conditions:
+      - Harem.together(aletta, audrey, shiori, name="office")
+      - not Harem.find(lavish, name='office')
+    outcomes:
+      complete:
+        conditions:
+          - aletta.flags.engagedmike
+          - audrey.flags.engagedmike
+          - shiori.flags.engagedmike
+      hidden:
+        conditions:
+          - Harem.find(lavish, name='office')
+        hide: True
+
+  propose_aletta_audrey_lavish:
+    name: Propose to Aletta, Audrey and Lavish.
+    conditions:
+      - Harem.together(aletta, audrey, lavish, name="office")
+      - not Harem.find(shiori, name='office')
+    outcomes:
+      complete:
+        conditions:
+          - aletta.flags.engagedmike
+          - audrey.flags.engagedmike
+          - lavish.flags.engagedmike
+      hidden:
+        conditions:
+          - Harem.find(shiori, name='office')
+        hide: True
+
+  propose_lavish_shiori:
+    name: Propose to Lavish and Shiori.
+    conditions:
+      - Harem.together(lavish, shiori, name='office')
+      - not Harem.find(aletta, name='office')
+      - not Harem.find(audrey, name='office')
+    outcomes:
+      complete:
+        conditions:
+          - lavish.flags.engagedmike
+          - shiori.flags.engagedmike
+      hidden_aletta:
+        conditions:
+          - Harem.find(aletta, name='office')
+        hide: True
+      hidden_audrey:
+        conditions:
+          - Harem.find(audrey, name='office')
+        hide: True
+
+  propose_audrey_shiori:
+    name: Propose to Audrey, and Shiori.
+    conditions:
+      - Harem.together(audrey, shiori, name='office')
+      - not Harem.find(aletta, name='office')
+      - not Harem.find(lavish, name='office')
+    outcomes:
+      complete:
+        conditions:
+          - audrey.flags.engagedmike
+          - shiori.flags.engagedmike
+      hidden_aletta:
+        conditions:
+          - Harem.find(aletta, name='office')
+        hide: True
+      hidden_lavish:
+        conditions:
+          - Harem.find(lavish, name='office')
+        hide: True
+
+  propose_audrey_lavish:
+    name: Propose to Audrey and Lavish.
+    conditions:
+      - Harem.together(audrey, lavish, name='office')
+      - not Harem.find(aletta, name='office')
+      - not Harem.find(shiori, name='office')
+    outcomes:
+      complete:
+        conditions:
+          - audrey.flags.engagedmike
+          - lavish.flags.engagedmike
+      hidden_aletta:
+        conditions:
+          - Harem.find(aletta, name='office')
+        hide: True
+      hidden_shiori:
+        conditions:
+          - Harem.find(shiori, name='office')
+        hide: True
+
+  propose_aletta_shiori:
+    name: Propose to Aletta and Shiori.
+    conditions:
+      - Harem.together(aletta, shiori, name='office')
+      - not Harem.find(audrey, name='office')
+      - not Harem.find(lavish, name='office')
+    outcomes:
+      complete:
+        conditions:
+          - aletta.flags.engagedmike
+          - shiori.flags.engagedmike
+      hidden_audrey:
+        conditions:
+          - Harem.find(audrey, name='office')
+        hide: True
+      hidden_lavish:
+        conditions:
+          - Harem.find(lavish, name='office')
+        hide: True
+
+  propose_aletta_lavish:
+    name: Propose to Aletta and Lavish.
+    conditions:
+      - Harem.together(aletta, lavish, name='office')
+      - not Harem.find(audrey, name='office')
+      - not Harem.find(shiori, name='office')
+    outcomes:
+      complete:
+        conditions:
+          - aletta.flags.engagedmike
+          - lavish.flags.engagedmike
+      hidden_audrey:
+        conditions:
+          - Harem.find(audrey, name='office')
+        hide: True
+      hidden_shiori:
+        conditions:
+          - Harem.find(shiori, name='office')
+        hide: True
+
+  propose_aletta_audrey:
+    name: Propose to Aletta and Audrey.
+    conditions:
+      - Harem.together(aletta, audrey, name='office')
+      - not Harem.find(lavish, name='office')
+      - not Harem.find(shiori, name='office')
+    outcomes:
+      complete:
+        conditions:
+          - aletta.flags.engagedmike
+          - audrey.flags.engagedmike
+      hidden_lavish:
+        conditions:
+          - Harem.find(lavish, name='office')
+        hide: True
+      hidden_shiori:
+        conditions:
+          - Harem.find(shiori, name='office')
+        hide: True

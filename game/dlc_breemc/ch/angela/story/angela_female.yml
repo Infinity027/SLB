@@ -1,0 +1,606 @@
+name: Angela
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Angela/FemaleMC"
+short: "{image=notify angela} · Angela"
+description: "Angela is [mike.name]'s mother."
+participants:
+  - angela
+conditions:
+  - hero.is_female
+  - '"angela_female_event_01" in DONE'
+
+outcomes:
+  complete:
+    description: Angela story is complete.
+    conditions:
+      - angela.flags.complete
+  gone:
+    description: Angela has left and is no longer part of my life.
+    condition: angela.is_gone_forever
+    icon: fail
+
+steps:
+  love20:
+    name: Get to know Angela better
+    condition: True
+    percentage:
+      value: angela.love.val
+      scale: 20
+    outcome:
+      hide: True
+      condition: angela.love >= 20
+
+  angela_female_event_02:
+    name: Meet Angela in the mall.
+    related_event: angela_female_event_02
+    conditions:
+      - angela.love >= 20
+      - '"angela_female_event_01" in DONE'
+    outcomes:
+      complete:
+        condition: '"angela_female_event_02" in DONE'
+
+  love40:
+    name: Get to know Angela better
+    condition: '"angela_female_event_02" in DONE'
+    percentage:
+      value: angela.love.val
+      scale: 40
+    outcome:
+      hide: True
+      condition: angela.love >= 40
+
+  angela_female_event_03:
+    name: Go for a run at the park.
+    related_event: angela_female_event_03
+    conditions:
+      - angela.love >= 40
+      - '"angela_female_event_02" in DONE'
+    outcomes:
+      complete:
+        condition: '"angela_female_event_03" in DONE'
+
+  love60:
+    name: Get to know Angela better
+    condition: '"angela_female_event_03" in DONE'
+    percentage:
+      value: angela.love.val
+      scale: 60
+    outcome:
+      hide: True
+      condition: angela.love >= 60
+
+  angela_female_event_04:
+    name: Wait for Angela to call
+    related_event: angela_female_event_04
+    conditions:
+      - angela.love >= 60
+      - '"angela_female_event_03" in DONE'
+    outcomes:
+      complete:
+        condition: '"angela_female_event_04" in DONE'
+
+  love80:
+    name: Get to know Angela better
+    condition: '"angela_female_event_04" in DONE'
+    percentage:
+      value: angela.love.val
+      scale: 80
+    outcome:
+      hide: True
+      condition: angela.love >= 80
+
+  angela_female_event_05:
+    name: Meet Angela in the street
+    related_event: angela_female_event_05
+    conditions:
+      - angela.love >= 80
+      - '"angela_female_event_04" in DONE'
+    outcomes:
+      complete:
+        condition: '"angela_female_event_05" in DONE'
+
+  love100:
+    name: Get to know Angela better
+    condition: '"angela_female_event_05" in DONE'
+    percentage:
+      value: angela.love.val
+      scale: 100
+    outcome:
+      hide: True
+      condition: angela.love >= 100
+
+  angela_female_event_06:
+    name: Meet Angela at the pub
+    related_event: angela_female_event_06
+    conditions:
+      - '"angela_female_event_05" in DONE'
+      - angela.love >= 100
+    outcomes:
+      complete:
+        condition: '"angela_female_event_06" in DONE'
+
+  love110:
+    name: Get to know Angela better
+    condition: '"angela_female_event_06" in DONE'
+    percentage:
+      value: angela.love.val
+      scale: 110
+    outcome:
+      hide: True
+      condition: angela.love >= 110
+
+  angela_female_event_07:
+    name: Wander around the street or park
+    related_event: angela_female_event_07
+    conditions:
+      - '"angela_female_event_06" in DONE'
+      - angela.love >= 110
+    outcomes:
+      complete:
+        condition: '"angela_female_event_07" in DONE'
+
+  love120:
+    name: Get to know Angela better
+    condition: '"angela_female_event_07" in DONE'
+    percentage:
+      value: angela.love.val
+      scale: 120
+    outcome:
+      hide: True
+      condition: angela.love >= 120
+
+  angela_female_event_08:
+    name: Find answers at the hospital
+    related_event: angela_female_event_08
+    conditions:
+      - '"angela_female_event_07" in DONE'
+      - angela.love >= 120
+    outcomes:
+      complete:
+        conditions:
+          - '"angela_female_event_08" in DONE'
+          - game.flags.angela_test_results
+        next: love140
+      uncomplete:
+        conditions:
+          - '"angela_female_event_08" in DONE'
+          - not game.flags.angela_test_results
+
+  angelainvestigation:
+    name: Persuade Angela's doctor to give her test results
+    related_event: angela_female_event_08
+    conditions:
+      - '"angela_female_event_08" in DONE'
+      - not game.flags.angela_test_results
+    percentage:
+      value: game.flags.angelainvestigation
+      scale: 100
+    outcome:
+      conditions:
+        - game.flags.angela_test_results
+
+  love140:
+    name: Get to know Angela better
+    conditions:
+      - '"angela_female_event_08" in DONE'
+      - game.flags.angela_test_results
+    percentage:
+      value: angela.love.val
+      scale: 140
+    outcome:
+      hide: True
+      condition: angela.love >= 140
+
+  angela_female_event_09:
+    name: Wait for Angela's phone call
+    related_event: angela_female_event_09
+    conditions:
+      - '"angela_female_event_08" in DONE'
+      - game.flags.angela_test_results
+      - angela.love >= 140
+    outcomes:
+      complete:
+        conditions: '"angela_female_event_09" in DONE'
+        next:
+          - love160
+          - collar
+
+  love160:
+    name: Get to know Angela better
+    conditions:
+      - '"angela_female_event_09" in DONE'
+    percentage:
+      value: angela.love.val
+      scale: 160
+    outcome:
+      hide: True
+      condition: angela.love >= 160
+
+  angela_female_event_10:
+    name: Angela promised to call
+    related_event: angela_female_event_10
+    conditions:
+      - '"angela_female_event_09" in DONE'
+      - angela.love >= 160
+    outcomes:
+      police:
+        description: We will talk to the police
+        conditions:
+          - '"angela_female_event_10" in DONE'
+          - angela.flags.angela_choice == "police"
+        next:
+          - love180
+          - angela_female_event_11
+      outside_help:
+        description: We will ask for help
+        conditions:
+          - '"angela_female_event_10" in DONE'
+          - angela.flags.angela_choice == "outside_help"
+        next:
+          - love180
+          - angela_female_event_12b
+          - angela_female_event_12c
+          - angela_female_event_12d
+          - angela_female_event_12e
+      evidence:
+        description: We will gather more evidence
+        conditions:
+          - '"angela_female_event_10" in DONE'
+          - angela.flags.angela_choice == "evidence"
+        next:
+          - love180
+          - angela_female_event_12a
+
+  love180:
+    name: Get to know Angela better
+    conditions:
+      - '"angela_female_event_10" in DONE'
+    percentage:
+      value: angela.love.val
+      scale: 180
+    outcome:
+      condition: angela.love >= 180
+      next: None
+      hide: True
+
+  # Cops/breakin
+  angela_female_event_11:
+    name: Go to the police station
+    related_event: angela_female_event_11
+    conditions:
+      - '"angela_female_event_10" in DONE'
+      - angela.flags.angela_choice == "police"
+    outcome:
+      conditions: '"angela_female_event_11" in DONE'
+
+  angela_female_event_12a:
+    name: Break in Angela's house
+    related_event: angela_female_event_12a
+    conditions:
+      - '"angela_female_event_10" in DONE'
+      - angela.flags.angela_choice in ["evidence", "police"]
+    outcomes:
+      complete:
+        condition: '"angela_female_event_13a" in DONE'
+      badending:
+        condition: '"angela_female_event_13b" in DONE'
+        next: None
+      fight:
+        condition: '"angela_female_event_13c" in DONE'
+        next:
+          - angela_female_event_15
+
+  angela_female_event_14a:
+    name: Go back to the police station
+    related_event: angela_female_event_14a
+    conditions:
+      - '"angela_female_event_13a" in DONE'
+    outcome:
+      conditions: '"angela_female_event_14a" in DONE'
+      next:
+        - angela_female_event_15
+
+  # Mike help
+  angela_female_event_12b:
+    name: "Ask [mike.name] for help"
+    related_event: angela_female_event_12b
+    toggle: True
+    conditions:
+      - '"angela_female_event_10" in DONE'
+      - angela.flags.angela_choice == "outside_help"
+      - angela.flags.outside_help is None
+    outcomes:
+      refused:
+        description: "[mike.name] refused to help"
+        conditions:
+          - '"angela_female_event_12b" in DONE'
+          - angela.flags.outside_help is None
+        icon: failed
+        next: None
+      complete:
+        description: "[mike.name] agreed to help"
+        conditions:
+          - '"angela_female_event_12b" in DONE'
+          - angela.flags.outside_help is "mike"
+        next:
+          - wait_angela_female_event_12b
+      breakin:
+        conditions:
+          - '"angela_female_event_12a" in DONE'
+        next: None
+        hide: True
+
+  wait_angela_female_event_12b:
+    name: Wait a little
+    conditions:
+      - '"angela_female_event_12b" in DONE'
+      - angela.flags.outside_help is "mike"
+    percentage:
+      value: angela.timers.angeladelay
+      scale: 1
+      invert: True
+    outcome:
+      hide: True
+      conditions:
+        - '"angela_female_event_12b" in DONE'
+        - angela.flags.outside_help is "mike"
+        - not angela.flags.angeladelay
+
+  angela_female_event_13d_13e:
+    name: Go find [mike.name]
+    conditions:
+      - '"angela_female_event_12b" in DONE'
+      - angela.flags.outside_help is "mike"
+      - not angela.flags.angeladelay
+    outcomes:
+      complete:
+        description: "[mike.name] doesn't remember our conversation"
+        condition: '"angela_female_event_13d" in DONE'
+        next: None
+      failed:
+        condition: '"angela_female_event_13e" in DONE'
+        next: None
+
+  # Dwayne help
+  angela_female_event_12c:
+    name: Ask Dwayne for help
+    related_event: angela_female_event_12c
+    toggle: True
+    conditions:
+      - '"angela_female_event_10" in DONE'
+      - angela.flags.angela_choice == "outside_help"
+      - angela.flags.outside_help is None
+      - not dwayne.hidden
+    outcomes:
+      refused:
+        description: Dwayne refused to help
+        conditions:
+          - '"angela_female_event_12c" in DONE'
+          - angela.flags.outside_help is None
+        icon: failed
+        next: None
+      complete:
+        description: Dwayne agreed to help
+        conditions:
+          - '"angela_female_event_12c" in DONE'
+          - angela.flags.outside_help is "dwayne"
+      breakin:
+        conditions:
+          - '"angela_female_event_12a" in DONE'
+        next: None
+        hide: True
+
+  wait_angela_female_event_13f:
+    name: Wait a little
+    conditions:
+      - '"angela_female_event_12c" in DONE'
+      - angela.flags.outside_help is "dwayne"
+    percentage:
+      value: angela.timers.angeladelay
+      scale: 3
+      invert: True
+    outcome:
+      hide: True
+      conditions:
+        - '"angela_female_event_12c" in DONE'
+        - angela.flags.outside_help is "dwayne"
+        - not angela.flags.angeladelay
+
+  angela_female_event_13f:
+    name: Be home
+    related_event: angela_female_event_13f
+    conditions:
+      - '"angela_female_event_12c" in DONE'
+      - angela.flags.outside_help is "dwayne"
+      - not angela.flags.angeladelay
+    outcome:
+      condition: '"angela_female_event_13f" in DONE'
+      next: angela_female_event_15
+
+  # Victor help
+  angela_female_event_12d:
+    name: Ask Victor for help
+    related_event: angela_female_event_12d
+    toggle: True
+    conditions:
+      - '"angela_female_event_10" in DONE'
+      - angela.flags.angela_choice == "outside_help"
+      - angela.flags.outside_help is None
+      - not victor.hidden
+    outcomes:
+      refused:
+        description: Victor refused to help
+        conditions:
+          - '"angela_female_event_12d" in DONE'
+          - angela.flags.outside_help is None
+        icon: failed
+        next: None
+      complete:
+        description: Victor agreed to help
+        conditions:
+          - '"angela_female_event_12d" in DONE'
+          - angela.flags.outside_help is "victor"
+      breakin:
+        conditions:
+          - '"angela_female_event_12a" in DONE'
+        next: None
+        hide: True
+
+  wait_angela_female_event_13g:
+    name: Wait a little
+    conditions:
+      - '"angela_female_event_12d" in DONE'
+      - angela.flags.outside_help is "victor"
+    percentage:
+      value: angela.timers.angeladelay
+      scale: 3
+      invert: True
+    outcome:
+      hide: True
+      conditions:
+        - '"angela_female_event_12d" in DONE'
+        - angela.flags.outside_help is "victor"
+        - not angela.flags.angeladelay
+
+  angela_female_event_13g:
+    name: Be home
+    related_event: angela_female_event_13g
+    conditions:
+      - '"angela_female_event_12d" in DONE'
+      - angela.flags.outside_help is "victor"
+      - not angela.flags.angeladelay
+    outcome:
+      condition: '"angela_female_event_13g" in DONE'
+      next: angela_female_event_15
+
+  # Danny help
+  angela_female_event_12e:
+    name: Ask Danny for help
+    related_event: angela_female_event_12e
+    toggle: True
+    conditions:
+      - '"angela_female_event_10" in DONE'
+      - angela.flags.angela_choice == "outside_help"
+      - angela.flags.outside_help is None
+      - not danny.hidden
+    outcomes:
+      refused:
+        description: Danny refused to help
+        conditions:
+          - '"angela_female_event_12e" in DONE'
+          - angela.flags.outside_help is None
+        icon: failed
+        next: None
+      complete:
+        description: Danny agreed to help
+        conditions:
+          - '"angela_female_event_12e" in DONE'
+          - angela.flags.outside_help is "danny"
+      breakin:
+        conditions:
+          - '"angela_female_event_12a" in DONE'
+        next: None
+        hide: True
+
+  wait_angela_female_event_13h:
+    name: Wait a little
+    conditions:
+      - '"angela_female_event_12e" in DONE'
+      - angela.flags.outside_help is "danny"
+    percentage:
+      value: angela.timers.angeladelay
+      scale: 3
+      invert: True
+    outcome:
+      hide: True
+      conditions:
+        - '"angela_female_event_12e" in DONE'
+        - angela.flags.outside_help is "danny"
+        - not angela.flags.angeladelay
+
+  angela_female_event_13h:
+    name: Be home
+    related_event: angela_female_event_13h
+    conditions:
+      - '"angela_female_event_12e" in DONE'
+      - angela.flags.outside_help is "danny"
+      - not angela.flags.angeladelay
+    outcome:
+      condition: '"angela_female_event_13h" in DONE'
+      next: angela_female_event_15
+
+#Angela finally free
+  angela_female_event_15:
+    name: Meet Angela at the pub
+    related_event: angela_female_event_15
+    conditions:
+      - '"angela_female_event_14a" in DONE or "angela_female_event_13c" in DONE or "angela_female_event_13f" in DONE or "angela_female_event_13g" in DONE or "angela_female_event_13h" in DONE '
+      - angela.love >= 180
+    outcomes:
+      complete:
+        condition: '"angela_female_event_15" in DONE'
+        next: angela_female_stalled
+
+  love200:
+    name: Get to know Angela better
+    condition: '"angela_female_event_15" in DONE'
+    percentage:
+      value: angela.love.val
+      scale: 200
+    outcome:
+      hide: True
+      condition: angela.love.val == 200
+
+  date:
+    name: "Go on a date with Angela"
+    condition: True
+    outcome:
+      condition: angela.flags.dates >= 1
+      next: birthday_date
+
+  birthday_date:
+    name: Take Angela out on a night date for her birthday
+    condition: angela.flags.dates >= 1
+    outcome:
+      condition: '"angela_birthday_date_female" in DONE'
+      next: None
+
+  sex:
+    name: "Have sex with Angela"
+    condition: True
+    outcome:
+      condition: angela.sexperience >= 1
+      next: None
+
+  love:
+    name: "Get Angela to fall in love with me"
+    condition: True
+    percentage:
+      value: angela.love.val
+      scale: 200
+    outcome:
+      condition: angela.love.val == 200
+      next: None
+
+  ring:
+    name: Buy a wedding ring
+    condition: True
+    outcome:
+      condition: hero.has_item("wedding_ring")
+
+  propose:
+    name: "Propose to Angela"
+    condition: hero.has_item("wedding_ring")
+    outcome:
+      condition: angela.flags.engagedbree
+      next: None
+
+  collar:
+    name: "Meet Angela at the coffeeshop"
+    condition:
+      - '"angela_female_event_09" in DONE'
+      - angela.love >= 110
+      - hero.flags.collared is False
+    outcome:
+      condition: '"angela_female_dom_01" in DONE'
+      next: None

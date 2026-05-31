@@ -1,0 +1,64 @@
+name: Alexis High School Story
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Alexis#Self-administered_justice_Path"
+short: "{image=notify alexis} · Alexis"
+description: "Alexis told me our high-school coach raped her, I should make the bastard pay!"
+participants:
+  - alexis
+condition: '"alexis_event_06" in DONE and alexis.flags.rapeConfession'
+outcomes:
+  skipped:
+    description: I didn't look for the coach.
+    conditions: 'False'
+    icon: fail
+  beaten:
+    description: I beat up the coach for Alexis!
+    condition: '"alexis_event_09a" in DONE'
+  gone:
+    description: Alexis has left and is no longer part of my life.
+    condition: alexis.is_gone_forever
+    icon: fail
+  police:
+    description: I convinced Alexis to report to the police.
+    condition: '"alexis_talk_rape" in DONE'
+
+steps:
+  alexis_hire_PI:
+    name: Hire a PI (using my phone) to find the coach
+    conditions: '"alexis_event_06" in DONE'
+    outcomes:
+      complete:
+        conditions: alexis.flags.hired_PI
+        next: alexis_event_07a
+      failed:
+        conditions: alexis.flags.policestation
+        hide: True
+      police:
+        conditions: '"alexis_event_07b" in DONE'
+        hide: True
+
+  alexis_event_07a:
+    name: Wait for the PI to call me back
+    related_event: alexis_event_07a
+    conditions:
+      - alexis.flags.hired_PI
+    outcome:
+      conditions:
+        - '"alexis_event_07a" in DONE'
+      next:
+        - alexis_event_08a
+
+  alexis_event_08a:
+    name: Go see the coach (I'll need a means of transportation for that)
+    related_event: alexis_event_08a
+    conditions: '"alexis_event_07a" in DONE'
+    outcome:
+      conditions: '"alexis_event_08a" in DONE'
+      next:
+        - alexis_event_09a
+
+  alexis_event_09a:
+    name: Talk to Alexis at the pub about the coach's fate
+    related_event: alexis_event_09a
+    conditions: '"alexis_event_08a" in DONE'
+    outcome:
+      conditions: '"alexis_event_09a" in DONE'

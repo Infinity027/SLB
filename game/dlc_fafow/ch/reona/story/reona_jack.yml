@@ -1,0 +1,278 @@
+name: Reona and Jack
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Reona"
+short: "{image=notify reona} · Reona"
+description: "Reona and Jack seems to know each other..."
+participants:
+  - reona
+  - jack
+conditions:
+  - hero.is_male
+  - "'reona_event_01' in DONE"
+
+outcomes:
+  done:
+    description: I had some fun with Reona and Jack.
+    conditions:
+      - '"reona_jack_05b" in DONE'
+  jack_reona:
+    description: Jack finally revealed his love for Reona.
+    conditions:
+      - '"reona_jack_05a" in DONE'
+  no_3some:
+    description: I refused Reona's offer to help Jack with is virgin state.
+    conditions:
+      - '"reona_jack_01b" in DONE'
+      - not reona.flags.help_virgin_jack
+    icon: fail
+  gone:
+    description: Reona has left and is no longer part of my life.
+    conditions:
+      - reona.is_gone_forever
+    icon: fail
+
+steps:
+  reona_jack_01:
+    name: Meet Reona at the university
+    related_event: reona_jack_01
+    conditions:
+      - '"reona_event_01" in DONE'
+      - reona.love >= 40
+    outcome:
+      condition: '"reona_jack_01" in DONE'
+      next:
+        - reona_jack_01b
+        - purity10
+
+  # Route EVG in story tree
+  purity10:
+    name: Purify Reona some more
+    condition: '"reona_jack_01" in DONE'
+    percentage:
+      value: reona.purity.val
+      scale: 10
+    outcome:
+      hide: True
+      conditions: reona.purity >= 10
+
+  reona_jack_01a:
+    name: Be at home on a weekend afternoon
+    related_event: reona_jack_01a
+    condition: '"reona_jack_01" in DONE'
+    outcomes:
+      complete:
+        conditions:
+          - '"reona_jack_01a" in DONE'
+          - "reona.sexperience == 0"
+      sexperience:
+        conditions:
+          - '"reona_jack_01a" in DONE'
+          - "reona.sexperience > 0"
+        icon: fail
+        next: None
+
+  purity30:
+    name: Purify Reona some more
+    condition: '"reona_jack_01a" in DONE'
+    percentage:
+      value: reona.purity.val
+      scale: 30
+    outcome:
+      hide: True
+      conditions: reona.purity >= 30
+
+  reona_jack_02a:
+    name: Be at home in the afternoon or evening
+    related_event: reona_jack_02a
+    condition: '"reona_jack_01a" in DONE'
+    outcomes:
+      complete:
+        conditions:
+          - '"reona_jack_02a" in DONE'
+          - "reona.sexperience == 0"
+      sexperience:
+        conditions:
+          - '"reona_jack_02a" in DONE'
+          - "reona.sexperience > 0"
+        icon: fail
+        next: None
+
+  purity50:
+    name: Purify Reona some more
+    condition: '"reona_jack_02a" in DONE'
+    percentage:
+      value: reona.purity.val
+      scale: 50
+    outcome:
+      hide: True
+      conditions: reona.purity >= 50
+
+  reona_jack_03a:
+    name: Be at home in the afternoon or evening
+    related_event: reona_jack_03a
+    condition: '"reona_jack_02a" in DONE'
+    outcomes:
+      complete:
+        conditions:
+          - '"reona_jack_03a" in DONE'
+          - "reona.sexperience == 0"
+      sexperience:
+        conditions:
+          - '"reona_jack_03a" in DONE'
+          - "reona.sexperience > 0"
+        icon: fail
+        next: None
+
+  purity70:
+    name: Purify Reona some more
+    condition: '"reona_jack_03a" in DONE'
+    percentage:
+      value: reona.purity.val
+      scale: 70
+    outcome:
+      hide: True
+      conditions: reona.purity >= 70
+
+  reona_jack_04a:
+    name: Wait for a call from Jack during the afternoon.
+    related_event: reona_jack_03a
+    condition: '"reona_jack_03a" in DONE'
+    outcomes:
+      complete:
+        conditions:
+          - '"reona_jack_04a" in DONE'
+          - "reona.sexperience == 0"
+      sexperience:
+        conditions:
+          - '"reona_jack_04a" in DONE'
+          - "reona.sexperience > 0"
+        icon: fail
+        next: None
+
+  purity90:
+    name: Purify Reona some more
+    condition: '"reona_jack_04a" in DONE'
+    percentage:
+      value: reona.purity.val
+      scale: 90
+    outcome:
+      hide: True
+      conditions: reona.purity >= 90
+
+  reona_jack_05a:
+    name: Be at home on a weekend afternoon
+    related_event: reona_jack_05a
+    condition: '"reona_jack_04a" in DONE'
+    outcomes:
+      complete:
+        conditions:
+          - '"reona_jack_05a" in DONE'
+          - "reona.sexperience == 0"
+        next: None
+      sexperience:
+        conditions:
+          - '"reona_jack_05a" in DONE'
+          - "reona.sexperience > 0"
+        icon: fail
+        next: None
+
+  # Route EVH in story tree
+  reona_jack_01b:
+    name: Talk with Reona about Jack
+    related_event: reona_jack_01b
+    conditions:
+      - '"reona_jack_01" in DONE'
+      - reona.love >= 80
+    outcomes:
+      complete:
+        conditions:
+          - '"reona_jack_01b" in DONE'
+          - reona.flags.help_virgin_jack
+      end_story:
+        conditions:
+          - '"reona_jack_01b" in DONE'
+          - not reona.flags.help_virgin_jack
+        next: None
+
+  love120:
+    name: Get to know Reona better
+    conditions:
+      - reona.love.max >= 120
+    percentage:
+      value: reona.love.val
+      scale: 120
+    outcome:
+      hide: True
+      condition: reona.love >= 120
+
+  reona_jack_02b:
+    name: Look out for Jack to talk to him
+    related_event: reona_jack_02b
+    conditions:
+      - '"reona_jack_01b" in DONE'
+      - reona.love >= 120
+      - reona.flags.help_virgin_jack
+    outcome:
+      condition: '"reona_jack_02b" in DONE'
+
+  love130:
+    name: Get to know Reona better
+    conditions:
+      - reona.love.max >= 130
+    percentage:
+      value: reona.love.val
+      scale: 130
+    outcome:
+      hide: True
+      condition: reona.love >= 130
+
+  reona_jack_03b:
+    name: Ask Reona to go on a date with Jack.
+    related_event: reona_jack_03b
+    conditions:
+      - '"reona_jack_02b" in DONE'
+      - reona.love >= 130
+      - reona.flags.help_virgin_jack
+    outcome:
+      condition: '"reona_jack_03b" in DONE'
+
+  love150:
+    name: Get to know Reona better
+    conditions:
+      - reona.love.max >= 150
+    percentage:
+      value: reona.love.val
+      scale: 150
+    outcome:
+      hide: True
+      condition: reona.love >= 150
+
+  reona_jack_04b:
+    name: Ask Reona to go on a date with Jack during Summer.
+    related_event: reona_jack_04b
+    conditions:
+      - '"reona_jack_03b" in DONE'
+      - reona.love >= 150
+      - reona.flags.help_virgin_jack
+    outcome:
+      condition: '"reona_jack_04b" in DONE'
+
+  sub80:
+    name:  Make Reona more submissive
+    condition: '"reona_jack_04b" in DONE'
+    percentage:
+      value: reona.sub.val
+      scale: 80
+    outcome:
+      hide: True
+      conditions: reona.sub >= 80
+
+  reona_jack_05b:
+    name: Wait for Reona's call at home.
+    related_event: reona_jack_05b
+    conditions:
+      - '"reona_jack_04b" in DONE'
+      - reona.sub >= 80
+      - reona.flags.help_virgin_jack
+    outcome:
+      condition: '"reona_jack_05b" in DONE'
+      next: None

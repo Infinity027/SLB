@@ -1,0 +1,374 @@
+name: Minami's Attraction
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Minami#Siscon_events"
+short: "{image=notify minami} · Minami Siscon"
+description: "Minami is my adopted little sister, we have a special relationship."
+participants:
+  - minami
+conditions:
+  - hero.is_male
+  - '"minami_event_03" in DONE'
+
+start:
+  - minami_wait
+  - minami_siscon20
+  - minami_siscon_01
+  - minami_siscon_02
+  - minami_siscon_03
+  - minami_siscon_04
+  - minami_siscon_05
+  - minami_siscon_07
+
+outcomes:
+  success:
+    description: I agreed to help Minami.
+    condition: '"minami_practice_sex" in DONE'
+
+steps:
+  minami_wait:
+    name: Wait some time
+    conditions:
+      - minami.siscon < 100
+      - minami.flags.sisconDelay
+    toggle: True
+    percentage:
+      value: minami.timers.sisconDelay
+      scale: 1
+      invert: True
+    outcome:
+      condition: False
+
+  minami_siscon20:
+    name: Increase your bond with Minami
+    conditions:
+      - minami.siscon < 20
+      - not minami.hidden
+    percentage:
+      value: minami.siscon.val
+      scale: 20
+    outcome:
+      condition: minami.siscon.val >= 20
+      hide: True
+      next: minami_siscon_cap_01
+
+  minami_siscon_01:
+    name: Minami will wait outside the studio
+    related_event: minami_siscon_01
+    toggle: True
+    conditions:
+      - not minami.hidden
+      - minami.siscon.val < minami.siscon.max
+    outcomes:
+      complete:
+        conditions:
+          - '"minami_siscon_01" in DONE'
+      stalled:
+        icon: stalled
+        conditions:
+          - '"angela_visit" in DONE'
+
+  minami_siscon_02:
+    name: Meet Minami at home when tired
+    related_event: minami_siscon_02
+    toggle: True
+    conditions:
+      - not minami.hidden
+      - minami.siscon.val < minami.siscon.max
+    outcomes:
+      complete:
+        conditions:
+          - '"minami_siscon_02" in DONE'
+      stalled:
+        icon: stalled
+        conditions:
+          - '"angela_visit" in DONE'
+
+  minami_siscon_03:
+    name: Meet Minami at home
+    related_event: minami_siscon_03
+    toggle: True
+    conditions:
+      - not minami.hidden
+      - minami.siscon.val < minami.siscon.max
+    outcomes:
+      complete:
+        conditions:
+          - '"minami_siscon_03" in DONE'
+      stalled:
+        icon: stalled
+        conditions:
+          - '"angela_visit" in DONE'
+
+  minami_siscon_04:
+    name: Meet Minami at home in the evening
+    related_event: minami_siscon_04
+    toggle: True
+    conditions:
+      - not minami.hidden
+      - minami.siscon.val < minami.siscon.max
+    outcomes:
+      complete:
+        conditions:
+          - '"minami_siscon_04" in DONE'
+      stalled:
+        icon: stalled
+        conditions:
+          - '"angela_visit" in DONE'
+
+  minami_siscon_05:
+    name: Meet Minami in the livingroom
+    related_event: minami_siscon_05
+    toggle: True
+    conditions:
+      - not minami.hidden
+      - minami.siscon.val < minami.siscon.max
+    outcomes:
+      complete:
+        conditions:
+          - '"minami_siscon_05" in DONE'
+      stalled:
+        icon: stalled
+        conditions:
+          - '"angela_visit" in DONE'
+
+  minami_siscon_07:
+    name: Meet Minami in the livingroom when Bree is at home
+    related_event: minami_siscon_07
+    toggle: True
+    conditions:
+      - not minami.hidden
+      - not bree.hidden
+      - minami.siscon.val < minami.siscon.max
+    outcomes:
+      complete:
+        conditions:
+          - '"minami_siscon_07" in DONE'
+      stalled:
+        icon: stalled
+        conditions:
+          - '"angela_visit" in DONE'
+
+  minami_siscon_cap_01:
+    name: Meet Minami at home
+    related_event: minami_siscon_cap_01
+    conditions:
+      - not minami.hidden
+      - minami.siscon.val >= 20
+    outcome:
+      next:
+        - minami_siscon_09
+        - minami_siscon40
+      condition: '"minami_siscon_cap_01" in DONE'
+
+  minami_siscon_09:
+    name: Meet Minami on the second floor
+    related_event: minami_siscon_09
+    toggle: True
+    conditions:
+      - not minami.hidden
+      - minami.siscon.val < minami.siscon.max
+      - '"minami_siscon_cap_01" in DONE'
+    outcomes:
+      complete:
+        conditions:
+          - '"minami_siscon_09" in DONE'
+      stalled:
+        icon: stalled
+        conditions:
+          - '"angela_visit" in DONE'
+
+  minami_siscon40:
+    name: Increase your bond with Minami
+    conditions:
+      - '"minami_siscon_cap_01" in DONE'
+      - minami.siscon.val < 40
+    percentage:
+      value: minami.siscon.val
+      scale: 40
+    outcome:
+      condition: minami.siscon.val >= 40
+      hide: True
+
+  minami_siscon_cap_02:
+    name: Meet Minami on Saturday afternoon
+    related_event: minami_siscon_cap_02
+    conditions:
+      - not minami.hidden
+      - minami.siscon.val >= 40
+    outcome:
+      next:
+        - minami_siscon60
+        - minami_siscon_08
+      condition: '"minami_siscon_cap_02" in DONE'
+
+  minami_siscon_08:
+    name: Meet Minami in the livingroom when Bree and Sasha are at home
+    related_event: minami_siscon_08
+    toggle: True
+    conditions:
+      - not minami.hidden
+      - not bree.hidden
+      - not sasha.hidden
+      - minami.siscon.val < minami.siscon.max
+      - minami.siscon.val >= 40
+      - '"minami_siscon_cap_02" in DONE'
+    outcomes:
+      complete:
+        conditions:
+          - '"minami_siscon_08" in DONE'
+      stalled:
+        icon: stalled
+        conditions:
+          - '"angela_visit" in DONE'
+
+  minami_siscon60:
+    name: Increase your bond with Minami
+    conditions:
+      - '"minami_siscon_cap_02" in DONE'
+      - minami.siscon.val < 60
+    percentage:
+      value: minami.siscon.val
+      scale: 60
+    outcome:
+      condition: minami.siscon.val >= 60
+      hide: True
+
+  minami_siscon_cap_03:
+    name: Practice dating with Minami
+    related_event: minami_siscon_cap_03
+    conditions:
+      - not minami.hidden
+      - minami.siscon.val >= 60
+    outcome:
+      next:
+        - minami_siscon80
+        - minami_siscon_06
+        - minami_siscon_06b
+      condition: '"minami_siscon_cap_03" in DONE'
+
+  minami_siscon_06:
+    name: Meet Minami and Bree at the pool
+    related_event: minami_siscon_06
+    toggle: True
+    conditions:
+      - not minami.hidden
+      - not bree.hidden
+      - minami.siscon.val < minami.siscon.max
+      - minami.siscon.val >= 60
+      - '"minami_siscon_cap_03" in DONE'
+      - '"minami_siscon_06b" not in DONE'
+      - 'game.season in [0,1]'
+    outcomes:
+      complete:
+        conditions:
+          - '"minami_siscon_06" in DONE'
+      stalled:
+        icon: stalled
+        conditions:
+          - '"angela_visit" in DONE'
+
+  minami_siscon_06b:
+    name: Go on a date with Minami at the mall
+    related_event: minami_siscon_06b
+    toggle: True
+    conditions:
+      - not minami.hidden
+      - minami.siscon.val < minami.siscon.max
+      - minami.siscon.val >= 60
+      - '"minami_siscon_cap_03" in DONE'
+      - '"minami_siscon_06" not in DONE'
+      - 'game.season == 3'
+    outcomes:
+      complete:
+        conditions:
+          - '"minami_siscon_06b" in DONE'
+      stalled:
+        icon: stalled
+        conditions:
+          - '"angela_visit" in DONE'
+
+  minami_siscon80:
+    name: Increase your bond with Minami
+    conditions:
+      - '"minami_siscon_cap_03" in DONE'
+      - minami.siscon.val < 80
+    percentage:
+      value: minami.siscon.val
+      scale: 80
+    outcome:
+      condition: minami.siscon.val >= 80
+      hide: True
+
+  minami_siscon_cap_04:
+    name: Practice dating with Minami
+    related_event: minami_siscon_cap_04
+    conditions:
+      - not minami.hidden
+      - minami.siscon.val >= 80
+    outcome:
+      next:
+        - minami_siscon100
+        - minami_siscon_10
+        - spank_minami
+      condition: '"minami_siscon_cap_04" in DONE'
+
+  minami_siscon_10:
+    name: Meet Minami in the nightclub
+    related_event: minami_siscon_10
+    toggle: True
+    conditions:
+      - not minami.hidden
+      - minami.siscon.val < minami.siscon.max
+      - minami.siscon.val >= 80
+      - '"minami_siscon_cap_04" in DONE'
+    outcomes:
+      complete:
+        conditions:
+          - '"minami_siscon_10" in DONE'
+      stalled:
+        icon: stalled
+        conditions:
+          - '"angela_visit" in DONE'
+
+  spank_minami:
+    name: Be at home when Sasha and Minami are also there
+    related_event: spank_minami
+    conditions:
+      - not minami.hidden
+      - not sasha.hidden
+      - minami.siscon >= 80
+      - minami.love >= 160
+      - minami.sub >= 50
+    outcomes:
+      complete:
+        description: "You spanked Minami."
+        conditions:
+          - '"spank_minami" in DONE'
+          - minami.sub.max >= 100
+        next: None
+      failed:
+        description: "You refused to punish Minami."
+        conditions:
+          - '"spank_minami" in DONE'
+          - minami.sub.max <= 50
+        next: None
+
+  minami_siscon100:
+    name: Increase your bond with Minami
+    conditions:
+      - '"minami_siscon_cap_04" in DONE'
+      - minami.siscon < 100
+    percentage:
+      value: minami.siscon.val
+      scale: 100
+    outcome:
+      condition: minami.siscon.val >= 100
+      hide: True
+
+  minami_sex_practice:
+    name: Practice sex with Minami
+    related_event: minami_practice_sex
+    conditions:
+      - minami.siscon >= 100
+    outcome:
+      condition: '"minami_practice_sex" in DONE'
+      next: None

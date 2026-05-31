@@ -1,0 +1,167 @@
+name: Whore Harem
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Whore_Harem"
+short: "{image=notify lexi}{image=notify reona} · Whore Harem"
+type: harem
+description: "Lexi and Reona are two girls driven by their sex desire. They sure get along together..."
+participants:
+  - lexi
+  - reona
+conditions:
+  - hero.is_male
+  - not lexi.hidden
+  - not reona.hidden
+  - reona.love >= 120
+  - lexi.love >= 120
+
+outcomes:
+  lex_gone:
+    description: Lexi has left and is no longer part of my life.
+    conditions:
+      - lexi.is_gone_forever
+    icon: fail
+  reo_gone:
+    description: Reona has left and is no longer part of my life.
+    conditions:
+      - reona.is_gone_forever
+    icon: fail
+  refuse_nudist_beach:
+    description: I refused to go to the nudist beach with Reona
+    conditions:
+      - '"whore_harem_event_05" in DONE'
+      - not hero.flags.whore_nudist_beach
+    icon: fail
+  monogamy:
+    description: I refused to be in a relationship with both Lexi and Reona at the same time
+    conditions:
+      - '"whore_harem_event_08" in DONE'
+      - not Harem.together("lexi", "reona", name="whore")
+    icon: fail
+
+steps:
+  whore_harem_event_01:
+    name: Have a high date score with Lexi at the nightclub while Reona is there.
+    related_event: whore_harem_event_01
+    conditions:
+      - '"whore_harem_event_01" in DONE'
+      - reona.love >= 120
+      - lexi.love >= 120
+      - lexi.sexperience >= 2
+      - reona.sexperience >= 2
+    outcome:
+      conditions:
+        - '"whore_harem_event_01" in DONE'
+
+  whore_harem_event_02:
+    name: Talk to Reona about Lexi.
+    related_event: whore_harem_event_02
+    conditions:
+      - '"whore_harem_event_01" in DONE'
+      - reona.sub >= 20
+      - reona.flags.cheating_agreement in ["mc", "both"]
+    outcome:
+      conditions:
+        - '"whore_harem_event_02" in DONE'
+
+  whore_harem_event_03:
+    name: Talk to Lexi about Reona.
+    related_event: whore_harem_event_03
+    conditions:
+      - '"whore_harem_event_02" in DONE'
+      - lexi.sub >= 20
+    outcome:
+      conditions:
+        - '"whore_harem_event_03" in DONE'
+
+  whore_harem_event_04:
+    name: Go on a date at the pub with Lexi or Reona
+    related_event: whore_harem_event_04
+    conditions:
+      - '"whore_harem_event_03" in DONE'
+    outcome:
+      conditions:
+        - '"whore_harem_event_04" in DONE'
+
+  whore_harem_event_05:
+    name: Wait for a phone call from Reona during summer
+    related_event: whore_harem_event_05
+    conditions:
+      - '"whore_harem_event_04" in DONE'
+    outcomes:
+      complete:
+        conditions:
+          - '"whore_harem_event_05" in DONE'
+          - hero.flags.whore_nudist_beach
+        next:
+          - whore_harem_event_06
+          - whore_harem_event_07
+      failed:
+        conditions:
+          - '"whore_harem_event_05" in DONE'
+          - not hero.flags.whore_nudist_beach
+        next: None
+
+
+  whore_harem_event_06:
+    name: Go on a date with Lexi
+    related_event: whore_harem_event_06
+    conditions:
+      - lexi.love >= 160
+      - lexi.sub >= 80
+      - '"whore_harem_event_05" in DONE'
+    outcomes:
+      first_love_talk:
+        conditions:
+          - '"whore_harem_event_06" in DONE'
+          - '"whore_harem_event_07" not in DONE'
+        next: None
+      second_love_talk:
+        conditions:
+          - '"whore_harem_event_06" in DONE'
+          - '"whore_harem_event_07" in DONE'
+        next: whore_harem_event_08
+
+  whore_harem_event_07:
+    name: Talk to Reona
+    related_event: whore_harem_event_07
+    conditions:
+      - reona.love >= 160
+      - reona.sub >= 80
+      - '"whore_harem_event_05" in DONE'
+      - '"whore_harem_event_07_text" in DONE'
+    outcomes:
+      first_love_talk:
+        conditions:
+          - '"whore_harem_event_06" not in DONE'
+          - '"whore_harem_event_07" in DONE'
+        next: None
+      second_love_talk:
+        conditions:
+          - '"whore_harem_event_06" in DONE'
+          - '"whore_harem_event_07" in DONE'
+        next: whore_harem_event_08
+
+  whore_harem_event_08:
+    name: Go on a date with Reona and Lexi at the restaurant
+    conditions:
+      - '"whore_harem_event_06" in DONE'
+      - '"whore_harem_event_07" in DONE'
+    outcomes:
+      monogamy:
+        conditions:
+          - '"whore_harem_event_08" in DONE'
+          - not Harem.together("lexi", "reona", name="whore")
+        next: None
+      polygamy:
+        conditions:
+          - '"whore_harem_event_08" in DONE'
+          - Harem.together("lexi", "reona", name="whore")
+
+  propose_lexi_reona:
+    name: Propose to Lexi and Reona
+    conditions:
+      - Harem.together("lexi", "reona", name="whore")
+    outcomes:
+      complete:
+        conditions:
+          - lexi.flags.engagedmike
+          - reona.flags.engagedmike

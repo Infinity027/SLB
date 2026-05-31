@@ -1,0 +1,179 @@
+name: The Roommates
+short: "{image=notify sasha}{image=notify bree} · The Roommates"
+sort: "0003"
+type: generic
+description: "When Ryan and Samantha moved out, I needed new roommates. [bree.name] and Sasha moved in. I should get used to life with the new people. After all, we're living together now!"
+participants:
+  - hero
+  - bree
+  - sasha
+condition: hero.is_male
+
+outcomes:
+  stillHere:
+    condition: all(step.complete for step in self.parent.steps.values() if not step.optional)
+    description: "I've gotten used to the new roommates, and have a pretty good feel for how life will go."
+  bothGone:
+    description: "[bree.name] and Sasha left the city before I had time to know them better."
+    conditions:
+      - not all(step.complete for step in self.parent.steps.values() if not step.optional)
+      - bree.is_gone_forever
+      - sasha.is_gone_forever
+    icon: fail
+
+steps:
+  bree_tv:
+    name: "Watch TV with [bree.name]"
+    toggle: True
+    condition: not bree.is_gone_forever
+    outcome:
+      condition: '"watch_tv_with_bree" in DONE'
+
+  sasha_tv:
+    name: Watch TV with Sasha
+    related_event: watch_tv_with_sasha
+    toggle: True
+    condition: not sasha.is_gone_forever
+    outcome:
+      condition: '"watch_tv_with_sasha" in DONE'
+
+  watch_tv_with_everyone:
+    name: "Watch TV with [bree.name] and Sasha"
+    related_event: watch_tv_with_everyone_male
+    toggle: True
+    conditions:
+      - not bree.is_gone_forever
+      - not sasha.is_gone_forever
+    outcome:
+      condition: '"watch_tv_with_everyone_male" in DONE'
+
+  have_a_meal_with_bree:
+    name: "Have a meal with [bree.name]"
+    toggle: True
+    condition: not bree.is_gone_forever
+    outcome:
+      condition: 'hero.flags.bree_meal or hero.flags.meal_bree'
+
+  have_a_meal_with_sasha:
+    name: Have a meal with Sasha
+    toggle: True
+    condition: not sasha.is_gone_forever
+    outcome:
+      condition: 'hero.flags.sasha_meal or hero.flags.meal_sasha'
+
+  have_a_meal_with_everyone:
+    name: "Have a meal with [bree.name] and Sasha"
+    toggle: True
+    conditions:
+      - not bree.is_gone_forever
+      - not sasha.is_gone_forever
+    outcome:
+      condition: 'hero.flags.bree_sasha_meal or hero.flags.meal_bree_sasha'
+
+  do_chores:
+    name: Do my chores
+    condition: True
+    percentage:
+      value: game.flags.chores
+      scale: 100
+    outcomes:
+      complete:
+        description: I did my chores this week, but I have to keep doing them?!
+        condition: game.flags.chores >= 100
+      already_done:
+        description: I did my chores this week, but I have to keep doing them?!
+        condition: game.flags.chores_completed
+      cleaning_service:
+        description: I hired a cleaning service
+        condition: game.flags.cleaningservices
+
+  peep_sasha:
+    name: Peep on Sasha in the shower
+    optional: True
+    toggle: True
+    condition: not sasha.is_gone_forever
+    outcome:
+      condition: sasha.flags.peeped_count >= 1
+
+  peep_bree:
+    name: "Peep on [bree.name] in the shower"
+    optional: True
+    toggle: True
+    condition: not bree.is_gone_forever
+    outcome:
+      condition: bree.flags.peeped_count >= 1
+
+  bree_masturbation:
+    name: "Peep on [bree.name] masturbating in her bedroom"
+    related_event: bree_masturbation
+    optional: True
+    toggle: True
+    condition: not bree.is_gone_forever
+    outcome:
+      condition: '"bree_masturbation" in DONE'
+
+  sasha_masturbation:
+    name: Peep on Sasha masturbating in her bedroom
+    related_event: sasha_masturbation
+    optional: True
+    toggle: True
+    condition: not sasha.is_gone_forever
+    outcome:
+      condition: '"sasha_masturbation" in DONE'
+
+  month:
+    name: Play through the first month
+    condition: True
+    percentage:
+      value: game.days_played
+      scale: 30
+    outcome:
+      condition: game.days_played >= 30
+      next: None
+
+  ask_for_pet:
+    name: "Sasha and [bree.name] want to talk"
+    toggle: True
+    conditions:
+      - game.days_played >= 40
+      - not bree.is_gone_forever
+      - not sasha.is_gone_forever
+    outcomes:
+      choose_dog:
+        condition: game.flags.chosen_pet == 'dog'
+        next: name_the_dog
+      choose_cat:
+        condition: game.flags.chosen_pet == 'cat'
+        next: name_the_cat
+      failed:
+        icon: fail
+        conditions:
+          - '"bree_sasha_pet_request" in DONE'
+          - not game.flags.chosen_pet
+        next: None
+
+  name_the_dog:
+    name: "There's a new resident in the house: 'The Dog'"
+    condition: game.flags.chosen_pet == 'dog' or 'name_cat' in DONE
+    outcomes:
+      cat_named:
+        condition: "'name_cat' in DONE"
+        hide: True
+        next: None
+      dog_named:
+        condition: "'name_dog' in DONE"
+        description: "The Dog is in fact known as [game.flags.pet_name]"
+        next: None
+
+  name_the_cat:
+    name: "There's a new resident in the house: 'The Cat'"
+    condition: game.flags.chosen_pet == 'cat' or 'name_dog' in DONE
+    outcomes:
+      dog_named:
+        condition: "'name_dog' in DONE"
+        hide: True
+        next: None
+      cat_named:
+        condition: "'name_cat' in DONE"
+        description: "The Cat is in fact known as [game.flags.pet_name]"
+        next: None

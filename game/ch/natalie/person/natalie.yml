@@ -1,0 +1,62 @@
+---
+name: Natalie
+class: Girl
+age: 24
+status: Samantha's friend
+gender: female
+flags:
+  nokiss: True
+  nodate: True
+  hidden: True
+attributes:
+  love:
+    min: 0
+    max: 20
+    default: 0
+  sub:
+    min: 0
+    max: 20
+    default: 0
+  lesbian:
+    min: 0
+    max: 20
+    default: 0
+  sexperience:
+    min: 0
+    max: null
+    default: 0
+piercings:
+  ears:
+    pierced: false
+  navel:
+    pierced: false
+  clit:
+    pierced: true
+  nipples:
+    pierced: false
+  nose:
+    pierced: false
+birthday:
+  - MONTH
+  - DAY
+traits:
+  - TRAIT_1
+  - TRAIT_2
+  - TRAIT_3
+  - TRAIT_4
+  - TRAIT_5
+desire_factors:
+  - DESIRE_FACTOR_1
+  - DESIRE_FACTOR_2
+  - DESIRE_FACTOR_3
+  - DESIRE_FACTOR_4
+  - DESIRE_FACTOR_5
+heronickname:
+    TEMPLATE: natalie.flags.mikeNickname in nickname_TEMPLATE
+schedule:
+  default:
+    '1234567':
+      '24':
+        - room: none
+          activity: none
+          clothes: casual

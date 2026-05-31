@@ -1,0 +1,53 @@
+- id: bookworm
+  display_name: Bookworm
+- id: hypnosis
+  display_name: Hypnosis
+- id: foodie
+  display_name: Foodie
+  gain_effects:
+    - hero.hunger.update_max(100)
+- id: high_libido
+  display_name: High Libido
+  transferable: False
+- id: low_libido
+  display_name: Low Libido
+  transferable: False
+- id: fertility_assessment
+  display_name: Fertility Assessment
+- id: investigator
+  display_name: Investigator
+- id: massage
+  display_name: Massage
+- id: guitar
+  display_name: Guitar
+- id: racing
+  display_name: Kart Racing
+- id: cooking
+  display_name: Cooking
+- id: martial_arts
+  display_name: Martial Arts
+- id: golf
+  display_name: Golf
+- id: work
+  display_name: Workaholic
+- id: dance
+  display_name: Dancer
+- id: no_sleep
+  display_name: Night Owl
+- id: video_games
+  display_name: Gamer
+- id: iron_stomach
+  display_name: Iron Stomach
+  gain_effects:
+    - hero.hunger.decay_value = 0.64
+- id: shooting
+  display_name: Shooting
+- id: sneaky
+  display_name: Sneaky
+- id: shibari
+  display_name: Shibari
+- id: sm
+  display_name: S&M
+- id: animalhated
+  display_name: Hated by Animals
+  transferable: False

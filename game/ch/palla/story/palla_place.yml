@@ -1,0 +1,40 @@
+name: Palla's place
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Palla"
+short: "{image=notify palla} · Palla"
+description: "Discover Palla's apartment."
+participants:
+  - palla
+conditions:
+  - hero.is_male
+  - palla.flags.addressknown
+
+outcomes:
+  leftgame:
+    condition: palla.is_gone_forever
+    description: Palla is gone from my life.
+    icon: fail
+  complete:
+    condition: "'palla_apartment_sex' in DONE"
+    description: I know where Palla lives.
+
+steps:
+  palla_apartment_first_visit:
+    name: Go to Palla's apartment for the first time
+    related_event: palla_apartment_first_visit
+    condition: palla.flags.addressknown
+    outcome:
+      condition: "'palla_apartment_first_visit' in DONE"
+
+  palla_repeat_naked_dogeza:
+    name: You find Palla repeating dogeza
+    related_event: palla_repeat_naked_dogeza
+    condition: "'palla_apartment_first_visit' in DONE"
+    outcome:
+      condition: "'palla_repeat_naked_dogeza' in DONE"
+
+  palla_apartment_sex:
+    name: Fuck Palla at her apartment after a date
+    related_event: palla_apartment_sex
+    condition: "'palla_apartment_first_visit' in DONE"
+    outcome:
+      condition: "'palla_apartment_sex' in DONE"

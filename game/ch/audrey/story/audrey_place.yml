@@ -1,0 +1,33 @@
+name: Audrey's place
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Audrey"
+short: "{image=notify audrey} · Audrey"
+description: "Discover Audrey's apartment."
+participants:
+  - audrey
+conditions:
+  - hero.is_male
+  - audrey.flags.addressknown
+
+outcomes:
+  leftgame:
+    condition: audrey.is_gone_forever
+    description: Audrey is gone from my life.
+    icon: fail
+  complete:
+    condition: "'audrey_apartment_sex' in DONE"
+    description: I know where Audrey lives.
+
+steps:
+  audrey_apartment_first_visit:
+    name: Go to Audrey's apartment for the first time
+    related_event: audrey_apartment_first_visit
+    condition: audrey.flags.addressknown
+    outcome:
+      condition: "'audrey_apartment_first_visit' in DONE"
+
+  audrey_apartment_sex:
+    name: Fuck Audrey at her apartment
+    related_event: audrey_apartment_sex
+    condition: "'audrey_apartment_first_visit' in DONE"
+    outcome:
+      condition: "'audrey_apartment_sex' in DONE"

@@ -1,0 +1,157 @@
+name: Home Harem - Lexi
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Home_Harem#Mike's_living_the_dream"
+short: "{image=notify lexi} · Home Harem"
+type: harem
+description:
+  - description: "I suggest that Lexi moves in."
+  - description: Lexi is now part of the harem.
+    condition: Harem.find('lexi', name='home')
+
+conditions:
+  - not demo
+  - game.flags.asklexiinhomeharem
+  - Harem.find(sasha, name='home')
+
+outcomes:
+  lexileft:
+    description: Unfortunately, Lexi left, dashing my hopes to include her in the home harem.
+    conditions:
+      - lexi.is_gone_forever
+    icon: fail
+  home_harem_bree_sasha_lexi:
+    conditions:
+      - Harem.together(bree, sasha, lexi, name='home')
+      - bree.flags.engagedmike
+      - sasha.flags.engagedmike
+      - lexi.flags.engagedmike
+    description: "[bree.name], Sasha and Lexi agreed to marry me!"
+
+steps:
+  should_not_happen_lexi:
+    icon: stalled
+    name: "Issue with Lexi joining the home harem. Contact devs ([game.flags.ongoinghomeharem])"
+    toggle: True
+    conditions:
+      - "game.flags.ongoinghomeharem not in ['samantha', 'lexi', 'minami']"
+    outcomes:
+      complete:
+        hide: True
+        condition: "not demo and Harem.find('lexi', name='home')"
+      ongoing:
+        hide: True
+        condition: "game.flags.ongoinghomeharem in ['samantha', 'lexi', 'minami']"
+      gone:
+        hide: True
+        condition: lexi.is_gone_forever
+
+  add_lexi_home_harem:
+    icon: stalled
+    name: "I can't let Lexi join the home harem right now ([game.flags.ongoinghomeharem!c] ongoing)"
+    toggle: True
+    conditions:
+      - "game.flags.ongoinghomeharem in ['samantha', 'minami']"
+    outcome:
+      hide: True
+      condition: "not demo and Harem.find('lexi', name='home')"
+
+  ask_sasha_bree_about_lexi:
+    name: "Ask [bree.name] and Sasha about Lexi"
+    toggle: True
+    conditions:
+      - game.flags.asklexiinhomeharem
+      - Harem.find(sasha, name='home')
+      - not game.flags.lexirefusedinhomeharem
+      - not Harem.find(samantha, name='home')
+      - not Harem.find(minami, name='home')
+      - game.flags.ongoinghomeharem == 'lexi'
+    outcome:
+      conditions:
+        - "not demo and lexi.flags.canmovein"
+      next:
+        - lexi_movingin
+
+  ask_sasha_bree_minami_about_lexi:
+    name: "Ask [bree.name], Sasha and Minami about Lexi"
+    conditions:
+      - game.flags.asklexiinhomeharem
+      - Harem.find(minami, name='home')
+      - not game.flags.lexirefusedinhomeharem
+      - not Harem.find(samantha, name='home')
+    outcome:
+      conditions:
+        - "not demo and lexi.flags.canmovein"
+      next:
+        - lexi_movingin
+
+  ask_sasha_bree_sam_about_lexi:
+    name: "Ask [bree.name], Sasha and Samantha about Lexi"
+    conditions:
+      - game.flags.asklexiinhomeharem
+      - Harem.find(samantha, name='home')
+      - not game.flags.lexirefusedinhomeharem
+      - not Harem.find(minami, name='home')
+    outcome:
+      conditions:
+        - "not demo and lexi.flags.canmovein"
+      next:
+        - lexi_movingin
+
+  ask_sasha_bree_sam_minami_about_lexi:
+    name: "Ask [bree.name], Sasha, Minami and Samantha about Lexi"
+    conditions:
+      - game.flags.asklexiinhomeharem
+      - Harem.find(minami, name='home')
+      - Harem.find(samantha, name='home')
+      - not game.flags.lexirefusedinhomeharem
+    outcome:
+      conditions:
+        - "not demo and lexi.flags.canmovein"
+      next:
+        - lexi_movingin
+
+  lexi_movingin:
+    name: Tell Lexi she can move in
+    related_event: lexi_moving_in
+    conditions:
+      - "not demo and lexi.flags.canmovein"
+    outcome:
+      condition: "not demo and Harem.find('lexi', name='home')"
+      next:
+        - threesome_bree_lexi
+        - threesome_lexi_sasha
+
+  threesome_bree_lexi:
+    name: "Have a threesome with [bree.name] and Lexi."
+    related_event: threesome_bree_lexi
+    condition: Harem.find('lexi', name='home')
+    outcome:
+      condition: 'not demo and "threesome_bree_lexi" in DONE'
+
+  lexi_sasha_alternative_nightclub:
+    name: Meet Sasha at the nightclub.
+    related_event: lexi_sasha_alternative_nightclub
+    condition:
+          - Harem.find('lexi', name='home')
+          - "'lexi_sasha_1' in DONE"
+          - lexi.love >= 100
+          - sasha.love >= 100
+          - "sasha.flags.sexydate or sasha.flags.sluttydate"
+    outcome:
+      condition: 'not demo and "lexi_sasha_alternative_nightclub" in DONE'
+
+  threesome_lexi_sasha:
+    name: Have a threesome with Lexi and Sasha.
+    related_event: threesome_lexi_sasha
+    condition: Harem.find('lexi', name='home')
+    outcome:
+      condition: 'not demo and "threesome_lexi_sasha" in DONE'
+
+  propose_bree_sasha_lexi:
+    name: "Propose to [bree.name], Sasha and Lexi"
+    conditions:
+      - "Harem.together(bree, sasha, lexi, name='home')"
+    outcome:
+      conditions:
+        - bree.flags.engagedmike
+        - sasha.flags.engagedmike
+        - lexi.flags.engagedmike

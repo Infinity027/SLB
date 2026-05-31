@@ -1,0 +1,134 @@
+---
+name: Scottie
+class: Guy
+age: 28
+status: friend
+gender: male
+flags:
+  hidden: true
+  pubes: true
+piercings:
+  navel:
+    outfits:
+      - naked
+      - sexyswimsuit
+      - underwear
+      - swimsuit
+  dick:
+    outfits:
+      - naked
+    pierced: true
+  nipples:
+    outfits:
+      - naked
+    pierced: true
+  tongue:
+    expressions:
+      - happy
+      - blush
+  nose: { }
+birthday:
+  - summer
+  - 1
+traits:
+  - rebel
+  - submissive
+  - bitchy
+desire_factors:
+  - charm
+  - not_home
+schedule:
+  default:
+    '12345':
+      '9':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '17':
+        - room: mall1
+          activity: shopping
+          clothes: casual
+        - room: mall2
+          activity: shopping
+          clothes: casual
+      '18':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '20':
+        - room: sexshop
+          activity: shop
+          clothes: casual
+      '24':
+        - room: None
+          activity: None
+          clothes: underwear
+    '6':
+      '9':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '11':
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '14':
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: waterpark
+          activity: swim
+          clothes: swimsuit
+          seasons: "01"
+      '16':
+        - room: waterpark
+          activity: swim
+          clothes: swimsuit
+          seasons: "01"
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '18':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '21':
+        - room: pub
+          activity: drink
+          clothes: casual
+      '23':
+        - room: pub
+          activity: drink
+          clothes: casual
+        - room: nightclub
+          activity: dance
+          clothes: date
+    '7':
+      '5':
+        - room: nightclub
+          activity: dance
+          clothes: date
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '10':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '16':
+        - room: park
+          activity: smoke
+          clothes: casual
+      '23':
+        - room: pub
+          activity: drink
+          clothes: casual

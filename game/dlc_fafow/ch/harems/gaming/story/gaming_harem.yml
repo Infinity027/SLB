@@ -1,0 +1,129 @@
+name: Gaming Harem
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Gaming_Harem"
+short: "{image=notify kat}{image=notify bree} · Gaming Harem"
+type: harem
+description: "Kat and [bree.name] are two gamer girls I know. Maybe they can get along with each other."
+participants:
+  - kat
+  - bree
+conditions:
+  - hero.is_male
+  - '"bree_event_11" in DONE'
+  - kat.love >= 50
+
+outcomes:
+  gone:
+    description: Kat has left and is no longer part of my life.
+    conditions:
+      - kat.is_gone_forever
+    icon: fail
+  engaged:
+    description: Kat has agreed to marry me!
+    condition: kat.flags.engagedmike
+  disagree_kat:
+    description: "I rejected Kat's offer on a threesome with [bree.name]."
+    conditions:
+      - '"gaming_harem_event_02" in DONE'
+      - not Harem.find(kat, name='gaming')
+    icon: fail
+  disagree_bree:
+    description: "I got cold on the idea of a threesome with [bree.name] and Kat."
+    conditions:
+      - '"bree_kat_threesome" in DONE'
+      - not Harem.find(bree, name='gaming')
+    icon: fail
+
+steps:
+  kles:
+    name: Make sure Kat is amenable to sex with other women
+    condition: True
+    percentage:
+      value: kat.lesbian.val
+      scale: 10
+    outcome:
+      condition: kat.lesbian >= 10
+
+  klestoomuch:
+    name: Make sure Kat is amenable to sex with men
+    condition: kat.lesbian > 11
+    percentage:
+      value: 20 - kat.lesbian.val
+      scale: 10
+    outcome:
+      condition: kat.lesbian <= 10
+
+  gaming_harem_event_01:
+    name: Kat seems troubled recently... Maybe I should talk to her.
+    related_event: gaming_harem_event_01
+    conditions:
+      - '"bree_event_11" in DONE'
+      - kat.love >= 50
+    outcomes:
+      interested:
+        description: "Kat looked interested by my relation with [bree.name]."
+        conditions:
+          - '"gaming_harem_event_01" in DONE'
+          - Harem.find(kat, name='gaming')
+      not_interested:
+        description: "I prevented Kat from interfering in my relation with [bree.name]."
+        conditions:
+          - '"gaming_harem_event_01" in DONE'
+          - not Harem.find(kat, name='gaming')
+
+  gaming_harem_event_02:
+    name: Find time to talk with Kat after a nice date.
+    related_event: gaming_harem_event_02
+    conditions:
+      - '"gaming_harem_event_01" in DONE'
+      - kat.love >= 100
+    outcomes:
+      agree:
+        description: "I approved Kat's offer on a threesome with [bree.name]."
+        conditions:
+          - '"gaming_harem_event_02" in DONE'
+          - Harem.find(kat, name='gaming')
+      disagree:
+        description: "I rejected Kat's offer on a threesome with [bree.name]."
+        conditions:
+          - '"gaming_harem_event_02" in DONE'
+          - not Harem.find(kat, name='gaming')
+        next: None
+
+  gaming_harem_event_03:
+    name: "Kat should come by the house on the next Saturday to have fun with [bree.name] and I."
+    related_event: bree_kat_threesome
+    conditions:
+      - '"gaming_harem_event_02" in DONE'
+      - kat.love >= 130
+      - kat.sexperience >= 3
+    outcomes:
+      threesome:
+        description: "I had a threesome with [bree.name] and Kat."
+        conditions:
+          - '"bree_kat_threesome" in DONE'
+          - Harem.find(bree, name='gaming')
+      no_threesome:
+        description: "I got cold on the idea of a threesome with [bree.name] and Kat."
+        conditions:
+          - '"bree_kat_threesome" in DONE'
+          - not Harem.find(bree, name='gaming')
+        next: None
+
+  gaming_harem_event_04:
+    name: "Talk to Bree in the evening about the game night."
+    related_event: gaming_harem_event_04
+    conditions:
+      - '"bree_kat_threesome" in DONE'
+      - Harem.together(bree, kat, name='gaming')
+    outcome:
+        condition: '"gaming_harem_event_04" in DONE'
+
+  propose_bree_kat:
+    name: Propose to Kat and [bree.name]
+    conditions:
+      - Harem.together("bree", "kat", name='gaming')
+    outcomes:
+      complete:
+        conditions:
+          - bree.flags.engagedmike
+          - kat.flags.engagedmike

@@ -1,0 +1,180 @@
+---
+name: Claire
+class: Girl
+age: 33
+status: Adam's mother
+gender: female
+flags:
+  nokiss: True
+  nodate: True
+  hidden: True
+attributes:
+  love:
+    min: 0
+    max: 20
+    default: 0
+  sub:
+    min: 0
+    max: 25
+    default: 0
+  lesbian:
+    min: 0
+    max: 20
+    default: 0
+  sexperience:
+    min: 0
+    max: null
+    default: 0
+piercings:
+  navel:
+    pierced: false
+  clit:
+    pierced: false
+  nipples:
+    pierced: false
+  nose:
+    pierced: false
+birthday:
+  - spring
+  - 25
+traits:
+  - playful
+  - family
+  - family
+  - family
+  - submissive
+  - gourmand
+  - gourmand
+  - innocent
+  - religious
+desire_factors:
+  - home
+  - home
+  - playful
+  - flowers
+  - sweets
+  - cinema
+heronickname:
+  Pumpkin: claire.flags.mikeNickname in nickname_pumpkin
+schedule:
+  default:
+    '1346':
+      '7':
+        - room: none
+          activity: sleep
+          clothes: underwear
+      '8':
+        - room: street
+          activity: none
+          clothes: casual
+      '10':
+        - room: bakery
+          activity: eat
+          clothes: casual
+      '12':
+        - room: aquarium
+          activity: none
+          clothes: casual
+      '13':
+        - room: ramenshop
+          activity: eat
+          clothes: casual
+        - room: none
+          activity: eat
+          clothes: casual
+      '14':
+        - room: flowershop
+          activity: none
+          clothes: casual
+      '17':
+        - room: waterpark
+          activity: none
+          clothes: swimsuit
+        - room: cinema
+          activity: none
+          clothes: casual
+      '18':
+        - room: gymreception
+          activity: none
+          clothes: sport
+      '20':
+        - room: street
+          activity: none
+          clothes: casual
+      '21':
+        - room: cinema
+          activity: none
+          clothes: casual
+      '23':
+        - room: none
+          activity: sleep
+          clothes: underwear
+    '25':
+      '10':
+        - room: none
+          activity: sleep
+          clothes: underwear
+      '12':
+        - room: gymreception
+          activity: none
+          clothes: sport
+      '14':
+        - room: bakery
+          activity: eat
+          clothes: casual
+      '17':
+        - room: cinema
+          activity: none
+          clothes: casual
+      '18':
+        - room: street
+          activity: none
+          clothes: casual
+      '21':
+        - room: none
+          activity: none
+          clothes: casual
+        - room: cinema
+          activity: none
+          clothes: casual
+      '22':
+        - room: none
+          activity: sleep
+          clothes: underwear
+    '7':
+      '9':
+        - room: none
+          activity: sleep
+          clothes: underwear
+      '10':
+        - room: bakery
+          activity: eat
+          clothes: casual
+      '11':
+        - room: church
+          activity: pray
+          clothes: casual
+      '12':
+        - room: flowershop
+          activity: none
+          clothes: casual
+      '14':
+        - room: aquarium
+          activity: none
+          clothes: casual
+      '15':
+        - room: bakery
+          activity: eat
+          clothes: casual
+      '16':
+        - room: none
+          activity: none
+          clothes: casual
+      '19':
+        - room: street
+          activity: none
+          clothes: casual
+      '23':
+        - room: none
+          activity: sleep
+          clothes: underwear

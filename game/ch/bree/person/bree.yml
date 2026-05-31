@@ -1,0 +1,684 @@
+---
+name: Bree
+family_name: Cheese
+class: Girl
+age: 22
+status: roommate
+gender: female
+birthday:
+  - fall
+  - 7
+flags:
+  birthPenalty: 25
+attributes:
+  love:
+    min: 0
+    max: 20
+    default: 0
+  sub:
+    min: 0
+    max: 50
+    default: 0
+  lesbian:
+    min: 0
+    max: 20
+    default: 0
+  sexperience:
+    min: 0
+    max: null
+    default: 0
+piercings:
+  ears:
+    outfits:
+      - date
+    pierced: true
+  navel:
+    outfits:
+      - naked
+      - swimsuit
+      - sexyswimsuit
+      - sexydate
+      - underwear
+      - sport
+  clit:
+    outfits:
+      - naked
+      - sexyswimsuit
+      - bottomless
+  nipples:
+    outfits:
+      - naked
+      - sexyswimsuit
+      - topless
+  tongue:
+    expressions:
+      - cry
+      - lose
+      - mouthful
+      - thumb
+      - surprised
+  lips:
+    outfits:
+      - all
+  nose:
+    outfits:
+      - all
+traits:
+  - bookworm
+  - playful
+  - geek
+movies:
+  action: -2
+  romcom: 2
+desire_factors:
+  - knowledge
+  - video_games
+  - books
+  - mall
+  - not_nightclub
+heronickname:
+  Roomie: bree.flags.mikeNickname in nickname_roomie
+  Hotshot: bree.flags.mikeNickname in nickname_hotshot
+  Cutie: bree.flags.mikeNickname in nickname_cutie
+  Player One: bree.flags.mikeNickname in nickname_player_one
+  Daddy: bree.is_sex_slave and bree.flags.mikeNickname in nickname_daddy
+schedule:
+  default:
+    '5':
+      '6':
+        - room: bedroom2
+          activity: sleep
+          clothes: underwear
+      '7':
+        - room: bathroom
+          activity: bath
+          clothes: naked
+        - room: bathroom
+          activity: brush
+          clothes: towel
+      '8':
+        - room: kitchen
+          activity: meal
+          clothes: sleep
+      '10':
+        - room: university
+          activity: work
+          clothes: casual
+      '11':
+        - room: classroom
+          activity: work
+          clothes: casual
+      '13':
+        - room: dininghall
+          activity: eat_uni
+          clothes: casual
+      '14':
+        - room: university
+          activity: work
+          clothes: casual
+        - room: street
+          activity: walk
+          clothes: casual
+      '15':
+        - room: classroom
+          activity: work
+          clothes: casual
+        - room: street
+          activity: walk
+          clothes: casual
+      '16':
+        - room: arcade
+          activity: play
+          clothes: casual
+        - room: electronic
+      '18':
+        - room: bookstore
+          activity: shop
+          clothes: casual
+        - room: electronic
+          activity: shop
+          clothes: casual
+        - room: livingroom
+          activity: read
+          clothes: casual
+      '19':
+        - room: bedroom2
+          activity: read
+          clothes: casual
+      '20':
+        - room: kitchen
+          activity: meal
+          clothes: casual
+      '23':
+        - room: stripclub
+          activity: dance
+          clothes: stripper
+          conditions:
+            - '"bree_stripclub_intro" in DONE'
+            - bree.flags.work_stripclub
+            - game.days_played % 4 == 0
+        - room: pubplay
+          activity: drink
+          clothes: casual
+        - room: livingroom
+          activity: tv
+          clothes: sleep
+        - room: bedroom2
+          activity: read
+          clothes: underwear
+    '6':
+      '9':
+        - room: bedroom2
+          activity: sleep
+          clothes: underwear
+      '10':
+        - room: bathroom
+          activity: bath
+          clothes: naked
+        - room: bathroom
+          activity: pee
+          clothes: underwear
+      '11':
+        - room: kitchen
+          activity: meal
+          clothes: sleep
+      '12':
+        - room: livingroom
+          activity: play
+          clothes: sleep
+        - room: kitchen
+          activity: dishes
+          clothes: sleep
+      '14':
+        - room: gymreception
+          activity: none
+          clothes: sport
+        - room: arcade
+          activity: play
+          clothes: casual
+        - room: park
+          activity: run
+          clothes: sport
+        - room: street
+          activity: run
+          clothes: sport
+      '15':
+        - room: arcade
+          activity: play
+          clothes: casual
+        - room: electronic
+          activity: shop
+          clothes: casual
+        - room: bathroom
+          activity: pee
+          clothes: underwear
+      '17':
+        - room: livingroom
+          activity: read
+          clothes: casual
+        - room: arcade
+          activity: play
+          clothes: casual
+      '18':
+        - room: arcade
+          activity: play
+          clothes: casual
+      '19':
+        - room: bedroom2
+          activity: read
+          clothes: casual
+        - room: pool
+          activity: read
+          clothes: swimsuit
+          seasons: '01'
+      '20':
+        - room: kitchen
+          activity: meal
+          clothes: casual
+      '23':
+        - room: stripclub
+          activity: dance
+          clothes: stripper
+          conditions:
+            - '"bree_stripclub_intro" in DONE'
+            - game.days_played % 4 == 0
+        - room: pubplay
+          activity: drink
+          clothes: casual
+    '7':
+      '10':
+        - room: bedroom2
+          activity: sleep
+          clothes: underwear
+      '11':
+        - room: bathroom
+          activity: bath
+          clothes: naked
+        - room: bedroom2
+          activity: sleep
+          clothes: underwear
+      '12':
+        - room: kitchen
+          activity: meal
+          clothes: sleep
+      '13':
+        - room: kitchen
+          activity: dishes
+          clothes: sleep
+      '17':
+        - room: pool
+          activity: sunbath
+          clothes: swimsuit
+          seasons: '01'
+        - room: livingroom
+          activity: play
+          clothes: sleep
+          seasons: '23'
+      '19':
+        - room: bedroom2
+          activity: read
+          clothes: sleep
+        - room: park
+          activity: read
+          clothes: casual
+      '20':
+        - room: kitchen
+          activity: meal
+          clothes: casual
+      '21':
+        - room: kitchen
+          activity: dishes
+          clothes: casual
+      '22':
+        - room: bathroom
+          activity: brush
+          clothes: towel
+      '23':
+        - room: bedroom2
+          activity: sleep
+          clothes: underwear
+    '1234':
+      '6':
+        - room: bedroom2
+          activity: sleep
+          clothes: sleep
+      '7':
+        - room: bathroom
+          activity: bath
+          clothes: naked
+        - room: bathroom
+          activity: brush
+          clothes: towel
+        - room: bedroom2
+          activity: dress
+          clothes: underwear
+      '8':
+        - room: kitchen
+          activity: meal
+          clothes: sleep
+      '9':
+        - room: livingroom
+          activity: play
+          clothes: sleep
+      '10':
+        - room: university
+          activity: work
+          clothes: casual
+      '11':
+        - room: classroom
+          activity: work
+          clothes: casual
+        - room: library
+          activity: work
+          clothes: casual
+      '13':
+        - room: dininghall
+          activity: meal
+          clothes: casual
+      '14':
+        - room: university
+          activity: work
+          clothes: casual
+        - room: bookstore
+          activity: shop
+          clothes: casual
+        - room: livingroom
+          activity: read
+          clothes: casual
+      '17':
+        - room: library
+          activity: work
+          clothes: casual
+        - room: classroom
+          activity: work
+          clothes: casual
+        - room: bookstore
+          activity: shop
+          clothes: casual
+        - room: pool
+          activity: read
+          clothes: swimsuit
+          seasons: '01'
+        - room: livingroom
+          activity: read
+          clothes: casual
+      '18':
+        - room: livingroom
+          activity: tv
+          clothes: casual
+      '19':
+        - room: bedroom2
+          activity: read
+          clothes: casual
+        - room: bedroom2
+          activity: read
+          clothes: casual
+        - room: livingroom
+          activity: tv
+          clothes: casual
+      '20':
+        - room: kitchen
+          activity: meal
+          clothes: casual
+      '22':
+        - room: livingroom
+          activity: read
+          clothes: sleep
+        - room: bedroom2
+          activity: read
+          clothes: underwear
+        - room: livingroom
+          activity: tv
+          clothes: sleep
+      '23':
+        - room: bathroom
+          activity: pee
+          clothes: underwear
+        - room: bathroom
+          activity: brush
+          clothes: towel
+  working:
+    '5':
+      '6':
+        - room: bedroom2
+          activity: sleep
+          clothes: underwear
+      '7':
+        - room: bathroom
+          activity: bath
+          clothes: naked
+        - room: bathroom
+          activity: brush
+          clothes: towel
+      '8':
+        - room: kitchen
+          activity: meal
+          clothes: sleep
+      '10':
+        - room: university
+          activity: work
+          clothes: casual
+      '11':
+        - room: classroom
+          activity: work
+          clothes: casual
+      '13':
+        - room: dininghall
+          activity: eat_uni
+          clothes: casual
+      '14':
+        - room: university
+          activity: work
+          clothes: casual
+      '17':
+        - room: arcade
+          activity: play
+          clothes: casual
+        - room: maidcafe
+          activity: work
+          clothes: maid
+      '19':
+        - room: maidcafe
+          activity: work
+          clothes: maid
+      '20':
+        - room: kitchen
+          activity: meal
+          clothes: casual
+      '23':
+        - room: stripclub
+          activity: dance
+          clothes: stripper
+          conditions:
+            - '"bree_stripclub_intro" in DONE'
+            - game.days_played % 4 == 0
+        - room: pubplay
+          activity: drink
+          clothes: casual
+        - room: bedroom2
+          activity: read
+          clothes: underwear
+    '6':
+      '9':
+        - room: bedroom2
+          activity: sleep
+          clothes: underwear
+      '10':
+        - room: bathroom
+          activity: bath
+          clothes: naked
+        - room: bathroom
+          activity: pee
+          clothes: underwear
+      '11':
+        - room: kitchen
+          activity: meal
+          clothes: sleep
+      '12':
+        - room: livingroom
+          activity: play
+          clothes: sleep
+        - room: kitchen
+          activity: dishes
+          clothes: sleep
+      '14':
+        - room: gymreception
+          activity: none
+          clothes: sport
+        - room: arcade
+          activity: play
+          clothes: casual
+        - room: park
+          activity: run
+          clothes: sport
+        - room: street
+          activity: run
+          clothes: sport
+      '18':
+        - room: maidcafe
+          activity: work
+          clothes: maid
+      '19':
+        - room: bedroom2
+          activity: read
+          clothes: casual
+        - room: pool
+          activity: read
+          clothes: swimsuit
+          seasons: '01'
+        - room: arcade
+          activity: play
+          clothes: casual
+      '20':
+        - room: kitchen
+          activity: meal
+          clothes: casual
+      '23':
+        - room: stripclub
+          activity: dance
+          clothes: stripper
+          conditions:
+            - '"bree_stripclub_intro" in DONE'
+            - game.days_played % 4 == 0
+        - room: pubplay
+          activity: drink
+          clothes: casual
+    '7':
+      '10':
+        - room: bedroom2
+          activity: sleep
+          clothes: underwear
+      '11':
+        - room: bathroom
+          activity: bath
+          clothes: naked
+        - room: bedroom2
+          activity: sleep
+          clothes: underwear
+      '12':
+        - room: kitchen
+          activity: meal
+          clothes: sleep
+      '13':
+        - room: kitchen
+          activity: dishes
+          clothes: sleep
+      '17':
+        - room: pool
+          activity: sunbath
+          clothes: swimsuit
+          seasons: '01'
+        - room: livingroom
+          activity: play
+          clothes: sleep
+          seasons: '23'
+        - room: maidcafe
+          activity: work
+          clothes: maid
+      '19':
+        - room: bedroom2
+          activity: read
+          clothes: sleep
+        - room: park
+          activity: read
+          clothes: casual
+      '20':
+        - room: kitchen
+          activity: meal
+          clothes: casual
+      '21':
+        - room: kitchen
+          activity: dishes
+          clothes: casual
+      '22':
+        - room: bathroom
+          activity: pee
+          clothes: underwear
+      '23':
+        - room: bedroom2
+          activity: sleep
+          clothes: underwear
+    '1234':
+      '6':
+        - room: bedroom2
+          activity: sleep
+          clothes: sleep
+      '7':
+        - room: bathroom
+          activity: bath
+          clothes: naked
+        - room: bathroom
+          activity: brush
+          clothes: towel
+        - room: bedroom2
+          activity: dress
+          clothes: underwear
+      '8':
+        - room: kitchen
+          activity: meal
+          clothes: sleep
+      '9':
+        - room: livingroom
+          activity: play
+          clothes: sleep
+      '10':
+        - room: university
+          activity: work
+          clothes: casual
+      '11':
+        - room: classroom
+          activity: work
+          clothes: casual
+        - room: library
+          activity: work
+          clothes: casual
+      '12':
+        - room: maidcafe
+          activity: work
+          clothes: maid
+      '13':
+        - room: dininghall
+          activity: meal
+          clothes: casual
+      '14':
+        - room: university
+          activity: work
+          clothes: casual
+        - room: bookstore
+          activity: shop
+          clothes: casual
+        - room: livingroom
+          activity: read
+          clothes: casual
+      '17':
+        - room: library
+          activity: work
+          clothes: casual
+        - room: classroom
+          activity: work
+          clothes: casual
+        - room: bookstore
+          activity: shop
+          clothes: casual
+        - room: pool
+          activity: read
+          clothes: swimsuit
+          seasons: '01'
+        - room: livingroom
+          activity: read
+          clothes: casual
+      '18':
+        - room: maidcafe
+          activity: work
+          clothes: maid
+      '19':
+        - room: bedroom2
+          activity: read
+          clothes: casual
+        - room: bedroom2
+          activity: read
+          clothes: casual
+        - room: livingroom
+          activity: tv
+          clothes: casual
+      '20':
+        - room: kitchen
+          activity: meal
+          clothes: casual
+      '22':
+        - room: livingroom
+          activity: read
+          clothes: sleep
+        - room: bedroom2
+          activity: read
+          clothes: underwear
+        - room: livingroom
+          activity: tv
+          clothes: sleep
+      '23':
+        - room: bathroom
+          activity: pee
+          clothes: underwear
+        - room: bathroom
+          activity: brush
+          clothes: towel

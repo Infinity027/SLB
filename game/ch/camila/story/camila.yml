@@ -1,0 +1,404 @@
+name: Camila
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Camila"
+short: "{image=notify camila} · Camila"
+description: "Camila is the detective in charge of Kylie's file."
+participants:
+  - camila
+condition: '"camila_event_01" in DONE and "camila_event_02_alt" not in DONE'
+
+start:
+  - love20
+  - sub25
+  - camila_prison_1
+
+outcomes:
+  gone:
+    description: Camila has left and is no longer part of my life.
+    condition: camila.is_gone_forever
+    icon: fail
+  engaged:
+    condition: camila.flags.engagedmike
+    description: Camila has agreed to marry me!
+
+steps:
+  love20:
+    name: Get to know Camila better
+    condition: '"camila_event_01" in DONE'
+    percentage:
+      value: camila.love.val
+      scale: 20
+    outcome:
+      hide: True
+      condition: camila.love >= 20
+
+  camila_event_02:
+    name: Meet Camila on a weekend afternoon
+    related_event: camila_event_02
+    conditions:
+      - camila.love >= 20
+    outcome:
+      condition: '"camila_event_02" in DONE'
+
+  love40:
+    name: Get to know Camila better
+    percentage:
+      value: camila.love.val
+      scale: 40
+    outcome:
+      hide: True
+      condition: camila.love >= 40
+
+  camila_event_03:
+    name: Wait for Camila call
+    related_event: camila_event_03
+    conditions:
+      - camila.love >= 40
+    outcome:
+      condition: '"camila_event_03" in DONE'
+
+  love60:
+    name: Get to know Camila better
+    percentage:
+      value: camila.love.val
+      scale: 60
+    outcome:
+      hide: True
+      condition: camila.love >= 60
+
+  camila_event_04:
+    name: Go shopping in the mall
+    related_event: camila_event_04
+    conditions:
+      - camila.love >= 60
+    outcome:
+      condition: '"camila_event_04" in DONE'
+
+  love80:
+    name: Get to know Camila better
+    percentage:
+      value: camila.love.val
+      scale: 80
+    outcome:
+      hide: True
+      condition: camila.love >= 80
+
+  camila_event_05:
+    name: Take Camila to a walk in the park on a winter day
+    related_event: camila_event_05
+    toggle: True
+    conditions:
+      - camila.love >= 80
+      - '"camila_event_05" not in DONE'
+      - '"camila_event_05b" not in DONE'
+      - game.season in [3]
+    outcomes:
+      missed:
+        condition: '"camila_event_05b" in DONE'
+        hide: True
+      complete:
+        condition: '"camila_event_05" in DONE'
+        next: love100
+
+  camila_event_05b:
+    name: Take Camila on a forest hike starting from the park
+    related_event: camila_event_05b
+    toggle: True
+    conditions:
+      - camila.love >= 80
+      - '"camila_event_05" not in DONE'
+      - '"camila_event_05b" not in DONE'
+      - game.season in [0, 1, 2]
+    outcomes:
+      missed:
+        condition: '"camila_event_05" in DONE'
+        hide: True
+      complete:
+        condition: '"camila_event_05b" in DONE'
+        next: love100
+
+  love100:
+    name: Get to know Camila better
+    percentage:
+      value: camila.love.val
+      scale: 100
+    outcome:
+      hide: True
+      condition: camila.love >= 100
+
+  camila_event_06:
+    name: Date with Camila
+    related_event: camila_event_06
+    conditions:
+      - camila.love >= 100
+      - '"camila_event_05" in DONE or "camila_event_05b" in DONE'
+    outcome:
+      condition: '"camila_event_06" in DONE'
+
+  love120:
+    name: Get to know Camila better
+    percentage:
+      value: camila.love.val
+      scale: 120
+    outcome:
+      hide: True
+      condition: camila.love >= 120
+
+  camila_event_07:
+    name: Meet Camila at her work in the evening
+    related_event: camila_event_07
+    conditions:
+      - camila.love >= 120
+    outcome:
+      condition: '"camila_event_07" in DONE'
+      next: [love140, camila_prison_1]
+
+  love140:
+    name: Get to know Camila better
+    percentage:
+      value: camila.love.val
+      scale: 140
+    outcome:
+      hide: True
+      condition: camila.love >= 140
+
+  camila_event_08:
+    name: Wait a phone call from Camila
+    related_event: camila_event_08
+    conditions:
+      - camila.love >= 140
+    outcome:
+      condition: '"camila_event_08" in DONE'
+
+  camila_event_09:
+    name: Go see camila at the hospital
+    related_event: camila_event_09
+    conditions:
+      - '"camila_event_08" in DONE'
+    outcome:
+      condition: '"camila_event_09" in DONE'
+
+  camila_out_of_hospital:
+    name: Wait for camila to go out the hospital
+    percentage:
+      value: camila.timers.hospitaldelay
+      scale: 5
+      invert: True
+    conditions:
+      - '"camila_event_09" in DONE'
+    outcome:
+      condition: 'camila.flags.schedule == "default"'
+
+  love160:
+    name: Get to know Camila better
+    percentage:
+      value: camila.love.val
+      scale: 160
+    outcome:
+      hide: True
+      condition: camila.love >= 160
+
+  camila_event_10:
+    name: Go on a date with Camila at the cinema
+    related_event: camila_event_10
+    conditions:
+      - camila.love >= 160
+      - camila.sexperience >= 1
+      - camila.flags.schedule == "default"
+    outcome:
+      condition: '"camila_event_10" in DONE'
+
+  love180:
+    name: Get to know Camila better
+    percentage:
+      value: camila.love.val
+      scale: 180
+    outcome:
+      hide: True
+      condition: camila.love >= 180
+
+  camila_event_11:
+    name: Talk to Camila
+    related_event: camila_event_11
+    conditions:
+      - camila.love >= 180
+    outcome:
+      condition: '"camila_event_11" in DONE'
+      next:
+        - None
+
+  sub25:
+    name: Make Camila more submissive
+    percentage:
+      value: camila.sub.val
+      scale: 25
+    outcome:
+      hide: True
+      conditions: camila.sub >= 25
+
+  camila_sub_event_01:
+    name: Go on a date with Camila
+    related_event: camila_sub_event_01
+    conditions:
+      - camila.sub >= 25
+      - camila.sexperience >= 2
+    outcome:
+      condition: '"camila_sub_event_01" in DONE'
+
+  sub50:
+    name: Make Camila more submissive
+    percentage:
+      value: camila.sub.val
+      scale: 50
+    outcome:
+      hide: True
+      conditions: camila.sub >= 50
+
+  camila_sub_event_02:
+    name: Talk to Camila
+    related_event: camila_sub_event_02
+    conditions:
+      - camila.sub >= 50
+      - '"camila_event_07" in DONE'
+    outcome:
+      condition: '"camila_sub_event_02" in DONE'
+
+  sub75:
+    name: Make Camila more submissive
+    percentage:
+      value: camila.sub.val
+      scale: 75
+    outcome:
+      hide: True
+      conditions: camila.sub >= 75
+
+  camila_sub_event_03:
+    name: Wait for Camila to call in the afternoon (be at home)
+    related_event: camila_sub_event_03
+    conditions:
+      - camila.sub >= 75
+      - camila.sexperience >= 4
+    outcome:
+      condition: '"camila_sub_event_03" in DONE'
+      next:
+        - sub90
+
+  camila_collar_request:
+    name: Have a date with Camila at the mall.
+    related_event: camila_collar_request
+    conditions:
+    - 'not camila.collared'
+    - 'not camila.hidden'
+    - 'camila.sub >= 80'
+    outcome:
+      condition: '"camila_collar_request" in DONE'
+      next: None
+
+  sub90:
+    name: Make Camila more submissive
+    percentage:
+      value: camila.sub.val
+      scale: 90
+    outcome:
+      hide: True
+      conditions: camila.sub >= 90
+
+  camila_sub_event_04:
+    name: Find Camila at the police station during the afternoon
+    related_event: camila_sub_event_04
+    conditions:
+      - camila.sub >= 90
+      - camila.sexperience >= 4
+    outcome:
+      condition: '"camila_sub_event_04" in DONE'
+      next:
+        - None
+
+  camila_prison_1:
+    name: A letter arrived saying that I could go see Kylie in prison. I should go when Camila is around.
+    related_event: camila_prison_visit_1
+    conditions:
+      - '"kylie_investigation_3" in DONE'
+      - 'kylie.flags.schedule == "jail"'
+      - 'not camila.flags.camiladelay'
+      - 'camila.sexperience >= 1'
+      - 'not camila.hidden'
+      - 'not kylie.hidden'
+      - 'camila.love >= 120'
+    outcome:
+      conditions:
+        - "'camila_prison_visit_1' in DONE"
+      description: I've seen Kylie in jail with Camila.
+
+  camila_prison_2:
+    name: I'm allowed to go see Kylie for the conjugal visit with Camila.
+    related_event: camila_prison_visit_2
+    conditions:
+    - '"camila_prison_visit_1" in DONE'
+    - 'kylie.flags.schedule == "jail"'
+    - 'not camila.flags.camiladelay'
+    - 'not camila.hidden'
+    - 'not kylie.hidden'
+    - 'camila.love >= 120'
+    outcome:
+      condition: '"camila_prison_visit_2" in DONE'
+      next: None
+
+  date:
+    name: Go on a date with Camila
+    condition: True
+    outcome:
+      condition: camila.flags.dates >= 1
+      next: birthday_date
+
+  birthday_date:
+    name: Take Camila out on a night date for her birthday
+    condition: camila.flags.dates >= 1
+    outcome:
+      condition: '"camila_birthday_date_male" in DONE'
+      next: None
+
+  sex:
+    name: Have sex with Camila
+    condition: True
+    outcome:
+      condition: camila.sexperience >= 1
+      next: None
+
+  love:
+    name: Get Camila to fall in love with me
+    condition: True
+    percentage:
+      value: camila.love.val
+      scale: 200
+    outcome:
+      condition: camila.love.val == 200
+      next: None
+
+  ring:
+    name: Buy a wedding ring
+    condition: True
+    outcome:
+      condition: hero.has_item("wedding_ring")
+
+  propose:
+    name: Propose to Camila
+    condition: hero.has_item("wedding_ring")
+    outcome:
+      condition: camila.flags.engagedmike
+      next: None
+
+  preg:
+    name: Get Camila pregnant
+    optional: True
+    condition: True
+    outcome:
+      condition: camila.flags.pregnancies_number > 0
+      next: None
+
+  slave:
+    name: Make Camila my sex slave
+    optional: True
+    condition: True
+    outcome:
+      condition: camila.is_sex_slave
+      next: None

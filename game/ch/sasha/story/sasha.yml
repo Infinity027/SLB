@@ -1,0 +1,235 @@
+name: Sasha
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Sasha"
+short: "{image=notify sasha} · Sasha"
+description: "One of my roommates, Sasha is a goth girl. She can be acerbic, but knows how to have a lot of fun."
+participants:
+  - sasha
+condition: hero.is_male
+
+outcomes:
+  gone:
+    description: Sasha has moved out and is no longer part of my life.
+    conditions:
+      - sasha.is_gone_forever
+    icon: fail
+  engaged:
+    condition: sasha.flags.engagedmike
+    description: Sasha has agreed to marry me!
+
+steps:
+  sasha_b_event_02:
+    name: Help Sasha unpack
+    related_event: sasha_b_event_02
+    condition: hero.is_male
+    outcome:
+      condition: '"sasha_b_event_02" in DONE'
+
+  sasha_b_event_03:
+    name: Meet Sasha at the pub
+    related_event: sasha_b_event_03
+    outcome:
+      condition: '"sasha_b_event_03" in DONE'
+
+  love60:
+    name: Get to know Sasha better
+    percentage:
+      value: sasha.love.val
+      scale: 60
+    outcome:
+      hide: True
+      next: sasha_b_event_04
+      condition: sasha.love >= 60
+
+  guitar:
+    name: Learn how to play the guitar
+    conditions:
+      - 'not hero.has_skill("guitar")'
+      - '"sasha_b_event_04" in DONE'
+    outcomes:
+      learned:
+        condition: 'hero.has_skill("guitar")'
+      fail:
+        icon: fail
+        condition: 'not hero.has_skill("guitar")'
+
+  sasha_b_event_04:
+    name: Find out what that noise coming from Sasha's room is
+    related_event: sasha_b_event_04
+    outcome:
+      description: That noise coming from Sasha's room was her playing guitar
+      condition: '"sasha_b_event_04" in DONE'
+
+  love140:
+     name: Get to know Sasha better
+     percentage:
+       value: sasha.love.val
+       scale: 140
+     outcome:
+       hide: True
+       conditions: sasha.love >= 140
+
+  sasha_b_event_05:
+    name: Take Sasha on a date
+    related_event: sasha_b_event_05
+    outcome:
+      condition: '"sasha_b_event_05" in DONE'
+
+  love160:
+    name: Get to know Sasha better
+    percentage:
+      value: sasha.love.val
+      scale: 160
+    outcome:
+      hide: True
+      conditions: sasha.love >= 160
+
+  sasha_b_event_06:
+    name: Take Sasha on a date (again)
+    related_event: sasha_b_event_06
+    outcome:
+      condition: '"sasha_b_event_06" in DONE'
+
+  love180:
+    name: Get to know Sasha better
+    percentage:
+      value: sasha.love.val
+      scale: 180
+    outcome:
+      hide: True
+      conditions: sasha.love >= 180
+
+  sasha_b_event_07:
+    name: Have a meal alone with Sasha in the kitchen
+    related_event: sasha_b_event_07
+    outcome:
+      condition: '"sasha_b_event_07" in DONE'
+
+
+
+  dom0:
+    name: Make Sasha more dominant for more intimate foot play
+    condition: 'hero.has_skill("massage")'
+    percentage:
+      value: 100 - sasha.sub.val
+      scale: 100
+    outcome:
+      hide: True
+      condition: sasha.sub <= 0
+
+  footrub:
+    name: Give Sasha a foot massage while watching TV
+    outcome:
+      condition: sasha.flags.footrub
+
+  dom25:
+    name: Make Sasha more dominant for more intimate foot play
+    percentage:
+      value: 100 - sasha.sub.val
+      scale: 125
+    outcome:
+      hide: True
+      condition: sasha.sub <= -25
+
+  footjob:
+    name: Get a footjob from Sasha while watching TV
+    outcome:
+      condition: sasha.flags.footjob
+
+  dom50:
+    name: Make Sasha more dominant for more intimate foot play
+    percentage:
+      value: 100 - sasha.sub.val
+      scale: 150
+    outcome:
+      hide: True
+      condition: sasha.sub <= -50
+
+  footlick:
+    name: Lick Sasha's feet while watching TV
+    outcomes:
+      licked:
+        condition: sasha.flags.footlick
+      declined:
+        description: I declined to lick Sasha's feet
+        condition: not sasha.flags.footrub
+
+  sasha_shower_BJ:
+    name: Get a blowjob from Sasha in the shower
+    related_event: sasha_shower_BJ
+    conditions:
+      - sasha.sub >= 50
+      - sasha.love >= 150
+    outcome:
+      condition: sasha.flags.showerbj
+
+  sasha_couch_bj:
+    name: Get a blowjob from Sasha on the couch
+    conditions: sasha.love >= 150
+    outcome:
+      condition: sasha.flags.couchbj
+
+  sasha_fuck_bathroom:
+    name: Fuck Sasha in the shower
+    condition: sasha.love >= 150
+    outcome:
+      condition: sasha.flags.showersex
+
+  date:
+    name: Go on a date with Sasha
+    condition: True
+    outcome:
+      condition: sasha.flags.dates >= 1
+      next: birthday_date
+
+  birthday_date:
+    name: Take Sasha out on a night date for her birthday
+    condition: sasha.flags.dates >= 1
+    outcome:
+      condition: '"sasha_birthday_date_male" in DONE'
+      next: None
+
+  sex:
+    name: Have sex with Sasha
+    condition: True
+    outcome:
+      condition: sasha.sexperience >= 1
+      next: None
+
+  love:
+    name: Get Sasha to fall in love with me
+    condition: True
+    percentage:
+      value: sasha.love.val
+      scale: 200
+    outcome:
+      condition: sasha.love.val == 200
+      next: None
+
+  ring:
+    name: Buy a wedding ring
+    condition: True
+    outcome:
+      condition: hero.has_item("wedding_ring")
+
+  propose:
+    name: Propose to Sasha
+    condition: hero.has_item("wedding_ring")
+    outcome:
+      condition: sasha.flags.engagedmike
+      next: None
+
+  preg:
+    name: Get Sasha pregnant
+    optional: True
+    condition: True
+    outcome:
+      condition: sasha.flags.pregnancies_number > 0
+      next: None
+
+  slave:
+    name: Make Sasha my sex slave
+    optional: True
+    condition: True
+    outcome:
+      condition: sasha.is_sex_slave
+      next: None

@@ -1,0 +1,555 @@
+name: Lavish
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Lavish"
+short: "{image=notify lavish} · Lavish"
+description: "Lavish is an intern at the office."
+participants:
+  - lavish
+  - office
+condition: '"lavish_start" in DONE'
+
+outcomes:
+  gone:
+    conditions:
+      - lavish.is_gone_forever
+    description: Lavish has left and is no longer part of my life.
+    icon: fail
+  engaged:
+    condition: lavish.flags.engagedmike
+    description: Lavish has agreed to marry me!
+
+steps:
+  wait2:
+    name: Wait
+    condition: '"lavish_start" in DONE'
+    percentage:
+      value: lavish.counters.daysemployed
+      scale: 2
+    outcome:
+      hide: True
+      condition: lavish.counters.daysemployed >= 2
+
+  lavish_event_02:
+    name: Go to work at the office
+    related_event: lavish_event_02
+    outcome:
+      condition: '"lavish_event_02" in DONE'
+
+  wait4:
+    name: Wait
+    percentage:
+      value: lavish.counters.daysemployed
+      scale: 4
+    outcome:
+      hide: True
+      condition: lavish.counters.daysemployed >= 4
+
+  lavish_event_03:
+    name: Go to work at the office
+    related_event: lavish_event_03
+    outcome:
+      condition: '"lavish_event_03" in DONE'
+
+  wait7:
+    name: Wait
+    percentage:
+      value: lavish.counters.daysemployed
+      scale: 7
+    outcome:
+      hide: True
+      condition: lavish.counters.daysemployed >= 7
+
+  lavish_event_04:
+    name: Go to work at the office
+    related_event: lavish_event_04
+    outcome:
+      condition: '"lavish_event_04" in DONE'
+
+  projectDelay:
+    name: Wait
+    condition: lavish.flags.projectDelay
+    percentage:
+      value: 2 - lavish.timers.projectDelay
+      scale: 2
+    outcome:
+      hide: True
+      condition: not lavish.flags.projectDelay
+
+  lavish_event_05:
+    name: Go to work at the office
+    related_event: lavish_event_05
+    outcome:
+      condition: '"lavish_event_05" in DONE'
+
+  wait14:
+    name: Wait
+    percentage:
+      value: lavish.counters.daysemployed
+      scale: 14
+    outcome:
+      hide: True
+      condition: lavish.counters.daysemployed >= 14
+
+  lavish_event_06:
+    name: Go to work at the office
+    related_event: lavish_event_06
+    outcome:
+      condition: '"lavish_event_06" in DONE'
+
+  projectDelay2:
+    name: Wait
+    condition: lavish.flags.projectDelay
+    percentage:
+      value: 7 - lavish.timers.projectDelay
+      scale: 7
+    outcome:
+      hide: True
+      condition: not lavish.flags.projectDelay
+
+  lavish_event_07:
+    name: Go to work at the office
+    related_event: lavish_event_07
+    outcome:
+      condition: '"lavish_event_07" in DONE'
+
+  lavish_event_08:
+    name: Meet Lavish at the pub
+    related_event: lavish_event_08
+    outcome:
+      condition: '"lavish_event_08" in DONE'
+      next:
+        - wait21
+        - lavish_spanking_start
+        - lavish_spanking_alternate_start
+  wait21:
+    name: Wait
+    percentage:
+      value: lavish.counters.daysemployed
+      scale: 21
+    outcome:
+      hide: True
+      condition: lavish.counters.daysemployed >= 21
+
+  lavish_event_09:
+    name: Go to work at the office
+    related_event: lavish_event_09
+    outcome:
+      condition: '"lavish_event_09" in DONE'
+      next:
+        - wait28
+        - sleaze
+        - career
+
+  wait28:
+    name: Wait
+    percentage:
+      value: lavish.counters.daysemployed
+      scale: 28
+    outcome:
+      hide: True
+      condition: lavish.counters.daysemployed >= 28
+
+  lavish_event_10:
+    name: Go to work at the office
+    related_event: lavish_event_10
+    outcome:
+      condition: '"lavish_event_10" in DONE'
+
+  wait30:
+    name: Wait
+    percentage:
+      value: lavish.counters.daysemployed
+      scale: 30
+    outcome:
+      hide: True
+      condition: lavish.counters.daysemployed >= 30
+
+  lavish_event_11:
+    name: Go to work at the office
+    related_event: lavish_event_11
+    outcome:
+      condition: '"lavish_event_11" in DONE'
+
+  wait35:
+    name: Wait
+    percentage:
+      value: lavish.counters.daysemployed
+      scale: 35
+    outcome:
+      hide: True
+      condition: lavish.counters.daysemployed >= 35
+
+  lavish_event_12:
+    name: Go to work at the office
+    related_event: lavish_event_12
+    outcome:
+      # This branches here and the next 2 steps will auto-activate
+      next: None
+      condition: '"lavish_event_12" in DONE'
+
+  lavish_event_13:
+    name: Congratulate Lavish on her promotion
+    related_event: lavish_event_13
+    conditions:
+      - '"lavish_event_12" in DONE'
+      - lavish.flags.promoted == 1
+    outcome:
+      condition: '"lavish_event_13" in DONE'
+
+  love140:
+    name: Get to know Lavish better
+    conditions:
+      - '"lavish_event_13" in DONE'
+      - lavish.flags.promoted >= 1
+    percentage:
+      value: lavish.love.val
+      scale: 140
+    outcome:
+      condition: lavish.love.val >= 140
+      hide: True
+
+  lavish_event_14:
+    name: Go to work at the office
+    related_event: lavish_event_14
+    conditions:
+      - lavish.love >= 140
+      - '"lavish_event_13" in DONE'
+    outcome:
+      condition: '"lavish_event_14" in DONE'
+
+  love150:
+    name: Get to know Lavish better
+    conditions:
+      - '"lavish_event_14" in DONE'
+    percentage:
+      value: lavish.love.val
+      scale: 150
+    outcome:
+      hide: True
+      condition: lavish.love.val >= 150
+
+  lavish_event_15:
+    name: Take Lavish on a date at the restaurant
+    related_event: lavish_event_15
+    conditions:
+      - lavish.love >= 150
+      - '"lavish_event_14" in DONE'
+    outcome:
+      condition: '"lavish_event_15" in DONE'
+
+  love160:
+    name: Get to know Lavish better
+    conditions:
+      - '"lavish_event_15" in DONE'
+    percentage:
+      value: lavish.love.val
+      scale: 160
+    outcome:
+      hide: True
+      condition: lavish.love.val >= 160
+
+  aletta_check:
+    name: Aletta must be available for the meeting
+    conditions:
+      - lavish.love >= 160
+    outcomes:
+      complete:
+        conditions:
+          - lavish.love >= 160
+          - not aletta.hidden
+        hide: True
+      stalled:
+        description: Aletta is not available for the meeting. That's all for this story.
+        icon: stalled
+        conditions:
+          - lavish.love >= 160
+          - aletta.hidden
+        next: None
+
+  audrey_check:
+    name: Audrey must be available for the meeting
+    conditions:
+      - lavish.love >= 160
+    outcomes:
+      complete:
+        conditions:
+          - lavish.love >= 160
+          - not audrey.hidden
+        hide: True
+      stalled:
+        description: Audrey is not available for the meeting. That's all for this story.
+        icon: stalled
+        conditions:
+          - lavish.love >= 160
+          - audrey.hidden
+        next: None
+
+  shiori_check:
+    name: Shiori must be available for the meeting
+    conditions:
+      - lavish.love >= 160
+    outcomes:
+      complete:
+        conditions:
+          - lavish.love >= 160
+          - not shiori.hidden
+        hide: True
+      stalled:
+        description: Shiori is not available for the meeting. That's all for this story.
+        icon: stalled
+        conditions:
+          - lavish.love >= 160
+          - shiori.hidden
+        next: None
+
+  lavish_event_16:
+    name: Attend meeting
+    related_event: lavish_event_16
+    conditions:
+      - lavish.love >= 160
+      - '"lavish_event_15" in DONE'
+    outcome:
+      condition: '"lavish_event_16" in DONE'
+
+  lavish_event_17:
+    name: Go to work at the office
+    related_event: lavish_event_17
+    conditions:
+      - not game.flags.lavfleemeetingdelay
+      - '"lavish_event_16" in DONE'
+    outcome:
+      condition: '"lavish_event_17" in DONE'
+
+  love180:
+    name: Get to know Lavish better
+    conditions:
+      - '"lavish_event_17" in DONE'
+    percentage:
+      value: lavish.love.val
+      scale: 180
+    outcome:
+      hide: True
+      condition: lavish.love.val >= 180
+
+  lavish_event_18:
+    name: Go to work at the office
+    related_event: lavish_event_18
+    conditions:
+      - not game.flags.lavfleemeetingdelay
+      - '"lavish_event_18" in DONE'
+    outcome:
+      condition: '"lavish_event_18" in DONE'
+
+  love200:
+    name: Get to know Lavish better
+    conditions:
+      - '"lavish_event_18" in DONE'
+    percentage:
+      value: lavish.love.val
+      scale: 200
+    outcome:
+      hide: True
+      condition: lavish.love.val >= 200
+
+  sleaze:
+    name: Convince Lavish to give sexual favors for promotions
+    condition: '"lavish_event_09" in DONE'
+    percentage:
+      value: 20 - lavish.flags.sleaze
+      scale: 20
+    outcomes:
+      success:
+        next: None
+        conditions:
+          - lavish.flags.sleaze >= 20
+      fail:
+        icon: fail
+        next: None
+        conditions:
+          - '"lavish_event_12" in DONE'
+          - lavish.flags.sleaze < 20
+
+  career:
+    name: Help Lavish earn a promotion
+    condition: '"lavish_event_09" in DONE'
+    percentage:
+      value: 50 - lavish.career.val
+      scale: 50
+    outcomes:
+      success:
+        next: None
+        conditions:
+          - lavish.flags.promoted == 1
+      fail:
+        next: None
+        icon: fail
+        conditions:
+          - '"lavish_event_12" in DONE'
+          - lavish.flags.promoted == 0
+
+  lavish_spanking_start:
+    name: Shiori needs to be punished, be sure Lavish is around
+    conditions:
+      - '"shiori_scold_5" in DONE'
+      - '"lavish_event_08" in DONE'
+    outcomes:
+      complete:
+        condition: '"lavish_spanking_start" in DONE'
+        next: lavish_spanking_1
+      alternate_start:
+        condition: '"lavish_spanking_alternate_start" in DONE'
+        hide: True
+        next: None
+
+  lavish_spanking_1:
+    name: Start spanking training with Lavish
+    related_event: lavish_spanking_1
+    conditions:
+      - '"lavish_spanking_start" in DONE'
+      - lavish.flags.start_spanking
+      - lavish.love >= 110
+      - lavish.sub >= 60
+    outcome:
+      condition: '"lavish_spanking_1" in DONE'
+      next: spank_lavish
+
+  lavish_spanking_alternate_start:
+    name: Lavish wanders around the office while I'm working
+    related_event: lavish_spanking_alternate_start
+    conditions:
+      - '"shiori_scold_5" in DONE'
+      - '"audrey_spanking_start" in DONE'
+      - '"lavish_event_08" in DONE'
+    outcomes:
+      complete:
+        conditions:
+          - '"lavish_spanking_alternate_start" in DONE'
+          - lavish.flags.start_spanking
+        next: spank_lavish
+      failed:
+        conditions:
+          - '"lavish_spanking_alternate_start" in DONE'
+          - not lavish.flags.start_spanking
+        icon: fail
+        next: None
+      spanking_start:
+        condition: '"lavish_spanking_start" in DONE'
+        hide: True
+        next: None
+
+  spank_lavish:
+    name: Spank Lavish
+    condition: lavish.flags.start_spanking
+    percentage:
+      value: lavish.flags.spank_counter
+      scale: 3
+    outcome:
+      hide: True
+      condition: lavish.flags.spank_counter >= 3
+      next:
+        - lavish_spanking_2
+        - lavish_sub_03
+
+  lavish_spanking_2:
+    name: Work while Lavish is in the office
+    related_event: lavish_spanking_2
+    conditions:
+      - lavish.flags.start_spanking
+      - lavish.flags.spank_counter >= 3
+    outcome:
+      condition: '"lavish_spanking_2" in DONE'
+      next: None
+
+  lavish_sub_03:
+    name: Work while Lavish, Audrey and Shiori are in the office
+    related_event: lavish_sub_03
+    conditions:
+      - Harem.together(audrey, lavish, shiori, name='office')
+      - lavish.flags.spank_counter >= 3
+      - lavish.love >= 160
+      - lavish.sub >= 80
+    outcomes:
+      complete:
+        condition: '"lavish_sub_03" in DONE'
+        next: None
+      done:
+        condition: '"lavish_sub_03" in DONE'
+        next: None
+      not_all_together:
+        conditions:
+          - '"office_audrey_lavish_shiori_showdown" in DONE'
+          - not Harem.together(audrey, lavish, shiori, name='office')
+        next: None
+        hide: True
+      not_audrey_lavish_together:
+        conditions:
+          - '"office_audrey_lavish_showdown" in DONE'
+          - not Harem.together(audrey, lavish, name='office')
+        next: None
+        hide: True
+      not_audrey_shiori_together: # If Shiori is not in the harem hide
+        conditions:
+          - '"office_audrey_shiori_showdown" in DONE'
+          - not Harem.together(audrey, shiori, name='office')
+        next: None
+        hide: True
+
+
+  date:
+    name: Go on a date with Lavish
+    condition: True
+    outcome:
+      condition: lavish.flags.dates >= 1
+      next: birthday_date
+
+  birthday_date:
+    name: Take Lavish out on a afternoon date for her birthday
+    condition: lavish.flags.dates >= 1
+    outcome:
+      condition: '"lavish_birthday_date_male" in DONE'
+      next: None
+
+  sex:
+    name: Have sex with Lavish
+    condition: True
+    outcome:
+      condition: lavish.sexperience >= 1
+      next: None
+
+  love:
+    name: Get Lavish to fall in love with me
+    condition: True
+    percentage:
+      value: lavish.love.val
+      scale: 200
+    outcome:
+      condition: lavish.love.val == 200
+      next: None
+
+  ring:
+    name: Buy a wedding ring
+    condition: True
+    outcome:
+      condition: hero.has_item("wedding_ring")
+
+  propose:
+    name: Propose to Lavish
+    condition: hero.has_item("wedding_ring")
+    outcome:
+      condition: lavish.flags.engagedmike
+      next: None
+
+  preg:
+    name: Get Lavish pregnant
+    optional: True
+    condition: True
+    outcome:
+      condition: lavish.flags.pregnancies_number > 0
+      next: None
+
+  slave:
+    name: Make Lavish my sex slave
+    optional: True
+    condition: True
+    outcome:
+      condition: lavish.is_sex_slave
+      next: None

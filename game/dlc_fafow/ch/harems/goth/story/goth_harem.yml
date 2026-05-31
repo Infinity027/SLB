@@ -1,0 +1,111 @@
+name: Goth Harem
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Goth_Harem"
+short: "{image=notify amy} · Goth Harem"
+type: harem
+description: "My date with Amy at the cemetery might have awakened something in her..."
+participants:
+  - amy
+#  - violaine
+#  - vincent
+conditions:
+  - hero.is_male
+  - "'amy_event_07_date' in DONE"
+  - Harem.find(amy, name='goth')
+  - amy.love.max >= 140
+  - amy.sub.max >= 30
+
+outcomes:
+  success:
+    conditions:
+      - '"goth_harem_event_03" in DONE'
+      - Harem.find('amy', name='goth')
+  disagree_4some:
+    description: I refused to have a foursome with Amy's friends
+    conditions:
+      - '"goth_harem_event_03" in DONE'
+      - not Harem.find('amy', name='goth')
+    icon: fail
+  disagree_vincent:
+    description: I refused to have a threesome with Amy's friend Vincent
+    conditions:
+      - '"goth_harem_event_02" in DONE'
+      - not Harem.find('amy', name='goth')
+    icon: fail
+  disagree_violaine:
+    description: I refused to have a threesome with Amy's friend Violaine
+    conditions:
+      - '"goth_harem_event_01" in DONE'
+      - not Harem.find('amy', name='goth')
+    icon: fail
+
+steps:
+  love170:
+     name: Get to know Amy better
+     percentage:
+       value: amy.love.val
+       scale: 170
+     outcome:
+       hide: True
+       conditions: amy.love >= 170
+
+  goth_harem_event_01:
+    name: Wait for a late night phone call
+    related_event: goth_harem_event_01
+    conditions:
+      - "'amy_event_07_date' in DONE"
+      - amy.love >= 170
+      - amy.sub >= 30
+      - amy.sexperience > 3
+    outcomes:
+      agree:
+        description: I had a threesome with Amy's friend Violaine
+        conditions:
+          - '"goth_harem_event_01" in DONE'
+          - Harem.find('amy', name='goth')
+      disagree:
+        conditions:
+          - '"goth_harem_event_01" in DONE'
+          - not Harem.find('amy', name='goth')
+        next: None
+        icon: fail
+
+  goth_harem_event_02:
+    name: Wait for an afternoon phone call
+    related_event: goth_harem_event_02
+    conditions:
+      - "'goth_harem_event_01' in DONE"
+      - amy.love >= 190
+      - amy.sub >= 50
+      - amy.sexperience > 5
+    outcomes:
+      agree:
+        description: I had a threesome with Amy's friend Vincent
+        conditions:
+          - '"goth_harem_event_02" in DONE'
+          - Harem.find('amy', name='goth')
+      disagree:
+        conditions:
+          - '"goth_harem_event_02" in DONE'
+          - not Harem.find('amy', name='goth')
+        next: None
+        icon: fail
+
+  goth_harem_event_03:
+    name: Wait for an afternoon phone call
+    related_event: goth_harem_event_03
+    conditions:
+      - "'goth_harem_event_02' in DONE"
+      - amy.love >= 200
+      - amy.sub >= 90
+    outcomes:
+      agree:
+        description: I had a foursome with Amy's friends
+        conditions:
+          - '"goth_harem_event_03" in DONE'
+          - Harem.find('amy', name='goth')
+      disagree:
+        conditions:
+          - '"goth_harem_event_03" in DONE'
+          - not Harem.find('amy', name='goth')
+        next: None
+        icon: fail

@@ -1,0 +1,155 @@
+name: Getting Started
+short: Get Started
+# This should always be first when shown.
+sort: "0000"
+type: generic
+description: "Get started with Love & Sex: Second base!"
+participants:
+  - hero
+condition: hero.is_male
+
+outcome:
+  condition: all(step.complete for step in self.parent.steps.values())
+  description: "I have a good start on getting my life in order!"
+
+steps:
+  eat:
+    name: Eat a meal
+    condition: True
+    outcome:
+        condition: 'hero.flags.alone_meal'
+
+  shower:
+    name: Take a shower
+    related_event: take_a_shower
+    condition: True
+    outcome:
+      condition: '"take_a_shower" in DONE'
+
+  tv:
+    name: Watch TV
+    related_event: watch_tv
+    condition: True
+    outcome:
+      condition: '"watch_tv" in DONE'
+
+  videogame:
+    name: Play a video game in the arcade
+    related_event: play_a_videogame
+    condition: True
+    outcome:
+      condition: '"play_a_videogame" in DONE'
+
+  console:
+    name: Buy a console at the Electronic Store to play video games at home.
+    condition: '"wish_had_console" in DONE or hero.has_item("zbox_360")'
+    outcome:
+      condition: 'hero.has_item("zbox_360")'
+
+  work:
+    name: Go to work
+    condition: True
+    outcome:
+      condition: game.flags.story_hasworked
+
+  visitmall:
+    name: Visit the mall
+    condition: True
+    outcome:
+      condition: 'hero.flags.visited_rooms and "mall1" in hero.flags.visited_rooms'
+
+  visitpark:
+    name: Visit the park
+    condition: True
+    outcome:
+      condition: 'hero.flags.visited_rooms and "park" in hero.flags.visited_rooms'
+
+  visitpub:
+    name: Visit the pub
+    condition: True
+    outcome:
+      condition: 'hero.flags.visited_rooms and "pub" in hero.flags.visited_rooms'
+
+  fitness:
+    name: Start training fitness
+    condition: True
+    percentage:
+      value: hero.fitness.val
+      scale: 40
+    outcome:
+      description: I got started training my fitness up, but I can do better
+      condition: hero.fitness > 40
+
+  charm:
+    name: Start training charm
+    condition: True
+    percentage:
+      value: hero.charm.val
+      scale: 40
+    outcome:
+      description: I got started training my charm up, but I can do better
+      condition: hero.charm > 40
+
+  knowledge:
+    name: Start training knowledge
+    condition: True
+    percentage:
+      value: hero.knowledge.val
+      scale: 40
+    outcome:
+      next: None
+      description: I got started training my knowledge up, but I can do better
+      condition: hero.knowledge > 40
+
+  clothes:
+    name: Change my clothes (open inventory in your bedroom)
+    condition: True
+    outcome:
+      condition: 'hero.equipment["clothes"]'
+      next: None
+
+  accessory:
+    name: Change my accessory (open inventory in your bedroom)
+    condition: True
+    outcome:
+      condition: 'hero.equipment["accessory"]'
+      next: None
+
+  gym:
+    name: Access gym by buying sport clothes
+    condition: 'game.days_played >= 7 or "audrey_go_to_the_gym" in DONE or "wish_had_sport_clothes" in DONE or hero.has_item("sport_clothes")'
+    outcome:
+      condition: 'hero.has_item("sport_clothes")'
+      next: None
+
+  nightclub:
+    name: Access nightclub by buying fancy clothes
+    conditions:
+      - 'game.days_played >= 7 or "sasha_nightclub_comment" in DONE or "wish_had_fancy_clothes" in DONE or hero.has_item("fancy_clothes")'
+    outcome:
+      condition: 'hero.has_item("fancy_clothes")'
+      next: None
+
+  beach:
+    name: Access beach (in summer) by buying a vehicle
+    condition: 'game.days_played >= 7 or "bree_go_to_the_beach" in DONE or hero.has_vehicle'
+    outcome:
+      condition: 'hero.has_vehicle'
+      next: None
+
+  waterpark:
+    name: Access water park (spring or summer) by buying a swimsuit
+    condition: 'game.days_played >= 7 or "samantha_waterpark_comment" in DONE or "wish_had_swimsuit" in DONE or hero.has_item("swimsuit")'
+    outcome:
+      condition: 'hero.has_item("swimsuit")'
+      next: None
+
+  nude_beach:
+    name: There's rumors about a nudist beach. Ask around in the pub.
+    related_event: jack_nude_beach
+    conditions:
+      - '"jack_event_01" in DONE'
+      - hero.sexperience >= 10
+    outcome:
+      condition: '"jack_nude_beach" in DONE'
+      next: None

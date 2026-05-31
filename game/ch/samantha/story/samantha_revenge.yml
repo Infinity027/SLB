@@ -1,0 +1,117 @@
+name: Samantha's Revenge
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Samantha#Path_D_(Revenge_Path)"
+short: "{image=notify samantha} · Revenge"
+description: "Samantha wants to get back at Ryan."
+participants:
+  - samantha
+conditions:
+  - samantha.flags.knows_ryancheats
+  - '"samantha_event_B01" in DONE or ("samantha_event_B03" in DONE and samantha.flags.unknown_father)'
+
+outcomes:
+  complete:
+    description: Samantha got her revenge.
+    condition: '"samantha_event_D05" in DONE or "samantha_event_D05B" in DONE'
+  gone:
+    condition: samantha.is_gone_forever
+    description: Samantha has left and is no longer part of my life.
+    icon: fail
+
+steps:
+  love110:
+    name: Get to know Samantha better
+    conditions:
+      - '"samantha_event_B01" in DONE'
+      - samantha.flags.knows_ryancheats
+    percentage:
+      value: samantha.love.val
+      scale: 110
+    outcome:
+      hide: True
+      conditions: samantha.love >= 110
+
+  samantha_event_D01:
+    name: Wait for Sam to come visit on Saturday afternoon
+    related_event: samantha_event_D01
+    outcome:
+      condition: '"samantha_event_D01" in DONE'
+
+  love120:
+    name: Get to know Samantha better
+    percentage:
+      value: samantha.love.val
+      scale: 120
+    outcome:
+      hide: True
+      conditions: samantha.love >= 120
+
+  samantha_event_D02:
+    name: Wait for Sam to come visit on Saturday afternoon
+    related_event: samantha_event_D02
+    outcome:
+      condition: '"samantha_event_D02" in DONE'
+
+  love130:
+    name: Get to know Samantha better
+    percentage:
+      value: samantha.love.val
+      scale: 130
+    outcome:
+      hide: True
+      conditions: samantha.love >= 130
+
+  samantha_event_D03:
+    name: Wait for Sam to come visit on Saturday afternoon
+    related_event: samantha_event_D03
+    outcome:
+      condition: '"samantha_event_D03" in DONE'
+
+  samantha_event_D04:
+    name: Talk to Sam about Ryan
+    related_event: samantha_event_D04
+    outcome:
+      condition: '"samantha_event_D04" in DONE'
+
+  love140:
+    name: Get to know Samantha better
+    percentage:
+      value: samantha.love.val
+      scale: 140
+    outcome:
+      hide: True
+      conditions: samantha.love >= 140
+
+  samantha_event_D05:
+    name: Wait for Sam to come visit on a weekend afternoon
+    related_event: samantha_event_D05
+    conditions:
+      - '"samantha_event_D04" in DONE'
+    outcomes:
+      complete:
+        conditions:
+          - '"samantha_event_D05" in DONE'
+          - not samantha.flags.nathalie
+        next: None
+      hide:
+        conditions:
+          - '"samantha_event_D04" in DONE'
+          - samantha.flags.nathalie
+        hide: True
+        next: None
+
+  samantha_event_D05B:
+    name: Wait for Sam to come visit on a weekend afternoon
+    related_event: samantha_event_D05B
+    conditions:
+      - '"samantha_event_D04" in DONE'
+      - samantha.flags.nathalie
+    outcomes:
+      complete:
+        condition: '"samantha_event_D05B" in DONE'
+        next: None
+      hide:
+        conditions:
+          - '"samantha_event_D04" in DONE'
+          - not samantha.flags.nathalie
+        hide: True
+        next: None

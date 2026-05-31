@@ -1,0 +1,204 @@
+---
+name: Kat
+class: Girl
+age: 22
+status: friend
+gender: female
+flags:
+  hidden: True
+  pubes: True
+attributes:
+  love:
+    min: 0
+    max: 20
+    default: 0
+  sub:
+    min: 0
+    max: 5
+    default: 0
+  lesbian:
+    min: 0
+    max: 20
+    default: 0
+  sexperience:
+    min: 0
+    max: null
+    default: 0
+piercings:
+  ears: { }
+  navel: { }
+  clit: { }
+  nipples: { }
+  tongue: { }
+  nose: { }
+birthday:
+  - spring
+  - 15
+traits:
+  - shy
+  - geek
+  - jealous
+  - not_princess
+  - not_family
+desire_factors:
+  - video_games
+  - high_libido
+  - not_restaurant
+  - not_nightclub
+  - not_park
+  - arcade
+heronickname:
+  Gamer: kat.flags.mikeNickname in nickname_gamer
+  Player One: kat.flags.mikeNickname in nickname_player_one
+  Player Two: kat.flags.mikeNickname in nickname_player_two
+schedule:
+  default:
+    '13':
+      '9':
+        - room: kathome
+          activity: sleep
+          clothes: naked
+      '11':
+        - room: electronic
+          activity: shop
+          clothes: casual
+      '12':
+        - room: bakery
+          activity: eat
+          clothes: casual
+      '13':
+        - room: mall1
+          activity: none
+          clothes: casual
+        - room: mall2
+          activity: none
+          clothes: casual
+      '18':
+        - room: arcade
+          activity: play
+          clothes: casual
+      '19':
+        - room: park
+          activity: none
+          clothes: casual
+      '24':
+        - room: kathome
+          activity: work
+          clothes: casual
+    '2':
+      '13':
+        - room: kathome
+          activity: sleep
+          clothes: naked
+      '18':
+        - room: kathome
+          activity: work
+          clothes: casual
+      '19':
+        - room: street
+          activity: none
+          clothes: casual
+      '22':
+        - room: cinema
+          activity: watch
+          clothes: casual
+      '24':
+        - room: kathome
+          activity: work
+          clothes: casual
+    '4':
+      '10':
+        - room: kathome
+          activity: sleep
+          clothes: naked
+      '13':
+        - room: kathome
+          activity: none
+          clothes: casual
+      '18':
+        - room: arcade
+          activity: play
+          clothes: casual
+      '19':
+        - room: street
+          activity: none
+          clothes: casual
+      '20':
+        - room: pubexterior
+          activity: drink
+          clothes: casual
+    '5':
+      '11':
+        - room: kathome
+          activity: sleep
+          clothes: naked
+      '12':
+        - room: coffeeshop
+          activity: eat
+          clothes: casual
+      '13':
+        - room: drugstore
+          activity: shop
+          clothes: casual
+      '18':
+        - room: arcade
+          activity: play
+          clothes: casual
+      '19':
+        - room: pubexterior
+          activity: drink
+          clothes: casual
+      '20':
+        - room: kathome
+          activity: none
+          clothes: casual
+    '6':
+      '1':
+        - room: kathome
+          activity: work
+          clothes: casual
+      '10':
+        - room: kathome
+          activity: sleep
+          clothes: naked
+      '14':
+        - room: arcade
+          activity: play
+          clothes: casual
+      '19':
+        - room: street
+          activity: none
+          clothes: casual
+      '22':
+        - room: cinema
+          activity: watch
+          clothes: casual
+    '7':
+      '1':
+        - room: kathome
+          activity: work
+          clothes: casual
+      '10':
+        - room: kathome
+          activity: sleep
+          clothes: naked
+      '12':
+        - room: coffeeshop
+          activity: eat
+          clothes: casual
+      '13':
+        - room: drugstore
+          activity: shop
+          clothes: casual
+      '18':
+        - room: arcade
+          activity: play
+          clothes: casual
+      '19':
+        - room: pubexterior
+          activity: drink
+          clothes: casual
+      '24':
+        - room: kathome
+          activity: work
+          clothes: casual

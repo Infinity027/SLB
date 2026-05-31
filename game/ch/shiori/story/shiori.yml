@@ -1,0 +1,532 @@
+name: Shiori
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Shiori"
+short: "{image=notify shiori} · Shiori"
+description: "Shiori is my secretary at work. She is honestly not very good at her job, but she is sweet and seems to really like me."
+participants:
+  - shiori
+  - office
+condition: '"shiori_teaser" in DONE'
+
+outcomes:
+  skipped:
+    condition: "not game.flags.hiringshiori"
+    description: Shiori came into the office looking for a job. I didn't think she was fit for the job, and turned her down.
+    icon: fail
+  gone:
+    conditions:
+      - shiori.is_gone_forever
+    description: Shiori has left and is no longer part of my life.
+    icon: fail
+  engaged:
+    condition: shiori.flags.engagedmike
+    description: Shiori has agreed to marry me!
+
+steps:
+  love20:
+    name: Get to know Shiori better
+    condition: '"shiori_teaser" in DONE'
+    percentage:
+      value: shiori.love.val
+      scale: 20
+    outcome:
+      hide: True
+      condition: shiori.love >= 20
+
+  shiori_event_01:
+    name: Work in the office
+    related_event: shiori_event_01
+    conditions:
+      - '"shiori_teaser" in DONE'
+      - shiori.love >= 20
+    outcome:
+      condition: '"shiori_event_01" in DONE'
+      next:
+        - love30
+        - sub40
+
+  love30:
+    name: Get to know Shiori better
+    condition: '"shiori_event_01" in DONE'
+    percentage:
+      value: shiori.love.val
+      scale: 30
+    outcome:
+      hide: True
+      condition: shiori.love >= 30
+
+  meet_aletta:
+    name: Meet Aletta in the break room
+    related_event: aletta_event_01
+    condition: '"shiori_event_01" in DONE'
+    outcome:
+      hide: True
+      condition: not aletta.hidden
+
+  shiori_event_02:
+    name: Work in the office while Shiori wanders around
+    related_event: shiori_event_02
+    conditions:
+      - '"shiori_event_01" in DONE'
+      - shiori.love >= 30
+    outcomes:
+      spanked:
+        description: I told Shiori I like my coffee milky
+        conditions:
+          - '"shiori_event_02" in DONE'
+          - shiori.flags.coffee
+      notspanked:
+        description: I told Shiori I like my coffee black
+        conditions:
+          - '"shiori_event_02" in DONE'
+          - not shiori.flags.coffee
+
+  love40:
+    name: Get to know Shiori better
+    condition: '"shiori_event_02" in DONE'
+    percentage:
+      value: shiori.love.val
+      scale: 40
+    outcome:
+      hide: True
+      condition: shiori.love >= 40
+
+  shiori_event_03:
+    name: If Shiori is around, she can help me in my work
+    related_event: shiori_event_03
+    conditions:
+      - '"shiori_event_02" in DONE'
+      - shiori.love >= 40
+    outcome:
+      condition: '"shiori_event_03" in DONE'
+
+  love75:
+    name: Get to know Shiori better
+    condition: '"shiori_event_03" in DONE'
+    percentage:
+      value: shiori.love.val
+      scale: 75
+    outcome:
+      hide: True
+      condition: shiori.love >= 75
+
+  shiori_event_04:
+    name: Talk with Shiori at the office
+    related_event: shiori_event_04
+    conditions:
+      - '"shiori_event_03" in DONE'
+      - shiori.love >= 75
+    outcome:
+      condition: '"shiori_event_04" in DONE'
+
+  shiori_event_05:
+    name: Babysit Kanta
+    related_event: shiori_event_05
+    condition: '"shiori_event_04" in DONE'
+    outcome:
+      condition: '"shiori_event_05" in DONE'
+
+  love100:
+    name: Get to know Shiori better
+    condition: '"shiori_event_05" in DONE'
+    percentage:
+      value: shiori.love.val
+      scale: 100
+    outcome:
+      hide: True
+      condition: shiori.love >= 100
+
+  shiori_event_06:
+    name: Start working, Shiori should come soon with some coffee
+    related_event: shiori_event_06
+    conditions:
+      - '"shiori_event_05" in DONE'
+      - shiori.love >= 100
+    outcome:
+      condition: '"shiori_event_06" in DONE'
+      next:
+        - love110
+        - love120
+        - give_buttplug
+
+  love110:
+    name: Get to know Shiori better
+    condition: '"shiori_event_06" in DONE'
+    percentage:
+      value: shiori.love.val
+      scale: 110
+    outcome:
+      hide: True
+      condition: shiori.love >= 110
+
+  shiori_has_had_sex:
+    name: Fuck Shiori
+    conditions:
+      - '"shiori_event_06" in DONE'
+      - shiori.love >= 110
+    outcome:
+      condition: shiori.sexperience >= 1
+      next: None
+
+  love120:
+    name: Get to know Shiori better
+    condition: '"shiori_event_06" in DONE'
+    percentage:
+      value: shiori.love.val
+      scale: 120
+    outcome:
+      hide: True
+      condition: shiori.love >= 120
+
+  shiori_stripclub:
+    name: Go to the strip club
+    related_event: shiori_stripclub
+    conditions:
+      - '"shiori_event_06" in DONE'
+      - shiori.love >= 120
+    outcome:
+      condition: '"shiori_stripclub" in DONE'
+
+  shiori_stripclub_confession:
+    name: Work in the office
+    related_event: shiori_stripclub_confession
+    condition: '"shiori_stripclub" in DONE'
+    outcome:
+      condition: '"shiori_stripclub_confession" in DONE'
+
+  love130:
+    name: Get to know Shiori better
+    condition: '"shiori_stripclub_confession" in DONE'
+    percentage:
+      value: shiori.love.val
+      scale: 130
+    outcome:
+      hide: True
+      condition: shiori.love >= 130
+
+  shiori_stripclub_lapdance_1:
+    name: Get a lapdance from Shiori in the strip club
+    related_event: shiori_stripclub_lapdance_1
+    conditions:
+      - '"shiori_stripclub_confession" in DONE'
+      - shiori.love >= 130
+    outcome:
+      condition: '"shiori_stripclub_lapdance_1" in DONE'
+      next:
+        - love140
+        - shiori_stripclub_lapdance_2
+
+  love140:
+    name: Get to know Shiori better
+    condition: '"shiori_stripclub_lapdance_1" in DONE'
+    percentage:
+      value: shiori.love.val
+      scale: 140
+    outcome:
+      hide: True
+      condition: shiori.love >= 140
+
+  shiori_blackmail_confession:
+    name: Talk to Shiori
+    related_event: shiori_blackmail_confession
+    conditions:
+      - '"shiori_stripclub_lapdance_1" in DONE'
+      - shiori.love >= 140
+    outcome:
+      condition: '"shiori_blackmail_confession" in DONE'
+
+  love150:
+    name: Get to know Shiori better
+    condition: '"shiori_blackmail_confession" in DONE'
+    percentage:
+      value: shiori.love.val
+      scale: 150
+    outcome:
+      hide: True
+      condition: shiori.love >= 150
+
+  shiori_work_no_show:
+    name: Go to work
+    related_event: shiori_work_no_show
+    conditions:
+      - '"shiori_blackmail_confession" in DONE'
+      - shiori.love >= 150
+    outcome:
+      condition: '"shiori_work_no_show" in DONE'
+
+  shiori_bruises:
+    name: Go to work (again)
+    related_event: shiori_bruises
+    condition: '"shiori_work_no_show" in DONE'
+    outcome:
+      condition: '"shiori_bruises" in DONE'
+
+  love160:
+    name: Get to know Shiori better
+    condition: '"shiori_bruises" in DONE'
+    percentage:
+      value: shiori.love.val
+      scale: 160
+    outcome:
+      hide: True
+      condition: shiori.love >= 160
+
+  shiori_strip_club_manager:
+    name: Go to the stripclub
+    related_event: shiori_strip_club_manager
+    conditions:
+      - '"shiori_bruises" in DONE'
+      - shiori.love >= 160
+    outcome:
+      condition: '"shiori_strip_club_manager" in DONE'
+
+  money10000:
+    name: Save 10k{image=gui/icons/icon_money.png}
+    condition: '"shiori_strip_club_manager" in DONE'
+    percentage:
+      value: hero.money.val
+      scale: 10000
+    outcomes:
+      complete:
+        hide: True
+        condition: hero.money >= 10000
+      payed:
+        hide: True
+        condition: '"shiori_strip_club_payoff" in DONE'
+
+  shiori_strip_club_payoff:
+    name: Pay off the manager
+    related_event: shiori_strip_club_payoff
+    conditions:
+      - '"shiori_strip_club_manager" in DONE'
+      - hero.money >= 10000
+    outcome:
+      condition: '"shiori_strip_club_payoff" in DONE'
+
+  shiori_payoff_conversation:
+    name: Tell Shiori what you did
+    related_event: shiori_payoff_conversation
+    condition: '"shiori_strip_club_payoff" in DONE'
+    outcome:
+      condition: '"shiori_payoff_conversation" in DONE'
+      next: None
+
+  sub40:
+    name: Make Shiori more submissive
+    conditions: '"shiori_event_01" in DONE'
+    percentage:
+      value: shiori.sub.val
+      scale: 40
+    outcome:
+      hide: True
+      conditions: shiori.sub >= 40
+
+  shiori_scold_2:
+    name: Go to work
+    related_event: shiori_scold_2
+    conditions:
+      - '"shiori_event_01" in DONE'
+      - shiori.sub >= 40
+    outcome:
+      condition: '"shiori_scold_2" in DONE'
+
+  sub50:
+    name: Make Shiori more submissive
+    conditions: '"shiori_scold_2" in DONE'
+    percentage:
+      value: shiori.sub.val
+      scale: 50
+    outcome:
+      conditions: shiori.sub >= 50
+
+  shiori_scold_3:
+    name: My coffee should be on my desk by now
+    related_event: shiori_scold_3
+    conditions:
+      - '"shiori_scold_2" in DONE'
+      - shiori.sub >= 50
+    outcome:
+      condition: '"shiori_scold_3" in DONE'
+
+  sub60:
+    name: Make Shiori more submissive
+    conditions: '"shiori_scold_3" in DONE'
+    percentage:
+      value: shiori.sub.val
+      scale: 60
+    outcome:
+      hide: True
+      conditions: shiori.sub >= 60
+
+  shiori_scold_4:
+    name: Work while waiting for the appointment Shiori took with Miss Jefferson
+    related_event: shiori_scold_4
+    conditions:
+      - '"shiori_scold_3" in DONE'
+      - shiori.flags.spank_counter >= 1
+      - shiori.sub >= 60
+    outcomes:
+      complete:
+        conditions:
+          - '"shiori_scold_4" in DONE'
+          - shiori.flags.spank_counter >= 2
+        next: sub70
+      not_enough_spanks:
+        conditions:
+          - '"shiori_scold_4" in DONE'
+          - shiori.flags.spank_counter < 2
+        next: None
+
+  sub70:
+    name: Make Shiori more submissive
+    conditions: '"shiori_scold_4" in DONE'
+    percentage:
+      value: shiori.sub.val
+      scale: 70
+    outcome:
+      hide: True
+      conditions: shiori.sub >= 70
+
+  shiori_scold_5:
+    name: Work as usual, Shiori will answer the phone this time
+    related_event: shiori_scold_5
+    conditions:
+      - '"shiori_scold_4" in DONE'
+      - shiori.flags.spank_counter >= 2
+      - shiori.sub >= 70
+    outcome:
+      next: sub80
+      condition: '"shiori_scold_5" in DONE'
+
+  sub80:
+    name: Make Shiori more submissive
+    conditions: '"shiori_scold_5" in DONE'
+    percentage:
+      value: shiori.sub.val
+      scale: 80
+    outcome:
+      hide: True
+      conditions: shiori.sub >= 80
+
+  shiori_office_bj:
+    name: Find Shiori in the office
+    related_event: shiori_office_bj
+    conditions:
+      - '"shiori_scold_5" in DONE'
+      - shiori.sub >= 80
+    outcome:
+      next: None
+      description: Shiori gave me a risky blowjob
+      condition: '"shiori_office_bj" in DONE'
+
+  date:
+    name: Go on a date with Shiori
+    condition: True
+    outcome:
+      condition: shiori.flags.dates >= 1
+      next: birthday_date
+
+  birthday_date:
+    name: Take Shiori out on a night date for her birthday
+    condition: shiori.flags.dates >= 1
+    outcome:
+      condition: '"shiori_birthday_date_male" in DONE'
+      next: None
+
+  sex:
+    name: Have sex with Shiori
+    condition: True
+    outcome:
+      condition: shiori.sexperience >= 1
+      next: None
+
+  love:
+    name: Get Shiori to fall in love with me
+    condition: True
+    percentage:
+      value: shiori.love.val
+      scale: 200
+    outcome:
+      condition: shiori.love.val == 200
+      next: None
+
+  ring:
+    name: Buy a wedding ring
+    condition: True
+    outcome:
+      condition: hero.has_item("wedding_ring")
+
+  propose:
+    name: Propose to Shiori
+    condition: hero.has_item("wedding_ring")
+    outcome:
+      condition: shiori.flags.engagedmike
+      next: None
+
+  preg:
+    name: Get Shiori pregnant
+    optional: True
+    condition: True
+    outcome:
+      condition: shiori.flags.pregnancies_number > 0
+      next: None
+
+  slave:
+    name: Make Shiori my sex slave
+    optional: True
+    condition: True
+    outcome:
+      condition: shiori.is_sex_slave
+      next: None
+
+  love110_coffee:
+    name: Get to know Shiori for a better coffee
+    optional: True
+    condition: shiori.flags.coffee
+    percentage:
+      value: shiori.love.val
+      scale: 110
+    outcome:
+      hide: True
+      condition: shiori.love >= 110
+
+  shiori_coffee_2:
+    name: Work while Shiori is around
+    related_event: shiori_coffee_2
+    optional: True
+    conditions:
+      - shiori.flags.coffee
+      - shiori.love >= 110
+    outcome:
+      next: None
+      description: Coffee is the key
+      condition: '"shiori_coffee_2" in DONE'
+
+  give_buttplug:
+    name: Give Shiori a shiny fant{b}ASS{/b}tic gift
+    optional: True
+    condition: '"shiori_event_06" in DONE'
+    outcome:
+      condition: shiori.flags.buttplug
+
+  shiori_show_off_3:
+    name: Start to work, if she's around, Shiori will come soon
+    related_event: shiori_show_off_3
+    optional: True
+    conditions:
+      - '"shiori_event_06" in DONE'
+      - shiori.love >= 120
+      - shiori.flags.buttplug
+    outcome:
+      next: None
+      description: I had a nice view of Shiori's buttocks
+      condition: '"shiori_show_off_3" in DONE'
+
+  shiori_stripclub_lapdance_2:
+    name: Get a new lapdance
+    related_event: shiori_stripclub_lapdance_2
+    optional: True
+    conditions:
+      - '"shiori_stripclub_lapdance_1" in DONE'
+    outcome:
+      condition: '"shiori_stripclub_lapdance_2" in DONE'
+      next: None

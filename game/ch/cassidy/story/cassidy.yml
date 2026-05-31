@@ -1,0 +1,364 @@
+name: Cassidy
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Cassidy"
+short: "{image=notify cassidy} · Cassidy"
+description:
+  - description: Cassidy appears to have manipulated things so that I'm under investigation at work.
+    condition: 'game.flags.suspended or self.parent.outcome == "cassidy_investigation_successful" or self.parent.outcome == "cassidy_investigation_blackmail"'
+  - description: Cassidy tried to blackmail me into being her toy, and it worked.
+    condition: cassidy.status == "mistress"
+  - description: Cassidy tried to blackmail me into being her toy, but I turned the tables. Now she is my pet.
+    condition: cassidy.status == "pet"
+  - description: "Cassidy is the daughter of the company CEO, Dwayne. She's sexy, but thinks she's better than everyone else."
+    condition: True
+
+participants:
+  - cassidy
+  - office
+condition: '"office_party" in DONE'
+
+outcomes:
+  cassidy_investigation_successful:
+    conditions:
+      - game.flags.workinvestigation >= 100
+      - not game.flags.cassidyrecorded
+      - '"cassidy_investigation_complete" in DONE'
+    description: Cassidy did not succeed in blackmailing me. She gave me a very nice blowjob, but then she left.
+  cassidy_investigation_blackmail:
+    conditions:
+      - game.flags.workinvestigation < 100
+      - game.flags.cassidyrecorded
+      - '"cassidy_investigation_complete" in DONE'
+    description: I recorded Cassidy's attempt to blackmail me, and this got her to back off. I haven't heard from her since.
+    icon: fail
+  engaged:
+    condition: cassidy.flags.engagedmike
+    description: Cassidy has agreed to marry me!
+  gone:
+    condition: cassidy.is_gone_forever
+    description: Cassidy has left and is no longer part of my life.
+    icon: fail
+
+steps:
+  wait:
+    name: Wait for Cassidy's return
+    condition: '"office_party" in DONE'
+    percentage:
+      value: 14 - game.timers.officepartyDelay
+      scale: 14
+    outcome:
+      condition: not game.flags.officepartyDelay
+
+  cassidy_start:
+    name: Go to work
+    related_event: cassidy_start
+    condition: not game.flags.officepartyDelay
+    outcomes:
+      complete:
+        description: At work, Cassidy appeared and demanded I be her personal valet.
+        conditions:
+          - '"cassidy_start" in DONE'
+          - not cassidy.is_gone_forever
+      refused:
+        description: At work, Cassidy appeared. I was too busy to fulfill her request.
+        conditions:
+          - '"cassidy_start" in DONE'
+          - cassidy.is_gone_forever
+        next: None
+
+  investigationDelay:
+    name: Wait for the consequences
+    conditions:
+      - '"cassidy_start" in DONE'
+      - not cassidy.is_gone_forever
+    percentage:
+      value: 7 - cassidy.timers.investigationDelay
+      scale: 7
+    outcome:
+      condition: not cassidy.flags.investigationDelay
+
+  cassidy_start_investigation:
+    name: Go to work
+    related_event: cassidy_start_investigation
+    condition: not cassidy.flags.investigationDelay
+    outcome:
+      condition: '"cassidy_start_investigation" in DONE'
+
+  hack_computer:
+    name: Investigate on Aletta's computer
+    related_event: hack_computer
+    condition: game.flags.underinvestigation
+    percentage:
+      value: cassidy.flags.hackattempts
+      scale: 7
+    outcomes:
+      success:
+        conditions:
+          - 'game.flags.workinvestigation >= 100 or cassidy.flags.hackattempts >= 7'
+      failed:
+        icon: fail
+        conditions:
+          - '"cassidy_investigation_complete" in DONE'
+          - game.flags.workinvestigation < 100
+
+  aletta_investigation_callback:
+    name: Get Aletta's help
+    related_event: aletta_investigation_callback
+    condition: game.flags.underinvestigation
+    outcomes:
+      success:
+        conditions:
+          - '"aletta_investigation_callback" in DONE or game.flags.workinvestigation >= 100'
+      fail:
+        icon: fail
+        conditions:
+          - '"aletta_investigation_callback" not in DONE'
+          - '"cassidy_investigation_complete" in DONE'
+
+  lavish_investigation_callback:
+    name: Get Lavish's help
+    related_event: lavish_investigation_callback
+    condition: game.flags.underinvestigation
+    outcomes:
+      success:
+        conditions:
+          - '"lavish_investigation_callback" in DONE or game.flags.workinvestigation >= 100'
+      fail:
+        icon: fail
+        conditions:
+          - '"lavish_investigation_callback" not in DONE'
+          - '"cassidy_investigation_complete" in DONE'
+
+  audrey_investigation_callback:
+    name: Get Audrey's help
+    related_event: audrey_investigation_callback
+    condition: game.flags.underinvestigation
+    outcomes:
+      success:
+        conditions:
+          - '"audrey_investigation_callback" in DONE or game.flags.workinvestigation >= 100'
+      fail:
+        icon: fail
+        conditions:
+          - '"audrey_investigation_callback" not in DONE'
+          - '"cassidy_investigation_complete" in DONE'
+
+  shiori_investigation_callback:
+    name: Get Shiori's help
+    related_event: shiori_investigation_callback
+    condition: game.flags.underinvestigation
+    outcomes:
+      success:
+        description: Getting Shiori's help was a mistake
+        next: None
+        icon: fail
+        conditions:
+          - '"shiori_investigation_callback" in DONE or game.flags.workinvestigation >= 100'
+      fail:
+        next: None
+        conditions:
+          - '"shiori_investigation_callback" not in DONE'
+          - '"cassidy_investigation_complete" in DONE'
+
+  investigation_hire_pi:
+    name: Hire a PI to find proof
+    related_event: investigation_hire_pi
+    condition: game.flags.underinvestigation
+    outcomes:
+      success:
+        next: None
+        conditions:
+          - '"investigation_hire_pi" in DONE or game.flags.workinvestigation >= 100'
+      fail:
+        next: None
+        conditions:
+          - '"investigation_hire_pi" not in DONE'
+          - '"cassidy_investigation_complete" in DONE'
+
+  camera:
+    optional: True
+    name: Set up a camera to record Cassidy
+    condition: game.flags.underinvestigation
+    outcomes:
+      success:
+        condition: game.flags.cassidycameraplaced
+        next: None
+      fail:
+        conditions:
+          - '"cassidy_hold_meeting" in DONE'
+          - not game.flags.cassidycameraplaced
+        hide: True
+        next: None
+
+  cassidy_hold_meeting:
+    related_event: cassidy_hold_meeting
+    condition: '"cassidy_setup_meeting" in DONE'
+    name: Attend Cassidy's midnight meeting
+    outcomes:
+      complete:
+        next: None
+        condition: '"cassidy_hold_meeting" in DONE'
+      fail:
+        next: None
+        condition: '"cassidy_hold_meeting_missed" in DONE'
+
+  calljeff:
+    name: Call Jeff the accountant
+    related_event: work_call_the_accountant
+    condition: game.flags.toldjeff
+    outcomes:
+      success:
+        condition: '"work_call_the_accountant" in DONE or game.flags.workinvestigation >= 100'
+      fail:
+        conditions:
+          - '"work_call_the_accountant" not in DONE'
+          - '"cassidy_investigation_complete" in DONE'
+
+  jeffpub:
+    name: Have a drink at the pub
+    related_event: jeff_in_the_pub
+    condition: '"work_call_the_accountant" in DONE'
+    outcomes:
+      success:
+        condition: '"jeff_in_the_pub" in DONE or game.flags.workinvestigation >= 100'
+      fail:
+        conditions:
+          - '"jeff_in_the_pub" not in DONE'
+          - '"cassidy_investigation_complete" in DONE'
+
+  workinvestigation:
+    condition: game.flags.underinvestigation
+    related_event: cassidy_investigation_complete
+    name: Complete the investigation before time runs out
+    percentage:
+      value: game.flags.workinvestigation
+      scale: 100
+    outcomes:
+      success:
+        next: None
+        conditions:
+          - '"cassidy_investigation_complete" in DONE'
+          - game.flags.workinvestigation >= 100
+      failed:
+        next: None
+        icon: fail
+        conditions:
+          - '"cassidy_investigation_complete" in DONE'
+          - game.flags.workinvestigation < 100
+
+  cassidy_new_assistant:
+    name: Wait to see what happens next
+    related_event: cassidy_new_assistant
+    conditions:
+      - '"cassidy_investigation_complete" in DONE'
+      - not cassidy.hidden
+    outcome:
+      condition: '"cassidy_new_assistant" in DONE'
+
+  love80:
+    name: Get to know Cassidy better
+    condition: '"cassidy_new_assistant" in DONE'
+    percentage:
+      value: cassidy.love.val
+      scale: 80
+    outcome:
+      hide: True
+      condition: cassidy.love >= 80
+
+  cassidy_bad_day:
+    name: Talk to Cassidy
+    related_event: cassidy_bad_day
+    condition: cassidy.love >= 80
+    outcome:
+      description: Cassidy asked me about Aletta
+      condition: '"cassidy_bad_day" in DONE'
+
+  dwaynefightDelay:
+    name: Wait
+    condition: cassidy.flags.dwaynefightDelay
+    percentage:
+      value: 1 - cassidy.timers.dwaynefightDelay
+      scale: 1
+    outcome:
+      hide: True
+      condition: not cassidy.flags.dwaynefightDelay
+
+  cassidy_overhear_argument:
+    name: Take a coffee break
+    related_event: cassidy_overhear_argument
+    conditions:
+      - not cassidy.flags.dwaynefightDelay
+      - '"cassidy_bad_day" in DONE'
+    outcome:
+      description: I overheard Dwayne and Cassidy arguing
+      condition: '"cassidy_overhear_argument" in DONE'
+      next: None
+
+  date:
+    name: Go on a date with Cassidy
+    condition: True
+    outcome:
+      condition: cassidy.flags.dates >= 1
+      next: birthday_date
+
+  birthday_date:
+    name: Take Cassidy out on a night date for her birthday
+    condition: cassidy.flags.dates >= 1
+    outcome:
+      condition: '"cassidy_birthday_date_male" in DONE'
+      next: None
+
+  sex:
+    name: Have sex with Cassidy
+    condition: True
+    outcome:
+      condition: cassidy.sexperience >= 1
+      next: None
+
+  love:
+    name: Get Cassidy to fall in love with me
+    condition: True
+    percentage:
+      value: cassidy.love.val
+      scale: 200
+    outcome:
+      condition: cassidy.love.val == 200
+      next: None
+
+  ring:
+    name: Buy a wedding ring
+    condition: True
+    outcome:
+      condition: hero.has_item("wedding_ring")
+
+  propose:
+    name: Propose to Cassidy
+    condition: hero.has_item("wedding_ring")
+    outcome:
+      condition: cassidy.flags.engagedmike
+      next: None
+
+  preg:
+    name: Get Cassidy pregnant
+    optional: True
+    condition: True
+    outcome:
+      condition: cassidy.flags.pregnancies_number > 0
+      next: None
+
+  slave:
+    name: Make Cassidy my pet or my sex slave
+    optional: True
+    condition: True
+    outcome:
+      condition: 'cassidy.is_sex_slave or cassidy.status == "pet"'
+      next: None
+
+  cassidy_spanking_start:
+    name: Work at the office
+    related_event: cassidy_spanking_start
+    outcome:
+      condition: '"cassidy_spanking_start" in DONE'
+      next: None
+    conditions:
+      - cassidy.love >= 90
+      - cassidy.sub >= 25

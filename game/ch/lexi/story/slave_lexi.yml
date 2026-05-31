@@ -1,0 +1,171 @@
+name:
+  - name: Slave Lexi
+    short: "{image=notify lexi} · Slave"
+    condition: lexi.sub.max >= 90
+  - name: Lexi and Sasha
+    short: "{image=notify lexi}{image=notify sasha} · Lexi & Sasha"
+    condition: '"lexi_sasha_1" in DONE'
+  - name: Lexi Dates
+    short: "{image=notify lexi} · Lexi"
+    condition: True
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Lexi#Slave_Lexi"
+description:
+  - description: Lexi is now my sex slave, and I have Sasha to thank for this turn of events.
+    condition: lexi.sub.max == 100
+  - description: I refused Lexi's request to be my sex slave. I don't ever want to treat her the way Danny did.
+    condition: '"lexi_slave_request" in DONE'
+  - description: After meeting Sasha, Lexi wants to be my sex slave as well. I wonder what I can make these two do together?
+    condition: lexi.sub.max == 90
+  - description: Lexi and Sasha ended up meeting and learning about each other. I wonder if they can get along?
+    condition: '"lexi_sasha_1" in DONE'
+  - description: Things have been going well with Lexi. Maybe it's time to take things to the next level?
+    condition: True
+
+participants:
+  - lexi
+  - sasha
+conditions:
+  - hero.is_male
+  - 'game.flags.lexiStart or "lexi_event_02" in DONE or "lexi_event_02b" in DONE'
+  - lexi.sub >= 25
+  - lexi.love >= 150
+  - sasha.love >= 150
+start: mall_date
+
+outcomes:
+  cheated:
+    description: I cheated on Sasha one too many times to make this threesome happen.
+    icon: fail
+  complete:
+    description: My date with Sasha and Lexi didn't end the way I thought.
+    conditions:
+      - '"lexi_sasha_samantha_nightclub" in DONE'
+
+steps:
+  mall_date:
+    name: Take Lexi on a date at the mall
+    related_event: lexi_sasha_1
+    conditions:
+      - lexi.sub >= 25
+      - lexi.love >= 150
+      - sasha.love >= 150
+    outcomes:
+      cheated_twice:
+        icon: fail
+        next: cheated
+        description: "Sasha caught me cheating... Again..."
+        conditions:
+          - '"followsamadvice" in DONE'
+          - sasha.flags.cheated == True
+          - '"lexi_sasha_1" in DONE'
+      slave-path:
+        next:
+          - sexydate
+          - lexi_sub50
+        description: "Lexi is willing try out being my slave and competing with Sasha for my approval."
+        conditions:
+          - lexi.sub.max >= 50
+          - '"lexi_sasha_1" in DONE'
+      rival-path:
+        next: sasha_makeup
+        description: "Lexi was surprisingly chill about me fucking Sasha. If only Sasha felt the same way..."
+        condition: '"lexi_sasha_1" in DONE'
+
+  sasha_makeup:
+    name: "Sasha is upset that I'm fucking Lexi, I have to find a way to make it up to her."
+    condition: '"lexi_sasha_1" in DONE'
+    outcome:
+      next: sexydate
+      condition: sasha.flags.cheated == False
+
+  sexydate:
+    name: "Make sure Sasha looks her sexiest for a night out dancing."
+    outcome:
+      next: 3dance
+      condition: "sasha.flags.sexydate or sasha.flags.sluttydate"
+
+  3dance:
+    name: Take Lexi out on a date to go dancing Saturday night.
+    related_event: lexi_sasha_dance
+    outcome:
+      next: 3fuck
+      description: We met Sasha at the club and all three of us danced together.
+      condition: '"lexi_sasha_dance" in DONE'
+
+  3fuck:
+    name: Spend a night on a dancing date with Sasha.
+    related_event: lexi_sasha_fuck
+    outcomes:
+      complete:
+        description: I ended up fucking both Lexi and Sasha in the nightclub bathroom.
+        conditions:
+          - '"lexi_sasha_fuck" in DONE'
+          - not samantha.is_gone_forever
+      complete_sam_gone:
+        description: I ended up fucking both Lexi and Sasha in the nightclub bathroom.
+        conditions:
+          - '"lexi_sasha_fuck" in DONE'
+          - samantha.is_gone_forever
+        next: None
+
+  4fuck:
+    name: Spend a night on a dancing date with Sasha or Lexi.
+    related_event: lexi_sasha_samantha_nightclub
+    conditions:
+      - '"lexi_sasha_fuck" in DONE'
+      - '"samantha_event_A04" in DONE'
+      - not samantha.is_gone_forever
+    outcomes:
+      foursome_lexi_sam_sasha:
+        description: I ended up fucking Lexi, Sasha and Samantha.
+        conditions:
+          - '"lexi_sasha_samantha_nightclub" in DONE'
+          - '"foursome_lexisamsasha" in DONE'
+        next: None
+      sam_gone_forever:
+        description: Samantha caught me with Lexi and Sasha
+        conditions:
+          - '"lexi_sasha_samantha_nightclub" in DONE'
+          - samantha.is_gone_forever
+        next: None
+
+  lexi_sub50:
+    name: Make Lexi more submissive
+    percentage:
+      value: lexi.sub.val
+      scale: 50
+    outcome:
+      next: request
+      hide: True
+      condition: lexi.sub.val >= 50
+
+  request:
+    name: Go talk to Lexi
+    related_event: lexi_slave_request
+    outcomes:
+      slave:
+        description: Lexi asked to be my sex slave, I said yes.
+        conditions:
+          - '"lexi_slave_request" in DONE'
+          - lexi.sub.max >= 90
+      noslave:
+        description: Lexi asked to be my sex slave, I said no.
+        condition: '"lexi_slave_request" in DONE'
+        next: None
+
+  lexi_sub90:
+    name: Make Lexi more submissive
+    percentage:
+      value: lexi.sub.val
+      scale: 90
+    outcome:
+      next: request
+      hide: True
+      condition: lexi.sub.val >= 90
+
+  give_collar:
+    name: Gift a collar to lexi
+    outcome:
+      conditions:
+        - lexi.flags.giftslave_collar
+        - lexi.sub.max >= 100

@@ -1,0 +1,112 @@
+---
+name: Dwayne
+family_name: Jackson
+class: Guy
+age: 45
+status: "[mike.name]'s boss"
+gender: male
+flags:
+  nokiss: True
+  nodate: True
+  hidden: True
+attributes:
+  love:
+    min: 0
+    max: 20
+    default: 0
+  sub:
+    min: -100
+    max: 25
+    default: -50
+  sexperience:
+    min: 0
+    max: null
+    default: 0
+birthday:
+  - summer
+  - 2
+traits:
+  - unfaithful
+  - family
+  - hung
+desire_factors:
+  - fitness
+  - fitness
+  - fitness
+  - money
+  - money
+schedule:
+  default:
+    '12345':
+      '6':
+        - room: None
+          activity: sleep
+          clothes: naked
+      '8':
+        - room: gym
+          activity: train
+          clothes: sport
+      '11':
+        - room: ceo
+          activity: work
+          clothes: work
+      '14':
+        - room: street
+          activity: walk
+          clothes: casual
+      '19':
+        - room: ceo
+          activity: work
+          clothes: work
+      '23':
+        - room: pubplay
+          activity: drink
+          clothes: casual
+      '24':
+        - room: street
+          activity: walk
+          clothes: casual
+        - room: None
+          activity: sleep
+          clothes: naked
+    '6':
+      '9':
+        - room: None
+          activity: sleep
+          clothes: naked
+      '18':
+        - room: ceo
+          activity: work
+          clothes: work
+      '21':
+        - room: pubplay
+          activity: drink
+          clothes: casual
+      '23':
+        - room: vip
+          activity: dance
+          clothes: date
+    '7':
+      '5':
+        - room: vip
+          activity: dance
+          clothes: date
+        - room: None
+          activity: sleep
+          clothes: naked
+      '10':
+        - room: None
+          activity: sleep
+          clothes: naked
+      '18':
+        - room: beach
+          activity: swim
+          clothes: swimsuit
+          seasons: "1"
+        - room: forest
+          activity: run
+          clothes: sport
+      '23':
+        - room: None
+          activity: sleep
+          clothes: naked

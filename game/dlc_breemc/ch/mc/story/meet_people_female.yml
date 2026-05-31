@@ -1,0 +1,171 @@
+name: Meet People
+sort: "0002"
+type: generic
+description: "Meet everyone in the game!"
+participants:
+  - hero
+condition: hero.is_female
+start:
+  - mike_love75
+  - mike_love100
+
+outcome:
+  condition: all(step.complete for step in self.parent.steps.values() if step.status != 0)
+  description: "I've met every new person in the game!"
+
+steps:
+  mike_love100:
+    name: "Get to know [mike.name] better to meet his mother"
+    condition: hero.is_female
+    percentage:
+      value: mike.love.val
+      scale: 100
+    outcome:
+      hide: True
+      conditions: mike.love >= 100
+
+  angela:
+    name: Meet Angela at home an afternoon in the weekend
+    related_event: angela_female_event_01
+    conditions:
+      - mike.love >= 100
+      - hero.is_female
+    outcome:
+      next: None
+      condition: '"angela_female_event_01" in DONE'
+
+  lexi_love30:
+    name: Get to know Lexi better to meet Danny
+    condition: hero.is_female
+    percentage:
+      value: mike.love.val
+      scale: 30
+    outcome:
+      hide: True
+      conditions: mike.love >= 30
+
+  danny:
+    name: Go to the pub while Lexi's there
+    related_event: danny_female_event_01
+    conditions:
+      - mike.love >= 20
+      - hero.is_female
+    outcome:
+      next: None
+      condition: '"danny_female_event_01" in DONE'
+
+  mike_love30:
+    name: "Get to know [mike.name] better to meet Dwayne"
+    condition: hero.is_female
+    percentage:
+      value: mike.love.val
+      scale: 30
+    outcome:
+      hide: True
+      conditions: mike.love >= 30
+
+  dwayne:
+    name: "Be home while [mike.name] is working"
+    related_event: dwayne_female_event_01
+    conditions:
+      - mike.love >= 30
+      - hero.is_female
+    outcome:
+      next: None
+      condition: '"dwayne_female_event_01" in DONE'
+
+  jack:
+    name: Meet Jack while playing video games on the Zbox
+    related_event: jack_female_event_01
+    conditions:
+      - hero.is_female
+    outcome:
+      next: None
+      condition: '"jack_female_event_01" in DONE'
+
+  mike_love75:
+    name: "Get to know [mike.name] better to meet Kylie"
+    condition: hero.is_female
+    percentage:
+      value: mike.love.val
+      scale: 75
+    outcome:
+      hide: True
+      conditions: mike.love >= 75
+
+  kylie:
+    conditions:
+      - hero.is_female
+      - mike.love >= 75
+    name: "Meet Kylie and [mike.name] in the classroom after 11 days have passed"
+    related_event: kylie_female_event_01
+    outcome:
+      condition: '"kylie_female_event_01" in DONE'
+      next: None
+
+  lexi:
+    condition: hero.is_female
+    name: Meet Lexi on the map after 9 days have passed
+    related_event: lexi_female_event_01
+    outcome:
+      condition: '"lexi_female_event_01" in DONE'
+      next: None
+
+  scottie:
+    name: Meet Scottie when he comes to visit Sasha
+    related_event: scottie_female_event_01
+    condition: hero.is_female
+    outcome:
+      next: None
+      condition: '"scottie_female_event_01" in DONE'
+
+  charm25:
+    name: Get charming enough for Shawn to notice me
+    condition: hero.is_female
+    percentage:
+      value: hero.charm.val
+      scale: 25
+    outcome:
+      next: None
+      condition: hero.charm >= 25
+
+  shawn:
+    name: Meet Shawn in the pub
+    related_event: shawn_female_event_01
+    conditions:
+      - hero.charm >= 25
+      - hero.is_female
+    outcome:
+      next: None
+      condition: '"shawn_female_event_01" in DONE'
+
+  the_master:
+    name: Meet The Master on the beach
+    related_event: meet_the_master_female
+    condition: hero.is_female
+    outcome:
+      next: None
+      condition: '"meet_the_master_female" in DONE'
+
+  victor:
+    name: Meet Victor at the nightclub after 9 days played
+    related_event: victor_female_event_01
+    condition: hero.is_female
+    outcome:
+      next: None
+      condition: '"victor_female_event_01" in DONE'
+
+  ryan:
+    name: Meet Ryan and Samantha when they hang out with [mike.name]
+    related_event: ryan_female_event_01
+    conditions: hero.is_female
+    outcome:
+      description: Meet Ryan and Samantha when they hang out with [mike.name]
+      condition: '"ryan_female_event_01" in DONE'
+
+  wait:
+    name: More people will be added in future updates.
+    icon: stalled
+    condition: True
+    outcome:
+      condition: False

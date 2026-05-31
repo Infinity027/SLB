@@ -1,0 +1,305 @@
+---
+name: Alexis
+class: Girl
+age: 25
+status: ex-girlfriend
+gender: female
+flags:
+ hidden: true
+attributes:
+  love:
+    min: 0
+    max: 20
+    default: 0
+  sub:
+    min: 0
+    max: 25
+    default: 0
+  lesbian:
+    min: 0
+    max: 20
+    default: 0
+  sexperience:
+    min: 0
+    max: null
+    default: 0
+piercings:
+  ears:
+    outfits:
+      - date
+    pierced: true
+  navel:
+    outfits:
+      - naked
+      - sexyswimsuit
+      - underwear
+      - sport
+  clit:
+    outfits:
+      - naked
+  nipples:
+    outfits:
+      - naked
+  lips:
+    expressions:
+      - happy
+      - blush
+      - angry
+      - normal
+      - sad
+  nose: { }
+birthday:
+  - fall
+  - 1
+traits:
+  - princess
+  - submissive
+  - bitchy
+  - not_family
+  - low fertility
+desire_factors:
+  - money
+  - fitness
+  - not_home
+  - not_park
+  - not_smalldick
+  - not_smalldick
+  - not_smalldick
+  - hung
+  - hung
+  - hung
+  - jewelry
+heronickname:
+  Wallet: alexis.flags.mikeNickname in nickname_wallet
+  Cuck: alexis.flags.mikeNickname in nickname_cuck
+  Dark knight: alexis.flags.mikeNickname in nickname_dark_knight
+schedule:
+  default:
+    '135':
+      '9':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '17':
+        - room: clothesshop
+          activity: shopping
+          clothes: casual
+        - room: mall1
+          activity: shopping
+          clothes: casual
+        - room: mall2
+          activity: shopping
+          clothes: casual
+        - room: street
+          activity: shopping
+          clothes: casual
+        - room: None
+          activity: None
+          clothes: underwear
+      '18':
+        - room: jewelrystore
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '20':
+        - room: sexshop
+          activity: shop
+          clothes: casual
+        - room: None
+          activity: None
+          clothes: underwear
+      '22':
+        - room: gymlockers
+          activity: shower
+          clothes: sport
+      '24':
+        - room: None
+          activity: None
+          clothes: underwear
+    '24':
+      '9':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '17':
+        - room: clothesshop
+          activity: shopping
+          clothes: casual
+        - room: mall1
+          activity: shopping
+          clothes: casual
+        - room: mall2
+          activity: shopping
+          clothes: casual
+        - room: street
+          activity: shopping
+          clothes: casual
+        - room: None
+          activity: None
+          clothes: underwear
+      '18':
+        - room: jewelrystore
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '20':
+        - room: pub
+          activity: drink
+          clothes: casual
+      '22':
+        - room: sexshop
+          activity: shop
+          clothes: casual
+        - room: None
+          activity: None
+          clothes: underwear
+      '24':
+        - room: None
+          activity: None
+          clothes: underwear
+    '6':
+      '9':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '11':
+        - room: jewelrystore
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: None
+          activity: None
+          clothes: underwear
+      '14':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+
+        - room: beach
+          activity: swim
+          clothes: swimsuit
+          seasons: "1"
+        - room: None
+          activity: None
+          clothes: underwear
+      '16':
+        - room: beach
+          activity: swim
+          clothes: swimsuit
+          seasons: "1"
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: None
+          activity: None
+          clothes: underwear
+      '18':
+        - room: jewelrystore
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: None
+          activity: None
+          clothes: underwear
+      '21':
+        - room: None
+          activity: None
+          clothes: underwear
+      '23':
+        - room: pub
+          activity: drink
+          clothes: casual
+        - room: nightclub
+          activity: dance
+          clothes: date
+        - room: restroom
+          activity: stuff
+          clothes: date
+        - room: neighborhood
+          activity: walk
+          clothes: casual
+        - room: None
+          activity: None
+          clothes: underwear
+    '7':
+      '5':
+        - room: nightclub
+          activity: dance
+          clothes: date
+        - room: None
+          activity: sleep
+          clothes: underwear
+        - room: None
+          activity: None
+          clothes: underwear
+      '10':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '11':
+        - room: jewelrystore
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: None
+          activity: None
+          clothes: underwear
+      '14':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+
+        - room: beach
+          activity: swim
+          clothes: swimsuit
+          seasons: "1"
+        - room: None
+          activity: None
+          clothes: underwear
+      '16':
+        - room: beach
+          activity: swim
+          clothes: swimsuit
+          seasons: "1"
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: None
+          activity: None
+          clothes: underwear
+      '18':
+        - room: jewelrystore
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: None
+          activity: None
+          clothes: underwear
+      '23':
+        - room: pub
+          activity: drink
+          clothes: casual

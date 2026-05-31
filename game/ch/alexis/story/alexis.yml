@@ -1,0 +1,643 @@
+name: Alexis
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Alexis"
+short: "{image=notify alexis} · Alexis"
+extra_data:
+  story: alexis.flags.story
+  conversation event: alexis.flags.conversation_event
+  ntr conversation: alexis.flags.ntr_conversation
+  restaurant outcome: alexis.flags.restaurant_outcome
+  cinema outcome: alexis.flags.cinema_outcome
+  beach outcome: alexis.flags.beach_outcome
+description: "Alexis is my ex-girlfriend."
+participants:
+  - alexis
+condition: '"alexis_event_01" in DONE'
+
+outcomes:
+  skipped:
+    description: Alexis tried to come back into my life, but I told her no.
+    conditions:
+      - '"alexis_event_01" in DONE'
+      - not game.flags.alexisstart
+    icon: fail
+  alexis_cinema_confrontation:
+    description: I confronted Alexis at the cinema and told I don't want to see her anymore.'
+    conditions:
+      - '"alexis_event_04" in DONE'
+      - alexis.flags.conversation_event
+      - 'alexis.flags.cinema_outcome == "found_confront"'
+      - alexis.is_gone_forever
+    icon: fail
+  alexis_beach_confrontation:
+    description: I confronted Alexis at the beach and told I don't want to see her anymore.'
+    conditions:
+      - '"alexis_event_05" in DONE'
+      - alexis.flags.conversation_event
+      - 'alexis.flags.beach_outcome == "found_confront"'
+      - alexis.is_gone_forever
+    icon: fail
+  gone:
+    description: Alexis has left and is no longer part of my life.
+    condition: alexis.is_gone_forever
+    icon: fail
+  engaged:
+    condition: alexis.flags.engagedmike
+    description: Alexis has agreed to marry me!
+
+steps:
+  money500:
+    name: Have enough money for Alexis to notice me
+    conditions: '"alexis_start" in DONE'
+    outcome:
+      hide: True
+      condition: hero.money >= 500
+
+  love20:
+    name: Get to know Alexis better
+    conditions: '"alexis_start" in DONE'
+    percentage:
+      value: alexis.love.val
+      scale: 20
+    outcome:
+      hide: True
+      condition: alexis.love >= 20
+
+  alexis_event_02:
+    name: Take Alexis on a date at the restaurant
+    related_event: alexis_event_02
+    conditions:
+      - hero.money >= 500
+      - alexis.love >= 40
+    outcomes:
+      end_flirt:
+        description: Alexis was really friendly with a stranger at the restaurant.
+        conditions:
+          - '"alexis_event_02" in DONE'
+          - 'alexis.flags.restaurant_outcome == "stop_flirt"'
+          - alexis.flags.conversation_event
+        next:
+          - love40
+          - alexis_ntr_conversation
+      found_out_and_left:
+        description: I found Alexis in the restaurant's restroom and left.
+        conditions:
+          - '"alexis_event_02" in DONE'
+          - 'alexis.flags.restaurant_outcome == "found_leave"'
+          - alexis.flags.conversation_event
+        next:
+          - love40
+          - alexis_ntr_conversation
+      found_out_and_watched:
+        description: I found Alexis in the restaurant's restroom and watched.
+        conditions:
+          - '"alexis_event_02" in DONE'
+          - 'alexis.flags.restaurant_outcome == "found_watch"'
+          - alexis.flags.conversation_event
+        next:
+          - love40
+          - alexis_ntr_conversation
+      waited:
+        description: I waited for Alexis to come back from the restaurant's restroom.
+        conditions:
+          - '"alexis_event_02" in DONE'
+          - 'alexis.flags.restaurant_outcome == "wait"'
+        next:
+          - love40
+      conversation:
+        conditions:
+          - '"alexis_event_02" in DONE'
+          - alexis.flags.conversation_event
+          - not alexis.flags.restaurant_outcome
+        next:
+          - love40
+          - alexis_ntr_conversation
+      nothing:
+        conditions:
+          - '"alexis_event_02" in DONE'
+          - not alexis.flags.conversation_event
+          - not alexis.flags.restaurant_outcome
+        next:
+          - love40
+
+  love40:
+    name: Get to know Alexis better
+    percentage:
+      value: alexis.love.val
+      scale: 40
+    outcome:
+      hide: True
+      condition: alexis.love >= 40
+
+  alexis_event_03:
+    name: Take Alexis on a date at the mall
+    related_event: alexis_event_03
+    conditions:
+      - '"alexis_event_02" in DONE'
+      - alexis.love >= 40
+    outcome:
+        condition: '"alexis_event_03" in DONE'
+        next:
+          - love60
+
+  love60:
+    name: Get to know Alexis better
+    percentage:
+      value: alexis.love.val
+      scale: 60
+    outcome:
+      hide: True
+      condition: alexis.love >= 60
+
+  alexis_event_04:
+    name: Take Alexis on a date at the cinema
+    related_event: alexis_event_04
+    conditions:
+      - '"alexis_event_03" in DONE'
+      - alexis.love >= 60
+    outcomes:
+      no_ntr:
+        description: We spent an nice date at the cinema.
+        conditions:
+          - '"alexis_event_04" in DONE'
+          - alexis.flags.story == 2
+          - 'alexis.flags.cinema_outcome == "no_ntr"'
+        next:
+          - love80
+      waited:
+        description: I fell asleep at the cinema.
+        conditions:
+          - '"alexis_event_04" in DONE'
+          - 'alexis.flags.cinema_outcome == "wait"'
+        next:
+          - love80
+      found_out_and_left:
+        description: I saw what Alexis was doing at the cinema and left.
+        conditions:
+          - '"alexis_event_04" in DONE'
+          - 'alexis.flags.cinema_outcome == "found_leave"'
+        next:
+          - love80
+          - alexis_ntr_conversation
+      found_out_and_watched:
+        description: I saw what Alexis was doing at the cinema and watched.
+        conditions:
+          - '"alexis_event_04" in DONE'
+          - 'alexis.flags.cinema_outcome == "found_watch"'
+        next:
+          - love80
+          - alexis_ntr_conversation
+      found_out_and_confronted:
+        description: I saw what Alexis was doing at the cinema and confronted her.
+        conditions:
+          - '"alexis_event_04" in DONE'
+          - 'alexis.flags.cinema_outcome == "found_confront"'
+        next:
+          - alexis_cinema_confrontation
+      agree_ntr:
+        description: I saw what Alexis was doing at the cinema, but we've already had this conversation.
+        conditions:
+          - '"alexis_event_04" in DONE'
+          - alexis.flags.story in [1, 3]
+          - 'alexis.flags.cinema_outcome == "agree_ntr"'
+        next:
+          - love80
+      conversation:
+        conditions:
+          - '"alexis_event_04" in DONE'
+          - alexis.flags.conversation_event
+          - not alexis.flags.cinema_outcome
+        next:
+          - love80
+          - alexis_ntr_conversation
+      nothing:
+        conditions:
+          - '"alexis_event_04" in DONE'
+          - not alexis.flags.conversation_event
+          - not alexis.flags.cinema_outcome
+        next:
+          - love80
+
+  love80:
+    name: Get to know Alexis better
+    percentage:
+      value: alexis.love.val
+      scale: 80
+    outcome:
+      hide: True
+      condition: alexis.love >= 80
+
+  alexis_event_05:
+    name: Take Alexis on a date at the beach
+    related_event: alexis_event_05
+    conditions:
+      - '"alexis_event_04" in DONE'
+      - alexis.love >= 80
+    outcomes:
+      no_ntr:
+        description: We spent an nice date at the the beach.
+        conditions:
+          - '"alexis_event_05" in DONE'
+          - alexis.flags.story == 2
+          - 'alexis.flags.beach_outcome == "no_ntr"'
+        next:
+          - love100
+      waited:
+        description: I waited on the beach for Alexis to come back.
+        conditions:
+          - '"alexis_event_05" in DONE'
+          - 'alexis.flags.beach_outcome == "wait"'
+        next:
+          - love100
+      found_out_and_left:
+        description: I saw what Alexis was doing at the beach and left.
+        conditions:
+          - '"alexis_event_05" in DONE'
+          - 'alexis.flags.beach_outcome == "found_leave"'
+        next:
+          - love100
+          - alexis_ntr_conversation
+      found_out_and_watched:
+        description: I saw what Alexis was doing at the beach and watched.
+        conditions:
+          - '"alexis_event_05" in DONE'
+          - 'alexis.flags.beach_outcome == "found_watch"'
+        next:
+          - love100
+          - alexis_ntr_conversation
+      found_out_and_confronted:
+        description: I saw what Alexis was doing at the beach and confronted her.
+        conditions:
+          - '"alexis_event_05" in DONE'
+          - 'alexis.flags.beach_outcome == "found_confront"'
+        next:
+          - alexis_beach_confrontation
+      agree_ntr:
+        description: I saw what Alexis was doing at the beach, but we've already had this conversation.
+        conditions:
+          - '"alexis_event_05" in DONE'
+          - alexis.flags.story in [1, 3]
+          - 'alexis.flags.beach_outcome == "agree_ntr"'
+        next:
+          - love100
+      conversation:
+        conditions:
+          - '"alexis_event_05" in DONE'
+          - alexis.flags.conversation_event
+          - not alexis.flags.beach_outcome
+        next:
+          - love100
+          - alexis_ntr_conversation
+      nothing:
+        conditions:
+          - '"alexis_event_05" in DONE'
+          - not alexis.flags.conversation_event
+          - not alexis.flags.beach_outcome
+        next:
+          - love100
+
+  love100:
+    name: Get to know Alexis better
+    percentage:
+      value: alexis.love.val
+      scale: 100
+    outcome:
+      hide: True
+      condition: alexis.love >= 100
+
+  alexis_event_06:
+    name: Talk with Alexis
+    related_event: alexis_event_06
+    conditions:
+      - '"alexis_event_05" in DONE'
+      - alexis.love >= 100
+    outcome:
+        conditions:
+          - '"alexis_event_06" in DONE'
+        next:
+          - love120
+
+  love120:
+    name: Get to know Alexis better
+    percentage:
+      value: alexis.love.val
+      scale: 120
+    outcome:
+      hide: True
+      condition: alexis.love >= 120
+
+  alexis_talk_rape:
+    name: Convince Alexis to go to the police
+    related_event: alexis_talk_rape
+    conditions:
+      - '"alexis_event_06" in DONE'
+    outcomes:
+      complete:
+        conditions: '"alexis_talk_rape" in DONE'
+        next:
+          - alexis_event_07b
+      failed:
+        icon: fail
+        conditions: alexis.flags.hired_PI
+        next: None
+
+  alexis_event_07b:
+    name: Report the rape to the police
+    related_event: alexis_talk_rape
+    conditions:
+      - '"alexis_talk_rape" in DONE'
+    outcomes:
+      complete:
+        conditions: '"alexis_event_07b" in DONE'
+        next:
+          - alexis_event_08b
+
+  love140:
+    name: Get to know Alexis better
+    percentage:
+      value: alexis.love.val
+      scale: 140
+    outcome:
+      hide: True
+      condition: alexis.love >= 140
+
+  alexis_event_08b:
+    name: Invite Alexis on a date at home
+    related_event: alexis_event_08b
+    conditions:
+      - '"alexis_event_07b" in DONE'
+    outcome:
+      conditions: '"alexis_event_08b" in DONE'
+
+  love160:
+    name: Get to know Alexis better
+    percentage:
+      value: alexis.love.val
+      scale: 160
+    outcome:
+      hide: True
+      condition: alexis.love >= 160
+
+  alexis_event_10:
+    name: Talk to Alexis, she seems exited about something
+    related_event: alexis_event_10
+    conditions:
+      - '"alexis_event_08b" in DONE or "alexis_event_09a" in DONE'
+    outcome:
+      conditions: '"alexis_event_10" in DONE'
+
+  alexis_event_11:
+    name: Go to the high school reunion
+    related_event: alexis_event_11
+    conditions:
+      - '"alexis_event_10" in DONE'
+    outcome:
+      conditions: '"alexis_event_11" in DONE'
+
+  love180:
+    name: Get to know Alexis better
+    percentage:
+      value: alexis.love.val
+      scale: 180
+    outcome:
+      hide: True
+      condition: alexis.love >= 180
+
+  alexis_event_12:
+    name: Talk to Alexis about your relationship
+    related_event: alexis_event_12
+    conditions:
+      - '"alexis_event_11" in DONE'
+    outcome:
+      conditions: '"alexis_event_12" in DONE'
+      next: None
+
+  alexis_event_ntr_01:
+    name: Invite Alexis on a date at home a weekend afternoon
+    related_event: alexis_event_ntr_01
+    conditions:
+      - '"alexis_event_05" in DONE'
+      - 'alexis.flags.story in [1,3]'
+      - 'alexis.love >= 100'
+    outcome:
+      conditions: '"alexis_event_ntr_01" in DONE'
+
+  alexis_event_ntr_02:
+    name: Go to the sexshop to talk about your idea to Alexis
+    related_event: alexis_event_ntr_02
+    conditions:
+      - '"alexis_event_ntr_01" in DONE'
+      - 'alexis.flags.story in [1,3]'
+      - 'alexis.love >= 130'
+      - 'alexis.sexperience >= 5'
+    outcome:
+      conditions: '"alexis_event_ntr_02" in DONE'
+
+  alexis_ceo_camera:
+    name: Place a spy cam in Dwayne's office
+    conditions:
+      - '"alexis_event_ntr_02" in DONE'
+    outcomes:
+      dwaynedead:
+        icon: fail
+        description: Dwayne's dead.
+        conditions:
+          - game.flags.dwaynedead
+        next: None
+      cameraplaced:
+        conditions:
+          - '"ceo_office_spy_camera" in DONE'
+
+  alexis_event_ntr_03:
+    name: Alexis will come at the office
+    related_event: alexis_event_ntr_03
+    conditions:
+      - '"ceo_office_spy_camera" in DONE'
+    outcomes:
+      delete:
+        description: I deleted the footage without watching it.
+        conditions:
+          - '"alexis_event_ntr_03" in DONE'
+          - 'game.flags.alexisfootage == "delete"'
+        next: love170
+      watched:
+        description: I watched the footage and deleted it.
+        conditions:
+          - '"alexis_event_ntr_03" in DONE'
+          - 'game.flags.alexisfootage == "watched"'
+        next: love170
+      leverage:
+        description: I might gain some leverage with this.
+        conditions:
+          - '"alexis_event_ntr_03" in DONE'
+          - 'game.flags.alexisfootage == "leverage"'
+        next: love170
+      blackmail:
+        description: Next step, talk to Dwayne.
+        conditions:
+          - '"alexis_event_ntr_03" in DONE'
+          - 'game.flags.alexisfootage == "blackmail"'
+        next:
+          - love170
+          - blackmail_dwayne
+
+  love170:
+    name: Get to know Alexis better
+    percentage:
+      value: alexis.love.val
+      scale: 170
+    outcome:
+      hide: True
+      condition: alexis.love >= 170
+
+  alexis_event_ntr_04:
+    name: Ask Alexis to go on a date at the restaurant
+    related_event: alexis_event_ntr_04
+    conditions:
+      - '"alexis_event_ntr_03" in DONE'
+    outcomes:
+      blackmail:
+        conditions:
+          - '"alexis_event_ntr_04" in DONE'
+          - game.flags.alexisfootage == "blackmail"
+        next:
+          - blackmail_dwayne
+          - alexis_event_ntr_05
+      complete:
+        conditions:
+          - '"alexis_event_ntr_04" in DONE'
+          - game.flags.alexisfootage != "blackmail"
+        next: alexis_event_ntr_05
+
+  blackmail_dwayne:
+    name: I can use the footage against dwayne
+    related_event: alexis_blackmail_dwayne
+    conditions:
+      - '"alexis_event_ntr_03" in DONE'
+      - game.flags.alexisfootage == "blackmail"
+    outcome:
+      condition: '"alexis_blackmail_dwayne" in DONE'
+      next: None
+
+  alexis_event_ntr_05_intro:
+    name: Talk to Alexis about what's next
+    related_event: alexis_event_ntr_05_intro
+    conditions:
+      - '"alexis_event_ntr_04" in DONE'
+    outcomes:
+      complete_restaurant:
+        conditions:
+          - '"alexis_event_ntr_05_intro" in DONE'
+          - 'alexis.flags.ntr_05 == "restaurant"'
+        next: alexis_event_ntr_05_restaurant
+      complete_home:
+        conditions:
+          - '"alexis_event_ntr_05_intro" in DONE'
+          - 'alexis.flags.ntr_05 == "home"'
+        next: alexis_event_ntr_05_home
+
+  alexis_event_ntr_05_restaurant:
+    name: Go on a date at the restaurant with Alexis
+    related_event: alexis_event_ntr_05
+    conditions:
+      - '"alexis_event_ntr_05_intro" in DONE'
+      - 'alexis.flags.ntr_05 == "restaurant"'
+    outcome:
+      condition: '"alexis_event_ntr_05_restaurant" in DONE'
+      next: None
+
+  alexis_event_ntr_05_home:
+    name: Wait for Alexis to come home when you're alone in the afternoon
+    related_event: alexis_event_ntr_05
+    conditions:
+      - '"alexis_event_ntr_05_intro" in DONE'
+      - 'alexis.flags.ntr_05 == "home"'
+    outcome:
+      condition: '"alexis_event_ntr_05_home" in DONE'
+      next: None
+
+  alexis_ntr_conversation:
+    name: Talk to Alexis about her behaviour
+    related_event: alexis_ntr_conversation
+    conditions:
+      - alexis.flags.conversation_event
+    outcomes:
+      consensual_ntr:
+        description: I support Alexis in her cheating efforts
+        conditions:
+          - alexis.flags.story == 1
+        next: None
+      disabled_ntr:
+        description: I forbade Alexis to cheat on me again
+        conditions:
+          - alexis.flags.story == 2
+        next: None
+      ignored_ntr:
+        description: I know Alexis cheats on me but didn't say anything
+        conditions:
+          - alexis.flags.story == 3
+        next: None
+      forever_gone:
+        description: I find out about Alexis cheating and broke up with her
+        conditions:
+          - alexis.is_gone_forever
+        next: None
+
+  date:
+    name: Go on a date with Alexis
+    condition: True
+    outcome:
+      condition: alexis.flags.dates >= 1
+      next: birthday_date
+
+  birthday_date:
+    name: Take Alexis out on a night date for her birthday
+    condition: alexis.flags.dates >= 1
+    outcome:
+      condition: '"alexis_birthday_date_male" in DONE'
+      next: None
+
+  sex:
+    name: Have sex with Alexis
+    condition: True
+    outcome:
+      condition: alexis.sexperience >= 1
+      next: None
+
+  love:
+    name: Get Alexis to fall in love with me
+    condition: True
+    percentage:
+      value: alexis.love.val
+      scale: 200
+    outcome:
+      condition: alexis.love.val == 200
+      next: None
+
+  ring:
+    name: Buy a wedding ring
+    condition: True
+    outcome:
+      condition: hero.has_item("wedding_ring")
+
+  propose:
+    name: Propose to Alexis
+    condition: hero.has_item("wedding_ring")
+    outcome:
+      condition: alexis.flags.engagedmike
+      next: None
+
+  preg:
+    name: Get Alexis pregnant
+    optional: True
+    condition: True
+    outcome:
+      condition: alexis.flags.pregnancies_number > 0
+      next: None
+
+  slave:
+    name: Make Alexis my sex slave
+    optional: True
+    condition: True
+    outcome:
+      condition: alexis.is_sex_slave
+      next: None

@@ -1,0 +1,709 @@
+name: Aletta
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Aletta"
+short: "{image=notify aletta} · Aletta"
+description: "Aletta is my boss at work."
+participants:
+  - aletta
+  - office
+condition: hero.is_male
+
+outcomes:
+  gone:
+    description: Aletta has left the company and is no longer part of my life.
+    condition: aletta.is_gone_forever
+    icon: fail
+  engaged:
+    description: Aletta has agreed to marry me!
+    condition: aletta.flags.engagedmike
+
+steps:
+  charm30:
+    name: Be charming enough for Aletta to notice me
+    percentage:
+      value: hero.charm.val
+      scale: 30
+    outcome:
+      hide: True
+      condition: hero.charm >= 30
+
+  aletta_event_01:
+    name: Take a coffee break
+    related_event: aletta_event_01
+    condition: hero.charm >= 30
+    outcome:
+      next:
+        - charm40
+        - love20
+        - sub10
+      condition: '"aletta_event_01" in DONE'
+
+  charm40:
+    name: Be charming enough for Aletta to notice me
+    condition: '"aletta_event_01" in DONE'
+    percentage:
+      value: hero.charm.val
+      scale: 40
+    outcome:
+      hide: True
+      condition: hero.charm >= 40
+
+  love20:
+    name: Get to know Aletta better
+    condition: '"aletta_event_01" in DONE'
+    percentage:
+      value: aletta.love.val
+      scale: 20
+    outcome:
+      hide: True
+      condition: aletta.love >= 20
+
+  aletta_event_02:
+    name: Work while Aletta is in the office
+    related_event: aletta_event_02
+    conditions:
+      - hero.charm >= 40
+      - aletta.love >= 20
+    outcome:
+      next:
+        - charm50
+        - love40
+      condition: '"aletta_event_02" in DONE'
+
+  charm50:
+    name: Be charming enough for Aletta to notice me
+    condition: '"aletta_event_02" in DONE'
+    percentage:
+      value: hero.charm.val
+      scale: 40
+    outcome:
+      hide: True
+      condition: hero.charm >= 50
+
+  love40:
+    name: Get to know Aletta better
+    condition: '"aletta_event_02" in DONE'
+    percentage:
+      value: aletta.love.val
+      scale: 40
+    outcome:
+      hide: True
+      condition: aletta.love >= 40
+
+  aletta_event_03:
+    name: Work under Aletta's supervision
+    related_event: aletta_event_03
+    conditions:
+      - hero.charm >= 50
+      - aletta.love >= 40
+    outcome:
+      next:
+        - charm60
+        - love60
+      condition: '"aletta_event_03" in DONE'
+
+  aletta_event_03b:
+    name: See Aletta in the city on a weekend afternoon
+    related_event: aletta_event_03b
+    conditions:
+      - hero.charm >= 55
+      - aletta.love >= 50
+    outcomes:
+      accepted:
+        next: None
+        description: Aletta offered me a ride on her motorcycle, and I accepted
+        condition: "aletta.flags.sidestory or not aletta.flags.cancel_sidestory"
+      declined:
+        next: None
+        description: Aletta offered me a ride on her motorcycle, and I declined
+        icon: fail
+        conditions:
+          - '"aletta_event_03b" in DONE'
+          - "not aletta.flags.sidestory or aletta.flags.cancel_sidestory"
+
+  charm60:
+    name: Be charming enough for Aletta to notice me
+    condition: '"aletta_event_03" in DONE'
+    percentage:
+      value: hero.charm.val
+      scale: 60
+    outcome:
+      hide: True
+      condition: hero.charm >= 60
+
+  love60:
+    name: Get to know Aletta better
+    condition: '"aletta_event_03" in DONE'
+    percentage:
+      value: aletta.love.val
+      scale: 60
+    outcome:
+      hide: True
+      condition: aletta.love >= 60
+
+  aletta_event_04:
+    name: Work when Aletta walks around the office
+    related_event: aletta_event_04
+    conditions:
+      - hero.charm >= 60
+      - aletta.love >= 60
+    outcome:
+      next:
+        - charm80
+        - love80
+      condition: '"aletta_event_04" in DONE'
+
+  charm80:
+    name: Be charming enough for Aletta to notice me
+    condition: '"aletta_event_04" in DONE'
+    percentage:
+      value: hero.charm.val
+      scale: 80
+    outcome:
+      hide: True
+      condition: hero.charm >= 80
+
+  love80:
+    name: Get to know Aletta better
+    condition: '"aletta_event_04" in DONE'
+    percentage:
+      value: aletta.love.val
+      scale: 80
+    outcome:
+      hide: True
+      condition: aletta.love >= 80
+
+  aletta_event_05:
+    name: Try to work when Aletta is around
+    related_event: aletta_event_05
+    conditions:
+      - hero.charm >= 80
+      - aletta.love >= 80
+    outcome:
+      next:
+        - charm100
+        - love100
+      condition: '"aletta_event_05" in DONE'
+
+  love100:
+    name: Get to know Aletta better
+    condition: '"aletta_event_05" in DONE'
+    percentage:
+      value: aletta.love.val
+      scale: 100
+    outcome:
+      hide: True
+      condition: aletta.love >= 100
+
+  charm100:
+    name: Be charming enough for Aletta to notice me
+    condition: '"aletta_event_05" in DONE'
+    percentage:
+      value: hero.charm.val
+      scale: 100
+    outcome:
+      hide: True
+      condition: hero.charm >= 100
+
+  cassidy_route:
+    name: You need to progress in Cassidy's route
+    condition: '"aletta_event_05" in DONE'
+    outcomes:
+      complete:
+        conditions:
+          - game.flags.dwaynedead
+        hide: True
+        next: aletta_event_06
+      cassidy_gone:
+        conditions:
+          - not game.flags.dwaynedead
+          - cassidy.is_gone_forever
+        hide: True
+        next: aletta_event_06_alt
+
+  aletta_event_06:
+    name: Work as usual, Aletta does the same
+    related_event: aletta_event_06
+    conditions:
+      - hero.charm >= 100
+      - aletta.love >= 100
+      - game.flags.dwaynedead
+    outcomes:
+      complete:
+        condition: '"aletta_event_06" in DONE'
+        next: love120
+      alt_complete:
+        condition: not game.flags.dwaynedead
+        hide: True
+        next: None
+
+  aletta_event_06_alt:
+    name: Just another quiet day working.
+    related_event: aletta_event_06_alt
+    conditions:
+      - hero.charm >= 100
+      - aletta.love >= 100
+      - not game.flags.dwaynedead
+    outcomes:
+      complete:
+        condition: '"aletta_event_06_alt" in DONE'
+        next: love120
+      alt_complete:
+        condition: game.flags.dwaynedead
+        hide: True
+        next: None
+
+  love120:
+    name: Get to know Aletta better.
+    condition: '"aletta_event_06" in DONE or "aletta_event_06_alt" in DONE'
+    percentage:
+      value: aletta.love.val
+      scale: 120
+    outcome:
+      hide: True
+      condition: aletta.love >= 120
+
+  aletta_event_07:
+    name: Have a date in the restaurant.
+    related_event: aletta_event_07
+    conditions:
+      - aletta.love >= 120
+      - '"aletta_event_06" in DONE or "aletta_event_06_alt" in DONE'
+    outcome:
+      condition: '"aletta_event_07" in DONE'
+
+  love140:
+    name: Get to know Aletta better.
+    condition: '"aletta_event_07" in DONE'
+    percentage:
+      value: aletta.love.val
+      scale: 140
+    outcomes:
+      complete:
+        hide: True
+        conditions:
+          - aletta.love >= 140
+          - '"aletta_event_06" in DONE'
+        next:
+          - aletta_event_08
+          - aletta_restaurant_cunnilingus
+      complete_alt:
+        hide: True
+        conditions:
+          - aletta.love >= 140
+          - '"aletta_event_06_alt" in DONE'
+        next:
+          - aletta_event_08_alt
+          - aletta_restaurant_cunnilingus
+
+  aletta_event_08:
+    name: Working, working, working!
+    related_event: aletta_event_08
+    conditions:
+      - aletta.love >= 140
+      - '"aletta_event_07" in DONE'
+    outcome:
+      condition: '"aletta_event_08" in DONE'
+
+  love160:
+    name: Get to know Aletta better.
+    condition: '"aletta_event_08" in DONE'
+    percentage:
+      value: aletta.love.val
+      scale: 160
+    outcome:
+      hide: True
+      condition: aletta.love >= 160
+
+  aletta_event_09:
+    name: Focus on work. Aletta isn't far from my desk.
+    related_event: aletta_event_09
+    conditions:
+      - aletta.love >= 160
+      - '"aletta_event_08" in DONE'
+    outcome:
+      condition: '"aletta_event_09" in DONE'
+
+  love180:
+    name: Get to know Aletta better
+    condition: '"aletta_event_09" in DONE'
+    percentage:
+      value: aletta.love.val
+      scale: 180
+    outcome:
+      hide: True
+      condition: aletta.love >= 180
+
+  aletta_event_10:
+    name: The shit didn't hit the fan that much, we can get back to work.
+    related_event: aletta_event_10
+    conditions:
+      - aletta.love >= 180
+      - '"aletta_event_09" in DONE'
+    outcome:
+      condition: '"aletta_event_10" in DONE'
+      next: None
+
+  aletta_event_08_alt:
+    name: I need to work to finish all my tasks.
+    related_event: aletta_event_08_alt
+    conditions:
+      - aletta.love >= 140
+      - '"aletta_event_07" in DONE'
+      - '"aletta_event_06_alt" in DONE'
+    outcome:
+      condition: '"aletta_event_08_alt" in DONE'
+
+  love160_alt:
+    name: Get to know Aletta better
+    condition: '"aletta_event_08_alt" in DONE'
+    percentage:
+      value: aletta.love.val
+      scale: 160
+    outcome:
+      hide: True
+      condition: aletta.love >= 160
+
+  aletta_event_09_alt:
+    name: I must finish all the scut work.
+    related_event: aletta_event_09_alt
+    conditions:
+      - aletta.love >= 160
+      - '"aletta_event_08_alt" in DONE'
+    outcomes:
+      complete:
+        description: I stood up against Dwayne's bullshit. I don't know what to expect now.
+        conditions:
+          - '"aletta_event_09_alt" in DONE'
+          - not game.flags.fired
+      fired:
+        description: I tried to calm everyone down and ended up getting fired.
+        conditions:
+          - '"aletta_event_09_alt" in DONE'
+          - game.flags.fired
+
+  love180_alt:
+    name: Get to know Aletta better
+    condition: '"aletta_event_09_alt" in DONE'
+    percentage:
+      value: aletta.love.val
+      scale: 180
+    outcomes:
+      complete:
+        hide: True
+        conditions:
+          - aletta.love >= 180
+          - '"aletta_event_09_alt" in DONE'
+          - not game.flags.fired
+        next: aletta_event_10_alt
+      complete_alt:
+        hide: True
+        conditions:
+          - aletta.love >= 180
+          - '"aletta_event_09_alt" in DONE'
+          - game.flags.fired
+        next: aletta_event_10_alt_fired
+
+  aletta_event_10_alt:
+    name: Try to work as usual.
+    related_event: aletta_event_10_alt
+    conditions:
+      - aletta.love >= 180
+      - '"aletta_event_09_alt" in DONE'
+    outcome:
+      condition: '"aletta_event_10_alt" in DONE'
+      next: None
+
+  aletta_event_10_alt_fired:
+    name: Catch up with Aletta.
+    related_event: aletta_event_10_alt_fired
+    conditions:
+      - aletta.love >= 180
+      - '"aletta_event_09_alt" in DONE'
+    outcome:
+      condition: '"aletta_event_10_alt_fired" in DONE'
+      next: None
+
+  sub10:
+    name: Make Aletta more submissive
+    condition: '"aletta_event_01" in DONE'
+    percentage:
+      value: aletta.sub.val
+      scale: 10
+    outcome:
+      hide: True
+      conditions: aletta.sub >= 10
+
+  aletta_kink_01:
+    name: Just a usual workday with Aletta around
+    related_event: aletta_stress
+    conditions:
+      - aletta.sub >= 10
+      - aletta.love >= 30
+    outcome:
+      condition: '"aletta_stress" in DONE'
+
+  sub20:
+    name: Make Aletta more submissive
+    conditions:
+      - '"aletta_stress" in DONE'
+    percentage:
+      value: aletta.sub.val
+      scale: 20
+    outcome:
+      hide: True
+      conditions: aletta.sub >= 20
+
+  aletta_kink_02:
+    name: Attend to the afternoon meeting in the office
+    related_event: aletta_stress_2
+    conditions:
+      - '"aletta_stress" in DONE'
+      - aletta.sub >= 20
+      - aletta.love >= 40
+    outcome:
+      condition: '"aletta_stress_2" in DONE'
+
+  sub40:
+    name: Make Aletta more submissive
+    conditions:
+      - '"aletta_stress_2" in DONE'
+    percentage:
+      value: aletta.sub.val
+      scale: 40
+    outcome:
+      hide: True
+      conditions: aletta.sub >= 40
+
+  aletta_kink_03:
+    name: Wandering around my office, Aletta is not far
+    related_event: aletta_kink_03
+    conditions:
+      - aletta.love >= 50
+      - aletta.sub >= 40
+    outcome:
+      condition: '"aletta_kink_03" in DONE'
+
+  sub50:
+    name: Make Aletta more submissive
+    conditions:
+      - '"aletta_kink_03" in DONE'
+    percentage:
+      value: aletta.sub.val
+      scale: 50
+    outcome:
+      hide: True
+      conditions: aletta.sub >= 50
+
+  aletta_kink_04:
+    name: Wait for Aletta at my desk
+    related_event: aletta_kink_04
+    conditions:
+      - aletta.love >= 60
+      - aletta.sub >= 50
+    outcome:
+      next:
+        - sub60
+        - have_ropes
+        - learn_shibari
+      condition: '"aletta_kink_04" in DONE'
+
+  sub60:
+    name: Make Aletta more submissive
+    conditions:
+      - '"aletta_kink_04" in DONE'
+    percentage:
+      value: aletta.sub.val
+      scale: 60
+    outcome:
+      hide: True
+      conditions: aletta.sub >= 60
+
+  have_ropes:
+    name: Find ropes
+    conditions:
+      - '"aletta_kink_04" in DONE'
+      - '"bondage_ropes" not in hero.inventory'
+    outcome:
+      condition: '"bondage_ropes" in hero.inventory'
+
+  learn_shibari:
+    name: Learn shibari
+    conditions:
+      - '"aletta_kink_04" in DONE'
+      - 'not hero.has_skill("shibari")'
+    outcome:
+      condition: 'hero.has_skill("shibari")'
+
+  aletta_kink_05:
+    name: Meet Aletta in her office
+    related_event: aletta_kink_05
+    conditions:
+      - aletta.love >= 70
+      - aletta.sub >= 60
+    outcome:
+      next:
+        - sub70
+        - office_setup
+      condition: '"aletta_kink_05" in DONE'
+
+  sub70:
+    name: Make Aletta more submissive
+    conditions:
+      - '"aletta_kink_05" in DONE'
+    percentage:
+      value: aletta.sub.val
+      scale: 70
+    outcome:
+      hide: True
+      conditions: aletta.sub >= 70
+
+#  office_setup:
+#    name: Setup the office for my next meeting with Aletta
+#    conditions:
+#      - '"aletta_kink_05" in DONE'
+#    outcomes:
+#      spycam_placed:
+#        description: Spy cam placed
+#        condition: aletta.flags.alettakinkspy
+#      failed:
+#        icon: fail
+#        condition:
+#          - '"aletta_kink_05" in DONE'
+#          - not aletta.flags.alettakinkspy
+#          - not aletta.flags.kinkdelay
+
+  aletta_kink_06:
+    name: Be in your office on a weekend afternoon
+    related_event: aletta_kink_06
+    conditions:
+      - aletta.love >= 80
+      - aletta.sub >= 70
+    outcome:
+      condition: '"aletta_kink_06" in DONE'
+      next:
+        - sub80
+        - aletta_restaurant_bj
+
+  sub80:
+    name: Make Aletta more submissive
+    conditions:
+      - '"aletta_kink_06" in DONE'
+    percentage:
+      value: aletta.sub.val
+      scale: 80
+    outcome:
+      hide: True
+      conditions: aletta.sub >= 80
+
+  aletta_kink_07:
+    name: Be in the office in the afternoon
+    related_event: aletta_kink_07
+    conditions:
+      - '"aletta_kink_06" in DONE'
+      - aletta.love >= 90
+      - aletta.sub >= 80
+    outcome:
+      condition: '"aletta_kink_07" in DONE'
+
+  sub90:
+    name: Make Aletta more submissive
+    conditions:
+      - '"aletta_kink_07" in DONE'
+    percentage:
+      value: aletta.sub.val
+      scale: 90
+    outcome:
+      hide: True
+      conditions: aletta.sub >= 90
+
+  aletta_kink_08:
+    name: Work in your office while Aletta is in the building
+    related_event: aletta_kink_08
+    outcomes:
+      complete:
+        conditions:
+          - '"aletta_kink_08" in DONE'
+          - aletta.sub.max == 100
+        next: None
+      failed:
+        icon: fail
+        conditions:
+          - '"aletta_kink_08" in DONE'
+          - aletta.sub.max == 90
+        next: None
+
+  aletta_restaurant_cunnilingus:
+    name: Give a cunnilingus to Aletta during a date at the restaurant
+    related_event: aletta_restaurant_cunnilingus
+    condition: '"aletta_event_07" in DONE'
+    outcome:
+      condition: '"aletta_restaurant_cunnilingus" in DONE'
+      next: None
+
+  aletta_restaurant_bj:
+    name: Get a blowjob from Aletta during a date at the restaurant
+    related_event: aletta_restaurant_blowjob
+    condition: '"aletta_kink_06" in DONE'
+    outcome:
+      condition: '"aletta_restaurant_blowjob" in DONE'
+      next: None
+
+  date:
+    name: Go on a date with Aletta
+    condition: True
+    outcome:
+      condition: aletta.flags.dates >= 1
+      next: birthday_date
+
+  birthday_date:
+    name: Take Aletta out on a night date for her birthday
+    condition: aletta.flags.dates >= 1
+    outcome:
+      condition: '"aletta_birthday_date_male" in DONE'
+      next: None
+
+  sex:
+    name: Have sex with Aletta
+    condition: True
+    outcome:
+      condition: aletta.sexperience >= 1
+      next: None
+
+  love:
+    name: Get Aletta to fall in love with me
+    condition: True
+    percentage:
+      value: aletta.love.val
+      scale: 200
+    outcome:
+      condition: aletta.love.val == 200
+      next: None
+
+  ring:
+    name: Buy a wedding ring
+    condition: True
+    outcome:
+      condition: hero.has_item("wedding_ring")
+
+  propose:
+    name: Propose to Aletta
+    condition: hero.has_item("wedding_ring")
+    outcome:
+      condition: aletta.flags.engagedmike
+      next: None
+
+  preg:
+    name: Get Aletta pregnant
+    optional: True
+    condition: True
+    outcome:
+      condition: aletta.flags.pregnancies_number > 0
+      next: None
+
+  slave:
+    name: Make Aletta my sex slave
+    optional: True
+    condition: True
+    outcome:
+      condition: aletta.is_sex_slave
+      next: None

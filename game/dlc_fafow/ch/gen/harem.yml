@@ -1,0 +1,38 @@
+- id: electronic
+  members:
+    - amy
+    - shawn
+- id: exclusive_fan
+  members:
+    - jack
+    - kat
+- id: gaming
+  members:
+    - kat
+    - bree
+- id: goth
+  members:
+    - amy
+#    - violaine
+- id: petite
+  members:
+    - anna
+    - emma
+    - kat
+  ending_conditions:
+    - anna.sub >= 90
+    - emma.sub >= 90
+    - kat.sub >= 90
+- id: thot
+  members:
+    - alexis
+    - reona
+    - audrey
+- id: whore
+  members:
+    - lexi
+    - reona
+- id: purity
+  members:
+    - harmony
+    - reona

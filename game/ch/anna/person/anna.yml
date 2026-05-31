@@ -1,0 +1,253 @@
+---
+name: Anna
+class: Girl
+age: 21
+status: friend
+gender: female
+flags:
+  hidden: true
+attributes:
+  love:
+    min: 0
+    max: 20
+    default: 0
+  sub:
+    min: 0
+    max: 40
+    default: 20
+  lesbian:
+    min: 5
+    max: 20
+    default: 15
+  sexperience:
+    min: 0
+    max: null
+    default: 0
+piercings:
+  ears:
+    outfits:
+      - date
+    pierced: true
+  navel:
+    outfits:
+      - naked
+      - swimsuit
+      - sexyswimsuit
+      - underwear
+      - sport
+    pierced: true
+  clit:
+    outfits:
+      - naked
+    pierced: true
+  nipples:
+    outfits:
+      - naked
+    pierced: true
+  tongue:
+    expressions:
+      - happy
+  nose: { }
+birthday:
+  - summer
+  - 26
+traits:
+  - dreamer
+  - playful
+  - kinky
+  - music
+movies:
+  horror: 3  # -1 from playful
+desire_factors:
+  - charm
+  - music
+  - not_underwear
+  - not_restaurant
+  - concert
+  - butt_plug
+heronickname:
+  Superstar: anna.flags.mikeNickname in nickname_superstar
+schedule:
+  default:
+    '124':
+      '6':
+        - room: None
+          activity: none
+          clothes: underwear
+      '8':
+        - room: coffeeshop
+          activity: coffee
+          clothes: casual
+      '10':
+        - room: university
+          activity: work
+          clothes: casual
+      '11':
+        - room: classroom
+          activity: work
+          clothes: casual
+        - room: library
+          activity: work
+          clothes: casual
+      '13':
+        - room: dininghall
+          activity: meal
+          clothes: casual
+      '14':
+        - room: None
+          activity: none
+          clothes: underwear
+      '17':
+        - room: street
+          activity: walk
+          clothes: casual
+        - room: None
+          activity: none
+          clothes: underwear
+      '18':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '19':
+        - room: pond
+          activity: None
+          clothes: casual
+      '24':
+        - room: pubexterior
+          activity: drink
+          clothes: casual
+        - room: None
+          activity: sleep
+          clothes: underwear
+    '35':
+      '9':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '11':
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: bakery
+          activity: eat
+          clothes: casual
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: pond
+          activity: None
+          clothes: casual
+      '14':
+        - room: pond
+          activity: None
+          clothes: casual
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '16':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: pond
+          activity: None
+          clothes: casual
+      '17':
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: pond
+          activity: None
+          clothes: casual
+      '20':
+        - room: studio
+          activity: practice
+          clothes: casual
+      '23':
+        - room: pubexterior
+          activity: drink
+          clothes: casual
+        - room: None
+          activity: sleep
+          clothes: underwear
+    '6':
+      '9':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '11':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: pond
+          activity: None
+          clothes: casual
+      '14':
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: pond
+          activity: None
+          clothes: casual
+      '16':
+        - room: pond
+          activity: None
+          clothes: casual
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '18':
+        - room: drugstore
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: pond
+          activity: None
+          clothes: casual
+      '21':
+        - room: None
+          activity: None
+          clothes: underwear
+      '23':
+        - room: pubexterior
+          activity: drink
+          clothes: casual
+    '7':
+      '5':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '10':
+        - room: None
+          activity: None
+          clothes: underwear
+      '18':
+        - room: pond
+          activity: None
+          clothes: casual
+      '23':
+        - room: pubexterior
+          activity: drink
+          clothes: casual

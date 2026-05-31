@@ -1,0 +1,503 @@
+name: Kat
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Kat"
+short: "{image=notify kat} · Kat"
+description: "Kat is a gamer girl."
+participants:
+  - kat
+conditions:
+  - hero.is_male
+  - "'bree_event_11' in DONE"
+  - not kat.hidden
+
+outcomes:
+  gone:
+    description: Kat has left and is no longer part of my life.
+    conditions:
+      - kat.is_gone_forever
+    icon: fail
+  engaged:
+    description: Kat has agreed to marry me!
+    condition: kat.flags.engagedmike
+
+steps:
+  love20:
+    name: Get to know Kat better
+    percentage:
+      value: kat.love.val
+      scale: 20
+    outcome:
+      hide: True
+      condition: kat.love >= 20
+
+  kat_event_01:
+    name: Go to the arcade
+    related_event: kat_event_01
+    conditions:
+      - kat.love >= 20
+    outcomes:
+      complete:
+        conditions:
+          - '"kat_event_01" in DONE'
+          - kat.sub.max > 5
+        next:
+          - love40
+          - sub10
+      nosub:
+        conditions:
+          - '"kat_event_01" in DONE'
+          - kat.sub.max <= 5
+        next:
+          - love40
+          - chall_kat
+
+  love40:
+    name: Get to know Kat better
+    condition: '"kat_event_01" in DONE'
+    percentage:
+      value: kat.love.val
+      scale: 40
+    outcome:
+      hide: True
+      condition: kat.love >= 40
+
+  kat_event_02:
+    name: I briefly saw Jack when I was walking and he looked really exited. I should try to find him and ask where his energy come from.
+    related_event: kat_event_02
+    conditions:
+      - '"kat_event_01" in DONE'
+      - kat.love >= 40
+    outcome:
+      condition: '"kat_event_02" in DONE'
+
+  love60:
+    name: Get to know Kat better
+    condition: '"kat_event_02" in DONE'
+    percentage:
+      value: kat.love.val
+      scale: 60
+    outcome:
+      hide: True
+      condition: kat.love >= 60
+
+  kat_event_03:
+    name: Go on a date at the amusement park during the afternoon
+    related_event: kat_event_03
+    conditions:
+      - '"kat_event_02" in DONE'
+      - kat.love >= 60
+    outcome:
+      condition: '"kat_event_03" in DONE'
+
+  love80:
+    name: Get to know Kat better
+    condition: '"kat_event_03" in DONE'
+    percentage:
+      value: kat.love.val
+      scale: 80
+    outcome:
+      hide: True
+      condition: kat.love >= 80
+
+  kat_event_04:
+    name: Have a nice date with Kat
+    related_event: kat_event_04
+    conditions:
+      - '"kat_event_03" in DONE'
+      - kat.love >= 80
+    outcome:
+      condition: '"kat_event_04" in DONE'
+
+  love100:
+    name: Get to know Kat better
+    condition: '"kat_event_04" in DONE'
+    percentage:
+      value: kat.love.val
+      scale: 100
+    outcome:
+      hide: True
+      condition: kat.love >= 100
+
+  kat_event_05:
+    name: Meet Jack in the street between 10 and 16
+    related_event: kat_event_05
+    conditions:
+      - '"kat_event_04" in DONE'
+      - kat.love >= 100
+    outcome:
+      condition: '"kat_event_05" in DONE'
+
+  love120:
+    name: Get to know Kat better
+    condition: '"kat_event_05" in DONE'
+    percentage:
+      value: kat.love.val
+      scale: 120
+    outcome:
+      hide: True
+      condition: kat.love >= 120
+
+  kat_event_06:
+    name: Have a nice date with Kat
+    related_event: kat_event_06
+    conditions:
+      - '"kat_event_05" in DONE'
+      - kat.love >= 120
+    outcomes:
+      like:
+        conditions:
+          - '"kat_event_06" in DONE'
+          - kat.love.max >= 140
+      dislike:
+        description: I told Kat that I'm not okay with her being a camgirl.
+        conditions:
+          - '"kat_event_06" in DONE'
+          - kat.love.max < 140
+        next: None
+
+  love140:
+    name: Get to know Kat better
+    condition: '"kat_event_06" in DONE'
+    percentage:
+      value: kat.love.val
+      scale: 140
+    outcome:
+      hide: True
+      condition: kat.love >= 140
+
+  kat_event_07:
+    name: Join Kat to her house between 14 and 17 (apartment in Street).
+    related_event: kat_event_07
+    conditions:
+      - '"kat_event_06" in DONE'
+      - kat.love >= 140
+    outcome:
+      condition: '"kat_event_07" in DONE'
+
+  love150:
+    name: Get to know Kat better
+    condition: '"kat_event_07" in DONE'
+    percentage:
+      value: kat.love.val
+      scale: 150
+    outcome:
+      hide: True
+      condition: kat.love >= 150
+
+  kat_event_08:
+    name: Go on a date with Kat
+    related_event: kat_event_08
+    conditions:
+      - '"kat_event_07" in DONE'
+      - kat.love >= 150
+    outcome:
+      condition: '"kat_event_08" in DONE'
+
+  love160:
+    name: Get to know Kat better
+    condition: '"kat_event_08" in DONE'
+    percentage:
+      value: kat.love.val
+      scale: 160
+    outcomes:
+      agree:
+        hide: True
+        conditions:
+          - kat.love >= 160
+          - kat.flags.agree_sex_cam
+        next:
+          - kat_event_08a
+      disagree:
+        hide: True
+        conditions:
+          - kat.love >= 160
+          - not kat.flags.agree_sex_cam
+        next:
+          - kat_event_08b
+
+  kat_event_08a:
+    name: Go on a date with Kat to participate in her stream
+    related_event: kat_event_08a
+    conditions:
+      - '"kat_event_08" in DONE'
+      - 'not "kat_event_08b" in DONE'
+      - kat.love >= 160
+      - kat.flags.agree_sex_cam
+    outcome:
+      condition: '"kat_event_08a" in DONE'
+      next:
+        - love180
+
+  kat_event_08b:
+    name: Stumble on Jack by walking in places where Kat isn't
+    related_event: kat_event_08b
+    conditions:
+      - '"kat_event_08" in DONE'
+      - 'not "kat_event_08a" in DONE'
+      - kat.love >= 160
+      - not kat.flags.agree_sex_cam
+    outcomes:
+      confront:
+        description: I'll have to talk to Kat about what she did.
+        conditions:
+          - '"kat_event_08b" in DONE'
+          - kat.flags.confront_sex_cam
+        next:
+          - kat_event_08c
+      dont_confront:
+        description: I decided there's no need to go mad on Kat about what she did.
+        conditions:
+          - '"kat_event_08b" in DONE'
+          - not kat.flags.confront_sex_cam
+        next:
+          - love180
+
+  kat_event_08c:
+    name: Go on a date with Kat to confront her
+    related_event: kat_event_08c
+    conditions:
+      - '"kat_event_08b" in DONE'
+      - kat.flags.confront_sex_cam
+    outcome:
+      condition: '"kat_event_08c" in DONE'
+
+  love180:
+    name: Get to know Kat better
+    conditions:
+      - '"kat_event_08a" in DONE or "kat_event_08b" in DONE'
+      - not kat.flags.confront_sex_cam
+    percentage:
+      value: kat.love.val
+      scale: 180
+    outcome:
+      hide: True
+      condition: kat.love >= 180
+
+  kat_event_09:
+    name: Have a nice walk on the street
+    related_event: kat_event_09
+    conditions:
+      - '"kat_event_08a" in DONE or "kat_event_08b" in DONE'
+      - not kat.flags.confront_sex_cam
+      - kat.love >= 180
+    outcome:
+      condition: '"kat_event_09" in DONE'
+
+  love200:
+    name: Get to know Kat better
+    condition: '"kat_event_09" in DONE'
+    percentage:
+      value: kat.love.val
+      scale: 200
+    outcome:
+      hide: True
+      condition: kat.love >= 200
+
+  kat_event_10:
+    name: My protagonist sense is tingling. I should check if Jack's somewhere nearby.
+    related_event: kat_event_10
+    conditions:
+      - '"kat_event_09" in DONE'
+      - kat.love >= 200
+    outcome:
+      condition: '"kat_event_10" in DONE'
+      next: None
+
+  chall_kat:
+    name: Challenge Kat during a date at the mall (one try each week)
+    related_event: challenge_kat
+    conditions:
+      - kat.sub.max <= 5
+    outcome:
+      condition: kat.sub.max > 5
+
+  sub10:
+    name: Make Kat more submissive
+    conditions:
+      - '"kat_event_01" in DONE'
+      - kat.sub.max > 5
+      - kat.love.max >= 80
+    percentage:
+      value: kat.sub.val
+      scale: 10
+    outcome:
+      hide: True
+      conditions: kat.sub >= 10
+
+  kat_kink_01:
+    name: Play console with Kat during a home date
+    related_event: kat_kink_01
+    conditions:
+      - '"kat_event_01" in DONE'
+      - kat.sub >= 10
+      - kat.love >= 80
+    outcome:
+      condition: '"kat_kink_01" in DONE'
+
+  sub20:
+    name: Make Kat more submissive
+    conditions: '"kat_kink_01" in DONE'
+    percentage:
+      value: kat.sub.val
+      scale: 20
+    outcome:
+      hide: True
+      conditions: kat.sub >= 20
+
+  kat_kink_02:
+    name: Offer a drink to Kat or buy a round during a pub date
+    related_event: kat_kink_02
+    conditions:
+      - '"kat_kink_01" in DONE'
+      - kat.sub >= 20
+      - kat.love >= 100
+    outcome:
+      condition: '"kat_kink_02" in DONE'
+
+  sub40:
+    name: Make Kat more submissive
+    conditions: '"kat_kink_02" in DONE'
+    percentage:
+      value: kat.sub.val
+      scale: 40
+    outcome:
+      hide: True
+      conditions: kat.sub >= 40
+
+  kat_kink_03:
+    name: Kiss Kat
+    related_event: kat_kink_03
+    conditions:
+      - '"kat_kink_02" in DONE'
+      - kat.sub >= 40
+      - kat.love >= 120
+      - kat.flags.kiss >= 4
+    outcomes:
+      spit:
+        conditions:
+          - '"kat_kink_03" in DONE'
+          - kat.sub.max >= 60
+      dontspit:
+        description: I refused to spit in Kat's mouth
+        conditions:
+          - '"kat_kink_03" in DONE'
+          - kat.sub.max < 60
+        next: None
+
+  sub60:
+    name: Make Kat more submissive
+    conditions: '"kat_kink_03" in DONE'
+    percentage:
+      value: kat.sub.val
+      scale: 60
+    outcome:
+      hide: True
+      conditions: kat.sub >= 60
+
+  kat_kink_04:
+    name: Talk to Kat
+    related_event: kat_kink_04
+    conditions:
+      - '"kat_kink_03" in DONE'
+      - kat.sub >= 60
+      - kat.love >= 130
+    outcome:
+      condition: '"kat_kink_04" in DONE'
+
+  sub80:
+    name: Make Kat more submissive
+    conditions: '"kat_kink_04" in DONE'
+    percentage:
+      value: kat.sub.val
+      scale: 80
+    outcome:
+      hide: True
+      conditions: kat.sub >= 80
+
+  kat_kink_05:
+    name: Have a nice time with Kat during a date
+    related_event: kat_kink_05
+    conditions:
+      - '"kat_kink_04" in DONE'
+      - kat.sub >= 80
+      - kat.love >= 150
+    outcome:
+      condition: '"kat_kink_05" in DONE'
+
+  sub100:
+    name: Make Kat more submissive
+    conditions: '"kat_kink_05" in DONE'
+    percentage:
+      value: kat.sub.val
+      scale: 100
+    outcome:
+      hide: True
+      conditions: kat.sub >= 100
+
+  kat_kink_06:
+    name: Talk to Kat
+    related_event: kat_kink_06
+    conditions:
+      - '"kat_kink_05" in DONE'
+      - kat.sub >= 100
+    outcome:
+      condition: '"kat_kink_06" in DONE'
+
+  date:
+    name: Go on a date with Kat
+    condition: True
+    outcome:
+      condition: kat.flags.dates >= 1
+      next: birthday_date
+
+  birthday_date:
+    name: Take Kat out on a night date for her birthday
+    condition: kat.flags.dates >= 1
+    outcome:
+      condition: '"kat_birthday_date_male" in DONE'
+      next: None
+
+  sex:
+    name: Have sex with Kat
+    condition: True
+    outcome:
+      condition: kat.sexperience >= 1
+      next: None
+
+  love:
+    name: Get Kat to fall in love with me
+    condition: True
+    percentage:
+      value: kat.love.val
+      scale: 200
+    outcome:
+      condition: kat.love.val == 200
+      next: None
+
+  ring:
+    name: Buy a wedding ring
+    condition: True
+    outcome:
+      condition: hero.has_item("wedding_ring")
+
+  propose:
+    name: Propose to Kat
+    condition: hero.has_item("wedding_ring")
+    outcome:
+      condition: kat.flags.engagedmike
+      next: None
+
+  preg:
+    name: Get Kat pregnant
+    optional: True
+    condition: True
+    outcome:
+      condition: kat.flags.pregnancies_number > 0
+      next: None
+
+  slave:
+    name: Make Kat my sex slave
+    optional: True
+    condition: True
+    outcome:
+      condition: kat.is_sex_slave
+      next: None

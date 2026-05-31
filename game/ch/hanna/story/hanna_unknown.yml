@@ -1,0 +1,38 @@
+name: Gym Girl
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Hanna"
+description: "There is this hot girl at the gym. I don't even know her name."
+
+participants:
+  - hero
+conditions:
+  - '"hanna_event_01" in DONE'
+  - not demo
+
+outcome:
+  description: The gym girl's name is Hanna!
+  condition: '"hanna_event_02" in DONE'
+
+steps:
+  fitness30:
+    name: Be fit enough for the mystery girl to notice me
+    outcome:
+      hide: True
+      condition: hero.fitness >= 30
+
+  hanna_masturbate:
+    name: Take a shower at the gym
+    related_event: hanna_masturbate
+    outcome:
+      condition: '"hanna_masturbate" in DONE'
+
+  fitness40:
+    name: Be fit enough for the mystery girl to notice me
+    outcome:
+      hide: True
+      condition: hero.fitness >= 40
+
+  hanna_event_02:
+    name: Buy a new gym membership
+    related_event: hanna_event_02
+    outcome:
+      condition: '"hanna_event_02" in DONE'

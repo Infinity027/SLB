@@ -1,0 +1,173 @@
+---
+name: Shawn
+class: Guy
+age: 34
+status: electronic store salesman
+gender: male
+flags:
+  nokiss: True
+  nodate: True
+  hidden: True
+attributes:
+  love:
+    min: 0
+    max: 20
+    default: 0
+  sub:
+    min: 0
+    max: 25
+    default: 0
+  sexperience:
+    min: 0
+    max: null
+    default: 0
+birthday:
+  - spring
+  - 24
+traits:
+  - gourmand
+  - innocent
+  - charm
+  - geek
+  - music
+  - playful
+  - not_dominant
+desire_factors:
+  - pub
+  - video_games
+  - charm
+  - concert
+heronickname:
+  Miss hero.family_name: shawn.flags.breeNickname == "family_name"
+schedule:
+  default:
+    '1245':
+      '1':
+        - room: pubplay
+          activity: drink
+          clothes: casual
+      '6':
+        - room: None
+          activity: sleep
+          clothes: naked
+      '18':
+        - room: electronic
+          activity: work
+          clothes: work
+      '23':
+        - room: pubplay
+          activity: drink
+          clothes: casual
+        - room: None
+          activity: sleep
+          clothes: naked
+    '3':
+      '1':
+        - room: pubplay
+          activity: play
+          clothes: casual
+        - room: None
+          activity: sleep
+          clothes: naked
+      '9':
+        - room: None
+          activity: sleep
+          clothes: naked
+      '12':
+        - room: electronic
+          activity: work
+          clothes: work
+      '14':
+        - room: gym
+          activity: yoga
+          clothes: sport
+        - room: coffeeshop
+          activity: eating
+          clothes: casual
+        - room: None
+          activity: None
+          clothes: casual
+      '16':
+        - room: park
+          activity: study
+          clothes: casual
+      '18':
+        - room: park
+          activity: study
+          clothes: casual
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: bookstore
+          activity: shop
+          clothes: casual
+      '23':
+        - room: cinema
+          activity: wait
+          clothes: casual
+    '6':
+      '3':
+        - room: pubplay
+          activity: play
+          clothes: casual
+        - room: None
+          activity: sleep
+          clothes: naked
+      '10':
+        - room: None
+          activity: sleep
+          clothes: naked
+      '12':
+        - room: gym
+          activity: yoga
+          clothes: sport
+          seasons: '23'
+        - room: waterpark
+          activity: swim
+          clothes: swimsuit
+          seasons: '01'
+      '16':
+        - room: park
+          activity: study
+          clothes: casual
+      '18':
+        - room: mall1
+          activity: shop
+          clothes: casual
+        - room: mall2
+          activity: shop
+          clothes: casual
+        - room: park
+          activity: study
+          clothes: casual
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: bookstore
+          activity: shop
+          clothes: casual
+      '23':
+        - room: pubplay
+          activity: drink
+          clothes: casual
+    '7':
+      '5':
+        - room: nightclubbar
+          activity: drink
+          clothes: date
+      '14':
+        - room: None
+          activity: sleep
+          clothes: naked
+      '18':
+        - room: park
+          activity: rest
+          clothes: casual
+        - room: waterpark
+          activity: swim
+          clothes: swimsuit
+          seasons: '01'
+      '23':
+        - room: pubplay
+          activity: drink
+          clothes: casual

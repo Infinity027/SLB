@@ -1,0 +1,609 @@
+---
+name: Kleio
+class: Girl
+age: 20
+status: friend
+gender: female
+flags:
+  nodate: true
+  nokiss: true
+  hidden: true
+attributes:
+  love:
+    min: 0
+    max: 20
+    default: 0
+  sub:
+    min: 0
+    max: 50
+    default: 0
+  lesbian:
+    min: 5
+    max: 20
+    default: 20
+  sexperience:
+    min: 0
+    max: null
+    default: 0
+piercings:
+  ears:
+    pierced: true
+  navel:
+    outfits:
+      - casual
+      - naked
+      - swimsuit
+      - sexyswimsuit
+      - underwear
+      - sport
+      - date
+    pierced: true
+  clit:
+    outfits:
+      - naked
+  nipples:
+    outfits:
+      - naked
+  tongue:
+    expressions:
+      - happy
+      - angry
+      - annoyed
+      - surprised
+      - punk
+  nose:
+    pierced: true
+birthday:
+  - winter
+  - 16
+traits:
+  - rebel
+  - music
+  - poor
+  - tomboy
+desire_factors:
+  - fitness
+  - knowledge
+  - guitar
+  - kart
+  - racing
+  - not_mall
+heronickname:
+  Boy: kleio.flags.mikeNickname in nickname_boy
+  Dumbass: kleio.flags.mikeNickname in nickname_dumbass
+  Twink: kleio.flags.mikeNickname in nickname_twink
+  Playboy: kleio.flags.mikeNickname in nickname_playboy
+  Boytoy: kleio.flags.mikeNickname in nickname_boytoy
+  Love: kleio.flags.mikeNickname in nickname_love
+schedule:
+  default:
+    '124':
+      '17':
+        - room: None
+          activity: none
+          clothes: underwear
+      '18':
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" not in DONE or "kleio_event_11" in DONE'
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" not in DONE or "kleio_event_11" in DONE'
+        - room: rooftop
+          activity: wait
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" in DONE'
+            - '"kleio_event_11" not in DONE'
+      '19':
+        - room: street2
+          activity: smoke
+          clothes: casual
+        - room: rooftop
+          activity: wait
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" in DONE'
+            - '"kleio_event_11" not in DONE'
+      '20':
+        - room: rooftop
+          activity: wait
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" in DONE'
+            - '"kleio_event_11" not in DONE'
+      '24':
+        - room: pubseat
+          activity: drink
+          clothes: casual
+        - room: kart
+          activity: drive
+          clothes: casual
+        - room: None
+          activity: sleep
+          clothes: underwear
+    '35':
+      '9':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '11':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: street2
+          activity: smoke
+          clothes: casual
+      '14':
+        - room: street2
+          activity: smoke
+          clothes: casual
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '16':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '17':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: street2
+          activity: smoke
+          clothes: casual
+      '20':
+        - room: rooftop
+          activity: wait
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" in DONE'
+            - '"kleio_event_11" not in DONE'
+        - room: studio
+          activity: practice
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" not in DONE or "kleio_event_11" in DONE'
+      '22':
+        - room: studio
+          activity: practice
+          clothes: casual
+      '23':
+        - room: kart
+          activity: drive
+          clothes: casual
+        - room: pubseat
+          activity: drink
+          clothes: casual
+    '6':
+      '9':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '11':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: street2
+          activity: smoke
+          clothes: casual
+      '14':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: bakery
+          activity: shop
+          clothes: casual
+        - room: street2
+          activity: smoke
+          clothes: casual
+      '16':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: street2
+          activity: smoke
+          clothes: casual
+      '18':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" not in DONE or "kleio_event_11" in DONE'
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" not in DONE or "kleio_event_11" in DONE'
+        - room: street2
+          activity: smoke
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" not in DONE or "kleio_event_11" in DONE'
+        - room: rooftop
+          activity: wait
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" in DONE'
+            - '"kleio_event_11" not in DONE'
+      '20':
+        - room: rooftop
+          activity: wait
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" in DONE'
+            - '"kleio_event_11" not in DONE'
+      '21':
+        - room: None
+          activity: None
+          clothes: underwear
+      '23':
+        - room: kart
+          activity: drive
+          clothes: casual
+        - room: pubseat
+          activity: drink
+          clothes: casual
+    '7':
+      '5':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '10':
+        - room: None
+          activity: None
+          clothes: underwear
+      '18':
+        - room: street2
+          activity: smoke
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" not in DONE or "kleio_event_11" in DONE'
+        - room: rooftop
+          activity: wait
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" in DONE'
+            - '"kleio_event_11" not in DONE'
+      '20':
+        - room: rooftop
+          activity: wait
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" in DONE'
+            - '"kleio_event_11" not in DONE'
+      '23':
+        - room: pubseat
+          activity: drink
+          clothes: casual
+        - room: kart
+          activity: drive
+          clothes: casual
+  work:
+    '1':
+      '7':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '17':
+        - room: garage
+          activity: work
+          clothes: work
+      '18':
+        - room: rooftop
+          activity: wait
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" in DONE'
+            - '"kleio_event_11" not in DONE'
+      '19':
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" not in DONE or "kleio_event_11" in DONE'
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" not in DONE or "kleio_event_11" in DONE'
+        - room: street2
+          activity: smoke
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" not in DONE or "kleio_event_11" in DONE'
+        - room: rooftop
+          activity: wait
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" in DONE'
+            - '"kleio_event_11" not in DONE'
+      '20':
+        - room: rooftop
+          activity: wait
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" in DONE'
+            - '"kleio_event_11" not in DONE'
+      '24':
+        - room: pubseat
+          activity: drink
+          clothes: casual
+        - room: kart
+          activity: drive
+          clothes: casual
+        - room: None
+          activity: sleep
+          clothes: underwear
+    '24':
+      '7':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '17':
+        - room: garage
+          activity: work
+          clothes: work
+      '18':
+        - room: rooftop
+          activity: wait
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" in DONE'
+            - '"kleio_event_11" not in DONE'
+      '19':
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" not in DONE or "kleio_event_11" in DONE'
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" not in DONE or "kleio_event_11" in DONE'
+        - room: street2
+          activity: smoke
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" not in DONE or "kleio_event_11" in DONE'
+        - room: rooftop
+          activity: wait
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" in DONE'
+            - '"kleio_event_11" not in DONE'
+      '20':
+        - room: rooftop
+          activity: wait
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" in DONE'
+            - '"kleio_event_11" not in DONE'
+      '24':
+        - room: pubseat
+          activity: drink
+          clothes: casual
+        - room: kart
+          activity: drive
+          clothes: casual
+        - room: None
+          activity: sleep
+          clothes: underwear
+    '35':
+      '9':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '11':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: street2
+          activity: smoke
+          clothes: casual
+      '14':
+        - room: street2
+          activity: smoke
+          clothes: casual
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '16':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '17':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: street2
+          activity: smoke
+          clothes: casual
+      '20':
+        - room: studio
+          activity: practice
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" not in DONE or "kleio_event_11" in DONE'
+        - room: rooftop
+          activity: wait
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" in DONE'
+            - '"kleio_event_11" not in DONE'
+      '22':
+        - room: studio
+          activity: practice
+          clothes: casual
+      '23':
+        - room: kart
+          activity: drive
+          clothes: casual
+        - room: pubseat
+          activity: drink
+          clothes: casual
+    '6':
+      '9':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '11':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: street2
+          activity: smoke
+          clothes: casual
+      '14':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: bakery
+          activity: shop
+          clothes: casual
+        - room: street2
+          activity: smoke
+          clothes: casual
+      '16':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: street2
+          activity: smoke
+          clothes: casual
+      '18':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" not in DONE or "kleio_event_11" in DONE'
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" not in DONE or "kleio_event_11" in DONE'
+        - room: street2
+          activity: smoke
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" not in DONE or "kleio_event_11" in DONE'
+        - room: rooftop
+          activity: wait
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" in DONE'
+            - '"kleio_event_11" not in DONE'
+      '19':
+        - room: rooftop
+          activity: wait
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" in DONE'
+            - '"kleio_event_11" not in DONE'
+      '20':
+        - room: rooftop
+          activity: wait
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" in DONE'
+            - '"kleio_event_11" not in DONE'
+      '21':
+        - room: None
+          activity: None
+          clothes: underwear
+      '23':
+        - room: kart
+          activity: drive
+          clothes: casual
+        - room: pubseat
+          activity: drink
+          clothes: casual
+    '7':
+      '5':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '10':
+        - room: None
+          activity: None
+          clothes: underwear
+      '18':
+        - room: street2
+          activity: smoke
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" not in DONE or "kleio_event_11" in DONE'
+        - room: rooftop
+          activity: wait
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" in DONE'
+            - '"kleio_event_11" not in DONE'
+      '19':
+        - room: rooftop
+          activity: wait
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" in DONE'
+            - '"kleio_event_11" not in DONE'
+      '20':
+        - room: rooftop
+          activity: wait
+          clothes: casual
+          conditions:
+            - '"kleio_event_10" in DONE'
+            - '"kleio_event_11" not in DONE'
+      '23':
+        - room: pubseat
+          activity: drink
+          clothes: casual
+        - room: kart
+          activity: drive
+          clothes: casual

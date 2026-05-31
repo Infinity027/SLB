@@ -1,0 +1,116 @@
+name: The Battle of the Bands
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Band_Harem"
+short: "{image=notify sasha}{image=notify kleio}{image=notify anna} · BoB"
+description: I agreed to play with the The Deathless Harpies for the Battle of the Bands!
+participants:
+  - sasha
+  - anna
+  - kleio
+conditions:
+  - '"sasha_band_event_01" in DONE'
+
+outcomes:
+  bobwon:
+    description: We won the Battle of the Bands!
+    conditions:
+      - '"battle_of_the_bands_win" in DONE'
+
+  bobfailed_round_two:
+    description: We lost the second round of the Battle of the Bands...
+    conditions:
+      - '"battle_of_the_bands_round_two" in DONE'
+      - not game.flags.bobWon
+    icon: fail
+
+  bobfailed_round_one:
+    description: We lost the first round of the Battle of the Bands...
+    conditions:
+      - '"battle_of_the_bands_round_one" in DONE'
+      - not game.flags.bobWon
+    icon: fail
+
+  disband:
+    description: The Deathless Harpies disbanded.
+    conditions:
+      - kleio.is_gone_forever or anna.is_gone_forever or sasha.is_gone_forever
+    icon: fail
+
+steps:
+  band_practice:
+    name: Practice with the band
+    condition: not game.flags.bandpractice
+    outcome:
+      condition: game.flags.bandpractice
+      hide: True
+      next:
+        - band_practice_more
+        - first_gig
+
+  first_gig:
+    name: The Battle of the Bands is coming up
+    related_event: first_gig
+    condition: game.flags.nextgig
+    percentage:
+      value: game.timers.nextgig
+      scale: 41
+      invert: True
+    outcome:
+      description: The Deathless Harpies had their first gig, unexpectedly
+      condition: '"first_gig" in DONE'
+      next:
+        - band_practice_more
+        - bob_first_round
+
+  band_practice_more:
+    name: Practice more with the band
+    percentage:
+      value: game.flags.bandpractice
+      scale: 100
+    outcomes:
+      complete:
+        condition: game.flags.bandpractice >= 100
+      incomplete:
+        condition: '"battle_of_the_bands_round_one" in DONE'
+
+  bob_first_round:
+    name: The first round of the Battle of the Bands is starting soon
+    related_event: battle_of_the_bands_round_one
+    condition: '"first_gig" in DONE'
+    percentage:
+      value: game.timers.nextgig
+      scale: 41
+      invert: True
+    outcomes:
+      won:
+        description: We won the first round of the Battle of the bands.
+        conditions:
+          - '"battle_of_the_bands_round_one" in DONE'
+          - game.flags.bobWon
+      lost:
+        description: We lost the first round of the Battle of the bands.
+        conditions:
+          - '"battle_of_the_bands_round_one" in DONE'
+          - not game.flags.bobWon
+
+  bob_second_round:
+    name: The second round of the Battle of the Bands is starting soon
+    related_event: battle_of_the_bands_round_two
+    conditions:
+      - game.flags.nextgig
+      - '"battle_of_the_bands_round_one" in DONE'
+      - game.flags.bobWon
+    percentage:
+      value: game.timers.nextgig
+      scale: 14
+      invert: True
+    outcomes:
+      won:
+        description: We won the second round of the Battle of the bands.
+        conditions:
+          - '"battle_of_the_bands_round_two" in DONE'
+          - game.flags.bobWon
+      lost:
+        description: We lost the second round of the Battle of the bands.
+        conditions:
+          - '"battle_of_the_bands_round_two" in DONE'
+          - not game.flags.bobWon

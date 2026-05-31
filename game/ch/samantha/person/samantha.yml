@@ -1,0 +1,440 @@
+---
+name: Samantha
+class: Girl
+age: 25
+flags:
+  nodate: true
+  nokiss: true
+  hidden: true
+  birthPenalty: 25
+status: friend
+gender: female
+attributes:
+  love:
+    min: 0
+    max: 20
+    default: 0
+  sub:
+    min: 0
+    max: 50
+    default: 0
+  lesbian:
+    min: 0
+    max: 20
+    default: 0
+  sexperience:
+    min: 0
+    max: null
+    default: 0
+piercings:
+  ears:
+    outfits:
+      - date
+      - sexydate
+    pierced: true
+  navel:
+    outfits:
+      - naked
+      - swimsuit
+      - sexyswimsuit
+      - underwear
+      - sport
+      - sexydate
+    pierced: true
+  clit:
+    outfits:
+      - naked
+      - bottomless
+    pierced: true
+  nipples:
+    outfits:
+      - naked
+      - sexydate
+      - sexyswimsuit
+      - topless
+    pierced: true
+  tongue:
+    expressions:
+      - happy
+    pierced: true
+  nose: { }
+  lips: { }
+birthday:
+  - summer
+  - 8
+traits:
+  - artsy
+  - gourmand
+  - family
+  - low fertility
+desire_factors:
+  - charm
+  - fitness
+  - dance
+  - clothes
+  - underwear
+  - cinema
+  - not_restaurant
+  - not_shooting
+  - hung
+  - not_smalldick
+heronickname:
+  Sugar: samantha.flags.mikeNickname in nickname_sugar
+  Baby: samantha.flags.mikeNickname in nickname_baby
+  Smooth rider: samantha.flags.mikeNickname in nickname_smooth_rider
+  Sweetheart: samantha.flags.mikeNickname in nickname_sweetheart
+  Muffin: samantha.flags.mikeNickname in nickname_muffin
+schedule:
+  default:
+    '1245':
+      '1':
+        - room: pub
+          activity: drink
+          clothes: casual
+      '6':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '18':
+        - room: bakery
+          activity: work
+          clothes: casual
+      '23':
+        - room: pub
+          activity: drink
+          clothes: casual
+        - room: None
+          activity: sleep
+          clothes: underwear
+    '3':
+      '1':
+        - room: pub
+          activity: play
+          clothes: casual
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '9':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '12':
+        - room: bakery
+          activity: work
+          clothes: casual
+      '14':
+        - room: gymreception
+          activity: none
+          clothes: sport
+        - room: coffeeshop
+          activity: eating
+          clothes: casual
+        - room: None
+          activity: None
+          clothes: casual
+      '16':
+        - room: pond
+          activity: study
+          clothes: casual
+      '18':
+        - room: pond
+          activity: study
+          clothes: casual
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: bookstore
+          activity: shop
+          clothes: casual
+      '23':
+        - room: pub
+          activity: drink
+          clothes: casual
+    '6':
+      '3':
+        - room: pub
+          activity: play
+          clothes: casual
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '10':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '12':
+        - room: gymreception
+          activity: none
+          clothes: sport
+          seasons: '23'
+        - room: waterpark2
+          activity: swim
+          clothes: swimsuit
+          seasons: '01'
+      '16':
+        - room: pond
+          activity: study
+          clothes: casual
+      '18':
+        - room: mall1
+          activity: shop
+          clothes: casual
+        - room: mall2
+          activity: shop
+          clothes: casual
+        - room: pond
+          activity: study
+          clothes: casual
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: bookstore
+          activity: shop
+          clothes: casual
+      '23':
+        - room: pub
+          activity: drink
+          clothes: casual
+    '7':
+      '5':
+        - room: nightclub
+          activity: dance
+          clothes: date
+      '14':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '18':
+        - room: pond
+          activity: rest
+          clothes: casual
+        - room: waterpark2
+          activity: swim
+          clothes: swimsuit
+          seasons: '01'
+      '23':
+        - room: pub
+          activity: drink
+          clothes: casual
+  harem:
+    '12':
+      '1':
+        - room: pub
+          activity: drink
+          clothes: casual
+      '5':
+        - room: bedroom2
+          activity: sleep
+          clothes: underwear
+        - room: bedroom3
+          activity: sleep
+          clothes: underwear
+      '6':
+        - room: bathroom
+          activity: brush
+          clothes: underwear
+      '18':
+        - room: bakery
+          activity: work
+          clothes: casual
+      '20':
+        - room: kitchen
+          activity: eat
+          clothes: casual
+      '21':
+        - room: bathroom
+          activity: brush
+          clothes: underwear
+      '23':
+        - room: pub
+          activity: drink
+          clothes: casual
+        - room: None
+          activity: sleep
+          clothes: underwear
+    '3':
+      '1':
+        - room: pub
+          activity: play
+          clothes: casual
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '8':
+        - room: bedroom3
+          activity: sleep
+          clothes: underwear
+        - room: bedroom2
+          activity: sleep
+          clothes: underwear
+      '9':
+        - room: bathroom
+          activity: brush
+          clothes: underwear
+      '12':
+        - room: bakery
+          activity: work
+          clothes: casual
+      '14':
+        - room: gymreception
+          activity: none
+          clothes: sport
+        - room: coffeeshop
+          activity: eating
+          clothes: casual
+        - room: None
+          activity: None
+          clothes: casual
+      '16':
+        - room: pond
+          activity: study
+          clothes: casual
+      '18':
+        - room: livingroom
+          activity: tv
+          clothes: casual
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: bookstore
+          activity: shop
+          clothes: casual
+      '23':
+        - room: pub
+          activity: drink
+          clothes: casual
+    '45':
+      '1':
+        - room: pub
+          activity: drink
+          clothes: casual
+      '5':
+        - room: bedroom5
+          activity: sleep
+          clothes: underwear
+          conditions:
+            - 'Room.find("bedroom5") and not Room.find("bedroom5").hidden'
+        - room: bedroom2
+          activity: sleep
+          clothes: underwear
+        - room: bedroom3
+          activity: sleep
+          clothes: underwear
+      '6':
+        - room: bathroom
+          activity: brush
+          clothes: underwear
+      '18':
+        - room: bakery
+          activity: work
+          clothes: casual
+      '20':
+        - room: kitchen
+          activity: eat
+          clothes: casual
+      '21':
+        - room: bathroom
+          activity: brush
+          clothes: underwear
+      '23':
+        - room: pub
+          activity: drink
+          clothes: casual
+        - room: None
+          activity: sleep
+          clothes: underwear
+    '6':
+      '3':
+        - room: pub
+          activity: play
+          clothes: casual
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '10':
+        - room: bedroom2
+          activity: sleep
+          clothes: underwear
+        - room: bedroom3
+          activity: sleep
+          clothes: underwear
+      '11':
+        - room: bathroom
+          activity: bath
+          clothes: naked
+      '12':
+        - room: gymreception
+          activity: none
+          clothes: sport
+          seasons: '23'
+        - room: waterpark2
+          activity: swim
+          clothes: swimsuit
+          seasons: '01'
+      '16':
+        - room: pool
+          activity: sunbath
+          clothes: swimsuit
+          seasons: '01'
+        - room: livingroom
+          activity: read
+          clothes: casual
+      '18':
+        - room: pool
+          activity: sunbath
+          clothes: swimsuit
+          seasons: '01'
+        - room: mall1
+          activity: shop
+          clothes: casual
+        - room: mall2
+          activity: shop
+          clothes: casual
+        - room: pond
+          activity: study
+          clothes: casual
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: bookstore
+          activity: shop
+          clothes: casual
+      '23':
+        - room: pub
+          activity: drink
+          clothes: casual
+    '7':
+      '5':
+        - room: nightclub
+          activity: dance
+          clothes: date
+      '14':
+        - room: bedroom3
+          activity: sleep
+          clothes: underwear
+        - room: bedroom2
+          activity: sleep
+          clothes: underwear
+      '15':
+        - room: kitchen
+          activity: eat
+          clothes: casual
+      '16':
+        - room: livingroom
+          activity: read
+          clothes: casual
+      '18':
+        - room: pond
+          activity: rest
+          clothes: casual
+        - room: waterpark2
+          activity: swim
+          clothes: swimsuit
+          seasons: '01'
+      '23':
+        - room: livingroom
+          activity: tv
+          clothes: casual
+        - room: pub
+          activity: drink
+          clothes: casual

@@ -1,0 +1,115 @@
+name: Aletta's hobbies
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Aletta#Aletta%E2%80%99s_hobbies"
+description: "Aletta gave me a ride on her motorcycle, and that is leading to more activities."
+participants:
+  - aletta
+conditions:
+  - "'aletta_event_03b' in DONE"
+  - "aletta.flags.sidestory or not aletta.flags.cancel_sidestory"
+start:
+  - charm70
+  - love70
+
+outcomes:
+  accepted:
+    description: I showed my shooting skills to Aletta
+    condition: '"aletta_event_05b" in DONE'
+  declined:
+    description: I put an end to these activities by refusing.
+    conditions:
+      - "'aletta_event_03b' in DONE"
+      - "(aletta.flags.sidestory < 1) or aletta.flags.cancel_sidestory"
+    icon: fail
+  gone:
+    description: Aletta has left and is no longer part of my life.
+    condition: aletta.is_gone_forever
+    icon: fail
+
+steps:
+  charm70:
+    name: Be charming enough for Aletta to notice me
+    conditions:
+      - "'aletta_event_03b' in DONE"
+      - "aletta.flags.sidestory or not aletta.flags.cancel_sidestory"
+    percentage:
+      value: hero.charm.val
+      scale: 70
+    outcome:
+      hide: True
+      condition: hero.charm >= 70
+
+  love70:
+    name: Get to know Aletta better
+    conditions:
+      - "'aletta_event_03b' in DONE"
+      - "aletta.flags.sidestory or not aletta.flags.cancel_sidestory"
+    percentage:
+      value: aletta.love.val
+      scale: 70
+    outcome:
+      hide: True
+      condition: aletta.love >= 70
+
+  aletta_event_04b:
+    name: Aletta will call on a weekend morning
+    related_event: aletta_event_04b
+    conditions:
+      - hero.charm >= 70
+      - aletta.love >= 70
+    outcomes:
+      accepted:
+        description: I went with Aletta to the shooting range
+        next:
+          - charm90
+          - love100
+        conditions:
+          - '"aletta_event_04b" in DONE'
+          - aletta.flags.sidestory >= 2
+          - not aletta.flags.cancel_sidestory
+      decline:
+        next: declined
+        description: Aletta offered to go to the shooting range with me, and I declined.
+        icon: fail
+        conditions:
+          - '"aletta_event_04b" in DONE'
+          - "aletta.flags.sidestory < 2 or aletta.flags.cancel_sidestory"
+
+  charm90:
+    name: Be charming enough for Aletta to notice me
+    conditions:
+      - '"aletta_event_04b" in DONE'
+      - not aletta.flags.cancel_sidestory
+    percentage:
+      value: hero.charm.val
+      scale: 90
+    outcome:
+      hide: True
+      condition: hero.charm >= 90
+
+  love100:
+    name: Get to know Aletta better
+    conditions:
+      - '"aletta_event_04b" in DONE'
+      - not aletta.flags.cancel_sidestory
+    percentage:
+      value: aletta.love.val
+      scale: 100
+    outcome:
+      hide: True
+      condition: aletta.love >= 100
+
+  aletta_event_05b:
+    name: Aletta will call again on a weekend morning
+    related_event: aletta_event_05b
+    conditions:
+      - hero.charm >= 90
+      - aletta.love >= 100
+      - '"aletta_event_04b" in DONE'
+      - not aletta.flags.cancel_sidestory
+    outcomes:
+      accepted:
+        description: I went with Aletta to the shooting range again
+        conditions:
+          - '"aletta_event_05b" in DONE'
+          - aletta.flags.sidestory >= 2
+        next: None

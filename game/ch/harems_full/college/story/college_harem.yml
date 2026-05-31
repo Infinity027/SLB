@@ -1,0 +1,69 @@
+name: College Harem
+wiki_link: "https://wiki.andrealphusgames.com/wiki/College_Harem"
+short: "{image=notify anna}{image=notify bree} · College Harem"
+type: harem
+description: "Bree doesn't look very serious about her studies. Perhaps she just needs some motivation!"
+participants:
+  - hero
+  - anna
+  - bree
+conditions:
+  - anna.sexperience >= 1
+  - bree.sexperience >= 1
+
+outcomes:
+  contestwin:
+    description: Anna and Bree can rule the world!
+    conditions:
+      - '"science_project_04" in DONE'
+  nohelper:
+    description: Since I let down Anna and Bree, nobody talks about their contest anymore.
+    conditions:
+      - '"science_project_03" in DONE'
+      - not game.flags.sciencehelper
+    icon: fail
+  anna_left:
+    description: Anna left the city, I don't think Bree will be able to continue her science project.
+    conditions:
+      - anna.is_gone_forever
+    icon: fail
+  bree_left:
+    description: Bree left the city, I don't think Anna will be able to continue her science project.
+    conditions:
+      - bree.is_gone_forever
+    icon: fail
+
+steps:
+  science_project_01:
+    name: Join Bree in the kitchen during morning
+    related_event: science_project_01
+    outcome:
+      condition: '"science_project_01" in DONE'
+
+  science_project_02:
+    name: At college, set up a meeting between Bree and Anna
+    related_event: science_project_02
+    outcome:
+      condition: '"science_project_02" in DONE'
+
+  science_project_03:
+    name: Be brave! Help Bree and Anna in their little science project
+    related_event: science_project_03
+    outcomes:
+      success:
+        conditions:
+          - '"science_project_03" in DONE'
+          - game.flags.sciencehelper
+      fail:
+        icon: fail
+        next: None
+        conditions:
+          - '"science_project_03" in DONE'
+          - not game.flags.sciencehelper
+
+  science_project_04:
+    name: At college, check how Anna and Bree will conquer the world
+    related_event: science_project_04
+    outcome:
+      condition: '"science_project_04" in DONE'
+      next: None

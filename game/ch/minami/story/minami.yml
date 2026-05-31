@@ -1,0 +1,260 @@
+name: Minami
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Minami"
+short: "{image=notify minami} · Minami"
+description: "Minami is my adopted little sister, she is kinda weird sometimes."
+participants:
+  - minami
+conditions:
+  - hero.is_male
+  - '"minami_event_01" in DONE'
+
+outcomes:
+  nomovein:
+    description: Minami asked to move in with me. I said no.
+    conditions:
+      - minami.flags.nomovein
+    icon: fail
+  gone:
+    description: Minami has moved out and is no longer part of my life.
+    conditions:
+      - minami.is_gone_forever
+    icon: fail
+  engaged:
+    condition: minami.flags.engagedmike
+    description: Minami has agreed to marry me!
+
+steps:
+  minami_event_02:
+    name: Wait for Minami to call me
+    related_event: minami_event_02
+    condition: '"minami_event_01" in DONE'
+    outcomes:
+      gone:
+        condition: minami.is_gone_forever
+        description: Minami is no longer part of my life.
+        next: None
+      complete:
+        condition: '"minami_event_02" in DONE'
+        description: Minami will move in.
+
+  minami_event_03:
+    name: Wait for Minami to move in
+    related_event: minami_event_03
+    conditions:
+      - '"minami_event_02" in DONE'
+      - 'not minami.hidden'
+    outcome:
+      condition: '"minami_event_03" in DONE'
+      next: None
+
+  minami_siscon100:
+    name: Increase your bond with Minami
+    conditions:
+      - '"minami_event_03" in DONE'
+      - minami.siscon < 100
+    percentage:
+      value: minami.siscon.val
+      scale: 100
+    outcome:
+      condition: minami.siscon.val >= 100
+      hide: True
+
+  angela_visit:
+    name: Be at home on a weekend afternoon (complete Minami's attraction before)
+    related_event: angela_visit
+    condition: minami.sexperience >= 1
+    outcome:
+      condition: '"angela_visit" in DONE'
+      next:
+        - dating_minami
+        - minami_love_nightclub
+        - minami_love_beach
+        - minami_love_cinema
+        - minami_love_home
+        - minami_love_mall
+        - minami_love_park
+        - minami_love_pub
+        - minami_love_restaurant
+        - minami_love_waterpark
+
+  dating_minami:
+    name: Take Minami on a lot of dates
+    condition: minami.love.max < 200
+    percentage:
+      value: minami.love.max
+      scale: 200
+    outcome:
+      condition: minami.love.max == 200
+
+  minami_love_nightclub:
+    name: Go on a date in the nightclub with Minami
+    related_event: minami_love_nightclub
+    condition: '"angela_visit" in DONE'
+    outcome:
+      condition: '"minami_love_nightclub" in DONE'
+
+  minami_love_beach:
+    name: Go on a date at the beach with Minami
+    related_event: minami_love_beach
+    condition: '"angela_visit" in DONE'
+    outcome:
+      condition: '"minami_love_beach" in DONE'
+
+  minami_love_cinema:
+    name: Go on a date at the cinema with Minami
+    related_event: minami_love_cinema
+    condition: '"angela_visit" in DONE'
+    outcome:
+      condition: '"minami_love_cinema" in DONE'
+
+  minami_love_home:
+    name: Go on a date at home with Minami
+    related_event: minami_love_home
+    condition: '"angela_visit" in DONE'
+    outcome:
+      condition: '"minami_love_home" in DONE'
+
+  minami_love_mall:
+    name: Go on a date at the mall with Minami
+    related_event: minami_love_mall
+    condition: '"angela_visit" in DONE'
+    outcome:
+      condition: '"minami_love_mall" in DONE'
+
+  minami_love_park:
+    name: Go on a date at the park with Minami
+    related_event: minami_love_park
+    condition: '"angela_visit" in DONE'
+    outcome:
+      condition: '"minami_love_park" in DONE'
+
+  minami_love_pub:
+    name: Go on a date at the pub with Minami
+    related_event: minami_love_pub
+    condition: '"angela_visit" in DONE'
+    outcome:
+      condition: '"minami_love_pub" in DONE'
+
+  minami_love_restaurant:
+    name: Go on a date at the restaurant with Minami
+    related_event: minami_love_restaurant
+    condition: '"angela_visit" in DONE'
+    outcome:
+      condition: '"minami_love_restaurant" in DONE'
+
+  minami_love_waterpark:
+    name: Go on a date at the waterpark with Minami
+    related_event: minami_love_waterpark
+    condition: '"angela_visit" in DONE'
+    outcome:
+      condition: '"minami_love_waterpark" in DONE'
+
+  minami_event_04:
+    name: Be at home in the afternoon when Minami is here
+    related_event: minami_event_04
+    conditions:
+      - minami.love >= 160
+      - minami.siscon >= 100
+      - minami.sexperience >= 1
+    outcome:
+      condition: '"minami_event_04" in DONE'
+
+  minami_snooping:
+    name: Minami suspects something
+    related_event: minami_snooping
+    toggle: True
+    conditions:
+      - minami.sexperience >= 1
+      - Harem.find_by_name('home')
+      - not game.flags.ongoinghomeharem
+    outcomes:
+      success:
+        conditions:
+          - '"minami_snooping" in DONE'
+          - minami.flags.haremdenied < 3
+        next:
+          - None
+      fail:
+        hide: True
+        conditions:
+          - not minami.flags.harem_home
+          - '"minami_snooping" in DONE'
+        next:
+          - None
+
+  haircut:
+    name: "Minami wonders about Sasha blonde hair"
+    related_event: minami_likes_blondes
+    optional: True
+    conditions:
+      - '"sasha_likes_blondes_2" in DONE'
+    outcome:
+      condition: '"minami_likes_blondes" in DONE'
+
+  minami_fuck_bathroom:
+    name: Fuck Minami in the shower
+    conditions:
+      - minami.love >= 150
+      - '"minami_event_03" in DONE'
+    outcome:
+      condition: minami.flags.showersex
+
+  date:
+    name: Go on a date with Minami
+    condition: True
+    outcome:
+      condition: minami.flags.dates >= 1
+      next: birthday_date
+
+  birthday_date:
+    name: Take Minami out on a night date for her birthday
+    condition: minami.flags.dates >= 1
+    outcome:
+      condition: '"minami_birthday_date_male" in DONE'
+      next: None
+
+  sex:
+    name: Have sex with Minami
+    condition: True
+    outcome:
+      condition: minami.sexperience >= 1
+      next: None
+
+  love:
+    name: Get Minami to fall in love with me
+    condition: True
+    percentage:
+      value: minami.love.val
+      scale: 200
+    outcome:
+      condition: minami.love.val == 200
+      next: None
+
+  ring:
+    name: Buy a wedding ring
+    condition: True
+    outcome:
+      condition: hero.has_item("wedding_ring")
+
+  propose:
+    name: Propose to Minami
+    condition: hero.has_item("wedding_ring")
+    outcome:
+      condition: minami.flags.engagedmike
+      next: None
+
+  preg:
+    name: Get Minami pregnant
+    optional: True
+    condition: True
+    outcome:
+      condition: minami.flags.pregnancies_number > 0
+      next: None
+
+  slave:
+    name: Make Minami my sex slave
+    optional: True
+    condition: True
+    outcome:
+      condition: minami.is_sex_slave
+      next: None

@@ -1,0 +1,72 @@
+name: Harmony and Lexi
+display_name: Good/Evil Harem
+short: "{image=notify harmony}{image=notify lexi} · Good/Evil Harem"
+type: harem
+description: "Having slept with both Harmony and Lexi, how will this end?"
+participants:
+  - harmony
+  - lexi
+
+conditions:
+  - harmony.love >= 125
+  - lexi.love >= 125
+  - harmony.flags.blowjob
+
+outcomes:
+  harmony_left:
+    description: Harmony left.
+    conditions:
+      - harmony.is_gone_forever
+    icon: fail
+  lexi_left:
+    description: Lexi left.
+    conditions:
+      - lexi.is_gone_forever
+    icon: fail
+  goodevil_harem:
+    conditions:
+      - Harem.together('harmony', 'lexi', name='goodevil')
+      - harmony.flags.engagedmike
+      - lexi.flags.engagedmike
+    description: Harmony and Lexi agreed to marry me!
+
+steps:
+  harmony_lexi_sex:
+    name: Have sex with Harmony & Lexi within 7 days
+    conditions:
+      - harmony.sexperience >= 1
+      - lexi.sexperience >= 1
+      - 'not Person.showdown(harmony, lexi)'
+      - '"harmony_lexi_showdown" not in DONE'
+    toggle: True
+    outcome:
+      condition: Person.showdown(harmony, lexi)
+
+  harmony_lexi_showdown:
+    name: Go on a date at the beach with Lexi
+    related_event: harmony_lexi_showdown
+    conditions:
+      - Person.showdown(harmony, lexi)
+    outcomes:
+      success:
+        conditions:
+          - "'harmony_lexi_showdown' in DONE"
+          - Harem.together('harmony', 'lexi', name='goodevil')
+      fail:
+        next: None
+        conditions:
+          - "'harmony_lexi_showdown' in DONE"
+          - "harmony.is_gone_forever or lexi.is_gone_forever"
+
+  goodevil_harem_event_01:
+    name: Ask Harmony and Lexi on a date
+    conditions:
+      - Harem.together('harmony', 'lexi', name='goodevil')
+    outcome:
+      condition: '"goodevil_harem_event_01" in DONE'
+
+#  harmony_lexi_stalled:
+#    icon: stalled
+#    name: That's all of for this story for now
+#    outcome:
+#      condition: False

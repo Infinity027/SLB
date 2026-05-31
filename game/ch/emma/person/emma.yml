@@ -1,0 +1,431 @@
+---
+name: Emma
+class: Girl
+age: 22
+status: friend
+gender: female
+flags:
+  nodrink: true
+  nodate: true
+  nokiss: true
+  hidden: true
+piercings:
+  navel:
+    outfits:
+      - naked
+      - swimsuit
+      - sexyswimsuit
+      - sport
+  clit:
+    outfits:
+      - naked
+  nipples:
+    outfits:
+      - naked
+  tongue:
+    expressions:
+      - happy
+      - angry
+  lips:
+    expressions:
+      - happy
+      - sad
+      - angry
+      - blush
+      - normal
+  nose: {}
+birthday:
+  - spring
+  - 27
+traits:
+  - playful
+  - family
+  - geek
+  - innocent
+  - not_rebel
+  - low fertility
+desire_factors:
+  - charm
+  - knowledge
+  - home
+  - park
+  - manga
+  - teddybear
+  - sickness
+  - sickness
+  - sickness
+  - sickness
+  - sickness
+heronickname:
+  Honey: emma.flags.mikeNickname in nickname_honey
+  Dreamboat: emma.flags.mikeNickname in nickname_dreamboat
+  Senpai: emma.flags.mikeNickname in nickname_senpai
+  My Prince: emma.flags.mikeNickname in nickname_my_prince
+  My King: emma.flags.mikeNickname in nickname_my_king
+schedule:
+  default:
+    '1':
+      '6':
+        - room: None
+          activity: sleep
+          clothes: naked
+      '10':
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '11':
+        - room: classroom
+          activity: teach
+          clothes: casual
+      '12':
+        - room: university
+          activity: None
+          clothes: casual
+      '13':
+        - room: None
+          activity: eat_uni
+          clothes: casual
+      '14':
+        - room: university
+          activity: None
+          clothes: casual
+      '17':
+        - room: classroom
+          activity: teach
+          clothes: casual
+      '18':
+        - room: university
+          activity: None
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: bookstore
+          activity: shop
+          clothes: casual
+        - room: park
+          activity: train
+          clothes: sport
+        - room: gymlockers
+          activity: rest
+          clothes: sport
+      '20':
+        - room: park
+          activity: train
+          clothes: sport
+        - room: cinema
+          activity: watch
+          clothes: casual
+      '22':
+        - room: None
+          activity: None
+          clothes: casual
+        - room: pubexterior
+          activity: drink
+          clothes: casual
+      '24':
+        - room: None
+          activity: sleep
+          clothes: naked
+    '2':
+      '6':
+        - room: None
+          activity: sleep
+          clothes: naked
+      '10':
+        - room: bakery
+          activity: shop
+          clothes: casual
+      '11':
+        - room: classroom
+          activity: teach
+          clothes: casual
+      '12':
+        - room: university
+          activity: None
+          clothes: casual
+      '13':
+        - room: None
+          activity: eat_uni
+          clothes: casual
+      '14':
+        - room: university
+          activity: None
+          clothes: casual
+      '17':
+        - room: classroom
+          activity: teach
+          clothes: casual
+      '18':
+        - room: university
+          activity: None
+          clothes: casual
+        - room: bookstore
+          activity: shop
+          clothes: casual
+        - room: park
+          activity: train
+          clothes: sport
+        - room: gymlockers
+          activity: rest
+          clothes: sport
+        - room: bakery
+          activity: shop
+          clothes: casual
+      '20':
+        - room: park
+          activity: train
+          clothes: sport
+        - room: cinema
+          activity: watch
+          clothes: casual
+      '22':
+        - room: None
+          activity: None
+          clothes: casual
+        - room: pubexterior
+          activity: drink
+          clothes: casual
+        - room: park
+          activity: train
+          clothes: sport
+      '24':
+        - room: None
+          activity: sleep
+          clothes: naked
+    '34':
+      '6':
+        - room: None
+          activity: sleep
+          clothes: naked
+      '10':
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: bakery
+          activity: shop
+          clothes: casual
+      '11':
+        - room: classroom
+          activity: teach
+          clothes: casual
+      '12':
+        - room: university
+          activity: None
+          clothes: casual
+      '13':
+        - room: None
+          activity: eat_uni
+          clothes: casual
+      '14':
+        - room: university
+          activity: None
+          clothes: casual
+      '17':
+        - room: classroom
+          activity: teach
+          clothes: casual
+      '18':
+        - room: bakery
+          activity: shop
+          clothes: casual
+        - room: university
+          activity: None
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: bookstore
+          activity: shop
+          clothes: casual
+        - room: park
+          activity: train
+          clothes: sport
+        - room: gymlockers
+          activity: rest
+          clothes: sport
+      '20':
+        - room: park
+          activity: train
+          clothes: sport
+        - room: cinema
+          activity: watch
+          clothes: casual
+      '22':
+        - room: None
+          activity: None
+          clothes: casual
+        - room: pubexterior
+          activity: drink
+          clothes: casual
+      '24':
+        - room: None
+          activity: sleep
+          clothes: naked
+    '5':
+      '6':
+        - room: None
+          activity: sleep
+          clothes: naked
+      '10':
+        - room: bakery
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '11':
+        - room: classroom
+          activity: teach
+          clothes: casual
+      '12':
+        - room: university
+          activity: None
+          clothes: casual
+      '13':
+        - room: None
+          activity: eat_uni
+          clothes: casual
+      '14':
+        - room: university
+          activity: None
+          clothes: casual
+      '17':
+        - room: classroom
+          activity: teach
+          clothes: casual
+      '18':
+        - room: university
+          activity: None
+          clothes: casual
+        - room: bakery
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: bookstore
+          activity: shop
+          clothes: casual
+        - room: park
+          activity: train
+          clothes: sport
+        - room: gymlockers
+          activity: rest
+          clothes: sport
+      '20':
+        - room: park
+          activity: train
+          clothes: sport
+        - room: cinema
+          activity: watch
+          clothes: casual
+      '22':
+        - room: pubexterior
+          activity: drink
+          clothes: casual
+        - room: None
+          activity: None
+          clothes: casual
+        - room: park
+          activity: train
+          clothes: sport
+      '24':
+        - room: None
+          activity: sleep
+          clothes: naked
+    '6':
+      '8':
+        - room: None
+          activity: sleep
+          clothes: naked
+      '10':
+        - room: bakery
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '12':
+        - room: gymlockers
+          activity: rest
+          clothes: sport
+      '18':
+        - room: bakery
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: bookstore
+          activity: shop
+          clothes: casual
+        - room: park
+          activity: train
+          clothes: sport
+        - room: gymlockers
+          activity: rest
+          clothes: sport
+      '22':
+        - room: pubexterior
+          activity: drink
+          clothes: casual
+        - room: None
+          activity: None
+          clothes: casual
+        - room: park
+          activity: train
+          clothes: sport
+      '24':
+        - room: None
+          activity: sleep
+          clothes: naked
+    '7':
+      '8':
+        - room: None
+          activity: sleep
+          clothes: naked
+      '10':
+        - room: bakery
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: church
+          activity: pray
+          clothes: casual
+      '12':
+        - room: gymlockers
+          activity: rest
+          clothes: sport
+      '18':
+        - room: bakery
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: bookstore
+          activity: shop
+          clothes: casual
+        - room: park
+          activity: train
+          clothes: sport
+        - room: gymlockers
+          activity: rest
+          clothes: sport
+      '22':
+        - room: park
+          activity: train
+          clothes: sport
+        - room: None
+          activity: None
+          clothes: casual
+        - room: pubexterior
+          activity: drink
+          clothes: casual
+      '24':
+        - room: None
+          activity: sleep
+          clothes: naked

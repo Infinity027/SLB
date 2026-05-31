@@ -1,0 +1,225 @@
+name: Audrey, Palla and Cassidy
+display_name: Bitchy Harem - Cassidy
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Bitchy_Harem"
+short: "{image=notify audrey}{image=notify palla}{image=notify cassidy} · Bitchy Harem"
+type: harem
+description:
+  - description: "Audrey and Palla found out for me and Cassidy."
+  - description: Cassidy is now part of the harem.
+    condition: Harem.find('cassidy', name='bitchy')
+participants:
+  - audrey
+  - palla
+  - cassidy
+
+start:
+  - cles
+  - clove160
+  - ales
+  - alove160
+  - ples
+  - plove160
+
+conditions:
+  - Harem.together(audrey, palla, name='bitchy')
+
+outcomes:
+  full_harem:
+    conditions:
+      - Harem.together(audrey, palla, cassidy, name='bitchy')
+      - audrey.flags.engagedmike
+      - palla.flags.engagedmike
+      - cassidy.flags.engagedmike
+    description: Audrey, Cassidy and Palla agreed to marry me!
+  audrey_left:
+    condition: audrey.is_gone_forever
+    description: Audrey has left town. I don't think the other two will want to keep this relationship without her...
+    icon: fail
+  cassidy_left:
+    condition: cassidy.is_gone_forever
+    description: Cassidy has left town. Fortunately I still have Audrey and Palla.
+    icon: fail
+  palla_left:
+    condition: palla.is_gone_forever
+    description: Palla has left town. I don't think the other two will want to keep this relationship without her...
+    icon: fail
+
+steps:
+  cles:
+    name: Make sure Cassidy is amenable to sex with other women
+    condition: True
+    percentage:
+      value: cassidy.lesbian.val
+      scale: 10
+    outcome:
+      hide: True
+      condition: cassidy.lesbian >= 10
+
+  clestoomuch:
+    name: Make sure Cassidy is amenable to sex with men
+    condition: cassidy.lesbian > 11
+    percentage:
+      value: 20 - cassidy.lesbian.val
+      scale: 10
+    outcome:
+      hide: True
+      condition: cassidy.lesbian <= 10
+
+  clove160:
+    name: Get to know Cassidy better
+    percentage:
+      value: cassidy.love.val
+      scale: 160
+    outcome:
+      hide: True
+      condition: cassidy.love >= 160
+
+  ales:
+    name: Make sure Audrey is amenable to sex with other women
+    condition: True
+    percentage:
+      value: audrey.lesbian.val
+      scale: 10
+    outcome:
+      hide: True
+      condition: audrey.lesbian >= 10
+
+  alestoomuch:
+    name: Make sure Audrey is amenable to sex with men
+    condition: audrey.lesbian > 11
+    percentage:
+      value: 20 - audrey.lesbian.val
+      scale: 10
+    outcome:
+      hide: True
+      condition: audrey.lesbian <= 10
+
+  alove160:
+    name: Get to know Audrey better
+    percentage:
+      value: audrey.love.val
+      scale: 160
+    outcome:
+      hide: True
+      condition: audrey.love >= 160
+
+  ples:
+    name: Make sure Palla is amenable to sex with other women
+    condition: True
+    percentage:
+      value: palla.lesbian.val
+      scale: 10
+    outcome:
+      hide: True
+      condition: palla.lesbian >= 10
+
+  plestoomuch:
+    name: Make sure Palla is amenable to sex with men
+    condition: palla.lesbian > 11
+    percentage:
+      value: 20 - palla.lesbian.val
+      scale: 10
+    outcome:
+      hide: True
+      condition: palla.lesbian <= 10
+
+  plove160:
+    name: Get to know Palla better
+    percentage:
+      value: palla.love.val
+      scale: 160
+    outcome:
+      hide: True
+      condition: palla.love >= 160
+
+  cassidy_audrey_showdown_check:
+    name: Have a hot coffee with Cassidy and Audrey within 7 days
+    condition: Harem.together("audrey", "palla", name="bitchy")
+    outcome:
+      condition: 'Person.showdown(cassidy, audrey) or "cassidy_audrey_showdown" in DONE'
+      hide: True
+
+  cassidy_audrey_showdown:
+    name: Be at your desk while Cassidy and Audrey are at work.
+    related_event: cassidy_audrey_showdown
+    condition: Person.showdown(cassidy, audrey)
+    outcomes:
+      success:
+        condition: '"cassidy_audrey_showdown" in DONE'
+      fail:
+        next: None
+        conditions:
+          - '"cassidy_audrey_showdown" in DONE'
+          - 'cassidy.hidden or audrey.hidden'
+
+  cassidy_palla_showdown_check:
+    name: Have a hot coffee with Cassidy and Palla within 7 days
+    condition: Harem.together("audrey", "palla", name="bitchy")
+    outcome:
+      condition: 'Person.showdown(cassidy, palla) or "cassidy_palla_showdown" in DONE'
+      hide: True
+
+  cassidy_palla_showdown:
+    name: Go on a date in the nightclub with Cassidy.
+    related_event: cassidy_palla_showdown
+    condition: Person.showdown(cassidy, palla)
+    outcomes:
+      success:
+        condition: '"cassidy_palla_showdown" in DONE'
+      fail:
+        next: None
+        conditions:
+          - '"cassidy_palla_showdown" in DONE'
+          - 'cassidy.hidden or palla.hidden'
+
+  bitchy_harem_foursome_request:
+    name: Be at the mall or nightclub.
+    related_event: bitchy_harem_foursome_request
+    condition: Harem.together("audrey", "cassidy", "palla", name="bitchy")
+    outcomes:
+      success:
+        conditions:
+          - '"bitchy_harem_foursome_request" in DONE'
+          - Harem.together("audrey", "cassidy", "palla", name="bitchy")
+      fail:
+        next: None
+        conditions:
+          - '"bitchy_harem_foursome_request" in DONE'
+          - not Harem.together("audrey", "cassidy", "palla", name="bitchy")
+
+  bitchy_harem_foursome_ask_cassidy:
+    name: Ask Cassidy about the foursome.
+    related_event: bitchy_harem_foursome_ask_cassidy
+    conditions:
+      - '"bitchy_harem_foursome_request" in DONE'
+      - Harem.together("audrey", "cassidy", "palla", name="bitchy")
+    outcomes:
+      success:
+        conditions:
+          - '"bitchy_harem_foursome_ask_cassidy" in DONE'
+          - cassidy.flags.bitchyHaremAgree
+      fail:
+        next: None
+        conditions:
+          - '"bitchy_harem_foursome_ask_cassidy" in DONE'
+          - not cassidy.flags.bitchyHaremAgree
+
+  bitchy_harem_nightclub_encounter:
+    name: Dance with Cassidy in the nightclub.
+    related_event: bitchy_harem_nightclub_encounter
+    conditions:
+      - cassidy.flags.bitchyHaremAgree
+      - Harem.together("audrey", "cassidy", "palla", name="bitchy")
+    outcome:
+      condition: '"bitchy_harem_nightclub_encounter" in DONE'
+      next: None
+
+  propose_audrey_palla_cassidy:
+    name: Propose to Audrey, Cassidy and Palla
+    conditions:
+      - Harem.together(audrey, palla, cassidy, name='bitchy')
+    outcome:
+      conditions:
+        - audrey.flags.engagedmike
+        - cassidy.flags.engagedmike
+        - palla.flags.engagedmike

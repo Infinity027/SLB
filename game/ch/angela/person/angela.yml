@@ -1,0 +1,247 @@
+---
+name: Angela
+family_name: Seeker
+class: Girl
+age: 35
+status: "[mike.name]'s mom"
+gender: female
+flags:
+ hidden: true
+attributes:
+  love:
+    min: 0
+    max: 20
+    default: 0
+  sub:
+    min: 0
+    max: 10
+    default: 0
+  lesbian:
+    min: 0
+    max: 20
+    default: 0
+  sexperience:
+    min: 0
+    max: null
+    default: 0
+piercings:
+  ears:
+    outfits:
+      - all
+    pierced: true
+  navel:
+    outfits:
+      - underwear
+      - sport
+      - sexydate
+      - sexyswimsuit
+      - naked
+    pierced: false
+  clit:
+    outfits:
+      - underwear
+      - sexydate
+      - sexyswimsuit
+      - naked
+    pierced: false
+  nipples:
+    outfits:
+      - underwear
+      - sexydate
+      - sexyswimsuit
+      - naked
+    pierced: false
+  lips: {}
+  nose:
+    outfits:
+      - all
+    pierced: false
+birthday:
+  - summer
+  - 17
+traits:
+  - family
+  - dominant
+  - not_geek
+desire_factors:
+  - knowledge
+  - fitness
+  - charm
+  - charm
+  - career
+  - clothes
+  - jewelry
+  - not_sweets
+  - career
+  - restaurant
+  - money
+  - money
+  - money
+  - not_video_games
+  - park
+  - mall
+schedule:
+  default:
+    '1234567':
+      '24':
+        - room: None
+          activity: sleep
+          clothes: naked
+  default_female:
+    '1245':
+      '1':
+        - room: pubseat
+          activity: drink
+          clothes: casual
+      '6':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '10':
+        - room: street
+          activity: walk
+          clothes: casual
+      '12':
+        - room: mall1
+          activity: shopping
+          clothes: casual
+      '14':
+        - room: park
+          activity: run
+          clothes: sport
+        #- room: clothesshop
+        #  activity: shop
+        #  clothes: casual
+      '18':
+        - room: park
+          activity: study
+          clothes: casual
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: bookstore
+          activity: shop
+          clothes: casual
+      '23':
+        - room: pubseat
+          activity: drink
+          clothes: casual
+        - room: None
+          activity: sleep
+          clothes: underwear
+    '3':
+      '1':
+        - room: pubseat
+          activity: play
+          clothes: casual
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '9':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '12':
+        - room: park
+          activity: study
+          clothes: casual
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: bookstore
+          activity: shop
+          clothes: casual
+      '14':
+        - room: gym
+          activity: yoga
+          clothes: sport
+        - room: coffeeshop
+          activity: eating
+          clothes: casual
+        - room: None
+          activity: None
+          clothes: casual
+      '16':
+        - room: park
+          activity: study
+          clothes: casual
+      '18':
+        - room: park
+          activity: study
+          clothes: casual
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: bookstore
+          activity: shop
+          clothes: casual
+      '23':
+        - room: pubseat
+          activity: drink
+          clothes: casual
+    '6':
+      '3':
+        - room: pubseat
+          activity: play
+          clothes: casual
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '10':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '12':
+        - room: gym
+          activity: yoga
+          clothes: sport
+          seasons: '23'
+        - room: waterpark
+          activity: swim
+          clothes: swimsuit
+          seasons: '01'
+      '16':
+        - room: park
+          activity: study
+          clothes: casual
+      '18':
+        - room: mall1
+          activity: shop
+          clothes: casual
+        - room: mall2
+          activity: shop
+          clothes: casual
+        - room: park
+          activity: study
+          clothes: casual
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: bookstore
+          activity: shop
+          clothes: casual
+      '23':
+        - room: pubseat
+          activity: drink
+          clothes: casual
+    '7':
+      '5':
+        - room: nightclub
+          activity: dance
+          clothes: date
+      '14':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '18':
+        - room: park
+          activity: rest
+          clothes: casual
+        - room: waterpark
+          activity: swim
+          clothes: swimsuit
+          seasons: '01'
+      '23':
+        - room: pubseat
+          activity: drink
+          clothes: casual

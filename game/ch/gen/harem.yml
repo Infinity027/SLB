@@ -1,0 +1,68 @@
+- id: home
+  members:
+    - sasha
+    - bree
+    - minami
+    - samantha
+    - lexi
+- id: band
+  members:
+    - anna
+    - kleio
+    - sasha
+    - amy
+- id: bitchy
+  members:
+    - palla
+    - audrey
+    - cassidy
+- id: college
+  members:
+    - anna
+    - bree
+- id: criminal
+  members:
+    - camila
+    - lexi
+- id: fashion
+  members:
+    - palla
+    - sasha
+- id: friendly
+  members:
+    - emma
+    - samantha
+- id: jail
+  members:
+    - camila
+    - kylie
+- id: jealous
+  members:
+    - sasha
+    - audrey
+- id: metal
+  members:
+    - scottie
+    - sasha
+- id: office
+  members:
+    - lavish
+    - audrey
+    - aletta
+    - shiori
+- id: pixie
+  members:
+    - kleio
+    - morgan
+- id: sporty
+  members:
+    - ayesha
+    - hanna
+- id: taming
+  members:
+    - ayesha
+    - kylie
+- id: goodevil
+  members:
+    - harmony
+    - lexi

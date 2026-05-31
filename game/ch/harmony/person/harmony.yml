@@ -1,0 +1,234 @@
+---
+name: Harmony
+class: Girl
+age: 24
+status: friend
+gender: female
+flags:
+  nodate: true
+  nokiss: true
+  nosex: true
+  nodance: true
+  hidden: true
+attributes:
+  love:
+    min: 0
+    max: 20
+    default: 0
+  sub:
+    min: 0
+    max: 100
+    default: 0
+  lesbian:
+    min: 0
+    max: 20
+    default: 0
+  purity:
+    min: 80
+    max: 100
+    default: 100
+    lock_bar: min
+  sexperience:
+    min: 0
+    max: null
+    default: 0
+piercings:
+  ears:
+    outfits:
+    - date
+  navel:
+    outfits:
+    - naked
+    - swimsuit
+    - sexyswimsuit
+    - underwear
+    - sport
+  clit:
+    outfits:
+    - naked
+  nipples:
+    outfits:
+    - naked
+  tongue:
+    expressions:
+    - happy
+  nose: {}
+birthday:
+  - fall
+  - 22
+traits:
+  - religious
+  - pacifist
+  - innocent
+  - not_sporty
+desire_factors:
+  - charm
+  - knowledge
+  - work
+  - beach
+  - not_pub
+  - leather_bound_bible
+  - leather_bound_bible
+  - not_high_libido
+  - low_libido
+  - sickness
+  - sickness
+  - sickness
+  - sickness
+  - sickness
+heronickname:
+  My friend: harmony.flags.mikeNickname in nickname_my_friend
+  Stallion: harmony.flags.mikeNickname in nickname_stallion
+  Demon: harmony.flags.mikeNickname in nickname_demon
+  My angel: harmony.flags.mikeNickname in nickname_my_angel
+schedule:
+  default:
+    '12345':
+      '12':
+      - room: None
+        activity: sleep
+        clothes: underwear
+      '14':
+      - room: coffeeshop
+        activity: eat
+        clothes: casual
+      '17':
+      - room: None
+        activity: wait
+        clothes: casual
+      '18':
+      - room: bookstore
+        activity: read
+        clothes: casual
+      '24':
+      - room: None
+        activity: sleep
+        clothes: underwear
+    '6':
+      '12':
+      - room: None
+        activity: sleep
+        clothes: underwear
+      '14':
+      - room: park
+        activity: eat
+        clothes: casual
+      '17':
+      - room: None
+        activity: wait
+        clothes: casual
+      '18':
+      - room: bookstore
+        activity: read
+        clothes: casual
+      '24':
+      - room: None
+        activity: sleep
+        clothes: underwear
+    '7':
+      '8':
+      - room: None
+        activity: sleep
+        clothes: underwear
+      '12':
+      - room: church
+        conditions:
+            - "'innocent' in harmony.traits"
+        activity: pray
+        clothes: casual
+      - room: park
+        conditions:
+            - "'innocent' not in harmony.traits"
+        activity: walk
+        clothes: casual
+      '13':
+      - room: None
+        activity: eat
+        clothes: casual
+      '18':
+      - room: church
+        conditions:
+            - "'innocent' in harmony.traits"
+        activity: pray
+        clothes: casual
+      - room: street
+        conditions:
+            - "'innocent' not in harmony.traits"
+        activity: walk
+        clothes: casual
+      '24':
+      - room: None
+        activity: sleep
+        clothes: underwear
+  stripclub:
+    '12345':
+      '12':
+      - room: None
+        activity: sleep
+        clothes: underwear
+      '14':
+      - room: coffeeshop
+        activity: eat
+        clothes: casual
+      '17':
+      - room: None
+        activity: wait
+        clothes: casual
+      '18':
+      - room: bookstore
+        activity: read
+        clothes: casual
+      '24':
+      - room: stripclub
+        activity: work
+        clothes: stripper
+    '6':
+      '4':
+      - room: stripclub
+        activity: work
+        clothes: stripper
+      '12':
+      - room: None
+        activity: sleep
+        clothes: underwear
+      '14':
+      - room: park
+        activity: eat
+        clothes: casual
+      '17':
+      - room: None
+        activity: wait
+        clothes: casual
+      '18':
+      - room: bookstore
+        activity: read
+        clothes: casual
+      '24':
+      - room: stripclub
+        activity: work
+        clothes: stripper
+    '7':
+      '4':
+      - room: stripclub
+        activity: work
+        clothes: stripper
+      '8':
+      - room: None
+        activity: sleep
+        clothes: underwear
+      '12':
+      - room: street
+        activity: walk
+        clothes: casual
+      '13':
+      - room: None
+        activity: eat
+        clothes: casual
+      '18':
+      - room: church
+        activity: pray
+        clothes: casual
+      '24':
+      - room: stripclub
+        activity: work
+        clothes: stripper

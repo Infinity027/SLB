@@ -1,0 +1,242 @@
+name: Petite Harem
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Petite_Harem"
+short: "{image=notify anna}{image=notify emma}{image=notify kat} · Petite Harem"
+type: harem
+description: "I know some girls that are kinda small."
+participants:
+  - anna
+  - emma
+  - kat
+conditions:
+  - hero.is_male
+  - kat.love >= 100
+  - kat.flags.kiss >= 1
+  - kat.sexperience >= 1
+  - not anna.hidden
+  - not emma.hidden
+
+outcomes:
+  anna_left:
+    description: Unfortunately, Anna left.
+    conditions:
+      - anna.is_gone_forever
+    icon: fail
+  emma_left:
+    description: Unfortunately, Emma left.
+    conditions:
+      - emma.is_gone_forever
+    icon: fail
+  kat_left:
+    description: Unfortunately, Kat left.
+    conditions:
+      - kat.is_gone_forever
+    icon: fail
+  petite_harem_anna_emma_kat:
+    conditions:
+      - Harem.together(anna, emma, kat, name='petite')
+      - anna.flags.engagedmike
+      - emma.flags.engagedmike
+      - kat.flags.engagedmike
+    description: Anna, Emma and Kat agreed to marry me!
+  fail_harem:
+    conditions:
+      - '"petite_harem_event_03" in DONE'
+      - not Harem.together(anna, emma, kat, name='petite')
+    description: We didn't get along enough together for this to continue
+    icon: fail
+
+steps:
+  petite_harem_starts:
+    name: Petite Harem Start
+    condition: True
+    outcome:
+      hide: True
+      condition: True
+      next:
+        - petite_harem_starts_anna_love
+        - petite_harem_starts_emma_love
+
+  petite_harem_starts_anna_love:
+    name: Get to know Anna better
+    condition: True
+    percentage:
+      value: anna.love.val
+      scale: 100
+    outcome:
+      hide: True
+      conditions: anna.love >= 100
+
+  petite_harem_starts_anna_kiss:
+    name: Kiss Anna
+    condition: True
+    outcome:
+      hide: True
+      conditions: anna.flags.kiss >= 1
+
+  petite_harem_starts_anna_sexperience:
+    name: Have sex with Anna
+    condition: True
+    outcome:
+      condition: anna.sexperience >= 1
+
+  petite_harem_event_01:
+    name: Go to the pub when both Anna and Kat are there (not during a date)
+    related_event: petite_harem_event_01
+    conditions:
+      - anna.love >= 100
+      - anna.flags.kiss >= 1
+      - anna.sexperience > 1
+      - kat.love >= 100
+      - kat.flags.kiss >= 1
+      - kat.sexperience >= 1
+    outcomes:
+      emmadone:
+        conditions:
+          - '"petite_harem_event_01" in DONE'
+          - '"petite_harem_event_02" in DONE'
+        next: petite_harem_event_03
+      notemmadone:
+        conditions:
+          - '"petite_harem_event_01" in DONE'
+        next: None
+
+  petite_harem_starts_emma_love:
+    name: Get to know Emma better
+    condition: True
+    percentage:
+      value: emma.love.val
+      scale: 100
+    outcome:
+      hide: True
+      conditions: emma.love >= 100
+
+  petite_harem_starts_emma_kiss:
+    name: Kiss Emma
+    condition: True
+    outcome:
+      hide: True
+      conditions: emma.flags.kiss >= 1
+
+  petite_harem_starts_emma_sexperience:
+    name: Have sex with Emma
+    condition: True
+    outcome:
+      condition: emma.sexperience >= 1
+
+  petite_harem_event_02:
+    name: Go to the park when both Emma and Kat are there (not during a date)
+    related_event: petite_harem_event_02
+    conditions:
+      - emma.love >= 100
+      - emma.flags.kiss >= 1
+      - emma.sexperience > 1
+      - kat.love >= 100
+      - kat.flags.kiss >= 1
+      - kat.sexperience >= 1
+    outcomes:
+      annadone:
+        conditions:
+          - '"petite_harem_event_01" in DONE'
+          - '"petite_harem_event_02" in DONE'
+        next: petite_harem_event_03
+      notannadone:
+        conditions:
+          - '"petite_harem_event_02" in DONE'
+        next: None
+
+  petite_harem_event_03:
+    name: Go to a place where Anna, Emma and Kat are at the same time (not during a date)
+    related_event: petite_harem_event_03
+    conditions:
+      - '"petite_harem_event_01" in DONE'
+      - '"petite_harem_event_02" in DONE'
+    outcomes:
+      annaemmakat:
+        conditions:
+          - '"petite_harem_event_03" in DONE'
+          - Harem.find('anna', name='petite')
+          - Harem.find('emma', name='petite')
+          - Harem.find('kat', name='petite')
+      annaemma:
+        conditions:
+          - '"petite_harem_event_03" in DONE'
+          - Harem.find('anna', name='petite')
+          - Harem.find('emma', name='petite')
+          - not Harem.find('kat', name='petite')
+        next: None
+      annakat:
+        conditions:
+          - '"petite_harem_event_03" in DONE'
+          - Harem.find('anna', name='petite')
+          - not Harem.find('emma', name='petite')
+          - Harem.find('kat', name='petite')
+        next: None
+      emmakat:
+        conditions:
+          - '"petite_harem_event_03" in DONE'
+          - not Harem.find('anna', name='petite')
+          - Harem.find('emma', name='petite')
+          - Harem.find('kat', name='petite')
+        next: None
+      anna:
+        conditions:
+          - '"petite_harem_event_03" in DONE'
+          - Harem.find('anna', name='petite')
+          - not Harem.find('emma', name='petite')
+          - not Harem.find('kat', name='petite')
+        next: None
+      emma:
+        conditions:
+          - '"petite_harem_event_03" in DONE'
+          - not Harem.find('anna', name='petite')
+          - Harem.find('emma', name='petite')
+          - not Harem.find('kat', name='petite')
+        next: None
+      kat:
+        conditions:
+          - '"petite_harem_event_03" in DONE'
+          - not Harem.find('anna', name='petite')
+          - not Harem.find('emma', name='petite')
+          - Harem.find('kat', name='petite')
+        next: None
+      none:
+        conditions:
+          - '"petite_harem_event_03" in DONE'
+          - not Harem.find('anna', name='petite')
+          - not Harem.find('emma', name='petite')
+          - not Harem.find('kat', name='petite')
+        next: None
+
+  petite_harem_event_04:
+    name: Meet Anna, Emma and Kat at the beach
+    related_event: petite_harem_event_04_trigger
+    conditions:
+      - Harem.together("anna", "emma", "kat", name="petite")
+      - anna.love >= 150
+      - emma.love >= 150
+      - kat.love >= 150
+      - anna.sub >= 75
+      - emma.sub >= 75
+      - kat.sub >= 75
+    outcomes:
+      foursome:
+        conditions:
+          - '"petite_harem_event_04" in DONE'
+          - '"petite_harem_event_04_sex" in DONE'
+      fail:
+        icon: fail
+        description: We part away at the end of our day at the beach
+        conditions:
+          - '"petite_harem_event_04" in DONE'
+          - '"petite_harem_event_04_sex" not in DONE'
+
+
+  propose_anna_emma_kat:
+    name: "Propose to Anna, Emma and Kat"
+    conditions:
+      - Harem.together(anna,emma,kat, name='home')
+    outcome:
+      conditions:
+        - anna.flags.engagedmc
+        - emma.flags.engagedmc
+        - kat.flags.engagedmc

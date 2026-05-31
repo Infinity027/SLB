@@ -1,0 +1,456 @@
+---
+name: Reona
+class: Girl
+age: 26
+status: friend
+gender: female
+flags:
+  nokiss: False
+  nodate: False
+  nosex: False
+  hidden: True
+  pill: true
+  slapassmod: 15
+  birthPenalty: -25
+  cheating_agreement: 'both'
+attributes:
+  love:
+    min: 0
+    max: 20
+    default: 0
+  sub:
+    min: 0
+    max: 10
+    default: 10
+  lesbian:
+    min: 0
+    max: 20
+    default: 0
+  purity:
+    min: 0
+    max: 10
+    default: 0
+    lock_bar: none
+  sexperience:
+    min: 0
+    max: null
+    default: 0
+piercings:
+  ears: { }
+  navel:
+    pierced: true
+  clit:
+    pierced: true
+  nipples:
+    pierced: true
+  tongue:
+    pierced: true
+  nose: { }
+birthday:
+  - fall
+  - 10
+traits:
+  - slutty
+  - trashy
+  - not_princess
+  - not_family
+desire_factors:
+  - high_libido
+  - high_libido
+  - not_smalldick
+  - sextoy
+  - sextoy
+  - nightclub
+  - jewelry
+heronickname:
+  Teach: reona.flags.mikeNickname in nickname_teach
+  Brainiac: reona.flags.mikeNickname in nickname_brainiac
+  Genius: reona.flags.mikeNickname in nickname_genius
+schedule:
+  default:
+    '1':
+      '1':
+        - room: nightclub
+          activity: dance
+          clothes: date
+      '3':
+        - room: vip
+          activity: party
+          clothes: date
+      '5':
+        - room: nightclub
+          activity: dance
+          clothes: date
+      '11':
+        - room: none
+          activity: sleep
+          clothes: naked
+      '12':
+        - room: jewelrystore
+          activity: shop
+          clothes: casual
+      '13':
+        - room: bakery
+          activity: eat
+          clothes: casual
+      '15':
+        - room: gymlockers
+          activity: unknown
+          clothes: sport
+      '17':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+      '19':
+        - room: beach
+          activity: swim
+          clothes: swimsuit
+          seasons: "1"
+        - room: waterpark2
+          activity: swim
+          clothes: swimsuit
+          seasons: '01'
+        - room: pond
+          activity: rest
+          clothes: casual
+      '23':
+        - room: none
+          activity: sleep
+          clothes: naked
+    '2':
+      '9':
+        - room: none
+          activity: sleep
+          clothes: naked
+      '10':
+        - room: classroom
+          activity: study
+          clothes: casual
+      '11':
+        - room: university
+          activity: study
+          clothes: casual
+      '12':
+        - room: dininghall
+          activity: lunch
+          clothes: casual
+      '13':
+        - room: mall1
+          activity: shop
+          clothes: casual
+        - room: mall2
+          activity: shop
+          clothes: casual
+      '14':
+        - room: gymlockers
+          activity: unknown
+          clothes: sport
+      '15':
+        - room: university
+          activity: study
+          clothes: casual
+      '16':
+        - room: classroom
+          activity: study
+          clothes: casual
+      '19':
+        - room: none
+          activity: sleep
+          clothes: naked
+      '21':
+        - room: sexshop
+          activity: work
+          clothes: casual
+      '22':
+        - room: alley
+          activity: unknown
+          clothes: date
+      '23':
+        - room: nightclub
+          activity: dance
+          clothes: date
+    '3':
+      '1':
+        - room: nightclub
+          activity: dance
+          clothes: date
+      '3':
+        - room: vip
+          activity: party
+          clothes: date
+      '9':
+        - room: none
+          activity: sleep
+          clothes: naked
+      '10':
+        - room: classroom
+          activity: study
+          clothes: casual
+      '11':
+        - room: university
+          activity: study
+          clothes: casual
+      '12':
+        - room: dininghall
+          activity: lunch
+          clothes: casual
+      '14':
+        - room: mall1
+          activity: shop
+          clothes: casual
+        - room: mall2
+          activity: shop
+          clothes: casual
+      '15':
+        - room: university
+          activity: study
+          clothes: casual
+      '16':
+        - room: classroom
+          activity: study
+          clothes: casual
+      '18':
+        - room: jewelrystore
+          activity: shop
+          clothes: casual
+      '19':
+        - room: street2
+          activity: walk
+          clothes: casual
+      '21':
+        - room: sexshop
+          activity: work
+          clothes: casual
+      '22':
+        - room: alley
+          activity: unknown
+          clothes: date
+      '23':
+        - room: nightclub
+          activity: dance
+          clothes: date
+    '4':
+      '1':
+        - room: nightclub
+          activity: dance
+          clothes: date
+      '9':
+        - room: none
+          activity: sleep
+          clothes: naked
+      '10':
+        - room: classroom
+          activity: study
+          clothes: casual
+      '11':
+        - room: university
+          activity: study
+          clothes: casual
+      '12':
+        - room: dininghall
+          activity: lunch
+          clothes: casual
+      '13':
+        - room: mall1
+          activity: shop
+          clothes: casual
+        - room: mall2
+          activity: shop
+          clothes: casual
+      '14':
+        - room: gymlockers
+          activity: unknown
+          clothes: sport
+      '15':
+        - room: university
+          activity: study
+          clothes: casual
+      '16':
+        - room: classroom
+          activity: study
+          clothes: casual
+      '19':
+        - room: none
+          activity: sleep
+          clothes: naked
+      '21':
+        - room: sexshop
+          activity: work
+          clothes: casual
+      '22':
+        - room: alley
+          activity: unknown
+          clothes: date
+      '23':
+        - room: nightclub
+          activity: dance
+          clothes: date
+    '5':
+      '1':
+        - room: nightclub
+          activity: dance
+          clothes: date
+      '9':
+        - room: none
+          activity: sleep
+          clothes: naked
+      '10':
+        - room: classroom
+          activity: study
+          clothes: casual
+      '11':
+        - room: university
+          activity: study
+          clothes: casual
+      '12':
+        - room: dininghall
+          activity: lunch
+          clothes: casual
+      '13':
+        - room: mall1
+          activity: shop
+          clothes: casual
+        - room: mall2
+          activity: shop
+          clothes: casual
+      '14':
+        - room: gymlockers
+          activity: unknown
+          clothes: sport
+      '15':
+        - room: university
+          activity: study
+          clothes: casual
+      '16':
+        - room: classroom
+          activity: study
+          clothes: casual
+      '18':
+        - room: jewelrystore
+          activity: shop
+          clothes: casual
+      '20':
+        - room: cinema
+          activity: movie
+          clothes: casual
+      '22':
+        - room: pubseat
+          activity: drink
+          clothes: casual
+      '23':
+        - room: nightclub
+          activity: dance
+          clothes: date
+    '6':
+      '1':
+        - room: nightclub
+          activity: dance
+          clothes: date
+      '3':
+        - room: vip
+          activity: party
+          clothes: date
+      '4':
+        - room: restroom
+          activity: puke
+          clothes: date
+      '9':
+        - room: none
+          activity: sleep
+          clothes: naked
+      '11':
+        - room: coffeeshop
+          activity: coffee
+          clothes: casual
+      '13':
+        - room: classroom
+          activity: study
+          clothes: casual
+      '15':
+        - room: beach
+          activity: swim
+          clothes: swimsuit
+          seasons: "1"
+        - room: waterpark2
+          activity: swim
+          clothes: swimsuit
+          seasons: '01'
+        - room: pond
+          activity: rest
+          clothes: casual
+      '16':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+      '17':
+        - room: drugstore
+          activity: shop
+          clothes: casual
+      '18':
+        - room: jewelrystore
+          activity: shop
+          clothes: casual
+        - room: bookstore
+          activity: read
+          clothes: casual
+      '19':
+        - room: street2
+          activity: walk
+          clothes: casual
+      '21':
+        - room: stripclub
+          activity: fun
+          clothes: stripper
+      '23':
+        - room: nightclub
+          activity: dance
+          clothes: date
+    '7':
+      '1':
+        - room: nightclub
+          activity: dance
+          clothes: date
+      '3':
+        - room: vip
+          activity: party
+          clothes: date
+      '4':
+        - room: restroom
+          activity: puke
+          clothes: date
+      '9':
+        - room: none
+          activity: sleep
+          clothes: naked
+      '11':
+        - room: coffeeshop
+          activity: coffee
+          clothes: casual
+      '14':
+        - room: flowershop
+          activity: shop
+          clothes: casual
+      '15':
+        - room: beach
+          activity: swim
+          clothes: swimsuit
+          seasons: "1"
+        - room: waterpark2
+          activity: swim
+          clothes: swimsuit
+          seasons: '01'
+        - room: pond
+          activity: rest
+          clothes: casual
+      '19':
+        - room: none
+          activity: sleep
+          clothes: naked
+      '21':
+        - room: sexshop
+          activity: work
+          clothes: casual
+      '23':
+        - room: nightclub
+          activity: dance
+          clothes: date

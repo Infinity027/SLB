@@ -1,0 +1,176 @@
+name: Reona - Redemption
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Reona"
+short: "{image=notify reona} · Reona"
+description: "Reona is sexually free, perhaps a little too much in fact... I wonder if there isn't a way to make her a little purer."
+participants:
+  - reona
+conditions:
+  - hero.is_male
+  - reona.flags.study_help_count >= 1
+  - not reona.flags.study_blow
+
+outcomes:
+  gone:
+    description: I wont' be able to purify Reona now that she's gone...
+    conditions:
+      - reona.is_gone_forever
+    icon: fail
+  engaged:
+    description: Reona has agreed to marry me!
+    condition: reona.flags.engagedmc
+  jack_reona:
+    description: Jack finally revealed his love for Reona.
+    conditions:
+      - '"reona_jack_05a" in DONE'
+
+steps:
+  reona_redemption_01:
+    name: Talk to Reona when she's in class
+    related_event: reona_redemption_01
+    conditions:
+      - reona.flags.study_help_count >= 1
+      - not reona.flags.study_blow
+    outcome:
+      condition: '"reona_redemption_01" in DONE'
+
+  purity20:
+    name: Purify Reona some more
+    condition: '"reona_redemption_01" in DONE'
+    percentage:
+      value: reona.purity.val
+      scale: 20
+    outcome:
+      hide: True
+      conditions: reona.purity >= 20
+
+  reona_redemption_02:
+    name: Meet Reona
+    related_event: reona_redemption_02
+    conditions:
+      - '"reona_redemption_01" in DONE'
+    outcome:
+      condition: '"reona_redemption_02" in DONE'
+
+  purity40:
+    name: Purify Reona some more
+    condition: '"reona_redemption_02" in DONE'
+    percentage:
+      value: reona.purity.val
+      scale: 40
+    outcome:
+      hide: True
+      conditions: reona.purity >= 40
+
+  reona_redemption_03:
+    name: Go on a date with Reona at the Maid Café
+    related_event: reona_redemption_03
+    conditions:
+      - '"reona_redemption_02" in DONE'
+      - reona.purity >= 40
+    outcome:
+      condition: '"reona_redemption_03" in DONE'
+
+  purity60:
+    name: Purify Reona some more
+    condition: '"reona_redemption_03" in DONE'
+    percentage:
+      value: reona.purity.val
+      scale: 60
+    outcome:
+      hide: True
+      conditions: reona.purity >= 60
+
+  reona_redemption_04:
+    name: Meet Reona on the street
+    related_event: reona_redemption_04
+    conditions:
+      - '"reona_redemption_03" in DONE'
+      - reona.purity >= 60
+    outcome:
+      condition: '"reona_redemption_04" in DONE'
+
+  purity70:
+    name: Purify Reona some more
+    condition: '"reona_redemption_04" in DONE'
+    percentage:
+      value: reona.purity.val
+      scale: 70
+    outcome:
+      hide: True
+      conditions: reona.purity >= 70
+
+  reona_redemption_05:
+    name: Talk to Reona
+    related_event: reona_redemption_05
+    conditions:
+      - '"reona_redemption_04" in DONE'
+      - reona.purity >= 70
+    outcome:
+      condition: '"reona_redemption_05" in DONE'
+
+  purity80:
+    name: Purify Reona some more
+    condition: '"reona_redemption_05" in DONE'
+    percentage:
+      value: reona.purity.val
+      scale: 80
+    outcome:
+      hide: True
+      conditions: reona.purity >= 80
+
+  # Reona forest date
+  reona_redemption_06:
+    name: Go on a date in the forest
+    conditions:
+      - '"reona_redemption_05" in DONE'
+      - reona.purity >= 80
+    outcome:
+      condition: '"reona_date_forest" in DONE'
+
+  purity100:
+    name: Purify Reona some more
+    condition: '"reona_date_forest" in DONE'
+    percentage:
+      value: reona.purity.val
+      scale: 100
+    outcome:
+      hide: True
+      conditions: reona.purity >= 100
+
+  reona_redemption_07:
+    name: Go on a date with Reona
+    conditions:
+      - '"reona_date_forest" in DONE'
+      - reona.purity >= 100
+    outcomes:
+      complete:
+        conditions:
+          - '"reona_redemption_07" in DONE'
+          - not reona.flags.temporary_hidden
+        next: propose
+      temporary_hidden:
+        description: Reona is pissed, let's give her some space
+        conditions:
+          - '"reona_redemption_07" in DONE'
+          - reona.flags.temporary_hidden
+
+  wait_reona:
+    name: Wait for Reona to be back again
+    percentage:
+      value: reona.flags.temporary_hidden
+      scale: 7
+      invert: True
+    conditions:
+      - '"reona_redemption_07" in DONE'
+      - reona.flags.temporary_hidden
+    outcome:
+      condition: not reona.flags.temporary_hidden
+
+  propose:
+    name: Propose to Reona
+    conditions:
+      - '"reona_redemption_07" in DONE'
+      - not reona.hidden
+    outcome:
+      condition: reona.flags.engagedmike
+      next: None

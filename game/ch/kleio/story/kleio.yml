@@ -1,0 +1,456 @@
+name: Kleio
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Kleio"
+short: "{image=notify kleio} · Kleio"
+description: "Kleio is a member of the Deathless Harpies, Sasha's band."
+participants:
+  - kleio
+condition: '"kleio_start" in DONE or "kleio_start2" in DONE'
+outcomes:
+  gone:
+    description: Kleio has left and is no longer part of my life.
+    conditions:
+      - kleio.is_gone_forever
+    icon: fail
+  engaged:
+    condition: kleio.flags.engagedmike
+    description: Kleio has agreed to marry me!
+  kleio_route_end:
+    conditions:
+      - kleio.love >= 80
+      - not game.flags.band
+    description: That's all of Kleio's story (since I didn't join the band)
+    icon: fail
+
+steps:
+  love20:
+    name: Get to know Kleio better
+    condition: '"kleio_start" in DONE or "kleio_start2" in DONE'
+    percentage:
+      value: kleio.love.val
+      scale: 20
+    outcome:
+      hide: True
+      conditions: kleio.love >= 20
+
+  kleio_event_01:
+    name: Wait for Kleio to call me
+    related_event: kleio_event_01
+    outcome:
+      condition: '"kleio_event_01" in DONE'
+
+  love40:
+    name: Get to know Kleio better
+    percentage:
+      value: kleio.love.val
+      scale: 40
+    outcome:
+      hide: True
+      conditions: kleio.love >= 40
+
+  kleio_event_02:
+    name: Wait for Kleio to call me again
+    related_event: kleio_event_02
+    outcome:
+      condition: '"kleio_event_02" in DONE'
+
+  love60:
+    name: Get to know Kleio better
+    percentage:
+      value: kleio.love.val
+      scale: 60
+    outcome:
+      hide: True
+      conditions: kleio.love >= 60
+
+  kleio_event_03:
+    name: Wait for Kleio to call me once more
+    related_event: kleio_event_03
+    outcome:
+      condition: '"kleio_event_03" in DONE'
+
+  love80:
+    name: Get to know Kleio better
+    percentage:
+      value: kleio.love.val
+      scale: 100
+    outcomes:
+      complete:
+        hide: True
+        conditions:
+          - kleio.love >= 80
+          - game.flags.band
+        next:
+          - buy_a_car
+          - kleio_event_04
+      ended:
+        hide: True
+        conditions:
+          - kleio.love >= 80
+          - not game.flags.band
+        next:
+          - kleio_route_end
+
+
+
+  buy_a_car:
+    name: Buy a car
+    conditions:
+      - kleio.love >= 80
+    outcome:
+      hide: True
+      conditions: hero.has_motor_vehicle or hero.flags.vehicle_in_garage
+      next: None
+
+  kleio_event_04:
+    name: Something will happen soon
+    related_event: kleio_event_04
+    conditions:
+      - kleio.love >= 80
+      - game.flags.band
+    outcome:
+      condition: '"kleio_event_04" in DONE'
+      description: The car needed repair
+
+  love100:
+    name: Get to know Kleio better
+    percentage:
+      value: kleio.love.val
+      scale: 100
+    outcome:
+      hide: True
+      conditions: kleio.love >= 100
+
+  kleio_event_05:
+    name: Meet Kleio in the studio
+    related_event: kleio_event_05
+    outcome:
+      condition: '"kleio_event_05" in DONE'
+
+  love110:
+    name: Get to know Kleio better
+    percentage:
+      value: kleio.love.val
+      scale: 110
+    outcome:
+      hide: True
+      conditions: kleio.love >= 110
+      next:
+        - kleio_event_05b
+        - car_in_garage
+
+  kleio_event_05b:
+    name: Wait for Kleio to call me about the sport car
+    related_event: kleio_event_05b
+    conditions:
+      - '"kleio_event_05" in DONE'
+      - kleio.love >= 110
+      - hero.flags.vehicle_in_garage == "sports_car"
+    outcomes:
+      complete:
+        conditions:
+          - '"kleio_event_05b" in DONE'
+        next:
+          - love120
+      done_05c:
+        hide: True
+        conditions:
+          - '"kleio_event_05c" in DONE'
+      jump_event_05c:
+        hide: True
+        conditions:
+          - '"kleio_event_05c" not in DONE'
+          - hero.flags.vehicle_in_garage == "car"
+
+  kleio_event_05c:
+    name: Wait for Kleio to call me about the car
+    related_event: kleio_event_05c
+    conditions:
+      - '"kleio_event_05" in DONE'
+      - kleio.love >= 110
+      - hero.flags.vehicle_in_garage == "car"
+    outcomes:
+      complete:
+        conditions:
+          - '"kleio_event_05c" in DONE'
+        next:
+          - love120
+      event_05b:
+        conditions:
+          - hero.flags.vehicle_in_garage == "sports_car"
+        hide: True
+        next: None
+      done_05b:
+        hide: True
+        conditions:
+          - '"kleio_event_05b" in DONE'
+        next: None
+
+  car_in_garage:
+    name: Wait for Kleio to fix the car.
+    conditions:
+      - '"kleio_event_04" in DONE'
+      - hero.flags.vehicle_in_garage
+    outcome:
+      conditions:
+        - '"kleio_event_05b" in DONE or "kleio_event_05c" in DONE'
+        - hero.has_motor_vehicle
+        - not hero.flags.vehicle_in_garage
+      hide: True
+      next: None
+
+  love120:
+    name: Get to know Kleio better
+    percentage:
+      value: kleio.love.val
+      scale: 120
+    outcome:
+      hide: True
+      conditions: kleio.love >= 120
+      next:
+        - kleio_event_06
+        - kleio_event_06b
+
+  kleio_event_06:
+    name: Wait for Kleio to call me
+    related_event: kleio_event_06
+    toggle: True
+    conditions:
+      - '"kleio_event_05b" in DONE or "kleio_event_05c" in DONE'
+      - 12 <= game.hour <= 18
+    outcomes:
+      complete:
+        condition: '"kleio_event_06" in DONE'
+        next: morgan_route
+      hidden:
+        condition: '"kleio_event_06b" in DONE'
+        hide: True
+        next: None
+
+  kleio_event_06b:
+    name: Go talk to Kleio
+    related_event: kleio_event_06b
+    conditions:
+      - '"kleio_event_05b" in DONE or "kleio_event_05c" in DONE'
+    outcomes:
+      complete:
+        condition: '"kleio_event_06b" in DONE'
+        next: morgan_route
+      hidden:
+        condition: '"kleio_event_06" in DONE'
+        hide: True
+        next: None
+
+  morgan_route:
+    name: You need to progress in Morgan's route
+    conditions:
+      - '"kleio_event_01" in DONE'
+      - '"morgan_event_06" not in DONE'
+    outcome:
+      conditions:
+        - '"kleio_event_01" in DONE'
+        - '"morgan_event_06" in DONE'
+      hide: True
+
+  morgan_kleio_event_01:
+    name: Meet Kleio's ex at the pub
+    related_event: morgan_kleio_event_01
+    conditions:
+      - '"kleio_event_01" in DONE'
+      - '"morgan_event_06" in DONE'
+    outcome:
+      condition: '"morgan_kleio_event_01" in DONE'
+
+  love140:
+    name: Get to know Kleio better
+    percentage:
+      value: kleio.love.val
+      scale: 140
+    outcome:
+      hide: True
+      conditions: kleio.love >= 140
+
+  kleio_getting_serious_01:
+    name: Take Kleio on a date
+    related_event: kleio_getting_serious_01
+    outcome:
+      condition: '"kleio_getting_serious_01" in DONE'
+
+  love150:
+    name: Get to know Kleio better
+    percentage:
+      value: kleio.love.val
+      scale: 150
+    outcome:
+      hide: True
+      conditions: kleio.love >= 150
+
+  kleio_event_07:
+    name: Hang out with Kleio
+    related_event: kleio_event_07
+    outcome:
+      condition: '"kleio_event_07" in DONE'
+
+  love160:
+    name: Get to know Kleio better
+    percentage:
+      value: kleio.love.val
+      scale: 160
+    outcome:
+      hide: True
+      conditions: kleio.love >= 160
+
+  kleio_getting_serious_02:
+    name: Take Kleio on a date
+    related_event: kleio_getting_serious_02
+    outcome:
+      condition: '"kleio_getting_serious_02" in DONE'
+
+  love170:
+    name: Get to know Kleio better
+    percentage:
+      value: kleio.love.val
+      scale: 170
+    outcome:
+      hide: True
+      conditions: kleio.love >= 170
+
+  kleio_event_07_1:
+      name: Hang out with Kleio at the park
+      related_event: kleio_event_07_1
+      outcome:
+        condition: '"kleio_event_07_1" in DONE'
+        next: love180
+
+  love180:
+    name: Get to know Kleio better
+    percentage:
+      value: kleio.love.val
+      scale: 180
+    outcome:
+      hide: True
+      conditions: kleio.love >= 180
+
+  kleio_event_08:
+    name: Hang out with Kleio
+    related_event: kleio_event_08
+    outcome:
+      condition: '"kleio_event_08" in DONE'
+      next: love190
+
+  love190:
+    name: Get to know Kleio better
+    percentage:
+      value: kleio.love.val
+      scale: 190
+    outcome:
+      hide: True
+      conditions: kleio.love >= 190
+
+  kleio_event_09:
+    name: Wait for Kleio to call me
+    related_event: kleio_event_09
+    outcome:
+      condition: '"kleio_event_09" in DONE'
+      next: love200
+
+  love200:
+    name: Get to know Kleio better
+    percentage:
+      value: kleio.love.val
+      scale: 200
+    outcome:
+      hide: True
+      conditions: kleio.love >= 200
+
+  kleio_event_10:
+    name: Wait for Kleio to call me
+    related_event: kleio_event_10
+    outcome:
+      condition: '"kleio_event_10" in DONE'
+      next: kleio_event_11
+
+  kleio_event_11:
+    name: Meet Kleio on the rooftop
+    related_event: kleio_event_11
+    outcome:
+      condition: '"kleio_event_11" in DONE'
+      next: None
+
+  kleio_studio_bj:
+    name: Get a blowjob from Kleio at the studio
+    related_event: kleio_studio_bj
+    condition: kleio.love >= 160
+    outcome:
+      condition: '"kleio_studio_bj" in DONE'
+      next: None
+
+  date:
+    name: Go on a date with Kleio
+    condition: True
+    outcome:
+      condition: kleio.flags.dates >= 1
+      next: birthday_date
+
+  birthday_date:
+    name: Take Kleio out on a night date for her birthday
+    condition: kleio.flags.dates >= 1
+    outcome:
+      condition: '"kleio_birthday_date_male" in DONE'
+      next: None
+
+  sex:
+    name: Have sex with Kleio
+    condition: True
+    outcome:
+      condition: kleio.sexperience >= 1
+      next: None
+
+  love:
+    name: Get Kleio to fall in love with me
+    condition: True
+    percentage:
+      value: kleio.love.val
+      scale: 200
+    outcome:
+      condition: kleio.love.val == 200
+      next: None
+
+  ring:
+    name: Buy a wedding ring
+    condition: True
+    outcome:
+      condition: hero.has_item("wedding_ring")
+
+  propose:
+    name: Propose to Kleio
+    condition: hero.has_item("wedding_ring")
+    outcome:
+      condition: kleio.flags.engagedmike
+      next: None
+
+  preg:
+    name: Get Kleio pregnant
+    optional: True
+    condition: True
+    outcome:
+      condition: kleio.flags.pregnancies_number > 0
+      next: None
+
+  slave:
+    name: Make Kleio my sex slave
+    optional: True
+    condition: True
+    outcome:
+      condition: kleio.is_sex_slave
+      next: None
+
+  kleio_sub_event_1:
+    name: Meet Kleio in the evening or night
+    related_event: kleio_sub_event_1
+    conditions:
+      - kleio.love >= 125
+      - kleio.sub >= 75
+      - 20 <= game.hour <= 6
+      - hero.has_motor_vehicle
+    outcome:
+      condition: '"kleio_sub_event_1" in DONE'

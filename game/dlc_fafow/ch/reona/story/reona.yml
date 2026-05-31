@@ -1,0 +1,669 @@
+name: Reona
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Reona"
+short: "{image=notify reona} · Reona"
+description: "Reona is a gorgeous looking student at the university."
+participants:
+  - reona
+conditions:
+  - hero.is_male
+  - "'reona_teaser' in DONE"
+
+outcomes:
+  gone:
+    description: Reona has left and is no longer part of my life.
+    conditions:
+      - reona.is_gone_forever
+    icon: fail
+  engaged:
+    description: Reona has agreed to marry me!
+    condition: reona.flags.engagedmike
+  jack_reona:
+    description: Jack finally revealed his love for Reona.
+    conditions:
+      - '"reona_jack_05a" in DONE'
+
+steps:
+  reona_start:
+    name: Meet Reona at the University
+    related_event: reona_teaser
+    conditions:
+      - bree.love >= 100
+    outcome:
+      hide: True
+      condition: '"reona_teaser" in DONE'
+      next:
+        - mikesxp10
+        - knowledge50
+
+  mikesxp10:
+    name: Be experienced in sex enough for Reona to notice me
+    percentage:
+      value: hero.sexperience
+      scale: 10
+    outcome:
+      hide: True
+      condition: hero.sexperience >= 10
+
+  knowledge50:
+    name: Be smart enough for Reona to notice me
+    condition: '"aletta_event_01" in DONE'
+    percentage:
+      value: hero.knowledge.val
+      scale: 50
+    outcome:
+      hide: True
+      condition: hero.knowledge >= 50
+
+  reona_event_01:
+    name: Go check the results of your last test at the University
+    related_event: reona_event_01
+    conditions:
+      - '"reona_teaser" in DONE'
+      - hero.sexperience >= 10
+      - hero.knowledge >= 50
+    outcome:
+      condition: '"reona_event_01" in DONE'
+      next:
+        - mikesxp20
+        - love20
+
+  mikesxp20:
+    name: Be experienced in sex enough for Reona to notice me
+    condition: '"reona_event_01" in DONE'
+    percentage:
+      value: hero.sexperience
+      scale: 20
+    outcome:
+      hide: True
+      condition: hero.sexperience >= 20
+
+  love20:
+    name: Get to know Reona better
+    condition: '"reona_event_01" in DONE'
+    percentage:
+      value: reona.love.val
+      scale: 20
+    outcome:
+      hide: True
+      condition: reona.love >= 20
+
+  reona_event_02:
+    name: Go to the sexshop while Reona is there
+    related_event: reona_event_02
+    conditions:
+      - '"reona_event_01" in DONE'
+      - hero.sexperience >= 20
+      - reona.love >= 20
+    outcome:
+      condition: '"reona_event_02" in DONE'
+      next:
+        - mikesxp30
+        - love40
+
+  mikesxp30:
+    name: Be experienced in sex enough for Reona to notice me
+    condition: '"reona_event_02" in DONE'
+    percentage:
+      value: hero.sexperience
+      scale: 30
+    outcome:
+      hide: True
+      condition: hero.sexperience >= 30
+
+  love40:
+    name: Get to know Reona better
+    condition: '"reona_event_02" in DONE'
+    percentage:
+      value: reona.love.val
+      scale: 40
+    outcome:
+      hide: True
+      condition: reona.love >= 40
+
+  reona_studies:
+    name: Help Reona with her homework by inviting her on a date to study at your home
+    related_event: date_study_with_reona
+    conditions:
+      - '"reona_event_01" in DONE'
+      - reona.love >= 40
+    percentage:
+      value: reona.flags.study_help_count
+      scale: 5
+    outcome:
+      hide: True
+      condition: reona.flags.study_help_count >= 5
+
+  love60:
+    name: Get to know Reona better
+    condition: '"reona_enough_study" in DONE'
+    percentage:
+      value: reona.love.val
+      scale: 60
+    outcome:
+      hide: True
+      condition: reona.love >= 60
+
+  reona_event_03:
+    name: Be in livingroom, house library or your bedroom between 22 and 5.
+    related_event: reona_event_03
+    conditions:
+      - '"reona_event_02" in DONE'
+      - hero.sexperience >= 30
+      - reona.love >= 60
+    outcome:
+      condition: '"reona_event_03" in DONE'
+      next:
+        - mikesxp40
+        - love80
+
+  mikesxp40:
+    name: Be experienced in sex enough for Reona to notice me
+    condition: '"reona_event_03" in DONE'
+    percentage:
+      value: hero.sexperience
+      scale: 40
+    outcome:
+      hide: True
+      condition: hero.sexperience >= 40
+
+  love80:
+    name: Get to know Reona better
+    condition: '"reona_event_03" in DONE'
+    percentage:
+      value: reona.love.val
+      scale: 80
+    outcome:
+      hide: True
+      condition: reona.love >= 80
+
+  reona_event_04:
+    name: Go to the pub while Reona is there
+    related_event: reona_event_04
+    conditions:
+      - '"reona_event_03" in DONE'
+      - hero.sexperience >= 40
+      - reona.love >= 80
+    outcome:
+      condition: '"reona_event_04" in DONE'
+      next:
+        - mikesxp50
+        - love100
+
+  reona_event_04b:
+    name: Interact with Reona
+    related_event: reona_event_04b
+    conditions:
+      - '"reona_event_03" in DONE'
+      - hero.sexperience >= 40
+      - reona.love >= 80
+    outcome:
+      condition: '"reona_event_04b" in DONE'
+      next:
+        - mikesxp50
+        - love100
+
+  mikesxp50:
+    name: Be experienced in sex enough for Reona to notice me
+    condition: '"reona_event_04" in DONE'
+    percentage:
+      value: hero.sexperience
+      scale: 50
+    outcome:
+      hide: True
+      condition: hero.sexperience >= 50
+
+  love100:
+    name: Get to know Reona better
+    condition: '"reona_event_04" in DONE'
+    percentage:
+      value: reona.love.val
+      scale: 100
+    outcome:
+      hide: True
+      condition: reona.love >= 100
+
+  reona_event_05:
+    name: Interact with Reona
+    related_event: reona_event_05
+    conditions:
+      - '"reona_event_04" in DONE'
+      - '"reona_event_04b" in DONE'
+      - hero.sexperience >= 50
+      - reona.love >= 100
+    outcome:
+      condition: '"reona_event_05" in DONE'
+      next:
+        - mikesxp60
+        - love120
+        - sub10
+
+  mikesxp60:
+    name: Be experienced in sex enough for Reona to notice me
+    condition: '"reona_event_05" in DONE'
+    percentage:
+      value: hero.sexperience
+      scale: 60
+    outcome:
+      hide: True
+      condition: hero.sexperience >= 60
+
+  love120:
+    name: Get to know Reona better
+    condition: '"reona_event_05" in DONE'
+    percentage:
+      value: reona.love.val
+      scale: 120
+    outcome:
+      hide: True
+      condition: reona.love >= 120
+
+  reona_event_06:
+    name: Go on date at the restaurant with Reona
+    related_event: reona_event_06
+    conditions:
+      - '"reona_event_05" in DONE'
+      - hero.sexperience >= 60
+      - reona.love >= 120
+    outcome:
+      condition: '"reona_event_06" in DONE'
+      next:
+        - mikesxp70
+        - love140
+
+  mikesxp70:
+    name: Be experienced in sex enough for Reona to notice me
+    condition: '"reona_event_06" in DONE'
+    percentage:
+      value: hero.sexperience
+      scale: 70
+    outcome:
+      hide: True
+      condition: hero.sexperience >= 70
+
+  love140:
+    name: Get to know Reona better
+    condition: '"reona_event_06" in DONE'
+    percentage:
+      value: reona.love.val
+      scale: 140
+    outcome:
+      hide: True
+      condition: reona.love >= 140
+
+  reona_event_07:
+    name: Invite Reona on date at your home, a saturday afternoon
+    related_event: reona_event_07
+    conditions:
+      - '"reona_event_06" in DONE'
+      - hero.sexperience >= 70
+      - reona.love >= 140
+    outcome:
+      condition: '"reona_event_07" in DONE'
+      next:
+        - mikesxp80
+        - love160
+
+  mikesxp80:
+    name: Be experienced in sex enough for Reona to notice me
+    condition: '"reona_event_07" in DONE'
+    percentage:
+      value: hero.sexperience
+      scale: 80
+    outcome:
+      hide: True
+      condition: hero.sexperience >= 80
+
+  love160:
+    name: Get to know Reona better
+    condition: '"reona_event_07" in DONE'
+    percentage:
+      value: reona.love.val
+      scale: 160
+    outcome:
+      hide: True
+      condition: reona.love >= 160
+
+  reona_event_08:
+    name: Invite Reona on date at park
+    related_event: reona_event_08
+    conditions:
+      - '"reona_event_07" in DONE'
+      - hero.sexperience >= 80
+      - reona.love >= 160
+    outcome:
+      condition: '"reona_event_08" in DONE'
+      next:
+        - mikesxp90
+        - love180
+
+  mikesxp90:
+    name: Be experienced in sex enough for Reona to notice me
+    condition: '"reona_event_08" in DONE'
+    percentage:
+      value: hero.sexperience
+      scale: 90
+    outcome:
+      hide: True
+      condition: hero.sexperience >= 90
+
+  love180:
+    name: Get to know Reona better
+    condition: '"reona_event_08" in DONE'
+    percentage:
+      value: reona.love.val
+      scale: 180
+    outcome:
+      hide: True
+      condition: reona.love >= 180
+
+  reona_event_09:
+    name: Invite Reona on date
+    related_event: reona_event_09
+    conditions:
+      - '"reona_event_08" in DONE'
+      - hero.sexperience >= 90
+      - reona.love >= 180
+    outcome:
+      condition: '"reona_event_09" in DONE'
+      next:
+        - mikesxp100
+        - love200
+
+  mikesxp100:
+    name: Be experienced in sex enough for Reona to notice me
+    condition: '"reona_event_09" in DONE'
+    percentage:
+      value: hero.sexperience
+      scale: 100
+    outcome:
+      hide: True
+      condition: hero.sexperience >= 100
+
+  love200:
+    name: Get to know Reona better
+    condition: '"reona_event_09" in DONE'
+    percentage:
+      value: reona.love.val
+      scale: 200
+    outcome:
+      hide: True
+      condition: reona.love >= 200
+
+  reona_event_10:
+    name: Invite Reona on date at your home, a saturday afternoon
+    related_event: reona_event_10
+    conditions:
+      - '"reona_event_09" in DONE'
+      - hero.sexperience >= 100
+      - reona.love >= 200
+    outcome:
+      condition: '"reona_event_10" in DONE'
+      next:
+        - mikesxp110
+
+  mikesxp110:
+    name: Be experienced in sex enough for Reona to notice me
+    condition: '"reona_event_10" in DONE'
+    percentage:
+      value: hero.sexperience
+      scale: 110
+    outcome:
+      hide: True
+      condition: hero.sexperience >= 110
+      next: None
+
+  sub10:
+    name: Make Reona more submissive
+    percentage:
+      value: reona.sub.val
+      scale: 10
+    outcome:
+      hide: True
+      condition: reona.sub >= 10
+
+  bc4:
+    name: Diversify your experiences to please Reona more
+    percentage:
+      value: len(hero.get_partners())
+      scale: 4
+    outcome:
+      hide: True
+      condition: len(hero.get_partners()) >= 4
+
+  reona_kink_01:
+    name: Have a nice start to your date with Reona
+    related_event: reona_kink_01
+    conditions:
+      - '"reona_event_04" in DONE'
+      - '"reona_event_04b" in DONE'
+      - hero.sexperience >= 50
+      - reona.love >= 100
+      - reona.sub >= 10
+      - len(hero.get_partners()) >= 4
+      - "reona.flags.cheating_agreement in ['mc', 'both']"
+    outcome:
+      condition: '"reona_kink_01" in DONE'
+      next:
+        - sub20
+        - bc8
+
+  sub20:
+    name: Make Reona more submissive
+    percentage:
+      value: reona.sub.val
+      scale: 20
+    outcome:
+      hide: True
+      condition: reona.sub >= 20
+
+  bc8:
+    name: Diversify your experiences to please Reona more
+    percentage:
+      value: len(hero.get_partners())
+      scale: 8
+    outcome:
+      hide: True
+      condition: len(hero.get_partners()) >= 8
+
+  reona_kink_02:
+    name: Wait for it...
+    related_event: reona_kink_02
+    conditions:
+      - '"reona_kink_01" in DONE'
+      - hero.sexperience >= 50
+      - reona.love >= 120
+      - reona.sub >= 20
+      - len(hero.get_partners()) >= 8
+      - "reona.flags.cheating_agreement in ['mc', 'both']"
+    outcome:
+      condition: '"reona_kink_02" in DONE'
+      next:
+        - sub40
+        - bc12
+
+  sub40:
+    name: Make Reona more submissive
+    percentage:
+      value: reona.sub.val
+      scale: 40
+    outcome:
+      hide: True
+      condition: reona.sub >= 40
+
+  bc12:
+    name: Diversify your experiences to please Reona more
+    percentage:
+      value: len(hero.get_partners())
+      scale: 12
+    outcome:
+      hide: True
+      condition: len(hero.get_partners()) >= 12
+
+  reona_kink_03:
+    name: Talk with Reona during a date
+    related_event: reona_kink_03
+    conditions:
+      - '"reona_kink_02" in DONE'
+      - reona.love >= 120
+      - reona.sub >= 40
+      - len(hero.get_partners()) >= 12
+      - (samantha.sexperience > 0 and samantha.flags.last_date_day > 0) or (sasha.sexperience > 0 and sasha.flags.last_date_day > 0) or (bree.sexperience > 0 and bree.flags.last_date_day > 0)
+    outcome:
+      condition: '"reona_kink_03" in DONE'
+      next:
+        - sub60
+        - bc16
+
+  sub60:
+    name: Make Reona more submissive
+    percentage:
+      value: reona.sub.val
+      scale: 60
+    outcome:
+      hide: True
+      condition: reona.sub >= 60
+
+  bc16:
+    name: Diversify your experiences to please Reona more
+    percentage:
+      value: len(hero.get_partners())
+      scale: 16
+    outcome:
+      hide: True
+      condition: len(hero.get_partners()) >= 16
+
+  reona_kink_04:
+    name: Talk with Reona during a date
+    related_event: reona_kink_04
+    conditions:
+      - '"reona_kink_03" in DONE'
+      - reona.love >= 130
+      - reona.sub >= 60
+      - len(hero.get_partners()) >= 16
+    outcome:
+      condition: '"reona_kink_04" in DONE'
+      next:
+        - sub80
+        - bc18
+
+  sub80:
+    name: Make Reona more submissive
+    percentage:
+      value: reona.sub.val
+      scale: 80
+    outcome:
+      hide: True
+      condition: reona.sub >= 80
+
+  bc18:
+    name: Diversify your experiences to please Reona more
+    percentage:
+      value: len(hero.get_partners())
+      scale: 18
+    outcome:
+      hide: True
+      condition: len(hero.get_partners()) >= 18
+
+  reona_kink_05:
+    name: Talk with Reona during a date
+    related_event: reona_kink_05
+    conditions:
+      - '"reona_kink_04" in DONE'
+      - reona.love >= 150
+      - reona.sub >= 80
+      - len(hero.get_partners()) >= 18
+    outcome:
+      condition: '"reona_kink_05" in DONE'
+      next:
+        - sub100
+        - bc20
+
+  sub100:
+    name: Make Reona more submissive
+    percentage:
+      value: reona.sub.val
+      scale: 100
+    outcome:
+      hide: True
+      condition: reona.sub >= 100
+
+  bc20:
+    name: Diversify your experiences to please Reona more
+    percentage:
+      value: len(hero.get_partners())
+      scale: 20
+    outcome:
+      hide: True
+      condition: len(hero.get_partners()) >= 20
+
+  reona_kink_06:
+    name: Talk with Reona during a date
+    related_event: reona_kink_06
+    conditions:
+      - '"reona_kink_05" in DONE'
+      - reona.love >= 200
+      - reona.sub >= 100
+      - len(hero.get_partners()) >= 20
+    outcome:
+      condition: '"reona_kink_06" in DONE'
+      next: None
+
+  date:
+    name: Go on a date with Reona
+    condition: True
+    outcome:
+      condition: reona.flags.dates >= 1
+      next: birthday_date
+
+  birthday_date:
+    name: Take Reona out on a afternoon date for her birthday
+    condition: reona.flags.dates >= 1
+    outcome:
+      condition: '"reona_birthday_date_male" in DONE'
+      next: None
+
+  sex:
+    name: Have sex with Reona
+    condition: True
+    outcome:
+      condition: reona.sexperience >= 1
+      next: None
+
+  love:
+    name: Get Reona to fall in love with me
+    condition: True
+    percentage:
+      value: reona.love.val
+      scale: 200
+    outcome:
+      condition: reona.love.val == 200
+      next: None
+
+  ring:
+    name: Buy a wedding ring
+    condition: True
+    outcome:
+      condition: hero.has_item("wedding_ring")
+
+  propose:
+    name: Propose to Reona
+    condition: hero.has_item("wedding_ring")
+    outcome:
+      condition: reona.flags.engagedmike
+      next: None
+
+  preg:
+    name: Get Reona pregnant
+    optional: True
+    condition: True
+    outcome:
+      condition: reona.flags.pregnancies_number > 0
+      next: None
+
+  slave:
+    name: Make Reona my sex slave
+    optional: True
+    condition: True
+    outcome:
+      condition: reona.is_sex_slave
+      next: None

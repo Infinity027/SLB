@@ -1,0 +1,327 @@
+---
+name: Hanna
+class: Girl
+age: 23
+status: friend
+gender: female
+flags:
+  hidden: true
+  armpits: true
+attributes:
+  love:
+    min: 0
+    max: 40
+    default: 0
+  sub:
+    min: 0
+    max: 25
+    default: 0
+  lesbian:
+    min: 0
+    max: 50
+    default: 0
+  sexperience:
+    min: 0
+    max: null
+    default: 0
+piercings:
+# art assets don't exist, and may never since her ears are never seen
+#  ears:
+#    outfits:
+#    - date
+#    pierced: true
+  navel:
+    outfits:
+    - naked
+    - swimsuit
+    - sexyswimsuit
+    - underwear
+    - sport
+    pierced: true
+  clit:
+    outfits:
+    - naked
+  nipples:
+    outfits:
+    - naked
+  tongue:
+    expressions:
+    - blush
+  nose:
+    pierced: true
+birthday:
+- fall
+- 30
+traits:
+- sporty
+- rebel
+- not_artsy
+desire_factors:
+- fitness
+- fitness
+- park
+- waterpark
+- not_nightclub
+- not_low_libido
+heronickname:
+  Champ: hanna.flags.mikeNickname in nickname_champ
+  Partner: hanna.flags.mikeNickname in nickname_partner
+schedule:
+  default:
+    '1234':
+      '6':
+      - room: None
+        activity: sleep
+        clothes: underwear
+      '7':
+      - room: pond
+        activity: train
+        clothes: sport
+      '22':
+      - room: gym
+        activity: work
+        clothes: work
+      '24':
+      - room: None
+        activity: None
+        clothes: underwear
+    '5':
+      '6':
+      - room: None
+        activity: sleep
+        clothes: underwear
+      '11':
+      - room: gym
+        activity: work
+        clothes: work
+      - room: pond
+        activity: train
+        clothes: sport
+      '14':
+      - room: coffeeshop
+        activity: shop
+        clothes: casual
+      '22':
+      - room: pond
+        activity: train
+        clothes: sport
+      - room: neighborhood
+        activity: train
+        clothes: sport
+      - room: gym
+        activity: work
+        clothes: work
+      '24':
+      - room: None
+        activity: None
+        clothes: underwear
+    '6':
+      '6':
+      - room: None
+        activity: sleep
+        clothes: underwear
+      '11':
+      - room: gym
+        activity: work
+        clothes: work
+      '14':
+      - room: pond
+        activity: train
+        clothes: sport
+      '18':
+      - room: gym
+        activity: work
+        clothes: work
+      - room: pond
+        activity: train
+        clothes: sport
+      '23':
+      - room: None
+        activity: None
+        clothes: underwear
+    '7':
+      '10':
+      - room: None
+        activity: None
+        clothes: underwear
+      '12':
+      - room: pond
+        activity: train
+        clothes: sport
+      - room: street
+        activity: train
+        clothes: sport
+      - room: neighborhood
+        activity: train
+        clothes: sport
+      '14':
+      - room: pond
+        activity: train
+        clothes: sport
+      - room: street
+        activity: train
+        clothes: sport
+      - room: neighborhood
+        activity: train
+        clothes: sport
+      '16':
+      - room: pond
+        activity: train
+        clothes: sport
+      - room: street
+        activity: train
+        clothes: sport
+      - room: neighborhood
+        activity: train
+        clothes: sport
+      '18':
+      - room: pond
+        activity: train
+        clothes: sport
+      - room: street
+        activity: train
+        clothes: sport
+      - room: neighborhood
+        activity: train
+        clothes: sport
+      '23':
+      - room: None
+        activity: None
+        clothes: underwear
+  stripclub:
+    '1234':
+      '4':
+      - room: stripclub
+        activity: work
+        clothes: stripper
+      '6':
+      - room: None
+        activity: sleep
+        clothes: underwear
+      '7':
+      - room: pond
+        activity: train
+        clothes: sport
+      '22':
+      - room: gym
+        activity: work
+        clothes: work
+      '24':
+      - room: stripclub
+        activity: work
+        clothes: stripper
+    '5':
+      '4':
+      - room: stripclub
+        activity: work
+        clothes: stripper
+      '6':
+      - room: None
+        activity: sleep
+        clothes: underwear
+      '11':
+      - room: gym
+        activity: work
+        clothes: work
+      - room: pond
+        activity: train
+        clothes: sport
+      '14':
+      - room: coffeeshop
+        activity: shop
+        clothes: casual
+      '22':
+      - room: pond
+        activity: train
+        clothes: sport
+      - room: neighborhood
+        activity: train
+        clothes: sport
+      - room: gym
+        activity: work
+        clothes: work
+      '24':
+      - room: stripclub
+        activity: work
+        clothes: stripper
+    '6':
+      '4':
+      - room: stripclub
+        activity: work
+        clothes: stripper
+      '6':
+      - room: None
+        activity: sleep
+        clothes: underwear
+      '11':
+      - room: gym
+        activity: work
+        clothes: work
+      '14':
+      - room: pond
+        activity: train
+        clothes: sport
+      '18':
+      - room: gym
+        activity: work
+        clothes: work
+      - room: pond
+        activity: train
+        clothes: sport
+      '24':
+      - room: stripclub
+        activity: work
+        clothes: stripper
+    '7':
+      '4':
+      - room: stripclub
+        activity: work
+        clothes: stripper
+      '10':
+      - room: None
+        activity: None
+        clothes: underwear
+      '12':
+      - room: pond
+        activity: train
+        clothes: sport
+      - room: street
+        activity: train
+        clothes: sport
+      - room: neighborhood
+        activity: train
+        clothes: sport
+      '14':
+      - room: pond
+        activity: train
+        clothes: sport
+      - room: street
+        activity: train
+        clothes: sport
+      - room: neighborhood
+        activity: train
+        clothes: sport
+      '16':
+      - room: pond
+        activity: train
+        clothes: sport
+      - room: street
+        activity: train
+        clothes: sport
+      - room: neighborhood
+        activity: train
+        clothes: sport
+      '18':
+      - room: pond
+        activity: train
+        clothes: sport
+      - room: street
+        activity: train
+        clothes: sport
+      - room: neighborhood
+        activity: train
+        clothes: sport
+      '24':
+      - room: stripclub
+        activity: work
+        clothes: stripper

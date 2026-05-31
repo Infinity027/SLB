@@ -1,0 +1,246 @@
+name: Bree
+display_name: "[bree.name]"
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Bree"
+short: "{image=notify bree} · [bree.name]"
+description: "One of my roommates, [bree.name] is a full time student. She is bubbly and sweet."
+participants:
+  - bree
+condition: hero.is_male
+
+outcomes:
+  gone:
+    description: "[bree.name] has moved out and is no longer part of my life."
+    condition: bree.is_gone_forever
+    icon: fail
+  engaged:
+    condition: bree.flags.engagedmike
+    description: "[bree.name] has agreed to marry me!"
+
+steps:
+  love20:
+    name: "Get to know [bree.name] better"
+    condition: hero.is_male
+    percentage:
+      value: bree.love.val
+      scale: 20
+    outcome:
+      hide: True
+      condition: bree.love >= 20
+
+  bree_event_01:
+    name: "Interact with [bree.name] in my living room while she is playing a game"
+    related_event: bree_event_01
+    outcome:
+      condition: '"bree_event_01" in DONE'
+
+  love40:
+    name: "Get to know [bree.name] better"
+    percentage:
+      value: bree.love.val
+      scale: 40
+    outcome:
+      hide: True
+      condition: bree.love >= 40
+
+  bree_event_02:
+    name: "Play video games with [bree.name] in the arcade on Saturday"
+    related_event: bree_event_02
+    outcome:
+      description: "[bree.name] likes video games"
+      condition: '"bree_event_02" in DONE'
+
+  love60:
+    name: "Get to know [bree.name] better"
+    percentage:
+      value: bree.love.val
+      scale: 60
+    outcome:
+      hide: True
+      condition: bree.love >= 60
+
+  zbox:
+    name: Acquire a Zbox 360 from the Electronics Shop
+    related_event: bree_event_02
+    condition: '"bree_event_02" in DONE'
+    outcome:
+      condition: 'hero.has_item("zbox_360")'
+
+  bree_event_03:
+    name: "Play video games with [bree.name] on the Zbox"
+    related_event: bree_event_03
+    conditions:
+      - 'hero.has_item("zbox_360")'
+      - bree.love >= 60
+    outcome:
+      condition: '"bree_event_03" in DONE'
+
+  bree_pool_throat:
+    name: "Get a blowjob from [bree.name] in the pool"
+    related_event: bree_pool_throat
+    condition: bree.sub >= 50
+    outcome:
+      condition: '"bree_pool_throat" in DONE'
+
+  bree_shower_bj:
+    name: "Get a blowjob from [bree.name] in the shower"
+    related_event: bree_shower_BJ
+    conditions:
+      - bree.sub >= 50
+      - bree.love >= 150
+    outcome:
+      condition: '"bree_shower_BJ" in DONE'
+
+  bree_couch_bj:
+    name: "Get a blowjob from [bree.name] on the couch"
+    condition: bree.love >= 150
+    outcome:
+      condition: bree.flags.couchbj
+
+  bree_fuck_bathroom:
+    name: "Fuck [bree.name] in the shower"
+    condition: bree.love >= 150
+    outcome:
+      condition: bree.flags.showersex
+
+  bree_fuck_beach:
+    name: "Fuck [bree.name] on the beach"
+    condition: bree.love >= 150
+    outcome:
+      condition: bree.flags.beachsex
+
+  bree_fuck_sasha_bedroom:
+    name: "Fuck [bree.name] in Sasha's bedroom"
+    related_event: bree_fuck_sasha_bedroom
+    condition: bree.love >= 160
+    outcome:
+      condition: "'bree_fuck_sasha_bedroom' in DONE"
+
+  bree_event_bowsette:
+    name: "See [bree.name]'s Bowsette cosplay"
+    related_event: bree_event_bowsette
+    conditions:
+      - bree.love >= 100
+      - game.days_played >= 21
+    outcome:
+      condition: '"bree_event_bowsette" in DONE'
+
+  bree_event_office_01:
+    name: "[bree.name] comes in my office while I'm working"
+    related_event: bree_event_office_01
+    conditions:
+      - bree.love >= 120
+      - '"work_promoted" in DONE'
+      - not game.flags.dwaynedead
+    outcomes:
+      done:
+        condition: '"bree_event_office_01" in DONE'
+      dead:
+        description: Dwayne is dead
+        condition: game.flags.dwaynedead
+        next: None
+
+  bree_event_office_02:
+    name: Dwayne comes in my office while I'm working
+    related_event: bree_event_office_02
+    conditions:
+      - '"bree_event_office_01" in DONE'
+      - not game.flags.breeoffice_delay
+    outcomes:
+      agreed:
+        description: "I agreed to ask [bree.name]"
+        conditions:
+          - '"bree_event_office_02" in DONE'
+          - game.flags.officebree
+      disagreed:
+        description: "I don't want [bree.name] anywhere near Dwayne"
+        conditions:
+          - '"bree_event_office_02" in DONE'
+          - not game.flags.officebree
+        next: None
+      dead:
+        description: Dwayne is dead
+        condition: game.flags.dwaynedead
+        next: None
+
+  bree_event_office_03:
+    name: "Ask [bree.name] about Dwayne's proposal"
+    related_event: bree_event_office_03
+    conditions:
+      - '"bree_event_office_02" in DONE'
+      - game.flags.officebree
+    outcomes:
+      agreed:
+        description: "[bree.name] agreed to meet Dwayne"
+        conditions:
+          - '"bree_event_office_03" in DONE'
+          - game.flags.officebree
+      disagreed:
+        description: "[bree.name] wants nothing to do with Dwayne"
+        conditions:
+          - '"bree_event_office_03" in DONE'
+          - not game.flags.officebree
+        next: None
+      dead:
+        description: Dwayne is dead
+        condition: game.flags.dwaynedead
+        next: None
+
+  date:
+    name: "Go on a date with [bree.name]"
+    condition: True
+    outcome:
+      condition: bree.flags.dates >= 1
+      next: birthday_date
+
+  birthday_date:
+    name: "Take [bree.name] out on a night date for her birthday"
+    condition: bree.flags.dates >= 1
+    outcome:
+      condition: '"bree_birthday_date_male" in DONE'
+      next: None
+
+  sex:
+    name: "Have sex with [bree.name]"
+    condition: True
+    outcome:
+      condition: bree.sexperience >= 1
+      next: None
+
+  love:
+    name: "Get [bree.name] to fall in love with me"
+    condition: True
+    percentage:
+      value: bree.love.val
+      scale: 200
+    outcome:
+      condition: bree.love.val == 200
+      next: None
+
+  ring:
+    name: Buy a wedding ring
+    condition: True
+    outcome:
+      condition: hero.has_item("wedding_ring")
+
+  propose:
+    name: "Propose to [bree.name]"
+    condition: hero.has_item("wedding_ring")
+    outcome:
+      condition: bree.flags.engagedmike
+      next: None
+
+  preg:
+    name: "Get [bree.name] pregnant"
+    optional: True
+    condition: True
+    outcome:
+      condition: bree.flags.pregnancies_number > 0
+      next: None
+
+  slave:
+    name: "Make [bree.name] my sex slave"
+    optional: True
+    condition: True
+    outcome:
+      condition: bree.is_sex_slave
+      next: None

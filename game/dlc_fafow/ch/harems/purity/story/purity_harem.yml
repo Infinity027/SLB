@@ -1,0 +1,125 @@
+name: Purity Harem
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Purity_Harem"
+short: "{image=notify harmony}{image=notify reona} · Purity Harem"
+type: harem
+description:
+  - description: "Reona seems uneasy lately."
+    conditions: True
+
+participants:
+  - harmony
+  - reona
+conditions:
+  - hero.is_male
+  - '"reona_event_07" in DONE'
+  - reona.purity == 100
+  - reona.sexperience == 0
+  - reona.love >= 170
+  - harmony.purity == 100
+  - harmony.sexperience == 0
+
+outcomes:
+  complete:
+    description: Harmony and Reona agreed to marry me!
+    conditions:
+      - Harem.together(harmony, reona, name='purity')
+      - harmony.flags.engagedmike
+      - reona.flags.engagedmike
+  harmony_left:
+    description: Unfortunately, Harmony left.
+    conditions:
+      - harmony.is_gone_forever
+  reona_left:
+    description: Unfortunately, Reona left.
+    conditions:
+      - reona.is_gone_forever
+
+steps:
+  purity_harem_event_01:
+    name: Be on a date at the park with Harmony
+    related_event: purity_harem_event_01
+    conditions:
+      - hero.is_male
+      - '"reona_event_07" in DONE'
+      - reona.purity == 100
+      - reona.sexperience == 0
+      - reona.love >= 170
+      - harmony.purity == 100
+      - harmony.sexperience == 0
+      - harmony.love >= 170
+    outcome:
+      condition: '"purity_harem_event_01" in DONE'
+      next:
+        - purity_harem_event_02a
+        - purity_harem_event_02b
+        - check_talk
+
+  purity_harem_event_02a:
+    name: Give some time to Harmony before talking about the elephant in the room
+    related_event: purity_harem_event_02a
+    conditions:
+      - hero.is_male
+      - '"purity_harem_event_01" in DONE'
+      - reona.purity == 100
+      - reona.sexperience == 0
+      - harmony.purity == 100
+      - harmony.sexperience == 0
+    outcome:
+      condition: '"purity_harem_event_02a" in DONE'
+      next: None
+
+  purity_harem_event_02b:
+    name: Give some time to Reona before a serious chat
+    related_event: purity_harem_event_02b
+    conditions:
+      - hero.is_male
+      - '"purity_harem_event_01" in DONE'
+      - reona.purity == 100
+      - reona.sexperience == 0
+      - harmony.purity == 100
+      - harmony.sexperience == 0
+    outcome:
+      condition: '"purity_harem_event_02b" in DONE'
+      next: None
+
+  check_talk:
+    name: Talk to both Harmony and Reona
+    conditions:
+      - hero.is_male
+      - '"purity_harem_event_01" in DONE'
+      - reona.purity == 100
+      - reona.sexperience == 0
+      - harmony.purity == 100
+      - harmony.sexperience == 0
+    outcome:
+      conditions:
+        - '"purity_harem_event_02a" in DONE'
+        - '"purity_harem_event_02b" in DONE'
+      hide: True
+
+  purity_harem_event_03:
+    name: Leave things cooking, and after some time go to the park, the pub, the street or the church
+    related_event: purity_harem_event_03
+    conditions:
+      - hero.is_male
+      - '"purity_harem_event_02a" in DONE'
+      - '"purity_harem_event_02b" in DONE'
+      - reona.purity == 100
+      - reona.sexperience == 0
+      - reona.love >= 190
+      - harmony.purity == 100
+      - harmony.sexperience == 0
+      - harmony.love >= 190
+    outcome:
+      condition: '"purity_harem_event_03" in DONE'
+      next: None
+
+  propose:
+    name: Propose to Harmony and Reona
+    condition: True
+    outcome:
+      description: Harmony and Reona agreed to marry me!
+      conditions:
+        - Harem.together(harmony, reona, name='purity')
+        - harmony.flags.engagedmike
+        - reona.flags.engagedmike

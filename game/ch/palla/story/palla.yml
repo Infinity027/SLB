@@ -1,0 +1,469 @@
+name: Palla
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Palla"
+short: "{image=notify palla} · Palla"
+description: "Palla is Audrey's best friend. She's mean, but she's incredibly sexy and there's something appealing about her."
+participants:
+  - palla
+condition: '"palla_event_01" in DONE'
+
+outcomes:
+  engaged:
+    condition: palla.flags.engagedmike
+    description: Palla has agreed to marry me!
+  leftgame:
+    condition: palla.is_gone_forever
+    description: Palla is gone from my life.
+    icon: fail
+
+steps:
+  charm50:
+    name: Be charming enough for Palla to notice me
+    condition: '"palla_event_01" in DONE'
+    percentage:
+      value: hero.charm.val
+      scale: 50
+    outcome:
+      hide: True
+      condition: hero.charm >= 50
+
+  palla_event_02:
+    name: Find Palla in the clothing shop
+    related_event: palla_event_02
+    outcomes:
+      paidsex:
+        description: I bought Palla a dress and we had rough sex in the changing room
+        conditions:
+          - "'palla_event_02' in DONE"
+          - palla.flags.storepaid
+          - palla.flags.storeanal
+      nopaidsex:
+        description: I refused to buy Palla a dress and we had rough sex in the changing room
+        conditions:
+          - "'palla_event_02' in DONE"
+          - not palla.flags.storepaid
+          - palla.flags.storeanal
+      paidnosex:
+        description: I bought Palla a dress and left it at that
+        conditions:
+          - "'palla_event_02' in DONE"
+          - palla.flags.storepaid
+          - not palla.flags.storeanal
+      nopaidnosex:
+        description: I did not buy Palla a dress, and left her in the clothing shop
+        conditions:
+          - "'palla_event_02' in DONE"
+          - not palla.flags.storepaid
+          - not palla.flags.storeanal
+
+  palla_event_03:
+    name: Run into Palla at the coffee shop
+    related_event: palla_event_03
+    condition: "'palla_event_02' in DONE"
+    outcome:
+      condition: "'palla_event_03' in DONE"
+
+  love10:
+    name: Get to know Palla better
+    percentage:
+      value: palla.love.val
+      scale: 10
+    outcome:
+      hide: True
+      conditions: palla.love >= 10
+
+  palla_event_03a:
+    name: Run into Palla at the coffee shop
+    related_event: palla_event_03a
+    condition: palla.love >= 10
+    outcome:
+      condition: "'palla_event_03a' in DONE"
+
+  love20:
+    name: Get to know Palla better
+    percentage:
+      value: palla.love.val
+      scale: 20
+    outcome:
+      hide: True
+      conditions: palla.love >= 20
+
+  palla_event_03b:
+    name: Run into Palla and Sasha at the clothing shop
+    related_event: palla_event_03b
+    condition: palla.love >= 20
+    outcome:
+      condition: "'palla_event_03b' in DONE"
+
+  love30:
+    name: Get to know Palla better
+    percentage:
+      value: palla.love.val
+      scale: 30
+    outcome:
+      hide: True
+      conditions: palla.love >= 30
+
+  palla_event_03c:
+    name: Meet Palla in the nightclub
+    related_event: palla_event_03c
+    condition: palla.love >= 30
+    outcome:
+      condition: "'palla_event_03c' in DONE"
+
+  love40:
+    name: Get to know Palla better
+    percentage:
+      value: palla.love.val
+      scale: 40
+    outcome:
+      hide: True
+      conditions: palla.love >= 40
+
+  palla_event_03d:
+    name: Buy Palla a drink in the pub
+    related_event: palla_event_03d
+    condition: palla.love >= 40
+    outcome:
+      condition: "'palla_event_03d' in DONE"
+
+  love50:
+    name: Get to know Palla better
+    percentage:
+      value: palla.love.val
+      scale: 50
+    outcome:
+      hide: True
+      conditions: palla.love >= 50
+
+  palla_event_03e:
+    name: Buy Palla a drink in the pub
+    related_event: palla_event_03e
+    condition: palla.love >= 50
+    outcome:
+      condition: "'palla_event_03e' in DONE"
+
+  fitness40:
+    name: Be fit enough to train with Palla
+    outcome:
+      hide: True
+      condition: hero.fitness >= 40
+
+  love60:
+    name: Get to know Palla better
+    percentage:
+      value: palla.love.val
+      scale: 60
+    outcome:
+      hide: True
+      conditions: palla.love >= 60
+
+  palla_event_03f:
+    name: Train with Palla in the gym
+    related_event: palla_event_03f
+    condition: palla.love >= 60
+    outcome:
+      condition: '"palla_event_03f" in DONE'
+
+  love70:
+    name: Get to know Palla better
+    percentage:
+      value: palla.love.val
+      scale: 70
+    outcome:
+      hide: True
+      conditions: palla.love >= 70
+
+  palla_event_03g:
+    name: Meet Palla in the coffee shop
+    related_event: palla_event_03g
+    condition: palla.love >= 70
+    outcome:
+      condition: "'palla_event_03g' in DONE"
+
+  love80:
+    name: Get to know Palla better
+    percentage:
+      value: palla.love.val
+      scale: 80
+    outcome:
+      hide: True
+      condition: palla.love >= 80
+
+  palla_event_04:
+    name: Wait for Palla to call me
+    related_event: palla_event_04
+    condition: palla.love >= 80
+    outcomes:
+      madeout:
+        description: Palla invited me out dancing and we made out in the bathroom
+        next: palla_event_05
+        conditions:
+          - palla.love.max >= 120
+          - "'palla_event_04' in DONE"
+          - not palla.flags.ev4b
+      danced:
+        description: Palla invited me out dancing and I left when she disappeared in the bathroom
+        next: palla_event_04b
+        conditions:
+          - palla.love.max == 60 or palla.flags.ev4b
+          - "'palla_event_04' in DONE"
+      nodance:
+        description: Palla invited me out dancing and I said no
+        next: palla_event_04b
+        conditions:
+          - palla.love.max == 40 or palla.flags.ev4b
+          - "'palla_event_04' in DONE"
+
+  palla_event_04b:
+    name: Talk to Palla
+    related_event: palla_event_04b
+    outcomes:
+      gone:
+        icon: fail
+        description: I did not have patience for her, and she is gone from my life
+        next: leftgame
+        conditions:
+          - "'palla_event_04b' in DONE"
+          - not palla.flags.ev4b
+      tryagain:
+        description: I argued with Palla and she walked away
+        conditions:
+          - "'palla_event_04b' in DONE"
+          - not palla.flags.ev4b
+
+  palla_event_04b_finish:
+    name: Wait for Palla
+    outcome:
+      conditions:
+        - "'palla_event_04b' in DONE"
+        - palla.love.max >= 120
+
+  palla_event_05:
+    name: Talk to Palla
+    related_event: palla_event_05
+    outcome:
+      next:
+        - giveflowers
+        - givecandies
+        - love120
+      description: I waited for Palla and she kissed me unexpectedly
+      condition: "'palla_event_05' in DONE"
+
+  love120:
+    name: Get to know Palla better
+    percentage:
+      value: palla.love.val
+      scale: 120
+    outcome:
+      next: None
+      condition: palla.love >= 120
+
+  giveflowers:
+    name: Give Palla flowers
+    outcome:
+      next: None
+      condition: palla.flags.gaveflowers
+
+  givecandies:
+    name: Give Palla candies
+    outcome:
+      next: None
+      condition: palla.flags.gavesweets
+
+  palla_event_06:
+    name: Go out with Palla when she calls
+    related_event: palla_event_06
+    conditions:
+      - palla.flags.gavesweets
+      - palla.flags.gaveflowers
+      - palla.love >= 120
+    outcomes:
+      complete:
+        conditions:
+          - '"palla_event_06" in DONE'
+          - palla.love.max >= 160
+      denied:
+        next: leftgame
+        icon: fail
+        conditions:
+          - '"palla_event_06" in DONE'
+          - palla.is_gone_forever
+
+  palla_event_07:
+    name: Talk about sex with Palla
+    related_event: palla_event_07
+    condition: palla.sexperience >= 1
+    outcomes:
+      dumped:
+        description: Palla and I talked, and I dumped her.
+        next: leftgame
+        icon: fail
+        conditions:
+          - '"palla_event_07" in DONE'
+          - palla.is_gone_forever
+      mine:
+        description: Palla and I talked, and I told her I wanted her to be mine
+        conditions:
+          - '"palla_event_07" in DONE'
+          - palla.love.max == 200
+          - palla.flags.minealone
+      relationship:
+        conditions:
+          - '"palla_event_07" in DONE'
+          - palla.love.max == 200
+
+  palla_event_07b:
+    name: Clarify my relationship with Palla
+    related_event: palla_event_07b
+    outcomes:
+      girlfriend:
+        description: Palla and I clarified that she is my girlfriend
+        conditions:
+          - '"palla_event_07b" in DONE'
+          - palla.status == "girlfriend"
+      friend:
+        description: Palla and I clarified that we are friends who fuck
+        conditions:
+          - '"palla_event_07b" in DONE'
+          - palla.status != "girlfriend"
+
+  palla_event_09:
+    name: See Palla in the nightclub
+    related_event: palla_event_09
+    condition: '"palla_event_07b" in DONE'
+    outcome:
+      description: I saw Palla in the nightclub with some other guy. Was it a date?
+      condition: '"palla_event_09" in DONE'
+
+  palla_event_10:
+    name: Learn more about Palla's mystery date
+    related_event: palla_event_10
+    condition: '"palla_event_09" in DONE'
+    outcome:
+      description: I met Palla's mystery date in the electronics shop
+      condition: '"palla_event_10" in DONE'
+
+  talkshawn:
+    name: Confront Palla about Shawn
+    condition: '"palla_event_10" in DONE'
+    outcome:
+      description: I confronted Palla about Shawn and she stormed off
+      condition: palla.flags.talkedshawn
+
+  palla_event_11:
+    name: Find Palla
+    related_event: palla_event_11
+    condition: palla.flags.talkedshawn
+    outcome:
+      description: I encountered an angry Shawn, who revealed they are not dating, just roommates
+      condition: '"palla_event_11" in DONE'
+
+  palla_event_12:
+    name: Wait for Palla to reappear
+    related_event: palla_event_12
+    condition: '"palla_event_11" in DONE'
+    outcome:
+      description: Palla came back, upset but apologetic
+      condition: '"palla_event_12" in DONE'
+
+  palla_event_13:
+    name: Talk to Palla
+    related_event: palla_event_13
+    condition: '"palla_event_12" in DONE'
+    outcome:
+      description: I offered to be Palla's agent
+      condition: '"palla_event_13" in DONE'
+
+  palla_event_14:
+    name: Wait for Palla's response
+    related_event: palla_event_14
+    condition: '"palla_event_13" in DONE'
+    outcomes:
+      agent:
+        description: Palla agreed I should be her agent
+        conditions:
+          - '"palla_event_14" in DONE'
+          - palla.flags.career
+      moved:
+        description: I changed my mind, and Palla moved away
+        next: leftgame
+        conditions:
+          - '"palla_event_14" in DONE'
+          - not palla.flags.career
+
+  pill:
+    name: Tell Palla to go off the pill
+    condition: palla.love >= 120
+    outcome:
+      description: Palla refused to go off the pill
+      condition: palla.flags.pillchat
+      icon: fail
+
+  pillchat:
+    name: Convince Palla to go off the pill once her career is good enough
+    conditions: palla.flags.pillchat
+    outcome:
+      description: Palla agreed she will go off the pill if I ask again
+      conditions:
+        - palla.flags.babyok
+      next: None
+
+  date:
+    name: Go on a date with Palla
+    condition: True
+    outcome:
+      condition: palla.flags.dates >= 1
+      next: birthday_date
+
+  birthday_date:
+    name: Take Palla out on a night date for her birthday
+    condition: palla.flags.dates >= 1
+    outcome:
+      condition: '"palla_birthday_date_male" in DONE'
+      next: None
+
+  sex:
+    name: Have sex with Palla
+    condition: True
+    outcome:
+      condition: palla.sexperience >= 1
+      next: None
+
+  love:
+    name: Get Palla to fall in love with me
+    condition: True
+    percentage:
+      value: palla.love.val
+      scale: 200
+    outcome:
+      condition: palla.love.val == 200
+      next: None
+
+  ring:
+    name: Buy a wedding ring
+    condition: True
+    outcome:
+      condition: hero.has_item("wedding_ring")
+
+  propose:
+    name: Propose to Palla
+    condition: hero.has_item("wedding_ring")
+    outcome:
+      condition: palla.flags.engagedmike
+      next: None
+
+  preg:
+    name: Get Palla pregnant
+    optional: True
+    condition: True
+    outcome:
+      condition: palla.flags.pregnancies_number > 0
+      next: None
+
+  slave:
+    name: Make Palla my sex slave
+    optional: True
+    condition: True
+    outcome:
+      condition: palla.is_sex_slave
+      next: None

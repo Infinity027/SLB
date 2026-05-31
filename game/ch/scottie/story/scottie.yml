@@ -1,0 +1,166 @@
+name: Scottie
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Sasha#Sasha_and_Scottie_events"
+short: "{image=notify scottie} · Scottie"
+description: "Scottie is Sasha's ex-boyfriend. He seems kind of dim, and can best be described as a lunkhead."
+participants:
+  - sasha
+  - scottie
+conditions:
+  - hero.is_male
+  - '"scottie_appears" in DONE'
+# Since this covers both Mike's version of scottie and Sasha's, don't auto start and let conditions do it.
+start:
+  - wait_step_talk
+  - days_played14
+  - sasha_love100
+outcomes:
+  done:
+    description: I turned down Sasha's suggestion that she, Scottie and I have a threesome.
+    conditions:
+      - hero.is_male
+      - '"sasha_threesome_request" in DONE'
+      - not sasha.flags.scottiethreesome
+  threesome:
+    description: I agreed having a threesome with Sasha and Scottie.
+    conditions:
+      - hero.is_male
+      - '"sasha_scottie_threesome" in DONE'
+  avoided:
+    description: I got to a point in my relationship with Sasha that she didn't want to pursue anything else
+    conditions:
+      - hero.is_male
+      - sasha.flags.disable_scottie_events
+    icon: fail
+
+steps:
+  wait_step_talk:
+    name: Wait for Sasha
+    conditions:
+      - hero.is_male
+      - '"scottie_appears" in DONE'
+      - sasha.flags.scottieDelay
+    percentage:
+      value: sasha.timers.scottieDelay
+      scale: 7
+      invert: True
+    outcome:
+      hide: True
+      conditions: not sasha.flags.scottieDelay
+      next:
+        - sasha_scottie_talk
+
+  sasha_scottie_talk:
+    name: Talk to Sasha about Scottie
+    related_event: sasha_scottie_talk
+    conditions:
+      - '"scottie_appears" in DONE'
+      - not sasha.flags.scottieDelay
+    outcomes:
+      complete:
+        conditions:
+          - '"sasha_scottie_talk" in DONE'
+          - not sasha.flags.disable_scottie_events
+      disabled:
+        conditions:
+          - '"sasha_scottie_talk" in DONE'
+          - sasha.flags.disable_scottie_events
+        next: None
+      failed:
+        conditions:
+          - sasha.love >= 99
+          - '"sasha_scottie_talk" not in DONE'
+        next: None
+
+  wait_step_bj:
+    name: Wait some time
+    conditions:
+      - '"sasha_scottie_talk" in DONE'
+      - not sasha.flags.disable_scottie_events
+      - sasha.flags.scottieDelay
+    percentage:
+      value: sasha.timers.scottieDelay
+      scale: 7
+      invert: True
+    outcome:
+      hide: True
+      conditions: not sasha.flags.scottieDelay
+
+  sasha_scottie_bj:
+    name: Join Sasha in her bedroom
+    related_event: sasha_scottie_bj
+    conditions:
+      - '"sasha_scottie_talk" in DONE'
+      - not sasha.flags.scottieDelay
+      - not sasha.flags.disable_scottie_events
+    outcomes:
+      complete:
+        conditions:
+          - '"sasha_scottie_bj" in DONE'
+      failed:
+        conditions:
+          - sasha.love >= 99
+          - '"sasha_scottie_bj" not in DONE'
+        icon: fail
+        next: None
+
+  days_played14:
+    name: Wait a few days
+    percentage:
+      value: game.days_played
+      scale: 14
+    outcome:
+      hide: True
+      condition: game.days_played >= 14
+
+  sasha_love100:
+    name: Get to know Sasha better
+    percentage:
+      value: sasha.love.val
+      scale: 100
+    outcome:
+      hide: True
+      condition: sasha.love >= 100
+      next: scottie_wait_for_sasha
+
+  scottie_wait_for_sasha:
+    name: Look for Sasha in the livingroom.
+    related_event: sasha_threesome_request
+    conditions:
+      - '"sasha_scottie_talk" in DONE'
+      - game.days_played >= 14
+      - sasha.love >= 100
+      - not sasha.flags.disable_scottie_events
+    outcomes:
+      complete:
+        conditions:
+          - '"sasha_threesome_request" in DONE'
+      failed:
+        conditions:
+          - -26 >= sasha.sub >= 25
+        icon: fail
+
+  sasha_threesome_request:
+    name: Accept Sasha's request to have a threesome with Scottie
+    conditions:
+      - '"sasha_threesome_request" in DONE'
+    outcomes:
+      accept:
+        conditions:
+          - sasha.flags.scottiethreesome
+          - not sasha.flags.disable_scottie_events
+      refuse:
+        next: done
+        condition:
+          - not sasha.flags.scottiethreesome
+          - sasha.flags.disable_scottie_events
+
+  sasha_scottie_threesome:
+    name: Have a threesome with Sasha and Scottie Saturday evening
+    related_event: sasha_scottie_threesome
+    conditions:
+      - sasha.flags.scottiethreesome
+      - not sasha.flags.disable_scottie_events
+    outcome:
+      conditions:
+        - '"sasha_scottie_threesome" in DONE'
+      next: None

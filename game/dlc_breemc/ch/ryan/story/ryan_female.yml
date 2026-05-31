@@ -1,0 +1,121 @@
+name: Ryan
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Ryan/FemaleMC"
+short: "{image=notify ryan} · Ryan"
+description: "I met [mike.name]'s friend Ryan."
+participants:
+  - ryan
+conditions:
+  - hero.is_female
+  - '"ryan_female_event_01" in DONE'
+
+outcomes:
+  complete:
+    description: Ryan story is complete.
+    conditions:
+      - ryan.flags.complete
+  gone:
+    description: Ryan has left and is no longer part of my life.
+    condition: ryan.is_gone_forever
+    icon: fail
+
+steps:
+  love20:
+    name: Get to know Ryan better
+    conditions:
+      - "'ryan_female_event_01' in DONE"
+    percentage:
+      value: ryan.love.val
+      scale: 20
+    outcome:
+      hide: True
+      conditions: ryan.love >= 20
+
+  ryan_female_event_02:
+    name: Meet Ryan at the mall
+    related_event: ryan_female_event_02
+    conditions:
+      - ryan.love >= 20
+      - "'ryan_female_event_01' in DONE"
+    outcome:
+      description: Meet Ryan at the mall
+      condition: '"ryan_female_event_02" in DONE'
+
+  love40:
+    name: Get to know Ryan better
+    conditions:
+      - "'ryan_female_event_02' in DONE"
+    percentage:
+      value: ryan.love.val
+      scale: 40
+    outcome:
+      hide: True
+      conditions: ryan.love >= 40
+
+  ryan_female_event_03:
+    name: Go to Ryan and Sam's wedding with [mike.name]
+    related_event: ryan_female_event_03
+    conditions:
+      - ryan.love >= 40
+      - "'ryan_female_event_02' in DONE"
+    outcome:
+      description: Go to Ryan and Sam's wedding with [mike.name]
+      condition: '"ryan_female_event_03" in DONE'
+
+  love60:
+    name: Get to know Ryan better
+    conditions:
+      - "'ryan_female_event_03' in DONE"
+    percentage:
+      value: ryan.love.val
+      scale: 60
+    outcome:
+      hide: True
+      conditions: ryan.love >= 60
+
+  ryan_female_event_04:
+    name: Wait a little
+    related_event: ryan_female_event_04
+    conditions:
+      - ryan.love >= 60
+      - "'ryan_female_event_03' in DONE"
+    outcome:
+      description: Wait a little
+      condition: '"ryan_female_event_04" in DONE'
+
+  love80:
+    name: Get to know Ryan better
+    conditions:
+      - "'ryan_female_event_04' in DONE"
+    percentage:
+      value: ryan.love.val
+      scale: 80
+    outcome:
+      hide: True
+      conditions: ryan.love >= 80
+
+  ryan_female_event_05:
+    name: Meet again Sam & Ryan in the street
+    related_event: ryan_female_event_05
+    conditions:
+      - ryan.love >= 80
+      - "'ryan_female_event_04' in DONE"
+    outcome:
+      description: Wait a little
+      condition: '"ryan_female_event_05" in DONE'
+
+  love100:
+    name: Get to know Ryan better
+    conditions:
+      - "'ryan_female_event_05' in DONE"
+    percentage:
+      value: ryan.love.val
+      scale: 100
+    outcome:
+      hide: True
+      conditions: ryan.love >= 100
+
+  ryan_female_event_06_wait:
+    name: That's all in Ryan's story for now
+    icon: stalled
+    outcome:
+      condition: False

@@ -1,0 +1,143 @@
+---
+name: Cherie
+family_name: Jackson
+class: Girl
+age: 39
+status: friend
+gender: female
+flags:
+  nokiss: True
+  nodate: True
+  hidden: True
+attributes:
+  love:
+    min: 0
+    max: 20
+    default: 0
+  sub:
+    min: -25
+    max: 25
+    default: 0
+  lesbian:
+    min: 0
+    max: 20
+    default: 0
+  sexperience:
+    min: 0
+    max: null
+    default: 0
+piercings:
+  clit:
+    pierced: False
+  ears:
+    pierced: False
+  navel:
+    pierced: False
+  nipples:
+    pierced: False
+  nose:
+    pierced: False
+birthday:
+  - fall
+  - 29
+traits:
+  - princess
+  - flirty
+  - gourmand
+  - french
+desire_factors:
+  - charm
+  - charm
+  - fitness
+  - not_home
+  - not_park
+  - restaurant
+  - money
+heronickname:
+    Amour: cherie.flags.mikeNickname in nickname_amour
+    Cochonet: cherie.flags.mikeNickname in nickname_cochonet
+schedule:
+  default:
+    '12345':
+      '6':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '9':
+        - room: gym
+          activity: train
+          clothes: sport
+      '10':
+        - room: ceo
+          conditions:
+            - cherie.flags.isceo
+          activity: work
+          clothes: work
+        - room: ceo
+          conditions:
+            - not cherie.flags.isceo
+          activity: wait
+          clothes: work
+      '12':
+        - room: restaurant
+          activity: eat
+          clothes: work
+      '14':
+        - room: ceo
+          conditions:
+            - cherie.flags.isceo
+          activity: work
+          clothes: work
+        - room: ceo
+          conditions:
+            - not cherie.flags.isceo
+          activity: wait
+          clothes: work
+      '16':
+        - room: jewelrystore
+          activity: shopping
+          clothes: casual
+      '17':
+        - room: golf
+          activity: train
+          clothes: sport
+      '19':
+        - room: mansion
+          activity: read
+          clothes: casual
+      '23':
+        - room: restaurant
+          activity: wait
+          clothes: date
+      '24':
+        - room: street2
+          activity: walk
+          clothes: casual
+        - room: None
+          activity: None
+          clothes: underwear
+    '67':
+      '9':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '12':
+        - room: mansion
+          activity: rest
+          clothes: casual
+      '16':
+        - room: golf
+          activity: play
+          clothes: sport
+      '20':
+        - room: mansion
+          activity: rest
+          clothes: casual
+      '22':
+        - room: street2
+          activity: walk
+          clothes: casual
+      '23':
+        - room: restaurant
+          activity: wait
+          clothes: date

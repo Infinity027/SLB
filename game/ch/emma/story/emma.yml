@@ -1,0 +1,340 @@
+name: Emma
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Emma"
+short: "{image=notify emma} · Emma"
+description: "Emma is the girl of my dreams. Literally, I had an amazingly intense dream about her, and then she turned out to be real. I feel drawn to her. Is it mystical? I don't know!"
+participants:
+  - emma
+condition: '"emma_event_02" in DONE'
+
+outcomes:
+  gone:
+    description: Emma has left and is no longer part of my life.
+    condition: emma.is_gone_forever
+    icon: fail
+  engaged:
+    description: Emma has agreed to marry me!
+    condition: emma.flags.engagedmike
+  friend:
+    description: We cleared things up with Emma and Sam. She will remain a friend while Sam and I stay together.
+    condition: "'emma_event_09_appointment' in DONE"
+    icon: fail
+
+steps:
+  emmadelay:
+    name: Wait a couple days
+    condition: '"emma_event_02" in DONE'
+    percentage:
+      value: 2 - samantha.timers.emmadelay
+      scale: 2
+    outcome:
+      condition: not samantha.flags.emmadelay
+
+  emma_event_03:
+    name: Talk to Samantha about Emma
+    related_event: emma_event_03
+    outcomes:
+      complete:
+        conditions:
+          - '"emma_event_03" in DONE'
+          - not emma.is_gone_forever
+      gone:
+        conditions:
+          - '"emma_event_03" in DONE'
+          - emma.is_gone_forever
+
+  emma_event_03_appointment:
+    name: Meet Sam and Emma at the coffee shop
+    outcome:
+      conditions: '"emma_event_03_appointment" in DONE'
+
+  love20:
+    name: Get to know Emma better
+    percentage:
+      value: emma.love.val
+      scale: 20
+    outcome:
+      hide: True
+      condition: emma.love >= 20
+
+  emma_event_04:
+    name: Talk to Emma about Samantha
+    related_event: emma_event_04
+    outcome:
+      conditions: '"emma_event_04" in DONE'
+
+  love30:
+    name: Get to know Emma better
+    percentage:
+      value: emma.love.val
+      scale: 30
+    outcome:
+      hide: True
+      condition: emma.love >= 30
+
+  emma_event_05:
+    name: Talk to Emma in the coffee shop
+    related_event: emma_event_05
+    outcome:
+      conditions: '"emma_event_05" in DONE'
+
+  love40:
+    name: Get to know Emma better
+    percentage:
+      value: emma.love.val
+      scale: 40
+    outcome:
+      hide: True
+      condition: emma.love >= 40
+
+  emma_event_06:
+    name: Wait for Emma to call
+    related_event: emma_event_06
+    outcome:
+      conditions: '"emma_event_06" in DONE'
+
+  emma_event_06_finish:
+    name: Go on a scavenger hunt with Emma
+    related_event: emma_event_06_finish
+    outcome:
+      conditions: '"emma_event_06_finish" in DONE'
+
+  love60:
+    name: Get to know Emma better
+    percentage:
+      value: emma.love.val
+      scale: 60
+    outcome:
+      hide: True
+      condition: emma.love >= 60
+
+  emma_event_07:
+    name: Buy Emma a drink
+    related_event: emma_event_07
+    outcome:
+      conditions: '"emma_event_07" in DONE'
+
+  love80:
+    name: Get to know Emma better
+    percentage:
+      value: emma.love.val
+      scale: 80
+    outcome:
+      hide: True
+      condition: emma.love >= 80
+
+  emma_event_08:
+    name: Wait for Emma to call for the sleepover
+    related_event: emma_event_08
+    outcome:
+      conditions: '"emma_event_08" in DONE'
+
+  emma_event_09:
+    name: Wait for Emma to reappear
+    related_event: emma_event_09
+    outcomes:
+      nodate:
+        conditions:
+          - emma.love.max <= 100
+          - '"emma_event_09" in DONE'
+        description: Emma reappeared, but we did not carry our romance further.
+        next: None
+      sam:
+        conditions:
+          - emma.flags.talktosam
+          - '"emma_event_09" in DONE'
+        description: Emma reappeared. We would like to date, but she doesn't want to hurt Sam.
+        next: emma_event_09_sam
+      date:
+        condition: '"emma_event_09" in DONE'
+        next:
+          - emma_fuck_date_second
+
+  emma_event_09_sam:
+    name: Wait for Samantha to call
+    related_event: emma_event_09_sam
+    outcomes:
+      moretalk:
+        conditions:
+          - '"emma_event_09_sam" in DONE'
+          - not samantha.flags.breakup
+        description: Samantha called, and she wants to talk to Emma and I together.
+        next: emma_event_09_appointment
+      brokeup:
+        conditions:
+          - '"emma_event_09_sam" in DONE'
+          - samantha.flags.breakup
+          - not emma.flags.samok
+        description: Samantha called, and we ended up breaking up.
+        next: emma_event_09_betrayed
+      emma_okayed:
+        conditions:
+          - '"emma_event_09_sam" in DONE'
+          - samantha.flags.breakup
+          - emma.flags.samok
+        next: emma_event_09_okayed
+
+  emma_event_09_betrayed:
+    name: Talk to Emma
+    related_event: emma_event_09_betrayed
+    outcomes:
+      gone:
+        condition: emma.is_gone_forever
+        description: Emma did not appreciate Sam and I breaking up. She told me off and left.
+        next: None
+      hidden:
+        condition: emma.flags.samok
+        hide: True
+        next: emma_event_09_okayed
+
+  emma_event_09_okayed:
+    name: Talk to Emma
+    related_event: emma_event_09_okayed
+    outcome:
+      condition: '"emma_event_09_okayed" in DONE'
+      description: Emma was not happy about Sam and I breaking up, but she understood.
+      next: emma_fuck_date_second
+
+  emma_event_09_appointment:
+    name: Meet with Emma and Sam
+    outcomes:
+      complete:
+        condition: "'emma_event_09_appointment' in DONE"
+        description: We cleared things up with Emma and Sam. She will remain a friend while Sam and I stay together.
+        next: None
+      hidden:
+        condition: "emma.flags.samok or 'emma_fuck_date_second' in DONE"
+        hide: True
+        next: None
+
+  emma_fuck_date_second:
+    name: Go on dates with Emma until something happens
+    outcome:
+      condition: "'emma_fuck_date_second' in DONE"
+      next:
+        - emma_event_10_cinema
+        - emma_event_10_bree
+        - emma_event_10_gfs
+
+  emma_event_10_cinema:
+    name: Watch a movie with Emma on a Cinema date
+    related_event: emma_event_10_cinema
+    outcome:
+      condition: '"emma_event_10_cinema" in DONE'
+      next: None
+
+  emma_event_10_bree:
+    name: "Overhear Emma and [bree.name] talk at the University"
+    related_event: emma_event_10_bree
+    outcome:
+      condition: '"emma_event_10_bree" in DONE'
+      next: None
+
+  emma_event_10_gfs:
+    name: Have a picnic or make a snowman with Emma on a Park date
+    related_event: emma_event_10_gfs
+    outcome:
+      condition: '"emma_event_10_gfs" in DONE'
+      next: None
+
+  emma_event_10:
+    name: Talk to Emma
+    related_event: emma_event_10
+    conditions:
+      - '"emma_event_10_bree" in DONE'
+      - '"emma_event_10_cinema" in DONE'
+      - '"emma_event_10_gfs" in DONE'
+    outcome:
+      condition: '"emma_event_10" in DONE'
+
+  emma_fuck_date_third:
+    name: Do some sexy role-play after a date with Emma
+    related_event: emma_fuck_date_third
+    outcome:
+      condition: '"emma_fuck_date_third" in DONE'
+
+  love160:
+    name: Get to know Emma better
+    percentage:
+      value: emma.love.val
+      scale: 160
+    outcome:
+      hide: True
+      condition: emma.love >= 160
+
+  emma_event_11:
+    name: Talk to Emma
+    related_event: emma_event_11
+    conditions:
+      - '"emma_fuck_date_third" in DONE'
+    outcome:
+      condition: '"emma_event_11" in DONE'
+
+  love180:
+    name: Get to know Emma better
+    percentage:
+      value: emma.love.val
+      scale: 180
+    outcome:
+      hide: True
+      condition: emma.love >= 180
+
+  emma_event_12:
+    name: Go on a date at the beach with Emma
+    related_event: emma_event_12
+    conditions:
+      - '"emma_event_11" in DONE'
+    outcome:
+      condition: '"emma_event_12" in DONE'
+
+  date:
+    name: Go on a date with Emma
+    condition: True
+    outcome:
+      condition: emma.flags.dates >= 1
+      next: None
+
+  sex:
+    name: Have sex with Emma
+    condition: True
+    outcome:
+      condition: emma.sexperience >= 1
+      next: None
+
+  love:
+    name: Get Emma to fall in love with me
+    condition: True
+    percentage:
+      value: emma.love.val
+      scale: 200
+    outcome:
+      condition: emma.love.val == 200
+      next: None
+
+  ring:
+    name: Buy a wedding ring
+    condition: True
+    outcome:
+      condition: hero.has_item("wedding_ring")
+
+  propose:
+    name: Propose to Emma
+    condition: hero.has_item("wedding_ring")
+    outcome:
+      condition: emma.flags.engagedmike
+      next: None
+
+  preg:
+    name: Get Emma pregnant
+    optional: True
+    condition: True
+    outcome:
+      condition: emma.flags.pregnancies_number > 0
+      next: None
+
+  slave:
+    name: Make Emma my sex slave
+    optional: True
+    condition: True
+    outcome:
+      condition: emma.is_sex_slave
+      next: None

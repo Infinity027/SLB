@@ -1,0 +1,148 @@
+---
+name: Ryan
+class: Guy
+age: 27
+status: "[mike.name]'s friend"
+gender: male
+flags:
+  nokiss: True
+  nodate: True
+  hidden: True
+attributes:
+  love:
+    min: 0
+    max: 20
+    default: 0
+  sub:
+    min: 0
+    max: 50
+    default: 0
+  sexperience:
+    min: 0
+    max: null
+    default: 0
+birthday:
+  - spring
+  - 20
+traits:
+  - selfish
+  - unfaithful
+  - dominant
+  - not_geek
+  - not_family
+  - smalldick
+desire_factors:
+  - charm
+  - charm
+  - submissive
+  - money
+  - money
+  - fitness
+  - mall
+schedule:
+  default:
+    '12345':
+      '9':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '11':
+        - room: street
+          activity: None
+          clothes: casual
+      '17':
+        - room: mall1
+          activity: shopping
+          clothes: casual
+        - room: mall2
+          activity: shopping
+          clothes: casual
+      '18':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '20':
+        - room: sexshop
+          activity: shop
+          clothes: casual
+      '24':
+        - room: None
+          activity: None
+          clothes: underwear
+    '6':
+      '9':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '11':
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '13':
+        - room: street
+          activity: None
+          clothes: casual
+      '14':
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: waterpark
+          activity: swim
+          clothes: swimsuit
+          seasons: "01"
+      '16':
+        - room: waterpark
+          activity: swim
+          clothes: swimsuit
+          seasons: "01"
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '18':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '21':
+        - room: pubseat
+          activity: drink
+          clothes: casual
+      '23':
+        - room: pubseat
+          activity: drink
+          clothes: casual
+        - room: nightclubbar
+          activity: drink
+          clothes: date
+    '7':
+      '5':
+        - room: nightclubbar
+          activity: drink
+          clothes: date
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '10':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '16':
+        - room: park
+          activity: smoke
+          clothes: casual
+      '18':
+        - room: street
+          activity: None
+          clothes: casual
+      '23':
+        - room: pubseat
+          activity: drink
+          clothes: casual

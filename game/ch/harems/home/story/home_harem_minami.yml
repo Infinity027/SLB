@@ -1,0 +1,277 @@
+name: Home Harem - Minami
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Home_Harem#Troublesome_sister"
+short: "{image=notify minami} · Home Harem"
+type: harem
+description:
+  - description: "Minami wants to be part of my relationship with [bree.name] and Sasha."
+  - description: Minami is now part of the harem.
+    condition: Harem.find(minami, name='home')
+
+conditions:
+  - minami.sexperience >= 1
+  - Harem.find(sasha, name='home')
+  - "'minami_snooping' in DONE"
+
+outcomes:
+  fail:
+    description: The girls don't want Minami in our relationship.
+    conditions:
+      - not minami.flags.harem_home
+      - "'minami_snooping' in DONE"
+      - minami.flags.haremdenied >= 3
+    icon: fail
+  minamileft:
+    description: Unfortunately, Minami left, dashing my hopes to include her in the home harem.
+    conditions:
+      - minami.is_gone_forever
+    icon: fail
+  home_harem_bree_sasha_minami:
+    conditions:
+      - Harem.together(bree, sasha, minami, name='home')
+      - bree.flags.engagedmike
+      - sasha.flags.engagedmike
+      - minami.flags.engagedmike
+    description: "[bree.name], Sasha and Minami agreed to marry me!"
+
+steps:
+  should_not_happen_minami:
+    icon: stalled
+    name: "Issue with Minami joining the home harem. Contact devs ([game.flags.ongoinghomeharem!c])"
+    toggle: True
+    conditions:
+      - "game.flags.ongoinghomeharem not in ['samantha', 'lexi', 'minami']"
+    outcomes:
+      complete:
+        hide: True
+        condition: Harem.find(minami, name='home')
+      ongoing:
+        hide: True
+        condition: "game.flags.ongoinghomeharem in ['samantha', 'lexi', 'minami']"
+      failed:
+        hide: True
+        conditions:
+          - not minami.flags.harem_home
+          - "'minami_snooping' in DONE"
+          - minami.flags.haremdenied >= 3
+      gone:
+        hide: True
+        condition: minami.is_gone_forever
+
+  add_samantha_home_harem:
+    icon: stalled
+    name: "I can't let Minami join the home harem right now ([game.flags.ongoinghomeharem!c] ongoing)"
+    toggle: True
+    conditions:
+      - "game.flags.ongoinghomeharem in ['lexi', 'samantha']"
+    outcome:
+      hide: True
+      condition: Harem.find(minami, name='home')
+
+  mlove:
+    name: Make sure Minami loves you enough
+    conditions:
+      - "'minami_snooping' in DONE"
+      - minami.flags.haremdenied < 3
+      - minami.love < 150
+    percentage:
+      value: minami.love.val
+      scale: 150
+    outcome:
+      condition: minami.love >= 150
+
+  mles:
+    name: Make sure Minami is amenable to sex with other women
+    conditions:
+      - "'minami_snooping' in DONE"
+      - minami.flags.haremdenied < 3
+    percentage:
+      value: minami.lesbian.val
+      scale: 9
+    outcome:
+      condition: minami.lesbian >= 9
+
+  minami_sex:
+    name: Have sex with Minami 3 times
+    conditions:
+      - "'minami_snooping' in DONE"
+      - minami.flags.haremdenied < 3
+    outcome:
+      condition: minami.sexperience >= 3
+
+  mlestoomuch:
+    name: Make sure Minami is amenable to sex with men
+    conditions:
+      - "'minami_snooping' in DONE"
+      - minami.flags.haremdenied < 3
+      - minami.lesbian > 11
+    percentage:
+      value: 20 - minami.lesbian.val
+      scale: 11
+    outcome:
+      condition: minami.lesbian <= 11
+
+  msub:
+    name: Ensure Minami is submissive enough
+    conditions:
+      - "'minami_snooping' in DONE"
+      - minami.flags.haremdenied < 3
+      - minami.sub < 25
+    percentage:
+      value: minami.sub.val
+      scale: 25
+    outcome:
+      condition: minami.sub >= 25
+
+  minami_request:
+    name: Minami has something in mind.
+    related_event: minami_request
+    conditions:
+      - "'minami_snooping' in DONE"
+      - Harem.find(sasha, name='home')
+      - minami.flags.haremdenied < 3
+    outcomes:
+      complete:
+        conditions:
+          - "'minami_request' in DONE"
+          - not game.flags.minamirefusedinhomeharem
+        next:
+          - seek_sasha_bree_approval
+      minami_refused:
+        conditions:
+          - "'minami_request' in DONE"
+          - game.flags.minamirefusedinhomeharem
+        next:
+          - minami_crash_threesome
+
+  seek_sasha_bree_approval:
+    name: "Ask [bree.name] and Sasha about Minami request"
+    conditions:
+      - "'minami_request' in DONE"
+      - Harem.find(sasha, name='home')
+      - not game.flags.minamirefusedinhomeharem
+      - not Harem.find(samantha, name='home')
+    outcomes:
+      minami_in_harem:
+        conditions:
+          - "'minami_request' in DONE"
+          - not game.flags.minamirefusedinhomeharem
+          - Harem.find(minami, name='home')
+        next:
+          - bj_bree_sasha_minami
+          - foursome_bree_minami_sasha
+      minami_refused:
+        conditions:
+          - '"minami_request" in DONE'
+          - game.flags.minamirefusedinhomeharem
+        next:
+          - minami_crash_threesome
+
+  seek_sasha_bree_sam_approval:
+    name: "Ask [bree.name] Sasha and Sam about Minami request"
+    conditions:
+      - "'minami_request' in DONE"
+      - Harem.find(sasha, name='home')
+      - not game.flags.minamirefusedinhomeharem
+      - Harem.find(samantha, name='home')
+    outcomes:
+      minami_in_harem:
+        conditions:
+          - "'minami_request' in DONE"
+          - not game.flags.minamirefusedinhomeharem
+          - Harem.find(minami, name='home')
+        next:
+          - bj_bree_sasha_minami
+          - foursome_bree_minami_sasha
+      minami_refused:
+        conditions:
+          - "'minami_request' in DONE"
+          - game.flags.minamirefusedinhomeharem
+        next:
+          - minami_crash_threesome
+
+  bree_convince_sasha:
+    name: "Sasha denied Minami's request. Maybe [bree.name] can convince Sasha."
+    conditions:
+      - "'bree_request' in DONE"
+      - "'sasha_request' in DONE"
+      - "'bree_sasha_request' not in DONE"
+      - game.flags.sasharefusedminami
+      - not game.flags.breerefusedminami
+      - not game.flags.minamirefusedinhomeharem
+    outcome:
+      hide: True
+      next:
+        - bj_bree_sasha_minami
+        - foursome_bree_minami_sasha
+      condition: Harem.find(minami, name='home')
+
+  sasha_convince_bree:
+    name: "[bree.name] refused Minami's request. Maybe Sasha can convince [bree.name]."
+    conditions:
+      - "'bree_request' in DONE"
+      - "'sasha_request' in DONE"
+      - "'bree_sasha_request' not in DONE"
+      - game.flags.breerefusedminami
+      - not game.flags.sasharefusedminami
+      - not game.flags.minamirefusedinhomeharem
+    outcome:
+      hide: True
+      next:
+        - bj_bree_sasha_minami
+        - foursome_bree_minami_sasha
+      condition: Harem.find(minami, name='home')
+
+  minami_crash_threesome:
+    name: Wait for Minami's next move
+    outcomes:
+      success:
+        description: In the heat of the moment, we let Minami in.
+        next:
+          - bj_bree_sasha_minami
+          - foursome_bree_minami_sasha
+          - threesome_bree_minami
+          - threesome_sasha_minami
+        conditions:
+          - Harem.find(minami, name='home')
+          - minami.flags.crash_threesome
+      fail:
+        description: Minami crash in my room. I told her to go.
+        conditions:
+          - minami.flags.crash_threesome
+          - minami.flags.haremdenied >= 3
+        next:
+          - None
+
+  bj_bree_sasha_minami:
+    name: "Get a blowjob from Sasha, [bree.name] and Minami while waking up."
+    related_event: bj_bree_sasha_minami
+    outcome:
+      condition: '"bj_bree_sasha_minami" in DONE'
+
+  foursome_bree_minami_sasha:
+    name: "Have a foursome with [bree.name] Minami and Sasha."
+    related_event: foursome_bree_minami_sasha
+    outcome:
+      condition: '"foursome_bree_minami_sasha" in DONE'
+
+  threesome_bree_minami:
+    name: "Have a threesome with [bree.name] and Minami."
+    related_event: threesome_bree_minami
+    outcome:
+      condition: '"threesome_bree_minami" in DONE'
+
+  threesome_sasha_minami:
+    name: Have a threesome with Sasha and Minami
+    related_event: threesome_sasha_minami
+    outcome:
+      condition: '"threesome_sasha_minami" in DONE'
+
+  propose_bree_sasha_minami:
+    name: "Propose to [bree.name], Sasha and Minami"
+    conditions:
+      - Harem.together(bree, sasha, minami, name='home')
+    outcome:
+      conditions:
+        - bree.flags.engagedmike
+        - sasha.flags.engagedmike
+        - minami.flags.engagedmike

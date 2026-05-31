@@ -1,0 +1,37 @@
+name: Kleio with twintails
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Kleio#Customization_events"
+short: "{image=notify kleio} · Kleio"
+description: Kleio is jealous of Bree's beautiful long hair.
+condition: kleio.flags.chosenbree
+participants:
+  - kleio
+
+outcomes:
+  twintails:
+    description: Kleio grew her hair and made twintails of them.
+    condition: '"kleio_twintails_02" in DONE'
+  gone:
+    condition: kleio.is_gone_forever
+    icon: fail
+    hide_story: True
+
+steps:
+  kleio_twintails_01:
+    name: Kleio seems to have something important to ask me.
+    related_event: kleio_twintails_01
+    condition: kleio.flags.chosenbree
+    outcome:
+      condition: '"kleio_twintails_01" in DONE'
+
+  kleio_twintails_pending:
+    name: Wait to see what Kleio does.
+    condition: kleio.flags.haircutDelay > 0
+    outcome:
+      condition: not kleio.flags.haircutDelay
+
+  kleio_twintails_02:
+    name: Find Kleio to see if she changed her look.
+    related_event: kleio_twintails_02
+    condition: kleio.flags.haircut
+    outcome:
+      condition: '"kleio_twintails_02" in DONE'

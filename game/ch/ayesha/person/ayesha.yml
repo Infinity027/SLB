@@ -1,0 +1,159 @@
+---
+name: Ayesha
+class: Girl
+age: 25
+status: friend
+gender: female
+birthday:
+  - winter
+  - 29
+flags:
+  hidden: true
+attributes:
+  love:
+    min: 0
+    max: 25
+    default: 0
+  sub:
+    min: 0
+    max: 50
+    default: 0
+  lesbian:
+    min: 0
+    max: 20
+    default: 10
+  sexperience:
+    min: 0
+    max: null
+    default: 0
+piercings:
+  ears:
+    outfits:
+      - date
+    pierced: true
+  navel:
+    outfits:
+      - naked
+      - sexyswimsuit
+      - underwear
+      - sport
+  clit:
+    outfits:
+      - naked
+  nipples:
+    outfits:
+      - naked
+  tongue:
+    expressions:
+      - cry
+      - lose
+      - mouthful
+      - thumb
+      - surprised
+  lips: { }
+  nose: { }
+traits:
+  - sporty
+  - rebel
+desire_factors:
+  - charm
+  - fitness
+  - beach
+  - high_libido
+heronickname:
+  Little man: ayesha.flags.mikeNickname in nickname_little_man
+  Boi: ayesha.flags.mikeNickname in nickname_boi
+  Coach: ayesha.flags.mikeNickname in nickname_coach
+schedule:
+  default:
+    '135':
+      '8':
+        - room: None
+          activity: sleep
+          clothes: sleep
+      '12':
+        - room: gymmachine
+          activity: work
+          clothes: work
+      '14':
+        - room: coffeeshop
+          activity: eat
+          clothes: casual
+      '20':
+        - room: gymmachine
+          activity: work
+          clothes: work
+      '21':
+        - room: street2
+          activity: walk
+          clothes: casual
+      '24':
+        - room: None
+          activity: sleep
+          clothes: sleep
+    '24':
+      '8':
+        - room: None
+          activity: sleep
+          clothes: sleep
+      '10':
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '12':
+        - room: gymmachine
+          activity: work
+          clothes: work
+      '14':
+        - room: coffeeshop
+          activity: eat
+          clothes: casual
+      '20':
+        - room: gymmachine
+          activity: work
+          clothes: work
+      '21':
+        - room: street2
+          activity: walk
+          clothes: casual
+      '24':
+        - room: None
+          activity: sleep
+          clothes: sleep
+    '67':
+      '8':
+        - room: None
+          activity: sleep
+          clothes: sleep
+      '9':
+        - room: pond
+          activity: run
+          clothes: sport
+      '12':
+        - room: mall2
+          activity: shopping
+          clothes: casual
+      '14':
+        - room: coffeeshop
+          activity: meal
+          clothes: casual
+      '16':
+        - room: forest
+          activity: hike
+          clothes: casual
+      '18':
+        - room: street2
+          activity: walk
+          clothes: casual
+      '20':
+        - room: None
+          activity: wait
+          clothes: casual
+      '23':
+        - room: cinema
+          activity: watch
+          clothes: casual
+      '24':
+        - room: None
+          activity: sleep
+          clothes: sleep

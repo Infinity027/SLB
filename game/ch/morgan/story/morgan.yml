@@ -1,0 +1,305 @@
+name: Morgan
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Morgan"
+short: "{image=notify morgan} · Morgan"
+description:
+  - description: "Morgan is an old friend from school. I always thought Morgan was a boy, but it turns out Morgan is a girl!"
+    condition: '"morgan_event_02" in DONE'
+  - description: "Morgan is an old friend from school."
+    condition: True
+participants:
+  - morgan
+condition: '"morgan_event_01" in DONE'
+
+outcomes:
+  gone:
+    conditions:
+      - morgan.is_gone_forever
+    description: Morgan has left and is no longer part of my life.
+    icon: fail
+  engaged:
+    condition: morgan.flags.engagedmike
+    description: Morgan has agreed to marry me!
+
+steps:
+  morgan_event_02:
+    condition: '"morgan_event_01" in DONE'
+    related_event: morgan_event_02
+    name: Talk to Jack about Morgan in the pub
+    outcome:
+      condition: '"morgan_event_02" in DONE'
+
+  love20:
+    name: Get to know Morgan better
+    percentage:
+      value: morgan.love.val
+      scale: 20
+    outcome:
+      hide: True
+      condition: morgan.love >= 20
+
+  morgan_event_03:
+    name: Apologize to Morgan
+    related_event: morgan_event_03
+    outcome:
+      condition: '"morgan_event_03" in DONE'
+
+  love50:
+    name: Get to know Morgan better
+    percentage:
+      value: morgan.love.val
+      scale: 50
+    outcome:
+      hide: True
+      condition: morgan.love >= 50
+
+  morgan_event_04:
+    name: Take Morgan on a date at the pub
+    related_event: morgan_event_04
+    outcome:
+      condition: '"morgan_event_04" in DONE'
+
+  love60:
+    name: Get to know Morgan better
+    percentage:
+      value: morgan.love.val
+      scale: 60
+    outcome:
+      hide: True
+      condition: morgan.love >= 60
+
+  morgan_event_05:
+    name: Take Morgan on a date at the fancy restaurant
+    related_event: morgan_event_05
+    outcome:
+      condition: '"morgan_event_05" in DONE'
+
+  love80:
+    name: Get to know Morgan better
+    percentage:
+      value: morgan.love.val
+      scale: 80
+    outcome:
+      hide: True
+      condition: morgan.love >= 80
+
+  morgan_event_06:
+    name: Take Morgan on a date at the cinema
+    related_event: morgan_event_06
+    outcome:
+      condition: '"morgan_event_06" in DONE'
+
+  love100:
+    name: Get to know Morgan better
+    percentage:
+      value: morgan.love.val
+      scale: 100
+    outcome:
+      hide: True
+      condition: morgan.love >= 100
+      next:
+        - morgan_event_07_wait
+        - morgan_event_07
+        - morgan_event_07b
+
+  morgan_event_07_wait:
+    name: Wait the end of Fall
+    toggle: True
+    conditions:
+      - '"morgan_event_06" in DONE'
+      - '"morgan_event_07" not in DONE'
+      - '"morgan_event_07b" not in DONE'
+      - "game.season == 2"
+    outcomes:
+      complete7:
+        condition: '"morgan_event_07" in DONE'
+        hide: True
+        next:
+          - love120
+      complete7b:
+        condition: '"morgan_event_07b" in DONE'
+        hide: True
+        next:
+          - love120
+
+  morgan_event_07:
+    name: Take Morgan on a date at the waterpark
+    related_event: morgan_event_07
+    toggle: True
+    conditions:
+      - '"morgan_event_06" in DONE'
+      - '"morgan_event_07" not in DONE'
+      - '"morgan_event_07b" not in DONE'
+      - "game.season in [0,1]"
+    outcomes:
+      complete:
+        condition: '"morgan_event_07" in DONE'
+        next:
+          - love120
+      alternate:
+        condition: '"morgan_event_07b" in DONE'
+        hide: True
+        next:
+          - love120
+
+  morgan_event_07b:
+    name: Take Morgan on a date at the mall
+    related_event: morgan_event_07b
+    toggle: True
+    conditions:
+      - '"morgan_event_07" not in DONE'
+      - '"morgan_event_07b" not in DONE'
+      - "game.season == 3"
+      - "18 <= game.day < 25"
+    outcomes:
+      complete:
+        condition: '"morgan_event_07b" in DONE'
+        next:
+          - love120
+      alternate:
+        condition: '"morgan_event_07" in DONE'
+        hide: True
+        next:
+          - love120
+
+  love120:
+    name: Get to know Morgan better
+    percentage:
+      value: morgan.love.val
+      scale: 120
+    outcome:
+      hide: True
+      condition: morgan.love >= 120
+
+  morgan_event_08:
+    name: Take Morgan on a date at the cinema
+    related_event: morgan_event_08
+    condition: morgan.love >= 120
+    outcome:
+      condition: '"morgan_event_08" in DONE'
+      next:
+        - love140
+
+  love140:
+    name: Get to know Morgan better
+    percentage:
+      value: morgan.love.val
+      scale: 140
+    outcome:
+      hide: True
+      condition: morgan.love >= 140
+
+  morgan_event_09:
+    name: Wait for Morgan to call you during the afternoon
+    related_event: morgan_event_09
+    conditions:
+      - '"morgan_event_08" in DONE'
+      - morgan.love >= 140
+    outcome:
+      condition: '"morgan_event_09" in DONE'
+
+  love160:
+    name: Get to know Morgan better
+    percentage:
+      value: morgan.love.val
+      scale: 160
+    outcome:
+      hide: True
+      condition: morgan.love >= 160
+
+  morgan_event_10:
+    name: Go on a date at the pub with Morgan
+    related_event: morgan_event_10
+    conditions:
+      - '"morgan_event_09" in DONE'
+      - morgan.love >= 160
+    outcome:
+      condition: '"morgan_event_10" in DONE'
+
+  love180:
+    name: Get to know Morgan better
+    percentage:
+      value: morgan.love.val
+      scale: 180
+    outcome:
+      hide: True
+      condition: morgan.love >= 180
+
+  morgan_event_11:
+    name: Go talk to Morgan
+    related_event: morgan_event_11
+    conditions:
+      - '"morgan_event_10" in DONE'
+      - morgan.love >= 180
+    outcome:
+      condition: '"morgan_event_11" in DONE'
+
+  male:
+    name: "Make Morgan more girly"
+    optional: True
+    condition: '"morgan_event_02" in DONE'
+    percentage:
+      value: 100 - morgan.male.val
+      scale: 100
+    outcome:
+      condition: morgan.male.val == 0
+      next: None
+
+  date:
+    name: Go on a date with Morgan
+    condition: True
+    outcome:
+      condition: morgan.flags.dates >= 1
+      next: birthday_date
+
+  birthday_date:
+    name: Take Morgan out on a afternoon date for her birthday
+    condition: morgan.flags.dates >= 1
+    outcome:
+      condition: '"morgan_birthday_date_male" in DONE'
+      next: None
+
+  sex:
+    name: Have sex with Morgan
+    condition: True
+    outcome:
+      condition: morgan.sexperience >= 1
+      next: None
+
+  love:
+    name: Get Morgan to fall in love with me
+    condition: True
+    percentage:
+      value: morgan.love.val
+      scale: 200
+    outcome:
+      condition: morgan.love.val == 200
+      next: None
+
+  ring:
+    name: Buy a wedding ring
+    condition: True
+    outcome:
+      condition: hero.has_item("wedding_ring")
+
+  propose:
+    name: Propose to Morgan
+    condition: hero.has_item("wedding_ring")
+    outcome:
+      condition: morgan.flags.engagedmike
+      next: None
+
+  preg:
+    name: Get Morgan pregnant
+    optional: True
+    condition: True
+    outcome:
+      condition: morgan.flags.pregnancies_number > 0
+      next: None
+
+  slave:
+    name: Make Morgan my sex slave
+    optional: True
+    condition: True
+    outcome:
+      condition: morgan.is_sex_slave
+      next: None

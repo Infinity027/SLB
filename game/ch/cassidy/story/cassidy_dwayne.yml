@@ -1,0 +1,305 @@
+name: Dwayne and Cassidy
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Cassidy#Dwayne_and_Cassidy"
+short: "{image=notify cassidy} · Dwayne"
+description:
+  - description: "After Cherie gave me Dwayne's secret book, Dwayne tried to kill us. Aletta showed up at the last minute and killed Dwayne, saving my life."
+    condition: 'game.flags.dwaynedead'
+  - description: "Cassidy and Aletta have come to a truce, and now the three of us have decided we need to do something about Dwayne."
+    condition: '"cassidy_aletta_make_nice"'
+  - description: "Dwayne is blackmailing Aletta into sex, and Cassidy is confused about what to do."
+    condition: '"cassidy_aletta_fight" in DONE'
+  - description: "I overheard Cassidy arguing with Dwayne. This seems important."
+    condition: True
+
+participants:
+  - cassidy
+  - aletta
+  - cherie
+condition: '"cassidy_overhear_argument" in DONE'
+
+outcomes:
+  missed_party:
+    description: I missed the party, and Cassidy left me because of it.
+    condition: '"cassidy_cherie_missed_party" in DONE'
+    icon: fail
+  cherie_said_no:
+    description: "Cherie refused to help me."
+    conditions:
+      - '"cherie_second_meeting" in DONE'
+      - not game.flags.cherie_helping
+    icon: fail
+  cherie_helps:
+    description: "The confrontation with Dwayne went south. Cherie will handle the rest."
+    conditions:
+      - '"cherie_vault" in DONE'
+      - game.flags.dwaynedead
+      - not game.flags.handle_gun_body
+  dwayne_corpse_discovery_outcome:
+    description: "Dwayne's body was found."
+    conditions:
+      - "'dwayne_corpse_discovery' in DONE"
+  gone:
+    condition: cassidy.is_gone_forever
+    description: Cassidy has left and is no longer part of my life.
+    icon: fail
+
+steps:
+  dwaynefalloutDelay:
+    name: Wait a day
+    condition: '"cassidy_overhear_argument" in DONE'
+    outcome:
+      hide: True
+      condition: not cassidy.flags.dwaynefalloutDelay
+
+  cassidy_dwayne_fight_fallout:
+    name: Talk to Cassidy
+    related_event: cassidy_dwayne_fight_fallout
+    outcomes:
+      wait_dwayne:
+        next: dwaynevisitDelay
+        conditions:
+          - '"cassidy_dwayne_fight_fallout" in DONE'
+          - cassidy.status == "pet"
+      wait_aletta:
+        next: alettafightDelay
+        conditions:
+          - '"cassidy_dwayne_fight_fallout" in DONE'
+          - cassidy.status != "pet"
+
+  dwaynevisitDelay:
+    name: Wait
+    condition: cassidy.flags.dwaynevisitDelay or cassidy.flags.dwaynevisit
+    percentage:
+      value: 7 - cassidy.timers.dwaynevisitDelay
+      scale: 7
+    outcome:
+      hide: True
+      condition: not cassidy.flags.dwaynevisitDelay
+
+  cassidy_dwayne_visit:
+    name: Wait in my office
+    related_event: cassidy_dwayne_visit
+    outcome:
+      description: Dwayne visited and tried to intimidate me
+      condition: '"cassidy_dwayne_visit" in DONE'
+
+  alettafightDelay:
+    name: Wait
+    condition: cassidy.flags.alettafightDelay or cassidy.flags.alettafight
+    percentage:
+      value: 7 - cassidy.timers.alettafightDelay
+      scale: 7
+    outcome:
+      hide: True
+      condition: not cassidy.flags.alettafightDelay
+
+  cassidy_aletta_fight:
+    name: Work in my office
+    related_event: cassidy_aletta_fight
+    outcome:
+      description: Cassidy and Aletta had a fight
+      condition: '"cassidy_aletta_fight" in DONE'
+
+  needscomfortDelay:
+    name: Wait
+    condition: cassidy.flags.needscomfortDelay
+    percentage:
+      value: 3 - cassidy.timers.needscomfortDelay
+      scale: 3
+    outcome:
+      hide: True
+      condition: not cassidy.flags.needscomfortDelay
+
+  cassidy_needs_comfort:
+    name: Wait for Cassidy at home
+    related_event: cassidy_needs_comfort
+    outcome:
+      condition: '"cassidy_needs_comfort" in DONE'
+
+  makeniceDelay:
+    name: Wait a day
+    outcome:
+      hide: True
+      condition: not cassidy.flags.makeniceDelay
+
+  cassidy_aletta_make_nice:
+    name: Go to work
+    related_event: cassidy_aletta_make_nice
+    outcome:
+      condition: '"cassidy_aletta_make_nice" in DONE'
+
+  arrangepartyDelay:
+    name: Wait
+    condition: cassidy.flags.arrangepartyDelay
+    percentage:
+      value: 7 - cassidy.timers.arrangepartyDelay
+      scale: 7
+    outcome:
+      hide: True
+      condition: not cassidy.flags.arrangepartyDelay
+
+  cassidy_arrange_party:
+    name: Talk to Cassidy in my office
+    related_event: cassidy_arrange_party
+    outcome:
+      condition: '"cassidy_arrange_party" in DONE'
+
+  cherie_first_meeting_appointment:
+    name: Go to the party and meet Cherie
+    related_event: cherie_first_meeting_appointment
+    outcomes:
+      success:
+        condition: '"cherie_first_meeting_appointment" in DONE'
+      fail:
+        icon: fail
+        description: I missed the party!
+        condition: game.flags.cherie_missed
+        next: None
+
+  cassidy_cherie_next_steps:
+    name: Find a way to see Cherie again
+    related_event: cassidy_cherie_next_steps
+    outcome:
+      condition: '"cassidy_cherie_next_steps" in DONE'
+
+  charm75:
+    name: Be charming enough for Cherie to see me
+    outcome:
+      hide: True
+      condition: hero.charm >= 75
+
+  cherie_cold_call:
+    name: Visit Cherie again
+    related_event: cherie_cold_call
+    outcome:
+      next:
+        - cassidy_chat_about_cherie
+        - aletta_chat_about_cherie
+      condition: '"cherie_cold_call" in DONE'
+
+  cassidy_chat_about_cherie:
+    name: Talk to Cassidy
+    related_event: cassidy_chat_about_cherie
+    outcome:
+      condition: '"cassidy_chat_about_cherie" in DONE'
+
+  aletta_chat_about_cherie:
+    name: Talk to Aletta
+    related_event: aletta_chat_about_cherie
+    outcome:
+      next: None
+      condition: '"aletta_chat_about_cherie" in DONE'
+
+  cherie_dwayne_confrontation:
+    name: Wait for Dwayne to confront me in my office
+    related_event: cherie_dwayne_confrontation
+    conditions:
+      - '"cassidy_chat_about_cherie" in DONE'
+      - '"aletta_chat_about_cherie" in DONE'
+    outcome:
+      condition: '"cherie_dwayne_confrontation" in DONE'
+
+  cherie_first_call:
+    name: Wait for Cherie to call
+    related_event: cherie_first_call
+    outcome:
+      next:
+        - cassidy_chat_about_cherie2
+        - aletta_chat_about_cherie2
+      condition: '"cherie_first_call" in DONE'
+
+  cassidy_chat_about_cherie2:
+    name: Talk to Cassidy
+    related_event: cassidy_chat_about_cherie2
+    outcome:
+      condition: '"cassidy_chat_about_cherie2" in DONE'
+
+  aletta_chat_about_cherie2:
+    name: Talk to Aletta
+    related_event: aletta_chat_about_cherie2
+    outcome:
+      condition: '"aletta_chat_about_cherie2" in DONE'
+
+  cherie_second_meeting:
+    name: Wait for Cherie to call
+    related_event: cherie_second_meeting
+    conditions:
+      - '"cassidy_chat_about_cherie2" in DONE'
+      - '"aletta_chat_about_cherie2" in DONE'
+    outcomes:
+      no_help:
+        icon: fail
+        conditions:
+          - '"cherie_second_meeting" in DONE'
+          - not game.flags.cherie_helping
+        description: Cherie will not be helping
+        next: cherie_said_no
+      help:
+        condition: game.flags.cherie_helping
+        next:
+          - martial_arts
+          - cherie_vault
+
+  martial_arts:
+    name: Learn martial arts
+    optional: True
+    outcome:
+      condition: 'hero.has_skill("martial_arts")'
+
+  cherie_vault:
+    name: Wait for Cherie's call
+    related_event: cherie_vault
+    percentage:
+      value: 7 - game.timers.cherie_vaultdelay
+      scale: 7
+    outcomes:
+      complete:
+        conditions:
+          - game.flags.dwaynedead
+          - not game.flags.handle_gun_body
+        next: cherie_helps
+      handle_gun_body:
+        conditions:
+          - game.flags.dwaynedead
+          - game.flags.handle_gun_body
+        next:
+          - handle_dwayne_body
+          - handle_aletta_gun
+
+  handle_dwayne_body:
+    name: Get rid of Dwayne's body in a discreet place.
+    conditions:
+      - "'cherie_vault' in DONE"
+      - game.flags.handle_gun_body
+    outcome:
+      condition: game.flags.dwayne_corpse
+      next: dwayne_corpse_discovery_delay
+
+  handle_aletta_gun:
+    name: Get rid of Aletta's gun in a discreet place.
+    conditions:
+      - "'cherie_vault' in DONE"
+      - game.flags.handle_gun_body
+    outcome:
+      condition: game.flags.aletta_gun
+      next: None
+
+  dwayne_corpse_discovery_delay:
+    name: Wait a few days
+    percentage:
+      value: game.timers.dwayne_corpse_discovery_delay
+      scale: 7
+      invert: True
+    outcome:
+      hide: True
+      condition: not game.flags.dwayne_corpse_discovery_delay
+
+  dwayne_corpse_discovery:
+    name: Be in the livingroom after work
+    related_event: dwayne_corpse_discovery
+    conditions:
+      - "'cherie_vault' in DONE"
+      - not game.flags.dwayne_corpse_discovery_delay
+    outcome:
+      condition: "'dwayne_corpse_discovery' in DONE"
+      next: dwayne_corpse_discovery_outcome

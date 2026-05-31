@@ -1,0 +1,512 @@
+---
+name: Lexi
+class: Girl
+age: 19
+status: friend
+gender: female
+flags:
+  nodate: true
+  nokiss: true
+  hidden: true
+  pill: true
+  slapassmod: 15
+  birthPenalty: -25
+attributes:
+  love:
+    min: 0
+    max: 20
+    default: 0
+  sub:
+    min: 0
+    max: 25
+    default: 0
+  lesbian:
+    min: 0
+    max: 20
+    default: 5
+  sexperience:
+    min: 0
+    max: null
+    default: 0
+piercings:
+  ears:
+    outfits:
+      - date
+      - casual
+    pierced: true
+  navel:
+    outfits:
+      - naked
+      - swimsuit
+      - sexyswimsuit
+      - underwear
+      - sport
+      - casual
+    pierced: true
+  clit:
+    outfits:
+      - naked
+      - bottomless
+    pierced: true
+  nipples:
+    outfits:
+      - naked
+      - topless
+    pierced: true
+  tongue:
+    outfits:
+      - all
+    expressions:
+      - happy
+      - angry
+      - normal
+    pierced: true
+  nose: { }
+birthday:
+  - summer
+  - 5
+traits:
+  - slutty
+  - dumb
+  - trashy
+  - poor
+  - lazy
+desire_factors:
+  - fitness
+  - knowledge
+  - guitar
+  - pub
+  - not_waterpark
+  - not_smalldick
+  - high_libido
+  - not low_libido
+heronickname:
+  Naughty boy: lexi.flags.mikeNickname in nickname_naughty_boy
+  Studmuffin: lexi.flags.mikeNickname in nickname_studmuffin
+schedule:
+  default:
+    '1234':
+      '10':
+        - room: trailerinside
+          activity: sleep
+          clothes: underwear
+      '17':
+        - room: classroom
+          activity: study
+          clothes: casual
+          conditions:
+            - "'lexi_female_event_09' in DONE"
+        - room: trailer
+          activity: phone
+          clothes: casual
+          conditions:
+            - "'lexi_trailer_onfire' not in DONE"
+        - room: trailerinside
+          activity: phone
+          clothes: casual
+          conditions:
+            - "'lexi_trailer_onfire' not in DONE"
+        - room: mall1
+          activity: phone
+          clothes: casual
+          conditions:
+            - "'lexi_trailer_onfire' in DONE"
+      '18':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+
+      '20':
+        - room: sexshop
+          activity: shop
+          clothes: casual
+        - room: alley
+          activity: smoke
+          clothes: casual
+
+      '24':
+        - room: pubseat
+          activity: drink
+          clothes: casual
+
+        - room: None
+          activity: sleep
+          clothes: underwear
+    '5':
+      '9':
+        - room: trailerinside
+          activity: sleep
+          clothes: underwear
+      '11':
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+
+        - room: alley
+          activity: smoke
+          clothes: casual
+
+      '14':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+
+      '16':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+
+      '20':
+        - room: alley
+          activity: work
+          clothes: casual
+
+    '6':
+      '9':
+        - room: trailerinside
+          activity: sleep
+          clothes: underwear
+      '11':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+
+      '14':
+        - room: mall1
+          activity: shop
+          clothes: casual
+        - room: mall2
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+
+      '16':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+
+        - room: pond
+          activity: smoke
+          clothes: casual
+
+      '18':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+
+        - room: pond
+          activity: smoke
+          clothes: casual
+
+      '20':
+        - room: alley
+          activity: work
+          clothes: casual
+
+      '21':
+        - room: None
+          activity: None
+          clothes: underwear
+      '23':
+        - room: nightclub
+          activity: dance
+          clothes: date
+        - room: restroom
+          activity: stuff
+          clothes: date
+    '7':
+      '5':
+        - room: nightclub
+          activity: dance
+          clothes: date
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '10':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '20':
+        - room: alley
+          activity: work
+          clothes: casual
+      '23':
+        - room: pubseat
+          activity: drink
+          clothes: casual
+  harem:
+    '13':
+      '10':
+        - room: livingroom
+          activity: sleep
+          clothes: underwear
+      '14':
+        - room: bathroom
+          activity: pee
+          clothes: underwear
+        - room: bathroom
+          activity: shower
+          clothes: naked
+      '17':
+        - room: pool
+          activity: phone
+          clothes: swimsuit
+          seasons: '01'
+        - room: livingroom
+          activity: phone
+          clothes: underwear
+      '18':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+
+      '20':
+        - room: sexshop
+          activity: shop
+          clothes: casual
+        - room: alley
+          activity: smoke
+          clothes: casual
+
+      '24':
+        - room: pubseat
+          activity: drink
+          clothes: casual
+
+        - room: None
+          activity: sleep
+          clothes: underwear
+    '24':
+      '10':
+        - room: livingroom
+          activity: sleep
+          clothes: underwear
+      '14':
+        - room: bathroom
+          activity: pee
+          clothes: underwear
+        - room: bathroom
+          activity: shower
+          clothes: naked
+      '17':
+        - room: pool
+          activity: phone
+          clothes: swimsuit
+          seasons: '01'
+        - room: livingroom
+          activity: phone
+          clothes: underwear
+      '18':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '22':
+        - room: livingroom
+          activity: tv
+          clothes: casual
+      '24':
+        - room: stripclub
+          activity: dance
+          clothes: stripper
+          conditions:
+            - lexi.flags.work_stripclub
+        - room: sexshop
+          activity: shop
+          clothes: casual
+        - room: alley
+          activity: smoke
+          clothes: casual
+    '5':
+      '9':
+        - room: livingroom
+          activity: sleep
+          clothes: underwear
+      '10':
+        - room: bathroom
+          activity: shower
+          clothes: naked
+      '11':
+        - room: livingroom
+          activity: tv
+          clothes: casual
+
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+
+        - room: alley
+          activity: smoke
+          clothes: casual
+      '13':
+        - room: bathroom
+          activity: pee
+          clothes: underwear
+        - room: bathroom
+          activity: shower
+          clothes: naked
+      '14':
+        - room: jewelrystore
+          activity: shop
+          clothes: casual
+
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+
+      '16':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+
+      '20':
+        - room: livingroom
+          activity: tv
+          clothes: casual
+
+    '6':
+      '9':
+        - room: livingroom
+          activity: sleep
+          clothes: underwear
+      '11':
+        - room: kitchen
+          activity: eat
+          clothes: casual
+
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+
+      '14':
+        - room: mall1
+          activity: shop
+          clothes: casual
+        - room: mall2
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+
+      '16':
+        - room: pool
+          activity: sunbath
+          clothes: swimsuit
+          seasons: '01'
+
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+
+        - room: pond
+          activity: smoke
+          clothes: casual
+
+      '18':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+
+        - room: pond
+          activity: smoke
+          clothes: casual
+
+      '20':
+        - room: alley
+          activity: work
+          clothes: casual
+
+      '21':
+        - room: pool
+          activity: phone
+          clothes: swimsuit
+          seasons: '01'
+        - room: livingroom
+          activity: phone
+          clothes: underwear
+      '23':
+        - room: nightclub
+          activity: dance
+          clothes: date
+        - room: restroom
+          activity: stuff
+          clothes: date
+    '7':
+      '5':
+        - room: nightclub
+          activity: dance
+          clothes: date
+        - room: livingroom
+          activity: sleep
+          clothes: underwear
+      '10':
+        - room: livingroom
+          activity: sleep
+          clothes: underwear
+      '12':
+        - room: kitchen
+          activity: meal
+          clothes: casual
+      '13':
+        - room: bathroom
+          activity: shower
+          clothes: naked
+      '19':
+        - room: alley
+          activity: work
+          clothes: casual
+      '22':
+        - room: livingroom
+          activity: tv
+          clothes: casual
+      '23':
+        - room: pubseat
+          activity: drink
+          clothes: casual

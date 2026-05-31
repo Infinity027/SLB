@@ -1,0 +1,103 @@
+name: Skills
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Game_Mechanics#Skills"
+# This should always be first when shown.
+sort: "0001"
+type: generic
+description: "Learn new skills!"
+participants:
+  - hero
+condition: True
+
+outcome:
+  conditions:
+    - 'hero.has_skill("dance")'
+    - 'hero.has_skill("fertility_assessment")'
+    - 'hero.has_skill("martial_arts")'
+    - 'hero.has_skill("massage")'
+    - 'hero.has_skill("guitar")'
+    - 'hero.has_skill("cooking")'
+    - 'hero.has_skill("shibari")'
+    - 'hero.has_skill("sm")'
+  description: "I have learned all the skills!"
+
+steps:
+  dance:
+    name: Get Palla to teach me how to dance
+    optional: True
+    conditions:
+      - '"palla_event_01" in DONE'
+      - 'not hero.has_skill("dance")'
+    outcome:
+      condition: 'hero.has_skill("dance")'
+
+  fertility:
+    name: Learn how to tell if a girl is fertile from a book
+    optional: True
+    condition: 'not hero.has_skill("fertility_assessment")'
+    outcome:
+      condition: 'hero.has_skill("fertility_assessment")'
+
+  martial_arts_training:
+    name: Get The Master to teach me martial arts
+    optional: True
+    condition:
+      - game.flags.masterStory
+      - 'not hero.has_skill("martial_arts")'
+    percentage:
+      value: game.flags.masterStory
+      scale: 6
+    outcome:
+      condition: game.flags.masterStory == 6
+
+  martial_arts:
+    name: Go back to the Master for your final lesson on Tuesday, Thursday, or Saturday
+    optional: True
+    conditions:
+      - game.flags.masterStory == 6
+      - 'not hero.has_skill("martial_arts")'
+    outcome:
+      condition: 'hero.has_skill("martial_arts")'
+
+  investigation:
+    name: Learn how to do a proper investigation from a book
+    optional: True
+    condition: 'not hero.has_skill("investigator")'
+    outcome:
+      condition: 'hero.has_skill("investigator")'
+
+  massage:
+    name: Learn massage from a book
+    optional: True
+    condition: 'not hero.has_skill("massage")'
+    outcome:
+      condition: 'hero.has_skill("massage")'
+
+  guitar:
+    name: Learn guitar from a book
+    optional: True
+    condition:
+      - 'not hero.has_skill("guitar")'
+    outcome:
+      condition: 'hero.has_skill("guitar")'
+
+  cooking:
+    name: Learn cooking from a book
+    optional: True
+    condition: 'not hero.has_skill("cooking")'
+    outcome:
+      condition: 'hero.has_skill("cooking")'
+
+  shibari:
+    name: Learn shibari from a book
+    optional: True
+    condition:
+      - 'not hero.has_skill("shibari")'
+    outcome:
+      condition: 'hero.has_skill("shibari")'
+
+  SM:
+    name: Learn S&M from a book
+    optional: True
+    condition: 'not hero.has_skill("sm")'
+    outcome:
+      condition: 'hero.has_skill("sm")'

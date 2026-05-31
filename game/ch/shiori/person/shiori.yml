@@ -1,0 +1,226 @@
+---
+name: Shiori
+class: Girl
+age: 27
+status: secretary
+gender: female
+flags:
+  hidden: true
+  birthPenalty: 25
+  otherBabies: 1
+attributes:
+  love:
+    min: 0
+    max: 20
+    default: 0
+  sub:
+    min: 0
+    max: 100
+    default: 25
+  lesbian:
+    min: 0
+    max: 20
+    default: 0
+  sexperience:
+    min: 0
+    max: null
+    default: 0
+piercings:
+  ears:
+    outfits:
+      - date
+    pierced: true
+  navel:
+    outfits:
+      - naked
+      - sexyswimsuit
+      - underwear
+      - sport
+  clit:
+    outfits:
+      - naked
+  nipples:
+    outfits:
+      - naked
+  tongue:
+    expressions:
+      - happy
+      - blush
+      - angry
+  nose: { }
+  lips: { }
+birthday:
+  - spring
+  - 23
+traits:
+  - submissive
+  - family
+  - slutty
+  - not_rebel
+  - fertile
+desire_factors:
+  - charm
+  - fitness
+  - money
+  - livingroom
+  - not_park
+heronickname:
+  Hero: shiori.flags.mikeNickname in nickname_hero
+  Owner: shiori.flags.mikeNickname in nickname_owner
+  Koibito: shiori.flags.mikeNickname in nickname_koibito
+  Hanata: shiori.flags.mikeNickname in nickname_hanata
+  Mr.Boss sir: shiori.flags.mikeNickname in nickname_mr_boss_sir
+  Sir: (shiori.sub >= 50 and shiori.flags.mikeNickname not in nickname_master) or Room.has_tag(game.room,"work")
+  heroname: shiori.love >= 100
+  Mister hero.family_name: True
+schedule:
+  default:
+    '12345':
+      '6':
+        - room: None
+          activity: none
+          clothes: underwear
+      '8':
+        - room: bakery
+          activity: eat
+          clothes: casual
+      '18':
+        - room: office
+          activity: work
+          clothes: work
+    '6':
+      '9':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '12':
+        - room: park
+          activity: play
+          clothes: casual
+        - room: street
+          activity: walk
+          clothes: casual
+      '14':
+        - room: None
+          activity: eat
+          clothes: casual
+      '16':
+        - room: park
+          activity: play
+          clothes: casual
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '18':
+        - room: drugstore
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: park
+          activity: play
+          clothes: casual
+      '23':
+        - room: None
+          activity: None
+          clothes: underwear
+    '7':
+      '10':
+        - room: None
+          activity: None
+          clothes: underwear
+      '18':
+        - room: park
+          activity: play
+          clothes: casual
+      '23':
+        - room: None
+          activity: None
+          clothes: casual
+  stripclub:
+    '12345':
+      '4':
+        - room: stripclub
+          activity: work
+          clothes: stripper
+      '6':
+        - room: None
+          activity: none
+          clothes: underwear
+      '8':
+        - room: bakery
+          activity: eat
+          clothes: casual
+      '18':
+        - room: office
+          activity: work
+          clothes: work
+      '24':
+        - room: stripclub
+          activity: work
+          clothes: stripper
+    '6':
+      '4':
+        - room: stripclub
+          activity: work
+          clothes: stripper
+      '9':
+        - room: None
+          activity: sleep
+          clothes: underwear
+      '12':
+        - room: park
+          activity: play
+          clothes: casual
+        - room: street
+          activity: walk
+          clothes: casual
+      '14':
+        - room: None
+          activity: eat
+          clothes: casual
+      '16':
+        - room: park
+          activity: play
+          clothes: casual
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '18':
+        - room: drugstore
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: park
+          activity: play
+          clothes: casual
+      '24':
+        - room: stripclub
+          activity: work
+          clothes: stripper
+    '7':
+      '4':
+        - room: stripclub
+          activity: work
+          clothes: stripper
+      '10':
+        - room: None
+          activity: None
+          clothes: underwear
+      '18':
+        - room: park
+          activity: play
+          clothes: casual
+      '24':
+        - room: stripclub
+          activity: work
+          clothes: stripper

@@ -1,0 +1,49 @@
+name: Apologize to Sasha
+short: "{image=notify sasha} · Apologize"
+description: "Sasha found out I was cheating on her. I need to find a way to make it up to her."
+
+participants:
+  - hero
+  - sasha
+condition: sasha.flags.cheated == True
+
+outcomes:
+  complete:
+    description: Sasha and I got back together, but I need to make sure something like this never happens again.
+    condition: sasha.flags.cheated == False
+  failed:
+    description: I was unable to make it right with Sasha.
+    conditions:
+      - '"samantha_event_B03" in DONE'
+      - not samantha.flags.knows_ryancheats
+    icon: fail
+
+steps:
+  apologize_wait:
+    name: Wait for something to happen
+    condition: 'not samantha.flags.knows_ryancheats'
+    outcomes:
+      success:
+        hide: True
+        next: apologize_advice
+        condition: 'samantha.flags.knows_ryancheats'
+      fail:
+        hide: True
+        next: None
+        conditions:
+          - '"samantha_event_B03" in DONE'
+          - not samantha.flags.knows_ryancheats
+
+  apologize_advice:
+    name: Go see if anyone has advice on how to deal with infidelity
+    outcome:
+      next: apologize_follow_advice
+      description: Samantha gave me some solid advice
+      condition: sasha.flags.cheatedSamAdvice == 1
+
+  apologize_follow_advice:
+    name: Apologize to Sasha
+    outcome:
+      next: None
+      description: Sasha and I decided not to break up, and to fix our relationship instead
+      condition: sasha.flags.cheated == False

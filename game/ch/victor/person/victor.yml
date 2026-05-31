@@ -1,0 +1,149 @@
+---
+name: Victor
+family_name: Yaga
+class: Guy
+age: 50
+status: hitman
+gender: male
+flags:
+  nokiss: True
+  nodate: True
+  hidden: True
+attributes:
+  love:
+    min: 0
+    max: 40
+    default: 0
+  sub:
+    min: -100
+    max: 100
+    default: 0
+  sexperience:
+    min: 0
+    max: null
+    default: 0
+birthday:
+  - fall
+  - 25
+traits:
+  - animal_lover
+  - dominant
+  - workaholic
+  - workaholic
+  - not_pacifist
+  - family
+  - kinky
+  - rebel
+  - sporty
+  - charm
+  - not_innocent
+desire_factors:
+  - charm
+  - knowledge
+  - career
+  - shooting
+heronickname:
+  Miss hero.family_name: shawn.flags.breeNickname == "family_name"
+schedule:
+  default:
+    '12345':
+      '9':
+        - room: victorsafehouse
+          activity: sleep
+          clothes: swimsuit
+      '12':
+        - room: "gym"
+          activity: sport
+          clothes: sport
+      '17':
+        - room: mall1
+          activity: shopping
+          clothes: casual
+        - room: mall2
+          activity: shopping
+          clothes: casual
+      '18':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '20':
+        - room: sexshop
+          activity: shop
+          clothes: casual
+      '24':
+        - room: victorsafehouse
+          activity: None
+          clothes: swimsuit
+    '6':
+      '9':
+        - room: victorsafehouse
+          activity: sleep
+          clothes: swimsuit
+      '11':
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '14':
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+        - room: waterpark
+          activity: swim
+          clothes: swimsuit
+          seasons: "01"
+      '16':
+        - room: waterpark
+          activity: swim
+          clothes: swimsuit
+          seasons: "01"
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '18':
+        - room: clothesshop
+          activity: shop
+          clothes: casual
+        - room: coffeeshop
+          activity: shop
+          clothes: casual
+      '21':
+        - room: pubseat
+          activity: drink
+          clothes: casual
+      '23':
+        - room: pubseat
+          activity: drink
+          clothes: casual
+        - room: nightclub
+          activity: dance
+          clothes: date
+    '7':
+      '5':
+        - room: nightclub
+          activity: dance
+          clothes: date
+        - room: victorsafehouse
+          activity: sleep
+          clothes: swimsuit
+      '10':
+        - room: victorsafehouse
+          activity: sleep
+          clothes: swimsuit
+      '16':
+        - room: pond
+          activity: smoke
+          clothes: casual
+      '21':
+        - room: victorsafehouse
+          activity: None
+          clothes: casual
+      '23':
+        - room: pubseat
+          activity: drink
+          clothes: casual

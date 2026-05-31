@@ -1,0 +1,84 @@
+name: Cassidy submission
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Cassidy"
+short: "{image=notify cassidy} · Cassidy"
+description: "Cassidy surely have some kinks that she has not revealed to me yet."
+participants:
+  - cassidy
+conditions:
+  - '"hanna_sub_event_02" in DONE'
+  - cassidy.status in ["pet", "sex slave"]
+
+outcomes:
+  gone:
+    condition: cassidy.is_gone_forever
+    description: Cassidy has left and is no longer part of my life.
+    icon: fail
+
+steps:
+  sub90:
+    name: Make Cassidy more submissive
+    percentage:
+      value: cassidy.sub.val
+      scale: 90
+    outcome:
+      hide: True
+      conditions: cassidy.sub >= 90
+
+  cassidy_sub_01:
+    name: Go see Cassidy
+    related_event: cassidy_sub_01
+    conditions:
+      - cassidy.sub >= 90
+      - '"hanna_sub_event_02" in DONE'
+      - cassidy.status in ["pet", "sex slave"]
+    outcomes:
+      agree:
+        description: I agree to take Cassidy on a walk
+        conditions:
+          - '"cassidy_sub_01" in DONE'
+          - cassidy.flags.agree_walk_outside
+        next: cassidy_sub_02a
+      disagree:
+        description: I disagree to take Cassidy on a walk
+        conditions:
+          - '"cassidy_sub_01" in DONE'
+          - not cassidy.flags.agree_walk_outside
+        next: cassidy_sub_02b
+
+  cassidy_sub_02a:
+    name: Wait in your livingroom between 1 and 4 for Cassidy to show up
+    related_event: cassidy_sub_02a
+    conditions:
+      - '"cassidy_sub_01" in DONE'
+      - cassidy.sub >= 90
+      - cassidy.status in ["pet", "sex slave"]
+      - cassidy.collared
+      - cassidy.flags.agree_walk_outside
+    outcome:
+      description: I walked Cassidy outside on a leash
+      condition: '"cassidy_sub_02a" in DONE'
+      next: cassidy_sub_03_wait
+
+  cassidy_sub_02b:
+    name: Take Hanna for a walk outside
+    conditions:
+      - '"cassidy_sub_01" in DONE'
+      - cassidy.status in ["pet", "sex slave"]
+      - not cassidy.flags.agree_walk_outside
+    outcomes:
+      agree:
+        description: We crossed Cassidy totally naked acting like a dog and took her with us for the walk.
+        conditions:
+          - '"cassidy_sub_02b" in DONE'
+          - cassidy.flags.walk_outside
+      disagree:
+        description: We crossed Cassidy totally naked acting like a dog and told her to get lost.
+        conditions:
+          - '"cassidy_sub_02b" in DONE'
+          - not cassidy.flags.walk_outside
+
+#  cassidy_sub_03_wait:
+#    icon: stalled
+#    name: That's all of Cassidy's story for now.
+#    outcome:
+#      condition: False

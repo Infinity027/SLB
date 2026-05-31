@@ -1,0 +1,138 @@
+---
+name: Jack
+class: Guy
+age: 26
+status: "[mike.name]'s friend"
+gender: male
+flags:
+  nokiss: True
+  nodate: True
+  hidden: True
+attributes:
+  love:
+    min: 0
+    max: 20
+    default: 0
+  sub:
+    min: 0
+    max: 50
+    default: 0
+  sexperience:
+    min: 0
+    max: null
+    default: 0
+birthday:
+  - summer
+  - 12
+traits:
+  - nerd
+  - flirty
+  - shy
+desire_factors:
+  - charm
+  - charm
+  - fitness
+  - not_home
+  - not_park
+  - mall
+schedule:
+  default:
+    '12345':
+      '4':
+        - room: None
+          activity: sleep
+          clothes: naked
+      '11':
+        - room: street
+          activity: None
+          clothes: casual
+      '12':
+        - room: bakery
+          activity: eat
+          clothes: casual
+        - room: coffeeshop
+          activity: eat
+          clothes: casual
+      '14':
+        - room: electronic
+          activity: shopping
+          clothes: casual
+        - room: arcade
+          activity: play
+          clothes: casual
+      '16':
+        - room: arcade
+          activity: play
+          clothes: casual
+        - room: electronic
+          activity: shopping
+          clothes: casual
+        - room: bookstore
+          activity: read
+          clothes: casual
+      '19':
+        - room: street
+          activity: None
+          clothes: casual
+      '20':
+        - room: pub
+          activity: drink
+          clothes: casual
+      '24':
+        - room: None
+          activity: play
+          clothes: casual
+    '6':
+      '4':
+        - room: None
+          activity: sleep
+          clothes: naked
+      '14':
+        - room: pond
+          activity: None
+          clothes: casual
+      '16':
+        - room: maidcafe
+          activity: eat
+          clothes: casual
+      '17':
+        - room: street
+          activity: None
+          clothes: casual
+      '18':
+        - room: None
+          activity: rpg
+          clothes: casual
+      '24':
+        - room: None
+          activity: play
+          clothes: casual
+    '7':
+      '3':
+        - room: None
+          activity: sleep
+          clothes: naked
+      '12':
+        - room: mall
+          activity: None
+          clothes: casual
+      '13':
+        - room: arcade
+          activity: play
+          clothes: casual
+      '16':
+        - room: maidcafe
+          activity: eat
+          clothes: casual
+      '18':
+        - room: cinema
+          activity: movie
+          clothes: casual
+      '21':
+        - room: pub
+          activity: drink
+          clothes: casual
+      '24':
+        - room: stripclub
+          activity: None
+          clothes: casual

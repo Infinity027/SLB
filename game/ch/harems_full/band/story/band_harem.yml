@@ -1,0 +1,383 @@
+name: The Deathless Harpies
+display_name: Band Harem
+wiki_link: "https://wiki.andrealphusgames.com/wiki/Band_Harem"
+short: "{image=notify sasha}{image=notify kleio}{image=notify anna} · Band Harem"
+type: harem
+description:
+  - description: We lost the Battle of the Bands, Sasha doesn't want to share me with Anna and Kleio
+    condition: '"battle_of_the_bands_lose" in DONE'
+  - description: We won the Battle of the Bands, Sasha, Anna and Kleio are fully committed to the Band
+    condition: '"battle_of_the_bands_win" in DONE'
+  - description: Sasha is in a band!
+    condition: True
+
+participants:
+  - hero
+  - sasha
+  - anna
+  - kleio
+conditions:
+  - hero.is_male
+  - '"sasha_b_event_04" in DONE'
+  - game.flags.band or game.flags.performance
+start: None
+
+outcomes:
+  bothgone:
+    description: Kleio and Anna have both left and are no longer part of my life.
+    conditions:
+      - kleio.is_gone_forever
+      - anna.is_gone_forever
+    icon: fail
+  kgone:
+    description: Kleio has left and is no longer part of my life.
+    conditions:
+      - kleio.is_gone_forever
+    icon: fail
+  agone:
+    description: Anna has left and is no longer part of my life.
+    conditions:
+      - anna.is_gone_forever
+    icon: fail
+  small_harem:
+    conditions:
+      - Harem.together(anna, kleio, name='band')
+      - not Harem.together(anna, kleio, sasha, name='band')
+      - anna.flags.engagedmike
+      - kleio.flags.engagedmike
+    description: Anna and Kleio agreed to marry me!
+  full_harem:
+    conditions:
+      - Harem.together(anna, kleio, sasha, name='band')
+      - anna.flags.engagedmike
+      - kleio.flags.engagedmike
+      - sasha.flags.engagedmike
+    description: Anna, Kleio and Sasha agreed to marry me!
+  groupie_end:
+    conditions:
+      - '"kleio_and_anna" in DONE'
+      - game.flags.performance
+    description: I became groupie N°1 of the Deathless Harpies!
+
+steps:
+  sasha_band_event_01:
+    name: Go see the band practice on Friday night
+    related_event: sasha_band_event_01
+    condition: game.flags.band
+    outcome:
+      description: Get invited to join the band
+      condition: '"sasha_band_event_01" in DONE'
+      next:
+        - klove150
+
+  sasha_band_event_02:
+    name: Go see the band perform on Friday night at the pub
+    related_event: sasha_band_event_02
+    condition: game.flags.performance
+    outcome:
+      description: Get invited to follow the band
+      condition: '"sasha_band_event_02" in DONE'
+
+  klove150:
+    name: Make Kleio fall in love with me
+    conditions:
+      - anna.sexperience > 0
+      - kleio.sexperience > 0
+    percentage:
+      value: kleio.love.val
+      scale: 150
+    outcome:
+      next: None
+      condition: kleio.love >= 150
+
+  alove150:
+    name: Make Anna fall in love with me
+    conditions:
+      - anna.sexperience > 0
+      - kleio.sexperience > 0
+    percentage:
+      value: anna.love.val
+      scale: 150
+    outcome:
+      next: None
+      condition: anna.love >= 150
+
+  kleio_anna_showdown:
+    name: Sleeping with Anna and Kleio without the other knowing. What can go wrong?
+    related_event: kleio_anna_showdown
+    conditions:
+      - anna.sexperience > 0
+      - kleio.sexperience > 0
+    outcomes:
+      success:
+        next:
+          - klove170
+          - alove170
+        conditions:
+          - '"kleio_anna_showdown" in DONE'
+          - anna.love.max != 0
+          - kleio.love.max != 0
+      fail:
+        next: None
+        description: Sleeping with Anna and Kleio without the other knowing went poorly.
+        conditions:
+          - '"kleio_anna_showdown" in DONE'
+          - anna.is_gone_forever or kleio.is_gone_forever
+
+  klove170:
+    name: Make Kleio fall in love with me
+    percentage:
+      value: kleio.love.val
+      scale: 150
+    outcome:
+      next: None
+      condition: kleio.love >= 150
+
+  alove170:
+    name: Make Anna fall in love with me
+    percentage:
+      value: anna.love.val
+      scale: 150
+    outcome:
+      next: None
+      condition: anna.love >= 150
+
+  kleio_and_anna:
+    name: Have a threesome with Kleio and Anna
+    related_event: date_set_up
+    conditions:
+      - kleio.love >= 150
+      - anna.love >= 150
+      - '"kleio_anna_showdown" in DONE'
+    outcomes:
+      complete:
+        conditions:
+         - '"kleio_and_anna" in DONE'
+         - game.flags.band
+      groupie:
+        next: groupie_end
+        conditions:
+          - '"kleio_and_anna" in DONE'
+          - game.flags.performance
+
+  bob_result:
+    name: Wait for the end on the battle of the band
+    condition: '"battle_of_the_bands_win" in DONE or "battle_of_the_bands_lose" in DONE'
+    outcomes:
+      success:
+        next:
+          - slove150
+          - sasha_threesome_confrontation
+          - play_gig
+        conditions:
+          - '"battle_of_the_bands_win" in DONE'
+      small_harem:
+        next:
+          - propose_kleio_anna
+        conditions:
+          - '"battle_of_the_bands_lose" in DONE'
+
+  slove150:
+    name: Make Sasha fall in love with me before she realizes what happened
+    percentage:
+      value: sasha.love.val
+      scale: 150
+    outcomes:
+      success:
+        next: None
+        condition: sasha.love >= 150
+      fail:
+        conditions:
+          - '"sasha_threesome_confrontation" in DONE'
+          - sasha.love < 150
+
+  sasha_threesome_confrontation:
+    name: Wait for Sasha to realize what happened
+    related_event: sasha_threesome_confrontation
+    outcomes:
+      fail:
+        description: Sasha was so mad she left.
+        icon: fail
+        next: None
+        conditions:
+          - '"sasha_threesome_confrontation" in DONE'
+          - sasha.is_gone_forever
+      partial:
+        description: Sasha grudgingly respected my ability to bang them both
+        next: wait
+        conditions:
+          - '"sasha_threesome_confrontation" in DONE'
+          - not sasha.flags.kleioannafoursome
+      success:
+        description: Sasha asked to join in
+        conditions:
+          - '"sasha_threesome_confrontation" in DONE'
+          - sasha.flags.kleioannafoursome
+
+  kleioannafoursome:
+    name: Have a foursome with the entire band
+    related_event: kleioannafoursome
+    outcome:
+      condition: '"kleioannafoursome" in DONE'
+
+  kleioannafoursome2:
+    name: Have a foursome with the entire band again
+    related_event: kleioannafoursome2
+    outcome:
+      condition: '"kleioannafoursome2" in DONE'
+
+  propose_kleio_anna:
+    name: Propose to Kleio and Anna
+    conditions:
+      - Harem.together(anna, kleio, name='band')
+      - not Harem.together(anna, kleio, sasha, name='band')
+    outcomes:
+      complete:
+        conditions:
+          - anna.flags.engagedmike
+          - kleio.flags.engagedmike
+      hidden_sasha:
+        conditions:
+          - Harem.find(sasha, name="band")
+        hide: True
+
+  propose_kleio_anna_sasha:
+    name: Propose to Kleio, Anna and Sasha
+    conditions:
+      - Harem.together(anna, kleio, sasha, name='band')
+    outcome:
+      conditions:
+        - anna.flags.engagedmike
+        - kleio.flags.engagedmike
+        - sasha.flags.engagedmike
+      next: None
+
+  play_gig:
+    name: Play a gig
+    related_event: gig
+    conditions:
+      - '"battle_of_the_bands_win" in DONE'
+    outcome:
+      condition: '"gig" in DONE'
+      next:
+        - together_in_band_harem
+        - play_naked_gig
+
+  together_in_band_harem:
+    name: Anna, Kleio and Sasha must be in the band harem
+    condition: '"gig" in DONE'
+    outcome:
+      condition: Harem.together(anna, kleio, sasha, name="band")
+      next:
+        - anna_concert_naked
+        - kleio_concert_naked
+        - sasha_concert_naked
+
+  anna_concert_naked:
+    name: Ask Anna how she feels about playing naked
+    related_event: anna_concert_naked
+    conditions:
+      - '"gig" in DONE'
+      - 'Harem.find_by_name("band") and Harem.find_by_name("band").is_active(anna)'
+    outcomes:
+      complete:
+        conditions:
+          - '"anna_concert_naked" in DONE'
+          - anna.flags.agree_concert_naked
+        next: None
+      refused:
+        description: Anna refused to play naked, so we're not doing it.
+        conditions:
+          - '"anna_concert_naked" in DONE'
+          - not anna.flags.agree_concert_naked
+        icon: fail
+        next: None
+      refused_before_asking:
+        conditions:
+          - any(g.flags.agree_concert_naked is False for g in (kleio, sasha))
+        hide: True
+        next: None
+      refused_before_asking_fafow:
+        conditions:
+          - Person.find("amy") and any(g.flags.agree_concert_naked is False for g in (amy, kleio, sasha))
+        hide: True
+        next: None
+
+  kleio_concert_naked:
+    name: Ask Kleio how she feels about playing naked
+    related_event: kleio_concert_naked
+    conditions:
+      - '"gig" in DONE'
+      - 'Harem.find_by_name("band") and Harem.find_by_name("band").is_active(kleio)'
+    outcomes:
+      complete:
+        conditions:
+          - '"kleio_concert_naked" in DONE'
+          - kleio.flags.agree_concert_naked
+        next: None
+      refused:
+        description: Kleio refused to play naked, so we're not doing it.
+        conditions:
+          - '"kleio_concert_naked" in DONE'
+          - not kleio.flags.agree_concert_naked
+        icon: fail
+        next: None
+      refused_before_asking:
+        conditions:
+          - any(g.flags.agree_concert_naked is False for g in (anna, sasha))
+        hide: True
+        next: None
+      refused_before_asking_fafow:
+        conditions:
+          - Person.find("amy") and any(g.flags.agree_concert_naked is False for g in (amy, anna, sasha))
+        hide: True
+        next: None
+
+  sasha_concert_naked:
+    name: Ask Sasha how she feels about playing naked
+    related_event: sasha_concert_naked
+    conditions:
+      - '"gig" in DONE'
+      - 'Harem.find_by_name("band") and Harem.find_by_name("band").is_active(sasha)'
+    outcomes:
+      complete:
+        conditions:
+          - '"sasha_concert_naked" in DONE'
+          - sasha.flags.agree_concert_naked
+        next: None
+      refused:
+        description: Sasha refused to play naked, so we're not doing it.
+        conditions:
+          - '"sasha_concert_naked" in DONE'
+          - not sasha.flags.agree_concert_naked
+        icon: fail
+        next: None
+      refused_before_asking:
+        conditions:
+          - any(g.flags.agree_concert_naked is False for g in (anna, kleio))
+        hide: True
+        next: None
+      refused_before_asking_fafow:
+        conditions:
+          - Person.find("amy") and any(g.flags.agree_concert_naked is False for g in (amy, anna, kleio))
+        hide: True
+        next: None
+
+  play_naked_gig:
+    name: Play a gig... naked!
+    related_event: gig
+    outcomes:
+      all_agree:
+        conditions:
+          - game.flags.naked_gig
+        next: None
+      not_all_agree:
+        conditions:
+          - any(g.flags.agree_concert_naked is False for g in (anna, kleio, sasha))
+        hide: True
+        next: None
+      not_all_agree_fafow:
+        conditions:
+          - Person.find("amy") and any(g.flags.agree_concert_naked is False for g in (amy, anna, kleio, sasha))
+        hide: True
+        next: None
