@@ -2020,7 +2020,9 @@ screen get_namesurname_screen(name="Mike", surname="Seeker", sex_choice="male"):
 
     hbox:
         yalign 1.0
-        if renpy.has_label("mc_selection_female"):
+        # FEMALE START DISABLED — no gender choice to roll back to, so hide BACK.
+        # (orig: if renpy.has_label("mc_selection_female"):)
+        if False:
             textbutton _("BACK") action Rollback() tooltip "" style "game_menu_return_button"
         else:
             frame style "empty" xysize (315, 39)
