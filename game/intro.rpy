@@ -8,7 +8,10 @@ label intro(start_plus):
     if start_plus:
         $ game.flags.ngplus = True
 
-    if renpy.has_label("mc_selection_female"):
+    # FEMALE START DISABLED — every new game begins as Mike (male).
+    # To restore the male/female choice, change the line below back to:
+    #     if renpy.has_label("mc_selection_female"):
+    if False:
         call mc_selection_female from _call_mc_selection_female
     else:
         $ sex_choice = "male"
