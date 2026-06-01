@@ -1,4 +1,4 @@
-2026-06-01 02:47:13 UTC
+2026-06-01 04:05:09 UTC
 Linux-6.17.0-23-generic-x86_64-with-glibc2.39
 Ren'Py 8.5.2.26010301
  
@@ -7,174 +7,227 @@ Love & Sex : Second Base - 26.4.0c
 26.4.0c
 Built at 2026-05-04 17:19:49 UTC
 
-Early init took 1196 ms
-Loading error handling took 974 ms
-Loading script took 282674 ms
-Loading save slot metadata took 237 ms
-Loading persistent took 3 ms
+Early init took 6019 ms
+Loading error handling took 4879 ms
+Loading script took 96459 ms
+Loading save slot metadata took 1382 ms
+Loading persistent took 14 ms
 Failed to initialize steam: Exception("steamapi.InitFlat returned 1 (Failed to load module '/home/asim/.steam/sdk64/steamclient.so')")
+ - Init at renpy/common/00steam.rpy:879 took 252 ms.
 Set script version to: (8, 5, 2)
- - Init at game/updater_module/updater.rpy:24 took 360 ms.
- - Init at game/start.rpy:262 took 12626 ms.
- - Init at game/cl/labels_story.rpy:1 took 4579 ms.
- - Init at game/start.rpy:213 took 1993 ms.
+ - Init at game/updater_module/updater.rpy:24 took 1629 ms.
+ - Init at game/cl/class_util.rpy:76 took 647 ms.
+ - Init at game/start.rpy:262 took 42794 ms.
+ - Init at game/cl/labels_story.rpy:1 took 25370 ms.
+ - Init at game/start.rpy:213 took 12085 ms.
+ - Init at renpy/common/00audio.rpy:47 took 307 ms.
+ - Init at renpy/common/00images.rpy:80 took 309 ms.
 Loading DLC: BreeMC
+ - Init at game/dlc_fafow/ch/amy/events.rpy:1 took 295 ms.
 Loading DLC: FAFOW
 Loading DLC: FAFWM
 Loading DLC: LIVELY
- - Init at game/updater_module/websocket.rpy:2 took 265 ms.
- - Init at game/ch/aletta/images.rpy:1 took 3407 ms.
- - Init at game/ch/alexis/images.rpy:1 took 2732 ms.
- - Init at game/ch/amy/images.rpy:1 took 874 ms.
- - Init at game/ch/angela/images.rpy:1 took 1160 ms.
- - Init at game/ch/anna/images.rpy:1 took 1555 ms.
- - Init at game/ch/audrey/images.rpy:1 took 2538 ms.
- - Init at game/ch/ayesha/images.rpy:1 took 1865 ms.
- - Init at game/ch/bree/images.rpy:1 took 6424 ms.
- - Init at game/ch/camila/images.rpy:1 took 1902 ms.
- - Init at game/ch/cassidy/images.rpy:1 took 2191 ms.
- - Init at game/ch/cherie/images.rpy:1 took 1916 ms.
- - Init at game/ch/claire/images.rpy:1 took 784 ms.
- - Init at game/ch/emma/images.rpy:1 took 1960 ms.
- - Init at game/ch/gen/beach_cream.rpy:27 took 940 ms.
- - Init at game/ch/gen/beach_icecream.rpy:22 took 776 ms.
- - Init at game/ch/gen/beach_sandcastle.rpy:35 took 864 ms.
- - Init at game/ch/gen/beach_volleyball.rpy:40 took 1281 ms.
- - Init at game/ch/gen/board_games.rpy:21 took 892 ms.
- - Init at game/ch/gen/buy_popcorn.rpy:22 took 548 ms.
- - Init at game/ch/gen/chatting.rpy:17 took 919 ms.
- - Init at game/ch/gen/cinemaroom.rpy:23 took 1223 ms.
- - Init at game/ch/gen/cuddles.rpy:1 took 777 ms.
- - Init at game/ch/gen/dance.rpy:1 took 1275 ms.
- - Init at game/ch/gen/dick_reactions.rpy:19 took 825 ms.
- - Init at game/ch/gen/drink_scenes.rpy:1 took 349 ms.
- - Init at game/ch/gen/eat_snacks.rpy:29 took 516 ms.
- - Init at game/ch/gen/game_arcade.rpy:27 took 325 ms.
- - Init at game/ch/gen/hottub.rpy:43 took 1587 ms.
- - Init at game/ch/gen/images.rpy:52 took 3502 ms.
- - Init at game/ch/gen/kitchen_meal.rpy:12 took 403 ms.
- - Init at game/ch/gen/peeping.rpy:33 took 433 ms.
- - Init at game/ch/gen/photobooth.rpy:1 took 406 ms.
- - Init at game/ch/gen/play_console.rpy:17 took 479 ms.
- - Init at game/ch/gen/play_guitar.rpy:17 took 486 ms.
- - Init at game/ch/gen/playing_water.rpy:33 took 816 ms.
- - Init at game/ch/gen/poledance.rpy:73 took 1394 ms.
- - Init at game/ch/gen/restaurant_meal.rpy:20 took 790 ms.
- - Init at game/ch/gen/sexinserts.rpy:1 took 684 ms.
- - Init at game/ch/gen/slap.rpy:34 took 1346 ms.
- - Init at game/ch/gen/sleep.rpy:1 took 493 ms.
- - Init at game/ch/gen/spank.rpy:1 took 532 ms.
- - Init at game/ch/gen/swimmingrace.rpy:22 took 487 ms.
- - Init at game/ch/gen/tattooparlor.rpy:1 took 951 ms.
- - Init at game/ch/gen/watch_tv.rpy:22 took 719 ms.
- - Init at game/ch/gen/waterslide.rpy:16 took 416 ms.
- - Init at game/ch/gen/wedding.rpy:18 took 336 ms.
- - Init at game/ch/gen_full/images.rpy:1 took 373 ms.
- - Init at game/ch/hanna/images.rpy:1 took 1223 ms.
- - Init at game/ch/harems/friendly/images.rpy:1 took 567 ms.
- - Init at game/ch/harems/home/images.rpy:1 took 8808 ms.
- - Init at game/ch/harems_full/band/images.rpy:1 took 1060 ms.
- - Init at game/ch/harems_full/bitchy/images.rpy:1 took 1046 ms.
- - Init at game/ch/harems_full/college/images.rpy:1 took 538 ms.
- - Init at game/ch/harems_full/criminal/images.rpy:1 took 411 ms.
- - Init at game/ch/harems_full/fashion/images.rpy:1 took 362 ms.
- - Init at game/ch/harems_full/goodevil/images.rpy:1 took 562 ms.
- - Init at game/ch/harems_full/jealous/images.rpy:1 took 864 ms.
- - Init at game/ch/harems_full/office/images.rpy:1 took 2578 ms.
- - Init at game/ch/harems_full/pixie/images.rpy:17 took 826 ms.
- - Init at game/ch/harems_full/taming/images.rpy:1 took 862 ms.
- - Init at game/ch/harmony/images.rpy:1 took 1487 ms.
- - Init at game/ch/kat/images.rpy:1 took 738 ms.
- - Init at game/ch/kiara/images.rpy:1 took 2429 ms.
- - Init at game/ch/kleio/images.rpy:1 took 3992 ms.
- - Init at game/ch/kylie/images.rpy:1 took 3209 ms.
- - Init at game/ch/lavish/images.rpy:1 took 2134 ms.
- - Init at game/ch/lexi/images.rpy:1 took 3797 ms.
- - Init at game/ch/mc/images.rpy:1 took 739 ms.
- - Init at game/ch/mike/images.rpy:1 took 760 ms.
- - Init at game/ch/minami/images.rpy:1 took 3266 ms.
- - Init at game/ch/morgan/images.rpy:1 took 2343 ms.
- - Init at game/ch/natalie/images.rpy:1 took 849 ms.
- - Init at game/ch/palla/images.rpy:1 took 1981 ms.
- - Init at game/ch/reona/images.rpy:1 took 1009 ms.
- - Init at game/ch/samantha/images.rpy:1 took 2625 ms.
- - Init at game/ch/sasha/images.rpy:1 took 4744 ms.
- - Init at game/ch/scottie/images.rpy:1 took 459 ms.
- - Init at game/ch/shiori/images.rpy:1 took 2632 ms.
- - Init at game/ch/violaine/images.rpy:1 took 653 ms.
- - Init at game/dlc_breemc/ch/angela/images.rpy:1 took 909 ms.
- - Init at game/dlc_breemc/ch/danny/images.rpy:1 took 860 ms.
- - Init at game/dlc_breemc/ch/dwayne/images.rpy:1 took 1404 ms.
- - Init at game/dlc_breemc/ch/harems/metal/images.rpy:1 took 701 ms.
- - Init at game/dlc_breemc/ch/jack/images.rpy:1 took 671 ms.
- - Init at game/dlc_breemc/ch/lexi/images.rpy:1 took 688 ms.
- - Init at game/dlc_breemc/ch/master/images.rpy:1 took 491 ms.
- - Init at game/dlc_breemc/ch/mc/images.rpy:1 took 3480 ms.
- - Init at game/dlc_breemc/ch/mike/images.rpy:1 took 1759 ms.
- - Init at game/dlc_breemc/ch/sasha/images.rpy:1 took 306 ms.
- - Init at game/dlc_breemc/ch/scottie/images.rpy:1 took 976 ms.
- - Init at game/dlc_breemc/ch/shawn/images.rpy:1 took 1247 ms.
- - Init at game/dlc_fafow/ch/amy/images.rpy:1 took 1421 ms.
- - Init at game/dlc_fafow/ch/gen/ev2/amusement_icecream.rpy:26 took 312 ms.
- - Init at game/dlc_fafow/ch/gen/ev2/haunted_house.rpy:15 took 400 ms.
- - Init at game/dlc_fafow/ch/harems/band/images.rpy:1 took 2074 ms.
- - Init at game/dlc_fafow/ch/harems/electronic/images.rpy:1 took 730 ms.
- - Init at game/dlc_fafow/ch/harems/goth/images.rpy:1 took 1385 ms.
- - Init at game/dlc_fafow/ch/harems/petite/images.rpy:1 took 660 ms.
- - Init at game/dlc_fafow/ch/harems/purity/images.rpy:1 took 488 ms.
- - Init at game/dlc_fafow/ch/harems/thot/images.rpy:1 took 1493 ms.
- - Init at game/dlc_fafow/ch/harems/whore/images.rpy:1 took 1257 ms.
- - Init at game/dlc_fafow/ch/kat/images.rpy:1 took 2363 ms.
- - Init at game/dlc_fafow/ch/reona/images.rpy:1 took 3952 ms.
- - Init at game/dlc_fafwm/ch/cherie/images.rpy:1 took 1065 ms.
- - Init at game/dlc_fafwm/ch/claire/images.rpy:1 took 1011 ms.
- - Init at game/dlc_fafwm/ch/harems/milf/images.rpy:1 took 880 ms.
- - Init at game/dlc_fafwm/ch/kiara/images.rpy:1 took 1066 ms.
- - Init at game/cl/class_gallery.rpy:1206 took 10498 ms.
- - Init at game/dlc_lively/bg/bathroom/bathroom.rpy:66 took 710 ms.
- - Init at game/dlc_lively/bg/beach/beach.rpy:40 took 442 ms.
- - Init at game/dlc_lively/bg/bookstore/bookstore.rpy:38 took 320 ms.
- - Init at game/dlc_lively/bg/breakroom/breakroom.rpy:40 took 354 ms.
- - Init at game/dlc_lively/bg/ceo/ceo.rpy:46 took 506 ms.
- - Init at game/dlc_lively/bg/cinema/cinema.rpy:48 took 741 ms.
- - Init at game/dlc_lively/bg/drugstore/drugstore.rpy:38 took 287 ms.
- - Init at game/dlc_lively/bg/gym/gym.rpy:40 took 381 ms.
- - Init at game/dlc_lively/bg/gymlockers/gymlockers.rpy:38 took 273 ms.
- - Init at game/dlc_lively/bg/gymmachine/gymmachine.rpy:38 took 346 ms.
- - Init at game/dlc_lively/bg/gymreception/gymreception.rpy:38 took 315 ms.
- - Init at game/dlc_lively/bg/jewelry/jewelry.rpy:42 took 396 ms.
- - Init at game/dlc_lively/bg/kitchen/kitchen.rpy:40 took 442 ms.
- - Init at game/dlc_lively/bg/livingroom/livingroom.rpy:65 took 321 ms.
- - Init at game/dlc_lively/bg/park/park.rpy:44 took 583 ms.
- - Init at game/dlc_lively/bg/personal/personal.rpy:38 took 305 ms.
- - Init at game/dlc_lively/bg/pond/pond.rpy:44 took 621 ms.
- - Init at game/dlc_lively/bg/pool/pool.rpy:40 took 378 ms.
- - Init at game/dlc_lively/bg/pub/pub.rpy:38 took 392 ms.
- - Init at game/dlc_lively/bg/pubexterior/pubexterior.rpy:38 took 333 ms.
- - Init at game/dlc_lively/bg/pubplay/pubplay.rpy:38 took 331 ms.
- - Init at game/dlc_lively/bg/pubseat/pubseat.rpy:40 took 395 ms.
- - Init at game/dlc_lively/bg/street/street.rpy:40 took 474 ms.
- - Init at game/dlc_lively/bg/street2/street2.rpy:42 took 500 ms.
- - Init at game/dlc_lively/bg/waterpark/waterpark.rpy:38 took 302 ms.
-Running init code took 200645 ms
-Loading analysis data took 189 ms
-Analyze and compile ATL took 122 ms
-Reloading save slot metadata took 22 ms
-Dump and make backups took 1 ms
-Cleaning cache took 0 ms
-Making clean stores took 1 ms
-Initial gc took 2082 ms
+ - Init at game/options.rpy:42 took 410 ms.
+ - Init at game/updater_module/websocket.rpy:2 took 1503 ms.
+ - Init at game/bg/doors/doors.rpy:1 took 481 ms.
+ - Init at game/bg/house/house.rpy:1 took 761 ms.
+ - Init at game/bg/housemap/housemap.rpy:1 took 304 ms.
+ - Init at game/bg/livingroom/livingroom.rpy:21 took 303 ms.
+ - Init at game/bg/taxi/taxi.rpy:1 took 309 ms.
+ - Init at game/bg/trailer/trailer.rpy:1 took 310 ms.
+ - Init at game/ch/aletta/images.rpy:1 took 16432 ms.
+ - Init at game/ch/alexis/images.rpy:1 took 17135 ms.
+ - Init at game/ch/amy/images.rpy:1 took 5914 ms.
+ - Init at game/ch/angela/images.rpy:1 took 8160 ms.
+ - Init at game/ch/anna/images.rpy:1 took 10727 ms.
+ - Init at game/ch/audrey/images.rpy:1 took 17523 ms.
+ - Init at game/ch/ayesha/images.rpy:1 took 12619 ms.
+ - Init at game/ch/bree/images.rpy:1 took 44073 ms.
+ - Init at game/ch/camila/images.rpy:1 took 12765 ms.
+ - Init at game/ch/cassidy/images.rpy:1 took 14737 ms.
+ - Init at game/ch/cherie/images.rpy:1 took 13024 ms.
+ - Init at game/ch/claire/images.rpy:1 took 5340 ms.
+ - Init at game/ch/danny/images.rpy:1 took 987 ms.
+ - Init at game/ch/dwayne/images.rpy:1 took 850 ms.
+ - Init at game/ch/emma/images.rpy:1 took 11638 ms.
+ - Init at game/ch/gen/beach_cream.rpy:27 took 4760 ms.
+ - Init at game/ch/gen/beach_icecream.rpy:22 took 3853 ms.
+ - Init at game/ch/gen/beach_sandcastle.rpy:35 took 4366 ms.
+ - Init at game/ch/gen/beach_volleyball.rpy:40 took 6460 ms.
+ - Init at game/ch/gen/board_games.rpy:21 took 4504 ms.
+ - Init at game/ch/gen/buy_popcorn.rpy:22 took 2785 ms.
+ - Init at game/ch/gen/chatting.rpy:17 took 4591 ms.
+ - Init at game/ch/gen/cinemaroom.rpy:23 took 6155 ms.
+ - Init at game/ch/gen/cuddles.rpy:1 took 3560 ms.
+ - Init at game/ch/gen/dance.rpy:1 took 6441 ms.
+ - Init at game/ch/gen/dick_reactions.rpy:19 took 4151 ms.
+ - Init at game/ch/gen/drink_scenes.rpy:1 took 1749 ms.
+ - Init at game/ch/gen/eat_snacks.rpy:29 took 2532 ms.
+ - Init at game/ch/gen/game_arcade.rpy:27 took 1564 ms.
+ - Init at game/ch/gen/hottub.rpy:43 took 7658 ms.
+ - Init at game/ch/gen/images.rpy:52 took 16997 ms.
+ - Init at game/ch/gen/kitchen_meal.rpy:12 took 2005 ms.
+ - Init at game/ch/gen/peeping.rpy:33 took 2219 ms.
+ - Init at game/ch/gen/photobooth.rpy:1 took 2252 ms.
+ - Init at game/ch/gen/play_console.rpy:17 took 3018 ms.
+ - Init at game/ch/gen/play_guitar.rpy:17 took 2350 ms.
+ - Init at game/ch/gen/playing_water.rpy:33 took 4178 ms.
+ - Init at game/ch/gen/poledance.rpy:73 took 7326 ms.
+ - Init at game/ch/gen/pub_burger.rpy:1 took 994 ms.
+ - Init at game/ch/gen/pub_dart.rpy:1 took 1205 ms.
+ - Init at game/ch/gen/pub_pool.rpy:1 took 1620 ms.
+ - Init at game/ch/gen/restaurant_meal.rpy:20 took 4058 ms.
+ - Init at game/ch/gen/sexinserts.rpy:1 took 3448 ms.
+ - Init at game/ch/gen/slap.rpy:34 took 8359 ms.
+ - Init at game/ch/gen/sleep.rpy:1 took 3314 ms.
+ - Init at game/ch/gen/spank.rpy:1 took 3668 ms.
+ - Init at game/ch/gen/studywith.rpy:1 took 756 ms.
+ - Init at game/ch/gen/swimmingrace.rpy:22 took 3442 ms.
+ - Init at game/ch/gen/tattooparlor.rpy:1 took 6300 ms.
+ - Init at game/ch/gen/watch_tv.rpy:22 took 4754 ms.
+ - Init at game/ch/gen/waterslide.rpy:16 took 2831 ms.
+ - Init at game/ch/gen/wedding.rpy:18 took 2441 ms.
+ - Init at game/ch/gen_full/images.rpy:1 took 2532 ms.
+ - Init at game/ch/hanna/images.rpy:1 took 8783 ms.
+ - Init at game/ch/harems/friendly/images.rpy:1 took 3979 ms.
+ - Init at game/ch/harems/home/images.rpy:1 took 64077 ms.
+ - Init at game/ch/harems_full/band/images.rpy:1 took 7305 ms.
+ - Init at game/ch/harems_full/bitchy/images.rpy:1 took 8195 ms.
+ - Init at game/ch/harems_full/college/images.rpy:1 took 3651 ms.
+ - Init at game/ch/harems_full/criminal/images.rpy:1 took 2784 ms.
+ - Init at game/ch/harems_full/fashion/images.rpy:1 took 2552 ms.
+ - Init at game/ch/harems_full/gaming/images.rpy:1 took 1360 ms.
+ - Init at game/ch/harems_full/goodevil/images.rpy:1 took 3890 ms.
+ - Init at game/ch/harems_full/jealous/images.rpy:1 took 5735 ms.
+ - Init at game/ch/harems_full/office/images.rpy:1 took 17492 ms.
+ - Init at game/ch/harems_full/pixie/images.rpy:17 took 5842 ms.
+ - Init at game/ch/harems_full/sporty/images.rpy:1 took 1191 ms.
+ - Init at game/ch/harems_full/taming/images.rpy:1 took 5780 ms.
+ - Init at game/ch/harmony/images.rpy:1 took 10130 ms.
+ - Init at game/ch/jack/images.rpy:1 took 606 ms.
+ - Init at game/ch/kat/images.rpy:1 took 4114 ms.
+ - Init at game/ch/kiara/images.rpy:1 took 11927 ms.
+ - Init at game/ch/kleio/images.rpy:1 took 20299 ms.
+ - Init at game/ch/kylie/images.rpy:1 took 16378 ms.
+ - Init at game/ch/lavish/images.rpy:1 took 10794 ms.
+ - Init at game/ch/lexi/images.rpy:1 took 19671 ms.
+ - Init at game/ch/master/images.rpy:1 took 604 ms.
+ - Init at game/ch/mc/images.rpy:1 took 3521 ms.
+ - Init at game/ch/mike/images.rpy:1 took 3810 ms.
+ - Init at game/ch/minami/images.rpy:1 took 16583 ms.
+ - Init at game/ch/morgan/images.rpy:1 took 11873 ms.
+ - Init at game/ch/natalie/images.rpy:1 took 4285 ms.
+ - Init at game/ch/palla/images.rpy:1 took 9500 ms.
+ - Init at game/ch/reona/images.rpy:1 took 5772 ms.
+ - Init at game/ch/ryan/images.rpy:1 took 465 ms.
+ - Init at game/ch/samantha/images.rpy:1 took 17711 ms.
+ - Init at game/ch/sasha/images.rpy:1 took 30826 ms.
+ - Init at game/ch/scottie/images.rpy:1 took 3057 ms.
+ - Init at game/ch/shawn/images.rpy:1 took 314 ms.
+ - Init at game/ch/shiori/images.rpy:1 took 17703 ms.
+ - Init at game/ch/victor/images.rpy:1 took 855 ms.
+ - Init at game/ch/violaine/images.rpy:1 took 4423 ms.
+ - Init at game/dlc_breemc/ch/angela/images.rpy:1 took 6113 ms.
+ - Init at game/dlc_breemc/ch/ayesha/images.rpy:1 took 1077 ms.
+ - Init at game/dlc_breemc/ch/danny/images.rpy:1 took 5699 ms.
+ - Init at game/dlc_breemc/ch/dwayne/images.rpy:1 took 9368 ms.
+ - Init at game/dlc_breemc/ch/gen/hottub_female.rpy:25 took 1053 ms.
+ - Init at game/dlc_breemc/ch/gen/peeping.rpy:1 took 961 ms.
+ - Init at game/dlc_breemc/ch/harems/metal/images.rpy:1 took 4652 ms.
+ - Init at game/dlc_breemc/ch/jack/images.rpy:1 took 4642 ms.
+ - Init at game/dlc_breemc/ch/lexi/images.rpy:1 took 4541 ms.
+ - Init at game/dlc_breemc/ch/master/images.rpy:1 took 3304 ms.
+ - Init at game/dlc_breemc/ch/mc/images.rpy:1 took 23477 ms.
+ - Init at game/dlc_breemc/ch/mike/images.rpy:1 took 11712 ms.
+ - Init at game/dlc_breemc/ch/ryan/images.rpy:1 took 635 ms.
+ - Init at game/dlc_breemc/ch/sasha/images.rpy:1 took 2022 ms.
+ - Init at game/dlc_breemc/ch/scottie/images.rpy:1 took 6422 ms.
+ - Init at game/dlc_breemc/ch/shawn/images.rpy:1 took 8252 ms.
+ - Init at game/dlc_breemc/ch/victor/images.rpy:1 took 1665 ms.
+ - Init at game/dlc_fafow/ch/amy/images.rpy:1 took 9583 ms.
+ - Init at game/dlc_fafow/ch/gen/ev2/amusement_icecream.rpy:26 took 2103 ms.
+ - Init at game/dlc_fafow/ch/gen/ev2/ferris_wheel.rpy:1 took 1413 ms.
+ - Init at game/dlc_fafow/ch/gen/ev2/haunted_house.rpy:15 took 3452 ms.
+ - Init at game/dlc_fafow/ch/gen/ev2/hedge_maze.rpy:1 took 2084 ms.
+ - Init at game/dlc_fafow/ch/gen/ev2/love_boat.rpy:1 took 1626 ms.
+ - Init at game/dlc_fafow/ch/gen/ev2/merry_go_round.rpy:1 took 1414 ms.
+ - Init at game/dlc_fafow/ch/harems/band/images.rpy:1 took 14586 ms.
+ - Init at game/dlc_fafow/ch/harems/electronic/images.rpy:1 took 4894 ms.
+ - Init at game/dlc_fafow/ch/harems/gaming/images.rpy:1 took 1057 ms.
+ - Init at game/dlc_fafow/ch/harems/goth/images.rpy:1 took 9471 ms.
+ - Init at game/dlc_fafow/ch/harems/petite/images.rpy:1 took 4409 ms.
+ - Init at game/dlc_fafow/ch/harems/purity/images.rpy:1 took 3282 ms.
+ - Init at game/dlc_fafow/ch/harems/thot/images.rpy:1 took 10331 ms.
+ - Init at game/dlc_fafow/ch/harems/whore/images.rpy:1 took 7263 ms.
+ - Init at game/dlc_fafow/ch/kat/images.rpy:1 took 12187 ms.
+ - Init at game/dlc_fafow/ch/reona/images.rpy:1 took 20179 ms.
+ - Init at game/dlc_fafwm/ch/cherie/images.rpy:1 took 6959 ms.
+ - Init at game/dlc_fafwm/ch/claire/images.rpy:1 took 6685 ms.
+ - Init at game/dlc_fafwm/ch/harems/milf/images.rpy:1 took 5951 ms.
+ - Init at game/dlc_fafwm/ch/kiara/images.rpy:1 took 7025 ms.
+ - Init at game/cl/class_gallery.rpy:1206 took 71076 ms.
+ - Init at game/dlc_lively/bg/alettaoffice/alettaoffice.rpy:32 took 322 ms.
+ - Init at game/dlc_lively/bg/aquarium/aquarium.rpy:38 took 1012 ms.
+ - Init at game/dlc_lively/bg/arcade/arcade.rpy:34 took 623 ms.
+ - Init at game/dlc_lively/bg/bathroom/bathroom.rpy:66 took 3714 ms.
+ - Init at game/dlc_lively/bg/beach/beach.rpy:40 took 2389 ms.
+ - Init at game/dlc_lively/bg/bedroom2/bedroom2.rpy:32 took 478 ms.
+ - Init at game/dlc_lively/bg/bedroom3/bedroom3.rpy:32 took 712 ms.
+ - Init at game/dlc_lively/bg/bedroom5/bedroom5.rpy:32 took 534 ms.
+ - Init at game/dlc_lively/bg/bookstore/bookstore.rpy:38 took 1612 ms.
+ - Init at game/dlc_lively/bg/breakroom/breakroom.rpy:40 took 1768 ms.
+ - Init at game/dlc_lively/bg/ceo/ceo.rpy:46 took 2555 ms.
+ - Init at game/dlc_lively/bg/church/church.rpy:34 took 613 ms.
+ - Init at game/dlc_lively/bg/cinema/cinema.rpy:48 took 3767 ms.
+ - Init at game/dlc_lively/bg/drugstore/drugstore.rpy:38 took 1486 ms.
+ - Init at game/dlc_lively/bg/electronic/electronic.rpy:36 took 1196 ms.
+ - Init at game/dlc_lively/bg/flowershop/flowershop.rpy:34 took 872 ms.
+ - Init at game/dlc_lively/bg/garage/garage.rpy:32 took 447 ms.
+ - Init at game/dlc_lively/bg/golf/golf.rpy:33 took 447 ms.
+ - Init at game/dlc_lively/bg/gym/gym.rpy:40 took 1849 ms.
+ - Init at game/dlc_lively/bg/gymlockers/gymlockers.rpy:38 took 1318 ms.
+ - Init at game/dlc_lively/bg/gymmachine/gymmachine.rpy:38 took 1696 ms.
+ - Init at game/dlc_lively/bg/gymreception/gymreception.rpy:38 took 1545 ms.
+ - Init at game/dlc_lively/bg/house/house.rpy:37 took 1062 ms.
+ - Init at game/dlc_lively/bg/jewelry/jewelry.rpy:42 took 2027 ms.
+ - Init at game/dlc_lively/bg/kitchen/kitchen.rpy:40 took 2252 ms.
+ - Init at game/dlc_lively/bg/livingroom/livingroom.rpy:65 took 1821 ms.
+ - Init at game/dlc_lively/bg/maidcafe/maidcafe.rpy:34 took 674 ms.
+ - Init at game/dlc_lively/bg/mansion/mansion.rpy:32 took 441 ms.
+ - Init at game/dlc_lively/bg/office/office.rpy:36 took 846 ms.
+ - Init at game/dlc_lively/bg/park/park.rpy:44 took 2865 ms.
+ - Init at game/dlc_lively/bg/personal/personal.rpy:38 took 1534 ms.
+ - Init at game/dlc_lively/bg/pond/pond.rpy:44 took 3002 ms.
+ - Init at game/dlc_lively/bg/pool/pool.rpy:40 took 1903 ms.
+ - Init at game/dlc_lively/bg/pub/pub.rpy:38 took 1960 ms.
+ - Init at game/dlc_lively/bg/pubexterior/pubexterior.rpy:38 took 1733 ms.
+ - Init at game/dlc_lively/bg/pubplay/pubplay.rpy:38 took 1703 ms.
+ - Init at game/dlc_lively/bg/pubseat/pubseat.rpy:40 took 2013 ms.
+ - Init at game/dlc_lively/bg/ramenshop/ramenshop.rpy:32 took 550 ms.
+ - Init at game/dlc_lively/bg/street/street.rpy:40 took 2451 ms.
+ - Init at game/dlc_lively/bg/street2/street2.rpy:42 took 2927 ms.
+ - Init at game/dlc_lively/bg/waterpark/waterpark.rpy:38 took 1837 ms.
+ - Init at game/dlc_lively/bg/waterpark2/waterpark2.rpy:36 took 1261 ms.
+ - Init at renpy/common/00director.rpy:1385 took 1500 ms.
+Running init code took 1182907 ms
+Loading analysis data took 437 ms
+Analyze and compile ATL took 493 ms
+Reloading save slot metadata took 68 ms
+Dump and make backups took 14 ms
+Cleaning cache took 1 ms
+Making clean stores took 5 ms
+Initial gc took 4173 ms
 DPI scale factor: 1.000000
-Creating interface object took 4 ms
-Init translation took 54 ms
-Cleaning stores took 0 ms
-Load screen analysis took 1 ms
-Analyze screens took 66 ms
-Save screen analysis took 54 ms
-Save pyanalysis took 107 ms
-Save bytecode took 1271 ms
-Running _start took 45 ms
-Interface start took 5643 ms
+Creating interface object took 16 ms
+Init translation took 309 ms
+Cleaning stores took 2 ms
+Load screen analysis took 13 ms
+Analyze screens took 505 ms
+Save screen analysis took 373 ms
+Save pyanalysis took 218 ms
+Save bytecode took 3867 ms
+Running _start took 134 ms
+Interface start took 14360 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -186,6 +239,9 @@ Version: '4.6 (Compatibility Profile) Mesa 25.2.8-0ubuntu0.24.04.1'
 Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
 Screen sizes: virtual=(1280, 720) physical=(1920, 1080) drawable=(1920, 1080)
 Maximum texture size: 4096x4096
-Could not open 'cache/shaders.txt':
 Screen sizes: virtual=(1280, 720) physical=(1920, 1080) drawable=(1920, 1080)
 Maximum texture size: 4096x4096
+Cleaning stores took 2 ms
+Load screen analysis took 1116 ms
+Analyze screens took 2 ms
+Running _start took 59 ms

@@ -246,17 +246,12 @@ init 1:
         always "aletta_oral_cum_b" if_all ["cum", "manb"]
 
 
-
-
     layeredimage aletta kiss:
         attribute_function Pickers([PiercingsPicker, CollarPicker, HaircutPicker, OutfitPicker], npc=aletta)
 
-
         group multiple auto variant acc1 when naked
 
-
         always "aletta_kiss"
-
 
         group multiple:
             attribute clit null
@@ -292,7 +287,6 @@ init 1:
 
         group hair auto if_not ["halloween"]
         always "aletta_kiss_hair_halloween" if_any ["halloween"]
-
 
         group multiple auto variant acc2 when not naked
 
