@@ -146,12 +146,6 @@ define aletta_achievement_3 = Achievement(
     id="aletta_3",
     name="Aletta's wedding",
     description="Get married with Aletta")
-define aletta_achievement_4 = Achievement(
-    id="aletta_4",
-    name="Aletta's pregnancy",
-    description="Get Aletta pregnant")
-
-
 
 define alexis_achievement_1 = Achievement(
     id="alexis_1",
@@ -165,12 +159,9 @@ define alexis_achievement_3 = Achievement(
     id="alexis_3",
     name="Alexis' wedding",
     description="Get married with Alexis")
+
 define alexis_achievement_4 = Achievement(
     id="alexis_4",
-    name="Alexis's pregnancy",
-    description="Get Alexis pregnant")
-define alexis_achievement_5 = Achievement(
-    id="alexis_5",
     name="AVENGE HER",
     description="Beat up your old sport teacher",
     locked_description="???",
@@ -190,11 +181,6 @@ define anna_achievement_3 = Achievement(
     id="anna_3",
     name="Anna's wedding",
     description="Get married with Anna")
-define anna_achievement_4 = Achievement(
-    id="anna_4",
-    name="Anna's pregnancy",
-    description="Get Anna pregnant")
-
 
 
 define audrey_achievement_1 = Achievement(
@@ -209,11 +195,6 @@ define audrey_achievement_3 = Achievement(
     id="audrey_3",
     name="Audrey's wedding",
     description="Get married with Audrey")
-define audrey_achievement_4 = Achievement(
-    id="audrey_4",
-    name="Audrey's pregnancy",
-    description="Get Audrey pregnant")
-
 
 
 define ayesha_achievement_1 = Achievement(
@@ -228,10 +209,7 @@ define ayesha_achievement_3 = Achievement(
     id="ayesha_3",
     name="Ayesha's wedding",
     description="Get married with Ayesha")
-define ayesha_achievement_4 = Achievement(
-    id="ayesha_4",
-    name="Ayesha's pregnancy",
-    description="Get Ayesha pregnant")
+
 define ayesha_achievement_5 = Achievement(
     id="ayesha_5",
     name="Eye of the Tiger",
@@ -251,11 +229,6 @@ define bree_achievement_3 = Achievement(
     id="bree_3",
     name="Bree's wedding",
     description="Get married with Bree")
-define bree_achievement_4 = Achievement(
-    id="bree_4",
-    name="Bree's pregnancy",
-    description="Get Bree pregnant")
-
 
 
 define camila_achievement_1 = Achievement(
@@ -270,12 +243,6 @@ define camila_achievement_3 = Achievement(
     id="camila_3",
     name="Camila's wedding",
     description="Get married with Camila")
-define camila_achievement_4 = Achievement(
-    id="camila_4",
-    name="Camila's pregnancy",
-    description="Get Camila pregnant")
-
-
 
 define cassidy_achievement_1 = Achievement(
     id="cassidy_1",
@@ -289,11 +256,6 @@ define cassidy_achievement_3 = Achievement(
     id="cassidy_3",
     name="Cassidy's wedding",
     description="Get married with Cassidy")
-define cassidy_achievement_4 = Achievement(
-    id="cassidy_4",
-    name="Cassidy's pregnancy",
-    description="Get Cassidy pregnant")
-
 
 
 define emma_achievement_1 = Achievement(
@@ -308,10 +270,7 @@ define emma_achievement_3 = Achievement(
     id="emma_3",
     name="Emma's wedding",
     description="Get married with Emma")
-define emma_achievement_4 = Achievement(
-    id="emma_4",
-    name="Emma's pregnancy",
-    description="Get Emma pregnant")
+
 define emma_achievement_5 = Achievement(
     id="emma_5",
     name="The elephant in the room",
@@ -333,12 +292,9 @@ define hanna_achievement_3 = Achievement(
     id="hanna_3",
     name="Hanna's wedding",
     description="Get married with Hanna")
+
 define hanna_achievement_4 = Achievement(
     id="hanna_4",
-    name="Hanna's pregnancy",
-    description="Get Hanna pregnant")
-define hanna_achievement_5 = Achievement(
-    id="hanna_5",
     name="Marketing expert",
     description="Make the gym a lewd place")
 
@@ -356,19 +312,15 @@ define harmony_achievement_3 = Achievement(
     id="harmony_3",
     name="Harmony's wedding",
     description="Get married with Harmony")
+
 define harmony_achievement_4 = Achievement(
     id="harmony_4",
-    name="Harmony's pregnancy",
-    description="Get Harmony pregnant")
-define harmony_achievement_5 = Achievement(
-    id="harmony_5",
     name="Bad influence",
     description="Make Harmony a real pervert")
-define harmony_achievement_6 = Achievement(
-    id="harmony_6",
+define harmony_achievement_5 = Achievement(
+    id="harmony_5",
     name="Shower with holy water",
     description="Make sure Harmony stays pure until the end game")
-
 
 
 define kleio_achievement_1 = Achievement(
@@ -383,10 +335,6 @@ define kleio_achievement_3 = Achievement(
     id="kleio_3",
     name="Kleio's wedding",
     description="Get married with Kleio")
-define kleio_achievement_4 = Achievement(
-    id="kleio_4",
-    name="Kleio's pregnancy",
-    description="Get Kleio pregnant")
 
 
 
@@ -414,10 +362,7 @@ define kylie_achievement_5 = Achievement(
     id="kylie_5",
     name="Kylie's wedding",
     description="Get married with Kylie")
-define kylie_achievement_6 = Achievement(
-    id="kylie_6",
-    name="Kylie's pregnancy",
-    description="Get Kylie pregnant")
+
 define kylie_achievement_7 = Achievement(
     id="kylie_7",
     name="Love and Thunder",
@@ -474,7 +419,6 @@ define lexi_achievement_5 = Achievement(
     description="Become Lexi's new pimp")
 
 
-
 define minami_achievement_1 = Achievement(
     id="minami_1",
     name="First kiss with Minami",
@@ -487,11 +431,6 @@ define minami_achievement_3 = Achievement(
     id="minami_3",
     name="Minami's wedding",
     description="Get married with Minami")
-define minami_achievement_4 = Achievement(
-    id="minami_4",
-    name="Minami's pregnancy",
-    description="Get Minami pregnant")
-
 
 
 define morgan_achievement_1 = Achievement(
@@ -506,12 +445,9 @@ define morgan_achievement_3 = Achievement(
     id="morgan_3",
     name="Morgan's wedding",
     description="Get married with Morgan")
+
 define morgan_achievement_4 = Achievement(
     id="morgan_4",
-    name="Morgan's pregnancy",
-    description="Get Morgan pregnant")
-define morgan_achievement_5 = Achievement(
-    id="morgan_5",
     name="My Fair Lady",
     description="Totally feminize Morgan")
 
@@ -529,10 +465,7 @@ define palla_achievement_3 = Achievement(
     id="palla_3",
     name="Palla's wedding",
     description="Get married with Palla")
-define palla_achievement_4 = Achievement(
-    id="palla_4",
-    name="Palla's pregnancy",
-    description="Get Palla pregnant")
+
 define palla_achievement_5 = Achievement(
     id="palla_5",
     name="Palla Poundin",
@@ -558,10 +491,7 @@ define samantha_achievement_3 = Achievement(
     id="samantha_3",
     name="Samantha's wedding",
     description="Get married with Samantha")
-define samantha_achievement_4 = Achievement(
-    id="samantha_4",
-    name="Samantha's pregnancy",
-    description="Get Samantha pregnant")
+
 define samantha_achievement_5 = Achievement(
     id="samantha_5",
     name="Netori enjoyer",
@@ -583,10 +513,6 @@ define sasha_achievement_3 = Achievement(
     id="sasha_3",
     name="Sasha's wedding",
     description="Get married with Sasha")
-define sasha_achievement_4 = Achievement(
-    id="sasha_4",
-    name="Sasha's pregnancy",
-    description="Get Sasha pregnant")
 
 
 
@@ -602,15 +528,11 @@ define shiori_achievement_3 = Achievement(
     id="shiori_3",
     name="Shiori's wedding",
     description="Get married with Shiori")
-define shiori_achievement_4 = Achievement(
-    id="shiori_4",
-    name="Shiori's pregnancy",
-    description="Get Shiori pregnant")
+
 define shiori_achievement_5 = Achievement(
     id="shiori_5",
     name="This is the Milky Way",
     description="Get a cup of coffee with milk")
-
 
 
 define danny_achievement_0 = Achievement(
@@ -639,7 +561,6 @@ define mike_achievement_0 = Achievement(
     hidden=True)
 
 
-
 define cherie_achievement_0 = Achievement(
     id="cherie_0",
     name="Widow in need",
@@ -666,10 +587,6 @@ define angela_bruce_achievement_1 = Achievement(
     description="Caught Angela committing adultery",
     locked_description="???",
     hidden=True)
-define violaine_achievement_1 = Achievement(
-    id="violaine_1",
-    name="Cemetery enthusiast",
-    description="Have fun with Violaine and Vincent")
 
 
 
@@ -739,7 +656,6 @@ define college_harem_achievement_3 = Achievement(
     id="college_harem_3",
     name="Lemon and Strawberry Mix",
     description="Get married with both Anna and Bree")
-
 
 
 define criminal_harem_achievement_1 = Achievement(
@@ -956,7 +872,6 @@ define bear_shark_achievement_1 = Achievement(
     hidden=True)
 
 
-
 define halloween_achievement_1 = Achievement(
     id="halloween_1",
     name="Halloween costume expectancy",
@@ -969,7 +884,6 @@ define christmas_achievement_2 = Achievement(
     id="christmas_2",
     name="Corporate Christmas party",
     description="Throw a party at the office for Christmas")
-
 
 
 define sexperience_achievement_1 = Achievement(
@@ -1004,18 +918,6 @@ define bluepill_achievement_1 = Achievement(
     hidden=True)
 
 
-
-define children_achievement_1 = Achievement(
-    id="children_1",
-    name="Baby boom",
-    description="Have 50+ children")
-define children_achievement_2 = Achievement(
-    id="children_2",
-    name="Serial Father",
-    description="Have at least 1 child with every love interest (DLC girls not included)")
-
-
-
 define alone_achievement_1 = Achievement(
     id="alone_1",
     name="Solitude & Sorrow: Final Base",
@@ -1024,13 +926,10 @@ define alone_achievement_1 = Achievement(
     hidden=True)
 
 
-
 define tea_achievement_1 = Achievement(
     id="tea_1",
     name="Tea Time",
     description="Drink all possible teas")
-
-
 
 
 init python:

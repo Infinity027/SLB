@@ -4,8 +4,6 @@
 
 init -15 python:
 
-
-
     class Girl(Registry, Person):
         def __init__(self, id, yaml):
             super(Girl, self).__init__(id, yaml)
@@ -33,7 +31,11 @@ init -15 python:
         )
         
         def impregnate(self, force=False, x="left", y="top", secret=False):
-            
+            # PREGNANCY DISABLED — girls never get pregnant. This short-circuits the
+            # only automatic trigger, so no call site can ever set the pregnant state.
+            # To restore pregnancy, delete the single "return False" line below.
+            return False
+
             if game.flags.nopreg or self.flags.nopreg:
                 return False
             
