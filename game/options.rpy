@@ -4,6 +4,9 @@ define build.game_only_update = False
 define build.include_update = True
 define gui.show_name = True
 define config.version = "26.4.0c"
+# --- Development mode: enables console (Shift+O), dev menu (Shift+D), reload
+# (Shift+R) and full tracebacks. Set back to "auto" (or remove) for distribution.
+define config.developer = True
 define gui.about = _p("""
 """)
 define build.name = "LoSeSb"
@@ -40,18 +43,24 @@ init -20 python:
 init python:
     re_ch = re.compile(r'ch\/([\w-]+)\/(?:.+)\.webp')
     ch_names = {re_ch.match(f).group(1) for f in files if re_ch.match(f)}
-    for ch_name in ch_names:
-        build.archive(ch_name, "all")
-    build.archive("scripts", "all")
-    build.archive("audio", "all")
-    build.archive("interface", "all")
-    build.archive("vi", "all")
-    build.archive("bg", "all")
-    build.archive("updater_module", "all")
-    build.archive("dlc_breemc", "breemc dlcs itchio patreon")
-    build.archive("dlc_fafow", "fafow dlcs patreon")
-    build.archive("dlc_fafwm", "fafwm dlcs patreon")
-    build.archive("dlc_lively", "lively dlcs patreon")
+    # --- Development: keep assets as loose files instead of packing them into
+    # .rpa archives. Set create_archives = True (or remove the guard) when
+    # building for distribution. (ch_names above is still needed by the
+    # build.classify loop further down, so it stays outside this guard.)
+    create_archives = False
+    if create_archives:
+        for ch_name in ch_names:
+            build.archive(ch_name, "all")
+        build.archive("scripts", "all")
+        build.archive("audio", "all")
+        build.archive("interface", "all")
+        build.archive("vi", "all")
+        build.archive("bg", "all")
+        build.archive("updater_module", "all")
+        build.archive("dlc_breemc", "breemc dlcs itchio patreon")
+        build.archive("dlc_fafow", "fafow dlcs patreon")
+        build.archive("dlc_fafwm", "fafwm dlcs patreon")
+        build.archive("dlc_lively", "lively dlcs patreon")
     if demo:
         config.name = _("Love & Sex : Second Base - Demo")
         build.name = "LoSeSb-Demo"
