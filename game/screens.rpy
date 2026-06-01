@@ -1,14 +1,5 @@
 init offset = -1
 
-
-
-
-
-
-
-
-
-
 style default:
     properties gui.text_properties()
     language gui.language
@@ -979,7 +970,10 @@ screen preferences():
                         use text_tooltip(_("X-Ray"), _("Allow to see through body during some scenes"), "lspref_label_text")
                         textbutton _("On") action SetField(persistent, 'xray', True)
                         textbutton _("Off") action SetField(persistent, 'xray', False)
-                    if renpy.has_live2d() and any(dlc in DLCS for dlc in ('lively', 'fafow', 'fafwm')):
+                    # LIVE2D DISABLED — the Animations (Live2D) on/off toggle is hidden so it
+                    # cannot be re-enabled. To restore, change "if False" back to:
+                    #   if renpy.has_live2d() and any(dlc in DLCS for dlc in ('lively', 'fafow', 'fafwm')):
+                    if False:
                         vbox:
                             xysize (230, 60)
                             use text_tooltip(text_tag_resize(_("Animations"), 230, 30), _("Enable/Disable sprites animations"), "lspref_label_text")

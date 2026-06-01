@@ -681,7 +681,7 @@ label cassidy_missionary_pussy_sub:
                 cassidy.say "I love you, Master!"
             else:
                 cassidy.say "I love you, [hero.name]!"
-        $ cassidy.impregnate()
+        #$ cassidy.impregnate()
     "When it's all over, I pull out of her and go limp."
     return
 
@@ -948,7 +948,7 @@ label cassidy_doggy(sexperience_min):
                 cassidy.say "Please don't cum in me!"
                 "Even as she speaks the words, it's already happening."
                 show cassidy doggy creampie normal with hpunch
-                $ cassidy.impregnate()
+                #$ cassidy.impregnate()
                 $ cassidy.love -= 5
                 "Cassidy wails as I shoot my load deep inside her pussy."
                 with hpunch
@@ -963,7 +963,7 @@ label cassidy_doggy(sexperience_min):
                 cassidy.say "Cum in me, please!"
                 "Even as she speaks the words, it's already happening."
                 show cassidy doggy creampie ahegao with hpunch
-                $ cassidy.impregnate()
+                #$ cassidy.impregnate()
                 $ cassidy.love += 5
                 "Cassidy wails as I shoot my load deep inside her pussy."
                 with hpunch
@@ -1170,7 +1170,7 @@ label cassidy_cowgirl(sexperience_min):
                 "And in the confusion I suddenly remember I'm not wearing a condom!"
                 show cassidy cowgirl creampie with vpunch
                 $ cassidy.love -= 5
-                $ cassidy.impregnate()
+                #$ cassidy.impregnate()
                 "I let go a second later, cumming deep inside of her pussy."
                 with vpunch
                 "Instantly Cassidy's face shows that she feels it, and she keens helplessly."
@@ -1189,7 +1189,7 @@ label cassidy_cowgirl(sexperience_min):
                 "And in the confusion I suddenly remember I'm not wearing a condom!"
                 show cassidy cowgirl ahegao creampie with vpunch
                 $ cassidy.love += 5
-                $ cassidy.impregnate()
+                #$ cassidy.impregnate()
                 "I let go a second later, cumming deep inside of her pussy."
                 with vpunch
                 "Instantly Cassidy's face shows that she feels it, and she keens helplessly."
@@ -1430,7 +1430,7 @@ label cassidy_reverse_cowgirl(sexperience_min):
                 "And I struggle to get out from under her."
                 "But it's already too late."
                 show cassidy reverse cowgirl pleasure creampie with vpunch
-                $ cassidy.impregnate()
+                #$ cassidy.impregnate()
                 $ cassidy.love -= 5
                 "I shoot my load while I'm as deep in her pussy as I can get."
                 with vpunch
@@ -1450,7 +1450,7 @@ label cassidy_reverse_cowgirl(sexperience_min):
                 "I struggle to get out from under Cassidy."
                 "But it's already too late."
                 show cassidy reverse cowgirl ahegao creampie with vpunch
-                $ cassidy.impregnate()
+                #$ cassidy.impregnate()
                 $ cassidy.love += 5
                 "I shoot my load while I'm as deep in her pussy as I can get."
                 with vpunch
@@ -1576,8 +1576,6 @@ label cassidy_missionary_pussy_dom:
     with vpunch
     "When I finally can't take anymore, I orgasm, filling the condom up with my sticky cum."
     show cassidy missionary eyes_ahegao cum with vpunch
-    if not CONDOM and not cassidy.flags.pill:
-        $ cassidy.impregnate()
     "When it's all over, I pull out of her and go limp."
     with vpunch
     if cassidy.lesbian > MIN_LES_GIRL_SEX:
@@ -2058,7 +2056,7 @@ label cassidy_fuck_office_reverse_cowgirl(sexperience_min):
                 with vpunch
                 "She bucks and twists as I shoot my load, but stays firmly in place."
                 show cassidy reverse cowgirl ahegao creampie with vpunch
-                $ cassidy.impregnate()
+                #$ cassidy.impregnate()
                 "I can feel that she's cumming too, and see it from the way she arches her back."
                 with vpunch
                 "And once done, she visibly sags, the last of her energy spent."
@@ -2074,7 +2072,7 @@ label cassidy_fuck_office_reverse_cowgirl(sexperience_min):
                 with vpunch
                 "She bucks and twists as I shoot my load, but stays firmly in place."
                 show cassidy reverse cowgirl ahegao creampie with vpunch
-                $ cassidy.impregnate()
+                #$ cassidy.impregnate()
                 "I can feel that she's cumming too, and see it from the way she arches her back."
                 with vpunch
                 "And once done, she visibly sags, the last of her energy spent."

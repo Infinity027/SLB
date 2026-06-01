@@ -478,8 +478,6 @@ label hanna_fuck_date_cowgirl(sexperience_min):
     show hanna cowgirl bounce
     pause .2
     show hanna cowgirl cum -speed -bounce at center, startle(0.1,-10)
-    if not CONDOM and not hanna.is_visibly_pregnant:
-        $ hanna.impregnate()
     with vpunch
     "I'm spent, almost as soon as my balls are."
     hide hanna with fade
@@ -729,7 +727,7 @@ label hanna_fuck_date_doggy(sexperience_min):
                 "I fill Hanna with all that I have, hearing her groan in apparent dread."
                 with hpunch
                 "And my own climax is also tainted, as I realise just what we've done..."
-                $ hanna.impregnate()
+                # $ hanna.impregnate()
                 $ hanna.love -= 10
                 $ hanna.sub += 5
             elif _return == "vaginal_inside_happy":
@@ -741,7 +739,7 @@ label hanna_fuck_date_doggy(sexperience_min):
                 "Before I can say another word, I feel myself cumming."
                 show hanna doggy ahegao squirt with hpunch
                 "I fill Hanna with all that I have, hearing her moan in satisfaction."
-                $ hanna.impregnate()
+                # $ hanna.impregnate()
                 with hpunch
                 "But my own climax is tainted by the knowledge of what she just made me do..."
                 $ hanna.love += 5
@@ -926,7 +924,7 @@ label hanna_fuck_date_missionary(sexperience_min):
                     "So the end result is that no one realises that I'm about to cum inside of her until it's too late!"
                     show hanna missionary cum with vpunch
                     mike.say "Oh, fuck - Hanna!"
-                    $ hanna.impregnate()
+                    # $ hanna.impregnate()
                     with vpunch
                     hanna.say "You...you came in me!"
                     hanna.say "[hero.name], you came in me without a rubber!"

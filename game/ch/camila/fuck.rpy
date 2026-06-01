@@ -547,7 +547,7 @@ label camila_date_fuck_cowgirl(sexperience_min):
                 with vpunch
                 "I let myself go inside of her, filling her pussy with all I have to give."
                 show camila cowgirl cumshot with vpunch
-                $ camila.impregnate()
+                ##$ camila.impregnate()
                 "Camila scrambles off of me the moment she can, for what good it will do."
                 "From the horrified way we're staring at each other, we know it."
                 "We both fucked up - big time!"
@@ -560,7 +560,7 @@ label camila_date_fuck_cowgirl(sexperience_min):
                 with vpunch
                 "I let myself go inside of her, filling her pussy with all I have to give."
                 show camila cowgirl cumshot with vpunch
-                $ camila.impregnate()
+                #$ camila.impregnate()
                 "Camila rides out the last moments, grinding on my cock for all she's worth."
                 with vpunch
                 "And then she collapses atop me, panting and gasping for breath."
@@ -717,7 +717,7 @@ label camila_date_fuck_doggy(sexperience_min):
                 with hpunch
                 "Camila writhes and wriggles as I shoot my load into her, cumming at the same time."
                 show camila doggy ahegao with hpunch
-                $ camila.impregnate()
+                #$ camila.impregnate()
                 "But I'm too confused to be able to enjoy the sensation."
                 "Afterwards I carefully lower Camila's limp form onto the bed."
                 "But I'm already thinking of the consequences that will follow."
@@ -731,7 +731,7 @@ label camila_date_fuck_doggy(sexperience_min):
                 "So much so that I forget all about the urgent need to pull my cock out of her!"
                 show camila doggy ahegao with hpunch
                 "Camila writhes and wriggles as I shoot my load into her, cumming at the same time."
-                $ camila.impregnate()
+                #$ camila.impregnate()
                 with hpunch
                 "But I'm too confused to be able to enjoy the sensation."
                 "Afterwards I carefully lower Camila's limp form onto the bed."
@@ -1051,7 +1051,7 @@ label camila_date_fuck_stand(sexperience_min):
                 pause 0.15
                 show camila stand pose1 creampie with vpunch
                 $ camila.love += 5
-                $ camila.impregnate()
+                #$ camila.impregnate()
                 "And she clings onto me for dear life as I lose it deep inside of her."
                 with vpunch
                 "Finally I feel my legs starting to give way, and I stagger towards the bed."
@@ -1080,7 +1080,7 @@ label camila_date_fuck_stand(sexperience_min):
                 pause 0.15
                 show camila stand pose1 pleasure creampie with vpunch
                 $ camila.love -= 5
-                $ camila.impregnate()
+                #$ camila.impregnate()
                 "And she clings onto me for dear life as I lose it deep inside of her."
                 with vpunch
                 "Finally I feel my legs starting to give way, and I stagger towards the bed."

@@ -1466,7 +1466,7 @@ label hanna_event_10:
                 "And I don't stop until I'm spent, panting and gasping for breath."
                 with hpunch
                 "But my mind is already racing with the thought of what just happened."
-                $ hanna.impregnate()
+                # $ hanna.impregnate()
                 $ hanna.love -= 10
                 $ hanna.sub += 5
             elif _return == "vaginal_inside_happy":
@@ -1482,7 +1482,7 @@ label hanna_event_10:
                 "Hanna lets out a deep, satisfied moan as I fill her pussy."
                 with hpunch
                 "And I don't stop until I'm spent, panting and gasping for breath."
-                $ hanna.impregnate()
+                # $ hanna.impregnate()
                 show hanna doggy ahegao squirt with hpunch
                 "But my mind is already racing with the thought of what just happened."
                 $ hanna.love += 5

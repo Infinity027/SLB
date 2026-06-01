@@ -1225,7 +1225,7 @@ label emma_fuck_date_missionary(sexperience_min):
                     "It's too late to stop now."
                     show emma missionary creampie pleasure with vpunch
                     $ emma.love -= 5
-                    $ emma.impregnate()
+                    ##$ emma.impregnate()
                     "And a second later I shoot my load into her."
                     with vpunch
                     emma.say "Ah..."
@@ -1242,7 +1242,7 @@ label emma_fuck_date_missionary(sexperience_min):
                     "It's too late to stop now."
                     show emma missionary creampie ahegao with vpunch
                     $ emma.love += 5
-                    $ emma.impregnate()
+                    #$ emma.impregnate()
                     "And a second later I shoot my load into her."
                     with vpunch
                     emma.say "Ah..."
@@ -1602,7 +1602,7 @@ label emma_fuck_date_cowgirl(sexperience_min):
                 elif _return == "vaginal_inside_happy":
                     show emma cowgirl eyes_ahegao mouth_pleasure tongueout cum -speed with vpunch
                     $ emma.love += 5
-                    $ emma.impregnate()
+                    #$ emma.impregnate()
                     emma.say "Ah..."
                     with vpunch
                     emma.say "Oh god...oh god..."
@@ -1620,7 +1620,7 @@ label emma_fuck_date_cowgirl(sexperience_min):
                     "I only hear Emma's warning when it's too late."
                     show emma cowgirl eyes_ahegao tongueout cum -speed with vpunch
                     $ emma.love -= 5
-                    $ emma.impregnate()
+                    #$ emma.impregnate()
                     "And that's a split-second before I cum!"
                     show emma cowgirl eyes_close mouth_shy -tongueout
                     emma.say "Oh god..."
@@ -2153,7 +2153,7 @@ label emma_fuck_date_reverse_cowgirl(sexperience_min):
                     pause 0.2
                     show emma reverse up creampie
                     $ emma.love += 5
-                    $ emma.impregnate()
+                    #$ emma.impregnate()
                     emma.say "Oh..."
                     with vpunch
                     emma.say "Oh shit...oh shit..."
@@ -2182,7 +2182,7 @@ label emma_fuck_date_reverse_cowgirl(sexperience_min):
                     pause 0.2
                     show emma reverse up creampie
                     $ emma.love -= 5
-                    $ emma.impregnate()
+                    #$ emma.impregnate()
                     "And there's nothing I can do to stop it happening."
                     with vpunch
                     emma.say "Oh no..."
@@ -2491,7 +2491,7 @@ label emma_fuck_date_doggy(sexperience_min):
                     "And her words catch me off guard, stopping me in my tracks."
                     show emma doggy ahegao cum -speed -bounce saliva with hpunch
                     $ emma.love += 5
-                    $ emma.impregnate()
+                    #$ emma.impregnate()
                     "But a moment later, I shoot my load."
                     with hpunch
                     "She cries out as I do so, in a mixture of arousal and alarm."
@@ -2506,7 +2506,7 @@ label emma_fuck_date_doggy(sexperience_min):
                     emma.say "You have to pull out!"
                     show emma doggy ahegao cum -speed -bounce with hpunch
                     $ emma.love -= 5
-                    $ emma.impregnate()
+                    #$ emma.impregnate()
                     "Almost the same second that Emma opens her mouth to say it, I shoot my load."
                     with hpunch
                     "She cries out as I do so, in a mixture of arousal and alarm."
@@ -3336,7 +3336,7 @@ label emma_fuck_beach:
                     show emma reverse down with vpunch
                     pause 0.2
                     show emma reverse up creampie
-                    $ emma.impregnate()
+                    #$ emma.impregnate()
                     "The sensation of me cumming inside of her has an instant effect."
                     $ emma.love += 5
                     with vpunch
@@ -3368,7 +3368,7 @@ label emma_fuck_beach:
                     show emma reverse down with vpunch
                     pause 0.2
                     show emma reverse up creampie
-                    $ emma.impregnate()
+                    #$ emma.impregnate()
                     "The sensation of me cumming inside of her has an instant effect."
                     with vpunch
                     "It makes Emma quiver and shake atop me."

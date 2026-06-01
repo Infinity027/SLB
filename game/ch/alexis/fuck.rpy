@@ -966,7 +966,7 @@ label alexis_fuck_date_reverse(sexperience_min):
                 "But Alexis throws me with her sudden demand for me to do the opposite."
                 "And in that moment, my hesitation gives her what she wants."
                 $ alexis.love += 5
-                $ alexis.impregnate()
+                #$ alexis.impregnate()
                 show alexis reverse mouth_ahegao cum with vpunch
                 "I shoot my load into Alexis as she clings onto me to dear life."
                 with vpunch
@@ -976,7 +976,7 @@ label alexis_fuck_date_reverse(sexperience_min):
                 alexis.say "[hero.name]..."
                 alexis.say "We can't..."
                 "Listening to Alexis, I take my mind off of what I'm doing for just a second."
-                $ alexis.impregnate()
+                #$ alexis.impregnate()
                 show alexis reverse mouth_ahegao cum with vpunch
                 "And that's all it takes for me to lose it inside of her."
                 $ alexis.love -= 5
@@ -1119,7 +1119,7 @@ label alexis_fuck_date_doggy(sexperience_min):
                 hide alexis
                 show alexis naked angry
                 with vpunch
-                $ alexis.impregnate()
+                #$ alexis.impregnate()
                 alexis.say "Ah...ah...shit, shit, shit!"
                 alexis.say "Shit - you came in me, you stupid bastard!"
                 "I'm in no fit state to reply, as Alexis scrambles around beneath me."
@@ -1135,7 +1135,7 @@ label alexis_fuck_date_doggy(sexperience_min):
                 "But the look on her face is so desperate and so full of pleading..."
                 "In the moment that I'm weighing up Alexis's plea, I feel myself finally lose it."
                 show alexis doggy pleasure ahegao cum with vpunch
-                $ alexis.impregnate()
+                #$ alexis.impregnate()
                 "Even if I hadn't known it myself, the sound of Alexis almost screaming in delight would have told me all I needed to know."
                 with vpunch
                 "She rides me to the last, making sure that every last drop is spent as deep inside of her as possible."
@@ -1367,7 +1367,7 @@ label alexis_fuck_date_cowgirl(sexperience_min):
                 show alexis cowgirl creampie with vpunch
                 "I shoot my load into Alexis a second later."
                 with vpunch
-                $ alexis.impregnate()
+                #$ alexis.impregnate()
                 "Afterwards we both fall silent."
                 "All we can do is stare at each other in horror."
                 $ alexis.love -= 5
@@ -1379,7 +1379,7 @@ label alexis_fuck_date_cowgirl(sexperience_min):
                 "Just a single moment, but long enough for disaster to strike."
                 show alexis cowgirl ahegao creampie with vpunch
                 "I shoot my load into Alexis, to her apparent delight."
-                $ alexis.impregnate()
+                #$ alexis.impregnate()
                 with vpunch
                 "But all I can feel is the sense of dread in my gut."
                 "Why did she ask me to do that?"
@@ -1585,7 +1585,7 @@ label alexis_fuck_date_missionary(sexperience_min):
                 "By the time Alexis manages to get the words out, it's already too late."
                 show alexis missionary creampie with vpunch
                 "I cum as deep inside of her as possible literally seconds later."
-                $ alexis.impregnate()
+                #$ alexis.impregnate()
                 with vpunch
                 "What should have been an incredible moment is instantly tainted."
                 "And all we can do is stare at each other, horrified at what we've done."
@@ -1598,7 +1598,7 @@ label alexis_fuck_date_missionary(sexperience_min):
                 "Her demand that I cum inside of her throws and confuses me in the moment."
                 "And that's all it takes for her to get what she wants."
                 show alexis missionary ahegao creampie with vpunch
-                $ alexis.impregnate()
+                #$ alexis.impregnate()
                 "Alexis throws back her head, riding me to the very last."
                 with vpunch
                 "But I'm left wondering why she just asked me to do that."

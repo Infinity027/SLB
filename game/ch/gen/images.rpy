@@ -383,20 +383,6 @@ init 1:
         2.5
         linear 1.0 alpha 0.0
 
-    layeredimage fx impregnate:
-        always:
-            "gui/fx/impregnate/bg_impregnate.png"
-        attribute rnd1:
-            animate_image("gui/fx/impregnate/rnd1/impregnate_rnd1", 90, 20, ".png")
-        attribute rnd2:
-            animate_image("gui/fx/impregnate/rnd2/impregnate_rnd2", 90, 20, ".png")
-        attribute rnd3:
-            animate_image("gui/fx/impregnate/rnd3/impregnate_rnd3", 90, 20, ".png")
-        attribute rnd4:
-            animate_image("gui/fx/impregnate/rnd4/impregnate_rnd4", 90, 20, ".png")
-        attribute rnd5:
-            animate_image("gui/fx/impregnate/rnd5/impregnate_rnd5", 90, 20, ".png")
-
     layeredimage arenabree:
         always:
             "arenabree_girl"

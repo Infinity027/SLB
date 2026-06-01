@@ -1,12 +1,5 @@
 init -999:
-
-
-
-
     define base_list = list.__bases__[0]
-
-
-
 
 init -100:
     define config.save_token_keys = [
@@ -128,7 +121,10 @@ init -100 python:
         persistent.selector = True
         persistent.new_ui = True
 
-    persistent.live2d_on = renpy.has_live2d() if persistent.live2d_on is None else persistent.live2d_on
+    # LIVE2D DISABLED — characters always render as static sprites, never animated.
+    # Forced off every launch (overrides any saved value). To restore, revert to:
+    # persistent.live2d_on = renpy.has_live2d() if persistent.live2d_on is None else persistent.live2d_on
+    persistent.live2d_on = False
 
     def display_notifications():
         import re
@@ -533,14 +529,8 @@ init -30 python:
 
 init 5 python:
     
-    
     BaseEvent.sort_registry(key=lambda x: x[1].priority, reverse=True)
-    
-    
     Activity.build_cache_by_room(key=lambda x: (x.order, x.display_name))
-    
-    
-    
     
     def VerticalSwipe(_time, downward, _ramplen=8, _reverse=False):
         img = (
@@ -643,12 +633,7 @@ init python:
                 filename = os.path.basename(file_path)
                 dest_path = os.path.join(dest_dir, filename)
                 print(f"Moving file {file_path} to {dest_path}")
-                
-                
                 shutil.copy(file_path, dest_path)
-                
-                
-                
                 renpy.utter_restart()
 
 
@@ -682,13 +667,10 @@ init python:
 
     def anim_attrs_filter(attrs, sgl_attrs, mult_attrs, prv_def_vals=[]):
         
-        
-        
         if not sgl_attrs:
             sgl_attrs = {}
         if not mult_attrs:
             mult_attrs = {}
-        
         
         for attr in attrs:
             

@@ -171,7 +171,7 @@ screen appearance(npc=None):
             $ shown_attributes = {shown_npc.get_clothes()}
         $ shown_attributes.update({pi.location for pi in pierced_piercings if pi.worn})
         $ display_shown = " ".join(shown_attributes)
-        add "[shown_npc.id] ['anim' if npc.id in anim_tag and persistent.live2d_on else ''] [display_shown]" xalign 0.25
+        add "[shown_npc.id] [''] [display_shown]" xalign 0.25
 
     vbox:
         xalign 0.75

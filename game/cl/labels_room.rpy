@@ -78,7 +78,7 @@ label enter_room(back="street", room_present_girls=[], max_time=0):
                         shown_girls = present_girls[girlidx:girlidx + 3]
 
 
-                        showexpr = [(g.id, f"{g.id} {'anim' if g.id in anim_tag and persistent.live2d_on else ''} {g.get_clothes()}")
+                        showexpr = [(g.id, f"{g.id} {''} {g.get_clothes()}")
     for g in (present_girls if (persistent.lively_bg and hasattr(room, "lively_npc") and room.lively_npc) else shown_girls)
     if (not g.activity_name == "sleep" or game.active_date.on_date(g.id))
     

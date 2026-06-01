@@ -1877,7 +1877,7 @@ label bree_fuck_date_doggy(sexperience_min):
         "As I cum into her, I press down with all of my weight, making sure that she stays put until I'm utterly spent."
         show bree doggy vaginal cuminpussy
         "I can hear [bree.name] whimpering and moaning at the feelings of ecstasy she's experiencing and the knowledge of what I've done to her."
-        $ bree.impregnate()
+        #$ bree.impregnate()
         $ bree.sub += 1
         "But I'm too exhausted to either feel triumphant or else let the implications of it all sink in."
         "So I lie down on the bed and leave [bree.name] to deal with it on her own for a while."
@@ -1905,7 +1905,7 @@ label bree_fuck_date_doggy(sexperience_min):
         "As I cum into her, I press down with all of my weight, making sure that she stays put until I'm utterly spent."
         show bree doggy vaginal cuminpussy with hpunch
         "I can hear [bree.name] whimpering and moaning at the feelings of ecstasy she's experiencing and the knowledge of what I've done to her."
-        $ bree.impregnate()
+        #$ bree.impregnate()
         $ bree.sub += 1
         "But I'm too exhausted to either feel triumphant or else let the implications of it all sink in."
         "So I lie down on the bed and leave [bree.name] to deal with it on her own for a while."
@@ -2058,7 +2058,7 @@ label bree_fuck_date_doggy_rough(sexperience_min):
                 "And those few seconds are all it takes for disaster to strike."
                 show bree rough doggy ahegao cum -boobs with hpunch
                 $ bree.love += 5
-                $ bree.impregnate()
+                #$ bree.impregnate()
                 "Within mere seconds I'm shooting my load into her."
                 with hpunch
                 "[bree.name] starts to cum almost a second after I do."
@@ -2073,7 +2073,7 @@ label bree_fuck_date_doggy_rough(sexperience_min):
                 "And those few seconds are all it takes for disaster to strike."
                 show bree rough doggy ahegao cum -boobs with hpunch
                 $ bree.love -= 5
-                $ bree.impregnate()
+                #$ bree.impregnate()
                 "Within mere seconds I'm shooting my load into her."
                 with hpunch
                 "[bree.name] starts to cum almost a second after I do."
@@ -2402,7 +2402,7 @@ label bree_fuck_date_cowgirl(sexperience_min):
                 "But by then, it's already too late to stop what's happening."
                 show bree cowgirl creampie pleasure -blush with vpunch
                 $ bree.love -= 5
-                $ bree.impregnate()
+                #$ bree.impregnate()
                 "She loses the ability to speak a moment later as I cum inside of her."
                 with vpunch
                 "What should be an intense and pleasurable thing becomes instantly tainted."
@@ -2417,7 +2417,7 @@ label bree_fuck_date_cowgirl(sexperience_min):
                 "It's more the surprise at [bree.name]'s plea that keeps me from pulling out of her rather than any conscious wish to do as she says in those final moments."
                 show bree cowgirl creampie up with vpunch
                 $ bree.love += 5
-                $ bree.impregnate()
+                #$ bree.impregnate()
                 "And so I shoot my load into her while feeling more than a little confused."
                 with vpunch
                 "But she confirms that this is what she wants by clinging onto me the whole time."
@@ -2721,7 +2721,7 @@ label bree_fuck_date_reverse_cowgirl(sexperience_min):
                 with vpunch
                 "She looks just like she's riding one of the mechanical bulls she described."
                 show bree reverse cowgirl creampie with vpunch
-                $ bree.impregnate()
+                #$ bree.impregnate()
                 "But the thrill's coming from me filling her pussy as I shoot my load!"
                 $ bree.love += 5
                 "I don't feel the same way, as I'm already beginning to panic!"
@@ -2737,7 +2737,7 @@ label bree_fuck_date_reverse_cowgirl(sexperience_min):
                 with vpunch
                 "She looks just like she's riding one of the mechanical bulls she described."
                 show bree reverse cowgirl creampie with vpunch
-                $ bree.impregnate()
+                #$ bree.impregnate()
                 "But the thrill's coming from me filling her pussy as I shoot my load!"
                 "The moment it's over, she looks at me with shock, even anger in her eyes."
                 $ bree.love -= 5
@@ -2878,7 +2878,7 @@ label bree_fuck_date_missionary(sexperience_min):
     elif _return == "vaginal_inside_mad":
         show bree missionary arm pleasure with hpunch
         "There's nothing I can do to stop myself from cumming, long and hard."
-        $ bree.impregnate()
+        #$ bree.impregnate()
         $ bree.sub += 1
         show bree missionary arm ahegao creampie with hpunch
         bree.say "Ah...ah...[hero.name]!"
@@ -2920,7 +2920,7 @@ label bree_fuck_date_missionary(sexperience_min):
     elif _return == "vaginal_inside_happy":
         show bree missionary arm pleasure with hpunch
         "There's nothing I can do to stop myself from cumming, long and hard."
-        $ bree.impregnate()
+        #$ bree.impregnate()
         $ bree.sub += 1
         show bree missionary arm ahegao creampie with hpunch
         bree.say "Ah...ah...[hero.name]!"
@@ -3061,7 +3061,7 @@ label bree_fuck_date_spoon(sexperience_min):
                 "[bree.name] pushes herself back into me before I can actually do it."
                 show bree spoon cum mouth_ahegao with hpunch
                 $ bree.love += 5
-                $ bree.impregnate()
+                #$ bree.impregnate()
                 "Which means I can feel how much she enjoys the sensation."
                 with hpunch
                 "Then I get to experience her orgasm too."
@@ -3071,7 +3071,7 @@ label bree_fuck_date_spoon(sexperience_min):
                 "[bree.name] warns me at the moment it's already too late."
                 show bree spoon cum eyes_closed mouth_pain with hpunch
                 $ bree.love -= 5
-                $ bree.impregnate()
+                #$ bree.impregnate()
                 pause 0.25
                 with hpunch
                 "I shoot my load into her, and she cums as I do so."
@@ -3507,7 +3507,7 @@ label bree_fuck_sasha_bedroom(sexperience_min=10):
                 with hpunch
                 "I shoot my load deep inside of [bree.name], much to her apparent horror."
                 $ bree.love -= 5
-                $ bree.impregnate()
+                #$ bree.impregnate()
                 with hpunch
                 "But I don't feel a thing, save for the horror growing inside of me."
             elif _return == "vaginal_inside_happy":
@@ -3525,7 +3525,7 @@ label bree_fuck_sasha_bedroom(sexperience_min=10):
                 with hpunch
                 "I shoot my load deep inside of [bree.name], much to her apparent delight."
                 $ bree.love += 5
-                $ bree.impregnate()
+                #$ bree.impregnate()
                 "But I don't feel a thing, save for the horror growing inside of me."
         "Fuck her ass" if bree.flags.anal >= 2 and hero.sexperience >= (sexperience_min + 5):
             "Without saying a word, I get behind [bree.name] and grab hold of her haunches."
@@ -3968,7 +3968,7 @@ label bree_zbox_penalty(sexperience_min=0):
                 with hpunch
                 "[bree.name] bucks and twists on the end of my cock."
                 $ bree.love -= 5
-                $ bree.impregnate()
+                #$ bree.impregnate()
                 "And once it's all over, she slides off me and collapses onto the ground."
                 "Which leaves me to begin fretting over what we just did."
             elif _return == "vaginal_inside_happy":
@@ -3983,7 +3983,7 @@ label bree_zbox_penalty(sexperience_min=0):
                 with hpunch
                 "[bree.name] bucks and twists on the end of my cock."
                 $ bree.love += 5
-                $ bree.impregnate()
+                #$ bree.impregnate()
                 "And once it's all over, she slides off me and collapses onto the ground."
                 "Which leaves me to begin fretting over what we just did."
     $ bree.sexperience += 1

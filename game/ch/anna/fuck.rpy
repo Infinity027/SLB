@@ -880,7 +880,7 @@ label anna_fuck_date_missionary(sexperience_min):
                 "Why not this one too?"
                 "By now I've used up too much time thinking about it to be able to pull out anyway."
                 show anna missionary creampie with hpunch
-                $ anna.impregnate()
+                #$ anna.impregnate()
                 $ anna.sub += 5
                 $ anna.love -= 5
                 "And so I can only hold on tightly as I fill Anna with one final thrust."
@@ -890,7 +890,7 @@ label anna_fuck_date_missionary(sexperience_min):
                 "Knowing just how out of it Anna is right now, I push on beyond the point of no return."
                 "By now I couldn't pull out in time even if I wanted to!"
                 show anna missionary creampie with hpunch
-                $ anna.impregnate()
+                #$ anna.impregnate()
                 "As I lose myself inside of her, Anna takes it in much the same way she has what came before."
                 show anna missionary ahegao with hpunch
                 $ anna.love -= 25
@@ -902,7 +902,7 @@ label anna_fuck_date_missionary(sexperience_min):
                 "As out of it as Anna is right now, I'm not much better myself."
                 "In fact, I'm so caught up in the moment that I don't notice how close I am to actually cumming."
                 show anna missionary creampie with hpunch
-                $ anna.impregnate()
+                #$ anna.impregnate()
                 "This means that when the time comes, I just keep right on thrusting into her with all of my remaining strength."
                 show anna missionary ahegao with hpunch
                 $ anna.love += 5
@@ -1087,7 +1087,7 @@ label anna_fuck_date_doggy(sexperience_min):
                 show anna doggy mouth_hurt eyes_ahegao cum with hpunch
                 $ anna.sub += 5
                 $ anna.love -= 5
-                $ anna.impregnate()
+                #$ anna.impregnate()
                 "And so I can only hold on tightly as I fill Anna with one final thrust."
                 show anna doggy mouth_pleasure with hpunch
                 "As she realises what's just happened, she lowers her face into the pillows, shaking her head in disbelief."
@@ -1097,7 +1097,7 @@ label anna_fuck_date_doggy(sexperience_min):
                 "Well, either that or she's totally given up any kind of responsibility and left me in charge!"
                 show anna doggy mouth_hurt eyes_open cum with hpunch
                 $ anna.love -= 5
-                $ anna.impregnate()
+                #$ anna.impregnate()
                 "In the end, the result is the same - I lose myself as deep into Anna as I can possibly get."
                 show anna doggy mouth_moan with hpunch
                 "She moans and writhes from the pleasure of the sensation, but then her cries slowly fall silent."
@@ -1111,7 +1111,7 @@ label anna_fuck_date_doggy(sexperience_min):
                 mike.say "Anna - what are you..."
                 show anna doggy mouth_hurt eyes_ahegao cum with hpunch
                 $ anna.love += 5
-                $ anna.impregnate()
+                #$ anna.impregnate()
                 "By then it's already too late, and I can feel myself cumming."
                 show anna doggy mouth_pleasure with hpunch
                 "I grab hold of Anna, meaning that I fill her with my cock almost all of the way up inside of her."
@@ -1248,7 +1248,7 @@ label anna_fuck_date_cowgirl(sexperience_min):
                 "By now I've used up too much time thinking about it to be able to pull out anyway."
                 show anna cowgirl cum vaginal with vpunch
                 "And so I can only hold on tightly as I fill Anna with one final thrust."
-                $ anna.impregnate()
+                #$ anna.impregnate()
                 with vpunch
                 "As she realises what's just happened, she lowers her face over my shoulder, shaking her head in disbelief."
                 $ anna.sub += 5
@@ -1261,7 +1261,7 @@ label anna_fuck_date_cowgirl(sexperience_min):
                 "As I lose myself inside of her, Anna takes it in much the same way she has what came before."
                 with vpunch
                 "She moans and sighs in an appreciative manner, but as I finish off and finally pull out of her, the noises she's making begin to change."
-                $ anna.impregnate()
+                #$ anna.impregnate()
                 "There are words discernible now, even as she turns away from me, keeping me from seeing the expression on her face."
                 anna.say "What...what have we done..."
                 anna.say "Oh shit...what if I get pregnant from this?!?"
@@ -1273,7 +1273,7 @@ label anna_fuck_date_cowgirl(sexperience_min):
                 mike.say "Anna - what are you..."
                 show anna cowgirl cum vaginal with vpunch
                 "By then it's already too late, and I can feel myself cumming."
-                $ anna.impregnate()
+                #$ anna.impregnate()
                 with vpunch
                 "I grab hold of Anna, meaning that I fill her with my cock almost all of the way up inside of her."
                 "And the whole time, she rides it eagerly, making appreciative noises between panting breaths."

@@ -775,8 +775,6 @@ label bree_event_06:
             show bree fuckgames ahegao with hpunch
             "I can still feel my cock inside of [bree.name] and hear her panting before me."
             "But all the same, the screen that's congratulating the player on their victory feels like it's just for me..."
-            if not CONDOM:
-                $ bree.impregnate()
     $ bree.sexperience += 1
     hide bree
     return

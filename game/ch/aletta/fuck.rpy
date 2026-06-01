@@ -739,7 +739,7 @@ label aletta_fuck_date_missionary(sexperience_min):
                 "I'm so caught up in the moment that I can't think of anything else."
                 show aletta missionary ahegao creampie inserts with hpunch
                 $ aletta.love -= 5
-                $ aletta.impregnate()
+                # $ aletta.impregnate()
                 "One moment I'm feeling the surge of my orgasm and the very next I'm cumming."
                 hide aletta
                 show aletta naked angry with fade
@@ -762,7 +762,7 @@ label aletta_fuck_date_missionary(sexperience_min):
                 show aletta naked blush
                 with fade
                 $ aletta.love += 6
-                $ aletta.impregnate()
+                $ #aletta.impregnate()
                 if not aletta.is_sex_slave:
                     aletta.say "[hero.name]...[hero.name]!"
                 else:
@@ -905,8 +905,6 @@ label aletta_fuck_date_cowgirl(sexperience_min):
                     show aletta cowgirl raised
                     pause 0.15
                     show aletta cowgirl raised creampie cum with vpunch
-                    if not CONDOM:
-                        $ aletta.impregnate()
                     "I cum no more than a heartbeat later, feeling myself burst inside of Aletta and not moving until it's all over."
                     with vpunch
                     if CONDOM:
@@ -1220,7 +1218,7 @@ label aletta_fuck_date_doggy(sexperience_min):
                 show aletta doggy creampie vaginal mike hand squirt with hpunch
                 $ aletta.love -= 20
                 $ aletta.sub -= 10
-                $ aletta.impregnate()
+                $ #aletta.impregnate()
                 "Before she can get the rest of her words out, I groan and shoot my load into Aletta."
                 with hpunch
                 "Instantly her head snaps around, and she fixes me with a fearful stare."
@@ -1235,7 +1233,7 @@ label aletta_fuck_date_doggy(sexperience_min):
                 aletta.say "Use me...like...like a...cheap whore!"
                 "If there was any chance of me doing so, Aletta just put paid to it with her little speech!"
                 show aletta doggy creampie vaginal mike hand ahegao squirt with hpunch
-                $ aletta.impregnate()
+                $ #aletta.impregnate()
                 $ aletta.love += 6
                 "I cum almost as soon as she finishes gasping it out, filling her with all I have."
                 with hpunch
@@ -2354,7 +2352,7 @@ label aletta_fuck_office_cowgirl(sexperience_min):
                 "My cock is as deep inside of Aletta as it can possibly go."
                 "So she takes all I have to give, with nothing held back."
                 show aletta cowgirl raised creampie cum with vpunch
-                $ aletta.impregnate()
+                $ #aletta.impregnate()
                 "Aletta groans as she cums too, trying in vain to pull herself away."
                 show aletta cowgirl -vaginal dickcum with vpunch
                 "And then she flops backwards, shock and horror written all over her face."
@@ -2369,7 +2367,7 @@ label aletta_fuck_office_cowgirl(sexperience_min):
                 "My cock is as deep inside of Aletta as it can possibly go."
                 "So she takes all I have to give, with nothing held back."
                 show aletta cowgirl raised creampie cum with vpunch
-                $ aletta.impregnate()
+                $ #aletta.impregnate()
                 "Aletta groans as she cums too, grinding herself down onto me."
                 with vpunch
                 "And then she flops backwards, laughing happily."
@@ -2581,7 +2579,7 @@ label aletta_fuck_office_doggy(sexperience_min):
                 with hpunch
                 "My cock is as deep inside of Aletta as it can possibly go."
                 show aletta doggy creampie vaginal mike hand squirt with hpunch
-                $ aletta.impregnate()
+                $ #aletta.impregnate()
                 "So she takes all I have to give, with nothing held back."
                 "Aletta groans as she cums too, trying in vain to pull herself away."
                 "And then she flops forwards, shock and horror written all over her face."
@@ -2596,7 +2594,7 @@ label aletta_fuck_office_doggy(sexperience_min):
                 with hpunch
                 "My cock is as deep inside of Aletta as it can possibly go."
                 show aletta doggy creampie vaginal mike hand squirt with hpunch
-                $ aletta.impregnate()
+                $ #aletta.impregnate()
                 "So she takes all I have to give, with nothing held back."
                 with hpunch
                 "Aletta groans as she cums too, pushing herself against me."

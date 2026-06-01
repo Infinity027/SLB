@@ -443,7 +443,7 @@ label ayesha_fuck_date_first(sexperience_min):
                 mike.say "Ayesha..."
                 mike.say "What are you..."
                 show ayesha missionary cum with hpunch
-                $ ayesha.impregnate()
+                ##$ ayesha.impregnate()
                 "Before I've even begun to struggle, I feel myself lose it inside of her."
                 $ ayesha.love += 2
                 show ayesha missionary eyes_ahegao mouth_ahegao with hpunch
@@ -455,7 +455,7 @@ label ayesha_fuck_date_first(sexperience_min):
                 "But I've spent so much time concentrating on making Ayesha comfortable, that my thoughts are elsewhere."
                 $ ayesha.sub += 5
                 show ayesha missionary cum with hpunch
-                $ ayesha.impregnate()
+                #$ ayesha.impregnate()
                 "This means that when I finally do cum, I'm still as deep inside of her as I can get."
                 show ayesha missionary eyes_ahegao mouth_ahegao with hpunch
                 ayesha.say "Ah...ah..."
@@ -1421,7 +1421,7 @@ label ayesha_fuck_date_reversecowgirl(sexperience_min):
                 elif _return == "vaginal_inside_happy":
                     $ ayesha.love += 5
                     show ayesha reversecowgirl cum orgasm with vpunch
-                    $ ayesha.impregnate()
+                    #$ ayesha.impregnate()
                     "I feel myself cumming a moment later, filling Ayesha with all that I have to give."
                     with vpunch
                     "But a moment later I feel dread in the pit of my stomach."
@@ -1435,7 +1435,7 @@ label ayesha_fuck_date_reversecowgirl(sexperience_min):
                     ayesha.say "Ah shit - the condom!"
                     $ ayesha.sub += 5
                     show ayesha reversecowgirl cum with vpunch
-                    $ ayesha.impregnate()
+                    #$ ayesha.impregnate()
                     "Ayesha manages to say this at the exact same moment that I lose myself inside of her."
                     with vpunch
                     "And so what should be the culmination of all that passion and excitement is cut off in an instant."
@@ -1691,7 +1691,7 @@ label ayesha_fuck_date_reversecowgirl(sexperience_min):
                     with vpunch
                     "It's like they're trying to get every last drop out of me."
                     $ ayesha.love += 5
-                    $ ayesha.impregnate()
+                    #$ ayesha.impregnate()
                     "Squeezing until the cum begins to seep out of Ayesha's pussy around my cock."
                     "It's only then that I realise what I've done."
                     "I just came inside Ayesha without a condom!"
@@ -1705,7 +1705,7 @@ label ayesha_fuck_date_reversecowgirl(sexperience_min):
                     "Ayesha squirms and wriggles, trying to clamber off me."
                     $ ayesha.sub += 5
                     show ayesha reversecowgirl cum with vpunch
-                    $ ayesha.impregnate()
+                    #$ ayesha.impregnate()
                     "But it's too late, as I shoot my load into her a second later."
                     with vpunch
                     "She moans and whimpers, unable to escape the effect it has on her."
@@ -1927,7 +1927,7 @@ label ayesha_fuck_date_doggy(sexperience_min):
                 "I'm so surprised by this, that I almost freeze, all thought of what I was doing gone in an instant."
                 ayesha.say "Oh no - don't you dare!"
                 show ayesha doggy creampie ahegao with hpunch
-                $ ayesha.impregnate()
+                #$ ayesha.impregnate()
                 $ ayesha.love += 5
                 "I cum perhaps a second after she's issued what I can only think was an actual threat!"
                 ayesha.say "Oh, shit...yeah...that's it!"
@@ -1938,7 +1938,7 @@ label ayesha_fuck_date_doggy(sexperience_min):
             elif _return == "vaginal_inside_mad":
                 $ ayesha.sub += 5
                 show ayesha doggy creampie angry with hpunch
-                $ ayesha.impregnate()
+                #$ ayesha.impregnate()
                 ayesha.say "Oh...fuck..."
                 ayesha.say "That's what I needed..."
                 $ ayesha.love -= 10
@@ -2128,7 +2128,7 @@ label ayesha_fuck_date_missionary(sexperience_min):
                 "Instead she holds me as tight as she can, those powerful limbs keeping me in her clutches."
                 $ ayesha.love += 5
                 show ayesha missionary cum with hpunch
-                $ ayesha.impregnate()
+                #$ ayesha.impregnate()
                 "I lose myself inside of her a moment later, but the thrill is dampened by what she's just done."
                 with hpunch
                 "And even as Ayesha rides out the last moments of my climax, I'm already thinking of the consequences..."
@@ -2139,7 +2139,7 @@ label ayesha_fuck_date_missionary(sexperience_min):
                 $ ayesha.love -= 10
                 $ ayesha.sub += 5
                 show ayesha missionary cum with hpunch
-                $ ayesha.impregnate()
+                #$ ayesha.impregnate()
                 "I cum almost the very same second that Ayesha's eyes open wide with horror."
                 with hpunch
                 "Lost in the moment, neither of us remembered that I'm riding Ayesha bareback right now."
@@ -2450,7 +2450,7 @@ label ayesha_fuck_date_cowgirl(sexperience_min):
                 "I feel myself cumming a moment later, filling Ayesha with all that I have to give."
                 show ayesha cowgirl vaginal creampie ahegao with vpunch
                 $ ayesha.love += 5
-                $ ayesha.impregnate()
+                #$ ayesha.impregnate()
                 "But a moment later I feel dread in the pit of my stomach."
                 mike.say "Ayesha - we forgot the condom!"
                 "The feeling of dread becomes one of confusion, as she looks back over her shoulder at me."
@@ -2465,7 +2465,7 @@ label ayesha_fuck_date_cowgirl(sexperience_min):
                 show ayesha cowgirl vaginal creampie ahegao with vpunch
                 $ ayesha.love -= 10
                 $ ayesha.sub += 5
-                $ ayesha.impregnate()
+                #$ ayesha.impregnate()
                 "And so what should be the culmination of all that passion and excitement is cut off in an instant."
                 mike.say "What the hell?"
                 mike.say "How could we forget?!?"
