@@ -60,8 +60,6 @@ init 1:
 
         attribute collar if_any ["sexywork"]
 
-
-
         attribute topless null
         group top auto variant "a" if_any ["a"] if_not ["pregnant", "topless", "naked"]
         group top auto variant "b" if_any ["b"] if_not ["pregnant", "topless", "naked"]
@@ -71,19 +69,12 @@ init 1:
         attribute nopatsies null
         group patsies auto if_not ["nopatsies", "topless", "naked"]
 
-
         attribute collar if_not ["sexywork"]
-
-
-
-
 
         group haircut auto if_any ["haircut"] if_not ["helmet", "halloween"]
         group haircut auto variant "halloween" if_any ["halloween"] if_not ["helmet"]
 
-
         group hat auto if_not ["topless", "naked"]
-
 
         attribute glasses null
         attribute noglasses null
@@ -99,9 +90,7 @@ init 1:
 
         attribute leash if_any ["collar"]
 
-
         group fx auto
-
 
         group arm auto
 

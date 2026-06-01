@@ -7,8 +7,7 @@ define config.version = "26.4.0c"
 # --- Development mode: enables console (Shift+O), dev menu (Shift+D), reload
 # (Shift+R) and full tracebacks. Set back to "auto" (or remove) for distribution.
 define config.developer = True
-define gui.about = _p("""
-""")
+define gui.about = _p("""""")
 define build.name = "LoSeSb"
 define config.gl2 = True
 define config.has_sound = True
@@ -164,4 +163,3 @@ init python:
     build.package("android_patreon", "directory", "android all", "Patreon Android Core files", hidden=True, update=False, dlc=True)
     build.package("gameonly_patreon", "null", "all patreon", "Game-Only Update for Mobile")
     build.package("gameonly_itchio", "null", "all itchio", "Game-Only Update for Mobile")
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc
