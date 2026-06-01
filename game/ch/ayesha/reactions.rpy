@@ -1,14 +1,3 @@
-label ayesha_ice_cream_reaction_male:
-    mike.say "I'm dying from this heat, Ayesha - let's grab an ice cream?"
-    ayesha.say "Huh...I hadn't noticed - but sure, we can do that."
-    "At the ice cream stall, I buy myself a cone with a couple of different scoops."
-    "Ayesha gets herself a cone too, but hers is just one scoop of pink ice cream."
-    mike.say "Wow, I needed this, Ayesha!"
-    mike.say "Is there something wrong with your cone?"
-    ayesha.say "Ah...no - I'm just not an ice cream kind of person, you know?"
-    "I nod at this, but I can't help raising my eyebrows too."
-    "Funny, I thought everyone loved ice cream?"
-    return
 
 label ayesha_ask_phone_male:
     mike.say "I was wondering if I could get your number, Ayesha?"

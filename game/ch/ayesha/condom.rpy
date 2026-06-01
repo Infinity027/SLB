@@ -1,31 +1,3 @@
-label ayesha_use_condom:
-    $ result = randint(1, 4)
-    if result == 1 and game.room == "bedroom1":
-        "Even with my mind on the task of making sure that Ayesha's comfortable, I still can't forget the basics."
-        "Which is why I take a moment to pause and grab a condom before going any further."
-        "Ayesha seems puzzled by this at first, but nods as soon as she sees what I'm actually doing."
-        "So a couple of seconds later, everything is sorted and ready to go."
-    elif result == 2 and game.room == "bedroom1":
-        "It's at that very moment something occurs to me."
-        "I hold up a hand to make Ayesha stop."
-        ayesha.say "Huh?"
-        ayesha.say "What's the matter, baby?"
-        mike.say "Protection, Ayesha!"
-        mike.say "We should really use a condom."
-        "Ayesha looks shocked, like she should have remembered that herself."
-        "She nods and holds back while I grab a condom from the bedside table."
-        "Ayesha waits patiently as I slide it on, and then we're ready to go."
-    elif result == 3:
-        "First things first though - can't forget the basics!"
-        "I reach out and just manage to grab a condom from the bedside table."
-        "Ayesha looks back over her shoulder, nodding in approval."
-        "All it takes is a couple more seconds, and we're ready to go."
-    else:
-        "But no matter how wrapped up I am in that thought, I still can't forget the basics."
-        "Which is why I grab a condom before going any further, making Ayesha wait a moment."
-        "She makes no sound of protest, already aware of just what I'm doing."
-        "Not that it takes me long to get the thing on and be ready to go."
-    return
 
 label ayesha_intro_condom:
     $ result = randint(1, 2)

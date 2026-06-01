@@ -1,21 +1,4 @@
-label ayesha_friendly_texts:
-    $ nvl_mode = "phone"
-    nvl clear
-    $ renpy.dynamic("texto")
-    $ texto = randint(0, 2)
-    if texto == 0:
-        ayesha_nvl "Hey, are you doing anything right now?"
-        ayesha_nvl "Because I just learned this really cool new move."
-        ayesha_nvl "And I can't wait to show it to you!"
-    elif texto == 1:
-        ayesha_nvl "Hey there, just wanted to chat, if you're free?"
-        ayesha_nvl "I've got you on my mind at the moment."
-        ayesha_nvl "Are you thinking about me too?"
-    else:
-        ayesha_nvl "I can't wait to see you again - the sooner the better!"
-        ayesha_nvl "That last date you took me on was pretty special!"
-        ayesha_nvl "I wonder what you've got planned for the next one..."
-    return
+
 
 label ayesha_flirty_texts:
     $ nvl_mode = "phone"

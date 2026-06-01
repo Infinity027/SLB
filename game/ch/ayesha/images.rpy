@@ -4,13 +4,9 @@ init 1:
 
 
         attribute idle null
-
-
         group position auto
 
         attribute pubes
-
-
         attribute pregnant null
         group pregnant auto if_any ["pregnant"]
 

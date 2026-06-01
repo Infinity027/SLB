@@ -20,33 +20,6 @@ init python:
     })
 
     Event(**{
-    "name": "ayesha_send_text",
-    "label": "send_text",
-    "priority": 100,
-    "conditions": [
-        IsHour(13, 14),
-        HeroTarget(
-            Not(OnDate()),
-            IsActivity("None"),
-            ),
-        GameTarget(IsFlag("noTexting", False)),
-        PersonTarget(ayesha,
-            Not(IsPresent()),
-            Not(IsHidden()),
-            ContactKnown(),
-            Not(IsActivity("sleep")),
-            MinStat("love", 50),
-            ),
-        ],
-    "fun": 1,
-    "girl": "ayesha",
-    "chances": 10,
-    "do_once": False,
-    "once_day": True,
-    "quit": False,
-    })
-
-    Event(**{
     "name": "ayesha_auto_greet",
     "label": "auto_greet",
     "girl": "ayesha",
@@ -86,51 +59,6 @@ init python:
             ),
         ],
     "chances": 10,
-    "do_once": False,
-    "once_day": True,
-    })
-
-    Event(**{
-    "name": "ayesha_are_you_sick",
-    "label": "are_you_sick",
-    "girl": "ayesha",
-    "priority": 100,
-    "conditions": [
-        HeroTarget(
-            Not(IsActivity("sleep")),
-            IsFlag("sick"),
-            ),
-        PersonTarget(ayesha,
-            IsPresent(),
-            Not(IsHidden()),
-            Not(IsActivity("sleep")),
-            ),
-        ],
-    "chances": (ayesha, "love", 50),
-    "do_once": False,
-    "once_day": True,
-    "quit": False,
-    })
-
-    Event(**{
-    "name": "ayesha_ask_out",
-    "label": "ask_out",
-    "girl": "ayesha",
-    "priority": 100,
-    "conditions": [
-        HeroTarget(
-            Not(IsActivity("ask_date"))),
-        PersonTarget(ayesha,
-            IsPresent(),
-            Not(IsHidden()),
-            Not(IsActivity("sleep")),
-            Not(IsDatePlanned()),
-            IsFlag("nodate", False),
-            IsFlag("noaskout", False),
-            MinStat("love", 100),
-            ),
-        ],
-    "chances": 5,
     "do_once": False,
     "once_day": True,
     })

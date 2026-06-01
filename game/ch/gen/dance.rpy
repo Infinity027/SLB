@@ -42,7 +42,6 @@ init 1:
 
         group npc auto variant "pose01" if_all ["breemc", "ayesha", "halloween"]
 
-
         group pubes auto
 
 

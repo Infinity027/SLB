@@ -1,17 +1,4 @@
 init python:
-    Event(**{
-    "name": "ayesha_event_01",
-    "label": "ayesha_event_01",
-    "duration": 2,
-    "conditions": [
-        IsDone("ayesha_teaser_2"),
-        HeroTarget(
-            IsGender("male"),
-            HasRoomTag("gym")),
-        ],
-    "music": "music/roa_music/2am.ogg",
-    "do_once": True,
-    })
 
     Event(**{
     "name": "ayesha_event_02",

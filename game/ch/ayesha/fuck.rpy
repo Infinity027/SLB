@@ -1,22 +1,3 @@
-init python:
-    Event(**{
-    "name": "ayesha_hottub_sex_male",
-    "label": "ayesha_hottub_sex_male",
-    "conditions": [
-        HeroTarget(
-            IsGender("male"),
-            IsActivity("date_hot_tub_home")),
-        PersonTarget(ayesha,
-            OnDate(),
-            MinStat("love", 100),
-            MinStat("sexperience", 1),
-            ),
-        ],
-    "priority": 500,
-    "do_once": False,
-    "once_day": True,
-    "duration": 1,
-    })
 
 label ayesha_hottub_sex_male:
     $ game.active_date.clothes = "swimsuit"

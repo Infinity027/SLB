@@ -1,14 +1,4 @@
-label ayesha_talk_love_male:
-    show ayesha
-    mike.say "Ayesha, do you think true love is a real thing?"
-    mike.say "Or is it just something fictional, you know - made up?"
-    show ayesha sad
-    "Ayesha glances away for a moment, a sad look in her eyes."
-    ayesha.say "I used to think that it was."
-    ayesha.say "But life kinda beats that way of thinking out of you..."
-    $ ayesha.love -= 1
-    hide ayesha
-    return
+
 
 label ayesha_talk_sex_male:
     show ayesha

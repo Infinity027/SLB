@@ -69,7 +69,7 @@ init python:
         build.classify('game/ch/angela/**', None)
         build.classify('game/ch/anna/**', None)
         build.classify('game/ch/audrey/**', None)
-        build.classify('game/ch/ayesha/**', None)
+        # build.classify('game/ch/ayesha/**', None)
         build.classify('game/ch/camila/**', None)
         build.classify('game/ch/cassidy/**', None)
         build.classify('game/ch/cherie/**', None)

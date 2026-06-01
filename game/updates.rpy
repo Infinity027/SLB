@@ -443,9 +443,6 @@ init -999 python:
         "angela breedad bj mike closed blowjob"
     ):
             game.flags.angelaBlow = True
-        
-        if hanna.flags.sexywork:
-            ayesha.flags.sexywork = True
 
 
     def update_22_5_0():
@@ -674,38 +671,9 @@ init -999 python:
             game.days_played + FLAGS["HERO!BoBDelay"].duration,
             FLAGS["HERO!BoBDelay"].duration,
         )
-        
-        if "ayesha_event_1" in DONE:
-            DONE["ayesha_event_01"] = DONE.pop("ayesha_event_1")
-        if "ayesha_event_2" in DONE:
-            DONE["ayesha_event_02"] = DONE.pop("ayesha_event_2")
-        if "ayesha_event_3" in DONE:
-            DONE["ayesha_event_03"] = DONE.pop("ayesha_event_3")
-        if "ayesha_event_3b" in DONE:
-            DONE["ayesha_event_03b"] = DONE.pop("ayesha_event_3b")
-        if "ayesha_event_4" in DONE:
-            DONE["ayesha_event_04"] = DONE.pop("ayesha_event_4")
-        if "ayesha_event_4b" in DONE:
-            DONE["ayesha_event_04b"] = DONE.pop("ayesha_event_4b")
-        if "ayesha_event_5" in DONE:
-            DONE["ayesha_event_05"] = DONE.pop("ayesha_event_5")
-        if "ayesha_event_6" in DONE:
-            DONE["ayesha_event_06"] = DONE.pop("ayesha_event_6")
-        if "ayesha_event_7" in DONE:
-            DONE["ayesha_event_07"] = DONE.pop("ayesha_event_7")
 
 
     def update_22_10_0():
-        
-        if "ayesha_sub_event_01" in DONE and "ayesha_sub_event_05" not in DONE:
-            DONE.pop("ayesha_sub_event_01")
-        if "ayesha_sub_event_02" in DONE and "ayesha_sub_event_05" not in DONE:
-            DONE.pop("ayesha_sub_event_02")
-        if "ayesha_sub_event_03" in DONE and "ayesha_sub_event_05" not in DONE:
-            DONE.pop("ayesha_sub_event_03")
-        
-        hero.calendar.find_and_remove(label="ayesha_sub_event_02")
-        hero.calendar.find_and_remove(label="ayesha_sub_event_03")
         
         if "morgan_kleio_threesome" in DONE:
             DONE["morgan_kleio_event_04"] = DONE.pop("morgan_kleio_threesome")
@@ -755,11 +723,6 @@ init -999 python:
     def update_23_1_0():
         if "palla_event_08" in DONE and palla.flags.slavepath:
             palla.sub.max = 100
-        
-        if "ayesha_event_03b" in DONE and not "cemetery_threesome" in DONE:
-            game.flags.waitCemetery3some = TemporaryFlag(True, 1)
-            Room.find("cemetery").unhide()
-        
         
         if "alexis_event_07b" in DONE:
             DONE["alexis_event_08b"] = DONE.pop("alexis_event_07b")
@@ -1799,10 +1762,6 @@ init -999 python:
                 print("adding label event final")
                 hero.calendar.add(game.days_played + 1, LabelAppointment(10, [], "Meet the master for the final lesson", "master_training_female_event_06", "master_training_female_event_missed"))
             
-            if "ayesha_female_event_05" in DONE:
-                if ayesha.love.max < 100:
-                    ayesha.love.max = 100
-                ayesha.set_girlfriend()
         
         for p in ('angela', 'dwayne', 'jack', 'ryan'):
             person = Person.find(p)

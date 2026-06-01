@@ -196,27 +196,6 @@ define audrey_achievement_3 = Achievement(
     name="Audrey's wedding",
     description="Get married with Audrey")
 
-
-define ayesha_achievement_1 = Achievement(
-    id="ayesha_1",
-    name="First kiss with Ayesha",
-    description="Kiss Ayesha for the first time")
-define ayesha_achievement_2 = Achievement(
-    id="ayesha_2",
-    name="Ayesha's hot coffee",
-    description="Have fun with Ayesha for the first time")
-define ayesha_achievement_3 = Achievement(
-    id="ayesha_3",
-    name="Ayesha's wedding",
-    description="Get married with Ayesha")
-
-define ayesha_achievement_5 = Achievement(
-    id="ayesha_5",
-    name="Eye of the Tiger",
-    description="Become Ayesha's manager")
-
-
-
 define bree_achievement_1 = Achievement(
     id="bree_1",
     name="First kiss with Bree",
@@ -790,38 +769,6 @@ define pixie_harem_achievement_3 = Achievement(
     name="Like a rainbow",
     description="Get married with both Kleio and Morgan")
 
-
-
-define sporty_harem_achievement_1 = Achievement(
-    id="sporty_harem_1",
-    name="Sparring partners",
-    description="Get in a three way relationship with Ayesha and Hanna")
-define sporty_harem_achievement_2 = Achievement(
-    id="sporty_harem_2",
-    name="Olympic triathlon",
-    description="Have fun with Ayesha and Hanna")
-define sporty_harem_achievement_3 = Achievement(
-    id="sporty_harem_3",
-    name="Marriage coaching",
-    description="Get married with both Ayesha and Hanna")
-
-
-
-define taming_harem_achievement_1 = Achievement(
-    id="taming_harem_1",
-    name="Girls fight",
-    description="Get in a three way relationship with Ayesha and Kylie")
-define taming_harem_achievement_2 = Achievement(
-    id="taming_harem_2",
-    name="Taming the passion",
-    description="Have fun with Ayesha and Kylie")
-define taming_harem_achievement_3 = Achievement(
-    id="taming_harem_3",
-    name="Ebony and ivory",
-    description="Get married with both Ayesha and Kylie")
-
-
-
 define battle_of_bands_achievement_1 = Achievement(
     id="battle_of_bands_1",
     name="We really shook the pillars of heaven, didn't we?",
@@ -1186,83 +1133,6 @@ label audrey_achievement_3:
     return
 label audrey_achievement_4:
     $ audrey_achievement_4.grant()
-    return
-
-
-init python:
-    Event(**{
-    "name": "ayesha_achievement_1",
-    "label": "ayesha_achievement_1",
-    "conditions": [
-        GameTarget(IsFlag("cheat", False)),
-        PersonTarget("ayesha",
-            MinFlag("kiss", 1)
-            ),
-        ],
-    "priority": 1000,
-    "do_once": True,
-    "quit": False,
-    })
-
-    Event(**{
-    "name": "ayesha_achievement_2",
-    "label": "ayesha_achievement_2",
-    "conditions": [
-        GameTarget(IsFlag("cheat", False)),
-        PersonTarget("ayesha",
-            MinStat("sexperience", 1)
-            ),
-        ],
-    "priority": 1000,
-    "do_once": True,
-    "quit": False,
-    })
-
-    Event(**{
-    "name": "ayesha_achievement_4",
-    "label": "ayesha_achievement_4",
-    "conditions": [
-        GameTarget(IsFlag("cheat", False)),
-        PersonTarget("ayesha",
-            Or(
-                MinFlag("pregnancies_number", 1),
-                MinFlag("mikeBabies", 1)
-                )
-            ),
-        ],
-    "priority": 1000,
-    "do_once": True,
-    "quit": False,
-    })
-
-    Event(**{
-    "name": "ayesha_achievement_5",
-    "label": "ayesha_achievement_5",
-    "conditions": [
-        GameTarget(IsFlag("cheat", False)),
-        PersonTarget("ayesha",
-            IsFlag("manager", True)
-            ),
-        ],
-    "priority": 1000,
-    "do_once": True,
-    "quit": False,
-    })
-
-label ayesha_achievement_1:
-    $ ayesha_achievement_1.grant()
-    return
-label ayesha_achievement_2:
-    $ ayesha_achievement_2.grant()
-    return
-label ayesha_achievement_3:
-    $ ayesha_achievement_3.grant()
-    return
-label ayesha_achievement_4:
-    $ ayesha_achievement_4.grant()
-    return
-label ayesha_achievement_5:
-    $ ayesha_achievement_5.grant()
     return
 
 
@@ -2755,30 +2625,6 @@ label pixie_harem_achievement_3:
 
 init python:
     Event(**{
-    "name": "sporty_harem_achievement_1",
-    "label": "sporty_harem_achievement_1",
-    "conditions": [
-        GameTarget(IsFlag("cheat", False)),
-        TogetherInHarem('sporty', 'ayesha', 'hanna'),
-        ],
-    "priority": 1000,
-    "do_once": True,
-    "quit": False,
-    })
-
-label sporty_harem_achievement_1:
-    $ sporty_harem_achievement_1.grant()
-    return
-label sporty_harem_achievement_2:
-    $ sporty_harem_achievement_2.grant()
-    return
-label sporty_harem_achievement_3:
-    $ sporty_harem_achievement_3.grant()
-    return
-
-
-init python:
-    Event(**{
     "name": "taming_harem_achievement_1",
     "label": "taming_harem_achievement_1",
     "conditions": [
@@ -2904,8 +2750,8 @@ init python:
     "conditions": [
         GameTarget(IsFlag("cheat", False)),
         "game.days_played < 80",
-        "all([Person.find(g).sexperience >= 1 for g in ['aletta', 'alexis', 'anna', 'audrey', 'ayesha', 'bree', 'camila', 'cassidy', 'emma', 'hanna', 'harmony', 'kleio', 'kylie', 'lavish', 'lexi', 'minami', 'morgan', 'palla', 'samantha', 'sasha', 'shiori']])",
-        "not any([Person.find(g).is_gone_forever for g in ['aletta', 'alexis', 'anna', 'audrey', 'ayesha', 'bree', 'camila', 'cassidy', 'emma', 'hanna', 'harmony', 'kleio', 'kylie', 'lavish', 'lexi', 'minami', 'morgan', 'palla', 'samantha', 'sasha', 'shiori']])"
+        "all([Person.find(g).sexperience >= 1 for g in ['aletta', 'alexis', 'anna', 'audrey', 'bree', 'camila', 'cassidy', 'emma', 'hanna', 'harmony', 'kleio', 'kylie', 'lavish', 'lexi', 'minami', 'morgan', 'palla', 'samantha', 'sasha', 'shiori']])",
+        "not any([Person.find(g).is_gone_forever for g in ['aletta', 'alexis', 'anna', 'audrey', 'bree', 'camila', 'cassidy', 'emma', 'hanna', 'harmony', 'kleio', 'kylie', 'lavish', 'lexi', 'minami', 'morgan', 'palla', 'samantha', 'sasha', 'shiori']])"
         ],
     "priority": 1000,
     "do_once": True,

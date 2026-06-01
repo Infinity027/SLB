@@ -1,14 +1,3 @@
-label ayesha_desire_0_male:
-    ayesha.say "I'm so happy that you're a member of the same gym where I work, [hero.name]."
-    ayesha.say "It's great to see you around there so often."
-    if hero.charm >= 10:
-        mike.say "Me too, Ayesha."
-        mike.say "You're one of the reasons I keep going there."
-        $ ayesha.love += 1
-    else:
-        mike.say "Meh - I only keep going there because it's a short drive from home."
-        $ ayesha.love -= 1
-    return
 
 label ayesha_desire_1_male:
     ayesha.say "I love the chance to hang out with you away from the gym, [hero.name]."

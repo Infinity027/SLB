@@ -626,7 +626,6 @@ init python:
             
             file_path = android.open_local_file()
             
-            
             dest_dir = renpy.config.searchpath[-1] if renpy.config.searchpath else renpy.config.gamedir
             
             if file_path and (file_path.endswith(".rpa") or file_path.endswith(".rpy")):
@@ -638,7 +637,6 @@ init python:
 
 
     def add_anim_attr(name):
-        
         
         def no_prefix_exists(n):
             if len(n) < 2:
@@ -1170,8 +1168,6 @@ init python:
         Usage:
             show amy normal at masking((0.5, 0.5), 2.0, (100, 50), (200, 200))
         """
-        
-        
         return Transform(
                 crop=(crop_pos[0], crop_pos[1], crop_size[0], crop_size[1]),
                 xalign=pos[0],
@@ -1204,8 +1200,6 @@ label splashscreen:
     hide screen promo
     scene bg white
     with dissolve
-
-
     return
 
 
@@ -1225,6 +1219,15 @@ label start(start_plus=False):
         game.room = "map"
     call intro (start_plus) from _call_intro
 
+    # AYESHA REMOVED — make her permanently "gone forever" at game start: hidden
+    # everywhere, dropped from all harems (taming/sporty/etc.), phone contact removed,
+    # stats zeroed. Her files stay in place so the 1000+ `ayesha` references never break.
+    # To restore Ayesha, delete this python block.
+    python:
+        _ayesha = Person.find("ayesha")
+        if _ayesha and not _ayesha.is_gone_forever:
+            _ayesha.set_gone_forever()
+
 label main:
     call enter_room from _call_enter_room
     jump main
@@ -1237,4 +1240,3 @@ label after_load:
         achievement.sync()
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

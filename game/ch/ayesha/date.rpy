@@ -1,25 +1,4 @@
-label ayesha_date_intro_valentine_male:
-    ayesha.say "H...hello, [hero.name]!"
-    ayesha.say "I'm...a little nervous about tonight."
-    ayesha.say "I don't think I've ever been someone's valentine!"
-    "The moment the words are out of Ayesha's mouth, my heart aches for her."
-    "She just looks so vulnerable and right now, despite her Amazonian physique."
-    mike.say "Don't worry, Ayesha, just follow my lead."
-    mike.say "I wouldn't have anyone else for my valentine, not for the world!"
-    return
 
-label ayesha_date_intro_halloween_male:
-    mike.say "Hey, Ayesha - you look great tonight!"
-    "Ayesha blushes and smiles at my compliment."
-    ayesha.say "Thanks, [hero.name] - you too."
-    ayesha.say "I'm pretty excited about tonight."
-    ayesha.say "I don't think I ever went on a Halloween date before!"
-    "At the mention of Halloween, I slap my forehead."
-    mike.say "It's Halloween, and I totally forgot!"
-    mike.say "We should have gotten dressed up for the occasion."
-    "Ayesha shakes her head at this."
-    ayesha.say "Oh no, [hero.name] - I only dress up in strange costumes when I wrestle."
-    return
 
 label ayesha_date_intro_christmas_male:
     ayesha.say "Happy Christmas, [hero.name]!"

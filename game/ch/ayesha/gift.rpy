@@ -1,24 +1,3 @@
-init python:
-    Event(**{
-    "name": "ayesha_give_a_gift",
-    "label": "npc_give_a_gift",
-    "conditions": [
-        Or(
-            HeroTarget(IsBirthday()),
-            IsSpecialDate("christmas"),
-            IsSpecialDate("valentine"),
-            ),
-        PersonTarget(ayesha,
-            IsPresent(),
-            Not(IsHidden()),
-            ),
-        ],
-    "girl": "ayesha",
-    "once_day": True,
-    "do_once": False,
-    "quit": False,
-    }
-    )
 
 label ayesha_birthday_gift_male:
     show ayesha

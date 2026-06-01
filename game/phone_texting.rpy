@@ -48,14 +48,6 @@ label text_sentence_audrey(sentence):
         audrey_nvl "[sentence]."
     return
 
-define ayesha_nvl = Character("Ayesha", kind=nvl, callback=Phone_SendSound)
-label text_sentence_ayesha(sentence):
-    if sentence.endswith((".", "?", "!")):
-        ayesha_nvl "[sentence]"
-    else:
-        ayesha_nvl "[sentence]."
-    return
-
 define bree_nvl = Character(bree.name, kind=nvl, callback=Phone_SendSound)
 label text_sentence_bree(sentence):
     if sentence.endswith((".", "?", "!")):
