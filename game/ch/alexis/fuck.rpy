@@ -492,33 +492,21 @@ label alexis_repeatable_beach_event:
 
 label alexis_fuck_date_male(location="hero"):
     $ game.play_music("music/roa_music/city_nights.ogg")
-    if kylie.yandere >= 25 and not kylie.flags.arrest and ("kylie_voyeur" not in DONE or kylie.flags.canwatch) and randint(1, 5) == 1:
-        call kylie_voyeur from _call_kylie_voyeur
-        return
 
     $ game.room = "bedroom1"
     scene bg bedroom1
     show alexis
-
-
     call alexis_fuck_date_intro_male (location) from _call_alexis_fuck_date_intro_male
-
 
     call alexis_dick_reactions from _call_alexis_dick_reactions_2
 
-
     call alexis_fuck_date_foreplay_male from _call_alexis_fuck_date_foreplay_male
 
-
-
-
     call alexis_fuck_date_choices_male from _call_alexis_fuck_date_choices_male
-
 
     call handle_npc_leaving (alexis, _return) from _call_handle_npc_leaving_1
     if _return:
         return
-
 
     hide alexis
     call alexis_sleep_date_fuck (location) from _call_alexis_sleep_date_fuck

@@ -1,0 +1,26 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While loading the script.
+UnboundLocalError: cannot access local variable 'lastfn' where it is not associated with a value
+
+-- Full Traceback ------------------------------------------------------------
+
+Traceback (most recent call last):
+  File "renpy/bootstrap.py", line 401, in bootstrap
+    renpy.main.main()
+    ~~~~~~~~~~~~~~~^^
+  File "renpy/main.py", line 432, in main
+    renpy.game.script.load_script()  # sets renpy.game.script.
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^                           
+  File "renpy/script.py", line 456, in load_script
+    self.load_appropriate_file(".rpyc", ["_ren.py", ".rpy"], dir, fn, initcode)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/script.py", line 1071, in load_appropriate_file
+    raise Exception("Could not load file %s." % lastfn)  # type: ignore
+                                                ^^^^^^                 
+UnboundLocalError: cannot access local variable 'lastfn' where it is not associated with a value
+
+Linux-6.17.0-23-generic-x86_64-with-glibc2.39 x86_64
+Ren'Py 8.5.2.26010301
+ 
+Mon Jun  1 17:47:33 2026

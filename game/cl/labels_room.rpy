@@ -111,4 +111,3 @@ label enter_room(back="street", room_present_girls=[], max_time=0):
     $ game.from_room = room.id
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

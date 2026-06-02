@@ -4,7 +4,7 @@ init python:
             if hero.is_female:
                 g = attr & set(p.id for p in Person.all())
                 g = list(g)[0] if g else None
-                if g in ["angela", "ayesha", "kylie", "lexi", "sasha"]:
+                if g in ["angela", "lexi", "sasha"]:
                     attr.add("back")
                 else:
                     attr.add("ahead")

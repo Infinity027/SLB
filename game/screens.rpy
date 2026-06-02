@@ -2122,7 +2122,7 @@ screen credits():
             text "Paradoxal Deviant"
 
             label "VOICE ACTORS"
-            text "MissMoonified as Bree & Kylie"
+            text "MissMoonified as Bree"
             text "LadyJem as Sasha"
             text "Mintea as Samantha"
             text "SilkyMilk as Aletta"

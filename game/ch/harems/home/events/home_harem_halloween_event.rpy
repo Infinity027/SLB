@@ -594,13 +594,8 @@ label halloween_event(appointment=None):
                 call kylie_halloween_party from _call_kylie_halloween_party
                 call kylie_halloween_dance from _call_kylie_halloween_dance
                 $ game.hour = 0
-                if kylie.sexperience >= 1:
-                    call kylie_halloween_crash_sex from _call_kylie_halloween_crash_sex
-                    scene bg black with dissolve
-                    call sleep (game.flags.halloween_girl) from _halloween_event_kylie
-                else:
-                    scene bg black with dissolve
-                    call sleep from _call_sleep_124
+                
+                call sleep from _call_sleep_124
             else:
                 call nodate_halloween_party from _call_nodate_halloween_party
                 call nodate_halloween_dance from _call_nodate_halloween_dance

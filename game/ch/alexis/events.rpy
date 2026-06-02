@@ -5764,12 +5764,7 @@ label alexis_male_ending:
         "Alexis locks eyes with me, looking more than a little nervous."
         "We'd talked about this point in the ceremony before now."
         "And we'd both been sure that there was no chance of someone barging into the chapel on the day."
-        if not kylie.is_gone_forever and not 'alexis_event_07b' in DONE:
-            "But still, we both hold our breath in case our old coach from high-school or Alexis's kid sister turns up."
-        elif not kylie.is_gone_forever:
-            "But still, we both hold our breath in case Alexis's kid sister turns up."
-        elif not 'alexis_event_07b' in DONE:
-            "But still, we both hold our breath in case our old coach from high-school."
+        "But still, we both hold our breath in case our old coach from high-school."
         "Priest" "Nobody?"
         "Priest" "Good..."
         "Alexis and I let out a sigh of relief in the very same moment."

@@ -3,7 +3,7 @@ init python:
         def __call__(self, attr):
             g = attr & set(p.id for p in Person.all())
             g = list(g)[0] if g else None
-            if g in ["aletta", "angela", "audrey", "camila", "hanna", "jack", "kylie", "master", "minami", "samantha", "victor", "amy", "kat", "reona", "cherie", "claire", "kiara"]:
+            if g in ["aletta", "angela", "audrey", "camila", "hanna", "jack", "master", "minami", "samantha", "victor", "amy", "kat", "reona", "cherie", "claire", "kiara"]:
                 attr.add("pose01")
             elif g in ["alexis", "ayesha", "cassidy", "harmony", "lavish", "morgan", "sasha", "scottie", "shawn", "danny"]:
                 attr.add("pose02")
@@ -62,8 +62,7 @@ init 1:
 
         group haircuts auto if_not ["camila", "nonpc"]
         group haircuts auto if_any ["camila"] if_not ["camila_sluttydate", "nonpc"]
-        always "restaurant_meal_kylie_basehair" if_all ["kylie"] if_not ["kylie_sluttydate", "nonpc"]
-        always "restaurant_meal_kylie_sluttyhair" if_all ["kylie", "kylie_sluttydate"]  if_not "nonpc"
+
 
         group table auto
 

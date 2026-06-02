@@ -252,15 +252,6 @@ label hypnosis_action:
                 mike.say "I think you should be more feminine."
                 $ active_girl.male -= 3
                 active_girl.say "I should be more feminine..."
-            "Be more stable" if active_girl.id == "kylie" and kylie.yandere > 0 and kylie.flags.yandere_hypnosis_adjustments < 3:
-                mike.say "I think you should be more stable."
-                $ active_girl.yandere -= 2
-                $ active_girl.flags.yandere_hypnosis_adjustments += 1
-                active_girl.say "I should be more stable."
-            "Be more unstable" if active_girl.id == "kylie" and kylie.yandere < 100:
-                mike.say "I think you should be more unstable."
-                $ active_girl.yandere += 2
-                active_girl.say "I should be more unstable."
     $ renpy.hide(active_girl.id)
     return
 return

@@ -4,7 +4,7 @@ init python:
             
             if attr & {"audrey", "bree", "kleio", "lexi", "mike", "minami", "samantha", "sasha", "shawn", "scottie"}:
                 attr.add("01")
-            elif attr & {"alexis", "camilla", "emma", "kylie", "lavish", "master", "palla", "victor"}:
+            elif attr & {"alexis", "camilla", "emma", "lavish", "master", "palla", "victor"}:
                 attr.add("02")
             elif attr & {"amy", "cassidy", "cherie", "jack", "kat", "kiara", "morgan", "reona", "ryan"}:
                 attr.add("03")

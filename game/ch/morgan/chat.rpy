@@ -22,7 +22,6 @@ define MORGAN_CHATS_MALE = {"morgan_chat_hang_male": (True, 1),
                             "morgan_chat_feelings_male": ("morgan.love >= 140 and morgan.sexperience >= 1", 1),
                             "morgan_chat_love_you_male": ("morgan.love >= 160 and morgan.sexperience >= 2", 1),
                             "morgan_chat_jack_male": (True, 1), "morgan_chat_alexis_male": ("morgan.love >= 60", 1),
-                            "morgan_chat_kylie_male": (True, 1), "morgan_chat_girl_male": ("morgan.male >= 50", 1),
                             "morgan_chat_girl2_male": ("morgan.male < 50", 1),
                             "morgan_chat_lovers_male": ("morgan.love >= 120 and morgan.sexperience >= 3", 1),
                             "morgan_chat_friends_lovers_male": ("morgan.love >= 120 and morgan.sexperience >= 3", 1)

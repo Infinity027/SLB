@@ -419,22 +419,6 @@ init -999 python:
                 minami.flags.showersex = False
 
 
-    def update_22_2_0c():
-        if "kylie_investigation_3" in DONE and not kylie.flags.schedule == "jail":
-            
-            kylie.love.max = 100
-            kylie.love.val = 100
-            kylie.unhide()
-            for harem in Harem.find(kylie, is_active=False):
-                harem.apologize(kylie)
-            hero.smartphone_contacts.append("kylie")
-            
-            
-            kylie.flags.schedule = "jail"
-            kylie.flags.nodate = True
-            kylie.flags.noproposedate = True
-
-
     def update_22_4_0():
         if hero.flags.base_sexperience == None:
             hero.flags.base_sexperience = 0
@@ -583,7 +567,6 @@ init -999 python:
         ("Guitar practice book", "guitar_practice_book", None),
         ("bree's sweater", "bree_sweater", None),
         ("Protein powder", "protein_powder", None),
-        ("Kylie's cookies", "kylie_cookies", None),
         ("lavish's tie", "lavish_tie", None),
         ("lavish's lucky panties", "lavish_lucky_panties", None),
         ("lexi's panties", "lexi_panties", None),
@@ -685,15 +668,11 @@ init -999 python:
         
         if "palla_event_03g" in DONE and palla.love.max < 80:
             palla.love.max = 80
-        
-        if kylie.flags.schedule == "jail":
-            kylie.flags.nodate = True
-            kylie.flags.noproposedate = True
 
 
     def update_22_10_0a():
-        if kylie.flags.schedule == "jail":
-            Harem.leave_by_name("taming", "kylie")
+        # if kylie.flags.schedule == "jail":
+        #     Harem.leave_by_name("taming", "kylie")
         
         if "palla_event_04" in DONE and palla.love.max < 120:
             palla.love.max = 80
@@ -922,7 +901,6 @@ init -999 python:
             "hanna",
             "harmony",
             "kleio",
-            "kylie",
             "lexi",
             "minami",
             "morgan",
@@ -932,9 +910,6 @@ init -999 python:
             "shiori",
         ]:
                 p.flags.giftsexy_dress = False
-        
-        if kylie.flags.rape == True and kylie.sexperience == 0:
-            kylie.sexperience += 1
 
 
     def update_23_6_1():
@@ -993,8 +968,6 @@ init -999 python:
                 achievement.grant("harmony_3")
             if renpy.has_label("kleio_achievement_3") and renpy.seen_image("kleio ending"):
                 achievement.grant("kleio_3")
-            if renpy.has_label("kylie_achievement_5") and renpy.seen_image("kylie ending"):
-                achievement.grant("kylie_5")
             if renpy.has_label("lavish_achievement_3") and renpy.seen_image(
             "lavish ending"
         ):
@@ -1271,9 +1244,6 @@ init -999 python:
         if "samantha_event_B03" in DONE:
             samantha.flags.cuck_ryan = True
         
-        if kylie.flags.AssaultVideo:
-            kylie.flags.assault_video = True
-        
         hero.counters = CountersShortcut(hero.id)
 
 
@@ -1303,8 +1273,6 @@ init -999 python:
     def update_23_11_0():
         if palla.flags.minealone:
             palla.flags.minealone = True
-        if "kylie_investigation_2" in DONE and not kylie.flags.arrest:
-            DONE.pop("kylie_investigation_2")
         if anna.flags.anal_experience and not anna.flags.anal:
             anna.flags.anal = anna.flags.anal_experience
         if shiori.flags.analsex and not shiori.flags.anal:
@@ -1468,14 +1436,6 @@ init -999 python:
                 elif isinstance(appointment, NoDateEvent):
                     new_appointment = NoDateEvent()
                     updated_appointments.append(new_appointment)
-                
-                elif isinstance(appointment, ReminderAppointment):
-                    if appointment.name == "Attend Kylie's trial":
-                        new_appointment = LabelAppointment(appointment.hours, [], appointment.name, appointment_label, "kylie_trial_2_missed")
-                        updated_appointments.append(new_appointment)
-                    elif appointment.name == "Attend Kylie's execution":
-                        new_appointment = LabelAppointment(appointment.hours, [], appointment.name, appointment_label, "kylie_trial_3_missed")
-                        updated_appointments.append(new_appointment)
                 else:
                     updated_appointments.append(appointment)
             hero.calendar.appointments[day_appointment] = updated_appointments
@@ -1740,8 +1700,6 @@ init -999 python:
         print("update_25_10_0a")
         if hasattr(store, "DLCS") and 'breemc' in store.DLCS:
             print("Has breemc dlc")
-            if "kylie_female_event_01" in DONE:
-                kylie.unhide()
             
             if hero.flags.master_training and "master_training_female_event_01" not in DONE and not hero.calendar.find(label="master_training_female_event_01"):
                 print("adding label event 01")

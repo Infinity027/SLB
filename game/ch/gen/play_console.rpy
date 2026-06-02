@@ -7,7 +7,7 @@ init python:
                 attr.add("02")
             elif attr & {"palla", "ayesha", "audrey", "minami", "lexi", "victor", "shawn", "amy", "kat", "reona", "cherie", "claire", "kiara"}:
                 attr.add("03")
-            elif attr & {"morgan", "samantha", "lavish", "emma", "sasha", "kylie", "danny", "jack"}:
+            elif attr & {"morgan", "samantha", "lavish", "emma", "sasha", "danny", "jack"}:
                 attr.add("04")
             
             if enable_debug_picker:

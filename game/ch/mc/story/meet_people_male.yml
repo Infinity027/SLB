@@ -100,33 +100,6 @@ steps:
       condition: '"audrey_event_01" in DONE'
       next: None
 
-  ayesha:
-    condition: hero.is_male
-    name: Meet Ayesha at the gym on Monday, Wednesday or Friday after meeting Hanna
-    related_event: ayesha_teaser
-    outcome:
-      condition: '"ayesha_teaser" in DONE'
-      next: None
-
-  ayesha_show:
-    conditions:
-      - hero.is_male
-      - '"ayesha_teaser" in DONE'
-    name: "Go to Ayesha's show with [bree.name] on a weekend afternoon"
-    related_event: ayesha_teaser_2
-    outcome:
-      condition: '"ayesha_teaser_2" in DONE'
-      next: None
-
-  ayesha_full:
-    conditions:
-      - demo
-      - '"ayesha_teaser_2" in DONE'
-    icon: stalled
-    name: Get the full version to continue with Ayesha
-    outcome:
-      condition: not demo
-      next: None
 
   cassidy:
     conditions:
@@ -217,24 +190,6 @@ steps:
       - 'game.flags.performance >= 2 or game.flags.band >= 2'
     icon: stalled
     name: Get the full version to continue with Kleio
-    outcome:
-      condition: not demo
-      next: None
-
-  kylie:
-    condition: hero.is_male
-    name: Meet Kylie in the university after 7 days have passed
-    related_event: kylie_event_01
-    outcome:
-      condition: '"kylie_event_01" in DONE'
-      next: None
-
-  kylie_full:
-    conditions:
-      - demo
-      - '"kylie_event_01" in DONE'
-    icon: stalled
-    name: Get the full version to continue with Kylie
     outcome:
       condition: not demo
       next: None

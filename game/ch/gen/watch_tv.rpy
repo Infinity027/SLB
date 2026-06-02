@@ -8,7 +8,7 @@ init python:
             if g:
                 if g.id in ["bree", "sasha", "aletta", "audrey", "samantha", "minami", "shiori", "lexi", "mike", "jack", "kat", "claire"]:
                     attr.add("01")
-                elif g.id in ["emma", "kylie", "anna", "hanna", "scottie", "danny", "reona", "cherie"]:
+                elif g.id in ["emma", "anna", "hanna", "scottie", "danny", "reona", "cherie"]:
                     attr.add("02")
                 elif g.id in ["palla", "lavish", "morgan", "alexis", "camila", "cassidy", "shawn", "victor", "kiara"]:
                     attr.add("03")

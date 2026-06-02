@@ -83,24 +83,6 @@ init python:
         "do_once": True,
         })
     
-    
-    Event(**{
-        "name": "kylie_event_01",
-        "label": "kylie_event_01",
-        "duration": 1,
-        "priority": 500,
-        "conditions": [
-
-            IsHour(10, 17),
-            MinDaysPlayed(6),
-            HeroTarget(
-                IsGender("male"),
-                IsRoom("university")
-                ),
-            ],
-        "do_once": True,
-        })
-    
     Event(**{
         "name": "alexis_event_01",
         "label": "alexis_event_01",
@@ -733,12 +715,8 @@ label alexis_event_01:
     hide alexis with dissolve
     scene expression f"bg {game.room}" with dissolve
     mike.say "So, uh, how'd you get this number?"
-    if "kylie_event_01" in DONE:
-        alexis.say "Hehe, silly."
-        alexis.say "Kylie told me she saw you the other day and told me all about that promotion you had."
-    else:
-        alexis.say "I found out from the company's directory, of course."
-        alexis.say "I heard from a friend of a friend online that you got that big-time promotion."
+    alexis.say "I found out from the company's directory, of course."
+    alexis.say "I heard from a friend of a friend online that you got that big-time promotion."
     alexis.say "So, I thought I'd congratulate you."
     mike.say "Oh, thank you!"
     "In reality, it's really nice to hear from her again, but I got to make sure."
@@ -791,127 +769,6 @@ label alexis_event_01:
     "Heh... 'Honey.' It's been a long time since someone's called me that."
     "Well, new position, old girlfriend."
     "Things seem to be looking up for [hero.name]!"
-    return
-
-label kylie_event_01:
-    $ game.flags.kylie_event_02_delay = TemporaryFlag(True, 2)
-    "Hurrying from one lecture to the next, my mind's already tuned into the subject that awaits me."
-    "That means the noise of the other students around me is nothing but a meaningless hubbub of sound."
-    "Girl" "Hey, hey - you over there!"
-    "I don't know why that one shout reaches my ears over all the others, but I ignore it and keep going all the same."
-    "It's not that I don't have any friends around here, but one of them would just have shouted my name if they wanted to get my attention."
-    "Girl" "[heroname]?"
-    "Girl" "[heroname] [hero.family_name]?"
-    "Well, maybe they'd start to shout my name after I'd walked past and ignored them like an ignorant sod!"
-    show kylie with dissolve
-    "I stop and turn on my heel in the general direction of the calls, seeing a pretty young-looking girl waving at me almost frantically as she hurries over."
-    "She's got a beaming smile on her face and an innocence in her eyes that only makes her seem even younger."
-    "But as she comes closer, I can see that her body gives the exact opposite impression, the tight shirt and short skirt she's wearing emphasizing this as well."
-    "Coming to a halt before me, she holds her hands behind her back and literally bounces up and down on her toes with what I take to be eager enthusiasm."
-    "This motion makes her long, platinum blonde hair sway and her chest, which is straining the buttons of her shirt, bob distractingly."
-    "I've no idea who this girl is, or what she wants with me - so I just give her a weak smile and wait for her to speak."
-    "Though the longer I look at her, the more aware I become of just how cute she is..."
-    "Girl" "Aww, come on - don't tell me you've forgotten all about me, [hero.name]?"
-    mike.say "Erm...I...well..."
-    "Girl" "I'm Kylie!"
-    "Girl" "Kylie - Alexis's sister?"
-    mike.say "Oh, shit - Kylie!"
-    mike.say "Is that really you?!?"
-    "Suddenly my memory kicks in, and I can almost see time running backwards before my eyes."
-    "I can recall her, without all of the changes that growing up has obviously made to her, wearing a pink T-shirt that has ponies or unicorns on the front."
-    "I remember braces and acne, skinny legs and pig-tails - Alexis's little sister that always bugged her back in high-school."
-    mike.say "Wow...Kylie...you grew...UP...you grew up!"
-    kylie.say "Yeah, well - I'm definitely not a kid anymore..."
-    mike.say "I can see that, Kylie."
-    mike.say "You look..."
-    menu:
-        "Inappropriate":
-            mike.say "...inappropriate."
-            mike.say "You know what people think about girls who dress like that, right?"
-            "Kylie's mouth opens wide in surprise, and she ceases bouncing on the spot."
-            kylie.say "Don't be such a prude, [hero.name]."
-            kylie.say "We're at college now - I can dress how ever I want to."
-            kylie.say "You know, you sound just like my Mom - always nagging at me!"
-            "I hold up both hands in a gesture of surrender."
-            mike.say "Okay, okay, Kylie - point taken!"
-            mike.say "I guess I just remember you as a kid, from back when I was dating Alexis..."
-            "At the mention of her sister's name, an odd intensity seems to begin to burn in Kylie's eyes."
-            kylie.say "Oh, I wondered when you'd mention HER!"
-            kylie.say "Aww...I can see you're still hurt from when she cheated on you."
-            kylie.say "Even after all this time, too."
-            kylie.say "What a fucking bitch - she never appreciated you, [hero.name]."
-            "More than a little taken aback by the venom in Kylie's voice, I try to calm things down."
-            mike.say "It was a long time ago, Kylie - and she is your sister, after all..."
-            kylie.say "Whatever - who wants to talk about Alexis, anyway?"
-            kylie.say "I came over to see how YOU were doing."
-        "Stunning":
-            mike.say "...REALLY good!"
-            mike.say "That skirt and the shirt...well...they really...flatter you!"
-            "Suddenly, Kylie's not smiling innocently, but rather grinning at me with a knowing look in her eyes."
-            kylie.say "Aww...thank you so much, [hero.name]."
-            kylie.say "Coming from you, that means SO much to me."
-            kylie.say "You have no idea how much it means to me."
-            kylie.say "Everyone sees me as Alexis's helpless little sister."
-            kylie.say "I've been waiting for someone to come along that can see me for what I really am!"
-            "Kylie keeps on staring at me for a moment, an odd intensity burning in her eyes."
-            "But then she seems to catch herself, and begins to speak again."
-            kylie.say "But that's far too much chatter about me!"
-    kylie.say "I want to hear all about you and your life - I want to hear everything about you that I've missed!"
-    "I shake my head for a moment, finding the experience of talking to Kylie oddly disorienting."
-    mike.say "What, me?"
-    mike.say "Okay, I guess - I can't complain."
-    show kylie at center, zoomAt(1.5, (640, 1040))
-    "At this, Kylie leans in closer, putting me in mind of a cat that's just seen a mouse."
-    kylie.say "Hmm, well - from what I heard, you've landed yourself a pretty decent job..."
-    "For a moment I just shrug, as if weighting up an answer."
-    "But then I can't help frowning as a thought suddenly occurs to me."
-    mike.say "Wait a minute, Kylie - why would you know anything at all about my job?"
-    "Kylie's eyes open wide at my question, and she looks this way and that, as if for a moment she can't meet my eye."
-    kylie.say "Huh...what...why would I..."
-    "I screw up my face as I try to figure out why Kylie has suddenly become so shifty and evasive all of a sudden."
-    mike.say "Hang on, did [bree.name] tell you about what's going on in my life?"
-    kylie.say "[bree.name]?"
-    mike.say "Yeah, [bree.name] - you know, my housemate?"
-    mike.say "She goes here too."
-    kylie.say "[bree.name]...yeah, that's who told me about you."
-    kylie.say "She was in one of my lectures, and we got talking."
-    kylie.say "Kept going on and on, telling me about this great guy that she lived with called [hero.name] - and so I figured it might be you."
-    kylie.say "I've been keeping an eye out for you around the campus ever since."
-    kylie.say "It's just SOOOO great to finally see you again!"
-    "It sounds like a strange coincidence to me."
-    "But then you hear about stuff like this happening all the time to other people, right?"
-    mike.say "You're serious - [bree.name] talks about me that much?"
-    kylie.say "Yeah, it was pretty weird!"
-    kylie.say "Maybe she was just stoked to have such a great place to live and a nice housemate to go with it?"
-    kylie.say "I gotta say, the way she described it, I am kinda jealous."
-    kylie.say "She made it sound so great."
-    kylie.say "Hey - while I mention it, would you let me know if you ever have a room free there?"
-    mike.say "I'll try to keep it in mind, Kylie..."
-    mike.say "Anyway, it's good to know that you're here and doing okay."
-    "Kylie's eyes widen and she smiles in that same innocent and yet slightly odd manner."
-    kylie.say "Are you REALLY glad I'm here?!?"
-    mike.say "Well, they always said you were the smart kid in your family..."
-    kylie.say "Aww, that's so sweet of you to say!"
-    kylie.say "Kind of a put-down for Alexis - but then she proved she was pretty dumb by cheating on a great guy like you!"
-    play sound cell_vibrate
-    kylie.say "Ooooh, look at the time - I gotta get going!"
-    hide kylie
-    show kylie at left4
-    kylie.say "Can't be late for class AGAIN - but we should meet up soon, really catch up, yeah?"
-    show kylie at left with move
-    kylie.say "I study in the library most nights, so maybe find me there?"
-    mike.say "Erm, okay, I guess - see you there some time."
-    hide kylie with moveoutleft
-    "I stand and watch Kylie hurry off for a couple of seconds, and then remember that I have a lecture to get to as well."
-    "But now I'm preoccupied by thoughts of Kylie and her elder sister, rather than the academic subject at hand."
-    "I haven't thought about that period in my life for quite some times, and it instantly raises mixed emotions for me."
-    "Alexis and I dated when we were in high-school and Kylie herself was just a kid."
-    "We had some wonderful times back then - I even snuck into her house a couple times while her parents were out."
-    "Even then, the sex was amazing."
-    "But Alexis ended up hurting me so badly that the wounds have never fully healed."
-    "Do I really need either of them back in my life now that I'm supposedly a responsible adult?"
-    "Maybe I'm being unfair though, dumping Kylie in with my bad memories of her sister."
-    "Perhaps Kylie really is as sweet and innocent as she seems, and wouldn't as much as hurt a fly?"
     return
 
 label harmony_event_02:

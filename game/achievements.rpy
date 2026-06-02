@@ -316,47 +316,6 @@ define kleio_achievement_3 = Achievement(
     description="Get married with Kleio")
 
 
-
-define kylie_achievement_1 = Achievement(
-    id="kylie_1",
-    name="First kiss with Kylie",
-    description="Kiss Kylie for the first time")
-define kylie_achievement_2 = Achievement(
-    id="kylie_2",
-    name="Kylie's hot coffee",
-    description="Have fun with Kylie for the first time")
-define kylie_achievement_3 = Achievement(
-    id="kylie_3",
-    name="Release the kraken!",
-    description="Get assaulted by Kylie",
-    locked_description="???",
-    hidden=True)
-define kylie_achievement_4 = Achievement(
-    id="kylie_4",
-    name="Bloody Christmas!",
-    description="Get killed by Kylie at Christmas",
-    locked_description="???",
-    hidden=True)
-define kylie_achievement_5 = Achievement(
-    id="kylie_5",
-    name="Kylie's wedding",
-    description="Get married with Kylie")
-
-define kylie_achievement_7 = Achievement(
-    id="kylie_7",
-    name="Love and Thunder",
-    description="Lead Kylie to her death",
-    locked_description="???",
-    hidden=True)
-define kylie_achievement_8 = Achievement(
-    id="kylie_8",
-    name="Death's Appointment",
-    description="Get killed by Kylie on Friday 13th",
-    locked_description="???",
-    hidden=True)
-
-
-
 define lavish_achievement_1 = Achievement(
     id="lavish_1",
     name="First kiss with Lavish",
@@ -1600,78 +1559,6 @@ label kleio_achievement_4:
 
 init python:
     Event(**{
-    "name": "kylie_achievement_1",
-    "label": "kylie_achievement_1",
-    "conditions": [
-        GameTarget(IsFlag("cheat", False)),
-        PersonTarget("kylie",
-            MinFlag("kiss", 1)
-            ),
-        ],
-    "priority": 1000,
-    "do_once": True,
-    "quit": False,
-    })
-
-    Event(**{
-    "name": "kylie_achievement_2",
-    "label": "kylie_achievement_2",
-    "conditions": [
-        GameTarget(IsFlag("cheat", False)),
-        PersonTarget("kylie",
-            MinStat("sexperience", 1)
-            ),
-        ],
-    "priority": 1000,
-    "do_once": True,
-    "quit": False,
-    })
-
-    Event(**{
-    "name": "kylie_achievement_6",
-    "label": "kylie_achievement_6",
-    "conditions": [
-        GameTarget(IsFlag("cheat", False)),
-        PersonTarget("kylie",
-            Or(
-                MinFlag("pregnancies_number", 1),
-                MinFlag("mikeBabies", 1)
-                )
-            ),
-        ],
-    "priority": 1000,
-    "do_once": True,
-    "quit": False,
-    })
-
-label kylie_achievement_1:
-    $ kylie_achievement_1.grant()
-    return
-label kylie_achievement_2:
-    $ kylie_achievement_2.grant()
-    return
-label kylie_achievement_3:
-    $ kylie_achievement_3.grant()
-    return
-label kylie_achievement_4:
-    $ kylie_achievement_4.grant()
-    return
-label kylie_achievement_5:
-    $ kylie_achievement_5.grant()
-    return
-label kylie_achievement_6:
-    $ kylie_achievement_6.grant()
-    return
-label kylie_achievement_7:
-    $ kylie_achievement_7.grant()
-    return
-label kylie_achievement_8:
-    $ kylie_achievement_8.grant()
-    return
-
-
-init python:
-    Event(**{
     "name": "lavish_achievement_1",
     "label": "lavish_achievement_1",
     "conditions": [
@@ -2629,7 +2516,7 @@ init python:
     "label": "taming_harem_achievement_1",
     "conditions": [
         GameTarget(IsFlag("cheat", False)),
-        TogetherInHarem('taming', 'ayesha', 'kylie'),
+        TogetherInHarem('taming', 'ayesha'),
         ],
     "priority": 1000,
     "do_once": True,
@@ -2750,8 +2637,8 @@ init python:
     "conditions": [
         GameTarget(IsFlag("cheat", False)),
         "game.days_played < 80",
-        "all([Person.find(g).sexperience >= 1 for g in ['aletta', 'alexis', 'anna', 'audrey', 'bree', 'camila', 'cassidy', 'emma', 'hanna', 'harmony', 'kleio', 'kylie', 'lavish', 'lexi', 'minami', 'morgan', 'palla', 'samantha', 'sasha', 'shiori']])",
-        "not any([Person.find(g).is_gone_forever for g in ['aletta', 'alexis', 'anna', 'audrey', 'bree', 'camila', 'cassidy', 'emma', 'hanna', 'harmony', 'kleio', 'kylie', 'lavish', 'lexi', 'minami', 'morgan', 'palla', 'samantha', 'sasha', 'shiori']])"
+        "all([Person.find(g).sexperience >= 1 for g in ['aletta', 'alexis', 'anna', 'audrey', 'bree', 'camila', 'cassidy', 'emma', 'hanna', 'harmony', 'kleio', 'lavish', 'lexi', 'minami', 'morgan', 'palla', 'samantha', 'sasha', 'shiori']])",
+        "not any([Person.find(g).is_gone_forever for g in ['aletta', 'alexis', 'anna', 'audrey', 'bree', 'camila', 'cassidy', 'emma', 'hanna', 'harmony', 'kleio', 'lavish', 'lexi', 'minami', 'morgan', 'palla', 'samantha', 'sasha', 'shiori']])"
         ],
     "priority": 1000,
     "do_once": True,
@@ -2793,7 +2680,7 @@ init python:
     "label": "children_achievement_2",
     "conditions": [
         GameTarget(IsFlag("cheat", False)),
-        "all([Person.find(g).flags.mikeBabies >= 1 for g in ['aletta', 'alexis', 'anna', 'audrey', 'ayesha', 'bree', 'camila', 'cassidy', 'emma', 'hanna', 'harmony', 'kleio', 'kylie', 'lavish', 'lexi', 'minami', 'morgan', 'palla', 'samantha', 'sasha', 'shiori']])"
+        "all([Person.find(g).flags.mikeBabies >= 1 for g in ['aletta', 'alexis', 'anna', 'audrey', 'ayesha', 'bree', 'camila', 'cassidy', 'emma', 'hanna', 'harmony', 'kleio', 'lavish', 'lexi', 'minami', 'morgan', 'palla', 'samantha', 'sasha', 'shiori']])"
         ],
     "priority": 1000,
     "do_once": True,

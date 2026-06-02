@@ -320,39 +320,6 @@ init python:
     "once_hour": False,
     })
 
-    InteractEvent(**{
-    "name": "bree_murder_talk_sasha",
-    "label": "bree_murder_talk_sasha",
-    "do_once": True,
-    "conditions": [
-        PersonTarget(bree,
-            IsActive(),
-            ),
-        PersonTarget("kylie",
-            IsFlag("killed", "sasha")
-            ),
-        ],
-    })
-
-    Event(**{
-    "name": "bree_pregnant_request",
-    "label": "bree_pregnant_request",
-    "conditions": [
-        HeroTarget(IsGender("male")),
-        PersonTarget(bree,
-            IsPresent(),
-            Not(IsHidden()),
-            Not(IsActivity("sleep")),
-            IsFlag("status", "girlfriend"),
-            MaxCounter("pregnant", 8),
-            ),
-        'game.days_played - bree.flags.girlfriend_day >= 7',
-        ],
-    "music": "music/roa_music/juice.ogg",
-    "do_once": True,
-    "quit": False,
-    })
-
     Event(**{
     "name": "bree_sasha_collar_reaction",
     "label": "bree_sasha_collar_reaction",
@@ -499,21 +466,6 @@ init python:
             ),
         ],
     "do_once": True,
-    })
-
-    InteractEvent(**{
-    "name": "bree_rape_talk",
-    "label": "bree_rape_talk",
-    "do_once": True,
-    "conditions": [
-        PersonTarget(bree,
-            IsActive(),
-            ),
-        PersonTarget("kylie",
-            IsFlag("killed", False),
-            IsFlag("rape"),
-            ),
-        ],
     })
 
     Event(**{
@@ -802,134 +754,6 @@ label bree_sasha_pregnant:
     "Maybe the fantasy of having two girls on the go is a fantasy for a reason?"
     return
 
-label bree_murder_talk_sasha:
-    show bree gloomy at center, zoomAt(1.25, (640, 880))
-    "There's been a cloud hanging over the house since the incident that happened with Kylie."
-    "And it's not like that's a hard thing to understand, is it?"
-    "I mean, look at what I'm doing right now - calling it 'the incident'!"
-    "I can't even come out and say it."
-    "Say that Kylie broke in here and actually killed Sasha in front of us..."
-    "But we can't go on like this forever."
-    show bree gloomy at center, zoomAt(1.5, (640, 1100)) with fade
-    "Which is why I finally make [bree.name] sit down with me and talk about it."
-    mike.say "I...I'm so sorry, [bree.name]."
-    show bree stuned
-    "[bree.name] looks at me for a moment like she doesn't know what I mean by that."
-    "Her eyes are more than a little bloodshot, pink around the edges too."
-    "I guess that she's been crying and finding it hard to sleep."
-    "Both of which I can empathise with."
-    show bree surprised
-    bree.say "Wh...what?"
-    bree.say "Why would you be sorry, [hero.name]?"
-    show bree stuned
-    "I take a deep breath, steeling myself for what lies ahead."
-    mike.say "Because it was me that got involved with Kylie."
-    mike.say "I was the one that brought her here in the first place."
-    mike.say "I feel responsible for what happened."
-    show bree gloomy
-    "[bree.name] shakes her head at this, already fighting back more tears."
-    "She surprises me by taking hold of my hands and squeezing them tightly."
-    show bree surprised
-    bree.say "No, no, no!"
-    bree.say "You can't think that, [hero.name]."
-    bree.say "There's no way you could have known she was..."
-    show bree gloomy
-    mike.say "Crazy?"
-    show bree sad
-    bree.say "Yeah, that's right."
-    show bree gloomy at center, zoomAt(2, (640, 1380)) with fade
-    "[bree.name] leans her head on my shoulder, pressing her weight against me."
-    "It makes me feel instantly more guilty, but I don't even try to stop her."
-    "I guess I need all the comfort that I can get right now, and so does she."
-    show bree cry
-    bree.say "What happened was awful, so awful..."
-    bree.say "But that psycho could have killed all three of us, you know?"
-    bree.say "You and I should be thankful that she didn't."
-    bree.say "And I think..."
-    show bree gloomy
-    "[bree.name] pauses to stifle a sob."
-    show bree normal
-    "And then she pushes on with what she was going to say."
-    show bree talkative
-    bree.say "I really think Sasha would want us to get on with our lives."
-    show bree normal
-    mike.say "I...think I know what you mean, [bree.name]."
-    mike.say "Sasha always lived life to the full, didn't she?"
-    show bree talkative
-    bree.say "Yeah - so she'd probably tell us off for moping around!"
-    show bree normal
-    "The thought of Sasha and her unique quirks makes me shake my head."
-    show bree happy
-    "[bree.name] seems to be affected in the same way, as she lets out a sudden laugh."
-    "It's pained and I can see that she feels embarrassed to be finding this funny."
-    show bree cry
-    "But when she bursts into tears straight afterwards, I hug her close to me."
-    "As I hold [bree.name], I start to feel a little better."
-    "It's not much to cling to right now."
-    "But maybe it's the first step towards healing for the both of us."
-    return
-
-label bree_rape_talk:
-    "I fancy myself a modern guy in most respects, and so what I want to do shouldn't be an issue."
-    "But even a modern guy can forgive himself for something on this kind of scale - right?"
-    "I mean, [bree.name] and Sasha burst into my room and literally saved me from Kylie the other night."
-    "Let's call it what it is - that mad bitch was going to rape me!"
-    "And she'd have had her way if it weren't for my housemates coming to my rescue."
-    "I know that I should thank them, at the very least, for what they did."
-    "But I can't help feeling ashamed of the state that they found me in that night."
-    "I know a modern guy shouldn't think it's any different for a man than a woman."
-    "And yet I'm still embarrassed by what happened and afraid to show my face."
-    show bree surprised at center, zoomAt(1.5, (640, 1040)) with hpunch
-    "In the end, it comes down to me bumping into [bree.name] in the hallway."
-    show bree happy
-    "We both smile awkwardly, and it looks like nobody's going to speak."
-    "But then we both open our mouths at the same exact moment."
-    mike.say "[bree.name], I just..."
-    show bree talkative
-    bree.say "[hero.name], are you..."
-    show bree blush sadsmile
-    "As soon as we both start talking, we stop again."
-    "I rub the back of my neck, trying to smile nonchalantly."
-    "And [bree.name]'s cheeks have gone more than a little red too."
-    "In the end, it's [bree.name] that recovers first."
-    show bree talkative
-    bree.say "Sorry, [hero.name]."
-    bree.say "I just wanted to ask if you were okay?"
-    show bree sadsmile
-    mike.say "I...I'm still shaken up, [bree.name]."
-    mike.say "But I'll be okay."
-    "There's a moment of silence as [bree.name] nods her head."
-    show bree happy
-    bree.say "Good..."
-    bree.say "That's good."
-    show bree sadsmile
-    mike.say "I was going to say thank you, just then."
-    "Now [bree.name] really does look embarrassed."
-    "She shakes her head and waves my words away."
-    show bree talkative
-    bree.say "Don't be silly, [hero.name]."
-    bree.say "You'd have done the same for me!"
-    show bree annoyed -blush
-    "She shakes her head for a second time."
-    show bree angry
-    "But this time it's from annoyance at the memory of what Kylie did."
-    show bree vangry
-    bree.say "Urgh..."
-    bree.say "The thought of what that horrid girl was doing to you!"
-    show bree angry
-    mike.say "Don't even think about it, [bree.name]."
-    mike.say "And thank you - I really mean it."
-    show bree happy
-    "[bree.name] nods, her expression changing to one of happiness."
-    show bree at center, traveling(2.5, 0.3, (640, 1640))
-    "She leans forwards and plants a little kiss on my cheek."
-    show bree wink
-    bree.say "That's okay, [hero.name]."
-    bree.say "We all have to stick together in this house."
-    bree.say "It's us against the world!"
-    return
-
-
 label bree_fight_dad:
     "Everything happens so quickly that I can't even hope to keep upright, let alone defend myself."
     "One minute I'm walking down the street, checking my phone and minding my own business."
@@ -1018,7 +842,7 @@ label bree_fight_dad:
     return
 
 label bree_fight_mourning_dad:
-    if bree.flags.girlfriend or bree.flags.fiance or not kylie.sexperience:
+    if bree.flags.girlfriend or bree.flags.fiance:
         "I kind of feel like I've been walking around in a trance since it happened."
         "Hell, I'm even having trouble calling it what it was, the trauma's so bad."
         "So when I hear the sound of someone yelling close by, I just ignore it."
@@ -1105,29 +929,28 @@ label bree_fight_mourning_dad:
         show bruce talkative
         breesdad "I just needed to tell you that, buddy..."
         breesdad "To let you know I could have stood to have you as a son-in-law."
-        if not "kylie_trial_2" in DONE:
-            breesdad "But at least there's one thing to look forward to, right?"
-            show bruce normal
-            mike.say "There is?"
-            show bruce talkative
-            breesdad "Ah, come on, [hero.name]…"
-            breesdad "Don't try being all woke and leftie with me!"
-            breesdad "This way we get to watch that murdering bitch fry."
-            breesdad "Get to see her pay for what she did to my little girl!"
-            show bruce normal
-            "All I can do is blink in genuine surprise."
-            "It might sound crazy, but I hadn't really thought about that too much."
-            "About whether I want to be there to see Kylie's execution."
-            "Even if I could stand to watch it happen from elsewhere."
-            mike.say "I..."
-            mike.say "I guess so."
-            "I don't think Bruce is really listening to what I'm saying right now."
-            "Or else he's not picking up on the nuances of my tone."
-            "Because he just grins, the expression almost turning into a genuine snarl."
-            show bruce talkative
-            breesdad "Yeah, you know that's gonna be fun to see."
-            breesdad "I'll reserve you a front-row seat, [hero.name]…"
-            breesdad "Hell, I'll even bring the fucking popcorn!"
+        breesdad "But at least there's one thing to look forward to, right?"
+        show bruce normal
+        mike.say "There is?"
+        show bruce talkative
+        breesdad "Ah, come on, [hero.name]…"
+        breesdad "Don't try being all woke and leftie with me!"
+        breesdad "This way we get to watch that murdering bitch fry."
+        breesdad "Get to see her pay for what she did to my little girl!"
+        show bruce normal
+        "All I can do is blink in genuine surprise."
+        "It might sound crazy, but I hadn't really thought about that too much."
+        "About whether I want to be there to see Kylie's execution."
+        "Even if I could stand to watch it happen from elsewhere."
+        mike.say "I..."
+        mike.say "I guess so."
+        "I don't think Bruce is really listening to what I'm saying right now."
+        "Or else he's not picking up on the nuances of my tone."
+        "Because he just grins, the expression almost turning into a genuine snarl."
+        show bruce talkative
+        breesdad "Yeah, you know that's gonna be fun to see."
+        breesdad "I'll reserve you a front-row seat, [hero.name]…"
+        breesdad "Hell, I'll even bring the fucking popcorn!"
         hide bruce
         show breedad
         "With that, Bruce seems to think that the conversation is over."

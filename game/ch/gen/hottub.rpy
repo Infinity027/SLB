@@ -29,7 +29,7 @@ init python:
                 attr.add(randchoice(["center", "left"]))
                 attr.add("mcalone")
             if g:
-                if g.id in ["anna", "bree", "emma", "kleio", "kylie", "lavish", "lexi", "samantha", "sasha", "shiori", "scottie", "ryan", "danny", "dwayne", "reona"]:
+                if g.id in ["anna", "bree", "emma", "kleio", "lavish", "lexi", "samantha", "sasha", "shiori", "scottie", "ryan", "danny", "dwayne", "reona"]:
                     attr.add("center")
                     attr.discard("left")
                 elif g.id in ["aletta", "alexis", "angela", "audrey", "ayesha", "cassidy", "hanna", "harmony", "minami", "morgan", "palla", "camila", "mike", "jack", "shawn", "master", "victor", "kat", "amy", "cherie", "claire", "kiara"]:

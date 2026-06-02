@@ -352,21 +352,6 @@ init python:
     "quit": False,
     })
 
-    InteractEvent(**{
-    "name": "morgan_murder_talk",
-    "label": "morgan_murder_talk",
-    "do_once": True,
-    "conditions": [
-        PersonTarget(morgan,
-            IsActive(),
-            ),
-        PersonTarget(kylie,
-            Not(IsHidden()),
-            IsFlag("schedule", "jail"),
-            ),
-        ],
-    })
-
     Event(**{
     "name": "morgan_react_kylie_sentence",
     "priority": 1500,

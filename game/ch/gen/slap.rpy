@@ -8,7 +8,7 @@ init python:
                     attr.add("pose02")
                 elif attr & {"lexi"}:
                     attr.add("pose03")
-                elif attr & {"angela", "danny", "dwayne", "jack", "kylie", "master", "mike", "ryan", "scottie", "shawn", "victor"}:
+                elif attr & {"angela", "danny", "dwayne", "jack", "master", "mike", "ryan", "scottie", "shawn", "victor"}:
                     attr.add("pose04")
             else:
                 if attr & {"bree", "emma", "kleio", "minami", "morgan", "sasha"}:
@@ -17,7 +17,7 @@ init python:
                     attr.add("pose02")
                 elif attr & {"aletta", "anna", "cassidy", "harmony", "lexi", "samantha"}:
                     attr.add("pose03")
-                elif attr & {"alexis", "angela", "audrey", "camila", "kylie", "shiori", "amy", "reona", "kat", "cherie", "claire", "kiara"}:
+                elif attr & {"alexis", "angela", "audrey", "camila", "shiori", "amy", "reona", "kat", "cherie", "claire", "kiara"}:
                     attr.add("pose04")
                 
                 if {"mc_work"} & attr:

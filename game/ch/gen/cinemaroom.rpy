@@ -10,7 +10,7 @@ init python:
                 attr.add("02")
             elif g in ["palla", "ayesha", "audrey", "minami", "lexi", "danny", "jack"]:
                 attr.add("03")
-            elif g in ["morgan", "samantha", "lavish", "emma", "sasha", "kylie", "ryan", "master", "dwayne", "cherie", "claire", "kiara"]:
+            elif g in ["morgan", "samantha", "lavish", "emma", "sasha", "ryan", "master", "dwayne", "cherie", "claire", "kiara"]:
                 attr.add("04")
             exp = attr & {"blush", "happy"}
             if exp:

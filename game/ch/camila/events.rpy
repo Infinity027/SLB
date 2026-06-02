@@ -1,21 +1,4 @@
 init python:
-    Event(**{
-    "name": "camila_event_01",
-    "label": "camila_event_01",
-    "priority": 500,
-    "conditions": [
-        IsDone("kylie_investigation_2"),
-        IsNotDone("camila_event_02_alt"),
-        HeroTarget(IsGender("male")),
-        IsDayOfWeek(6, 7),
-        IsTimeOfDay("evening"),
-        PersonTarget(kylie,
-            IsFlag("arrest")
-            ),
-        ],
-    "music": "music/roa_music/hero.ogg",
-    "do_once": True,
-    })
 
     Event(**{
     "name": "camila_event_02",
@@ -363,58 +346,6 @@ init python:
     "music": "music/roa_music/hero.ogg",
     "do_once": False,
     "once_month": True,
-    })
-
-    InteractActivity(**{
-    "name": "camila_prison_visit_1",
-    "display_name": "Visit Kylie",
-    "label": "camila_prison_visit_1",
-    "conditions": [
-        IsDone("kylie_investigation_3"),
-        HeroTarget(IsGender("male")),
-        PersonTarget(kylie,
-            Not(IsHidden()),
-            IsFlag("schedule", "jail"),
-            ),
-        PersonTarget(camila,
-            IsActive(),
-            IsRoom("policestation", "jail"),
-            IsFlag("camiladelay", False),
-            MinStat("love", 120),
-            MinStat("sexperience", 1),
-            ),
-        ],
-    "icon": "kylie",
-    "music": "music/roa_music/hero.ogg",
-    "do_once": True,
-    })
-
-    InteractActivity(**{
-    "name": "camila_prison_visit_2",
-    "display_name": "Visit Kylie",
-    "label": "camila_prison_visit_2",
-    "conditions": [
-        IsDone("camila_prison_visit_1"),
-        HeroTarget(
-            IsGender("male"),
-            IsRoom("jail", "policestation"),
-            HasStamina(),
-            ),
-        PersonTarget(kylie,
-            Not(IsHidden()),
-            IsFlag("schedule", "jail"),
-            ),
-        PersonTarget(camila,
-            IsActive(),
-            IsRoom("policestation", "jail"),
-            IsFlag("camiladelay", False),
-            MinStat("love", 120),
-            MinStat("sexperience", 1),
-            ),
-        ],
-    "once_day": True,
-    "icon": "kylie",
-    "music": "music/roa_music/hero.ogg",
     })
 
     Event(**{

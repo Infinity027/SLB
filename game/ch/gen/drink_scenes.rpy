@@ -28,9 +28,6 @@ init 1:
 
         group people auto
 
-        always "drink_kylie_basehair" if_all ["kylie"] if_not ["kylie_sluttydate"]
-        always "drink_kylie_sluttyhair" if_all ["kylie", "kylie_sluttydate"]
-
         group multiple auto variant piercings_hidden
 
         group outfit auto

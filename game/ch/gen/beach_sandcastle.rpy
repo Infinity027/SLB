@@ -2,7 +2,7 @@ init python:
     class CG_BeachSandCastle_Picker(object):
         def __call__(self, attr):
             if hero.is_male:
-                if attr & {"angela", "ayesha", "anna", "bree", "emma", "hanna", "kleio", "kylie", "lavish", "samantha", "shiori", "minami", "master", "dwayne", "victor", "danny", "ryan", "shawn", "jack", "scottie", "mike", "reona", "kat", "amy"}:
+                if attr & {"angela", "ayesha", "anna", "bree", "emma", "hanna", "kleio", "lavish", "samantha", "shiori", "minami", "master", "dwayne", "victor", "danny", "ryan", "shawn", "jack", "scottie", "mike", "reona", "kat", "amy"}:
                     attr.add("01")
                     attr.discard("02")
                 elif attr & {"aletta", "alexis", "audrey", "cassidy", "harmony", "lexi", "palla", "sasha", "morgan", "camila", "cherie", "claire", "kiara"}:
@@ -21,12 +21,6 @@ init python:
                 else:
                     attr.add("01")
                     attr.discard("02")
-                    if attr & {"ayesha", "kylie"}:
-                        attr.add("right")
-                        attr.discard("left")
-                    else:
-                        attr.add("left")
-                        attr.discard("right")
             
             if enable_debug_picker:
                 renpy.log(f"CG_BeachSandCastle_Picker results: {attr}")
@@ -39,16 +33,13 @@ init 1:
 
         group bg auto
 
-
         attribute alonemc null
         group npc auto if_not ["alonemc"]
         group npc auto variant "nopregnant" if_not ["alonemc", "pregnant"]
         group npc auto variant "pregnant" if_all "pregnant" if_not ["alonemc"]
 
-
         group pubes auto if_any ["pubes"] if_not ["alonemc"]:
             attribute emma_pubes null
-
 
         attribute breemc null
         group breemc_position auto:
@@ -102,14 +93,9 @@ init 1:
         group piercings auto variant "noboobjob" if_all ["sasha_noboobjob"] if_any ["naked" , "sasha_naked" ] if_not ["alonemc"]
         group piercings auto variant "boobjob" if_all ["sasha_boobjob"] if_any ["naked" , "sasha_naked" ] if_not ["alonemc"]
 
-
         group multiple auto variant piercings_naked when naked and not alonemc
 
-
         group outfits auto if_not ["alonemc", "naked"]
-
-
-        group pregnancies auto if_all ["kylie_pregnant"] if_not ["alonemc"]
 
         group outfits auto variant "pregnant" if_any "pregnant" if_not ["alonemc", "naked"]
 
@@ -133,15 +119,11 @@ init 1:
 
         group dicks auto
 
-
         group collars auto if_not ["alonemc"]
-
 
         attribute morgan_makeup
 
-
         group castle auto
-
 
         attribute mikemc null
         group mikemc auto if_any ["mikemc"]

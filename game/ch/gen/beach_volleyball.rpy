@@ -8,7 +8,7 @@ init python:
             if g:
                 
                 
-                if g.id in ["cassidy", "aletta", "hanna", "ayesha", "kylie", "master", "scottie", "mike", "victor", "dwayne", "kat", "amy", "reona"]:
+                if g.id in ["cassidy", "aletta", "hanna", "ayesha", "master", "scottie", "mike", "victor", "dwayne", "kat", "amy", "reona"]:
                     attr.update({"frontmc", "01"})
                     attr.discard("backmc")
                     attr.discard("02")

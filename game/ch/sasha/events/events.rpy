@@ -63,21 +63,6 @@ init python:
     })
 
     InteractEvent(**{
-    "name": "sasha_rape_talk",
-    "label": "sasha_rape_talk",
-    "do_once": True,
-    "conditions": [
-        PersonTarget(sasha,
-            IsActive(),
-            ),
-        PersonTarget("kylie",
-            IsFlag("rape"),
-            IsFlag("killed", False),
-            ),
-        ],
-    })
-
-    InteractEvent(**{
     "name": "sasha_murder_talk_bree",
     "label": "sasha_murder_talk_bree",
     "do_once": True,
@@ -109,68 +94,6 @@ init python:
         ],
     "do_once": True,
     })
-
-label sasha_rape_talk:
-    "I'm not one of those modern guys that moans on about how hard men have it, you know?"
-    "Like whenever something bad happens to them, it's worse than if it happened to anyone else."
-    "But it's still not easy to come to terms with what happened in the house the other night."
-    "That mad bitch Kylie - she literally tied me up and tried to sexually assault me!"
-    "Yeah, you might laugh at that, think that it'd be fun to be tied up by a beautiful girl."
-    "But trust me, the reality is that it's no fun at all."
-    "If [bree.name] and Sasha hadn't burst in when they did..."
-    "Well, let's just say that they saved my ass back there!"
-    "I want to say thanks to them, but that would also mean admitting that I was helpless."
-    "And to be honest, I'm scared of doing that."
-    "Not because I think it makes me any less of a man, you understand?"
-    "More because it makes me feel ashamed, knowing they saw me like that."
-    "I don't know how long it would have taken me to get over it on my own."
-    show sasha sad at center, zoomAt(1.0, (640, 720))
-    "But in the end, Sasha takes the decision out of my hands."
-    show sasha at center, traveling(1.5, 0.5, (640, 1040))
-    "She corners me, making it pretty obvious that there's going to be no escape."
-    show sasha whining
-    sasha.say "Hey, [hero.name]!"
-    sasha.say "You've been keeping pretty quiet lately."
-    sasha.say "How are you holding up?"
-    show sasha sadsmile
-    "I try as best I can to look like I'm not thrown by the question."
-    "Shrugging and shaking my head, I offer the best answer I can manage."
-    mike.say "Ah..."
-    mike.say "I...I'm okay, Sasha."
-    mike.say "I mean, I've been better - obviously!"
-    mike.say "But, you know...I'm not too bad, all things considered."
-    show sasha sad
-    "Sasha looks at me as she wrinkles her nose and frowns."
-    "She seems to be anything but convinced by the act I'm putting on."
-    show sasha whining
-    sasha.say "Really, [hero.name]?"
-    sasha.say "Because you sound like you're babbling."
-    sasha.say "Also, you sure don't look okay."
-    sasha.say "And it's okay not to be okay."
-    sasha.say "You know that, right?"
-    show sasha sad
-    mike.say "I...I know, Sasha."
-    mike.say "I just feel like a fool."
-    mike.say "I feel like I should have known..."
-    show sasha normal at center, traveling(1.75, 0.5, (640, 1200))
-    "Sasha makes a dismissive noise and shakes her head at this."
-    show sasha shout
-    sasha.say "Forget feeling like that, [hero.name]."
-    sasha.say "If you were a girl, nobody would blame you."
-    sasha.say "It's no different, trust me."
-    show sasha vangry
-    sasha.say "That bitch attacked you - and you didn't ask for it to happen!"
-    show sasha shout
-    sasha.say "Then we helped out, because that's what friends do."
-    show sasha normal
-    mike.say "Thanks, Sasha."
-    mike.say "Thanks for being a friend."
-    show sasha shy at center, traveling(2.0, 0.5, (640, 1340))
-    "Rather than saying anything more, Sasha wraps her arms around me."
-    "I return the hug, enjoying the sensation of feeling her pressed against me."
-    "Sure, it's nice to be this close to a hot girl - especially one that's sane."
-    "But it's also a relief to know that she's a friend as well."
-    return
 
 label sasha_murder_talk_bree:
     "There was no way things were ever just going to go back to normal after what happened."

@@ -197,17 +197,7 @@ label smartphone_call(girl):
                 $ smart_room = girl.room
                 if smart_room != "None":
                     if girl.love >= 40:
-                        if smart_room in ['house'] and girl.id == "kylie":
-                            $ s = randint(1, 3)
-                            if s == 1:
-                                kylie.say "Looking at you from the window..."
-                                kylie.say "Kidding!"
-                                kylie.say "Who would do that..."
-                            elif s ==2:
-                                kylie.say "Totally not in front of your house."
-                            else:
-                                kylie.say "In my bed sleeping, where do you want me to be?"
-                        elif smart_room in ["amusementpark"]:
+                        if smart_room in ["amusementpark"]:
                             smartphone_girl.say "I am at the amusement park."
                         elif smart_room in ["apartmentbuilding", "house", "bedroom1", "bedroom2", "bedroom3", "bedroom4", "bedroom5", "bedroom6", "bathroom", "kitchen", "pool", "livingroom", "secondfloor", "attic"]:
                             smartphone_girl.say "I am at home."

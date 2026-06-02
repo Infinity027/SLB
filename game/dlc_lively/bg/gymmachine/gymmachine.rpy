@@ -15,15 +15,11 @@ init 5 python:
                 
                 if not aletta.flags.gone_forever and not game.flags.JudiciaryDelay and aletta.room == "gymmachine":
                     attr.add('aletta')
-                if not ayesha.flags.gone_forever and ayesha.room == "gymmachine":
-                    attr.add('ayesha')
                 if not camila.flags.gone_forever and camila.room == "gymmachine":
                     attr.add('camila')
-                if not kylie.flags.gone_forever and kylie.room == "gymmachine":
-                    attr.add('kylie')
             
             
-            if active_girl.id in ["aletta", "ayesha", "camila", "kylie"]:
+            if active_girl.id in ["aletta",  "camila",]:
                 if enable_debug_picker:
                     renpy.log(f"GymMachinePicker remove active/interact girl: {active_girl.id}")
                 attr.discard(active_girl.id)
@@ -33,7 +29,7 @@ init 5 python:
                 renpy.log(f"GymMachinePicker result: {attr}")
             return attr
 
-    Room.find("gymmachine").lively_npc = ["aletta", "ayesha", "camila", "kylie"]
+    Room.find("gymmachine").lively_npc = ["aletta", "camila"]
 
 init 6:
     layeredimage bg gymmachine:
@@ -53,10 +49,6 @@ init 6:
         attribute camila_lips null
         attribute camila_nose null
         attribute camila_tongue null
-        attribute kylie_clit null
-        attribute kylie_ears null
-        attribute kylie_nose null
-        attribute kylie_tongue null
 
 
         always "gymmachine"

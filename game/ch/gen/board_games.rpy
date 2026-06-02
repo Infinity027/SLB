@@ -11,7 +11,7 @@ init python:
                 attr.add("02")
             elif attr & {"harmony", "angela", "dwayne", "scottie", "ayesha", "kleio", "amy", "kat", "reona"}:
                 attr.add("03")
-            elif attr & {"anna", "ryan", "master", "danny", "kylie", "emma", "hanna", "cherie", "claire", "kiara"}:
+            elif attr & {"anna", "ryan", "master", "danny", "emma", "hanna", "cherie", "claire", "kiara"}:
                 attr.add("04")
             
             if enable_debug_picker:

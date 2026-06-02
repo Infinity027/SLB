@@ -49,7 +49,6 @@ label alexis_desire_3_male:
             mike.say "It's no wonder Kylie seems to waltz through life, Alexis."
             mike.say "Especially when you consider that she was the one of you that got all of the looks!"
             $ alexis.sub += 1
-            $ kylie.love += 1
     return
 
 label alexis_desire_4_male:

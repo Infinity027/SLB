@@ -285,45 +285,6 @@ init 1:
 
         group multiple auto variant fx
 
-    layeredimage camila handlick kylie:
-
-
-        always "camila_handlick_kylie_bg"
-
-
-        always "camila_handlick_kylie_kylie"
-        group eyes auto:
-            attribute sad default
-        group mouth auto if_not ["lick"]:
-            attribute cry default
-        group mouth_lick if_any ["lick"]:
-            attribute down default
-
-
-        group hand if_any ["camila"]:
-            attribute stand
-            attribute lick
-
-
-        attribute cum null
-        group cum auto if_all ["camila", "cum"]
-
-
-        group mouth_lick if_any ["lick"]:
-            attribute up
-
-
-        always "camila_handlick_kylie_bars"
-
-
-        group hand if_any ["camila"]:
-            attribute hold default
-
-
-        attribute naked null
-        group person auto:
-            attribute camila default
-        always "camila_handlick_kylie_mike_outfit" if_any ["mike"] if_not ["naked"]
 
     layeredimage camila cowgirl:
         attribute_function Pickers([DickPicker, PiercingsPicker, PregnancyPicker, CollarPicker, HaircutPicker, PubesPicker], npc=camila)

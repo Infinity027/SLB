@@ -9,7 +9,7 @@ init 1:
         group mc_outfit auto variant "mikemc" if_all "mikemc":
             attribute mcdate default
 
-        group mc_armsoutfit auto variant "mikemc_a" if_all "mikemc" if_any ["alexis", "angela", "audrey", "ayesha", "bree", "camila", "cassidy", "emma", "hanna", "harmony", "kleio", "kylie", "lavish", "lexi", "morgan", "palla", "samantha", "sasha", "shiori", "amy", "kat", "reona", "cherie", "claire", "kiara"]:
+        group mc_armsoutfit auto variant "mikemc_a" if_all "mikemc" if_any ["alexis", "angela", "audrey", "ayesha", "bree", "camila", "cassidy", "emma", "hanna", "harmony", "kleio", "lavish", "lexi", "morgan", "palla", "samantha", "sasha", "shiori", "amy", "kat", "reona", "cherie", "claire", "kiara"]:
             attribute mcdate default
         group mc_armsoutfit auto variant "mikemc_b" if_all "mikemc" if_any ["aletta"]:
             attribute mcdate default
@@ -24,7 +24,7 @@ init 1:
         group mc_outfit auto variant "breemc_pose01" if_all "breemc" if_not ["ayesha", "danny", "dwayne", "jack", "master", "mike", "ryan", "sasha", "scottie", "shawn",  "victor"]:
             attribute mcdate default
 
-        group mc_armsoutfit auto variant "breemc_pose01_a" if_all "breemc" if_any ["audrey", "camila", "cassidy", "emma", "hanna", "harmony", "kleio", "kylie", "lavish", "lexi", "morgan", "samantha", "shiori"]:
+        group mc_armsoutfit auto variant "breemc_pose01_a" if_all "breemc" if_any ["audrey", "camila", "cassidy", "emma", "hanna", "harmony", "kleio", "lavish", "lexi", "morgan", "samantha", "shiori"]:
             attribute mcdate default
         group mc_armsoutfit auto variant "breemc_pose01_b" if_all "breemc" if_any ["aletta", "alexis", "anna"]:
             attribute mcdate default
@@ -108,8 +108,6 @@ init 1:
         group necklaces auto if_not ["reona_collar"]
 
         always "dance_hat_camila_sluttydate" if_all ["camila_sluttydate"]
-        always "dance_kylie_basehair" if_all ["kylie"] if_not ["kylie_sluttydate"]
-        always "dance_kylie_sluttyhair" if_all ["kylie", "kylie_sluttydate"]
 
         group hairs auto if_not ["camila_halloween", "camila_sluttydate", "samantha_sexydate", "samantha_sluttydate"]
         group hairs auto variant "pose02" if_all ["minami"] if_not ["minami_date"]

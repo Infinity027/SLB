@@ -8,7 +8,7 @@ init 1:
 
 
         always:
-            if_any ["minami", "kylie", "emma", "bree", "lexi", "reona"] if_not "nonpc"
+            if_any ["minami", "emma", "bree", "lexi", "reona"] if_not "nonpc"
             "studywith_book"
 
 

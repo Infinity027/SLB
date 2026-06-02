@@ -682,20 +682,6 @@ init python:
     "quit": False,
     })
 
-    InteractEvent(**{
-    "name": "sam_murder_talk_sasha",
-    "label": "sam_murder_talk_sasha",
-    "do_once": True,
-    "conditions": [
-        PersonTarget(samantha,
-            IsActive(),
-            ),
-        PersonTarget("kylie",
-            IsFlag("killed", "sasha")
-            ),
-        ],
-    })
-
     Event(**{
     "name": "samantha_pregnant_request",
     "label": "samantha_pregnant_request",
