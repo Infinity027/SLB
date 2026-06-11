@@ -44,44 +44,26 @@ init python:
         "do_once": True,
         })
     
-    Event(**{
-        "name": "ayesha_teaser",
-        "label": "ayesha_teaser",
-        "conditions": [
-            IsDone("hanna_event_01"),
-            IsHour(10, 17),
-            IsDayOfWeek(1, 3, 5),
-            HeroTarget(
-                IsGender("male"),
-                HasRoomTag("gym"),
-                Not(IsFlag("ayeshateaser")),
-                IsFlag("gymmember"),
-                ),
-            ],
-        "priority": 500,
-        "do_once": True,
-        })
-    
-    Activity(**{
-        "name": "ayesha_teaser_2",
-        "display_name": "Go to Ayesha's show",
-        "label": "ayesha_teaser_2",
-        "duration": 0,
-        "conditions": [
-            IsDone("ayesha_teaser"),
-            HeroTarget(
-                IsGender("male"),
-                Not(OnDate()),
-                ),
-            IsDayOfWeek(6, 7),
-            IsHour(14, 18),
-            PersonTarget(bree,
-                Not(IsHidden())
-                ),
-            ],
-        "icon": "ayesha",
-        "do_once": True,
-        })
+    # Activity(**{
+    #     "name": "ayesha_teaser_2",
+    #     "display_name": "Go to Ayesha's show",
+    #     "label": "ayesha_teaser_2",
+    #     "duration": 0,
+    #     "conditions": [
+    #         IsDone("ayesha_teaser"),
+    #         HeroTarget(
+    #             IsGender("male"),
+    #             Not(OnDate()),
+    #             ),
+    #         IsDayOfWeek(6, 7),
+    #         IsHour(14, 18),
+    #         PersonTarget(bree,
+    #             Not(IsHidden())
+    #             ),
+    #         ],
+    #     "icon": "ayesha",
+    #     "do_once": True,
+    #     })
     
     Event(**{
         "name": "alexis_event_01",
@@ -1138,287 +1120,286 @@ label hanna_event_01:
     "Or, is she hiding something?"
     "Will it be a good idea to try to find out, I wonder as I finish up my set and take a swig of my water."
     "Maybe, just maybe..."
-    $ game.flags.ayeshateaser = TemporaryFlag(True, 2)
+    # $ game.flags.ayeshateaser = TemporaryFlag(True, 2)
     return
 
-label ayesha_teaser:
-    scene bg gym
-    "You always notice a new face at the gym, and for the most part, all they justify is a quick glance on account of their novelty."
-    "Okay, if it's a particularly cute girl or a guy that you're instantly jealous of."
-    "Then you might sneak a couple more glances when you think they're not looking."
-    "But on this occasion, I was quite literally stopped in my tracks by the sight of someone new."
-    "I tend to avoid the boxing ring and the mats where the meatheads and MMA freaks work out."
-    "Maybe it's just me, but there's not much in it for me watching a pair of angry, buzz-cut guys in Lycra shorts grinding on each other."
-    "So this means that when I walk by that part of the gym, I'm usually not really paying much attention."
-    "I can see that there are two people sparring in the ring right now."
-    "One's a regular that I vaguely recognise from among the other angry buzz-cut guys in shorts."
-    "The other's hidden by the first guy, and all I can see of them is that they're pretty much handing him his own ass in there!"
-    show ayesha normal
-    "It's only when I get further away that I can see the other person sparring is actually a girl."
-    "But what a girl!"
-    "She must be at least six feet in height and built like an amazon."
-    "Dressed in black Lycra shorts and a bra-top, her dark brown skin is slick with sweat from exertion, and her ebony braids whip back and forth as she moves."
-    "I watch transfixed, as she demolishes the formidable guy she's sparring with, taking him apart piece-by-piece."
-    hide ayesha
-    show hanna normal
-    if "hanna_event_02" in DONE:
-        hanna.say "Like watching a lioness toy with her next meal, isn't it?"
-        "I tear my eyes away from the action in the ring and see that Hanna's walked up beside me while I was distracted."
-        mike.say "Uh...yeah...that pretty much sums it up!"
-        "Hanna chuckles and shakes her head at my evident fascination."
-    else:
-        hanna.say "Like watching a lioness toy with her next meal, isn't it?"
-        "I tear my eyes away from the action in the ring and see that the girl from the treadmill has walked up beside me while I was distracted."
-        mike.say "Uh...yeah...that pretty much sums it up!"
-        "The girl chuckles and shakes her head at my evident fascination."
-    hanna.say "For the record, her name's Ayesha."
-    hanna.say "She only just started training here a week or two ago."
-    hanna.say "And word in the locker-room is that most of the beefcakes are already afraid of stepping into the ring with her!"
-    "I shake my head as I look back to see the guy in the ring go down under a flurry of blows."
-    "And then I gulp in genuine astonishment as I see Ayesha follow him down, sit astride his chest and begin to pummel him on the ring canvas."
-    mike.say "She's...she's quite something!"
-    mike.say "What is she - some kind of MMA fighter or martial artist, or something?"
-    if "hanna_event_02" in DONE:
-        "Hanna shrugs at the question, shaking her head again."
-    else:
-        "The girl shrugs at the question, shaking her head again."
-    hanna.say "I don't know about any of that stuff."
-    hanna.say "But someone that's had the privilege of being on the receiving end of her ground and pound told me that she's a wrestler."
-    mike.say "A wrestler?"
-    mike.say "Which kind - amateur or fake?"
-    if "hanna_event_02" in DONE:
-        "Hanna looks me in the eye before she answers, her expression becoming serious for a moment."
-    else:
-        "The girl looks me in the eye before she answers, her expression becoming serious for a moment."
-    hanna.say "The latter - but I wouldn't let her hear you call it that!"
-    "I shrug, sure that I can't possibly be overheard while Ayesha's still sparring."
-    mike.say "Fake then - strange when she looks so tough in there!"
-    hide hanna
-    if "hanna_event_02" in DONE:
-        "Hanna rolls her eyes at my dismissive comment and walks away, leaving me standing alone again."
-    else:
-        "The girl just rolls her eyes at my dismissive comment and walks away, leaving me standing alone again."
-    "I take a last look round the gym and turn to head for the showers."
-    ayesha.say "HEY, FUCK-FACE!"
-    show ayesha angry
-    "I turn around, an expression on my face that makes me look like I've been slapped hard with a wet fish."
-    ayesha.say "Yeah, you - don't stand there with that dumb look on your fucking face!"
-    ayesha.say "Who else am I gonna be shouting at, asshole?!?"
-    "I continue to gape silently as I see Ayesha striding towards me, pulling off her MMA gloves with a face like thunder."
-    ayesha.say "You're a little man with a real big mouth, you know that?"
-    "Oh shit - did she actually hear what I just said?"
-    ayesha.say "Where in the hell do you get off calling how I make a living fucking FAKE?!?"
-    "As if there's a need to underline the fact that she did hear me just now, Ayesha thumps me in the chest with the flat of her hand."
-    "I'm not prepared for the strength of the blow at all, and it sends me staggering back a couple of feet."
-    "The pain is pretty bad, but I feel like she's also knocked the air out of my lungs too."
-    "I just have enough time to see her advancing on me again and make up my mind as to what my next move should be."
-    menu:
-        "Stand up to her":
-            "I've been abused, verbally and physically, in front of the entire gym, which makes me see red."
-            "As Ayesha comes towards me, I pull myself up and meet her with all the force that I can muster."
-            mike.say "Back off, you muscle-bound bitch!"
-            "I make sure to get in her face as much as possible as I say this, trying to ignore the good few inches that she has on me in height."
-            mike.say "This is the twenty-first century, in case, being a throwback cave-woman, you hadn't noticed."
-            mike.say "Don't think for a second that I won't fight back if you pick a fight with me!"
-            show ayesha normal
-            "Though she doesn't back down one iota at this, I see a slight raise of an eyebrow and the hint of a smile from Ayesha."
-            ayesha.say "Is that so?"
-            ayesha.say "Well, maybe next time you think about running your dick-licker around me, you should keep it shut and see me in the ring instead?"
-            ayesha.say "Think about it, tough guy!"
-            hide ayesha
-            "And with that, she breezes past me towards the women's locker-room."
-            "I rub the back of my neck, puzzling over her sudden change in attitude."
-            "Was she really that mad, or was she just feeling me out to see if I'd stand up for myself?"
-        "Apologise":
-            "Ayesha looks so powerful and imposing as she towers over me that I can't help but cower away from her."
-            mike.say "Okay, okay...I'm sorry for what I said!"
-            mike.say "It was dumb of me, and I just didn't think...please don't hurt me!"
-            "I look at Ayesha from behind the shield of my own hands."
-            "And I'm surprised to see her angry expression soften as she looks at me."
-            mike.say "Please...I don't know any martial arts or wrestling stuff..."
-            show ayesha blush
-            ayesha.say "It's okay, I'm not going to hurt you."
-            ayesha.say "I was just...mad...that's all."
-            "As the anger leaves her face, I begin to see how beautiful Ayesha actually is up close."
-            "She has deep, dark eyes and a sensual mouth that's somehow a little sad in its aspect."
-            ayesha.say "You should keep comments like that to yourself, you know?"
-            "I nod hesitantly."
-            ayesha.say "Whatever you might think about wrestling, it's what I do to put food on the table, man."
-            ayesha.say "It might not be as legit as you like your fights to be, but it's fucking hard on the body."
-            "I nod furiously, and she nods once to acknowledge my own."
-            hide ayesha
-            "All of that said, she walks past me, towards the women's locker-room."
-    "Once I'm showered and changed, I hurry out of the gym, hoping not to bump into Ayesha a second time."
-    if "hanna_event_02" in DONE:
-        "But as I pass the reception desk, Hanna calls me over, waving something in her hand."
-    else:
-        "But as I pass the reception desk, the girl from before calls me over, waving something in her hand."
-    show hanna
-    hanna.say "Hey, Ayesha asked me to give you these!"
-    "I take what she's holding out to me, already dreading just what they might turn out to be."
-    hanna.say "It's tickets to her next wrestling show - front row as well."
-    hanna.say "I guess someone made an impression on our resident amazon, eh?"
-    if "hanna_event_02" in DONE:
-        "I can't help but groan, both at the look on Hanna's face and the prospect of seeing Ayesha wrestle."
-    else:
-        "I can't help but groan, both at the look on the girl's face and the prospect of seeing Ayesha wrestle."
-    "But do I really have a choice of whether to go along to the show or not?"
-    return
+# label ayesha_teaser:
+#     scene bg gym
+#     "You always notice a new face at the gym, and for the most part, all they justify is a quick glance on account of their novelty."
+#     "Okay, if it's a particularly cute girl or a guy that you're instantly jealous of."
+#     "Then you might sneak a couple more glances when you think they're not looking."
+#     "But on this occasion, I was quite literally stopped in my tracks by the sight of someone new."
+#     "I tend to avoid the boxing ring and the mats where the meatheads and MMA freaks work out."
+#     "Maybe it's just me, but there's not much in it for me watching a pair of angry, buzz-cut guys in Lycra shorts grinding on each other."
+#     "So this means that when I walk by that part of the gym, I'm usually not really paying much attention."
+#     "I can see that there are two people sparring in the ring right now."
+#     "One's a regular that I vaguely recognise from among the other angry buzz-cut guys in shorts."
+#     "The other's hidden by the first guy, and all I can see of them is that they're pretty much handing him his own ass in there!"
+#     show ayesha normal
+#     "It's only when I get further away that I can see the other person sparring is actually a girl."
+#     "But what a girl!"
+#     "She must be at least six feet in height and built like an amazon."
+#     "Dressed in black Lycra shorts and a bra-top, her dark brown skin is slick with sweat from exertion, and her ebony braids whip back and forth as she moves."
+#     "I watch transfixed, as she demolishes the formidable guy she's sparring with, taking him apart piece-by-piece."
+#     hide ayesha
+#     show hanna normal
+#     if "hanna_event_02" in DONE:
+#         hanna.say "Like watching a lioness toy with her next meal, isn't it?"
+#         "I tear my eyes away from the action in the ring and see that Hanna's walked up beside me while I was distracted."
+#         mike.say "Uh...yeah...that pretty much sums it up!"
+#         "Hanna chuckles and shakes her head at my evident fascination."
+#     else:
+#         hanna.say "Like watching a lioness toy with her next meal, isn't it?"
+#         "I tear my eyes away from the action in the ring and see that the girl from the treadmill has walked up beside me while I was distracted."
+#         mike.say "Uh...yeah...that pretty much sums it up!"
+#         "The girl chuckles and shakes her head at my evident fascination."
+#     hanna.say "For the record, her name's Ayesha."
+#     hanna.say "She only just started training here a week or two ago."
+#     hanna.say "And word in the locker-room is that most of the beefcakes are already afraid of stepping into the ring with her!"
+#     "I shake my head as I look back to see the guy in the ring go down under a flurry of blows."
+#     "And then I gulp in genuine astonishment as I see Ayesha follow him down, sit astride his chest and begin to pummel him on the ring canvas."
+#     mike.say "She's...she's quite something!"
+#     mike.say "What is she - some kind of MMA fighter or martial artist, or something?"
+#     if "hanna_event_02" in DONE:
+#         "Hanna shrugs at the question, shaking her head again."
+#     else:
+#         "The girl shrugs at the question, shaking her head again."
+#     hanna.say "I don't know about any of that stuff."
+#     hanna.say "But someone that's had the privilege of being on the receiving end of her ground and pound told me that she's a wrestler."
+#     mike.say "A wrestler?"
+#     mike.say "Which kind - amateur or fake?"
+#     if "hanna_event_02" in DONE:
+#         "Hanna looks me in the eye before she answers, her expression becoming serious for a moment."
+#     else:
+#         "The girl looks me in the eye before she answers, her expression becoming serious for a moment."
+#     hanna.say "The latter - but I wouldn't let her hear you call it that!"
+#     "I shrug, sure that I can't possibly be overheard while Ayesha's still sparring."
+#     mike.say "Fake then - strange when she looks so tough in there!"
+#     hide hanna
+#     if "hanna_event_02" in DONE:
+#         "Hanna rolls her eyes at my dismissive comment and walks away, leaving me standing alone again."
+#     else:
+#         "The girl just rolls her eyes at my dismissive comment and walks away, leaving me standing alone again."
+#     "I take a last look round the gym and turn to head for the showers."
+#     ayesha.say "HEY, FUCK-FACE!"
+#     show ayesha angry
+#     "I turn around, an expression on my face that makes me look like I've been slapped hard with a wet fish."
+#     ayesha.say "Yeah, you - don't stand there with that dumb look on your fucking face!"
+#     ayesha.say "Who else am I gonna be shouting at, asshole?!?"
+#     "I continue to gape silently as I see Ayesha striding towards me, pulling off her MMA gloves with a face like thunder."
+#     ayesha.say "You're a little man with a real big mouth, you know that?"
+#     "Oh shit - did she actually hear what I just said?"
+#     ayesha.say "Where in the hell do you get off calling how I make a living fucking FAKE?!?"
+#     "As if there's a need to underline the fact that she did hear me just now, Ayesha thumps me in the chest with the flat of her hand."
+#     "I'm not prepared for the strength of the blow at all, and it sends me staggering back a couple of feet."
+#     "The pain is pretty bad, but I feel like she's also knocked the air out of my lungs too."
+#     "I just have enough time to see her advancing on me again and make up my mind as to what my next move should be."
+#     menu:
+#         "Stand up to her":
+#             "I've been abused, verbally and physically, in front of the entire gym, which makes me see red."
+#             "As Ayesha comes towards me, I pull myself up and meet her with all the force that I can muster."
+#             mike.say "Back off, you muscle-bound bitch!"
+#             "I make sure to get in her face as much as possible as I say this, trying to ignore the good few inches that she has on me in height."
+#             mike.say "This is the twenty-first century, in case, being a throwback cave-woman, you hadn't noticed."
+#             mike.say "Don't think for a second that I won't fight back if you pick a fight with me!"
+#             show ayesha normal
+#             "Though she doesn't back down one iota at this, I see a slight raise of an eyebrow and the hint of a smile from Ayesha."
+#             ayesha.say "Is that so?"
+#             ayesha.say "Well, maybe next time you think about running your dick-licker around me, you should keep it shut and see me in the ring instead?"
+#             ayesha.say "Think about it, tough guy!"
+#             hide ayesha
+#             "And with that, she breezes past me towards the women's locker-room."
+#             "I rub the back of my neck, puzzling over her sudden change in attitude."
+#             "Was she really that mad, or was she just feeling me out to see if I'd stand up for myself?"
+#         "Apologise":
+#             "Ayesha looks so powerful and imposing as she towers over me that I can't help but cower away from her."
+#             mike.say "Okay, okay...I'm sorry for what I said!"
+#             mike.say "It was dumb of me, and I just didn't think...please don't hurt me!"
+#             "I look at Ayesha from behind the shield of my own hands."
+#             "And I'm surprised to see her angry expression soften as she looks at me."
+#             mike.say "Please...I don't know any martial arts or wrestling stuff..."
+#             show ayesha blush
+#             ayesha.say "It's okay, I'm not going to hurt you."
+#             ayesha.say "I was just...mad...that's all."
+#             "As the anger leaves her face, I begin to see how beautiful Ayesha actually is up close."
+#             "She has deep, dark eyes and a sensual mouth that's somehow a little sad in its aspect."
+#             ayesha.say "You should keep comments like that to yourself, you know?"
+#             "I nod hesitantly."
+#             ayesha.say "Whatever you might think about wrestling, it's what I do to put food on the table, man."
+#             ayesha.say "It might not be as legit as you like your fights to be, but it's fucking hard on the body."
+#             "I nod furiously, and she nods once to acknowledge my own."
+#             hide ayesha
+#             "All of that said, she walks past me, towards the women's locker-room."
+#     "Once I'm showered and changed, I hurry out of the gym, hoping not to bump into Ayesha a second time."
+#     if "hanna_event_02" in DONE:
+#         "But as I pass the reception desk, Hanna calls me over, waving something in her hand."
+#     else:
+#         "But as I pass the reception desk, the girl from before calls me over, waving something in her hand."
+#     show hanna
+#     hanna.say "Hey, Ayesha asked me to give you these!"
+#     "I take what she's holding out to me, already dreading just what they might turn out to be."
+#     hanna.say "It's tickets to her next wrestling show - front row as well."
+#     hanna.say "I guess someone made an impression on our resident amazon, eh?"
+#     if "hanna_event_02" in DONE:
+#         "I can't help but groan, both at the look on Hanna's face and the prospect of seeing Ayesha wrestle."
+#     else:
+#         "I can't help but groan, both at the look on the girl's face and the prospect of seeing Ayesha wrestle."
+#     "But do I really have a choice of whether to go along to the show or not?"
+#     return
 
-label ayesha_teaser_2:
-    scene bg gym empty
-    "I was nervous about the tickets that Ayesha gave to me to her wrestling show, and torn as to whether I should go along or not."
-    "The plus side was, of course, that the tickets were free and the show was happening at the same gym that I work out at."
-    "On the other hand, while I watched it as a kid, pro-wrestling's never really been my thing since I grew up and sort of became a responsible adult."
-    "And I'm still pretty intimidated by Ayesha in her own right."
-    "Add to that the theatrics and over-the-top trappings of wrestling, and it might just be too much for me to handle."
-    "But then I remembered that I had two tickets, and thus the ability to bring along a companion to make the whole thing that much easier to bear."
-    "My thoughts went immediately to Jack, not least because I knew that he was pretty into wrestling and fit the image I had in my head of a typical grapple fan too."
-    "The only problem was that didn't want to look like one by default too."
-    "Plus there was the fact I would have to listen to his encyclopedic and exhaustive knowledge of wrestling as well."
-    "Those two counts against him were enough to score a pin-fall against him and set me to looking for another potential companion instead."
-    "I was afraid that Sasha would just laugh in my face, so that left [bree.name] as the next name on my list."
-    "Selling it to her as a kind of performance art and theatre with added acrobatics and simulated combat seemed to do the trick."
-    "It's only when we arrive at the gym and find our seats in the front row that [bree.name] finally realises that I've not been strictly honest with her."
-    show bree casual
-    bree.say "Hey, that looks just like a wrestling ring right there!"
-    bree.say "And there's a hell of a lot of fat, sweaty neck-beards in wrestling t-shirts here too!"
-    bree.say "[hero.name], be honest - is this really a piece of experimental theatre?"
-    "I shrug and try to look like the whole thing is an amusing misunderstanding."
-    "But the look on [bree.name]'s face tells me I'm having little success."
-    mike.say "Okay, okay...it IS a wrestling show."
-    mike.say "So technically I did sort of tell you a lie."
-    "[bree.name] gives me the stare of death, easily wiping the already weak smile right off of my face."
-    mike.say "Sorry, okay - I just needed someone kind of normal to come with me to this thing."
-    bree.say "I guess I should be flattered to know that I qualify as at least 'kind of normal'!"
-    "I have to rescue this situation, and quickly - I can't let [bree.name] walk out and leave on my own after we've gotten this far."
-    mike.say "Look, [bree.name] - cards on the table, okay?"
-    "I hold up my hands up in a gesture of surrender."
-    "And I'm relieved to see her shake her head at first, but then nod in grudging agreement."
-    bree.say "You better make this good, [hero.name]!"
-    mike.say "Honestly, [bree.name] - there's this girl at the gym who's wrestling on the show tonight."
-    "[bree.name] looks instantly more interested at the mere mention of a woman being involved in tonight's proceedings."
-    bree.say "Oh, you mean like on that GLOW show?"
-    "Fate seems to have dropped a golden opportunity into my unsuspecting lap."
-    "And I don't hesitate to grab it with both hands, then hang on for dear life."
-    mike.say "Yes, exactly like that!"
-    "[bree.name] smiles and even claps her hands together a little in a show of delight."
-    bree.say "I LOVED that show - why didn't you say it was going to be like that from the start?"
-    "The truth is that I have literally no idea if there's going to be anything like the damn show happening here tonight."
-    "I don't follow wrestling and I didn't see GLOW either."
-    "But I'm not going to stop that from giving me an in with [bree.name] to get her interested keeping her buttocks on her folding seat for the duration."
-    bree.say "So, you were telling me about this girl from the gym?"
-    "Shit, I'd all but forgotten about explaining Ayesha to [bree.name], thinking that the connection with her wrestling TV show would be enough to seal it."
-    mike.say "Yeah...well, she kind of gave me the tickets to the show."
-    mike.say "And I was a bit scared to come along on my own..."
-    "I watch as [bree.name]'s eyes glaze over at my words, and she clasps her hands together with a sickly grin on her face."
-    bree.say "Aww, [hero.name] - that's so sweet!"
-    "I look at her with a look of almost sheer disbelief on my face."
-    mike.say "What...you really mean that?!?"
-    bree.say "Of course I do - she's desperate to have you come along and support her while she performs."
-    bree.say "And you're so embarrassed about seeing her again that you needed a friend to come along for moral support!"
-    bree.say "Seriously, it's like a plot from a romantic movie or something!"
-    "Oops, she thinks that this is some kind of fairytale, with Ayesha as the shy little princess."
-    "What's she going to think when she sees her for the first time and realises that she's more likely to grind my bones to make her bread?!?"
-    "But I can hopefully deal with that problem when it arises, so there's no point bringing it up here and now."
-    "The show starts a couple of moments later, mercifully cutting off the chance for [bree.name] to ask any more questions."
-    hide bree
-    "What follows is pretty much the kind of thing that I'd been expecting to see."
-    "Rock music blares from the PA system, and one after another, a steady stream of gaudily-dressed wrestlers parade to the ring and ply their trade."
-    "I soon find myself forgetting any misgivings I had as the over-the-top feel of it all actually starts to hook me and draw me in."
-    "[bree.name] and I are soon laughing at the comedy spots, clapping at the aerial feats and even booing and hurling abuse at the villains who taunt the crowd."
-    "The only fly in the ointment is that whenever a female wrestler appears, [bree.name] instantly coos over her and demands to know if the newcomer is the mysterious Ayesha."
-    "So when the last match of the show is announced, and a brooding thrash-metal track begins to play, I can see a look of confusion on [bree.name]'s face."
-    "This only becomes more pronounced as Ayesha's name is called over the PA and she strides out onto the stage like a conquering amazon."
-    show ayesha fight
-    "She's wearing yellow spandex with black stripes, a tiger's head on her belt and mask on her face completing the outfit."
-    "Ayesha plays the part to the full, raising her arms and slashing with her hands to imitate a big cat as she growls at the audience."
-    hide ayesha
-    show bree casual
-    "[bree.name] finally manages to tear her eyes away from Ayesha long enough to give me a shocked glance that speaks volumes."
-    bree.say "THAT'S HER?!?"
-    "The volume of the music saves [bree.name]'s shout from being audible to anyone other than me, and I nod in way of answer."
-    "I raise my eyebrows and shrug in a manner that I hope lets her know this is the reason that I'm intimidated by Ayesha, and not the cutesy reason she had concocted beforehand."
-    "Ayesha's opponent is a far smaller blonde oriental girl, dressed in grungy clothes and strutting around the ring with a cocky arrogance."
-    bree.say "It can't be her against that other girl - she'll use the poor thing as a tooth-pick!"
-    "I nod, unable to do anything but agree with [bree.name]'s assessment of the odds in the match that's about to begin."
-    hide bree
-    show ayesha fight
-    "But as soon as the bell rings, I remember the fact that we've both been conned into forgetting about pro-wrestling."
-    "This isn't a straight-up athletic competition, rather it's a choreographed performance that's supposed to pull at the audience's emotions."
-    "I'm proven right as Ayesha initially overwhelms her smaller foe and the audience instantly shows its disapproval."
-    "But then the smaller girl uses her quickness and smarts to duck and dodge, and the crowd's right there behind her."
-    "As I watch Ayesha in the ring, I begin to appreciate the subtlety with which she's delivering her performance."
-    "Far from being the monstrous villain that she's playing, I can start to see that she's taking great pains to keep the other girl safe while still making it look convincing."
-    "I even feel myself becoming concerned for Ayesha when it's her turn to be the one taking the beating."
-    "I never said she wasn't a striking woman to look at, but seeing her show vulnerability really brings home the fact that she's actually quite beautiful too."
-    "But a moment later, I'm snapped out of my contemplation by the action spilling out of the wrestling ring and onto the floor."
-    "Ayesha charges towards her opponent, only to have her pull down the top rope at the very last minute."
-    "She keeps on going, pitching out of the ring and tumbling into the front row."
-    "And, as fate would have it, she's falling straight towards me!"
-    menu:
-        "Protect yourself":
-            $ protect = False
-            hide ayesha
-            "I might be able to pull off being a gentleman and act all chivalrous in better circumstances than this."
-            "But the mere sight of Ayesha's substantial frame plummeting towards me means that I'm reacting on instinct alone."
-            "All that I can do is grab for [bree.name] in the seat next to me and do my best to drag her into Ayesha's path to save myself."
-            "Everything happens so fast that I'm sure she doesn't have the time to figure out what I just did."
-            "People are scattering and folding chairs are skittering across the floor, making everything a mass of confusion."
-            show ayesha fight
-            "I look up in time to see Ayesha laid almost face-down on the ground perhaps a few feet from where I ended up being thrown."
-            "For a moment, I can't see any trace of [bree.name] whatsoever."
-            "But then Ayesha pulls herself up onto her elbows, and I can see that the smaller girl is trapped beneath the amazon."
-            "[bree.name] looks petrified at first, but then a strange look seems to pass between them, one that I really can't make sense of at all."
-            "I watch as Ayesha gets up slowly, pulling [bree.name] to her feet with a gentleness that belies her hulking frame."
-            "[bree.name] allows herself to be drawn up, staring wide-eyed at the other woman the whole time."
-            "Neither of them speak, but I see Ayesha cup [bree.name]'s chin in her hand for a moment before turning and walking away."
-            "[bree.name]'s cheeks instantly flush a bright red at this, even more so when she sees me watching the silent exchange."
-            "What was all of that?"
-            "Did they just flirt with each other or something?!?"
-        "Protect [bree.name]" if hero.fitness >= 50:
-            $ protect = True
-            hide ayesha
-            "There's no time to even think about moving out of the way, yet everything seems to happen in slow motion."
-            "I look up and see Ayesha, silhouetted against the lights above the ring and baring down on me."
-            "She reminds me of an angel - not the flouncy pleasant kind, but the pissed-off avenging, wrath of God kind."
-            "As she comes closer, I wonder if this is really such a bad way to go."
-            "I mean, it has to beat being squashed by a truck or smeared across the tracks by an express train, right?"
-            "And then she actually hits me, at which point everything becomes a scrabbling mess of flying people and folding chairs."
-            "When the world finally begins to make some kind of sense again, the first thing I realise is that I have something big and heavy atop me."
-            "And of course, that would be Ayesha herself, laid with her back to my belly as she struggles to regain her own senses too."
-            "She seems to have no idea that she's atop me, and so when she begins to writhe and wriggle, I feel every single movement of her body against mine."
-            "Ayesha tries to turn onto her belly a couple of times before she finally succeeds."
-            "Her powerful limbs and firm muscles feel like they're giving me an impromptu and undisciplined massage the whole time."
-            "And when at last she's on her belly, she's also still on top of me, easily covering and pinning me to the ground."
-            "Before she hauls herself back to her feet, she looks down at me with eyes that are only now coming back to full awareness."
-            "I can't manage anything but a nervous grin, which makes her face melt into an amused and almost predatory smile."
-            "I've never been this close to Ayesha before, and I can't help noticing that her eyes are a deep, enchanting shade of brown."
-            "Her smile is all the more intriguing thanks to her exceptional stature and the strength she exudes."
-            "Trust me - this close up, it's almost like a pheromone that she exudes from her very pores!"
-            show ayesha fight curious
-            ayesha.say "Aww, don't be scared, man - I'm a real safe worker."
-            "I feel her hand on my groin as she starts to get to her feet, squeezing me so that I feel an exquisite pain."
-            show ayesha fight happy
-            ayesha.say "I won't hurt you - unless you really want me to..."
-            "And with that, she's up and climbing back into the ring to finish her match."
-    hide ayesha
-    "[bree.name] and I almost stagger out of the gym once the wrestling show is finally over."
-    "Both of us have gotten far more involved in the evening's proceedings than we ever intended to."
-    "Which means we're a little bruised and emotionally drained as we stagger home together."
-    "Neither of us says anything, but it's safe to assume Ayesha's as much on [bree.name]'s mind as she is mine."
-    if protect:
-        if not demo:
-            $ hero.smartphone_contacts.append("ayesha")
-        "It's then that I reach into my pocket and feel something that I don't recall putting in there myself."
-        "I discover a crumpled note, with a hastily-written name and a mobile number on it."
-        "Of course, the name is 'Ayesha', and I can guess that the number is hers as well."
-        "She must have shoved it into my pocket during the confusion when she fell out of the ring."
-        "I stare at the note for a moment, and then cram it back into my pocket before [bree.name] can see it too."
-    "I don't know if tonight has made me more or less afraid of Ayesha, and I don't know which would be the better of the two options either."
-    $ game.pass_time(1)
-    return
-
+# label ayesha_teaser_2:
+#     scene bg gym empty
+#     "I was nervous about the tickets that Ayesha gave to me to her wrestling show, and torn as to whether I should go along or not."
+#     "The plus side was, of course, that the tickets were free and the show was happening at the same gym that I work out at."
+#     "On the other hand, while I watched it as a kid, pro-wrestling's never really been my thing since I grew up and sort of became a responsible adult."
+#     "And I'm still pretty intimidated by Ayesha in her own right."
+#     "Add to that the theatrics and over-the-top trappings of wrestling, and it might just be too much for me to handle."
+#     "But then I remembered that I had two tickets, and thus the ability to bring along a companion to make the whole thing that much easier to bear."
+#     "My thoughts went immediately to Jack, not least because I knew that he was pretty into wrestling and fit the image I had in my head of a typical grapple fan too."
+#     "The only problem was that didn't want to look like one by default too."
+#     "Plus there was the fact I would have to listen to his encyclopedic and exhaustive knowledge of wrestling as well."
+#     "Those two counts against him were enough to score a pin-fall against him and set me to looking for another potential companion instead."
+#     "I was afraid that Sasha would just laugh in my face, so that left [bree.name] as the next name on my list."
+#     "Selling it to her as a kind of performance art and theatre with added acrobatics and simulated combat seemed to do the trick."
+#     "It's only when we arrive at the gym and find our seats in the front row that [bree.name] finally realises that I've not been strictly honest with her."
+#     show bree casual
+#     bree.say "Hey, that looks just like a wrestling ring right there!"
+#     bree.say "And there's a hell of a lot of fat, sweaty neck-beards in wrestling t-shirts here too!"
+#     bree.say "[hero.name], be honest - is this really a piece of experimental theatre?"
+#     "I shrug and try to look like the whole thing is an amusing misunderstanding."
+#     "But the look on [bree.name]'s face tells me I'm having little success."
+#     mike.say "Okay, okay...it IS a wrestling show."
+#     mike.say "So technically I did sort of tell you a lie."
+#     "[bree.name] gives me the stare of death, easily wiping the already weak smile right off of my face."
+#     mike.say "Sorry, okay - I just needed someone kind of normal to come with me to this thing."
+#     bree.say "I guess I should be flattered to know that I qualify as at least 'kind of normal'!"
+#     "I have to rescue this situation, and quickly - I can't let [bree.name] walk out and leave on my own after we've gotten this far."
+#     mike.say "Look, [bree.name] - cards on the table, okay?"
+#     "I hold up my hands up in a gesture of surrender."
+#     "And I'm relieved to see her shake her head at first, but then nod in grudging agreement."
+#     bree.say "You better make this good, [hero.name]!"
+#     mike.say "Honestly, [bree.name] - there's this girl at the gym who's wrestling on the show tonight."
+#     "[bree.name] looks instantly more interested at the mere mention of a woman being involved in tonight's proceedings."
+#     bree.say "Oh, you mean like on that GLOW show?"
+#     "Fate seems to have dropped a golden opportunity into my unsuspecting lap."
+#     "And I don't hesitate to grab it with both hands, then hang on for dear life."
+#     mike.say "Yes, exactly like that!"
+#     "[bree.name] smiles and even claps her hands together a little in a show of delight."
+#     bree.say "I LOVED that show - why didn't you say it was going to be like that from the start?"
+#     "The truth is that I have literally no idea if there's going to be anything like the damn show happening here tonight."
+#     "I don't follow wrestling and I didn't see GLOW either."
+#     "But I'm not going to stop that from giving me an in with [bree.name] to get her interested keeping her buttocks on her folding seat for the duration."
+#     bree.say "So, you were telling me about this girl from the gym?"
+#     "Shit, I'd all but forgotten about explaining Ayesha to [bree.name], thinking that the connection with her wrestling TV show would be enough to seal it."
+#     mike.say "Yeah...well, she kind of gave me the tickets to the show."
+#     mike.say "And I was a bit scared to come along on my own..."
+#     "I watch as [bree.name]'s eyes glaze over at my words, and she clasps her hands together with a sickly grin on her face."
+#     bree.say "Aww, [hero.name] - that's so sweet!"
+#     "I look at her with a look of almost sheer disbelief on my face."
+#     mike.say "What...you really mean that?!?"
+#     bree.say "Of course I do - she's desperate to have you come along and support her while she performs."
+#     bree.say "And you're so embarrassed about seeing her again that you needed a friend to come along for moral support!"
+#     bree.say "Seriously, it's like a plot from a romantic movie or something!"
+#     "Oops, she thinks that this is some kind of fairytale, with Ayesha as the shy little princess."
+#     "What's she going to think when she sees her for the first time and realises that she's more likely to grind my bones to make her bread?!?"
+#     "But I can hopefully deal with that problem when it arises, so there's no point bringing it up here and now."
+#     "The show starts a couple of moments later, mercifully cutting off the chance for [bree.name] to ask any more questions."
+#     hide bree
+#     "What follows is pretty much the kind of thing that I'd been expecting to see."
+#     "Rock music blares from the PA system, and one after another, a steady stream of gaudily-dressed wrestlers parade to the ring and ply their trade."
+#     "I soon find myself forgetting any misgivings I had as the over-the-top feel of it all actually starts to hook me and draw me in."
+#     "[bree.name] and I are soon laughing at the comedy spots, clapping at the aerial feats and even booing and hurling abuse at the villains who taunt the crowd."
+#     "The only fly in the ointment is that whenever a female wrestler appears, [bree.name] instantly coos over her and demands to know if the newcomer is the mysterious Ayesha."
+#     "So when the last match of the show is announced, and a brooding thrash-metal track begins to play, I can see a look of confusion on [bree.name]'s face."
+#     "This only becomes more pronounced as Ayesha's name is called over the PA and she strides out onto the stage like a conquering amazon."
+#     show ayesha fight
+#     "She's wearing yellow spandex with black stripes, a tiger's head on her belt and mask on her face completing the outfit."
+#     "Ayesha plays the part to the full, raising her arms and slashing with her hands to imitate a big cat as she growls at the audience."
+#     hide ayesha
+#     show bree casual
+#     "[bree.name] finally manages to tear her eyes away from Ayesha long enough to give me a shocked glance that speaks volumes."
+#     bree.say "THAT'S HER?!?"
+#     "The volume of the music saves [bree.name]'s shout from being audible to anyone other than me, and I nod in way of answer."
+#     "I raise my eyebrows and shrug in a manner that I hope lets her know this is the reason that I'm intimidated by Ayesha, and not the cutesy reason she had concocted beforehand."
+#     "Ayesha's opponent is a far smaller blonde oriental girl, dressed in grungy clothes and strutting around the ring with a cocky arrogance."
+#     bree.say "It can't be her against that other girl - she'll use the poor thing as a tooth-pick!"
+#     "I nod, unable to do anything but agree with [bree.name]'s assessment of the odds in the match that's about to begin."
+#     hide bree
+#     show ayesha fight
+#     "But as soon as the bell rings, I remember the fact that we've both been conned into forgetting about pro-wrestling."
+#     "This isn't a straight-up athletic competition, rather it's a choreographed performance that's supposed to pull at the audience's emotions."
+#     "I'm proven right as Ayesha initially overwhelms her smaller foe and the audience instantly shows its disapproval."
+#     "But then the smaller girl uses her quickness and smarts to duck and dodge, and the crowd's right there behind her."
+#     "As I watch Ayesha in the ring, I begin to appreciate the subtlety with which she's delivering her performance."
+#     "Far from being the monstrous villain that she's playing, I can start to see that she's taking great pains to keep the other girl safe while still making it look convincing."
+#     "I even feel myself becoming concerned for Ayesha when it's her turn to be the one taking the beating."
+#     "I never said she wasn't a striking woman to look at, but seeing her show vulnerability really brings home the fact that she's actually quite beautiful too."
+#     "But a moment later, I'm snapped out of my contemplation by the action spilling out of the wrestling ring and onto the floor."
+#     "Ayesha charges towards her opponent, only to have her pull down the top rope at the very last minute."
+#     "She keeps on going, pitching out of the ring and tumbling into the front row."
+#     "And, as fate would have it, she's falling straight towards me!"
+#     menu:
+#         "Protect yourself":
+#             $ protect = False
+#             hide ayesha
+#             "I might be able to pull off being a gentleman and act all chivalrous in better circumstances than this."
+#             "But the mere sight of Ayesha's substantial frame plummeting towards me means that I'm reacting on instinct alone."
+#             "All that I can do is grab for [bree.name] in the seat next to me and do my best to drag her into Ayesha's path to save myself."
+#             "Everything happens so fast that I'm sure she doesn't have the time to figure out what I just did."
+#             "People are scattering and folding chairs are skittering across the floor, making everything a mass of confusion."
+#             show ayesha fight
+#             "I look up in time to see Ayesha laid almost face-down on the ground perhaps a few feet from where I ended up being thrown."
+#             "For a moment, I can't see any trace of [bree.name] whatsoever."
+#             "But then Ayesha pulls herself up onto her elbows, and I can see that the smaller girl is trapped beneath the amazon."
+#             "[bree.name] looks petrified at first, but then a strange look seems to pass between them, one that I really can't make sense of at all."
+#             "I watch as Ayesha gets up slowly, pulling [bree.name] to her feet with a gentleness that belies her hulking frame."
+#             "[bree.name] allows herself to be drawn up, staring wide-eyed at the other woman the whole time."
+#             "Neither of them speak, but I see Ayesha cup [bree.name]'s chin in her hand for a moment before turning and walking away."
+#             "[bree.name]'s cheeks instantly flush a bright red at this, even more so when she sees me watching the silent exchange."
+#             "What was all of that?"
+#             "Did they just flirt with each other or something?!?"
+#         "Protect [bree.name]" if hero.fitness >= 50:
+#             $ protect = True
+#             hide ayesha
+#             "There's no time to even think about moving out of the way, yet everything seems to happen in slow motion."
+#             "I look up and see Ayesha, silhouetted against the lights above the ring and baring down on me."
+#             "She reminds me of an angel - not the flouncy pleasant kind, but the pissed-off avenging, wrath of God kind."
+#             "As she comes closer, I wonder if this is really such a bad way to go."
+#             "I mean, it has to beat being squashed by a truck or smeared across the tracks by an express train, right?"
+#             "And then she actually hits me, at which point everything becomes a scrabbling mess of flying people and folding chairs."
+#             "When the world finally begins to make some kind of sense again, the first thing I realise is that I have something big and heavy atop me."
+#             "And of course, that would be Ayesha herself, laid with her back to my belly as she struggles to regain her own senses too."
+#             "She seems to have no idea that she's atop me, and so when she begins to writhe and wriggle, I feel every single movement of her body against mine."
+#             "Ayesha tries to turn onto her belly a couple of times before she finally succeeds."
+#             "Her powerful limbs and firm muscles feel like they're giving me an impromptu and undisciplined massage the whole time."
+#             "And when at last she's on her belly, she's also still on top of me, easily covering and pinning me to the ground."
+#             "Before she hauls herself back to her feet, she looks down at me with eyes that are only now coming back to full awareness."
+#             "I can't manage anything but a nervous grin, which makes her face melt into an amused and almost predatory smile."
+#             "I've never been this close to Ayesha before, and I can't help noticing that her eyes are a deep, enchanting shade of brown."
+#             "Her smile is all the more intriguing thanks to her exceptional stature and the strength she exudes."
+#             "Trust me - this close up, it's almost like a pheromone that she exudes from her very pores!"
+#             show ayesha fight curious
+#             ayesha.say "Aww, don't be scared, man - I'm a real safe worker."
+#             "I feel her hand on my groin as she starts to get to her feet, squeezing me so that I feel an exquisite pain."
+#             show ayesha fight happy
+#             ayesha.say "I won't hurt you - unless you really want me to..."
+#             "And with that, she's up and climbing back into the ring to finish her match."
+#     hide ayesha
+#     "[bree.name] and I almost stagger out of the gym once the wrestling show is finally over."
+#     "Both of us have gotten far more involved in the evening's proceedings than we ever intended to."
+#     "Which means we're a little bruised and emotionally drained as we stagger home together."
+#     "Neither of us says anything, but it's safe to assume Ayesha's as much on [bree.name]'s mind as she is mine."
+#     if protect:
+#         if not demo:
+#             $ hero.smartphone_contacts.append("ayesha")
+#         "It's then that I reach into my pocket and feel something that I don't recall putting in there myself."
+#         "I discover a crumpled note, with a hastily-written name and a mobile number on it."
+#         "Of course, the name is 'Ayesha', and I can guess that the number is hers as well."
+#         "She must have shoved it into my pocket during the confusion when she fell out of the ring."
+#         "I stare at the note for a moment, and then cram it back into my pocket before [bree.name] can see it too."
+#     "I don't know if tonight has made me more or less afraid of Ayesha, and I don't know which would be the better of the two options either."
+#     $ game.pass_time(1)
+#     return
 
 
 label samantha_event_01:

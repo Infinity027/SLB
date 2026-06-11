@@ -490,22 +490,22 @@ init python:
     "quit": False,
     })
 
-    InteractEvent(**{
-    "name": "kleio_event_talk_murder",
-    "label": "kleio_event_talk_murder",
-    "priority": 500,
-    "conditions": [
-        PersonTarget(kleio,
-            IsActive(),
-            ),
-        PersonTarget(kylie,
-            IsFlag("killed", "sasha"),
-            ),
-        ],
-    "clothes": "casual",
-    "music": "music/roa_music/horizon.ogg",
-    "do_once": True,
-    })
+    # InteractEvent(**{
+    # "name": "kleio_event_talk_murder",
+    # "label": "kleio_event_talk_murder",
+    # "priority": 500,
+    # "conditions": [
+    #     PersonTarget(kleio,
+    #         IsActive(),
+    #         ),
+    #     PersonTarget(kylie,
+    #         IsFlag("killed", "sasha"),
+    #         ),
+    #     ],
+    # "clothes": "casual",
+    # "music": "music/roa_music/horizon.ogg",
+    # "do_once": True,
+    # })
 
     Event(**{
     "name": "kleio_meet_bree",
@@ -3070,14 +3070,9 @@ label kleio_event_talk_murder:
     kleio.say "Oh hell no!"
     kleio.say "Don't beat yourself up, man!"
     kleio.say "There's no way you could have known!"
-    if kylie.flags.rape == True:
-        kleio.say "And she assaulted you too."
-        kleio.say "That's wrong, no matter that she's a woman and you're a man."
-        kleio.say "You shouldn't feel guilty about it."
-    else:
-        kleio.say "Listen, we've all been there."
-        kleio.say "We've all put our metaphorical dicks in crazy!"
-        kleio.say "When you're into someone, you don't see the warning signs."
+    kleio.say "Listen, we've all been there."
+    kleio.say "We've all put our metaphorical dicks in crazy!"
+    kleio.say "When you're into someone, you don't see the warning signs."
     "Of all the people that I know, I never thought I'd hear this from Kleio."
     "Sure, it's delivered in her usual, in your face style."
     "But I can hear the genuine emotion in her voice as she speaks to me."

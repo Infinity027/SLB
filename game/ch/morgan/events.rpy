@@ -357,17 +357,9 @@ init python:
     "priority": 1500,
     "label": "morgan_react_kylie_sentence",
     "conditions": [
-        IsNotDone('kylie_trial_3', 'kylie_trial_3_missed'),
         IsDone("morgan_event_03"),
-        Or(
-            "'kylie_trial_2' in DONE and DONE['kylie_trial_2'] + 7 >= game.days_played",
-            "'kylie_trial_2_missed' in DONE and DONE['kylie_trial_2_missed'] + 7 >= game.days_played",
-            ),
         HeroTarget(
             IsGender("male"),
-            ),
-        PersonTarget(kylie,
-            IsFlag("trial_verdict", "tried_but_guilty"),
             ),
         PersonTarget(morgan,
             IsPresent(),
@@ -547,104 +539,7 @@ label morgan_murder_talk:
     mike.say "It's fine, Morgan..."
     mike.say "I mean, I'm not back to one hundred percent yet."
     mike.say "But I'm getting there, one step at a time."
-    if kylie.flags.rape and (not kylie.flags.killed == 'bree' and not kylie.flags.killed == 'sasha'):
-        show morgan sadsmile
-        "Morgan nods at this."
-        "But I can see that there's more she wants to say."
-        "And it doesn't take long for the words to come flooding out of her."
-        morgan.say "I am so glad that bitch is behind bars!"
-        morgan.say "They really need to throw away the key too!"
-        if morgan.male >= 66:
-            morgan.say "I just wish I'd been here at the time."
-            morgan.say "I'd have kicked her crazy ass!"
-        elif morgan.male >= 33:
-            morgan.say "I just wish I'd seen it in her sooner."
-            morgan.say "Like, maybe I could have stepped in and actually done something?"
-        else:
-            morgan.say "I knew that I shouldn't have let you out of my sight."
-            morgan.say "That I should never have let you be alone with her!"
-        show morgan sad
-        "I know Morgan well enough to be aware that she means what she says."
-        "And the sentiment that she's trying to express makes me feel warm inside."
-        "But all the same, I feel like I have to shake my head."
-        "That and wave away her protestations."
-        mike.say "I'm kind of glad that you didn't, Morgan."
-        mike.say "Because that way Kylie might have hurt you too."
-        mike.say "I'd much rather have you safe and with me now."
-        mike.say "Because it's now that I need friends like you."
-        "My words seem to have an instant effect on Morgan."
-        "And I could swear that she's welling up in front of me."
-        "That emotion's going to get the better of her and she might actually start crying."
-        "In the end she manages to stay in control of herself."
-        "But she still leans her head on my shoulder, letting out a huge sigh as she does so."
-    elif not kylie.flags.rape and (kylie.flags.killed == 'bree' or kylie.flags.killed == 'sasha'):
-        show morgan sadsmile
-        "Morgan nods at this."
-        "But I can see that there's more she wants to say."
-        "And it doesn't take long for the words to come flooding out of her."
-        show morgan sad
-        morgan.say "I am so glad that bitch is behind bars!"
-        morgan.say "They really need to throw away the key too!"
-        show fx exclamation
-        if kylie.flags.killed == 'bree':
-            morgan.say "How could she do that to poor Bree?!?"
-        elif kylie.flags.killed == 'sasha':
-            morgan.say "How could she do that to poor Sasha?!?"
-        if morgan.male >= 66:
-            morgan.say "I just wish I'd been here at the time."
-            morgan.say "I'd have kicked her crazy ass!"
-        elif morgan.male >= 33:
-            morgan.say "I just wish I'd seen it in her sooner."
-            morgan.say "Like, maybe I could have stepped in and actually done something?"
-        else:
-            morgan.say "I knew that I shouldn't have let you out of my sight."
-            morgan.say "That I should never have let you guys be alone with her!"
-        mike.say "I'm kind of glad that you didn't, Morgan."
-        mike.say "Because that way Kylie might have hurt you too."
-        mike.say "I'd much rather have you safe and with me now."
-        mike.say "Because it's now that I need friends like you."
-        "My words seem to have an instant effect on Morgan."
-        "And I could swear that she's welling up in front of me."
-        "That emotion's going to get the better of her and she might actually start crying."
-        "In the end she manages to stay in control of herself."
-        "But she still leans her head on my shoulder, letting out a huge sigh as she does so."
-    elif kylie.flags.rape and (kylie.flags.killed == 'bree' or kylie.flags.killed == 'sasha'):
-        show morgan sadsmile
-        "Morgan nods at this."
-        "But I can see that there's more she wants to say."
-        "And it doesn't take long for the words to come flooding out of her."
-        show morgan sad
-        morgan.say "I am so glad that bitch is behind bars!"
-        morgan.say "They really need to throw away the key too!"
-        morgan.say "My god - what she did too you!"
-        show fx exclamation
-        if kylie.flags.killed == 'bree':
-            morgan.say "How could she do that to poor Bree?!?"
-        elif kylie.flags.killed == 'sasha':
-            morgan.say "How could she do that to poor Sasha?!?"
-        if morgan.male >= 66:
-            morgan.say "I just wish I'd been here at the time."
-            morgan.say "I'd have kicked her crazy ass!"
-        elif morgan.male >= 33:
-            morgan.say "I just wish I'd seen it in her sooner."
-            morgan.say "Like, maybe I could have stepped in and actually done something?"
-        else:
-            morgan.say "I knew that I shouldn't have let you out of my sight."
-            morgan.say "That I should never have let you be alone with her!"
-        show morgan sadsmile
-        "I know Morgan well enough to be aware that she means what she says."
-        "And the sentiment that she's trying to express makes me feel warm inside."
-        "But all the same, I feel like I have to shake my head."
-        "That and wave away her protestations."
-        mike.say "I'm kind of glad that you didn't, Morgan."
-        mike.say "Because that way Kylie might have hurt you too."
-        mike.say "I'd much rather have you safe and with me now."
-        mike.say "Because it's now that I need friends like you."
-        "My words seem to have an instant effect on Morgan."
-        "And I could swear that she's welling up in front of me."
-        "That emotion's going to get the better of her and she might actually start crying."
-        "In the end she manages to stay in control of herself."
-        "But she still leans her head on my shoulder, letting out a huge sigh as she does so."
+    
     show morgan normal
     "The sensation of her doing so feels almost as good as the hug did."
     "And I can't resist putting my head atop hers a few seconds later."
@@ -2062,22 +1957,6 @@ label morgan_event_01:
             "I can't help staring at her for a moment, as I'm not sure either why she's laughing or why Morgan's blushing."
             "I look at Alexis, hoping for some help."
             "But I see that she's looking at me in an odd way too."
-        elif date_girl == kylie:
-            "Morgan shifts uncomfortably, even more so when Kylie steps up to my side and nudges me in the elbow."
-            show kylie happy
-            kylie.say "Oh...hi."
-            show kylie normal
-            mike.say "Oh, right - Morgan, you remember Kylie?"
-            mike.say "She's Alexis's little sister, from school?"
-            mike.say "I used to date Alexis, and now...well, I guess I'm dating her!"
-            mike.say "Kylie, you remember Morgan, don't you?"
-            mike.say "He's one of the guys I used to hang out with at school."
-            show morgan casual blush
-            "For some odd reason, this statement seems to embarrass Morgan, who flushes red and begins to say something."
-            "The words are drowned out, however, as a girl hovering close by (who I now realise must be Morgan's own date) suddenly starts chuckling loudly."
-            "I can't help staring at her for a moment, as I'm not sure either why she's laughing or why Morgan's blushing."
-            "I look at Kylie, hoping for some help."
-            "But I see that she's looking at me in an odd way too."
         else:
             "Morgan shifts uncomfortably, even more so when [date_girl.name] steps up to my side and nudges me in the elbow."
             mike.say "Oh, right - Morgan, this is [date_girl.name]."
@@ -2242,35 +2121,7 @@ label morgan_event_01:
             show alexis at dark
             with dissolve
             "With that, the lights in the theatre go down and the film begins."
-        elif date_girl == kylie:
-            scene bg cinemaroom
-            with fade
-            show kylie at center, zoomAt(1.25, (640, 880)) with easeinleft
-            "As we walk off and find the screen where our film is being shown, I find myself talking about Morgan to Kylie."
-            "Most likely I'm unconsciously trying to distance myself from the memory of his annoying date with more agreeable ones about Morgan instead."
-            mike.say "I can't believe we just bumped into that guy at random."
-            mike.say "It's been years since I saw him last."
-            show kylie stuned
-            "Every time I make a statement about Morgan, Kylie seems to look at me in a strange manner."
-            "It's almost like I think that I'm speaking in English, but something is a little off when she hears it come out of my mouth."
-            mike.say "Hey, look...what's up?"
-            show kylie surprised
-            kylie.say "What do you mean?"
-            show kylie normal
-            mike.say "Every time I mention Morgan or something about the guy, you look at me like I have steaming turds hanging out of my mouth!"
-            show kylie happy
-            kylie.say "We are talking about the Morgan in the lobby, right?"
-            show kylie normal
-            "I shrug my shoulders and shake my head, not knowing what she means."
-            show kylie surprised
-            kylie.say "You mean you really don't get it?"
-            show kylie happy
-            kylie.say "Oh dear!"
-            show kylie normal
-            show bg cinemaroom at dark
-            show kylie at dark
-            with dissolve
-            "With that, the lights in the theatre go down and the film begins."
+
         elif date_girl == kleio:
             show kleio at center, zoomAt(1.25, (640, 880)) with easeinright
             "I'm still shaking my head when Kleio appears by my side."

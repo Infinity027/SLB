@@ -1,26 +1,94 @@
 ﻿I'm sorry, but an uncaught exception occurred.
+/home/asim/store/renpy-8.5.2-sdk/Manila_Show/game/images/beach/beach006.1.jpg
+While running game code:
+  File "game/cl/class_story.rpy", line 579, in self_test
+    eval(c, locals=locals())
+    ~~~~^^^^^^^^^^^^^^^^^^^^
+NameError: name 'kylie' is not defined
 
-While loading the script.
-UnboundLocalError: cannot access local variable 'lastfn' where it is not associated with a value
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "game/start.rpy", line 1228, in script call
+    call enter_room from _call_enter_room
+  File "game/cl/labels_room.rpy", line 43, in script call
+    call event_do (event) from _call_event_do_3
+  File "game/cl/labels_events.rpy", line 19, in script call
+    call expression do_event.label from _call_expression_514
+  File "game/ch/kleio/events.rpy", line 968, in script call
+    hide kleio
+  File "game/updates.rpy", line 267, in after_load_callback
+    storytracker.self_test()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "game/cl/class_story.rpy", line 132, in self_test
+    story.self_test()
+    ~~~~~~~~~~~~~~~^^
+  File "game/cl/class_story.rpy", line 496, in self_test
+    step.self_test()
+    ~~~~~~~~~~~~~~^^
+  File "game/cl/class_story.rpy", line 494, in self_test
+    StoryConditions.self_test(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "game/cl/class_story.rpy", line 582, in self_test
+    raise Exception("Error in condition", self.id, c, e)
+Exception: ('Error in condition', 'camila.camila_prison_1', 'kylie.flags.schedule == "jail"', NameError("name 'kylie' is not defined"))
 
 -- Full Traceback ------------------------------------------------------------
 
 Traceback (most recent call last):
-  File "renpy/bootstrap.py", line 401, in bootstrap
-    renpy.main.main()
+  File "game/cl/class_story.rpy", line 579, in self_test
+    eval(c, locals=locals())
+    ~~~~^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1305, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1298, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<none>", line 1, in <module>
+NameError: name 'kylie' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "game/start.rpy", line 1228, in script call
+    call enter_room from _call_enter_room
+  File "game/cl/labels_room.rpy", line 43, in script call
+    call event_do (event) from _call_event_do_3
+  File "game/cl/labels_events.rpy", line 19, in script call
+    call expression do_event.label from _call_expression_514
+  File "game/ch/kleio/events.rpy", line 968, in script call
+    hide kleio
+  File "renpy/common/00start.rpy", line 114, in script
+    python hide:
+  File "renpy/ast.py", line 1187, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1273, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/common/00start.rpy", line 114, in <module>
+    python hide:
+  File "renpy/common/00start.rpy", line 117, in _execute_python_hide
+    i()
+    ~^^
+  File "game/updates.rpy", line 267, in after_load_callback
+    storytracker.self_test()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "game/cl/class_story.rpy", line 132, in self_test
+    story.self_test()
     ~~~~~~~~~~~~~~~^^
-  File "renpy/main.py", line 432, in main
-    renpy.game.script.load_script()  # sets renpy.game.script.
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^                           
-  File "renpy/script.py", line 456, in load_script
-    self.load_appropriate_file(".rpyc", ["_ren.py", ".rpy"], dir, fn, initcode)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/script.py", line 1071, in load_appropriate_file
-    raise Exception("Could not load file %s." % lastfn)  # type: ignore
-                                                ^^^^^^                 
-UnboundLocalError: cannot access local variable 'lastfn' where it is not associated with a value
+  File "game/cl/class_story.rpy", line 496, in self_test
+    step.self_test()
+    ~~~~~~~~~~~~~~^^
+  File "game/cl/class_story.rpy", line 494, in self_test
+    StoryConditions.self_test(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "game/cl/class_story.rpy", line 582, in self_test
+    raise Exception("Error in condition", self.id, c, e)
+Exception: ('Error in condition', 'camila.camila_prison_1', 'kylie.flags.schedule == "jail"', NameError("name 'kylie' is not defined"))
 
 Linux-6.17.0-23-generic-x86_64-with-glibc2.39 x86_64
 Ren'Py 8.5.2.26010301
- 
-Mon Jun  1 17:47:33 2026
+Love & Sex : Second Base - 26.4.0c 26.4.0c
+Wed Jun  3 21:23:46 2026

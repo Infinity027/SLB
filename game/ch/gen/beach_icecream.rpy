@@ -9,7 +9,7 @@ init python:
                     attr.discard("02")
                     attr.add("01")
             elif "breemc" in attr:
-                if {"angela", "ayesha", "lexi", "sasha"} & attr:
+                if {"angela", "lexi", "sasha"} & attr:
                     attr.discard("01")
                     attr.add("02")
                 else:

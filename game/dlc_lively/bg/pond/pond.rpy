@@ -15,12 +15,8 @@ init 5 python:
                 
                 if not anna.flags.gone_forever and anna.room == "pond":
                     attr.add('anna')
-                if not ayesha.flags.gone_forever and ayesha.room == "pond":
-                    attr.add('ayesha')
                 if not hanna.flags.gone_forever and hanna.room == "pond":
                     attr.add('hanna')
-                if not kylie.flags.gone_forever and kylie.room == "pond":
-                    attr.add('kylie')
                 if not morgan.flags.gone_forever and morgan.room == "pond":
                     attr.add('morgan')
                 if not reona.flags.gone_forever and reona.room == "pond":
@@ -29,7 +25,7 @@ init 5 python:
                     attr.add('samantha')
             
             
-            if active_girl.id in ["anna", "ayesha", "hanna", "kylie", "morgan", "reona", "samantha"]:
+            if active_girl.id in ["anna", "hanna", "morgan", "reona", "samantha"]:
                 if enable_debug_picker:
                     renpy.log(f"PondPicker remove active/interact girl: {active_girl.id}")
                 attr.discard(active_girl.id)
@@ -39,7 +35,7 @@ init 5 python:
                 renpy.log(f"PondPicker result: {attr}")
             return attr
 
-    Room.find("pond").lively_npc = ["anna", "ayesha", "hanna", "kylie", "morgan", "reona", "samantha"]
+    Room.find("pond").lively_npc = ["anna", "hanna", "morgan", "reona", "samantha"]
 
 init 6:
     layeredimage bg pond:
@@ -52,17 +48,9 @@ init 6:
         attribute anna_ears null
         attribute anna_nose null
         attribute anna_tongue null
-        attribute ayesha_casual null
-        attribute ayesha_clit null
-        attribute ayesha_nose null
-        attribute ayesha_tongue null
         attribute hanna_armpits null
         attribute hanna_nose null
         attribute hanna_tongue null
-        attribute kylie_casual null
-        attribute kylie_ears null
-        attribute kylie_nose null
-        attribute kylie_tongue null
         attribute morgan_clit null
         attribute morgan_tongue null
         attribute reona_ears null
@@ -106,18 +94,6 @@ init 6:
         group morgan_top auto variant preg when morgan and morgan_pregnant
         group morgan_hair auto when morgan
 
-
-        attribute kylie
-        attribute kylie_collar when kylie
-        attribute kylie_pregnant when kylie
-        group multiple auto variant kylie_piercings when kylie
-        group kylie_bot auto variant nopreg when kylie and not kylie_pregnant
-        group kylie_bot auto variant preg when kylie and kylie_pregnant
-        group kylie_top auto variant nopreg when kylie and not kylie_pregnant
-        group kylie_top auto variant preg when kylie and kylie_pregnant
-        attribute kylie_nohaircut when kylie
-
-
         attribute anna
         attribute anna_collar when anna
         attribute anna_pregnant when anna
@@ -127,17 +103,6 @@ init 6:
         group anna_top auto variant nopreg when anna and not anna_pregnant
         group anna_top auto variant preg when anna and anna_pregnant
         attribute anna_nohaircut when anna
-
-
-        attribute ayesha
-        attribute ayesha_pregnant when ayesha
-        group multiple auto variant ayesha_piercings when ayesha
-        group ayesha_bot auto variant nopreg when ayesha and not ayesha_pregnant
-        group ayesha_bot auto variant preg when ayesha and ayesha_pregnant
-        group ayesha_top auto variant nopreg when ayesha and not ayesha_pregnant
-        group ayesha_top auto variant preg when ayesha and ayesha_pregnant
-        attribute ayesha_collar when ayesha
-        attribute ayesha_nohaircut when ayesha
 
 
         attribute hanna

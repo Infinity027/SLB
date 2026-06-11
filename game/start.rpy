@@ -1219,10 +1219,6 @@ label start(start_plus=False):
         game.room = "map"
     call intro (start_plus) from _call_intro
 
-    # AYESHA REMOVED — make her permanently "gone forever" at game start: hidden
-    # everywhere, dropped from all harems (taming/sporty/etc.), phone contact removed,
-    # stats zeroed. Her files stay in place so the 1000+ `ayesha` references never break.
-    # To restore Ayesha, delete this python block.
     python:
         _ayesha = Person.find("ayesha")
         if _ayesha and not _ayesha.is_gone_forever:

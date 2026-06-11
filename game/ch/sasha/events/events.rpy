@@ -62,19 +62,19 @@ init python:
     "once_hour": False,
     })
 
-    InteractEvent(**{
-    "name": "sasha_murder_talk_bree",
-    "label": "sasha_murder_talk_bree",
-    "do_once": True,
-    "conditions": [
-        PersonTarget(sasha,
-            IsActive(),
-            ),
-        PersonTarget("kylie",
-            IsFlag("killed", "bree")
-            ),
-        ],
-    })
+    # InteractEvent(**{
+    # "name": "sasha_murder_talk_bree",
+    # "label": "sasha_murder_talk_bree",
+    # "do_once": True,
+    # "conditions": [
+    #     PersonTarget(sasha,
+    #         IsActive(),
+    #         ),
+    #     PersonTarget("kylie",
+    #         IsFlag("killed", "bree")
+    #         ),
+    #     ],
+    # })
 
     Event(**{
     "name": "sasha_bree_collar_reaction",
@@ -95,78 +95,78 @@ init python:
     "do_once": True,
     })
 
-label sasha_murder_talk_bree:
-    "There was no way things were ever just going to go back to normal after what happened."
-    "I mean, how could they after poor [bree.name] was murdered in front of Sasha and me?"
-    "Even worse, the unthinkable deed was committed by Kylie."
-    "The girl that I was dating at the time."
-    "A girl that I failed to see was actually some kind of psycho!"
-    "I know that I should make an effort to sit down and talk to Sasha."
-    "But there's one crazy thing that's been stopping me."
-    "It's insane, and yet it's keeping me from knowing how she actually feels."
-    "In the end though, I'm more afraid of leaving it too late."
-    show sasha sad at center, zoomAt(1.0, (640, 720))
-    "And so I insist that Sasha and I have the inevitable talk."
-    show sasha at center, traveling(1.5, 0.5, (640, 1040))
-    mike.say "Erm, Sasha?"
-    show sasha whining
-    sasha.say "Yeah, [hero.name]?"
-    show sasha sad
-    mike.say "I don't know about you..."
-    mike.say "But I'm still kind of reeling from what happened."
-    "A look of relief comes over Sasha's face the moment I say this."
-    "It seems that she's been waiting for a chance to talk about it too."
-    show sasha whining
-    sasha.say "Me too, [hero.name], me too."
-    show sasha sad
-    mike.say "Really?!?"
-    mike.say "That's great!"
-    mike.say "I mean...I mean it's great that we can talk..."
-    mike.say "Talk about [bree.name], that is..."
-    show sasha whining
-    sasha.say "You sound surprised."
-    sasha.say "Did you think I'd just brushed it off or something?"
-    show sasha sad
-    "I can feel my cheeks starting to turn red."
-    "I'm sweating too as Sasha puts me on the spot."
-    mike.say "Well, the thing is, Sasha..."
-    mike.say "I wasn't sure if you were in mourning or not."
-    mike.say "Because...because you always wear black!"
-    show sasha surprised
-    "Sasha looks at me, eyes wide and her mouth hanging open."
-    "She says nothing for what feels like the longest time."
-    show sasha happy at startle
-    "And then, out of nowhere, she bursts into peals of laughter."
-    "I can't help joining in too, feeling the sense of relief it brings."
-    "Neither of us is laughing out of malice or amusement at the fate of poor [bree.name]."
-    "It's out of sheer and helpless gallows humour that we're laughing at all."
-    show sasha shout
-    sasha.say "Oh god..."
-    sasha.say "That's so not funny!"
-    show sasha sadsmile
-    mike.say "Well, it kind of is..."
-    mike.say "You...you remember when [bree.name] asked you..."
-    mike.say "Asked you how many different shades of black you had in your wardrobe?"
-    show sasha happy at startle
-    "Sasha erupts into another round of laughter."
-    show sasha cry at center, traveling(2.0, 0.2, (640, 1340))
-    pause 0.2
-    with vpunch
-    "And then a moment later, she collapses against my shoulder in a flood of tears."
-    sasha.say "Oh shit..."
-    sasha.say "I'm going to miss her."
-    mike.say "Me too - and I feel like it was my fault too."
-    "I feel Sasha wrap her arms around me as I say this."
-    "She shakes her head and then buries her face in my chest."
-    sasha.say "It's not, [hero.name], it's not."
-    sasha.say "We've all missed the signs with someone we were dating."
-    sasha.say "You're just so into them that it passes you by."
-    mike.say "I think I need you to keep telling me that, Sasha."
-    mike.say "At least for a little while."
-    sasha.say "Okay, [hero.name]."
-    sasha.say "And we can both be a little more sunny too."
-    sasha.say "Maybe that way we can keep [bree.name]'s spirit alive."
-    return
+# label sasha_murder_talk_bree:
+#     "There was no way things were ever just going to go back to normal after what happened."
+#     "I mean, how could they after poor [bree.name] was murdered in front of Sasha and me?"
+#     "Even worse, the unthinkable deed was committed by Kylie."
+#     "The girl that I was dating at the time."
+#     "A girl that I failed to see was actually some kind of psycho!"
+#     "I know that I should make an effort to sit down and talk to Sasha."
+#     "But there's one crazy thing that's been stopping me."
+#     "It's insane, and yet it's keeping me from knowing how she actually feels."
+#     "In the end though, I'm more afraid of leaving it too late."
+#     show sasha sad at center, zoomAt(1.0, (640, 720))
+#     "And so I insist that Sasha and I have the inevitable talk."
+#     show sasha at center, traveling(1.5, 0.5, (640, 1040))
+#     mike.say "Erm, Sasha?"
+#     show sasha whining
+#     sasha.say "Yeah, [hero.name]?"
+#     show sasha sad
+#     mike.say "I don't know about you..."
+#     mike.say "But I'm still kind of reeling from what happened."
+#     "A look of relief comes over Sasha's face the moment I say this."
+#     "It seems that she's been waiting for a chance to talk about it too."
+#     show sasha whining
+#     sasha.say "Me too, [hero.name], me too."
+#     show sasha sad
+#     mike.say "Really?!?"
+#     mike.say "That's great!"
+#     mike.say "I mean...I mean it's great that we can talk..."
+#     mike.say "Talk about [bree.name], that is..."
+#     show sasha whining
+#     sasha.say "You sound surprised."
+#     sasha.say "Did you think I'd just brushed it off or something?"
+#     show sasha sad
+#     "I can feel my cheeks starting to turn red."
+#     "I'm sweating too as Sasha puts me on the spot."
+#     mike.say "Well, the thing is, Sasha..."
+#     mike.say "I wasn't sure if you were in mourning or not."
+#     mike.say "Because...because you always wear black!"
+#     show sasha surprised
+#     "Sasha looks at me, eyes wide and her mouth hanging open."
+#     "She says nothing for what feels like the longest time."
+#     show sasha happy at startle
+#     "And then, out of nowhere, she bursts into peals of laughter."
+#     "I can't help joining in too, feeling the sense of relief it brings."
+#     "Neither of us is laughing out of malice or amusement at the fate of poor [bree.name]."
+#     "It's out of sheer and helpless gallows humour that we're laughing at all."
+#     show sasha shout
+#     sasha.say "Oh god..."
+#     sasha.say "That's so not funny!"
+#     show sasha sadsmile
+#     mike.say "Well, it kind of is..."
+#     mike.say "You...you remember when [bree.name] asked you..."
+#     mike.say "Asked you how many different shades of black you had in your wardrobe?"
+#     show sasha happy at startle
+#     "Sasha erupts into another round of laughter."
+#     show sasha cry at center, traveling(2.0, 0.2, (640, 1340))
+#     pause 0.2
+#     with vpunch
+#     "And then a moment later, she collapses against my shoulder in a flood of tears."
+#     sasha.say "Oh shit..."
+#     sasha.say "I'm going to miss her."
+#     mike.say "Me too - and I feel like it was my fault too."
+#     "I feel Sasha wrap her arms around me as I say this."
+#     "She shakes her head and then buries her face in my chest."
+#     sasha.say "It's not, [hero.name], it's not."
+#     sasha.say "We've all missed the signs with someone we were dating."
+#     sasha.say "You're just so into them that it passes you by."
+#     mike.say "I think I need you to keep telling me that, Sasha."
+#     mike.say "At least for a little while."
+#     sasha.say "Okay, [hero.name]."
+#     sasha.say "And we can both be a little more sunny too."
+#     sasha.say "Maybe that way we can keep [bree.name]'s spirit alive."
+#     return
 
 label sasha_asleep:
     if samantha.room == game.room:

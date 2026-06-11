@@ -1,0 +1,12 @@
+Model: gemini-3.1-pro-preview
+
+Based on the image, here is a detailed description:
+
+**Subject Present:**
+*   **People:** There is one person in the image, a young woman depicted in an anime or visual novel art style.
+*   **Appearance:** She has wavy, shoulder-length blonde hair, large brown eyes, and fair skin with a slight blush on her cheeks. She is wearing a short, sleeveless pink dress or nightgown featuring a prominent graphic of a blue pegasus with a rainbow mane (resembling Rainbow Dash from My Little Pony) inside a purple star, along with a smaller yellow star above it. She is barefoot.
+*   **Actions:** She is sitting cross-legged on a dark blue sofa. She is holding a dark-colored smartphone horizontally with both hands in front of her chest. She has a wired earpiece in her left ear. Her expression is one of shock or surprise, with wide eyes, raised eyebrows, and an open mouth. There is a yellow, jagged "surprise" symbol floating near her head to emphasize her reaction.
+
+**Environment and Setting:**
+*   **Setting:** She appears to be sitting inside a moving vehicle, likely a train or a bus, given the large windows and seating arrangement.
+*   **Environment:** The interior features a dark blue, padded bench seat and sleek, modern walls in grey and blue tones. Large windows wrap around behind her, showing an outdoor daytime scene. Outside, there is a clear, bright blue sky with scattered white clouds, lush green trees, and what appears to be a body of water or a distant horizon line. Diagonal white lines across the window suggest motion or reflections.

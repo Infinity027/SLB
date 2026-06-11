@@ -1,0 +1,12 @@
+Model: gemini-3.1-pro-preview
+
+Based on the image provided, here is a detailed description:
+
+**Subject Present:**
+*   **Person:** The image features a single character drawn in an anime/cartoon style. She is a young woman.
+*   **Appearance:** She has voluminous, curly blonde hair parted to the side, fair skin, and large brown eyes. She is wearing a maroon or dark pink scoop-neck top underneath an olive green collared jacket or overshirt.
+*   **Actions:** She is in the middle of eating a meal. She is holding a spoon with a piece of food on it near her open mouth, looking happy and eager to take a bite. Her other hand rests on the table.
+
+**Environment and Setting:**
+*   **Setting:** The scene takes place in a modern-looking kitchen.
+*   **Details:** The character is sitting at a white counter or table. In front of her is a white plate containing what appears to be a serving of rice and a brown stew or curry. Behind her, the kitchen features white lower and upper cabinets. On the counter to her left is a coffee maker with a full pot of dark liquid (likely coffee). To her right, there is a kitchen sink with a curved silver faucet. The backsplash behind the counter has a geometric pattern with intersecting lines in shades of teal/blue and light gray or white. The overall lighting is bright, suggesting daytime.

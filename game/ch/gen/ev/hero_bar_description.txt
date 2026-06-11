@@ -1,0 +1,12 @@
+Model: gemini-3.1-pro-preview
+
+Based on the image provided, here is a detailed description:
+
+**Subjects Present (People, Appearance, Actions)**
+*   **Foreground Subject:** On the right side of the image, seen from behind and from the chest up, is a man with dark hair. He is wearing a long-sleeved, reddish-brown collared shirt with light-colored (possibly white or gray) cuffs. He is seated at a bar counter. His right arm rests on the counter with a loosely closed fist. His left hand is holding the handle of a large glass mug of beer. He has his head turned, looking back over his left shoulder towards the background of the room.
+*   **Background Subject:** On the left side of the image, sitting further down the bar counter, is a second man who is drawn slightly out of focus to show depth of field. He has short, dark hair and is wearing a light blue t-shirt. He is facing away from the foreground subject, looking toward a window. His left arm is raised, with his hand pointing upward or gesturing. 
+
+**Environment and Setting**
+*   **Location:** The scene takes place inside a dimly lit, casual bar or pub. 
+*   **Details:** The men are seated at a dark wooden bar counter. In the immediate foreground, sitting on the counter, is a large glass mug filled with golden beer, topped with a thick, frothy white head that appears to be slightly spilling over the edge. 
+*   **Background Details:** The back wall is made of exposed reddish-brown brick. Hanging on the brick wall is a sign or poster that reads "Cheers" in yellow lettering above an illustration of two clinking beer mugs. To the left, there are wooden, saloon-style swinging doors and a window with panes that looks out into a dark, likely nighttime, setting. The lighting is warm and somewhat subdued, with light sources visible on the brick wall above the "Cheers" sign. The art style is consistent with 2D animation or visual novels.

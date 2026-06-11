@@ -9,13 +9,6 @@ init python:
                 Not(IsHidden()),
                 IsFlag("policestation")
                 ),
-            PersonTarget("kylie",
-                Not(IsHidden()),
-                Or(
-                    IsFlag("policestation"),
-                    IsFlag("schedule", "jail"),
-                    )
-                ),
             PersonTarget("camila",
                 Not(IsHidden()),
                 ),

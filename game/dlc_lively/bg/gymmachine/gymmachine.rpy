@@ -43,8 +43,6 @@ init 6:
         attribute aletta_lips null
         attribute aletta_nose null
         attribute aletta_tongue null
-        attribute ayesha_nose null
-        attribute ayesha_tongue null
         attribute camila_clit null
         attribute camila_lips null
         attribute camila_nose null
@@ -66,17 +64,6 @@ init 6:
         group multiple auto variant camila_piercings_front when camila
 
 
-        attribute ayesha
-        attribute ayesha_pregnant when ayesha
-        attribute ayesha_collar when ayesha
-        attribute ayesha_nohaircut when ayesha
-        group multiple auto variant ayesha_piercings when ayesha
-        group ayesha_bot auto variant nopreg when ayesha and not ayesha_pregnant
-        group ayesha_bot auto variant preg when ayesha and ayesha_pregnant
-        group ayesha_top auto variant nopreg when ayesha and not ayesha_pregnant
-        group ayesha_top auto variant preg when ayesha and ayesha_pregnant
-
-
         attribute aletta
         attribute aletta_pregnant when aletta
         attribute aletta_collar when aletta
@@ -87,14 +74,3 @@ init 6:
         group aletta_top auto variant preg when aletta and aletta_pregnant
         group aletta_hair auto when aletta
 
-
-        attribute kylie
-        attribute kylie_pregnant when kylie
-        attribute kylie_collar when kylie
-        group multiple auto variant kylie_piercings when kylie
-        group kylie_bot auto variant nopreg when kylie and not kylie_pregnant
-        group kylie_bot auto variant preg when kylie and kylie_pregnant
-        group kylie_top auto variant nopreg when kylie and not kylie_pregnant
-        group kylie_top auto variant preg when kylie and kylie_pregnant
-        attribute kylie_nohaircut when kylie
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

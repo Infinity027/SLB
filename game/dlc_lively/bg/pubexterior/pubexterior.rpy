@@ -19,11 +19,9 @@ init 5 python:
                     attr.add('emma')
                 if not kat.flags.gone_forever and kat.room == "pubexterior":
                     attr.add('kat')
-                if not kylie.flags.gone_forever and kylie.room == "pubexterior":
-                    attr.add('kylie')
             
             
-            if active_girl.id in ["anna", "emma", "kat", "kylie"]:
+            if active_girl.id in ["anna", "emma", "kat"]:
                 if enable_debug_picker:
                     renpy.log(f"PubExteriorPicker remove active/interact girl: {active_girl.id}")
                 attr.discard(active_girl.id)
@@ -33,7 +31,7 @@ init 5 python:
                 renpy.log(f"PubExteriorPicker result: {attr}")
             return attr
 
-    Room.find("pubexterior").lively_npc = ["anna", "emma", "kat", "kylie"]
+    Room.find("pubexterior").lively_npc = ["anna", "emma", "kat"]
 
 init 6:
     layeredimage bg pubexterior:
@@ -55,27 +53,11 @@ init 6:
         attribute kat_navel null
         attribute kat_pregnant_navel null
         attribute kat_tongue null
-        attribute kylie_clit null
-        attribute kylie_ears null
-        attribute kylie_navel null
-        attribute kylie_pregnant_navel null
-        attribute kylie_tongue null
 
 
         group season auto variant "day" if_any "day"
         group season auto variant "night" if_any "night"
         always "snow"
-
-
-        attribute kylie
-        attribute kylie_pregnant when kylie
-        attribute kylie_collar when kylie
-        always "bg_pubexterior_kylie_hair_kylie_nohaircut" when kylie
-        group multiple auto variant kylie_piercings when kylie
-        group kylie_bot auto variant preg when kylie and kylie_pregnant
-        group kylie_bot auto variant nopreg when kylie and not kylie_pregnant
-        group kylie_top auto variant preg when kylie and kylie_pregnant
-        group kylie_top auto variant nopreg when kylie and not kylie_pregnant
 
 
         attribute kat

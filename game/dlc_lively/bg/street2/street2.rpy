@@ -15,8 +15,6 @@ init 5 python:
                 
                 if not aletta.flags.gone_forever and not game.flags.JudiciaryDelay and aletta.room == "street2":
                     attr.add('aletta')
-                if not ayesha.flags.gone_forever and ayesha.room == "street2":
-                    attr.add('ayesha')
                 if not cherie.flags.gone_forever and cherie.room == "street2":
                     attr.add('cherie')
                 if not kiara.flags.gone_forever and kiara.room == "street2":
@@ -27,7 +25,7 @@ init 5 python:
                     attr.add('reona')
             
             
-            if active_girl.id in ["aletta", "ayesha", "cherie", "kleio", "reona"]:
+            if active_girl.id in ["aletta", "cherie", "kleio", "reona"]:
                 if enable_debug_picker:
                     renpy.log(f"Street2Picker remove active/interact girl: {active_girl.id}")
                 attr.discard(active_girl.id)
@@ -37,7 +35,7 @@ init 5 python:
                 renpy.log(f"Street2Picker result: {attr}")
             return attr
 
-    Room.find("street2").lively_npc = ["aletta", "ayesha", "cherie", "kiara", "kleio", "reona"]
+    Room.find("street2").lively_npc = ["aletta", "cherie", "kiara", "kleio", "reona"]
 
 init 6:
     layeredimage bg street2:
@@ -50,7 +48,6 @@ init 6:
         attribute aletta_lips null
         attribute aletta_nose null
         attribute aletta_tongue null
-        attribute ayesha_tongue null
         attribute kiara_clit null
         attribute kleio_clit null
         attribute kleio_nose null
@@ -119,15 +116,3 @@ init 6:
         group kleio_bot auto variant nopreg when kleio and not kleio_pregnant
         group kleio_top auto variant preg when kleio and kleio_pregnant
         group kleio_top auto variant nopreg when kleio and not kleio_pregnant
-
-
-        attribute ayesha
-        attribute ayesha_pregnant when ayesha
-        attribute ayesha_collar when ayesha
-        group multiple auto variant ayesha_piercings when ayesha
-        group ayesha_bot auto variant preg when ayesha and ayesha_pregnant
-        group ayesha_bot auto variant nopreg when ayesha and not ayesha_pregnant
-        group ayesha_top auto variant preg when ayesha and ayesha_pregnant
-        group ayesha_top auto variant nopreg when ayesha and not ayesha_pregnant
-        attribute ayesha_nohaircut when ayesha
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

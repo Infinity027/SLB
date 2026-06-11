@@ -341,7 +341,7 @@ init -15 python:
                 not_girl = Person.find(not_girl)
             cheated_girls = []
             for g in Room.find(game.room).get_present_girls():
-                if {not_girl.id, g.id} == {"alexis", "kylie"}:
+                if {not_girl.id, g.id} == {"alexis"}:
                     continue
                 elif (
                 (g.flags.kiss or g.sexperience)
@@ -463,8 +463,6 @@ init -15 python:
                     g.unpreg()
                     if not g.flags.engagedmike:
                         g.love -= g.flags.birthPenalty + 25
-                        if g.id == "kylie":
-                            g.yandere += 25
                     renpy.say("", g.name + " gave birth today.")
             if self.calendar.is_today("valentine"):
                 renpy.say("", "It's Valentine's Day.")

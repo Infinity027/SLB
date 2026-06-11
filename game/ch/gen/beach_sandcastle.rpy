@@ -2,7 +2,7 @@ init python:
     class CG_BeachSandCastle_Picker(object):
         def __call__(self, attr):
             if hero.is_male:
-                if attr & {"angela", "ayesha", "anna", "bree", "emma", "hanna", "kleio", "lavish", "samantha", "shiori", "minami", "master", "dwayne", "victor", "danny", "ryan", "shawn", "jack", "scottie", "mike", "reona", "kat", "amy"}:
+                if attr & {"angela", "anna", "bree", "emma", "hanna", "kleio", "lavish", "samantha", "shiori", "minami", "master", "dwayne", "victor", "danny", "ryan", "shawn", "jack", "scottie", "mike", "reona", "kat", "amy"}:
                     attr.add("01")
                     attr.discard("02")
                 elif attr & {"aletta", "alexis", "audrey", "cassidy", "harmony", "lexi", "palla", "sasha", "morgan", "camila", "cherie", "claire", "kiara"}:

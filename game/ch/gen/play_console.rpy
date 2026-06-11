@@ -5,7 +5,7 @@ init python:
                 attr.add("01")
             elif attr & {"harmony", "angela", "alexis", "kleio", "shiori", "master", "ryan"}:
                 attr.add("02")
-            elif attr & {"palla", "ayesha", "audrey", "minami", "lexi", "victor", "shawn", "amy", "kat", "reona", "cherie", "claire", "kiara"}:
+            elif attr & {"palla", "audrey", "minami", "lexi", "victor", "shawn", "amy", "kat", "reona", "cherie", "claire", "kiara"}:
                 attr.add("03")
             elif attr & {"morgan", "samantha", "lavish", "emma", "sasha", "danny", "jack"}:
                 attr.add("04")

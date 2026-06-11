@@ -9,7 +9,7 @@ init 1:
         group mc_outfit auto variant "mikemc" if_all "mikemc":
             attribute mcdate default
 
-        group mc_armsoutfit auto variant "mikemc_a" if_all "mikemc" if_any ["alexis", "angela", "audrey", "ayesha", "bree", "camila", "cassidy", "emma", "hanna", "harmony", "kleio", "lavish", "lexi", "morgan", "palla", "samantha", "sasha", "shiori", "amy", "kat", "reona", "cherie", "claire", "kiara"]:
+        group mc_armsoutfit auto variant "mikemc_a" if_all "mikemc" if_any ["alexis", "angela", "audrey", "bree", "camila", "cassidy", "emma", "hanna", "harmony", "kleio", "lavish", "lexi", "morgan", "palla", "samantha", "sasha", "shiori", "amy", "kat", "reona", "cherie", "claire", "kiara"]:
             attribute mcdate default
         group mc_armsoutfit auto variant "mikemc_b" if_all "mikemc" if_any ["aletta"]:
             attribute mcdate default
@@ -17,11 +17,11 @@ init 1:
             attribute mcdate default
 
 
-        group mc_outfit auto variant "breemc_pose01" if_all ["breemc", "ayesha", "halloween"]
-        group mc_armsoutfit auto variant "breemc_pose01_b" if_all ["breemc", "ayesha", "halloween"]
+        group mc_outfit auto variant "breemc_pose01" if_all ["breemc", "halloween"]
+        group mc_armsoutfit auto variant "breemc_pose01_b" if_all ["breemc", "halloween"]
 
 
-        group mc_outfit auto variant "breemc_pose01" if_all "breemc" if_not ["ayesha", "danny", "dwayne", "jack", "master", "mike", "ryan", "sasha", "scottie", "shawn",  "victor"]:
+        group mc_outfit auto variant "breemc_pose01" if_all "breemc" if_not ["danny", "dwayne", "jack", "master", "mike", "ryan", "sasha", "scottie", "shawn",  "victor"]:
             attribute mcdate default
 
         group mc_armsoutfit auto variant "breemc_pose01_a" if_all "breemc" if_any ["audrey", "camila", "cassidy", "emma", "hanna", "harmony", "kleio", "lavish", "lexi", "morgan", "samantha", "shiori"]:
@@ -33,20 +33,20 @@ init 1:
 
 
         group npc auto if_not ["bree_sexydate", "minami_date", "samantha_sexydate", "samantha_sluttydate", "sasha_sluttydate", "shiori_sexydate", "shiori_sexywork"]
-        group npc auto variant "pose01" if_all ["mikemc"] if_any ["ayesha", "sasha"] if_not "sasha_sluttydate"
+        group npc auto variant "pose01" if_all ["mikemc"] if_any ["sasha"] if_not "sasha_sluttydate"
         group npc auto variant "pose02" if_any ["minami"] if_not ["minami_date"]
 
-        group npc auto variant "pose02" if_all ["breemc", "ayesha"] if_not ["halloween"]
+        group npc auto variant "pose02" if_all ["breemc"] if_not ["halloween"]
         group npc auto variant "pose02" if_all ["breemc", "sasha"]
 
 
-        group npc auto variant "pose01" if_all ["breemc", "ayesha", "halloween"]
+        group npc auto variant "pose01" if_all ["breemc", "halloween"]
 
         group pubes auto
 
 
         group pregnancy auto
-        group pregnancy auto variant "pose02" if_all ["breemc", "ayesha"] if_not ["halloween"]
+        group pregnancy auto variant "pose02" if_all ["breemc"] if_not ["halloween"]
 
 
         group boobjob:
@@ -76,9 +76,8 @@ init 1:
         group outfit_boobjob auto variant "pose02" if_all ["sasha_boobjob", "breemc"]
 
 
-        group multiple auto variant outfit_pose01 when mikemc and (ayesha or minami_date)
-        group outfit_pregnant auto variant "pose01" if_all ["mikemc", "pregnant"] if_any ["ayesha", "minami_date"]
-
+        group multiple auto variant outfit_pose01 when mikemc and minami_date
+        
         group outfit auto variant "pose02" if_all ["mikemc", "minami"] if_not "minami_date"
         group outfit_pregnant auto variant "pose02" if_all ["mikemc", "pregnant", "minami"] if_not ["minami_date"]
 
@@ -90,12 +89,12 @@ init 1:
         group outfit_pregnant auto variant "pose02" if_all ["breemc", "pregnant"] if_not ["minami_date"]
 
 
-        group outfit auto variant "pose01" if_all ["breemc", "ayesha", "halloween"]
-        group outfit_pregnant auto variant "pose01" if_all ["breemc", "ayesha", "pregnant", "halloween"]
+        group outfit auto variant "pose01" if_all ["breemc", "halloween"]
+        group outfit_pregnant auto variant "pose01" if_all ["breemc", "pregnant", "halloween"]
 
 
-        group outfit auto variant "pose02" if_all ["breemc", "ayesha"] if_not ["halloween"]
-        group outfit_pregnant auto variant "pose02" if_all ["breemc", "ayesha", "pregnant"] if_not ["halloween"]
+        group outfit auto variant "pose02" if_all ["breemc"] if_not ["halloween"]
+        group outfit_pregnant auto variant "pose02" if_all ["breemc", "pregnant"] if_not ["halloween"]
 
         group jacket auto
 
@@ -135,13 +134,13 @@ init 1:
 
         group forearms auto variant "breemc" if_all "breemc" if_not ["harmony_pregnant"]
         group forearms auto variant "breemc_pregnant" if_all ["breemc", "harmony_pregnant"]
-        group forearms auto variant "breemc_pose01" if_all ["breemc", "ayesha", "halloween"]
+        group forearms auto variant "breemc_pose01" if_all ["breemc", "halloween"]
 
 
-        group mc auto variant "pose02" if_all ["breemc", "ayesha"] if_not ["halloween"]
-        group mc_outfit auto variant "breemc_pose02" if_all ["breemc", "ayesha"] if_not ["halloween"]:
+        group mc auto variant "pose02" if_all ["breemc"] if_not ["halloween"]
+        group mc_outfit auto variant "breemc_pose02" if_all ["breemc"] if_not ["halloween"]:
             attribute mcdate default
-        group forearms auto variant "breemc_pose02" if_all ["breemc", "ayesha"] if_not ["halloween"]
+        group forearms auto variant "breemc_pose02" if_all ["breemc"] if_not ["halloween"]
 
 
         group mc auto variant "pose02" if_all ["breemc"] if_any ["danny", "dwayne", "jack", "master", "mike", "ryan", "sasha", "scottie", "shawn",  "victor"]

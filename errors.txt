@@ -2,33 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/ch/aletta/fuck.rpy", line 765: expected python code
-    $
-      ^
-
-File "game/ch/aletta/fuck.rpy", line 1221: expected python code
-    $
-      ^
-
-File "game/ch/aletta/fuck.rpy", line 1236: expected python code
-    $
-      ^
-
-File "game/ch/aletta/fuck.rpy", line 2355: expected python code
-    $
-      ^
-
-File "game/ch/aletta/fuck.rpy", line 2370: expected python code
-    $
-      ^
-
-File "game/ch/aletta/fuck.rpy", line 2582: expected python code
-    $
-      ^
-
-File "game/ch/aletta/fuck.rpy", line 2597: expected python code
-    $
-      ^
+File "game/ch/morgan/events.rpy", line 366: invalid syntax. Perhaps you forgot a comma?
+    HeroTarget(
+        ^^^^^
 
 Ren'Py Version: Ren'Py 8.5.2.26010301
-Mon Jun  1 15:16:27 2026
+Tue Jun  2 18:29:07 2026

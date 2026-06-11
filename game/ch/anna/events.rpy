@@ -322,22 +322,22 @@ init python:
     "do_once": True,
     })
 
-    InteractEvent(**{
-    "name": "anna_event_talk_murder",
-    "label": "anna_event_talk_murder",
-    "priority": 500,
-    "conditions": [
-        PersonTarget(anna,
-            IsActive(),
-            ),
-        PersonTarget(kylie,
-            IsFlag("killed", "sasha"),
-            ),
-        ],
-    "clothes": "casual",
-    "music": "music/roa_music/innocence.ogg",
-    "do_once": True,
-    })
+    # InteractEvent(**{
+    # "name": "anna_event_talk_murder",
+    # "label": "anna_event_talk_murder",
+    # "priority": 500,
+    # "conditions": [
+    #     PersonTarget(anna,
+    #         IsActive(),
+    #         ),
+    #     PersonTarget(kylie,
+    #         IsFlag("killed", "sasha"),
+    #         ),
+    #     ],
+    # "clothes": "casual",
+    # "music": "music/roa_music/innocence.ogg",
+    # "do_once": True,
+    # })
 
     Event(**{
     "name": "anna_practice_01",
@@ -3387,46 +3387,45 @@ label guitar_practice_book:
     $ game.set_flag("bandpractice", 10, mod="+")
     return
 
-label anna_event_talk_murder:
-    show anna cry
-    anna.say "I can't believe it, [hero.name]."
-    anna.say "None of this seems real."
-    mike.say "I feel the same way, Anna."
-    mike.say "And I was in the damn room when it all happened!"
-    mike.say "I just wanted to say that I'm sorry, you know?"
-    mike.say "Maybe if I'd done something differently..."
-    "Anna raises her head from my chest and looks me in the eye."
-    "Her own eyes are a little red and puffy from crying."
-    "But the look in them is resolute and she shakes her head."
-    anna.say "No, no, no..."
-    anna.say "This isn't your fault!"
-    if kylie.flags.rape == True:
-        anna.say "You're as much a victim as poor Sasha!"
-        anna.say "What that horrid girl did to you..."
-        anna.say "Ooh...I'll never forgive her for that!"
-    else:
-        anna.say "This is all that horrid girl's fault!"
-        anna.say "She's the one that deserves to be punished."
-        anna.say "Not you, [hero.name]!"
-    "I nod my head, trying my best to agree with Anna's take on events."
-    "I can't say that she manages to convince me totally."
-    "But it feels reassuring to hear someone defending me like that."
-    mike.say "Maybe you're right, Anna."
-    mike.say "But I'd give anything to have Sasha back!"
-    $ anna.love += 10
-    show anna b cry at center, zoomAt (1.75, (650, 1150))
-    anna.say "Of course you would!"
-    anna.say "And that's because you're the good guy!"
-    anna.say "Bad people always do bad things."
-    anna.say "Good people always do good things."
-    anna.say "You just need to be around more good people!"
-    show anna b cry at zoomAt (1.95, (650, 1250))
-    "I can't help pulling Anna closer to me as she says this."
-    "I need positive energy in my life right now."
-    "And she's giving it out like crazy."
-    mike.say "Thanks for being a friend, Anna."
-    anna.say "I'm here for you, [hero.name]."
-    anna.say "We gotta stick together now, all of us!"
-    return
-return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc
+# label anna_event_talk_murder:
+#     show anna cry
+#     anna.say "I can't believe it, [hero.name]."
+#     anna.say "None of this seems real."
+#     mike.say "I feel the same way, Anna."
+#     mike.say "And I was in the damn room when it all happened!"
+#     mike.say "I just wanted to say that I'm sorry, you know?"
+#     mike.say "Maybe if I'd done something differently..."
+#     "Anna raises her head from my chest and looks me in the eye."
+#     "Her own eyes are a little red and puffy from crying."
+#     "But the look in them is resolute and she shakes her head."
+#     anna.say "No, no, no..."
+#     anna.say "This isn't your fault!"
+#     if kylie.flags.rape == True:
+#         anna.say "You're as much a victim as poor Sasha!"
+#         anna.say "What that horrid girl did to you..."
+#         anna.say "Ooh...I'll never forgive her for that!"
+#     else:
+#         anna.say "This is all that horrid girl's fault!"
+#         anna.say "She's the one that deserves to be punished."
+#         anna.say "Not you, [hero.name]!"
+#     "I nod my head, trying my best to agree with Anna's take on events."
+#     "I can't say that she manages to convince me totally."
+#     "But it feels reassuring to hear someone defending me like that."
+#     mike.say "Maybe you're right, Anna."
+#     mike.say "But I'd give anything to have Sasha back!"
+#     $ anna.love += 10
+#     show anna b cry at center, zoomAt (1.75, (650, 1150))
+#     anna.say "Of course you would!"
+#     anna.say "And that's because you're the good guy!"
+#     anna.say "Bad people always do bad things."
+#     anna.say "Good people always do good things."
+#     anna.say "You just need to be around more good people!"
+#     show anna b cry at zoomAt (1.95, (650, 1250))
+#     "I can't help pulling Anna closer to me as she says this."
+#     "I need positive energy in my life right now."
+#     "And she's giving it out like crazy."
+#     mike.say "Thanks for being a friend, Anna."
+#     anna.say "I'm here for you, [hero.name]."
+#     anna.say "We gotta stick together now, all of us!"
+#     return
+# return

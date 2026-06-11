@@ -10,7 +10,7 @@ init python:
                     attr.add("01")
                 elif g.id in ["angela", "aletta", "bree", "cassidy", "camila", "emma", "lexi", "morgan", "palla", "danny", "mike", "victor", "jack", "ryan", "scottie", "kat", "reona", "amy", "cherie", "claire", "kiara"]:
                     attr.add("02")
-                elif g.id in ["anna", "audrey", "ayesha", "hanna", "samantha", "shiori"]:
+                elif g.id in ["anna", "audrey", "hanna", "samantha", "shiori"]:
                     attr.add("03")
                 
                 if game.room in ["pool", "date_livingroom"]:

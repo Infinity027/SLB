@@ -6,7 +6,7 @@ init python:
                 attr.discard("02")
                 attr.discard("03")
                 attr.discard("04")
-            elif attr & {"harmony", "angela", "kleio", "ayesha", "jack", "shawn", "reona"}:
+            elif attr & {"harmony", "angela", "kleio", "jack", "shawn", "reona"}:
                 attr.add("02")
                 attr.discard("01")
                 attr.discard("03")

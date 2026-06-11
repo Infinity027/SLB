@@ -1025,11 +1025,6 @@ screen preferences():
                         textbutton _("Hide") action SetField(persistent, 'notifications', False)
                     vbox:
                         xysize (230, 60)
-                        use text_tooltip(text_tag_resize(_("Pregnancy duration"), 230, 30), _("Change the pregnancy duration to suit your preference"), "lspref_label_text")
-                        textbutton _("Endless") action SetField(persistent, 'pregnancy_end', False)
-                        textbutton _("Immersive") action SetField(persistent, 'pregnancy_end', True)
-                    vbox:
-                        xysize (230, 60)
                         use text_tooltip(text_tag_resize(_("Pregnancy pop-up"), 230, 30), _("Enable/Disable pregnancy pop-up"), "lspref_label_text")
                         textbutton _("Show") action SetField(persistent, 'pregnancy_notification', True)
                         textbutton _("Hide") action SetField(persistent, 'pregnancy_notification', False)
@@ -2130,7 +2125,7 @@ screen credits():
             text "AngstyExistence as Mike"
             text "LusterRose as Ryan"
             text "LadyELiseVA as Minami"
-            text "MidnightDatura as Ayesha, Kiara & Cherie"
+            text "MidnightDatura as Kiara & Cherie"
             text "KumBomb as Cassidy"
             text "Miradessa as Hanna"
             text "Squeaky as Lexi"

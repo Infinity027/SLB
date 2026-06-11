@@ -1,0 +1,16 @@
+Model: gemini-3.1-pro-preview
+
+Based on the image, here is a detailed description:
+
+**Subjects:**
+- **Two Women:** The image features two animated, anime-style women sitting at a table eating breakfast.
+- **Woman on the Left:**
+    - **Appearance:** She has long, voluminous blonde wavy hair and brown eyes. She is wearing a pink sleeveless top with a large graphic on it featuring a blue pony character (resembling Rainbow Dash from My Little Pony) inside a purple star, along with a smaller yellow star.
+    - **Action:** She is actively eating. Her mouth is open with a happy expression as she holds a spoon up to her mouth. On her plate is a single pastry or pancake topped with white whipped cream or frosting and a reddish sauce.
+- **Woman on the Right:**
+    - **Appearance:** She has long, straight black hair and dark eyes. She is wearing a dark grey or black sleeveless top with white lettering ("NES") and a crossed bones graphic partially visible. She has dark lipstick or lip gloss on.
+    - **Action:** She is looking toward the blonde woman with a gentle, smiling expression while resting her chin on her left hand. With her right hand, she is pouring a stream of reddish-orange syrup from a silver gravy boat onto a tall stack of pancakes. The pancakes have a pat of butter on top.
+
+**Environment and Setting:**
+- **Location:** The scene takes place indoors, likely in a modern kitchen.
+- **Details:** They are sitting at a plain white or light grey table. In the background, there is a wall with a distinctive geometric pattern of teal/blue interlocking shapes. To the left, part of light grey kitchen cabinetry or a counter is visible. The overall setting suggests a casual, bright, and cheerful morning meal.

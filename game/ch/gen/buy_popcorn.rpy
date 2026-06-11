@@ -10,7 +10,7 @@ init python:
                     attr.add("01")
                 elif g.id in ["harmony", "angela", "alexis", "kleio", "shiori", "victor", "shawn", "amy", "kat", "reona", "claire", "cherie", "kiara"]:
                     attr.add("02")
-                elif g.id in ["palla", "ayesha", "audrey", "minami", "lexi", "danny", "jack"]:
+                elif g.id in ["palla", "audrey", "minami", "lexi", "danny", "jack"]:
                     attr.add("03")
                 elif g.id in ["morgan", "sasha", "samantha", "lavish", "emma", "ryan", "master", "dwayne"]:
                     attr.add("04")

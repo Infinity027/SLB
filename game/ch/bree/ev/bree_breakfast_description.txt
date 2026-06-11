@@ -1,0 +1,13 @@
+Model: gemini-3.1-pro-preview
+
+Based on the image provided, here is a detailed description:
+
+**Subject Present (People, Appearance, Actions)**
+*   **Appearance:** The image features a single subject: a young woman illustrated in an anime-inspired art style. She has light skin, large brown eyes, and long blonde hair that falls past her shoulders in loose curls. She is wearing a pink, sleeveless tank top. On the chest of her shirt is a graphic design featuring a large purple star with a blue pegasus pony with a rainbow mane inside it (resembling Rainbow Dash from *My Little Pony*), along with a smaller yellow star to the side. 
+*   **Actions:** She appears cheerful, looking forward with a bright, open-mouthed smile. She is in the middle of eating. Her right hand is holding a spoon, lifting a piece of an orange dessert toward her mouth. Her left arm is resting comfortably on the table in front of her. On the table sits a white plate holding a ring-shaped, orange, gelatinous-looking dessert topped with a generous swirl of white whipped cream. 
+
+**Environment and Setting**
+*   The scene is set indoors, specifically in what appears to be a clean, modern kitchen.
+*   **Foreground:** The woman sits at a smooth, light-grey or white counter or table.
+*   **Background:** Behind her is a brightly colored backsplash featuring a teal background with a lighter, geometric crisscross pattern. 
+*   **Objects:** To the viewer's left, on the white kitchen counter behind the subject, sits a modern white coffee maker with a glass carafe filled with dark coffee. To the viewer's right, a tall, curved silver kitchen faucet is visible, indicating a sink area. The cabinetry appears to be sleek, flat-paneled, and white or light grey.

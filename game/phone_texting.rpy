@@ -128,14 +128,6 @@ label text_sentence_kleio(sentence):
         kleio_nvl "[sentence]."
     return
 
-define kylie_nvl = Character("Kylie", kind=nvl, callback=Phone_SendSound)
-label text_sentence_kylie(sentence):
-    if sentence.endswith((".", "?", "!")):
-        kylie_nvl "[sentence]"
-    else:
-        kylie_nvl "[sentence]."
-    return
-
 define lavish_nvl = Character("Lavish", kind=nvl, callback=Phone_SendSound)
 label text_sentence_lavish(sentence):
     if sentence.endswith((".", "?", "!")):

@@ -12,7 +12,7 @@ init python:
                     attr.add("02")
                 elif g.id in ["palla", "lavish", "morgan", "alexis", "camila", "cassidy", "shawn", "victor", "kiara"]:
                     attr.add("03")
-                elif g.id in ["harmony", "angela", "kleio", "ayesha", "master", "ryan", "dwayne", "amy"]:
+                elif g.id in ["harmony", "angela", "kleio", "master", "ryan", "dwayne", "amy"]:
                     attr.add("04")
             
             if enable_debug_picker:

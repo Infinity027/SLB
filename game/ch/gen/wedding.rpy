@@ -8,7 +8,7 @@ init python:
                 attr.add("02")
             elif attr & {"amy", "cassidy", "cherie", "jack", "kat", "kiara", "morgan", "reona", "ryan"}:
                 attr.add("03")
-            elif attr & {"aletta", "angela", "anna", "ayesha", "claire", "danny", "dwayne", "hanna", "harmony", "shiori"}:
+            elif attr & {"aletta", "angela", "anna", "claire", "danny", "dwayne", "hanna", "harmony", "shiori"}:
                 attr.add("04")
             
             if enable_debug_picker:
@@ -55,7 +55,7 @@ init 1:
         attribute sasha_nohaircut
 
 
-        group npc_collars auto when (aletta or angela or anna or ayesha or claire or hanna or shiori)
+        group npc_collars auto when (aletta or angela or anna or claire or hanna or shiori)
 
 
         group multiple auto variant npc_piercings
@@ -68,7 +68,7 @@ init 1:
         group npc_boobs auto
 
 
-        group npc_collars auto when not (aletta or angela or anna or ayesha or claire or hanna or shiori)
+        group npc_collars auto when not (aletta or angela or anna or claire or hanna or shiori)
 
 
         group npc_hair auto

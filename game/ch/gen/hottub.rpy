@@ -1,7 +1,7 @@
 init python:
     class HottubSexPicker(object):
         def __call__(self, attr):
-            if attr & {"ayesha", "cassidy", "emma", "hanna", "harmony", "kleio", "lavish", "lexi", "minami", "palla", "amy", "kat", "reona", "cherie", "claire", "kiara"}:
+            if attr & {"cassidy", "emma", "hanna", "harmony", "kleio", "lavish", "lexi", "minami", "palla", "amy", "kat", "reona", "cherie", "claire", "kiara"}:
                 attr.add("01")
                 attr.discard("02")
             else:
@@ -32,7 +32,7 @@ init python:
                 if g.id in ["anna", "bree", "emma", "kleio", "lavish", "lexi", "samantha", "sasha", "shiori", "scottie", "ryan", "danny", "dwayne", "reona"]:
                     attr.add("center")
                     attr.discard("left")
-                elif g.id in ["aletta", "alexis", "angela", "audrey", "ayesha", "cassidy", "hanna", "harmony", "minami", "morgan", "palla", "camila", "mike", "jack", "shawn", "master", "victor", "kat", "amy", "cherie", "claire", "kiara"]:
+                elif g.id in ["aletta", "alexis", "angela", "audrey", "cassidy", "hanna", "harmony", "minami", "morgan", "palla", "camila", "mike", "jack", "shawn", "master", "victor", "kat", "amy", "cherie", "claire", "kiara"]:
                     attr.add("left")
                     attr.discard("center")
             

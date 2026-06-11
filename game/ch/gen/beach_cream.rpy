@@ -2,14 +2,14 @@ init python:
     class BeachCreamPicker(object):
         def __call__(self, attr):
             if hero.is_female:
-                if attr & {"ayesha", "lexi", "sasha", "jack", "shawn", "master", "scottie"}:
+                if attr & {"lexi", "sasha", "jack", "shawn", "master", "scottie"}:
                     attr.add("01")
-                    if attr & {"ayesha", "lexi"}:
+                    if attr & {"lexi"}:
                         attr.add("right")
                 elif attr & {"angela", "danny", "dwayne", "ryan", "victor", "mike"}:
                     attr.add("02")
             else:
-                if attr & {"ayesha", "harmony", "anna", "palla", "hanna", "bree", "lexi", "shiori", "amy", "kat", "reona", "cherie", "claire", "kiara"}:
+                if attr & {"harmony", "anna", "palla", "hanna", "bree", "lexi", "shiori", "amy", "kat", "reona", "cherie", "claire", "kiara"}:
                     attr.add("01")
                     if randint(0, 1) == 1:
                         attr.add("right")

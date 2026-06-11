@@ -5,7 +5,7 @@ init python:
             g = list(g)[0] if g else None
             if g in ["aletta", "angela", "audrey", "camila", "hanna", "jack", "master", "minami", "samantha", "victor", "amy", "kat", "reona", "cherie", "claire", "kiara"]:
                 attr.add("pose01")
-            elif g in ["alexis", "ayesha", "cassidy", "harmony", "lavish", "morgan", "sasha", "scottie", "shawn", "danny"]:
+            elif g in ["alexis", "cassidy", "harmony", "lavish", "morgan", "sasha", "scottie", "shawn", "danny"]:
                 attr.add("pose02")
             elif g in ["anna", "bree", "emma", "kleio", "lexi", "palla", "shiori", "ryan", "dwayne", "mike"]:
                 attr.add("pose03")

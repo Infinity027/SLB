@@ -255,4 +255,3 @@ label hypnosis_action:
     $ renpy.hide(active_girl.id)
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

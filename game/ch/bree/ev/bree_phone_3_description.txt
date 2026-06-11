@@ -1,0 +1,13 @@
+Model: gemini-3.1-pro-preview
+
+Based on the image, here is a detailed description:
+
+**Subject Present:**
+*   **People:** There is one person in the image, presented in a stylized, anime-like artistic design.
+*   **Appearance:** She is a young woman with long, wavy blonde hair. She has large brown eyes and is drawn with a prominent blush across her cheeks and nose. She is wearing a short, sleeveless pink nightshirt or t-shirt featuring a design on the front: a purple star outline containing a drawing of a blue cartoon pony with a rainbow mane (resembling Rainbow Dash from My Little Pony).
+*   **Actions:** She is sitting cross-legged. She is holding a dark gray smartphone horizontally with both hands in front of her face, seemingly engrossed in what she is looking at. Her expression is one of shock or surprise, with wide eyes and a small, open mouth. She is wearing wired earphones connected to the phone, with one earbud visible in her left ear.
+
+**Environment and Setting:**
+*   She is sitting on a dark blue, modern-looking sofa or bench.
+*   The background indicates she is indoors, likely in a room or possibly a vehicle like a train, given the large windows behind her.
+*   Through the windows, a bright, sunny day is visible. There is a clear blue sky with some scattered white clouds. The landscape outside features green bushes or trees and a flat, green horizon line, suggesting a rural or suburban outdoor setting. The light in the image suggests daytime.

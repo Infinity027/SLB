@@ -587,18 +587,8 @@ label halloween_event(appointment=None):
         else:
             "That's the last of them."
             "Now it's time to get on with hosting the party."
-            if Person.find("kylie") and not (kylie.flags.arrest or kylie.hidden):
-                play sound door_knock
-                "But before I can turn my mind to that, there's another knock at the door."
-                call kylie_halloween_crash from _call_kylie_halloween_crash
-                call kylie_halloween_party from _call_kylie_halloween_party
-                call kylie_halloween_dance from _call_kylie_halloween_dance
-                $ game.hour = 0
-                
-                call sleep from _call_sleep_124
-            else:
-                call nodate_halloween_party from _call_nodate_halloween_party
-                call nodate_halloween_dance from _call_nodate_halloween_dance
+            call nodate_halloween_party from _call_nodate_halloween_party
+            call nodate_halloween_dance from _call_nodate_halloween_dance
         $ game.flags.party_planned = False
         $ game.flags.halloween_girl = None
         $ hero.energy -= 3

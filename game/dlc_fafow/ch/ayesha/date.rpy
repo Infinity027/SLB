@@ -1,43 +1,43 @@
-label ayesha_date_amusement_park_male:
-    scene bg amusement
-    show ayesha sadsmile
-    with fade
-    "I'm always excited to be going to the Amusement Park, as it makes me feel like a kid again."
-    "And I'm even more keen when I get the chance to take someone special along with me."
-    "Today that's Ayesha, who I can feel squeezing my hand as we walk towards the entrance."
-    "But when I cast a look in her direction, I see that Ayesha doesn't seem as enthusiastic."
-    "It's not that she looks annoyed or pissed-off at the prospect."
-    "More that her expression is kind of neutral, not tending towards either extreme of emotion."
-    mike.say "Ayesha..."
-    mike.say "Are you feeling okay?"
-    show ayesha stuned
-    "At the sound of my voice, Ayesha seems to snap out of it a little."
-    show ayesha sadsmile
-    "She turns to look at me, a weak smile appearing on her face as she does so."
-    ayesha.say "Huh?"
-    show ayesha surprised
-    ayesha.say "Oh..."
-    ayesha.say "There's nothing wrong, [hero.name]."
-    ayesha.say "I'm fine, honestly."
-    show ayesha normal
-    mike.say "Really, Ayesha?"
-    mike.say "Because you don't look very excited."
-    show ayesha whining
-    ayesha.say "Well..."
-    ayesha.say "This kind of thing isn't really my bag, you know?"
-    show ayesha sad
-    mike.say "So what are you saying, Ayesha?"
-    mike.say "That you don't want to go in there?"
-    show ayesha normal
-    "Ayesha shakes her head at this."
-    show ayesha happy
-    ayesha.say "Oh no..."
-    ayesha.say "I'm fine with it, really."
-    ayesha.say "I'm determined to have a good time."
-    show ayesha normal
-    "I'm not so sure that you can force yourself to have a good time at a place like this."
-    "But I decide to go along with what Ayesha's saying, hoping for the best."
-    return
+# label ayesha_date_amusement_park_male:
+#     scene bg amusement
+#     show ayesha sadsmile
+#     with fade
+#     "I'm always excited to be going to the Amusement Park, as it makes me feel like a kid again."
+#     "And I'm even more keen when I get the chance to take someone special along with me."
+#     "Today that's Ayesha, who I can feel squeezing my hand as we walk towards the entrance."
+#     "But when I cast a look in her direction, I see that Ayesha doesn't seem as enthusiastic."
+#     "It's not that she looks annoyed or pissed-off at the prospect."
+#     "More that her expression is kind of neutral, not tending towards either extreme of emotion."
+#     mike.say "Ayesha..."
+#     mike.say "Are you feeling okay?"
+#     show ayesha stuned
+#     "At the sound of my voice, Ayesha seems to snap out of it a little."
+#     show ayesha sadsmile
+#     "She turns to look at me, a weak smile appearing on her face as she does so."
+#     ayesha.say "Huh?"
+#     show ayesha surprised
+#     ayesha.say "Oh..."
+#     ayesha.say "There's nothing wrong, [hero.name]."
+#     ayesha.say "I'm fine, honestly."
+#     show ayesha normal
+#     mike.say "Really, Ayesha?"
+#     mike.say "Because you don't look very excited."
+#     show ayesha whining
+#     ayesha.say "Well..."
+#     ayesha.say "This kind of thing isn't really my bag, you know?"
+#     show ayesha sad
+#     mike.say "So what are you saying, Ayesha?"
+#     mike.say "That you don't want to go in there?"
+#     show ayesha normal
+#     "Ayesha shakes her head at this."
+#     show ayesha happy
+#     ayesha.say "Oh no..."
+#     ayesha.say "I'm fine with it, really."
+#     ayesha.say "I'm determined to have a good time."
+#     show ayesha normal
+#     "I'm not so sure that you can force yourself to have a good time at a place like this."
+#     "But I decide to go along with what Ayesha's saying, hoping for the best."
+#     return
 
 label ayesha_date_ferris_wheel_male:
     "As soon as I see the Ferris Wheel, I know that we have to ride it."

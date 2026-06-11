@@ -1,9 +1,9 @@
 init python:
     class CGHauntedHousePicker(object):
         def __call__(self, attr):
-            if attr & {"bree", "ayesha", "audrey", "angela", "anna", "amy", "alexis", "aletta", "danny", "scottie", "mike", "kiara"}:
+            if attr & {"bree", "audrey", "angela", "anna", "amy", "alexis", "aletta", "danny", "scottie", "mike", "kiara"}:
                 attr.add("01")
-            elif attr & {"kleio", "kylie", "kat", "harmony", "hanna", "emma", "cassidy", "camila", "jack", "shawn", "dwayne", "cherie"}:
+            elif attr & {"kleio", "kat", "harmony", "hanna", "emma", "cassidy", "camila", "jack", "shawn", "dwayne", "cherie"}:
                 attr.add("02")
             elif attr & {"samantha", "sasha", "shiori", "reona", "palla", "morgan", "minami", "lexi", "lavish", "master", "ryan", "victor", "claire"}:
                 attr.add("03")

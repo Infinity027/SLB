@@ -9,7 +9,7 @@ init python:
             if g:
                 if g.id in ["anna", "audrey", "bree", "hanna", "kleio", "lexi", "master", "mike", "minami", "sasha", "scottie", "shiori", "kat", "cherie", "claire", "kiara"]:
                     attr.add("pose01")
-                elif g.id in ["alexis", "angela", "ayesha", "cassidy", "danny", "dwayne", "emma", "harmony", "jack", "lavish", "morgan", "ryan", "palla", "samantha", "reona"]:
+                elif g.id in ["alexis", "angela", "cassidy", "danny", "dwayne", "emma", "harmony", "jack", "lavish", "morgan", "ryan", "palla", "samantha", "reona"]:
                     attr.add("pose02")
                 elif g.id in ["aletta", "camila", "shawn", "victor", "amy"]:
                     attr.add("pose03")

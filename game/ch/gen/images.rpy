@@ -1005,13 +1005,10 @@ init 1:
 
         attribute leash_hanna "new_petplay_leash_hanna_front" if_all ["hanna", "hanna_collar"] if_any ["walk", "pee"]
         attribute leash_cassidy "new_petplay_leash_cassidy_front" if_all ["cassidy", "cassidy_collar"] if_any ["walk", "pee"]
-        attribute leash_ayesha "new_petplay_leash_ayesha_front" if_all ["ayesha", "ayesha_collar"] if_any ["walk", "pee"]
-
 
         group left_girl:
             attribute hanna null
         group right_girl:
-            attribute ayesha null
             attribute cassidy null
         group multiple auto variant girls_walk when walk
         group multiple auto variant girls_pee when pee
@@ -1038,7 +1035,6 @@ init 1:
         group multiple auto variant pregnancy_back when back
 
 
-        attribute leash_ayesha "new_petplay_leash_ayesha_back" if_all ["back", "ayesha", "ayesha_collar"]
         attribute leash_cassidy "new_petplay_leash_cassidy_back" if_all ["back", "cassidy", "cassidy_collar"]
         attribute leash_hanna "new_petplay_leash_hanna_back" if_all ["back", "hanna", "hanna_collar"]
 

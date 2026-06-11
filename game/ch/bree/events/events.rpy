@@ -468,49 +468,49 @@ init python:
     "do_once": True,
     })
 
-    Event(**{
-    "name": "bree_fight_dad",
-    "label": "bree_fight_dad",
-    "duration": 4,
-    "priority": 1500,
-    "conditions": [
-        HeroTarget(
-            Or(
-                IsRoom("alley"),
-                HasRoomTag("street"),
-                ),
-            ),
-        PersonTarget(bree,
-            IsGone()
-            ),
-        PersonTarget("kylie",
-            Not(IsFlag("killed", "bree"))
-            ),
-        ],
-    "do_once": True,
-    })
+    # Event(**{
+    # "name": "bree_fight_dad",
+    # "label": "bree_fight_dad",
+    # "duration": 4,
+    # "priority": 1500,
+    # "conditions": [
+    #     HeroTarget(
+    #         Or(
+    #             IsRoom("alley"),
+    #             HasRoomTag("street"),
+    #             ),
+    #         ),
+    #     PersonTarget(bree,
+    #         IsGone()
+    #         ),
+    #     PersonTarget("kylie",
+    #         Not(IsFlag("killed", "bree"))
+    #         ),
+    #     ],
+    # "do_once": True,
+    # })
 
-    Event(**{
-    "name": "bree_fight_mourning_dad",
-    "label": "bree_fight_mourning_dad",
-    "duration": 1,
-    "priority": 1500,
-    "conditions": [
-        HeroTarget(
-            Or(
-                IsRoom("alley"),
-                HasRoomTag("street"),
-                ),
-            ),
-        PersonTarget(bree,
-            IsGone()
-            ),
-        PersonTarget("kylie",
-            IsFlag("killed", "bree")
-            ),
-        ],
-    "do_once": True,
-    })
+    # Event(**{
+    # "name": "bree_fight_mourning_dad",
+    # "label": "bree_fight_mourning_dad",
+    # "duration": 1,
+    # "priority": 1500,
+    # "conditions": [
+    #     HeroTarget(
+    #         Or(
+    #             IsRoom("alley"),
+    #             HasRoomTag("street"),
+    #             ),
+    #         ),
+    #     PersonTarget(bree,
+    #         IsGone()
+    #         ),
+    #     PersonTarget("kylie",
+    #         IsFlag("killed", "bree")
+    #         ),
+    #     ],
+    # "do_once": True,
+    # })
 
     AfterDateEvent(**{
     "name": "bree_stripclub_intro",
@@ -841,263 +841,263 @@ label bree_fight_dad:
     $ hero.grooming -= 10
     return
 
-label bree_fight_mourning_dad:
-    if bree.flags.girlfriend or bree.flags.fiance:
-        "I kind of feel like I've been walking around in a trance since it happened."
-        "Hell, I'm even having trouble calling it what it was, the trauma's so bad."
-        "So when I hear the sound of someone yelling close by, I just ignore it."
-        "Because there's already so much stuff going on inside of my head, you know?"
-        breesdad "[hero.name]…"
-        breesdad "Hey, [hero.name]!"
-        breesdad "You can hear me, yeah?"
-        with vpunch
-        "The only thing that stops me from walking away is the sensation of a hand on my shoulder."
-        "And it's not a gentle hand either, but rather one that's clamping on like a bear-trap!"
-        "I'm spun around before I can say a single word, but I'm less than pleased with that."
-        show breedad at center, dark
-        "So I end up with a frown on my face as I find myself facing the owner of the hand."
-        mike.say "What the actual fuck?!?"
-        mike.say "Who do you think you..."
-        hide breedad
-        show bruce
-        with dissolve
-        "Before I can finish what I'm saying, I recognise who has a hold of me."
-        mike.say "B...Bruce?"
-        mike.say "Is that really you?"
-        mike.say "I'm sorry...I didn't mean to be rude!"
-        "I'm used to seeing [bree.name]'s dad with a frown on his face."
-        "Because he's one of those genuinely miserable old bastards."
-        "You know the kind, right?"
-        "Ex cops or teachers from state schools?"
-        "But what's throwing me right now is that he doesn't look pissed."
-        show bruce quiet
-        "For once he looks emotional, like he's on the verge of tears."
-        show bruce talkative
-        breesdad "Nah, buddy..."
-        breesdad "It's cool, it's cool - I totally get it."
-        breesdad "You're mad, edgy, angry at the whole fucking world, right?"
-        show bruce normal
-        "Another time I'd have disagreed with him."
-        "I'd have explained that I was pissed at being manhandled by some macho jerk."
-        "But this doesn't seem to be the time or place to start throwing blame around."
-        "So I just nod, putting a grim smile on my face."
-        mike.say "Yeah, Bruce..."
-        mike.say "That's it exactly."
-        mike.say "I wanna...I wanna fight the whole fucking world!"
-        show bruce talkative
-        breesdad "Yeah, buddy..."
-        breesdad "Ain't that the truth of it!"
-        show bruce normal
-        "For a moment there's a weird kind fire in Bruce's eyes."
-        "Like he's going to throw caution to the wind and suggest something."
-        "Something crazy like the two of us stock up on guns and become vigilantes."
-        "Go out into the night and take justice into our own hands..."
-        "But then he shakes his head and slaps me hard on the shoulder."
-        show bruce talkative
-        breesdad "I had it all worked out, you know?"
-        breesdad "All the stuff I was gonna say to you about [bree.name]..."
-        breesdad "But the second I saw you, it all just vanished out of my head!"
-        show bruce normal
-        mike.say "I'm sorry, Bruce..."
-        mike.say "I know it's just words and it doesn't change anything..."
-        "Bruce waves a hand in the air and shakes his head."
-        show bruce talkative
-        breesdad "I know, I know, buddy..."
-        breesdad "But at times like this you gotta say things that matter."
-        breesdad "In case you don't get to say it later, you gotta explain yourself."
-        breesdad "Like when I first met you, I was kinda hard on you."
-        breesdad "But that was just because I wanted the best for [bree.name], yeah?"
-        show bruce normal
-        "Bruce is looking at me with something in his eyes that I don't recognise."
-        "In someone that was less of a shit-kicker, I'd have said it was pleading."
-        mike.say "I get it, man..."
-        mike.say "Dads look out for their daughters."
-        mike.say "No guy's ever good enough."
-        show bruce talkative
-        breesdad "No, no, no..."
-        breesdad "I was being hard on you because I saw something in you, buddy."
-        breesdad "You seemed to make [bree.name] happy, that was the biggest thing."
-        breesdad "But I was sure you were tough underneath, you know?"
-        breesdad "Under all the modern pussy boy bullshit?"
-        show bruce normal
-        "I get the feeling that Bruce is really trying to open up to me right now."
-        "The problem is that he still kind of sounds like he's insulting me too."
-        mike.say "Erm..."
-        mike.say "Thanks?"
-        mike.say "I think?"
-        "Bruce nods, seeming to think that I'm reading him loud and clear."
-        show bruce talkative
-        breesdad "I just needed to tell you that, buddy..."
-        breesdad "To let you know I could have stood to have you as a son-in-law."
-        breesdad "But at least there's one thing to look forward to, right?"
-        show bruce normal
-        mike.say "There is?"
-        show bruce talkative
-        breesdad "Ah, come on, [hero.name]…"
-        breesdad "Don't try being all woke and leftie with me!"
-        breesdad "This way we get to watch that murdering bitch fry."
-        breesdad "Get to see her pay for what she did to my little girl!"
-        show bruce normal
-        "All I can do is blink in genuine surprise."
-        "It might sound crazy, but I hadn't really thought about that too much."
-        "About whether I want to be there to see Kylie's execution."
-        "Even if I could stand to watch it happen from elsewhere."
-        mike.say "I..."
-        mike.say "I guess so."
-        "I don't think Bruce is really listening to what I'm saying right now."
-        "Or else he's not picking up on the nuances of my tone."
-        "Because he just grins, the expression almost turning into a genuine snarl."
-        show bruce talkative
-        breesdad "Yeah, you know that's gonna be fun to see."
-        breesdad "I'll reserve you a front-row seat, [hero.name]…"
-        breesdad "Hell, I'll even bring the fucking popcorn!"
-        hide bruce
-        show breedad
-        "With that, Bruce seems to think that the conversation is over."
-        "He shoots me one of those pointing gestures, you know?"
-        "The kind overly macho guys use to say goodbye to their buddies?"
-        hide breedad with easeoutleft
-        "And then he turns on his heel and walks away."
-        "Which leaves me feeling a new level of shame and grief hollowing me out."
-        "Another whole layer of stuff that I'm going to have to process somehow."
-        "But at least I get the chance to do that."
-        "Which is more than you can say for poor [bree.name]."
-    else:
-        "I can't say that life's been much fun for me recently."
-        "In fact I'd go as far as say that it's kind of been turned to shit."
-        "And I've been wandering around like I'm not quite right in the head."
-        "Which is why I don't turn around when I hear a voice shouting nearby."
-        breesdad "Hey..."
-        breesdad "Hey, you!"
-        "I mean, the voice sounds vaguely familiar."
-        "You know, like I maybe heard it somewhere before?"
-        "But the person speaking sounds angry and bitter."
-        "Which isn't something that I'm going to gravitate towards."
-        with vpunch
-        "It's only when I feel a hand on my shoulder that I start to pay attention."
-        breesdad "Hey, dipshit..."
-        breesdad "I'm talking to you!"
-        "Before I can say a word, I find myself being spun around."
-        show breedad with hpunch
-        "And the first thing that I see when I stop turning is a rather angry face."
-        "One that's even better at snapping me out of my funk than the hand on the shoulder."
-        mike.say "B...Bruce?!?"
-        mike.say "Oh man..."
-        mike.say "I...I don't know...I meant to..."
-        "I'm babbling and stumbling over my words as I try to get my brain in gear."
-        "Which is understandable when you consider that the guy standing there is Bruce."
-        "The tough cop father of [bree.name], my recently deceased housemate."
-        "And the girl that I was supposedly in a relationship with."
-        "At least until the psycho I was cheating on her with went and killed her!"
-        "So yeah, you know that this is going to get super-intense pretty quickly."
-        show bruce angry
-        breesdad "You shut your fucking mouth, buddy..."
-        breesdad "And open your goddamn ears too."
-        breesdad "Because you're gonna hear what I have to say, whether you like it or not!"
-        show bruce normal
-        "As if he needs to make his point clearer, Bruce snatches a handful of my collar."
-        with hpunch
-        "Then he proceeds to shove me up against the nearest wall, and hard too."
-        mike.say "Urgh..."
-        "It all happens too fast for me to even think of putting up any resistance."
-        "And even if I could have, it'd probably be the dumbest idea possible."
-        "After all, this guy's a real hard-nosed kind of cop, proper tough guy."
-        "Plus he's on the warpath right now, probably looking to hurt someone."
-        "But seeing as his daughter just got murdered, can you blame him?"
-        show bruce talkative
-        breesdad "I never liked you..."
-        breesdad "Not from the first second I knew you even existed."
-        breesdad "Then moment my little girl told me she was moving in with some guy..."
-        breesdad "I just knew I was gonna have to put my hands on him sooner or later."
-        show bruce normal
-        "I'm doing all I can to nod and look like I'm listening."
-        "But it's hard when someone's spitting their anger straight into your face."
-        "That and you're thinking they might start beating you any second!"
-        show bruce talkative
-        breesdad "And when she told me she was dating this jerk..."
-        breesdad "I ain't gonna lie - the red mist started to come down over me!"
-        show bruce normal
-        "Bruce pauses for a moment, closing his eyes and taking a deep breath."
-        show bruce talkative
-        breesdad "But I told myself that I needed to change..."
-        breesdad "I told myself that's what the old me would have done."
-        breesdad "So I swallowed it and put a smile on my face - I played nice with you."
-        show bruce normal
-        "Even as scared as I am right now, that doesn't exactly ring true."
-        "I mean, Bruce was never exactly nice to me."
-        "Not on any of the few occasions I met him before..."
-        "Well, I guess there's no other way to say it...before [bree.name] passed."
-        "Maybe he became a little less of an asshole with time."
-        "But that's an observation I'll probably keep to myself."
-        "And instead of challenging Bruce's narrative, I nod the whole time."
-        show bruce talkative
-        breesdad "But I was right, wasn't I?"
-        breesdad "I was fucking right all along!"
-        show bruce normal
-        play sound punch_hard
-        "Bruce underlines his point by landing a punch right beside my head."
-        "And it doesn't seem to bother him that means he's just connected with the wall!"
-        "I flinch out of sheer instinct, wincing at the blood on his knuckles."
-        mike.say "Y..yeah…"
-        mike.say "You sure were, Bruce!"
-        show bruce talkative
-        breesdad "Yeah, you bet I was!"
-        breesdad "Man, if only you'd cheated on her with a normal broad."
-        breesdad "That way I'd have just beat the living shit out of your ass!"
-        breesdad "But oh no, not you..."
-        breesdad "Mister Fancy-pants here had to go and sleep around with a psycho."
-        breesdad "A genuine, one hundred percent fucking fruit-cake."
-        show bruce normal
-        "Bruce stops shouting for a moment and shakes his head."
-        "As usual, I'm not sure what he's going to do next."
-        "Whether he's going to attack me or else collapse into a flood of tears."
-        mike.say "Erm..."
-        mike.say "I'm...sorry?"
-        "I wince again as the words come out of me."
-        "Still expecting Bruce to snap and start beating me."
-        if not "kylie_trial_2" in DONE:
-            "But instead he lets out a grim chuckle."
-            show bruce talkative
-            breesdad "Huh..."
-            breesdad "At least this way there's one thing to look forward to, right?"
-            show bruce normal
-            mike.say "There is?"
-            show bruce talkative
-            breesdad "Ah, come on, [hero.name]…"
-            breesdad "Don't try being all woke and leftie with me!"
-            breesdad "This way we get to watch that murdering bitch fry."
-            breesdad "Get to see her pay for what she did to my little girl!"
-            show bruce normal
-            "All I can do is blink in genuine surprise."
-            "It might sound crazy, but I hadn't really thought about that too much."
-            "About whether I want to be there to see Kylie's execution."
-            "Even if I could stand to watch it happen from elsewhere."
-            mike.say "I..."
-            mike.say "I guess so."
-            "I don't think Bruce is really listening to what I'm saying right now."
-            "Or else he's not picking up on the nuances of my tone."
-            "Because he just grins, the expression almost turning into a genuine snarl."
-            show bruce talkative
-            breesdad "Yeah, you know that's gonna be fun to see."
-            breesdad "I'll reserve you a front-row seat, [hero.name]…"
-            breesdad "Hell, I'll even bring the fucking popcorn!"
-        else:
-            "But instead he lets out a sad sigh, looking at me with tired eyes."
-        hide bruce
-        show breedad
-        "With that, Bruce seems to think that the conversation is over."
-        if not "kylie_trial_2" in DONE:
-            "He shoots me one of those pointing gestures, you know?"
-            "The kind overly macho guys use to say goodbye to their buddies?"
-        hide breedad with easeoutleft
-        "And then he turns on his heel and walks away."
-        "Which leaves me feeling a new level of shame and grief hollowing me out."
-        "Another whole layer of stuff that I'm going to have to process somehow."
-        "But then in the grand scheme of things, is that really so bad?"
-        "At least I got a better deal than poor [bree.name] did."
-        "At least I got to live, even if I do feel wretched and guilty all the time."
-    $ hero.fun -= 10
-    return
+# label bree_fight_mourning_dad:
+#     if bree.flags.girlfriend or bree.flags.fiance:
+#         "I kind of feel like I've been walking around in a trance since it happened."
+#         "Hell, I'm even having trouble calling it what it was, the trauma's so bad."
+#         "So when I hear the sound of someone yelling close by, I just ignore it."
+#         "Because there's already so much stuff going on inside of my head, you know?"
+#         breesdad "[hero.name]…"
+#         breesdad "Hey, [hero.name]!"
+#         breesdad "You can hear me, yeah?"
+#         with vpunch
+#         "The only thing that stops me from walking away is the sensation of a hand on my shoulder."
+#         "And it's not a gentle hand either, but rather one that's clamping on like a bear-trap!"
+#         "I'm spun around before I can say a single word, but I'm less than pleased with that."
+#         show breedad at center, dark
+#         "So I end up with a frown on my face as I find myself facing the owner of the hand."
+#         mike.say "What the actual fuck?!?"
+#         mike.say "Who do you think you..."
+#         hide breedad
+#         show bruce
+#         with dissolve
+#         "Before I can finish what I'm saying, I recognise who has a hold of me."
+#         mike.say "B...Bruce?"
+#         mike.say "Is that really you?"
+#         mike.say "I'm sorry...I didn't mean to be rude!"
+#         "I'm used to seeing [bree.name]'s dad with a frown on his face."
+#         "Because he's one of those genuinely miserable old bastards."
+#         "You know the kind, right?"
+#         "Ex cops or teachers from state schools?"
+#         "But what's throwing me right now is that he doesn't look pissed."
+#         show bruce quiet
+#         "For once he looks emotional, like he's on the verge of tears."
+#         show bruce talkative
+#         breesdad "Nah, buddy..."
+#         breesdad "It's cool, it's cool - I totally get it."
+#         breesdad "You're mad, edgy, angry at the whole fucking world, right?"
+#         show bruce normal
+#         "Another time I'd have disagreed with him."
+#         "I'd have explained that I was pissed at being manhandled by some macho jerk."
+#         "But this doesn't seem to be the time or place to start throwing blame around."
+#         "So I just nod, putting a grim smile on my face."
+#         mike.say "Yeah, Bruce..."
+#         mike.say "That's it exactly."
+#         mike.say "I wanna...I wanna fight the whole fucking world!"
+#         show bruce talkative
+#         breesdad "Yeah, buddy..."
+#         breesdad "Ain't that the truth of it!"
+#         show bruce normal
+#         "For a moment there's a weird kind fire in Bruce's eyes."
+#         "Like he's going to throw caution to the wind and suggest something."
+#         "Something crazy like the two of us stock up on guns and become vigilantes."
+#         "Go out into the night and take justice into our own hands..."
+#         "But then he shakes his head and slaps me hard on the shoulder."
+#         show bruce talkative
+#         breesdad "I had it all worked out, you know?"
+#         breesdad "All the stuff I was gonna say to you about [bree.name]..."
+#         breesdad "But the second I saw you, it all just vanished out of my head!"
+#         show bruce normal
+#         mike.say "I'm sorry, Bruce..."
+#         mike.say "I know it's just words and it doesn't change anything..."
+#         "Bruce waves a hand in the air and shakes his head."
+#         show bruce talkative
+#         breesdad "I know, I know, buddy..."
+#         breesdad "But at times like this you gotta say things that matter."
+#         breesdad "In case you don't get to say it later, you gotta explain yourself."
+#         breesdad "Like when I first met you, I was kinda hard on you."
+#         breesdad "But that was just because I wanted the best for [bree.name], yeah?"
+#         show bruce normal
+#         "Bruce is looking at me with something in his eyes that I don't recognise."
+#         "In someone that was less of a shit-kicker, I'd have said it was pleading."
+#         mike.say "I get it, man..."
+#         mike.say "Dads look out for their daughters."
+#         mike.say "No guy's ever good enough."
+#         show bruce talkative
+#         breesdad "No, no, no..."
+#         breesdad "I was being hard on you because I saw something in you, buddy."
+#         breesdad "You seemed to make [bree.name] happy, that was the biggest thing."
+#         breesdad "But I was sure you were tough underneath, you know?"
+#         breesdad "Under all the modern pussy boy bullshit?"
+#         show bruce normal
+#         "I get the feeling that Bruce is really trying to open up to me right now."
+#         "The problem is that he still kind of sounds like he's insulting me too."
+#         mike.say "Erm..."
+#         mike.say "Thanks?"
+#         mike.say "I think?"
+#         "Bruce nods, seeming to think that I'm reading him loud and clear."
+#         show bruce talkative
+#         breesdad "I just needed to tell you that, buddy..."
+#         breesdad "To let you know I could have stood to have you as a son-in-law."
+#         breesdad "But at least there's one thing to look forward to, right?"
+#         show bruce normal
+#         mike.say "There is?"
+#         show bruce talkative
+#         breesdad "Ah, come on, [hero.name]…"
+#         breesdad "Don't try being all woke and leftie with me!"
+#         breesdad "This way we get to watch that murdering bitch fry."
+#         breesdad "Get to see her pay for what she did to my little girl!"
+#         show bruce normal
+#         "All I can do is blink in genuine surprise."
+#         "It might sound crazy, but I hadn't really thought about that too much."
+#         "About whether I want to be there to see Kylie's execution."
+#         "Even if I could stand to watch it happen from elsewhere."
+#         mike.say "I..."
+#         mike.say "I guess so."
+#         "I don't think Bruce is really listening to what I'm saying right now."
+#         "Or else he's not picking up on the nuances of my tone."
+#         "Because he just grins, the expression almost turning into a genuine snarl."
+#         show bruce talkative
+#         breesdad "Yeah, you know that's gonna be fun to see."
+#         breesdad "I'll reserve you a front-row seat, [hero.name]…"
+#         breesdad "Hell, I'll even bring the fucking popcorn!"
+#         hide bruce
+#         show breedad
+#         "With that, Bruce seems to think that the conversation is over."
+#         "He shoots me one of those pointing gestures, you know?"
+#         "The kind overly macho guys use to say goodbye to their buddies?"
+#         hide breedad with easeoutleft
+#         "And then he turns on his heel and walks away."
+#         "Which leaves me feeling a new level of shame and grief hollowing me out."
+#         "Another whole layer of stuff that I'm going to have to process somehow."
+#         "But at least I get the chance to do that."
+#         "Which is more than you can say for poor [bree.name]."
+#     else:
+#         "I can't say that life's been much fun for me recently."
+#         "In fact I'd go as far as say that it's kind of been turned to shit."
+#         "And I've been wandering around like I'm not quite right in the head."
+#         "Which is why I don't turn around when I hear a voice shouting nearby."
+#         breesdad "Hey..."
+#         breesdad "Hey, you!"
+#         "I mean, the voice sounds vaguely familiar."
+#         "You know, like I maybe heard it somewhere before?"
+#         "But the person speaking sounds angry and bitter."
+#         "Which isn't something that I'm going to gravitate towards."
+#         with vpunch
+#         "It's only when I feel a hand on my shoulder that I start to pay attention."
+#         breesdad "Hey, dipshit..."
+#         breesdad "I'm talking to you!"
+#         "Before I can say a word, I find myself being spun around."
+#         show breedad with hpunch
+#         "And the first thing that I see when I stop turning is a rather angry face."
+#         "One that's even better at snapping me out of my funk than the hand on the shoulder."
+#         mike.say "B...Bruce?!?"
+#         mike.say "Oh man..."
+#         mike.say "I...I don't know...I meant to..."
+#         "I'm babbling and stumbling over my words as I try to get my brain in gear."
+#         "Which is understandable when you consider that the guy standing there is Bruce."
+#         "The tough cop father of [bree.name], my recently deceased housemate."
+#         "And the girl that I was supposedly in a relationship with."
+#         "At least until the psycho I was cheating on her with went and killed her!"
+#         "So yeah, you know that this is going to get super-intense pretty quickly."
+#         show bruce angry
+#         breesdad "You shut your fucking mouth, buddy..."
+#         breesdad "And open your goddamn ears too."
+#         breesdad "Because you're gonna hear what I have to say, whether you like it or not!"
+#         show bruce normal
+#         "As if he needs to make his point clearer, Bruce snatches a handful of my collar."
+#         with hpunch
+#         "Then he proceeds to shove me up against the nearest wall, and hard too."
+#         mike.say "Urgh..."
+#         "It all happens too fast for me to even think of putting up any resistance."
+#         "And even if I could have, it'd probably be the dumbest idea possible."
+#         "After all, this guy's a real hard-nosed kind of cop, proper tough guy."
+#         "Plus he's on the warpath right now, probably looking to hurt someone."
+#         "But seeing as his daughter just got murdered, can you blame him?"
+#         show bruce talkative
+#         breesdad "I never liked you..."
+#         breesdad "Not from the first second I knew you even existed."
+#         breesdad "Then moment my little girl told me she was moving in with some guy..."
+#         breesdad "I just knew I was gonna have to put my hands on him sooner or later."
+#         show bruce normal
+#         "I'm doing all I can to nod and look like I'm listening."
+#         "But it's hard when someone's spitting their anger straight into your face."
+#         "That and you're thinking they might start beating you any second!"
+#         show bruce talkative
+#         breesdad "And when she told me she was dating this jerk..."
+#         breesdad "I ain't gonna lie - the red mist started to come down over me!"
+#         show bruce normal
+#         "Bruce pauses for a moment, closing his eyes and taking a deep breath."
+#         show bruce talkative
+#         breesdad "But I told myself that I needed to change..."
+#         breesdad "I told myself that's what the old me would have done."
+#         breesdad "So I swallowed it and put a smile on my face - I played nice with you."
+#         show bruce normal
+#         "Even as scared as I am right now, that doesn't exactly ring true."
+#         "I mean, Bruce was never exactly nice to me."
+#         "Not on any of the few occasions I met him before..."
+#         "Well, I guess there's no other way to say it...before [bree.name] passed."
+#         "Maybe he became a little less of an asshole with time."
+#         "But that's an observation I'll probably keep to myself."
+#         "And instead of challenging Bruce's narrative, I nod the whole time."
+#         show bruce talkative
+#         breesdad "But I was right, wasn't I?"
+#         breesdad "I was fucking right all along!"
+#         show bruce normal
+#         play sound punch_hard
+#         "Bruce underlines his point by landing a punch right beside my head."
+#         "And it doesn't seem to bother him that means he's just connected with the wall!"
+#         "I flinch out of sheer instinct, wincing at the blood on his knuckles."
+#         mike.say "Y..yeah…"
+#         mike.say "You sure were, Bruce!"
+#         show bruce talkative
+#         breesdad "Yeah, you bet I was!"
+#         breesdad "Man, if only you'd cheated on her with a normal broad."
+#         breesdad "That way I'd have just beat the living shit out of your ass!"
+#         breesdad "But oh no, not you..."
+#         breesdad "Mister Fancy-pants here had to go and sleep around with a psycho."
+#         breesdad "A genuine, one hundred percent fucking fruit-cake."
+#         show bruce normal
+#         "Bruce stops shouting for a moment and shakes his head."
+#         "As usual, I'm not sure what he's going to do next."
+#         "Whether he's going to attack me or else collapse into a flood of tears."
+#         mike.say "Erm..."
+#         mike.say "I'm...sorry?"
+#         "I wince again as the words come out of me."
+#         "Still expecting Bruce to snap and start beating me."
+#         if not "kylie_trial_2" in DONE:
+#             "But instead he lets out a grim chuckle."
+#             show bruce talkative
+#             breesdad "Huh..."
+#             breesdad "At least this way there's one thing to look forward to, right?"
+#             show bruce normal
+#             mike.say "There is?"
+#             show bruce talkative
+#             breesdad "Ah, come on, [hero.name]…"
+#             breesdad "Don't try being all woke and leftie with me!"
+#             breesdad "This way we get to watch that murdering bitch fry."
+#             breesdad "Get to see her pay for what she did to my little girl!"
+#             show bruce normal
+#             "All I can do is blink in genuine surprise."
+#             "It might sound crazy, but I hadn't really thought about that too much."
+#             "About whether I want to be there to see Kylie's execution."
+#             "Even if I could stand to watch it happen from elsewhere."
+#             mike.say "I..."
+#             mike.say "I guess so."
+#             "I don't think Bruce is really listening to what I'm saying right now."
+#             "Or else he's not picking up on the nuances of my tone."
+#             "Because he just grins, the expression almost turning into a genuine snarl."
+#             show bruce talkative
+#             breesdad "Yeah, you know that's gonna be fun to see."
+#             breesdad "I'll reserve you a front-row seat, [hero.name]…"
+#             breesdad "Hell, I'll even bring the fucking popcorn!"
+#         else:
+#             "But instead he lets out a sad sigh, looking at me with tired eyes."
+#         hide bruce
+#         show breedad
+#         "With that, Bruce seems to think that the conversation is over."
+#         if not "kylie_trial_2" in DONE:
+#             "He shoots me one of those pointing gestures, you know?"
+#             "The kind overly macho guys use to say goodbye to their buddies?"
+#         hide breedad with easeoutleft
+#         "And then he turns on his heel and walks away."
+#         "Which leaves me feeling a new level of shame and grief hollowing me out."
+#         "Another whole layer of stuff that I'm going to have to process somehow."
+#         "But then in the grand scheme of things, is that really so bad?"
+#         "At least I got a better deal than poor [bree.name] did."
+#         "At least I got to live, even if I do feel wretched and guilty all the time."
+#     $ hero.fun -= 10
+#     return
 
 label bree_asleep:
     if samantha.room == game.room:

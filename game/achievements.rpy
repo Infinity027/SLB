@@ -2516,7 +2516,7 @@ init python:
     "label": "taming_harem_achievement_1",
     "conditions": [
         GameTarget(IsFlag("cheat", False)),
-        TogetherInHarem('taming', 'ayesha'),
+        TogetherInHarem('taming'),
         ],
     "priority": 1000,
     "do_once": True,
@@ -2680,7 +2680,7 @@ init python:
     "label": "children_achievement_2",
     "conditions": [
         GameTarget(IsFlag("cheat", False)),
-        "all([Person.find(g).flags.mikeBabies >= 1 for g in ['aletta', 'alexis', 'anna', 'audrey', 'ayesha', 'bree', 'camila', 'cassidy', 'emma', 'hanna', 'harmony', 'kleio', 'lavish', 'lexi', 'minami', 'morgan', 'palla', 'samantha', 'sasha', 'shiori']])"
+        "all([Person.find(g).flags.mikeBabies >= 1 for g in ['aletta', 'alexis', 'anna', 'audrey', 'bree', 'camila', 'cassidy', 'emma', 'hanna', 'harmony', 'kleio', 'lavish', 'lexi', 'minami', 'morgan', 'palla', 'samantha', 'sasha', 'shiori']])"
         ],
     "priority": 1000,
     "do_once": True,

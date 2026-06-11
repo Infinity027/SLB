@@ -2295,7 +2295,6 @@ label hanna_event_07a:
 
 label hanna_event_07b:
     $ hanna.flags.sexywork = True
-    $ ayesha.flags.sexywork = True
     if hanna.love.max < 140:
         $ hanna.love.max = 140
     "It's not like I really need an excuse to head down to the gym and see if Hanna's taken my advice about making some changes for the better."

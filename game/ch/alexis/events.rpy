@@ -487,18 +487,18 @@ init python:
     "do_once": True,
     })
 
-    InteractEvent(**{
-    "name": "alexis_rape_talk",
-    "label": "alexis_rape_talk",
-    "conditions": [
-        IsDone("kylie_investigation_3"),
-        PersonTarget(alexis,
-            IsActive(),
-            ),
-        ],
-    "music": "music/roa_music/one_wish.ogg",
-    "do_once": True,
-    })
+    # InteractEvent(**{
+    # "name": "alexis_rape_talk",
+    # "label": "alexis_rape_talk",
+    # "conditions": [
+    #     IsDone("kylie_investigation_3"),
+    #     PersonTarget(alexis,
+    #         IsActive(),
+    #         ),
+    #     ],
+    # "music": "music/roa_music/one_wish.ogg",
+    # "do_once": True,
+    # })
 
 label alexis_start:
     $ alexis.unhide()
@@ -5465,116 +5465,6 @@ label alexis_preg_talk:
             $ alexis.flags.pregstory = 1
     "Two lives changed forever thanks to just one little conversation."
     "But a conversation with consequences that were far from little in their implications."
-    return
-
-label alexis_rape_talk:
-    show alexis sad
-    if alexis.love >= 100:
-        alexis.say "[hero.name]."
-        mike.say "Alexis."
-        mike.say "I...I wanted to call you talk to you before now, Alexis."
-        mike.say "But I was worried that..."
-        alexis.say "What, [hero.name]?"
-        alexis.say "What were you worried about?"
-        mike.say "I didn't know if you'd want to hear from me, Alexis."
-        mike.say "Not after I was the one that went to the police about what Kylie did..."
-        "Alexis stares at me for the longest time, in total silence and yet with her mouth hanging open."
-        "And when she does finally speak, the disbelief in her voice as clear as can be."
-        alexis.say "How...how could you think that, [hero.name]?!?"
-        alexis.say "Sure, Kylie's my sister."
-        alexis.say "But I can't forgive what she did to you!"
-        if kylie.flags.rape and not kylie.flags.killed:
-            alexis.say "She raped you, [hero.name]."
-            alexis.say "It'd be no different if you were a girl and she were a guy."
-            alexis.say "As far as I'm concerned, Kylie's right where she needs to be."
-            alexis.say "And maybe she should have been there a lot sooner too!"
-        elif kylie.flags.rape and kylie.flags.killed:
-            alexis.say "She raped you, [hero.name]."
-            alexis.say "And I don't think I'll ever be able to forgive the fact that she killed someone either!"
-            alexis.say "She's dangerous, too dangerous to be out on the streets where she could hurt someone else."
-            alexis.say "God help me for saying this, but I hope they never let her out!"
-        "I feel a sudden and unexpected surge of emotion as Alexis says all of this."
-        "And I realise that I've been bottling up my feelings since it all happened."
-        "Somehow, just knowing that Alexis is on my side is enough to lift the weight off of my shoulders."
-        alexis.say "[hero.name]..."
-        alexis.say "Are you...crying?"
-        "Without asking my permission, Alexis cups my cheek with her hand and wipes my eye."
-        "I see that her finger comes away wet, telling me that she's right."
-        mike.say "I...I guess I am!"
-        mike.say "It's just so good to know that you get it, Alexis - that you understand."
-        alexis.say "Let's just say that I've been where you are now, [hero.name]."
-        alexis.say "And you helped me to get back on my feet too."
-        "For a moment I seriously think about asking Alexis just what she means by that."
-        "But then I shake it off, deciding that now isn't the best time to pry."
-        alexis.say "I lost you once, [hero.name]."
-        alexis.say "But I won't let that happen again!"
-        "I feel Alexis take hold of my hands."
-        "Gripping them tightly as if afraid she'll lose me if she doesn't."
-        "I don't need to be told to wrap my own fingers between hers either."
-        "After that, there's no more need for words as she leans her forehead against mine."
-        hide alexis
-        show alexis kiss with fade
-        $ alexis.flags.kiss += 1
-        "And the sensation of kissing her lips is like sealing the deal."
-        "As soon as I do so, I somehow feel like everything's going to be okay after all."
-    else:
-        alexis.say "Hey, [hero.name]."
-        mike.say "Hey, Alexis."
-        mike.say "I can't imagine it's fun for your family right now."
-        alexis.say "Don't worry yourself about that, [hero.name]."
-        alexis.say "As far as I'm concerned, you're the only victim here!"
-        if kylie.flags.rape and not kylie.flags.killed:
-            mike.say "Thanks for saying that, Alexis - you're a good friend."
-            mike.say "But there's still a part of me that feels a little sorry for her, you know?"
-            alexis.say "Huh...really?!?"
-            mike.say "I know, I know...it sounds crazy."
-            mike.say "But she was sick in the head, after all."
-            "Alexis shakes her head, her mouth set in a grim line."
-            alexis.say "It's amazing you can be that kind, [hero.name]."
-            alexis.say "I couldn't be, and she's my kid sister!"
-            "All I can do is shrug and offer Alexis a weak smile."
-            mike.say "Maybe you'll be able to forgive her in time, Alexis."
-            alexis.say "Maybe...maybe not."
-            alexis.say "But I didn't come here to talk about Kylie."
-        elif kylie.flags.rape and kylie.flags.killed:
-            "Almost the same moment that she says it, Alexis realises the mistake she's made."
-            "She starts waving her hands in front of herself, as if trying to distance herself from it."
-            alexis.say "Oh shit, [hero.name] - I'm so sorry!"
-            alexis.say "My first thought was for you."
-            alexis.say "I guess I forgot about your poor housemate..."
-            "I hold up my own hand, stopping Alexis before she can say anything more."
-            mike.say "It's okay, Alexis - I understand."
-            mike.say "You didn't know her like I did."
-            mike.say "And you were just trying to be a good friend."
-            "Alexis nods, but I can see in her eyes that she's not totally convinced by my words."
-            mike.say "It's weird her not being around the place anymore."
-            mike.say "And right now, I don't know what's going to happen next."
-            mike.say "Maybe we'll get a new housemate, or maybe I'll move out."
-            alexis.say "Well, you can always crash on the couch at my place."
-            mike.say "Thanks, Alexis - you're a good friend."
-            alexis.say "I didn't come here to talk about me, [hero.name]."
-        alexis.say "I came here to talk about you."
-        "I smile, trying to wave away her concern for me."
-        mike.say "I'll be fine, Alexis."
-        mike.say "I just need time to get over it, that's all."
-        "Alexis looks me straight in the eye, shaking her head as she does so."
-        "It's then that I feel the weight of her hand on mine."
-        alexis.say "You don't need to act like it's nothing with me, [hero.name]."
-        alexis.say "We go way back, far enough for me to know when you're putting on a front."
-        mike.say "Uh...yeah, Alexis."
-        mike.say "I guess you are one of my oldest friends."
-        "Alexis squeezes my hand at this, a pained, but genuine smile on her face."
-        alexis.say "I...I feel like I could have been a better friend, [hero.name]."
-        alexis.say "Maybe if I had..."
-        alexis.say "Maybe things would have been different..."
-        mike.say "You couldn't have stopped Kylie, Alexis."
-        mike.say "She was hellbent on doing what she did."
-        mike.say "But I could use all the friends I can get right now."
-        mike.say "So maybe you can help me get over what's been done?"
-        "Alexis' smile slowly loses its pain and becomes more genuine as I say this."
-        "She nods, and I can feel a smile spreading across my face too."
-        "I guess this one of those times when old friends don't really need words to know what each other is thinking."
-    $ alexis.love += 20
     return
 
 label alexis_male_ending:

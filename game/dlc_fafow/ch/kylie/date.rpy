@@ -1,41 +1,41 @@
-label kylie_date_amusement_park_male:
-    scene bg amusement
-    show kylie normal
-    with fade
-    "I'm feeling a real buzz of excitement as I walk towards the gates of the Amusement Park."
-    "And that's nothing new for me, as I love the chance to come here and go on all my favourite rides."
-    "But today it feels extra special as I have Kylie holding my hand as I go through the gates."
-    "As if it weren't enough that I have a cute girl with me, she seems totally up for it too."
-    show kylie impressed
-    "Kylie's eyes are like saucers as she looks here and there, taking it all in."
-    "In fact she looks almost like they're going to glaze over with all of the flashing lights!"
-    mike.say "You look pretty excited to be here, Kylie!"
-    mike.say "You should have told me that you were so into this place."
-    show kylie normal
-    "At the sound of my voice, Kylie's expression changes."
-    "She tears her gaze away from what's going on around us."
-    "And all of a sudden I'm the centre of her attention."
-    "The change is so sudden and so complete that it's almost scary."
-    "Like every fibre of Kylie's being is focussed on me at once."
-    show kylie shout
-    kylie.say "Oh, this place is great, [hero.name]."
-    kylie.say "But that's not why I'm excited to be here."
-    show kylie normal
-    mike.say "It..."
-    mike.say "It isn't?"
-    show kylie crazyhappy
-    kylie.say "Of course not, silly!"
-    kylie.say "The really exciting thing is getting to spend time with you!"
-    show kylie smile
-    "As Kylie says this, I feel her grip on my arm tightening."
-    "At the same time her eyes seem to get even bigger than before."
-    show kylie happy
-    "And her smile widens, now showing off her even, white teeth too."
-    "I can't help thinking that all of this could be a little scary."
-    "You know, if I wasn't totally sure that it's just because she's into me?"
-    "Knowing that means I can just return the smile and forget all about it."
-    "And then I lead Kylie into the park for what promises to be a very enjoyable visit."
-    return
+# label kylie_date_amusement_park_male:
+#     scene bg amusement
+#     show kylie normal
+#     with fade
+#     "I'm feeling a real buzz of excitement as I walk towards the gates of the Amusement Park."
+#     "And that's nothing new for me, as I love the chance to come here and go on all my favourite rides."
+#     "But today it feels extra special as I have Kylie holding my hand as I go through the gates."
+#     "As if it weren't enough that I have a cute girl with me, she seems totally up for it too."
+#     show kylie impressed
+#     "Kylie's eyes are like saucers as she looks here and there, taking it all in."
+#     "In fact she looks almost like they're going to glaze over with all of the flashing lights!"
+#     mike.say "You look pretty excited to be here, Kylie!"
+#     mike.say "You should have told me that you were so into this place."
+#     show kylie normal
+#     "At the sound of my voice, Kylie's expression changes."
+#     "She tears her gaze away from what's going on around us."
+#     "And all of a sudden I'm the centre of her attention."
+#     "The change is so sudden and so complete that it's almost scary."
+#     "Like every fibre of Kylie's being is focussed on me at once."
+#     show kylie shout
+#     kylie.say "Oh, this place is great, [hero.name]."
+#     kylie.say "But that's not why I'm excited to be here."
+#     show kylie normal
+#     mike.say "It..."
+#     mike.say "It isn't?"
+#     show kylie crazyhappy
+#     kylie.say "Of course not, silly!"
+#     kylie.say "The really exciting thing is getting to spend time with you!"
+#     show kylie smile
+#     "As Kylie says this, I feel her grip on my arm tightening."
+#     "At the same time her eyes seem to get even bigger than before."
+#     show kylie happy
+#     "And her smile widens, now showing off her even, white teeth too."
+#     "I can't help thinking that all of this could be a little scary."
+#     "You know, if I wasn't totally sure that it's just because she's into me?"
+#     "Knowing that means I can just return the smile and forget all about it."
+#     "And then I lead Kylie into the park for what promises to be a very enjoyable visit."
+#     return
 
 label kylie_date_ferris_wheel_male:
     mike.say "You want to ride the Ferris Wheel, Kylie?"

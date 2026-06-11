@@ -682,6 +682,7 @@ init python:
     "quit": False,
     })
 
+
     Event(**{
     "name": "samantha_pregnant_request",
     "label": "samantha_pregnant_request",
@@ -950,19 +951,19 @@ init python:
     "do_once": True,
     })
 
-    InteractEvent(**{
-    "name": "sam_murder_talk_bree",
-    "label": "sam_murder_talk_bree",
-    "do_once": True,
-    "conditions": [
-        PersonTarget(samantha,
-            IsActive(),
-            ),
-        PersonTarget("kylie",
-            IsFlag("killed", "bree")
-            ),
-        ],
-    })
+    # InteractEvent(**{
+    # "name": "sam_murder_talk_bree",
+    # "label": "sam_murder_talk_bree",
+    # "do_once": True,
+    # "conditions": [
+    #     PersonTarget(samantha,
+    #         IsActive(),
+    #         ),
+    #     PersonTarget("kylie",
+    #         IsFlag("killed", "bree")
+    #         ),
+    #     ],
+    # })
 
     Event(**{
     "name": "samantha_exclusive_cheated",
@@ -1638,104 +1639,104 @@ label samantha_asleep_bedroom5:
     $ game.room = "secondfloor"
     return
 
-label sam_murder_talk_sasha:
-    "As you can imagine, the atmosphere around the house has been pretty strained since it happened."
-    "And the fact that I'm calling the incident 'it' pretty much lets you know that it's bad."
-    "I mean, how can you even begin to process the fact that someone broke into your house and raped you?"
-    "That and worse, that she actually topped it all off by literally killing one of your housemates too?"
-    "It takes me the first few days just to be able to think of Kylie without breaking into a cold sweat."
-    "And even when I can manage that, I keep on seeing the whole thing playing out, over and again."
-    "When I close my eyes, all I can see is the image of what happened to poor Sasha."
-    "It's vivid and stark, like the scene is etched into my mind and I'll never be able to forget it."
-    "I'm so wrapped up in my own mental trauma that I almost don't notice the others are avoiding me."
-    "At first I just assume that everyone's feeling the same, that they need their mental space."
-    "But soon enough I start to become worried that there's more to it than that."
-    "Could they actually be avoiding me because I was the one that knew Kylie?"
-    "Am I tainted by association with that crazy bitch?"
-    "In the end, I decide to just up and ask."
-    "I figure that either way, it's better to know the truth."
-    "And I hope that Sam, the one that I've known the longest, will be straight up and honest with me."
-    show samantha sad with dissolve
-    mike.say "Ah..."
-    if samantha.flags.nickname == "cupcake":
-        mike.say "Hey, Cupcake!"
-    else:
-        mike.say "Hey, Sam!"
-    show samantha surprised
-    "Sam stops in her tracks, looking a little surprised to see me."
-    "But she recovers quickly, hiding whatever she's feeling behind a mask of sympathy."
-    show samantha normal
-    samantha.say "Oh, hey, [hero.name]."
-    samantha.say "How are you holding up?"
-    "All I can do is shrug and let out a sigh."
-    "The truth is that I'm not doing great - who would after what happened?"
-    "But I still don't want to wallow in self-pity or be smothered with someone else's sympathy."
-    "So I tell a lie, only a small one, just to move the conversation on."
-    mike.say "Better than I did on the day it happened."
-    if samantha.flags.nickname == "cupcake":
-        mike.say "How about you, Cupcake?"
-    else:
-        mike.say "How about you, Sam?"
-    show samantha surprised
-    "I can see that the question catches Sam out, putting her on the backfoot."
-    "Maybe she expected the whole conversation to be about me, rather than the both of us."
-    samantha.say "I...I'm okay, [hero.name]."
-    samantha.say "After all, that crazy girl didn't hurt me - did she?"
-    "I want to be subtle about this, but I can't keep from stating the obvious."
-    mike.say "The crazy girl that I was involved with?"
-    show samantha sad
-    samantha.say "I...I didn't mean it like that, [hero.name]."
-    if samantha.flags.nickname == "cupcake":
-        mike.say "But it's true, Cupcake - I'm the one that brought Kylie here."
-    else:
-        mike.say "But it's true, Sam - I'm the one that brought Kylie here."
-    mike.say "If it weren't for me, Sasha would still be alive."
-    samantha.say "Come on, [hero.name] - you can't believe that?!?"
-    samantha.say "I thought that it was...that it might be my fault!"
-    show samantha close
-    "Now the roles are suddenly reversed, as I find myself baffled by Sam's confession."
-    "I shake my head, trying to dismiss what she just said almost the moment I hear it."
-    if samantha.flags.nickname == "cupcake":
-        mike.say "What do you mean, Cupcake?!?"
-    else:
-        mike.say "What do you mean, Sam?!?"
-    mike.say "That's just crazy!"
-    samantha.say "Really, [hero.name]?"
-    samantha.say "How is it any more crazy than you trying to take the blame for what a psycho did?"
-    mike.say "Oh yeah..."
-    if samantha.flags.nickname == "cupcake":
-        mike.say "Point taken, Cupcake."
-    else:
-        mike.say "Point taken, Sam."
-    samantha.say "Yeah, well..."
-    samantha.say "With me it was thinking that my moving back in here was bad luck."
-    samantha.say "Like I'd come back to the place where it started to go wrong with Ryan and me."
-    samantha.say "But it wasn't - it was just a crazy girl doing what her crazy brain told her to do."
-    samantha.say "You just had the misfortune to be the guy she fixated on, [hero.name]."
-    samantha.say "And Sasha was in the wrong place at the wrong time."
-    samantha.say "It sucks and it's not fair, but you're not right to blame yourself."
-    if samantha.flags.nickname == "cupcake":
-        mike.say "It still hurts, Cupcake."
-    else:
-        mike.say "It still hurts, Sam."
-    samantha.say "I know, [hero.name]."
-    samantha.say "But that's because it's supposed to."
-    samantha.say "All the guilt and pain you're feeling - that's the proof your not insane."
-    show samantha normal
-    samantha.say "It's proof that you're not like her."
-    "I feel Sam squeezing my hand tighter as she says this, holding my eye the whole time."
-    "Knowing that she's there for me does make me feel better, more confident for the future."
-    "I squeeze her hand in return, nodding to show that her words have had the desired effect."
-    show samantha sad
-    samantha.say "I feel like I never had the chance to get to know Sasha."
-    samantha.say "Not properly, at least."
-    show samantha normal
-    samantha.say "I think I'd like you to tell me all about her, [hero.name]."
-    "I nod again, beginning to warm to the idea."
-    "And then I can't help laughing just a little."
-    "As I can think of the perfect stories to tell Sam."
-    "And I just know that they'll have her laughing too."
-    return
+# label sam_murder_talk_sasha:
+#     "As you can imagine, the atmosphere around the house has been pretty strained since it happened."
+#     "And the fact that I'm calling the incident 'it' pretty much lets you know that it's bad."
+#     "I mean, how can you even begin to process the fact that someone broke into your house and raped you?"
+#     "That and worse, that she actually topped it all off by literally killing one of your housemates too?"
+#     "It takes me the first few days just to be able to think of Kylie without breaking into a cold sweat."
+#     "And even when I can manage that, I keep on seeing the whole thing playing out, over and again."
+#     "When I close my eyes, all I can see is the image of what happened to poor Sasha."
+#     "It's vivid and stark, like the scene is etched into my mind and I'll never be able to forget it."
+#     "I'm so wrapped up in my own mental trauma that I almost don't notice the others are avoiding me."
+#     "At first I just assume that everyone's feeling the same, that they need their mental space."
+#     "But soon enough I start to become worried that there's more to it than that."
+#     "Could they actually be avoiding me because I was the one that knew Kylie?"
+#     "Am I tainted by association with that crazy bitch?"
+#     "In the end, I decide to just up and ask."
+#     "I figure that either way, it's better to know the truth."
+#     "And I hope that Sam, the one that I've known the longest, will be straight up and honest with me."
+#     show samantha sad with dissolve
+#     mike.say "Ah..."
+#     if samantha.flags.nickname == "cupcake":
+#         mike.say "Hey, Cupcake!"
+#     else:
+#         mike.say "Hey, Sam!"
+#     show samantha surprised
+#     "Sam stops in her tracks, looking a little surprised to see me."
+#     "But she recovers quickly, hiding whatever she's feeling behind a mask of sympathy."
+#     show samantha normal
+#     samantha.say "Oh, hey, [hero.name]."
+#     samantha.say "How are you holding up?"
+#     "All I can do is shrug and let out a sigh."
+#     "The truth is that I'm not doing great - who would after what happened?"
+#     "But I still don't want to wallow in self-pity or be smothered with someone else's sympathy."
+#     "So I tell a lie, only a small one, just to move the conversation on."
+#     mike.say "Better than I did on the day it happened."
+#     if samantha.flags.nickname == "cupcake":
+#         mike.say "How about you, Cupcake?"
+#     else:
+#         mike.say "How about you, Sam?"
+#     show samantha surprised
+#     "I can see that the question catches Sam out, putting her on the backfoot."
+#     "Maybe she expected the whole conversation to be about me, rather than the both of us."
+#     samantha.say "I...I'm okay, [hero.name]."
+#     samantha.say "After all, that crazy girl didn't hurt me - did she?"
+#     "I want to be subtle about this, but I can't keep from stating the obvious."
+#     mike.say "The crazy girl that I was involved with?"
+#     show samantha sad
+#     samantha.say "I...I didn't mean it like that, [hero.name]."
+#     if samantha.flags.nickname == "cupcake":
+#         mike.say "But it's true, Cupcake - I'm the one that brought Kylie here."
+#     else:
+#         mike.say "But it's true, Sam - I'm the one that brought Kylie here."
+#     mike.say "If it weren't for me, Sasha would still be alive."
+#     samantha.say "Come on, [hero.name] - you can't believe that?!?"
+#     samantha.say "I thought that it was...that it might be my fault!"
+#     show samantha close
+#     "Now the roles are suddenly reversed, as I find myself baffled by Sam's confession."
+#     "I shake my head, trying to dismiss what she just said almost the moment I hear it."
+#     if samantha.flags.nickname == "cupcake":
+#         mike.say "What do you mean, Cupcake?!?"
+#     else:
+#         mike.say "What do you mean, Sam?!?"
+#     mike.say "That's just crazy!"
+#     samantha.say "Really, [hero.name]?"
+#     samantha.say "How is it any more crazy than you trying to take the blame for what a psycho did?"
+#     mike.say "Oh yeah..."
+#     if samantha.flags.nickname == "cupcake":
+#         mike.say "Point taken, Cupcake."
+#     else:
+#         mike.say "Point taken, Sam."
+#     samantha.say "Yeah, well..."
+#     samantha.say "With me it was thinking that my moving back in here was bad luck."
+#     samantha.say "Like I'd come back to the place where it started to go wrong with Ryan and me."
+#     samantha.say "But it wasn't - it was just a crazy girl doing what her crazy brain told her to do."
+#     samantha.say "You just had the misfortune to be the guy she fixated on, [hero.name]."
+#     samantha.say "And Sasha was in the wrong place at the wrong time."
+#     samantha.say "It sucks and it's not fair, but you're not right to blame yourself."
+#     if samantha.flags.nickname == "cupcake":
+#         mike.say "It still hurts, Cupcake."
+#     else:
+#         mike.say "It still hurts, Sam."
+#     samantha.say "I know, [hero.name]."
+#     samantha.say "But that's because it's supposed to."
+#     samantha.say "All the guilt and pain you're feeling - that's the proof your not insane."
+#     show samantha normal
+#     samantha.say "It's proof that you're not like her."
+#     "I feel Sam squeezing my hand tighter as she says this, holding my eye the whole time."
+#     "Knowing that she's there for me does make me feel better, more confident for the future."
+#     "I squeeze her hand in return, nodding to show that her words have had the desired effect."
+#     show samantha sad
+#     samantha.say "I feel like I never had the chance to get to know Sasha."
+#     samantha.say "Not properly, at least."
+#     show samantha normal
+#     samantha.say "I think I'd like you to tell me all about her, [hero.name]."
+#     "I nod again, beginning to warm to the idea."
+#     "And then I can't help laughing just a little."
+#     "As I can think of the perfect stories to tell Sam."
+#     "And I just know that they'll have her laughing too."
+#     return
 
 label sam_murder_talk_bree:
     "I know that I shouldn't be trying to hide away from the reality of what happened the other night."

@@ -16,13 +16,11 @@ init 5 python:
             if attr & {"force_display"} or ((not game.active_date or isinstance(game.active_date, NoDateEvent)) and not IN_EVENT_WITH and not globals().get("appointment")):
                 
                 
-                if not kylie.hidden and kylie.room == "house":
-                    attr.add('kylie')
                 if not minami.hidden and minami.room == "house":
                     attr.add('minami')
             
             
-            if active_girl.id in ["kylie", "minami"]:
+            if active_girl.id in ["minami"]:
                 if enable_debug_picker:
                     renpy.log(f"HousePicker remove active/interact girl: {active_girl.id}")
                 attr.discard(active_girl.id)
@@ -32,7 +30,7 @@ init 5 python:
                 renpy.log(f"HousePicker result: {attr}")
             return attr
 
-    Room.find("house").lively_npc = ["kylie", "minami"]
+    Room.find("house").lively_npc = ["minami"]
 
 init 6:
     layeredimage bg house:
@@ -46,14 +44,6 @@ init 6:
         attribute naked null
         attribute bottomless null
         attribute topless null
-        attribute kylie_clit null
-        attribute kylie_ears null
-        attribute kylie_navel null
-        attribute kylie_nipples null
-        attribute kylie_nose null
-        attribute kylie_pregnant null
-        attribute kylie_pregnant_navel null
-        attribute kylie_tongue null
         attribute minami_ears null
         attribute minami_nipples null
 
@@ -73,11 +63,6 @@ init 6:
 
         group season auto variant night_bike when night and bike and not (car or sportscar)
         group season auto variant day_bike when day and bike and not (car or sportscar)
-
-
-        attribute kylie
-        attribute kylie_casual when kylie
-        attribute kylie_nohaircut when kylie
 
 
         group season_fg auto variant day when day

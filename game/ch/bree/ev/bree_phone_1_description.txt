@@ -1,0 +1,11 @@
+Model: gemini-3.1-pro-preview
+
+Based on the image, here is a detailed description:
+
+**Subject Present (People, appearance, actions):**
+*   **Person & Appearance:** The main subject is an animated, anime-style young woman. She has fair skin, large expressive brown eyes, and medium-length wavy blonde hair. She is wearing a short, pink sleeveless dress or oversized t-shirt. The shirt features a prominent graphic of a purple star containing a blue pony character (which appears to be Rainbow Dash from *My Little Pony*). She is also wearing black wired earphones.
+*   **Actions & Expression:** She is sitting cross-legged on a couch, holding a dark gray smartphone horizontally with both hands. Her thumbs are positioned on the screen, indicating she is deeply engrossed in playing a mobile game. Her facial expression is intense and highly focused; her eyebrows are furrowed, and she is gritting her teeth in a strained or competitive smile, suggesting the game is challenging or action-packed.
+
+**Environment and Setting:**
+*   **Immediate Surroundings:** She is seated on a modern, dark blue sofa. To her right, a portion of a simple, light-wood side table or armrest is visible. 
+*   **Background Setting:** Behind the couch is a large, panoramic window that frames a bright daytime scene. Outside, there is a vibrant blue sky with fluffy white clouds and green trees or bushes visible along the horizon line. Faint diagonal white lines cut across the glass, which could represent window glare, structural elements of the glass, or motion (implying she might be on a train or bus, though the background outside is not blurred). The overall lighting in the room is bright and natural.

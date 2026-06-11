@@ -4,8 +4,6 @@ init python:
             if hero.gender == "female":
                 if attr & {"sasha"}:
                     attr.add("pose01")
-                elif attr & {"ayesha"}:
-                    attr.add("pose02")
                 elif attr & {"lexi"}:
                     attr.add("pose03")
                 elif attr & {"angela", "danny", "dwayne", "jack", "master", "mike", "ryan", "scottie", "shawn", "victor"}:
@@ -13,7 +11,7 @@ init python:
             else:
                 if attr & {"bree", "emma", "kleio", "minami", "morgan", "sasha"}:
                     attr.add("pose01")
-                elif attr & {"ayesha", "hanna", "lavish", "palla"}:
+                elif attr & { "hanna", "lavish", "palla"}:
                     attr.add("pose02")
                 elif attr & {"aletta", "anna", "cassidy", "harmony", "lexi", "samantha"}:
                     attr.add("pose03")
@@ -23,7 +21,7 @@ init python:
                 if {"mc_work"} & attr:
                     if attr & {"aletta", "audrey", "cassidy", "lavish", "shiori"}:
                         attr.add('mc_workoffice')
-                    elif attr & {"ayesha", "hanna"}:
+                    elif attr & {"hanna"}:
                         attr.add('mc_worksport')
                     elif attr & {"camila", "kleio"}:
                         attr.add('mc_workcasual')
@@ -62,7 +60,7 @@ init 1:
         attribute pregnant null
 
 
-        group pregnancy auto if_not ["aletta", "ayesha", "harmony", "minami_halloween", "minami_rpg", "samantha_sexyswimsuit"]
+        group pregnancy auto if_not ["aletta", "harmony", "minami_halloween", "minami_rpg", "samantha_sexyswimsuit"]
 
 
         group boobjob auto
@@ -100,7 +98,6 @@ init 1:
 
 
         group pregnancy auto if_all ["aletta"] if_any ["naked", "aletta_cosplay", "aletta_swimsuit", "aletta_sexyswimsuit"]
-        group pregnancy auto if_all ["ayesha"] if_any ["naked", "ayesha_sexydate", "ayesha_sport"]
         group pregnancy auto if_all ["harmony"] if_any ["naked", "harmony_underwear"]
         group pregnancy auto if_all ["samantha"] if_any ["naked", "samantha_sexyswimsuit"]
 

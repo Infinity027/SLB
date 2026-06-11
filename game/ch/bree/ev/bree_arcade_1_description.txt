@@ -1,0 +1,13 @@
+Model: gemini-3.1-pro-preview
+
+Based on the image provided, here is a detailed description:
+
+**Subject Present (People, Appearance, Actions)**
+*   **Person:** The central subject is an animated, anime-style young woman.
+*   **Appearance:** She has long, voluminous blonde hair that cascades down her back with slight waves. She has fair skin, large brown eyes, and is displaying a highly intense, competitive facial expression with a wide, slightly gritted smile or grimace. 
+*   **Clothing:** She is dressed casually in a layered outfit. She wears an olive-green cropped jacket with visible stitching on the sleeves and a front pocket, worn over a dark pink or light red top. Her pants are dark blue denim and feature distinctive tan lacing details running down the outer sides of her legs, tied in little bows near the bottom. 
+*   **Actions:** She is actively engaged in playing an arcade racing game. She is sitting deep in a racing-style bucket seat, gripping a red-rimmed steering wheel tightly with both hands. Her posture and expression suggest she is in the middle of an exciting or stressful moment in the game.
+
+**Environment and Setting**
+*   **Foreground/Immediate Setting:** The subject is seated at a racing arcade cabinet. She sits in a black gaming seat detailed with red piping along the edges. The game's dashboard in front of her is a dark, chunky plastic featuring the steering wheel, which has small green, yellow, and red buttons on its center console. The cabinet framing around the screen features glowing cyan/light blue panels or speakers. 
+*   **Background:** The background is heavily blurred to keep focus on the character, but it clearly depicts the interior of a dimly lit video game arcade. You can see the colorful, out-of-focus glow of various other arcade monitors, cabinet marquees, and screens in shades of blue, red, and white.
