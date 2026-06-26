@@ -487,29 +487,11 @@ init python:
     "do_once": True,
     })
 
-    # InteractEvent(**{
-    # "name": "alexis_rape_talk",
-    # "label": "alexis_rape_talk",
-    # "conditions": [
-    #     IsDone("kylie_investigation_3"),
-    #     PersonTarget(alexis,
-    #         IsActive(),
-    #         ),
-    #     ],
-    # "music": "music/roa_music/one_wish.ogg",
-    # "do_once": True,
-    # })
-
 label alexis_start:
     $ alexis.unhide()
     return
 
 label alexis_event_02:
-
-
-
-
-
 
     $ renpy.play("sd/cell_vibrate.ogg", "sound")
     $ result = renpy.call_screen("smartphone_choice")
@@ -926,16 +908,6 @@ label alexis_event_03:
     return
 
 label alexis_event_04:
-
-
-
-
-
-
-
-
-
-
 
     if alexis.love.max < 80:
         $ alexis.love.max = 80

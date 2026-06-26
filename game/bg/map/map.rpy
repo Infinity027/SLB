@@ -217,7 +217,7 @@ label dog_shit:
 
 label found_money:
     scene bg street
-    $ amount = randint(5, 50)
+    $ amount = randint(20, 100)
     if hero.is_lucky:
         $ amount *= 2
     "I found [amount]{image=gui/icons/icon_money.png} on the sidewalk!"

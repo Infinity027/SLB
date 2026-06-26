@@ -970,21 +970,18 @@ screen preferences():
                         use text_tooltip(_("X-Ray"), _("Allow to see through body during some scenes"), "lspref_label_text")
                         textbutton _("On") action SetField(persistent, 'xray', True)
                         textbutton _("Off") action SetField(persistent, 'xray', False)
-                    # LIVE2D DISABLED — the Animations (Live2D) on/off toggle is hidden so it
-                    # cannot be re-enabled. To restore, change "if False" back to:
-                    #   if renpy.has_live2d() and any(dlc in DLCS for dlc in ('lively', 'fafow', 'fafwm')):
                     if False:
                         vbox:
                             xysize (230, 60)
                             use text_tooltip(text_tag_resize(_("Animations"), 230, 30), _("Enable/Disable sprites animations"), "lspref_label_text")
                             textbutton _("On") action SetField(persistent, 'live2d_on', True)
                             textbutton _("Off") action SetField(persistent, 'live2d_on', False)
-                    if 'lively' in DLCS:
-                        vbox:
-                            xysize (230, 60)
-                            use text_tooltip(text_tag_resize(_("Lively backgrounds"), 230, 30), _("Enable/Disable sprites in backgrounds"), "lspref_label_text")
-                            textbutton _("On") action SetField(persistent, 'lively_bg', True)
-                            textbutton _("Off") action SetField(persistent, 'lively_bg', False)
+                    # if 'lively' in DLCS:
+                    #     vbox:
+                    #         xysize (230, 60)
+                    #         use text_tooltip(text_tag_resize(_("Lively backgrounds"), 230, 30), _("Enable/Disable sprites in backgrounds"), "lspref_label_text")
+                    #         textbutton _("On") action SetField(persistent, 'lively_bg', True)
+                    #         textbutton _("Off") action SetField(persistent, 'lively_bg', False)
             vbox:
                 spacing 20
                 use text_tooltip(text_tag_resize(_("Gameplay Setting:"), 343, 30), "", "lspref_label_text_title")

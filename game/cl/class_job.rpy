@@ -31,9 +31,6 @@ init -20 python:
 
 
 init python:
-
-
-
     def career_daily_girl(girl):
         job = JOBS.get(girl.flags.job)
         if not job or girl.career > job.career_max:

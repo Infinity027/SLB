@@ -642,117 +642,117 @@ label bree_sasha_collar_reaction:
         "And if [bree.name]'s happy as well as Sasha, then I'm happy too."
     return
 
-label bree_sasha_pregnant:
-    "You know, I never thought that keeping two girls on the go at the same time would turn out to be this hard."
-    "But then I suppose that I never really put much thought into the idea before now either."
-    "Sure, I thought about all the obvious stuff, like how exciting it would be to sample two different flavours at once."
-    "Maybe I even spared a couple of moments to wonder how you'd manage sneaking around so as not to get caught."
-    "Back then, when it was all theoretical, I might even have thought that the thrill of being caught out would be fun."
-    "But now that I'm actually living out what for most guys would be an impossible fantasy, it feels very different."
-    "You see, the longer that you manage to keep it up, the harder it gets."
-    "As the relationships with both girls get more complex, so do the lies that you have to tell to cover your tracks."
-    "Sooner or later, it starts to get really hard to remember which of them you told what little bit of bullshit to steer them away from the other."
-    "And getting one of them pregnant is probably the ultimate no-no."
-    show sasha at right with easeinright
-    "So now that Sasha's well and truly beginning to show, things are getting seriously hard for me."
-    show sasha at center with ease
-    "Every day her belly seems to be swelling, becoming visibly larger."
-    show sasha at left with ease
-    "A part of me is super excited at the prospect of being a dad."
-    "But it gets pushed out of the way every time it pops up by the fear of being caught out."
-    show bree annoyed at right with easeinright
-    "The worst thing is that I can see [bree.name] beginning to notice that something's up."
-    hide sasha with easeoutleft
-    "Obviously she can see with her own eyes that Sasha's pregnant, that's not the real issue."
-    show bree at center with ease
-    "The fact that I've already told Sasha she should probably keep the finer details from [bree.name] is though."
-    show bree at left with ease
-    "I've pretty much convinced Sasha that we need to choose the right moment to tell our housemate about our relationship and the baby."
-    hide bree with easeoutleft
-    "Selling her on the grounds that it'll mean we probably have to make changes around the house."
-    "That and how much it might freak [bree.name] out to know that we're starting a family right under her nose."
-    "But she's getting ever more suspicious, and keeps on asking questions behind Sasha's back."
-    "I guess she must be doing the same to Sasha behind my back too."
-    "I just don't know how much longer we can keep on telling lies that back each other up."
-    "Especially when I'm already lying about those lies to Sasha as well!"
-    show bree b talkative at center, zoomAt(1.5, (640, 1040)) with easeinleft
-    bree.say "[hero.name], have you got a minute spare?"
-    bree.say "I want to talk to you - about Sasha."
-    show bree normal
-    "Here we go again!"
-    "I take a deep breath and try to remember the last round of lies that I told [bree.name] on the same subject."
-    mike.say "Sure, [bree.name] - what's on your mind?"
-    show bree a annoyed
-    "She sighs and crossed her arms over her chest, a worried expression on her face."
-    show bree sad
-    bree.say "Look, I know you said that we should just leave this alone."
-    bree.say "But it's been eating away at me the whole time I'm in the same room as her."
-    bree.say "I really think that we should sit Sasha down and make her tell us what's going on with her right now."
-    show bree stuned
-    "She seems to notice the pained look on my face."
-    show bree normal
-    "But luckily, she assumes that it's because she's dredging up an old conversation that we'd said was done with already."
-    show bree talkative
-    bree.say "I know, I know...we said that we'd let her tell us in her own time."
-    bree.say "At least we should make her tell her who it was that landed her in this mess."
-    bree.say "Whether the deadbeat's going to do the right thing or not - we'd know what she needs from us as friends."
-    mike.say "I think she's been pretty good at letting us know what she need, [bree.name]."
-    mike.say "And that's space."
-    show bree annoyed
-    "[bree.name] frowns at me, shaking her head in frustration."
-    show bree vangry
-    bree.say "I don't get it, [hero.name]."
-    bree.say "I mean, I understand what you're saying."
-    bree.say "But sometimes...sometimes I almost feel like you're standing up for this guy, whoever he is."
-    show bree gloomy
-    mike.say "Oh come on, [bree.name] - that's crazy!"
-    mike.say "I just want to give Sasha space, that's all."
-    mike.say "She's already living under the same roof as us while we're seeing each other."
-    mike.say "And now she's pregnant too."
-    show bree angry
-    "[bree.name] squints at me, wrinkling her brow as she does so."
-    "Suddenly I feel as though she's putting far too much thought into this for my liking."
-    show bree talkative
-    bree.say "It's weird, you know?"
-    bree.say "Almost like you're more into keeping the peace around here than helping Sasha out..."
-    bree.say "If she has to make a change for the sake of her baby, how does that affect us, even in the slightest?"
-    show bree angry
-    mike.say "Ah...it...it doesn't."
-    show bree talkative
-    bree.say "Then what's so bad about having it out with her?"
-    bree.say "Unless..."
-    show bree stuned
-    "The look of sudden realisation spreading across her face is enough to make me feel a churning in the pit of my stomach."
-    "But it's too swift for me to be able to get my lies straight and jump in before she beats me to the punch."
-    show bree surprised
-    bree.say "Oh god...oh god!"
-    bree.say "All this time, I thought that you were being evasive to protect Sasha."
-    bree.say "But you weren't - you were lying to me to protect yourself!"
-    show bree stuned
-    mike.say "[bree.name], please..."
-    mike.say "I can explain..."
-    "[bree.name] holds up a hand to fend off my desperate words."
-    show bree cry
-    "I can already see the tears welling in the corner of her eyes."
-    bree.say "Don't...just don't..."
-    bree.say "I'm going to my room now, and I'm going to start packing."
-    show bree gloomy at center, zoomAt(1.5, (840, 1040)) with ease
-    "I try to make a move towards her, try to say something."
-    "But she cuts me off with another wave of her hand."
-    show bree cry
-    bree.say "Don't try to stop me."
-    bree.say "I won't say anything to Sasha, I promise."
-    bree.say "You two are going to need each other more than you can ever know."
-    bree.say "And just for the record, [hero.name] - I'm not doing this for you, or her."
-    bree.say "I'm doing it for the babies, because they're the only innocent in this whole thing - and they don't deserve to be hurt by it."
-    bree.say "Especially after you already hurt everyone else that's involved."
-    hide bree with easeoutright
-    $ bree.set_gone_forever()
-    $ Room.find("bedroom2").hide()
-    "And with that, she storms off, leaving me alone with only my guilt for company."
-    "I guess that I should be thankful for what she's doing, even though I don't feel like I deserve it."
-    "Maybe the fantasy of having two girls on the go is a fantasy for a reason?"
-    return
+# label bree_sasha_pregnant:
+#     "You know, I never thought that keeping two girls on the go at the same time would turn out to be this hard."
+#     "But then I suppose that I never really put much thought into the idea before now either."
+#     "Sure, I thought about all the obvious stuff, like how exciting it would be to sample two different flavours at once."
+#     "Maybe I even spared a couple of moments to wonder how you'd manage sneaking around so as not to get caught."
+#     "Back then, when it was all theoretical, I might even have thought that the thrill of being caught out would be fun."
+#     "But now that I'm actually living out what for most guys would be an impossible fantasy, it feels very different."
+#     "You see, the longer that you manage to keep it up, the harder it gets."
+#     "As the relationships with both girls get more complex, so do the lies that you have to tell to cover your tracks."
+#     "Sooner or later, it starts to get really hard to remember which of them you told what little bit of bullshit to steer them away from the other."
+#     "And getting one of them pregnant is probably the ultimate no-no."
+#     show sasha at right with easeinright
+#     "So now that Sasha's well and truly beginning to show, things are getting seriously hard for me."
+#     show sasha at center with ease
+#     "Every day her belly seems to be swelling, becoming visibly larger."
+#     show sasha at left with ease
+#     "A part of me is super excited at the prospect of being a dad."
+#     "But it gets pushed out of the way every time it pops up by the fear of being caught out."
+#     show bree annoyed at right with easeinright
+#     "The worst thing is that I can see [bree.name] beginning to notice that something's up."
+#     hide sasha with easeoutleft
+#     "Obviously she can see with her own eyes that Sasha's pregnant, that's not the real issue."
+#     show bree at center with ease
+#     "The fact that I've already told Sasha she should probably keep the finer details from [bree.name] is though."
+#     show bree at left with ease
+#     "I've pretty much convinced Sasha that we need to choose the right moment to tell our housemate about our relationship and the baby."
+#     hide bree with easeoutleft
+#     "Selling her on the grounds that it'll mean we probably have to make changes around the house."
+#     "That and how much it might freak [bree.name] out to know that we're starting a family right under her nose."
+#     "But she's getting ever more suspicious, and keeps on asking questions behind Sasha's back."
+#     "I guess she must be doing the same to Sasha behind my back too."
+#     "I just don't know how much longer we can keep on telling lies that back each other up."
+#     "Especially when I'm already lying about those lies to Sasha as well!"
+#     show bree b talkative at center, zoomAt(1.5, (640, 1040)) with easeinleft
+#     bree.say "[hero.name], have you got a minute spare?"
+#     bree.say "I want to talk to you - about Sasha."
+#     show bree normal
+#     "Here we go again!"
+#     "I take a deep breath and try to remember the last round of lies that I told [bree.name] on the same subject."
+#     mike.say "Sure, [bree.name] - what's on your mind?"
+#     show bree a annoyed
+#     "She sighs and crossed her arms over her chest, a worried expression on her face."
+#     show bree sad
+#     bree.say "Look, I know you said that we should just leave this alone."
+#     bree.say "But it's been eating away at me the whole time I'm in the same room as her."
+#     bree.say "I really think that we should sit Sasha down and make her tell us what's going on with her right now."
+#     show bree stuned
+#     "She seems to notice the pained look on my face."
+#     show bree normal
+#     "But luckily, she assumes that it's because she's dredging up an old conversation that we'd said was done with already."
+#     show bree talkative
+#     bree.say "I know, I know...we said that we'd let her tell us in her own time."
+#     bree.say "At least we should make her tell her who it was that landed her in this mess."
+#     bree.say "Whether the deadbeat's going to do the right thing or not - we'd know what she needs from us as friends."
+#     mike.say "I think she's been pretty good at letting us know what she need, [bree.name]."
+#     mike.say "And that's space."
+#     show bree annoyed
+#     "[bree.name] frowns at me, shaking her head in frustration."
+#     show bree vangry
+#     bree.say "I don't get it, [hero.name]."
+#     bree.say "I mean, I understand what you're saying."
+#     bree.say "But sometimes...sometimes I almost feel like you're standing up for this guy, whoever he is."
+#     show bree gloomy
+#     mike.say "Oh come on, [bree.name] - that's crazy!"
+#     mike.say "I just want to give Sasha space, that's all."
+#     mike.say "She's already living under the same roof as us while we're seeing each other."
+#     mike.say "And now she's pregnant too."
+#     show bree angry
+#     "[bree.name] squints at me, wrinkling her brow as she does so."
+#     "Suddenly I feel as though she's putting far too much thought into this for my liking."
+#     show bree talkative
+#     bree.say "It's weird, you know?"
+#     bree.say "Almost like you're more into keeping the peace around here than helping Sasha out..."
+#     bree.say "If she has to make a change for the sake of her baby, how does that affect us, even in the slightest?"
+#     show bree angry
+#     mike.say "Ah...it...it doesn't."
+#     show bree talkative
+#     bree.say "Then what's so bad about having it out with her?"
+#     bree.say "Unless..."
+#     show bree stuned
+#     "The look of sudden realisation spreading across her face is enough to make me feel a churning in the pit of my stomach."
+#     "But it's too swift for me to be able to get my lies straight and jump in before she beats me to the punch."
+#     show bree surprised
+#     bree.say "Oh god...oh god!"
+#     bree.say "All this time, I thought that you were being evasive to protect Sasha."
+#     bree.say "But you weren't - you were lying to me to protect yourself!"
+#     show bree stuned
+#     mike.say "[bree.name], please..."
+#     mike.say "I can explain..."
+#     "[bree.name] holds up a hand to fend off my desperate words."
+#     show bree cry
+#     "I can already see the tears welling in the corner of her eyes."
+#     bree.say "Don't...just don't..."
+#     bree.say "I'm going to my room now, and I'm going to start packing."
+#     show bree gloomy at center, zoomAt(1.5, (840, 1040)) with ease
+#     "I try to make a move towards her, try to say something."
+#     "But she cuts me off with another wave of her hand."
+#     show bree cry
+#     bree.say "Don't try to stop me."
+#     bree.say "I won't say anything to Sasha, I promise."
+#     bree.say "You two are going to need each other more than you can ever know."
+#     bree.say "And just for the record, [hero.name] - I'm not doing this for you, or her."
+#     bree.say "I'm doing it for the babies, because they're the only innocent in this whole thing - and they don't deserve to be hurt by it."
+#     bree.say "Especially after you already hurt everyone else that's involved."
+#     hide bree with easeoutright
+#     $ bree.set_gone_forever()
+#     $ Room.find("bedroom2").hide()
+#     "And with that, she storms off, leaving me alone with only my guilt for company."
+#     "I guess that I should be thankful for what she's doing, even though I don't feel like I deserve it."
+#     "Maybe the fantasy of having two girls on the go is a fantasy for a reason?"
+#     return
 
 label bree_fight_dad:
     "Everything happens so quickly that I can't even hope to keep upright, let alone defend myself."
@@ -1261,7 +1261,7 @@ label bree_call_daddy_slutty:
             show bree normal
             mike.say "Sure thing, [bree.name]."
             mike.say "Just so long as we don't have to wait long until you do!"
-            show bree flirt
+            show bree flirtsurprise
             "[bree.name] claps again, giggling with sheer delight."
             show bree happy blush
             bree.say "Oh, I don't think that's gonna be a problem, Daddy."

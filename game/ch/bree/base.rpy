@@ -70,7 +70,7 @@ init python:
     "conditions": [
         IsHour(13, 14),
         HeroTarget(
-            IsGender("male"),
+            # IsGender("male"),
             Not(OnDate()),
             IsActivity("None"),
             ),
@@ -121,7 +121,7 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            # IsGender("male"),
             Not(OnDate()),
             IsActivity("None"),
             ),
@@ -167,7 +167,7 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            # IsGender("male"),
             Not(IsActivity("ask_date"))),
         PersonTarget(bree,
             IsPresent(),
@@ -213,7 +213,7 @@ init python:
     "duration": 1,
     "fun": 2,
     "conditions": [
-        IsHour(20, 3),
+        IsHour(18, 3),
         HeroTarget(
             IsGender("male"),
             IsActivity("knock_bedroom2")),
@@ -405,7 +405,7 @@ label bree_bye(bye_outfit=None):
     return
 
 label bree_play_pool:
-    show playing water pool bree
+    show bree_pool_play
     "I recoil as a wave of water makes contact with my unsuspecting face."
     "[bree.name]'s laugh leaves no question as to what the cause was, so I return in kind, sending a large splash back to her."
     "The back and forth continues for a short while before we decide on a truce."
@@ -422,10 +422,10 @@ label bree_tv:
     if hero.charm >= 40 - bree.love or bree.activity_name == "tv":
         call watch_tv_with (bree) from _call_watch_tv_with_2
     else:
-        show bree
+        show bree_casual_talk
         bree.say "Sorry, I don't have time right now."
         $ hero.cancel_activity()
-        hide bree
+        hide bree_casual_talk
     return
 
 label bree_tv_reaction:
@@ -433,7 +433,9 @@ label bree_tv_reaction:
     return
 
 label bree_porn_bad_reaction:
+    show bree_casual_annoyed
     bree.say "Sorry, I don't want to watch this sort of thing."
+    hide bree_casual_annoyed
     return
 
 label bree_tv_bj:
@@ -506,7 +508,7 @@ label bree_greet_dialogues_male:
 label bree_kiss:
     scene expression f"bg {game.room}"
     if bree.love + hero.charm < 80 and not bree.is_girlfriend and not game.active_date.score >= 75:
-        show bree
+        show bree_casual_annoyed 
         "[bree.name] quickly takes a step back, and turns away."
         if bree.love < 40:
             bree.say "Sorry but... I don't really feel comfortable with that."
@@ -519,19 +521,19 @@ label bree_kiss:
             else:
                 bree.say "I'm sorry, but I have to go..."
             "Before I can react, [bree.name] turns and rushes away."
-        hide bree
+        hide bree_casual_annoyed
     elif bree.love + hero.charm < 60 or game.active_date.score >= 75:
         hide bree
         if bree.lesbian > MAX_LES_GUY_SEX:
             $ bree.lesbian -= 1
-        show bree kiss
+        show bree_casual_kiss
         if not bree.flags.kiss:
             $ bree.love += 5
             "I watch [bree.name]'s eyes open wide in surprise, and for a moment I think she might back away, or even run, but slowly her eyelids close as she cautiously returns the affection."
             "Her lips are remarkably soft, I can even taste a hint of strawberry as we meet."
             "My own eyes drift shut, and we only hold together for a brief moment, but there's no denying its simply wonderful."
             "No matter what comes next, something tells me that I will never forget this moment."
-            hide bree kiss
+            hide bree_casual_kiss
             if bree.love >= 60:
                 show bree
                 bree.say "Um, I think we should talk about this later, alright?"
@@ -547,11 +549,11 @@ label bree_kiss:
             "I stop just short of meeting her lips, letting her lean forwards to meet mine, and letting her soft lips dance across mine at her pace."
             "Once again I taste strawberries, before she eventually pulls back, and I move my arms away."
             "I catch a glimpse of a small smile playing on her lips before she tries to hide it, a blush covering her complexion."
-            hide bree kiss
+            hide bree_casual_kiss
         $ bree.flags.kiss += 1
     else:
         hide bree
-        show bree kiss
+        show bree_casual_kiss
         if not bree.flags.kiss:
             $ bree.love += 5
             "I feel my lips passing over [bree.name]'s as we embrace, my hands resting comfortably on her hips while her own had ventured to my shoulders, looping around my neck."
@@ -560,13 +562,13 @@ label bree_kiss:
             "I let myself inside her, exploring every crevice of her mouth in earnest even if she herself seems hesitant to return the treatment."
             "I let my eyes open to gauge her reaction, and although she seems rather tense, my ears pick up on a soft whimper of pleasure that tells me she's at least enjoying the treatment."
             "My eyes drift closed once more, and before long we part, although I can still taste her on my tongue."
-            hide bree kiss
+            hide bree_casual_kiss
             if bree.love >= 60:
-                show bree flirt blush
+                show bree_casual_blush
                 bree.say "Wow... Um, that was... Different."
                 "I catch a small smile dancing upon her face through the thick blush that adorns her cheeks, letting me know without a shadow of a doubt that it was the good kind of different."
             else:
-                show bree flirt blush
+                show bree_casual_blush
                 bree.say "Um... I should go..."
                 "Before I can object, [bree.name] turns and quickly flees the scene, leaving me wondering what I did wrong."
         else:
@@ -583,15 +585,15 @@ label bree_kiss:
                 "I bring one hand to [bree.name]'s chin, tilting her up to face me as I lean down to let our lips meet, the familiar taste of strawberry yet again facing me."
                 "My tongue yet again pushes through the barrier that her lips form to begin exploring [bree.name]'s mouth, while she cautiously met me, letting me lead the dance our tongues engaged in."
                 "Before long, we pulled away from one another, breathless."
-            hide bree kiss
+            hide bree_casual_kiss
             if hero.charm >= 160 - bree.love and bree.love < 50:
-                show bree flirt blush
+                show bree_casual_blush
                 bree.say "Stop doing that."
             else:
-                show bree flirt blush
+                show bree_casual_blush
                 bree.say "Thank you [hero.name]."
         $ bree.flags.kiss += 1
-        hide bree
+        hide bree_casual_blush
     return
 
 label bree_gift_signed_fantasy_book_male:

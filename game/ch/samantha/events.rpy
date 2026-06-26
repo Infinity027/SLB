@@ -8151,23 +8151,9 @@ label samantha_birthday_sex:
     "Only now do I feel the fatigue beginning to catch up with me."
     "And I wonder if I can stay awake for the duration of the journey home."
 
-
-
-
-
-
-
-
-
-
-
     return
 
 label samantha_exclusive_cheated:
-
-
-
-
 
     "This date with [active_girl.name] goes pretty well. And I wonder about my next move."
     "Girl" "[hero.name]?"

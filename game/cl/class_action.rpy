@@ -124,7 +124,7 @@ init -22 python:
                         money_gain *= mult
                 
                 for attribute in self.money_gain["attributes"]:
-                    money_gain *= 1 + hero[attribute] / 400.0
+                    money_gain *= 1 + hero[attribute] / 200.0
                 
                 money_gain *= Game.get_difficulty_mod(money_gain)
                 

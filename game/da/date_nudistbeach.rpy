@@ -41,4 +41,3 @@ label date_nudistbeach:
     $ renpy.hide(date_girl.id)
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

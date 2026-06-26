@@ -383,4 +383,3 @@ label date_beach:
     $ renpy.hide(date_girl.id)
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

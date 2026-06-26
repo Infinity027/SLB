@@ -87,11 +87,6 @@ label bree_fuck_bathroom:
     show bree naked
     $ renpy.sound.play("sd/shower.ogg", loop=True)
 
-
-
-
-
-
     "I pull the shower-curtain aside and step in behind her, the first thing [bree.name] knows about it is the sensation of my cock against her backside."
     mike.say "Surprise, [bree.name]!"
     show bree naked surprised at startle

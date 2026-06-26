@@ -231,23 +231,23 @@ label buy_lottery_ticket:
         $ r = min([r, randint(1, 30000)])
     elif hero.is_unlucky:
         $ r = max([r, randint(1, 30000)])
-    if r <= 1:
+    if r <= 2:
         $ w = 5000 + (randint(1, 5) * 1000)
-    elif r <= 25:
+    elif r <= 35:
         $ w = 2500 + (randint(1, 5) * 500)
-    elif r <= 50:
+    elif r <= 70:
         $ w = 500 + (randint(1, 10) * 200)
-    elif r <= 100:
+    elif r <= 200:
         $ w = 1000 + (randint(1, 5) * 100)
-    elif r <= 300:
+    elif r <= 500:
         $ w = 500 + (randint(1, 5) * 100)
-    elif r <= 600:
+    elif r <= 800:
         $ w = 250 + (randint(1, 5) * 50)
-    elif r <= 1200:
+    elif r <= 2200:
         $ w = 50 + (randint(1, 5) * 10)
-    elif r <= 2500:
+    elif r <= 3500:
         $ w = 10
-    elif r <= 5000:
+    elif r <= 8000:
         $ w = 5
     else:
         $ w = 0
@@ -258,4 +258,3 @@ label buy_lottery_ticket:
         "I lost..."
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

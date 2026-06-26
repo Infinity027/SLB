@@ -359,10 +359,7 @@ label lexi_fuck_beach:
         "Being at the beach with Lexi is kind of like living the dream, you know?"
         "Like all those fantasies you had as a sad, lonely adolescent have finally come true."
         "You're walking along the sand, feeling as though you're on top of the world."
-        if game.room == "date_nudistbeach":
-            "And it's all because the naked hot girl is hanging off of your arm for a change."
-        else:
-            "And it's all because the achingly hot girl in the skimpy bikini is hanging off of your arm for a change."
+        "And it's all because the achingly hot girl in the skimpy bikini is hanging off of your arm for a change."
         show lexi happy
         "Whenever she laughs at your jokes and leans her head on your shoulder, you feel like pinching yourself."
         "You just know that other guys are looking on with jealously in their eyes."

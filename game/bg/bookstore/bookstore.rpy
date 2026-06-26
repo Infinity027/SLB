@@ -1,9 +1,9 @@
 init python:
-    Gift("romance_novel", price=30, tooltip="A novel that gives love", tags=["books"], love_bonus=1, purity_bonus=-1, bonus_traits=["dreamer", "bookworm"])
+    Gift("romance_novel", price=30, tooltip="A novel that gives love", tags=["books"], love_bonus=1, purity_bonus=-2, bonus_traits=["dreamer", "bookworm"])
     Gift("mistress_amanda", display_name="Mistress Amanda", price=50, tooltip="A book about the dominant Mistress Amanda", tags=["books"], sub_bonus=-1, bonus_traits=["not_religious", "not_innocent", "bookworm", "dominant"])
     Gift("yuri_manga", price=50, tooltip="A manga that represents lesbian scenes", tags=["books", "manga"], les_bonus=1, bonus_traits=["not_religious", "bookworm"])
     Gift("porn_magazine", price=50, tooltip="A magazine with mostly heterosexual picture", tags=["books"], les_bonus=-1, bonus_traits=["slutty", "not_religious", "not_innocent", "bookworm"])
-    Gift("a_sex_slave_story", display_name="A sex slave's story", price=50, tooltip="A tale of surrender and passion in the journey of a sex slave", tags=["books"], sub_bonus=1, bonus_traits=["not_religious", "not_innocent", "bookworm", "submissive"])
+    Gift("a_sex_slave_story", display_name="A sex slave's story", price=50, tooltip="A tale of surrender and passion in the journey of a sex slave", tags=["books"], sub_bonus=2, bonus_traits=["not_religious", "not_innocent", "bookworm", "submissive"])
     Gift("leather_bound_bible", price=100, tooltip="The holy book", tags=["books"], love_bonus=1, purity_bonus=1, bonus_traits=["religious", "not_slutty", "bookworm"])
     Consumable("knowledge_book", price=100, tooltip="An encyclopedia of everything", effects=[("knowledge", 2), ("time", 4)], frequency_limit="week", conditions=[HeroTarget(MinStat("energy", 2), MinStat("hunger", 2), MinStat("grooming", 2), MinStat("fun", 2))])
     Consumable("fitness_book", price=100, tooltip="A book listing training and fitness exercises", effects=[("fitness", 2), ("time", 4)], frequency_limit="week", conditions=[HeroTarget(MinStat("energy", 2), MinStat("hunger", 2), MinStat("grooming", 2), MinStat("fun", 2))])

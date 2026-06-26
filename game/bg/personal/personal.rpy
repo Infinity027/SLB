@@ -119,7 +119,7 @@ init python:
 
     Activity(**{
     "name": "workhard_personal",
-    "money_gain": {"attributes": ["charm", "knowledge"], "mult": (1.5,), "bonus": ("promoted",)},
+    "money_gain": {"attributes": ["charm", "knowledge"], "mult": (2,), "bonus": ("promoted",)},
     "fun": -2,
     "duration": 4,
     "rooms": "mcoffice",

@@ -873,4 +873,3 @@ label meet_the_master_male:
     "Most people just go to the beach to relax, but it's just my luck that I go along there and attract every nut job within a two-mile radius."
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

@@ -37,4 +37,3 @@ label eat_a_ramen:
     "Slupr, slurp...\nslurp..."
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

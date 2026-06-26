@@ -81,7 +81,7 @@ init python:
     "money_gain": {
         "attributes": ["charm", "knowledge"],
         "bonus": ["promoted"],
-        "mult": [1.5],
+        "mult": [2],
         },
     "fun": -2,
     "duration": 4,

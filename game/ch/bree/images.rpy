@@ -1877,4 +1877,9 @@ init 1:
             attribute navel null
             attribute pregnant_navel null
             attribute nipples null
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc
+
+image bree_pool_play = "ch/bree/images/home/pool_play.webp"
+image bree_casual_talk = "ch/bree/images/casual/talk.webp"
+image bree_casual_annoyed = "ch/bree/images/casual/annoyed.webp"
+image bree_casual_kiss = "ch/bree/images/casual/kiss.webp"
+image bree_casual_blush = "ch/bree/images/casual/blush.webp"

@@ -199,4 +199,3 @@ label pay_bills:
             hero.money.val = 0
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

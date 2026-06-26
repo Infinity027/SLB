@@ -85,6 +85,8 @@ init -100:
     define anim_tag = []
 
 init -100 python:
+    LIVE2D_ENABLED = False
+
     import locale
     import copy
     import yaml
@@ -121,9 +123,6 @@ init -100 python:
         persistent.selector = True
         persistent.new_ui = True
 
-    # LIVE2D DISABLED — characters always render as static sprites, never animated.
-    # Forced off every launch (overrides any saved value). To restore, revert to:
-    # persistent.live2d_on = renpy.has_live2d() if persistent.live2d_on is None else persistent.live2d_on
     persistent.live2d_on = False
 
     def display_notifications():
@@ -304,7 +303,7 @@ init -30 python:
             ch_files.append((m.group(1), m.group(0)))
             continue
         
-        if "/st2_anim/" in f:
+        if LIVE2D_ENABLED and "/st2_anim/" in f:
             folder_name = "/".join(f.split("/")[:5])
             anim_files[folder_name].append(f)
             ch_name = folder_name.split("/")[2]
@@ -408,7 +407,7 @@ init -30 python:
 
 
 
-    if renpy.has_live2d():
+    if LIVE2D_ENABLED and renpy.has_live2d():
         for anims in anim_files:
             
             is_sprite = True if "/st2_anim" in anims else False
@@ -707,7 +706,6 @@ init python:
 
 
     def filtered_attrs(*args):
-        
         result = []
         
         for arg in args:
@@ -730,8 +728,8 @@ init python:
 init:
     default SAVE_VERSION = config.version
 
-    define config.adjust_attributes = dict.fromkeys(anim_tag, add_anim_attr)
-    define config.log_live2d_loading = True
+    define config.adjust_attributes = dict.fromkeys(anim_tag, add_anim_attr) if LIVE2D_ENABLED else {}
+    define config.log_live2d_loading = False
 
 
     define nickname_master = ["Master", "master"]

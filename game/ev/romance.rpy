@@ -14,17 +14,6 @@ init python:
 
 label common_ending:
 
-
-
-
-
-
-
-
-
-
-
-
     python:
         harem_fiances = dict()
         fiances = set(Person.get_fiances())
