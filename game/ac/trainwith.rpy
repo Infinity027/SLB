@@ -49,7 +49,7 @@ label train_with:
                 $ bonus += 1
             $ active_girl.love += bonus
             if hero.fitness >= active_girl.sub:
-                $ active_girl.sub += 1
+                $ active_girl.sub += 2
             elif "sporty" in active_girl.traits:
                 $ active_girl.sub -= 1
         else:

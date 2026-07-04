@@ -13,7 +13,7 @@ label audrey_friendly_texts:
     else:
         audrey_nvl "You know what, that last date was pretty okay!"
         audrey_nvl "I mean, it wasn't the most amazing time I've ever had..."
-        audrey_nvl "But I'd be up for doing it again, if you are?"
+        audrey_nvl "{phone_image=phone/audrey/lingerie.webp}"
     return
 
 label audrey_flirty_texts:
@@ -41,17 +41,13 @@ label audrey_dirty_texts:
     if texto == 0:
         audrey_nvl "Work sucks...it's like the worst thing ever!"
         audrey_nvl "Want to do something that doesn't suck?"
-        audrey_nvl "Well, it does - but it involves me sucking your cock!"
+        audrey_nvl "{phone_image=phone/audrey/work_off.webp}"
     elif texto == 1:
         audrey_nvl "I wish I could walk into the office naked some days."
-        audrey_nvl "That and have you spank me while everyone watched!"
-        audrey_nvl "Oh fuck...I've made myself want it now!"
-        audrey_nvl "Seriously, where's your cock when I need it?!?"
+        audrey_nvl "{phone_image=phone/audrey/naked.webp}"
     else:
         audrey_nvl "I'm going to be wearing something tight and short next time you see me."
-        audrey_nvl "Something that I know is going to make you hard as a rock and want me."
-        audrey_nvl "Your job is to pounce on me the moment you get the chance."
-        audrey_nvl "Think you can handle that?"
+        audrey_nvl "{phone_image=phone/audrey/ass_view.webp}"
     return
 
 label audrey_friendly_texts_male:

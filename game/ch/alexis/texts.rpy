@@ -31,9 +31,9 @@ label alexis_flirty_texts:
         alexis_nvl "We were pretty wild back then, got away with some crazy shit!"
         alexis_nvl "You think we could do that again, maybe even top it?"
     else:
-        alexis_nvl "Ooh...wear that T-shirt again when have a date, okay?"
-        alexis_nvl "You know that one, right?"
-        alexis_nvl "It REALLY shows off your biceps!"
+        alexis_nvl "{phone_image=phone/alexis/ass.webp}"
+        alexis_nvl "What're you looking at?"
+        alexis_nvl "Look at my tatoo - it's right on my thigh!"
     return
 
 label alexis_dirty_texts:
@@ -48,10 +48,14 @@ label alexis_dirty_texts:
             alexis_nvl "Or I'll find a way to do it myself!"
         else:
             alexis_nvl "Or I'll find somebody else that will!"
+
+        alexis_nvl "{phone_image=phone/alexis/cleavage.webp}"
+            
     elif texto == 1:
         alexis_nvl "You want to fuck me in a bathroom, huh?"
         alexis_nvl "I never got fucked by you in a bathroom before!"
-        alexis_nvl "I...I mean I never got fucked in a bathroom before..."
+        alexis_nvl "{phone_image=phone/alexis/bath.webp}"
+
     else:
         alexis_nvl "Mmm...I just want to curl up in bed with you right now."
         alexis_nvl "Spend all day cuddled up to you, like we used to in high-school."

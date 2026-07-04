@@ -183,34 +183,6 @@ label bree_fuck_bathroom:
     "More and more I start to find myself supporting her, rather than simply holding onto her."
     "And I can't help worrying that she will pass out if I don't do something sooner, rather than later."
     show bree showersex wet speed
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     "I can feel myself getting overcome by the heat in the exact same way as [bree.name]."
     "And I realise that, if I up the pace now, I can maybe cum before I have to admit defeat and carry her out of the shower in a dead faint."
     bree.say "[hero.name]...I'm feeling...feeling light-headed!"

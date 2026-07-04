@@ -224,7 +224,7 @@ label apply_porn_extra_gains(subgenre, *people):
                 if person is None:
                     continue
                 if isinstance(person, Girl):
-                    person.sub += 1
+                    person.sub += 2
                 elif isinstance(person, Guy):
                     person.sub -= 1
 

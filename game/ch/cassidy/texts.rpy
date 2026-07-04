@@ -25,7 +25,7 @@ label cassidy_flirty_texts:
     if texto == 0:
         cassidy_nvl "Hey, I'm picking an outfit for our next date."
         cassidy_nvl "And I was thinking of covering up for a change..."
-        cassidy_nvl "Just kidding - I'm going to show off more flesh then last time!"
+        cassidy_nvl "{phone_image=phone/cassidy/pose.webp}"
     elif texto == 1:
         cassidy_nvl "I want to get the biggest kick I can when I see you next."
         cassidy_nvl "So I'm thinking of the baddest things we can get up to."
@@ -44,14 +44,14 @@ label cassidy_dirty_texts:
     if texto == 0:
         cassidy_nvl "Hey, can you come over here?"
         cassidy_nvl "I just had THE best idea ever!"
-        cassidy_nvl "Let's do it on my Mommy and Daddy's bed!"
+        cassidy_nvl "{phone_image=phone/cassidy/ass_view.webp}"
     elif texto == 1:
         cassidy_nvl "Please put your cock in me again!"
         cassidy_nvl "It feels so good when we fuck!"
-        cassidy_nvl "You make me feel like a real woman!"
+        cassidy_nvl "{phone_image=phone/cassidy/touching.webp}"
     else:
-        cassidy_nvl "Being all on my own sucks!"
         cassidy_nvl "I'm having to use one of my vibrators right now!"
+        cassidy_nvl "{phone_image=phone/cassidy/vibrator.webp}"
         cassidy_nvl "But it's not as good as your cock!"
     return
 

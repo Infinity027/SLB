@@ -264,6 +264,16 @@ define nvl_mode = "phone"
 
 init -1 python:
     phone_show_hero = True  
+
+    def phone_message_image(message):
+        """Return the path from a {phone_image=path} message, if present."""
+        prefix = "{phone_image="
+        if isinstance(message, str) and message.startswith(prefix) and message.endswith("}"):
+            path = message[len(prefix):-1].strip()
+            if path:
+                return path
+        return None
+
     def Phone_ReceiveSound(event, interact=True, **kwargs):
         if event == "show_done":
             renpy.sound.play("sd/msg_send.ogg", channel="sound")
@@ -330,6 +340,7 @@ screen nvl_phonetext(dialogue):
                 if d.current:
                     at message_narrator
         else:
+            $ message_image = phone_message_image(d.what)
             if d.who == "mc":
                 $ message_frame = "gui/phone/message/phone_send_frame.png"
             else:
@@ -389,14 +400,18 @@ screen nvl_phonetext(dialogue):
                             else:
                                 at message_appear(-1)
 
-                        text d.what:
-                            pos (0, 0)
-                            xsize 185
-                            slow_cps False
-                            size 18
-                            color "#fff"
-                            outlines [( 0, "#00000000", 0, 0)]
-                            id d.what_id
+                        if message_image:
+                            add Transform(message_image, maxsize=(175, 300), fit="contain"):
+                                id d.what_id
+                        else:
+                            text d.what:
+                                pos (0, 0)
+                                xsize 185
+                                slow_cps False
+                                size 18
+                                color "#fff"
+                                outlines [( 0, "#00000000", 0, 0)]
+                                id d.what_id
         $ previous_d_who = d.who
 
 style phoneFrame is default

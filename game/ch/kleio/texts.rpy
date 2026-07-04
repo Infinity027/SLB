@@ -29,7 +29,7 @@ label kleio_flirty_texts:
     elif texto == 1:
         kleio_nvl "You like the look of me in my shorts and stockings, yeah?"
         kleio_nvl "You want me to tell you how they feel, Loverboy?"
-        kleio_nvl "Yeah, you'd like that, wouldn't you?"
+        kleio_nvl "{phone_image=phone/kleio/ass.webp}"
     else:
         kleio_nvl "Ah, I don't know what I want to do with myself, Loverboy!"
         kleio_nvl "Half of me wants to pluck at my bass."
@@ -48,13 +48,11 @@ label kleio_dirty_texts:
     elif texto == 1:
         kleio_nvl "I don't think you've seen ALL of my tattoos, Loverboy."
         kleio_nvl "Not the ones below my waist."
-        kleio_nvl "So I'm gonna strip off and you can take you time reading them."
-        kleio_nvl "And while you're down there - eat my pussy, yeah?"
+        kleio_nvl "{phone_image=phone/kleio/tattoo.webp}"
     else:
-        kleio_nvl "Hang around after we finish practice this week, Loverboy."
-        kleio_nvl "You remember Sasha splashed out on that new speaker?"
-        kleio_nvl "Yeah, well, we're gonna splash on it ourselves!"
-        kleio_nvl "By which, of course, I mean you're going to fuck me over it!"
+        kleio_nvl "Sometime I stretch my ass with this."
+        kleio_nvl "{phone_image=phone/kleio/buttplug.webp}"
+        kleio_nvl "Obiously, It's all about getting my ass ready for you, Loverboy!"
     return
 
 label kleio_friendly_texts_male:

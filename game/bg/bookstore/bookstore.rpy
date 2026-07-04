@@ -1,5 +1,5 @@
 init python:
-    Gift("romance_novel", price=30, tooltip="A novel that gives love", tags=["books"], love_bonus=1, purity_bonus=-2, bonus_traits=["dreamer", "bookworm"])
+    Gift("romance_novel", price=30, tooltip="A novel that gives love", tags=["books"], love_bonus=1, purity_bonus=-3, bonus_traits=["dreamer", "bookworm"])
     Gift("mistress_amanda", display_name="Mistress Amanda", price=50, tooltip="A book about the dominant Mistress Amanda", tags=["books"], sub_bonus=-1, bonus_traits=["not_religious", "not_innocent", "bookworm", "dominant"])
     Gift("yuri_manga", price=50, tooltip="A manga that represents lesbian scenes", tags=["books", "manga"], les_bonus=1, bonus_traits=["not_religious", "bookworm"])
     Gift("porn_magazine", price=50, tooltip="A magazine with mostly heterosexual picture", tags=["books"], les_bonus=-1, bonus_traits=["slutty", "not_religious", "not_innocent", "bookworm"])

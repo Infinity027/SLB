@@ -10,10 +10,7 @@ label lexi_friendly_texts:
     elif texto == 1:
         lexi_nvl "Why can't I stop thinking about you?"
         lexi_nvl "It's like I can't get a thing done with you in my head!"
-        if hero.is_male:
-            lexi_nvl "You've got a lot to answer for, mister!"
-        else:
-            lexi_nvl "You've got a lot to answer for, miss!"
+        lexi_nvl "You've got a lot to answer for, mister!"
     else:
         lexi_nvl "Hey, I've got some time on my hands right now."
         lexi_nvl "You want to meet up and do something with me?"
@@ -28,18 +25,15 @@ label lexi_flirty_texts:
     if texto == 0:
         lexi_nvl "Geez...I feel so fucking horny today!"
         lexi_nvl "I dunno what's the matter with me."
-        lexi_nvl "Just thought you'd like to know that!"
+        lexi_nvl "{phone_image=phone/lexi/submissive.webp}"
     elif texto == 1:
         lexi_nvl "Urgh...I'm freezing my ass off today, it's so cold!"
         lexi_nvl "Maybe I should have worn more clothes?"
         lexi_nvl "Nah - that's mean nobody could see my ass and my tits!"
     else:
         lexi_nvl "You got those tight pants on today, huh?"
-        if hero.is_male:
-            lexi_nvl "The ones that show off your junk?"
-        else:
-            lexi_nvl "The ones that show off your slit?"
-        lexi_nvl "Mmm...I love the look of you in those!"
+        lexi_nvl "The ones that show off your junk?"
+        lexi_nvl "{phone_image=phone/lexi/pantie.webp}"
     return
 
 label lexi_dirty_texts:
@@ -53,16 +47,10 @@ label lexi_dirty_texts:
         lexi_nvl "But I let you have it for free!"
     elif texto == 1:
         lexi_nvl "I can't stop thinking about you right now!"
-        lexi_nvl "When can you get over here?"
-        if hero.is_male:
-            lexi_nvl "I need your cock in my pussy!"
-        else:
-            lexi_nvl "I need you in my pussy!"
+        lexi_nvl "I need your cock in my pussy!"
+        lexi_nvl "{phone_image=phone/lexi/pussy.webp}"
     else:
-        if hero.is_male:
-            lexi_nvl "I loved it when I sucked your cock in that alley."
-        else:
-            lexi_nvl "I loved it when I licked your pussy in that alley."
+        lexi_nvl "I loved it when I sucked your cock in that alley."
         lexi_nvl "I want to do it someplace like that again."
         lexi_nvl "But this time, I wanna be fucked up against the wall!"
     return

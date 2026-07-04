@@ -318,11 +318,11 @@ steps:
     related_event: camila_prison_visit_1
     conditions:
       - '"kylie_investigation_3" in DONE'
-      - 'kylie.flags.schedule == "jail"'
+      - 'Person.find("kylie") and Person.find("kylie").flags.schedule == "jail"'
       - 'not camila.flags.camiladelay'
       - 'camila.sexperience >= 1'
       - 'not camila.hidden'
-      - 'not kylie.hidden'
+      - 'Person.find("kylie") and not Person.find("kylie").hidden'
       - 'camila.love >= 120'
     outcome:
       conditions:
@@ -334,10 +334,10 @@ steps:
     related_event: camila_prison_visit_2
     conditions:
     - '"camila_prison_visit_1" in DONE'
-    - 'kylie.flags.schedule == "jail"'
+    - 'Person.find("kylie") and Person.find("kylie").flags.schedule == "jail"'
     - 'not camila.flags.camiladelay'
     - 'not camila.hidden'
-    - 'not kylie.hidden'
+    - 'Person.find("kylie") and not Person.find("kylie").hidden'
     - 'camila.love >= 120'
     outcome:
       condition: '"camila_prison_visit_2" in DONE'

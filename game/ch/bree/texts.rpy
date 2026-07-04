@@ -29,11 +29,11 @@ label bree_flirty_texts:
     elif texto == 1:
         bree_nvl "Guess where I am right now."
         bree_nvl "I'll give you a clue - I have my swimsuit on and the water's just perfect!"
-        bree_nvl "Come see if you can find me, yeah?"
+        bree_nvl "{phone_image=phone/bree/naked.webp}"
     else:
         bree_nvl "I'm thinking of going shopping for some new outfits later."
-        bree_nvl "And I was just wondering if you had any advice for what I should get?"
         bree_nvl "You like me in stuff that's skimpy and revealing, right?"
+        bree_nvl "{phone_image=phone/bree/cleavage.webp}"
     return
 
 label bree_dirty_texts:
@@ -44,11 +44,11 @@ label bree_dirty_texts:
     if texto == 0:
         bree_nvl "My eyes are tired - I need to quit playing this game!"
         bree_nvl "Maybe I'll play with myself instead..."
-        bree_nvl "Or I could play on your joystick instead?"
+        bree_nvl "{phone_image=phone/bree/pose.webp}"
     elif texto == 1:
         bree_nvl "Hey, I'm taking a dip in the pool out back."
-        bree_nvl "You want to come see what I'm not wearing right now?"
         bree_nvl "Maybe even play a fun game under the water?"
+        bree_nvl "{phone_image=phone/bree/ass.webp}"
     else:
         bree_nvl "I watched a scary movie and now I'm freaked out!"
         bree_nvl "Can I sleep with you in your bed tonight?"

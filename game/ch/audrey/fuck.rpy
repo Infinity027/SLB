@@ -633,66 +633,43 @@ label audrey_sleep_date_fuck(location="hero"):
 
 label audrey_fuck_date_blowjob:
     scene
-    show audrey bj
+    show audrey_bj01
     with fade
-    "I only have the chance to blink once before she's on me."
-    "Audrey peels of the last of her clothes so that she's standing over me naked."
-    "There's no time to appreciate the view though, as she moves like lightning."
     audrey.say "There it is!"
-    audrey.say "Gimmie that thing!"
-    "Audrey slithers over the bed, reaching out to grab hold of my cock."
+    audrey.say "It's huge!"
     "I wince as her hand closes around the shaft with an iron grip."
     mike.say "Go easy on me, Audrey!"
     mike.say "It's not like I'm resisting!"
     "Audrey shoots me a look that shuts me up in an instant."
     "Her eyes are wide and full of predatory instinct."
+    show audrey_bj02
     "And she give my cock an even harder squeeze, just to make her point."
     "My cock was already getting hard before we even got into my bedroom."
     "But now that it's in Audrey's hands, it's getting harder still."
     "It seems like the more she squeezes and tugs, the more I like it!"
-    "So I just hold my hands up and stop protesting."
-    "This gets me a knowing half-smile from Audrey."
-    "Then she lowers her head, still holding my eye."
     "Her hand moves downwards as her lips part."
+    show audrey_bj03
     "I watch Audrey's tongue emerge from between her lips."
-    "Only now does she turn her eyes to the task at hand."
-    show audrey bj blink
-    "Audrey stops looking at me the same moment her tongue goes into action."
-    "Which is a relief, as I soon feel like I'm losing my mind!"
-    "From the very first moment she begins licking the tip, I'm entranced."
+    play sound "vo/audrey/suck.mp3" loop
     "Audrey doesn't look like she's going through the motions of giving head."
     "It seems more like she's doing something that she needs in order to live!"
-    "She kisses, licks and nibbles between pants and moans of pleasure."
-    "And of course I'm soon making the same kind of sounds myself."
-    "Audrey works the shaft of my cock with one hand."
-    "The other she uses to pinch her nipples at first."
-    "Then she slides it between her legs, stroking her own pussy."
-    "Just when I think that I can't get anymore aroused, Audrey kicks it up a notch."
-    play sound audrey_moans_blowjob_low loop
-    show audrey bj blowjob normal
-    "Without warning she wraps her lips around my cock."
-    show audrey bj at startle (0.1, 10)
+    show expression make_anim(audrey_blow, time=1.5, loop=True)
     "And then she swallows it deep into her mouth in one smooth motion."
+    stop shound
     mike.say "Oh fuck..."
     mike.say "Audrey..."
     "If she hears me cry out, then Audrey makes no show of it."
-    show audrey bj blink at startle (0.075, 10)
-    pause 0.2
-    show audrey bj at startle (0.075, 10)
+    show audrey_bj04
     "Instead she moves faster still, head bobbing up and down."
     "She seems to be swallowing almost all of me each and every time."
+    play sound "vo/audrey/suck.mp3" loop
     "And the feeling of being in her mouth is impossibly good."
-    show audrey bj at startle (0.075, 10)
-    pause 0.2
-    show audrey bj at startle (0.075, 10)
+    show expression make_anim(audrey_blow, time=1.5, time_factor=1.2, loop=True)
     "Audrey's hands goes down as her head goes up."
     "Each time I honestly think I'm going to lose it."
     "But somehow I still manage to hang on, gasping for breath."
-    show audrey bj normal at startle (0.075, 10)
-    pause 0.2
-    show audrey bj at startle (0.075, 10)
+    show audrey_bj05
     "Audrey seems to sense that I'm getting close to the end."
-    "And she looks up at me for the first time."
     "I think she's trying to guess where I want this thing to go!"
     menu:
         "Cum on her face":
@@ -700,35 +677,32 @@ label audrey_fuck_date_blowjob:
             play sexsfx1 pull_out
             play sound audrey_moans_breathing_fast
             queue sound audrey_moans_breathing_slow
-            show audrey bj blink out
+            show audrey_bj_facial01
             "She lets my cock slide out of her mouth as she raises her head."
             "Then she closes her eyes, a knowing smile spreading across her face."
             $ audrey.love += 2
             play sexsfx1 cum_outside
             play sound audrey_generic_oh_2
-            show audrey bj cumshot with vpunch
+            show audrey_bj_facial02 with vpunch
             "A moment later I lose it, shooting my load straight at her."
             with vpunch
             "Audrey gasps as the hot, sticky cum spatters across her cheeks."
-            show audrey bj dickcum -cumshot with vpunch
-            "Then she laughs as it runs down and over her lips."
-            "Audrey lick it up eagerly, as if she's savouring the taste."
+
         "Cum in her mouth":
             "I motion downwards, and Audrey seems to catch on straight away."
-            show audrey bj blink
+            show audrey_bj_mouth01
             play sound audrey_moans_blowjob_high loop
             "She gets herself into a safe position and prepares for what's coming next."
             "Then she closes her eyes, a knowing smile spreading across her face."
             $ audrey.sub += 2
-            show audrey bj cumshot with vpunch
+            show audrey_bj_mouth02 with vpunch
             "A moment later I lose it, shooting my load straight down her throat."
             play sound audrey_moans_blowjob_swallow
             with vpunch
             "Audrey's cheeks bulge for a few seconds, and then she starts to swallow."
             with vpunch
             "Not missing a beat, she gulps down every drop of cum I have to give."
-            show audrey bj normal
-            "And she looks like she's enjoying every second of it too!"
+
     stop sexsfx1 fadeout 1
     stop sound fadeout 1
     hide audrey
@@ -751,6 +725,7 @@ label audrey_fuck_date_blowjob:
     return
 
 label audrey_fuck_date_oral_intro:
+
     "Audrey's one of those girls that just can't hide it when she has something on her mind."
     "Especially when it's something that's to do with what goes on in the bedroom too."
     "You know what I mean by that, right?"
@@ -879,7 +854,7 @@ label audrey_fuck_date_missionary(sexperience_min):
     "This means that by the time I'm finally naked and climbing onto the bed, I'm as hard as a rock."
     "Audrey keeps her mouth shut now, simply raising her eyebrows in what I hope is anticipation."
     "She welcomes me literally with open arms, letting me embrace her as roughly as I like."
-    show audrey kiss naked with fade
+    show audrey_mis_kiss with fade
     $ audrey.flags.kiss += 1
     "I kiss her hungrily, feeling like she has an electric charge running through her body."
     "A charge that I need to restore my own energy, that I need to be able to live."
@@ -888,7 +863,7 @@ label audrey_fuck_date_missionary(sexperience_min):
     "Audrey wants to be fucked."
     "And I want to fuck her."
     "Anything else is just a needless complication."
-    show audrey missionary nomike with fade
+    show audrey_mis_enter with fade
     "I'll be inside of her as soon as I can manage it."
     "But where is it going to end up..."
     menu:
@@ -986,8 +961,9 @@ label audrey_fuck_date_missionary(sexperience_min):
                 hide sexinserts
                 hide bellycum
             $ audrey.flags.anal += 1
+
         "Fuck her pussy":
-            show audrey missionary -nomike
+            show audrey_miss_pussy01
             "After all the time that Audrey's spent teasing and taunting me, I don't want to waste any more."
             "I don't hesitate to push the head of my cock against the lips of her pussy."
             play sound audrey_moans_discreet_low
@@ -998,140 +974,42 @@ label audrey_fuck_date_missionary(sexperience_min):
             call check_condom_usage (audrey, 180) from _call_check_condom_usage_12
             if _return == False:
                 return "leave_without_gain"
-            if CONDOM:
-                show audrey missionary condom
             play sexsfx1 slide_in
             "The feeling of my cock sliding into Audrey is simply incredible."
-            if CONDOM:
-                show audrey missionary vaginal condom
-            else:
-                show audrey missionary vaginal
             "After so much goading beforehand, actually getting my hands on her is just so gratifying."
             "And it seems to be pretty much the same for Audrey too."
             "She lies back on the pillows as I get as deep into her as I can manage."
             play sound audrey_moans_happy_medium
+            show expression make_anim(audrey_miss_pussy01, time=1.5, loop=True)
             "And finally her cutting words are replaced by deep moans of pure pleasure."
             "Audrey seems to surrender to me then, laying back on the bed, eyes rolling back into her head."
             "Her chin is cast back, exposing her neck."
             menu:
-                "Choke her" if hero.fitness >= 50:
+                "More deep" if hero.fitness >= 50:
                     $ audrey.sub += 1
-                    show audrey missionary vaginal choke pleasure
+                    show audrey_miss_pussy02
                     "It's in that moment I remember how much Audrey's into breath-play."
                     "Gingerly I reach out with both hands, placing them around her neck."
                     "I squeeze gently at first, just to let her know what I have in mind."
                     "Her eyes never open, but she nods her head just enough for me to notice."
-                    show audrey missionary vaginal ahegao
+                    show expression make_anim(audrey_miss_pussy02, time=1.5, loop=True)
                     play sound audrey_moans_pained_high
-                    audrey.say "Yeah...please..."
-                    "Keeping up the rhythm of my cock thrusting into her pussy, I tighten my grip on her neck."
-                    "I figure it's best to build up, rather than just throttle her from the first."
-                    "And so I slowly put on more pressure, until I see a reaction."
-                    "Audrey's cheeks soon begin to flush, and she makes small gasping sounds."
-                    "These increase steadily as I pile on more pressure and pound her pussy at the same time."
                     "I can feel her body trembling from what I'm doing."
                     "And though I never thought I'd admit this - it's turning me on seeing her reaction!"
-                    "The more Audrey writhes and struggles, the closer I get to cumming."
-                "Do not choke her":
+
+                "Kiss her":
                     $ audrey.love += 1
-                    show audrey missionary vaginal
+                    play sound audrey_moans_happy_high
+                    show expression make_anim(audrey_miss_pussy03, time=1.7, loop=True)
                     "Seeing her give in so completely to what I'm doing is a massive turn on."
                     "And I respond by quickening my pace as I pound into Audrey's pussy."
                     "Her body absorbs the force of each and every thrust."
-                    "And I watch as her breasts bounce in sympathy, nipples painfully erect."
-                    "It feels good to be the one making Audrey moan and writhe on the bed."
-                    "Not out of any cruel sense of revenge or need to demean her."
-                    show audrey missionary vaginal pleasure
-                    play sound audrey_moans_happy_high
-                    "But rather from the point of knowing that she's not as superior as she pretends to be."
-                    "A part of me is quickly coming to the conclusion that she likes to play games."
-                    "And being soundly fucked by someone that she's goaded seems to be the end result."
-                    "Who knows, maybe she thinks that she doesn't deserve to be fucked unless it's fuelled by annoyance?"
-                    "Whatever the reason, I've almost completely forgotten what she said to me before this."
-                    "Instead, all I can think about is the sensation of my cock in her pussy."
-                    "That and the sight of her taking everything that I have to give."
+                    show audrey_miss_kiss
+                    audrey.say "Mmhh..."
+            show audrey_miss_kiss
             "And it won't be long before I do just that!"
             "As in the very next moment, I can feel myself ready to blow."
             call cum_reaction (audrey, 'vaginal', sexperience_min) from _call_cum_reaction_26
-            if _return == "vaginal_condom":
-                "Safe and secure in the knowledge that I've taken precautions, I keep right on going."
-                "This means that I can spend the last ounce of my energies on making Audrey scream."
-                $ audrey.love += 1
-                show audrey missionary vaginal ahegao condom with hpunch
-                play sexsfx1 final_thrust
-                play sound [audrey_moans_happy_orgasm_1, audrey_moans_breathing_fast, audrey_moans_breathing_slow]
-                "And she does just that, wriggling and squirming on my cock as she cums too."
-                with hpunch
-                "Afterwards she collapses into a panting, but otherwise silent mass."
-                show audrey missionary -vaginal condom cum
-                "And all I can do is slide down atop her, equally exhausted and spent."
-            elif _return == "vaginal_outside":
-                show sexinserts chest audrey zorder 1 at center, zoomAt(1, (710, 740))
-                show sexinserts belly audrey as bellycum zorder 2 at center, zoomAt(1, (740, 970))
-                "I'd dearly love to keep right on going, to lose myself inside of Audrey."
-                "But there's no way I'm feeling that reckless and stupid right now."
-                show audrey missionary -vaginal
-                "And so I put my hands on her thighs and yank my cock out of her."
-                $ audrey.sub += 1
-                play sexsfx1 pull_out
-                play sound audrey_generic_oh_4
-                play sound [audrey_moans_happy_orgasm_1, audrey_moans_breathing_fast, audrey_moans_breathing_slow]
-                show audrey missionary cum
-                show sexinserts belly audrey cum as bellycum zorder 2 at center, zoomAt(1, (740, 970))
-                with hpunch
-                "Audrey makes a sound that's filled with sensuality and not a little disappointment."
-                show audrey missionary cum dickcum
-                show sexinserts chest audrey cum zorder 1 at center, zoomAt(1, (710, 740))
-                with hpunch
-                "But she doesn't complain or chastise me, simply lying there as my cum hits her belly and breasts."
-                hide sexinserts
-                hide bellycum
-            elif _return == "vaginal_inside_pill":
-                audrey.say "No..."
-                audrey.say "Don't you dare..."
-                audrey.say "I'm on the damn pill!"
-                "By the time her words have sunk in, she's made sure of what she wants anyway."
-                $ audrey.love += 2
-                show audrey missionary cum with hpunch
-                play sexsfx1 final_thrust
-                play sound [audrey_moans_happy_orgasm_1, audrey_moans_breathing_fast, audrey_moans_breathing_slow]
-                "I lose myself as deep inside of Audrey as I can, filling her completely."
-                with hpunch
-                "She rides me to the last, squeezing all that she can out of my now lifeless cock."
-            elif _return == "vaginal_inside_pregnant":
-                "I smile as I feel the curve of Audrey's pregnant belly against my own."
-                show audrey missionary cum with hpunch
-                "And it's all the licence that I need to lose myself inside of her."
-                $ audrey.love += 3
-                with hpunch
-                "She moans in pleasure at the sensation, and I savour it too."
-                "It feels as good right now as it did the moment that I made her pregnant too!"
-            elif _return == "vaginal_inside_mad":
-                show audrey missionary cum with hpunch
-                #$ audrey.impregnate()
-                play sexsfx1 cum_inside
-                play sound audrey_generic_ah_3
-                audrey.say "Oh shit...oh shit!"
-                mike.say "What is it?"
-                audrey.say "Did you just cum in me?"
-                mike.say "Uh...yeah...I guess so."
-                $ audrey.love -= 5
-                audrey.say "No condom...no fucking condom!"
-                "We stare at each other, wide-eyed as the reality of what we've just done hits home."
-            elif _return == "vaginal_inside_happy":
-                "Remembering that I'm not wearing a condom, I make to pull out before it's too late."
-                "But then I realise that Audrey's clinging onto me for dear life."
-                mike.say "What the actual fuck..."
-                audrey.say "No, [hero.name]..."
-                audrey.say "Cum in me..."
-                audrey.say "Please!"
-                show audrey missionary cum with hpunch
-                #$ audrey.impregnate()
-                play sexsfx1 cum_inside
-                play sound [audrey_moans_happy_orgasm_1, audrey_moans_breathing_fast, audrey_moans_breathing_slow]
-                "A moment later, she gets her wish."
-                $ audrey.love += 5
-                "And the look of happiness on her face is one of pure bliss."
     stop sexsfx1 fadeout 1
     stop sound fadeout 1
     return

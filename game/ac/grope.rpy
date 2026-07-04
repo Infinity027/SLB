@@ -44,7 +44,7 @@ label grope:
                 $ active_girl.love += 2
             else:
                 $ active_girl.love += 1
-            if active_girl.sub < 50:
+            if active_girl.sub < 90:
                 $ active_girl.sub += 1
             if renpy.has_label(f"{active_girl.id}_grope_happy_{hero.gender}"):
                 call expression f"{active_girl.id}_grope_happy_{hero.gender}" from _call_expression_103

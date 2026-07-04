@@ -1,3 +1,6 @@
+# 175×300
+# Square: 175×175
+# 175×98
 label aletta_friendly_texts:
     $ nvl_mode = "phone"
     nvl clear
@@ -10,7 +13,7 @@ label aletta_friendly_texts:
     elif texto == 1:
         aletta_nvl "I know I should really be working right now."
         aletta_nvl "But I can't stop thinking about you!"
-        aletta_nvl "What have you done to me?"
+        # aletta_nvl "{phone_image=phone/aletta/selfie.webp}"
     else:
         aletta_nvl "I had a really great time on our last date."
         aletta_nvl "Let me know when we can do it again, okay?"
@@ -32,8 +35,7 @@ label aletta_flirty_texts:
         aletta_nvl "It rubbed me so hard down there - it almost made me cum!"
     else:
         aletta_nvl "I'm wearing that underwear you like today."
-        aletta_nvl "The set with the stockings and suspenders?"
-        aletta_nvl "Just wanted you to get a good mental image of that..."
+        aletta_nvl "{phone_image=phone/aletta/ass.webp}"
     return
 
 label aletta_dirty_texts:
@@ -42,17 +44,17 @@ label aletta_dirty_texts:
     $ renpy.dynamic("texto")
     $ texto = randint(0, 2)
     if texto == 0:
-        aletta_nvl "Urgh...you're getting inside of my head!"
         aletta_nvl "I'm bored at work - and I'm NEVER bored at work!"
         aletta_nvl "All I can think about is you fucking me over this damn desk!"
+        aletta_nvl "{phone_image=phone/aletta/desk.webp}"
+
     elif texto == 1:
         aletta_nvl "I'm picking out my panties, bra and stockings."
-        aletta_nvl "Then I'm putting my riding leathers on over the top."
-        aletta_nvl "And I want you to take them off again when I get to your place, okay?"
+        aletta_nvl "{phone_image=phone/aletta/lingerie.webp}"
     else:
         aletta_nvl "I'm at the shooting range, getting in some practice."
         aletta_nvl "How about I come over after I'm done?"
-        aletta_nvl "Then you can practice shooting your load into me?"
+        aletta_nvl "{phone_image=phone/aletta/gun.webp}"
     return
 
 label aletta_friendly_texts_male:
@@ -257,4 +259,3 @@ label aletta_dirty_texts_male:
         $ hero.fun += 0.2
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

@@ -25,7 +25,7 @@ label morgan_flirty_texts:
     if texto == 0:
         morgan_nvl "What to wear, what to wear?"
         morgan_nvl "How about as little as possible?"
-        morgan_nvl "You like the sound of that?"
+        morgan_nvl "{phone_image=phone/morgan/tits.webp}"
     elif texto == 1:
         morgan_nvl "Hey, can I come over to your place?"
         morgan_nvl "No particular reason...none at all..."
@@ -44,16 +44,14 @@ label morgan_dirty_texts:
     if texto == 0:
         morgan_nvl "Urgh...I just got off of work and I'm all sweaty!"
         morgan_nvl "That costume they make me wear - it's SO tight!"
-        morgan_nvl "Can I come over to your place and grab a quick shower?"
-        morgan_nvl "If you say yes, you can grab me while I'm in there too..."
+        morgan_nvl "{phone_image=phone/morgan/costume.webp}"
     elif texto == 1:
         morgan_nvl "Oh...you fucked me so hard last time we did it."
         morgan_nvl "And I liked it SO much!"
-        morgan_nvl "I swear it feels like you're still inside of me!"
+        morgan_nvl "{phone_image=phone/morgan/pussy.webp}"
     else:
         morgan_nvl "Sure, I like to dress sexy, wear something you'll like."
-        morgan_nvl "But I kind of wonder what's the point in bothering?"
-        morgan_nvl "All I want you to do is tear if off of me!"
+        morgan_nvl "{phone_image=phone/morgan/pose.webp}"
     return
 
 label morgan_friendly_texts_male:

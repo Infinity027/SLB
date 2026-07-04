@@ -40,7 +40,7 @@ label slap:
         elif active_girl.sub < 45 + active_girl.flags.slapassmod:
             $ active_girl.sub += randchoice([0, 0, 0, 1])
         elif active_girl.sub < 50 + active_girl.flags.slapassmod:
-            $ active_girl.sub += randchoice([0, 0, 0, 0, 1])
+            $ active_girl.sub += randchoice([0, 0, 0, 0, 2])
         if renpy.has_label(f"{active_girl.id}_slap_ass_happy_{hero.gender}"):
             call expression f"{active_girl.id}_slap_ass_happy_{hero.gender}" from _call_expression_134
         else:

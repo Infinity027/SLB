@@ -29,7 +29,7 @@ label lavish_flirty_texts:
     elif texto == 1:
         lavish_nvl "Remember, I might be wearing something smart and sensible."
         lavish_nvl "But I always have something on underneath that's slinky and sexy!"
-        lavish_nvl "Something that I'm wearing just for you!"
+        lavish_nvl "{phone_image=phone/lavish/pantie.webp}"
     else:
         lavish_nvl "Ah...work really took it out of me today!"
         lavish_nvl "You mind if I come over to your place to unwind tonight?"
@@ -44,16 +44,15 @@ label lavish_dirty_texts:
     if texto == 0:
         lavish_nvl "Oh...I can't keep my mind on my work!"
         lavish_nvl "I keep thinking about you all the time!"
-        lavish_nvl "Well...you and what I want you to do to me..."
+        lavish_nvl "{phone_image=phone/lavish/work_off.webp}"
     elif texto == 1:
         lavish_nvl "I put on some really nice lingerie today, just for you!"
         lavish_nvl "I really want to show it off, but I can't in the office!"
-        lavish_nvl "Maybe we could meet up in the stationary cupboard?"
-        lavish_nvl "Then you could show me how much you like it..."
+        lavish_nvl "{phone_image=phone/lavish/lingerie.webp}"
     else:
         lavish_nvl "Can I come over and use your pool?"
-        lavish_nvl "But...the thing is...I need to know your housemates aren't in."
-        lavish_nvl "Because...well...I want to swim naked for you!"
+        lavish_nvl "Well...I want to swim naked for you!"
+        lavish_nvl "{phone_image=phone/lavish/naked.webp}"
     return
 
 label lavish_friendly_texts_male:

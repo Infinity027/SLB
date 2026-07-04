@@ -29,7 +29,7 @@ label anna_flirty_texts:
     elif texto == 1:
         anna_nvl "Ooh...my bra's so tight - it's squeezing me!"
         anna_nvl "Seriously, I think my tits are going to pop out of it!"
-        anna_nvl "Can you imagine how that would look?!?"
+        anna_nvl "{phone_image=phone/anna/cleavage.webp}"
     else:
         anna_nvl "I love watching you play the guitar!"
         anna_nvl "It's silly, but sometimes I kinda get jealous..."
@@ -44,7 +44,7 @@ label anna_dirty_texts:
     if texto == 0:
         anna_nvl "Ooh...I've got an itchy butt!"
         anna_nvl "You want to scratch it for me?"
-        anna_nvl "A hard cock up there should hit the spot!"
+        anna_nvl "{phone_image=phone/anna/butt_plug.webp}"
     elif texto == 1:
         anna_nvl "Hmm...I wonder what would look good on my chest?"
         anna_nvl "Oh yeah, I know!"

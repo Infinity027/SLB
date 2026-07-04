@@ -28,8 +28,7 @@ label minami_flirty_texts:
         minami_nvl "Just think of how hard that would make my nipples!"
     elif texto == 1:
         minami_nvl "I have a skirt I need to show you when you get home, big bro."
-        minami_nvl "I think it might be too short for me to wear outside of the house!"
-        minami_nvl "So you're gonna have to watch me bending over in it, okay?"
+        minami_nvl "{phone_image=phone/minami/skirt.webp}"
     else:
         minami_nvl "You should SO get into cosplay with me, big bro."
         minami_nvl "We could go to conventions together, have matching outfits."
@@ -44,17 +43,15 @@ label minami_dirty_texts:
     if texto == 0:
         minami_nvl "Hey, big bro, guess what?"
         minami_nvl "I've got my Lunar Mariner costume on - the one with the short skirt!"
-        minami_nvl "But I forgot to put on my panties!"
-        minami_nvl "Wanna come fuck me in it?"
+        minami_nvl "{phone_image=phone/minami/lunar_mariner.webp}"
     elif texto == 1:
         minami_nvl "Ah...I should SO be studying right now, big bro."
         minami_nvl "But I can't concentrate on my books."
-        minami_nvl "All I can think about is how good your cock feels inside of me!"
+        minami_nvl "{phone_image=phone/minami/pose.webp}"
     else:
         minami_nvl "Hey, big bro, the sun's out and there's nobody else home."
         minami_nvl "I'm gonna jump in the pool and swim naked!"
-        minami_nvl "You want to come join me?"
-        minami_nvl "Then maybe cum in me?"
+        minami_nvl "{phone_image=phone/minami/pool.webp}"
     return
 
 label minami_friendly_texts_male:
