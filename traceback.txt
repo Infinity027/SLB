@@ -1,44 +1,39 @@
 ﻿I'm sorry, but an uncaught exception occurred.
-/home/asim/store/renpy-8.5.2-sdk/Manila_Show/game/images/beach/beach006.1.jpg
+
 While running game code:
-  File "game/cl/class_story.rpy", line 579, in self_test
-    eval(c, locals=locals())
-    ~~~~^^^^^^^^^^^^^^^^^^^^
-NameError: name 'kylie' is not defined
+  File "game/cl/class_util.rpy", line 53, in safe_eval
+    return eval(c)
+           ~~~~^^^
+NameError: name 'nickname_TEMPLATE' is not defined
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "game/start.rpy", line 1228, in script call
+  File "game/start.rpy", line 1226, in script call
     call enter_room from _call_enter_room
   File "game/cl/labels_room.rpy", line 43, in script call
     call event_do (event) from _call_event_do_3
   File "game/cl/labels_events.rpy", line 19, in script call
     call expression do_event.label from _call_expression_514
-  File "game/ch/kleio/events.rpy", line 968, in script call
-    hide kleio
-  File "game/updates.rpy", line 267, in after_load_callback
-    storytracker.self_test()
-    ~~~~~~~~~~~~~~~~~~~~~~^^
-  File "game/cl/class_story.rpy", line 132, in self_test
-    story.self_test()
-    ~~~~~~~~~~~~~~~^^
-  File "game/cl/class_story.rpy", line 496, in self_test
-    step.self_test()
-    ~~~~~~~~~~~~~~^^
-  File "game/cl/class_story.rpy", line 494, in self_test
-    StoryConditions.self_test(self)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
-  File "game/cl/class_story.rpy", line 582, in self_test
-    raise Exception("Error in condition", self.id, c, e)
-Exception: ('Error in condition', 'camila.camila_prison_1', 'kylie.flags.schedule == "jail"', NameError("name 'kylie' is not defined"))
+  File "game/dlc_fafow/ch/harems/goth/events.rpy", line 358, in script
+    violaine.say "You must be [hero.name], yes?"
+  File "game/cl/class_hero.rpy", line 179, in name
+    return get_hero_nickname(current_speaker)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "game/cl/class_util.rpy", line 303, in get_hero_nickname
+    if safe_eval(v):
+       ~~~~~~~~~^^^ 
+  File "game/cl/class_util.rpy", line 56, in safe_eval
+    raise Exception("Invalid Condition: " + str(c) + "\n" + str(e))
+Exception: Invalid Condition: violaine.flags.mikeNickname in nickname_TEMPLATE
+name 'nickname_TEMPLATE' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Traceback (most recent call last):
-  File "game/cl/class_story.rpy", line 579, in self_test
-    eval(c, locals=locals())
-    ~~~~^^^^^^^^^^^^^^^^^^^^
+  File "game/cl/class_util.rpy", line 53, in safe_eval
+    return eval(c)
+           ~~~~^^^
   File "renpy/python.py", line 1305, in py_eval
     return py_eval_bytecode(code, globals, locals)
            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
@@ -46,49 +41,64 @@ Traceback (most recent call last):
     return eval(bytecode, globals, locals)
            ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "<none>", line 1, in <module>
-NameError: name 'kylie' is not defined
+NameError: name 'nickname_TEMPLATE' is not defined
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "game/start.rpy", line 1228, in script call
+  File "game/start.rpy", line 1226, in script call
     call enter_room from _call_enter_room
   File "game/cl/labels_room.rpy", line 43, in script call
     call event_do (event) from _call_event_do_3
   File "game/cl/labels_events.rpy", line 19, in script call
     call expression do_event.label from _call_expression_514
-  File "game/ch/kleio/events.rpy", line 968, in script call
-    hide kleio
-  File "renpy/common/00start.rpy", line 114, in script
-    python hide:
-  File "renpy/ast.py", line 1187, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/python.py", line 1273, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/common/00start.rpy", line 114, in <module>
-    python hide:
-  File "renpy/common/00start.rpy", line 117, in _execute_python_hide
-    i()
-    ~^^
-  File "game/updates.rpy", line 267, in after_load_callback
-    storytracker.self_test()
-    ~~~~~~~~~~~~~~~~~~~~~~^^
-  File "game/cl/class_story.rpy", line 132, in self_test
-    story.self_test()
-    ~~~~~~~~~~~~~~~^^
-  File "game/cl/class_story.rpy", line 496, in self_test
-    step.self_test()
-    ~~~~~~~~~~~~~~^^
-  File "game/cl/class_story.rpy", line 494, in self_test
-    StoryConditions.self_test(self)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
-  File "game/cl/class_story.rpy", line 582, in self_test
-    raise Exception("Error in condition", self.id, c, e)
-Exception: ('Error in condition', 'camila.camila_prison_1', 'kylie.flags.schedule == "jail"', NameError("name 'kylie' is not defined"))
+  File "game/dlc_fafow/ch/harems/goth/events.rpy", line 358, in script
+    violaine.say "You must be [hero.name], yes?"
+  File "renpy/ast.py", line 2925, in execute
+    Say.execute(self)
+    ~~~~~~~~~~~^^^^^^
+  File "renpy/ast.py", line 991, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/exports/sayexports.py", line 129, in say
+    who(what, *args, **kwargs)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/character.py", line 1550, in __call__
+    what = self.prefix_suffix("what", self.what_prefix, what, self.what_suffix)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/character.py", line 1464, in prefix_suffix
+    return sub(prefix) + sub(body, translate=not renpy.game.context().translated) + sub(suffix)
+                         ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^              
+  File "renpy/character.py", line 1443, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^   
+  File "renpy/substitutions.py", line 355, in substitute
+    s = interpolate(s, variables)  # type: ignore
+        ~~~~~~~~~~~^^^^^^^^^^^^^^                
+  File "renpy/substitutions.py", line 89, in interpolate
+    raise e
+  File "renpy/substitutions.py", line 81, in interpolate
+    value = renpy.python.py_eval(code, {}, scope)
+            ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1305, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1298, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<none>", line 1, in <module>
+  File "game/cl/class_hero.rpy", line 179, in name
+    return get_hero_nickname(current_speaker)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "game/cl/class_util.rpy", line 303, in get_hero_nickname
+    if safe_eval(v):
+       ~~~~~~~~~^^^ 
+  File "game/cl/class_util.rpy", line 56, in safe_eval
+    raise Exception("Invalid Condition: " + str(c) + "\n" + str(e))
+Exception: Invalid Condition: violaine.flags.mikeNickname in nickname_TEMPLATE
+name 'nickname_TEMPLATE' is not defined
 
-Linux-6.17.0-23-generic-x86_64-with-glibc2.39 x86_64
+Linux-6.17.0-35-generic-x86_64-with-glibc2.39 x86_64
 Ren'Py 8.5.2.26010301
 Love & Sex : Second Base - 26.4.0c 26.4.0c
-Wed Jun  3 21:23:46 2026
+Wed Jul 15 12:35:21 2026

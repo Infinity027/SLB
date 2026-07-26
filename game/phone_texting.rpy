@@ -401,8 +401,11 @@ screen nvl_phonetext(dialogue):
                                 at message_appear(-1)
 
                         if message_image:
-                            add Transform(message_image, maxsize=(175, 300), fit="contain"):
-                                id d.what_id
+                            fixed:
+                                fit_first True
+                                add Transform(message_image, maxsize=(175, 300), fit="contain")
+                                text "":
+                                    id d.what_id
                         else:
                             text d.what:
                                 pos (0, 0)

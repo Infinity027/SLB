@@ -121,7 +121,7 @@ schedule:
       - room: university
         activity: work
         clothes: casual
-      '17':
+      '16':
       - room: library
         activity: work
         clothes: casual
@@ -522,9 +522,6 @@ schedule:
       - room: livingroom
         activity: tv
         clothes: sleep
-      - room: bedroom5
-        activity: read
-        clothes: underwear
 
     '6':
       '9':

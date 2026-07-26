@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/ch/morgan/events.rpy", line 366: invalid syntax. Perhaps you forgot a comma?
-    HeroTarget(
-        ^^^^^
+File "game/bg/bookstore/bookstore.rpy", line 4: invalid syntax. Perhaps you forgot a comma?
+    Gift("yuri_manga", price=50, tooltip="A manga that represents lesbian scenes", tags=["books", "manga"],romance les_bonus=1, bonus_traits=["not_religious", "bookworm"])
+                                                                                                               ^^^^^^^^^^^^^^^^^
 
 Ren'Py Version: Ren'Py 8.5.2.26010301
-Tue Jun  2 18:29:07 2026
+Sat Jul  4 09:24:08 2026

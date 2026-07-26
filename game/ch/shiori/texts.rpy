@@ -43,17 +43,15 @@ label shiori_dirty_texts:
     $ text_id = randint(0, 2)
     if text_id == 0:
         shiori_nvl "Oh dear...I don't think I can keep it in any more!"
-        shiori_nvl "I want you so badly, it's making me crazy!"
         shiori_nvl "I need to have your cock in me again!"
+        shiori_nvl "{phone_image=phone/shiori/touching.webp}"
     elif text_id == 1:
         shiori_nvl "I'll wear that really tight, short dress again if you like?"
         shiori_nvl "The one that I feel like I'm going to pop out of?"
-        shiori_nvl "I like the way you look at me when I wear it..."
-        shiori_nvl "It...it makes me wet!"
+        
     else:
         shiori_nvl "I miss you so badly!"
-        shiori_nvl "I want to wake up next to you!"
-        shiori_nvl "I want to wake up with you in me..."
+        shiori_nvl "{phone_image=phone/shiori/no_pantie.webp}"
     return
 
 label shiori_friendly_texts_male:

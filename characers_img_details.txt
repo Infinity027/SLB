@@ -1,9 +1,13 @@
+I PULLED OUT HIS GIANT COCK IN RESTAURANT! PUBLIC EXTREM!
 === Bree ===
 
 Dress: 
 
 ==== Alleta ====
 She has rock-style blonde hair with an undercut and bright red streaks in her front bangs. She has a prominent skull and filigree tattoo on her upper chest/collarbone, is wearing black nail polish. 
+
+==== cassidy ====
+gym: She wears a white sleeveless crop top featuring a black silhouette of a leaping cat, paired with tight black leggings.
 
 ==== Kleio ====
 She has rock-style blonde hair with an undercut and bright red streaks in her front bangs. She has a prominent skull and filigree tattoo on her upper chest/collarbone, is wearing black nail polish. 
@@ -19,6 +23,10 @@ She is wearing a loose, beige/off-white herringbone-patterned off-shoulder sweat
 ==== Lavish ====
 A calm, self-assured expression.
 
+=== Hanna ===
+dress: She is casually dressed in a long-sleeved, dark blue sweatshirt. The sweatshirt has the words "NEW YORK" printed across the chest in large white, block letters, and features two white athletic stripes on each upper arm. On her bottom half, she is wearing very short, tight-fitting, light beige or off-white shorts.
+
+
 Expression:
 
 Normal:
@@ -26,6 +34,8 @@ Normal:
 Sad:
 
 Angry: Her expression is one of annoyance, anger, or confrontation, indicated by her deeply furrowed eyebrows and her mouth being open
+
+annoying: Change the woman expression to annoying and eyebrows shrink.
 
 happy:
 
@@ -37,5 +47,20 @@ Pose:
 1. Her arms are crossed tightly over her chest.
 
 
-===== cinema =====
+===== Cinema Date =====
 Same anime style, inside a dark movie theater with rows of plush red seats. The young man with messy spiky black hair inserted his hand is slid inside the woman's blue jeans. The woman is blushing with wide surprised eyes, slightly open mouth, and an embarrassed yet aroused expression.
+
+===== Home Date =====
+
+talk: The pair are sitting on a dark blue couch or booth near a large window with a bright, blurred outdoor view. A modern table or counter is visible in the foreground.
+
+===== Restaurant Date =====
+===== Pub Date =====
+
+===== Pool Date =====
+
+
+Characters:
+Man (left):
+Spiky black hair, wearing a maroon V-neck t-shirt and grey pants.
+He is turned toward the woman, speaking with an engaged expression and open hand gestures (one hand raised as if explaining something).

@@ -23,7 +23,7 @@ init python:
     "description": "Heirloom is a standard department store brand with little style or glamour, but it's a mainstream job that will pay the bills.",
     "label": "palla_find_heirloom",
     "income": 200,
-    "career_gain": (2, "12345"),
+    "career_gain": (3, "12345"),
     "career_max": 25,
     "conditions": [
         PersonTarget(palla,

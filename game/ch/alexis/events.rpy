@@ -1,22 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 init python:
     Event(**{
     "name": "alexis_start",
@@ -98,7 +80,6 @@ init python:
     "conditions": [
         IsDone("alexis_event_04"),
         HeroTarget(
-            IsGender("male"),
             IsRoom("date_beach", "date_nudistbeach")),
         PersonTarget(alexis,
             IsPresent(),
