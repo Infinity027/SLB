@@ -5,7 +5,6 @@ init python:
     "duration": 0,
     "icon": "pettinggirl",
     "conditions": [
-        HeroTarget(IsGender("male")),
         ActiveTarget(
             Not(IsActivity("sleep")),
             IsGender("female"),

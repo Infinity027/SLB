@@ -638,26 +638,6 @@ init python:
     "once_day": True,
     })
 
-
-    Event(**{
-    "name": "kat_preg_talk",
-    "max_girls": 1,
-    "label": "kat_preg_talk",
-    "do_once": False,
-    "conditions": [
-        HeroTarget(
-            IsGender("male"),
-            Not(OnDate())),
-        PersonTarget(kat,
-            IsPresent(),
-            Not(IsHidden()),
-            IsFlag("toldpreg", False),
-            MinCounter("pregnant", 6),
-            ),
-        ],
-    "music": "music/roa_music/buddy.ogg",
-    })
-
     InteractActivity(**{
     "name": "kat_vibrator_restaurant",
     "label": "kat_vibrator_restaurant",
@@ -3107,14 +3087,9 @@ label kat_male_ending:
     "She's always been something of a shy girl, awkward in some social situations."
     "And yet somehow the dress she's wearing is able to make her the centre of attention."
     "It compliments her demure looks, somehow making the most of them without changing who she appears to be."
-    if kat.is_visibly_pregnant:
-        "Even the delicate curve of Kat's belly is treated with dignity."
-        "Making a subtle statement of the fact that she's pregnant."
-        "Rather than shoving the fact into the face of anyone that sees her."
-    else:
-        "To me there's no sense of the dress turning Kat into a fairytale princess."
-        "Because she's already the most beautiful girl in the world to my eyes."
-        "Instead it confirms for me what I already knew - that I'm one hell of a lucky guy!"
+    "To me there's no sense of the dress turning Kat into a fairytale princess."
+    "Because she's already the most beautiful girl in the world to my eyes."
+    "Instead it confirms for me what I already knew - that I'm one hell of a lucky guy!"
     "The music fades as Kat reaches the altar and comes to a halt at my side."
     "Now that she's close enough for me to touch, I finally see the smile on her face."
     "It's small and hard to spot unless you know all the quirks of Kat's expressions."
@@ -3227,16 +3202,10 @@ label kat_male_ending:
     kat.say "Domesticity kind of crept up on me slowly from there."
     kat.say "But the biggest surprise was how natural I found it."
     "[hero.name] and I got married, becoming a typically nauseating couple in love."
-    if kat.is_visibly_pregnant:
-        kat.say "And when we found out I was going to have a baby, it was perfect."
-        kat.say "Mario came along nine months later, and we became a family."
-        kat.say "[hero.name] might not be the most confident of fathers."
-        kat.say "But his heart is in the right place, and that's what matters."
-    else:
-        kat.say "So much in love that we're already thinking about starting a family."
-        kat.say "We haven't decided to make a go of it just yet."
-        kat.say "And I know that [hero.name]'s hiding the fact he's scared of the responsibility."
-        kat.say "But I'm sure that he'll muddle through and make a good father in the end."
+    kat.say "So much in love that we're already thinking about starting a family."
+    kat.say "We haven't decided to make a go of it just yet."
+    kat.say "And I know that [hero.name]'s hiding the fact he's scared of the responsibility."
+    kat.say "But I'm sure that he'll muddle through and make a good father in the end."
     kat.say "It's kind of a cliche that [hero.name] got to keep his career."
     kat.say "And doubly so that I decided to stay at home myself."
     kat.say "But I'm not bored or frustrated, far from it."
@@ -8117,16 +8086,9 @@ label jack_kat_male_ending:
     "Normally she's one hundred percent casual, totally relaxed in her choice of clothes."
     "So seeing her in an elegant, flowing white dress is a complete surprise."
     "And believe me, she looks absolutely amazing!"
-    if kat.is_visibly_pregnant:
-        "I can hardly tell that she's got a swollen belly under the dress."
-        "The cut of it manages to hide the fact pretty well."
-        "Not that I'm at all embarrassed by the fact."
-        "In fact I'm incredibly proud that Kat's carrying a baby."
-        "Though I admit to not knowing which of us is the father."
-    else:
-        "I make mental note to ask Kat if she'll dress-up nice in the future."
-        "Because I'd be really disappointed if this is the only time she does it."
-        "She looks way too good to never see her looking this way again."
+    "I make mental note to ask Kat if she'll dress-up nice in the future."
+    "Because I'd be really disappointed if this is the only time she does it."
+    "She looks way too good to never see her looking this way again."
     show kat wedding at center, zoomAt(1.5, (900, 1040))
     show jack embarrassed date at center, zoomAt(1.5, (380, 1080))
     with easeinleft
@@ -8307,139 +8269,6 @@ label jack_kat_male_ending:
     pause 0.3
     $ game.set_new_game_plus()
     $ renpy.full_restart()
-
-label kat_preg_talk:
-    show kat a sad
-    "Kat's got a pretty serious expression spread across it right now."
-    "Plus the fact that her eyes seem to be red and more than a little puffy."
-    show kat a sad at center, zoomAt(1.5, (640, 1040))
-    "Almost like..."
-    mike.say "Kat..."
-    mike.say "Have you..."
-    mike.say "Have you been crying?"
-    show kat a annoyed
-    "As soon as I ask the question, Kat seems to become defensive."
-    "She sniffles and shakes her head, though the evidence is right there."
-    kat.say "No..."
-    show kat a sadclosed
-    kat.say "Yes..."
-    show kat a sadsmile
-    kat.say "Ah...that's not important!"
-    mike.say "Of course it is, Kat!"
-    mike.say "If something bad's happened to you, then I want to know."
-    mike.say "That's why you're here, right?"
-    show kat d sadclosed
-    "Kat nods, still sniffling and sighing."
-    "She also keeps wiping the corner of her eyes with the back of her hand."
-    "And each time she does so, they become redder and more angry."
-    "Though I get the distinct impression mentioning that would be a mistake."
-    show kat a sad
-    kat.say "Okay, [hero.name]..."
-    kat.say "This is serious, yeah?"
-    kat.say "So I need you to not panic."
-    mike.say "I'll do my best."
-    kat.say "You'd better!"
-    kat.say "Because I just took a pregnancy test."
-    kat.say "And the result was positive."
-    "For a moment the world around me seems to slow and come to a stop."
-    "I know what those words all mean, and how they fit together to create a greater meaning."
-    "But for some reason I can't fully connect all of that back to reality."
-    show kat a confused
-    kat.say "[hero.name]?"
-    kat.say "Did you hear what I said?!?"
-    mike.say "Y...yeah, Kat..."
-    mike.say "I heard you."
-    show kat d
-    "By now Kat's waving her arms in the air."
-    "Beginning to demand answers from me."
-    show kat sad
-    kat.say "So what are we going to do?"
-    kat.say "Tell me that, [hero.name]!"
-    show kat d afraid
-    kat.say "What the fuck are we going to do?!?"
-    menu:
-        "We should keep the baby":
-            "Oddly enough, I don't hesitate to come out with an answer."
-            "One that I hope will show I'm taking charge of the situation."
-            "As well as reassuring Kat that everything will be fine."
-            mike.say "Don't worry about anything, Kat."
-            mike.say "Sure, this is a shock and all."
-            mike.say "But we're not the first people to end up here."
-            show kat surprised
-            "Kat looks up at me, her eyes wider than ever."
-            "But for the first time, I think I can see hope in them."
-            kat.say "You..."
-            show kat confused
-            kat.say "You really mean that?"
-            kat.say "You're going to try to make this work?"
-            "I shake my head."
-            mike.say "No, Kat..."
-            mike.say "I'm not going to try to make it work."
-            mike.say "I am going to make it work."
-            show kat a happy
-            $ kat.love += 10
-            "Something inside of Kat seems to break as she hears this."
-            "It's like until that very moment, she's been holding back."
-            "Doing the best she can to stay strong under the circumstances."
-            "But now that she knows I'm on her side, the dam finally breaks."
-            show kat at center, zoomAt(1.5, (640, 1040)) with hpunch
-            "Kat throws her arms around me, hugging me with surprising strength."
-            kat.say "We'll make it work, [hero.name]..."
-            show kat a smile
-            kat.say "You and me against the world."
-            kat.say "Nothing's can beat us as long as we're together!"
-            $ kat.flags.toldpreg = True
-            hide kat
-            show kat a smile at center, zoomAt(1.65, (640, 1140)), startle(0.05,-10)
-            "I nod and wrap my arms around Kat."
-            "Returning the gesture and trying to offer her reassurance."
-            "But at the same time my mind is already filling."
-            "Thoughts building up as to the enormity of the task ahead."
-        "You should have a termination":
-            "Oddly enough, I don't hesitate to come out with an answer."
-            show kat at center, zoomAt(1.5, (640, 1040))
-            "One that I hope will show I'm taking charge of the situation."
-            "As well as reassuring Kat that everything will be fine."
-            mike.say "Don't worry about anything, Kat."
-            mike.say "I have some savings that I've been putting aside."
-            mike.say "It was supposed to be for a deposit on a place of my own."
-            mike.say "But this is more important than that."
-            show kat confused
-            "Kat seems a little confused by what I'm saying."
-            "She frowns as she questions me further."
-            kat.say "What's the money for, [hero.name]?"
-            kat.say "Sure, we'll need it further down the line."
-            kat.say "But I don't see what we need to pay for right now."
-            mike.say "A termination isn't free, Kat!"
-            mike.say "They don't hand those things out lightly either!"
-            show kat shocked
-            "Kat's eyes go wide at this."
-            hide kat
-            show kat shocked
-            "And she actually takes a step backwards."
-            "Putting some distance between the two of us."
-            kat.say "A termination?"
-            show kat offended
-            $ kat.love -= 20
-            kat.say "What are you talking about?"
-            kat.say "I don't want to get rid of it!"
-            mike.say "What am I talking about?"
-            mike.say "What the hell are you talking about?!?"
-            mike.say "I can't be a father and we can't start a family!"
-            show kat annoyed
-            kat.say "No, [hero.name]..."
-            show kat angry
-            $ kat.sub -= 10
-            kat.say "I won't let you kill my baby!"
-            kat.say "I'll do this on my own if I have to."
-            kat.say "I don't need you, and the baby doesn't either!"
-            show kat at right4 with ease
-            "Before I can say another word, Kat turns on her heel."
-            hide kat with easeoutright
-            $ kat.set_gone_forever()
-            "Then she runs away, as fast as her feet will carry her."
-            "And something tells me that she won't be coming back."
-    return
 
 label kat_vibrator_restaurant:
     scene bg restaurant with fade

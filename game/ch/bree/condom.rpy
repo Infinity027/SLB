@@ -39,11 +39,6 @@ label bree_use_condom:
     return
 
 
-
-
-
-
-
 label bree_warn_condom:
     $ result = randint(1, 3)
     if result == 1:

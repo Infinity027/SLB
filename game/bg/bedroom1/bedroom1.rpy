@@ -4,9 +4,6 @@ init python:
     "exits": ["livingroom", "housemap"],
     "display_name": "My Bedroom",
     "music": house_music(),
-    "conditions": [
-        HeroTarget(IsGender("male")),
-        ],
     "outfit": "casual",
     "tags": ["home"],
     })

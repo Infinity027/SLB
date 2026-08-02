@@ -74,19 +74,9 @@ label samantha_date_eat_a_burger:
     return
 
 label samantha_date_buy_drink:
-    if samantha.is_visibly_pregnant:
-        show samantha angry
-        $ samantha.love -= 10
-        samantha.say "Grow up, [hero.name]!"
-        samantha.say "I'm pregnant, remember?"
-        if not samantha.flags.NPCpregnancy:
-            samantha.say "Something you had a hand in too, I seem to recall!"
-        $ hero.cancel_activity()
-        hide samantha
-    else:
-        "Sam sips her drink through a straw, visibly savouring it as she does so."
-        "Somehow she manages to make sucking up alcohol like that look very, very good."
-        "Even when she gets to the bottom of the glass and makes sucking noises among the ice-cubes."
+    "Sam sips her drink through a straw, visibly savouring it as she does so."
+    "Somehow she manages to make sucking up alcohol like that look very, very good."
+    "Even when she gets to the bottom of the glass and makes sucking noises among the ice-cubes."
     return
 
 label samantha_date_play_darts:
@@ -102,15 +92,7 @@ label samantha_date_pub_play_pool:
     return
 
 label samantha_date_buy_a_round:
-    if samantha.is_visibly_pregnant:
-        show samantha angry
-        $ samantha.love -= 10
-        samantha.say "Grow up, [hero.name]!"
-        samantha.say "I'm pregnant, remember?"
-        if not samantha.flags.NPCpregnancy:
-            samantha.say "Something you had a hand in too, I seem to recall!"
-        $ hero.cancel_activity()
-    elif (hero.charm >= 60 - samantha.love and samantha.flags.drinks < 2):
+    if (hero.charm >= 60 - samantha.love and samantha.flags.drinks < 2):
         show drink samantha
         "Sam just nods and smiles when I say that the next round's on me."
         "I guess she's not that bothered about downing another drink."

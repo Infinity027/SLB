@@ -2,12 +2,9 @@ label shiori_talk_love_male:
     show shiori
     mike.say "Shiori, what do you think true love actually is?"
     show shiori embarrassed
-    if shiori.is_visibly_pregnant:
-        shiori.say "I think that true love is having someone's child growing inside of you, nurturing it and bringing it into the world!"
-    else:
-        shiori.say "I think that love is being able to do anything for your man, no matter what he asks."
-        shiori.say "It's having him dictate every aspect of your life..."
-        $ shiori.sub += 1
+    shiori.say "I think that love is being able to do anything for your man, no matter what he asks."
+    shiori.say "It's having him dictate every aspect of your life..."
+    $ shiori.sub += 1
     hide shiori
     return
 
@@ -15,10 +12,7 @@ label shiori_talk_sex_male:
     show shiori
     mike.say "What's your preference when it comes to sex, Shiori?"
     show shiori embarrassed
-    if shiori.is_visibly_pregnant:
-        "I hear that you can still have sex while you're pregnant..."
-    else:
-        shiori.say "Well...I can't imagine pleasure without at least a touch of pain..."
+    shiori.say "Well...I can't imagine pleasure without at least a touch of pain..."
     $ shiori.sub += 1
     hide shiori
     return
@@ -27,12 +21,8 @@ label shiori_talk_politics_male:
     show shiori
     mike.say "Opinions on politics are like assholes everyone's got one - what are your politics, Shiori?"
     show shiori annoyed
-    if shiori.is_visibly_pregnant:
-        shiori.say "I don't know anything about politics."
-        shiori.say "But you won't vote for anyone that'd hurt our baby, would you, [hero.name]?"
-    else:
-        shiori.say "Oh, I wouldn't know anything about all of that!"
-        shiori.say "I just nod and smile when people start talking about politics."
+    shiori.say "Oh, I wouldn't know anything about all of that!"
+    shiori.say "I just nod and smile when people start talking about politics."
     hide shiori
     return
 
@@ -40,12 +30,8 @@ label shiori_talk_food_male:
     show shiori
     mike.say "Most people tend to eat out these days - how about you, Shiori?"
     show shiori
-    if shiori.is_visibly_pregnant:
-        shiori.say "Since I got pregnant, I just can't stop eating!"
-        shiori.say "If this keeps up, I'll be the size of a whale by the time the baby's due!"
-    else:
-        shiori.say "Oh no, I love making food!"
-        shiori.say "I think that a woman should be able to cook a hearty meal for her man at the end of the working day."
+    shiori.say "Oh no, I love making food!"
+    shiori.say "I think that a woman should be able to cook a hearty meal for her man at the end of the working day."
     hide shiori
     return
 
@@ -62,10 +48,7 @@ label shiori_talk_tv_male:
     show shiori
     mike.say "I need to start watching that new series on Netflix that everyone's talking about, tonight if I can."
     mike.say "You've heard about it, right, Shiori?"
-    if shiori.is_visibly_pregnant:
-        shiori.say "I'm usually so tired by the time I flop down on the sofa, I'm asleep in just a couple of minutes!"
-    else:
-        shiori.say "Nope - I mainly watch soaps, sometimes Reality TV shows."
+    shiori.say "Nope - I mainly watch soaps, sometimes Reality TV shows."
     hide shiori
     return
 
@@ -73,20 +56,14 @@ label shiori_talk_sports_male:
     show shiori
     mike.say "All anyone's talking about in the office is the big game that's going to be on TV tonight."
     mike.say "Will you be watching it too, Shiori?"
-    if shiori.is_visibly_pregnant:
-        shiori.say "I'm usually so worn out by the time I collapse on the sofa, I'm snoring away in just a few minutes!"
-    else:
-        shiori.say "Oh no, I don't watch sports on TV, sorry."
+    shiori.say "Oh no, I don't watch sports on TV, sorry."
     hide shiori
     return
 
 label shiori_talk_fashion_male:
     show shiori
     mike.say "You're always pretty well dressed when you walk into the office, Shiori."
-    if shiori.is_visibly_pregnant:
-        shiori.say "Erm...nothing really fits me anymore, and I need to buy some maternity clothes, real soon!"
-    else:
-        shiori.say "Aw, thank you for saying so - I just love clothes and shopping!"
+    shiori.say "Aw, thank you for saying so - I just love clothes and shopping!"
     hide shiori
     return
 
@@ -94,12 +71,9 @@ label shiori_talk_books_male:
     show shiori
     mike.say "I heard about this pretty hardcore new adult novel that apparently everyone's reading."
     mike.say "Have you heard of it...or read it?"
-    if shiori.is_visibly_pregnant:
-        shiori.say "No...but I did pick up this adorable book of baby names!"
-    else:
-        "Shiori giggles and shakes her head."
-        shiori.say "Oh no...I don't read all that much."
-        shiori.say "I think I might be too dumb to understand it!"
+    "Shiori giggles and shakes her head."
+    shiori.say "Oh no...I don't read all that much."
+    shiori.say "I think I might be too dumb to understand it!"
     hide shiori
     return
 
@@ -123,10 +97,7 @@ label shiori_talk_computers_male:
     show shiori
     mike.say "How are you coping with the latest software upgrades on your work computer, Shiori?"
     show shiori annoyed
-    if shiori.is_visibly_pregnant:
-        shiori.say "I can't even think about computers, not when I already have babies on the brain!"
-    else:
-        shiori.say "I'm not really very good with computers, they make my brain hurt!"
+    shiori.say "I'm not really very good with computers, they make my brain hurt!"
     hide shiori
     return
 
@@ -134,11 +105,7 @@ label shiori_talk_music_male:
     show shiori
     mike.say "I was going to play some music - do you have any preferences, Shiori?"
     show shiori
-    if shiori.is_visibly_pregnant:
-        shiori.say "Could you play some classical music?"
-        shiori.say "It's supposed to be good for the baby!"
-    else:
-        shiori.say "Not really - I don't listen to music all that much."
+    shiori.say "Not really - I don't listen to music all that much."
     hide shiori
     return
 

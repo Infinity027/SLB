@@ -9,21 +9,11 @@ label kiara_date_buy_drink:
     mike.say "Looks like it's time for another round."
     mike.say "How about you, Kiara?"
     mike.say "You want a pint of something?"
-    if kiara.is_visibly_pregnant:
-        "Kiara's eyes go wide with surprise as I ask the question."
-        "And at the same time her hands move to her belly, as if to shield it from harm."
-        kiara.say "[hero.name], did you forget about something?!?"
-        $ kiara.love -= 2
-        "Suddenly reminded of the fact she's pregnant, I shake my head."
-        mike.say "Oh yeah, sorry!"
-        mike.say "Maybe a soft drink or a fruit-juice instead?"
-        $ hero.cancel_activity()
-    else:
-        "Kiara picks up her glass and swills around the remaining liquid inside."
-        kiara.say "I think that you are trying to get me drunk!"
-        kiara.say "But then so what if you are?"
-        kiara.say "I will have another one of these."
-        $ kiara.set_flag("drinks", 1, "day", mod="+")
+    "Kiara picks up her glass and swills around the remaining liquid inside."
+    kiara.say "I think that you are trying to get me drunk!"
+    kiara.say "But then so what if you are?"
+    kiara.say "I will have another one of these."
+    $ kiara.set_flag("drinks", 1, "day", mod="+")
     return
 
 label kiara_date_play_darts:
@@ -48,24 +38,14 @@ label kiara_date_buy_a_round:
     mike.say "Looks like it's time for another round."
     mike.say "And I think it's my turn to get one in."
     mike.say "So, same again?"
-    if kiara.is_visibly_pregnant:
-        "Kiara's eyes go wide with surprise as I ask the question."
-        "And at the same time her hands move to her belly, as if to shield it from harm."
-        kiara.say "[hero.name], did you forget about something?!?"
-        $ kiara.love -= 2
-        "Suddenly reminded of the fact she's pregnant, I shake my head."
-        mike.say "Oh yeah, sorry!"
-        mike.say "Maybe a soft drink or a fruit-juice instead?"
-        $ hero.cancel_activity()
-    else:
-        "Kiara picks up her glass and swills around the remaining liquid inside."
-        kiara.say "I think that you are trying to get me drunk!"
-        kiara.say "But then so what if you are?"
-        kiara.say "I will have another one of these."
+    "Kiara picks up her glass and swills around the remaining liquid inside."
+    kiara.say "I think that you are trying to get me drunk!"
+    kiara.say "But then so what if you are?"
+    kiara.say "I will have another one of these."
+    $ game.active_date.score += 5
+    if "rebel" in kiara.traits:
         $ game.active_date.score += 5
-        if "rebel" in kiara.traits:
-            $ game.active_date.score += 5
-        $ kiara.set_flag("drinks", 1, "day", mod="+")
+    $ kiara.set_flag("drinks", 1, "day", mod="+")
     return
 
 label kiara_dance_with:

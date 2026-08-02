@@ -428,24 +428,6 @@ init python:
     "do_once": True,
     })
 
-    Event(**{
-    "name": "emma_preg_talk",
-    "label": "emma_preg_talk",
-    "do_once": False,
-    "conditions": [
-        HeroTarget(
-            IsGender("male"),
-            Not(OnDate())),
-        PersonTarget(emma,
-            IsPresent(),
-            Not(IsHidden()),
-            IsFlag("toldpreg", False),
-            MinCounter("pregnant", 6),
-            ),
-        ],
-    "music": "music/roa_music/tiny_love.ogg",
-    })
-
 label emma_dream_01:
     scene bg bedroom1 at blur(16), dark, dark with dissolve
     $ emma.flags.emmadelay = TemporaryFlag(True, 7)
@@ -2525,147 +2507,8 @@ label emma_event_12:
     "But if it's not the right choice, we'll regret it in the future."
     return
 
-label emma_preg_talk:
-    $ emma.flags.toldpreg = True
-    show emma fear
-    "From the first moment I set eyes on Emma, I know that there's something wrong."
-    "Her face is pale, her eyes huge and I swear that she's actually shaking too!"
-    show emma fear at center, zoomAt (1.5, (640, 1040))
-    "The second I realise the state that she's in, I hurry over, consumed with worry."
-    "I have my hands on her shoulders before either of us can speak a single word."
-    mike.say "Emma..."
-    mike.say "Are you okay?"
-    mike.say "You look as white as a sheet!"
-    "Emma gazes up at me as I say all of this, looking straight into my eyes."
-    "But even so there's something not quite right about the way she does this."
-    "It's almost like she sees me and yet she doesn't see me at the same time."
-    mike.say "Emma, please!"
-    mike.say "Snap out of it already..."
-    mike.say "You're scaring me!"
-    "For some reason this last statement seems to get through to Emma."
-    "She shakes her head a little, starting to come back to her senses."
-    "And I finally see the fog clearing from her eyes as she does so."
-    emma.say "[hero.name]..."
-    emma.say "Oh...I'm sorry!"
-    emma.say "I feel like I'm in a daze!"
-    emma.say "Like everything's unreal, you know?"
-    "I nod eagerly, hanging on every word that Emma says."
-    "But pretty soon I realise that she's not actually saying that much."
-    "Sure, she's explaining how she feels."
-    "But she's not telling my why."
-    "Taking Emma's hands gently in mine, I press her for an answer."
-    mike.say "Emma..."
-    mike.say "I want to help you."
-    mike.say "But to do that, I need to know what's wrong."
-    mike.say "Can you do that?"
-    show emma sad
-    "Emma nods at this."
-    "But I can see that she's still scared."
-    "And I can feel her trembling as I hold her hands."
-    emma.say "I...I have to tell you something, [hero.name]."
-    emma.say "I took a test this morning..."
-    show emma fear
-    emma.say "And it was positive!"
-    "The moment that Emma comes out with those words, I know exactly what she means."
-    "There's no need for her to say what kind of test it was, because that's obvious."
-    mike.say "You mean...you're pregnant?"
-    "Emma nods, biting her lip."
-    "I can see tears welling in her eyes too."
-    emma.say "Oh, [hero.name]..."
-    emma.say "I'm so scared!"
-    emma.say "I...I can't have a baby - I just can't!"
-    "I shake my head, feeling more than a little puzzled."
-    "I'd have expected a girl to be delighted at the news."
-    "Either that or mad at me for getting her pregnant."
-    "But Emma seems to be genuinely terrified by the idea."
-    mike.say "Don't worry, Emma..."
-    mike.say "I'm right here, and I'm not going anywhere!"
-    mike.say "Whatever decision we come to, we'll do it together, okay?"
-    "Emma looks at me in what could almost be described as desperation."
-    emma.say "No, [hero.name], you don't understand!"
-    emma.say "I'm not scared of being a mother."
-    emma.say "I'm scared that I won't survive giving birth!"
-    emma.say "I...I've always been weak, had bad health since I was a child."
-    emma.say "The doctors told me that it would be dangerous for me to have a baby!"
-    "That confession almost hits me harder than the actual news Emma's pregnant."
-    "I was all set to step up to the challenge, to shoulder the responsibility."
-    "But now the there's not one life on the line, but two!"
-    "And Emma's clearly waiting for me to tell her what she should do about it."
-    menu:
-        "Tell Emma to keep it":
-            "I take a deep breath as I prepare to say my piece."
-            "And I already know that this is going to be a hard thing to sell."
-            "But I feel that I owe it to Emma and myself to be honest."
-            "So here goes nothing..."
-            mike.say "Emma..."
-            mike.say "I think you should keep the baby."
-            show fx exclamation
-            "Emma's eyes go wider still."
-            "And I can see the shock written all over her face."
-            hide fx
-            emma.say "B...but, [hero.name]..."
-            emma.say "Didn't you hear what I just said?"
-            emma.say "What the doctors said could happen to me?"
-            mike.say "I know, Emma, I know."
-            mike.say "Obviously it's your decision to make, not mine."
-            mike.say "And I'll support whatever choice you do make."
-            mike.say "But at least hear me out, okay?"
-            show emma sad
-            "Emma nods slowly."
-            "And I do the best I can to make my case."
-            mike.say "When was the last time you actually saw someone about your condition?"
-            emma.say "Erm..."
-            emma.say "I guess it's been a while..."
-            mike.say "And you're healthy now, right?"
-            mike.say "You're doing fine, aren't you?"
-            show emma normal
-            "Emma nods again."
-            mike.say "So what I'm saying is, things might have gotten better."
-            mike.say "If you think about keeping the baby, we can go see your doctors."
-            mike.say "We'll have them find out what the chances are, okay?"
-            "I can see the idea starting to take root in Emma's head."
-            "She's been ruled by the advice the doctors gave her in the past."
-            "So why not seek their advice on this matter too?"
-            emma.say "I...I suppose we could try that."
-            emma.say "It would be reassuring."
-            "I nod at this."
-            mike.say "Then that's what we'll do, Emma."
-            mike.say "We'll keep the baby - but get the doctors involved too!"
-        "Tell Emma to get rid of it":
-            "I take a deep breath, preparing myself for what I'm about to say."
-            "There's no easy answer to a question like this."
-            "But after what Emma's told me, I have to be honest."
-            mike.say "Emma..."
-            mike.say "If what you say about your health is true..."
-            mike.say "Then I think that you should have a termination."
-            mike.say "Obviously it's your decision to make, not mine."
-            mike.say "And I'll support whatever choice you do make."
-            mike.say "But that's my honest opinion."
-            show emma cry
-            "Emma finally bursts into tears, unable to hold back her emotions any longer."
-            "She falls into my arms and I do the best I can to hold her gently yet firmly."
-            hide emma
-            show emma close cry
-            emma.say "Oh, [hero.name]..."
-            emma.say "I feel like the worst person in the world!"
-            emma.say "But I'm so scared of dying!"
-            mike.say "That's nothing to be ashamed of, Emma."
-            mike.say "This was just an accident, that's all."
-            mike.say "And you caught it early, which is a good thing."
-            mike.say "You shouldn't have to risk your life for an accident!"
-            "Emma buries her head into my shoulder, still sobbing."
-            "And I do the best I can to comfort her."
-            "I know it hurts, but I honestly think she's making the right choice."
-            $ emma.love -= 20
-            $ emma.unpreg()
-    return
-
 label emma_male_ending:
     $ game.hour = 16
-
-
-
-
     if renpy.has_label("emma_achievement_3") and not game.flags.cheat:
         call emma_achievement_3 from _call_emma_achievement_3
     $ game.room = "church"
@@ -2707,17 +2550,9 @@ label emma_male_ending:
     "To me it's like she's walking down the aisle in slow-motion."
     "Like it's one of those scenes in a movie with the soft-focus, you know?"
     "I feel like I'm the only person here and Emma's looking only at me."
-    if emma.is_visibly_pregnant:
-        "I steal a second to glance at the curve of Emma's belly."
-        "Her dress is cut to be sympathetic to the fact she's pregnant."
-        "But at the same time it doesn't try to hide the fact at all."
-        "That was a choice that we made together, because why should we hide it?"
-        "We're proud of the fact that we're going to be parents."
-        "Proud of the fact that we're going to be a family."
-    else:
-        "I honestly never thought this moment would come."
-        "I never thought that I'd actually be standing here."
-        "And in just a few moments time, we're going to be married!"
+    "I honestly never thought this moment would come."
+    "I never thought that I'd actually be standing here."
+    "And in just a few moments time, we're going to be married!"
     show emma happy at center, traveling(1.5, 5.0, (640, 1000))
     emma.say "[hero.name]?"
     show fx question
@@ -2825,19 +2660,12 @@ label emma_male_ending:
     emma.say "But all it took was one look into his eyes to know that he understood what I was feeling."
     emma.say "And I know that he'd never have popped the question because he thought he had to - only because he wanted to."
     emma.say "Likewise I would never have said yes for the same reason, only because I knew we were really in love!"
-    if emma.is_visibly_pregnant or emma.flags.mikeBabies >= 1:
-        emma.say "And when we found out that I was pregnant with Emily, it was just perfect."
-        emma.say "The fact that we were going to become a family made everything seem real."
-        emma.say "At last we were forging bonds in the physical world and building something solid."
-        emma.say "[hero.name]'s not the perfect dad, but he tries his best to be just that."
-        emma.say "And in the end, that's what makes him a great father."
-    else:
-        emma.say "And now we're building something solid together in the real world."
-        emma.say "I really feel like we're laying down the foundations of a future together."
-        emma.say "[hero.name] and I keep talking about the possibility of starting a family."
-        emma.say "And I'm sure that it's going to happen sooner, rather than later."
-        emma.say "When that happens, I'm sure he'll prove to be a great father."
-        emma.say "Not a perfect one, of course, but the best he can possibly be."
+    emma.say "And now we're building something solid together in the real world."
+    emma.say "I really feel like we're laying down the foundations of a future together."
+    emma.say "[hero.name] and I keep talking about the possibility of starting a family."
+    emma.say "And I'm sure that it's going to happen sooner, rather than later."
+    emma.say "When that happens, I'm sure he'll prove to be a great father."
+    emma.say "Not a perfect one, of course, but the best he can possibly be."
     emma.say "And before anyone asks me about it, let's talk about the elephant in the room."
     emma.say "Before I met [hero.name], I had no idea what I wanted in terms of a career."
     emma.say "But what with all of the dream girl nonsense...well, I started reading around."

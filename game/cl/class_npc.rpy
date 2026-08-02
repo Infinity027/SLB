@@ -12,7 +12,7 @@ init -15 python:
         def fertility_modifier(self):
             return (
             0
-            if ("barren" in self.traits or self.flags.pill or self.is_visibly_pregnant)
+            if ("barren" in self.traits or self.flags.pill)
             else 0.5
             if "low fertility" in self.traits
             else 1.5

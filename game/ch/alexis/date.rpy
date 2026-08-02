@@ -55,19 +55,10 @@ label alexis_date_eat_a_burger:
     return
 
 label alexis_date_buy_drink:
-    if alexis.is_visibly_pregnant:
-        show alexis angry
-        $ alexis.love -= 10
-        alexis.say "[hero.name]!"
-        alexis.say "Are you serious?!?"
-        alexis.say "You know I can't drink in my condition!"
-        $ hero.cancel_activity()
-        hide alexis
-    else:
-        "Alexis's face practically lights up at the sight of the drink that she ordered."
-        "She lifts it to her lips and takes a generous sip whilst smiling the whole time."
-        "Maybe the way to her heart is actually through her penchant for alcohol?"
-        $ game.active_date.score += 5
+    "Alexis's face practically lights up at the sight of the drink that she ordered."
+    "She lifts it to her lips and takes a generous sip whilst smiling the whole time."
+    "Maybe the way to her heart is actually through her penchant for alcohol?"
+    $ game.active_date.score += 5
     return
 
 label alexis_date_play_darts:
@@ -84,14 +75,7 @@ label alexis_date_pub_play_pool:
     return
 
 label alexis_date_buy_a_round:
-    if alexis.is_visibly_pregnant:
-        show alexis angry
-        $ alexis.love -= 10
-        alexis.say "[hero.name]!"
-        alexis.say "Are you serious?!?"
-        alexis.say "You know I can't drink in my condition!"
-        $ hero.cancel_activity()
-    elif (hero.charm >= 60 - alexis.love and alexis.flags.drinks < 2):
+    if (hero.charm >= 60 - alexis.love and alexis.flags.drinks < 2):
         show drink alexis
         "Alexis smiles broadly and flutters her eyelids at me when I offer to buy the next round."
         "The effect is such that I totally forget if it's actually my round at all."

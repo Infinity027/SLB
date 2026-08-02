@@ -805,15 +805,7 @@ label lexi_fuck_date_intro_male(location="hero", called_from_date=True):
             lexi.say "Ah, shut up and do me!"
             "With that, Lexi closes the last of the distance between us."
             "Then she pretty much pounces on me!"
-        if lexi.is_visibly_pregnant:
-            "She rubs her hand underneath her pregnant belly, sticking out of her short top."
-            "Even after I knocked her up earlier, she didn't want to change her wardrobe."
-            "That's fine."
-            "It really shows how trailer trash she is, and that's why I like her."
-            "Immediately, she turns to me, grabbing my crotch and pressing her chest up against mine."
-            "Her swollen breasts poke at my body, and I feel a tiny squirt of moisture on my shirt."
-            lexi.say "So, why don't you and I get more comfortable?"
-        elif "drugs" in hero.inventory:
+        if "drugs" in hero.inventory:
             menu:
                 "Offer drugs":
                     $ lexi.flags.drugs = TemporaryFlag(True, "day")
@@ -863,16 +855,7 @@ label lexi_fuck_date_intro_male(location="hero", called_from_date=True):
         mike.say "So, what do you think?"
         lexi.say "Shucks, [hero.name]!"
         lexi.say "I'm just ready for a wild time, and you got a nice bed."
-        if lexi.is_visibly_pregnant:
-            "She rubs her hand underneath her pregnant belly, sticking out of her short top."
-            "Even after I knocked her up earlier, she didn't want to change her wardrobe."
-            "That's fine."
-            "It really shows how trailer trash she is, and that's why I like her."
-            "Immediately, she turns to me, grabbing my crotch and pressing her chest up against mine."
-            "Her swollen breasts poke at my body, and I feel a tiny squirt of moisture on my shirt."
-            show lexi wink
-            lexi.say "So, why don't you and I get more comfortable?"
-        elif "drugs" in hero.inventory:
+        if "drugs" in hero.inventory:
             menu:
                 "Offer drugs":
                     $ lexi.flags.drugs = TemporaryFlag(True, "day")
@@ -914,18 +897,8 @@ label lexi_fuck_date_intro_male(location="hero", called_from_date=True):
                 "Don't":
                     pass
     "She leads me over towards the bed and immediately lifts her top up off of her."
-    if lexi.is_visibly_pregnant:
-        "Who would have ever thought that the drug dealing con artist would ever have the curves of motherhood—the full breast, the baby bump."
-        "It suits her well, though I'll no doubt end up being the responsible parent."
-        "Wasting no time, she undoes her shorts and shimmies out of them and her thong, leaving herself naked."
-        "It takes her a little longer than she normally does, but that comes with the territory of the added baby weight."
-        lexi.say "Well, come on."
-        lexi.say "Don't waste my time now."
-        lexi.say "Let me see that dick that done knocked me up."
-        lexi.say "Just cause I got a baby on board don't mean I don't crave a taste!"
-    else:
-        lexi.say "Well, come on."
-        lexi.say "Don't waste my time now."
+    lexi.say "Well, come on."
+    lexi.say "Don't waste my time now."
     if lexi.flags.drugs:
         lexi.say "Haha, okay! Well, I'm gonna devour that dick!"
         "Her eyes are wide and filled with lustful hunger."
@@ -961,11 +934,7 @@ label lexi_fuck_date_blowjob:
     "She smirks as she climbs down onto her knees in front of me."
     show lexi bj bedroom naked nodick with fade
     "She sighs as she lowers herself, nodding once she's all settled into position."
-    if lexi.is_visibly_pregnant:
-        lexi.say "Whoo... not as easy as before, [hero.name] and that's all yer fault, daddy."
     "All I can see of her between my legs is her smiling face."
-    if lexi.is_visibly_pregnant:
-        lexi.say "Alright, [hero.name], They say there's strange cravings when a gal is bred, and I'm hankerin' for some of this dick of yers!"
     hide lexi
     show lexi bj bedroom naked
     "She snickers and then leans in, rolling her tongue out and licking up along my shaft."
@@ -1011,8 +980,6 @@ label lexi_fuck_date_blowjob:
                 with vpunch
                 "She snickers and then leans in, placing another kiss on my cock."
                 lexi.say "Oh, yeah, you're a real stud—a real animal [hero.name]."
-                if lexi.is_visibly_pregnant:
-                    "But just because you shot true with me before, daddy, don't mean I don't want it, so you'd better be ready for the next round!"
             scene bg bedroom1
             show lexi naked cum
             if hero.fitness < 50:
@@ -1036,11 +1003,7 @@ label lexi_fuck_date_blowjob:
                 $ lexi.flags.facecum = True
                 return "skip_to_sleep"
         "Take control" if hero.sexperience >= 25:
-            if not lexi.is_visibly_pregnant:
-                "Oh, she think she can be the only one who can steer this relationship?"
-                "She has another thing coming!"
-            else:
-                "Sorry, Lexi, but you lost control when I knocked you up."
+            "Sorry, Lexi, but you lost control when I knocked you up."
             show lexi bj left right
             "I grab her by the hair and she gasps, closing one eye and looking up to me with a surprised gurgle."
             "I'm close—I can tell she has been planning to finish me off, but she's not going to finish without giving me a real gift!"
@@ -1103,8 +1066,6 @@ label lexi_fuck_date_blowjob:
                     "I smirk at her."
                     mike.say "We're not done yet, miss."
                     mike.say "No way I'm wasting myself on your throat today."
-                    if lexi.is_visibly_pregnant:
-                        mike.say "You know damn well where I like to cum, 'mommy'."
     return
 
 label lexi_fuck_date_missionary(sexperience_min):
@@ -2016,8 +1977,6 @@ label lexi_fuck_date_standing(sexperience_min):
         mike.say "Oh, no, we're definitely not done yet."
         mike.say "You're my whore all night long tonight!"
         "She giggles at that , slapping me on the thigh."
-        if lexi.is_visibly_pregnant:
-            lexi.say "Great! Now, how you gonna treat me, the momma of yer child?"
         if lexi.flags.drugs:
             lexi.say "I'm yer crack whore!"
             lexi.say "Now, let me pay you off!"
@@ -2028,34 +1987,21 @@ label lexi_fuck_date_standing(sexperience_min):
         "I stand up , grabbing her by the arm, yanking her up so she stands with me."
         "I then spin her around, placing my hands upon her hips and whispering to her."
         mike.say "I'm going to use you however I want, for as long as I can handle."
-        if not (lexi.flags.drugs or lexi.is_visibly_pregnant):
-            lexi.say "Oh, [hero.name], come on and show me how a real man fucks a woman!"
-        elif lexi.flags.drugs:
+        if lexi.flags.drugs:
             lexi.say "Ah, come on! Stop teasing me! I'm so fucking hot, I can't stand it!"
-        elif lexi.is_visibly_pregnant:
-            "She winces a moment, but smirks."
-            lexi.say "Ah, not even gentle to yer kid?"
-            lexi.say "Love that reckless shit. Come on and play with your favorite baby oven!"
         if lexi.flags.facecum:
             show lexi stand grope cum
         else:
             show lexi stand grope
         "Her thighs take my dick like they were hungry for it."
         "She shudders as my cock kisses her sex."
-        if lexi.is_visibly_pregnant:
-            lexi.say "Not worried about getting the baby all messy?"
-            mike.say "Oh, don't you worry about that."
-            "I Pull back just a bit to get the right angle."
-            mike.say "It's perfectly safe for me to fuck you up until your water breaks, and I intend to take advantage of that the whole nine months!"
-        elif lexi.flags.drugs:
+        if lexi.flags.drugs:
             lexi.say "Yeah, yeah! Come on, fucker! Fuck me right now!"
         else:
             lexi.say "Oooh, You're... you're gonna put it in now?"
         "I thrust inside, letting her dripping wet pussy suck me in."
         "She moans, squirming as I spread her and pump into her."
-        if lexi.is_visibly_pregnant:
-            lexi.say "[hero.name], yer so rough! Fuck me harder til my water bursts all over yer dick!"
-        elif lexi.flags.drugs:
+        if lexi.flags.drugs:
             lexi.say "Ah, fuck, [hero.name], what is this weak shit!"
             lexi.say "I need a better high than this! Harder, harder!"
         "I do it, but only because I want it."
@@ -2091,10 +2037,7 @@ label lexi_fuck_date_standing(sexperience_min):
                     "What rush must she be feeling now, knowing that I give her the thrill of air loss."
                 else:
                     "She shudders, quick breaths passing through her windpipe as I hold her down tight."
-                if lexi.is_visibly_pregnant:
-                    "Even as I get the sick joy of this dangerous thrill, I can't think about all the things she's done to me."
-                    "Instead, I see her rounded belly and all I can think of is the life inside her, the one that hasn't made her mistakes and doesn't deserve to be hurt."
-                elif lexi.flags.drugs:
+                if lexi.flags.drugs:
                     "She struggles underneath my grasp, but with little laughs escaping the gasps and gurgles that she has."
                     "At first, I wonder if I'm just imagining it, but when she grabs my cock and furiously jerks it, I know I have to keep going, but is this all I had left in me?"
                 else:
@@ -2103,10 +2046,7 @@ label lexi_fuck_date_standing(sexperience_min):
                 "I let go and give her a quick kiss on the cheek."
                 mike.say "That's enough of that for now."
                 "She gasps, falling forward a bit, but I catch her."
-                if lexi.is_visibly_pregnant:
-                    "She sighs and nods."
-                    lexi.say "Shame... though after I pop this bundle out of me, you'd better choke me good, won't you?"
-                elif lexi.flags.drugs:
+                if lexi.flags.drugs:
                     lexi.say "Either my heart's gonna explode or you're gonna choke me out!"
                 else:
                     "She coughs, sputtering up some drool before she wipes it off, wheezing."
@@ -2172,12 +2112,9 @@ label lexi_fuck_date_standing(sexperience_min):
             "Soon, I release, sending my seed deep inside of her body."
             if lexi.flags.drugs:
                 "Lexi's eyes roll back and she collapses her whole weight upon me, groaning as she crashes from the end of her high and the climax I gave her."
-            elif not lexi.is_visibly_pregnant:
-                "Lexi coos as she falls back on me, content that I have bred her."
             else:
                 "Lexi coos as she falls back on me."
             hide lexi stand
-            $ lexi.impregnate()
     else:
         menu:
             "Fuck her from front":

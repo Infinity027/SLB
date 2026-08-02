@@ -64,15 +64,7 @@ label harmony_offer_a_drink_male:
     mike.say "You want anything from the bar, Harmony?"
     mike.say "I was just going to grab a drink."
     "Almost the second the words are out of my mouth, Harmony turns to face me."
-    if harmony.is_visibly_pregnant:
-        show harmony angry
-        $ harmony.love -= 10
-        harmony.say "What, and hurt the child growing inside of me?!?"
-        harmony.say "Have you gone mad, [hero.name]?"
-        harmony.say "Are you possessed by spirits of a demonic kind?!?"
-        $ hero.cancel_activity()
-        hide harmony
-    elif (hero.charm >= 60 - harmony.love and harmony.flags.drinks < 2) or date_girl == harmony:
+    if (hero.charm >= 60 - harmony.love and harmony.flags.drinks < 2) or date_girl == harmony:
         show harmony happy
         harmony.say "Jesus fucking Christ, [hero.name]!"
         harmony.say "I thought you'd never ask!"

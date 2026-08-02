@@ -1042,25 +1042,12 @@ init 1:
         always "alexis_ntr_wedding_light"
 
     layeredimage alexis ending:
-
-
         always "alexis_ending_bg"
-
-
-        if alexis.flags.mikeBabies >= 1 or alexis.is_visibly_pregnant:
-            "alexis_ending_baby"
-        else:
-            "alexis_ending_dog"
-
-
-        if alexis.flags.story != 2 and alexis.flags.mikeBabies < 1 and alexis.is_visibly_pregnant:
-            "alexis_ending_blackskin"
+        always "alexis_ending_dog"
 
         always "alexis_ending_alexis"
 
     layeredimage alexis beach threesome:
-
-
 
         attribute cum null
 

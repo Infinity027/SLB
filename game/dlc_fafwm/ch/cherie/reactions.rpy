@@ -123,41 +123,22 @@ label cherie_offer_a_drink_male:
     mike.say "Hey, Cherie..."
     mike.say "I'm going to grab another drink."
     mike.say "You want me to get one for you too?"
-    if cherie.is_visibly_pregnant:
-        $ cherie.love -= 10
-        if cherie.sub >= 66:
-            "Cherie puts her hands on her belly, looking sad all of a sudden."
-            show cherie whining
-            cherie.say "I don't want to sound ungrateful, [hero.name]..."
-            cherie.say "But aren't you forgetting something?"
-            show cherie sadsmile
-        else:
-            show cherie stuned
-            "Cherie looks at me with a scandalised expression."
-            "And at the same time she places her hands on her belly in a defensive manner."
-            show cherie angry
-            cherie.say "[hero.name], you know that I'm pregnant!"
-            cherie.say "How could you even suggest such a thing?!?"
-            show cherie upset
-        mike.say "Oh yeah...my bad!"
-        $ hero.cancel_activity()
+    "Cherie holds up her empty glass, shaking it so that the ice inside tinkles around."
+    show cherie happy
+    if cherie.sub >= 66:
+        cherie.say "If you think I could handle another one, [hero.name]?"
+        cherie.say "But only if you approve."
     else:
-        "Cherie holds up her empty glass, shaking it so that the ice inside tinkles around."
-        show cherie happy
-        if cherie.sub >= 66:
-            cherie.say "If you think I could handle another one, [hero.name]?"
-            cherie.say "But only if you approve."
-        else:
-            cherie.say "Oh, how thoughtful of you!"
-            cherie.say "I will have the same again, please."
-            cherie.say "And don't be too shy with the measures either!"
-        show cherie smile
-        if cherie.love <= 25:
-            $ cherie.love += 1
-        elif date_girl == cherie and game.active_date:
-            $ game.active_date.score += 5
-        call expression cherie.get_chat from _call_expression_224
-        $ cherie.set_flag("drinks", 1, "day", mod="+")
+        cherie.say "Oh, how thoughtful of you!"
+        cherie.say "I will have the same again, please."
+        cherie.say "And don't be too shy with the measures either!"
+    show cherie smile
+    if cherie.love <= 25:
+        $ cherie.love += 1
+    elif date_girl == cherie and game.active_date:
+        $ game.active_date.score += 5
+    call expression cherie.get_chat from _call_expression_224
+    $ cherie.set_flag("drinks", 1, "day", mod="+")
     return
 
 label cherie_slap_ass_intro_male:

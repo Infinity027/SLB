@@ -3,9 +3,7 @@ init python:
     "name": "kleio_hottub_sex_male",
     "label": "kleio_hottub_sex_male",
     "conditions": [
-        HeroTarget(
-            IsGender("male"),
-            IsActivity("date_hot_tub_home")),
+        HeroTarget(IsActivity("date_hot_tub_home")),
         PersonTarget(kleio,
             OnDate(),
             MinStat("love", 100),
@@ -26,7 +24,7 @@ init python:
     "conditions": [
         IsDone("kleio_event_05b"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsRoom("garage"),
             ),
@@ -48,8 +46,7 @@ init python:
     "duration": 1,
     "conditions": [
         IsDone("kleio_fuck_date_bj"),
-        HeroTarget(
-            IsGender("male"),
+        HeroTarget(    
             Not(OnDate()),
             IsRoom("studio"),
             ),
@@ -63,7 +60,6 @@ init python:
     "do_once": False,
     "once_month": True,
     })
-
 
 label kleio_hottub_sex_male:
     $ game.active_date.clothes = "swimsuit"
@@ -193,12 +189,9 @@ label kleio_fuck_date_male(location="hero"):
     scene bg bedroom1
     $ game.room = "bedroom1"
 
-
     call kleio_fuck_date_intro_male (location) from _call_kleio_fuck_date_intro
 
-
     call kleio_dick_reactions from _call_kleio_dick_reactions_2
-
 
     if hero.sexperience >= 20:
         call kleio_fuck_date_foreplay_male from _call_kleio_fuck_date_foreplay_male
@@ -209,15 +202,11 @@ label kleio_fuck_date_male(location="hero"):
     if _return:
         return
 
-
-
     call kleio_fuck_date_choices_male from _call_kleio_fuck_date_choose
-
 
     call handle_npc_leaving (kleio, _return) from _call_handle_npc_leaving_11
     if _return:
         return
-
 
     scene bg bedroom1
     show kleio naked
@@ -448,65 +437,7 @@ label kleio_fuck_date_cunni:
             "Kleio twitches and jumps as I work her with the toy."
             "The sounds that she's making now are that much more intense than before."
             "In fact, it's getting harder to keep it up the more she moves!"
-        "Use the anal beads" if "anal_beads" in hero.inventory and hero.sexperience >= 15:
-            show kleio cunnilingus pleasure
-            "Luckily for me, Kleio's totally into it when I begin to lick at her pussy."
-            "In fact, she's so engrossed in my efforts that she doesn't notice me reach under the bed."
-            "My hand easily finds the string of anal beads that are hidden down there."
-            "All it takes is for me to push my tongue a little deeper between Kleio's lips..."
-            "She moans, her pelvis rising unconsciously as she tries to push me deeper still."
-            show kleio cunnilingus alone
-            "I take the chance and reach under her ass, pushing the first of the beads up there."
-            kleio.say "Ugh..."
-            kleio.say "Wha...what are you..."
-            show kleio cunnilingus ahegao beads
-            "But it's already too late for Kleio to object or stop me."
-            "My working on her pussy is simply too much for her to risk spoiling right now."
-            "And so she has no choice but to let me keep on stuffing the beads up her ass."
-            "I can tell from the moaning sounds she makes that it's giving her pleasure, not pain."
-            "And I redouble my efforts at probing between her lips, just to make sure."
-            show kleio cunnilingus pleasure
-            "Soon enough, Kleio's moans reach a peak and she begins to quiver all over."
-            "I can sense that the perfect moment is getting closer by the second."
-            "But I wait until I'm absolutely sure, and then tug the cord attached to the beads."
-            "They pop out of Kleio's clenching ass one after another."
-            "I swear each and every one makes her yelp out loud too."
-            "The cascade of beads pushes Kleio over the edge."
-            "And it also saves me from utter exhaustion too!"
-        "Use dildo and my finger." if hero.has_item("dildo") and hero.sexperience >= 30:
-            show kleio cunnilingus pleasure
-            "Kleio's into it almost the same moment that I begin to lick at her pussy."
-            "She's moaning and cooing so much that I'm sure she's pretty distracted."
-            "That makes slipping a hand under one of her buttocks an easy task."
-            "I keep right on enjoying the taste and texture on my tongue for a few moments."
-            "And then I give Kleio's pert little buttock a good, firm squeeze."
-            kleio.say "Ooh..."
-            kleio.say "What are you..."
-            "I already have one finger in position."
-            "Just waiting for the second she lowers her ass back down..."
-            kleio.say "HEY!!!"
-            kleio.say "What are you..."
-            show kleio cunnilingus alone ahegao assfinger two
-            kleio.say "Oh...oooh...oh shit!"
-            "I feel the resistance melt from Kleio's body as she sinks down and onto the finger."
-            "Her muscles judder and protest, but then give way as she feel the pleasure it brings."
-            show kleio cunnilingus pleasure
-            "Pretty soon, Kleio's back is arched from the sensation of being worked from both angles."
-            "And I'm sure that nothing save for me actually stopping would distract her now."
-            "The taste and feel of her is almost enough to draw me all the way in too."
-            "But then I remember something just within reach, and grab it with one hand."
-            show kleio cunnilingus dildo vaginal
-            "The first thing that Kleio knows about it is when I push the dildo into her, just a little."
-            kleio.say "What the hell..."
-            kleio.say "That feels..."
-            kleio.say "Good...it feels good!"
-            "I take this as permission to follow through with my plan."
-            "And so push the dildo still deeper into Kleio's pussy."
-            "It sinks in gradually, and she moans ever more deeply as it does so."
-            "I keep on licking and probing the outer folds the whole time."
-            "Kleio twitches and jumps as I work her with my tongue, finger and the toy."
-            "The sounds that she's making now are that much more intense than before."
-            "In fact, it's getting harder to keep it up the more she moves!"
+    
     "But just then, the first twinges of Kleio's climax come to my aid!"
     "And when it does take hold of her, my fears are realised."
     show kleio cunnilingus ahegao
@@ -708,6 +639,7 @@ label kleio_fuck_date_cowgirl(sexperience_min):
                 hide sexinserts
                 hide bellycum
             $ kleio.flags.anal += 1
+
         "Fuck her pussy":
             call check_condom_usage (kleio, love=180, drinks=3) from _call_check_condom_usage_62
             if _return == False:
@@ -788,18 +720,7 @@ label kleio_fuck_date_cowgirl(sexperience_min):
                 "The strength of it takes my last little reserve, and I can't hold Kleio up any longer."
                 "Not that the afterglow seems to have left her feeling any less drained, as she proceeds to flop down atop me."
                 "I feel myself slide out of Kleio even as she slithers over my sweat-soaked body."
-            elif _return == "vaginal_inside_pregnant":
-                "I keep right on going, reasoning that I can hardly make Kleio more pregnant than I already have."
-                "In fact, the extra weight of her swelling belly above me means that she's pressed down onto my cock more than ever."
-                show kleio cowgirl ahegao
-                "And in truth, I have to struggle to keep her upright as she begins to cum herself."
-                "But all the same, I love the feeling of holding her like this."
-                "She looks so healthy and full of vigour, with a new life growing inside of her..."
-                show kleio cowgirl creampie with vpunch
-                $ kleio.love += 3
-                "I cum a second later, still supporting Kleio as she goes limp in the wake of her own orgasm."
-                with vpunch
-                "Gently cradling her in my arms, I guide her down onto the bed beside me, wrapping her in my arms."
+            
             elif _return == "vaginal_inside_mad":
                 if kleio.sub <= 75:
                     "All that I can hear is the sound of Kleio and myself panting in delighted exhaustion."
@@ -1006,21 +927,7 @@ label kleio_fuck_date_cowgirl2(sexperience_min):
                 "I can already feel it beginning to seep out of her pussy."
                 "But she keeps on pushing down on me until the very last."
                 "And then she collapses forwards, exhausted and utterly spent."
-            elif _return == "vaginal_inside_pregnant":
-                kleio.say "Keep going..."
-                kleio.say "Please?!?"
-                show kleio cowgirl ahegao
-                "I take hold of Kleio, cradling her belly."
-                with vpunch
-                "And when I shoot my load, she takes everything I have to give."
-                with vpunch
-                "Kleio's mouth hangs open as she cums with the sensation."
-                show kleio cowgirl creampie with vpunch
-                $ kleio.love += 3
-                "I can already feel it beginning to seep out of her pussy."
-                with vpunch
-                "But she keeps on pushing down on me until the very last."
-                "And then she collapses forwards, exhausted and utterly spent."
+            
             elif _return == "vaginal_inside_mad":
                 kleio.say "Oh shit..."
                 kleio.say "Pull out - NOW!"
@@ -1194,16 +1101,7 @@ label kleio_fuck_date_doggy2(sexperience_min):
                 with hpunch
                 "All I can do is kneel over her, panting in an effort to catch my breath and make the room stop spinning."
                 $ kleio.love += 2
-            elif _return == "vaginal_inside_pregnant":
-                "The reassuring weight of Kleio's swelling belly is there the whole time, swaying gently."
-                "It reminds me that I have nothing to fear from keeping right on going to the end."
-                with hpunch
-                "So I push myself with all I have left, using the last of my strength to get deep into Kleio."
-                show kleio_doggy2 creampie ahegao with hpunch
-                "The moment after I cum, Kleio slithers off of my cock and collapses onto the bed, cradling her belly in a protective hug."
-                with hpunch
-                "All I can do is kneel over her, panting in an effort to catch my breath and make the room stop spinning."
-                $ kleio.love += 2
+            
             elif _return == "vaginal_inside_mad":
                 if kleio.sub <= 75:
                     "I'm so lost in the moment right now that the fact I'm not wearing a condom is the last thing on my mind."
@@ -1630,21 +1528,7 @@ label kleio_garage_fuck:
                 with vpunch
                 "And Kleio wraps her arms and legs around me, holding me against her."
                 "But also keeping me inside of her as she cums too."
-            elif _return == "vaginal_inside_pregnant":
-                kleio.say "Do it, Loverboy!"
-                kleio.say "Cum in me!"
-                kleio.say "You already knocked me up!"
-                "I grab hold of Kleio and thrust myself into her one last time."
-                "The fact that she's pregnant means there's no danger in me doing so."
-                "And I can instantly see the pleasure that this gives to Kleio too."
-                show kleio missionary creampie ahegao with vpunch
-                $ kleio.love += 3
-                "She nods desperately as I shoot my load into her, eyes wide with the sensation."
-                with vpunch
-                "As soon as I'm spent, I fall forwards onto the hood of the car."
-                with vpunch
-                "And Kleio wraps her arms and legs around me, holding me against her."
-                "But also keeping me inside of her as she cums too."
+           
             elif _return == "vaginal_inside_mad":
                 kleio.say "Y...you have to pull out!"
                 kleio.say "You have to - NOW!"
@@ -1927,6 +1811,7 @@ label kleio_studio_bj:
             show sexinserts head kleio -cum zorder 1 at center, zoomAt(1, (720, 810))
             "And I watch in amazement as she gulps down everything I have to give."
             $ kleio.sub += 1
+
     "Afterwards, Kleio gets to her feet, stretching like a satisfied cat."
     hide sexinserts
     hide kleio bj
@@ -1948,4 +1833,3 @@ label kleio_studio_bj:
     "I follow her example, all the time still aching for more of the same from her."
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

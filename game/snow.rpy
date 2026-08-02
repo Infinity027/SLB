@@ -112,5 +112,3 @@ init python:
         
         def visit(self):
             return [self.d]
-
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

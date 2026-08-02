@@ -110,18 +110,9 @@ label hanna_date_eat_a_burger:
     return
 
 label hanna_date_buy_drink:
-    if hanna.is_visibly_pregnant:
-        show hanna angry
-        $ hanna.love -= 10
-        hanna.say "Alcohol, [hero.name]?"
-        hanna.say "Really?!?"
-        hanna.say "Am I the only one looking out for this kid?"
-        $ hero.cancel_activity()
-        hide hanna
-    else:
-        "Hanna takes the drink I offer her and immediately swallows about half of it."
-        "And I don't mean she sips it either - she knocks it back in one!"
-        "Afterwards, Hanna smiles at me as she wipes the back of her hand across her lips."
+    "Hanna takes the drink I offer her and immediately swallows about half of it."
+    "And I don't mean she sips it either - she knocks it back in one!"
+    "Afterwards, Hanna smiles at me as she wipes the back of her hand across her lips."
     return
 
 label hanna_date_play_darts:
@@ -137,14 +128,7 @@ label hanna_date_pub_play_pool:
     return
 
 label hanna_date_buy_a_round:
-    if hanna.is_visibly_pregnant:
-        show hanna angry
-        $ hanna.love -= 10
-        hanna.say "Alcohol, [hero.name]?"
-        hanna.say "Really?!?"
-        hanna.say "Am I the only one looking out for this kid?"
-        $ hero.cancel_activity()
-    elif (hero.charm >= 60 - hanna.love and hanna.flags.drinks < 2):
+    if (hero.charm >= 60 - hanna.love and hanna.flags.drinks < 2):
         show drink hanna
         mike.say "Time for another?"
         hanna.say "Sure thing, [hero.name]."

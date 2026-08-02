@@ -85,25 +85,6 @@ init python:
     })
 
     Event(**{
-    "name": "minami_preg_talk",
-    "label": "minami_preg_talk",
-    "do_once": False,
-    "music": "music/roa_music/new_days.ogg",
-    "conditions": [
-        HeroTarget(
-            IsGender("male"),
-            Not(OnDate())),
-        PersonTarget(minami,
-            IsPresent(),
-            Not(IsHidden()),
-            IsFlag("toldpreg", False),
-            MinCounter("pregnant", 6),
-            ),
-        ],
-    "music": "music/roa_music/new_days.ogg",
-    })
-
-    Event(**{
     "name": "minami_siscon_01",
     "label": "minami_siscon_01",
     "duration": 1,
@@ -802,24 +783,6 @@ init python:
             MinStat("love", 120),
             ),
         ],
-    })
-
-    Event(**{
-    "name": "minami_pregnant_request",
-    "label": "minami_pregnant_request",
-    "conditions": [
-        HeroTarget(IsGender("male")),
-        PersonTarget(minami,
-            IsPresent(),
-            Not(IsHidden()),
-            Not(IsActivity("sleep")),
-            IsFlag("status", "girlfriend"),
-            MaxCounter("pregnant", 8),
-            ),
-        'game.days_played - minami.flags.girlfriend_day >= 7',
-        ],
-    "do_once": True,
-    "quit": False,
     })
 
     WakeUpEvent(**{
@@ -3991,123 +3954,6 @@ label minami_siscon_01:
             $ minami.siscon += 10
     return
 
-label minami_preg_talk:
-    show minami
-    "I know that there's something up almost as soon as I set eyes on Minami, even though she's wearing a smile."
-    "She's normally so upbeat and nothing seems to get her down, a regular ball of infectious energy."
-    "But everything about her feels like it's forced, as though she's trying to put a brave face on."
-    "I try as best I can to keep the concern that I feel for her off of my own face."
-    "My instinct tells me that coming straight out and demanding to know what's wrong would only make matters worse."
-    "Far better to let Minami pluck up the courage to tell me herself and in a way of her own choosing."
-    mike.say "Hey, Minami."
-    "For all of her efforts to look like she's perfectly fine, Minami still lets out a sigh before replying."
-    minami.say "Hey, big bro."
-    show minami sad
-    minami.say "I...I kinda need to talk to you."
-    "Still pretending to have no idea that she's got a load on her mind, I raise my eyebrows and try to look surprised."
-    mike.say "Oh yeah?"
-    mike.say "Well, you don't have to ask permission, Minami."
-    mike.say "If you want to tell me something, then just go right ahead."
-    mike.say "After all we've been through recently, I don't think there's anything we can't handle between us!"
-    show minami annoyed
-    "At this, Minami frowns for the first time."
-    "She looks away, as if reluctant to meet my eye."
-    minami.say "I hope so, big bro."
-    minami.say "I really do!"
-    show minami c
-    "Minami clasps her hands together beneath her chin, staring at the ground."
-    mike.say "Minami..."
-    mike.say "Whatever you have to say, it can't be that bad - surely?"
-    show minami cry
-    "It's only when Minami looks back up that I see the beginnings of tears in her eyes."
-    minami.say "You say that now, big bro."
-    minami.say "When you don't know what it is..."
-    mike.say "Then tell me, Minami."
-    mike.say "Tell me what it is."
-    mike.say "And then I can tell you what I think of it."
-    show minami sad
-    "Minami nods sadly, perhaps realising the futility of keeping silent."
-    minami.say "I...I'm pregnant, big bro."
-    minami.say "I'm going to have your baby!"
-    "The revelation hits me like a sudden and unexpected slap to the face."
-    "The girl that was once my little sister, and then my girlfriend is now carrying my child!"
-    minami.say "I need to know what you want to do, big bro."
-    minami.say "I mean...I'm going to keep the baby, I know that much."
-    minami.say "But I don't know what you want..."
-    menu:
-        "Reject her":
-            "I shake my head, taking a step back and away from Minami, distancing myself from her."
-            "Of course, she instantly senses what this gesture means, and makes to follow me."
-            mike.say "Oh no!"
-            mike.say "No way, Minami!"
-            show minami cry
-            "Minami starts to speak, an objection, or maybe a plea forming on her lips."
-            "But I've already built up too much momentum for her to be able to get even a single word in."
-            mike.say "I would have stayed with you anyway."
-            mike.say "There was no need for you to go and pull something like this!"
-            show minami surprised at center, vshake
-            "Minami looks at me in amazement, clearly stunned by this accusation."
-            minami.say "What?"
-            minami.say "You actually think I did this on purpose?!?"
-            mike.say "Well it fits, doesn't it?"
-            "All Minami can do is shake her head in denial."
-            mike.say "Oh come on, Minami!"
-            mike.say "After all that stuff we found out Mom and Dad did to screw with us?"
-            mike.say "You must have been scared that I'd break things off between you and me."
-            mike.say "Getting pregnant must have seemed like a sure way to keep it going."
-            show minami cry
-            "By now, Minami really is crying, tears streaming down her cheeks."
-            minami.say "No, big bro - that's not true."
-            minami.say "You have to believe me!"
-            "Now it's my turn to shake my head and turn away from Minami."
-            mike.say "I'm sorry, Minami, but I don't."
-            mike.say "Keep the baby or don't, that's your choice."
-            mike.say "But whether to be a part of it's life is mine."
-            mike.say "And I won't let you use it to blackmail me."
-            show minami surprised
-            "Minami looks at me like all of a sudden she doesn't know me anymore."
-            "For a moment, I think that she's going to say something else, maybe argue her case again."
-            hide minami with dissolve
-            "But then she turns and runs away, leaving me to watch her as she disappears from sight."
-            $ minami.set_gone_forever()
-            $ Room.find("bedroom5").hide()
-            $ Room.find("attic").hide()
-        "Take responsibility":
-            show minami at center, zoomAt (1.65, (650, 1140))
-            "I shake my head, taking a step towards Minami and pulling her into a tight embrace."
-            "She flinches a little in surprise, but then returns the gesture, wrapping her arms around me in return."
-            mike.say "Minami, that's the best news ever!"
-            show minami surprised
-            minami.say "R...really?"
-            "Releasing her from the embrace, I can't help nodding like crazy."
-            mike.say "Of course it is, Minami - don't you see what it means?"
-            show minami sad
-            minami.say "Erm, no."
-            minami.say "I don't think I do..."
-            mike.say "Think about it, Minami."
-            mike.say "My Dad and the woman I thought was my Mom manipulated us both."
-            mike.say "And when we found out what they did, it could have ended us, right?"
-            "Minami nods slowly, not enjoying the reminder of what our so-called parents put us through."
-            mike.say "But it didn't, because what we have is too strong."
-            mike.say "We're together because WE want to be, not thanks to them."
-            mike.say "And this baby is the perfect proof of that."
-            show minami normal
-            "I can see the light of understanding begin to grow in Minami's eyes."
-            minami.say "I...I don't love you because of what they did, [hero.name]."
-            minami.say "I love you in spite of it..."
-            mike.say "That's it, Minami."
-            mike.say "That's exactly how I feel too!"
-            mike.say "Our child is the first thing we'll do together."
-            mike.say "The first thing we do in the life that we make together."
-            "Minami takes hold of my hands, gripping them tightly."
-            show minami happy blush
-            "She gazes up at me, practically glowing with pride and happiness."
-            minami.say "You're right, [hero.name]."
-            minami.say "We were only pretending to be a family before."
-            minami.say "But now we can start one of our very own!"
-            $ minami.flags.toldpreg = True
-    return
-
 label minami_event_03:
     show bg livingroom
     "When the big day finally arrives, I'm reduced to a bag of nerves as I wait for Minami to turn up on my doorstep."
@@ -5361,125 +5207,8 @@ label minami_event_04:
             $ minami.sub += 2
     return
 
-label minami_pregnant_request:
-    "Had it been any other girl, I might have missed the signs."
-    "But I've known Minami since we were both kids."
-    "And so I can pretty much read her like a book."
-    "There's something on her mind, it's written all over her face."
-    "So I might as well take a deep breath and just ask the question."
-    mike.say "Minami..."
-    mike.say "Is everything okay?"
-    mike.say "You seem a little distracted, you know?"
-    show minami surprised
-    "Minami looks surprised at first, like she's been caught out."
-    show minami normal
-    "But then she shakes her head and gives me a sweet little smile."
-    "It's one of the kind that always manages to melt me."
-    "And so I can't help being drawn in by it."
-    show minami blush
-    minami.say "Oh, big bro!"
-    minami.say "You can read me like a book."
-    minami.say "But yeah, there is something I wanted to ask you."
-    "Minami takes a deep breath and then lets it out as an even bigger sigh."
-    minami.say "And get ready, because it's kind of a big ask!"
-    "I do my best to keep a smile on my face."
-    "And I give Minami what I hope looks like an encouraging nod."
-    "But I can already feel the apprehension building inside of me."
-    "What on earth could she have be about to ask me?"
-    mike.say "Go on, Minami."
-    mike.say "You can ask me anything - you know that!"
-    minami.say "Okay, big bro."
-    minami.say "Here goes nothing..."
-    minami.say "I've decided that I want to have a baby - with you!"
-    "Suddenly I feel like I've had the air literally dragged out of my lungs."
-    "All I can do is blink as I open and close my mouth in complete silence."
-    "Minami watches me with the smile still fixed on her face."
-    "If anything, she seems to be sympathetic to my situation."
-    show minami sad blush
-    minami.say "Aww, poor big bro!"
-    minami.say "I did say it was a big one."
-    minami.say "But anyway - what do you think?"
-    minami.say "You wanna have a baby with me, huh?"
-    "By now I can feel some of the confusion starting to lift."
-    "I can finally begin to make some sort of sense out of it all."
-    "And then I realise I wasn't hearing her wrong."
-    "Minami really does want to have a baby with me!"
-    menu:
-        "Agree":
-            "My gut instinct is to remind Minami of all the crap that we've been through already."
-            "She's gone from being my adopted sister to my girlfriend."
-            "And on top of that there's been all the drama with Mom and Dad too."
-            "But then it hits me that I'm still letting all of that steer our lives."
-            "Aren't we supposed to be putting all that behind us?"
-            "Shouldn't we be living the lives that we want?"
-            mike.say "I might be crazy for saying this, Minami."
-            mike.say "But yeah, I want to have a baby with you!"
-            show minami surprised
-            "Now it's Minami's turn to stare at me in shocked silence."
-            "But she seems to take far less time to recover her senses."
-            minami.say "Did...did you say yes?"
-            minami.say "Did you really say yes?!?"
-            "I can't help grinning at Minami."
-            show minami happy
-            "And when I nod in response, she squeals happily."
-            minami.say "Oh...my...god!"
-            minami.say "I'm going to be a mommy!"
-            minami.say "This is going to be the best thing ever!"
-            show minami close
-            "Minami throws her arms around me and hugs me as tight as she can."
-            "And I return the gesture, enjoying the sensation of her body against mine."
-            "She moves in my embrace, letting me feel every motion she makes."
-            minami.say "I can't wait to get started, big bro."
-            minami.say "And I never got pregnant before."
-            minami.say "So we're gonna need a LOT of practice..."
-            $ minami.love += 2
-            $ minami.flags.pregrequest = True
-        "Refuse":
-            "I can't actually believe that she'd ask me to do something like this."
-            "Not after all of the drama that we've been through together."
-            "She's literally gone from being my adopted sister to my girlfriend."
-            "And on top of that there's all the drama that came along with it too!"
-            mike.say "Minami, I really don't think we're ready for that."
-            mike.say "At least not yet."
-            show minami annoyed
-            minami.say "Y...you don't want to have kids with me?"
-            minami.say "Is that it, big bro?"
-            minami.say "You think it'd be too weird?"
-            "I can see the tears already beginning to well in Minami's eyes."
-            "She looks like she's about to burst out crying."
-            "And it breaks my heart to see her like that."
-            show minami sad
-            mike.say "No, Minami, no..."
-            mike.say "It's not like that at all!"
-            minami.say "Then tell me how it is, big bro?"
-            minami.say "I want to be with you."
-            minami.say "I want to have your babies!"
-            "Minami's on the verge of wailing by now."
-            "And I'm struggling to calm her down."
-            mike.say "I want that too, Minami - really I do!"
-            mike.say "But I don't want to rush into anything, yeah?"
-            mike.say "Look, Mom and Dad were really screwed up."
-            mike.say "And I don't want to screw us up too!"
-            mike.say "I love you too much to let that happen."
-            "Minami bites her lips and screws up her face."
-            show minami cry
-            "And then finally she begins to sob."
-            minami.say "Oh, big bro..."
-            minami.say "You're so good to me!"
-            minami.say "And I love you SO much!"
-            minami.say "Just promise that I can have your babies one day?!?"
-            show minami close
-            "Minami throws her arms around me, pressing her head into my chest."
-            "And I wrap my arms around her too, pulling her closer still."
-            $ minami.love -= 2
-    return
-
 label minami_male_ending:
     $ game.hour = 16
-
-
-
-
     if renpy.has_label("minami_achievement_3") and not game.flags.cheat:
         call minami_achievement_3 from _call_minami_achievement_3
     $ game.room = "church"
@@ -5523,14 +5252,9 @@ label minami_male_ending:
     "She looks radiant in the dress she chose."
     "The combination of Japanese designs and a modern cut suit her down to the ground."
     "And most beautiful of all, her smile is beaming."
-    if minami.is_visibly_pregnant:
-        "The adjustments made to accommodate her swelling belly are subtle."
-        "But the sight of it makes me feel butterflies in my own stomach."
-        "I'm still staggered by the fact that our child is growing inside of her!"
-    else:
-        "All in all, Minami looks more than ever like the woman she was meant to be."
-        "She's still petite and youthful, but there's a maturity about her now that's growing all the time."
-        "It makes my stomach fill with butterflies at the thought of spending my life with her!"
+    "All in all, Minami looks more than ever like the woman she was meant to be."
+    "She's still petite and youthful, but there's a maturity about her now that's growing all the time."
+    "It makes my stomach fill with butterflies at the thought of spending my life with her!"
     show wedding minami with fade
     "Minami smiles up at me as she reaches the altar, her cheeks flushing with emotion."
     "I can see how nervous she is right now, how excited too."
@@ -5610,13 +5334,8 @@ label minami_male_ending:
     minami.say "We moved out a couple of months later, into a house all our own."
     minami.say "Big bro's still doing whatever he does at work every day."
     minami.say "And I'm still studying at uni, working towards my degree."
-    if minami.flags.mikeBabies >= 1 or minami.is_visibly_pregnant:
-        minami.say "It's gotten a little bit more crowded around here since Mei arrived on the scene."
-        minami.say "And big bro's trying his very best to be a working daddy and a doting husband."
-        minami.say "Truth is, he's pretty hopeless - but his heart's in the right place!"
-    else:
-        minami.say "I still have no idea what comes after that."
-        minami.say "But I'm looking forward to finding out."
+    minami.say "I still have no idea what comes after that."
+    minami.say "But I'm looking forward to finding out."
     minami.say "As for planning out our future together, we haven't really talked about it."
     minami.say "I guess that's because someone else was scheming to steer us down a certain path."
     minami.say "It wasn't planning stuff that got us where we are today."
@@ -5934,8 +5653,11 @@ label minami_snooping:
                     hide minami
                     "And with that, Minami turns and walks out of my bedroom, leaving me alone again."
                     "But as calm as she seemed to be just now, I can't help thinking this matter's not settled."
-                    $ game.flags.ongoinghomeharem = "minami"
-                    $ game.flags.tempminamiharem = TemporaryFlag(True, randint(1, 3))
+                    # HOME HAREM DISABLED FOR MINAMI — the scene above still plays, but we no
+                    # longer start the home-harem join (which would need ongoinghomeharem="minami").
+                    # Her own route is unaffected. To re-enable, uncomment the two lines below.
+                    # $ game.flags.ongoinghomeharem = "minami"
+                    # $ game.flags.tempminamiharem = TemporaryFlag(True, randint(1, 3))
             return
         "Come here.":
             "[bree.name] and Sasha took it out of me just now, but I know I still have enough left for Minami too."

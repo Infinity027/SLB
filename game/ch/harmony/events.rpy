@@ -569,24 +569,6 @@ init python:
     })
 
     Event(**{
-    "name": "harmony_preg_talk",
-    "label": "harmony_preg_talk",
-    "do_once": False,
-    "conditions": [
-        HeroTarget(
-            IsGender("male"),
-            Not(OnDate())),
-        PersonTarget(harmony,
-            IsPresent(),
-            Not(IsHidden()),
-            IsFlag("toldpreg", False),
-            MinCounter("pregnant", 6),
-            ),
-        ],
-    "music": "music/roa_music/one_day.ogg",
-    })
-
-    Event(**{
     "name": "harmony_kissable",
     "label": "harmony_kissable",
     "priority": 1500,
@@ -4324,222 +4306,6 @@ label harmony_purity_06:
     $ game.pass_time(1)
     return
 
-label harmony_preg_talk:
-    $ harmony.flags.toldpreg = True
-    show harmony sad
-    "Harmony isn't exactly one of those girls that's good at keeping her emotions under wraps."
-    "If she has something on her mind, good or bad, then it tends to be pretty easy to spot."
-    "It's either written all over her face or else it's totally taking over her thoughts."
-    "So I can usually see when there's something that we need to sit down and discuss."
-    "And when she's showing those signs today, I decide to take the initiative."
-    mike.say "Hey, Harmony..."
-    show fx question
-    harmony.say "Hmm..."
-    hide fx
-    show harmony normal
-    harmony.say "Oh...oh, yeah, [hero.name]!"
-    harmony.say "Sorry, I was miles away!"
-    mike.say "I can see that, Harmony!"
-    mike.say "What's on your mind?"
-    mike.say "Is there something we should talk about?"
-    show harmony sad
-    "The moment I suggest that we talk, Harmony's reaction is plain to see."
-    "Her cheeks flush red and she tries to keep from looking me in the eye."
-    harmony.say "H...how did you know?"
-    harmony.say "Oh dear..."
-    harmony.say "I thought I was being all secretive and sly too!"
-    "I chuckle and shake my head."
-    "Harmony can be so cute and endearing sometimes."
-    mike.say "Just a hunch, I guess!"
-    mike.say "So..."
-    mike.say "What was it that you needed to talk about?"
-    "Harmony takes a deep breath, preparing herself for the task ahead."
-    "Then she finally turns and looks me straight in the eye."
-    harmony.say "I'm afraid I have some bad news, [hero.name]."
-    harmony.say "We seem to have had a little...accident!"
-    mike.say "Harmony..."
-    mike.say "You don't mean..."
-    "Harmony lets out a sigh."
-    harmony.say "Yes, I do."
-    harmony.say "I took a test this morning - and it was positive."
-    harmony.say "We're pregnant!"
-    "I feel like my eyes are going to pop right out of their sockets."
-    "A moment ago I was being all smug and superior as I quizzed Harmony."
-    "But now it's my turn to be the one that looks shocked."
-    mike.say "You're sure?!?"
-    mike.say "You did the test right?!?"
-    mike.say "Those things can be tricky, you know!"
-    show harmony annoyed
-    "Harmony frowns at this and pouts a little."
-    harmony.say "Of course I'm sure, [hero.name]!"
-    harmony.say "I wouldn't joke about something this serious."
-    show harmony sad
-    harmony.say "Now what are we going to do about it?!?"
-    menu:
-        "We should keep it":
-            "I feel like someone just sucker-punched me - right in the gut!"
-            "But Harmony's right, we need to focus and make a decision here."
-            "And there's only one honest answer that I can give her."
-            mike.say "We have to keep it, Harmony."
-            mike.say "We can't end the life of a child we made together!"
-            if "religious" in harmony.traits:
-                show harmony happy
-                $ harmony.love += 10
-                "Harmony instantly clasps her hands together like she's praying."
-                "They make a clapping sound, and I jump with surprise."
-                harmony.say "Praise the Lord!"
-                harmony.say "I KNEW you were a good man, [hero.name]!"
-                harmony.say "A righteous man with the Holy Spirit in him!"
-                hide harmony
-                show harmony close happy
-                with hpunch
-                "Harmony parts her hands and literally pounces on me."
-                "She pulls me into an embrace and squeezes me like a boa constrictor!"
-                mike.say "H...Harmony..."
-                mike.say "I...can't...breathe!"
-                show harmony close normal
-                harmony.say "Oh...oh dear!"
-                hide harmony
-                show harmony
-                "She releases me and I gasp for breath."
-                harmony.say "I'm sorry, [hero.name]."
-                show harmony happy
-                harmony.say "I'm just so happy that we're going to be a family!"
-                harmony.say "Now we can get married, settle down and plan the rest of our lives together!"
-                mike.say "Ah...yeah, Harmony..."
-                mike.say "That sounds...perfect!"
-            elif "slutty" in harmony.traits:
-                "Harmony takes a deep breath, and then lets it out as a weary sigh."
-                "She nods her head with a grim smile on her face."
-                $ harmony.love -= 10
-                $ harmony.sub -= 5
-                harmony.say "Ah shit..."
-                harmony.say "I was kind of hoping you'd say the opposite of that!"
-                harmony.say "But if that's what you really want..."
-                mike.say "It is, Harmony."
-                mike.say "I think we can make a success of this, if we work together."
-                "Harmony snorts, beginning to pout a little."
-                harmony.say "Well okay then..."
-                show harmony annoyed
-                harmony.say "But you've got to promise me we'll still have fun!"
-                harmony.say "I spent WAY too long fixated on Jesus before I met you."
-                harmony.say "If we keep the kid, you'd better not stop doing me, okay?"
-                mike.say "Okay, Harmony."
-                mike.say "It's a deal."
-            else:
-                show harmony normal
-                "Harmony takes a deep breath, and then lets it out as a weary sigh."
-                "She nods her head with a grim smile on her face."
-                harmony.say "I didn't know which way you'd go on this one, [hero.name]."
-                harmony.say "So I thought that I'd just leave it to chance and go with your choice."
-                harmony.say "Okay...I guess this means I'm going to have to grow-up!"
-                show harmony annoyed
-                "Harmony looks me straight in the eye."
-                harmony.say "But the same goes for you too, mister!"
-                harmony.say "If we do this, we do it together, you got that?"
-                "I nod, still a little surprised at Harmony's intensity."
-                mike.say "Of course, Harmony!"
-                mike.say "You and me against the world!"
-                show harmony happy
-                "Harmony smiles at this."
-                show harmony normal close
-                "Then she throws her arms around me."
-                harmony.say "I can do this, [hero.name]."
-                harmony.say "So long as I have you, I know I can!"
-        "You should have a termination":
-            "I feel like someone just sucker-punched me - right in the gut!"
-            "But Harmony's right, we need to focus and make a decision here."
-            "And there's only one honest answer that I can give her."
-            mike.say "We can't keep it, Harmony."
-            mike.say "Having a kid by accident is a terrible idea."
-            mike.say "I think we need to get a termination."
-            if "religious" in harmony.traits:
-                show harmony angry
-                $ harmony.love -= 100
-                "The moment the words leave my mouth, Harmony gasps in horror."
-                "It's like she's seeing me as I really am for the very first time."
-                "And she's just realised that all this time I've been a hideous monster!"
-                harmony.say "Oh no..."
-                harmony.say "Oh no, no, no!"
-                harmony.say "God save me and saints preserve me!"
-                harmony.say "I had no idea I was in a relationship with a child murderer!"
-                show harmony annoyed
-                "Harmony's already starting to back away from me."
-                "I make to reach out for her, trying to explain myself."
-                mike.say "Harmony, please!"
-                mike.say "Don't you think you're overreacting?"
-                "But it's no good, as she leaps backwards to escape."
-                show harmony angry
-                harmony.say "Don't touch me!"
-                harmony.say "I see it now!"
-                harmony.say "You have the devil in you!"
-                harmony.say "You want to tempt me into sin - to lure me down to hell!"
-                harmony.say "But I won't let you, and I'll raise my child in the light of god!"
-                hide harmony with dissolve
-                "Before I can say another word, Harmony turns and runs away."
-                "And as I watch her go, I get the feeling things just came to an end between us."
-                $ harmony.set_gone_forever()
-            elif "slutty" in harmony.traits:
-                show harmony happy
-                $ harmony.love += 10
-                $ harmony.sub += 5
-                harmony.say "Geez, [hero.name]!"
-                harmony.say "Am I ever glad to hear that!"
-                show harmony normal
-                harmony.say "I thought you were gonna want to keep the kid!"
-                "I feel an initial wave of relief that Harmony and I are of one mind."
-                "But then I ponder the speed with which she seems to be getting over it."
-                mike.say "You don't like the idea of being a mom, Harmony?"
-                mike.say "Starting a family doesn't appeal - even in the future?"
-                show harmony happy
-                "Harmony snorts with laughter and shakes her head."
-                harmony.say "Nah!"
-                show harmony normal
-                harmony.say "I used to be into all that stuff."
-                harmony.say "You know, back when my head was full of religious crap?"
-                harmony.say "But now I'm having too much fun to want to stop and settle down!"
-                "I nod, trying to tell myself that's the answer I wanted to hear."
-                "Because I feel that way too - I think..."
-                $ harmony.unpreg()
-            else:
-                "Harmony takes a deep breath, and then lets it out as a weary sigh."
-                "She nods her head with a grim smile on her face."
-                if harmony.love >= 150:
-                    harmony.say "You're right, [hero.name], we can't raise a kid together."
-                    harmony.say "At least not now - we're not ready for that."
-                    harmony.say "I knew that was the only answer."
-                    show harmony normal
-                    harmony.say "I guess I just needed to hear you say it too."
-                    hide harmony
-                    show harmony close
-                    "Harmony leans against me, her head on my shoulder."
-                    "We hold each other in silence for a good long while."
-                    "Each of us is lost in our own thoughts."
-                    "But we both know that we're making the right choice."
-                    "Because it's the only choice that makes sense."
-                    "Though that doesn't mean that we have to like it."
-                    $ harmony.unpreg()
-                else:
-                    harmony.say "I knew you were going to say that."
-                    harmony.say "You're not ready to be a father yet."
-                    harmony.say "I respect that, [hero.name]."
-                    harmony.say "But I'm not going to terminate my own child."
-                    show harmony normal
-                    "Harmony smiles, but it's a weak and tired one."
-                    harmony.say "So I'm going to go it alone on this one."
-                    mike.say "Harmony..."
-                    mike.say "You don't have to..."
-                    show harmony sad
-                    harmony.say "Yes, [hero.name], I do!"
-                    harmony.say "Maybe we can try again when you're in a different place."
-                    harmony.say "But for now, I guess this is goodbye!"
-                    "Harmony plants a kiss on my cheek."
-                    hide harmony with dissolve
-                    "Then she waves and walks away."
-                    "Which leaves me standing alone and feeling like I've been slapped in the face."
-                    $ harmony.set_gone_forever()
-    return
-
 label harmony_male_ending:
 
     if renpy.has_label("harmony_achievement_3") and not game.flags.cheat:
@@ -4679,17 +4445,9 @@ label harmony_male_ending:
         harmony.say "I might have made him restrain his more animal instincts before we married."
         harmony.say "But such things are practically encouraged within the bonds of wedlock!"
         harmony.say "And he's shown me such amazing things - I almost feel like I was missing out before!"
-        if not harmony.is_visibly_pregnant or harmony.flags.mikeBabies < 1:
-            harmony.say "Oh, and that's another thing..."
-            harmony.say "I don't know if [hero.name]'s noticed the fact my belly's getting rounder."
-            harmony.say "It's growing a little more each day, so soon he'll know that we're going to be a family!"
-            harmony.say "The doctor tells me it's going to be a boy."
-            harmony.say "And I know [hero.name] will be delighted when I tell him!"
         harmony.say "So that's my story, all of it."
         harmony.say "I feel that I was rewarded for keeping my faith."
         harmony.say "I got everything that I wanted and more because I remained true."
-        if not harmony.is_visibly_pregnant or harmony.flags.mikeBabies < 1:
-            harmony.say "So now I'll do the same thing for [hero.name] and our son, when he comes along!"
         if renpy.has_label("harmony_achievement_6") and not game.flags.cheat:
             call harmony_achievement_6 from _call_harmony_achievement_6
     elif "slutty" in harmony.traits:
@@ -4729,17 +4487,10 @@ label harmony_male_ending:
         "Somehow it manages to do all of this while still keeping her decent too!"
         "Another guy might have been shocked at the sight of her in it."
         "But not me - I'm just blown away by how gorgeous my bride looks in it!"
-        if harmony.is_visibly_pregnant:
-            "My smile becomes even wider when I see Harmony's growing belly."
-            "The dress does little if nothing to hide the fact she's pregnant."
-            "But then why should it?"
-            "There's nothing for either of us to be ashamed about."
-            "Our child was conceived out of love, and that's how they'll be raised too."
-        else:
-            "There's nothing wrong with petite, skinny women."
-            "But once you've been with a girl as curvy as Harmony..."
-            "Well, I wouldn't say you'd never go back!"
-            "But you certainly never forget a girl built like her!"
+        "There's nothing wrong with petite, skinny women."
+        "But once you've been with a girl as curvy as Harmony..."
+        "Well, I wouldn't say you'd never go back!"
+        "But you certainly never forget a girl built like her!"
         "Harmony's grinning by the time she makes it to the altar."
         "And she looks even better up close than she did coming down the aisle."
         hide harmony
@@ -4864,16 +4615,9 @@ label harmony_male_ending:
         harmony.say "I knew almost as soon as it happened that it could never be bad."
         harmony.say "And yeah, [hero.name] lit a fire inside of me."
         harmony.say "It's still burning right now - and I want to keep those flames alive!"
-        if harmony.is_visibly_pregnant or harmony.flags.mikeBabies >= 1:
-            harmony.say "And sure, we ended up getting pregnant."
-            harmony.say "But we're both mature individuals, not dumb kids."
-            harmony.say "And together we made the decision to start a family."
-            harmony.say "Believe me, [hero.name]'s not the perfect dad!"
-            harmony.say "But he's trying his best, and Jamie loves him for it."
-        else:
-            harmony.say "But for all that he liberated me from sexual oppression, we weren't dumb kids."
-            harmony.say "We still played it safe and made sure that we didn't have any accidents."
-            harmony.say "So now we're in a good position to think about starting a family of our own."
+        harmony.say "But for all that he liberated me from sexual oppression, we weren't dumb kids."
+        harmony.say "We still played it safe and made sure that we didn't have any accidents."
+        harmony.say "So now we're in a good position to think about starting a family of our own."
         harmony.say "[hero.name]'s doing great at his job and he has a perfect home-life too."
         harmony.say "And me?"
         harmony.say "Well...I always used to think that I'd end up becoming a nun."
@@ -4905,16 +4649,10 @@ label harmony_male_ending:
         "Harmony looks radiant, as beautiful as she's ever seemed to my eyes."
         "Her dress is perfect, making the most of her full figure too."
         "I swear that I can feel my heart swelling in my chest!"
-        if harmony.is_visibly_pregnant:
-            "I had worried that Harmony's belly might be obvious."
-            "And now that I see her, you can't avoid spotting it."
-            "But somehow it only serves to add to her beauty."
-            "I know it's a cliche, but she really is glowing!"
-        else:
-            "I don't mind admitting that I see many guys checking her out."
-            "And I can't blame them for having good taste!"
-            "Plus more than a few skinny girls are looking pretty jealous too!"
-            "After all, curves like Harmony's are something special."
+        "I don't mind admitting that I see many guys checking her out."
+        "And I can't blame them for having good taste!"
+        "Plus more than a few skinny girls are looking pretty jealous too!"
+        "After all, curves like Harmony's are something special."
         hide harmony
         show harmony close wedding
         with fade
@@ -5010,16 +4748,9 @@ label harmony_male_ending:
         harmony.say "And yeah, let's address the elephant in the room!"
         harmony.say "It was a revelation to discover all the sex I'd been missing out on!"
         harmony.say "That was probably worth it all on it's own."
-        if harmony.is_visibly_pregnant or harmony.flags.mikeBabies >= 1:
-            harmony.say "And sure, we ended up getting pregnant."
-            harmony.say "But we're both mature individuals, not dumb kids."
-            harmony.say "And together we made the decision to start a family."
-            harmony.say "Believe me, [hero.name]'s not the perfect dad!"
-            harmony.say "But he's trying his best, and Jamie loves him for it."
-        else:
-            harmony.say "But for all that he liberated me from sexual oppression, we weren't dumb kids."
-            harmony.say "We still played it safe and made sure that we didn't have any accidents."
-            harmony.say "So now we're in a good position to think about starting a family of our own."
+        harmony.say "But for all that he liberated me from sexual oppression, we weren't dumb kids."
+        harmony.say "We still played it safe and made sure that we didn't have any accidents."
+        harmony.say "So now we're in a good position to think about starting a family of our own."
         harmony.say "[hero.name]'s career is going from strength to strength."
         harmony.say "And I'm working at a centre that helps out girls fleeing religious persecution."
         harmony.say "It's not the future that I saw for myself when I was a kid."

@@ -206,8 +206,6 @@ label xmas_party_turkey:
     scene bg livingroom
     call xmas_party_hh_display from _call_xmas_party_hh_display
     with dissolve
-
-
     $ xmas_party_cook = "mike"
     if Person.find("lexi") and lexi.flags.schedule == "harem" and not bree.hidden:
         $ xmas_party_cook = ["bree", "lexi"][renpy.random.randint(0, 1)]
@@ -371,7 +369,6 @@ label xmas_party_singing:
     scene bg livingroom
     call xmas_party_hh_display from _call_xmas_party_hh_display_1
     with dissolve
-
 
     $ xmas_party_singer = ["mike", "minami"][renpy.random.randint(0, 1)] if Harem.find(minami, name="home") else "mike"
 
@@ -1155,7 +1152,6 @@ label xmas_party_hh_display:
         show samantha casual normal at mostright5
         show lexi casual normal at mostleft5
 
-
     elif not bree.hidden and not sasha.hidden and not minami.hidden and samantha.flags.schedule == "harem":
         show bree casual normal at left4
         show sasha casual normal at right4
@@ -1181,7 +1177,6 @@ label xmas_party_hh_display:
         show minami casual normal at right4
         show samantha casual normal at mostright4
         show lexi casual normal at mostleft4
-
 
     elif not bree.hidden and not sasha.hidden and not minami.hidden:
         show bree casual normal at left

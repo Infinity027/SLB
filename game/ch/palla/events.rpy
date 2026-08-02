@@ -438,24 +438,6 @@ init python:
     })
 
     Event(**{
-    "name": "palla_preg_talk",
-    "label": "palla_preg_talk",
-    "do_once": False,
-    "conditions": [
-        HeroTarget(
-            IsGender("male"),
-            Not(OnDate())),
-        PersonTarget(palla,
-            IsPresent(),
-            Not(IsHidden()),
-            IsFlag("toldpreg", False),
-            MinCounter("pregnant", 6),
-            ),
-        ],
-    "music": "music/roa_music/sleepless_nights.ogg",
-    })
-
-    Event(**{
     "name": "palla_mall_date_fuck",
     "label": "palla_mall_date_fuck",
     "priority": 500,
@@ -3412,49 +3394,6 @@ label palla_event_baby_ok:
     hide palla
     return
 
-label palla_preg_talk:
-    show palla
-    palla.say "Hey, [hero.name]!"
-    "Palla's expression is a weird mix of a smile and trepidation."
-    mike.say "Hi, Palla. How're you doing today?"
-    palla.say "Well, you know how I agreed to go off the pill? And we, ah. You know."
-    mike.say "Sure. I. Oh! You mean? It happened?"
-    show palla happy
-    palla.say "It happened."
-    mike.say "And you're sure you're okay with it?"
-    palla.say "Well. I...I'm not sure. But."
-    show palla normal
-    "She puts her hands on my chest and looks me directly in the eyes."
-    palla.say "I love you."
-    if palla.love >= 160 or palla.sub >= 80:
-        palla.say "I love you so much, I'll do anything for you. Even this."
-    palla.say "So. So [hero.name], do you still want me to do this? It's...going to be a big change. A child. My child. You have to help me not fuck it up. right?"
-    palla.say "You have to promise, {b}promise{/b} me that you'll make sure we're better parents than mine. Okay?"
-    menu:
-        "We'll be great parents":
-            mike.say "Yes, my love. You'll be a great mother, and I'll be with you the whole way. This will be our child."
-            show palla blush at zoomAt(1.5, (640, 1040))
-            "Palla throws her arms around me and buries her head into my shoulder."
-            show palla happy
-            palla.say "I love you so much!"
-            $ palla.flags.toldpreg = True
-        "This is too much for you, let it go":
-            mike.say "I understand. I've pushed you into something you don't {b}really{/b} want, haven't I? Am I being selfish?"
-            show palla sad
-            palla.say "No, [hero.name], you're not being selfish. I'm the one being selfish. I'm sorry. I want...you to be happy."
-            mike.say "And I want you to be happy. Will you be truly happy with this?"
-            "Palla looks at me and there are tears in her eyes."
-            show palla cry
-            palla.say "I'll be happy if it makes you happy."
-            mike.say "That's not good enough. I want you to be happy too. That's what matters the most. Look, maybe we can talk about this again another time. Maybe you'll be ready later."
-            palla.say "And if I'm not? If it's something I'll do for you, but not for me, will that be enough for you?"
-            mike.say "It will have to be enough for me."
-            "Palla sniffles, and starts to cry."
-            palla.say "Okay, then. I'll...take care of this."
-            $ palla.unpreg()
-    hide palla
-    return
-
 label palla_birthday_date_male:
     $ DONE["palla_birthday_date_male"] = game.days_played
     $ game.active_date.clothes = "casual"
@@ -4462,14 +4401,9 @@ label palla_male_ending:
     "I find myself holding it in as I gape at how good she looks in her stylish wedding dress."
     "In fact, I've never seen her looking as lovely as she does right now!"
     "And graceful as well, don't forget graceful!"
-    if palla.is_visibly_pregnant:
-        "I have to look twice in order to see Palla's round belly."
-        "Whoever made her dress must be some kind of fashion wizard!"
-        "If I hadn't been the one that got her pregnant, I wouldn't believe she actually was!"
-    else:
-        "Whoever made Palla's dress must be some kind of fashion genius."
-        "But then what else would you expect?"
-        "It's just one hundred percent Palla!"
+    "Whoever made Palla's dress must be some kind of fashion genius."
+    "But then what else would you expect?"
+    "It's just one hundred percent Palla!"
     show palla at center, traveling (1.75, 5.0, (640, 1200))
     "Palla sweeps down the aisle towards me with a fluid motion."
     "I guess this is what she was practicing for whenever she walked down a catwalk!"
@@ -4572,15 +4506,10 @@ label palla_male_ending:
         show palla happy
         palla.say "He's so creative too, always dreaming up new ideas!"
         palla.say "I think we make a pretty good team."
-        if palla.flags.mikeBabies >= 1 or palla.is_visibly_pregnant:
-            palla.say "He's such a great father too, so devoted to Mary."
-            palla.say "I feel guilty having to jet off to shoots all over the world."
-            palla.say "But I know they'll always be there to greet me at the airport when I get back!"
-        else:
-            palla.say "I think he'd make a pretty good father too."
-            palla.say "Which is a thought that kind of took me by surprise."
-            palla.say "Because I always assumed that I didn't want to start a family."
-            palla.say "But now I'm not so sure..."
+        palla.say "I think he'd make a pretty good father too."
+        palla.say "Which is a thought that kind of took me by surprise."
+        palla.say "Because I always assumed that I didn't want to start a family."
+        palla.say "But now I'm not so sure..."
         scene palla pornstar ending with fade
         palla.say "My career's still pretty demanding though."
         palla.say "I don't think people realise just how hard a porn-star has to work."
@@ -4651,15 +4580,10 @@ label palla_male_ending:
         palla.say "Someone that's not interested in seeing me parade around in their latest creations."
         palla.say "Well, that doesn't mean that [hero.name] isn't interested in seeing me parade around!"
         palla.say "And we sometimes have little fashion shows all of our own, if you know what I mean..."
-        if palla.flags.mikeBabies >= 1 or palla.is_visibly_pregnant:
-            palla.say "He's such a great father too, so devoted to Mary."
-            palla.say "I feel guilty having to jet off to shoots all over the world."
-            palla.say "But I know they'll always be there to greet me at the airport when I get back!"
-        else:
-            palla.say "I think he'd make a pretty good father too."
-            palla.say "Which is a thought that kind of took me by surprise."
-            palla.say "Because I always assumed that I didn't want to start a family."
-            palla.say "But now I'm not so sure..."
+        palla.say "I think he'd make a pretty good father too."
+        palla.say "Which is a thought that kind of took me by surprise."
+        palla.say "Because I always assumed that I didn't want to start a family."
+        palla.say "But now I'm not so sure..."
         palla.say "So that's the long and short of it - [hero.name] and me."
         palla.say "We seem to be working out pretty well, and marriage agrees with us."
         palla.say "I don't know what the future holds."

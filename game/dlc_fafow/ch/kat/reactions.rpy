@@ -170,19 +170,7 @@ label kat_offer_a_drink_male:
     mike.say "Looks like it's time for another round!"
     mike.say "Can I get you one too, Kat?"
     mike.say "The same again?"
-    if kat.is_visibly_pregnant:
-        show kat surprised
-        $ kat.love -= 10
-        "Kat looks at me with genuine surprise."
-        "Which puzzles me, until I look down and see her swollen belly."
-        kat.say "I don't think that's a good idea, [hero.name]!"
-        kat.say "Not in my current condition."
-        mike.say "Erm..."
-        mike.say "No, Kat..."
-        mike.say "You're probably right!"
-        $ hero.cancel_activity()
-        hide kat
-    elif (hero.charm >= 60 - kat.love and kat.flags.drinks < 2) or date_girl == kat:
+    if (hero.charm >= 60 - kat.love and kat.flags.drinks < 2) or date_girl == kat:
         "Kat looks at her own glass, which is all but empty too."
         "Then she looks back at me."
         show kat happy
@@ -209,19 +197,7 @@ label kat_offer_a_drink_female:
     bree.say "Looks like it's time for another round!"
     bree.say "Can I get you one too, Kat?"
     bree.say "The same again?"
-    if hero.is_visibly_pregnant:
-        show kat surprised
-        $ kat.love -= 10
-        "Kat looks at me with genuine surprise."
-        "Which puzzles me, until I look down and see her staring at my swollen belly."
-        kat.say "I don't think that's a good idea, [hero.name]!"
-        kat.say "Not in your current condition."
-        bree.say "Erm..."
-        bree.say "No, Kat..."
-        bree.say "You're probably right!"
-        $ hero.cancel_activity()
-        hide kat
-    elif (hero.charm >= 60 - kat.love and kat.flags.drinks < 2) or date_girl == kat:
+    if (hero.charm >= 60 - kat.love and kat.flags.drinks < 2) or date_girl == kat:
         "Kat looks at her own glass, which is all but empty too."
         "Then she looks back at me."
         show kat happy

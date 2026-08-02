@@ -4,9 +4,7 @@ init python:
     "label": "kleio_start",
     "priority": 500,
     "conditions": [
-        HeroTarget(
-            IsGender("male"),
-            MinFlag("performance", 2)),
+        HeroTarget(MinFlag("performance", 2)),
         ],
     "do_once": True,
     "quit": False,
@@ -18,7 +16,7 @@ init python:
     "priority": 500,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsFlag("band", 2)),
         ],
     "do_once": True,
@@ -37,7 +35,7 @@ init python:
             ),
         IsHour(14, 15),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate())),
         PersonTarget(kleio,
             Not(IsPresent()),
@@ -58,7 +56,7 @@ init python:
         IsDone("kleio_event_01"),
         IsHour(17, 18),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate())),
         PersonTarget(kleio,
             Not(IsPresent()),
@@ -78,7 +76,7 @@ init python:
         IsDone("kleio_event_02"),
         IsHour(5, 8),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate())),
         PersonTarget(kleio,
             Not(IsPresent()),
@@ -100,7 +98,7 @@ init python:
         IsDayOfWeek("24"),
         IsHour(9, 18),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsRoom("map"),
             ),
@@ -128,7 +126,7 @@ init python:
     "conditions": [
         IsDone("kleio_event_04"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsRoom("studio"),
             HasStamina(),
@@ -158,7 +156,7 @@ init python:
         IsDayOfWeek("135"),
         IsHour(20, 23),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsActivity("None"),
             ),
@@ -184,7 +182,7 @@ init python:
         IsDayOfWeek("135"),
         IsHour(14, 18),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             HasRoomTag("home"),
             ),
@@ -211,7 +209,7 @@ init python:
         Not(IsDone("kleio_event_06b")),
         IsHour(12, 18),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             ),
         PersonTarget(kleio,
@@ -234,9 +232,6 @@ init python:
             IsDone("kleio_event_05c"),
             ),
         Not(IsDone("kleio_event_06")),
-        HeroTarget(
-            IsGender("male"),
-            ),
         PersonTarget(kleio,
             IsActive(),
             MinStat("love", 120),
@@ -307,7 +302,7 @@ init python:
     "conditions": [
         IsDone("kleio_event_07", "kleio_getting_serious_02"),
         HeroTarget(
-            IsGender("male"),
+            
             Or(
                 IsRoom("date_park"),
                 HasRoomTag("park"),
@@ -330,11 +325,8 @@ init python:
         IsDone("kleio_event_07_1"),
         IsHour(19, 22),
         HeroTarget(
-            IsGender("male"),
-            Or(
-                IsRoom("date_pub"),
-                HasRoomTag("pub"),
-                ),
+            IsRoom("date_pub"),
+            HasRoomTag("pub"),
             ),
         PersonTarget(kleio,
             IsActive(),
@@ -353,7 +345,7 @@ init python:
         IsDone("kleio_event_08"),
         IsHour(10, 22),
         HeroTarget(
-            IsGender("male"),
+            
             IsFlag("kleiocall", False)),
         PersonTarget(kleio,
             IsPresent(),
@@ -373,7 +365,7 @@ init python:
         IsDone("kleio_event_09"),
         IsHour(9, 19),
         HeroTarget(
-            IsGender("male"),
+            
             IsFlag("kleiocall", False)),
         PersonTarget(kleio,
             Not(IsPresent()),
@@ -413,7 +405,7 @@ init python:
     "label": "kleio_practice_01",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsActivity("practice_band"),
             MinFlag("bandpractice", 25),
@@ -435,7 +427,7 @@ init python:
     "label": "kleio_say_preg",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsRoom("map"),
             ),
@@ -471,49 +463,12 @@ init python:
     })
 
     Event(**{
-    "name": "kleio_preg_talk",
-    "label": "kleio_preg_talk",
-    "conditions": [
-        HeroTarget(
-            IsGender("male"),
-            Not(OnDate())),
-        PersonTarget(kleio,
-            IsPresent(),
-            Not(IsHidden()),
-            IsFlag("toldpreg", False),
-            MinCounter("pregnant", 6),
-            ),
-        ],
-    "music": "music/roa_music/horizon.ogg",
-    "once_day": True,
-    "do_once": False,
-    "quit": False,
-    })
-
-    # InteractEvent(**{
-    # "name": "kleio_event_talk_murder",
-    # "label": "kleio_event_talk_murder",
-    # "priority": 500,
-    # "conditions": [
-    #     PersonTarget(kleio,
-    #         IsActive(),
-    #         ),
-    #     PersonTarget(kylie,
-    #         IsFlag("killed", "sasha"),
-    #         ),
-    #     ],
-    # "clothes": "casual",
-    # "music": "music/roa_music/horizon.ogg",
-    # "do_once": True,
-    # })
-
-    Event(**{
     "name": "kleio_meet_bree",
     "priority": 500,
     "label": "kleio_meet_bree",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("pub"),
             ),
         Or(
@@ -581,7 +536,7 @@ init python:
     "label": "kleio_call_me_master",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             ),
         PersonTarget(kleio,
@@ -2876,12 +2831,8 @@ label kleio_male_ending:
     "And it doesn't hurt that she looks as hot as hell right now too!"
     "Disdaining anything even slightly traditional, Kleio's wearing only a pair of shorts and a skimpy top."
     "But rather than her usual choice of black or similarly dark colours, today she's chosen white."
-    if not kleio.is_visibly_pregnant:
-        "Which helps to show off the tattoos and piercings all over Kleio's tight little body."
-        "All of which I can recall kissing with my own lips on numerous occasions."
-    else:
-        "Which helps to show off the curve of her ever-growing belly for all to see."
-        "Not that either of us is anything but proud of the fact we're soon going to be parents."
+    "Which helps to show off the curve of her ever-growing belly for all to see."
+    "Not that either of us is anything but proud of the fact we're soon going to be parents."
     "In fact the whole affair is pretty much a chance to stick the middle finger up to the haters in our lives."
     "All of this was her idea too, getting hitched in the middle of this automotive chaos."
     "We're surrounded by most of the friends and acquaintances she's made in the course of her career as a mechanic."
@@ -3013,15 +2964,8 @@ label kleio_male_ending:
     kleio.say "We Deathless Harpies are currently in the middle of our first headlining tour."
     kleio.say "Sure, it's just playing clubs and shit, but it's ours and we own that fucker."
     kleio.say "And for now, it keeps our minds off of what happens when we're back to reality."
-    if kleio.is_visibly_pregnant:
-        kleio.say "It's getting harder to play my guitar every night."
-        kleio.say "And we might end up coming home with a new member of the band."
-        kleio.say "It's going to be a girl, and we've decided to call her 'Courtney'."
-        kleio.say "Loverboy shits himself whenever the subject comes up."
-        kleio.say "But we've agreed that we're moving in together once we're home again."
-    else:
-        kleio.say "Maybe he'll move in with me, or the other way around."
-        kleio.say "But I have NO idea what Sasha would think about having me as a housemate!"
+    kleio.say "Maybe he'll move in with me, or the other way around."
+    kleio.say "But I have NO idea what Sasha would think about having me as a housemate!"
     kleio.say "So maybe we'll end up getting a place of our own."
     kleio.say "Fuck it, maybe we'll end up hitting the big time and move into a damn mansion!"
     kleio.say "Either way, all I know is that I want [hero.name] as close as possible..."
@@ -3052,54 +2996,6 @@ label kleio_male_ending:
                 call sexperience_achievement_3 from _call_sexperience_achievement_3_11
     $ game.set_new_game_plus()
     $ renpy.full_restart()
-
-label kleio_event_talk_murder:
-    show kleio sad at center, zoomAt(1.5, (640, 1040))
-    "Kleio surprises me by throwing her arms around my neck and hugging me tightly."
-    "It takes me a moment to snap out of it and hug her back in return."
-    "And as I do I can feel the tension and trepidation lifting."
-    "But not the guilt, that stubbornly remains."
-    "Eventually, Kleio breaks the hug and looks up at me."
-    "And I can see that she has tears in her eyes."
-    kleio.say "Fuck me, man - this sucks worse than anything!"
-    mike.say "I...I know, right?"
-    mike.say "Look, Kleio..."
-    mike.say "I understand if you're mad with me..."
-    "Kleio looks at me as though she doesn't understand."
-    "Then realisation dawns on her, and she shakes her head."
-    kleio.say "Oh hell no!"
-    kleio.say "Don't beat yourself up, man!"
-    kleio.say "There's no way you could have known!"
-    kleio.say "Listen, we've all been there."
-    kleio.say "We've all put our metaphorical dicks in crazy!"
-    kleio.say "When you're into someone, you don't see the warning signs."
-    "Of all the people that I know, I never thought I'd hear this from Kleio."
-    "Sure, it's delivered in her usual, in your face style."
-    "But I can hear the genuine emotion in her voice as she speaks to me."
-    "And the look in her eyes is one hundred percent sincere."
-    mike.say "I just keep thinking that I should have done something, Kleio!"
-    mike.say "I should have been smarter or fought back harder."
-    $ kleio.love += 10
-    kleio.say "Nah, you couldn't."
-    kleio.say "And it doesn't mean you're not a good guy."
-    kleio.say "Sasha wouldn't have come running to help if you weren't."
-    kleio.say "Because that girl could smell a cunt a mile off!"
-    "I can't help laughing at Kleio's description of Sasha."
-    show kleio happy
-    "She joins in a moment later, so that we're both laughing."
-    show kleio sad
-    "But then Kleio suddenly bursts into tears, and I join her."
-    show kleio at center, zoomAt(1.65, (640, 1140))
-    "She leans against me and I wrap her in my arms."
-    "It's comforting, but there's noting sexual about the moment."
-    "We're just two friends, trying to prop each other up in a time of need."
-    kleio.say "Come on, man - let's go grab a beer."
-    kleio.say "We can get drunk and swap Sasha stories, yeah?"
-    mike.say "Sounds good to me, Kleio."
-    mike.say "Let's go!"
-    "Still leaning against each other, we walk off towards Sasha's favourite pub."
-    "And the rest of the night kind of disappears into a drunken blur."
-    return
 
 label kleio_birthday_date_male:
     $ DONE["kleio_birthday_date_male"] = game.days_played
@@ -3498,7 +3394,6 @@ label kleio_birthday_date_male:
             play sound car_screeching_tires
             hide kleio_kart_mikemc as mike with easeoutright
             "Misjudging a corner, I spin out."
-
 
             with vpunch
             with hpunch
@@ -4148,118 +4043,6 @@ label kleio_practice_01:
     hide kleio
     return
 
-label kleio_preg_talk:
-    "It doesn't take me long to notice that Kleio's not her usual self."
-    "With any other girl, it might show up as being sarcastic or prickly."
-    "But Kleio can be both those things when she's in a good mood."
-    "And so I notice it in her because she's being unusually quiet."
-    "The last thing that I want is for her to be wrestling with something alone."
-    "So I make an effort to broach the subject as soon as I feel the time is right."
-    mike.say "Hey, Kleio..."
-    mike.say "What's bugging you, huh?"
-    show kleio normal
-    kleio.say "Huh..."
-    kleio.say "What are you talking about, Loverboy?"
-    kleio.say "I'm fine, as always."
-    "I give Kleio a slight frown."
-    "And it's more than enough to let her know I'm not convinced."
-    mike.say "Oh, Kleio."
-    mike.say "You didn't even bother to drop a fuck in there!"
-    mike.say "It's like you're not even trying to fool me."
-    "Kleio opens her mouth to protest."
-    "But then she seems to change her mind."
-    "She sighs and shrugs."
-    show kleio annoyed
-    kleio.say "I guess you know me too well by now."
-    kleio.say "Far too well to be taken in."
-    kleio.say "Don't know if that's good or bad!"
-    mike.say "Kleio..."
-    mike.say "You're trying to change the subject!"
-    "Kleio sighs for a second time."
-    show kleio normal
-    kleio.say "Okay, okay..."
-    kleio.say "But this is going to be a real downer."
-    kleio.say "I need to tell you something..."
-    kleio.say "I need to tell you that I'm pregnant."
-    "Kleio sounds so uncomfortable and forced as she says the words."
-    "So much so that I don't think of doubting her for as much as a second."
-    mike.say "Wow..."
-    mike.say "I was not expecting that..."
-    "Kleio makes a clucking noise with her tongue."
-    "And then she nods, letting out a rueful laugh."
-    show kleio annoyed
-    kleio.say "So there."
-    kleio.say "Now you know."
-    kleio.say "Like I said - a real downer!"
-    menu:
-        "Let's keep the baby":
-            "Kleio's wrong, dead wrong."
-            "She just hasn't seen it yet, that's all."
-            mike.say "It doesn't have to be, Kleio."
-            mike.say "A downer, that is."
-            show kleio surprised
-            "Kleio looks at me in confusion."
-            "She shakes her head as she does so."
-            kleio.say "Wh...what are you saying?"
-            kleio.say "That we should keep the baby?"
-            mike.say "Why not, Kleio?"
-            mike.say "I mean, I know all of the practical reasons not to."
-            mike.say "But since when have you lived your life like that, huh?"
-            show kleio annoyed
-            kleio.say "Did you not hear what I said, Loverboy?"
-            kleio.say "This isn't running off to play in a gig."
-            kleio.say "It's a bit more serious than that!"
-            mike.say "Of course I heard you, Kleio."
-            mike.say "But I think this is something we can handle."
-            mike.say "So long as we do it together - I think we can handle anything!"
-            show kleio normal
-            "Kleio doesn't seem to have a comeback for that."
-            "Instead she just stares at me in silence for what feels like forever."
-            "And when she does finally speak up, her voice is low and serious."
-            kleio.say "Do you really mean that?"
-            kleio.say "You...really want to have a kid...with ME?!?"
-            "Now it's my turn to look confused and shake my head."
-            mike.say "Kleio..."
-            mike.say "What are you talking about?"
-            mike.say "Of course I do."
-            mike.say "I love you, for god's sake!"
-            show kleio at center, zoomAt(1.65, (640, 1140))
-            "Kleio nods and then leans her head on my shoulder."
-            "I don't need to be told to wrap my arms around her."
-            show kleio happy
-            kleio.say "Oh, Loverboy..."
-            kleio.say "I don't deserve a guy like you!"
-            mike.say "Oh yes you do, Kleio."
-            mike.say "Oh yes you do..."
-            $ kleio.love += 10
-            $ kleio.flags.toldpreg = True
-        "Tell her to abort":
-            "Kleio's right - this could put a downer on everything for us."
-            "I mean, we couldn't organise using a damn condom."
-            "So how on earth are we going to raise a child between us?"
-            mike.say "Yeah, a real downer, Kleio."
-            mike.say "We can't be parents."
-            mike.say "We can hardly look after ourselves!"
-            "Kleio nods at this."
-            "But she still looks saddened by my response."
-            show kleio sad
-            kleio.say "You're right."
-            kleio.say "That's just what I was thinking."
-            kleio.say "I just..."
-            kleio.say "I just wanted to hear you say it, that's all."
-            "It sounds like Kleio wasn't as certain as she sounded at first."
-            "But that doesn't change the fact that we can't start a family right now."
-            mike.say "I think this is the right thing, Kleio."
-            mike.say "Maybe we'll be ready to have kids in the future."
-            mike.say "But here and now, we can't go through with it."
-            show kleio at center, zoomAt(1.65, (640, 1140))
-            "Kleio nods and then leans her head on my shoulder."
-            "I don't need to be told to wrap my arms around her."
-            "She needs all the support I can give her at a time like this."
-            $ kleio.love -= 25
-            $ kleio.unpreg()
-    return
-
 label kleio_meet_bree:
     "It's been one of those days, what with work and my studies all piling up."
     "What I need is to take a break, so I head straight to the pub and walk right in."
@@ -4699,7 +4482,6 @@ label kleio_sub_event_1:
     play sound car_door
     queue sound "<from 0 to 6.0>sd/SFX/vehicles/car_ignition.ogg"
 
-
     scene bg street night at center, zoomAt(1.25, (640, 530)), dark
     show car_inside_sit at center, zoomAt(1.5, (940, 1080))
     show kleio b casual shy at center, zoomAt(2.0, (640, 1340))
@@ -4877,7 +4659,6 @@ label kleio_sub_event_1:
     mike.say "Kleio, get dressed!"
     mike.say "There's someone pulling in behind us!"
 
-
     scene bg street night at center, zoomAt(1.25, (640, 530)), dark
     show car_inside_sit at center, zoomAt(1.5, (640, 1080))
     show layer master at police_lights
@@ -4932,4 +4713,3 @@ label kleio_sub_event_1:
     stop sound
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

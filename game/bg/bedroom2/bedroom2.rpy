@@ -5,7 +5,6 @@ init python:
     "display_name": "[bree.name]'s Bedroom",
     "music": "music/roa_music/juice.ogg",
     "conditions": [
-        HeroTarget(IsGender("male")),
         PersonTarget(bree,
             Not(IsHidden()),
         ),
@@ -13,4 +12,3 @@ init python:
     "outfit": "casual",
     "tags": ["home"],
     })
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

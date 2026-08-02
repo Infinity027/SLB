@@ -3481,19 +3481,10 @@ label audrey_cassidy_palla_male_ending:
     "I look at each of my brides in turn as they walk down the aisle."
     "There's Audrey, as wicked and spikey as the day I first met her at work."
     "And the dress she's wearing reminding me of all the physical charms she possesses too."
-    if audrey.is_visibly_pregnant:
-        "She even seem to be wearing her pregnant belly as a challenge."
-        "Like she just doesn't care what anybody else thinks of her."
     "Cassidy looks more like a princess than ever right now."
     "Like she was born to be the centre of attention."
-    if cassidy.is_visibly_pregnant:
-        "And even the fact that she's visibly pregnant doesn't seem to bother her."
-        "Instead she's taking it in her stride and smiling happily."
     "Of course Palla looks like she's striding down a catwalk."
     "Every step she takes oozes with confidence and her dress is sheer perfection."
-    if palla.is_visibly_pregnant:
-        "It's also cut in just such a way to accommodate her pregnant belly."
-        "Not so as to hide it, just to make it less than instantly obvious."
     "Once they reach the altar, all we have time to do is smile at each other."
     "And that's because we're running on a tight schedule here."
     "After all, we are dealing with three brides!"
@@ -3579,16 +3570,6 @@ label audrey_cassidy_palla_male_ending:
     cassidy.say "You know that you love us, Audrey!"
     palla.say "Yeah!"
     palla.say "We're all stuck with each other now!"
-    if audrey.is_visibly_pregnant or audrey.flags.mikeBabies >= 1:
-        audrey.say "Well, I guess [hero.name] is a good father."
-        audrey.say "And little Lee adores his daddy."
-    if cassidy.is_visibly_pregnant or cassidy.flags.mikeBabies >= 1:
-        cassidy.say "Sophia is so precious to [hero.name]."
-        cassidy.say "He's such a good daddy to me..."
-        cassidy.say "To them - I mean to them!"
-    if palla.is_visibly_pregnant or palla.flags.mikeBabies >= 1:
-        palla.say "I certainly wouldn't have had Mary without [hero.name]."
-        palla.say "And she means so much more to me than my career ever did."
     cassidy.say "And let's face it, girls..."
     cassidy.say "[hero.name] needs us too!"
     audrey.say "Oh, you got that right!"
@@ -3631,15 +3612,9 @@ label audrey_palla_male_ending:
     show audrey wedding happy at left5
     "There's Audrey, as wicked and spikey as the day I first met her at work."
     "And the dress she's wearing reminding me of all the physical charms she possesses too."
-    if audrey.is_visibly_pregnant:
-        "She even seem to be wearing her pregnant belly as a challenge."
-        "Like she just doesn't care what anybody else thinks of her."
     "Of course Palla looks like she's striding down a catwalk."
     show palla wedding happy at right5
     "Every step she takes oozes with confidence and her dress is sheer perfection."
-    if palla.is_visibly_pregnant:
-        "It's also cut in just such a way to accommodate her pregnant belly."
-        "Not so as to hide it, just to make it less than instantly obvious."
     "Once they reach the altar, all we have time to do is smile at each other."
     "And that's because we're running on a tight schedule here."
     "After all, we are dealing with two brides!"
@@ -3719,19 +3694,6 @@ label audrey_palla_male_ending:
     audrey.say "Especially not to someone like you!"
     palla.say "Thanks, Audrey - the feeling's mutual!"
     palla.say "But somehow he manages to make us a family."
-    if audrey.is_visibly_pregnant or audrey.flags.mikeBabies >= 1:
-        audrey.say "Well, I guess [hero.name] is a good father."
-        audrey.say "And little Tommy adores his daddy."
-    if palla.is_visibly_pregnant or palla.flags.mikeBabies >= 1:
-        palla.say "I certainly wouldn't have had Mary without [hero.name]."
-        palla.say "And she means so much more to me than my career ever did."
-    if not audrey.is_visibly_pregnant and not audrey.flags.mikeBabies and not palla.is_visibly_pregnant and not palla.flags.mikeBabies:
-        audrey.say "Palla..."
-        audrey.say "Do you..."
-        palla.say "Spit it out, Audrey!"
-        audrey.say "Do you kind of think about having kids with him?"
-        palla.say "You too, huh?"
-        palla.say "Yeah, Audrey - all the time!"
     audrey.say "So we're agreed?"
     audrey.say "[hero.name]'s like the perfect husband."
     audrey.say "And he's made the pair of us disgustingly happy."
@@ -3744,4 +3706,3 @@ label audrey_palla_male_ending:
     $ game.set_new_game_plus()
     $ renpy.full_restart()
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

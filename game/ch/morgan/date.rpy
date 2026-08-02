@@ -79,24 +79,9 @@ label morgan_date_eat_a_burger:
     return
 
 label morgan_date_buy_drink:
-    if morgan.is_visibly_pregnant:
-        show morgan angry
-        $ morgan.love -= 10
-        if morgan.male <= 33:
-            morgan.say "Oh no, [hero.name]!"
-            morgan.say "Won't you please think of the baby?!?"
-        elif morgan.male <= 66:
-            morgan.say "Ah, did you forget that I'm pregnant?"
-            morgan.say "Urgh...you're so irresponsible sometimes!"
-        else:
-            morgan.say "What the fuck?"
-            morgan.say "Did you forget I was pregnant, asshole?!?"
-        $ hero.cancel_activity()
-        hide morgan
-    else:
-        "Getting her hands on a drink really seems to help Morgan to loosen up and start enjoying herself."
-        "Not that I'm trying to say that she's dependent on the booze, you understand?"
-        "Just that it looks like it's helping her to just be herself around me."
+    "Getting her hands on a drink really seems to help Morgan to loosen up and start enjoying herself."
+    "Not that I'm trying to say that she's dependent on the booze, you understand?"
+    "Just that it looks like it's helping her to just be herself around me."
     return
 
 label morgan_date_play_darts:
@@ -112,20 +97,7 @@ label morgan_date_pub_play_pool:
     return
 
 label morgan_date_buy_a_round:
-    if morgan.is_visibly_pregnant:
-        show morgan angry
-        $ morgan.love -= 10
-        if morgan.male <= 33:
-            morgan.say "Oh no, [hero.name]!"
-            morgan.say "Won't you please think of the baby?!?"
-        elif morgan.male <= 66:
-            morgan.say "Ah, did you forget that I'm pregnant?"
-            morgan.say "Urgh...you're so irresponsible sometimes!"
-        else:
-            morgan.say "What the fuck?"
-            morgan.say "Did you forget I was pregnant, asshole?!?"
-        $ hero.cancel_activity()
-    elif (hero.charm >= 60 - morgan.love and morgan.flags.drinks < 2):
+    if (hero.charm >= 60 - morgan.love and morgan.flags.drinks < 2):
         show drink morgan
         "When I offer to get the next round in, Morgan just shrugs and nods."
         "I guess that she's pretty much just expecting us to trade rounds anyway."

@@ -319,7 +319,6 @@ init python:
     "priority": 500,
     "conditions": [
         IsTimeOfDay("evening", "night"),
-        HeroTarget(IsGender("male")),
         MinDateScore(90),
         PersonTarget(audrey,
             OnDate(),
@@ -447,7 +446,6 @@ init python:
     "label": "audrey_kiss_me",
     "max_girls": 1,
     "conditions": [
-        HeroTarget(IsGender("male")),
         PersonTarget(audrey,
             IsPresent(),
             Not(IsHidden()),
@@ -460,24 +458,6 @@ init python:
     "do_once": False,
     "music": "music/roa_music/esperanza.ogg",
     "quit": False,
-    })
-
-    Event(**{
-    "name": "audrey_preg_talk",
-    "label": "audrey_preg_talk",
-    "do_once": False,
-    "conditions": [
-        HeroTarget(
-            IsGender("male"),
-            Not(OnDate())),
-        PersonTarget(audrey,
-            IsPresent(),
-            Not(IsHidden()),
-            IsFlag("toldpreg", False),
-            MinCounter("pregnant", 6),
-            ),
-        ],
-    "music": "music/roa_music/esperanza.ogg",
     })
 
     Event(**{
@@ -500,7 +480,6 @@ init python:
     "name": "audrey_go_to_the_gym",
     "label": "audrey_go_to_the_gym",
     "conditions": [
-        HeroTarget(IsGender("male")),
         Not(InInventory("sport_clothes")),
         PersonTarget(audrey,
             IsPresent(),
@@ -2672,155 +2651,6 @@ label audrey_kiss_me:
     hide audrey kiss with fade
     return
 
-label audrey_preg_talk:
-    show audrey annoyed
-    $ audrey.flags.toldpreg = True
-    "I can't help looking sideways at Audrey, studying her with real curiosity."
-    "And at that same time, I'm hoping that she doesn't catch me doing it too!"
-    "I'm sure that there's something on her mind that's pretty serious."
-    "I figure this because she's being quiet, which is unusual for her."
-    mike.say "Audrey..."
-    mike.say "Are you okay?"
-    "Audrey looks up in surprise, her eyes wide."
-    audrey.say "Huh?"
-    audrey.say "Oh...it's nothing, [hero.name]."
-    audrey.say "I was just thinking, that's all."
-    "I raise my eyebrows, trying to get more out of her."
-    mike.say "Anything I can help with?"
-    audrey.say "Yeah, maybe you can."
-    audrey.say "What do you think of pregnant women?"
-    "The question seems to come out of nowhere."
-    "And I find myself shrugging as I try to answer it."
-    mike.say "I don't know, Audrey."
-    mike.say "Maybe that they look like it's exhausting?"
-    "Audrey shakes her head, letting me know that's the wrong answer."
-    audrey.say "No, not like that!"
-    audrey.say "I mean do you think they can be hot?"
-    audrey.say "You know, are they sexy?"
-    menu:
-        "Agree":
-            mike.say "Well, yeah..."
-            mike.say "It's a bit weird, I know."
-            mike.say "But I do think they're kind of sexy!"
-            audrey.say "Ah..."
-            audrey.say "That's good..."
-            "I see an awkward, almost pained expression appear on Audrey's face."
-            "But when she looks at me, it's with a serious determination in her eyes."
-            show audrey normal
-            audrey.say "Because I'm pregnant."
-            audrey.say "And it's yours."
-            mike.say "Are you serious, Audrey?!?"
-            audrey.say "Of course I am!"
-            audrey.say "I wouldn't joke about something like this."
-            "Audrey pauses to suck in a deep breath."
-            audrey.say "And I want to keep it too."
-            menu:
-                "Agree":
-                    "For a moment, I can't help wondering about what Audrey just asked me."
-                    "If she would have said the same thing had I answered in the negative."
-                    "But then I dismiss the thought as nothing more than me overthinking it."
-                    "What does any of that matter when we're going to have a baby together?"
-                    mike.say "So do I, Audrey."
-                    mike.say "This is amazing - we're going to be parents!"
-                    "Audrey throws her arms around me and I return the gesture."
-                    "And it doesn't take long for me to notice she's almost clinging to me."
-                    show audrey blush
-                    audrey.say "Ah, [hero.name]..."
-                    audrey.say "You promise that you'll still want me?"
-                    audrey.say "You know - when I'm the size of a cow?"
-                    mike.say "I already said so, Audrey."
-                    mike.say "You know that I'm crazy about you."
-                    mike.say "And you know I love pregnant bellies too."
-                    mike.say "So you're going to be my perfect woman!"
-                    "Audrey chuckles, her head buried against my chest."
-                    audrey.say "You better promise, [hero.name]."
-                    show audrey flirt
-                    audrey.say "You better fuck me when I look like a hot Buddha!"
-                    $ audrey.love += 10
-                    $ audrey.sub += 5
-                "Disagree":
-                    "A thought occurs to me, even as I'm reeling from the news."
-                    "Why in the hell was Audrey asking me about pregnant bellies just now?"
-                    "Surely she didn't say she wanted to keep it because of my answer?"
-                    "Surely she wouldn't decide just based on that?"
-                    mike.say "Audrey, be honest with me."
-                    mike.say "Would you have wanted to keep it if I said I didn't like pregnant bellies?"
-                    mike.say "Because that's not how you make decisions like this!"
-                    show audrey annoyed
-                    "Audrey suddenly looks evasive, like she'd rather be somewhere else."
-                    audrey.say "I...I don't know..."
-                    audrey.say "That's part of it, [hero.name]."
-                    audrey.say "I didn't think you'd want me if I were the size of a cow!"
-                    mike.say "I'm sorry, Audrey."
-                    mike.say "But I can't start a family for the sake of you feeling sexy!"
-                    mike.say "I...I think we need to rethink keeping the baby."
-                    audrey.say "Okay..."
-                    audrey.say "I guess..."
-                    $ audrey.love -= 20
-                    $ audrey.unpreg()
-        "Disagree":
-            mike.say "Urgh..."
-            mike.say "I've got to be honest, Audrey."
-            mike.say "I think pregnant bellies are kind of gross!"
-            $ audrey.love -= 10
-            $ audrey.sub -= 5
-            show audrey sad
-            audrey.say "Oh..."
-            audrey.say "Okay..."
-            "I see an awkward, almost pained expression appear on Audrey's face."
-            "But when she looks at me, it's with a serious determination in her eyes."
-            show audrey angry
-            audrey.say "That really sucks, [hero.name]."
-            audrey.say "Because I'm pregnant."
-            audrey.say "And you're the father!"
-            mike.say "Are you serious, Audrey?!?"
-            audrey.say "Of course I am!"
-            audrey.say "I wouldn't joke about something like this."
-            audrey.say "And before you ask, I don't want to keep it either!"
-            menu:
-                "Agree":
-                    "I feel like I'm reeling from one blow as the next lands."
-                    "In one breath Audrey tells me that she's pregnant."
-                    "And in the next she also tells me that she wats a termination!"
-                    "I don't feel like I have any choice but to agree with her."
-                    mike.say "Fucking hell, Audrey!"
-                    mike.say "If that's how you feel..."
-                    audrey.say "I already said it was, [hero.name]!"
-                    audrey.say "Don't even try to talk be out of it."
-                    mike.say "I...I wasn't, Audrey."
-                    mike.say "I promise I wasn't."
-                    audrey.say "Good - then it's decided."
-                    mike.say "I guess so..."
-                    $ audrey.love -= 20
-                    $ audrey.unpreg()
-                "Disagree":
-                    "The mention of Audrey being pregnant snaps me out of it."
-                    "Making me realise that she's talking about my kid here."
-                    "That and the fact she just said she wants a termination."
-                    "I'm involved in this thing too, damn it!"
-                    mike.say "Hold on one fucking second, Audrey!"
-                    mike.say "If you're having my kid, I get a say in what happens too."
-                    mike.say "Where do you get off just telling me you're getting rid of it?"
-                    "Audrey curls her lip and crosses her arms over her chest."
-                    "Which means she's getting ready for a fight."
-                    audrey.say "What do you care, huh?"
-                    audrey.say "You're the one that just told me pregnant bellies are a turn-off!"
-                    "I find myself shaking my head in amazement."
-                    mike.say "Jesus, Audrey."
-                    mike.say "That's not the same as saying I don't want to keep my kid!"
-                    mike.say "And for the record, I'm not going to leave you over this either."
-                    mike.say "And that's because I love you!"
-                    show audrey awkward
-                    "Audrey stares at me, her eyes wide with surprise."
-                    audrey.say "I...I do too, [hero.name]."
-                    audrey.say "Love you, that is..."
-                    mike.say "Okay, now we've settled that - can we talk about this?"
-                    mike.say "I'm sure we can work it out."
-                    show audrey normal
-                    audrey.say "Okay, [hero.name]."
-                    audrey.say "Let's talk..."
-    return
-
 label audrey_event_01b:
     "All I wanted to do was head down to the pub to unwind after a long, stressful day."
     "You know, just sink a couple of beers and forget all about my problems for a while?"
@@ -3812,14 +3642,8 @@ label audrey_male_ending:
     "Sure, she technically shouldn't be wearing white."
     "But it looks good on her all the same."
     "Maybe it looks so good because I know the reasons why she shouldn't be wearing it too!"
-    if audrey.is_visibly_pregnant:
-        "The cut of the dress can't hide the fact that Audrey's pregnant either."
-        "But then it's never something that we've tried to hide."
-        "Just a reminder that we're ready to start a family."
-        "That and spend the rest of our lives together."
-    else:
-        "The cut of the dress is pretty traditional."
-        "But that just means it shows off Audrey's beauty that much more."
+    "The cut of the dress is pretty traditional."
+    "But that just means it shows off Audrey's beauty that much more."
     "And she still has that same look in her eye."
     "The one that she always had when she was torturing me back in the office."
     "The one that lets me know she's thinking wicked thoughts!"
@@ -4024,13 +3848,8 @@ label audrey_male_ending:
     audrey.say "Of course most of it is down to having me as his PA, but he still does his part."
     audrey.say "He moved out of that suburban dive he was renting as soon as we were married."
     audrey.say "And now we have a penthouse apartment that suits our lifestyle so much more."
-    if audrey.is_visibly_pregnant:
-        audrey.say "And there's plenty of room for the new addition to the family too."
-        audrey.say "We don't know if it's a boy or a girl, as we chose not to find out."
-        audrey.say "But either way, we can't wait to meet them when they get here!"
-    else:
-        audrey.say "We can look down on everyone else from way up here."
-        audrey.say "And if we ever choose to start a family, there's plenty of room."
+    audrey.say "We can look down on everyone else from way up here."
+    audrey.say "And if we ever choose to start a family, there's plenty of room."
     audrey.say "But before I make it sound like we're the perfect couple, I'll level with you."
     show audrey flirt
     audrey.say "I still LOVE to torment [hero.name] every chance that I get."

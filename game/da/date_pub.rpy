@@ -347,14 +347,7 @@ label date_buy_a_round:
     if renpy.has_label(f"{active_girl.id}_date_buy_a_round"):
         call expression f"{active_girl.id}_date_buy_a_round" from _call_expression_142
     else:
-        if active_girl.is_visibly_pregnant:
-            $ renpy.show(f"{active_girl.id} angry")
-            $ active_girl.love -= 10
-            active_girl.say "Are you serious?!?"
-            active_girl.say "You're gonna buy drinks for everyone but I'll be the one not being able to enjoy it?"
-            active_girl.say "You must be joking [hero.name]!"
-            $ hero.cancel_activity()
-        elif (hero.charm >= 60 - active_girl.love and active_girl.flags.drinks < 2):
+        if (hero.charm >= 60 - active_girl.love and active_girl.flags.drinks < 2):
             $ renpy.show(f"drink {active_girl.id}")
             "I pay a round of beers to the whole pub."
             $ active_girl.set_flag("drinks", 1, "day", mod="+")

@@ -62,16 +62,7 @@ label samantha_offer_a_drink_male:
     mike.say "You want anything from the bar?"
     mike.say "I'm just gonna get another drink."
     "Almost the second the words are out of my mouth, Sam turns to face me."
-    if samantha.is_visibly_pregnant:
-        show samantha angry
-        $ samantha.love -= 10
-        samantha.say "Grow up, [hero.name]!"
-        samantha.say "I'm pregnant, remember?"
-        if not samantha.flags.NPCpregnancy:
-            samantha.say "Something you had a hand in too, I seem to recall!"
-        $ hero.cancel_activity()
-        hide samantha
-    elif (hero.charm >= 60 - samantha.love and samantha.flags.drinks < 2) or date_girl == samantha:
+    if (hero.charm >= 60 - samantha.love and samantha.flags.drinks < 2) or date_girl == samantha:
         show samantha happy
         samantha.say "Oh, sure thing, [hero.name]."
         samantha.say "Just grab me a beer, okay?"

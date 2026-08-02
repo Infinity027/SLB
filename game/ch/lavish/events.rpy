@@ -331,24 +331,6 @@ init python:
     })
 
     Event(**{
-    "name": "lavish_preg_talk",
-    "label": "lavish_preg_talk",
-    "do_once": False,
-    "conditions": [
-        HeroTarget(
-            IsGender("male"),
-            Not(OnDate())),
-        PersonTarget(lavish,
-            IsPresent(),
-            Not(IsHidden()),
-            IsFlag("toldpreg", False),
-            MinCounter("pregnant", 6),
-            ),
-        ],
-    "music": "music/johny_grimes/nostalgia.ogg",
-    })
-
-    Event(**{
     "name": "lavish_office_bj",
     "label": "lavish_office_bj",
     "priority": 200,
@@ -2202,140 +2184,8 @@ label lavish_event_18:
         $ lavish.love.max = 200
     return
 
-label lavish_preg_talk:
-    $ lavish.flags.toldpreg = True
-    show lavish
-    "I guess I should have noticed that there was something a little off with Lavish today."
-    "But then I'm usually distracted by her presence anyway, you know?"
-    "Having such a beautiful girl around and knowing that we're an item."
-    "I mean, can you blame me for being wrapped up in that thought when she's around?"
-    "So when she comes out and confronts me with it, I'm taken by surprise."
-    lavish.say "[hero.name]..."
-    lavish.say "There's something that I need to tell you."
-    lavish.say "Something that's really important."
-    "Well, that's more than enough to snap me out of it and get my attention."
-    "What guy doesn't dread his significant other having something to tell him?"
-    "Especially when it sounds as ominous as that!"
-    mike.say "Ah, okay, Lavish."
-    mike.say "I'm listening."
-    mike.say "What is it?"
-    show lavish bored
-    "Lavish takes a deep breath, collecting herself before she speaks."
-    "And I can see the effort that it's taking written all over her face."
-    lavish.say "This isn't an easy thing to admit, [hero.name]."
-    lavish.say "But here goes..."
-    show lavish normal blush
-    lavish.say "I just found out that I'm pregnant!"
-    "Wow...just wow."
-    "I was honestly expecting Lavish to say she was dumping me or something."
-    "But I wasn't prepared for a bombshell like that!"
-    mike.say "Y...you're sure, Lavish?"
-    mike.say "You took a test and everything?"
-    show lavish bored -blush
-    "Lavish nods, looking a little irritated at the questions."
-    lavish.say "Of course I did, [hero.name]."
-    lavish.say "This is serious, so I needed to be sure."
-    mike.say "And I'm the father?"
-    show lavish angry
-    lavish.say "[hero.name]!"
-    lavish.say "I haven't been playing around behind your back."
-    lavish.say "That means you have to be the father."
-    "I nod hastily, sensing that I'm in danger of seriously pissing Lavish off."
-    "Of course she's going to be sure of stuff like that."
-    "Lavish is nothing if not organised and professional."
-    "Even in terms of her private life!"
-    mike.say "Have you decided what you want to do?"
-    mike.say "You know - about the baby?"
-    show lavish annoyed
-    "Lavish lets out a sigh, her mood softening as she does so."
-    "And I see her hands unconsciously cradling her belly."
-    lavish.say "I...I don't want you to think I'm cold, [hero.name]."
-    lavish.say "But my first instinct is to have a termination."
-    lavish.say "We never planned for this, either of us."
-    lavish.say "And going through with it would ruin my career."
-    "I nod, keen to show Lavish that I do understand her dilemma."
-    "She's worked her ass off to get where she is at work."
-    "Everyone would pay lip-service to her taking maternity leave."
-    "But they'd snap up her spot as soon as she was out of the office too!"
-    show lavish normal
-    lavish.say "Well..."
-    lavish.say "What do you want to do, [hero.name]?"
-    lavish.say "You should have some say in this too!"
-    menu:
-        "We should keep it":
-            "I'm grateful that Lavish wants to get my input on this."
-            "Some girls I've known wouldn't have been so eager to hear it!"
-            "She's pretty modern and cool like that."
-            "And that's when it strikes me with the force of a slap."
-            "Why are we thinking like we're living in the last century?"
-            mike.say "Why does it have to be your career that takes the hit, Lavish?"
-            "Lavish looks at me sideways, clearly not getting my point."
-            lavish.say "Erm, because I'm the one that's pregnant, [hero.name]!"
-            mike.say "Sure, Lavish, sure."
-            mike.say "But after that, what if I was the one to stay home?"
-            show lavish bored
-            "Lavish stares at me blankly for a moment."
-            "Then she blinks and shakes her head, as if finally understanding."
-            show lavish normal
-            lavish.say "You'd do that?"
-            lavish.say "For me?"
-            lavish.say "You'd actually quit work and raise the baby?"
-            mike.say "Yeah, Lavish, I would."
-            mike.say "This is the twenty-first century, and I'm a modern guy."
-            mike.say "I'm not afraid of changing nappies!"
-            "I can see that Lavish is already turning the idea over in her head."
-            "This would mean that she could have the best of both worlds."
-            "She gets to keep her career and her baby."
-            "Unlike most women, she could really have it all."
-            "And I think she wasn't expecting me to even suggest it either."
-            "Because she's looking at me with a new shine in her eyes the whole time!"
-            show lavish kiss
-            $ lavish.flags.kiss += 1
-            "Lavish surprises me then by kissing me full on the lips."
-            show lavish blush
-            "When she breaks it off, I'm the one feeling flustered."
-            mike.say "I...I take it you like the idea?"
-            "Lavish nods."
-            mike.say "But what was the kiss for?"
-            lavish.say "Oh you know..."
-            lavish.say "Just keeping the little man at home sweet!"
-            $ lavish.love += 10
-        "You should have a termination":
-            "The idea of having a kid with Lavish has instant appeal."
-            "I love spending time with her, and I can see a future for us together."
-            "But that's what it is right now - a vision of a future."
-            "We're both focused on our careers, not ready to start a family."
-            mike.say "I understand, Lavish."
-            mike.say "And for the record, I don't think you're cold."
-            mike.say "In fact, you're really thinking of the child here."
-            "Lavish nods, clearly wanting to be reassured by my words."
-            "But she's too smart and self-aware to let herself be convinced so easily."
-            show lavish bored
-            lavish.say "H...how's that, [hero.name]?"
-            lavish.say "What do you mean?"
-            mike.say "We're not ready for kids, Lavish."
-            mike.say "We both know that."
-            mike.say "If one or both of us gave up our careers..."
-            mike.say "Well, no one would say it out loud."
-            mike.say "But we'd end up resenting the kid, and each other too!"
-            show lavish normal
-            lavish.say "I guess you're right."
-            mike.say "You'll be a great mom, Lavish - I know that as well."
-            mike.say "But that'll happen when the time's right."
-            "Lavish nods, forcing a smile onto her face."
-            "Though I can see tears welling in her eyes."
-            "I reach out and pull her into an embrace."
-            "Neither of us needs to speak right now."
-            "Just to know that we're there for each other."
-            $ lavish.unpreg()
-    return
-
 label lavish_male_ending:
     $ game.hour = 16
-
-
-
-
     if renpy.has_label("lavish_achievement_3") and not game.flags.cheat:
         call lavish_achievement_3 from _call_lavish_achievement_3
     $ game.room = "church"
@@ -2359,16 +2209,10 @@ label lavish_male_ending:
     "She appears at the other end of the chapel, walking down the aisle."
     "And now I know why she insisted on me not seeing the dress before the big day."
     "It's perfect, making her look like a fairy tale bride."
-    if lavish.is_visibly_pregnant:
-        "Rather than trying to hide the shape of her swelling belly, the dress allows for it."
-        "And in doing so it makes her look that much more beautiful too."
-        "I know all about the negative connotations of a pregnant bride."
-        "But all of that seems so silly and old-fashioned right now."
-    else:
-        "Somehow it manages to make Lavish look pure and almost innocent."
-        "Yet at the same time it doesn't even try to hide her incredible figure either."
-        "I don't know what kind of sorcery this is."
-        "But I do know that I approve!"
+    "Somehow it manages to make Lavish look pure and almost innocent."
+    "Yet at the same time it doesn't even try to hide her incredible figure either."
+    "I don't know what kind of sorcery this is."
+    "But I do know that I approve!"
     show lavish at center, traveling(1.5, 3.0, (640, 1040))
     "I guess that my amazement must be written all over my face."
     "Because Lavish is grinning at me by the time she reaches the altar."
@@ -2465,22 +2309,12 @@ label lavish_male_ending:
     lavish.say "But that doesn't mean he left me all alone either."
     lavish.say "He was there every step of the way, supporting me the whole time."
     lavish.say "There were even moments when he put my career before his own."
-    if lavish.flags.mikeBabies >= 1 or lavish.is_visibly_pregnant:
-        lavish.say "And that made me start thinking about what he wanted too."
-        lavish.say "[hero.name] was making a sacrifice for me."
-        lavish.say "But that just didn't feel right somehow."
-        lavish.say "For the first time, work was beginning to feel hollow and unfulfilling."
-        lavish.say "It was when I found out that I was pregnant with Mathieu that things changed."
-        lavish.say "[hero.name] was ecstatic at the news, and that made me happy too."
-        lavish.say "It made me realise that there was more to life than work."
-        lavish.say "And that my family made me happier than my career ever could."
-    else:
-        lavish.say "And that's made me start thinking about what he wants too."
-        lavish.say "[hero.name]'s made so many sacrifices for me in the time we've been together."
-        lavish.say "It just doesn't feel right somehow."
-        lavish.say "It's even starting to make work feel somehow hollow and unfulfilling."
-        lavish.say "I don't really know what the answer is."
-        lavish.say "But maybe it's time I started to put him before my career too?"
+    lavish.say "And that's made me start thinking about what he wants too."
+    lavish.say "[hero.name]'s made so many sacrifices for me in the time we've been together."
+    lavish.say "It just doesn't feel right somehow."
+    lavish.say "It's even starting to make work feel somehow hollow and unfulfilling."
+    lavish.say "I don't really know what the answer is."
+    lavish.say "But maybe it's time I started to put him before my career too?"
     lavish.say "I suppose that's what [hero.name]'s brought to my life."
     lavish.say "He's taught me that sometimes it's okay not to have a plan."
     lavish.say "That sometimes you can just sit back and see where life takes you."

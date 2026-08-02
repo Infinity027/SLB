@@ -6,7 +6,6 @@ init python:
     "conditions": [
         IsTimeOfDay("evening"),
         HeroTarget(
-            IsGender("male"),
             HasStamina()
             ),
         PersonTarget(bree,
@@ -25,8 +24,7 @@ init python:
     "label": "ACTIVE_GIRL_fuck_ROOM",
     "conditions": [
         IsHour(14, 18),
-        HeroTarget(
-            IsGender("male"),
+        HeroTarget(        
             IsRoom("beach", "date_beach", "date_nudistbeach"),
             HasStamina(),
             ),
@@ -46,7 +44,7 @@ init python:
     "label": "bree_fuck_sasha_bedroom_intro",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home"),
             ),
         PersonTarget(bree,
@@ -66,8 +64,7 @@ init python:
     "name": "bree_hottub_sex_male",
     "label": "bree_hottub_sex_male",
     "conditions": [
-        HeroTarget(
-            IsGender("male"),
+        HeroTarget( 
             IsActivity("date_hot_tub_home")),
         PersonTarget(bree,
             OnDate(),
@@ -121,46 +118,11 @@ label bree_fuck_bathroom:
                 mike.say "Sorry, I wanna be alone with [bree.name] a little."
                 hide sasha
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     $ bree.flags.showersex = True
     hide bree
     show bree showersex wet
     with fade
-    if bree.is_visibly_pregnant:
-        "Aware of just how delicate [bree.name]'s condition is right now, I loop one arm under hers to hold her up."
-        "The other I use to reach around and cradle her belly so that I can support her and make sure she won't slip while we make love."
-        "Though she's bent like a bow, I move my legs and abdomen to bring my cock into a position where I can find my way into [bree.name]."
-        "I enter her slowly and with infinite care, caressing her swollen belly as she sinks onto me."
-    elif bree.is_collared:
+    if bree.is_collared:
         "I'm more than ready to have my way with [bree.name] by now, and she needs to be taken in hand to make that happen."
         "I seize her arms with one of my own and grab hold of her collar firmly with the other."
         "Forced against the wall, breasts and belly pressed to the tiles, [bree.name] yelps as she feels me searching for her pussy."
@@ -520,13 +482,10 @@ label bree_fuck_date_male(location="hero"):
     $ game.play_music("music/roa_music/city_nights.ogg")
     $ intro_foreplay = False
 
-
     call bree_fuck_date_intro_male (location) from _call_bree_fuck_date_intro_male
-
 
     if not intro_foreplay:
         call bree_dick_reactions from _call_bree_dick_reactions_2
-
 
     if "bree_event_07b" in DONE and bree.sexperience > 1 and not bree.flags.tittyfuck:
         call bree_fuck_date_titfuck from _call_bree_fuck_date_titfuck
@@ -534,17 +493,13 @@ label bree_fuck_date_male(location="hero"):
         call handle_npc_leaving (bree, _return) from _call_handle_npc_leaving_5
         return
 
-
     call bree_fuck_date_foreplay_male from _call_bree_fuck_date_foreplay_male
 
-
     call bree_fuck_date_choices_male from _call_bree_fuck_date_choices_male
-
 
     call handle_npc_leaving (bree, _return) from _call_handle_npc_leaving_6
     if _return:
         return
-
 
     hide bree
     call bree_sleep_date_fuck (location) from _call_bree_sleep_date_fuck
@@ -1755,40 +1710,22 @@ label bree_fuck_date_doggy(sexperience_min):
         "I don't think she's ever looked as beautiful to me as she does right now."
         "She fits into the crook of my body so well that I don't even need to move an inch."
     elif _return == "vaginal_outside":
-        if bree.is_visibly_pregnant:
-            "As much as I'd like to finish inside her, a part of me gets off on seeing my cum on her skin."
-            show bree doggy -vaginal cumshot with hpunch
-            "I hear [bree.name] give a small sigh as I pull out, but it's replaced with a sharp intake of breath through her teeth as my hot cum hits her skin."
-            with hpunch
-            "It spatters down on the small of her back, running down her spine and between her buttocks."
-            show bree doggy -cumshot cumonass with hpunch
-            "She looks at me with an embarrassed expression on her face."
-            scene expression f"bg {game.room}"
-            show bree naked blush
-            bree.say "Wow...that was crazy!"
-            bree.say "I honestly thought you were going to cum in me for a moment back there!"
-            "I chuckle softly, still breathing a little heavily from my exertions."
-            mike.say "I know...it was touch and go for a while!"
-            "My compliment does nothing to keep her from blushing all the more."
-            $ bree.sub += 1
-            "[bree.name] doesn't say anything more, but she wraps her arms around me in an embrace that's worth a thousand words."
-        else:
-            "I manage to keep my head and pull out just before it's too late."
-            show bree doggy -vaginal cumshot with hpunch
-            "I hear [bree.name] sigh in unconscious disappointment, but I know she'd have been rather more irate to feel me cumming inside of her."
-            with hpunch
-            "The consequence of my conscientiousness is that she almost instantly gets showered with all that I have to give."
-            show bree doggy -cumshot cumonass with hpunch
-            "It spatters down on the small of her back, running down her spine and between her buttocks."
-            "She looks at me with an embarrassed expression on her face."
-            scene expression f"bg {game.room}"
-            show bree naked blush
-            bree.say "Wow...that was crazy!"
-            bree.say "I honestly thought you were going to cum in me for a moment back there!"
-            "I shake my head, still breathing a little heavily from my exertions."
-            mike.say "I know...it was touch and go for a while!"
-            mike.say "You get me so worked up with passion, [bree.name] - I think we need to use a condom in future!"
-            "My compliment does nothing to keep her from blushing all the more."
+        "I manage to keep my head and pull out just before it's too late."
+        show bree doggy -vaginal cumshot with hpunch
+        "I hear [bree.name] sigh in unconscious disappointment, but I know she'd have been rather more irate to feel me cumming inside of her."
+        with hpunch
+        "The consequence of my conscientiousness is that she almost instantly gets showered with all that I have to give."
+        show bree doggy -cumshot cumonass with hpunch
+        "It spatters down on the small of her back, running down her spine and between her buttocks."
+        "She looks at me with an embarrassed expression on her face."
+        scene expression f"bg {game.room}"
+        show bree naked blush
+        bree.say "Wow...that was crazy!"
+        bree.say "I honestly thought you were going to cum in me for a moment back there!"
+        "I shake my head, still breathing a little heavily from my exertions."
+        mike.say "I know...it was touch and go for a while!"
+        mike.say "You get me so worked up with passion, [bree.name] - I think we need to use a condom in future!"
+        "My compliment does nothing to keep her from blushing all the more."
             "[bree.name] doesn't say anything more, but she wraps her arms around me in an embrace that's worth a thousand words."
     elif _return == "vaginal_inside_pill":
         $ bree.sub += 1
@@ -1844,7 +1781,6 @@ label bree_fuck_date_doggy(sexperience_min):
         "As I cum into her, I press down with all of my weight, making sure that she stays put until I'm utterly spent."
         show bree doggy vaginal cuminpussy
         "I can hear [bree.name] whimpering and moaning at the feelings of ecstasy she's experiencing and the knowledge of what I've done to her."
-        #$ bree.impregnate()
         $ bree.sub += 1
         "But I'm too exhausted to either feel triumphant or else let the implications of it all sink in."
         "So I lie down on the bed and leave [bree.name] to deal with it on her own for a while."

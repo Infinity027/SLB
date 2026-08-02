@@ -142,7 +142,7 @@ label emma_samantha_showdown:
     emma.say "It's all been a bit of a whirlwind, really."
     emma.say "It feels like one minute I was just meeting him."
     emma.say "And the very next second, we were dating!"
-    if emma.love >= 150 and samantha.love >= 150 and samantha.flags.nonexclusive:
+    if emma.love >= 150 and samantha.love >= 150:
         "As soon as Emma mentions the fact we're dating, Sam's expression changes."
         "Before she looked genuinely interested in pumping us for information."
         "But now she's smiling, and I think that I know why."
@@ -1296,17 +1296,9 @@ label emma_samantha_male_ending:
     "My eyes fall on Emma first, the shorter and slighter of my brides."
     "She's perfect in her dress, cut to flatter her petite figure."
     "But the most beautiful thing about her is the smile on her face."
-    if emma.is_visibly_pregnant:
-        "Part of the reason for that might be the size of her belly!"
-        "Because I know that Emma's very proud of the fact she's pregnant."
-        "And there's no way she's ever going to hide that fact."
     "In contrast, Sam's tall, full-figured and confident."
     "She strides down the aisle with the confidence of someone that's done this before."
     "But to me she looks impossibly better today than she did when she married Ryan."
-    if samantha.is_visibly_pregnant:
-        "Her dress doesn't try to hide the fact that she's expecting."
-        "And that's something that makes me swell with pride."
-        "Because it's a statement of the new start we're making together."
     "I'm so busy staring at the two of them that I'm totally distracted."
     show emma at center, zoomAt (1.65, (840, 1140))
     show samantha blush at center, zoomAt (1.65, (440, 1140))
@@ -1425,25 +1417,10 @@ label emma_samantha_male_ending:
     samantha.say "I mean, I liked those girls."
     samantha.say "But it was getting crowded around here."
     samantha.say "Plus now we have [hero.name] all to ourselves!"
-    if (emma.is_visibly_pregnant or emma.flags.mikeBabies >= 1) and (samantha.is_visibly_pregnant or samantha.flags.mikeBabies >= 1):
-        emma.say "Hmm..."
-        emma.say "Funny how having Cora and [hero.name] Junior around doesn't make it feel that way."
-        samantha.say "That's different, Emma."
-        samantha.say "I don't mind giving up space for our own kids!"
-    elif emma.is_visibly_pregnant or emma.flags.mikeBabies >= 1:
-        emma.say "Hmm..."
-        emma.say "Funny how having little Cora around doesn't make it feel that way."
-        samantha.say "That's different, Emma."
-        samantha.say "I don't mind giving up space for a child that grew inside of you!"
-    elif samantha.is_visibly_pregnant or samantha.flags.mikeBabies >= 1:
-        samantha.say "Well, when he's not being wrapped around [hero.name] Junior's finger!"
-        emma.say "Oh yeah!"
-        emma.say "That little tearaway sure loves his daddy!"
-    else:
-        emma.say "That could change if we have any new additions!"
-        emma.say "We'd be up to our noses in nappies and bottles!"
-        samantha.say "That's different, Emma."
-        samantha.say "I don't mind giving up space for our own kids!"
+    emma.say "That could change if we have any new additions!"
+    emma.say "We'd be up to our noses in nappies and bottles!"
+    samantha.say "That's different, Emma."
+    samantha.say "I don't mind giving up space for our own kids!"
     emma.say "Maybe you're right, Sam."
     show emma blush
     emma.say "Maybe I should just accept that we're living in a dream come true."

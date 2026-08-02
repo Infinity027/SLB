@@ -55,17 +55,9 @@ label lavish_date_eat_a_burger:
     return
 
 label lavish_date_buy_drink:
-    if lavish.is_visibly_pregnant:
-        show lavish angry
-        $ lavish.love -= 10
-        lavish.say "Have you forgotten that one of us is pregnant, [hero.name]?!?"
-        lavish.say "It wouldn't have slipped your mind if YOU were the one carrying our child!"
-        $ hero.cancel_activity()
-        hide lavish
-    else:
-        "Lavish accepts her drink gratefully and places it down next to her."
-        "She traced the rim of the glass with and idle finger."
-        "The whole time she smiles, and coyly averts her eyes."
+    "Lavish accepts her drink gratefully and places it down next to her."
+    "She traced the rim of the glass with and idle finger."
+    "The whole time she smiles, and coyly averts her eyes."
     return
 
 label lavish_date_play_darts:
@@ -81,13 +73,7 @@ label lavish_date_pub_play_pool:
     return
 
 label lavish_date_buy_a_round:
-    if lavish.is_visibly_pregnant:
-        show lavish angry
-        $ lavish.love -= 10
-        lavish.say "Have you forgotten that one of us is pregnant, [hero.name]?!?"
-        lavish.say "It wouldn't have slipped your mind if YOU were the one carrying our child!"
-        $ hero.cancel_activity()
-    elif (hero.charm >= 60 - lavish.love and lavish.flags.drinks < 2):
+    if (hero.charm >= 60 - lavish.love and lavish.flags.drinks < 2):
         show drink lavish
         "I get up and offer to buy the next round, and get a short nod in return."
         "I was expecting more enthusiasm, maybe a bit of thanks."

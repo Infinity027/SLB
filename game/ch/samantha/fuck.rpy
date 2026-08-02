@@ -283,12 +283,7 @@ label samantha_fuck_home:
     show samantha
     mike.say "Hey, wanna come and have fun?"
     samantha.say "Sure."
-
-
-    if samantha.is_visibly_pregnant:
-        mike.say "Let's take it slow tonight."
-        samantha.say "I like that."
-    elif samantha.sub >= 50:
+    if samantha.sub >= 50:
         mike.say "You know who's in charge tonight."
         samantha.say "Yes."
         $ samantha.sub += 1
@@ -342,12 +337,7 @@ label samantha_fuck_date_male(location="hero"):
         if samantha.flags.engaged:
             "Her engagement ring throws a sharp little star on the wall whenever she moves her hand; she twists it without thinking, breath still ragged."
         "Both of us lay collapsed upon the bed, an entire session where I was in full control spending both of us."
-        if samantha.is_visibly_pregnant and not samantha.flags.NPCpregnancy == "ryan":
-            "She guides my hand to her belly and smiles, breath still shaky; the soft curve rises and falls under my fingers."
-            samantha.say "Ours."
-            mike.say "Ours."
-            $ samantha.love += 1
-        elif samantha.flags.NPCpregnancy == "ryan":
+        if samantha.flags.NPCpregnancy == "ryan":
             "She exhales and squeezes my fingers, protective and warm, her palm lingering over the gentle swell of her stomach."
             samantha.say "Hold me a second longer."
             mike.say "I've got you."
@@ -410,9 +400,6 @@ label samantha_fuck_date_intro_male(location="hero"):
         show samantha naked
         if samantha.flags.engaged:
             "Her wedding band stays on as she undresses; the slim circle of gold gleams against her skin, a pale indentation beneath it betraying how rarely she takes it off."
-        if samantha.is_visibly_pregnant:
-            "Her belly is round and warm beneath my gaze, a faint line running from her navel downward; she cradles it as if the gesture is instinct."
-
         if samantha.flags.engaged:
             "She pauses; for a heartbeat, guilt and hunger flicker across her face."
             menu:
@@ -422,9 +409,6 @@ label samantha_fuck_date_intro_male(location="hero"):
                 "Let's keep us separate from the rest.":
                     mike.say "Let's keep us separate from the rest."
                     samantha.say "Then take me and don't look back."
-        if samantha.is_visibly_pregnant and not samantha.flags.NPCpregnancy == "ryan":
-            "She draws my palm to her belly and kisses my wrist."
-            samantha.say "This is ours."
         if game.days_played % 2 == 1:
             menu:
                 "I want to be gentle with you.":
@@ -468,8 +452,6 @@ label samantha_fuck_date_intro_male(location="hero"):
         "Just as she says this, she lifts up a bit, cupping her hands under her motherly breasts and sliding my cock in between those warm and soft tits of hers."
         if samantha.flags.engaged:
             "Her wedding ring shines every time her hands squeeze together around me, a tiny strobe of light that shouldn't be this hot."
-        if samantha.is_visibly_pregnant:
-            "A soft bead of milk pearls at one nipple when the pressure shifts; she blushes, then breathes out when I don't stop her."
         samantha.say "How does this feel? Do you like it?"
         "As she squeezes herself, the swollen and filled jugs swish around my cock with a heavier weight."
     else:
@@ -488,26 +470,6 @@ label samantha_fuck_date_intro_male(location="hero"):
             samantha.say "But we're in your house, so we get to do what you want."
             samantha.say "Though... let me give you something to think about first."
             show samantha naked
-            if samantha.is_visibly_pregnant:
-                "Samantha's already bountiful breasts swell with the burden of motherhood."
-                "The round, pregnant shape of her belly is almost enough to make me realize how amazing she looks."
-                if samantha.flags.engaged:
-                    "She braces on the mattress; the band on her finger taps the headboard with a tiny click before she steadies herself."
-                samantha.say "You like it, [hero.name]?"
-                samantha.say "This is all for you and all because of you."
-                "She caresses her stomach, looking downward over her body."
-                samantha.say "I'll be a perfect mother, if that is what you want me to be, but for now, I'll be your pregnancy fetish."
-                "Well, then! I can't say no to that. Let's get going!"
-                $ samantha.love += 1
-                menu:
-                    "Kiss her belly.":
-                        mike.say "Come here."
-                        "I kneel and kiss the soft curve of her stomach."
-                        samantha.say "Do that again."
-                        $ samantha.love += 1
-                    "Eyes up here.":
-                        mike.say "Eyes up here."
-                        samantha.say "Then earn it."
             "I get undressed myself, knowing we won't be needing clothes where we're going."
             call samantha_dick_reactions from _call_samantha_dick_reactions_2
             samantha.say "Just let me know what you want, and I'll do it for you."
@@ -517,8 +479,6 @@ label samantha_fuck_date_intro_male(location="hero"):
             hide samantha
             show samantha bj open
             with fade
-            if samantha.is_visibly_pregnant:
-                "Samantha takes a deep breath and slides down in between my legs, going a little slowly as she carefully tries to keep her baby safe from any harm."
             "She brushes her fingers gently up along my thighs. Her large breasts squish against the mattress."
             "As she looks down over my already hardened shaft, ready to take her mouth."
             "But as she smiles down at it, she then looks up to me, the face she makes showing how her shy side melts away to a look of pure excitement and joy."
@@ -527,8 +487,6 @@ label samantha_fuck_date_intro_male(location="hero"):
             if samantha.flags.engaged:
                 "Her wedding ring glints each time her hands press together around me; it's distracting in exactly the right way."
             "As she squeezes herself, the swollen and filled jugs swish around my cock with a heavier weight."
-            if samantha.is_visibly_pregnant:
-                "From her actions, little trickles of milk roll down, glistening her body and making a wet and sticky mess of my crotch."
         elif res == 1:
             "I'm practically bursting with excitement and anticipation as Sam and I make it back to my place."
             "I mean, can you really blame me?"
@@ -780,8 +738,6 @@ label samantha_fuck_date_intro_male(location="hero"):
             "Sam smiles and begins to take off the rest of her clothes."
             "She drops them in a pile at her feet, one after another."
             show samantha naked
-            if samantha.is_visibly_pregnant:
-                "Her belly rounds beautifully when she straightens; she strokes the curve like it's second nature."
             "And once she's finally naked, she turns her back to me."
     return
 
@@ -835,8 +791,6 @@ label samantha_fuck_date_bj:
             samantha.say "Please fuck my mouth."
         else:
             samantha.say "Oh, I'm so glad to hear that!"
-        if samantha.is_visibly_pregnant and randint(0, 1):
-            "She shifts her weight and props herself comfortably before she starts, one hand absently smoothing her belly."
         elif samantha.flags.engaged and randint(0, 1):
             "When her fingers wrap around me, the wedding ring throws a tiny spark of light; it keeps catching my eye as she moves."
         "Then she sets off to work."
@@ -857,8 +811,6 @@ label samantha_fuck_date_bj:
         "Soon, a simple suckle goes into a full-blown suck as her cheeks collapse in from the vacuum pressure of her blowjob."
         "I groan, lifting my hips a bit as she quickens the pace of her tits, fucking my cock with her wonderful bouncy chest."
         "Soon, her focus becomes so powerful that she hungrily sucks me off as she squishes her body up against my own, her own growls and grunts rising up."
-        if samantha.is_visibly_pregnant and randint(0, 1):
-            "Her tits make a mess of my bed as she fondles herself, not seeming to care about all that she spills out."
         if samantha.flags.engaged and randint(0, 1):
             "The wedding ring flashes again when she strokes faster, a tiny crown of light at the base of my shaft."
         if samantha.piercings.clit.worn and randint(0, 1):
@@ -870,8 +822,6 @@ label samantha_fuck_date_bj:
                 hide samantha
                 show samantha bj open
                 "She pulls her lips away with a smack and smiles, licking them as she pushes herself up."
-                if samantha.is_visibly_pregnant and randint(0, 1):
-                    "She gives her sensitive breasts one last rub as she stands there."
                 if samantha.flags.engaged and randint(0, 1):
                     "She wipes her mouth with the back of her hand; the band catches on her lip for a second and she laughs."
                 samantha.say "Alright then. What do you want to do next? I'm ready to please!"
@@ -915,8 +865,6 @@ label samantha_fuck_date_bj:
                 hide samantha with fade
     else:
         "Sam kneels down in front of me."
-        if samantha.is_visibly_pregnant and randint(0, 1):
-            "She eases to her knees with a little care, one hand braced on the mattress before she reaches for me."
         show samantha bj4 lick rest up smile with fade
         if samantha.is_sex_slave and randint(0, 1):
             samantha.say "Your slave will drink it all."
@@ -979,8 +927,6 @@ label samantha_fuck_date_bj:
                     "She drags a finger through it with a little laugh; the wedding ring gleams at me through the mess."
                 if randint(0, 1):
                     "A warm thread runs past her jaw onto her chest; she smears it into her skin and licks her palm clean."
-                if samantha.is_visibly_pregnant and randint(0, 1):
-                    "Another drop trails lower; she traces it toward the curve of her belly with a soft, wondering smile."
                 "And she doesn't stop smiling the whole time it's happening either!"
                 $ FACIAL = " facial "
             "Cum in her mouth":
@@ -1032,15 +978,6 @@ label samantha_fuck_date_titjob:
     mike.say "I want to keep fucking them wonderful tits of yours."
     samantha.say "Oh, you really like these tits, don't you [hero.name]?"
     samantha.say "Is this what you really want?"
-    if samantha.is_visibly_pregnant and randint(0, 1):
-        if samantha.flags.NPCpregnancy == "ryan":
-            samantha.say "You think Ryan would believe these got bigger just from swims at the pool?"
-        else:
-            samantha.say "Is this why you knocked me up—so you'd have even more to worship?"
-    if samantha.is_visibly_pregnant and not samantha.flags.NPCpregnancy:
-        samantha.say "Is this why you got me pregnant? You just wanted me to get larger and lactate, is that right?"
-        mike.say "Well, it's certainly not something I dislike about knocking you up!"
-        samantha.say "Then, I'm happy to give it to you. Oh, so very happy!"
     if samantha.flags.engaged and randint(0, 1):
         "When she climbs over me, her wedding ring flashes once, cold light, hot promise."
     elif randint(0, 1):
@@ -1049,26 +986,13 @@ label samantha_fuck_date_titjob:
     hide samantha
     show samantha bj
     with fade
-    if samantha.is_visibly_pregnant:
-        "Little squirts of milk rolling down her chest as she settles in, making sure not to harm the baby as she gets up against the bed."
-        if randint(0, 1):
-            "Tiny barbells tug at her nipples; the metal gleams, halos of milk beading where the jewelry presses her soft skin."
-        "She slides her hands over to the sides of her wondrous mounds, squeezing the soft and supple flesh, wincing slightly as those sore and swollen mounds are played with, and lining up both sides to wrap around my hardened pole."
-        "Her breasts are warm and soft and nearly envelope my entire shaft, but they feel so wonderful having become so heavy with mother's milk."
-        "She shifts and rolls those beauties with her fingers, groping herself in the process, spreading the staining milk over her body as she lets her skin slide up and down along my own."
-    else:
-        "She slides her hands over to the sides of her wondrous mounds, squeezing the soft and supple flesh, and lining up both sides to wrap around my hardened pole."
-        "The pressure of the weighted breasts only add to my pleasure, and they nearly envelope my whole cock, but she keeps the head poking out, perhaps as a tease."
-        if randint(0, 1):
-            "She flicks her tongue over my tip; the little stud clicks faintly against me before she traps my shaft between her breasts again."
-        "She shifts and rolls those beauties with her fingers, groping herself in the process."
+    "She slides her hands over to the sides of her wondrous mounds, squeezing the soft and supple flesh, and lining up both sides to wrap around my hardened pole."
+    "The pressure of the weighted breasts only add to my pleasure, and they nearly envelope my whole cock, but she keeps the head poking out, perhaps as a tease."
+    if randint(0, 1):
+        "She flicks her tongue over my tip; the little stud clicks faintly against me before she traps my shaft between her breasts again."
+    "She shifts and rolls those beauties with her fingers, groping herself in the process."
     if samantha.piercings.clit.worn and randint(0, 1):
         "When she adjusts her knees, a tiny flash of metal between her folds betrays a secret piercing I’ve only barely seen."
-    elif samantha.is_visibly_pregnant and randint(0, 1):
-        if samantha.flags.NPCpregnancy == "ryan":
-            samantha.say "Gentle… I still want to feel everything."
-        else:
-            samantha.say "Easy… remember—our baby’s listening."
     samantha.say "You feel so wonderful, [hero.name]. I'm so happy I get to please you with these!"
     menu:
         "Don't stop her":
@@ -1085,8 +1009,6 @@ label samantha_fuck_date_titjob:
             if randint(0, 1):
                 if samantha.flags.engaged:
                     "She swipes a streak from her cheek with her wedding ring hand; the band smears a shining line across her skin."
-                if samantha.is_visibly_pregnant and randint(0, 1) and samantha.piercings.nipples.worn:
-                    "White on white—my spend and her milk gleam together over the metal at her nipples."
             elif randint(0, 1) and samantha.piercings.tongue:
                 "Her tongue stud peeks as she tastes me off her lip, the little bead tapping her teeth."
             "She gasps, then she smiles, and she pulls away."
@@ -1119,8 +1041,6 @@ label samantha_fuck_date_cunnilingus_intro:
     show samantha naked happy with dissolve
     if samantha.flags.engaged and randint(0, 1) and samantha.piercings.nipples.worn:
         "When she tosses her top aside, her nipples piercings catches the lamp—little starbursts dance over the wall."
-    elif samantha.is_visibly_pregnant and randint(0, 1):
-        "Her belly rises and falls when she breathes in; she strokes it once, an unconscious, tender habit."
     elif randint(0, 1) and samantha.piercings.navel.worn:
         "As she steps out of her skirt, a tiny sparkle at her navel glints at me before she climbs onto the bed."
     "Before too long, we're both naked and my eyes are fixed on the shape of her body."
@@ -1216,8 +1136,6 @@ label samantha_fuck_date_cunnilingus:
             "Now my tongue isn't just licking at her pussy like it was before."
             if samantha.piercings.clit.worn and randint(0, 1):
                 "A cool kiss of metal greets my tongue—her hood piercing answers every flick with a tiny pulse of pressure."
-            elif samantha.is_visibly_pregnant and randint(0, 1):
-                "I keep my shoulders snug between her knees so nothing presses her belly; she exhales a grateful, shivery yes."
             show samantha cunnilingus down
             "Instead I'm lapping away, doing all I can to touch as much of her as possible."
             show samantha cunnilingus up
@@ -1262,8 +1180,6 @@ label samantha_fuck_date_cunnilingus:
             "But she starts to buck and twitch under the attention of my tongue."
             show samantha cunnilingus down
             "At first I just take hold of her ass to keep from being smothered by her pussy!"
-            if samantha.is_visibly_pregnant and randint(0, 1):
-                "I angle my wrist carefully, keeping her hips cushioned so we don't jostle her belly."
             show samantha cunnilingus up
             show samantha cunnilingus fingerass
             "So that's why I take a finger and stick it straight up there."
@@ -1371,8 +1287,6 @@ label samantha_fuck_date_cunnilingus:
             "But it's not long before I give in to temptation and stick a finger up there too."
             if samantha.flags.engaged and randint(0, 1):
                 "She laces her fingers with mine; the wedding ring presses into my knuckle while she rides the toy."
-            if samantha.is_visibly_pregnant and randint(0, 1):
-                "I keep my palm under her hip so she can move without straining; she melts into the support."
             samantha.say "Whoa..."
             samantha.say "What's that..."
             samantha.say "Mmm...oh man..."
@@ -1411,9 +1325,7 @@ label samantha_date_fuck_blindfold:
     samantha.say "You want to blind me, [hero.name]?"
     mike.say "It'll heighten your pleasure and I'll get to do whatever I want without you seeing what it is."
     if samantha.sub >= 10:
-        if samantha.is_visibly_pregnant and randint(0, 1):
-            "I steady her by the hips so nothing presses her belly."
-        elif samantha.piercings.nipples.worn and randint(0, 1):
+        if samantha.piercings.nipples.worn and randint(0, 1):
             "When I reach around, the cloth brushes her barbells and she shivers."
         samantha.say "Oh, oh my..."
         "I reach around her head, putting the cloth over her face. She sighs as I tie it around the back of her head."
@@ -1441,8 +1353,6 @@ label samantha_date_fuck_beads:
         if samantha.piercings.clit.worn and randint(0, 1):
             "A tiny flicker between her folds betrays a hood piercing when she parts herself."
         "She pulls them apart, showing off her puckered pink star."
-        if samantha.is_visibly_pregnant and randint(0, 1):
-            "She props a cushion under her hips and nods for me to continue."
         samantha.say "H-here it is, [hero.name]. I hope its not too terrible for you."
         mike.say "Oh, it's perfect."
         "I pour the lube over the beads, making them glisten."
@@ -1460,8 +1370,6 @@ label samantha_date_fuck_beads:
         samantha.say "[hero.name], it's inside., I-"
         "I push the next one up against her hole, larger than the first."
         "She bites her lip and squeals as she feels it forcing its way inside, but after a moment of coaxing, Samantha swallows it up."
-        if samantha.is_visibly_pregnant and randint(0, 1):
-            "I keep my free hand cradling her belly while I feed the next bead home."
         samantha.say "Do... do you like seeing my ass take your beads, [hero.name]?"
         "I answer her by adding in the next one."
         "One after another, larger and larger beads make their way inside her body."
@@ -1493,10 +1401,6 @@ label samantha_fuck_date_doggy(sexperience_min):
     if samantha.flags.engaged and randint(0, 1):
         "Her wedding ring ticks softly on the headboard when she braces."
     samantha.say "I can guess what we're doing now!"
-    if samantha.is_visibly_pregnant:
-        "The way her belly and her tits accent her profile makes the submissive position all the more hot."
-        if samantha.piercings.navel.worn and randint(0, 1):
-            "Her navel jewel glints when she arches."
     if "anal_beads" in hero.inventory or "dildo" in hero.inventory or "blindfold" in hero.inventory:
         menu:
             "Use some toy":
@@ -1517,16 +1421,6 @@ label samantha_fuck_date_doggy(sexperience_min):
     samantha.say "For you, I'll do anything!"
     "She looks over her shoulder with that devoted smile she always has and nods quickly, grabbing the covers in her anticipation."
     "So, I go in, looming over her, my arms wrapping around her body."
-    if samantha.is_visibly_pregnant:
-        "I grab onto her tits, fondling them, squeezing them, letting the milk spill out and roll over my fingers and over her skin."
-        if samantha.piercings.nipples.worn and randint(0, 1):
-            "The nipples piercings press into my palms; milk beads around cool steel."
-        "She gasps, pushing her chest out, her nipples hardening under my palms as I work my way over her."
-        samantha.say "Aah, [hero.name] milk me... I'm so swollen!"
-        "Once I am done with her tits, I slide my sticky and wet hand downward, drying myself off over her smooth and supple skin."
-        "Soon, my palm finds its way over her pregnant body, and I swirl my hand over the mound I had made within her."
-        "New life, created by me!"
-        "The perfect biological achievement a man can accomplish, and within a mother who would do anything for me."
     menu:
         "Fuck her ass" if not BEADS:
             "My cock rests between her asscheeks before I slide the length down between that crack of hers."
@@ -1567,8 +1461,6 @@ label samantha_fuck_date_doggy(sexperience_min):
                 show expression f"samantha doggy cumshot out {FACIAL} {BLINDFOLD} {DILDO}"
                 "Finding myself ready, I pull myself out, but I don't leave her with nothing."
                 "When I release, I shoot off onto her lower back and her butt, making her glisten with my expulsions."
-                if samantha.is_visibly_pregnant:
-                    "After all, I've already conquered her inside, why not mark her outside?"
                 show expression f"samantha doggy nomike asscum bodycum{FACIAL} {BLINDFOLD} {DILDO}"
             $ samantha.flags.anal += 1
         "Fuck her pussy" if not DILDO:
@@ -1607,10 +1499,6 @@ label samantha_fuck_date_doggy(sexperience_min):
                 "Her moan breaks on a soft click of her tongue piercing."
 
             "She lifts her hips against my body, grinding away as if she is in heat herself, and perhaps, in a way we are."
-            if samantha.is_visibly_pregnant:
-                "Which, for a pregnant woman, would make her quite the insatiable monster!"
-            if samantha.is_visibly_pregnant and randint(0, 1):
-                "I keep one palm under her belly when she rocks back; she melts into the support."
             "It has been a long time coming, and I'm glad I get to have her."
             call cum_reaction (samantha, 'vaginal', sexperience_min) from _call_cum_reaction_152
             if _return == "vaginal_condom":
@@ -1638,8 +1526,6 @@ label samantha_fuck_date_doggy(sexperience_min):
                     "Her cheek is still glossy from earlier; the new streaks make a wicked contrast with the shine on her face."
                 elif samantha.flags.engaged and randint(0, 1):
                     "She wipes a line with the back of her hand; the wedding ring smears a pearly trail over her skin."
-                if samantha.is_visibly_pregnant:
-                    "After all, I've already conquered her inside, why not mark her outside?"
                 show expression f"samantha doggy nomike asscum bodycum {FACIAL} {BEADS} {BLINDFOLD}"
             elif _return == "vaginal_inside_pill":
                 "With a few more thrusts, I soon find myself slamming up into her."
@@ -1664,9 +1550,7 @@ label samantha_fuck_date_doggy(sexperience_min):
                 samantha.say "Oh, [hero.name], please!"
                 show expression f"samantha doggy cumshot {FACIAL} {BEADS} {BLINDFOLD}"
                 "With a gasp, I soon find myself releasing, spurting out into her as I hold her down."
-                if samantha.is_visibly_pregnant and not samantha.flags.NPCpregnancy == "ryan" and randint(0, 1):
-                    "I press my palm to her belly for a heartbeat; ours."
-                elif samantha.flags.NPCpregnancy == "ryan" and randint(0, 1):
+                if samantha.flags.NPCpregnancy == "ryan" and randint(0, 1):
                     "She breathes, 'steady,' and I keep her hips cradled until the tremor fades."
                 "She's mine now, and she smiles, her cheek against the bed, drooling."
                 "I pull out, her hole filled with my creamy goodness as I look over my conquest with a satisfied grin."
@@ -1720,8 +1604,6 @@ label samantha_fuck_date_reverse_cowgirl(sexperience_min):
         "When she leans forward to guide me, her navel jewel gives a wicked gleam."
     elif FACIAL and randint(0, 1):
         "A glossy sheen still clings to her cheek; she drags her tongue over her lip and grins."
-    elif samantha.is_visibly_pregnant and randint(0, 1):
-        "Her belly rises and falls; she places my hand where she wants support before she sits deeper."
     elif samantha.piercings.tongue.worn and randint(0, 1):
         "She steals a quick lick along my tip; the stud clicks softly, then she settles back onto me."
     if samantha.is_sex_slave and randint(0, 1):
@@ -1742,8 +1624,6 @@ label samantha_fuck_date_reverse_cowgirl(sexperience_min):
             show samantha reversecowgirl anal with fade
             "Caught off-guard, there's nothing that Sam can do to stop me."
             "Before she even knows what's happening, I have my cock in her ass."
-            if samantha.is_visibly_pregnant and randint(0, 1):
-                "I keep one hand braced beneath her belly while I guide her down, steady and sure."
             "Her muscles instinctively tense, trying to keep me out."
             "But I have gravity and her own weight on my side."
             "Which means that she begins to sink down and onto me."
@@ -1901,8 +1781,6 @@ label samantha_fuck_date_reverse_cowgirl(sexperience_min):
             show samantha reverse vaginal up smile
             samantha.say "That's so good..."
             samantha.say "Keep doing that!"
-            if samantha.is_visibly_pregnant and randint(0, 1):
-                "I guide her hips to keep the bounce smooth; she melts into the rhythm and pushes harder."
             "It's not like I need the encouragement!"
             show samantha reverse vaginal up
             pause 0.2
@@ -2052,8 +1930,6 @@ label samantha_fuck_date_cowgirl(sexperience_min):
         "When she leans forward, the jewel in her navel gives a wicked gleam."
     elif FACIAL and randint(0, 1):
         "A glossy sheen still clings to her cheek; she licks a stripe from her lip and smirks."
-    if samantha.is_visibly_pregnant and randint(0, 1):
-        "Her belly rises and falls; she sets my hands where she wants support before she sinks down."
     if samantha.is_sex_slave and randint(0, 1):
         samantha.say "Your slave will ride however you command."
     elif samantha.sub >= 70 and randint(0, 1):
@@ -2088,8 +1964,6 @@ label samantha_fuck_date_cowgirl(sexperience_min):
                 mike.say "Sure thing, Sam!"
             mike.say "Whatever you say."
             "Sam nods, and then closes her eyes."
-            if samantha.is_visibly_pregnant and randint(0, 1):
-                "I steady her with one palm beneath her belly while she settles."
             "That done, she begins to push my cock between her buttocks."
             "Not only do I feel everything that follows..."
             "I'm also treated to the expression on Sam's face."
@@ -2277,8 +2151,6 @@ label samantha_fuck_date_cowgirl(sexperience_min):
             samantha.say "You haven't seen anything yet!"
             "Without waiting a second longer, Sam pushes herself down."
             show samantha cowgirl down vaginal
-            if samantha.is_visibly_pregnant and randint(0, 1):
-                "I steady her hips so the motion stays smooth; she melts into the support."
             elif samantha.piercings.navel.worn and randint(0, 1):
                 "Her navel jewel glints as she swallows me inch by inch."
             elif FACIAL and randint(0, 1):
@@ -2601,8 +2473,6 @@ label samantha_fuck_date_missionary(sexperience_min):
         "When I push myself into Sam, it's slowly and gently, so that I can feel every moment of the experience."
         if samantha.piercings.clit.worn and randint(0, 1):
             "A cool kiss of metal at her hood greets my first slide; she shivers and clutches my back."
-        elif samantha.is_visibly_pregnant and randint(0, 1):
-            "I cradle the curve of her belly with my palm so the motion stays smooth; she exhales a grateful yes."
         "Looking down on her as I do so, I can see the sensations spreading through her entire body at the same time."
         "My thrusts and motions are not translated into painful or taxing pangs, but rather they seem to create sympathetic ripples in her."
         "Sam moves beneath me in harmony, enjoying every moment of my presence inside of her."
@@ -2685,8 +2555,6 @@ label samantha_fuck_date_missionary(sexperience_min):
             "A second later, I lose myself in her."
             $ samantha.impregnate()
             show samantha missionary cumeyes inside with vpunch
-            if samantha.is_visibly_pregnant and randint(0, 1):
-                "I press my palm to the curve of her belly for a heartbeat; she smiles through a gasp."
             samantha.say "OH FUCK!"
             samantha.say "OH YES...FUCK ME...PLEASE!!!"
             with vpunch
@@ -3037,8 +2905,6 @@ label samantha_fuck_flat_doggy(sexperience_min):
         "This means my already stiffening cock is shoved between her buttocks."
         if samantha.flags.engaged and randint(0, 1):
             "Her wedding ring ticks the sheet when she braces under me."
-        elif samantha.is_visibly_pregnant and randint(0, 1):
-            "I cradle her belly with one palm so the slide stays smooth; she exhales a grateful yes."
         elif FACIAL and randint(0, 1):
             "A glossy sheen still clings to her cheek; she grins when I press close."
         "It's not exactly the most romantic methods of choosing where to put it."
@@ -3158,8 +3024,6 @@ label samantha_fuck_flat_doggy(sexperience_min):
         "I watch spellbound as her ass rises up and wiggles right in front of me."
         if samantha.flags.engaged and randint(0, 1):
             "Her wedding ring flashes when she plants her hand for balance."
-        elif samantha.is_visibly_pregnant and randint(0, 1):
-            "She pats her belly and smiles; I nod and steady her hips as I climb behind."
         samantha.say "Well..."
         samantha.say "If you like it so much..."
         samantha.say "Why don't you come and get it?"
@@ -3231,8 +3095,6 @@ label samantha_fuck_flat_doggy(sexperience_min):
                 "My cock doesn't go all the way in, not at first."
                 "Instead it sinks into her, inch by inch."
                 "And every moment that it's happening is better than the last."
-                if samantha.is_visibly_pregnant and randint(0, 1):
-                    "I keep one hand under her belly so the rhythm stays smooth; she melts into the support."
                 samantha.say "Mmm..."
                 samantha.say "Don't...don't hold back..."
                 samantha.say "I...I want it...hard!"
@@ -3470,9 +3332,6 @@ label samantha_date_fuck_beads_out:
     "It's time to take the beads out, I think, so I grab hold and prepare for extraction."
     if samantha.flags.engaged and randint(0, 1):
         "Her wedding ring flashes as she clutches the sheet, the band biting into the fabric."
-    elif samantha.is_visibly_pregnant and randint(0, 1):
-        "I keep one palm under her belly so the angle stays gentle while I work."
-
     menu:
         "Rough":
             "With a tug, I yank the beads back."
@@ -3537,9 +3396,7 @@ label samantha_date_fuck_dildo:
     "Go ahead, put it in... keep it in, but first..."
     "I flip the switch, and the buzzing fills the air of my room."
     "Immediately, Samantha squirms around under the shock of the intense stimulation."
-    if samantha.is_visibly_pregnant and randint(0, 1):
-        "I keep my palm under her belly while she rides the pulse, breath catching."
-    elif samantha.flags.engaged and randint(0, 1):
+    if samantha.flags.engaged and randint(0, 1):
         "Her wedding ring flashes as her fingers clutch the sheets."
     mike.say "And you're going to keep it inside you until I tell you to pull it out. Got it."
     samantha.say "Y... yes, [hero.name]!"
@@ -3574,9 +3431,7 @@ label samantha_sleep_date_fuck(location="hero"):
         scene bg bedroom1
         if not samantha.get_counters('pregnant') > 6 or samantha.flags.tellpregnant:
             show samantha naked
-            if samantha.is_visibly_pregnant and randint(0, 1):
-                "She rubs the curve of her belly, then tugs me close to feel the warmth together."
-            elif FACIAL and randint(0, 1):
+            if FACIAL and randint(0, 1):
                 "A soft sheen still glazes her cheek; she kisses my chin and giggles."
             elif samantha.flags.engaged and randint(0, 1):
                 "Her wedding ring shimmers when she hooks a finger in my waistband."
@@ -3773,8 +3628,6 @@ label samantha_fuck_bathroom:
     with fade
     "She turns her back to me then, pushing her ass against me."
     "I don't need to be told what she wants me to do next."
-    if samantha.is_visibly_pregnant and randint(0, 1):
-        "I slide one hand beneath the soft swell of her belly to steady her as she sets her feet."
     "Needless to say, I'm already hard."
     "And I want the exact same thing..."
     menu:
@@ -3863,8 +3716,6 @@ label samantha_fuck_bathroom:
             samantha.say "Oh, [hero.name]..."
             samantha.say "That's what I want!"
             samantha.say "I want you inside of me..."
-            if samantha.is_visibly_pregnant and randint(0, 1):
-                "I steady her hips and belly so the rhythm stays smooth in the spray."
             "It's not like I needed the encouragement to keep on going."
             "But just knowing that Sam want this so badly..."
             "That makes it all the more exciting as I begin to push into her."
@@ -3923,8 +3774,6 @@ label samantha_fuck_bathroom:
                     "And then I shoot my load over her buttocks and onto her back."
                     if randint(0, 1):
                         "A hot stripe arcs around her hip onto her belly; she rubs it into the skin and sucks it from her fingers like it's a secret treat."
-                        if samantha.is_visibly_pregnant and randint(0, 1):
-                            "Watching it warm the curve of her belly makes my chest ache in a way I can't name."
                     with hpunch
                     "Sam gasps the whole time, still shuddering from her climax."
                     "And then it's all over, and we're both gasping with exhaustion."
@@ -3950,8 +3799,6 @@ label samantha_fuck_date_beach:
         if samantha.flags.engaged and randint(0, 1):
             "When she squeezes my hand, her wedding ring throws a tiny star across the sand."
         "But I can't stop staring at Sam, beaming with happiness at the thought that she's all mine."
-        if samantha.is_visibly_pregnant and randint(0, 1):
-            "She strokes the curve of her belly when the breeze lifts, smiling like the sun is only for us."
         elif samantha.piercings.navel.worn and randint(0, 1):
             "Her navel jewel glimmers each time the light dances on the waves."
         "And she seems to feel the same way too, holding my hand and returning my smiles the whole time."
@@ -3999,8 +3846,6 @@ label samantha_fuck_date_beach:
         hide samantha
         show beach cream samantha nomc
         with fade
-        if samantha.is_visibly_pregnant and randint(0, 1):
-            "She lies carefully, one hand caressing her belly as the evening air cools."
         "Her belly is almost flat to the ground."
         "But her makes sure to raise her exquisite ass in a provocative manner too."
         "Sam looks back over her shoulder at me, a wicked gleam in her eyes."
@@ -4081,8 +3926,6 @@ label samantha_fuck_date_beach:
                 show samantha flat doggy cumshot with hpunch
                 if randint(0, 1):
                     "A stripe curls around her hip and kisses her lower belly; she rubs it into her skin with two fingers and sucks them clean."
-                    if samantha.is_visibly_pregnant and randint(0, 1):
-                        "Watching it warm the soft curve of her belly stirs something fierce and tender in my chest."
                 "She moans, digging deeper into the sand than ever before."
                 with hpunch
                 "And I know from the way she's shuddering that she's cumming too."
@@ -4120,8 +3963,6 @@ label samantha_fuck_date_beach:
         show samantha happy at center, zoomAt(1.5, (640, 1100)) with fade
         "We throw towels down on the sand and settle on them."
         "Sam lies back, soaking up the sun without a care in the world."
-        if samantha.is_visibly_pregnant and randint(0, 1):
-            "She rests a hand on her belly and hums, eyes closed, peaceful as the tide."
         "And I lie next to her, trying to hide the fact she's making me hard as a rock!"
         "As time passes, I'm beginning to think that I can handle it."
         show samantha at center, zoomAt(1.5, (640, 1100)), top_to_bottom

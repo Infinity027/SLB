@@ -326,14 +326,9 @@ label shiori_fuck_date_male(location="hero"):
     shiori.say "Oh please...please don't!"
     "She's almost to the bed now."
     shiori.say "It's so big...there won't be room!"
-    if not shiori.is_visibly_pregnant:
-        "Shiori bumps into the bed and pantomimes falling over and scrambling onto it."
-        shiori.say "Please...please...I'll be good - just don't put it inside of me!"
-        "She's on all fours now, her naked ass wriggling as she clambers across the bed, being sure not to go too fast."
-    else:
-        "Shiori bumps into the bed, her rounded belly making her movements clumsy and causing her to collapse onto it."
-        shiori.say "Please...please...I'll be good - just don't put it inside of me!"
-        "She's on all fours now, her naked ass wriggling and huge belly keeping her from moving at more than a crawl."
+    "Shiori bumps into the bed, her rounded belly making her movements clumsy and causing her to collapse onto it."
+    shiori.say "Please...please...I'll be good - just don't put it inside of me!"
+    "She's on all fours now, her naked ass wriggling and huge belly keeping her from moving at more than a crawl."
     mike.say "It's too late for that now, Shiori!"
     mike.say "You've been a very bad girl - the worst of all!"
     "Shiori yelps and looks back over her shoulder as I begin to climb onto the bed and crawl after her."
@@ -969,12 +964,8 @@ label shiori_fuck_date_reverse_cowgirl(sexperience_min):
                 "My orgasm sends me even deeper into Shiori, pushing her into her own, so that she writhes in my lap."
                 hide shiori
                 show shiori reverse milk pussy nodick
-
-
                 with vpunch
                 $ shiori.love += 3
-                if not shiori.flags.pill and not shiori.is_visibly_pregnant:
-                    $ shiori.impregnate()
                 "When I finally pull out she let a faint whimper escape her throat as my cum seep out of her pussy."
                 "The milk from her breasts is almost squirting now as she cums, making us both slick with pale white fluids."
 

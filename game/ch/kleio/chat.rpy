@@ -47,7 +47,6 @@ label kleio_desire_4_male:
     return
 
 label kleio_desire_5_male:
-
     if kleio.love < 180:
         kleio.say "What do you say we go somewhere quiet?"
     else:
@@ -150,4 +149,3 @@ label kleio_bad_sweet_talk_male:
     hide kleio
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

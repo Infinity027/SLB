@@ -1180,22 +1180,9 @@ label anna_kleio_male_ending:
     "And before she can put on a show of being nonchalant and cocky, I catch the true emotions in them."
     show kleio happy
     "She's every bit as excited as Anna, just that much better at hiding it."
-    if anna.is_visibly_pregnant and kleio.is_visibly_pregnant:
-        "Plus there's the fact that everyone's staring at Anna and Kleio's swollen bellies!"
-        "Their dresses can't hope to hide the fact that they're so close to giving birth."
-        "But they can all think what they like, as the three of us can't wait to meet the babies."
-    elif anna.is_visibly_pregnant:
-        "Plus there's the fact that everyone's staring at Anna's swollen belly!"
-        "Her dress can't hope to hide the fact that she's so close to giving birth."
-        "But they can all think what they like, as the three of us can't wait to meet the baby."
-    elif kleio.is_visibly_pregnant:
-        "Plus there's the fact that everyone's staring at Kleio's swollen belly!"
-        "Her dress can't hope to hide the fact that she's so close to giving birth."
-        "But they can all think what they like, as the three of us can't wait to meet the baby."
-    else:
-        "But if their moods and demeanour don't match, their dresses certainly do."
-        "Despite the differences in their figures, Anna and Kleio chose to wear the exact same dress."
-        "I'm not sure if anyone else gets the joke, but it seems to amuse them greatly."
+    "But if their moods and demeanour don't match, their dresses certainly do."
+    "Despite the differences in their figures, Anna and Kleio chose to wear the exact same dress."
+    "I'm not sure if anyone else gets the joke, but it seems to amuse them greatly."
     show kleio normal
     show fx question at right5
     kleio.say "What the hell are you staring at, Loverboy?"
@@ -1351,32 +1338,7 @@ label anna_kleio_male_ending:
     anna.say "Aww, you old romantic, you!"
     anna.say "It is neat there being three of us."
     anna.say "As it means you're never lonely, or bored either!"
-    if anna.is_visibly_pregnant and kleio.is_visibly_pregnant:
-        anna.say "And there'll be five of us soon too!"
-        show kleio annoyed
-        kleio.say "Urgh...don't remind me."
-        kleio.say "I feel like a fucking whale right now!"
-        show anna normal
-        anna.say "Don't worry, Kleio."
-        anna.say "We can put [hero.name] on nappy duty as soon as Tommy and Courtney are born!"
-        kleio.say "Hell yeah."
-        kleio.say "He was the one that got us both pregnant in the first place!"
-    elif anna.is_visibly_pregnant:
-        anna.say "And there'll be four of us soon too!"
-        kleio.say "Bags not having to be there for nappy changing duty!"
-        show anna angry at left5, hshake
-        anna.say "KLEIO!"
-        kleio.say "Joking, Anna."
-        kleio.say "Don't worry - I'll be there to help out with Tommy."
-    elif kleio.is_visibly_pregnant:
-        kleio.say "And there'll be four of us soon too."
-        show anna annoyed
-        anna.say "Eww - stinky nappies!"
-        show kleio angry at right5, hshake
-        kleio.say "ANNA!"
-        show anna normal
-        anna.say "Sorry, Kleio."
-        anna.say "Don't worry - I'll be there to help out with Courtney."
+    
     scene bg black with dissolve
     pause 0.2
     show picnic with timelaps
@@ -2158,63 +2120,14 @@ label anna_kleio_sasha_male_ending:
     sasha.say "We took off pretty much straight after we got married, and we haven't stopped to catch our breath since."
     kleio.say "We're living the rock n' roll lifestyle for real now!"
     sasha.say "Things will have to change once we're back from the tour though."
-    if anna.is_visibly_pregnant and kleio.is_visibly_pregnant and sasha.is_visibly_pregnant:
-        sasha.say "[hero.name] and I are still technically living with [bree.name]."
-        sasha.say "And I don't know if we need to all move in together for this relationship to work."
-        kleio.say "Loverboy damn well better be there when we get back from this tour!"
-        kleio.say "He's the one that got all of us knocked-up in the first place!"
-        anna.say "Yeah - Tommy, Dahlia and Courtney all need their Daddy around!"
-        sasha.say "Oh, don't you girls worry about that."
-        sasha.say "[hero.name]'s outnumbered now - six-to-one!"
-    elif anna.is_visibly_pregnant and sasha.is_visibly_pregnant:
-        sasha.say "[hero.name] and I are still technically living with [bree.name]."
-        sasha.say "And I don't know if we need to all move in together for this relationship to work."
-        kleio.say "Whoa, hold on there, sister!"
-        kleio.say "I don't know if I wanna move in with a couple of pregnoids!"
-        anna.say "KLEIO!"
-        sasha.say "Don't listen to her, Anna, she's just putting it on."
-        sasha.say "Dahlia and Tommy love Auntie Kleio, and she loves them too!"
-    elif kleio.is_visibly_pregnant and sasha.is_visibly_pregnant:
-        sasha.say "[hero.name] and I are still technically living with [bree.name]."
-        sasha.say "And I don't know if we need to all move in together for this relationship to work."
-        anna.say "Ooh, I want to move in with you guys - and Kleio too!"
-        anna.say "Dahlia and Courtney need to have their Auntie Anna on call!"
-        kleio.say "Geez..."
-        kleio.say "I don't know if I do!"
-        sasha.say "Trust me, Kleio - it's easier to just nod and smile..."
-    elif anna.is_visibly_pregnant and kleio.is_visibly_pregnant:
-        sasha.say "[hero.name] and I are still technically living with [bree.name]."
-        sasha.say "And I don't know if we need to all move in together for this relationship to work."
-        kleio.say "You damn well better be moving in with us - you and [hero.name]!"
-        anna.say "Yeah - Tommy and Courtney are going to need their Daddy around."
-        anna.say "And their auntie Sasha too!"
-        sasha.say "Geez, don't I even get a say in the matter!"
-    elif sasha.is_visibly_pregnant:
-        sasha.say "[hero.name] and I are still technically living with [bree.name]."
-        sasha.say "And I don't know if we need to all move in together for this relationship to work."
-        kleio.say "Bags not having to be there for nappy changing duty!"
-        anna.say "Aw, I'll help, Sasha - little Dahlia's SO CUTE!"
-    elif anna.is_visibly_pregnant:
-        sasha.say "[hero.name] and I are still technically living with [bree.name]."
-        sasha.say "And I don't know if we need to all move in together for this relationship to work."
-        kleio.say "Bags not having to be there for nappy changing duty!"
-        anna.say "KLEIO!"
-        sasha.say "Don't listen to her, Anna - I'll be there to help out with Tommy."
-    elif kleio.is_visibly_pregnant:
-        sasha.say "[hero.name] and I are still technically living with [bree.name]."
-        sasha.say "And I don't know if we need to all move in together for this relationship to work."
-        anna.say "Eww, it's bad enough being on a bus with all those stinky diapers!"
-        kleio.say "ANNA - I thought we were supposed to be married!"
-        sasha.say "Don't worry, Kleio - I'll be there to help out with Courtney."
-    else:
-        sasha.say "[hero.name] and I are still technically living with [bree.name]."
-        sasha.say "And I don't know if we need to all move in together for this relationship to work."
-        anna.say "If [bree.name] moves out, I call first dibs on her room!"
-        sasha.say "Anna!"
-        anna.say "What?!?"
-        anna.say "It's a nice room, I've seen it!"
-        kleio.say "And if we live together, we can turn it into a party house too!"
-        sasha.say "Oh, grow up, you two!"
+    sasha.say "[hero.name] and I are still technically living with [bree.name]."
+    sasha.say "And I don't know if we need to all move in together for this relationship to work."
+    anna.say "If [bree.name] moves out, I call first dibs on her room!"
+    sasha.say "Anna!"
+    anna.say "What?!?"
+    anna.say "It's a nice room, I've seen it!"
+    kleio.say "And if we live together, we can turn it into a party house too!"
+    sasha.say "Oh, grow up, you two!"
     sasha.say "I guess a whole lot depends on whether or not the band takes off."
     sasha.say "That way we could afford to quit our jobs and become full-time musicians."
     kleio.say "That and hire a team of goddamn nannies!"

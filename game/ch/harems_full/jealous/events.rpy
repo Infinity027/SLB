@@ -1460,17 +1460,9 @@ label audrey_sasha_male_ending:
     "And she's walking with that same confidence too."
     "Almost like she's challenging everyone that makes eye-contact."
     "Even her wedding dress can't hide her true nature as a trouble-maker!"
-    if audrey.is_visibly_pregnant:
-        "And that's made all the more true thanks to her swelling belly."
-        "Audrey makes no effort to hide the fact she's pregnant."
-        "Turning that into a challenge for the onlookers too."
     "Sasha is another story entirely, looking like a goth-metal princess!"
     "Every move she makes reminds me of the times I've seen her on stage."
     "And she swaggers like this is just another gig with an audience to entertain."
-    if sasha.is_visibly_pregnant:
-        "I almost have to remind myself that she's pregnant."
-        "But then I see Sasha's hand resting on her belly."
-        "And I smile as I remember all the fun we had getting her there!"
     "The smile on my face must be like a mile wide."
     "Because by the time they make it to the alter, Audrey and Sasha are sniggering at me."
     audrey.say "Wow, [hero.name]..."
@@ -1624,22 +1616,13 @@ label audrey_sasha_male_ending:
     audrey.say "Stop it, Sasha!"
     show audrey normal
     audrey.say "Stop saying things I have to agree with!"
-    if (audrey.is_visibly_pregnant or audrey.flags.mikeBabies >= 1) or (sasha.is_visibly_pregnant or sasha.flags.mikeBabies >= 1):
-        if audrey.is_visibly_pregnant or audrey.flags.mikeBabies >= 1:
-            audrey.say "Well, I guess [hero.name] is a good father."
-            audrey.say "And little Tommy adores his daddy."
-        if sasha.is_visibly_pregnant or sasha.flags.mikeBabies >= 1:
-            sasha.say "I used to think that boys were easier to raise than girls."
-            show sasha happy
-            sasha.say "But wow, did Billy cure me of that one pretty quickly!"
-    else:
-        audrey.say "Sasha..."
-        audrey.say "Do you..."
-        show sasha normal
-        sasha.say "Do I what, Audrey?"
-        audrey.say "Do you kind of think about having kids with him?"
-        sasha.say "Well you obviously do!"
-        sasha.say "But yeah, I do all the time."
+    audrey.say "Sasha..."
+    audrey.say "Do you..."
+    show sasha normal
+    sasha.say "Do I what, Audrey?"
+    audrey.say "Do you kind of think about having kids with him?"
+    sasha.say "Well you obviously do!"
+    sasha.say "But yeah, I do all the time."
     audrey.say "This is crazy, Sasha."
     show audrey normal
     audrey.say "It sounds like we're living in a fairy-tale!"

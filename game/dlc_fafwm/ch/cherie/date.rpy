@@ -14,29 +14,16 @@ label cherie_date_buy_drink:
     mike.say "Hey, Cherie..."
     mike.say "I'm going to grab another drink."
     mike.say "You want me to get one for you too?"
-    if cherie.is_visibly_pregnant:
-        "Cherie looks at me with a scandalised expression."
-        if cherie.sub >= 66:
-            "Cherie puts her hands on her belly, looking sad all of a sudden."
-            cherie.say "I don't want to sound ungrateful, [hero.name]..."
-            cherie.say "But aren't you forgetting something?"
-        else:
-            "And at the same time she places her hands on her belly in a defensive manner."
-            cherie.say "[hero.name], you know that I'm pregnant!"
-            cherie.say "How could you even suggest such a thing?!?"
-        mike.say "Oh yeah...my bad!"
-        $ hero.cancel_activity()
+    "Cherie holds up her empty glass, shaking it so that the ice inside tinkles around."
+    if cherie.sub >= 66:
+        cherie.say "If you think I could handle another one, [hero.name]?"
+        cherie.say "But only if you approve."
     else:
-        "Cherie holds up her empty glass, shaking it so that the ice inside tinkles around."
-        if cherie.sub >= 66:
-            cherie.say "If you think I could handle another one, [hero.name]?"
-            cherie.say "But only if you approve."
-        else:
-            cherie.say "Oh, how thoughtful of you!"
-            cherie.say "I will have the same again, please."
-            cherie.say "And don't be too shy with the measures either!"
-        $ game.active_date.score += 5
-        $ cherie.set_flag("drinks", 1, "day", mod="+")
+        cherie.say "Oh, how thoughtful of you!"
+        cherie.say "I will have the same again, please."
+        cherie.say "And don't be too shy with the measures either!"
+    $ game.active_date.score += 5
+    $ cherie.set_flag("drinks", 1, "day", mod="+")
     return
 
 label cherie_date_play_darts:
@@ -66,30 +53,16 @@ label cherie_date_buy_a_round:
     "Knocking back the last of my drink, I slam the empty glass down and stand up."
     mike.say "Okay, I think it's my round."
     mike.say "Are you up for one too, Cherie?"
-    if cherie.is_visibly_pregnant:
-        if cherie.sub >= 66:
-            show cherie sad
-            "Cherie puts her hands on her belly, looking sad all of a sudden."
-            cherie.say "I don't want to sound ungrateful, [hero.name]..."
-            cherie.say "But aren't you forgetting something?"
-        else:
-            "Cherie looks at me with a scandalised expression."
-            "And at the same time she places her hands on her belly in a defensive manner."
-            cherie.say "[hero.name], you know that I'm pregnant!"
-            cherie.say "How could you even suggest such a thing?!?"
-        mike.say "Oh yeah...my bad!"
-        $ hero.cancel_activity()
+    "Cherie holds up her empty glass, shaking it so that the ice inside tinkles around."
+    if cherie.sub >= 66:
+        cherie.say "If you think I could handle another one, [hero.name]?"
+        cherie.say "But only if you approve."
     else:
-        "Cherie holds up her empty glass, shaking it so that the ice inside tinkles around."
-        if cherie.sub >= 66:
-            cherie.say "If you think I could handle another one, [hero.name]?"
-            cherie.say "But only if you approve."
-        else:
-            cherie.say "Oh, how thoughtful of you!"
-            cherie.say "I will have the same again, please."
-            cherie.say "And don't be too shy with the measures either!"
-        $ game.active_date.score += 5
-        $ cherie.set_flag("drinks", 1, "day", mod="+")
+        cherie.say "Oh, how thoughtful of you!"
+        cherie.say "I will have the same again, please."
+        cherie.say "And don't be too shy with the measures either!"
+    $ game.active_date.score += 5
+    $ cherie.set_flag("drinks", 1, "day", mod="+")
     return
 
 label cherie_dance_with:

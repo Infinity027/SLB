@@ -117,19 +117,10 @@ label camila_date_eat_a_burger:
     return
 
 label camila_date_buy_drink:
-    if camila.is_visibly_pregnant:
-        show camila angry
-        $ camila.love -= 10
-        camila.say "Don't you think this kid of ours has it hard enough?"
-        camila.say "They've already got a mom with a dangerous job."
-        camila.say "The last thing they need is for me to soak them in booze too!"
-        $ hero.cancel_activity()
-        hide camila
-    else:
-        camila.say "Ah, thanks, [hero.name]."
-        camila.say "I needed that!"
-        mike.say "No kidding, Camila."
-        mike.say "You almost drank it down in one!"
+    camila.say "Ah, thanks, [hero.name]."
+    camila.say "I needed that!"
+    mike.say "No kidding, Camila."
+    mike.say "You almost drank it down in one!"
     return
 
 label camila_date_play_darts:
@@ -145,14 +136,7 @@ label camila_date_pub_play_pool:
     return
 
 label camila_date_buy_a_round:
-    if camila.is_visibly_pregnant:
-        show camila angry
-        $ camila.love -= 10
-        camila.say "Don't you think this kid of ours has it hard enough?"
-        camila.say "They've already got a mom with a dangerous job."
-        camila.say "The last thing they need is for me to soak them in booze too!"
-        $ hero.cancel_activity()
-    elif (hero.charm >= 60 - camila.love and camila.flags.drinks < 2):
+    if (hero.charm >= 60 - camila.love and camila.flags.drinks < 2):
         show drink camila
         camila.say "Ah, where are you going, [hero.name]?"
         mike.say "To get another round, Camila."

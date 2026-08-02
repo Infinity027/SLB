@@ -1,27 +1,20 @@
 label aletta_talk_love_male:
     mike.say "How about you, Aletta - do you believe in true love and all that stuff?"
     show aletta
-    if aletta.is_visibly_pregnant:
-        show aletta happy
-        "Aletta rubs her swelling belly, smiling as she does so."
-        aletta.say "I used to think it was all just chemicals screwing with the brain."
-        aletta.say "That was before I had a symbol of our love growing, right here inside of me!"
-        $ aletta.love += 1
-    else:
-        aletta.say "Love is an outdated concept, nothing more than a chemical reaction in the most primitive parts of the human brain."
-        aletta.say "Passion, now there's something much more interesting to me!"
-        menu:
-            "Agree":
-                mike.say "Couldn't have said it better myself."
-                mike.say "Who wants to be a slave to a chemical reaction when you could be one to passion instead!"
-                show aletta flirt
-                "Aletta eyes me like a satisfied cat, seeming to know I'm trying to impress her, yet intrigued all the same."
-                $ aletta.love += 1
-            "Disagree":
-                mike.say "That's not very romantic, now is it?"
-                mike.say "I like to think that there's always the one out there, just waiting to sweep you off of your feet."
-                show aletta annoyed
-                aletta.say "Well, I hope you find the man of your dreams one day soon!"
+    aletta.say "Love is an outdated concept, nothing more than a chemical reaction in the most primitive parts of the human brain."
+    aletta.say "Passion, now there's something much more interesting to me!"
+    menu:
+        "Agree":
+            mike.say "Couldn't have said it better myself."
+            mike.say "Who wants to be a slave to a chemical reaction when you could be one to passion instead!"
+            show aletta flirt
+            "Aletta eyes me like a satisfied cat, seeming to know I'm trying to impress her, yet intrigued all the same."
+            $ aletta.love += 1
+        "Disagree":
+            mike.say "That's not very romantic, now is it?"
+            mike.say "I like to think that there's always the one out there, just waiting to sweep you off of your feet."
+            show aletta annoyed
+            aletta.say "Well, I hope you find the man of your dreams one day soon!"
     hide aletta
     return
 

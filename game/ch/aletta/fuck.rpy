@@ -7,7 +7,6 @@ init python:
     "conditions": [
         IsDone("aletta_event_04"),
         HeroTarget(
-            IsGender("male"),
             IsRoom("alettaoffice"),
             HasStamina(),
             MinStat("charm", 60),
@@ -30,7 +29,7 @@ init python:
     "conditions": [
         IsDone("aletta_event_05b"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("forest"),
             HasStamina(),
             MinStat("charm", 90),
@@ -71,7 +70,6 @@ init python:
     "conditions": [
         IsDone("aletta_kink_06"),
         HeroTarget(
-            IsGender("male"),
             IsRoom("date_restaurant")),
         PersonTarget(aletta,
             OnDate(),
@@ -90,7 +88,7 @@ init python:
     "conditions": [
         IsDone("aletta_event_07"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_restaurant")),
         PersonTarget(aletta,
             OnDate(),
@@ -108,7 +106,7 @@ init python:
     "label": "aletta_hottub_sex_male",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             HasStamina(),
             IsActivity("date_hot_tub_home")),
         PersonTarget(aletta,

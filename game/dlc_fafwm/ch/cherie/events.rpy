@@ -272,26 +272,6 @@ init python:
         })
     
     Event(**{
-        "name": "cherie_preg_talk",
-        "label": "cherie_preg_talk",
-        "do_once": False,
-        "conditions": [
-            HeroTarget(
-                IsActivity("None"),
-                IsGender("male"),
-                Not(OnDate()),
-                ),
-            PersonTarget(cherie,
-                IsPresent(),
-                Not(IsHidden()),
-                IsFlag("toldpreg", False),
-                MinCounter("pregnant", 6),
-                ),
-            ],
-        "music": "music/roa_music/focus.ogg",
-        })
-    
-    Event(**{
         "name": "cherie_sub_event_01",
         "label": "cherie_sub_event_01",
         "duration": 1,
@@ -350,183 +330,6 @@ init python:
         "music": "music/roa_music/focus.ogg",
         })
 
-label cherie_preg_talk:
-    $ cherie.flags.toldpreg = True
-    show cherie normal at center, zoomAt(1.0, (640, 720))
-    "As usual I have a pretty big smile on my face as Cherie shows up."
-    "I'm just that happy to see her that I can't help letting it show."
-    show cherie annoyed at center, traveling(1.5, 0.5, (640, 1040))
-    "But as she comes closer, I can see that the look on her face is very different."
-    "She looks stressed, her mouth set in a firm, hard line."
-    "And the realisation that she's not in a good place right now changes my mood too."
-    mike.say "Cherie..."
-    mike.say "What's happened?"
-    mike.say "Is everything okay?"
-    show cherie sadsmile
-    "Cherie shakes her head before she answers my questions."
-    "And that's more than enough to let me know things aren't okay."
-    show cherie whining
-    cherie.say "[hero.name]…"
-    show cherie talkative
-    cherie.say "I am grateful that you came when I called."
-    cherie.say "I have some news, and I am afraid that it is bad."
-    cherie.say "Too bad for us to talk about it over the telephone."
-    show cherie sadsmile
-    "By now I'm really starting to get worried about what Cherie's going to tell me."
-    "But at the same time the waiting to hear what she has to say is almost unbearable."
-    mike.say "What is it, Cherie?"
-    mike.say "You have to tell me!"
-    "Cherie's looking me in the eye as I demand to know."
-    "But I see one of her hands move to her stomach at the same time."
-    show cherie talkative
-    cherie.say "Ah, {i}mon ami{/i}…"
-    cherie.say "There is no easy way for me to say this..."
-    cherie.say "But I have taken a test, and the result is positive."
-    show cherie sadsmile
-    mike.say "You..."
-    mike.say "You mean that..."
-    show cherie talkative
-    cherie.say "Yes, I am pregnant!"
-    show cherie sadsmile
-    "The words hit me with all the force of a hard slap to the face."
-    "Eyes wide and mouth hanging open, all I can do is shake my head."
-    mike.say "Are you serious?"
-    mike.say "We're going to have a baby?!"
-    "The serious expression on Cherie's face kind of makes the first question sound silly."
-    "And the second one seems purely academic, just a symptom of my brain doing backflips."
-    show cherie whining
-    cherie.say "Of course I am serious!"
-    cherie.say "But you misunderstand me, [hero.name]…"
-    cherie.say "I am pregnant, yes - but we are not having a baby!"
-    show cherie sadsmile
-    "I find myself blinking in surprise at what Cherie just said."
-    mike.say "Huh?"
-    mike.say "What does that mean?"
-    if game.flags.dwaynedead:
-        show cherie stuned
-        "Cherie looks at me like she can't believe what she's hearing."
-        show cherie surprised
-        cherie.say "Do I look like silly little teenage girl to you?!?"
-        cherie.say "I have already been married and a mother, already raised a child."
-        cherie.say "I cannot do all of that again, not at my age!"
-        show cherie sad
-        "The intensity of Cherie's outburst takes me by surprise."
-        "I mean sure, I'm fully aware that she's a mature woman."
-        "But I never thought that saw herself as being too old for that kind of thing."
-    else:
-        show cherie annoyed
-        "Cherie rolls her eyes and lets out a sigh."
-        show cherie angry
-        cherie.say "Urgh..."
-        cherie.say "Have you forgotten that I am still married to Dwayne?"
-        cherie.say "Your employer and the man that is the head of the company?"
-        cherie.say "Because I do not think that he would take the news very well!"
-        show cherie sad
-        "I can't help nodding as Cherie reminds me of the situation we're in."
-        "And I don't think we could convince Dwayne the kid was his either."
-        "He's probably too smart to fall for a scheme like that."
-    "And it's about then that the real implications of what she's saying hit me."
-    mike.say "But wait a second, Cherie..."
-    mike.say "Are you saying that you..."
-    show cherie whining
-    cherie.say "Yes, [hero.name]…"
-    cherie.say "I want to end the pregnancy."
-    cherie.say "And I want to do it as soon as possible."
-    show cherie sad
-    "The weight of the situation suddenly feels like way too much for me to handle."
-    "One minute I'm being told that I'm fifty percent responsible for the pregnancy."
-    "And the next, before I can come to terms with that, I learn that Cherie wants to end it."
-    "Either of those things alone would be more than enough to make my head spin."
-    "But here I am, with Cherie expecting me to just take it all in and..."
-    "And what?"
-    "Is she just expecting me to go along with the idea of ending it?"
-    "Just like that?"
-    menu:
-        "Alright, if that's what you want...":
-            "Part of me feels like I should be arguing to keep the baby."
-            "But another part of me, a pretty selfish part, just wants to keep Cherie."
-            "And so I make a decision that I sincerely hope I won't come to regret."
-            mike.say "Okay, Cherie..."
-            mike.say "I'm not crazy about the idea..."
-            mike.say "But if that's what you're resolved to do, then you have my support."
-            "Cherie looks like she's been holding her breath as she waits for my answer."
-            show cherie normal
-            "And the relief that spreads across her face now is plain to see."
-            show cherie talkative
-            cherie.say "Oh, {i}mon ami{/i}…"
-            cherie.say "You do not know how happy I am to hear you say that!"
-            cherie.say "I was afraid that you would be angry, that you would leave me all alone."
-            show cherie sadsmile
-            "I shake my head as I wrap my arms around Cherie and pull her into a tight embrace."
-            "Feeling my spirits begin to rise a little as she leans into the hug and holds me too."
-            "There's no way what lies ahead is going to be easy for either of us."
-            "But maybe together we can prove strong enough to make it out the other end."
-            $ cherie.love += 10
-            $ cherie.unpreg()
-        "But why not keep it and raise it, together!":
-            "I don't know what it is that makes me shake my head."
-            "But suddenly I just have this vision of Cherie and myself as a family."
-            "And you know what, it just feels so damn right!"
-            mike.say "No, Cherie..."
-            mike.say "I don't think that's right."
-            mike.say "I think we should keep the baby."
-            mike.say "And I think we should raise them together, as a family."
-            show cherie stuned
-            "Cherie looks at me in pure, unadulterated amazement."
-            show cherie surprised
-            cherie.say "Have you lost your mind, {i}mon ami{/i}?"
-            cherie.say "Did you not hear everything that I just said?"
-            show cherie stuned
-            mike.say "Of course I did, Cherie..."
-            mike.say "But you haven't heard everything I've got to say."
-            mike.say "You're not old, you're in your prime."
-            mike.say "And things wouldn't be like they were with Dwayne either."
-            show cherie surprised
-            cherie.say "How so?"
-            show cherie stuned
-            mike.say "Because I'm a totally different guy, that's how..."
-            mike.say "And most importantly, I'm the guy that's madly in love with you!"
-            if cherie.love >= 150:
-                show cherie surprised
-                cherie.say "You..."
-                cherie.say "You really mean that, do you not?"
-                cherie.say "Oh, {i}mon ami{/i}…"
-                cherie.say "Perhaps...perhaps it could be possible?"
-                show cherie stuned
-                "I sense the chance to change Cherie's mind."
-                "And I'm determined not to let it pass me by."
-                mike.say "Of course I do, Cherie..."
-                mike.say "Of course it could work..."
-                mike.say "You and me, together - we can do anything!"
-                show cherie sadsmile
-                "Cherie pauses for a moment, silently looking me in the eye."
-                "I'm afraid that she might pull back at the last second."
-                "That her fears might get the better of her, even now."
-                "But then she nods."
-                show cherie talkative
-                cherie.say "Then we will make it work, {i}mon ami{/i}…"
-                cherie.say "Together we will make a new life for ourselves."
-                cherie.say "And for our child too!"
-                show cherie normal
-                $ cherie.love += 5
-                $ cherie.sub += 5
-            else:
-                show cherie sad
-                "Cherie looks at me with genuine pain in her eyes."
-                "And then then reaches out and takes my hands."
-                "Squeezing them as she shakes her head."
-                show cherie whining
-                cherie.say "Oh, {i}mon ami{/i}…"
-                cherie.say "Bless you for trying..."
-                cherie.say "But my mind is already made up."
-                show cherie sad
-                "I shake my head as Cherie leans her head on my shoulder."
-                "Feeling my spirits begin to rise a little as she wraps her arms around me."
-                "There's no way what lies ahead is going to be easy for either of us."
-                "But maybe together we can prove strong enough to make it out the other end."
-                $ cherie.sub -= 10
-                $ cherie.unpreg()
-    return
 
 label cherie_police_interview_male:
     $ cherie.unhide()
@@ -5030,16 +4833,10 @@ label cherie_male_ending:
     "Or queendom?"
     "Okay, I don't know how that works..."
     "But the important thing is that my prospective wife-to-be is the hottest thing in the room right now."
-    if cherie.is_visibly_pregnant:
-        show cherie wedding normal
-        "Hell, the dress is even cut to accommodate the size of Cherie's belly."
-        "Which to me seems to be getting bigger with each passing day."
-        "Reminding everyone that sees it of the future that we're planning together."
-    else:
-        show cherie wedding smile
-        "I know that she's one of those elegant older women that always amazes."
-        "Yet somehow the sight of her in that dress still manages to almost floor me."
-        "Maybe because of what it represents and the commitment we're about to make."
+    show cherie wedding smile
+    "I know that she's one of those elegant older women that always amazes."
+    "Yet somehow the sight of her in that dress still manages to almost floor me."
+    "Maybe because of what it represents and the commitment we're about to make."
     show cherie at center, traveling(1.5, 10.0, (640, 1040))
     "As Cherie gets closer, I see the heads of our colleagues turning to follow her progress too."
     "There's Aletta, finally starting to look like her old self again now that Dwayne's gone for good."
@@ -5171,18 +4968,11 @@ label cherie_male_ending:
     cherie.say "Now the company that Dwayne built belongs to us, and we run it together."
     cherie.say "[hero.name] and I, we are...how do you say...a power-couple?"
     cherie.say "But we make sure that our company is ethical and a power for good."
-    if cherie.is_visibly_pregnant or cherie.flags.mikeBabies >= 1:
-        cherie.say "But soon I think that we will take a step back from running things."
-        cherie.say "Put Aletta and Cassidy in place as vice-presidents of the company."
-        cherie.say "Then [hero.name] and I will devote ourselves to being parents."
-        cherie.say "So we can make sure that little Francois grows up be just like his father."
-        cherie.say "And not at all like that of his older half-sister!"
-    else:
-        cherie.say "But soon I think that we will take a step back from running things."
-        cherie.say "Put Aletta and Cassidy in place as vice-presidents of the company."
-        cherie.say "Then [hero.name] and I will devote ourselves to creating something more important."
-        cherie.say "A legacy that will endure far longer than that of the company."
-        cherie.say "One that only the two of us can create when we come together."
+    cherie.say "But soon I think that we will take a step back from running things."
+    cherie.say "Put Aletta and Cassidy in place as vice-presidents of the company."
+    cherie.say "Then [hero.name] and I will devote ourselves to creating something more important."
+    cherie.say "A legacy that will endure far longer than that of the company."
+    cherie.say "One that only the two of us can create when we come together."
     cherie.say "So you could say that once I thought that I had it all."
     cherie.say "But I was shown in a harsh way that I was totally wrong."
     cherie.say "Yet now, after almost losing everything, I feel like I really do have it all."

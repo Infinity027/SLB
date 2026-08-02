@@ -121,13 +121,7 @@ label emma_offer_a_drink_male:
     mike.say "You ready for a drink, Emma?"
     mike.say "I know I am!"
     "Almost the second the words are out of my mouth, Emma turns to face me."
-    if emma.is_visibly_pregnant:
-        $ emma.love -= 10
-        emma.say "I can't drink alcohol when I'm pregnant!"
-        emma.say "Oh, [hero.name], that's so thoughtless of you!"
-        $ hero.cancel_activity()
-        hide emma
-    elif (hero.charm >= 60 - emma.love and emma.flags.drinks < 2) or date_girl == emma:
+    if (hero.charm >= 60 - emma.love and emma.flags.drinks < 2) or date_girl == emma:
         emma.say "Erm..."
         emma.say "Okay, [hero.name], I guess."
         emma.say "Can I get a cider or whatever?"

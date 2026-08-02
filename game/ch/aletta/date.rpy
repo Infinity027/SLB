@@ -59,18 +59,9 @@ label aletta_date_eat_a_burger:
     return
 
 label aletta_date_buy_drink:
-    if aletta.is_visibly_pregnant:
-        show aletta angry
-        $ aletta.love -= 10
-        aletta.say "I'm going to pretend you didn't say that, [hero.name]."
-        aletta.say "For your sake and the sake of our unborn child."
-        aletta.say "But I won't forget a second time!"
-        $ hero.cancel_activity()
-        hide aletta
-    else:
-        "Aletta accepts her drink with a genuine smile."
-        "She takes a sip and places it down before her."
-        "Seems that it meets with her approval."
+    "Aletta accepts her drink with a genuine smile."
+    "She takes a sip and places it down before her."
+    "Seems that it meets with her approval."
     return
 
 label aletta_date_play_darts:
@@ -87,14 +78,7 @@ label aletta_date_pub_play_pool:
     return
 
 label aletta_date_buy_a_round:
-    if aletta.is_visibly_pregnant:
-        show aletta angry
-        $ aletta.love -= 10
-        aletta.say "I'm going to pretend you didn't say that, [hero.name]."
-        aletta.say "For your sake and the sake of our unborn child."
-        aletta.say "But I won't forget a second time!"
-        $ hero.cancel_activity()
-    elif (hero.charm >= 60 - aletta.love and aletta.flags.drinks < 2):
+    if (hero.charm >= 60 - aletta.love and aletta.flags.drinks < 2):
         show drink aletta
         "When I announce that I'm going to the bar and this round's on me, Aletta makes no big fuss about the matter."
         "She just shrugs and nods, as if she has no problem with it, but doesn't expect it all the same."

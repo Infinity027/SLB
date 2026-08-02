@@ -50,15 +50,7 @@ label sasha_offer_a_drink_male:
     mike.say "I'm going to the bar."
     mike.say "You want another one?"
     "Almost the second the words are out of my mouth, Sasha turns to face me."
-    if sasha.is_visibly_pregnant:
-        show sasha angry
-        $ sasha.love -= 10
-        sasha.say "What the..."
-        sasha.say "Are you taking the piss or what?"
-        sasha.say "Did you forget that I'm bloody pregnant?!?"
-        $ hero.cancel_activity()
-        hide sasha
-    elif (hero.charm >= 60 - sasha.love and sasha.flags.drinks < 2) or date_girl == sasha:
+    if (hero.charm >= 60 - sasha.love and sasha.flags.drinks < 2) or date_girl == sasha:
         show sasha happy
         sasha.say "Geez, I thought you'd never ask!"
         sasha.say "Grab me a rum while you're there."

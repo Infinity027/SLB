@@ -60,18 +60,9 @@ label cassidy_date_eat_a_burger:
     return
 
 label cassidy_date_buy_drink:
-    if cassidy.is_visibly_pregnant:
-        show cassidy angry
-        $ cassidy.love -= 10
-        cassidy.say "[hero.name], you...you beast!"
-        cassidy.say "First you get me pregnant."
-        cassidy.say "And then you put our child in danger by offering me alcohol!"
-        $ hero.cancel_activity()
-        hide cassidy
-    else:
-        "When her drink arrives, Cassidy plucks it up almost without acknowledging where it came from."
-        "She holds it in her hand and takes the occasional sip, almost like it's an accessory."
-        "Part of me wonders if she knows what she's actually drinking at all."
+    "When her drink arrives, Cassidy plucks it up almost without acknowledging where it came from."
+    "She holds it in her hand and takes the occasional sip, almost like it's an accessory."
+    "Part of me wonders if she knows what she's actually drinking at all."
     return
 
 label cassidy_date_play_darts:
@@ -87,14 +78,7 @@ label cassidy_date_pub_play_pool:
     return
 
 label cassidy_date_buy_a_round:
-    if cassidy.is_visibly_pregnant:
-        show cassidy angry
-        $ cassidy.love -= 10
-        cassidy.say "[hero.name], you...you beast!"
-        cassidy.say "First you get me pregnant."
-        cassidy.say "And then you put our child in danger by offering me alcohol!"
-        $ hero.cancel_activity()
-    elif (hero.charm >= 60 - cassidy.love and cassidy.flags.drinks < 2):
+    if (hero.charm >= 60 - cassidy.love and cassidy.flags.drinks < 2):
         show drink cassidy
         "Cassidy simply nods in a nonchalant fashion at me offering to buy a round."
         "She's so entitled that she seems to think it's just a given thing."

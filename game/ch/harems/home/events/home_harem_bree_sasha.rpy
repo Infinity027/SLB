@@ -350,232 +350,6 @@ label bree_sasha_convenient_store:
     scene bg black with dissolve
     return
 
-label home_harem_preg_talk:
-    if bree.is_collared and sasha.is_collared:
-        "I know that you kind of grow up in the modern day and age with the morals of safe sex and taking sensible precautions practically drummed into you."
-        "But once you start breaking the rules of mainstream society and venturing into areas that are pretty much uncharted for most people, things are different."
-        "Throwing a whole load of accepted rules and regulations out of the window makes you kind of lax in other areas too."
-        "And if you've, oh I don't know, been living under the same roof as your two devoted sex-slaves, for example."
-        "Then you could obviously be forgiven for letting the use of an occasional condom slip your mind, right?"
-        show bree happy underwear at center, zoomAt (1.25, (420, 880))
-        show sasha happy underwear at center, zoomAt (1.25, (860, 880))
-        with dissolve
-        "I mean, when you have a pair of girls like [bree.name] and Sasha, literally on the end of a couple of leads..."
-        "Perhaps I should have spotted the warning signs when they first appeared."
-        "Like one of them starting to feel like crap in the mornings or craving weird stuff at mealtimes."
-        "But to miss the same tell-tale signs in both [bree.name] and Sasha..."
-        "Well, maybe I was seeing them, but ignoring what they actually meant out of unconscious fear?"
-        "Either way, I have the unenviable experience of walking in on [bree.name] and Sasha as they're comparing their stomachs."
-        "Believing themselves to be totally alone, they experimentally prod and squeeze at each other."
-        "Although it looks a little weird, I'm actually more than a little turned on by the sight!"
-        "Before they realise I'm there, the conversation between them is quiet, almost conspiratorial in nature."
-        "But as soon as they see me, I'm treated to a round of smiles and fluttering eyelids."
-        "Specifically the kind that remind me of just how good it is to be their master."
-        show bree smile
-        bree.say "Hi there, [hero.name]."
-        show bree normal
-        show sasha shout
-        sasha.say "Sorry, we didn't hear you come in."
-        show sasha normal
-        "Both of the girls have their tops hiked up, exposing their bellies."
-        "And as I return their smiles, I note that neither of them makes a move to pull them back down again."
-        mike.say "No worries about that."
-        mike.say "So long as you tell me what you were talking about just now?"
-        "[bree.name] and Sasha look at each other, seeming to take a literal deep breath before answering my question."
-        show sasha shout
-        sasha.say "We were just comparing bellies, that's all."
-        show sasha normal
-        show bree smile
-        bree.say "Sasha thinks mine's a little bigger."
-        bree.say "But I don't think there's that much in it."
-        show bree normal
-        "I frown a little at this, not really knowing what to make of their sudden obsession with their stomachs."
-        "Neither of them is particularly large in that area to begin with."
-        "And if putting on a little weight around the middle bothered me, then I'd have said so already."
-        "After all, that's one of the advantages of having a couple of sex-slaves - they don't get pissy when you tell them to lose weight!"
-        "But as [bree.name] points to their respective midriffs, I do seem to notice that they're both looking just a tad more prosperous at the moment."
-        "Not that I find that a turn-off in the slightest."
-        "It actually kind of suits them, makes them look cute and like I want to use those bellies as a cushion..."
-        mike.say "You shouldn't argue about things like that, you know."
-        mike.say "Neither of you is fat - not in the slightest."
-        mike.say "In fact, I think it makes you both look pretty hot!"
-        show sasha upset
-        show bree happy
-        "At this, Sasha gives me an oddly irritated look and [bree.name] turns to her, trying to suppress a fit of giggles."
-        "Confused by this reaction, I look form one of them to the other and then back again."
-        "I really don't know what was so odd about that statement."
-        "But so much for me thinking that I was being all modern and relaxed about their apparent pot-bellies!"
-        mike.say "What did I say?"
-        mike.say "What's so funny?"
-        show bree smile
-        bree.say "Oh, [hero.name] - you really don't know, do you?"
-        show bree happy at startle
-        "[bree.name] giggles again."
-        mike.say "Know what?"
-        show bree normal at center, zoomAt (1.25, (420, 880))
-        show sasha shout at center, zoomAt (1.25, (860, 880))
-        sasha.say "It's [bree.name] and I, [hero.name] - we're both pregnant."
-        show sasha normal
-        "I don't know if Sasha's being so blunt out of obedience or frustration at my being so slow on the uptake."
-        "But she still manages to cut through the confusion and get to the heart of the matter with those few words."
-        mike.say "You're pregnant...BOTH of you?!?"
-        show sasha shout
-        sasha.say "That is what I just said, [hero.name]."
-        show sasha normal
-        mike.say "I...I know..."
-        mike.say "It's just...a lot to take in, that's all!"
-        "I should be acting the part of the confident and unshakable Master here, I know."
-        "But the news really has taken me completely by surprise."
-        "And this is not the scene I'd always imagined would confront me if I happened to get two different girls pregnant at the same time, either."
-        mike.say "Wait a minute - you're both okay with this?"
-        mike.say "You're not mad at all?"
-        "[bree.name] and Sasha look at each other again, before they return their respective gazes to me."
-        "They exchange one of those loaded glances that speaks of serious discussions having happened before this moment."
-        "Sasha nods first, and then [bree.name] a few seconds later."
-        show bree smile
-        bree.say "It's not our place to be mad or to judge your actions, [hero.name]."
-        show bree normal
-        show sasha shout
-        sasha.say "You've made us both pregnant with your children, whether that was your plan or not."
-        show sasha normal
-        show bree smile
-        bree.say "We're your slaves, so we obey your will in all such matters."
-        show bree normal
-        "I nod, thinking at first that this pretty much gets me off of the hook on both counts."
-        show bree happy at center, traveling(1.4, 0.3, (420, 1050))
-        show sasha happy at center, traveling(1.4, 0.3, (860, 1050))
-        "But then it occurs to me that, while I'm not getting my ass kicked, the actual opposite is true when it comes to responsibility."
-        "As my sex-slaves, [bree.name] and Sasha are effectively happy to sit back and let me make all of the decisions for all three of us."
-        "No, wait - all FIVE of us!"
-        "It seems that being the undisputed Master isn't all fun and games..."
-    else:
-        "Have you ever watched one of those wildlife documentaries on the TV?"
-        "The kind where you see lionesses sizing up a bewildered wildebeest?"
-        "Well that's how I feel right about now."
-        show bree happy at center, zoomAt (1.25, (420, 880))
-        show sasha happy at center, zoomAt (1.25, (860, 880))
-        with dissolve
-        "I just walked in on [bree.name] and Sasha, and everything just stopped dead."
-        "They were chatting away intently the very second before they realised I was there."
-        show bree normal
-        show sasha normal
-        "But then the conversation ended abruptly, and both of them are now staring straight at me."
-        "And here I am, that poor, dumb animal that doesn't know whether to freeze or turn tail and run!"
-        "The only difference is that I don't think the lionesses often wear knowing smiles on the TV shows..."
-        show bree happy at startle
-        bree.say "Hey, [hero.name]!"
-        show bree normal
-        show sasha shout
-        sasha.say "What a coincidence!"
-        show sasha normal
-        show bree smile
-        bree.say "Yeah - we were just talking about you..."
-        show bree normal
-        "I hope my smile doesn't look too nervous and forced."
-        "But I'm already sure they know just how much I'm freaked."
-        mike.say "Erm...really?"
-        "The girls nod and their smiles become even more smug than before."
-        show sasha joke
-        sasha.say "Yeah, we were just discussing what kind of a guy you are."
-        show bree normal
-        mike.say "What kind of a...a guy I am?"
-        show sasha shout
-        sasha.say "That's right."
-        sasha.say "You see [bree.name] here."
-        show sasha embarrassed
-        "Sasha gestures to [bree.name], who flutters her eyelids and regards me sweetly."
-        show sasha shout
-        sasha.say "Now she thinks that you're the kind of guy that likes to be treated with kid gloves."
-        show sasha normal
-        show bree happy
-        "[bree.name] nods happily at this statement."
-        show sasha shout
-        sasha.say "That you need to have things sugar-coated so that you can swallow them."
-        show sasha normal
-        show bree smile
-        bree.say "But Sasha, on the other hand."
-        show bree normal
-        "[bree.name] leans forward, taking over the conversation."
-        bree.say "She subscribes to the school of thought that you appreciate being direct."
-        show bree normal
-        "Now it's [bree.name]'s turn to regard Sasha, who shrugs and nods."
-        show bree smile
-        bree.say "Sasha thinks you'd want to be told the plain and unadorned truth."
-        show bree normal
-        "I look from Sasha to [bree.name] and back again, still not exactly sure what's going on here."
-        show sasha shout
-        sasha.say "So, [hero.name] - which is it?"
-        show sasha normal
-        show bree smile
-        bree.say "Yeah - which one of us has you figured?"
-        show bree normal
-        mike.say "Wait...let me get this straight."
-        mike.say "The two of you have been sitting around, debating how I prefer to hear news?"
-        mike.say "And now you want me to settle the argument?"
-        "[bree.name] and Sasha look at each other briefly, and then nod as one."
-        mike.say "Mind if I ask a question of my own?"
-        mike.say "I mean, what's so important about that?"
-        "[bree.name] smiles at me again, looking as innocent and harmless as she ever has."
-        show bree smile
-        bree.say "Oh, [hero.name] - don't be silly!"
-        bree.say "There's nothing really important about that."
-        show bree normal
-        mike.say "Then why did you..."
-        mike.say "Why all the questions?!?"
-        show bree happy at startle
-        show sasha happy at startle
-        "I hear Sasha laugh at the frustration in my voice, and my head snaps round in her direction."
-        show bree normal
-        show sasha shout
-        sasha.say "Ah, [hero.name], chill out!"
-        sasha.say "We just thought it'd be best to distract you a little bit."
-        sasha.say "Rather than just coming out and telling you that we're both pregnant!"
-        show sasha normal
-        "What with all the confusion that the girls have been careful to create, I don't understand straight away."
-        "Instead I keep on staring at Sasha and [bree.name], as if I expect them to say more."
-        show bree talkative
-        bree.say "[hero.name]..."
-        bree.say "Didn't you hear what Sasha said?"
-        show bree normal
-        show sasha shout
-        sasha.say "Yeah, earth to [hero.name] - both your girlfriends are knocked up!"
-        show sasha normal
-        "Bless her heart - you can see why Sasha's the song-writer of the pair..."
-        with vpunch
-        mike.say "What..."
-        mike.say "You mean that..."
-        show sasha shout
-        sasha.say "Yes and yes."
-        show sasha normal
-        show bree smile
-        bree.say "We mean it, [hero.name]."
-        bree.say "You're going to be a daddy - twice over!"
-        show bree normal
-        "I don't know what to say, and so, for a change, I don't say anything."
-        "My mind is racing at the implications of what I've just been told, what it means for the three of us."
-        "And more than ever I feel like that wildebeest, cornered and helpless in the face of his inevitable fate!"
-        show bree talkative
-        bree.say "[hero.name], are you feeling okay?"
-        show bree sadsmile
-        show sasha whining
-        sasha.say "Yeah, you don't look too good!"
-        show sasha sadsmile
-        mike.say "I...I'll be okay."
-        mike.say "It's just a lot to take in - you know?"
-        show bree happy at center, traveling(1.4, 0.3, (420, 1050))
-        show sasha happy at center, traveling(1.4, 0.3, (860, 1050))
-        "[bree.name] and Sasha both nod, coming closer to put their arms around me and offer their support."
-        "And do you know what?"
-        "As soon as they do, I'm almost certain that it will - be okay, that is."
-        "Three of us."
-        "Two of them."
-        "And more than enough love to go around."
-        "Sorry if that sounds a bit sappy and emotional, but I just found out that I'm going to be a dad."
-        "And that's the kind of thing that can make a guy get hit right in the feels!"
-    $ sasha.flags.toldpreg = True
-    $ bree.flags.pregtest = 2
-    return
-
 label bree_sasha_showdown:
     scene bg livingroom with fade
     "Yet another lazy day finds me, lounging around the living room, spread across the couch and staring at the television screen blankly."
@@ -610,24 +384,6 @@ label bree_sasha_showdown:
     sasha.say "Yes, 'THAT'! What the fuck were you thinking?"
     show sasha angry
     mike.say "I..."
-    if "bree_preg_talk" in DONE and "sasha_preg_talk" in DONE:
-        show sasha vangry
-        sasha.say "You even got us pregnant moron!"
-        show sasha angry
-        show bree cry
-        "[bree.name]'s eyes are welling up with tears."
-    elif "sasha_preg_talk" in DONE:
-        show sasha vangry
-        sasha.say "You even got me pregnant moron!"
-        show sasha angry
-        show bree cry
-        "[bree.name]'s eyes are welling up with tears."
-    elif "bree_preg_talk" in DONE:
-        show sasha vangry
-        sasha.say "You even got [bree.name] pregnant moron!"
-        show sasha angry
-        show bree cry
-        "[bree.name]'s eyes are welling up with tears."
     if all([person.love >= 150 and person.lesbian >= 9 and person.flags.collared for person in [sasha, bree]]):
         show sasha normal
         "I see Sasha fingering the collar around her neck, a thoughtful look beginning to appear on her face."
@@ -1678,12 +1434,7 @@ label bree_sasha_threesome_2:
     "But there seems to be something darker and more sultry in Sasha's gaze - spice as opposed to [bree.name]'s own delightful sweetness."
     "Whether I'm right or wrong, I'll go with that."
     "If I wait and ponder it any longer, I'm afraid that the moment will pass and the mood die completely."
-    if sasha.is_visibly_pregnant:
-        "Sure, Sasha didn't have much trouble turning me on before she fell pregnant - after all, one kind of followed on from the other!"
-        "But there's just something about the sight of her with that big, round belly that makes me want to do it all over again."
-        "As I take her by the hand and make it plain that I want her in front of me, back to belly, she sways like a beautifully ripe fruit."
-        "Once she's standing in front of me, I feel as though I'm about to have sex with a primeval fertility icon brought magically to life."
-    elif sasha.flags.boobjob:
+    if sasha.flags.boobjob:
         "Don't get me wrong, I love the natural size and shape of [bree.name]'s breasts."
         "But there's just something so wonderfully fake and dirty about the implants that pump Sasha's up to a comparable size."
         "As I take her by the hand and make it plain that I want her in front of me, back to belly, they bounce and sway like rubber balls."
@@ -2024,58 +1775,7 @@ label bree_sasha_male_ending:
     "Turning to watch their approach, I see the crowd part roughly down the middle to allow my two brides to walk to where the priest and I are awaiting them."
     show sasha at center, traveling (1.25, 5.0, (860, 900))
     show bree at center, traveling (1.25, 5.0, (420, 900))
-    if not bree.is_visibly_pregnant and not sasha.is_visibly_pregnant:
-        "They walk slowly, arm in arm through the sand."
-        "I'm surprised to see that, despite being fond of tradition, [bree.name]'s chosen to wear pink."
-        "A light, floating affair that's short in the front and long in the back."
-        "Pink roses woven into a headband and the locks of her hair compliment the delicate tones of her skin."
-        "And she clutches a bouquet of the same flowers, though their beauty is put to shame by the smile on her face as she walks towards me."
-        "Sasha walks at her side, a vision in red and black against her strikingly pale skin."
-        "The dress is a bodice of red above flowing skirts of that same colour and folds of black."
-        "Delicate sleeves of lace cover her arms, and three crimson roses have been woven into her tumbling, ebony hair."
-        "In her hands, Sasha clutches a bouquet of black roses."
-        "And her face is obscured by a veil of fine, black lace."
-        "Oh, did I forget to mention - she kind of has a thing for black!"
-    elif bree.is_visibly_pregnant and sasha.is_visibly_pregnant:
-        "They walk slowly, arm in arm through the sand."
-        "I'm surprised to see that, despite being fond of tradition, [bree.name]'s chosen to wear pink."
-        "A light, floating affair that's short in the front and long in the back."
-        "Pink roses woven into a headband and the locks of her hair compliment the delicate tones of her skin."
-        "And she clutches a bouquet of the same flowers, though their beauty is put to shame by the smile on her face as she walks towards me."
-        "The dress has been tastefully cut to accommodate the curve of [bree.name]'s belly, and so this only adds to her radiance."
-        "Sasha walks at her side, a vision in red and black against her strikingly pale skin."
-        "The dress is a bodice of red, cut to be sympathetic to the curve of her swelling belly."
-        "Below are flowing skirts of that same colour and folds of black."
-        "Delicate sleeves of lace cover her arms, and three crimson roses have been woven into her tumbling, ebony hair."
-        "In her hands, Sasha clutches a bouquet of black roses."
-        "And her face is obscured by a veil of fine, black lace."
-        "Oh, did I forget to mention - she kind of has a thing for black!"
-    elif bree.is_visibly_pregnant and not sasha.is_visibly_pregnant:
-        "They walk slowly, arm in arm through the sand."
-        "I'm surprised to see that, despite being fond of tradition, [bree.name]'s chosen to wear pink."
-        "A light, floating affair that's short in the front and long in the back."
-        "Pink roses woven into a headband and the locks of her hair compliment the delicate tones of her skin."
-        "And she clutches a bouquet of the same flowers, though their beauty is put to shame by the smile on her face as she walks towards me."
-        "The dress has been tastefully cut to accommodate the curve of [bree.name]'s belly, and so this only adds to her radiance."
-        "Sasha walks at her side, a vision in red and black against her strikingly pale skin."
-        "The dress is a bodice of red above flowing skirts of that same colour and folds of black."
-        "Delicate sleeves of lace cover her arms, and three crimson roses have been woven into her tumbling, ebony hair."
-        "In her hands, Sasha clutches a bouquet of black roses."
-        "And her face is obscured by a veil of fine, black lace."
-        "Oh, did I forget to mention - she kind of has a thing for black!"
-    elif not bree.is_visibly_pregnant and sasha.is_visibly_pregnant:
-        "They walk slowly, arm in arm through the sand."
-        "I'm surprised to see that, despite being fond of tradition, [bree.name]'s chosen to wear pink."
-        "A light, floating affair that's short in the front and long in the back."
-        "Pink roses woven into a headband and the locks of her hair compliment the delicate tones of her skin."
-        "And she clutches a bouquet of the same flowers, though their beauty is put to shame by the smile on her face as she walks towards me."
-        "Sasha walks at her side, a vision in red and black against her strikingly pale skin."
-        "The dress is a bodice of red, cut to be sympathetic to the curve of her swelling belly."
-        "Below are flowing skirts of that same colour and folds of black."
-        "Delicate sleeves of lace cover her arms, and three crimson roses have been woven into her tumbling, ebony hair."
-        "In her hands, Sasha clutches a bouquet of black roses."
-        "And her face is obscured by a veil of fine, black lace."
-        "Oh, did I forget to mention - she kind of has a thing for black!"
+
     show sasha at center, traveling (1.4, 5.0, (820, 1050))
     show bree blush at center, traveling (1.4, 5.0, (460, 1050))
     "Seeing them walking towards me, their arms intertwined, I'm reminded of the fact that [bree.name] and Sasha are as much marrying each other as they are me."
@@ -2136,22 +1836,7 @@ label bree_sasha_male_ending:
     bree.say "Uh-huh!"
     sasha.say "Well, there are some things that should remain a secret - part of the sanctity of marriage!"
     sasha.say "So they can just go on wondering!"
-    if not bree.is_visibly_pregnant and not sasha.is_visibly_pregnant:
-        bree.say "We still live in the same house together."
-        sasha.say "But we have been talking about saving up to put a deposit down on something we can one day own."
-    elif bree.is_visibly_pregnant and sasha.is_visibly_pregnant:
-        bree.say "We still live in the same house together."
-        sasha.say "But that's mainly because I was expecting Dahlia so soon after the wedding."
-        bree.say "And don't forget I was almost as far on with Poppy at the same time too!"
-        sasha.say "So with two baby girls on the way so close together, moving was out of the question!"
-    elif bree.is_visibly_pregnant and not sasha.is_visibly_pregnant:
-        bree.say "We still live in the same house together."
-        sasha.say "Mainly because we thought you were going to pop any second after the wedding!"
-        bree.say "With Poppy on the way, moving was out of the question!"
-    elif not bree.is_visibly_pregnant and sasha.is_visibly_pregnant:
-        sasha.say "We still live in the same house together."
-        bree.say "Mainly because we thought you were going to pop any second after the wedding!"
-        sasha.say "With Dahlia on the way, moving was out of the question!"
+
     bree.say "We all still talk about just how weird it is - that things turned out like this."
     bree.say "It was total chance that Sasha and I both moved into the same house that [hero.name] was already living in."
     sasha.say "More than that, what are the chances that two of us out of the three would have hit it off so well as to start a relationship - let alone all three of us becoming involved?"
@@ -2180,31 +1865,7 @@ label bree_sasha_bitches_1:
     "[bree.name], Sasha and myself are just sitting on the sofa together, binging on a box-set and eating popcorn."
     "Sounds pretty innocent, right?"
     "Well, not if you could actually see us doing it."
-    if bree.is_visibly_pregnant and sasha.is_visibly_pregnant:
-        "While I'm sitting there looking fairly normal, with my popcorn in my lap, I am holding onto two leads at the same time."
-        "The black one is attached to the collar that Sasha's wearing as she sits to my right."
-        "The pink one to the collar around [bree.name]'s neck to my left."
-        "Save for the collars, both of them are naked, their heavily pregnant bellies plain to see."
-        "While Sasha is sitting with her legs drawn up and her arms crossed over her knees, [bree.name] simply has her legs crossed."
-        "She keeps popping pieces of popcorn into her mouth, utterly unfazed by the fact that her ample breasts are bare and fully on show."
-        "Sasha stares intently at the TV screen, lost in the show that we're watching to the exclusion of all else."
-    elif sasha.is_visibly_pregnant:
-        "While I'm sitting there looking fairly normal, with my popcorn in my lap, I am holding onto two leads at the same time."
-        "The black one is attached to the collar that Sasha's wearing as she sits to my right."
-        "The pink one to the collar around [bree.name]'s neck to my left."
-        "Save for the collars, both of them are naked, but Sasha's pregnant belly is plain to see."
-        "While Sasha is sitting with her legs drawn up and her arms crossed over her knees, [bree.name] simply has her legs crossed."
-        "She keeps popping pieces of popcorn into her mouth, utterly unfazed by the fact that her ample breasts are bare and fully on show."
-        "Sasha stares intently at the TV screen, lost in the show that we're watching to the exclusion of all else."
-    elif bree.is_visibly_pregnant:
-        "While I'm sitting there looking fairly normal, with my popcorn in my lap, I am holding onto two leads at the same time."
-        "The black one is attached to the collar that Sasha's wearing as she sits to my right."
-        "The pink one to the collar around [bree.name]'s neck to my left."
-        "Save for the collars, both of them are naked but [bree.name]'s pregnant belly is plain to see."
-        "While Sasha is sitting with her legs drawn up and her arms crossed over her knees, [bree.name] simply has her legs crossed."
-        "She keeps popping pieces of popcorn into her mouth, utterly unfazed by the fact that her ample breasts are bare and fully on show."
-        "Sasha stares intently at the TV screen, lost in the show that we're watching to the exclusion of all else."
-    elif not sasha.flags.boobjob and not sasha.flags.haircut:
+    if not sasha.flags.boobjob and not sasha.flags.haircut:
         "While I'm sitting there looking fairly normal, with my popcorn in my lap, I am holding onto two leads at the same time."
         "The black one is attached to the collar that Sasha's wearing as she sits to my right."
         "The pink one to the collar around [bree.name]'s neck to my left."

@@ -2602,10 +2602,8 @@ label fivesome_breeminamisamsasha:
     "I feel like holding back for a moment, just to commit the scene to memory."
     "There's Sam, one of the most beautiful girls that I've ever come across."
     "But her head is laying between Sasha's amazing breasts."
-    if not bree.is_visibly_pregnant:
-        "To one side of her, [bree.name] is crouched, stroking her flat stomach."
-    else:
-        "To one side of her, [bree.name] is crouched, stroking her round stomach."
+
+    "To one side of her, [bree.name] is crouched, stroking her round stomach."
     "And on the other, Minami is squeezing her breasts too!"
     "As for Sam herself, she looks almost overwhelmed."
     "She's already beginning to pant from the attention of the other girls."
@@ -2629,10 +2627,8 @@ label fivesome_breeminamisamsasha:
     "While all of this is going on, [bree.name] and Minami don't sit back and watch."
     "Instead they redouble their efforts, hands travelling all over Sam's helpless body."
     "They kiss her nipples as they play with her breasts."
-    if samantha.is_visibly_pregnant:
-        "And their free hands slide over her rounded stomach."
-    else:
-        "And their free hands slide over her flat stomach."
+
+    "And their free hands slide over her flat stomach."
     "All the time teasing that they might soon go lower..."
     "Not wanting to leave all of the work to [bree.name] and Minami, I begin to move inside of Sam."
     "I try to keep the thrusts that I'm making in and out of slow at first."
@@ -3457,31 +3453,6 @@ label bree_minami_samantha_sasha_male_ending:
     show samantha happy
     "And then there's Sam, the only one that I've ever seen in a wedding dress before now."
     "Yet she somehow looks so much better in this one than the last!"
-    if bree.is_visibly_pregnant and minami.is_visibly_pregnant and samantha.is_visibly_pregnant and sasha.is_visibly_pregnant:
-        "Maybe I should be sweating and nervous at the sight of four large baby-bumps."
-        "And I have no idea what the guests sitting in the pews must think of the girls all being pregnant at once."
-        "But the truth is that I really don't care - we're already a big family, and soon to be bigger still!"
-    elif not bree.is_visibly_pregnant and not minami.is_visibly_pregnant and not samantha.is_visibly_pregnant and not sasha.is_visibly_pregnant:
-        "I can't stop staring at [bree.name], Sasha, Minami and Sam as they stand beside me at the altar."
-        "My four brides - soon to be my four wives!"
-    else:
-        if bree.is_visibly_pregnant:
-            "Whoever made [bree.name]'s dress managed to pull off a miracle."
-            "With the bouquet in her hands, her already massive bump is almost invisible!"
-            "Not that I want to forget about the fact that she's carrying my child."
-        if sasha.is_visibly_pregnant:
-            "As she gets closer, I can see that it's not just the make-up that's making Sasha look white."
-            "She's already pretty far on with her pregnancy, and it's taking its tole on her."
-            "But she smiles and nods, letting me know that she's doing okay."
-        if minami.is_visibly_pregnant:
-            "Minami's dress makes no effort to hide the fact that she's heavily pregnant."
-            "But then she's a thoroughly modern girl, and sees no shame in the fact."
-            "Instead she wears it with pride, and I feel the same feeling swell inside of me too."
-        if samantha.is_visibly_pregnant:
-            "Though I've seen Sam in a wedding dress before, there's one big difference this time around."
-            "Last time she didn't have a belly that was already swelling with my kid inside of it!"
-            "I guess that just goes to show how different things are this time!"
-    "There's barely enough time for the five of us to exchange glances and nervous smiles."
     "And that's because the priest leaps into the ceremony almost as soon as the music come to an end."
     "Priest" "Dearly beloved..."
     "Priest" "We are gathered here today..."
@@ -3572,32 +3543,7 @@ label bree_minami_samantha_sasha_male_ending:
     bree.say "Oh yeah!"
     minami.say "Totally!"
     samantha.say "Only four people?"
-    if bree.is_visibly_pregnant and minami.is_visibly_pregnant and samantha.is_visibly_pregnant and sasha.is_visibly_pregnant:
-        bree.say "Are we still technically a fivesome?"
-        sasha.say "Yeah, we might have accidentally become a tribe somewhere along the way!"
-        sasha.say "[hero.name] could be the founder of a whole new nation."
-        minami.say "Aww - that's sweet."
-        minami.say "But please don't tell big bro that."
-        samantha.say "I agree - his head's big enough as it is!"
-    elif not bree.is_visibly_pregnant and not minami.is_visibly_pregnant and not samantha.is_visibly_pregnant and not sasha.is_visibly_pregnant:
-        bree.say "Yeah, always room for more!"
-        minami.say "Huh...is someone else moving in?"
-        sasha.say "She means the patter of tiny feet, Minami!"
-        samantha.say "You know - babies?"
-        minami.say "Oh..."
-    else:
-        if bree.is_visibly_pregnant:
-            bree.say "Yeah, yeah...I know."
-            bree.say "Poppy's got so much energy, it's hard to keep up!"
-        if minami.is_visibly_pregnant:
-            minami.say "I don't think I could handle Mei without you guys."
-            minami.say "And she loves her four mommies!"
-        if sasha.is_visibly_pregnant:
-            sasha.say "I think [hero.name] likes not being the only guy around here."
-            sasha.say "That's why he spoils Dahlia every chance he gets!"
-        if samantha.is_visibly_pregnant:
-            samantha.say "Don't forget about little Jemima!"
-            samantha.say "She might be small, but she feels like she makes up for it!"
+    
     samantha.say "But mainly, it's all sunshine and rainbows - right guys?"
     bree.say "Oh yeah, I'm really having fun with married life."
     sasha.say "It's a rollercoaster at times."
@@ -3663,26 +3609,7 @@ label bree_samantha_sasha_male_ending:
     "And then there's Sam, the only one that I've ever seen in a wedding dress before now."
     "Yet she somehow looks so much better in this one than the last!"
     show samantha normal
-    if bree.is_visibly_pregnant and samantha.is_visibly_pregnant and sasha.is_visibly_pregnant:
-        "Maybe I should be sweating and nervous at the sight of three large baby-bumps."
-        "And I have no idea what the guests sitting in the pews must think of the girls all being pregnant at once."
-        "But the truth is that I really don't care - we're already a big family, and soon to be bigger still!"
-    elif not bree.is_visibly_pregnant and not samantha.is_visibly_pregnant and not sasha.is_visibly_pregnant:
-        "I can't stop staring at [bree.name], Sasha, and Sam as they stand beside me at the altar."
-        "My three brides - soon to be my three wives!"
-    else:
-        if bree.is_visibly_pregnant:
-            "Whoever made [bree.name]'s dress managed to pull off a miracle."
-            "With the bouquet in her hands, her already massive bump is almost invisible!"
-            "Not that I want to forget about the fact that she's carrying my child."
-        if sasha.is_visibly_pregnant:
-            "As she gets closer, I can see that it's not just the make-up that's making Sasha look white."
-            "She's already pretty far on with her pregnancy, and it's taking its tole on her."
-            "But she smiles and nods, letting me know that she's doing okay."
-        if samantha.is_visibly_pregnant:
-            "Though I've seen Sam in a wedding dress before, there's one big difference this time around."
-            "Last time she didn't have a belly that was already swelling with my kid inside of it!"
-            "I guess that just goes to show how different things are this time!"
+    
     "There's barely enough time for the four of us to exchange glances and nervous smiles."
     "And that's because the priest leaps into the ceremony almost as soon as the music come to an end."
     "Priest" "Dearly beloved..."
@@ -3756,15 +3683,7 @@ label bree_samantha_sasha_male_ending:
     sasha.say "It is a lot more fun with two other people to make it up to!"
     bree.say "Oh yeah!"
     samantha.say "Only two people?"
-    if bree.is_visibly_pregnant:
-        bree.say "Yeah, yeah...I know."
-        bree.say "Poppy's got so much energy, it's hard to keep up!"
-    if sasha.is_visibly_pregnant:
-        sasha.say "I think [hero.name] likes not being the only guy around here."
-        sasha.say "That's why he spoils Dahlia every chance he gets!"
-    if samantha.is_visibly_pregnant:
-        samantha.say "Don't forget about little Jemima!"
-        samantha.say "She might be small, but she feels like she makes up for it!"
+    
     samantha.say "But mainly, it's all sunshine and rainbows - right guys?"
     bree.say "Oh yeah, I'm really having fun with married life."
     sasha.say "It's a rollercoaster at times."

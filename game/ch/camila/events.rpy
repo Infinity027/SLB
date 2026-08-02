@@ -7,7 +7,6 @@ init python:
     "duration": 2,
     "conditions": [
         IsDone("camila_event_01"),
-        HeroTarget(IsGender("male")),
         IsDayOfWeek(6, 7),
         IsTimeOfDay("afternoon"),
         PersonTarget(camila,
@@ -30,7 +29,6 @@ init python:
             IsDone("camila_event_02"),
             IsDone("camila_event_04_alt"),
             ),
-        HeroTarget(IsGender("male")),
         IsTimeOfDay("afternoon"),
         PersonTarget(camila,
             Not(IsHidden()),
@@ -49,9 +47,7 @@ init python:
     "duration": 1,
     "conditions": [
         IsDone("camila_event_03"),
-        HeroTarget(
-            IsGender("male"),
-            HasRoomTag("mall_southside")),
+        HeroTarget(HasRoomTag("mall_southside")),
         PersonTarget(camila,
             Not(IsHidden()),
             IsFlag("camiladelay", False),
@@ -72,7 +68,6 @@ init python:
         Not(IsDone("camila_event_05b")),
         IsSeason(3),
         HeroTarget(
-            IsGender("male"),
             OnDate(),
             IsRoom("date_park"),
             ),
@@ -96,7 +91,6 @@ init python:
         Not(IsDone("camila_event_05")),
         IsSeason(0, 1, 2),
         HeroTarget(
-            IsGender("male"),
             OnDate(),
             IsRoom("date_park"),
             ),
@@ -119,9 +113,7 @@ init python:
             IsDone("camila_event_05"),
             IsDone("camila_event_05b"),
             ),
-        HeroTarget(
-            IsGender("male"),
-            OnDate()),
+        HeroTarget(OnDate()),
         PersonTarget(camila,
             IsPresent(),
             Not(IsHidden()),
@@ -140,9 +132,7 @@ init python:
     "conditions": [
         IsDone("camila_event_06"),
         IsTimeOfDay("evening"),
-        HeroTarget(
-            IsGender("male"),
-            IsRoom("policestation")),
+        HeroTarget(IsRoom("policestation")),
         PersonTarget(camila,
             IsPresent(),
             Not(IsHidden()),
@@ -162,7 +152,6 @@ init python:
         IsDone("camila_event_07"),
         IsTimeOfDay("afternoon"),
         HeroTarget(
-            IsGender("male"),
             Not(OnDate()),
             IsActivity("None"),
             ),
@@ -184,7 +173,6 @@ init python:
     "conditions": [
         IsDone("camila_event_08"),
         HeroTarget(
-            IsGender("male"),
             IsRoom("hospital"),
             ),
         PersonTarget(camila,
@@ -205,7 +193,6 @@ init python:
     "conditions": [
         IsDone("camila_event_09"),
         HeroTarget(
-            IsGender("male"),
             IsRoom("date_cinema")
             ),
         PersonTarget(camila,
@@ -226,7 +213,6 @@ init python:
     "conditions": [
         IsDone("camila_event_10"),
         HeroTarget(
-            IsGender("male"),
             IsRoom("date_cinema")
             ),
         PersonTarget(camila,
@@ -248,9 +234,6 @@ init python:
     "priority": 500,
     "conditions": [
         IsDone("camila_event_10"),
-        HeroTarget(
-            IsGender("male"),
-            ),
         PersonTarget(camila,
             IsActive(),
             MinStat("love", 180),
@@ -346,26 +329,6 @@ init python:
     "music": "music/roa_music/hero.ogg",
     "do_once": False,
     "once_month": True,
-    })
-
-    Event(**{
-    "name": "camila_preg_talk",
-    "label": "camila_preg_talk",
-    "conditions": [
-        HeroTarget(
-            IsGender("male"),
-            Not(OnDate())),
-        PersonTarget(camila,
-            IsPresent(),
-            IsFlag("toldpreg", False),
-            MinCounter("pregnant", 6),
-            Not(IsHidden()),
-            ),
-        ],
-    "music": "music/roa_music/hero.ogg",
-    "once_day": True,
-    "do_once": False,
-    "quit": False,
     })
 
     Event(**{
@@ -480,24 +443,6 @@ init python:
     "priority": 500,
     "do_once": True,
 })
-
-    Event(**{
-    "name": "camila_pregnant_request",
-    "label": "camila_pregnant_request",
-    "conditions": [
-        HeroTarget(IsGender("male")),
-        PersonTarget(camila,
-            IsPresent(),
-            Not(IsHidden()),
-            Not(IsActivity("sleep")),
-            IsFlag("status", "girlfriend"),
-            MaxCounter("pregnant", 8),
-            ),
-        'game.days_played - camila.flags.girlfriend_day >= 7',
-        ],
-    "do_once": True,
-    "quit": False,
-    })
 
     Event(**{
     "name": "camila_collar_request",
@@ -756,93 +701,35 @@ label camila_event_02:
     hide camila with easeoutright
     "As we're getting ready to leave, Camila hangs back for a moment."
     "I can see that she's talking to one of the staff, a guy she must know pretty well."
-    if "aletta_event_04b" in DONE:
-        "I kick my heels while I wait for Camila to wrap up her conversation."
-        "It's none of my business who she talks to, I'm well aware of that."
-        "But still I can't help being just a little curious."
-        "I'm trying to discern what I can from a distance when I hear a familiar voice."
-        aletta.say "Well hello, [hero.name]."
-        aletta.say "Fancy bumping into you here!"
-        show aletta happy casual with dissolve
-        "I turn around to see Aletta standing there."
-
-        mike.say "Oh, hi, Aletta."
-        mike.say "Yeah, I haven't been here since that time we came together."
-        mike.say "I...I'm just waiting for Camila over there."
-        "Aletta follows my gaze to where Camila's standing."
-        "She makes an odd kind of harumphing sound as she does so."
-        show aletta normal
-        "The kind of sound that usually means she's not at all impressed with what she sees."
-        aletta.say "Oh yes, HER!"
-        aletta.say "I saw her giving you some pointers just now."
-        show aletta at left4
-        show camila at right
-        with easeinright
-        "As Aletta finishes speaking, Camila makes it over to where we're standing."
-        mike.say "Oh, Camila, this is Aletta."
-        mike.say "We...ah...we work together!"
-        "I see Aletta's eyes go wide at this."
-        "She seems to bristle at only being introduced as my colleague and nothing more."
-        camila.say "Hey, Aletta - are you a gun-nut too?"
-        aletta.say "No, I'd describe myself more as an enthusiast."
-        aletta.say "I shoot for sport."
-        show camila happy
-        "Camila smiles at this, nodding her head."
-        camila.say "So you're an amateur then?"
-        camila.say "When you're on the force, you need to be more of a professional!"
-        show aletta happy
-        aletta.say "White collar versus blue collar, dear."
-        aletta.say "I think that's the distinction you're looking for!"
-        "Wait a minute - are they exchanging insults?!?"
-        mike.say "Ah, hey, you two..."
-        mike.say "I'm sure you have a lot to talk about."
-        mike.say "But maybe we can meet up some other time, huh?"
-        "At the sound of my voice, both girls seem to suddenly snap out of it."
-        "They exchange smiles that look less than sincere and nod their heads."
-        show aletta normal
-        show camila normal
-        aletta.say "Of course, [hero.name]."
-        aletta.say "I have other places to be."
-        camila.say "Me too, [hero.name]."
-        camila.say "Let's get out of here!"
-        show camila at top_mostright with ease
-        "I walk out of the place with Camila, trying to tell myself it's over."
-        scene bg shootingrange
-        show aletta normal casual
-        with fade
-        "But when I glance back over my shoulder, I see Aletta still staring in our direction."
-        "She narrows her eyes before turning her back and walking away."
-        hide aletta with fade
-    else:
-        "It takes Camila a couple of minutes to wrap up her conversation."
-        "And I spend the time trying to look interested in the posters on the walls."
-        "When she finally walks back over, I raise my eyebrows and give her a smile."
-        show camila
-        mike.say "Ah, who's that guy, Camila?"
-        "She looks at me sideways with a crooked smile of her own."
-        camila.say "Just a friend, [hero.name], that's all!"
-        show fx question
-        camila.say "What's it to you, anyway?"
-        camila.say "Wouldn't happen to be jealous, would you?"
-        mike.say "What...jealous?"
-        mike.say "Why would I be jealous?"
-        mike.say "I'm just curious, that's all!"
-        show camila happy
-        camila.say "Yeah, you're curious all right!"
-        "Camila laughs, letting me know that she's amused by my questions."
-        "All I can do is shrug it off, trying to explain myself."
-        mike.say "Well, it's just that we came here together, you know?"
-        mike.say "On a...well, maybe not a date, as such..."
-        show camila normal
-        camila.say "I never said this wasn't a date, [hero.name]."
-        camila.say "Why can't a trip to the shooting range be a date?"
-        mike.say "I...I guess it can, Camila!"
-        mike.say "Wait a minute - are you saying this IS a date?"
-        show camila bored
-        camila.say "I don't remember saying that either!"
-        "Camila smiles again as we walk out of the place."
-        "I can see just how much she enjoys screwing around with me."
-        "But what surprises me is just how much I like it too..."
+    "It takes Camila a couple of minutes to wrap up her conversation."
+    "And I spend the time trying to look interested in the posters on the walls."
+    "When she finally walks back over, I raise my eyebrows and give her a smile."
+    show camila
+    mike.say "Ah, who's that guy, Camila?"
+    "She looks at me sideways with a crooked smile of her own."
+    camila.say "Just a friend, [hero.name], that's all!"
+    show fx question
+    camila.say "What's it to you, anyway?"
+    camila.say "Wouldn't happen to be jealous, would you?"
+    mike.say "What...jealous?"
+    mike.say "Why would I be jealous?"
+    mike.say "I'm just curious, that's all!"
+    show camila happy
+    camila.say "Yeah, you're curious all right!"
+    "Camila laughs, letting me know that she's amused by my questions."
+    "All I can do is shrug it off, trying to explain myself."
+    mike.say "Well, it's just that we came here together, you know?"
+    mike.say "On a...well, maybe not a date, as such..."
+    show camila normal
+    camila.say "I never said this wasn't a date, [hero.name]."
+    camila.say "Why can't a trip to the shooting range be a date?"
+    mike.say "I...I guess it can, Camila!"
+    mike.say "Wait a minute - are you saying this IS a date?"
+    show camila bored
+    camila.say "I don't remember saying that either!"
+    "Camila smiles again as we walk out of the place."
+    "I can see just how much she enjoys screwing around with me."
+    "But what surprises me is just how much I like it too..."
     $ camila.love += 2
     $ camila.flags.camiladelay = TemporaryFlag(True, 3)
     hide camila
@@ -3255,123 +3142,7 @@ label camila_prison_visit_2:
     "And a part of me wonders which side of the glass the crazy people were really on!"
     return
 
-label camila_preg_talk:
-    "Camila's one of those uncomplicated girls."
-    "The kind that says whatever's on her mind at the time."
-    "And also the kind that says to hell with the consequences too!"
-    "Which means that she doesn't hold back or give me any warning..."
-    show camila normal
-    camila.say "[hero.name], we've got a problem!"
-    mike.say "Huh?"
-    mike.say "What do you mean?"
-    camila.say "I mean we need to talk about something - right now!"
-    mike.say "S...sure thing, Camila!"
-    mike.say "I'm all ears."
-    "Camila nods, clearly pleased with the way I just jumped to attention."
-    camila.say "I've been feeling shitty in the morning the past couple of days."
-    camila.say "I tried to ignore it at first, but it just got worse."
-    camila.say "So I took a test, and it was positive."
-    "Camila lets the words hang in the air."
-    "She's clearly expecting a response of some kind from me."
-    mike.say "Ah...okay..."
-    mike.say "It was positive for what, exactly?"
-    "Camila throws her hands up in the air at this."
-    show camila annoyed
-    "She lets out a grunt of frustration at my answer too."
-    camila.say "Urgh..."
-    camila.say "What the hell do you think it was for, dummy?!?"
-    camila.say "I'm fucking pregnant!"
-    "Suddenly I feel like a complete idiot."
-    "And not just because Camila's calling me one too."
-    "What other kind of test would she be talking about?"
-    mike.say "Oh..."
-    mike.say "Oh shit!"
-    show camila normal
-    "Camila nods, relieved to see that I'm finally on the same page as her."
-    camila.say "Oh shit is about right."
-    camila.say "We need to get serious, [hero.name]."
-    camila.say "We need to decide what we're going to do!"
-    "Doesn't look like I'm going to get to think about this one."
-    "Which is a shame, because how am I supposed to know what's for the best?"
-    "Camila's already eyeing me up, waiting for a response..."
-    menu:
-        "Let's keep the baby":
-            "I can't say that I'm honestly ready to have a kid."
-            "But then I wasn't ready to fall for a tough cop either!"
-            "Chance brought Camila and me together."
-            "And she's the best thing in my life right now."
-            "So maybe chance is behind this too?"
-            mike.say "Camila, I think we should keep the baby."
-            "For the first time, Camila looks genuinely surprised."
-            camila.say "A...are you serious?!?"
-            camila.say "I was sure you'd say no."
-            camila.say "That you'd say we should get rid of it!"
-            "I shake my head, trying to dismiss the notion outright."
-            mike.say "No, Camila."
-            mike.say "We should definitely do this."
-            "Now it's Camila's turn to shake her head."
-            camila.say "I...I don't know if I can be a mom..."
-            mike.say "No, Camila."
-            mike.say "For the record, I think you'll be a great mom."
-            mike.say "Fierce as a fucking lioness with her cubs!"
-            "I see her blush a little at this, trying to laugh it off."
-            show camila flirt
-            camila.say "Shut up, [hero.name]!"
-            camila.say "But seriously - who's gonna raise the baby?"
-            camila.say "We both have careers, right?"
-            mike.say "We can worry about that later, Camila."
-            mike.say "And I'm not against staying at home to raise your kids either."
-            mike.say "Actually, I kind of like the idea of waiting for a tough cop to come home."
-            mike.say "It's hot, and I'd be the envy of the other stay-at-home dad's at the park too!"
-            show camila happy
-            "Camila laughs, and then gives me a punch on the arm for good measure."
-            "Sure, it stings more than a little."
-            "But it let's me know that she loves me."
-            "So it's more than worth the pain."
-            $ camila.love += 10
-            $ camila.flags.toldpreg = True
-        "Tell her to abort":
-            "How can either of us say that we're ready to have a kid?"
-            "I'm working every hour that god sends to get ahead in my career."
-            "And Camila's a cop that's fighting to keep the streets clean."
-            "She's putting her neck on the line daily!"
-            "Neither of us is in a position to raise a child."
-            mike.say "You don't want to keep it, do you?"
-            "For the first time, Camila looks genuinely surprised."
-            show camila annoyed
-            camila.say "I...I don't know, [hero.name]."
-            camila.say "What makes you think that?"
-            camila.say "Don't you think I could be a mom?"
-            "I shake my head, dismissing the notion out of hand."
-            mike.say "No, Camila."
-            mike.say "For the record, I think you'd be a great mom."
-            mike.say "Fierce as a fucking lioness with her cubs!"
-            "I see her blush a little at this, trying to laugh it off."
-            mike.say "But you usually know what you want."
-            mike.say "If you wanted to keep the kid..."
-            mike.say "Well, you'd have just said so."
-            "Camila nods, letting me know that I'm right."
-            "But all the same, I'm too smart to let it show."
-            show camila normal
-            camila.say "I guess I wanted to see what you wanted, you know?"
-            camila.say "But you got me, [hero.name]."
-            camila.say "I don't think I'm ready for this..."
-            mike.say "Then we do what we have to do, Camila."
-            mike.say "And we wait until both of us ARE ready."
-            "Camila lets out an uncharacteristic sob."
-            "But she puts her arms around me and we hold each other tight."
-            $ camila.love -= 10
-            $ camila.unpreg()
-    return
-
 label camila_male_ending:
-
-
-
-
-
-
-
     if renpy.has_label("camila_achievement_3") and not game.flags.cheat:
         call camila_achievement_3 from _call_camila_achievement_3
     $ game.hour = 16
@@ -3413,16 +3184,10 @@ label camila_male_ending:
     "So used to it that the sight of her in a wedding dress is like a slap in the face."
     "All of the toughness and machismo that she exudes on the beat is nowhere to be seen."
     "Instead she looks elegant, feminine and breath-takingly beautiful."
-    if camila.is_visibly_pregnant:
-        "It still feels a little odd to see Camila's belly growing on a daily basis."
-        "But the cut of her dress is sympathetic to the fact that she's pregnant."
-        "And so it only serves to add another level to how stunning she looks."
-        "That and it reminds me of the fact we're about to become a family!"
-    else:
-        "I have to make sure that I heap the compliments on Camila once the ceremony's over."
-        "She looks so damn good in that dress that I want to see her wearing stuff like that more often."
-        "But I have to be subtle about it, not let on that I'm too keen."
-        "Otherwise I'll never get to see her body on show outside of the bedroom again!"
+    "I have to make sure that I heap the compliments on Camila once the ceremony's over."
+    "She looks so damn good in that dress that I want to see her wearing stuff like that more often."
+    "But I have to be subtle about it, not let on that I'm too keen."
+    "Otherwise I'll never get to see her body on show outside of the bedroom again!"
     show camila at center, traveling (1.5, 3.0, (640, 1040))
     "It's like the mere sight of Camila walking down the aisle solves everything."
     "All of my fears and anxiety are gone in the blink of an eye."
@@ -3564,34 +3329,15 @@ label camila_male_ending:
     camila.say "I guess he'd already come to terms with it while we were dating."
     camila.say "I think he knows that I can handle myself out there."
     camila.say "And even better than that, he trusts my judgement too."
-
-
-
-
-
-
-
-
-
-
-
     camila.say "I went so long without anyone like [hero.name] in my life."
     camila.say "And I was convinced that I didn't need anyone like that either."
     camila.say "So it's funny now that I can't imagine my life without him!"
-    if camila.is_visibly_pregnant or camila.flags.mikeBabies >= 1:
-        camila.say "Not that I could imagine it without Nova and Seren either!"
-        camila.say "I mean, I kind of always thought I'd have kids at some point in the future."
-        camila.say "But when [hero.name] and I found out that I was pregnant, it just felt right."
-        camila.say "Now we have two little rascals to keep in line around the house."
-        camila.say "I think [hero.name] secretly hopes they'll grow up to be girly girls."
-        camila.say "But I have a feeling they might take after me and be tomboys instead!"
-    else:
-        camila.say "And even though it's just the two of us right now, that may soon change."
-        camila.say "I always kind of assumed that I'd have kids at some point in the future."
-        camila.say "But now that I'm married, I'm wondering why we should wait any longer?"
-        camila.say "[hero.name] seems to be up for starting a family."
-        camila.say "And I think he'll make a great dad once the new arrivals are on the scene."
-        camila.say "Maybe he'll even enjoy being a house-husband too!"
+    camila.say "And even though it's just the two of us right now, that may soon change."
+    camila.say "I always kind of assumed that I'd have kids at some point in the future."
+    camila.say "But now that I'm married, I'm wondering why we should wait any longer?"
+    camila.say "[hero.name] seems to be up for starting a family."
+    camila.say "And I think he'll make a great dad once the new arrivals are on the scene."
+    camila.say "Maybe he'll even enjoy being a house-husband too!"
     camila.say "I still think it's weird that if he'd never come across that psycho, we'd likely never have met."
     camila.say "But part of me feel that it was almost supposed to play out like that, you know?"
     camila.say "Like we found each other because he needed somebody to step in and protect him."
@@ -5733,171 +5479,6 @@ label camila_event_04_alt:
     if not hero.has_skill("shooting"):
         $ hero.gain_skill("shooting")
         "After all that, I sure feel more comfortable around guns."
-    return
-
-label camila_pregnant_request:
-    show camila at center, zoomAt (1.25, (640, 880)) with fade
-    "Dealing with Camila can be a pretty tricky prospect when you take into account her contradictory nature."
-    "What I mean by that is on the one hand she gives off the impression of being a tough, no nonsense cop."
-    "You get the impression that she always says what she means and wears her heart on her sleeve."
-    "But it doesn't take you long to realise that she's actually one seriously smart cookie."
-    "And that's why she's so good at her job, the intelligence underneath the tough exterior."
-    "The only problem is that it kind of leaves me guessing a lot of the time when we're together."
-    "Like, is she pulling the same act with me, or is she actually being up-front about her feelings?"
-    "And sometimes, you just have to poke the bear and then hope you don't get mauled too badly."
-    mike.say "Camila..."
-    show camila surprised
-    camila.say "Huh?"
-    show camila normal
-    mike.say "Is everything okay?"
-    show camila bored
-    camila.say "What kind of a question is that?"
-    camila.say "Does it look like there's something up?"
-    show camila sadsmile
-    mike.say "Well, you're snapping at me like someone you just busted for possession..."
-    mike.say "So I'm going to go out on a limb and say that there is."
-    show camila annoyed
-    "Camila's brows furrow and she narrows her eyes, like she's about to launch into a tirade."
-    "But then she seems to remember who she's talking to, and the annoyance drains out of her."
-    show camila angry
-    camila.say "Ah, dammit..."
-    show camila talkative
-    camila.say "I've been around you so long, you can read me like a frickin book!"
-    show camila normal
-    mike.say "So what?"
-    mike.say "There is something wrong?"
-    mike.say "When were you going to tell me?"
-    show camila annoyed
-    "Camila shakes her head and holds up a hand, trying to stop me going down that lone of reasoning."
-    show camila talkative
-    camila.say "It's not like that, [hero.name]…"
-    camila.say "I don't have something to tell you, like a confession or anything."
-    show camila whining
-    camila.say "But what I do have is...something to ask you."
-    show camila sadsmile
-    "Well now I'm more than a little intrigued."
-    "What could Camila possibly have to ask me that's got her so wound up?"
-    mike.say "Then ask away, Camila..."
-    mike.say "I'm all ears!"
-    show camila talkative
-    camila.say "Okay, okay..."
-    camila.say "Just do me a favour and hear me out before you answer."
-    camila.say "I always thought that the force was all I'd ever need."
-    camila.say "That my fellow officers were like my family, you know?"
-    camila.say "But then you came along, and all of that started to change."
-    show camila normal
-    "I can't help frowning as Camila opens up to me about how she's feeling."
-    "Because I'd pretty much come to terms with the fact that she was devoted to her job."
-    "Like it or not, I'd accepted that I might come second to her duties as a police officer."
-    mike.say "What are you trying to tell me, Camila?"
-    mike.say "You're not thinking about jacking it in, are you?"
-    "Camila shakes her head again."
-    show camila talkative
-    camila.say "Not totally, just maybe taking a sabbatical."
-    camila.say "No, [hero.name]...I want to start a family."
-    show camila normal
-    "The statement is made so boldly and out of the blue that it doesn't really sink in fully."
-    "So instead of processing this momentous revelation, my brain just flips into stupid mode."
-    mike.say "Oh..."
-    mike.say "Who with?"
-    show camila weird
-    "Camila's eyes flare with astonishment, and she instinctively punches me on the arm."
-    "Given the circumstances, that's probably a perfectly fair reaction to the question."
-    with hpunch
-    "And the sudden pain of the well-aimed jab serves to jerk me back to reality as well."
-    mike.say "OUCH!"
-    show camila angry
-    camila.say "With some random junkie I just busted five minutes ago!"
-    show camila weird
-    camila.say "Geez, [hero.name], who do you frickin think I mean?!?"
-    camila.say "You, you dumb bastard!"
-    show camila normal
-    "By now I'm nodding like crazy, trying to claw back some vague semblance of dignity."
-    "And the reality of what Camila is asking me is really beginning to sink in too."
-    mike.say "Are you serious?"
-    mike.say "I mean...wow!"
-    mike.say "I'd kind of gotten used to the idea that you were married to the force."
-    mike.say "So it's kind of hard to get my head around the idea of us having a kid."
-    show camila whining
-    camila.say "Yeah, yeah...I get that."
-    show camila talkative
-    camila.say "But it's all your fault, you jerk!"
-    camila.say "You're the one that came along and made me go all mushy inside."
-    camila.say "I can't help that you made me get in touch with my feelings and all that."
-    camila.say "And I tried to ignore it, but I couldn't - I want your damn baby!"
-    show camila normal
-    menu:
-        "Agree":
-            "Okay, this might be the craziest thing I've ever done."
-            "But somehow it just feels one hundred percent right."
-            "And I have the urge to go with my gut feeling on this one."
-            mike.say "Then I say that we do it."
-            "Now it's Camila's turn to look at me like she doesn't understand."
-            "Almost like she was ready for me to say no and call her crazy."
-            show camila surprised
-            camila.say "Wait a minute..."
-            camila.say "Did you just say yes?"
-            camila.say "Aren't you supposed to say you don't want to be tied down?"
-            camila.say "Or jerk me around about not being prepared for this kind of thing?"
-            show camila normal
-            mike.say "Camila, I'm not going to impregnate you on the spot, right here and now!"
-            mike.say "I'm just saying that I think we should go for it."
-            mike.say "We can figure out the details later."
-            show camila flirt
-            "For the first time since we started talking about all of this, Camila cracks a smile."
-            "Like the reality's finally dawning on her that I want to make this thing happen too."
-            show camila happy
-            camila.say "Oh man..."
-            camila.say "I was so sure you were going to chicken out on me!"
-            show camila flirt
-            mike.say "What?!?"
-            mike.say "No way - I'm so much tougher now than I was when you first met me."
-            show camila talkative
-            camila.say "Well you'd better be."
-            camila.say "Because being a dad's gonna be harder than anything you've ever done before!"
-            show camila normal
-            mike.say "Bring it on - I can handle the pressure!"
-            show camila talkative
-            camila.say "Yeah..."
-            camila.say "When the time comes, I'll remind you that you said that!"
-            show camila normal
-            $ camila.love += 2
-            $ camila.flags.pregrequest = True
-        "Refuse":
-            "Part of me wants to say yes, just for the sake of pleasing Camila."
-            "But the more responsible part of me knows that this isn't a frivolous thing."
-            "And I owe it to the both of us to be completely honest with her."
-            mike.say "There's no way we can have a kid, Camila..."
-            mike.say "Not with where the two of us are in terms of our careers."
-            mike.say "It'd mess everything up, don't you see?"
-            show camila sad
-            "Of course that's not going to be what Camila wanted to hear."
-            "And the look on her face reflects that, as she scowls at me."
-            show camila whining
-            camila.say "I'm not asking you to knock me up right here and now!"
-            camila.say "I'm talking about us making serious plans together."
-            camila.say "About us committing to a vision of our future."
-            camila.say "And making sacrifices to have it happen."
-            show camila sadsmile
-            "All of what Camila's saying makes sense."
-            "But I'm not in the mood to let her change my mind."
-            mike.say "No, Camila..."
-            show camila sad
-            mike.say "We can make plans for the long-term, plan for the future."
-            mike.say "But the way I see it, kids are a hell of a long way away for us."
-            "Camila looks at me in a way that makes me think she might hit me a second time."
-            "But then she shakes her head and turns on her heel."
-            show camila whining
-            camila.say "Maybe we need to be talking about whether or not there is a future for us, [hero.name]."
-            camila.say "Because it sounds like we're about a million miles apart right now!"
-            show camila sad
-            pause 0.5
-            hide camila with easeoutright
-            "Before I can say another word, Camila strides away from me."
-            "And her body-language tells me that following her would not be a good idea."
-            "I guess I'll just have to hope that what she said was in the heat of the moment."
-            "And that once she's calmed down, we can talk it through."
-            $ camila.love -= 2
     return
 
 label camila_collar_request:

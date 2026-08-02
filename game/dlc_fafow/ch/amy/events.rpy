@@ -342,34 +342,15 @@ init python:
     "conditions": [
         IsDone("amy_kink_04"),
         PersonTarget("amy",
-                     IsActive(),
-                     MinStat("sub", 80),
-                     MinStat("love", 150),
-                     ),
+                    IsActive(),
+                    MinStat("sub", 80),
+                    MinStat("love", 150),
+                    ),
         HeroTarget(
             IsGender("male"),
             ),
         ],
     "do_once": True,
-    })
-
-    Event(**{
-    "name": "amy_preg_talk",
-    "max_girls": 1,
-    "label": "amy_preg_talk",
-    "do_once": False,
-    "conditions": [
-        HeroTarget(
-            IsGender("male"),
-            Not(OnDate())),
-        PersonTarget(amy,
-            IsPresent(),
-            Not(IsHidden()),
-            IsFlag("toldpreg", False),
-            MinCounter("pregnant", 6),
-            ),
-        ],
-    "music": "music/roa_music/reflection.ogg",
     })
 
 
@@ -3077,16 +3058,10 @@ label amy_male_ending:
         "Amy sweeps into the chapel and down the aisle, looking like I've never seen her before."
         "Somehow she's managed to find a wedding dress that makes her look like an angel."
         "Yet it also manages to stay faithful to the goth image that's so much a part of her."
-        if amy.is_visibly_pregnant:
-            "The dress is also cut to flatter Amy's swelling belly too."
-            "Though it makes no effort to hide the fact that she's pregnant."
-            "Which is exactly the way we wanted it to be."
-            "Because we're both so proud of the fact we're going to be parents."
-        else:
-            "And as Amy gets closer to the altar, she only seems to look better."
-            "I can't seem to take my eyes off her the whole time."
-            "And I must have a huge smile plastered on my face too."
-            "Because I swear I can feel my jaw starting to ache."
+        "And as Amy gets closer to the altar, she only seems to look better."
+        "I can't seem to take my eyes off her the whole time."
+        "And I must have a huge smile plastered on my face too."
+        "Because I swear I can feel my jaw starting to ache."
         "Amy comes to a halt by my side at the altar."
         "And we spend the next few moments grinning at each other like total fools."
         show amy b flirt
@@ -3191,14 +3166,9 @@ label amy_male_ending:
         amy.say "And I've never looked back since then."
         amy.say "[hero.name]'s flying high in his career."
         amy.say "Though I'm still not sure what he actually does for a living!"
-        if amy.is_visibly_pregnant or amy.flags.mikeBabies >= 1:
-            amy.say "But he always finds time to be a good daddy to Raven."
-            amy.say "And he makes sure to use up all of his vacation time too."
-            amy.say "Because we know that being a family is the most important thing."
-        else:
-            amy.say "But we're talking about the future and what we want out of life."
-            amy.say "And the more we do, the more we both keep mentioning starting a family."
-            amy.say "So I don't think it'll be long until we hear the pattering of little feet around here."
+        amy.say "But we're talking about the future and what we want out of life."
+        amy.say "And the more we do, the more we both keep mentioning starting a family."
+        amy.say "So I don't think it'll be long until we hear the pattering of little feet around here."
         amy.say "And as for me, well..."
         amy.say "It turns out that I'm a hell of a lot better at running an electronics store than I thought."
         amy.say "A little time after [hero.name] and I got married, Shawn ended up in big trouble at work."
@@ -3223,7 +3193,6 @@ label amy_male_ending:
                 call sexperience_achievement_3 from _call_sexperience_achievement_3_21
     $ game.set_new_game_plus()
     $ renpy.full_restart()
-
 
 label amy_birthday_date_male:
     $ DONE["amy_birthday_date_male"] = game.days_played
@@ -4127,132 +4096,3 @@ label amy_birthday_sex_male:
     "And why would there be any need to say a word?"
     "Especially after the intimacy we just shared."
     return
-
-label amy_preg_talk:
-    show amy pain
-    "I'm used to Amy being pretty easy-going in terms of her mood, you know?"
-    "Like when I first met her, she was always taking the piss out of Shawn."
-    "Getting on his case for being pompous and having his head up his ass."
-    "And that's how she's been most of the time we've been dating too."
-    "So being around her was always a riot, a whole lot of fun."
-    "That's also why it's so easy for me to spot that something's changed too."
-    show amy surprised at startle(0.05,-10)
-    mike.say "Amy..."
-    mike.say "Are you doing okay today?"
-    mike.say "I mean...I don't want to be nosey..."
-    mike.say "But you kind of look like there's a lot on your mind!"
-    "At first, Amy looks up at me like she's been caught off-guard."
-    "Which I guess means that she was all but lost in her thoughts just now."
-    show amy sadsmile
-    "But as I start to ask questions, her expression seems to change."
-    "Becoming more relieved than anything else."
-    "Which really poses more questions than it answers."
-    amy.say "Sorry, [hero.name]..."
-    amy.say "I was miles away!"
-    amy.say "You're right - I do have something on my mind."
-    amy.say "And I was waiting for the right moment to say something about it."
-    amy.say "But seeing as you asked the question first, I'm gonna do it now."
-    "I nod and take a deep breath, waiting for whatever's coming next."
-    "Doing the best I can to keep my nerves from showing at the same time."
-    amy.say "We might have been trying to be careful."
-    amy.say "But it looks like we weren't trying hard enough."
-    mike.say "You..."
-    mike.say "You mean..."
-    show amy shy
-    amy.say "Yeah, [hero.name]..."
-    amy.say "I'm pregnant."
-    "Suddenly I feel dizzy, like my legs are going to give way."
-    "I shake my head, trying to regain my senses and snap out of it."
-    "But Amy seems to think that this means I'm refusing to accept her word."
-    show amy pain
-    amy.say "I'm not kidding..."
-    amy.say "I did a test and everything!"
-    mike.say "Yeah, yeah..."
-    mike.say "I believe you, Amy..."
-    show amy sadsmile
-    amy.say "That's great to know."
-    amy.say "But what are we going to do about it?"
-    menu:
-        "We should keep the baby":
-            "My mind is a mess of confusing thoughts and contradictory notions."
-            "Or at least it is until Amy asks me that specific question."
-            show amy at center, zoomAt(1.5, (640, 1040))
-            "The moment I hear it, everything seems to clear up."
-            "And I hear myself answering without pause or hesitation."
-            mike.say "Do about it?"
-            mike.say "What do you mean, Amy?"
-            mike.say "We could get married, if that's what you really want."
-            mike.say "But we can still raise a child without doing that."
-            show amy surprised
-            "Amy blinks, like she almost doesn't understand."
-            amy.say "You..."
-            amy.say "You want to keep it?"
-            amy.say "You want to keep the baby?"
-            mike.say "Well...yeah..."
-            mike.say "Don't you?"
-            show amy normal
-            $ amy.love += 10
-            "A flood of relief seems to sweep over Amy as I say all of this."
-            "And she visibly sags, like the tension has been released from her body."
-            amy.say "Yes, I do..."
-            show amy puzzled
-            amy.say "But I was worried that..."
-            amy.say "Because you're a guy and all that..."
-            "I hold my hand up, stopping Amy before she can say more."
-            mike.say "It's okay."
-            mike.say "I get it."
-            mike.say "But just to be clear, I do want to keep the baby."
-            mike.say "And I want us to raise it together, as a family."
-            show amy happy
-            amy.say "Urgh..."
-            amy.say "That's a weight off my mind!"
-            show amy normal
-            amy.say "But now I suppose the real hard work starts."
-            amy.say "Now we have to plan for the future!"
-            $ amy.flags.toldpreg = True
-            "I can only nod, beginning to feel the weight of responsibility too."
-        "You should have a termination":
-            "My mind is a mess of confusing thoughts and contradictory notions."
-            "Or at least it is until Amy asks me that specific question."
-            show amy at center, zoomAt(1.5, (640, 1040))
-            "The moment I hear it, everything seems to clear up."
-            "And I hear myself answering without pause or hesitation."
-            show amy surprised
-            mike.say "Get rid of it!"
-            mike.say "That's what we're going to do."
-            mike.say "Get a termination!"
-            mike.say "I can't be a parent, now way!"
-            "Before now, Amy looked confused and more than a little scared."
-            "But as soon as she hears what I have to say, everything changes."
-            "There's a look of disbelief on her face."
-            show amy mad
-            "Though it quickly turns into one of genuine disgust."
-            amy.say "[hero.name]..."
-            show amy angry
-            $ amy.love -= 20
-            amy.say "How can you even think that?!?"
-            amy.say "This is a child we're talking about..."
-            amy.say "Our child!"
-            "I shake my head, refusing to be swayed."
-            "Simply not wanting to hear what Amy's saying."
-            mike.say "It's not a child yet, Amy."
-            mike.say "At this stage it's not anything at all!"
-            mike.say "But it will be if you don't get a termination - right now!"
-            hide amy
-            show amy mad
-            $ amy.sub -= 10
-            "Amy's already starting to back away from me."
-            "And now she's the one shaking her head."
-            "Like she's doesn't know who she's looking at anymore."
-            amy.say "No, [hero.name]..."
-            amy.say "I won't let you harm my baby."
-            show amy angry
-            amy.say "Not now, not ever!"
-            amy.say "You stay the hell away from me, you hear?"
-            hide amy with easeoutright
-            $ amy.set_gone_forever()
-            "With that, Amy turns on her heel and runs away."
-            "And something makes me feel that she's not coming back either."
-    return
-return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

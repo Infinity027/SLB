@@ -6,7 +6,6 @@ init python:
         IsDone("cleaning_attic"),
         Or(
             IsDone("samantha_event_A02"),
-            IsDone("samantha_event_B04"),
             IsDone("samantha_event_C03"),
             ),
         HeroTarget(
@@ -19,29 +18,6 @@ init python:
     "music": "music/darren_curtis/come_out_and_play.ogg",
     "do_once": True,
     })
-
-    # Event(**{
-    # "name": "ayesha_emma_event_01",
-    # "label": "ayesha_emma_event_01",
-    # "conditions": [
-    #     HeroTarget(
-    #         IsRoom("coffeeshop"),
-    #         ),
-    #     PersonTarget(ayesha,
-    #         IsPresent(),
-    #         Not(IsHidden()),
-    #         MinStat("love", 60),
-    #         ),
-    #     PersonTarget(emma,
-    #         IsPresent(),
-    #         Not(IsHidden()),
-    #         MinStat("love", 60),
-    #         ),
-    #     ],
-    # "priority": 500,
-    # "music": "music/darren_curtis/come_out_and_play.ogg",
-    # "do_once": True,
-    # })
 
 label ryan_bus:
     scene bg street with fade

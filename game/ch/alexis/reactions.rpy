@@ -49,15 +49,7 @@ label alexis_offer_a_drink_male:
     mike.say "I'm just going to the bar, Alexis."
     mike.say "You want a drink?"
     "Almost the second the words are out of my mouth, Alexis turns to face me."
-    if alexis.is_visibly_pregnant:
-        show alexis angry
-        $ alexis.love -= 10
-        alexis.say "[hero.name]!"
-        alexis.say "Are you serious?!?"
-        alexis.say "You know I can't drink in my condition!"
-        $ hero.cancel_activity()
-        hide alexis
-    elif (hero.charm >= 60 - alexis.love and alexis.flags.drinks < 2) or date_girl == alexis:
+    if (hero.charm >= 60 - alexis.love and alexis.flags.drinks < 2) or date_girl == alexis:
         show alexis happy
         alexis.say "Oh, sure, [hero.name]."
         alexis.say "You mind grabbing me a craft beer?"

@@ -10,7 +10,6 @@ init 1:
             attribute c null
             attribute d null
 
-
         always:
             if_not ["c"]
             "kleio_body"
@@ -20,20 +19,15 @@ init 1:
             "kleio_body_c"
         group tattoo auto variant "c" if_any "c"
 
-
-
         attribute pubes if_not ["c"]
 
 
         group preg auto if_not ["c"]
         group pregc auto if_any ["c"]
 
-
         group multiple auto variant piercings when not c
 
-
         group tattoo auto variant "bot" if_not ["c"]
-
 
         attribute naked null
         group stockings auto if_not ["c", "bottomless", "naked"]

@@ -1,26 +1,26 @@
 init python:
-    InteractEvent(**{
-    "name": "bree_event_05",
-    "label": "bree_event_05",
-    "duration": 2,
-    "conditions": [
-        IsDone("bree_event_03"),
-        IsNotDone("bree_event_04"),
-        IsDayOfWeek("123456"),
-        IsHour(18, 20),
-        HeroTarget(
-            IsGender("male"),
-            IsRoom("livingroom")),
-        HasSkill("video_games"),
-        PersonTarget(bree,
-            IsActive(),
-            MinStat("love", 80),
-            ),
-        ],
-    "priority": 500,
-    "do_once": True,
-    "music": "music/roa_music/juice.ogg",
-    })
+    # InteractEvent(**{
+    # "name": "bree_event_05",
+    # "label": "bree_event_05",
+    # "duration": 2,
+    # "conditions": [
+    #     IsDone("bree_event_03"),
+    #     IsNotDone("bree_event_04"),
+    #     IsDayOfWeek("123456"),
+    #     IsHour(18, 20),
+    #     HeroTarget(
+    #         IsGender("male"),
+    #         IsRoom("livingroom")),
+    #     HasSkill("video_games"),
+    #     PersonTarget(bree,
+    #         IsActive(),
+    #         MinStat("love", 80),
+    #         ),
+    #     ],
+    # "priority": 500,
+    # "do_once": True,
+    # "music": "music/roa_music/juice.ogg",
+    # })
 
     InteractEvent(**{
     "name": "bree_event_06",
@@ -67,7 +67,6 @@ init python:
     "duration": 6,
     "conditions": [
         IsDone("bree_event_07"),
-        HeroTarget(IsGender("male")),
         IsHour(8, 20),
         PersonTarget(bree,
             Not(IsHidden()),
@@ -130,7 +129,6 @@ init python:
     "duration": 2,
     "conditions": [
         IsDone("bree_event_10"),
-        HeroTarget(IsGender("male")),
         IsHour(10, 14),
         PersonTarget(bree,
             Not(IsHidden()),

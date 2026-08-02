@@ -127,15 +127,7 @@ label minami_offer_a_drink_male:
     mike.say "Minami, you want a beer?"
     mike.say "I'm just headed to the bar to grab one."
     "Almost the second the words are out of my mouth, Minami turns to face me."
-    if minami.is_visibly_pregnant:
-        show minami angry
-        $ minami.love -= 10
-        minami.say "You can't give me beer, big bro!"
-        minami.say "It's bad for the baby."
-        minami.say "We're going to be parents soon - you need to be more responsible!"
-        $ hero.cancel_activity()
-        hide minami
-    elif (hero.charm >= 60 - minami.love and minami.flags.drinks < 2) or date_girl == minami:
+    if (hero.charm >= 60 - minami.love and minami.flags.drinks < 2) or date_girl == minami:
         show minami happy
         minami.say "Ooh..."
         minami.say "Thanks, big bro."

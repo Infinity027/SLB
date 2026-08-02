@@ -8,8 +8,7 @@ init python:
         IsNotDone("bree_event_05"),
         IsDayOfWeek("12345"),
         IsHour(12, 18),
-        HeroTarget(
-            IsGender("male"),
+        HeroTarget(       
             Not(OnDate())),
         PersonTarget(bree,
             Not(IsPresent()),
@@ -34,7 +33,7 @@ init python:
         IsNotDone("bree_event_05b"),
         IsHour(9, 22),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("livingroom", "kitchen", "bathroom", "bedroom1")),
         PersonTarget(bree,
             Not(IsHidden()),
@@ -52,7 +51,7 @@ init python:
         IsDone("bree_event_04"),
         IsHour(9, 22),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("secondfloor", "bedroom2")),
         PersonTarget(bree,
             Not(IsHidden()),
@@ -73,7 +72,7 @@ init python:
         IsDone("bree_event_05b"),
         IsHour(18, 22),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("livingroom", "kitchen")),
         PersonTarget(bree,
             Not(IsHidden()),
@@ -95,7 +94,7 @@ init python:
         IsDayOfWeek("12345"),
         IsHour(12, 18),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("map")),
         PersonTarget(bree,
             Not(IsHidden()),
@@ -114,7 +113,7 @@ init python:
         IsDone("bree_event_07b"),
         IsHour(18, 20),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("maidcafe")),
         PersonTarget(bree,
             IsPresent(),
@@ -135,7 +134,7 @@ init python:
     "conditions": [
         IsDone("bree_event_08b"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("maidcafe")),
         PersonTarget(bree,
             IsPresent(),
@@ -156,7 +155,7 @@ init python:
         IsDone("bree_event_08b"),
         IsHour(18, 20),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home")),
         PersonTarget(bree,
             Not(IsHidden()),
@@ -176,7 +175,7 @@ init python:
         IsDone("bree_event_09b"),
         IsHour(18, 22),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("livingroom")),
         PersonTarget(bree,
             IsPresent(),
@@ -197,7 +196,7 @@ init python:
         IsDone("bree_event_10b"),
         IsHour(18, 22),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("livingroom")),
         PersonTarget(bree,
             IsPresent(),
@@ -219,7 +218,7 @@ init python:
         IsDone("bree_event_10b", "bree_event_09c"),
         IsHour(18, 23),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("watch_tv_with_bree"),
             IsRoom("livingroom"),
             ),
@@ -241,7 +240,7 @@ init python:
         IsDone("bree_event_11b"),
         IsHour(18, 20),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("maidcafe")),
         PersonTarget(bree,
             IsPresent(),
@@ -260,7 +259,7 @@ init python:
     "conditions": [
         IsDone("bree_event_12b"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("livingroom")),
         PersonTarget(bree,
             IsActive(),
@@ -278,7 +277,6 @@ init python:
     "duration": 2,
     "conditions": [
         IsDone("bree_event_13b"),
-        HeroTarget(IsGender("male")),
         IsDayOfWeek("67"),
         IsHour(8, 18),
         PersonTarget(bree,
@@ -301,7 +299,7 @@ init python:
         Not(IsDone("bree_event_14c_alternate")),
         IsSeason(1),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_beach", "date_nudistbeach")),
         PersonTarget(bree,
             IsPresent(),
@@ -322,7 +320,7 @@ init python:
         Not(IsDone("bree_event_14c")),
         IsSeason(3),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_mall1")),
         PersonTarget(bree,
             IsPresent(),
@@ -3277,8 +3275,6 @@ label bree_event_14b:
     breesdad "You should have stuck with that guy I found for you!"
     show fx anger at left
     breesdad "Sure, he knocked you about a bit."
-    if not bree.is_visibly_pregnant:
-        breesdad "But he'd have knocked you up by now too!"
     "I can see the impact of the comment on [bree.name]."
     "It hits her almost like a physical blow, as if her dad had slapped her across the face."
     show bree cry at right

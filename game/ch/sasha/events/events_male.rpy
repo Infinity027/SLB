@@ -7,7 +7,7 @@ init python:
     "conditions": [
         IsHour(9, 19),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("livingroom")),
         ],
     "duration": 1,
@@ -24,7 +24,7 @@ init python:
         IsNotDone("sasha_b_event_02"),
         IsHour(9, 0),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("livingroom", "kitchen", "bathroom", "bedroom1")),
         PersonTarget(sasha,
             Not(IsHidden()),
@@ -46,7 +46,7 @@ init python:
     "conditions": [
         IsHour(9, 0),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("secondfloor", "bedroom3")),
         PersonTarget(sasha,
             Not(IsHidden()),
@@ -68,7 +68,7 @@ init python:
     "conditions": [
         IsDone("sasha_b_event_02"),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("pub"),),
         PersonTarget(sasha,
             IsPresent(),
@@ -89,7 +89,7 @@ init python:
         IsNotDone("sasha_b_event_04"),
         IsHour(18, 0),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("livingroom", "kitchen", "bathroom", "bedroom1")),
         PersonTarget(sasha,
             Not(IsHidden()),
@@ -112,7 +112,7 @@ init python:
         IsDone("sasha_b_event_03"),
         IsHour(18, 0),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("secondfloor", "bedroom3")),
         PersonTarget(sasha,
             Not(IsHidden()),
@@ -130,9 +130,6 @@ init python:
     "priority": 500,
     "conditions": [
         MinDateScore(90),
-        HeroTarget(
-            IsGender("male"),
-            ),
         PersonTarget(sasha,
             OnDate(),
             MinStat("love", 140),
@@ -210,7 +207,7 @@ init python:
     "conditions": [
         IsSeason(0, 1),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("bedroom1")),
         PersonTarget(sasha,
             Not(IsHidden()),
@@ -232,7 +229,6 @@ init python:
     "conditions": [
         IsDone("sasha_event_03"),
         HeroTarget(
-            IsGender("male"),
             IsRoom("livingroom")),
         PersonTarget(sasha,
             IsActive(),
@@ -252,7 +248,7 @@ init python:
     "conditions": [
         IsDone("sasha_event_04"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("livingroom")),
         PersonTarget(sasha,
             IsActive(),
@@ -276,7 +272,6 @@ init python:
         IsDayOfWeek("5"),
         IsHour(20, 21),
         HeroTarget(
-            IsGender("male"),
             IsRoom("map"),
             MinFlag("band", 1),
             ),
@@ -297,7 +292,6 @@ init python:
         IsDayOfWeek("5"),
         IsHour(20, 23),
         HeroTarget(
-            IsGender("male"),
             HasRoomTag("pub"),
             MinFlag("performance", 1),
             ),
@@ -315,7 +309,6 @@ init python:
     "label": "sasha_practice_01",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             Not(OnDate()),
             IsActivity("practice_band"),
             MinFlag("bandpractice", 25),
@@ -336,8 +329,7 @@ init python:
     "priority": 500,
     "do_once": True,
     "conditions": [
-        HeroTarget(
-            IsGender("male"),
+        HeroTarget(   
             Not(OnDate()),
             IsActivity("practice_band"),
             IsFlag("bandcrossdress", True),
@@ -367,7 +359,7 @@ init python:
     "conditions": [
         MinDaysPlayed(7),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("livingroom")),
         PersonTarget(sasha,
             IsPresent(),
@@ -424,7 +416,7 @@ init python:
     "conditions": [
         IsDone("sasha_scottie_talk"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("bedroom3", "secondfloor")),
         PersonTarget(sasha,
             Not(IsHidden()),
@@ -445,7 +437,7 @@ init python:
         IsDone("scottie_appears"),
         MinDaysPlayed(14),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("livingroom")),
         PersonTarget(sasha,
             IsPresent(),
@@ -471,7 +463,6 @@ init python:
         Not(IsDone("sasha_threesome_request")),
         MinDaysPlayed(14),
         HeroTarget(
-            IsGender("male"),
             IsRoom("livingroom")),
         PersonTarget(sasha,
             IsFlag("disable_scottie_events", False),
@@ -486,195 +477,6 @@ init python:
     "do_once": True,
     })
 
-    Event(**{
-    "name": "sasha_likes_blondes_1",
-    "label": "sasha_likes_blondes_1",
-    "duration": 1,
-    "do_once": True,
-    "music": "music/roa_music/smile_for_me.ogg",
-    "priority": 500,
-    "conditions": [
-        IsHour(20, 0),
-        HeroTarget(
-            IsGender("male"),
-            HasRoomTag("home")),
-        PersonTarget(sasha,
-            IsPresent(),
-            Not(IsHidden()),
-            Not(HasCheated()),
-            MinStat("love", 125),
-            ),
-        PersonTarget(bree,
-            IsPresent(),
-            Not(IsHidden()),
-            ),
-        ],
-    })
-
-    Event(**{
-    "name": "sasha_likes_blondes_2",
-    "label": "sasha_likes_blondes_2",
-    "duration": 2,
-    "do_once": True,
-    "music": "music/roa_music/smile_for_me.ogg",
-    "priority": 500,
-    "conditions": [
-        IsHour(20, 0),
-        HeroTarget(
-            IsGender("male"),
-            HasRoomTag("home"),
-            IsFlag("LikesBlondes"),
-            IsFlag("LikesBlondesDelay", False),
-            ),
-        PersonTarget(sasha,
-            IsPresent(),
-            Not(IsHidden()),
-            Not(HasCheated()),
-            MinStat("love", 130),
-            ),
-        ],
-    })
-
-    Event(**{
-    "name": "sasha_likes_blondes_3",
-    "label": "sasha_likes_blondes_3",
-    "do_once": True,
-    "music": "music/roa_music/smile_for_me.ogg",
-    "priority": 500,
-    "conditions": [
-        IsDone("sasha_likes_blondes_2"),
-        HeroTarget(
-            IsGender("male"),
-            IsFlag("LikesBlondesDelay", False),
-            IsFlag("LikesBlondes", False),
-            ),
-        PersonTarget(sasha,
-            Not(IsHidden()),
-            Not(IsActivity("sleep")),
-            Not(HasCheated()),
-            ),
-        ],
-    })
-
-    Event(**{
-    "name": "sasha_breast_complex_1",
-    "label": "sasha_breast_complex_1",
-    "duration": 1,
-    "do_once": True,
-    "music": "music/roa_music/smile_for_me.ogg",
-    "priority": 500,
-    "conditions": [
-        IsHour(20, 0),
-        HeroTarget(
-            IsGender("male"),
-            IsRoom("livingroom")),
-        PersonTarget(sasha,
-            Not(IsHidden()),
-            Not(HasCheated()),
-            MinStat("love", 50),
-            ),
-        ],
-    })
-
-    Event(**{
-    "name": "sasha_breast_complex_2",
-    "label": "sasha_breast_complex_2",
-    "music": "music/roa_music/smile_for_me.ogg",
-    "duration": 1,
-    "do_once": True,
-    "priority": 500,
-    "conditions": [
-        IsDone("sasha_breast_complex_1"),
-        IsSeason(0, 1),
-        IsDayOfWeek("67"),
-        HeroTarget(
-            IsGender("male"),
-            IsRoom("pool")),
-        PersonTarget(sasha,
-            Not(IsHidden()),
-            Not(HasCheated()),
-            MinStat("love", 100),
-            MinStat("sub", 75),
-            ),
-        PersonTarget(bree,
-            IsPresent(),
-            Not(IsHidden()),
-            Not(IsActivity("sleep")),
-            "bree.get_clothes() == 'swimsuit'",
-            ),
-        ],
-    })
-
-    Event(**{
-    "name": "sasha_breast_complex_3",
-    "music": "music/roa_music/smile_for_me.ogg",
-    "label": "sasha_breast_complex_3",
-    "duration": 1,
-    "do_once": True,
-    "priority": 500,
-    "conditions": [
-        IsDone("sasha_breast_complex_2"),
-        IsTimeOfDay("morning"),
-        HeroTarget(
-            IsGender("male"),
-            IsRoom("bathroom")),
-        PersonTarget(sasha,
-            IsPresent(),
-            Not(IsHidden()),
-            Not(IsActivity("sleep")),
-            Not(HasCheated()),
-            MinStat("love", 150),
-            MinStat("sexperience", 1),
-            ),
-        ],
-    })
-
-    Event(**{
-    "name": "sasha_breast_complex_4",
-    "label": "sasha_breast_complex_4",
-    "music": "music/roa_music/smile_for_me.ogg",
-    "duration": 1,
-    "do_once": True,
-    "priority": 500,
-    "max_girls": 1,
-    "conditions": [
-        IsDone("sasha_breast_complex_3"),
-        HeroTarget(
-            IsGender("male"),
-            Not(OnDate()),
-            IsFlag("BreastComplexDelay", False),
-            ),
-        PersonTarget(sasha,
-            IsPresent(),
-            Not(IsHidden()),
-            Not(IsActivity("sleep")),
-            Not(HasCheated()),
-            IsFlag("BreastComplex"),
-            ),
-        ],
-    })
-
-    Event(**{
-    "name": "sasha_breast_complex_5",
-    "label": "sasha_breast_complex_5",
-    "duration": 1,
-    "music": "music/roa_music/smile_for_me.ogg",
-    "do_once": True,
-    "priority": 500,
-    "conditions": [
-        IsDone("sasha_breast_complex_4"),
-        IsHour(10, 18),
-        HeroTarget(
-            IsGender("male"),
-            HasRoomTag("home"),
-            IsFlag("BreastComplexDelay", False),
-            ),
-        PersonTarget(sasha,
-            Not(HasCheated()),
-            IsFlag("BreastComplex"),
-            ),
-        ],
-    })
 
     Event(**{
     "name": "sasha_event_coffee",
@@ -682,7 +484,7 @@ init python:
     "priority": 500,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("date_coffee")),
         PersonTarget(sasha,
             IsPresent(),
@@ -702,7 +504,7 @@ init python:
     "priority": 500,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("kitchen")),
         PersonTarget(sasha,
             IsActive(),
@@ -738,28 +540,6 @@ init python:
     })
 
     Event(**{
-    "name": "sasha_preg_talk",
-    "label": "sasha_preg_talk",
-    "conditions": [
-        HeroTarget(
-            IsGender("male"),
-            Not(OnDate())
-            ),
-        PersonTarget(sasha,
-            IsPresent(),
-            Not(IsHidden()),
-            Not(HasCheated()),
-            IsFlag("toldpreg", False),
-            MinCounter("pregnant", 6),
-            ),
-        ],
-    "music": "music/roa_music/smile_for_me.ogg",
-    "once_day": True,
-    "do_once": False,
-    "quit": False,
-    })
-
-    Event(**{
     "name": "sasha_event_bree_shower",
     "label": "sasha_event_bree_shower",
     "duration": 1,
@@ -768,7 +548,7 @@ init python:
         IsNotDone("sasha_event_bree_shower_2"),
         IsHour(20, 22),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsRoom("bedroom1"),
             ),
@@ -796,7 +576,7 @@ init python:
         IsActiveHarem('home'),
         IsHour(20, 22),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsRoom("bedroom1"),
             ),
@@ -819,7 +599,7 @@ init python:
     "conditions": [
         IsHour(20, 0),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("take_a_shower")
             ),
         PersonTarget(sasha,
@@ -856,7 +636,7 @@ init python:
     "priority": 1000,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("bedroom3")
             ),
         PersonTarget(sasha,
@@ -869,25 +649,6 @@ init python:
     "chances": 20,
     "do_once": True,
     "once_hour": False,
-    })
-
-    Event(**{
-    "name": "sasha_pregnant_request",
-    "label": "sasha_pregnant_request",
-    "conditions": [
-        HeroTarget(IsGender("male")),
-        PersonTarget(sasha,
-            IsPresent(),
-            Not(IsHidden()),
-            Not(IsActivity("sleep")),
-            IsFlag("status", "girlfriend"),
-            MaxCounter("pregnant", 8),
-            ),
-        'game.days_played - sasha.flags.girlfriend_day >= 7',
-        ],
-    "once_day": False,
-    "do_once": True,
-    "quit": False,
     })
 
     SpecificTalkSubject(**{
@@ -917,7 +678,7 @@ init python:
     "duration": 1,
     "conditions": [
         IsHour(5, 9),
-        HeroTarget(IsGender("male"),
+        HeroTarget(
             Not(InFlag("slept_with", "sasha")),
             Not(IsFlag("morningwood")),
             ),
@@ -3540,782 +3301,6 @@ label sasha_threesome_request:
     "Because I know that's what is on my mind as well."
     return
 
-label sasha_likes_blondes_1:
-    scene bg livingroom
-    show sasha at center, zoomAt (1.25, (640, 880))
-    "It's one of those evenings when no one needs to spell it out, everyone just knows that you're all dog-tired and wanting to chill out in front of the TV."
-    "To begin with, it's just Sasha and me, so there are lazy embraces and maybe a few more relaxed possibilities on the cards."
-    show sasha at center, zoomAt (1.25, (440, 880))
-    show bree sport at center, zoomAt (1.0, (940, 720))
-    with easeinright
-    show bree at center, traveling(1.25, 0.3, (840, 880))
-    "But then [bree.name] joins us, and the mood becomes altogether more focused on simply filling the remaining hours of the day with laziness and inactivity."
-    "At some point, one of us thinks to order pizza, but I'm so tired and unfocused that I really can't recall who."
-    hide bree with easeoutright
-    "Maybe it was [bree.name], as she's the first up and making for the door when the food arrives."
-    show bree sport at center, zoomAt(1.25, (840, 880)) with easeinright
-    "On her way back in, she bends over to put the boxes down on the coffee table, and I get an unexpected chance to check out her ass as she does so."
-    "I wasn't looking to ogle [bree.name] in particular."
-    "But as she's wearing yoga pants and her backside is no more than a metre from my face, I kind of can't help getting an eyeful."
-    show sasha annoyed with hpunch
-    "Sasha elbows me in the ribs, snapping me out of my reverie and letting me know that she can see what I'm doing."
-    "As [bree.name] stands up, I feel the need to lessen the severity of my transgression somehow."
-    mike.say "Did you do something to your hair, [bree.name]?"
-    show bree smile
-    bree.say "Erm, no...just washed it like I always do for a night in."
-    show bree normal
-    mike.say "Well, whatever you did...it looks pretty good."
-    show bree talkative
-    bree.say "Okay...thanks, [hero.name]...I guess."
-    show bree normal
-    "In the awkward silence that follows, I have no idea whether my clumsy attempt to cover my tracks has worked or actually made things worse."
-    show sasha normal with fade
-    "We eventually get back to making meaningless small-talk and watching the TV as the pizzas are slowly devoured."
-    show bree happy
-    "[bree.name] yawns a little later, starting everyone else off doing the same."
-    show bree smile
-    bree.say "Okay...I'm turning in, before I fall asleep right here on the couch!"
-    show bree normal
-    "Sasha and I make our excuses and say that we're staying up still later."
-    hide bree with easeoutright
-    "But even as I do so, I'm already worried that Sasha's going to chew me out for staring at [bree.name]'s backside."
-    show sasha at center, zoomAt (1.25, (640, 880)) with ease
-    "To her credit, Sasha waits almost a full five minutes before making what's supposed to be an innocent comment."
-    show sasha shout
-    sasha.say "[hero.name]...I heard you complimenting [bree.name] on her hair before."
-    show sasha normal
-    mike.say "Ah...yeah?"
-    "How could she have failed to hear me?"
-    "She was sitting right there next to me at the time!"
-    show sasha shout
-    sasha.say "This is gonna sound pretty dumb...but do you prefer blondes, or something?"
-    show sasha whining
-    sasha.say "I mean, you never complimented me like that."
-    show sasha sadsmile
-    "Although I'm relieved to not be answering the more dangerous question involving [bree.name]'s ass, this could still be a potential minefield in its own right."
-    "I can see Sasha's looking at me like she expects an answer, and I can't think up a credible way out of giving her one."
-    menu:
-        "I prefer blondes":
-            mike.say "Well, it's not that I PREFER blondes in any official capacity."
-            mike.say "You know, I don't have a membership card for the 'International I Love Blondes Society' in my wallet next to my credit cards."
-            show sasha shout
-            sasha.say "But you do like them, don't you?"
-            show sasha normal
-            mike.say "Of course I like them, Sasha - I like women with all different colours of hair."
-            mike.say "It's just that..."
-            $ sasha.love -= 10
-            show sasha whining
-            sasha.say "It's just that what?"
-            show sasha annoyed
-            "I can feel myself clutching at straws as I stumble over my words."
-            mike.say "It's just that you kinda get it drummed into you that blonde is best, you know?"
-            mike.say "TV, magazines, movies - they're all full of blondes."
-            mike.say "Even when someone's not blonde, there are ads all over the place for stuff to dye your hair blonde."
-            mike.say "You get to the point where you're indoctrinated."
-            show sasha normal
-            "Sasha nods a little."
-            show sasha whining
-            sasha.say "You want to try being a non-blonde...that's pretty tough sometimes too."
-            show sasha sadsmile
-            mike.say "So yes...I guess that I do like blondes."
-            mike.say "But it's never been a deal-breaker for me either."
-            $ game.flags.LikesBlondes = True
-            $ sasha.flags.LikesBlondesDelay = TemporaryFlag(True, 1)
-        "I don't prefer blondes":
-            mike.say "Me, prefer blondes?"
-            mike.say "Hell no!"
-            show sasha shout
-            sasha.say "Really?"
-            show sasha normal
-            mike.say "Yes, really - I always hated the way that they're shoved down your throat."
-            mike.say "Whenever you turn on the TV or open a magazine, it's just blondes, blondes, blondes."
-            mike.say "They turn into 'blands' pretty quickly, if you know what I mean?"
-            show sasha happy at startle
-            "Sasha nods and laughs at the lame joke, seeming pleased with the answer."
-            $ sasha.love += 5
-            show sasha shout
-            sasha.say "That's a relief to hear."
-            sasha.say "I was thinking that you might have wanted me to go do something crazy, like bleach my hair!"
-            show sasha normal
-            mike.say "Nah, I like it just how you have it now."
-            mike.say "Don't go changing it on my account."
-            show sasha surprised
-            "Sasha screws up her face in mock horror."
-            sasha.say "But if you weren't into [bree.name]'s hair...you must have been checking out her butt!"
-            mike.say "Sasha, I couldn't help it!"
-            mike.say "It was like an inch from my face!"
-            show sasha happy at startle
-            "Sasha laughs and waves away my protests."
-            show sasha shout
-            sasha.say "Relax, [hero.name] - you're only human, and it's a nice butt!"
-    show sasha normal
-    "That's the last either of us has to say on the matter for the rest of the night."
-    "I find myself hoping that it's nothing more than an idle conversation that Sasha will soon forget all about."
-    "But then I remember how deep and emotional she can be, and I wonder, not for the first time, if what I've said will end up coming back to haunt me."
-    return
-
-label sasha_likes_blondes_2:
-    $ sasha.flags.haircut = True
-    scene bg livingroom
-    "I admit that I have a habit of getting home and collapsing in front of the TV at the end of the day, zoning out and being hard to reach."
-    "But in my defence, I have a tough job, my boss is an asshole of the highest order, and my personal life isn't exactly serene at the moment either."
-    show sasha at center, zoomAt (1.0, (1040, 720)) with easeinright
-    "So when someone walks confidently into the living room and almost seems to present themselves for an inspection, it takes me a couple of seconds to snap out of it."
-    show sasha at center, zoomAt (1.0, (940, 720)) with ease
-    "Almost immediately I know that this is the wrong decision, as the first thing I realise is that the person standing in front of me is female, and demanding attention."
-    show sasha at center, zoomAt (1.0, (840, 720)) with ease
-    "The second thing I realise is that the body and face belong to Sasha, but there's something bugging me about what I see."
-    show sasha at center, zoomAt (1.0, (740, 720)) with ease
-    "Luckily for me, my TV-addled brain is stirring rapidly from its former sluggishness."
-    show sasha at center, traveling(1.25, 0.3, (640, 880))
-    "This means I can make a vague connection between the fact that something's different about Sasha's appearance and the fact that she's almost demanding that I look her up and down."
-    "My astute deduction, therefore, is that she's changed something, and now she wants a suitably genuine and spontaneous-sounding compliment on whatever that change is."
-    show sasha shout
-    sasha.say "Well, what do you think?"
-    show sasha normal
-    "I make as quick of an appraisal of her as I can manage, searching for the elusive change."
-    "Her face and make-up look no different from the usual, no help there."
-    "Clothes are the same band T-shirt and shorts, another blank."
-    show sasha annoyed
-    "Sasha looks increasingly impatient as I struggle to locate whatever it is I should instantly have noticed."
-    "What else is there to see?"
-    "What else can girl chance on a whim?"
-    "Hair, that's it!"
-    "Now that I'm actually fully awake and paying attention, I can see that it should have been obvious."
-    "Sasha's hair is no longer its characteristic black, but instead a shockingly platinum blonde instead."
-    "All that remains of the former colour is a hint of darkness around the roots."
-    mike.say "Wow...that's really quite a...quite a change!"
-    show sasha upset
-    "Sasha instantly looks frustrated at the bland and noncommittal nature of my comment."
-    show sasha vangry
-    sasha.say "Really, [hero.name]?"
-    sasha.say "Is that all you can summon up to say?"
-    sasha.say "I was hoping for a 'fucking hell' or something like that, at the very least!"
-    show sasha upset
-    mike.say "Sorry...it's just a bit of a surprise, that's all."
-    show sasha shout
-    sasha.say "Well?"
-    show sasha sadsmile
-    mike.say "Well what?"
-    show sasha shout
-    sasha.say "Well now that you've had a chance to let this crazy news sink in - do you like it or not?"
-    show sasha sadsmile
-    menu:
-        "I don't like it":
-            mike.say "Erm...well...not really."
-            $ sasha.love -= 10
-            show sasha surprised at center, zoomAt(1.0, (640, 880)), vshake
-            sasha.say "WHAT?!?"
-            show sasha stuned
-            mike.say "Ah...I'm going to guess that wasn't exactly what you wanted to hear...and that it's too late to change my answer."
-            show sasha upset
-            "Sasha puts her hands to her forehead in a gesture of frustration, then runs her fingers through her hair."
-            "This only seems to make things worse, as she glances down to see the now blonde locks between her fingers."
-            show sasha whining
-            sasha.say "But the other night, when we were getting takeout with [bree.name] - you told me that you preferred blondes!"
-            show sasha upset
-            "Oh dear - it seems Sasha read far too much into a comment I made in the hope of covering the fact I was actually staring at [bree.name]'s ass."
-            mike.say "Yeah, Sasha - I remember what I said at the time."
-            mike.say "But I never actually said that you should go out and do something this drastic just to please me either!"
-            show sasha annoyed
-            "Sasha's anger seems to be simmering down into irritated resentment, as she mulls over this important fact."
-            show sasha whining
-            sasha.say "I...I just thought that you'd like it...that it'd make me more your type."
-            show sasha sadsmile
-            mike.say "Sasha, it doesn't work like that - not with me, anyway."
-            mike.say "Just because I like blondes doesn't mean that I can't be with you if you've got black hair."
-            mike.say "Hell, Sasha - I love cheeseburgers, but I don't want to eat them at every meal."
-            show sasha annoyed
-            "Sasha looks at me sideways, trying to make sense of my last comment."
-            mike.say "Maybe that's a bad metaphor...but what I'm trying to say is that I don't need you to change in order to keep me interested in you."
-            show sasha whining
-            sasha.say "You might have been more specific about that."
-            show sasha angry
-            sasha.say "Jesus...this shit is going to take months to grow out!"
-            show sasha stuned
-            "A sudden flash of inspiration crosses Sasha's face."
-            show sasha shout
-            sasha.say "Unless I shave my head and start from scratch!"
-            sasha.say "[hero.name], what do you think about girls with shaven heads?"
-            show sasha normal
-            "Her tone and expression are so sincere that I must look genuinely shocked at the question."
-            show sasha happy
-            sasha.say "Joking!"
-            show sasha joke
-            sasha.say "Don't worry, I'll just have to grow it out, I guess."
-            show sasha normal
-            $ game.flags.LikesBlondes = False
-            $ game.flags.LikesBlondesDelay = TemporaryFlag(True, 7)
-        "I love it":
-            $ sasha.love += 5
-            mike.say "I like it, Sasha...I like it a lot!"
-            show sasha happy
-            "Sasha doesn't say a word, but her face shows a genuine delight which makes the impact all the more impressive."
-            mike.say "I think I didn't notice it at first because it looks so good."
-            mike.say "Maybe this is how I always pictured you, and it took me a second to realise I wasn't imagining it?"
-            "Cheesy line, I know."
-            "But in my experience, girls don't really pick up on that kind of thing when they want to be flattered and you're obliging them."
-            show sasha blush
-            sasha.say "You really think so?"
-            show sasha shy
-            "Sasha's blushing now, drinking in the compliments eagerly."
-            "I nod, and not out of a desire to simply make her feel good about herself and validate her decision."
-            "I've always found dyed hair a big turn-on, and what with the black still showing at the roots, Sasha's platinum blonde locks are really doing it for me."
-            "The combination of the two makes her normally dark look feel instantly more edgy and trashy somehow."
-            "All I can think about is getting up to the kind of kinky shit that I already know Sasha likes in the bedroom."
-            "But now I keep imagining those dirty blonde locks hanging over me or grabbing them firmly in one hand."
-            show sasha shout
-            sasha.say "I really wasn't sure if I should risk it."
-            sasha.say "But after you complimented [bree.name] on her hair, I thought you'd like it if I were blonde too."
-            show sasha normal
-            if sasha.sexperience:
-                "I have to call that a win - trying to cover up checking out another girl's backside and ending up with the one I'm fucking making changes I love thanks to my lame excuse at the time!"
-            else:
-                "I have to call that a win - trying to cover up checking out one girl's backside and ending up with another making changes I love thanks to my lame excuse at the time!"
-            mike.say "You were right!"
-            mike.say "But yours is better, much better."
-            show sasha shout
-            sasha.say "How so?"
-            show sasha normal
-            mike.say "[bree.name]'s is natural, so I guess it looks all sweet and innocent on her."
-            mike.say "Yours is more down and dirty, you know?"
-            show sasha joke
-            "I know Sasha's kinks pretty well, and I'm not surprised that being described in such terms elicits a sly smile."
-            mike.say "I suppose I'm trying to say it's more punk rock than pop - more Joan Jett than Joan Rivers."
-            mike.say "Does...does it make you feel different?"
-            mike.say "Does it make you feel more dirty, Sasha?"
-            show sasha blush
-            sasha.say "I don't know...but maybe there's a way we could find out?"
-            show sasha shy
-    hide sasha with easeoutright
-    "Seemingly satisfied with what I've said on the subject, Sasha walks out of the room and leaves me alone once more."
-    "I'm left reflecting that, though you can never see either coming, there are definitely good and bad surprises to be had in life."
-    "But I'm still not entirely sure which kind just popped up in my own."
-    return
-
-label sasha_likes_blondes_3:
-    $ sasha.flags.haircut = False
-    return
-
-label sasha_breast_complex_1:
-    "I barely make it to the sofa before I collapse and let out a groan of utter exhaustion."
-    "I'm so tired that I can't even be bothered to turn on the TV, so I just grab the first thing within reach to read."
-    "It's a glossy women's lifestyle magazine, the kind of thing that Sam used to leave scattered around the house all the time."
-    "Not ideal reading material, but there's usually at least one article or photoshoot that classes as VERY softcore titillation."
-    "That could be just what I need right now, as anything more stimulating might render me unconscious with a mere glance."
-    "I've been flicking through the pages for what feels like a couple of minutes before I get the feeling of being watched."
-    show sasha at center, zoomAt(1.0, (1140, 720)) with dissolve
-    "Glancing up blearily, I see Sasha, leaning in the doorway and grinning evilly in my direction."
-    show sasha joke
-    sasha.say "Getting in touch with your feminine side, eh?"
-    show sasha normal
-    "I take a while to answer, as in addition to being worn out, I'm also too busy checking Sasha out too."
-    if sasha.get_clothes() == "sleep":
-        "She's clearly winding down for bed, wearing nothing save for a pair of tight shorts and a cut-off band T-shirt."
-        "Even without make-up, her mocking features are filled with wicked allure."
-    mike.say "Huh?"
-    mike.say "Oh...this?"
-    "I hold up the magazine, trying to sound nonchalant."
-    mike.say "Nah, it's just Sam's, she must have forgotten it...I was looking at the pictures, that's all."
-    show sasha shout
-    sasha.say "Why, you too much of a pussy to look at actual porn?"
-    show sasha normal
-    mike.say "No...it's just that there are actually some interesting and informative articles in here."
-    "Sasha raises her eyebrows in questioning amusement."
-    mike.say "Really, there are...like this one here 'Is Your Undersized Bra Causing You Harm?'"
-    "Sasha keeps on staring at me, evidently enjoying watching me squirm and dig myself into a hole."
-    mike.say "Well...not that the last one would be of interest to you..."
-    show sasha wtf at center, zoomAt(1.25, (940, 880)), vshake
-    $ sasha.love -= 5
-    sasha.say "WHAT THE HELL?!?"
-    mike.say "Erm...I'm sorry?"
-    show sasha angry
-    sasha.say "What in the hell is that supposed to mean?!?"
-    show sasha upset
-    "For a moment I'm wrong-footed and lost for words."
-    "I genuinely can't fathom what I've said to take Sasha from zero to fuming in so short of a time."
-    "But then I glimpse her hands going instinctively towards her breasts, as if she's trying to cover them up or hide them from sight."
-    "Suddenly it all makes sense, and I realise that Sasha's secretly quite insecure about her breast size."
-    "And I just went and made a comment that could be taken as meaning I think hers are too small to ever have an undersized bra."
-    "Hooray for me."
-    mike.say "Sasha I'm..."
-    show sasha vangry
-    sasha.say "Ah, shut up - just keep on wanking over women with fake tits as full of air as your big, dumb head and leave me out of it!"
-    hide sasha with easeoutright
-    "With that, she storms out of the room and I can hear her stomping footsteps all the way to her room."
-    play sound door_slam
-    "When the sound of the door slamming reaches my ear, I'm left alone with the magazine still clutched in my hand."
-    "I wonder if I just put my foot in it because I'm dead tired."
-    "Or if I could have been so blundering and insensitive after a good night's rest."
-    "Either way, I just discovered one of Sasha's flashpoints in perhaps the worst way imaginable."
-    return
-
-label sasha_breast_complex_2:
-    "Seeing as how it was the weekend and the weather was fine, the pool was the natural place I found myself relaxing."
-    "But it took me a full twenty minutes to sit up and realise what was actually happening when [bree.name] announced that she was doing the same."
-    "I felt like one of those guys living the fantasies I'd dreamed up as a pathetic teenager."
-    show bree a at left with easeinleft
-    "I try to stay relaxed and unmoved when [bree.name] strolls out in a white swimsuit and begins to tentatively dip her toes in the water."
-    "I feel that she's basically doing the same thing."
-    show bree b happy at center with ease
-    "But it's like she's just too naturally hot to be able to keep from making whatever she does seductive and arousing."
-    play sound water_splash
-    pause 0.2
-    hide bree a with moveoutbottom
-    if sasha.get_clothes() != "swimsuit":
-        show sasha casual shout at top_mostleft with dissolve
-    else:
-        show sasha shout at top_mostleft with dissolve
-    sasha.say "Hey, [hero.name] - you want some company out here..."
-    show sasha normal
-    "I look up guiltily to see Sasha standing by my lounger, clearly thinking of joining me."
-    "Or at least she was, until she realised that I was just getting a load of [bree.name] in her swimsuit, sporting in the pool."
-    mike.say "Sure, Sasha...erm, it looks like [bree.name]'s staying in the water, so I could use someone to talk to."
-    "My line sounds lame, mainly because it is."
-    show sasha shout
-    if game.hour < 12:
-        sasha.say "Now you come to mention it, the water does look really good this morning."
-    elif game.hour < 18:
-        sasha.say "Now you come to mention it, the water does look really good this afternoon."
-    else:
-        sasha.say "Now you come to mention it, the water does look really good this evening."
-    if sasha.get_clothes() != "swimsuit":
-        sasha.say "Don't go anywhere, I'll be right back."
-        hide sasha with easeoutleft
-        "I sit there feeling more than a little puzzled, but another glance at [bree.name] soon cures me of that."
-        scene bg pool at dark
-        show bree b happy at center, zoomAt(2, (740, 1250)), rotation(30)
-        with dissolve
-        "She's doing a backstroke, and I can't help being hypnotised by her motions in the water."
-        "Her glistening blonde locks and the way her swimsuit clings to her breasts make me think what she'd look like as a mermaid."
-        scene bg pool with dissolve
-        "But before I can imagine [bree.name] wearing nothing save for clamshells and a tail, another sight to distract me Sasha comes into view."
-        show sasha swimsuit at top_mostleft with easeinleft
-        "Sasha must have hastily changed and come back to the side of the pool."
-        if not sasha.flags.sexyswimsuit:
-            "As she's now wearing nothing save for a black bikini."
-        else:
-            "As she's now wearing nothing save for a red bikini."
-    show sasha swimsuit normal at left with ease
-    "She seems to take one quick glance over her shoulder, almost as if checking that I'm watching."
-    play sound water_splash
-    pause 0.2
-    hide sasha a with moveoutbottom
-    "And then she slips off into the water."
-    scene bg pool at dark
-    show sasha swimsuit happy at center, zoomAt(2, (540, 1250)), rotation(-30)
-    with dissolve
-    pause 1
-    hide sasha
-    show bree b happy at center, zoomAt(2, (740, 1250)), rotation(30)
-    with dissolve
-    "Watching both girls swim, I could almost believe [bree.name] having a halo and feathery wings, and Sasha sprouting horns and bat wings herself."
-    "The pair of them are so different, and yet both so sexy in their own way, it's hard to choose which one to watch at any given moment."
-    hide bree
-    show sasha swimsuit happy at center, zoomAt(2, (540, 1250)), rotation(-30)
-    with dissolve
-    "Eventually Sasha emerges from the pool and comes to lie on the lounger next to mine."
-    "She reclines for a while without saying a word, simply enjoying the sensation of the sun upon her skin."
-    "While she's silent, I suddenly know which one of them that I want to watch."
-    if not sasha.flags.haircut:
-        "I can't take my eyes of the pale skin of Sasha's body and how it contrasts so strikingly with her jet-black hair."
-    "Her breasts are more petite than [bree.name]'s, for sure."
-    "But that only means that they stand more erect and proud on her chest, nipples stiff beneath her bikini top."
-    "I start to think what it would be like to caress Sasha's little round breasts, to have one in each hand."
-    "I realise that I could cover them, hold them entirely, as if my hands were some kind of living bra..."
-    scene bg pool
-    show sasha swimsuit happy at center, zoomAt(1.25, (640, 880))
-    with dissolve
-    sasha.say "[hero.name]...be honest with me, okay?"
-    "Sasha keeps her eyes closed as she speaks, but her words don't instantly put me at ease."
-    sasha.say "Does [bree.name] look good in that swimsuit she's wearing?"
-    "Oh great, one attractive woman asking me in a roundabout way if I think another attractive woman is at all attractive."
-    "No hidden traps or pitfalls there then!"
-    mike.say "It looks good, I guess...on her."
-    show sasha shout
-    sasha.say "What does that mean?"
-    show sasha normal
-    mike.say "I suppose it means that I think she's got the figure to pull it off."
-    show sasha shout
-    sasha.say "Do I have the figure to pull it off?"
-    show sasha normal
-    "Careful now!"
-    mike.say "I don't know about that...but she definitely couldn't pull it off the other way round."
-    show sasha shout
-    sasha.say "How so?"
-    show sasha normal
-    mike.say "Well, don't think I'm being mean, but I think there are times when you need ripe peaches, rather than over-sized melons."
-    show sasha surprised
-    "Sasha opens her eyes wide at the same moment she opens her mouth in what I take as a scandalised and yet still very much amused grin."
-    show sasha normal at center, traveling(1.5, 0.5, (640, 1040))
-    "I must have said something right, because Sasha's body-language becomes more open and she leans visibly towards me."
-    "I should say more, but the fact her rapidly-drying breasts are coming closer makes me clam up and simply stare at them some more."
-    hide sasha
-    return
-
-label sasha_breast_complex_3:
-    "I push the door to the bathroom open and walk in while still feeling half asleep, and then jump at the sound of someone telling me off."
-    show sasha naked angry
-    with vpunch
-    sasha.say "HEY - did you never hear of actually fucking knocking on a door?"
-    show sasha upset
-    mike.say "What...huh...oh, sorry...I guess I should have knocked, you're right."
-    show sasha naked annoyed
-    "Seeing that it's me and not [bree.name] that barged in on her, Sasha's expression softens a little and she stops reaching desperately for a towel."
-    "It's kind of weird to be so prudish about being nude around someone that's gotten up to what we have, after all."
-    "Even though I'm still not awake and I just got a little chewed out for my trouble, I still can't help looking Sasha up and down admiringly."
-    "She's fresh out of the shower, hair hanging in wet tresses and skin pink from the warmth of the water."
-    "Though she has her back to me, I can tell she's watching me in the mirror above the sink."
-    show sasha naked normal
-    "And her expression isn't long in softening as she realises that she's being admired."
-    "I catch her smile in the mirror and she shakes her head at my interest."
-    show sasha at left4 with ease
-    "A moment later she hops around, leans forward and waggles her petite breasts at me."
-    show sasha at right4 with ease
-    "Then she hops back the other way, adding a last wriggle of her buttocks just to tease me."
-    show sasha joke at center with ease
-    sasha.say "That's all you're getting right now - I have plans for this morning, and they don't involve your dirty imagination!"
-    show sasha shy
-    "Smiling at the little show for my sole benefit, I nod in agreement and go back to eyeing up her buttocks."
-    show sasha normal
-    "Sasha pauses in the middle of brushing her teeth, the brush still in her mouth as she speaks."
-    show sasha shout
-    sasha.say "Not meaning to be weird, but why do your eyes always seem to be drawn specifically to my ass?"
-    show sasha normal
-    mike.say "Erm...because I'm a guy, and you have a great ass?"
-    show sasha shout
-    sasha.say "No, really - you can take it all in, but you always end up looking at my ass."
-    show sasha normal
-    "I don't really have an answer for that."
-    "I haven't spent much time analysing my hierarchy of preferences when it comes to admiring Sasha's body."
-    "I suppose that I'm too busy actually doing it to care very much."
-    show sasha whining
-    sasha.say "I guess what I mean is...don't you like my breasts?"
-    show sasha sadsmile
-    "The question seems so odd that I can't answer it either."
-    show sasha whining
-    sasha.say "I know most guys are supposed to like bigger ones, but I thought maybe you liked mine...even though they're pretty small?"
-    show sasha sadsmile
-    menu:
-        "I like them small":
-            mike.say "Sasha, your breasts are fucking amazing...they make me want to touch them whenever I set eyes on them."
-            show sasha surprised
-            sasha.say "Really?"
-            show sasha whining
-            sasha.say "You never said so!"
-            show sasha normal
-            mike.say "Sasha, this is the twenty-first century, you know?!?"
-            mike.say "Most guys think saying something like that'll get them strung up, never mind dumped!"
-            show sasha shout
-            sasha.say "Most guys are idiots."
-            show sasha normal
-            mike.say "Okay, for the sake of not being one of them, and for the record."
-            mike.say "Sasha, I hereby state that I not only love your breasts, I also cherish, worship and adore them."
-            mike.say "I love the fact that I can fit them into the palms of my hands."
-            mike.say "I love the way they stand up and beg for attention."
-            mike.say "And I love the way they bounce when you're on top of me."
-            $ sasha.love += 1
-            show sasha embarrassed
-            "Sasha screws up her face at the gushing praise I'm heaping upon her chest."
-            show sasha blush
-            sasha.say "Geez, lighten up there, Mr Shakespeare!"
-            show sasha shy
-            "She shakes her head to underline how she thinks I'm being over the top."
-            show sasha a towel happy -naked with dissolve
-            "But as she wraps herself in a towel and walks out, she has a glint in her eye and a twitch of a smile."
-            "That makes me think she's not totally embarrassed by my proclamations."
-        "I like them big":
-            mike.say "They're great, Sasha - but..."
-            show sasha whining
-            sasha.say "But what?"
-            show sasha sad
-            mike.say "Well, don't take this the wrong way, but you wanted me to be honest, right?"
-            show sasha whining
-            sasha.say "Yeah...I suppose so."
-            show sasha sad
-            mike.say "The thing is that, while they're great, I do kinda more like larger breasts...usually."
-            show sasha whining
-            sasha.say "Oh...so you think mine are...too small?"
-            show sasha sadsmile
-            mike.say "No, no, that's not what I'm saying...well, kind of it is, but not...if you follow me?"
-            show sasha whining
-            sasha.say "I'm not sure that I do."
-            show sasha sadsmile
-            mike.say "I just like bigger ones, but yours are great too."
-            show sasha naked sad
-            "The look of disappointment and confusion on Sasha's face tells me that I'm in trouble here."
-            "I open my mouth to go on, but she holds up a hand to cut me off."
-            $ sasha.love -= 5
-            $ sasha.sub += 5
-            $ sasha.flags.BreastComplex = True
-            $ game.flags.BreastComplexDelay = TemporaryFlag(1, 3)
-            show sasha whining
-            sasha.say "It's okay, I get it."
-            show sasha a towel sad -naked with dissolve
-            "She wraps herself up in a towel and stalks out of the bathroom without another word."
-            "And I'm left thinking that I pretty much fouled that one up completely."
-    hide sasha with dissolve
-    "Now that I have the bathroom to myself, I can't honestly remember what I came in here for in the first place."
-    "The only thing on my mind now are Sasha and her breasts."
-    "But I suppose there are far worse things to be obsessed with."
-    return
-
-label sasha_breast_complex_4:
-    show sasha at center, zoomAt(1.0, (640, 720))
-    mike.say "What's up?"
-    show sasha at center, traveling(1.5, 0.5, (640, 1040))
-    "Sasha walks over and sits down next to me on the bed."
-    show sasha whining
-    sasha.say "Well, first of all I wanted to say sorry for being all weird and angry with you the past couple of days."
-    show sasha sadsmile
-    mike.say "Ah, I see...you mean about..."
-    show sasha whining
-    sasha.say "Yeah, yeah...about my breast size."
-    show sasha sad
-    mike.say "Apology accepted."
-    show sasha normal
-    "Sasha smiles wanly at my response, clearly pleased to know that she's back in good graces with me."
-    show sasha shout
-    sasha.say "I just got to thinking of how selfish and unfair I'd been about all of this, you know?"
-    show sasha normal
-    mike.say "I did feel a bit like you bit my head off, Sasha."
-    mike.say "Especially when it was you who asked me to be honest!"
-    show sasha shout
-    sasha.say "I know...I'm sorry I was so unreasonable."
-    show sasha annoyed
-    sasha.say "I've come to realise that it's my problem, not yours."
-    sasha.say "I've always been really insecure about the size of my breasts."
-    show sasha shout
-    sasha.say "But that's my fault, and I've been taking it out on you."
-    sasha.say "I was so full of that feminist idea that my body was mine alone, that I totally forgot that you have rights too."
-    show sasha normal
-    "I just keep nodding, allowing her to say her piece."
-    "But all the time I'm wondering where this is ultimately going."
-    show sasha shout
-    sasha.say "That's why I've given it some serious thought, and I've decided to have my breasts enlarged."
-    show sasha normal
-    "Of all the things she could have said, I wasn't expecting that."
-    show sasha shout
-    sasha.say "After all, I'd only be doing it to make myself more attractive to you."
-    sasha.say "And if you want me more, then we both get something we want out of it."
-    sasha.say "Don't we?"
-    show sasha normal
-    menu:
-        "I'll help you pay for it" if hero.money >= 500:
-            mike.say "Wow, Sasha - I'm such a lucky guy to have a girl that'd go to such lengths for me!"
-            show sasha happy
-            "Sasha's face positively lights up with delight at my approval."
-            show sasha shout
-            sasha.say "Okay - I've done some research on clinics with a good record in the city."
-            sasha.say "And I think that I've come up with a way I can pay..."
-            show sasha normal
-            mike.say "Oh no, you're not paying for it - I am."
-            $ sasha.love += 10
-            $ sasha.sub += 10
-            show sasha stuned
-            "Sasha looks at me in genuine surprise."
-            mike.say "I'm the one that wanted you to have bigger breasts, so the least I can do is pay for them."
-            show sasha shy
-            mike.say "Think of them as a gift that'll keep on giving for the both of us."
-            mike.say "I know I'm already thinking of how to repay you after the surgery's over!"
-            $ game.flags.BreastComplexDelay = TemporaryFlag(1, 7)
-            $ sasha.hide()
-            $ hero.money -= 500
-        "That's a great idea":
-            mike.say "We sure do!"
-            mike.say "I can almost imagine them already!"
-            "I cup Sasha's petite breasts in my hands without asking for permission, massaging them as I think of them massively increased in size."
-            show sasha shout
-            sasha.say "So you're okay with me getting it done?"
-            show sasha shy
-            "Sasha's cheeks have flushed as I continue to play with her nipples."
-            "I can hear a question in her tone, but I'm more interested in pinching her now stiffening nipples than seeking it out."
-            show sasha blush
-            sasha.say "[hero.name]...it's just that...ah...I was...ah...wondering if you could...help me out...with the cost?"
-            show sasha embarrassed
-            mike.say "Woah, Sasha - that's pretty manipulative of you, don't you think?"
-            $ sasha.love -= 10
-            $ sasha.sub -= 10
-            show sasha surprised
-            sasha.say "Huh?"
-            show sasha stuned
-            mike.say "I mean - you come in here, all apologetic and demure to start with."
-            mike.say "Then you tease me with your boobs and try to milk me for money!"
-            show sasha surprised
-            sasha.say "I...no...that's not it!"
-            show sasha stuned
-            mike.say "The least you could do is pony up the cash yourself."
-            mike.say "That'd show me you were REALLY sorry."
-            show sasha whining
-            sasha.say "Uh..well...I guess so."
-            $ game.flags.BreastComplexDelay = TemporaryFlag(1, 7)
-            $ sasha.hide()
-        "You should not do it":
-            mike.say "You're serious?"
-            show sasha shout
-            sasha.say "Of course I am!"
-            show sasha normal
-            mike.say "Look, Sasha - I've been thinking too, and I don't really want you to have the surgery."
-            show sasha stuned
-            "Sasha's expression shows surprise at my confession, but also not a little relief too."
-            show sasha surprised
-            sasha.say "But...but I thought you said you liked bigger breasts than mine?"
-            show sasha sadsmile
-            mike.say "What I meant was that I like bigger breasts on girls with bigger breasts."
-            mike.say "And I like your breasts on you!"
-            show sasha shout
-            sasha.say "Really?"
-            show sasha normal
-            mike.say "Yes...how could an over-sized pair of dumplings stand to attention like yours are right now?"
-            show sasha happy at startle
-            "Sasha giggles and instinctively covers her breasts with her hands."
-            "But I can see that she's flattered and more than a little aroused by the praise I've just heaped on her petite chest."
-            $ sasha.flags.BreastComplex = False
-    show sasha normal
-    "Once we're done talking about the subject, I feel much better, like the air has finally been cleared between us."
-    "Sasha plants a kiss on my lips and scurries away to her own room, not saying another word."
-    "Little by little, I think we're coming to understand each other so much better than before."
-    return
-
-label sasha_breast_complex_5:
-    scene bg livingroom
-    $ sasha.unhide()
-    $ sasha.flags.boobjob = True
-    $ today = game.calendar.day_of_week_name.capitalize()
-    show sasha casual shout at center, zoomAt(1.25, (640, 880))
-    if sasha.is_sex_slave:
-        sasha.say "Hello, [hero.name]...I'm back."
-    else:
-        sasha.say "Hi."
-    sasha.say "I hope that you're pleased to see me..."
-    show sasha normal
-    "Of course, today is [today], more than a week since Sasha left for the appointment at the clinic."
-    "Specifically the appointment for her breast augmentation surgery."
-
-
-
-    if sasha.is_sex_slave:
-        "If she weren't so happily subservient to my will, I'd say she was trying to tease me."
-        "But as it is, I think she's far more likely presenting me with an opportunity to exercise my control over her."
-        mike.say "I'm definitely pleased to have a piece of my property back."
-        mike.say "It means I have the chance to inspect the work that I've had done to it."
-        "Sasha's pale cheeks colour a little at my speaking of her in such abstract terms."
-    "I'm fully aware of just how intrusive, potentially painful and life-changing the enlargement of her breasts must have been."
-    if sasha.is_sex_slave:
-        "But I also know how arousing she finds my treating her like an object."
-        "And the two in combination must be almost impossible to keep from turning her on to a great degree."
-        "I make a vague gesture for Sasha to come and stand before me, winding an index finger in a circle at the same time."
-        "She nods and, not needing to be told any more, walks obediently forwards until she stands perhaps two feet in front of me."
-    else:
-        "Sasha walks towards me."
-    mike.say "Well, what are you waiting for?"
-    mike.say "Strip."
-    if sasha.is_sex_slave:
-        "Sasha nods curtly, clearly enjoying being given orders by me once more."
-    show sasha naked with dissolve
-    "She slowly peels off her clothes, easing it down over her arms."
-
-
-
-
-
-
-    "As she raises her arms to drag it over her head, I'm treated to a truly magnificent view."
-    "First they rise in sympathy with her arms and shoulders, spreading out and then jiggling with the jerking of her muscles."
-    "And then they descend in the same manner, settling onto her chest as gravity returns them to their normal position."
-    "Sasha proceeds to then caress them, weighing them in the palms of her hands and even gently squeezing their heavy, fleshy masses."
-    "If I'd been expecting the operation to leave Sasha with the god-awful kind of implants that make breasts look like soccer balls stuffed under the skin, I was dead wrong."
-    "Clearly she'd been very wise when it came to choosing the clinic, as while they were clearly out of proportion to her petite figure, they still looked natural and very alluring."
-    show sasha blush
-    if sasha.is_sex_slave:
-        sasha.say "Well, [hero.name]...will I do?"
-        show sasha shy
-        "I gave a grin that was almost a leer, and pointed to the floor right before me."
-        mike.say "They look the part, but I want to take them for a test-drive, before I sign off on them."
-        "Sasha again nods in obedience and kneels on the floor in front of me."
-    else:
-        sasha.say "Do you like them?"
-        show sasha shy
-        mike.say "I do."
-        show sasha joke
-        sasha.say "I am pretty sure you'll like them even more in a few minutes."
-        show sasha shy
-    show sasha at center, traveling(1.5, 0.5, (640, 1040))
-    "She shuffles forwards on her knees, making her newly enlarged breasts sway back and forth as she comes."
-    "I don't see where she produces the lube from, but nevertheless, it appears in her hands."
-    "Sasha makes a great show of slowly rubbing the transparent liquid onto her breasts."
-    "She once more massages and caresses them as she does so, spreading the lube between them and then over their entire mass."
-    "Sasha pinches her enlarged nipples as she sweeps her hands over them, the darkened skin puckering as they become suddenly erect."
-    "There's little to do for my sake once she opens my flies and reaches in to pull out my dick."
-    scene bg black
-    show sasha tittyfuck livingroom
-    with fade
-    "Placing the tip just beneath her now slick breasts, Sasha moves downwards so that it travels straight up and between them."
-    "She makes perhaps a half-dozen more such passes, and then suddenly presses them together so that my dick is caught in the middle."
-    "The unexpected pressure makes me gasp audibly as the head emerges, from the cleft."
-    show chest_insert sasha zorder 1 at zoomAt(1, (40, 160))
-    "Sasha's breasts are baffling mixture of softness and substance, both cushioning and squeezing at the same time."
-    "She works me in that same way now, keeping the pressure up as she slides my dick between her breasts."
-    "The way that her hands cause them to push together and then return to their resting shape is almost hypnotic to watch."
-    "Sasha's new chest seems to almost possess a life of its own as she uses it to tease me and caress me all at the same time."
-    show sasha tittyfuck mouthopen
-    "All the while, Sasha pants and moans, as if the feeling of my dick is arousing her in the same manner as her breasts are me."
-    if sasha.is_sex_slave:
-        if sasha.flags.mikeNickname:
-            sasha.say "Uh...uh, [hero.name]...please...may I..."
-            mike.say "Speak up!"
-        sasha.say "[hero.name]...please...may I...touch myself?"
-        "I nod, trying not to look too turned on by her desperate desire to masturbate right in front of me."
-    $ renpy.sound.play("sd/moans/sasha/sasha_moans_light_low.ogg", loop=True)
-    "Sasha wraps her breasts with one arm to keep them around my dick, while her free hand almost darts for her denim shorts."
-    "I might not be able to see what she's doing, but soon I can feel the results."
-    "Sasha's pants and moans become all the more pronounced, and she begins to move in time with her ministrations to herself."
-    "The rhythm this creates is immediate and intense, as she's effectively stimulating herself and then me in turn as she moves in sympathy."
-    show chest_insert sasha zorder 1 at zoomAt(1, (40, 360))
-    show mouth_insert sasha zorder 2 at zoomAt(1, (40, 100))
-    with dissolve
-    "Sasha's lips are now puckering and parting, her tongue curling with the increasing pleasure she's feeling."
-    "She's in serious danger of finishing me off any moment, but now I can't take my eyes of the appealing sight of her open, gasping lips."
-    mike.say "Sasha, take me in your mouth...now."
-    if sasha.flags.mikeNickname:
-        sasha.say "Uhh...yes, yes...[hero.name]!"
-    else:
-        sasha.say "Yes [hero.name]!"
-    $ renpy.sound.play("sd/moans/sasha/sasha_blowjob_low.ogg", loop=True)
-    show sasha tittyfuck blow
-    "Hurrying to obey, she wastes no time with kissing or caressing the head of my dick."
-    "Instead she simply wraps her lips around it and eagerly swallows as much as she can without either gagging or choking."
-    "Still with her own fingers inside of herself, Sasha sucks away at the same intensifying rhythm."
-    "I could swear I can feel the very emanations spreading out from her pussy and through her entire body."
-    stop sound
-    show sasha tittyfuck blow cum
-    show mouth_insert sasha cum
-    with vpunch
-    $ renpy.sound.play("sd/moans/sasha/sasha_blowjob_swallow.ogg", loop=True)
-    pause 0.25
-    with vpunch
-    pause 0.25
-    with vpunch
-    "I cum mere seconds later, and Sasha struggles to take it all, keeping it in her mouth and not following her instinct to swallow."
-    "A wave of my hand lets her know that she can release me, and she does so, keeping her eyes on me at the same time."
-    stop sound
-    if sasha.is_sex_slave:
-        show sasha tittyfuck normal facecum eyesclosed -cum
-        mike.say "Open wide - let me see it."
-        "Sasha obliges me by opening her mouth wide, letting me see the cum still upon her tongue."
-        mike.say "Very good...you may swallow it now."
-        "She nods demurely as she complies."
-        show mouth_insert sasha -cum
-        sasha.say "Thank you, [hero.name]."
-    hide chest_insert
-    hide mouth_insert
-    scene bg livingroom with fade
-    "I pat the sofa beside me, and Sasha crawls up to curl herself beside me, almost like an oversized house-cat."
-    "She makes no effort to cover up her breasts, still soaked in a mixture of sweat and lube."
-    "I amuse myself by idly playing with her stiff nipples and listening to the soft moans this arouses from her."
-    "Neither of us speaks, but I'm already thinking of the new possibilities where my submissive pet's new assets are concerned."
-    return
-
 label sasha_event_coffee:
     scene bg coffeeshop
     show sasha shout at center, zoomAt(1.5, (640, 1140))
@@ -4483,116 +3468,6 @@ label sasha_kiss_me:
     hide sasha kiss
     return
 
-label sasha_preg_talk:
-    if "Harem.together('bree', 'sasha', name='home')" and bree.flags.pregtest and bree.room == sasha.room:
-        call home_harem_preg_talk from _call_home_harem_preg_talk_1
-    else:
-        show sasha shout
-        sasha.say "I kinda have something I need to tell you."
-        show sasha sadsmile
-        "I give her the same raised eyebrows, not letting on that I've already seen this coming."
-        show sasha shout
-        sasha.say "Well...you know how we've 'forgotten' to use protection a hell of a lot recently?"
-        show sasha sadsmile
-        "Even though I've been trying to play it cool, I can't keep my eyes from widening."
-        mike.say "Do you mean what I think you mean?"
-        show sasha shout
-        sasha.say "Depends on whether or not you think I mean that I'm pregnant!"
-        show sasha sadsmile
-        "We both fall silent from the enormity of what Sasha just admitted."
-        "But we can't stay silent forever, not with something of that magnitude hanging over the both of us."
-        "Eventually, it looks as though Sasha is going to be the one to break the silence for the second time."
-        if sasha.sub <= 50:
-            "Sasha coughs loudly, taking control of the conversation."
-            if sasha.love >= 180:
-                show sasha shout
-                sasha.say "We both had a hand in making this happen, so I think we both need to step up and take ownership of it as well."
-                show sasha normal
-                mike.say "Erm...you mean like, stepping up and being a man?"
-                show sasha shout
-                sasha.say "Geez, you make it sound like it's the scariest thing that you could imagine."
-                show sasha normal
-                mike.say "Well...it is kind of scary."
-                show sasha shout
-                sasha.say "How about you take it a step at a time?"
-                sasha.say "Maybe try being a dad first, then step it up to a fully-fledged man at a later date, eh?"
-                show sasha normal
-                $ sasha.flags.toldpreg = True
-            else:
-                show sasha whining
-                sasha.say "I can't raise a child on my own, and I can see from your face that you'd be no use to me either."
-                show sasha sad
-                "I open my mouth to speak, but Sasha's blunt appraisal of me means that my lips move and nothing comes out."
-                show sasha whining
-                sasha.say "Yeah, you see now would have been the time to speak up and prove me wrong."
-                sasha.say "But all you can manage is a lousy impression of a goldfish."
-                sasha.say "That's why I'm having a termination - the timing's just not right."
-                mike.say "Erm...well...if you think that's what'd be best..."
-                show sasha sad
-                $ sasha.unpreg()
-        else:
-
-
-
-
-
-
-
-            "Sasha looks at me imploringly, clearly waiting for me to tell her what we're going to do."
-            menu:
-                "Let's keep the baby":
-                    $ sasha.love += 10
-                    mike.say "Well, I can't say that I was expecting you to say that."
-                    show sasha shout
-                    sasha.say "You're...you're not mad, are you?"
-                    show sasha sadsmile
-                    mike.say "No, I'm not mad - you'd know if I was mad."
-                    show sasha shout
-                    sasha.say "Okay...but what are we going to do?"
-                    show sasha sadsmile
-                    mike.say "We're going to keep it, that's what we're going to do."
-                    show sasha shout
-                    sasha.say "Really - you think that's for the best?"
-                    show sasha normal
-                    mike.say "I do, so just do as I say and it'll be fine - you'll see."
-                    $ sasha.flags.toldpreg = True
-                "Tell her to abort":
-                    $ sasha.love -= 25
-                    mike.say "We can't have a kid, Sasha - you know that as well as I do."
-                    show sasha whining
-                    sasha.say "But...but I'm pregnant, the test was positive!"
-                    show sasha sad
-                    mike.say "Well we'll just have to fix that then, won't we?"
-                    show sasha whining
-                    sasha.say "You mean...you want me to have an abortion?"
-                    show sasha sad
-                    mike.say "Who said anything about wanting - you're having one, and that's all there is to it!"
-                    "Sasha looks down at her lap as any thoughts of doing otherwise fade from her mind."
-                    show sasha whining
-                    sasha.say "Okay...I suppose you know what's best."
-                    show sasha sadsmile
-                    $ sasha.unpreg()
-                "Dump Sasha":
-                    "I sigh and begin to rub my forehead with one hand, my frustration at the unexpected news clearly evident."
-                    show sasha whining
-                    sasha.say "What's wrong, [hero.name] - are you mad at me?"
-                    show sasha sad
-                    mike.say "Goddamn it, Sasha - of course I'm fucking mad at you!"
-                    "Sasha flinches back at the anger evident in my voice."
-                    mike.say "Jesus, how in the hell could you let this happen - how could you be so stupid?!?"
-                    show sasha whining
-                    sasha.say "But...but we both didn't remember to use..."
-                    show sasha cry
-                    mike.say "Shut up, Sasha - don't go trying to pin this one on me!"
-                    mike.say "You're the one that's pregnant, and it's your problem -don't expect me to bail you out now!"
-                    show sasha whining
-                    sasha.say "[hero.name], what are you saying?"
-                    show sasha cry
-                    mike.say "Oh I think you know, but I'll spell it out for you, just to be sure - you're dumped, Sasha!"
-                    $ sasha.flags.toldpreg = True
-                    $ sasha.love -= 100
-    return
-
 label sasha_event_bree_shower:
     "I'm lying in bed, just scrolling through some mindless crap on my phone when I hear the first of the hushed giggles coming from outside the door."
     "Unable to tell if it's [bree.name] or Sasha that's finding something so funny that she just can't keep it in, I slide off the bed and sneak to my door and open it just enough to glance out."
@@ -4697,25 +3572,15 @@ label sasha_male_ending:
     show sasha wedding shy at center, zoomAt(1.0, (640, 720)) with dissolve
     "And the moment that I see her enter the church, I can see that's just what she's managed to do..."
     show sasha wedding at center, traveling(1.5, 5.0, (640, 1040))
-    if not sasha.is_visibly_pregnant:
-        "Sasha sweeps into the church, a vision in red and black against her strikingly pale skin."
-        "The dress is a bodice of red above flowing skirts of that same colour and folds of black."
-        "Delicate sleeves of lace cover her arms, and three crimson roses have been woven into her tumbling, ebony hair."
-        "In her hands, Sasha clutches a bouquet of black roses."
-        "And her face is obscured by a veil of fine, black lace."
-        "Oh, did I forget to mention - she kind of has a thing for black!"
-        "And since I've grown to love her, so do I."
-        "When I said she was a vision, I meant it."
-    else:
-        "Sasha sweeps into the church, a vision in red and black against her strikingly pale skin."
-        "The dress is a bodice of red, cut to be sympathetic to the curve of her swelling belly."
-        "Below are flowing skirts of that same colour and folds of black."
-        "Delicate sleeves of lace cover her arms, and three crimson roses have been woven into her tumbling, ebony hair."
-        "In her hands, Sasha clutches a bouquet of black roses."
-        "And her face is obscured by a veil of fine, black lace."
-        "Oh, did I forget to mention - she kind of has a thing for black!"
-        "And since I've grown to love her, so do I."
-        "When I said she was a vision, I meant it."
+    "Sasha sweeps into the church, a vision in red and black against her strikingly pale skin."
+    "The dress is a bodice of red, cut to be sympathetic to the curve of her swelling belly."
+    "Below are flowing skirts of that same colour and folds of black."
+    "Delicate sleeves of lace cover her arms, and three crimson roses have been woven into her tumbling, ebony hair."
+    "In her hands, Sasha clutches a bouquet of black roses."
+    "And her face is obscured by a veil of fine, black lace."
+    "Oh, did I forget to mention - she kind of has a thing for black!"
+    "And since I've grown to love her, so do I."
+    "When I said she was a vision, I meant it."
     "As much as she's an alternative kind of girl that doesn't define herself solely on her looks, I can still see that Sasha's enjoying the attention she's getting."
     show wedding sasha with fade
     "Joining me at the altar, even the veil that she's wearing can't do much to hide the smile on her face."
@@ -4764,17 +3629,11 @@ label sasha_male_ending:
     sasha.say "It's funny, how I'd always sworn that I'd never be a wife with a home in the suburbs."
     sasha.say "But now that's exactly what I am, it's not all that bad after all."
     sasha.say "No one's chained me to the sink or made me behave like a Stepford Wife - at least so far..."
-    if not sasha.is_visibly_pregnant:
-        sasha.say "The only real fly in the ointment when we got back from the honeymoon was how the atmosphere in the house changed."
-        sasha.say "I guess that [hero.name] and I being a couple kind of ruined the dynamic for [bree.name]."
-        sasha.say "She started spending less time around us and more in her room, until she upped and told us she was moving out."
-        sasha.say "Sure, it was sad - but she keeps in touch and seems to be doing well in her new place."
-    else:
-        sasha.say "The only real fly in the ointment when we got back from the honeymoon was how the atmosphere in the house changed."
-        sasha.say "I guess that [hero.name] and I being a couple kind of ruined the dynamic for [bree.name]."
-        sasha.say "And then when Dahlia came along, it must have felt like she was intruding on our little family the whole time."
-        sasha.say "She started spending less time around us and more in her room, until she upped and told us she was moving out."
-        sasha.say "Sure, it was sad - but she keeps in touch and seems to be doing well in her new place."
+    sasha.say "The only real fly in the ointment when we got back from the honeymoon was how the atmosphere in the house changed."
+    sasha.say "I guess that [hero.name] and I being a couple kind of ruined the dynamic for [bree.name]."
+    sasha.say "And then when Dahlia came along, it must have felt like she was intruding on our little family the whole time."
+    sasha.say "She started spending less time around us and more in her room, until she upped and told us she was moving out."
+    sasha.say "Sure, it was sad - but she keeps in touch and seems to be doing well in her new place."
     sasha.say "I don't think marriage has changed us all that much though."
     sasha.say "We still have the band, go to gigs and see a movie every now and then."
     sasha.say "If you thought that I was going to paint the whole house black and fill the yard with tombstones, then I'm sorry to disappoint you."
@@ -5091,119 +3950,6 @@ label sasha_wearing_strapon:
         "And I can still hear her laughing as I hurry away down the corridor."
         $ sasha.sub -= 2
     $ sasha.flags.strapon_known = True
-    return
-
-label sasha_pregnant_request:
-    show sasha at center, zoomAt (1.25, (640, 880)) with fade
-    "I thought that I had a pretty good handle on Sasha."
-    "At least in terms of what she wants and where we're going."
-    "But I must have been wrong on that score."
-    "And that's because she surprised me with a question."
-    "One that I could never have seen coming from her."
-    "Not in a million years!"
-    show sasha shout
-    sasha.say "Hey, [hero.name]."
-    show sasha normal
-    mike.say "Ah, yeah, Sasha?"
-    show sasha shout
-    sasha.say "You ever think about us having a kid together?"
-    show sasha normal
-    "Sasha says this in such a casual, matter-of-fact way."
-    "For a moment, I'm not sure I actually heard her right."
-    mike.say "S...Sasha..."
-    mike.say "Did you just say we should have a baby?!?"
-    show sasha stuned
-    "Sasha looks at me sideways, like I really haven't understood her at all."
-    show sasha surprised
-    sasha.say "What?!?"
-    sasha.say "I didn't say we SHOULD!"
-    show sasha shout
-    sasha.say "All I said was did you ever THINK about it."
-    sasha.say "But now that it's out there..."
-    sasha.say "Do you think maybe we could?"
-    show sasha normal
-    "Somehow she's managed to turn this thing around on me."
-    "Just like that it's gone from her asking the question to me being put on the spot!"
-    mike.say "Well...I..."
-    mike.say "I have thought about it, I guess."
-    mike.say "But vaguely, you know?"
-    mike.say "Like something we might do in the future?"
-    show sasha sadsmile
-    "Sasha looks a little crestfallen at this, as though it's the wrong answer."
-    "The last thing that I want is to come across like an insensitive jerk."
-    "But I can't just agree with her in order to get back on her good side either."
-    "Having kids together is something that we both need to agree on for it to work."
-    "We need to do what's best for the both of us."
-    "Not to mention our theoretical offspring too!"
-    show sasha whining
-    sasha.say "Do you think I'd make a bad mom?"
-    show sasha sadsmile
-    "Oh shit - Sasha just hit me with a sucker-punch!"
-    mike.say "Oh god, Sasha - of course not!"
-    mike.say "It's just that you never mentioned kids before now."
-    mike.say "And these days..."
-    mike.say "Well...it's kind of sexist to assume that's what a girl wants!"
-    show sasha normal
-    "Sasha nods heavily, letting out an equally heavy breath as she does so."
-    show sasha shout
-    sasha.say "Yeah, yeah...I know."
-    sasha.say "But putting all of that crap aside."
-    sasha.say "What about it, huh?"
-    show sasha normal
-    menu:
-        "Agree":
-            "Why am I over-thinking this?"
-            "What if I'd done that when it came to Sasha and me?"
-            "We'd never have gotten beyond being housemates."
-            "We'd still be little more than awkward friends!"
-            "Maybe I need to be more impulsive?"
-            mike.say "I think we should go for it, Sasha."
-            mike.say "That's what I think."
-            show sasha surprised
-            "Sasha stares at me for a moment."
-            "Her eyes are wide and her mouth is hanging open."
-            show sasha normal
-            "Then, all of a sudden, she starts talking again."
-            show sasha happy
-            sasha.say "Oh god..."
-            sasha.say "Oh...[hero.name]..."
-            show sasha shout
-            sasha.say "Are you serious?!?"
-            show sasha normal
-            mike.say "Of course I am, Sasha!"
-            mike.say "You just caught me out, that's all."
-            mike.say "You made me think about it for real."
-            mike.say "Sure, it's scary."
-            mike.say "But I know that I love you - so what else matters?"
-            "Sasha grabs hold of my hands and squeezes them tightly."
-            show sasha happy
-            "She's smiling so much that it's almost scary!"
-            show sasha shout
-            sasha.say "I don't know what having a baby's gonna be like."
-            sasha.say "But I know the first part is going to be fun!"
-            $ sasha.love += 2
-            $ sasha.flags.pregrequest = True
-        "Refuse":
-            "I can't ignore the way that Sasha's question has made me feel."
-            "And all of the questions that it's thrown up in my mind either."
-            "If I said yes to her now, it'd be a huge mistake."
-            "I'd only be doing it to make her happy here and now."
-            "The one thing I'm sure of is that it'd end in disaster."
-            mike.say "I think we already answered that one, Sasha."
-            mike.say "Kids are something that we need to plan ahead for."
-            mike.say "We can't just decide to bring a life into the world like that."
-            mike.say "It's not fair on us or the kid."
-            "Sasha sighs and nods again."
-            "But this time she doesn't protest."
-            show sasha shout
-            sasha.say "I...I guess you're right, [hero.name]."
-            sasha.say "If me asking you shows anything, it's that we're not ready."
-            sasha.say "I think if we were, you'd have said yes straight away."
-            show sasha sadsmile
-            "All I can do is give Sasha a weak smile in response."
-            "It hurts to have to let her down like this."
-            "But I think it's the best thing for the both of us."
-            $ sasha.love -= 2
     return
 
 label sasha_cheated_sam_advice:

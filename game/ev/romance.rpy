@@ -583,22 +583,19 @@ label cum_reaction(fuck_npc, fuck_location, sexperience_min=0, love_min=180, che
                 "Pull out" if hero.sexperience >= sexperience_min + 5:
                     return "vaginal_outside"
 
-                "Cum inside" if not CONDOM and fuck_npc.is_visibly_pregnant:
-                    return "vaginal_inside_pregnant"
-
-                "Cum inside" if not CONDOM and not fuck_npc.is_visibly_pregnant and fuck_npc.flags.pill:
+                "Cum inside" if not CONDOM and fuck_npc.flags.pill:
                     return "vaginal_inside_pill"
 
-                "Cum inside" if not CONDOM and not fuck_npc.is_visibly_pregnant and not fuck_npc.flags.pill and fuck_npc.love < love_min and check_sub and fuck_npc.sub >= sub_min and not fuck_npc.flags.pregrequest and not fuck_npc.is_sex_slave and not fuck_npc.flags.drugs:
+                "Cum inside" if not CONDOM and not fuck_npc.flags.pill and fuck_npc.love < love_min and check_sub and fuck_npc.sub >= sub_min and not fuck_npc.flags.pregrequest and not fuck_npc.is_sex_slave and not fuck_npc.flags.drugs:
                     return "vaginal_inside_sub"
 
-                "Cum inside" if not CONDOM and not fuck_npc.is_visibly_pregnant and not fuck_npc.flags.pill and fuck_npc.love < love_min and check_sub and fuck_npc.sub < sub_min and not fuck_npc.flags.pregrequest and not fuck_npc.is_sex_slave and not fuck_npc.flags.drugs:
+                "Cum inside" if not CONDOM and not fuck_npc.flags.pill and fuck_npc.love < love_min and check_sub and fuck_npc.sub < sub_min and not fuck_npc.flags.pregrequest and not fuck_npc.is_sex_slave and not fuck_npc.flags.drugs:
                     return "vaginal_inside_mad"
 
-                "Cum inside" if not CONDOM and not fuck_npc.is_visibly_pregnant and not fuck_npc.flags.pill and fuck_npc.love < love_min and not check_sub and not fuck_npc.flags.pregrequest and not fuck_npc.is_sex_slave and not fuck_npc.flags.drugs:
+                "Cum inside" if not CONDOM and not fuck_npc.flags.pill and fuck_npc.love < love_min and not check_sub and not fuck_npc.flags.pregrequest and not fuck_npc.is_sex_slave and not fuck_npc.flags.drugs:
                     return "vaginal_inside_mad"
 
-                "Cum inside" if not CONDOM and not fuck_npc.is_visibly_pregnant and not fuck_npc.flags.pill and (fuck_npc.love >= love_min or fuck_npc.flags.pregrequest or fuck_npc.is_sex_slave or fuck_npc.flags.drugs):
+                "Cum inside" if not CONDOM and not fuck_npc.flags.pill and (fuck_npc.love >= love_min or fuck_npc.flags.pregrequest or fuck_npc.is_sex_slave or fuck_npc.flags.drugs):
                     return "vaginal_inside_happy"
     else:
         if fuck_location == "anal":
@@ -614,22 +611,19 @@ label cum_reaction(fuck_npc, fuck_location, sexperience_min=0, love_min=180, che
                 "Pull him out" if hero.sexperience >= sexperience_min + 5:
                     return "vaginal_outside"
 
-                "Let him cum inside" if not CONDOM and hero.is_visibly_pregnant:
-                    return "vaginal_inside_pregnant"
-
-                "Let him cum inside" if not CONDOM and not hero.is_visibly_pregnant and hero.flags.pill:
+                "Let him cum inside" if not CONDOM and hero.flags.pill:
                     return "vaginal_inside_pill"
 
-                "Let him cum inside" if not CONDOM and not hero.is_visibly_pregnant and not hero.flags.pill and fuck_npc.love < love_min and check_sub and fuck_npc.sub >= sub_min and not fuck_npc.flags.pregrequest and not fuck_npc.is_sex_slave and not fuck_npc.flags.drugs:
+                "Let him cum inside" if not CONDOM and not hero.flags.pill and fuck_npc.love < love_min and check_sub and fuck_npc.sub >= sub_min and not fuck_npc.flags.pregrequest and not fuck_npc.is_sex_slave and not fuck_npc.flags.drugs:
                     return "vaginal_inside_sub"
 
-                "Let him cum inside" if not CONDOM and not hero.is_visibly_pregnant and not hero.flags.pill and fuck_npc.love < love_min and check_sub and fuck_npc.sub < sub_min and not fuck_npc.flags.pregrequest and not fuck_npc.is_sex_slave and not fuck_npc.flags.drugs:
+                "Let him cum inside" if not CONDOM and not hero.flags.pill and fuck_npc.love < love_min and check_sub and fuck_npc.sub < sub_min and not fuck_npc.flags.pregrequest and not fuck_npc.is_sex_slave and not fuck_npc.flags.drugs:
                     return "vaginal_inside_mad"
 
-                "Let him cum inside" if not CONDOM and not hero.is_visibly_pregnant and not hero.flags.pill and fuck_npc.love < love_min and not check_sub and not fuck_npc.flags.pregrequest and not fuck_npc.is_sex_slave and not fuck_npc.flags.drugs:
+                "Let him cum inside" if not CONDOM and not hero.flags.pill and fuck_npc.love < love_min and not check_sub and not fuck_npc.flags.pregrequest and not fuck_npc.is_sex_slave and not fuck_npc.flags.drugs:
                     return "vaginal_inside_mad"
 
-                "Let him cum inside" if not CONDOM and not hero.is_visibly_pregnant and not hero.flags.pill and (fuck_npc.love >= love_min or fuck_npc.flags.pregrequest or fuck_npc.is_sex_slave or fuck_npc.flags.drugs):
+                "Let him cum inside" if not CONDOM and not hero.flags.pill and (fuck_npc.love >= love_min or fuck_npc.flags.pregrequest or fuck_npc.is_sex_slave or fuck_npc.flags.drugs):
                     return "vaginal_inside_happy"
 
 label handle_npc_leaving(npc, return_status=None, from_foreplay=False):
@@ -639,7 +633,6 @@ label handle_npc_leaving(npc, return_status=None, from_foreplay=False):
 
     if return_status == "leave_without_gain":
         return True
-
 
     if npc.id == "harmony":
         $ harmony.purity -= 5
@@ -651,4 +644,3 @@ label handle_npc_leaving(npc, return_status=None, from_foreplay=False):
         return True
     return False
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

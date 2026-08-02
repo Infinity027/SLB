@@ -8,7 +8,6 @@ init python:
     "rooms": "livingroom",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             MinStat("fun", 0)),
         PersonTarget(bree,
             IsPresent(),
@@ -27,7 +26,6 @@ init python:
     "display_name": "Play with [bree.name]",
     "rooms": "pool",
     "conditions": [
-        HeroTarget(IsGender("male")),
         IsSeason(0, 1),
         InInventory("swimsuit"),
         PersonTarget(bree,
@@ -48,7 +46,6 @@ init python:
     "label": "give_phone_number",
     "girl": "bree",
     "conditions": [
-        HeroTarget(IsGender("male")),
         PersonTarget(bree,
             IsPresent(),
             Not(IsHidden()),
@@ -70,7 +67,6 @@ init python:
     "conditions": [
         IsHour(13, 14),
         HeroTarget(
-            # IsGender("male"),
             Not(OnDate()),
             IsActivity("None"),
             ),
@@ -98,7 +94,6 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             IsActivity("None")),
         PersonTarget(bree,
             IsPresent(),
@@ -121,7 +116,6 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            # IsGender("male"),
             Not(OnDate()),
             IsActivity("None"),
             ),
@@ -144,7 +138,6 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             Not(IsActivity("sleep")),
             IsFlag("sick"),
             ),
@@ -167,7 +160,6 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            # IsGender("male"),
             Not(IsActivity("ask_date"))),
         PersonTarget(bree,
             IsPresent(),
@@ -191,7 +183,6 @@ init python:
     "girl": "bree",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             Not(OnDate()),
             Not(IsActivity("sleep")),
             ),
@@ -215,7 +206,6 @@ init python:
     "conditions": [
         IsHour(18, 3),
         HeroTarget(
-            IsGender("male"),
             IsActivity("knock_bedroom2")),
         PersonTarget(bree,
             Not(IsHidden()),

@@ -6,7 +6,6 @@ init python:
         IsHour(9, 19),
         Or(
             And(
-                HeroTarget(IsGender("male")),
                 IsDone("bree_event_07b"),
                 PersonTarget(bree,
                     Not(IsHidden()),
@@ -32,7 +31,6 @@ init python:
     "money_cost": 25,
     "rooms": "maidcafe",
     "conditions": [
-        HeroTarget(IsGender("male")),
         PersonTarget(bree,
             IsPresent(),
             Not(IsHidden()),

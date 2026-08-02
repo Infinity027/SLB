@@ -106,27 +106,18 @@ label harmony_date_eat_a_burger:
     return
 
 label harmony_date_buy_drink:
-    if harmony.is_visibly_pregnant:
-        show harmony angry
-        $ harmony.love -= 10
-        harmony.say "What, and hurt the child growing inside of me?!?"
-        harmony.say "Have you gone mad, [hero.name]?"
-        harmony.say "Are you possessed by spirits of a demonic kind?!?"
-        $ hero.cancel_activity()
-        hide harmony
+    if harmony.purity >= HP:
+        "At the very mention of drinking alcohol, Harmony turns her nose up and shakes her head."
+        "She mutters something about it being the root of all evil and shakes her head for a second time."
+        "In the end, she makes me feel awkward holding my own drink too."
+    elif harmony.purity < VLP:
+        "Whatever I'm having, Harmony seems to want the same - and in equal measures too!"
+        "She doesn't hold back once the glass is in her hand, draining it with some considerable speed too."
+        "It's all that I can do to keep up with her as she finishes her drink off and looks to where the next is coming from."
     else:
-        if harmony.purity >= HP:
-            "At the very mention of drinking alcohol, Harmony turns her nose up and shakes her head."
-            "She mutters something about it being the root of all evil and shakes her head for a second time."
-            "In the end, she makes me feel awkward holding my own drink too."
-        elif harmony.purity < VLP:
-            "Whatever I'm having, Harmony seems to want the same - and in equal measures too!"
-            "She doesn't hold back once the glass is in her hand, draining it with some considerable speed too."
-            "It's all that I can do to keep up with her as she finishes her drink off and looks to where the next is coming from."
-        else:
-            "Harmony accepts the offer of a drink, but settles for a small measure of something not too strong."
-            "She sips this drink sparingly, seeming to be making it last as long as possible."
-            "Though whether she's aware of doing this or not, I really can't tell."
+        "Harmony accepts the offer of a drink, but settles for a small measure of something not too strong."
+        "She sips this drink sparingly, seeming to be making it last as long as possible."
+        "Though whether she's aware of doing this or not, I really can't tell."
     return
 
 label harmony_date_play_darts:
@@ -152,14 +143,7 @@ label harmony_date_pub_play_pool:
     return
 
 label harmony_date_buy_a_round:
-    if harmony.is_visibly_pregnant:
-        show harmony angry
-        $ harmony.love -= 10
-        harmony.say "What, and hurt the child growing inside of me?!?"
-        harmony.say "Have you gone mad, [hero.name]?"
-        harmony.say "Are you possessed by spirits of a demonic kind?!?"
-        $ hero.cancel_activity()
-    elif (hero.charm >= 60 - harmony.love and harmony.flags.drinks < 2):
+    if (hero.charm >= 60 - harmony.love and harmony.flags.drinks < 2):
         show drink harmony
         if harmony.purity >= HP:
             "Harmony takes almost no notice of me as I get up and announce my intention to buy another round."

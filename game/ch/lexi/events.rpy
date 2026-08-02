@@ -521,25 +521,6 @@ init python:
     })
 
     Event(**{
-    "name": "lexi_preg_talk",
-    "max_girls": 1,
-    "label": "lexi_preg_talk",
-    "do_once": False,
-    "conditions": [
-        HeroTarget(
-            IsGender("male"),
-            Not(OnDate())),
-        PersonTarget(lexi,
-            IsPresent(),
-            Not(IsHidden()),
-            IsFlag("toldpreg", False),
-            MinCounter("pregnant", 6),
-            ),
-        ],
-    "music": "music/roa_music/alley.ogg",
-    })
-
-    Event(**{
     "name": "lexi_sasha_1",
     "label": "lexi_sasha_1",
     "music": "music/roa_music/alley.ogg",
@@ -683,25 +664,6 @@ init python:
         ],
     "priority": 1000,
     "do_once": True,
-    })
-
-    Event(**{
-    "name": "lexi_pregnant_request",
-    "label": "lexi_pregnant_request",
-    "conditions": [
-        HeroTarget(IsGender("male")),
-        PersonTarget(lexi,
-            IsPresent(),
-            Not(IsHidden()),
-            Not(IsActivity("sleep")),
-            IsFlag("status", "girlfriend"),
-            ),
-        'game.days_played - lexi.flags.girlfriend_day >= 7',
-        'not lexi.pregnant',
-        ],
-    "music": "music/roa_music/alley.ogg",
-    "do_once": True,
-    "quit": False,
     })
 
     Event(**{
@@ -1984,10 +1946,7 @@ label lexi_event_05:
             "Danny too is looking less sure of himself now, trying to muster his former strength."
             mike.say "How about this, Danny?"
             mike.say "You had your pound of flesh as far as Lexi's concerned."
-            if lexi.is_visibly_pregnant:
-                mike.say "But now she's pregnant with my kid, and it's time for you to find another vulnerable girl to exploit."
-            else:
-                mike.say "But now she's mine, and it's time for you to find another vulnerable girl to exploit."
+            mike.say "But now she's mine, and it's time for you to find another vulnerable girl to exploit."
             mike.say "Walk away now, leave us alone, and I won't call the cops or let them have the footage from my security cameras."
             "Danny tries to pull himself up for one last try at me, but one of his cronies puts a hand on his shoulder whilst shaking his head."
             "I can hear Danny mouthing something that might be a threat as he walks away, but it's half-hearted and lame."
@@ -2057,18 +2016,12 @@ label lexi_event_06:
     thug_say "Settle down, man - I haven't done anything to her...yet!"
     mike.say "You bastard - let her go, or I'll call the cops!"
     thug_say "Oh no you don't - this is between you and me."
-    if lexi.is_visibly_pregnant:
-        thug_say "Call the cops, and all they'll find of her is pieces - same goes for the kid too."
-    else:
-        thug_say "Call the cops, and all they'll find of her is pieces."
+    thug_say "Call the cops, and all they'll find of her is pieces."
     mike.say "Bastard!"
     thug_say "Yeah, you already called me that once."
     thug_say "Look, if she means that much to you, then you'll meet me at the address I text you after I hang up."
     thug_say "If you want to see her again and you want to see her alive, you'll come quick and you'll come alone."
-    if lexi.is_visibly_pregnant:
-        "After he hangs up I feel my guts churning at the thought of what he might do to Lexi and the baby."
-    else:
-        "After he hangs up I feel my guts churning at the thought of what he might do to Lexi."
+    "After he hangs up I feel my guts churning at the thought of what he might do to Lexi."
     menu:
         "Call Camila" if not camila.flags.schedule == "hospital" and ((not camila.hidden and camila.love >= 80) or Harem.together('camila', 'lexi', name='criminal')):
             "Part of me is terrified of what Danny will do to Lexi if I do call the cops."
@@ -2597,17 +2550,10 @@ label lexi_male_ending:
     "When I actually get a good look at her, I can't help smiling."
     "Lexi looks stunning in the dress that she's chosen."
     "It flatters her and still manages to reflect her quirky personality as well."
-    if lexi.is_visibly_pregnant:
-        "And it somehow manages to accommodate her swelling belly too!"
-        if lexi.flags.mikeBabies >= 1:
-            "It didn't come as any surprise to learn that Lexi's carrying twins."
-        "There's still some time to go before she's due, but she already looks fit to burst."
-        "Not that it matters to me - as all I can see is the future that we're planning together."
-    else:
-        "Case in point - I can see that Lexi's actually chewing gum right now."
-        "And she proves it by blowing a large, pink bubble as she walks towards me."
-        "The bubble pops and Lexi sucks it back into her mouth with an audible cracking sound."
-        "Then she smiles at me, unashamed as ever."
+    "Case in point - I can see that Lexi's actually chewing gum right now."
+    "And she proves it by blowing a large, pink bubble as she walks towards me."
+    "The bubble pops and Lexi sucks it back into her mouth with an audible cracking sound."
+    "Then she smiles at me, unashamed as ever."
     show lexi close blush at center, traveling(1.5, 3.0, (640, 1040))
     "Lexi stands by my side, paying more attention to me than she does the priest."
     "Even now I can tell that she's enjoying having my eyes playing over her."
@@ -2655,7 +2601,6 @@ label lexi_male_ending:
     "So why shouldn't I go with it now!"
     if not "date_lexi_meet_jack_4" in DONE:
         scene lexi ending
-        $ babies = lexi.flags.mikeBabies + 1 if lexi.is_visibly_pregnant else lexi.flags.mikeBabies
         if babies == 1:
             show lexi ending daughter
         elif babies >= 2:
@@ -2763,15 +2708,10 @@ label lexi_male_ending:
         lexi.say "But I know that he's only doing it for the sake of the business."
         lexi.say "That's why I'd have been dumb to turn him down when he asked me to marry him."
         lexi.say "So now he's my pimp, my husband and my best friend, all rolled into one!"
-        if lexi.flags.mikeBabies or lexi.is_visibly_pregnant:
-            lexi.say "And if he didn't love me, he'd never have started a family with me."
-            lexi.say "Ever since Chantel and Tyrone arrived, [hero.name]'s been the perfect daddy to them."
-            lexi.say "He adores those two little rascals, you can see it in his eyes whenever he looks the pair."
-        else:
-            lexi.say "And if he didn't love me, he'd never have set up a home with me."
-            lexi.say "Yeah, that's right - I moved out of the trailer park and into an actual house with [hero.name]!"
-            lexi.say "Sure, some of the neighbours don't seem to like what they see when I'm lounging by the pool."
-            lexi.say "But screw them anyway - who cares about what they think?"
+        lexi.say "And if he didn't love me, he'd never have set up a home with me."
+        lexi.say "Yeah, that's right - I moved out of the trailer park and into an actual house with [hero.name]!"
+        lexi.say "Sure, some of the neighbours don't seem to like what they see when I'm lounging by the pool."
+        lexi.say "But screw them anyway - who cares about what they think?"
         lexi.say "Hmm...you know what?"
         lexi.say "Now that I think of it..."
         lexi.say "All of that does kind of sound like a fairy-tale."
@@ -2833,13 +2773,9 @@ label lexi_sasha_dance:
     scene bg nightclub
     show 3dance_mike
     show 3dance_girl_lexi at slide(10, 0.9)
-    if lexi.is_visibly_pregnant:
-        show 3dance_pregnancy_lexi_pregnant at slide(10, 0.9)
     if lexi.is_collared:
         show 3dance_collars_lexi_collar at slide(10, 0.9)
     show 3dance_girl_sasha at slide(10, 0.8)
-    if sasha.is_visibly_pregnant:
-        show 3dance_pregnancy_sasha_pregnant at slide(10, 0.8)
     if sasha.is_collared:
         show 3dance_collars_sasha_collar at slide(10, 0.8)
     if sasha.flags.boobjob:
@@ -3452,105 +3388,6 @@ label lexi_sasha_1:
     "I begin to wonder about the relative merits of Sasha and Lexi."
     "As well as any possible ways they could be convinced to tolerate the presence of the other, now that they know I've been seeing them behind each other's backs."
     $ game.room = "mall1"
-    return
-
-label lexi_preg_talk:
-    show lexi sad
-    "I can sense that there's something up with Lexi almost the moment that I see her."
-    "She might be a professional when it comes to using her natural charms to get her way."
-    "But she's actually pretty bad at lying when she can't use her hips, ass or chest to her advantage."
-    "She's visibly edgy, glancing over her shoulder as she walks up the driveway to the house."
-    "When I open the door, she almost darts inside, as if she's afraid of being seen."
-    "My mind leaps to the most obvious conclusion imaginable."
-    mike.say "What's up, Lexi?"
-    if not game.flags.dannydead:
-        mike.say "Has that ape Danny been beating you again?"
-        show lexi surprised
-        show fx question
-        lexi.say "What?"
-        "Lexi looks startled, but I don't know if it's at the mention of violence or just of a thug like Danny."
-        lexi.say "No, no...well, no more than usual."
-        hide fx
-        "If it were anyone else saying that, I'd have been horrified and telling her to call the police."
-        "But then, if it were anyone else, I wouldn't be asking them that question in the first place."
-        "It strikes me as odd how quickly I've come to accept the strangeness of Lexi's life as almost normal for her."
-        show lexi sad
-        "Though her face still looks preoccupied, her body gives out the same vibes as always."
-        "I find it hard to make myself look serious and keep from staring at the way her skimpy clothes do nothing to hide her astonishing body."
-        mike.say "So, lexi...what's up, for the second time of asking?"
-    show lexi blush
-    lexi.say "Erm...well...this is kinda hard to say..."
-    "It must be bad, as Lexi's never been short of words or afraid of saying whatever comes into her head before now."
-    mike.say "Don't worry, you can tell me anything, Lexi."
-    show lexi normal
-    "She smiles weakly at this, showing that rare honest vulnerability that makes her so much more than the cheap little harlot she seems to be in the outside."
-    lexi.say "Well...with what we've been doing...I thought I ought to tell you..."
-    "My smile gets ever more pained as I'm convinced that she's about to tell me she's had bad news from the VD clinic."
-    lexi.say "I'm pregnant - or I think I am!"
-    "My mouth moves, but no words seem to come out."
-    pause 2.0
-    show lexi annoyed
-    lexi.say "Well, say something, for fuck's sake - even if it's something mean about me and the way I live my life, just say something already!"
-    "Of all the things I could have imagined her saying, I was not prepared for that."
-    mike.say "Wow, Lexi - that's caught me off guard!"
-    lexi.say "Well, I thought I'd tell you, 'cos you're the smartest person I know - the least crooked as well."
-    mike.say "I guess I should be flattered...wait a minute, Lexi - the kid is mine, isn't it?!?"
-    "Any other woman, I'd have expected to confirm the fact within a second."
-    pause 2.0
-    "But Lexi instead pauses for a moment, as if totting up the chances in her head."
-    show lexi normal
-    lexi.say "Oh, I'm almost totally certain it's probably yours."
-    mike.say "You don't say?"
-    show lexi sad
-    "Lexi doesn't say anything more, just looks at me with eyes that have never looked so large and pleading."
-    "She looks so much like a vulnerable little girl in that moment."
-    "I can't help but pick up on the fact that she wants me to tell her what to do, to make it all better for her."
-    menu:
-        "Tell her to abort":
-            mike.say "You can't look after a baby, Lexi - Christ knows you're struggling to look after yourself."
-            mike.say "I don't like it, but the best thing would probably for you to abort it now, before it's too late."
-            show lexi annoyed
-            "Lexi's expression becomes visibly more hopeful, but I can see she wants me to add something more to my advice."
-            if hero.money >= 200:
-                menu:
-                    "Tell her you'll pay for it":
-                        $ hero.money -= 200
-                        $ lexi.love += 5
-                        $ lexi.sub -= 5
-                        show lexi happy
-                        mike.say "Don't worry about the money, either - it's probably mine, and anyway, it's time someone was nice to you for a change."
-                        "Lexi looks at me in a different way to normal, without a hint of calculation or cynicism."
-                        "I wonder how often someone in her life as acted in her best interests out of pure affection for her alone."
-                    "Don't":
-                        $ lexi.love -= 10
-                        $ lexi.sub += 5
-                        show lexi sad
-                        mike.say "The money shouldn't be a problem, not with how good you are at picking pockets and screwing gullible marks over."
-                        "Lexi says nothing, just nods meekly, clearly having been expecting more from me."
-            else:
-                $ lexi.love -= 10
-                $ lexi.sub += 5
-                mike.say "The money shouldn't be a problem, not with how good you are at picking pockets and screwing gullible marks over."
-                "Lexi says nothing, just nods meekly, clearly having been expecting more from me."
-            $ lexi.unpreg()
-        "Tell her to keep the baby and that you will support her":
-            $ lexi.love += 10
-            $ lexi.sub += 10
-            mike.say "You can look after a baby, Lexi - so long as you have someone to look after you too."
-            show lexi surprised
-            "Lexi's eyes are suddenly full of what looks like surprise, confusion and not a little fear as well."
-            mike.say "Wait a minute, Lexi - before you say no, just hear me out."
-            mike.say "You once told me that you live the life you live because you don't have a choice."
-            mike.say "Well now I'm giving you that choice, because I think you're worth a hell of a lot more and you're being wasted in the life you're living."
-            mike.say "Have the baby, and I'll be right by your side from now on."
-            if not game.flags.dannydead:
-                mike.say "Fuck Danny and fuck the past - it'll be just us, and whatever we want to make of it."
-            else:
-                mike.say "Fuck the past - it'll be just us, and whatever we want to make of it."
-            "Lexi looks literally stunned, nodding with a blank expression on her face."
-            $ lexi.flags.toldpreg = True
-    "The apprehension from when she came in gone, Lexi drains her glass as the weight of what we just agreed finally starts to sink in."
-    "I can feel the same weight too, and I'm already trying to work it all out inside of my head."
     return
 
 label lexi_bj_alley:
@@ -5475,7 +5312,10 @@ label lexi_trailer_on_fire:
             "And I try to focus on the problem at hand, rather than the sensation of her beside me."
             "But all the same, it's a task that proves challenging in the extreme."
             $ game.flags.asklexiinhomeharem = True
-            $ game.flags.ongoinghomeharem = "lexi"
+            # HOME HAREM DISABLED FOR LEXI — the scene above still plays, but we no longer
+            # start the home-harem join (all her join events require ongoinghomeharem="lexi",
+            # so none can fire). Her own route is unaffected. Uncomment to re-enable.
+            # $ game.flags.ongoinghomeharem = "lexi"
             $ lexi.flags.trailer = False
         "It's not possible.":
             "I want to help Lexi in any way that I can."
@@ -5617,99 +5457,51 @@ label lexi_dwayne_event:
             show lexi naked with dissolve
             "Soon she's utterly naked, still sitting upon his knee."
             "Dwayne amuses himself by squeezing her exposed breasts with one hand and stroking between her thighs with the other."
-            if lexi.is_visibly_pregnant:
-                "Dwayne pauses for a second, placing his hand on the curve of Lexi's rounded belly."
-                dwayne.say "Hey, you're not just extra thick, are you?"
-                dwayne.say "Who got you in the family way, Lexi?"
-                "Lexi is suddenly struck silent, not used to being questioned about her pregnancy in a situation like this."
-                "She shoots a brief glance at me, and that's all Dwayne needs to answer his question."
-                dwayne.say "[hero.name], you stud!"
-                "I can see from the evil glint in his eye that this revelation isn't going to keep Dwayne from having his way with Lexi."
-                "Indeed, it's going to make screwing her in front of me all the more enjoyable for him."
-                "Dwayne stands up and proceeds to strip his clothes off without a hint of modesty."
-                "Once he's naked, I see Lexi's eyes visibly widen at the size of his penis."
-                "Maybe she thought he'd prove to be all talk and gym sculpted muscles."
-                dwayne.say "Don't worry, little lady - I promise to be gentle!"
-                "He looks my way as he says this, clearly speaking more to me than to Lexi."
-                "Dwayne guides Lexi down onto the closest couch so that she's on all fours and looking straight at me."
-                "I don't know if it's the sight of Lexi herself or the opportunity to humiliate me, but either way he's having no trouble getting an erection."
-                "His massive cock bobs and swings above Lexi's exposed buttocks like a sexual battering-ram."
-                "I can't help noticing the similarity in the way the light reflects off both Dwayne's head and the helmet of his dick at the same time."
-                dwayne.say "Here I come, girl - see if you can tell when I get there!"
-                scene nightclub threesomelexi dwayne
-                show nightclub threesomelexi dwayne naked
-                with fade
-                "Lexi might have been about to say something in return, but all she manages to let out is a strangled cry as Dwayne forces his way into her."
-                "I can't tell how ready she was for him, but he doesn't stop or pause for as much as a second."
-                "Lexi's eyes are fixed on mine as she endures the sensation of his huge size being thrust mercilessly into her pussy."
-                "But when I glance up, I can see Dwayne's eyes are on me as well."
-                "He's simply loving the fact that I'm watching him fuck the girl that's already pregnant with my baby."
-                "I've only ever heard of what Dwayne's like in terms of sex from Aletta, and even though she was scathing, she didn't do him justice."
-                "Dwayne pounds away at Lexi as though he's working out at the gym, working her like she's an exercise machine and he needs to get his reps in."
-                "Lexi seems to be animated solely by the presence of his cock inside of her, swaying and bouncing to its relentless rhythm."
-                show nightclub threesomelexi dwayne ahegao
-                "I know that she's some kind of crazy sex-machine in her own right, but it looks like Dwayne's going to cause her to malfunction badly."
-                "The spell is broken, however, when I feel something clawing at the front of my trousers."
-                "I look down to see that Lexi is using one hand to desperately open my flies."
-                "That done, she pulls out my own dick and begins to minister to it with her lips and tongue."
-                "Without thinking, I look up to see what Dwayne's reaction will be."
-                "He looks suitably pissed for a moment, but then I see the same fake expression of friendliness that he uses in the office slide over his features."
-                "I realise that by trying to appear so sexually uninhibited and open, he's backed himself into a corner from which he can't object to what Lexi's doing without blowing the whole thing."
-                "I close my eyes and try to forget that he's there at all, just allowing the sensation of Lexi's expert mouth around my cock carry me away from the moment."
-                "The feeling comes to an end just before I feel myself about to cum."
-                show nightclub bj lexi dwayne naked with fade
-                "My cock is unceremoniously yanked out of Lexi's mouth as Dwayne almost shoves her onto the floor."
-                show nightclub bj lexi dwayne cum with hpunch
-                "The effect is that she ends up kneeling before us, my climax hitting her on the left cheek a second after Dwayne's hits her on the right."
-                show nightclub bj lexi dwayne ahegao with hpunch
-                "The expression on her face might have been comical for its unpreparedness and surprise as the cum splatters her from two angles at once."
-                "As it is, I can't help feeling like she's being metaphorically slapped in the face, twice over."
-            else:
-                "Dwayne grins as he bounces Lexi up and down on his knee, leering on the way it makes her bounce and sway."
-                dwayne.say "Make no mistake, baby - I'm going to enjoy having you!"
-                "He looks at me the whole time, making it plain he's actually more interested in my reaction to his words than Lexi's."
-                "Dwayne proceeds to strip off without a hint of shame or embarrassment, showing off his gym-built body and even more so his reputedly enormous cock."
-                "Which only remains reputedly enormous until the moment I catch an unwanted view of it, almost mistaking it instead for a small elephant's trunk."
-                "He sees the look of genuine surprise on Lexi's face as she too catches sight of it."
-                dwayne.say "Don't be disappointed, little lady - it does get bigger...much bigger!"
-                "With that he pushes Lexi down so that she's crouching on all fours on the nearest couch."
-                "Dwayne doesn't waste time with any foreplay, instead simply lining up his now massively erect dick with Lexi's exposed pussy and forcing his way into her."
-                "Lexi actually yelps and cries out in pain as she's made to take him in without pause, her muscles quivering in sympathy with her pussy, making her shake visibly."
-                scene nightclub threesomelexi dwayne
-                show nightclub threesomelexi dwayne naked
-                with fade
-                "Dwayne grins at me as he begins to thrust into her, eliciting yet more cries and moans from Lexi."
-                "I've seen that same expression on his face before, when he's mercilessly crushing someone else's ambitions in the workplace."
-                "There he likes to make a show of it and impress upon his colleagues his alpha male status, and it looks like sex, for him, is more of the same."
-                "I've never seen Lexi in a state like this before, as Dwayne exposes her to the evident stamina of his gym-crafted physique."
-                "Usually she's good at putting on the moans and pants to flatter her partner, but the sounds she makes now are ragged, pained and very real in nature."
-                show nightclub threesomelexi dwayne ahegao
-                "Lexi's breasts swing almost violently, slapping against one another and her legs are visibly trembling now."
-                "Dwayne's grin is now pretty much a lascivious leer, as he wallows in what he's doing to Lexi right before my eyes."
-                "His expression sours a moment later, when he sees that Lexi is desperately tugging at my flies."
-                "Surprised by this, I offer no resistance as she pulls out my own dick and begins to bring it to life with her lips and tongue."
-                "Dwayne deliberately breaks eye-contact then, looking away in annoyance."
-                "It's then I hear a stifled moan coming from elsewhere in the room."
-                "Glancing over his shoulder, I see Aletta, sitting on the couch opposite."
-                "She's clearly watching the proceedings, probably glad not to be playing the part of Dwayne's fuck-toy for once."
-                "As I watch, I can see that she's trying to keep still."
-                "But one of her hands is hovering around her huge breasts, while the other is creeping towards her groin."
-                "She's obviously getting massively turned-on by watching, trying to keep herself from touching herself."
-                "I can't be sure if she's imagining herself taking one from Dwayne or else giving me a blowjob."
-                "Suddenly I hit upon an idea to find out which."
-                "Making sure I have Aletta's eye, I mouth the words 'I wish this was your mouth', while pointing at the top of Lexi's head."
-                "Aletta makes an almost unconscious nod, and finally she can't keep her hands at bay any longer."
-                "She begins to immediately massage her right breast, fingers pinching harshly at the stiffening nipple."
-                "At the same time she openly rubs herself through the crotch of her trouser-suit's pants."
-                "Aletta's moaning is too low to reach Dwayne's ear, but I can pick it out thanks to looking straight at her."
-                "Lexi's expertise at giving a blowjob might be arousing me physically."
-                "But I have to admit to feeling guilty that it's the sight of Aletta openly masturbating before me that's arousing my mind."
-                show nightclub bj lexi dwayne naked with fade
-                "Before I can lose myself in Lexi's mouth, Dwayne pulls her onto the floor so that she's kneeling between us."
-                show nightclub bj lexi dwayne cum with hpunch
-                "Lexi takes my ejaculation on one cheek and Dwayne's on the other within mere seconds of each other."
-                show nightclub bj lexi dwayne ahegao with hpunch
-                "She doesn't even have time to react, her dazed expression twisting into a grimace as she's painted white."
+            "Dwayne grins as he bounces Lexi up and down on his knee, leering on the way it makes her bounce and sway."
+            dwayne.say "Make no mistake, baby - I'm going to enjoy having you!"
+            "He looks at me the whole time, making it plain he's actually more interested in my reaction to his words than Lexi's."
+            "Dwayne proceeds to strip off without a hint of shame or embarrassment, showing off his gym-built body and even more so his reputedly enormous cock."
+            "Which only remains reputedly enormous until the moment I catch an unwanted view of it, almost mistaking it instead for a small elephant's trunk."
+            "He sees the look of genuine surprise on Lexi's face as she too catches sight of it."
+            dwayne.say "Don't be disappointed, little lady - it does get bigger...much bigger!"
+            "With that he pushes Lexi down so that she's crouching on all fours on the nearest couch."
+            "Dwayne doesn't waste time with any foreplay, instead simply lining up his now massively erect dick with Lexi's exposed pussy and forcing his way into her."
+            "Lexi actually yelps and cries out in pain as she's made to take him in without pause, her muscles quivering in sympathy with her pussy, making her shake visibly."
+            scene nightclub threesomelexi dwayne
+            show nightclub threesomelexi dwayne naked
+            with fade
+            "Dwayne grins at me as he begins to thrust into her, eliciting yet more cries and moans from Lexi."
+            "I've seen that same expression on his face before, when he's mercilessly crushing someone else's ambitions in the workplace."
+            "There he likes to make a show of it and impress upon his colleagues his alpha male status, and it looks like sex, for him, is more of the same."
+            "I've never seen Lexi in a state like this before, as Dwayne exposes her to the evident stamina of his gym-crafted physique."
+            "Usually she's good at putting on the moans and pants to flatter her partner, but the sounds she makes now are ragged, pained and very real in nature."
+            show nightclub threesomelexi dwayne ahegao
+            "Lexi's breasts swing almost violently, slapping against one another and her legs are visibly trembling now."
+            "Dwayne's grin is now pretty much a lascivious leer, as he wallows in what he's doing to Lexi right before my eyes."
+            "His expression sours a moment later, when he sees that Lexi is desperately tugging at my flies."
+            "Surprised by this, I offer no resistance as she pulls out my own dick and begins to bring it to life with her lips and tongue."
+            "Dwayne deliberately breaks eye-contact then, looking away in annoyance."
+            "It's then I hear a stifled moan coming from elsewhere in the room."
+            "Glancing over his shoulder, I see Aletta, sitting on the couch opposite."
+            "She's clearly watching the proceedings, probably glad not to be playing the part of Dwayne's fuck-toy for once."
+            "As I watch, I can see that she's trying to keep still."
+            "But one of her hands is hovering around her huge breasts, while the other is creeping towards her groin."
+            "She's obviously getting massively turned-on by watching, trying to keep herself from touching herself."
+            "I can't be sure if she's imagining herself taking one from Dwayne or else giving me a blowjob."
+            "Suddenly I hit upon an idea to find out which."
+            "Making sure I have Aletta's eye, I mouth the words 'I wish this was your mouth', while pointing at the top of Lexi's head."
+            "Aletta makes an almost unconscious nod, and finally she can't keep her hands at bay any longer."
+            "She begins to immediately massage her right breast, fingers pinching harshly at the stiffening nipple."
+            "At the same time she openly rubs herself through the crotch of her trouser-suit's pants."
+            "Aletta's moaning is too low to reach Dwayne's ear, but I can pick it out thanks to looking straight at her."
+            "Lexi's expertise at giving a blowjob might be arousing me physically."
+            "But I have to admit to feeling guilty that it's the sight of Aletta openly masturbating before me that's arousing my mind."
+            show nightclub bj lexi dwayne naked with fade
+            "Before I can lose myself in Lexi's mouth, Dwayne pulls her onto the floor so that she's kneeling between us."
+            show nightclub bj lexi dwayne cum with hpunch
+            "Lexi takes my ejaculation on one cheek and Dwayne's on the other within mere seconds of each other."
+            show nightclub bj lexi dwayne ahegao with hpunch
+            "She doesn't even have time to react, her dazed expression twisting into a grimace as she's painted white."
         "It's not a good idea":
             mike.say "No, I think you should tell him to get lost."
             show lexi normal
@@ -5835,135 +5627,6 @@ label lexi_dwayne_event:
     "There's really nothing I can do to stop Dwayne dragging her along in his shadow for the rest of the night."
     $ hero.replace_activity()
     $ game.pass_time(2)
-    return
-
-label lexi_pregnant_request:
-    show lexi surprised
-    lexi.say "Oh, [hero.name]..."
-    lexi.say "I got a crazy idea - you wanna hear it?"
-    "There's no build up or chance for me to tune into what's on Lexi's mind."
-    "One moment she's as quiet as a mouse."
-    "Well...as quiet as Lexi ever gets."
-    "And the next she springs it on me."
-    "Out of nowhere and without warning."
-    show lexi normal
-    lexi.say "I was thinking we should have a baby!"
-    mike.say "Huh..."
-    mike.say "What...what did you say?"
-    mike.say "A baby?!?"
-    "Lexi seems not to notice the shock and surprise in my voice."
-    "Either that or she chooses to ignore it and keeps on talking."
-    lexi.say "Yeah, a baby."
-    lexi.say "You and me."
-    show lexi happy
-    lexi.say "Great idea, right?"
-    "Put on the spot, I can't think of anything to say."
-    "All I can do is blink at Lexi in stunned silence."
-    "Up to now, the biggest thing on my mind was what to have for lunch!"
-    show lexi surprised
-    lexi.say "What's up, [hero.name]?"
-    lexi.say "You look like I just blew your mind!"
-    "But then I see her eyes narrow and she frowns at me."
-    show lexi annoyed
-    lexi.say "Wait a minute..."
-    lexi.say "You think it's a good idea, right?"
-    lexi.say "You DO wanna have kids with me, yeah?"
-    "I try my best to shake off the funk that Lexi's put me in."
-    "As I can see that this conversation is in danger of taking a bad turn."
-    mike.say "I...I honestly hadn't given it that much thought, Lexi."
-    mike.say "We've been having so much fun lately, you know?"
-    mike.say "I really haven't been thinking that far ahead!"
-    "I can see that the compliment goes someway towards mollifying Lexi."
-    show lexi normal
-    "She raises her eyebrows a little and gives me a smile."
-    lexi.say "Well, yeah, [hero.name]."
-    show lexi wink
-    lexi.say "I WAS there the whole time, remember?!?"
-    lexi.say "I just...got to thinking myself."
-    show lexi normal
-    lexi.say "Thinking about where we're going together."
-    "This is a new experience for me, hearing Lexi talk about the future."
-    "Until now, I thought she only ever lived in the moment."
-    "Her life and the way she chooses to live it made me sure of that."
-    "But apparently she has hidden depths that I totally missed."
-    mike.say "And you think that place is us having kids?"
-    mike.say "And having them right now?"
-    show lexi happy
-    "Lexi nods at this, the smile on her face becoming a little strained."
-    show lexi normal
-    "I can really see how much she's into the idea."
-    "That and how desperate she is to hear my answer!"
-    "I'd always assumed that I'd end up with a wife and kids."
-    "You know, house in the suburbs, a lawn and a dog - all that stuff."
-    "But it was always far in the future."
-    menu:
-        "Agree":
-            "And it's in that moment that the thought hits me."
-            "I could never have imagined meeting and dating a girl like Lexi."
-            "Never mind that I would actually end up falling in love with her!"
-            "But I did, and now I can't imagine not being with her."
-            "So why should I start holding back now?"
-            mike.say "You know what, Lexi - you're right."
-            mike.say "We're great together."
-            mike.say "And I know we'll be great parents too!"
-            show lexi surprised blush
-            "Lexi's eyes go wide and her mouth drops open."
-            "I think this might be the first time I've seen her lost for words!"
-            mike.say "Ah, Lexi..."
-            mike.say "Are you feeling okay?"
-            "I lean forwards a little, trying to get a response out of her."
-            show lexi happy
-            "And that's the moment Lexi chooses to let out a scream of delight."
-            show lexi close with vpunch
-            "She jumps up, wrapping her arms around my neck."
-            show lexi normal
-            lexi.say "Oh wow!"
-            lexi.say "You really mean it?"
-            lexi.say "You wanna have a kid with me?!?"
-            mike.say "Urgh..."
-            mike.say "Y...yeah, Lexi..."
-            mike.say "That's what I said!"
-            lexi.say "Great!"
-            lexi.say "You're gonna be such a good daddy, [hero.name]."
-            lexi.say "I'll be the best mommy in the world!"
-            lexi.say "And we can get started right now..."
-            $ lexi.love += 2
-            $ lexi.flags.pregrequest = True
-        "Refuse":
-            "And the wife I imagined was never anything like Lexi!"
-            "I mean, I love her - really I do."
-            "But is she really mommy material?"
-            mike.say "I...I don't think we can be hasty, Lexi."
-            mike.say "Having kids is a big step."
-            mike.say "I think we both need to be ready."
-            show lexi sad
-            lexi.say "Oh, I see how it is, [hero.name]."
-            lexi.say "You say WE."
-            lexi.say "But you really mean ME!"
-            "I throw my hands up in a pleading gesture."
-            "And Lexi plants hers on her hips."
-            "She's glaring at me now, shaking her head."
-            mike.say "No, Lexi!"
-            mike.say "That's not it at all!"
-            "Well, it's more than a small part of it."
-            "But I can't admit that to Lexi."
-            "I love her too much to be that brutally honest!"
-            mike.say "I'm not ready either, Lexi."
-            mike.say "I mean look at me."
-            mike.say "I'm basically an overgrown man-child."
-            mike.say "You're probably learning about kids just from being with me!"
-            "Lexi tries to keep the angry expression on her face."
-            "But I can already see that she's starting to crack."
-            "A moment later, she can't help but start laughing."
-            show lexi happy
-            lexi.say "Yeah, [hero.name]..."
-            lexi.say "You're right there!"
-            show lexi normal
-            "She nods slowly."
-            "And I know then that she's come round to my way of thinking."
-            lexi.say "Okay, [hero.name], you win."
-            lexi.say "Maybe we'll wait a while."
-            $ lexi.love -= 2
     return
 
 label lexi_asleep:

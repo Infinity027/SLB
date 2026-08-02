@@ -34,14 +34,7 @@ label offer_a_drink:
         call expression f"{active_girl.id}_offer_a_drink_{hero.gender}" from _call_expression_38
     else:
         call expression f"offer_a_drink_dialogues_1_{hero.gender}" from _call_expression_124
-        if active_girl.is_visibly_pregnant:
-            $ renpy.show(f"{active_girl.id} angry")
-            $ active_girl.love -= 10
-            active_girl.say "Are you serious?!?"
-            active_girl.say "I can't drink when I'm pregnant!"
-            active_girl.say "What are you thinking?!?"
-            $ hero.cancel_activity()
-        elif (hero.charm >= 60 - active_girl.love and active_girl.flags.drinks < 2) or date_girl == active_girl:
+        if (hero.charm >= 60 - active_girl.love and active_girl.flags.drinks < 2) or date_girl == active_girl:
             active_girl.say "Sure!"
             $ renpy.hide(active_girl.id)
             show expression f"drink {active_girl.id}"

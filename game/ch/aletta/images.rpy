@@ -1,205 +1,59 @@
 init 1:
-    layeredimage aletta:
-        attribute_function Pickers([PositionPicker, PiercingsPicker, PregnancyPicker, CollarPicker, HaircutPicker, PubesPicker, OutfitPicker], npc=aletta)
-
-
-        attribute idle null
-
-
-        attribute haircut null
-        attribute nohaircut null
-        group nohaircut auto if_not ["helmet", "haircut", "halloween"]
-        group halloween_haircut auto if_any ["halloween"] if_not ["helmet"]
-
-
-        group tail auto if_not ["bottomless", "naked"]
-
-
-        group wings auto if_not ["topless", "naked"]
-
-
-        group position auto
-
-
-        attribute pubes
-
-
-        attribute pregnant null
-        group pregnant auto if_any ["pregnant"]
-
-
-        group tattoo auto if_not ["pregnant"]
-        group tattoo auto variant "pregnant" if_any ["pregnant"]
-
-
-        attribute blush
-
-
-        group exp auto:
-            attribute normal default
-
-
-        attribute lips null
-        attribute tongue null
-        group multiple auto variant piercings
-
-
-        group watch auto variant "a" if_any ["a"]
-        group watch auto variant "b" if_any ["b"]
-
-
-        attribute naked null
-
-        group stockings auto if_not ["naked", "bottomless"]
-
-        attribute bottomless null
-        group bot auto variant "a" if_any ["a"] if_not ["pregnant", "bottomless", "naked"]
-        group bot auto variant "b" if_any ["b"] if_not ["pregnant", "bottomless", "naked"]
-        group bot auto variant "a_pregnant" if_all ["a", "pregnant"] if_not ["bottomless", "naked"]
-        group bot auto variant "b_pregnant" if_all ["b", "pregnant"] if_not ["bottomless", "naked"]
-
-        attribute collar if_any ["sexywork"]
-
-        attribute topless null
-        group top auto variant "a" if_any ["a"] if_not ["pregnant", "topless", "naked"]
-        group top auto variant "b" if_any ["b"] if_not ["pregnant", "topless", "naked"]
-        group top auto variant "a_pregnant" if_all ["a", "pregnant"] if_not ["topless", "naked"]
-        group top auto variant "b_pregnant" if_all ["b", "pregnant"] if_not ["topless", "naked"]
-
-        attribute nopatsies null
-        group patsies auto if_not ["nopatsies", "topless", "naked"]
-
-        attribute collar if_not ["sexywork"]
-
-        group haircut auto if_any ["haircut"] if_not ["helmet", "halloween"]
-        group haircut auto variant "halloween" if_any ["halloween"] if_not ["helmet"]
-
-        group hat auto if_not ["topless", "naked"]
-
-        attribute glasses null
-        attribute noglasses null
-        group glasses auto if_any "glasses" if_not ["helmet", "noglasses"]
-
-
-        attribute helmet null
-        group helmet auto if_any ["helmet"]
-
-
-        group book auto variant "a" if_any ["a"]
-
-
-        attribute leash if_any ["collar"]
-
-        group fx auto
-
-        group arm auto
-
-    layeredimage aletta close:
-        yalign 0.04
-        attribute_function Pickers([PositionPicker, PiercingsPicker, PregnancyPicker, CollarPicker, HaircutPicker, PubesPicker, OutfitPicker], npc=aletta)
-
-
-        attribute idle null
-
-
-        attribute haircut null
-        attribute nohaircut null
-        group nohaircut auto if_not ["helmet", "haircut", "halloween"]
-        group halloween_haircut auto if_any ["halloween"] if_not ["helmet"]
-
-
-        group tail auto if_not ["bottomless", "naked"]
-
-
-        group wings auto if_not ["topless", "naked"]
-
-
-        group position auto
-
-
-        attribute pubes
-
-
-        attribute pregnant null
-        group pregnant auto if_any ["pregnant"]
-
-
-        group tattoo auto if_not ["pregnant"]
-        group tattoo auto variant "pregnant" if_any ["pregnant"]
-
-
-        attribute blush
-
-
-        group exp auto:
-            attribute normal default
-
-
-        attribute lips null
-        attribute tongue null
-        group multiple auto variant piercings
-
-
-        group watch auto variant "a" if_any ["a"]
-        group watch auto variant "b" if_any ["b"]
-
-
-        attribute naked null
-
-        group stockings auto if_not ["naked", "bottomless"]
-
-        attribute bottomless null
-        group bot auto variant "a" if_any ["a"] if_not ["pregnant", "bottomless", "naked"]
-        group bot auto variant "b" if_any ["b"] if_not ["pregnant", "bottomless", "naked"]
-        group bot auto variant "a_pregnant" if_all ["a", "pregnant"] if_not ["bottomless", "naked"]
-        group bot auto variant "b_pregnant" if_all ["b", "pregnant"] if_not ["bottomless", "naked"]
-
-        attribute collar if_any ["sexywork"]
-
-
-
-        attribute topless null
-        group top auto variant "a" if_any ["a"] if_not ["pregnant", "topless", "naked"]
-        group top auto variant "b" if_any ["b"] if_not ["pregnant", "topless", "naked"]
-        group top auto variant "a_pregnant" if_all ["a", "pregnant"] if_not ["topless", "naked"]
-        group top auto variant "b_pregnant" if_all ["b", "pregnant"] if_not ["topless", "naked"]
-
-        attribute nopatsies null
-        group patsies auto if_not ["nopatsies", "topless", "naked"]
-
-
-        attribute collar if_not ["sexywork"]
-
-
-
-
-
-        group haircut auto if_any ["haircut"] if_not ["helmet", "halloween"]
-        group haircut auto variant "halloween" if_any ["halloween"] if_not ["helmet"]
-
-
-        group hat auto if_not ["topless", "naked"]
-
-
-        attribute noglasses null
-        attribute glasses null
-        group glasses auto if_any "glasses" if_not ["helmet", "noglasses"]
-
-
-        attribute helmet null
-        group helmet auto if_any ["helmet"]
-
-
-        group book auto variant "a" if_any ["a"]
-
-
-        attribute leash if_any ["collar"]
-
-
-        group fx auto
-
-
-        group arm auto
+    # ── ALETTA - Main standing character images ─────────────────────────────────
+    # Path: ch/images/aletta/<outfit>/<expression>.webp
+    # Outfits: casual, casual_b, work, date, nude, special_event, home_hotcoffee
+
+    # --- Casual outfit (default / a-variant) ---
+    image aletta             = "ch/images/aletta/casual/normal.webp"
+    image aletta normal      = "ch/images/aletta/casual/normal.webp"
+    image aletta happy       = "ch/images/aletta/casual/happy.webp"
+    image aletta sad         = "ch/images/aletta/casual/sad.webp"
+    image aletta angry       = "ch/images/aletta/casual/angry.webp"
+    image aletta flirt       = "ch/images/aletta/casual/flirt.webp"
+    image aletta blush       = "ch/images/aletta/casual/blush.webp"
+    image aletta surprised   = "ch/images/aletta/casual/surprised.webp"
+    image aletta talkative   = "ch/images/aletta/casual/talkative.webp"
+    image aletta dreamy      = "ch/images/aletta/casual/dreamy.webp"
+    image aletta pain        = "ch/images/aletta/casual/pain.webp"
+    image aletta whining     = "ch/images/aletta/casual/whining.webp"
+    image aletta sadsmile    = "ch/images/aletta/casual/sadsmile.webp"
+    image aletta wink        = "ch/images/aletta/casual/wink.webp"
+    image aletta annoyed     = "ch/images/aletta/casual/annoyed.webp"
+    image aletta upset       = "ch/images/aletta/casual/upset.webp"
+    image aletta embarrassed = "ch/images/aletta/casual/embarrassed.webp"
+    image aletta stuned      = "ch/images/aletta/casual/stunned.webp"
+    image aletta normal blush = "ch/images/aletta/casual/blush.webp"
+
+    # --- Casual "b" outfit variant ---
+    image aletta b           = "ch/images/aletta/casual_b/normal.webp"
+    image aletta b flirt     = "ch/images/aletta/casual_b/flirt.webp"
+    image aletta b underwear = "ch/images/aletta/casual_b/underwear.webp"
+    image aletta normal b underwear = "ch/images/aletta/casual_b/underwear.webp"
+
+    # --- Date outfit ---
+    image aletta date normal = "ch/images/aletta/date/normal.webp"
+    image aletta date happy  = "ch/images/aletta/date/happy.webp"
+
+    # --- Underwear ---
+    image aletta underwear   = "ch/images/aletta/casual/underwear.webp"
+
+    # --- Nude ---
+    image aletta naked        = "ch/images/aletta/nude/normal.webp"
+    image aletta naked angry  = "ch/images/aletta/nude/angry.webp"
+    image aletta naked blush  = "ch/images/aletta/nude/blush.webp"
+    image aletta b naked      = "ch/images/aletta/nude/normal.webp"
+    image aletta blush b naked = "ch/images/aletta/nude/blush.webp"
+
+    # --- Halloween special outfit ---
+    image aletta halloween           = "ch/images/aletta/special_event/halloween.webp"
+    image aletta halloween talkative = "ch/images/aletta/special_event/halloween_talkative.webp"
+    image aletta halloween flirt     = "ch/images/aletta/special_event/halloween_flirt.webp"
+
+    # ── ALETTA CLOSE-UP ─────────────────────────────────────────────────────────
+    # Used for intimate/indoor scenes
+    # Path: ch/images/aletta/<outfit>/close_<expression>.webp
+    image aletta close         = "ch/images/aletta/casual/close_normal.webp"
+    image aletta close b naked = "ch/images/aletta/nude/close_normal.webp"
 
     layeredimage aletta smartphone:
         always "aletta_smartphone"
@@ -226,9 +80,7 @@ init 1:
             attribute mana default
             attribute manb
 
-
         attribute arm if_any ["mana"]
-
 
         group eyes auto variant "mana" if_any ["mana"]:
             attribute open default
@@ -237,14 +89,11 @@ init 1:
             attribute open default
             attribute closed
 
-
         attribute tongue if_any ["mana"]
-
 
         attribute cum null
         always "aletta_oral_cum_a" if_all ["cum", "mana"]
         always "aletta_oral_cum_b" if_all ["cum", "manb"]
-
 
     layeredimage aletta kiss:
         attribute_function Pickers([PiercingsPicker, CollarPicker, HaircutPicker, OutfitPicker], npc=aletta)
@@ -263,27 +112,20 @@ init 1:
             attribute tongue null
         group multiple auto variant piercings
 
-
         group multiple auto variant glasses
-
 
         attribute naked null
         attribute topless null
         group outfit auto if_not ["naked", "topless"]
 
-
         group necklace auto if_not ["collar"]
-
 
         attribute collar
 
-
         always "aletta_kiss_collar_letter" if_any ["collar"] if_not ["suit"]
-
 
         group outfitmike auto if_not ["naked"]:
             attribute normal default
-
 
         group hair auto if_not ["halloween"]
         always "aletta_kiss_hair_halloween" if_any ["halloween"]
@@ -293,46 +135,34 @@ init 1:
     layeredimage aletta titjob:
         attribute_function Pickers([DickPicker, PiercingsPicker, CollarPicker, HaircutPicker, OutfitPicker], npc=aletta)
 
-
         group bg auto:
             attribute bedroom default
 
-
         always "aletta_titjob_bodies"
 
-
         attribute collar
-
 
         group outfit auto:
             attribute sexydate null
             attribute date null
 
-
         group exp auto:
             attribute normal default
-
 
         attribute cum null
         group multiple auto variant cum when cum
 
-
         group hair auto
-
 
         attribute glasses
 
-
         group dick auto
-
 
         attribute dickcum null
         group dickcum auto if_any ["dickcum"]
 
-
         attribute cumshot null
         group cumshot auto if_any ["cumshot"]
-
 
         group multiple auto variant piercings
         group multiple:
@@ -344,31 +174,23 @@ init 1:
     layeredimage aletta cowgirl:
         attribute_function Pickers([DickPicker, PiercingsPicker, PregnancyPicker, CollarPicker, HaircutPicker, OutfitPicker], npc=aletta)
 
-
         group bg auto:
             attribute bedroom default
 
-
         always "aletta_cowgirl_bodies"
-
 
         group mike_outfit_top auto
 
-
         group multiple auto variant fx
-
 
         attribute chain
 
-
         attribute pregnant
-
 
         group exp_aletta auto:
             attribute normal default
         group exp_mike auto:
             attribute smile default
-
 
         attribute clit null
         attribute ears null
@@ -385,20 +207,15 @@ init 1:
         group outfit_top auto if_not ["nobra", "naked"]
         group outfit_top auto variant "nobra" if_any ["nobra"] if_not ["naked"]
 
-
         attribute glasses
 
-
         group hair auto
-
 
         group booty auto:
             attribute raised default
 
-
         group outfit_bot auto variant "down" if_any ["down"] if_not ["naked"]
         group outfit_bot auto variant "raised" if_any ["raised"] if_not ["naked"]
-
 
         attribute vaginal null
         attribute anal null
@@ -406,109 +223,81 @@ init 1:
         group dick auto variant "anal" if_any ["anal"]
         group dick auto variant "out" if_not ["vaginal","anal"]
 
-
         attribute condom null
         group condom auto variant "vaginal" if_all ["condom","vaginal"]
         group condom auto variant "out" if_any ["condom"] if_not ["vaginal","anal"]
-
 
         attribute creampie null
         group creampie auto variant "vaginal" if_all ["creampie","vaginal"] if_not ["condom"]
         group creampie auto variant "anal" if_all ["creampie","anal"] if_not ["condom"]
 
-
         group condomcum auto if_all ["condom","cumshot"] if_not ["vaginal","anal"]
-
 
         attribute cumshot null
         group cumshot auto if_any ["cumshot"] if_not ["condom","vaginal","anal"]
 
-
         attribute dickcum null
         group dickcum auto if_any ["dickcum"] if_not ["condom","vaginal","anal"]
-
 
         group hand auto:
             attribute raised default
 
-
         group mike_outfit auto variant "down" if_any ["down"] if_not ["naked"]
         group mike_outfit auto variant "raised" if_any ["raised"] if_not ["naked"]
 
-
         group mike_outfit auto
-
 
         attribute collar
 
     layeredimage aletta shooting:
         attribute_function Pickers([PubesPicker], npc=aletta)
 
-
         group bg auto:
             attribute range default
 
-
         attribute mike
-
 
         group expmike auto if_any ["mike"]:
             attribute normal default
 
-
         attribute finger null if_not ["mike", "bj"]
         always "aletta_shooting_finger" if_any ["finger"]
 
-
         always "aletta_shooting_body" if_not ["mike"]
 
-
         attribute pubes if_not ["mike"]
-
 
         group outfit auto if_not ["mike"]:
             attribute closed default
             attribute naked null
 
-
         group exp auto if_not ["mike"]:
             attribute normal default
 
-
         always "aletta_shooting_glasses" if_not ["mike"]
 
-
         always "aletta_shooting_arms" if_not ["mike"]
-
 
         group outfitarms auto if_not ["mike"]:
             attribute clothed default
             attribute naked null
 
-
         attribute fire null
         always "aletta_shooting_fire1" if_any ["fire"] if_not ["mike"]
         always "aletta_shooting_fire2" if_all ["fire", "mike"]
 
-
         attribute juice if_not ["mike"]
-
 
         always "aletta_shooting_finger_arms" if_any ["finger"]
 
-
         always "aletta_shooting_finger_head" if_any ["finger"]
 
-
         attribute bj if_any ["mike"] if_not ["finger"]
-
 
         group bj auto if_any ["bj"]:
             attribute suck default
 
-
         group bj_cumshot auto if_any ["bj"]
-
 
         group fg auto
 
@@ -517,52 +306,37 @@ init 1:
         attribute nobg null
         attribute noglasses null
 
-
         always "aletta_ride_bg" if_not["nobg"]
-
 
         always "aletta_ride_bike"
 
-
         attribute mike
 
-
         always "aletta_ride_body"
-
 
         group suit auto:
             attribute closed default
 
-
         always "aletta_ride_mike_leg" if_any ["mike"]
-
 
         group righthand auto if_any ["mike"]:
             attribute waist default
 
-
         group lefthand auto if_any ["mike"]:
             attribute lwaist default
 
-
         always "aletta_ride_bike_front"
-
 
         group exp auto:
             attribute normal default
 
-
         always "aletta_ride_mike_face" if_any ["mike"]
-
 
         always "aletta_ride_glasses" if_not ["noglasses"]
 
-
         always "aletta_ride_arm"
 
-
         always "aletta_ride_helmet"
-
 
         always "aletta_ride_blur" if_not ["nobg"]
 
@@ -592,7 +366,6 @@ init 1:
 
         group aletta_front_bodyparts auto:
             attribute anal null
-
 
         group exp auto:
             attribute normal default
@@ -650,14 +423,11 @@ init 1:
     layeredimage aletta doggy:
         attribute_function Pickers([PubesPicker, PregnancyPicker, CollarPicker, PiercingsPicker], npc=aletta)
 
-
         group bg auto:
             attribute bedroom default
 
-
         group backhair auto:
             attribute hairup default
-
 
         attribute pregnant null
         group pregnant auto if_any "pregnant":

@@ -22,17 +22,3 @@ outcomes:
     condition: sasha.is_gone_forever
     hide_story: True
 
-steps:
-  sasha_likes_blondes_2:
-    name: Wait to see what Sasha does.
-    related_event: sasha_likes_blondes_2
-    condition: game.flags.LikesBlondes
-    outcome:
-      condition: '"sasha_likes_blondes_2" in DONE'
-
-  sasha_likes_blondes_3:
-    name: Wait for Sasha to dye her hair back.
-    condition: game.flags.LikesBlondesDelay > 0
-    outcome:
-      next: brunette
-      condition: not game.flags.LikesBlondesDelay

@@ -139,15 +139,7 @@ label anna_offer_a_drink_male:
     mike.say "You ready for a drink, Anna?"
     mike.say "Because I'm just heading to the bar."
     "Almost the second the words are out of my mouth, Anna turns to face me."
-    if anna.is_visibly_pregnant:
-        show anna angry
-        $ anna.love -= 10
-        anna.say "Seriously, [hero.name]?"
-        anna.say "Did you forget that you got me pregnant?!?"
-        anna.say "I can't drink while I'm like this!"
-        $ hero.cancel_activity()
-        hide anna
-    elif (hero.charm >= 60 - anna.love and anna.flags.drinks < 2) or date_girl == anna:
+    if (hero.charm >= 60 - anna.love and anna.flags.drinks < 2) or date_girl == anna:
         show anna happy
         anna.say "Ooh..."
         anna.say "Yes please!"

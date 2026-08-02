@@ -3604,26 +3604,7 @@ label bree_minami_sasha_male_ending:
     "And Minami, what can I say about my gorgeous little Minami?"
     "Her dress is of Japanese silk and traditional patterns."
     "But the cut is modern and unconventional, just like her."
-    if bree.is_visibly_pregnant and minami.is_visibly_pregnant and sasha.is_visibly_pregnant:
-        "Maybe I should be sweating and nervous at the sight of three large baby-bumps."
-        "And I have no idea what the guests sitting in the pews must think of the girls all being pregnant at once."
-        "But the truth is that I really don't care - we're already a big family, and soon to be bigger still!"
-    elif not bree.is_visibly_pregnant and not minami.is_visibly_pregnant and not sasha.is_visibly_pregnant:
-        "I can't stop staring at [bree.name], Sasha and Minami as they stand beside me at the altar."
-        "My three brides - soon to be my three wives!"
-    else:
-        if bree.is_visibly_pregnant:
-            "I almost forget that [bree.name]'s so far along with her pregnancy."
-            "The dress hides her bump so well and she's holding her bouquet over it too!"
-            "Though it doesn't seem to be holding her back in the slightest."
-        if sasha.is_visibly_pregnant:
-            "It takes me a moment to see that Sasha actually looks a little paler than usual."
-            "And that's most likely on account of her being pregnant right now."
-            "So I make a mental note to keep an eye on her for any signs her colour getting worse!"
-        if minami.is_visibly_pregnant:
-            "As well made as her dress is, it can't hope to hide the fact that Minami's with child."
-            "But she makes no effort to hide the fact - and why should she?"
-            "I'm as proud to be the father as she is to be having my baby!"
+    
     show bree normal
     show sasha normal
     show minami normal
@@ -3728,28 +3709,7 @@ label bree_minami_sasha_male_ending:
     minami.say "You should have tried growing up with him too!"
     bree.say "But it's sweet that the house is now really our home."
     sasha.say "Though it is starting to get a little crowded around here..."
-    if bree.is_visibly_pregnant and minami.is_visibly_pregnant and sasha.is_visibly_pregnant:
-        bree.say "Hmm...we kinda turned this place into a commune between us!"
-        sasha.say "Yeah, well, [hero.name]'s to blame as well."
-        sasha.say "He shouldn't be so damn fertile!"
-        minami.say "Aww - big bro wanted to buy a sports car."
-        minami.say "But he had to get a mini-van instead!"
-    elif not bree.is_visibly_pregnant and not minami.is_visibly_pregnant and not sasha.is_visibly_pregnant:
-        bree.say "Yeah, and there's always the chance of it getting even more crowded too!"
-        minami.say "Huh...who else is moving in here?"
-        sasha.say "She means the patter of tiny feet, Minami!"
-        minami.say "Oh..."
-        minami.say "Well, that could happen!"
-    else:
-        if bree.is_visibly_pregnant:
-            bree.say "I know, I know."
-            bree.say "Little Poppy's turning into such a tearaway since she learned to walk!"
-        if minami.is_visibly_pregnant:
-            minami.say "Mei having three mommies sure helps things go smoother."
-            minami.say "But she's still such a handful!"
-        if sasha.is_visibly_pregnant:
-            sasha.say "I used to think that boys were easier to raise than girls."
-            sasha.say "But wow, did Dahlia cure me of that one pretty quickly!"
+   
     bree.say "So all in all, we're pretty happy with how things turned out."
     sasha.say "Apart from [hero.name]'s stinky shoes."
     minami.say "And his socks - he leaves those everywhere!"
@@ -3768,4 +3728,3 @@ label bree_minami_sasha_male_ending:
     $ game.set_new_game_plus()
     $ renpy.full_restart()
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

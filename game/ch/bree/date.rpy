@@ -105,18 +105,9 @@ label bree_date_eat_a_burger:
     return
 
 label bree_date_buy_drink:
-    if bree.is_visibly_pregnant:
-        show bree angry
-        $ bree.love -= 10
-        bree.say "Are you serious?!?"
-        bree.say "I can't drink when I'm pregnant!"
-        bree.say "What are you thinking?!?"
-        $ hero.cancel_activity()
-        hide bree
-    else:
-        "When I put the drink she ordered into her hand, [bree.name] looks almost surprised."
-        "She thanks me and takes a couple of sips before putting it down."
-        "And even then I get the feeling she was doing it to be polite."
+    "When I put the drink she ordered into her hand, [bree.name] looks almost surprised."
+    "She thanks me and takes a couple of sips before putting it down."
+    "And even then I get the feeling she was doing it to be polite."
     return
 
 label bree_date_play_darts:
@@ -132,14 +123,7 @@ label bree_date_pub_play_pool:
     return
 
 label bree_date_buy_a_round:
-    if bree.is_visibly_pregnant:
-        show bree angry
-        $ bree.love -= 10
-        bree.say "Are you serious?!?"
-        bree.say "I can't drink when I'm pregnant!"
-        bree.say "What are you thinking?!?"
-        $ hero.cancel_activity()
-    elif (hero.charm >= 60 - bree.love and bree.flags.drinks < 2):
+    if (hero.charm >= 60 - bree.love and bree.flags.drinks < 2):
         show drink bree
         "When I offer to stand a round, [bree.name] just nods happily."
         "I know I'm supposed to be a modern guy and all that."
@@ -664,14 +648,6 @@ label bree_halloween_sex:
     with fade
     "And with the other, she opens the door to her room."
     "There's nothing more that either of us needs to say."
-
-
-
-
-
-
-
-
     "[bree.name] doesn't make any demands of me."
     "And all I want right now is her."
     "And so we come together simply and almost on instinct."
@@ -730,4 +706,3 @@ label bree_halloween_sex:
     $ game.pass_time(1)
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

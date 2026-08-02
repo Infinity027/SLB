@@ -203,9 +203,6 @@ label petite_harem_event_01:
     kat.say "Then we can sit down and chat, okay?"
     show kat normal
     mike.say "Sounds good to me!"
-    if kat.is_visibly_pregnant:
-        mike.say "But remember to make it non-alcoholic, yeah?"
-        "Kat nods, and I notice that she can't help unconsciously cradling her belly."
     mike.say "I'll go grab us a table."
     hide kat with easeoutleft
     "Kat heads to the bar and I go in search of the table I promised her."
@@ -249,8 +246,6 @@ label petite_harem_event_01:
     "With that she walks straight up to me and puts her arms around my neck."
     "If anything, Anna's actually a little shorter than Kat."
     "But rather than straining to reach up, she pulls me down."
-    if anna.is_visibly_pregnant:
-        "Something that the weight of her pregnant belly makes easier than normal."
     show anna kiss with fade
     $ anna.flags.kiss += 1
     "And then she plants her lips against mine, kissing me deep and hard."
@@ -317,60 +312,6 @@ label petite_harem_event_01:
     show kat defiant
     show anna unpleased
     kat.say "We just clicked that much, you know?"
-    if anna.is_visibly_pregnant and kat.is_visibly_pregnant:
-        "Both of the girls are still looking to score points."
-        "And soon their eyes settle on each other's bellies."
-        show kat talkative
-        kat.say "Oops!"
-        kat.say "Did somebody have a little accident?"
-        kat.say "Forget to take the proper precautions?"
-        kat.say "Or are you just casual about that kind of thing?"
-        show kat defiant
-        show anna talkative
-        anna.say "Look who's talking!"
-        anna.say "Someone got careless, didn't they?"
-        anna.say "Did you just forget?"
-        anna.say "Or can you not remember who the father is?"
-        show anna unpleased
-        "Both Anna and Kat look to me to come to their aid."
-        "But when I look the other way, they fall back to poking at each other."
-        show anna evil
-        anna.say "Oh no!"
-        anna.say "The father of my child and I are very much together and in love!"
-        show kat talkative
-        kat.say "Hurmph..."
-        kat.say "Well, it's the same for me too!"
-    elif anna.is_visibly_pregnant:
-        "Still looking to score points, Kat's eyes settle on Anna's belly."
-        show kat talkative
-        kat.say "Oops!"
-        kat.say "Did somebody have a little accident?"
-        kat.say "Forget to take the proper precautions?"
-        kat.say "Or are you just casual about that kind of thing?"
-        show kat defiant
-        show anna annoyed
-        "Anna's face shows her irritation and annoyance at the question."
-        "She looks at me to come to her aid."
-        "But when I look the other way, she decides to stand up for herself."
-        show anna evil
-        anna.say "Oh no!"
-        anna.say "The father of my child and I are very much together and in love!"
-    elif kat.is_visibly_pregnant:
-        "Still looking to score points, Anna's eyes settle on Kat's belly."
-        show anna talkative
-        anna.say "Oh my god!"
-        anna.say "Someone got careless, didn't they?"
-        anna.say "Did you just forget?"
-        anna.say "Or can you not remember who the father is?"
-        show anna normal
-        show kat angry
-        "Kat's face shows her irritation and annoyance at the question."
-        "She looks at me to come to her aid."
-        "But when I look the other way, she decides to stand up for herself."
-        show kat defiant
-        kat.say "Oh no!"
-        kat.say "The father of my child and I are very much together and in love!"
-        show kat normal
     "The atmosphere is getting more tense and awkward by the second."
     "But much to my relief, the solution presents itself a moment later."
     "Almost as one, Anna and Kat both get up from the table."
@@ -411,8 +352,6 @@ label petite_harem_event_02:
     show emma happy with dissolve
     "And it doesn't take me long to spot Emma hurrying towards me."
     "She waves her hand in the air as she gets closer."
-    if emma.is_visibly_pregnant:
-        "And even the fact that she's visibly pregnant doesn't seem to slow her down."
     "So I have no choice but to stop and wait for her to catch me up."
     "Don't get me wrong, I don't have any real reason to want to avoid Emma right now."
     "Save for the fact that I was supposed to be grabbing some me time and spending it all alone."
@@ -458,9 +397,6 @@ label petite_harem_event_02:
     show kat happy at left5 with dissolve
     kat.say "Sorry if we nearly ran you over back there!"
     "Kat looks really pleased to see me as she hurries over."
-    if kat.is_visibly_pregnant:
-        "Though she does look more than a little precarious on her hover-board."
-        "What with also having to cradle her pregnant belly."
     show kat surprised
     kat.say "Oh..."
     kat.say "Who's this?"
@@ -511,49 +447,6 @@ label petite_harem_event_02:
     kat.say "But I already feel like I've known him all my life!"
     show kat defiant
     kat.say "We just clicked that much, you know?"
-    if emma.is_visibly_pregnant and kat.is_visibly_pregnant:
-        "Both of the girls are still looking to score points."
-        "And soon their eyes settle on each other's bellies."
-        kat.say "Oops!"
-        kat.say "Did somebody have a little accident?"
-        kat.say "Forget to take the proper precautions?"
-        kat.say "Or are you just casual about that kind of thing?"
-        emma.say "Look who's talking!"
-        emma.say "You must have been a little careless."
-        emma.say "You know, to end up in that state?"
-        emma.say "I hope you know who the father is!"
-        "Both Emma and Kat look to me to come to their aid."
-        "But when I look the other way, they fall back to poking at each other."
-        emma.say "Oh no!"
-        emma.say "The father of my child and I are very much together and in love!"
-        kat.say "Hurmph..."
-        kat.say "Well, it's the same for me too!"
-    elif emma.is_visibly_pregnant:
-        "Still looking to score points, Kat's eyes settle on Emma's belly."
-        kat.say "Oops!"
-        kat.say "Did somebody have a little accident?"
-        kat.say "Forget to take the proper precautions?"
-        kat.say "Or are you just casual about that kind of thing?"
-        show emma annoyed
-        "Emma's face shows her irritation and annoyance at the question."
-        "She looks at me to come to her aid."
-        "But when I look the other way, she decides to stand up for herself."
-        show emma blush
-        emma.say "Oh no!"
-        emma.say "The father of my child and I are very much together and in love!"
-    elif kat.is_visibly_pregnant:
-        "Still looking to score points, Emma's eyes settle on Kat's belly."
-        emma.say "Oh my!"
-        emma.say "You must have been a little careless."
-        emma.say "You know, to end up in that state?"
-        emma.say "I hope you know who the father is!"
-        show kat angry
-        "Kat's face shows her irritation and annoyance at the question."
-        "She looks at me to come to her aid."
-        "But when I look the other way, she decides to stand up for herself."
-        show kat defiant
-        kat.say "Oh no!"
-        kat.say "The father of my child and I are very much together and in love!"
     "The atmosphere is getting more tense and awkward by the second."
     "But much to my relief, the solution presents itself a moment later."
     "Almost as one, Emma and Kat turn to walk in opposite directions."
@@ -592,8 +485,6 @@ label petite_harem_event_03:
     mike.say "Anna, what are you doing?"
     "I see Anna falling backwards in slow-motion."
     "And I just manage to make a grab for her before it's too late."
-    if anna.is_visibly_pregnant:
-        "All the better on account of her being so heavily pregnant!"
     show anna surprised
     "My hand grasps her wrist, just in time to keep Anna on her feet."
     show anna annoyed
@@ -618,8 +509,6 @@ label petite_harem_event_03:
     mike.say "Emma?"
     mike.say "Where did you come from?"
     "I'm already staggering to the side from Emma's shove."
-    if emma.is_visibly_pregnant:
-        "Which was pretty impressive, to say that she's pregnant!"
     show kat angry at mostright5 with hpunch
     "Then I find myself being pushed again from the other side."
     show emma at left5
@@ -627,8 +516,6 @@ label petite_harem_event_03:
     show kat at right5
     with ease
     "This time I have to jump backwards, as Kat closes in on me too!"
-    if kat.is_visibly_pregnant:
-        "One hand holding her pregnant belly as the other makes a fist that's waved in my face."
     kat.say "That's it, girls..."
     kat.say "Keep him cornered."
     kat.say "Don't let him get away!"
@@ -3916,31 +3803,16 @@ label anna_emma_kat_male_ending:
     "But still, I can't help noticing the unique and individual charms each one possesses."
     "Of course, Anna's the most forward and upbeat of the three."
     "Practically beaming as she walks towards me."
-    if anna.is_visibly_pregnant:
-        "I'm relieved to see that Anna's holding onto her belly."
-        "Because she's really starting to show now."
-        "And I'm always worried about keeping her and the baby as safe as possible."
-    else:
-        "In fact Anna's moving so quickly that I'm worried she's going to trip and fall."
-        "She seems to be rushing in an effort to get here as fast as she possibly can!"
+    "In fact Anna's moving so quickly that I'm worried she's going to trip and fall."
+    "She seems to be rushing in an effort to get here as fast as she possibly can!"
     "Emma's walking with far more care and awareness of her surroundings."
     "In fact I'm amazed that she can keep up with Anna at all."
-    if emma.is_visibly_pregnant:
-        "I steal a second to glance at the curve of Emma's belly."
-        "Proud of the fact that we're going to be parents."
-        "Proud of the fact that all of us are going to be a family."
-    else:
-        "I honestly never thought this moment would come."
-        "And in just a few moments time, we're going to be married!"
+    "I honestly never thought this moment would come."
+    "And in just a few moments time, we're going to be married!"
     "Last, but by no means least is Kat, walking with more confidence than Emma."
     "But maybe not as much of a genuine swagger as Anna."
-    if kat.is_visibly_pregnant:
-        "Even the delicate curve of Kat's belly looks damn good to me."
-        "Making a subtle statement of the fact that she's pregnant."
-        "Rather than shoving the fact into the face of anyone that sees her."
-    else:
-        "But she's one of the three most beautiful girl in the world to my eyes."
-        "And just looking at her tells me I'm one hell of a lucky guy!"
+    "But she's one of the three most beautiful girl in the world to my eyes."
+    "And just looking at her tells me I'm one hell of a lucky guy!"
     "Like I said before, Anna's hurrying a little ahead of the others."
     "But then Emma and Kat seem to realise they're being left behind."
     "And they put on a last minute burst of speed, catching up to her."
@@ -4124,25 +3996,6 @@ label anna_emma_kat_male_ending:
     anna.say "But life here's not so bad, is it?"
     anna.say "We all built the shack we live in."
     anna.say "And we have enough coconuts to last us for years to come."
-    if all([girl.flags.mikeBabies < 1 and not girl.is_visibly_pregnant for girl in [anna, emma, kat]]):
-        anna.say "Plus I think [hero.name] wants to add to the population too!"
-        anna.say "He certainly spends a lot of his time trying to get us involved..."
-        emma.say "Yeah..."
-        emma.say "And I don't like it when he jokes about starting his own tribe of little people either!"
-        kat.say "Urgh..."
-        kat.say "He thinks that's SO funny too!"
-    else:
-        if anna.flags.mikeBabies >= 1 or anna.is_visibly_pregnant:
-            anna.say "Plus this is a safe place for Tommy to grow up."
-            anna.say "Not like the shitty neighbourhood I was brought up in!"
-        if emma.flags.mikeBabies >= 1 or emma.is_visibly_pregnant:
-            emma.say "I was always worrying about what schools I'd be able to get my kids into."
-            emma.say "But since Emily was born here, none of that stuff matters."
-            emma.say "Which I think means I'm worrying about more important things instead."
-        if kat.flags.mikeBabies >= 1 or kat.is_visibly_pregnant:
-            kat.say "I know that Mario's growing up strong and healthy on this island."
-            kat.say "And I'm actually glad he won't have videogames to play on."
-            kat.say "As much of a hypocrite as that makes me!"
     kat.say "But aside from the bad jokes, I can't say life here is all that bad."
     kat.say "The island is beautiful in the day, and the sunsets are to die for."
     emma.say "I think the company helps too, you know?"
@@ -4161,4 +4014,3 @@ label anna_emma_kat_male_ending:
     $ game.set_new_game_plus()
     $ renpy.full_restart()
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

@@ -290,11 +290,7 @@ label date_restaurant_noisykids:
         "Complain about the kids":
             $ renpy.show("restaurant meal waiter bored " + date_girl.id)
             call expression f"date_restaurant_noisykids_dialogues_1_{hero.gender}" from _call_expression_359
-            if "family" in date_girl.traits or date_girl.is_visibly_pregnant:
-                $ renpy.show("restaurant meal waiter bored " + date_girl.id)
-                $ game.active_date.score -= 10
-                "[date_girl.name] looks shocked at my outburst, almost concerned for the poor family I'm ranting about."
-            elif "bitchy" in date_girl.traits:
+            if "bitchy" in date_girl.traits:
                 $ renpy.show("restaurant meal waiter happy " + date_girl.id)
                 $ game.active_date.score += 5
                 "[date_girl.name] nods approvingly as she shoots venomous glances towards the harassed parents."
@@ -302,11 +298,7 @@ label date_restaurant_noisykids:
                 "[date_girl.name] wears an expression that's sympathetic, but ultimately as helpless as anyone else."
         "Fawn over the kids":
             call expression f"date_restaurant_noisykids_dialogues_2_{hero.gender}" from _call_expression_360
-            if "family" in date_girl.traits or date_girl.is_visibly_pregnant:
-                $ renpy.show("restaurant meal waiter happy " + date_girl.id)
-                $ game.active_date.score += 5
-                "[date_girl.name] smiles at me happily, her eyes becoming as wide as saucers, nodding the whole time."
-            elif "bitchy" in date_girl.traits:
+            if "bitchy" in date_girl.traits:
                 $ renpy.show("restaurant meal waiter bored " + date_girl.id)
                 $ game.active_date.score -= 5
                 "[date_girl.name] curls her lip and shakes her head, like I just admitted to being a cannibal or something similarly distasteful."

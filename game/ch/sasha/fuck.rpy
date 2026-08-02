@@ -274,12 +274,7 @@ label sasha_pool_foreplay:
             "It's still weird to see Sasha's long, lustrous hair shimmering with blonde tones, rather than her natural black."
             "But as it stretches out behind her in the water, it seems to give her a more vital appearance than before."
             "To me at least, she looks more vibrant, more alive than ever before."
-        if sasha.is_visibly_pregnant:
-            "I'm amazed that Sasha can still get away with wearing a bikini at all, based on the curve of her belly and the size that her breasts are swelling to."
-            "I doubt it'll fit her in a week's time, and she'll likely be forced to look for something more forgiving in the maternity section of wherever they sell clothes for pregnant Heavy Metal devotees."
-            "But that's not to say that she doesn't look fantastic in the thing, all the same!"
-            "Pregnancy has made her body bloom ever more as she's progressed through her term, and with the water supporting her, she reminds me of a reclining goddess."
-        if not any([sasha.flags.boobjob, sasha.flags.haircut, sasha.is_visibly_pregnant]):
+        if not any([sasha.flags.boobjob, sasha.flags.haircut]):
             "I know that the normal image of the bathing beauty is buxom and blonde."
             "But maybe that's why the sight of Sasha, with her black hair and alternative look turns me on so much."
             "Even while she's in the pool, she still has her usual dark, heavy eye-shadow and lipstick on, contrasting so well with her pale skin."
