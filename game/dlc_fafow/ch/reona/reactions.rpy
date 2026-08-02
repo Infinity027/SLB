@@ -72,15 +72,7 @@ label reona_offer_a_drink_male:
     mike.say "I'm on the way to the bar, Reona."
     mike.say "You want me to grab you one while I'm there?"
     mike.say "It's no trouble!"
-    if reona.is_visibly_pregnant:
-        "Reona looks like she's about to nod."
-        "But then she gazes down at her swollen belly."
-        reona.say "Oh yeah, I'm pregnant, aren't I?"
-        $ reona.love -= 10
-        reona.say "Dammit, I could have used a cold one!"
-        $ hero.cancel_activity()
-        hide reona
-    elif (hero.charm >= 60 - reona.love and reona.flags.drinks < 2) or date_girl == reona:
+    if (hero.charm >= 60 - reona.love and reona.flags.drinks < 2) or date_girl == reona:
         "Reona nods happily."
         reona.say "You read my mind, [hero.name]!"
         reona.say "Make mine a cold one."

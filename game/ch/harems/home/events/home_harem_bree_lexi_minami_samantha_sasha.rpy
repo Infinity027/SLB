@@ -1203,34 +1203,7 @@ label bree_lexi_minami_samantha_sasha_male_ending:
     "Well, let's just say she looks more like a princess than ever."
     "She'll always be trash."
     "But who knew that trash could look so good?"
-    if bree.is_visibly_pregnant and lexi.is_visibly_pregnant and minami.is_visibly_pregnant and samantha.is_visibly_pregnant and sasha.is_visibly_pregnant:
-        "Maybe I should be sweating and nervous at the sight of five large baby-bumps."
-        "And I have no idea what the guests sitting in the pews must think of the girls all being pregnant at once."
-        "But the truth is that I really don't care - we're already a big family, and soon to be bigger still!"
-    elif not bree.is_visibly_pregnant and not lexi.is_visibly_pregnant and not minami.is_visibly_pregnant and not samantha.is_visibly_pregnant and not sasha.is_visibly_pregnant:
-        "I can't stop staring at [bree.name], Sasha, Minami, Sam and Lexi as they stand beside me at the altar."
-        "My five brides - soon to be my five wives!"
-    else:
-        if bree.is_visibly_pregnant:
-            "[bree.name]'s dress looks like it's performing a minor miracle."
-            "Her bump is getting huge, but I can hardly see it right now!"
-            "Not that either of us wants to hide the fact she's expecting."
-        if sasha.is_visibly_pregnant:
-            "Sure, Sasha has a lot of make-up on today, but she's looking pale under it all."
-            "For a moment I worry that she's not doing well, glancing at her swollen belly."
-            "She seems to note my concern, nodding and smiling to assure me that she's okay."
-        if minami.is_visibly_pregnant:
-            "Minami's dress could never hope to hide the fact that she's pregnant."
-            "And I guess that's because she's more than proud to show off the fact."
-            "She's crazily happy to be carrying my baby, and I feel the same way too!"
-        if samantha.is_visibly_pregnant:
-            "One thing's very different to the last time I saw Sam in a wedding dress."
-            "And that's the fact that she's visibly pregnant."
-            "But then I guess that, based on how her last marriage turned out, the difference can only be a good thing!"
-        if lexi.is_visibly_pregnant:
-            "It's a cliche for a trailer park girl to be sporting a swollen belly."
-            "But somehow it just serves to make Lexi look all the more desirable, at least in my eyes."
-            "She carries it so well that I just know she's going to make a wonderful mother."
+
     "There's barely enough time for the five of us to exchange glances and nervous smiles."
     "And that's because the priest leaps into the ceremony almost as soon as the music come to an end."
     show bree wedding normal
@@ -1330,39 +1303,6 @@ label bree_lexi_minami_samantha_sasha_male_ending:
     samantha.say "I guess we're going to be on different pages sometimes."
     samantha.say "There are six of us involved in this relationship after all!"
     lexi.say "There's six of us for now!"
-
-    if bree.is_visibly_pregnant and lexi.is_visibly_pregnant and minami.is_visibly_pregnant and samantha.is_visibly_pregnant and sasha.is_visibly_pregnant:
-        bree.say "Are we still technically a sixsome?"
-        sasha.say "Yeah, we might have accidentally become a tribe somewhere along the way!"
-        sasha.say "[hero.name] could be the founder of a whole new nation."
-        lexi.say "Ah...weird!"
-        minami.say "No - that's sweet."
-        minami.say "But please don't tell big bro that."
-        samantha.say "I agree - his head's big enough as it is!"
-    elif not bree.is_visibly_pregnant and not lexi.is_visibly_pregnant and not minami.is_visibly_pregnant and not samantha.is_visibly_pregnant and not sasha.is_visibly_pregnant:
-        bree.say "Yeah, always room for more!"
-        lexi.say "Squeeze a couple in there, huh?"
-        minami.say "Erm...is someone else moving in?"
-        sasha.say "She means the patter of tiny feet, Minami!"
-        samantha.say "You know - babies?"
-        minami.say "Oh..."
-    else:
-        if bree.is_visibly_pregnant:
-            bree.say "Yeah - don't forget Poppy."
-            bree.say "She's loud enough to count for two!"
-        if minami.is_visibly_pregnant:
-            minami.say "I sometimes forget that Mei's just my kid."
-            minami.say "You guys are so good with her and she loves you all so much!"
-        if sasha.is_visibly_pregnant:
-            sasha.say "Dahlia's a tearaway, I know."
-            sasha.say "But what do you expect from a kid with five moms!"
-
-        if samantha.is_visibly_pregnant:
-            samantha.say "Ha...Jemima's already got us all wrapped around her finger."
-            samantha.say "I hate to think what she'll be like when she's older!"
-        if lexi.is_visibly_pregnant:
-            lexi.say "Chantel and Tyrone make it feel like there's four of them, let alone two!"
-            lexi.say "Good job there are so many pairs of hands to throw in."
 
     bree.say "It would have been nice to be able to stay in the old house."
     bree.say "You know, where all of this got started?"

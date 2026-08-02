@@ -114,15 +114,7 @@ label bree_offer_a_drink_male:
     mike.say "Looks like it's time for another round!"
     mike.say "You getting in on this one, [bree.name]?"
     "Almost the second the words are out of my mouth, [bree.name] turns to face me."
-    if bree.is_visibly_pregnant:
-        show bree angry
-        $ bree.love -= 10
-        bree.say "Are you serious?!?"
-        bree.say "I can't drink when I'm pregnant!"
-        bree.say "What are you thinking?!?"
-        $ hero.cancel_activity()
-        hide bree
-    elif (hero.charm >= 60 - bree.love and bree.flags.drinks < 2) or date_girl == bree:
+    if (hero.charm >= 60 - bree.love and bree.flags.drinks < 2) or date_girl == bree:
         show bree happy
         bree.say "Ooh..."
         bree.say "Yeah, that sounds good, [hero.name]."
@@ -487,4 +479,3 @@ label bree_belly_listen_male:
     bree.say "But don't be surprised if I blame other noises from down there on the baby in future..."
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

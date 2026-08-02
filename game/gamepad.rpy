@@ -26,4 +26,3 @@ screen overlay_selector():
 
 style frame_selector:
     background Frame("gui/selector.png", Borders(23, 23, 23, 23))
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

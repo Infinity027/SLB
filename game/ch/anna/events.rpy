@@ -159,7 +159,6 @@ init python:
     "conditions": [
         IsDone("anna_talk_kleio", "kleio_talk_anna"),
         IsHour(10, 18),
-        HeroTarget(IsGender("male")),
         PersonTarget(anna,
             Not(IsPresent()),
             Not(IsHidden()),
@@ -181,7 +180,6 @@ init python:
     "priority": 500,
     "conditions": [
         IsDone("anna_event_07"),
-        HeroTarget(IsGender("male")),
         MinDateScore(90),
         PersonTarget(anna,
             OnDate(),
@@ -198,7 +196,6 @@ init python:
     "priority": 500,
     "conditions": [
         IsDone("anna_event_08"),
-        HeroTarget(IsGender("male")),
         PersonTarget(anna,
             IsActive(),
             MinStat("love", 160),
@@ -214,7 +211,6 @@ init python:
     "priority": 500,
     "conditions": [
         IsDone("anna_event_09"),
-        HeroTarget(IsGender("male")),
         MinDateScore(90),
         PersonTarget(anna,
             OnDate(),
@@ -370,7 +366,6 @@ init python:
     "label": "anna_kiss_me",
     "max_girls": 1,
     "conditions": [
-        HeroTarget(IsGender("male")),
         PersonTarget(anna,
             IsPresent(),
             Not(IsHidden()),
@@ -385,23 +380,6 @@ init python:
     "quit": False,
     })
 
-    Event(**{
-    "name": "anna_preg_talk",
-    "label": "anna_preg_talk",
-    "do_once": False,
-    "conditions": [
-        HeroTarget(
-            IsGender("male"),
-            Not(OnDate())),
-        PersonTarget(anna,
-            IsPresent(),
-            Not(IsHidden()),
-            IsFlag("toldpreg", False),
-            MinCounter("pregnant", 6),
-            ),
-        ],
-    "music": "music/roa_music/innocence.ogg",
-    })
 
 label anna_start:
     if anna.love.max < 40:
@@ -2074,14 +2052,10 @@ label anna_male_ending:
     show anna normal
     "And then there's the look on her face, the smile and the way that her eyes are shining right now."
     "That's almost as much of a turn on as the sight of her chest, bobbing along in the corset of her dress."
-    if not anna.is_visibly_pregnant:
-        "By sheer force of habit, I find myself mentally undressing her."
-        "But I can only imagine what the underwear she's chosen might look like!"
-    else:
-        "I can also see that the seamstress made an effort to hide Anna's swollen belly."
-        "But if anything, the sight of it makes me happier than ever."
-        "There's no shame for either of us in the fact that we're expecting a child."
-        "Only the proof of our love and the promise of our future together."
+    "I can also see that the seamstress made an effort to hide Anna's swollen belly."
+    "But if anything, the sight of it makes me happier than ever."
+    "There's no shame for either of us in the fact that we're expecting a child."
+    "Only the proof of our love and the promise of our future together."
     show anna wedding blush at traveling (1.75, 3.0, (650, 1150))
     "Clutching a bouquet in her hands as she comes to stand beside me, Anna looks fit to burst."
     "When the priest calls for everyone to be seated, it's all that I can do to tear my eyes away from her."
@@ -2161,10 +2135,7 @@ label anna_male_ending:
     anna.say "But...aww, who am I kidding."
     anna.say "Just look at that face!"
     anna.say "I can't stay mad at him for too long."
-    if anna.flags.mikeBabies >= 1 or anna.is_visibly_pregnant:
-        anna.say "Not when it comes to my precious little Tommy's daddy!"
-    else:
-        anna.say "Not when it comes to my fantastic husband!"
+    anna.say "Not when it comes to my fantastic husband!"
     anna.say "Ah, it's so weird to think what might have happened if we hadn't met, you know?"
     anna.say "Like if our paths had never crossed at all."
     anna.say "If Sasha hadn't brought him along to band practice that one time."
@@ -3177,98 +3148,6 @@ label anna_birthday_sex:
         hero.grooming -= grooming_decay
     $ game.room = "forest"
     pause 1
-    return
-
-label anna_preg_talk:
-    $ anna.flags.toldpreg = True
-    show anna
-    "I can tell that there's something on Anna's mind as soon as I see her."
-    "With a girl as honest and open as Anna, it's almost impossible for her to hide what she's actually thinking."
-    "The sheer amount of effort that she's putting into trying to act normal is the biggest give away of all."
-    "Not wanting to make her life any harder than it already is, I play along, acting like everything's normal and I don't suspect a thing."
-    show anna kiss
-    $ anna.flags.kiss += 1
-    "She reacts well when I give her a pretty passionate kiss and squeeze her ass in the middle of it."
-    hide anna
-    show anna
-    "Anna giggles in a typically dirty fashion, and for a moment it's like she's back to normal again."
-    mike.say "Anna, for God's sake - what's the matter?"
-    anna.say "Huh...oh...nothing, I guess."
-    mike.say "It's either nothing or else it's something."
-    mike.say "How about you put the guessing aside and just tell me?"
-    show anna cry
-    "Anna looks at me, her eyes massive and staring, making her look more like an innocent puppy than ever."
-    anna.say "Well, I was wondering...can we do anal tonight?"
-    "I burst out laughing, I just can't help it."
-    mike.say "Anna, we almost always do it that way!"
-    mike.say "You like it, and I like that you like it so much."
-    mike.say "Plus it saves on condoms and keeps us from having a little accident."
-    "At the last few words, she instantly colours and deliberately looks away from me."
-    mike.say "Anna...have you got something that you need to tell me?"
-    mike.say "Something like, I don't know, you having missed a certain female monthly event?"
-    "Anna still won't turn around and look me in the face."
-    "But finally she nods, confirming my suspicions."
-    mike.say "But how?"
-    mike.say "We almost never do it anywhere but up the ass!"
-    mike.say "Jesus, what are the odds!"
-    show anna close cry
-    "Anna finally turns round to face me."
-    "Her eyes are puffy and red, as if she's on the brink of tears."
-    anna.say "Well, we never bothered with precautions when we did...did we?"
-    "I have to nod in agreement."
-    "She's bang right - we got into such a habit of doing it anally I guess we just got lazy on the few other occasions."
-    "We assumed that we'd be safe just because we were dabbling, and we got caught out."
-    anna.say "[hero.name], please don't be mad at me?"
-    mike.say "It's as much my fault as your's, Anna - why would I be mad with you?"
-    anna.say "Well, you see...I want to keep it."
-    "Saying the words out loud seems to somehow strengthen her will on the matter."
-    anna.say "That is...I'm going to keep it."
-    "She looks suddenly resolute and immovable."
-    "It's then I realise she's waiting for me to react to what she just said."
-    menu:
-        "Dump her ass":
-            mike.say "It's your decision, Anna - your body, your choice."
-            mike.say "But this is the twenty-first century, and I'm a modern kind of guy."
-            mike.say "I'm not going to be held down by any old-fashioned notions of 'doing what's right'."
-            anna.say "What...what are you saying?"
-            mike.say "I'm saying, Anna, that you can have the kid with my blessing."
-            mike.say "But you'll be doing it on your own."
-            "Anna's eyes widen even further, and she finally starts to actually shed tears."
-            anna.say "You mean it's...it's over between us?"
-            mike.say "Yeah, I guess that's exactly what I'm saying."
-            $ sasha.set_gone_forever()
-            $ kleio.set_gone_forever()
-            $ anna.set_gone_forever()
-            $ Room.find("bedroom3").hide()
-            $ Room.find("studio").hide()
-        "Beg her to abort":
-            mike.say "Anna, have you really thought this through?"
-            mike.say "I mean REALLY thought it through?"
-            anna.say "Well, I haven't known for all that long."
-            anna.say "I just know that I want to keep it."
-            anna.say "That feels right and getting rid of it doesn't."
-            "I sigh in frustration, wanting to keep Anna, but not being in the slightest bit ready to be a father."
-            anna.say "I want this baby, [hero.name] - with you or without you!"
-            "All I can do is shrug unhappily and look away from her."
-            anna.say "I guess it's without you then..."
-            $ anna.set_gone_forever()
-        "Take responsibility":
-            "For a moment I don't say a word, but the smile on my face begins to elicit one of Anna's own."
-            show anna normal
-            anna.say "What are you grinning like a fool for, [hero.name]?"
-            mike.say "I was just picturing you with a massive baby-belly!"
-            show anna angry
-            anna.say "Hey!"
-            show anna normal
-            mike.say "No, you're getting it all wrong - I think you'll look great pregnant."
-            mike.say "I also think you'll make a great mother too."
-            "Anna looks at me expectantly, knowing that I haven't yet said the words she's wanting to hear."
-            mike.say "Okay, I'll say it - I want to be with you, and the baby too."
-            show anna happy
-            "I don't need to say any more, as the look of happiness in Anna's eyes as she suddenly hugs me says it all."
-    "There must have been more to the evening, more words spoken and things done."
-    "But all I can recall, even after Anna's left, is the bombshell she dropped on me and what it means for our relationship."
-    "Everything changes from here, for better or worse."
     return
 
 label anna_kiss_me:

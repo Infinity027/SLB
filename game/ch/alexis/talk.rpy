@@ -111,12 +111,7 @@ label alexis_talk_love_male:
     show alexis
     mike.say "Do you even believe that love exists, Alexis?"
     alexis.say "People like to get all flowery and poetic about it."
-    if alexis.is_visibly_pregnant:
-        show alexis blush
-        "Alexis puts her hands to her belly, her face showing a sudden surge of emotion."
-        alexis.say "I didn't...but things like this can really change the way you look at things."
-        $ alexis.love += 1
-    elif alexis.love >= 50:
+    if alexis.love >= 50:
         show alexis blush
         alexis.say "I'd like to - but sometimes life makes you lose faith in happy endings."
         $ alexis.love += 1
@@ -130,10 +125,7 @@ label alexis_talk_love_male:
 label alexis_talk_sex_male:
     show alexis
     mike.say "What's sex all about for you, Alexis?"
-    if alexis.is_visibly_pregnant:
-        alexis.say "I used to think that sex was just a weapon that I could use against people."
-        alexis.say "But now I can see how wrong I was..."
-    elif alexis.love >= 50:
+    if alexis.love >= 50:
         alexis.say "You can use it as a tool...or like a weapon."
         show alexis blush
         alexis.say "To defend yourself or lash out at people..."
@@ -147,10 +139,7 @@ label alexis_talk_sex_male:
 label alexis_talk_politics_male:
     show alexis
     mike.say "Alexis, do you have a political stance?"
-    if alexis.is_visibly_pregnant:
-        alexis.say "I never really engaged with politics before now."
-        alexis.say "But with a kid on the way, I keep finding it pressing on my mind all the more."
-    elif alexis.love >= 50:
+    if alexis.love >= 50:
         show alexis sad
         alexis.say "I find it hard to trust most people...so how can I trust a damn politician?"
     else:
@@ -163,11 +152,7 @@ label alexis_talk_politics_male:
 label alexis_talk_food_male:
     show alexis
     mike.say "Any special dietary requirements, Alexis?"
-    if alexis.is_visibly_pregnant:
-        show alexis happy
-        alexis.say "I used to be real picky - but now I seem to want to eat anything put in front of me!"
-        $ alexis.love += 1
-    elif alexis.love >= 50:
+    if alexis.love >= 50:
         alexis.say "I've spent so long eating what I think people should believe I like..."
         show alexis confused
         alexis.say "I feel as though I don't remember what I really do like anymore."
@@ -181,9 +166,7 @@ label alexis_talk_food_male:
 label alexis_talk_travels_male:
     show alexis
     mike.say "I think I have enough stashed away for a foreign holiday this year - any tips, Alexis?"
-    if alexis.is_visibly_pregnant:
-        alexis.say "Don't ask me - I can't go too far afield in this condition!"
-    elif alexis.love >= 50:
+    if alexis.love >= 50:
         show alexis blush
         alexis.say "All I really want is to be alone somewhere quiet...with someone that loves me."
         $ alexis.love += 1
@@ -196,12 +179,7 @@ label alexis_talk_travels_male:
 label alexis_talk_tv_male:
     show alexis
     mike.say "I'm not watching anything on TV right now, how about recommending something, Alexis?"
-    if alexis.is_visibly_pregnant:
-        alexis.say "I have the same problem now that I can't get out as much."
-        show alexis flirt
-        alexis.say "Maybe we could find something to watch together?"
-        $ alexis.love += 1
-    elif alexis.love >= 50:
+    if alexis.love >= 50:
         show alexis sad
         alexis.say "I used to always end up watching TV alone...it still reminds me of being so lonely."
         $ alexis.love -= 1
@@ -214,10 +192,7 @@ label alexis_talk_sports_male:
     show alexis
     mike.say "You were always quite keen on sports, Alexis - or at least the sporting type when it came to guys..."
     mike.say "Did you keep that up after we left school?"
-    if alexis.is_visibly_pregnant:
-        alexis.say "[hero.name], seriously - I already look like a football and I'm getting kicked all the time."
-        alexis.say "The last thing I want is to watch a real one being kicked around!"
-    elif alexis.love >= 50:
+    if alexis.love >= 50:
         show alexis angry
         alexis.say "I really don't like sports and I don't want to talk about it!"
         alexis.say "It's not a good subject for me...please let's talk about something else?"
@@ -234,10 +209,7 @@ label alexis_talk_fashion_male:
     show alexis
     mike.say "I don't think I've seen you in the same outfit twice, Alexis."
     mike.say "How can you afford it?"
-    if alexis.is_visibly_pregnant:
-        alexis.say "Nothing fits me anymore."
-        alexis.say "At one time it would have bothered me - but now I have bigger things to worry about."
-    elif alexis.love >= 50:
+    if alexis.love >= 50:
         alexis.say "I've always used clothes kind of like armour...like a shield."
         alexis.say "If people only see your clothes, they tend to ignore the person beneath them..."
     else:
@@ -251,9 +223,7 @@ label alexis_talk_fashion_male:
 label alexis_talk_books_male:
     mike.say "What's on your bookshelf, Alexis?"
     show alexis
-    if alexis.is_visibly_pregnant:
-        alexis.say "Just stuff on caring for the baby."
-    elif alexis.love >= 50:
+    if alexis.love >= 50:
         alexis.say "I read a lot of stuff to try and help with my demons."
         show alexis sad
         alexis.say "Sometimes it helps - but not always..."
@@ -267,9 +237,7 @@ label alexis_talk_books_male:
 label alexis_talk_people_male:
     show alexis
     mike.say "You have a general philosophy for dealing with other people, Alexis?"
-    if alexis.is_visibly_pregnant:
-        alexis.say "I hope there really are good people in the world, for the baby's sake."
-    elif alexis.love >= 50:
+    if alexis.love >= 50:
         show alexis sad
         alexis.say "When people hurt me in the past, I always pushed them away."
         show alexis normal
@@ -285,9 +253,7 @@ label alexis_talk_people_male:
 label alexis_talk_computers_male:
     show alexis
     mike.say "Alexis - are you up to speed with computers, the internet and all that stuff?"
-    if alexis.is_visibly_pregnant:
-        alexis.say "No, but I figure I can just wait for the baby to get a bit older and then start educating me."
-    elif alexis.love >= 50:
+    if alexis.love >= 50:
         alexis.say "I know as much as anyone - but I'm no computer expert!"
     else:
         show alexis annoyed
@@ -300,9 +266,7 @@ label alexis_talk_computers_male:
 label alexis_talk_music_male:
     show alexis
     mike.say "Have you got a playlist of your favourite music, Alexis?"
-    if alexis.is_visibly_pregnant:
-        alexis.say "I want to listen to something soothing - I don't care what!"
-    elif alexis.love >= 50:
+    if alexis.love >= 50:
         alexis.say "I've spent so long liking things to make people like me that I can't remember what I like for real!"
     else:
         alexis.say "No, but I like to have the latest tech to play it on."

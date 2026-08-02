@@ -50,14 +50,7 @@ label lavish_offer_a_drink_male:
     mike.say "Can I get you a drink from the bar, Lavish?"
     mike.say "I was just about to get a round in."
     "Almost the second the words are out of my mouth, Lavish turns to face me."
-    if lavish.is_visibly_pregnant:
-        show lavish angry
-        $ lavish.love -= 10
-        lavish.say "Have you forgotten that one of us is pregnant, [hero.name]?!?"
-        lavish.say "It wouldn't have slipped your mind if YOU were the one carrying our child!"
-        $ hero.cancel_activity()
-        hide lavish
-    elif (hero.charm >= 60 - lavish.love and lavish.flags.drinks < 2) or date_girl == lavish:
+    if (hero.charm >= 60 - lavish.love and lavish.flags.drinks < 2) or date_girl == lavish:
         show lavish happy
         lavish.say "Aw..."
         lavish.say "That's so kind of you, [hero.name]."

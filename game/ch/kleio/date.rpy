@@ -60,17 +60,9 @@ label kleio_date_eat_a_burger:
     return
 
 label kleio_date_buy_drink:
-    if kleio.is_visibly_pregnant:
-        show kleio angry
-        $ kleio.love -= 10
-        kleio.say "You already knocked me up, you jerk!"
-        kleio.say "Now you're trying to screw the baby up too?!?"
-        $ hero.cancel_activity()
-        hide kleio
-    else:
-        "Kleio takes a healthy swig from her glass, hardly pausing for a second as she does so."
-        "I swear that the amount she just swallowed would have made a man twice her size proud of the effort."
-        "But she just wipes her mouth on the back of her hand and smiles."
+    "Kleio takes a healthy swig from her glass, hardly pausing for a second as she does so."
+    "I swear that the amount she just swallowed would have made a man twice her size proud of the effort."
+    "But she just wipes her mouth on the back of her hand and smiles."
     return
 
 label kleio_date_play_darts:
@@ -86,13 +78,7 @@ label kleio_date_pub_play_pool:
     return
 
 label kleio_date_buy_a_round:
-    if kleio.is_visibly_pregnant:
-        show kleio angry
-        $ kleio.love -= 10
-        kleio.say "You already knocked me up, you jerk!"
-        kleio.say "Now you're trying to screw the baby up too?!?"
-        $ hero.cancel_activity()
-    elif (hero.charm >= 60 - kleio.love and kleio.flags.drinks < 2):
+    if (hero.charm >= 60 - kleio.love and kleio.flags.drinks < 2):
         show drink kleio
         "As soon as I mention that I'm headed to the bar, Kleio gives me a resounding cheer."
         "But then she finds out that I'm planning on buying a round, rather than just one for me."
@@ -611,4 +597,3 @@ label kleio_halloween_sex:
     $ game.pass_time(1)
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

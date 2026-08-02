@@ -1,18 +1,18 @@
 init python:
-    InteractActivity(**{
-    "name": "command",
-    "label": "command_girl",
-    "display_name": "Command",
-    "icon": "command",
-    "duration": 0,
-    "conditions": [
-        ActiveTarget(
-            IsFlag("breakup", False),
-            MinStat("sub", 50),
-            ),
-        ],
-    "once_day": "ACTIVE",
-    })
+    # InteractActivity(**{
+    # "name": "command",
+    # "label": "command_girl",
+    # "display_name": "Command",
+    # "icon": "command",
+    # "duration": 0,
+    # "conditions": [
+    #     ActiveTarget(
+    #         IsFlag("breakup", False),
+    #         MinStat("sub", 50),
+    #         ),
+    #     ],
+    # "once_day": "ACTIVE",
+    # })
 
 
 label command_girl:
@@ -520,19 +520,13 @@ screen appearance(npc=None):
 
 
                 if shown_npc.id in ["aletta", "camila", "kleio", "minami", "sasha", "reona", "cherie", "claire", "kiara"] and shown_npc.sub >= 25 and not shown_npc.flags.haircutDelay:
-                    if shown_npc.id == "aletta" and ("aletta_event_03b" in DONE or "aletta_event_05b" in DONE) and shown_npc.sub >= 50:
-                        $ text_do = "Untie your hair"
-                        $ text_undo = "Tie your hair"
-                    elif shown_npc.id == "camila" and "camila_event_06" in DONE:
+                    if shown_npc.id == "camila" and "camila_event_06" in DONE:
                         $ text_do = "Tie your hair"
                         $ text_undo = "Untie your hair"
                     elif shown_npc.id == "kleio" and "kleio_twintails_02" in DONE and shown_npc.sub >= 35:
                         $ text_do = "Grow your hair"
                         $ text_undo = "Cut your hair"
                     elif shown_npc.id == "minami" and "minami_likes_blondes" in DONE:
-                        $ text_do = "Dye your hair"
-                        $ text_undo = "Undye your hair"
-                    elif shown_npc.id == "sasha" and "sasha_likes_blondes_2" in DONE:
                         $ text_do = "Dye your hair"
                         $ text_undo = "Undye your hair"
                     elif shown_npc.id == "reona" and shown_npc.purity >= 50:

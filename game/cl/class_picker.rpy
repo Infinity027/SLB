@@ -488,17 +488,10 @@ init python:
         def __call__(self, attr, add_mc_prefix):
             for p, status in hero.piercings.items():
                 if status.worn:
-                    if p == "navel" and hero.is_visibly_pregnant:
-                        if add_mc_prefix:
-                            attr.add("mc_pregnant_navel")
-                        else:
-                            attr.add("pregnant_navel")
-                        attr.discard("navel")
+                    if add_mc_prefix:
+                        attr.add(f"mc_{p}")
                     else:
-                        if add_mc_prefix:
-                            attr.add(f"mc_{p}")
-                        else:
-                            attr.add(f"{p}")
+                        attr.add(f"{p}")
             if enable_debug_picker:
                 renpy.log(f"MCPiercingsPicker results: {attr}")
             return attr
@@ -537,22 +530,6 @@ init python:
             attr.add(haircut_attr)
             if enable_debug_picker:
                 renpy.log(f"MCPubesPicker results: {attr}")
-            return attr
-
-
-    class MCPregnancyPicker(object):
-        """
-    Check if the hero is pregnant, add 'pregnant' attribute if that's the case.
-    """
-        
-        def __call__(self, attr, add_mc_prefix):
-            if hero.is_visibly_pregnant:
-                if add_mc_prefix:
-                    attr.add("mc_pregnant")
-                else:
-                    attr.add("pregnant")
-            if enable_debug_picker:
-                renpy.log(f"MCPregnancyPicker results: {attr}")
             return attr
 
 
@@ -878,39 +855,6 @@ init python:
             )
 
 
-    class PiercingsPicker(NPCPicker):
-        """
-    Iteration over piercings. No check on outfits or expressions.
-    Now with smart attribute prefixing for layeredimage optimization.
-    """
-        
-        def __init__(
-        self, npc=None, id_prefix=False, clear_npc=None, piercings_prefix=False
-    ):
-            super().__init__(npc, id_prefix, clear_npc)
-            self.piercings_prefix = piercings_prefix
-        
-        def __call__(self, attr):
-            attr = super(PiercingsPicker, self).__call__(attr)
-            
-            for p, status in self.npc.piercings.items():
-                if status.worn:
-                    p_name = p
-                    if p == "navel" and self.npc.is_visibly_pregnant:
-                        p_name = "pregnant_navel"
-                    
-                    
-                    if self.id_prefix or self.piercings_prefix:
-                        attr.add(f"{self.npc_id}_{p_name}")
-                    else:
-                        attr.add(p_name)
-            
-            if enable_debug_picker:
-                renpy.log(f"PiercingsPicker results: {attr}")
-            self.clean()
-            return attr
-
-
     class PositionPicker(NPCPicker):
         """
     Selects a position for an NPC based on their attributes and available images.
@@ -1116,37 +1060,6 @@ init python:
                 position.append("-y")
 
 
-    class PregnancyPicker(NPCPicker):
-        """
-    Check if a npc is pregnant, add 'pregnant' attribute if she is.
-    """
-        
-        def __init__(
-        self,
-        npc=None,
-        id_prefix=False,
-        clear_npc=None,
-        add_simple_pregnant_attribute=False,
-    ):
-            super().__init__(npc, id_prefix, clear_npc)
-            self.add_simple_pregnant_attribute = add_simple_pregnant_attribute
-        
-        def __call__(self, attr):
-            attr = super(PregnancyPicker, self).__call__(attr)
-            
-            if self.npc.is_visibly_pregnant:
-                if self.id_prefix:
-                    attr.add(f"{self.npc_id}_pregnant")
-                    if self.add_simple_pregnant_attribute:
-                        attr.add("pregnant")
-                else:
-                    attr.add("pregnant")
-            if enable_debug_picker:
-                renpy.log(f"PregnancyPicker results: {attr}")
-            self.clean()
-            return attr
-
-
     class ButtplugPicker(NPCPicker):
         """
     Check if a npc is buttplugged, add 'buttplug' attribute if she is.
@@ -1275,11 +1188,6 @@ init python:
                 renpy.log(f"EndingKidPicker _call_ params: {attr}")
             if hero.is_male:
                 attr = super(EndingKidPicker, self).__call__(attr)
-                if self.npc.flags.mikeBabies >= 1 or self.npc.is_visibly_pregnant:
-                    if self.id_prefix:
-                        attr.add(f"{self.npc_id}_kid")
-                    else:
-                        attr.add("kid")
                 if enable_debug_picker:
                     renpy.log(f"NPCEndingKidPicker results: {attr}")
                 self.clean()

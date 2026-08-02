@@ -51,15 +51,7 @@ label lexi_offer_a_drink_male:
     mike.say "Lexi!"
     mike.say "Beer?"
     "Almost the second the words are out of my mouth, Lexi turns to face me."
-    if lexi.is_visibly_pregnant:
-        show lexi angry
-        $ lexi.love -= 10
-        lexi.say "Hey, my mom drank while she was having me."
-        lexi.say "And some people said it made me turn out bad!"
-        lexi.say "I want things to be different for our kid."
-        $ hero.cancel_activity()
-        hide lexi
-    elif (hero.charm >= 60 - lexi.love and lexi.flags.drinks < 2) or date_girl == lexi:
+    if (hero.charm >= 60 - lexi.love and lexi.flags.drinks < 2) or date_girl == lexi:
         show lexi happy
         lexi.say "You sure know how to treat a lady, [hero.name]!"
         lexi.say "Toss one my way, yeah?"

@@ -3160,55 +3160,6 @@ init -30 python:
             )
 
 
-    class IsVisiblyPregnant(TargetedChecker):
-        """Checker that verifies if the character is visibly pregnant."""
-        
-        __slots__ = ()
-        
-        def post_set_target(self):
-            if not isinstance(self._target, Girl):
-                raise ValueError("{} can't be visibly pregnant".format(self._name))
-        
-        def __call__(self):
-            return self._target.is_visibly_pregnant
-        
-        def debug_message(self, indent_level=0, negated=False):
-            return self._indent(
-            "{} is{} visibly pregnant".format(self._name, "" if negated else " not"),
-            indent_level,
-        )
-        
-        def description(self, indent_level=0, negated=False):
-            return self._indent(
-            "{} must{} be visibly pregnant".format(
-                self._name, " not" if negated else ""
-            ),
-            indent_level,
-        )
-        
-        def for_ui(self, indent_level=0, negated=False):
-            if self._name == "target":
-                return self._indent(
-                "Must{} be visibly pregnant".format(" not" if negated else ""),
-                indent_level,
-            )
-            else:
-                if self._target.flags.NPCpregnancy:
-                    info = f"({self._target.flags.NPCpregnancy})"
-                elif self._target.counters.pregnant:
-                    info = f"({self._target.counters.pregnant}/9)"
-                else:
-                    info = ""
-                return self._indent(
-                "Must{} be visibly pregnant {}{} ".format(
-                    " not" if negated else "",
-                    info,
-                    self._visual_checks(self.__call__(), negated),
-                ),
-                indent_level,
-            )
-
-
     class IsActive(TargetedChecker):
         """Checker that verifies that the target is the active character."""
         

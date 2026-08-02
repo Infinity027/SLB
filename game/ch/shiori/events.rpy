@@ -392,25 +392,6 @@ init python:
     })
 
     Event(**{
-    "name": "shiori_preg_talk",
-    "label": "shiori_preg_talk",
-    "conditions": [
-        HeroTarget(
-            IsGender("male"),
-            Not(OnDate())
-            ),
-        PersonTarget(shiori,
-            IsPresent(),
-            Not(IsHidden()),
-            IsFlag("toldpreg", False),
-            MinCounter("pregnant", 6),
-            ),
-        ],
-    "music": "music/roa_music/miss_summer.ogg",
-    "quit": False,
-    })
-
-    Event(**{
     "name": "shiori_meeting",
     "label": "shiori_meeting",
     "priority": 0,
@@ -2219,240 +2200,8 @@ label shiori_kiss_me:
     hide shiori kiss
     return
 
-label shiori_preg_talk:
-    show shiori
-    if "shiori_blackmail_confession" not in DONE:
-        mike.say "Hey, Shiori - what's up?"
-        "I can tell the very moment that I look into her eyes this close up that I've badly misjudged the situation."
-        "Shiori's own eyes are almost as wide as saucers, glazed over as if seeing only wondrous things."
-        "All tell-tale signs that, whatever the matter is, it's taking over every thought that's passing through her head."
-        show shiori close
-        "At the sight of me, Shiori practically throws herself in my direction, almost collapsing into my unsuspecting arms."
-        "It's all that I can do to keep from either dropping her or being knocked over myself."
-        shiori.say "Oh, [hero.name], I'm so happy to see you!"
-        shiori.say "I have the most wonderful news!"
-        "Wonderful news?"
-        "Now that's not something I expected to hear from her today."
-        mike.say "Erm...okay, Shiori."
-        mike.say "I guess you should probably tell me just what it is..."
-        "Her own enthusiasm means that she totally misses my own confusion and sudden anxiety as to just where all of this will ultimately lead."
-        show shiori happy
-        "Shiori simply smiles so broadly that her eyes are almost forced closed by the degree to which her cheeks rise in sympathy."
-        "She pulls back from my embrace just enough to grab one of my hands and hold it over her belly."
-        "Her grip is far stronger than anything I ever imagined her being capable of, and it even scares me a little."
-        shiori.say "Can you feel it?"
-        "She's looking at me with such intensity that I can hardly tear my eyes away from her gaze to look down at her stomach."
-        shiori.say "Can you feel the first stirrings of the miracle that we created?"
-        shiori.say "The new life that you planted inside of me?"
-        "Suddenly, realisation dawns on me."
-        mike.say "Oh god, you don't mean..."
-        "Shiori nods furiously, her smile becoming almost manic as she does so."
-        shiori.say "Yes, [hero.name], I do - I'm pregnant!"
-        shiori.say "Isn't it wonderful news?!?"
-        show shiori normal
-        menu:
-            "You should abort":
-                "I feel like a gaping black hole just opened up under my feet and is trying to pull me down into oblivion."
-                "It's not that I hate the idea of either having a kid or being with Shiori for a long while to come."
-                "But having both dropped on me from a great height is simply a terrifying prospect."
-                mike.say "But...Shiori...we can't..."
-                "Even someone as oblivious and innocent as Shiori can't fail to pick up on the fact I'm not exactly elated with her news."
-                "Her eyes become wide and her smile shrinks away to almost nothing."
-                show shiori surprised
-                shiori.say "[hero.name]...what's the matter?"
-                shiori.say "Aren't you happy that you're going to be a father?"
-                "Something about her expression makes the floodgates finally open for my emotions."
-                mike.say "I can't have a kid, Shiori...we can't..."
-                show shiori sad
-                "Shiori suddenly cries out in horror."
-                shiori.say "Oh, [hero.name]...you don't mean..."
-                mike.say "It's okay, Shiori - I'll pay for the operation."
-                mike.say "You won't have to worry about a thing, I promise!"
-                hide shiori
-                show shiori sad
-                "Shiori backs away from me slowly, shaking her head as if she no longer knows who she's looking at."
-                shiori.say "No...I won't...I won't let you kill our baby!"
-                "She turns her back on me with more drama than I thought she was capable of."
-                "And then she runs away from me, her sobs carrying backwards on the air."
-                $ shiori.set_gone_forever()
-            "That's wonderful":
-                "It takes a good few moments of staring into space and not saying a word."
-                "But I soon realise that most, if not all, of my negative emotions are just the shock of being told that I'm going to be a father."
-                "When I actually look down and see Shiori looking back up at me, hanging on my response to her news, I feel positively elated."
-                show shiori happy
-                $ shiori.love += 10
-                mike.say "Shiori...that's amazing news!"
-                mike.say "I'm going to be a dad!"
-                "I don't think I've ever seen a smile like the one on Shiori's face right now."
-                "Her eyes almost seem to glaze over with happiness."
-                mike.say "Wait...you do want me to be involved, to raise the kid - don't you?"
-                "Shiori doesn't seem to be able to believe the words that keep coming out of my mouth."
-                shiori.say "YES...I mean, yes...of course I do, [hero.name]!"
-                shiori.say "Actually, I was worried that you...might not want to be..."
-                "I shake my head in disbelief at the very idea that she might think I would reject her and the baby."
-                mike.say "Shiori, I never really thought about it much before."
-                mike.say "But the way I see it, this is the perfect chance for us to build a life together."
-                mike.say "I mean, this pretty much makes us a family, doesn't it?"
-                "Suddenly I feel my middle being squeezed tightly enough to make me gasp for breath."
-                "I look down in surprise to see Shiori wrapped around me like a constricting snake."
-                shiori.say "Oh, [hero.name], you've made me so happy!"
-                $ shiori.flags.toldpreg = True
-        hide shiori with moveoutleft
-        "Once Shiori pulls herself together enough to be on her way, I'm left alone to contemplate all that she's told me."
-        "I'm still feeling more than a little disoriented myself, and it still hasn't really sunk in."
-        "All that has is the overwhelming news that I'm going to be a father!"
-    else:
-        "It can be pretty tough to tell when there's something up with Shiori, as she's kind of meek and has a worried look about her most of the time anyway."
-        "So the first that I tend to know about such things is when she actually manages to pluck up the courage to just come out and tell me about it."
-        "I suppose if I'm honest, the matter's not helped by the fact that I'm usually distracted by staring at her breasts."
-        "That and imagining what I want to do to her the next time that an opportunity presents itself..."
-        shiori.say "Erm...hey, [hero.name]..."
-        shiori.say "Did you hear what I said?"
-        shiori.say "It is kind of important..."
-        shiori.say "But I suppose I could come back later, if you're too busy right now..."
-        "See what I mean?"
-        "With some effort, I finally manage to tear by eyes away from the enticing sight of Shiori's cleavage and look her straight in the eye."
-        mike.say "Sorry, Shiori - I was miles away!"
-        mike.say "What were you trying to tell me?"
-        show shiori sad
-        "Shiori manages a weak smile at my belated attention, but it's clearly not enough to change the rather sad look in her eyes."
-        shiori.say "Well...you know how we've been...getting to know each other?"
-        shiori.say "Getting to know each other...outside of work?"
-        "I nod slowly, my head filling instantly with a series of rather lewd images."
-        "I'm guessing by that she means that we've been fucking like rabbits whenever the chance comes up."
-        shiori.say "And you remember that we weren't always that careful when it came to...using protection?"
-        "Suddenly I understand the reason for her unusually downcast mood and why she's beating about the bush."
-        mike.say "Shiori - what are you trying to say?"
-        "She smiles helplessly, her hands unconsciously hugging her belly in a protective manner."
-        show shiori normal
-        shiori.say "[hero.name], I'm pregnant!"
-        shiori.say "I'm having your baby!"
-        "My mouth works silently for a moment as I try to wrap my head around what Shiori just told me."
-        "And then, when I finally find the words, it all comes out in a desperate flurry of verbiage."
-        mike.say "What?"
-        mike.say "Are you sure?"
-        mike.say "Could you have made a mistake?"
-        mike.say "What in the hell are we going to do?!?"
-        show shiori sad
-        "With the same pained smile on her face, Shiori takes a deep breath."
-        "I suppose she's already had some time to think about this whole mess."
-        "But I have no idea what conclusions she might have come to..."
-        if not shiori.flags.donestripping:
-            shiori.say "I...I always thought that I'd be happy if you made me pregnant, [hero.name]."
-            shiori.say "Really, I did!"
-            shiori.say "The thought of it even made me touch myself...when I was alone at night..."
-            show shiori blush
-            "Shiori's cheeks suddenly redden at this confession."
-            mike.say "I'm sensing there's a 'but' about to be inserted right about now?"
-            "Shiori lets out a sigh of regret so genuine that it almost feels like a stab to the heart."
-            shiori.say "Oh, [hero.name] - I'm already a single mother!"
-            shiori.say "I struggle to make ends meet as it is."
-            shiori.say "The way things are, I can't possibly keep our baby."
-            mike.say "So...what are you saying, Shiori?"
-            show shiori normal
-            shiori.say "I'm...I'm going to have a termination!"
-            menu:
-                "Agree with Shiori":
-                    "It takes me a moment to gather myself and reply to this second bombshell from Shiori in almost as many minutes."
-                    "I can see something in her eyes that I take to be a glimmer of desperate hope."
-                    "Maybe the hope that I'll convince her to change her mind."
-                    "But I can't see any way out of this mess for us either."
-                    mike.say "If that's what you want, Shiori, then I'll support you one hundred percent."
-                    mike.say "I'll foot my share of the bill too, of course."
-                    mike.say "And if there's anything else I can do..."
-                    show shiori sad
-                    "Shiori nods sadly, as if my words have confirmed the course she was already settled on."
-                    "She doesn't say another word to me then, just turns and walks quietly away."
-                    "I suppose she needs to be alone with her thoughts right now."
-                    hide shiori
-                    $ shiori.love -= 30
-                    $ shiori.unpreg()
-                "Plead to keep the baby":
-                    "I don't even have to hesitate before I blurt out my response."
-                    mike.say "No, Shiori!"
-                    mike.say "You can't mean that, surely?!?"
-                    show shiori happy
-                    "She looks surprised, and more than a little hopeful at my outburst."
-                    show shiori sad
-                    "But then her face becomes sad once more, and she shakes her head."
-                    shiori.say "But, I just couldn't raise another child - not alone!"
-                    mike.say "You won't be!"
-                    mike.say "Alone, that is!"
-                    shiori.say "You mean..."
-                    mike.say "Yes, Shiori - I want to raise this baby with you!"
-                    mike.say "I want us to be a family!"
-                    "She shakes her head, seemingly not convinced."
-                    shiori.say "I just don't know if that would work."
-                    shiori.say "So for now...my decision stands."
-                    "She doesn't say another word to me then, just turns and walks quietly away."
-                    "I suppose she needs to be alone with her thoughts right now."
-                    hide shiori
-                    $ shiori.love -= 20
-                    $ shiori.sub -= 10
-                    $ shiori.unpreg()
-        else:
-            shiori.say "I don't know, [hero.name], I really don't."
-            shiori.say "That's why I wanted to tell you as soon as I could."
-            shiori.say "I needed to know what you would want to do."
-            shiori.say "I HOPED you would know what would be for the best..."
-            "Oh god - I thought just being told I'd gotten Shiori pregnant would be the scariest thing I could imagine right now."
-            "But she's pretty much asking me to tell her whether she should keep it or not!"
-            "I mean, I like her a hell of a lot and she drives me crazy on a purely physical level."
-            "But can I actually commit to raising a child with her?"
-            "And maybe even more than that, like devoting a large part of my life to them both?"
-            "In the end, I guess it comes down to the question of whether I love Shiori or whether I see her as just another conquest."
-            menu:
-                "Tell her to have an abortion":
-                    mike.say "You're already struggling to raise one child alone, Shiori."
-                    mike.say "Add a second and you'll never be able to hold down your job - not a chance."
-                    mike.say "I'd offer to support you, but my salary just wouldn't cover it."
-                    mike.say "I simply can't afford to pay twice for rent, food and all of the rest."
-                    "After I've laid out the reasons that we can't afford a child based on our current circumstances, Shiori looks like she's about to say something."
-                    "For a moment, I actually think that she's going to suggest I could make some changes, make a sacrifice if I really wanted to."
-                    show shiori sad
-                    "But then she just lets out a sad, resigned sigh and nods her head slowly."
-                    shiori.say "Yes, [hero.name], I suppose that you're right."
-                    shiori.say "Would you...would you at least..."
-                    mike.say "Don't worry, Shiori - I'll make all the arrangements."
-                    shiori.say "Thank you, [hero.name]."
-                    "She doesn't say another word to me then, just turns and walks quietly away."
-                    "I suppose she needs to be alone with her thoughts right now."
-                    hide shiori
-                    $ shiori.love -= 20
-                    $ shiori.sub += 10
-                    $ shiori.unpreg()
-                "Tell her to keep the baby" if shiori.love >= 150:
-                    "And that's a question that I instantly know the answer to."
-                    mike.say "Shiori, I want you to keep the baby."
-                    show shiori happy
-                    "At this, Shiori's eyes grow suddenly wide with disbelief and then joy."
-                    shiori.say "Oh, [hero.name] - do you really mean that?!?"
-                    shiori.say "But...but what about the cost and the hard work?"
-                    shiori.say "And you'd need to be involved, as I can't raise two children on my own..."
-                    "Shiori trails off as she realizes the implications of what she's just said."
-                    show shiori blush
-                    "She looks afraid all of a sudden, as though she's over-stepped the mark and is now in serious trouble."
-                    shiori.say "I'm so sorry, [hero.name]!"
-                    shiori.say "I would never try to force you to..."
-                    mike.say "It's okay, Shiori, you're not forcing anything on me."
-                    mike.say "I want to raise this child with you."
-                    mike.say "Whatever it costs, whatever it takes, we'll handle it - together."
-                    show shiori happy
-                    "Shiori practically bursts into tears of joy as she rushes to throw her arms around me."
-                    "I hug her back, enjoying the feeling of her petite and yet curvaceous body pressed against me."
-                    "Looking down at her as she buries her head into my chest, I know I've made the right decision."
-                    hide shiori
-                    $ shiori.love += 20
-                    $ shiori.sub += 10
-                    $ shiori.flags.toldpreg = True
-    return
-
 label shiori_male_ending:
     $ game.hour = 16
-
-
-
-
     if renpy.has_label("shiori_achievement_3") and not game.flags.cheat:
         call shiori_achievement_3 from _call_shiori_achievement_3
     $ game.room = "church"
@@ -2481,16 +2230,10 @@ label shiori_male_ending:
     "I can't help grinning from ear to ear at the sight of her."
     "Shiori doesn't take long to notice my reaction, and she blushes deeply."
     "Which of course only serves to make her look all the more demure and desirable."
-    if shiori.is_visibly_pregnant:
-        "Shiori's hands cradle her swollen belly in an unconscious gesture."
-        "It's hard to tell that she's pregnant thanks to the kimono."
-        "But the thought of my child growing inside of her is always on my mind."
-        "And it simply makes the fact we're about to become a family that much more special."
-    else:
-        "Shiori clutches the flowers in her bouquet tightly."
-        "And I can hear her breathing as she walks the last few feet to the altar."
-        "It sounds like she's doing some kind of breath exercises."
-        "Seems that she's ever bit as nervous as I am!"
+    "Shiori clutches the flowers in her bouquet tightly."
+    "And I can hear her breathing as she walks the last few feet to the altar."
+    "It sounds like she's doing some kind of breath exercises."
+    "Seems that she's every bit as nervous as I am!"
     show shiori at center, zoomAt(1.5, (640, 1040))
     "As soon as she's standing beside me, I turn my head to look at Shiori."
     "And it's no surprise to find she's doing the same thing as well."
@@ -2571,12 +2314,8 @@ label shiori_male_ending:
     shiori.say "[hero.name] and I have a place all of our own."
     shiori.say "[bree.name] and Sasha are sweet girls, of course."
     shiori.say "But we're a family now, and we need the space!"
-    if shiori.flags.mikeBabies >= 1 or shiori.is_visibly_pregnant:
-        shiori.say "Kanta's getting so tall these days."
-        shiori.say "And since little Tetsuo arrived, it's already feeling cramped!"
-    else:
-        shiori.say "Kanta needs the room to stretch his legs."
-        shiori.say "And who knows when he'll have a little brother or sister to play with too!"
+    shiori.say "Kanta needs the room to stretch his legs."
+    shiori.say "And who knows when he'll have a little brother or sister to play with too!"
     shiori.say "I would have kept on working, if [hero.name] thought that was for the best."
     shiori.say "But I think he already knew that what I really wanted was to make a home for us."
     shiori.say "It's not like I miss the hustle and bustle of the office anyway."

@@ -403,30 +403,6 @@ init python:
     })
 
     Event(**{
-    "name": "hanna_preg_talk",
-    "label": "hanna_preg_talk",
-    "do_once": False,
-    "music": "music/roa_music/purple.ogg",
-    "conditions": [
-        IsHour(6, 15),
-        HeroTarget(
-            IsGender("male"),
-            Or(
-                HasRoomTag("street"),
-                HasRoomTag("park"),
-            ),
-            Not(OnDate())),
-        PersonTarget(hanna,
-            IsPresent(),
-            IsFlag("toldpreg", False),
-            MinCounter("pregnant", 6),
-            Not(IsHidden()),
-            ),
-        ],
-    "music": "music/roa_music/purple.ogg",
-    })
-
-    Event(**{
     "name": "hanna_sub_event_01",
     "label": "hanna_sub_event_01",
     "do_once": True,
@@ -460,120 +436,6 @@ init python:
         ],
     "music": "music/roa_music/purple.ogg",
     })
-
-label hanna_preg_talk:
-    scene expression f"bg {game.room}"
-    show hanna a blush sweat sport
-    with fade
-    hanna.say "Hey...hey, [hero.name]...hey there!"
-    "My head snaps around in time to see Hanna, obviously out jogging and coming straight towards me."
-    "I was never a fan of Baywatch back in the day, but she seems to run slow-motion as she approaches all the same."
-    "Her shorts show off her shapely legs, her chest sways with the motion of her body, and her hair bounces around her face like a blonde halo."
-    "Do I sound like I'm reeling off the virtues of a goddess at all?"
-    "If so, then what do I care?"
-    "She looks stunning, full stop."
-    show hanna wink a at center, zoomAt(1.5, (640, 1040)), startle
-    mike.say "Oh, hi, Hanna."
-    "She stops just before me, bending over to rest her hands on her thighs and catch her breath for a moment."
-    show hanna normal a
-    "Having to watch her spandex shorts stretch as she does so is such a chore to endure!"
-    show hanna normal b
-    "She stands up and stretches a little more, so close that I can feel the heat, smell the perspiration coming off of her body."
-    "It's weird how normally another person's sweat normally freaks me out."
-    "But with her, it's somehow sexy - like she's giving off a pheromone, or something."
-    show hanna normal a
-    hanna.say "I must have jogged past here every day for months now."
-    hanna.say "How come I've never seen you before?"
-    hanna.say "You work around here, right?"
-    hanna.say "I remember you saying so."
-    mike.say "Yeah, in that building, right there."
-    mike.say "Normally I've got so much on that I eat lunch at my desk."
-    show hanna surprised at center, zoomAt(1.5, (640, 1040)), startle
-    "Hanna shakes her head in disbelief, the idea that no sane person would allow themselves to be chained to a desk all day implicit in her eyes."
-    show hanna normal
-    hanna.say "But today, you managed to escape?"
-    mike.say "Yeah, I guess you could say that."
-    mike.say "And ran into you - so I guess you could call it fate!"
-    show hanna annoyed
-    "I can see from the way her expression changes that the joke fell far short of the mark."
-    "But I can't tell for the life of me why."
-    hanna.say "Well...maybe you might want to think about whether or not you believe that later."
-    mike.say "What...why, Hanna?"
-    hanna.say "There's something that I've been meaning to tell you for a while now."
-    "Oh shit, here we go."
-    hanna.say "I'd been trying to think of the right moment and spot, but nothing came to mind."
-    hanna.say "So I guess, as fate made us meet at random, here and now is as good of a place and time as any."
-    mike.say "Hanna, you're scaring me a little - are you trying to tell me that you want to break up or something?"
-    show hanna normal
-    hanna.say "[hero.name], no...god no...not that!"
-    hanna.say "But it's almost as serious, I guess."
-    mike.say "Aww, hell...just tell me, please?"
-    "Hanna pauses to look around for a moment, as if steeling her nerves before she speaks again."
-    hanna.say "Well, [hero.name]...here goes - I'm pregnant."
-    "I feel like someone just snuck up and hit me in the gut with a sledgehammer."
-    mike.say "You...you're sure?"
-    hanna.say "As I can be - I took the test a couple of days ago, and it was positive."
-    hanna.say "That's why I've been off the radar recently."
-    hanna.say "I had to get my head round it before I told you."
-    hanna.say "So - what are we going to do?"
-    "Part of me feels mad that Hanna took so long to get her own head straight, but then dumped this on me in the street with no prior warning."
-    "But then this is as serious as she says it is, and getting petulant and mad isn't going to make it any easier in the long run."
-    menu:
-        "You should have a termination":
-            $ hanna.love -= 10
-            mike.say "Jesus, Hanna - I'm not ready for this!"
-            hanna.say "Look, I know I kinda just dropped this whole thing on you, and it's big."
-            hanna.say "If you want time to think, maybe we could meet up tonight?"
-            mike.say "No, Hanna, you don't understand."
-            mike.say "What I mean to say, is that I'm not ready to be a parent - not at all!"
-            hanna.say "But..."
-            mike.say "And I don't think you are, either."
-            show hanna sad
-            "Hanna looks instantly devastated, as though she's desperately trying to think up a counter to my argument."
-            mike.say "I don't just mean emotionally either."
-            mike.say "My job has me wound up so tight that I might snap, and I still live in a house that I have to rent rooms in to make ends meet."
-            mike.say "Your dad might own the gym, but neither of us wants to sponge off of him, do we?"
-            hanna.say "So you think that we...that we should..."
-            "She can't even bring herself to say the word, so I have to do it for her."
-            mike.say "A termination, Hanna - yes, I think we have to get a termination."
-            "Hanna's huge blue eyes begin to shed genuine, heartfelt tears."
-            hide hanna
-            show hanna sad blush sweat sport at center, zoomAt(2.0, (640, 1340))
-            with fade
-            "I embrace her, right there in the street."
-            "Having to say that out loud was tough, but I genuinely think, under the circumstances, it was the best thing for the both of us."
-            $ hanna.unpreg()
-        "We should keep it":
-            $ hanna.love += 10
-            mike.say "Hanna, you should have told me the moment that you knew!"
-            hanna.say "Oh geez, [hero.name] - you're not mad at me, are you?"
-            mike.say "What?"
-            mike.say "No, Hanna...I'm...I'm...the other thing...you know?"
-            hanna.say "Happy?"
-            mike.say "Yes, Hanna - I'm really, really happy!"
-            show hanna happy
-            "Hanna looks more startled than happy herself."
-            hanna.say "Oh god, I really thought you were going to get mad...or tell me to get rid of it!"
-            mike.say "No...why would I do that?"
-            hanna.say "Well, that's why I took so long to tell you."
-            hanna.say "First I was worried you wouldn't want it, or that you wouldn't want me anymore."
-            hanna.say "Then I thought about how stressed you always are with your job, and how mine's no better..."
-            mike.say "Fuck the jobs, Hanna - I don't mind scrubbing toilets if it means I can be with you...and our baby!"
-            mike.say "All that's just minor details, and we'll work something out, just like people have been doing since the dawn of fucking time!"
-            hide hanna
-            show hanna happy blush sweat sport at center, zoomAt(2.0, (640, 1340))
-            with hpunch
-            "Hanna throws her arms around me, almost crushing the air out of my lungs."
-            "She's crying, but I'm sure that they're tears of relief and, I hope, happiness."
-            $ hanna.flags.toldpreg = True
-    hide hanna
-    show hanna sport blush sweat
-    with fade
-    "Eventually, I have to call time on our embrace and get back to the office."
-    "Hanna looks a bit of a mess, with tears still staining her cheeks."
-    "But she assures me that she's fine, and we agree to meet up later that evening to discuss things further."
-    "As hard as work was to deal with this morning, I think it's going to be that much worse this afternoon, with those revelations kicking around inside of my head."
-    return
 
 label missed_hanna_event_09a(from_cancel=False):
     if not from_cancel:
@@ -4195,16 +4057,10 @@ label hanna_male_ending:
     "Hanna's dress is just perfect."
     "And why wouldn't it be?"
     "After all, it was made for her."
-    if hanna.is_visibly_pregnant:
-        "Even though it's been made to accommodate her belly, it's still perfect."
-        "And it's not like I even care that everyone here can see she's pregnant."
-        "All that means is our family is starting to grow, literally inside of her."
-        "What better proof could there be of how much we love each other?"
-    else:
-        "It's at times like this when Hanna's obsession with working out really pays off."
-        "And that dress accentuates every muscle and exquisite curve of Hanna's body."
-        "I honestly don't think she's ever looked better than this in lycra and spandex."
-        "Maybe she's only ever looked better naked!"
+    "It's at times like this when Hanna's obsession with working out really pays off."
+    "And that dress accentuates every muscle and exquisite curve of Hanna's body."
+    "I honestly don't think she's ever looked better than this in lycra and spandex."
+    "Maybe she's only ever looked better naked!"
     show hanna at center, traveling (1.5, 5.0, (640, 1040))
     "I can't take my eyes off of Hanna as she reaches the altar."
     "And I can see from the look on her face that she knows it too."
@@ -4259,7 +4115,6 @@ label hanna_male_ending:
     "Not so long as I know that I'm the centre of Hanna's attention."
     hide hanna
 
-
     scene hanna gym ending
     with fade
     hanna.say "Hello?"
@@ -4299,30 +4154,17 @@ label hanna_male_ending:
     hanna.say "That's why [hero.name] is different, why he's special."
     hanna.say "And I guess that's why I married him in the end!"
 
-
-
     hanna.say "[hero.name]'s been the best husband that I could have wised for too."
     hanna.say "He's given me all the support I needed to take over running the gym."
     hanna.say "And now the place feels like it's totally mine."
     hanna.say "Like it's as much of a success as our marriage!"
 
-
-
-
-
-
     hanna.say "I love the way that my life is turning out now that we're settled down together."
     hanna.say "And I just know that the future is only going to see things get better."
-    if hanna.is_visibly_pregnant:
-        hanna.say "And [hero.name] Junior is all the proof that I need to be sure of it."
-        hanna.say "The way that [hero.name] stepped up and became a father."
-        hanna.say "It told me more about him than I ever thought possible."
-        hanna.say "And now we're a happy little family unit!"
-    else:
-        hanna.say "All of this means that we're in a good place right now."
-        hanna.say "And we keep talking about the possibility of starting a family."
-        hanna.say "The time might not be right just now."
-        hanna.say "But I know that will change sooner or later."
+    hanna.say "All of this means that we're in a good place right now."
+    hanna.say "And we keep talking about the possibility of starting a family."
+    hanna.say "The time might not be right just now."
+    hanna.say "But I know that will change sooner or later."
     hanna.say "So all in all, I think I did a pretty good job with [hero.name]."
     hanna.say "I managed to straighten out most of the kinks he had when we met."
     hanna.say "And I actively encouraged some of the ones that I really liked!"
@@ -4338,4 +4180,3 @@ label hanna_male_ending:
     $ game.set_new_game_plus()
     $ renpy.full_restart()
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

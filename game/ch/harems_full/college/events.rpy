@@ -80,7 +80,6 @@ init python:
             Not(IsHidden()),
             HasRoomTag("uni"),
             ),
-        "not bree.is_visibly_pregnant"
         ],
     })
 
@@ -1225,16 +1224,9 @@ label anna_bree_male_ending:
     "Her blonde hair bounces as she walks and her blue eyes are sparkling."
     "And the cut of her dress is perfect."
     "It manages to show off her figure while remaining elegant."
-    if bree.is_visibly_pregnant:
-        "Even the curve of her belly is taken into account."
-        "Celebrating, rather than trying to hide the fact she's pregnant."
     "Then my eyes turn to Anna, and I'm reminded of how much I adore her."
     "Petite and full of life, she's impossible to ignore."
     "And that dress makes her look better than ever!"
-    if anna.is_visibly_pregnant:
-        "Plus it shows off her belly as well."
-        "And I love the sight of Anna carrying my baby."
-        "It add a womanly aspect to her normally girlish character."
     show anna b at center, traveling (1.75, 5.0, (840, 1200))
     show bree at center, traveling (1.75, 5.0, (440, 1200))
     "My chance to observe them comes to an end as they reach the altar."
@@ -1360,22 +1352,6 @@ label anna_bree_male_ending:
         show anna happy
         anna.say "You see, [bree.name] - I told you he was great!"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     bree.say "Family life is actually pretty good too."
     show bree happy
     bree.say "I have to admit that."
@@ -1385,26 +1361,10 @@ label anna_bree_male_ending:
     show bree normal
     bree.say "I dunno, Anna."
     bree.say "It was getting pretty crowded around here."
-    if (anna.is_visibly_pregnant or anna.flags.mikeBabies >= 1) and (bree.is_visibly_pregnant or bree.flags.mikeBabies >= 1):
-        anna.say "Hmm..."
-        anna.say "I guess so, what with little Tommy running around!"
-        bree.say "Yeah, mainly running his daddy ragged!"
-        anna.say "What about Brianna?"
-        anna.say "She's quite a handful!"
-        bree.say "You don't need to remind me!"
-    elif anna.is_visibly_pregnant or anna.flags.mikeBabies >= 1:
-        anna.say "Hmm..."
-        anna.say "I guess so, what with little Tommy running around!"
-        bree.say "Yeah, mainly running his daddy ragged!"
-    elif bree.is_visibly_pregnant or bree.flags.mikeBabies >= 1:
-        anna.say "What about Brianna?"
-        anna.say "She's quite a handful!"
-        bree.say "You don't need to remind me!"
-    else:
-        anna.say "Yeah, but it's still big enough for some little additions."
-        anna.say "If you know what I mean?"
-        bree.say "I sure do, Anna."
-        bree.say "And when that happens, [hero.name] won't know what hit him!"
+    anna.say "Yeah, but it's still big enough for some little additions."
+    anna.say "If you know what I mean?"
+    bree.say "I sure do, Anna."
+    bree.say "And when that happens, [hero.name] won't know what hit him!"
     anna.say "I think things turned out pretty well for us, [bree.name]."
     show bree happy
     bree.say "You know what, Anna - you're right."
@@ -1416,4 +1376,3 @@ label anna_bree_male_ending:
     $ game.set_new_game_plus()
     $ renpy.full_restart()
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

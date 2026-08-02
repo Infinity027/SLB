@@ -10,19 +10,11 @@ label reona_date_buy_drink:
     reona.say "I'm gagging for a drink!"
     reona.say "How about you?"
     reona.say "Should I grab you one too?"
-    if reona.is_visibly_pregnant:
-        mike.say "Erm, I don't think that's a good idea, Reona!"
-        mike.say "Not in your condition, you know?"
-        "Reona looks down at her belly, like she forgot all about it."
-        $ reona.love += 5
-        reona.say "Oh yeah - dammit!"
-        reona.say "Better make mine a soda!"
-    else:
-        mike.say "That sounds great, Reona."
-        mike.say "I'll have whatever you're having."
-        mike.say "Then it's my turn to get a round in."
-        reona.say "You got it, [hero.name]!"
-        reona.say "I'll be right back with the drinks..."
+    mike.say "That sounds great, Reona."
+    mike.say "I'll have whatever you're having."
+    mike.say "Then it's my turn to get a round in."
+    reona.say "You got it, [hero.name]!"
+    reona.say "I'll be right back with the drinks..."
     return
 
 label reona_date_play_darts:
@@ -47,24 +39,15 @@ label reona_date_buy_a_round:
     reona.say "I'm gagging for a drink!"
     reona.say "How about you?"
     reona.say "Should I grab you one too?"
-    if reona.is_visibly_pregnant:
-        mike.say "Erm, I don't think that's a good idea, Reona!"
-        mike.say "Not in your condition, you know?"
-        "Reona looks down at her belly, like she forgot all about it."
-        $ reona.love += 5
-        reona.say "Oh yeah - dammit!"
-        reona.say "Better make mine a soda!"
-        $ hero.cancel_activity()
-    else:
-        mike.say "That sounds great, Reona."
-        mike.say "I'll have whatever you're having."
-        mike.say "Then it's my turn to get a round in."
-        reona.say "You got it, [hero.name]!"
-        reona.say "I'll be right back with the drinks..."
+    mike.say "That sounds great, Reona."
+    mike.say "I'll have whatever you're having."
+    mike.say "Then it's my turn to get a round in."
+    reona.say "You got it, [hero.name]!"
+    reona.say "I'll be right back with the drinks..."
+    $ game.active_date.score += 5
+    if "rebel" in reona.traits:
         $ game.active_date.score += 5
-        if "rebel" in reona.traits:
-            $ game.active_date.score += 5
-        $ reona.set_flag("drinks", 1, "day", mod="+")
+    $ reona.set_flag("drinks", 1, "day", mod="+")
     return
 
 label reona_dance_with:

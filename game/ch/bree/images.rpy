@@ -2,7 +2,6 @@ init 1:
     layeredimage bree:
         attribute_function Pickers([PositionPicker, PiercingsPicker, PregnancyPicker, CollarPicker, PubesPicker, OutfitPicker, HaircutPicker], npc=bree)
 
-
         attribute idle null
 
         attribute nohaircut null

@@ -96,7 +96,6 @@ init python:
     "label": "alexis_event_06",
     "conditions": [
         IsDone("alexis_event_05", "alexis_ntr_conversation"),
-        HeroTarget(IsGender("male")),
         PersonTarget(alexis,
             IsActive(),
             MinStat("love", 100),
@@ -403,7 +402,6 @@ init python:
     "duration": 0,
     "icon": "button_alexis",
     "conditions": [
-        HeroTarget(IsGender("male")),
         PersonTarget(alexis,
             IsActive(),
             IsFlag("conversation_event", "restaurant", "beach", "cinema"),
@@ -418,7 +416,6 @@ init python:
     "label": "alexis_kiss_me",
     "max_girls": 1,
     "conditions": [
-        HeroTarget(IsGender("male")),
         PersonTarget(alexis,
             IsPresent(),
             Not(IsHidden()),
@@ -434,35 +431,16 @@ init python:
     })
 
     Event(**{
-    "name": "alexis_preg_talk",
-    "label": "alexis_preg_talk",
-    "do_once": False,
-    "conditions": [
-        HeroTarget(
-            IsActivity("None"),
-            IsGender("male"),
-            Not(OnDate())),
-        PersonTarget(alexis,
-            IsPresent(),
-            Not(IsHidden()),
-            IsFlag("pregstory", 0),
-            MinCounter("pregnant", 6),
-            ),
-        ],
-    "music": "music/roa_music/one_wish.ogg",
-    })
-
-    Event(**{
     "name": "alexis_blackmail_dwayne",
     "label": "alexis_blackmail_dwayne",
     "duration": 1,
     "conditions": [
         IsDone("alexis_event_ntr_03"),
         HeroTarget(HasRoomTag("work"),
-                   Not(IsFlag("dwaynedead")),
-                   IsFlag("alexisfootage", "blackmail"),
-                   Not(IsFlag("alexis_dwayne_encounter")),
-                   ),
+                Not(IsFlag("dwaynedead")),
+                IsFlag("alexisfootage", "blackmail"),
+                Not(IsFlag("alexis_dwayne_encounter")),
+                ),
         ],
     "music": "music/roa_music/one_wish.ogg",
     "do_once": True,
@@ -5311,115 +5289,6 @@ label alexis_kiss_me:
         call expression randchoice(cheated_girls).id + "_cheated" pass ("kissing") from _call_expression_127
     return
 
-label alexis_preg_talk:
-    "It'd be fair to say that I walk into what I thought was supposed to be nothing more than a chance to meet Alexis with my guard well and truly down."
-    show alexis
-    "But almost the same moment that I see her face for the first time, I can tell that I'm actually walking into something pretty damn heavy."
-    "She greets me with an expression that's equal parts pained and a visible effort to put on a brave face."
-    mike.say "Hey, Alexis...what's up?"
-    mike.say "You look like you've got the weight of the world on your shoulders."
-    "She gives me another pained look, and takes a deep breath, as if steeling herself for what she's about to say."
-    alexis.say "You could say that, [hero.name]..."
-    alexis.say "I don't know how best to get this out, so I'm just going to say it."
-    "Oh shit - here we go!"
-    alexis.say "You know how we've been getting on so well these past few weeks?"
-    "I nod quickly."
-    alexis.say "How we've been having a lot of fun - like multiple amounts of fun, sometimes on the same occasion?"
-    "My nodding is getting more frantic now, as I begin to get the gist of what she's trying to tell me."
-    alexis.say "Well, let's just say that a little something I picked up at the chemist's told me that we might have had too much fun!"
-    alexis.say "Specifically, unprotected fun..."
-    "Ah, I see what she means now."
-    mike.say "You mean you're..."
-    alexis.say "Yes, [hero.name] - I'm pregnant."
-    "The weight of what she's just told me begins to sink in, almost making me want to sit down in sympathy."
-    mike.say "And, well...what do you want to do about it?"
-    "Alexis shakes her head, partly from genuine confusion and, I sense, at least a little from frustration at my passive response to such momentous news."
-    alexis.say "I don't really know, [hero.name]."
-    alexis.say "But I thought that I should tell you the truth, and maybe we could work that out together."
-    "It occurs to me that Alexis must have known about this for at least a little amount of time before she told me."
-    "And I wonder if she's really wanting to ask me for my input, or she's actually made her mind up already."
-    mike.say "Wow...this has kind of dropped on me, Alexis."
-    mike.say "Maybe if you tell me what you think, just off the cuff, I could use that to get my own thoughts straight too?"
-    if alexis.love >= 150:
-        "Alexis sighs and takes a hold of my hand, squeezing it tightly as she looks me straight in the eyes."
-        alexis.say "I love you, [hero.name], and that's the truth."
-        alexis.say "What I want is to have the baby and for us to raise it together, as a family."
-        alexis.say "Look, I know we had issues in the past...that I did things that hurt you deeply."
-        alexis.say "But we've looked the past in the face now and moved on together, haven't we?"
-        show alexis flirt
-        "She pauses for a moment, the emotion of what she's telling me clearly playing on her face as she does so."
-        alexis.say "I don't think those hurtful things make us weak, I think that overcoming them made us stronger than before."
-        alexis.say "In fact, I think that'd make a pretty sound base on which we could even build a marriage..."
-    else:
-        "Alexis smiles at me in an oddly amorous way, given the subject that we've just been discussing."
-        "She leans in closer, placing her hand atop mine and beginning to stroke it with her fingers."
-        show alexis happy
-        alexis.say "Well, as you were man enough to get me in the family way, how about you go all the way with it?"
-        alexis.say "I'm tired of being on my own and having no one to devote myself to in life."
-        alexis.say "What I really want is the chance to settle down and become a happy little wife for you."
-        show alexis blush
-        "Her smile becomes wider still, and she now has a wicked glint in her eyes."
-        alexis.say "And let's just say that I don't want to be one of these 'modern wives' either."
-        alexis.say "When I promise to love, honour and obey you, then I really mean it."
-        alexis.say "No matter what you might want - I'll always obey..."
-    "And I thought just being hit with the news of the pregnancy was enough to make me confused and conflicted!"
-    "What Alexis just added to that is equal parts dream come true and terrifying nightmare, depending simply on whether I choose to trust her or not."
-    "I mull over what she's said for a moment, wondering if I should ask her for more time to consider my answer."
-    "But one look into her eyes tells me that she's expecting one here and now."
-    menu:
-        "You should have a termination":
-            "I puff my cheeks out in preparation for saying something that I know isn't going to go down well."
-            "But I feel that I wouldn't be playing it fair if I chose to say something else for the sake of being liked."
-            mike.say "Alexis, I hate to say this, but I think you should seriously think about having a termination."
-            hide alexis
-            show alexis angry
-            "She stares at me for a moment, dumbfounded."
-            "And then her face becomes angry, almost outraged."
-            alexis.say "[hero.name]...how in the hell can you even think of such a thing?"
-            alexis.say "This is a human being we're talking about - your own kid!"
-            "I prepare myself again, as here comes the low blow that I'm not proud of, but I think needs to be delivered all the same."
-            mike.say "You say it's mine, Alexis - but we both know that's not a certain thing."
-            show alexis sad
-            "Her anger abates for a moment, replaced with shock and genuine pain."
-            "I know instantly that what I just said has hurt Alexis deeply, and I wish I could take it back."
-            "But I won't."
-            mike.say "You were a cheater back then, Alexis, and you're still a cheater now."
-            mike.say "I don't want to turn down raising a family with you because of that, though."
-            mike.say "I just won't raise kids with someone that I can't trust, as it wouldn't be fair on them."
-            show alexis cry
-            "Alexis has no answer to that."
-            "Instead she just shakes her head as she backs away, then turns and runs from me."
-            "The worst part is that I can tell she's trying to keep me from seeing the tears running down her face as she does so."
-            $ alexis.flags.nodate = True
-            $ alexis.flags.nokiss = True
-            $ alexis.love -= 50
-            $ alexis.flags.pregstory = 2
-        "I want to raise the child with you":
-            "I take a deep breath in preparation for what I'm going to say next, knowing that it will change my life forever."
-            mike.say "You know what, Alexis - I think you're one hundred percent right."
-            "Alexis looks at me with a hopeful expression, almost unable to believe what I just told her."
-            alexis.say "You mean..."
-            mike.say "I mean that we should totally make a go of raising the kid together."
-            "Before I can say another word, Alexis wraps her arms around me and pulls me into a ferocious hug."
-            "My face us buried in her hair, and all I can feel is the pleasant sensation of her body pressing itself against mine."
-            "It takes me a while to realise that I can hear something, a sound that Alexis is making, even as she's still hugging me."
-            "I pull back a little, and notice that she's crying in my arms."
-            mike.say "Alexis, what's the matter...why are you crying?"
-            "She sobs and sniffles a little as she tries to explain herself."
-            alexis.say "I'm happy, really I am..."
-            alexis.say "It's just that...you showed me that you really do forgive me for what I did to you before..."
-            mike.say "Alexis, of course I do...we were kids, and you're a different person now!"
-            alexis.say "I know, I know...but I never really believed it myself before now."
-            alexis.say "I always thought I'd be tainted by it somehow..."
-            alexis.say "But I can put it behind me now, start over again."
-            alexis.say "Oh, [hero.name]...I promise I'll make you so happy!"
-            mike.say "You already did, Alexis."
-            $ alexis.love += 10
-            $ alexis.flags.pregstory = 1
-    "Two lives changed forever thanks to just one little conversation."
-    "But a conversation with consequences that were far from little in their implications."
-    return
-
 label alexis_male_ending:
     $ game.hour = 16
     $ game.room = "church"
@@ -5669,23 +5538,11 @@ label alexis_male_ending:
         alexis.say "He's happier and more productive at work, and I get to be a trophy wife!"
         alexis.say "I'm free to do what I like with whoever I like."
         alexis.say "So long as I let my loving husband know when and how he's being cucked!"
-        if alexis.flags.mikeBabies >= 1:
-            alexis.say "We've even been able to start a family all of our own."
-            alexis.say "And by some miracle [hero.name] was the father."
-            alexis.say "I think he might have been thrilled if he wasn't."
-            alexis.say "But little Marco looks so much like his daddy."
-            alexis.say "So he's not adding to [hero.name]'s humiliation in that way!"
-        elif alexis.is_visibly_pregnant:
-            alexis.say "We've even been blessed with the patter of tiny feet."
-            alexis.say "I mean sure, [hero.name]'s not really the father, and he knows it too."
-            alexis.say "But he's kind of thrilled to be raising another man's kid."
-            alexis.say "It sort of adds to the fact that he's being humiliated on a daily basis!"
-        else:
-            alexis.say "I keep broaching the subject of us starting a family."
-            alexis.say "And it's not like [hero.name] is against the idea."
-            alexis.say "And one day we'll probably go through with it too."
-            alexis.say "But part of me thinks that [hero.name] is hoping someone else will get me pregnant."
-            alexis.say "You know, so that he can be humiliated in that way too?"
+        alexis.say "I keep broaching the subject of us starting a family."
+        alexis.say "And it's not like [hero.name] is against the idea."
+        alexis.say "And one day we'll probably go through with it too."
+        alexis.say "But part of me thinks that [hero.name] is hoping someone else will get me pregnant."
+        alexis.say "You know, so that he can be humiliated in that way too?"
         alexis.say "So that's how our story turned out, at least so far."
         alexis.say "And I think we've got a better chance now than we ever had in the past."
         alexis.say "I suppose it proves that honesty is the foundation of any successful relationship."
@@ -5737,15 +5594,10 @@ label alexis_male_ending:
         alexis.say "[hero.name] goes out to work in the morning and I do whatever a wife is supposed to do."
         alexis.say "I mean, I do get bored sometimes...really bored."
         alexis.say "But don't worry - that doesn't mean I'm going to fall back into old habits!"
-        if alexis.flags.mikeBabies >= 1 or alexis.is_visibly_pregnant:
-            alexis.say "Running around after little Marco keeps me too busy for any of that."
-            alexis.say "And yes, [hero.name] was relieved when his son ended up looking like him."
-            alexis.say "But he needn't have worried himself, as I was over all of that well beforehand."
-        else:
-            alexis.say "And we keep talking about starting a family too."
-            alexis.say "Which I guess will be more than enough to keep me busy."
-            alexis.say "It also proves that [hero.name] trusts me."
-            alexis.say "And that he's not expecting his kid to look like some other guy!"
+        alexis.say "And we keep talking about starting a family too."
+        alexis.say "Which I guess will be more than enough to keep me busy."
+        alexis.say "It also proves that [hero.name] trusts me."
+        alexis.say "And that he's not expecting his kid to look like some other guy!"
         alexis.say "So that's where you find us, leaving the past behind and looking towards the future."
         alexis.say "It sure was a crazy journey to get here, but it was worth it."
         alexis.say "And I can't wait to see what life has in store for us around the corner."
@@ -5782,24 +5634,11 @@ label alexis_male_ending:
         alexis.say "I'm making [hero.name] happy, for as long as I can."
         alexis.say "And so far, it seems to be working out pretty well."
         alexis.say "[hero.name]'s happy at home and at work."
-        if alexis.flags.mikeBabies >= 1:
-            alexis.say "We've even been able to start a family all of our own."
-            alexis.say "I was relieved to find out that [hero.name] was the father."
-            alexis.say "It's something I take almost as divine proof that I'm in the right!"
-            alexis.say "And little Marco looks so much like his daddy too."
-            alexis.say "So that helps to keep suspicion off of me as well!"
-        elif alexis.is_visibly_pregnant:
-            alexis.say "We've even been blessed with the patter of tiny feet."
-            alexis.say "I mean sure, [hero.name]'s not really the father."
-            alexis.say "But he believes me when I say that Marco looks just like my grandfather."
-            alexis.say "And he's over the moon at the chance to be a father anyway."
-            alexis.say "So that helps to keep suspicion off of me too!"
-        else:
-            alexis.say "I keep broaching the subject of us starting a family."
-            alexis.say "Especially when [hero.name] starts to get suspicious."
-            alexis.say "And one day we'll probably go through with it too."
-            alexis.say "I'll just have to remember to be extra careful when that time comes."
-            alexis.say "As the last thing I need is awkward questions about our kid not looking like his daddy!"
+        alexis.say "I keep broaching the subject of us starting a family."
+        alexis.say "Especially when [hero.name] starts to get suspicious."
+        alexis.say "And one day we'll probably go through with it too."
+        alexis.say "I'll just have to remember to be extra careful when that time comes."
+        alexis.say "As the last thing I need is awkward questions about our kid not looking like his daddy!"
         alexis.say "So we have all the important things in life taken care of."
         alexis.say "All I need to do is keep [hero.name] in the dark about certain things."
         alexis.say "As long as I can do that, I think we can make a go of it."

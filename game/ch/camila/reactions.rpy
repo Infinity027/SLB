@@ -51,15 +51,7 @@ label camila_offer_a_drink_male:
     mike.say "I need to grab another beer."
     mike.say "How about I get you one too, Camila?"
     "Almost the second the words are out of my mouth, Camila turns to face me."
-    if camila.is_visibly_pregnant:
-        show camila angry
-        $ camila.love -= 10
-        camila.say "Don't you think this kid of ours has it hard enough?"
-        camila.say "They've already got a mom with a dangerous job."
-        camila.say "The last thing they need is for me to soak them in booze too!"
-        $ hero.cancel_activity()
-        hide camila
-    elif (hero.charm >= 60 - camila.love and camila.flags.drinks < 2) or date_girl == camila:
+    if (hero.charm >= 60 - camila.love and camila.flags.drinks < 2) or date_girl == camila:
         show camila happy
         camila.say "After my last shift, I need as much booze as I can get!"
         camila.say "Make mine a whiskey, and don't be stingy with the size either."

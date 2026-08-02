@@ -655,15 +655,9 @@ label palla_sasha_male_ending:
     "Of course Palla looks the image of perfection."
     "Her dress, hair and make-up have been styled with a cutting-edge vision."
     "So she looks like she could be walking down a catwalk right now."
-    if palla.is_visibly_pregnant:
-        "Somehow they even managed to make the dress sympathetic to her belly."
-        "You can't hide the fact she's pregnant, but the dress makes it seem inconsequential."
     "Sasha's the perfect counter to Palla's perfection."
     "Pale skin and dark hair make her look like a Goth princess."
     "And she walks with a swagger no model ever possessed too."
-    if sasha.is_visibly_pregnant:
-        "She even carries her belly with a defiant pride."
-        "Like she's challenging anyone to have a problem with her being pregnant."
     show sasha at center, traveling (1.75, 5.0, (840, 1200))
     show palla at center, traveling (1.75, 5.0, (440, 1200))
     "By the time Palla and Sasha reach the altar, I'm entranced."
@@ -813,58 +807,20 @@ label palla_sasha_male_ending:
     show sasha angry at startle
     sasha.say "Palla!"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     show sasha normal
     sasha.say "Jesus - look at us!"
     sasha.say "We're setting up house together."
     show palla normal
     palla.say "More than that, Sasha."
     palla.say "We're creating a home!"
-    if (palla.is_visibly_pregnant or palla.flags.mikeBabies >= 1) and (sasha.is_visibly_pregnant or sasha.flags.mikeBabies >= 1):
-        palla.say "I certainly wouldn't have had Mary without [hero.name]."
-        show palla happy
-        palla.say "And she means so much more to me than my career ever did."
-        sasha.say "I used to think that boys were easier to raise than girls."
-        show sasha happy
-        sasha.say "But wow, did Tommy cure me of that one pretty quickly!"
-    elif palla.is_visibly_pregnant or palla.flags.mikeBabies >= 1:
-        palla.say "I certainly wouldn't have had Mary without [hero.name]."
-        show palla happy
-        palla.say "And she means so much more to me than my career ever did."
-    elif sasha.is_visibly_pregnant or sasha.flags.mikeBabies >= 1:
-        sasha.say "I used to think that boys were easier to raise than girls."
-        show sasha happy
-        sasha.say "But wow, did Tommy cure me of that one pretty quickly!"
-    else:
-        palla.say "And there might be other people to fit in down the line too."
-        show sasha annoyed
-        sasha.say "Huh?"
-        sasha.say "Who's gonna be moving in with us?"
-        palla.say "No, Sasha - new additions to the family!"
-        show sasha normal
-        sasha.say "OH!"
-        sasha.say "Yeah...that could be a thing."
+    palla.say "And there might be other people to fit in down the line too."
+    show sasha annoyed
+    sasha.say "Huh?"
+    sasha.say "Who's gonna be moving in with us?"
+    palla.say "No, Sasha - new additions to the family!"
+    show sasha normal
+    sasha.say "OH!"
+    sasha.say "Yeah...that could be a thing."
     show sasha normal
     show palla normal
     sasha.say "So all in all, things are pretty good, right?"
@@ -881,4 +837,3 @@ label palla_sasha_male_ending:
     $ game.set_new_game_plus()
     $ renpy.full_restart()
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

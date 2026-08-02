@@ -58,21 +58,7 @@ label morgan_offer_a_drink_male:
     mike.say "Morgan, I'm headed to the bar."
     mike.say "Would you like me to get you something to drink?"
     "Almost the second the words are out of my mouth, Morgan turns to face me."
-    if morgan.is_visibly_pregnant:
-        show morgan angry
-        $ morgan.love -= 10
-        if morgan.male <= 33:
-            morgan.say "Oh no, [hero.name]!"
-            morgan.say "Won't you please think of the baby?!?"
-        elif morgan.male <= 66:
-            morgan.say "Ah, did you forget that I'm pregnant?"
-            morgan.say "Urgh...you're so irresponsible sometimes!"
-        else:
-            morgan.say "What the fuck?"
-            morgan.say "Did you forget I was pregnant, asshole?!?"
-        $ hero.cancel_activity()
-        hide morgan
-    elif (hero.charm >= 60 - morgan.love and morgan.flags.drinks < 2) or date_girl == morgan:
+    if (hero.charm >= 60 - morgan.love and morgan.flags.drinks < 2) or date_girl == morgan:
         show morgan happy
         if morgan.male <= 33:
             morgan.say "Oh, that's be sweet of you, [hero.name]!"

@@ -8,21 +8,12 @@ label amy_date_eat_a_burger:
 label amy_date_buy_drink:
     amy.say "Looks like I need another drink!"
     amy.say "You want one of the same?"
-    if amy.is_visibly_pregnant:
-        mike.say "Ah, Amy..."
-        mike.say "Should you really be drinking that much?"
-        "Amy looks annoyed at the question."
-        $ amy.love += 5
-        "But then she seems to become aware of the reason I'm asking."
-        amy.say "Oh yeah...I guess not!"
-        $ hero.cancel_activity()
-    else:
-        mike.say "I'm just about done with this one."
-        mike.say "So count me in!"
-        "Amy nods as she starts walking towards the bar."
-        amy.say "You got it, [hero.name]."
-        amy.say "I'll be right back."
-        $ amy.set_flag("drinks", 1, "day", mod="+")
+    mike.say "I'm just about done with this one."
+    mike.say "So count me in!"
+    "Amy nods as she starts walking towards the bar."
+    amy.say "You got it, [hero.name]."
+    amy.say "I'll be right back."
+    $ amy.set_flag("drinks", 1, "day", mod="+")
     return
 
 label amy_date_play_darts:
@@ -44,24 +35,15 @@ label amy_date_pub_play_pool:
 label amy_date_buy_a_round:
     amy.say "It's my round!"
     amy.say "So what's everyone having?"
-    if amy.is_visibly_pregnant:
-        mike.say "Ah, Amy..."
-        mike.say "Should you really be drinking that much?"
-        "Amy looks annoyed at the question."
-        $ amy.love += 5
-        "But then she seems to become aware of the reason I'm asking."
-        amy.say "Oh yeah...I guess not!"
-        $ hero.cancel_activity()
-    else:
-        mike.say "I'm just about done with this one."
-        mike.say "So count me in!"
-        "Amy nods as she starts walking towards the bar."
-        amy.say "You got it, [hero.name]."
-        amy.say "I'll be right back."
+    mike.say "I'm just about done with this one."
+    mike.say "So count me in!"
+    "Amy nods as she starts walking towards the bar."
+    amy.say "You got it, [hero.name]."
+    amy.say "I'll be right back."
+    $ game.active_date.score += 5
+    if "rebel" in amy.traits:
         $ game.active_date.score += 5
-        if "rebel" in amy.traits:
-            $ game.active_date.score += 5
-        $ amy.set_flag("drinks", 1, "day", mod="+")
+    $ amy.set_flag("drinks", 1, "day", mod="+")
     return
 
 label amy_dance_with:

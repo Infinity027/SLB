@@ -117,15 +117,7 @@ label shiori_offer_a_drink_male:
     mike.say "Would you like a drink, Shiori?"
     mike.say "I'm going to the bar, so it's no trouble to get you one too."
     "Almost the second the words are out of my mouth, Shiori turns to face me."
-    if shiori.is_visibly_pregnant:
-        show shiori angry
-        $ shiori.love -= 10
-        shiori.say "Oh...how could you, [hero.name]?"
-        shiori.say "You know I can't drink when I'm pregnant!"
-        shiori.say "I thought you cared about me and the baby?!?"
-        $ hero.cancel_activity()
-        hide shiori
-    elif (hero.charm >= 60 - shiori.love and shiori.flags.drinks < 2) or date_girl == shiori:
+    if (hero.charm >= 60 - shiori.love and shiori.flags.drinks < 2) or date_girl == shiori:
         show shiori happy
         shiori.say "Oh...okay, [hero.name]."
         shiori.say "Maybe I could have a glass of wine?"

@@ -49,15 +49,7 @@ label audrey_offer_a_drink_male:
     mike.say "How about I get you a drink, Audrey?"
     mike.say "Whatever you like - just name it."
     "Almost the second the words are out of my mouth, Audrey turns to face me."
-    if audrey.is_visibly_pregnant:
-        show audrey angry
-        $ audrey.love -= 10
-        audrey.say "Wow, [hero.name], just wow."
-        audrey.say "Way to win Father of the Year!"
-        audrey.say "This kid's screwed before it's even been born!"
-        $ hero.cancel_activity()
-        hide audrey
-    elif (hero.charm >= 60 - audrey.love and audrey.flags.drinks < 2) or date_girl == audrey:
+    if (hero.charm >= 60 - audrey.love and audrey.flags.drinks < 2) or date_girl == audrey:
         show audrey happy
         audrey.say "Geez, I thought you'd never ask!"
         audrey.say "Vodka and tonic - and make it snappy!"

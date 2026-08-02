@@ -454,7 +454,7 @@ label samantha_propose_male:
     "Sam returns my gaze, her face oddly blank, as if she doesn't fully realise what's going on."
     "Then, all of a sudden, she seems to catch up with the moment."
     "Her eyes widen and she actually tries to speak at least a couple of times before she manages to get a single word out."
-    if samantha.flags.engaged and "samantha_event_B01" in DONE and not samantha.is_visibly_pregnant and not samantha.sexperience:
+    if samantha.flags.engaged and "samantha_event_B01" in DONE and not samantha.sexperience:
         samantha.say "Erm, [hero.name], unless you'd forgotten - I'm kind of already married!"
         "She smiles wryly whilst brandishing her wedding ring in front of me for effect."
         if samantha.flags.nickname == "cupcake":
@@ -502,7 +502,7 @@ label samantha_propose_male:
             "Sam smiles and drapes her arms around my shoulders."
             samantha.say "Yes, you idiot - I said yes!"
             $ samantha.set_fiance()
-    elif samantha.flags.engaged and "samantha_event_B01" in DONE and not samantha.is_visibly_pregnant:
+    elif samantha.flags.engaged and "samantha_event_B01" in DONE:
         samantha.say "So, you want to make it official, huh?"
         samantha.say "Kick Ryan's ass right out of the old marital bed?"
         samantha.say "Is fucking me behind my husband's back not getting you hard enough anymore?"
@@ -544,45 +544,7 @@ label samantha_propose_male:
                 mike.say "Of course, Sam - I've waited this long for you."
             mike.say "So I can wait a little longer to tell everyone else."
             $ samantha.set_fiance()
-    elif samantha.flags.engaged and "samantha_event_B01" in DONE and samantha.is_visibly_pregnant:
-        "Sam strokes the curve of her belly, letting me know without saying a word that this decision involves our unborn child, as much as either of us."
-        "For all that I might have thought being pregnant with my baby would have counted in my favour right now, she seems to be mulling it over rather deeply all the same."
-        samantha.say "Urgh, it's so frustrating to have almost everything that I want in life and yet still be married to that shit!"
-        "I can't argue with her on that one, but I'm hoping that her knowing I want to make a commitment to her will be enough."
-        if samantha.flags.nickname == "cupcake":
-            mike.say "Don't think of it like that, Cupcake."
-        else:
-            mike.say "Don't think of it like that, Sam."
-        mike.say "Stop thinking of what you don't have and focus on what you do instead."
-        mike.say "We have each other, and soon we'll have a child we both love too."
-        mike.say "Whatever happens with Ryan and the divorce, it can't take any of that away."
-        "Sam smiles at me, a little sadness evident in her eyes, but the happiness she finds in my words visible too."
-        samantha.say "You're right...you're right."
-        samantha.say "I need to be less fixated on material things."
-        samantha.say "Also on getting one over on people that don't give a shit."
-        samantha.say "When I should be thinking about the people that do!"
-        "That's great to hear - but it's still not an answer."
-        if samantha.love < 195:
-            samantha.say "There's just so much that's up in the air right now."
-            samantha.say "Until we get things sorted, I don't think either of us should be making rash commitments."
-            mike.say "You mean..."
-            "Sam smiles at me again, wanly this time, putting her hand atop mine to cover up the ring."
-            samantha.say "What I'm saying is, that for now at least, it's a no."
-            "I can't keep my nod from being sad, but I hope that it's not the end of us altogether."
-            $ samantha.love -= 25
-            $ samantha.sub -= 25
-        else:
-            show samantha close happy
-            samantha.say "Hmm...I can't believe that I didn't see what was important before."
-            samantha.say "You know, what was REALLY important?"
-            "She smiles at me again, more affirmed in her emotions this time."
-            if samantha.flags.NPCpregnancy == "ryan":
-                samantha.say "As long as I have you and our baby, I don't need anything else in the whole world."
-            else:
-                samantha.say "As long as I have you, I don't need anything else in the whole world."
-            samantha.say "Yes, [hero.name], I will marry you!"
-            $ samantha.set_fiance()
-    elif not samantha.flags.engaged and "samantha_event_B01" in DONE and not samantha.is_visibly_pregnant:
+    elif not samantha.flags.engaged and "samantha_event_B01" in DONE:
         samantha.say "Wow, that is not something that I expected to be happening to me again anytime soon!"
         "She must see the instant distress that her comment causes to show in my eyes, as she hurries to comfort me."
         samantha.say "[hero.name], please don't think anything of what I just said."
@@ -618,45 +580,7 @@ label samantha_propose_male:
             samantha.say "I've changed since then, and you're totally another kind of guy to Ryan."
             samantha.say "We shouldn't let the past dictate the future."
             $ samantha.set_fiance()
-    elif not samantha.flags.engaged and "samantha_event_B01" in DONE and samantha.is_visibly_pregnant:
-        samantha.say "A shotgun wedding - how quaint and rustic!"
-        samantha.say "Should we make the plans now, or wait until I'm the size of a whale so it's really obvious?"
-        "She has a wicked smile on her face as she asks me this, making it clear that she's joking."
-        if samantha.flags.nickname == "cupcake":
-            mike.say "Cupcake, I'd have proposed to you whether you were pregnant or not - even if you looked like a space-hopper!"
-        else:
-            mike.say "Sam, I'd have proposed to you whether you were pregnant or not - even if you looked like a space-hopper!"
-        samantha.say "Now there's a mental image that sticks with me - maybe if I were, you could ride me to work and back every day!"
-        "I fix her with a serious stare, and she shakes her head to acknowledge that it's time to talk like proper adults."
-        if samantha.flags.nickname == "cupcake":
-            mike.say "For real, Cupcake - we're both single in the eyes of the law, and we're committed enough to be having a kid together."
-        else:
-            mike.say "For real, Sam - we're both single in the eyes of the law, and we're committed enough to be having a kid together."
-        mike.say "What's wrong with going that one step further and making it legal?"
-        samantha.say "What's wrong with leaving things as they are?"
-        samantha.say "I'm serious, [hero.name] - that next step's a big one, and we're pretty good right where we are."
-        samantha.say "Aren't we?"
-        "I nod, not wanting to give her the impression that I'm dissatisfied with our current relationship."
-        mike.say "Of course we are..."
-        mike.say "There's just an old-fashioned part of me that wants to be able to call you my wife."
-        if samantha.love < 195:
-            samantha.say "I just don't think that we should get married for the sake of making a statement like that."
-            samantha.say "Your name will be on the baby's birth certificate and we're not talking about breaking up."
-            samantha.say "Are we?"
-            mike.say "No, of course not!"
-            samantha.say "Then what's the problem?"
-            samantha.say "We can always get married when we both feel we're ready."
-            $ samantha.love -= 25
-            $ samantha.sub -= 25
-        else:
-            show samantha close happy
-            samantha.say "Maybe you do have a point..."
-            samantha.say "If it doesn't matter that much whether we get married or not, then surely doing it's as simple as not doing it?"
-            mike.say "Well, that's not how I'd have put it..."
-            samantha.say "And it would tie up everything neatly if we did it before the baby was born..."
-            samantha.say "Okay...yes...let's do it!"
-            $ samantha.set_fiance()
-    elif not samantha.flags.engaged and not "samantha_event_B01" in DONE and not samantha.is_visibly_pregnant:
+    elif not samantha.flags.engaged and not "samantha_event_B01" in DONE:
         samantha.say "Wait a minute - didn't I just dodge getting married once already?"
         samantha.say "And if I remember correctly, you were instrumental in making that happen too!"
         "If there was a response that I'd been anticipating, that was certainly not it."
@@ -685,39 +609,6 @@ label samantha_propose_male:
             samantha.say "Yes, I'll marry you!"
             mike.say "You will?"
             samantha.say "That's what I said, isn't it?"
-            $ samantha.set_fiance()
-    elif not samantha.flags.engaged and not "samantha_event_B01" in DONE and samantha.is_visibly_pregnant:
-        samantha.say "Whoa, things are going very quickly around here!"
-        samantha.say "First I'm marrying Ryan, then I'm not."
-        samantha.say "Next thing I know, we're an item and then I'm pregnant."
-        samantha.say "Now you're proposing to me!"
-        "I shrug and shake my head in surprise."
-        mike.say "It felt like the natural thing to do...I just wanted to be with you, and make it official."
-        samantha.say "Sorry - I guess that after what happened with Ryan I'm still a little phobic of all the trappings of marriage."
-        mike.say "I thought that, what with us expecting a baby, it'd be nice to make a commitment to each other."
-        samantha.say "It's not like we need a piece of paper and an expensive ceremony to do that."
-        mike.say "I guess not..."
-        "I'm running out of things to say fast here."
-        "I always thought women were the ones that had the big dreams of their wedding days!"
-        mike.say "So, what's your answer?"
-        if samantha.love < 195:
-            samantha.say "I can't, [hero.name]...at least not yet."
-            "Sam must see my disappointment, as she puts a hand on my arm in a show of support."
-            samantha.say "But that doesn't mean that we have to call it all off in terms of us either."
-            samantha.say "We've managed just fine without being married so far."
-            "I suppose she's right - she got her fingers burned with Ryan, and it's not something worth losing her over."
-            "I nod in agreement."
-            $ samantha.love -= 25
-            $ samantha.sub -= 25
-        else:
-            show samantha close happy
-            samantha.say "I suppose that I should think of Ryan as a practice run, a chance to shake out the kinks."
-            samantha.say "I got a lucky escape there, but why should it keep me from trying again?"
-            mike.say "You mean..."
-            samantha.say "Yes, [hero.name], I mean that I will marry you!"
-            show samantha kiss
-            $ samantha.flags.kiss += 1
-            "Before she can say another word, I'm up and kissing her as though my life depends on it."
             $ samantha.set_fiance()
     else:
         samantha.say "[hero.name]...what are you talking about?"

@@ -104,18 +104,9 @@ label lexi_date_eat_a_burger:
     return
 
 label lexi_date_buy_drink:
-    if lexi.is_visibly_pregnant:
-        show lexi angry
-        $ lexi.love -= 10
-        lexi.say "Hey, my mom drank while she was having me."
-        lexi.say "And some people said it made me turn out bad!"
-        lexi.say "I want things to be different for our kid."
-        $ hero.cancel_activity()
-        hide lexi
-    else:
-        "Drink in one hand and the other waving about in the air, Lexi is constantly either sipping or chattering."
-        "And in between doing one and then the other, she pauses only to take in great gulps of air."
-        "Try as I might, I can't seem to get a word in edgeways."
+    "Drink in one hand and the other waving about in the air, Lexi is constantly either sipping or chattering."
+    "And in between doing one and then the other, she pauses only to take in great gulps of air."
+    "Try as I might, I can't seem to get a word in edgeways."
     return
 
 label lexi_date_play_darts:
@@ -132,14 +123,7 @@ label lexi_date_pub_play_pool:
     return
 
 label lexi_date_buy_a_round:
-    if lexi.is_visibly_pregnant:
-        show lexi angry
-        $ lexi.love -= 10
-        lexi.say "Hey, my mom drank while she was having me."
-        lexi.say "And some people said it made me turn out bad!"
-        lexi.say "I want things to be different for our kid."
-        $ hero.cancel_activity()
-    elif (hero.charm >= 60 - lexi.love and lexi.flags.drinks < 2):
+    if (hero.charm >= 60 - lexi.love and lexi.flags.drinks < 2):
         show drink lexi
         "At the mere mention of my buying another round, Lexi's up out of her seat and literally bouncing around."
         "She looks far too happy for someone that's simply been told that their next drink is on the way."

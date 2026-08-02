@@ -62,16 +62,9 @@ label emma_date_eat_a_burger:
     return
 
 label emma_date_buy_drink:
-    if emma.is_visibly_pregnant:
-        $ emma.love -= 10
-        emma.say "I can't drink alcohol when I'm pregnant!"
-        emma.say "Oh, [hero.name], that's so thoughtless of you!"
-        $ hero.cancel_activity()
-        hide emma
-    else:
-        "Emma accepts her drink, but only sips from it occasionally."
-        "This gives me the impression that she's not a big-time drinker."
-        "Most of the time she clutches the glass in both hands, as if afraid of losing it."
+    "Emma accepts her drink, but only sips from it occasionally."
+    "This gives me the impression that she's not a big-time drinker."
+    "Most of the time she clutches the glass in both hands, as if afraid of losing it."
     return
 
 label emma_date_play_darts:
@@ -87,12 +80,7 @@ label emma_date_pub_play_pool:
     return
 
 label emma_date_buy_a_round:
-    if emma.is_visibly_pregnant:
-        $ emma.love -= 10
-        emma.say "I can't drink alcohol when I'm pregnant!"
-        emma.say "Oh, [hero.name], that's so thoughtless of you!"
-        $ hero.cancel_activity()
-    elif (hero.charm >= 60 - emma.love and emma.flags.drinks < 2):
+    if (hero.charm >= 60 - emma.love and emma.flags.drinks < 2):
         show drink emma
         "I offer to stand the next round out of common decency."
         "But the gesture really doesn't seem to curry any favor with Emma."

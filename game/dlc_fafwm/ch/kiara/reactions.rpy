@@ -79,20 +79,7 @@ label kiara_offer_a_drink_male:
     mike.say "Looks like it's time for another round."
     mike.say "How about you, Kiara?"
     mike.say "You want a pint of something?"
-    if kiara.is_visibly_pregnant:
-        show kiara disappointed
-        "Kiara's eyes go wide with surprise as I ask the question."
-        "And at the same time her hands move to her belly, as if to shield it from harm."
-        show kiara angry
-        kiara.say "[hero.name], did you forget about something?!?"
-        $ kiara.love -= 10
-        show kiara irritated
-        "Suddenly reminded of the fact she's pregnant, I shake my head."
-        mike.say "Oh yeah, sorry!"
-        mike.say "Maybe a soft drink or a fruit-juice instead?"
-        $ hero.cancel_activity()
-        hide kiara
-    elif (hero.charm >= 60 - kiara.love and kiara.flags.drinks < 2) or date_girl == kiara:
+    if (hero.charm >= 60 - kiara.love and kiara.flags.drinks < 2) or date_girl == kiara:
         show kiara smile
         "Kiara picks up her glass and swills around the remaining liquid inside."
         kiara.say "I think that you are trying to get me drunk!"

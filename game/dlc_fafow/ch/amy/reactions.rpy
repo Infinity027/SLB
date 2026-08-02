@@ -78,15 +78,7 @@ label amy_ask_birthday_male:
 label amy_offer_a_drink_male:
     mike.say "Huh...looks like I polished that one off!"
     mike.say "You want me to get you one while I'm at the bar, Amy?"
-    if amy.is_visibly_pregnant:
-        "Amy glances down at her swollen belly and then back up at me."
-        amy.say "Erm..."
-        $ amy.love -= 10
-        amy.say "What do you think?!?"
-        "I nod my head, already feeling my cheeks flushing red."
-        $ hero.cancel_activity()
-        hide amy
-    elif (hero.charm >= 60 - amy.love and amy.flags.drinks < 2) or date_girl == amy:
+    if (hero.charm >= 60 - amy.love and amy.flags.drinks < 2) or date_girl == amy:
         amy.say "Sure thing!"
         amy.say "I'll have whatever you're having."
         amy.say "And thanks for thinking of me too!"

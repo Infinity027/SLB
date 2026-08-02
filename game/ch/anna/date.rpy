@@ -59,18 +59,9 @@ label anna_date_eat_a_burger:
     return
 
 label anna_date_buy_drink:
-    if anna.is_visibly_pregnant:
-        show anna angry
-        $ anna.love -= 10
-        anna.say "Seriously, [hero.name]?"
-        anna.say "Did you forget that you got me pregnant?!?"
-        anna.say "I can't drink while I'm like this!"
-        $ hero.cancel_activity()
-        hide anna
-    else:
-        "Petite as she is, there's nothing dainty about the way Anna knocks back her drink."
-        "At times I even find it hard to keep up with her."
-        "The glass in her hand seems to empty at an alarming rate!"
+    "Petite as she is, there's nothing dainty about the way Anna knocks back her drink."
+    "At times I even find it hard to keep up with her."
+    "The glass in her hand seems to empty at an alarming rate!"
     return
 
 label anna_date_play_darts:
@@ -87,14 +78,7 @@ label anna_date_pub_play_pool:
     return
 
 label anna_date_buy_a_round:
-    if anna.is_visibly_pregnant:
-        show anna angry
-        $ anna.love -= 10
-        anna.say "Seriously, [hero.name]?"
-        anna.say "Did you forget that you got me pregnant?!?"
-        anna.say "I can't drink while I'm like this!"
-        $ hero.cancel_activity()
-    elif (hero.charm >= 60 - anna.love and anna.flags.drinks < 2):
+    if (hero.charm >= 60 - anna.love and anna.flags.drinks < 2):
         show drink anna
         "Anna nods happily when I say that the next round is on me."
         "She thanks me, and then says that she'll get the next one herself."

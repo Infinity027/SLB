@@ -259,4 +259,3 @@ label kleio_dirty_texts_male:
         $ hero.fun += 0.2
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

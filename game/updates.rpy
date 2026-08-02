@@ -409,8 +409,6 @@ init -999 python:
             if minami.sexperience:
                 minami.sexperience = 0
                 minami.flags.sexperience = 0
-            if minami.is_visibly_pregnant:
-                minami.unpreg()
             if minami.flags.anal:
                 minami.flags.anal = 0
             if "minami_dick_reactions" in DONE:
@@ -1236,8 +1234,6 @@ init -999 python:
                 (12, 20), [], "Sam and Ryan's wedding", "samantha_event_B01"
             ),
         )
-        if "samantha_preg_talk_ryan" in DONE and samantha.flags.storyD >= 1:
-            samantha.flags.knows_ryancheats = True
         if samantha.flags.storyD >= 1:
             samantha.flags.knows_ryancheats = True
             samantha.flags.cuck_ryan = True

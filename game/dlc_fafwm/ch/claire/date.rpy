@@ -10,21 +10,13 @@ label claire_date_buy_drink:
     "I drain the last dregs from my glass and then make to stand up."
     mike.say "Looks like it's time for another drink!"
     mike.say "Are you wanting one too, Claire?"
-    if claire.is_visibly_pregnant:
-        "Claire shoots me a look of sheer amazement and shakes her head."
-        "And that's when I notice her hands protectively clutching her swollen belly."
-        claire.say "How many of those things have you had?"
-        claire.say "Did they make you forget that I'm pregnant?!?"
-        mike.say "Ah, yeah...sorry about that!"
-        $ hero.cancel_activity()
-    else:
-        "Claire looks down at her own glass and then back up at me."
-        "And I have to say that I really like the cheeky glint in her eye as she does so."
-        claire.say "Are you trying to get me drunk, [hero.name]?"
-        claire.say "Because if you are, it's totally working!"
-        claire.say "Hurry up and bring me another one of these before I sober up."
-        $ game.active_date.score += 5
-        $ claire.set_flag("drinks", 1, "day", mod="+")
+    "Claire looks down at her own glass and then back up at me."
+    "And I have to say that I really like the cheeky glint in her eye as she does so."
+    claire.say "Are you trying to get me drunk, [hero.name]?"
+    claire.say "Because if you are, it's totally working!"
+    claire.say "Hurry up and bring me another one of these before I sober up."
+    $ game.active_date.score += 5
+    $ claire.set_flag("drinks", 1, "day", mod="+")
     return
 
 label claire_date_play_darts:
@@ -50,21 +42,13 @@ label claire_date_buy_a_round:
     mike.say "Aaah!"
     mike.say "Time for another round."
     mike.say "Can I get one for you too, Claire?"
-    if claire.is_visibly_pregnant:
-        "Claire shoots me a look of sheer amazement and shakes her head."
-        "And that's when I notice her hands protectively clutching her swollen belly."
-        claire.say "How many of those things have you had?"
-        claire.say "Did they make you forget that I'm pregnant?!?"
-        mike.say "Ah, yeah...sorry about that!"
-        $ hero.cancel_activity()
-    else:
-        "Claire looks down at her own glass and then back up at me."
-        "And I have to say that I really like the cheeky glint in her eye as she does so."
-        claire.say "Are you trying to get me drunk, [hero.name]?"
-        claire.say "Because if you are, it's totally working!"
-        claire.say "Hurry up and bring me another one of these before I sober up."
-        $ game.active_date.score += 5
-        $ claire.set_flag("drinks", 1, "day", mod="+")
+    "Claire looks down at her own glass and then back up at me."
+    "And I have to say that I really like the cheeky glint in her eye as she does so."
+    claire.say "Are you trying to get me drunk, [hero.name]?"
+    claire.say "Because if you are, it's totally working!"
+    claire.say "Hurry up and bring me another one of these before I sober up."
+    $ game.active_date.score += 5
+    $ claire.set_flag("drinks", 1, "day", mod="+")
     return
 
 label claire_dance_with:

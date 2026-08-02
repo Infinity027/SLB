@@ -83,18 +83,9 @@ label audrey_date_eat_a_burger:
     return
 
 label audrey_date_buy_drink:
-    if audrey.is_visibly_pregnant:
-        show audrey angry
-        $ audrey.love -= 10
-        audrey.say "Wow, [hero.name], just wow."
-        audrey.say "Way to win Father of the Year!"
-        audrey.say "This kid's screwed before it's even been born!"
-        $ hero.cancel_activity()
-        hide audrey
-    else:
-        "Audrey seems pleased to have a drink in her hand."
-        "And she savours the first sip that she makes as well."
-        "She looks like she really enjoyed that."
+    "Audrey seems pleased to have a drink in her hand."
+    "And she savours the first sip that she makes as well."
+    "She looks like she really enjoyed that."
     return
 
 label audrey_date_play_darts:
@@ -110,14 +101,7 @@ label audrey_date_pub_play_pool:
     return
 
 label audrey_date_buy_a_round:
-    if audrey.is_visibly_pregnant:
-        show audrey angry
-        $ audrey.love -= 10
-        audrey.say "Wow, [hero.name], just wow."
-        audrey.say "Way to win Father of the Year!"
-        audrey.say "This kid's screwed before it's even been born!"
-        $ hero.cancel_activity()
-    elif (hero.charm >= 60 - audrey.love and audrey.flags.drinks < 2):
+    if (hero.charm >= 60 - audrey.love and audrey.flags.drinks < 2):
         show drink audrey
         "When I offer to buy the next round, Audrey nods with genuine enthusiasm."
         "I have no idea if she'll return the favour for the next one."

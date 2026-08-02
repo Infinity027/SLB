@@ -28,7 +28,6 @@ init python:
     "conditions": [
         IsHour(15, 16),
         HeroTarget(
-            IsGender("male"),
             Not(OnDate()),
             IsActivity("None"),
             ),
@@ -56,7 +55,7 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("None")),
         PersonTarget(kleio,
             IsPresent(),
@@ -79,7 +78,7 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsActivity("None"),
             ),
@@ -102,7 +101,7 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Not(IsActivity("sleep")),
             IsFlag("sick"),
             ),
@@ -125,7 +124,7 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Not(IsActivity("ask_date"))),
         PersonTarget(kleio,
             IsPresent(),
@@ -149,7 +148,7 @@ init python:
     "girl": "kleio",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             Not(IsActivity("sleep")),
             ),
@@ -497,4 +496,3 @@ label kleio_ask_date_alone_male:
         $ date_choice = True
     return date_choice
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

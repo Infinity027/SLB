@@ -53,15 +53,7 @@ label hanna_offer_a_drink_male:
     mike.say "You want a drink, Hanna?"
     mike.say "I'm headed to the bar, so I can grab you one too."
     "Almost the second the words are out of my mouth, Hanna turns to face me."
-    if hanna.is_visibly_pregnant:
-        show hanna angry
-        $ hanna.love -= 10
-        hanna.say "Alcohol, [hero.name]?"
-        hanna.say "Really?!?"
-        hanna.say "Am I the only one looking out for this kid?"
-        $ hero.cancel_activity()
-        hide hanna
-    elif (hero.charm >= 60 - hanna.love and hanna.flags.drinks < 2) or date_girl == hanna:
+    if (hero.charm >= 60 - hanna.love and hanna.flags.drinks < 2) or date_girl == hanna:
         show hanna happy
         hanna.say "Sure thing, [hero.name]."
         hanna.say "Mine's a light beer."

@@ -4,7 +4,6 @@ init python:
     "label": "give_phone_number",
     "girl": "anna",
     "conditions": [
-        HeroTarget(IsGender("male")),
         PersonTarget(anna,
             IsPresent(),
             Not(IsHidden()),

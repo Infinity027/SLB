@@ -122,18 +122,9 @@ label minami_date_eat_a_burger:
     return
 
 label minami_date_buy_drink:
-    if minami.is_visibly_pregnant:
-        show minami angry
-        $ minami.love -= 10
-        minami.say "You can't give me beer, big bro!"
-        minami.say "It's bad for the baby."
-        minami.say "We're going to be parents soon - you need to be more responsible!"
-        $ hero.cancel_activity()
-        hide minami
-    else:
-        "Minami doesn't even blink when I hand her the drink that she asked for."
-        "She just takes hold of it and begins to sip happily at the contents."
-        "I guess she's just used to getting what she wants!"
+    "Minami doesn't even blink when I hand her the drink that she asked for."
+    "She just takes hold of it and begins to sip happily at the contents."
+    "I guess she's just used to getting what she wants!"
     return
 
 label minami_date_play_darts:
@@ -149,14 +140,7 @@ label minami_date_pub_play_pool:
     return
 
 label minami_date_buy_a_round:
-    if minami.is_visibly_pregnant:
-        show minami angry
-        $ minami.love -= 10
-        minami.say "You can't give me beer, big bro!"
-        minami.say "It's bad for the baby."
-        minami.say "We're going to be parents soon - you need to be more responsible!"
-        $ hero.cancel_activity()
-    elif (hero.charm >= 60 - minami.love and minami.flags.drinks < 2):
+    if (hero.charm >= 60 - minami.love and minami.flags.drinks < 2):
         show drink minami
         "I stand up and offer to get the next round of drinks in."
         "But I pause out of habit, being used to my friends at least making a token gesture of objection."

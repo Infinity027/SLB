@@ -182,7 +182,7 @@ label home_harem_girls_couch_fun:
 label home_harem_compare_bellies:
     python:
         hh_members_at_home = Harem.find_by_name("home").active_members_in_room
-        hh_pregnant_members = [i for i in hh_members_at_home if Person.find(i).activity["activity"] != "sleep" and Person.find(i).is_visibly_pregnant]
+        hh_pregnant_members = [i for i in hh_members_at_home if Person.find(i).activity["activity"] != "sleep"]
         if game.flags.hh_compared_bellies:
             hh_pregnant_members = list(set(hh_pregnant_members) - set(game.flags.hh_compared_bellies))
     if hh_pregnant_members and len(hh_pregnant_members) > 1:

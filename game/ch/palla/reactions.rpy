@@ -45,16 +45,7 @@ label palla_offer_a_drink_male:
     mike.say "Palla, would you like a drink?"
     mike.say "I'm just going to the bar and I wondered..."
     "Almost the second the words are out of my mouth, Palla turns to face me."
-    if palla.is_visibly_pregnant:
-        show palla angry
-        $ palla.love -= 10
-        palla.say "Erm...don't you remember getting me pregnant, [hero.name]?"
-        palla.say "Because I certainly do!"
-        palla.say "It's basically your fault I can't do anything fun."
-        palla.say "At least not while I have your kid inside of me!"
-        $ hero.cancel_activity()
-        hide palla
-    elif (hero.charm >= 60 - palla.love and palla.flags.drinks < 2) or date_girl == palla:
+    if (hero.charm >= 60 - palla.love and palla.flags.drinks < 2) or date_girl == palla:
         show palla happy
         palla.say "Hmm..."
         palla.say "Okay, [hero.name], okay."

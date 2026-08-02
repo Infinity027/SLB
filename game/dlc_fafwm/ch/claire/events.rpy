@@ -189,27 +189,6 @@ init python:
     })
 
     Event(**{
-    "name": "claire_preg_talk",
-    "label": "claire_preg_talk",
-    "do_once": False,
-    "conditions": [
-        HeroTarget(
-            IsActivity("None"),
-            IsGender("male"),
-            Not(OnDate()),
-            IsActivity("None"),
-            ),
-        PersonTarget(claire,
-            IsPresent(),
-            Not(IsHidden()),
-            IsFlag("toldpreg", False),
-            MinCounter("pregnant", 6),
-            ),
-        ],
-    "music": "music/roa_music/focus.ogg",
-    })
-
-    Event(**{
     "name": "claire_sub_event_01",
     "label": "claire_sub_event_01",
     "priority": 500,
@@ -2592,16 +2571,10 @@ label claire_male_ending:
     "Sure, you know that I'm going to say Claire looks stunning in the thing."
     "That I've never seen her looking as lovely as she does right now."
     "But that's the honest truth of it - she looks more perfect than I could ever have imagined."
-    if claire.is_visibly_pregnant:
-        "The cut of her dress is flattering her in every way possible."
-        "Especially around the curve of her belly, where she's really starting to show."
-        "And as it always does, the merest thought of the child we're expecting fills me with hope."
-        "As I imagine the possibilities of raising a family of our own together."
-    else:
-        "Part of me was worried that the dress wouldn't seem special somehow."
-        "As if the fact that Claire had already walked down the aisle once would make a difference."
-        "But now I can see how wrong I as to think like that."
-        "Because she looks simply radiant as she makes her way towards me."
+    "Part of me was worried that the dress wouldn't seem special somehow."
+    "As if the fact that Claire had already walked down the aisle once would make a difference."
+    "But now I can see how wrong I as to think like that."
+    "Because she looks simply radiant as she makes her way towards me."
     "As soon as Claire makes it to the altar, I feel the urge to start talking to her."
     "That I have a hundred and one things on my mind that I'd like to tell her or questions I want to ask."
     "But before I can even open my mouth, someone else beats me to it and asserts their authority instead."
@@ -2725,16 +2698,10 @@ label claire_male_ending:
     claire.say "He's still climbing the corporate ladder at work, keeping us well."
     claire.say "But he's also mastering the art of the cook-out."
     claire.say "And he keeps talking about coaching the neighbourhood softball team too."
-    if claire.is_visibly_pregnant:
-        show claire ending pie sides chicken mike claire girl boy with dissolve
-        claire.say "All of this on top of being the best father in the world to little Mikey Junior too."
-        claire.say "The footsteps of a child in the house giving me something that I never had before."
-        claire.say "The chance to raise a family that's truly my own, truly born out of our love for each other."
-    else:
-        show claire ending pie sides chicken mike claire with dissolve
-        claire.say "And he keeps dropping hints about how big the house is and all the extra space."
-        claire.say "As well as suggesting which of the rooms would make the best nursery."
-        claire.say "All the time thinking that I don't catch on to how much he wants to start a family of our own."
+    show claire ending pie sides chicken mike claire with dissolve
+    claire.say "And he keeps dropping hints about how big the house is and all the extra space."
+    claire.say "As well as suggesting which of the rooms would make the best nursery."
+    claire.say "All the time thinking that I don't catch on to how much he wants to start a family of our own."
     claire.say "I mean, sometimes I do screw-up and call him 'Hector' by mistake."
     claire.say "Which makes him suck in his gut and pat the back of his head."
     claire.say "And then I have to reassure him it was just a little slip of the tongue."
@@ -2753,201 +2720,6 @@ label claire_male_ending:
                 call sexperience_achievement_3 from _call_sexperience_achievement_3_25
     $ game.set_new_game_plus()
     $ renpy.full_restart()
-
-label claire_preg_talk:
-    $ claire.flags.toldpreg = True
-    show claire sad at center, zoomAt(1.0, (640, 720))
-    "The moment that I set eyes on Claire, I can see that there's something wrong."
-    "She has an almost haunted look on her face and her eyes are red-rimmed."
-    show claire at center, traveling(1.5, 0.5, (640, 1040))
-    "In fact she looks like she hasn't gotten a wink of sleep since the last time I saw her."
-    mike.say "Claire..."
-    mike.say "Are you okay?"
-    mike.say "Is there something wrong?"
-    "Claire looks at me like she wants to shake her head and nod it at the same time."
-    "Like there's a dozen things running around inside of her head right now."
-    "And she really doesn't know the best way to answer even a basic question like that."
-    show claire whining
-    claire.say "Yes..."
-    claire.say "No..."
-    claire.say "I...I don't know!"
-    show claire sad
-    "Wanting to do whatever I can to help, I reach out and take hold of Claire's hand."
-    "This seems to do the trick, as she instantly returns the gesture, holding on tightly."
-    "And I think I can see a little calm beginning to return to her."
-    mike.say "It's okay, Claire..."
-    mike.say "Just take your time, okay?"
-    mike.say "Whatever it is, I'm listening."
-    show claire sadsmile
-    "Claire nods as I say all of this."
-    "And I can see that she's trying to pull herself together."
-    "Soon enough she nods, as if she feels like she's ready to talk."
-    show claire talkative
-    claire.say "Okay, okay..."
-    claire.say "So, I took a test this morning..."
-    claire.say "And the result was positive!"
-    show claire sadsmile
-    "For a moment the reality of what Claire's telling me doesn't seem to sink in."
-    "I hear the words and somehow my brain interprets them in the most illogical manner."
-    mike.say "Well..."
-    mike.say "Isn't that good?"
-    mike.say "After all, it's important to be positive."
-    show claire stuned
-    "I can see that Claire's now staring at me in total amazement."
-    "Like she can't actually believe what she's hearing."
-    "And that's when my brain seems to finally catch up with itself."
-    mike.say "Oh..."
-    mike.say "Wait..."
-    mike.say "When you said a test - you meant, like, a pregnancy test?!?"
-    show claire surprised
-    claire.say "Of course I meant a pregnancy test!"
-    claire.say "What other kind of test could I possibly have meant?"
-    show claire sad
-    "By now I'm starting to get why Claire looks so worried and worn-out."
-    "And to be honest, I quickly starting to feel the same way too."
-    if claire.flags.still_maried:
-        "Without thinking, I blurt out the first thing that pops into my head."
-        mike.say "Erm..."
-        mike.say "You didn't tell a certain person about this, did you?"
-        show claire stuned
-        "Claire looks at me like I'm stupid for a second time."
-        show claire surprised
-        claire.say "I didn't tell him about the two of us having an affair, [hero.name]…"
-        claire.say "So do you honestly think I'm going to tell Hector about this?!?"
-        show claire stuned
-        mike.say "No, no..."
-        mike.say "Of course not."
-        show claire annoyed
-        "Claire shakes her head, obviously annoyed at my struggling to keep up."
-        show claire whining
-        claire.say "So, as I see it, we've got two problems on our hands."
-        claire.say "One, we have to get rid of it."
-        claire.say "And two, we have to do it without my husband finding out."
-    else:
-        "But I guess that Claire's already gone through what's playing out in my head."
-        "Because it doesn't take her long to cut to the chase."
-        show claire whining
-        claire.say "I need you to focus, [hero.name]…"
-        claire.say "Because you've got to help me get rid of it!"
-    show claire sad
-    "I'm only just starting to process the idea of Claire being pregnant."
-    "Let alone get my head around the fact that I'm the father too."
-    "But now she's dealt me another blow that's staggered my poor, over-taxed brain."
-    mike.say "Wait...what?"
-    mike.say "You mean..."
-    mike.say "You want to get an abortion?"
-    show claire whining
-    claire.say "Of course I do!"
-    claire.say "I'm way too old to have a child."
-    if claire.flags.still_maried:
-        claire.say "Especially with my lover, rather than my husband!"
-    show claire sad
-    "Claire's looking at me like I'm supposed to be agreeing with her right now."
-    "But all of this is happening so fast that I feel like my head is spinning."
-    "And the problem is that I know I have to say something, and fast."
-    menu:
-        "It might be a wise decision, yeah...":
-            "Part of me hates the very idea of doing this, thinks that it's cowardly."
-            "But I can see the anxiety written all over Claire's face."
-            "And I want to do anything that I can to help make it go away."
-            "So I decide that there's no other way out of this mess."
-            mike.say "Okay, Claire..."
-            mike.say "If that's what you want, then that's what we'll do."
-            mike.say "I...I don't know how this kind of thing works though!"
-            "I kind of falter as I make the admission."
-            "But the relief that I see on Claire's face can't be anything but real."
-            show claire whining
-            claire.say "Neither do I."
-            claire.say "But between the two of us, I think we can work it out!"
-            show claire sadsmile
-            "I nod and squeeze Claire's hand tighter than ever."
-            "And I try to put a literal brave face on for her sake."
-            "Even though the truth is that I feel more than a little scared myself."
-            "I don't know what lies ahead."
-            "But I get the impression we're going to need each other like never before."
-            $ claire.love += 10
-            $ claire.unpreg()
-        "But I would love to hear Adam call me step-father!":
-            "I can see that Claire's convinced herself an abortion is the only way out of this."
-            "But I can't help seeing things differently, like there might be a future in it."
-            mike.say "I don't think we need to do anything that extreme, Claire."
-            mike.say "I think that we could make a go of it, you know?"
-            mike.say "You, me and the baby - we could be a family."
-            show claire stuned
-            "Claire's eyes get wider the whole time I'm explaining myself."
-            "And as soon as I'm done speaking, she starts to shake her head."
-            show claire surprised
-            claire.say "Are you totally crazy?!?"
-            claire.say "I already spent most of my life doing the whole family thing!"
-            claire.say "And do you need me to spell out how much that sucked?"
-            show claire stuned
-            "Now it's my turn to shake my head, as I try to change Claire's mind."
-            mike.say "No, Claire..."
-            mike.say "You spent that time doing the family thing with Hector."
-            mike.say "I promise you that trying again with me will be totally different."
-            mike.say "Because we love each other, and we'll both love our child."
-            "Claire stares at me as I make my pitch."
-            "And I feel a glimmer of hope that I'm getting through to her."
-            show claire surprised
-            claire.say "You mean..."
-            claire.say "We could start over?"
-            claire.say "We could start anew?"
-            show claire stuned
-            mike.say "Yeah, Claire - that's exactly what I mean!"
-            if claire.love >= 150:
-                "Claire fixes me with a serious stare."
-                "One that makes me feel like she's looking straight into my soul."
-                show claire surprised
-                claire.say "Are you serious, [hero.name]?"
-                claire.say "Do you really understand what that means?"
-                claire.say "You'd have to be a husband AND a father."
-                show claire stuned
-                "The fact that Claire's even discussing the idea instantly fills me with hope."
-                "Before she was all doom and gloom, with no hope of there being a happy ending."
-                "But now I have to prove to her that I'm serious, and this isn't just a fantasy."
-                mike.say "I'm ready, Claire..."
-                mike.say "And you know that I'll be everything you need."
-                mike.say "Because this is like a dream come true for me."
-                "Claire actually looks surprised by my enthusiasm."
-                show claire surprised
-                claire.say "But..."
-                claire.say "You're getting saddled with a middle-aged woman and a kid!"
-                claire.say "Most guys would think that was a nightmare."
-                show claire sadsmile
-                mike.say "Then those guys are morons!"
-                mike.say "Because I'm getting to raise a kid with the woman I love."
-                show claire normal
-                "Claire leans herself against me, putting her head on my shoulder."
-                show claire talkative
-                claire.say "Oh, [hero.name]…"
-                claire.say "All of this is so crazy."
-                claire.say "But the craziest thing of all is that I think it might actually work!"
-                show claire happy
-                $ claire.love += 5
-                $ claire.sub += 5
-            else:
-                "Claire seems to be listening to what I'm saying very intently."
-                "And once I'm done, there's a moment of silence while I wait for her answer."
-                "But then her former demeanour seems to return, and she shakes her head."
-                show claire whining
-                claire.say "No, [hero.name]…"
-                claire.say "I'm sorry, but that's not going to happen."
-                claire.say "Maybe in another lifetime..."
-                show claire sad
-                "Claire underlines her point by letting go of my hand."
-                "And then she pulls away, turning on her heel."
-                show claire whining
-                claire.say "And if you're not going to help me..."
-                claire.say "Then I'll have to make the arrangements on my own."
-                show claire sad
-                "I know that I should say something right now."
-                "That I should be offering Claire support."
-                "But the truth is that I'm too shocked and stunned to do anything of the kind."
-                "Maybe later I'll be able to pull myself together and actually offer her help."
-                "But here and now, all I can do is stand there and watch her walking away."
-                $ claire.sub -= 10
-                $ claire.unpreg()
-    return
 
 label claire_sub_event_01:
     if claire.sub.max < 50:

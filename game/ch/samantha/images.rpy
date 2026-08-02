@@ -182,9 +182,6 @@ init 1:
     layeredimage samantha smartphone:
         always "samantha_smartphone"
 
-    layeredimage samantha babyshopping:
-        always "samantha_babyshopping"
-
     layeredimage samantha cowgirl:
         attribute_function Pickers([PiercingsPicker, PregnancyPicker, PubesPicker, DickPicker, CollarPicker], npc=samantha)
 

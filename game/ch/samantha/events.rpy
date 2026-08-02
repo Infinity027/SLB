@@ -176,33 +176,6 @@ init python:
     })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     Event(**{
     "name": "samantha_event_B02",
     "label": "samantha_event_B02",
@@ -245,35 +218,6 @@ init python:
             ),
         ],
     "priority": 500,
-    "music": "music/roa_music/the_one.ogg",
-    "do_once": True,
-    })
-
-    Event(**{
-    "name": "samantha_event_B04",
-    "label": "samantha_event_B04",
-    "duration": 1,
-    "priority": 500,
-    "max_girls": 0,
-    "conditions": [
-        IsDone("samantha_event_B03"),
-        IsHour(16, 0),
-        HeroTarget(
-            IsGender("male"),
-            HasRoomTag("home"),
-            IsActivity("None"),
-            Not(OnDate()),
-            ),
-        PersonTarget(samantha,
-            IsFlag("unknown_father"),
-            ),
-        Or(
-            PersonTarget(samantha,
-                IsVisiblyPregnant(),
-            ),
-            IsDone("samantha_wedding_baby"),
-            ),
-        ],
     "music": "music/roa_music/the_one.ogg",
     "do_once": True,
     })
@@ -524,7 +468,6 @@ init python:
     "label": "samantha_meet_bree",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             MinDaysPlayed(20),
             HasRoomTag("pub"),),
         PersonTarget(samantha,
@@ -628,46 +571,6 @@ init python:
     "once_day": True,
     })
 
-
-
-    Event(**{
-    "name": "samantha_preg_talk",
-    "label": "samantha_preg_talk",
-    "duration": 1,
-    "priority": 500,
-    "conditions": [
-        IsHour(19, 21),
-        HeroTarget(
-            IsGender("male"),
-            IsRoom("livingroom")),
-        PersonTarget(samantha,
-            IsPresent(),
-            Not(IsHidden()),
-            IsFlag("tellpregnant", 1),
-            ),
-        ],
-    "do_once": True,
-    "music": "music/roa_music/the_one.ogg",
-    })
-
-    Event(**{
-    "name": "samantha_babyshopping",
-    "label": "samantha_babyshopping",
-    "duration": 1,
-    "conditions": [
-        HeroTarget(
-            IsGender("male"),
-            IsRoom("date_mall1")),
-        PersonTarget(samantha,
-            IsPresent(),
-            Not(IsHidden()),
-            MinCounter("pregnant", 10),
-            ),
-        ],
-    "do_once": True,
-    "music": "music/roa_music/the_one.ogg",
-    })
-
     InteractEvent(**{
     "name": "samantha_waterpark_comment",
     "label": "samantha_waterpark_comment",
@@ -677,25 +580,6 @@ init python:
         PersonTarget(samantha,
             IsActive(),
             ),
-        ],
-    "do_once": True,
-    "quit": False,
-    })
-
-
-    Event(**{
-    "name": "samantha_pregnant_request",
-    "label": "samantha_pregnant_request",
-    "conditions": [
-        HeroTarget(IsGender("male")),
-        PersonTarget(samantha,
-            IsPresent(),
-            Not(IsHidden()),
-            Not(IsActivity("sleep")),
-            IsFlag("status", "girlfriend"),
-            MaxCounter("pregnant", 8),
-            ),
-        'game.days_played - samantha.flags.girlfriend_day >= 7',
         ],
     "do_once": True,
     "quit": False,
@@ -838,65 +722,6 @@ init python:
     "music": "music/roa_music/the_one.ogg",
     })
 
-
-    Event(**{
-    "name": "samantha_wedding_baby",
-    "label": "samantha_wedding_baby",
-    "duration": 1,
-    "priority": 500,
-    "conditions": [
-        IsDone("samantha_event_B01"),
-        HeroTarget(
-            IsGender("male"),
-            HasRoomTag("mall_southside"),
-            Not(OnDate()),
-            IsActivity("None"),
-            ),
-        PersonTarget(samantha,
-            Not(IsHidden()),
-            Not(IsFlag("divorced")),
-            Or(
-                And(
-                    Not(IsFlag("ryanpregnancydelay")), 
-                                                       
-                    IsDone("samantha_preg_talk_ryan"), 
-                    MaxCounter("pregnant", 0)
-                    ),
-                MinCounter("pregnant", 50)
-                ),
-            ),
-        ],
-    "do_once": True,
-    "music": "music/roa_music/the_one.ogg",
-    })
-
-    Event(**{
-    "name": "samantha_preg_talk_ryan",
-    "label": "samantha_preg_talk_ryan",
-    "duration": 1,
-    "priority": 500,
-    "conditions": [
-        IsDone("samantha_event_B01"),
-        HeroTarget(
-            IsGender("male"),
-            Not(OnDate()),
-            ),
-        PersonTarget(samantha,
-            IsPresent(),
-            Not(IsHidden()),
-            Not(IsActivity("sleep")),
-            Not(IsFlag("divorced")),
-            And(
-                Not(IsFlag("ryanpregnancydelay")),
-                MaxStat("sexperience", 0),
-                ),
-            Not(IsFlag("post_wedding_baby_talk_delay")),
-            ),
-        ],
-    "do_once": True,
-    "music": "music/roa_music/the_one.ogg",
-    })
-
     Event(**{
     "name": "samantha_side_event_01",
     "label": "samantha_side_event_01",
@@ -951,442 +776,6 @@ init python:
     "do_once": True,
     })
 
-    # InteractEvent(**{
-    # "name": "sam_murder_talk_bree",
-    # "label": "sam_murder_talk_bree",
-    # "do_once": True,
-    # "conditions": [
-    #     PersonTarget(samantha,
-    #         IsActive(),
-    #         ),
-    #     PersonTarget("kylie",
-    #         IsFlag("killed", "bree")
-    #         ),
-    #     ],
-    # })
-
-    Event(**{
-    "name": "samantha_exclusive_cheated",
-    "priority": 1000,
-    "label": "samantha_exclusive_cheated",
-    "conditions": [
-        IsDone("samantha_event_A04"),
-        HeroTarget(
-            IsGender("male"),
-            HasRoomTag("dateroom")),
-        PersonTarget(samantha,
-            Not(IsHidden()),
-            IsFlag("girlfriend"),
-            IsFlag("nonexclusive", False),
-            ),
-        "samantha.room == game.room.replace('date_', '')",
-        ],
-    "do_once": True,
-    })
-
-
-label samantha_preg_talk_ryan:
-    "Did you ever have one of those moments when you really had to bite your tongue?"
-    "When you had to smile and try to hide the fact that you're dying a little inside?"
-    "Yeah, I know that sounds really dramatic, but we've all been there."
-    "The worst is when someone just drops a revelation in a casual conversation."
-    show samantha at center, zoomAt(1.25, (640, 900)) with dissolve
-    "You're never ready for it, like right now, when Sam does that very thing to me..."
-    samantha.say "Oh, yeah..."
-    samantha.say "I can't believe I almost forgot to tell you, [hero.name]!"
-    show samantha a happy
-    samantha.say "Great news - Ryan and I, we're having a baby!"
-    "It takes a moment for the words to fully sink in."
-    "Time that I spend staring at Sam, my mouth hanging open."
-    "Luckily for me, she seems to take this as nothing more than genuine surprise."
-    show samantha a normal
-    samantha.say "I know, I know..."
-    samantha.say "It's crazy, isn't it?"
-    show samantha a happy at center, zoomAt(1.0, (640, 900)), startle
-    samantha.say "I'm going to be a mom!"
-    "I finally manage to shake off the initial shock of the revelation."
-    with hpunch
-    "And I shake my head to regain control of my senses before answering."
-    show samantha normal
-    "Again, Sam seems to take this as me being floored by the news."
-    "So she doesn't question my reaction, just waits patiently for me to answer."
-    if not hero.flags.knows_ryancheats:
-        "I have no idea whether or not Sam knows how I feel about her."
-        "Even though I held a torch for her all the time we lived together."
-        "Hell, I'm still holding that same torch right now!"
-        "But none of that really matters, does it?"
-        "If I never had the guts to tell her how I feel, that's my fault."
-        "I can't let it get in the way of her living her life with Ryan."
-        "And so I swallow my own feelings and put a smile on my face."
-        mike.say "That's..."
-        if samantha.flags.nickname == "cupcake":
-            mike.say "That's great, Cupcake - fantastic news!"
-        else:
-            mike.say "That's great, Sam - fantastic news!"
-        mike.say "I know that you'll make a great mom."
-        show samantha happy
-        "Sam's face breaks into a smile at this."
-        "The exact kind of smile that makes my heart ache."
-        samantha.say "Aw, thank you, [hero.name]!"
-        samantha.say "And Ryan too?"
-        samantha.say "You think he'll make a great dad, right?"
-        "Sam keeps right on smiling as she asks me this."
-        "But there's no way she can know how it's twisting a knife inside of me."
-        if samantha.flags.nickname == "cupcake":
-            mike.say "Yeah, Cupcake..."
-        else:
-            mike.say "Yeah, Sam..."
-        mike.say "Of course he will!"
-        mike.say "You're going to be a perfect little family unit!"
-        "I somehow manage to keep the smile fixed on my face."
-        "And Sam doesn't notice the strain it causes me to do so."
-        show samantha normal
-    else:
-        menu:
-            "Keep your mouth shut":
-                "As if it wasn't bad enough to be holding a torch for Sam all this time."
-                "And on top of that I'm keeping the secret that Ryan's a cheating scumbag."
-                "Now I'm going to have to smile and pretend to be happy about this too!"
-                "But I suppose that none of that stuff really matters."
-                "I've already chosen to keep all of that to myself."
-                "So what right do I have to dump it all onto Sam right now?"
-                "It'd just be selfish of me to ruin her chances of being happy."
-                "So I swallow my true feelings and put a smile on my face."
-                mike.say "That's..."
-                if samantha.flags.nickname == "cupcake":
-                    mike.say "That's great, Cupcake - fantastic news!"
-                else:
-                    mike.say "That's great, Sam - fantastic news!"
-                mike.say "I know that you'll make a great mom."
-                show samantha happy
-                "Sam's face breaks into a smile at this."
-                "The exact kind of smile that makes my heart ache."
-                samantha.say "Aw, thank you, [hero.name]!"
-                samantha.say "And Ryan too?"
-                samantha.say "You think he'll make a great dad, right?"
-                "Sam keeps right on smiling as she asks me this."
-                "But there's no way she can know how it's twisting a knife inside of me."
-                "Part of me wants to tell her the truth."
-                "To say that he's a scumbag that doesn't deserve her."
-                "But I've already made my choice."
-                if samantha.flags.nickname == "cupcake":
-                    mike.say "Yeah, Cupcake..."
-                else:
-                    mike.say "Yeah, Sam..."
-                mike.say "Of course he will!"
-                mike.say "You're going to be a perfect little family unit!"
-                "I somehow manage to keep the smile fixed on my face."
-                "And Sam doesn't notice the strain it causes me to do so."
-                hide samantha fade
-            "Tell her about the cheating":
-                "After all that I've seen and kept quiet about between Sam and Ryan."
-                "I know that I should just smile and pretend to be happy about this too."
-                "But somehow I start speaking before I know what I'm doing."
-                "And then it's too late, everything just comes spilling out."
-                if samantha.flags.nickname == "cupcake":
-                    mike.say "I can't keep doing this, Cupcake!"
-                else:
-                    mike.say "I can't keep doing this, Sam!"
-                mike.say "I can't keep covering for him!"
-                show samantha surprised at center, zoomAt(1.0, (640, 900)), startle
-                "Sam looks puzzled, shaking her head in confusion."
-                samantha.say "Covering for who, [hero.name]?"
-                samantha.say "Wh...what do you mean?"
-                if samantha.flags.nickname == "cupcake":
-                    mike.say "Ryan's cheating on you, Cupcake."
-                else:
-                    mike.say "Ryan's cheating on you, Sam."
-                mike.say "He's been cheating on you all along!"
-                show samantha at center, zoomAt(1.0, (640, 900)), startle
-                "Sam keeps on shaking her head."
-                "As if the mere motion will make what I just said untrue."
-                samantha.say "He...he wouldn't do that to me!"
-                samantha.say "Not after all we've been through."
-                show samantha sad
-                samantha.say "Why are you saying that, [hero.name]?"
-                samantha.say "Are you jealous - is that it?"
-                "Sam's right about how I feel."
-                "But not about why I'm doing this."
-                if samantha.flags.nickname == "cupcake":
-                    mike.say "This isn't about me, Cupcake."
-                else:
-                    mike.say "This isn't about me, Sam."
-                mike.say "It's about you."
-                mike.say "And I guess it's about your baby too."
-                samantha.say "But...why tell me this now, [hero.name]?"
-                show samantha a
-                samantha.say "Why wait until I was pregnant?"
-                if samantha.flags.nickname == "cupcake":
-                    mike.say "I don't know, Cupcake."
-                else:
-                    mike.say "I don't know, Sam."
-                mike.say "Until now I kept quiet because I thought it'd be okay."
-                mike.say "Maybe I thought you wouldn't believe me."
-                mike.say "That you'd just think I was trying to break you up."
-                mike.say "But now there's a kid involved..."
-                mike.say "Well, that changes things, doesn't it?"
-                "Sam falls silent at this, nodding slowly."
-                "She seems to be pondering my words deeply."
-                show samantha a cry
-                "But then she finally looks me in the eye and speaks."
-                samantha.say "I think I'd like to be alone now, [hero.name]."
-                samantha.say "I need to think about what you've said."
-                hide samantha
-                show samantha a cry
-                with dissolve
-                "All I can do is nod in turn."
-                hide samantha a with moveoutright
-                "And then watch in silence as she walks away."
-                $ samantha.flags.knows_ryancheats = True
-                $ samantha.love -= 20
-                $ samantha.flags.nokiss = False
-    $ samantha.flags.ryanpregnancydelay = TemporaryFlag(True, 30)
-    $ samantha.flags.NPCpregnancy = "ryan"
-    return
-
-label samantha_preg_talk:
-    $ samantha.flags.tellpregnant = 2
-    if Harem.find_by_name("home").is_member(samantha):
-        "I'm just going about my daily routine when a soft voice interrupts my thoughts."
-        samantha.say "Hey [hero.name], do you have a moment?"
-        show samantha with dissolve
-        "Turning to face her, I can't help but smile. Samantha always lights up my day, and I can't believe she agreed to move in with us."
-        "In her hands, she's holding a small white box with the bakery logo printed on it's surface."
-        "Opening my arms we meet in a soft embrace. I can hear her usually gentle heartbeat beating fast; much faster than usual."
-        "Taking a step back from her, I gesture to the box she still holds."
-    else:
-        play sound door_knock
-        "A knock on the front door gets my attention."
-        queue sound door_knock
-        "I want to ignore it and don't move for a few long seconds. But the knocking persists."
-        mike.say "Alright, alright."
-        scene bg black with dissolve
-        scene bg house
-        show samantha casual
-        with wiperight
-        "I reluctantly rise from my spot on the couch and head to the door. I flip the gold painted lock and come face to face with Samantha."
-        if samantha.flags.nickname == "cupcake":
-            mike.say "Cupcake?"
-        else:
-            mike.say "Sam?"
-        "She stands on the porch with soft eyes and small, white box in her hands with the bakery logo."
-        samantha.say "Hi! I'm sorry, I didn't tell you I was coming over, did I?"
-        samantha.say "I got super caught up at work! Is this okay?"
-        "She already knows what I'm going to say."
-        mike.say "Yeah, sure. Come on in."
-        "I stand aside and hold the door wider, letting her walk in. She seems a little nervous, clutching at her box tighter."
-        scene bg livingroom
-        show samantha casual
-        with fade
-    mike.say "What's that?"
-    if not Harem.find_by_name("home").is_member(samantha):
-        "I gesture to her box."
-    samantha.say "Oh. Just something I made at work."
-    samantha.say "It's for you!"
-    if Harem.find_by_name("home").is_member(samantha):
-        "Sam shoves the box at me, and quickly walks past."
-    else:
-        "Sam shoves the box at me after I shut the door. I fumble but take it from her."
-    samantha.say "I'm going to get some water!"
-    hide samantha with moveoutright
-    "She exclaims before heading to the kitchen. This all seems... suspicious."
-    "I start to follow behind her but slow as I open the lid. I come to a full stop."
-    "Inside is a rather large cupcake, the top covered in two colours of icing- one half is pink and the other is blue. A white question mark is painted on the middle."
-    mike.say "..."
-    if samantha.flags.nickname == "cupcake":
-        mike.say "Cupcake?"
-    else:
-        mike.say "Sam?"
-    scene bg kitchen
-    show samantha casual blush
-    with fade
-    "I pick up the pace, getting to the kitchen. Sam is waiting at the counter, cheeks dusted red and waiting for me. On the surface in front of her is a long, white stick."
-    mike.say "Are you...?"
-    "I can't seem to form words. I know what's happening, I just can't seem to process it."
-    samantha.say "[hero.name]... I'm pregnant!"
-    "She taps a perfect nail on the pregnancy test and two little pink stripes stare back at me."
-    mike.say "This is..."
-    "I don't know what to say."
-    menu:
-        "Hug her":
-            hide samantha
-            show samantha casual close surprised
-            $ samantha.love += 5
-            "I rush forward and gather her into my arms. She seems surprised at first but melts into me."
-            show samantha flirt
-            samantha.say "... So you're okay with all this?"
-            mike.say "Hell yes, I am."
-            show samantha happy
-            "Sam pulls away and the warmth is gone. But once I see her happy tears, the warmth blooms in my chest this time."
-            samantha.say "You're going to be a great father, [hero.name]!"
-            samantha.say "Thank you..."
-            "She goes back into my arms and I hold her. A future children's book writer, baker, and beautiful girlfriend? She would be a great mother, too."
-        "Back away":
-            "Panic rises in my chest as soon as I get over the shock. My hands shake and I shift away from her."
-            show samantha sad
-            "Samantha's face visibly falls."
-            samantha.say "[hero.name]?"
-            mike.say "I- I'm sorry. Is this what you meant the other morning?"
-            samantha.say "... Yeah, I just... maybe I should have told you then."
-            "I set the cupcake down on the counter next to the positive pregnancy test."
-            samantha.say "W-What's wrong?"
-            mike.say "I just..."
-            "I don't really know how to word this."
-            mike.say "I don't really think we're ready for this."
-            "Samantha seems sad but has a spark of understanding in her eyes. Her mouth twitches as she struggles for a response."
-            samantha.say "Maybe... but we can become ready for it. I'm willing to try."
-            mike.say "What if it doesn't work out?"
-            hide samantha
-            show samantha casual close normal
-            "Samantha steps forward and takes my hand, gripping it tightly. Her fingers are warm."
-            samantha.say "I won't let it not work out. If we're both willing to try, we can do anything."
-            "I look down, but she doesn't let my eyes reach the floor."
-            samantha.say "Please? Try for me. I promise everything will be okay."
-            "I stare back at the sloppy cupcake on the counter. Globs of icing hang off the side and the question mark is shaky. She must have really been worried about coming to me with this."
-            mike.say "Alright. Let's do it. We can do it."
-            show samantha happy
-            "Sam's face lights up with joy. She lurches forward and wraps her arms around my neck. I catch her, squeezing her back."
-        "Tell her it's probably Ryan's":
-            mike.say "Are you sure it's not Ryan's?"
-            show samantha surprised
-            samantha.say "[hero.name]!"
-            samantha.say "You fucking jerk!"
-            mike.say "I think you should leave..."
-            mike.say "I am pretty sure it's not mine."
-            show samantha sad
-            samantha.say "I never thought you would do that..."
-            show samantha angry
-            samantha.say "I never want to see you again!"
-            $ samantha.set_gone_forever()
-    scene bg black with dissolve
-    return
-
-label samantha_wedding_baby:
-    if samantha.flags.NPCpregnancy == "ryan" or samantha.sexperience <= 0:
-        $ mike_pregnancy = False
-    else:
-        if persistent.pregnancy_end:
-            $ samantha.flags.mikeBabies += 1
-        $ mike_pregnancy = True
-    if persistent.pregnancy_end:
-        $ samantha.unpreg()
-    "I know that I came to the mall for something, that there was something I needed from here."
-    "And I'm pretty sure that I was headed straight for the store that sells it too."
-    "But all thought of such things vanishes from my head as soon as I hear a familiar voice."
-    ryan.say "Hey there, buddy!"
-    ryan.say "Over here!"
-    "My head spins around at the sound of Ryan's voice, my eyes searching for him."
-    "But at the same time, part of me is hoping and praying that he's alone."
-    "That, like me, he just happened to be at the mall on his own to pick something up."
-    show samantha a happy zorder 2 at right5
-    show ryan casual smile zorder 1 at left4
-    with dissolve
-    samantha.say "Hey, [hero.name]."
-    samantha.say "Fancy seeing you here..."
-    show samantha a normal
-    "Damn it!"
-    "Why did she have to be with him?"
-    "Why does it always have to feel like Ryan's rubbing my face in his happiness?"
-    "Isn't it enough that he got the girl and he's getting away with cheating on her too?"
-    if samantha.sexperience:
-        "Well...Sam is cheating on him with me too."
-        "So I guess that does balance things out a little."
-    "I do the best I can to force a genuine smile onto my face."
-    "I just hope that it's convincing enough."
-    mike.say "Hey, Ryan!"
-    if samantha.flags.nickname == "cupcake":
-        mike.say "Hey, Cupcake!"
-    else:
-        mike.say "Hey, Sam!"
-    mike.say "How in the hell are you guys doing?"
-    show ryan annoyed
-    "Ryan frowns at me and shakes his head."
-    "Then he looks down at what's in front of them."
-    ryan.say "Aren't you going to say hi to the new arrival?"
-    ryan.say "I'm sure little Annika here is keen to meet her uncle [hero.name]!"
-    "I look down and see that there's a baby stroller in front of Sam and Ryan."
-    "How in the hell could I have missed that?!?"
-    "And sure enough, there's a gurgling infant in there too!"
-    mike.say "That's..."
-    mike.say "That's a baby!"
-    ryan.say "Wow!"
-    ryan.say "There are no flies on you, [hero.name]!"
-    if samantha.flags.tellpregnant == 2 or "samantha_preg_talk_ryan" in DONE:
-        samantha.say "You sound surprised."
-        samantha.say "Didn't we tell you we were pregnant?"
-    if samantha.flags.tellpregnant == 2:
-        "Sam underlines the question with a meaningful stare."
-        "Of course she told me that she was pregnant."
-        "How could I have missed it when I've seen her naked so many times in recent weeks?"
-        "It's just the shock of actually seeing the kid in the flesh for the first time!"
-    if samantha.flags.tellpregnant == 2 or "samantha_preg_talk_ryan" in DONE:
-        if samantha.flags.nickname == "cupcake":
-            mike.say "Of course you did, Cupcake!"
-        else:
-            mike.say "Of course you did, Sam!"
-        mike.say "I...I just have a lot on my mind right now, that's all."
-    mike.say "Congratulations...both of you!"
-    show ryan smile
-    "Ryan beams like he always does, behaving like all the praise is for him alone."
-    "But Sam looks more downbeat, and her smile seems like it's a little forced."
-    "I mean, obviously she's going to be exhausted from the act of giving birth."
-    "Yet there's still something more to it than that."
-    "Most new mothers are practically radiant and full of joy."
-    "Sam looks like she hasn't slept in a month and she's depressed to boot."
-    if samantha.flags.nickname == "cupcake":
-        mike.say "Are you okay, Cupcake?"
-    else:
-        mike.say "Are you okay, Sam?"
-    mike.say "You look pretty beat!"
-    show samantha at right5, startle
-    samantha.say "Oh, you know how it is..."
-    show ryan annoyed
-    show samantha annoyed
-    samantha.say "Feeding in the middle of the night..."
-    samantha.say "Crying at random for hours on end..."
-    show samantha normal
-    ryan.say "And that's just Sam here!"
-    show ryan smile at left4, startle
-    show samantha annoyed
-    "As Ryan bursts into laughter at his own joke, I press Sam further."
-    if samantha.flags.nickname == "cupcake":
-        mike.say "Seriously, Cupcake..."
-    else:
-        mike.say "Seriously, Sam..."
-    mike.say "Are you okay?"
-    show ryan annoyed
-    samantha.say "I...I'll be fine, [hero.name]."
-    samantha.say "It's just adjusting to being a mom...that's all!"
-    if samantha.sexperience:
-        show samantha normal at center, zoomAt(1.15, (740, 800))
-        "Sam leans in closer, making sure that Ryan can't hear her."
-        samantha.say "We'll talk first chance we get, okay?"
-        hide samantha
-        show samantha at right5
-    if mike_pregnancy:
-        "About how this affects us - and about Annika's daddy!"
-    show samantha normal
-    "Sam forces another weak smile onto her face."
-    "But then the baby begins to wail."
-    "That sound focuses Sam's attention like a laser."
-    "And suddenly the kid's the only thing she has time for."
-    show ryan smile at left4, startle
-    ryan.say "Oops!"
-    ryan.say "Looks like duty calls!"
-    show ryan at left5 with move
-    ryan.say "See you around, [hero.name]!"
-    "I nod and smile almost as weakly as Sam."
-    hide samantha
-    hide ryan
-    with moveoutleft
-    "And I watch as she and Ryan hurry off to do whatever it is that new parents do."
-    "Well, at least I don't have to find out the gory details just yet!"
-    if mike_pregnancy:
-        "But what did Sam mean when she said that just now?"
-        "Surely she knows who the father is?"
-        "And that's Ryan - right?!?"
-    "Now, if only I could remember what I came here for in the first place..."
-    return
 
 label samantha_booty_call:
     "The expression on my face is usually pretty blase and uninterested whenever I pick up my phone and force myself to see what tiresome person in on the other end of the line this time."
@@ -1639,105 +1028,6 @@ label samantha_asleep_bedroom5:
     $ game.room = "secondfloor"
     return
 
-# label sam_murder_talk_sasha:
-#     "As you can imagine, the atmosphere around the house has been pretty strained since it happened."
-#     "And the fact that I'm calling the incident 'it' pretty much lets you know that it's bad."
-#     "I mean, how can you even begin to process the fact that someone broke into your house and raped you?"
-#     "That and worse, that she actually topped it all off by literally killing one of your housemates too?"
-#     "It takes me the first few days just to be able to think of Kylie without breaking into a cold sweat."
-#     "And even when I can manage that, I keep on seeing the whole thing playing out, over and again."
-#     "When I close my eyes, all I can see is the image of what happened to poor Sasha."
-#     "It's vivid and stark, like the scene is etched into my mind and I'll never be able to forget it."
-#     "I'm so wrapped up in my own mental trauma that I almost don't notice the others are avoiding me."
-#     "At first I just assume that everyone's feeling the same, that they need their mental space."
-#     "But soon enough I start to become worried that there's more to it than that."
-#     "Could they actually be avoiding me because I was the one that knew Kylie?"
-#     "Am I tainted by association with that crazy bitch?"
-#     "In the end, I decide to just up and ask."
-#     "I figure that either way, it's better to know the truth."
-#     "And I hope that Sam, the one that I've known the longest, will be straight up and honest with me."
-#     show samantha sad with dissolve
-#     mike.say "Ah..."
-#     if samantha.flags.nickname == "cupcake":
-#         mike.say "Hey, Cupcake!"
-#     else:
-#         mike.say "Hey, Sam!"
-#     show samantha surprised
-#     "Sam stops in her tracks, looking a little surprised to see me."
-#     "But she recovers quickly, hiding whatever she's feeling behind a mask of sympathy."
-#     show samantha normal
-#     samantha.say "Oh, hey, [hero.name]."
-#     samantha.say "How are you holding up?"
-#     "All I can do is shrug and let out a sigh."
-#     "The truth is that I'm not doing great - who would after what happened?"
-#     "But I still don't want to wallow in self-pity or be smothered with someone else's sympathy."
-#     "So I tell a lie, only a small one, just to move the conversation on."
-#     mike.say "Better than I did on the day it happened."
-#     if samantha.flags.nickname == "cupcake":
-#         mike.say "How about you, Cupcake?"
-#     else:
-#         mike.say "How about you, Sam?"
-#     show samantha surprised
-#     "I can see that the question catches Sam out, putting her on the backfoot."
-#     "Maybe she expected the whole conversation to be about me, rather than the both of us."
-#     samantha.say "I...I'm okay, [hero.name]."
-#     samantha.say "After all, that crazy girl didn't hurt me - did she?"
-#     "I want to be subtle about this, but I can't keep from stating the obvious."
-#     mike.say "The crazy girl that I was involved with?"
-#     show samantha sad
-#     samantha.say "I...I didn't mean it like that, [hero.name]."
-#     if samantha.flags.nickname == "cupcake":
-#         mike.say "But it's true, Cupcake - I'm the one that brought Kylie here."
-#     else:
-#         mike.say "But it's true, Sam - I'm the one that brought Kylie here."
-#     mike.say "If it weren't for me, Sasha would still be alive."
-#     samantha.say "Come on, [hero.name] - you can't believe that?!?"
-#     samantha.say "I thought that it was...that it might be my fault!"
-#     show samantha close
-#     "Now the roles are suddenly reversed, as I find myself baffled by Sam's confession."
-#     "I shake my head, trying to dismiss what she just said almost the moment I hear it."
-#     if samantha.flags.nickname == "cupcake":
-#         mike.say "What do you mean, Cupcake?!?"
-#     else:
-#         mike.say "What do you mean, Sam?!?"
-#     mike.say "That's just crazy!"
-#     samantha.say "Really, [hero.name]?"
-#     samantha.say "How is it any more crazy than you trying to take the blame for what a psycho did?"
-#     mike.say "Oh yeah..."
-#     if samantha.flags.nickname == "cupcake":
-#         mike.say "Point taken, Cupcake."
-#     else:
-#         mike.say "Point taken, Sam."
-#     samantha.say "Yeah, well..."
-#     samantha.say "With me it was thinking that my moving back in here was bad luck."
-#     samantha.say "Like I'd come back to the place where it started to go wrong with Ryan and me."
-#     samantha.say "But it wasn't - it was just a crazy girl doing what her crazy brain told her to do."
-#     samantha.say "You just had the misfortune to be the guy she fixated on, [hero.name]."
-#     samantha.say "And Sasha was in the wrong place at the wrong time."
-#     samantha.say "It sucks and it's not fair, but you're not right to blame yourself."
-#     if samantha.flags.nickname == "cupcake":
-#         mike.say "It still hurts, Cupcake."
-#     else:
-#         mike.say "It still hurts, Sam."
-#     samantha.say "I know, [hero.name]."
-#     samantha.say "But that's because it's supposed to."
-#     samantha.say "All the guilt and pain you're feeling - that's the proof your not insane."
-#     show samantha normal
-#     samantha.say "It's proof that you're not like her."
-#     "I feel Sam squeezing my hand tighter as she says this, holding my eye the whole time."
-#     "Knowing that she's there for me does make me feel better, more confident for the future."
-#     "I squeeze her hand in return, nodding to show that her words have had the desired effect."
-#     show samantha sad
-#     samantha.say "I feel like I never had the chance to get to know Sasha."
-#     samantha.say "Not properly, at least."
-#     show samantha normal
-#     samantha.say "I think I'd like you to tell me all about her, [hero.name]."
-#     "I nod again, beginning to warm to the idea."
-#     "And then I can't help laughing just a little."
-#     "As I can think of the perfect stories to tell Sam."
-#     "And I just know that they'll have her laughing too."
-#     return
-
 label sam_murder_talk_bree:
     "I know that I shouldn't be trying to hide away from the reality of what happened the other night."
     "There's no way that it's healthy to take something like that and shove it down inside my guts."
@@ -1893,28 +1183,17 @@ label samantha_male_ending:
     "All I can see is her silhouette, until my eyes adjust themselves and she finally comes into focus."
     show samantha wedding flirt at center, zoomAt(1.0, (640, 1040)) with dissolve
     show samantha at center, traveling(1.5, 5.0, (640, 1040))
-    if not samantha.is_visibly_pregnant:
-        "Get ready for some serious cliches from here on in, because I'm too caught up in the moment to be all laid back and original right now."
-        "Sam's always been one of the most beautiful girls I can ever remember meeting."
-        "Able to turn me on with as little as a smile and drive me crazy with anything much more than that."
-        "But today she seems to have become all of that and more in my eyes."
-        "Right now it feels as if all of the qualities that made me fall for her are at the surface and on show for everyone to see."
-        "Her dress is actually quite a simple affair of white, all the better to show off Sam's natural beauty."
-        "She's clutching a bouquet of white flowers, the same as the kind that decorate the chapel."
-        show wedding samantha with fade
-        "Before I know it, she's walked the short distance up the aisle and is standing before me."
-    else:
-        "Sam looks simply radiant as she walks up the aisle towards me."
-        "In fact, I don't think that I can ever recall thinking her more beautiful than she looks here today."
-        "Perhaps the now rather pronounced curve of her belly means that her white dress could not have been more complicated in terms of its cut."
-        "But to me, it just adds to the perfection of the moment."
-        "We talked a great deal about the fact that she was pregnant before the wedding."
-        "And neither of us felt that it was a thing that we should either be ashamed of or try to hide."
-        if not samantha.flags.NPCpregnancy:
-            "The child growing inside of her is there because of the love we feel for each other."
-            "Probably a more honest declaration of our love so than any wedding ceremony could be."
-        show wedding samantha with fade
-        "Sam reaches me at the altar while I'm still enjoying the sight of her approach, shaking her head with a smile."
+    "Sam looks simply radiant as she walks up the aisle towards me."
+    "In fact, I don't think that I can ever recall thinking her more beautiful than she looks here today."
+    "Perhaps the now rather pronounced curve of her belly means that her white dress could not have been more complicated in terms of its cut."
+    "But to me, it just adds to the perfection of the moment."
+    "We talked a great deal about the fact that she was pregnant before the wedding."
+    "And neither of us felt that it was a thing that we should either be ashamed of or try to hide."
+    if not samantha.flags.NPCpregnancy:
+        "The child growing inside of her is there because of the love we feel for each other."
+        "Probably a more honest declaration of our love so than any wedding ceremony could be."
+    show wedding samantha with fade
+    "Sam reaches me at the altar while I'm still enjoying the sight of her approach, shaking her head with a smile."
     "Priest" "Ahem...shall we begin?"
     show wedding samantha priest with dissolve
     "From there I try to concentrate on the moment, really I do."
@@ -2064,23 +1343,13 @@ label samantha_male_ending:
     samantha.say "And I finally put pen to paper, at least in a metaphorical sense, and wrote down the first of what became many stories in a career as a children's writer."
     samantha.say "I'm not likely to become the next JK Rowling any time soon, but I have a keen agent and a willing publisher, so things are looking good."
     samantha.say "That's what I was doing, just before I began typing this little reflection - working on a story."
-    if not samantha.is_visibly_pregnant:
-        samantha.say "But now I can hear [hero.name] calling me from just outside."
-        samantha.say "He's wanting to go on one of the long walks we've taken to having down the beach together."
-        samantha.say "Every day we simply head out and walk in the direction that our whim takes us."
-        samantha.say "We talk, swap ideas and always keep an eye out for any interesting driftwood or other detritus washed up overnight."
-        samantha.say "[hero.name] keeps talking about starting to make sculptures out of what we collect, even selling it at the flea market in the nearest little town."
-        samantha.say "He bristles when I tell him to grow a beard and start drinking local IPAs, to become a true hipster."
-        samantha.say "But the truth is that I think this new life is changing us both for the better."
-        samantha.say "Or maybe just washing over us, like the tide on the driftwood, rubbing away until we're worn down to who we were always supposed to be."
-    else:
-        samantha.say "But now I can hear [hero.name] calling me from the living room."
-        samantha.say "I can hear the small, sweet cries of Isaac too, sounds that are already starting to resemble words."
-        samantha.say "Our is starting to toddle now, but he still won't take a single faltering step without his mother being present to watch and clap his efforts."
-        samantha.say "I know that sometimes [hero.name] finds the life we're living out here quiet and sedate in comparison to the city."
-        samantha.say "But I think that he's becoming satisfied with things in a whole different way to what would have made him happy in the past."
-        samantha.say "It's funny how seeming to have less and so often make you want less too."
-        samantha.say "I suppose it's just a case of learning what truly has value in life."
+    samantha.say "But now I can hear [hero.name] calling me from the living room."
+    samantha.say "I can hear the small, sweet cries of Isaac too, sounds that are already starting to resemble words."
+    samantha.say "Our is starting to toddle now, but he still won't take a single faltering step without his mother being present to watch and clap his efforts."
+    samantha.say "I know that sometimes [hero.name] finds the life we're living out here quiet and sedate in comparison to the city."
+    samantha.say "But I think that he's becoming satisfied with things in a whole different way to what would have made him happy in the past."
+    samantha.say "It's funny how seeming to have less and so often make you want less too."
+    samantha.say "I suppose it's just a case of learning what truly has value in life."
     samantha.say "I'm pretty sure that this isn't the end of our story, not by a long measure."
     samantha.say "But perhaps it might the point where our story changes subtly."
     samantha.say "Changes in a way that means it's more interesting to us than to anyone that might happen to be in on it too."
@@ -2092,128 +1361,6 @@ label samantha_male_ending:
                 call sexperience_achievement_3 from _call_sexperience_achievement_3_18
     $ game.set_new_game_plus()
     $ renpy.full_restart()
-
-label samantha_babyshopping:
-    show samantha happy
-    samantha.say "I'm growing really excited."
-    "A grin is plastered on her face, not an uncommon, or unwelcome, sight, and it makes me smile at her in response."
-    mike.say "It won't be long now, we haven't much time to wait."
-    show samantha normal
-    samantha.say "They've been kicking a lot lately, I think they're getting as restless as us."
-    mike.say "We might even get an early arrival in that case."
-    show samantha annoyed
-    samantha.say "Oh, I hope so."
-    samantha.say "Not early enough for it to be unhealthy of course, but I just can't wait much longer!"
-    "I laugh, snaking an arm around Samantha's shoulder and pulling her closer."
-    mike.say "They're going to be quite the looker with us as the parents."
-    show samantha happy
-    "This time it was Samantha's time to laugh, blushing as she placed a light kiss on my cheek."
-    samantha.say "I hope they're just like you."
-    mike.say "And I hope they're just like you, so fingers crossed they get the best of both worlds."
-    show samantha a normal
-    samantha.say "I've been making a list of things we need."
-    "Samantha began as she pulled a sheet of paper from her pocket."
-    "My jaw drops as I catch sight of what's written on it. It wasn't one piece of paper, it was four, each with both sides filled to the brim with things to buy."
-    "Suddenly my wallet feels very empty, but I gulp, and nod as Samantha continues."
-    samantha.say "So I think we should get..."
-    "Though I can see the list myself, Samantha reading it aloud makes it seem that much longer."
-    samantha.say "And then we can finish with just a few sets of bibs! Got it?"
-    mike.say "Yeah I uh... I got it."
-    "She grins at me as I nod along, my hands feeling awfully sweaty."
-    show samantha at center, zoomAt(1.5, (640, 1040))
-    "Thankfully, Samantha doesn't mind that as she leans in, taking my hands in hers and stepping close."
-    "I find myself lost in her eyes for a few moments."
-    show samantha flirt
-    samantha.say "I love you, [hero.name]."
-    "I wink at her, leaning in and embracing her."
-    mike.say "I love you too."
-    show samantha happy
-    "Seeing her so overjoyed, that cute little smile, the way her entire face lights up with glee, makes everything worth it."
-    "It's priceless."
-    mike.say "Come on then, lots to do."
-    scene bg drugstore
-    show samantha casual normal at center, zoomAt(1.5, (640, 1040))
-    with fade
-    "I pull away quickly, keeping her hand in mine and motioning for her to lead."
-    "I wouldn't know where to start, despite planning the trip, and it's clear she's come more than prepared."
-    "She's even picked out specific products ahead of time, a level of forethought I'd never have achieved."
-    mike.say "You really know what you're doing, huh?"
-    samantha.say "Well, it's kinda embarrassing."
-    samantha.say "I didn't think you'd want to spend all day browsing different onesies, so I came down yesterday to pick some things out."
-    "I'm almost stunned for a moment."
-    mike.say "You made this trip twice just to make it easier on me?"
-    show samantha flirt
-    samantha.say "I knew you'd be stressed out with the baby so close, and it was making me restless, so yep."
-    "She looks a little sheepish, but I'm too busy appreciating her to calm her down immediately."
-    mike.say "I can't believe you sometimes."
-    mike.say "You're so thoughtful, it's impressive."
-    show samantha happy
-    samantha.say "Hehe, I just want to do everything I can to make this easier on you."
-    mike.say "That's my job, I should be doing that for you."
-    samantha.say "You already do so much, I just had to return the favour."
-    hide samantha
-    show samantha surprised at center, zoomAt(1.5, (640, 1040)), vshake
-    "I scoff, and are about to retort when she suddenly yelps."
-    samantha.say "Ah! They're kicking."
-    hide samantha
-    show samantha babyshopping
-    with fade
-    "I practically drop my bags where I stand, freeing up my hands for Samantha to guide to her stomach."
-    "Her skin is warm, and, sure enough, I soon feel something bump my hand."
-    "I'm surprised at just how violent it is, and it must have shown since Samantha quickly began laughing."
-    mike.say "Wow, they're going to be a real fighter, huh?"
-    samantha.say "It definitely feels like it, a little minx too, she keeps waking me up with this."
-    "I wave a finger disapprovingly at Samantha's stomach, shaking my head and putting on my best stern voice."
-    mike.say "Now now, Mommy needs her rest, stop waking her up."
-    "Samantha laughs at my expression."
-    samantha.say "You already look like a dad, now you just need some bad jokes and you're golden."
-    mike.say "Bad jokes?"
-    mike.say "How do you make holy water?"
-    samantha.say "I don't know, how?"
-    mike.say "You boil the hell out of it."
-    "Samantha visibly cringes, though laughs anyway, whether or not it's simply out of pity I can't tell."
-    samantha.say "Hehe, you really are ready to be a dad."
-    mike.say "If that's all it takes, I'll be the best dad ever."
-    samantha.say "I'm sure you will be anyway, [hero.name]."
-    "Another kick interrupts my train of thought, Samantha yelping quietly at what I can only assume was a particularly strong one."
-    samantha.say "Maybe they'll be an athlete."
-    mike.say "They've certainly got the strength for it."
-    mike.say "What do you think, do you want to be an athlete?"
-    "I ask the mound on Samantha's stomach, then leant in, placing my cheek lightly against it."
-    "I can't make out Samantha's face, but she has to be blushing, I can tell from the way even her stomach grew slightly warmer."
-    mike.say "Interesting..."
-    "I muse, smirking to myself."
-    if samantha.flags.nickname == "cupcake":
-        mike.say "They say they want to be a scientist, Cupcake."
-    else:
-        mike.say "They say they want to be a scientist, Samantha."
-    samantha.say "Hehe, you're lucky, she never talks to me."
-    mike.say "Why don't you talk to Mommy?"
-    "I ask, pressing myself a little further into her stomach, not hard enough to harm the baby of course, but enough to freshly embarrass Samantha."
-    if samantha.flags.nickname == "cupcake":
-        mike.say "Ah, they say it's because I'm the cooler parent. Sorry Cupcake, straight out of the baby's mouth."
-    else:
-        mike.say "Ah, they say it's because I'm the cooler parent. Sorry Samantha, straight out of the baby's mouth."
-    samantha.say "Oh, is that right? I'll remember that the next time they're craving a chocolate muffin."
-    mike.say "Hear that? No more chocolate muffins for you."
-    "I start to laugh, but am cut off by a foot to my cheek."
-    "Startled, I quickly pull back, though quickly break into laughter alongside Samantha."
-    samantha.say "I don't think she liked that."
-    mike.say "Well, I wouldn't be happy if someone threatened to take MY muffins away."
-    hide samantha
-    show samantha close
-    with fade
-    "I stand and quickly embrace Samantha, squeezing her tightly."
-    samantha.say "They're going to be amazing."
-    mike.say "Just like their mother."
-    samantha.say "Just like their dad."
-    "I shut her up with a kiss, otherwise we'd be here arguing over who's best for the rest of the day."
-    "Samantha seems embarrassed the entire situation happened in public, but thankfully we're soon off again before someone walks down the aisle we'd been standing in."
-    scene bg black with timelaps
-    scene expression f"bg {game.room}" with timelaps
-    "By the time the day's over, I've got enough bags that I struggle to carry them all, and despite it being only a short walk I have to get a cab home."
-    "It's better to have bought everything now than later though, and seeing how happy Samantha was as she picked out cute clothes was worth it alone."
-    return
 
 label samantha_meet_sasha:
     $ game.flags.sashaknowssamantha = True
@@ -5055,22 +4202,6 @@ label samantha_event_B02:
 
 label samantha_event_B03:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     $ renpy.dynamic("answer")
     if samantha.love.max < 160:
         $ samantha.love.max = 160
@@ -5344,7 +4475,6 @@ label samantha_event_B03:
                 if samantha.impregnate(force=True, secret=True):
                     $ samantha.flags.pill = False
                     $ samantha.hide()
-                    $ samantha.flags.unknown_father = True
             else:
 
                 "I spill into the condom."
@@ -5534,158 +4664,6 @@ label samantha_event_B03:
 
     $ samantha.flags.cuck_ryan = True
     $ samantha.sexperience += 1
-    return
-
-label samantha_event_B04:
-    if samantha.love.max < 200:
-        $ samantha.love.max = 200
-    $ samantha.unhide()
-    $ samantha.flags.tellpregnant = 2
-    play sound cell_vibrate
-    "..."
-    queue sound cell_vibrate
-    "It vibrates again."
-    "Whoever it is can wait."
-    "I shove the phone into my pocket..."
-    scene bg livingroom with fade
-    "I can hear the rain from inside."
-    "Where was my umbrella?"
-    "I look around the front for a few moments before I conclude one of my roommates used it or lost it somewhere."
-    "Sighing, I turn the knob and pull open the door."
-    scene bg black with dissolve
-    scene bg house
-    show samantha casual cry
-    with wiperight
-    "..."
-    samantha.say "... [hero.name]."
-    "Samantha stands outside in the rain, barely covered by the porch roof."
-    "Her hair is wet and her clothes are dotted with raindrops."
-    "She's shivering, arms wrapped around her middle."
-    if samantha.flags.nickname == "cupcake":
-        mike.say "Cupcake? What are you doing here?"
-    else:
-        mike.say "Sam? What are you doing here?"
-    "I didn't really understand."
-    "I was almost expecting to never see her again at this point."
-    "But here she is."
-    "Inspecting closer, I realize she probably walked here."
-    show samantha sad
-    samantha.say "I need to talk to you."
-    "The idea of work flew out of my mind."
-    scene bg livingroom
-    show samantha casual sad at right
-    with fade
-    "I stepped aside, letting her in. She was being..."
-    "Unusually serious."
-    "It was hard to tell if she was going to give me horrible news or not."
-    "I start walking to the couch, figuring she'd want to sit down."
-    "She stays by the door."
-    "I stare at her for a few long seconds."
-    samantha.say "I... um."
-    samantha.say "I'm pregnant."
-    "..."
-    "What?"
-    mike.say "Oh."
-    mike.say "Congratulations."
-    "It slips out before I can process what she even says."
-    "Her lack of expression gives me the much needed time to come to terms."
-    mike.say "Oh."
-    "By the way she's been talking about Ryan, it doesn't sound like they've been spending a lot of personal time together."
-    "Now that I think about it, we didn't even use a condom."
-    mike.say "You think it's mine?"
-    samantha.say "I don't know."
-    "I take a few steps closer to her."
-    "It looks like she wants to back away and the wall behind her stops her."
-    if samantha.flags.nickname == "cupcake":
-        mike.say "Cupcake I-..."
-    else:
-        mike.say "Sam I-..."
-    "What can I even say?"
-    "It's like I can physically feel my world crashing down around me."
-    "Did I just... ruin Sam's marriage?"
-    "Or worse, her life?"
-    "It's no use thinking like this."
-    mike.say "I'll get you a towel."
-    scene bg livingroom at blur(16), dark, dark with dissolve
-    "Before she can say anything else, I rush to the linen closet and grab one of our fluffiest towels."
-    scene bg livingroom
-    show samantha casual sad at right
-    with dissolve
-    "When I come back, she's still standing in the same spot."
-    "I hand it to her. Samantha takes it silently and holds it numbly in her hands."
-    mike.say "What are you going to do with it?"
-    show samantha surprised
-    samantha.say "What?"
-    mike.say "I mean... do you have a plan?"
-    show samantha sad
-    samantha.say "I just ran here from my fucking home. Does it sound like I have a plan?"
-    "I don't think I've ever heard her swear before."
-    "It sounds wrong coming out of her mouth."
-    if samantha.flags.nickname == "cupcake":
-        mike.say "I'm so sorry, Cupcake."
-    else:
-        mike.say "I'm so sorry, Sam."
-    show samantha annoyed
-    samantha.say "I don't want to hear it. This... I'm just as guilty as you. I can't lie to Ryan- I won't."
-    show samantha sad
-    samantha.say "I just want to know... if it really is yours, will you be here? Or am I going to be alone?"
-    if samantha.flags.nickname == "cupcake":
-        mike.say "Cupcake..."
-    else:
-        mike.say "Sam..."
-    menu:
-        "I'll be there.":
-            if samantha.flags.nickname == "cupcake":
-                mike.say "Every step of the way, Cupcake. I wouldn't leave you like that."
-            else:
-                mike.say "Every step of the way, Samantha. I wouldn't leave you like that."
-            hide samantha
-            show samantha close pregnant cry
-            "Sam nods, tears finally falling from her lashes, mixing with heavy rain. She rushes forward and throws her arms around me."
-            samantha.say "Thank you- thank you."
-            mike.say "Here's what we'll do, okay? We'll set up an appointment for you and get a real strategy. Then we can go from there."
-            show samantha sad
-            samantha.say "Okay."
-            mike.say "Do you... want to keep it? With Ryan?"
-            samantha.say "Keeping it? That's not even a question. I can't just get rid of it."
-            samantha.say "It's not some trash left over- this is a person. If Ryan wants one or not, I'm keeping it."
-            mike.say "I- alright."
-            play sound cell_vibrate
-            "My phone buzzes in my back pocket. I quickly turn my phone off."
-            mike.say "Do you want to stay here? You could probably do with some de-stressing. Tea?"
-            samantha.say "..."
-            samantha.say "Sure."
-            "Her sobs were subsiding the more we talked. Samantha's face was contorted, trying not to have a full blown freak out."
-            mike.say "I don't want you to worry about Ryan, okay. I'll take everything for you- we can say it's my fault. That you weren't in the right mind."
-            samantha.say "No. I feel guilty enough. I have to tell Ryan, and I will."
-            mike.say "Alright. If you need me there, I will be."
-            show samantha normal
-            samantha.say "Thank you."
-            scene bg kitchen with fade
-            "I get Samantha settled on the couch and go to make tea for her."
-            "As I grab spoonful after spoonful of sugar, I try not to overthink this, or think at all."
-            "If it wasn't mine, then there was nothing to worry about other than Ryan being pissed with me."
-            if hero.flags.knows_ryancheats:
-                "At the same time, I still had dirt on him."
-                "Pulling that out could result in a less than pretty black eye, but... okay, I'm definitely overthinking."
-                "What Samantha needs is someone to lean on. If I had to be that person, then so be it."
-        "There's no way.":
-            if samantha.flags.nickname == "cupcake":
-                mike.say "Cupcake- what? There's no way either of us can do this. Not even you and Ryan."
-            else:
-                mike.say "Sam- what? There's no way either of us can do this. Not even you and Ryan."
-            mike.say "You're still studying in university, I need roommates to pay for my house, and you just got married. Where is this money going to come from?"
-            samantha.say "..."
-            mike.say "I think you should work this out with Ryan. You two are a couple. You have parents that can help you out. It's better if I stay out of this."
-            show samantha surprised
-            samantha.say "Even if it's yours?"
-            mike.say "..."
-            mike.say "I-"
-            show samantha sad
-            samantha.say "I get it. Goodbye, [hero.name]."
-            hide samantha with moveoutright
-            "Before I can stop her, she's back out the door, running down my street. I fucked up, didn't I?"
-    scene bg black with dissolve
     return
 
 label samantha_event_C01:
@@ -6726,21 +5704,6 @@ label samantha_event_D03:
     "And when I finally manage to drag my cock out of her pussy, Sam instantly starts to leak."
     "All I can hear is the sound of her panting from sheer exhaustion."
     "And all I can see is the cum, dripping steadily out from between her swollen lips."
-    if not samantha.flags.pill and not samantha.is_visibly_pregnant:
-        "It's then that a random thought strikes me."
-        if samantha.flags.nickname == "cupcake":
-            mike.say "Cupcake..."
-        else:
-            mike.say "Sam..."
-        samantha.say "Hmm?"
-        mike.say "You are on the pill - right?"
-        show samantha reverse smile
-        samantha.say "Mmm...nope."
-        show samantha reverse orgasm
-        samantha.say "There's no point - Ryan always uses a rubber anyway!"
-        "All of a sudden, the steady stream of semen still running out of Sam's pussy takes on far greater significance."
-        "I look at her in honest surprise, but all she does is smile right back at me."
-        "From her expression, you'd think there was nothing more innocent in the entire world."
     hide sexinserts
     $ samantha.sexperience += 1
     return
@@ -6943,13 +5906,8 @@ label samantha_event_D05:
     show samantha doggy vaginal
     "And as I begin to push into her, I see Sam's mouth open in sympathy with her pussy."
     "No matter how many times we do this, I still can't believe just how good she feels."
-    if samantha.is_visibly_pregnant:
-        show samantha doggy milk
-        "I can feel the added weight to Sam's body from her heavy, swollen belly."
-        "And her breasts hang down, already growing in anticipation of what's to come, already leaking."
-    else:
-        "I never imagined that Sam's body could look any more amazing than when I stole glances at her clothed."
-        "But once naked, she's something else altogether."
+    "I never imagined that Sam's body could look any more amazing than when I stole glances at her clothed."
+    "But once naked, she's something else altogether."
     show samantha doggy scream
     samantha.say "Oh...[hero.name]..."
     samantha.say "It feels so, SO good inside of me!"
@@ -8152,194 +7110,6 @@ label samantha_birthday_sex:
     "And I wonder if I can stay awake for the duration of the journey home."
 
     return
-
-label samantha_exclusive_cheated:
-
-    "This date with [active_girl.name] goes pretty well. And I wonder about my next move."
-    "Girl" "[hero.name]?"
-    "Still lost in my thoughts, I turn back to see who's calling."
-    play sound spank
-    with hpunch
-    scene expression f"bg {game.room}" at center, zoomAt (1, (640, 1145)), blur(4), swing(1.07, 0.6, 1.08, -0.6, 0.5)
-    show samantha angry at center, blur(2), zoomAt (1, (640, 840)), swing(1.0, 0.4, 1.0, -0.4, 0.5)
-    with fade
-    "Which I guess is why the sudden sensation of being struck in the face comes as a complete surprise!"
-    "Suddenly I'm seeing stars, and my cheek feels like it's been blistered with a cheese-grater."
-    "I honestly don't think I'd have even known what was happening."
-    "That is if not for the yelling that comes along in it's wake..."
-    scene expression f"bg {game.room}"
-    show samantha angry
-    show fx anger
-    with dissolve
-    samantha.say "How does that feel, you lying piece of shit?!?"
-    mike.say "Huh...wha..."
-    mike.say "H...hey..."
-    mike.say "What the hell?!?"
-    play sound spank
-    show samantha angry at center, zoomAt (1.5, (640, 1040))
-    with hpunch
-    "Sam doesn't hesitate to slap me a second time, catching me on the other cheek."
-    show fx anger
-    samantha.say "You lied to me, you bastard!"
-    samantha.say "And like a moron, I believed you!"
-    mike.say "What are you even talking about?!?"
-    mike.say "Didn't we just get through dealing with this?"
-    "Sam makes to hit me for a third time, aiming a back-handed blow at my face."
-    hide samantha
-    show samantha casual angry
-    "But this time I'm ready for it, and I manage to slink backwards and out of range."
-    samantha.say "Yeah, I thought we did too."
-    show samantha casual annoyed
-    samantha.say "But then I started having my doubts."
-    samantha.say "So I followed you."
-    "I'm surprised by the shock I feel at her telling me this."
-    "And I can't say if it's more from guilt or the invasion of my privacy!"
-    mike.say "You followed me?!?"
-    mike.say "How could you do that?"
-    show samantha casual angry blush
-    "Sam's fuming at me by now, her eyes wide with rage."
-    "I fully expect her to start grinding her teeth or foaming at the mouth."
-    show fx anger
-    samantha.say "How could I not?!?"
-    samantha.say "I needed to know if you were telling the truth, [hero.name]."
-    samantha.say "I needed to know that I could trust you!"
-    show fx anger
-    samantha.say "But now, I see you with her, so I know that I can't!"
-    if samantha.flags.nickname == "cupcake":
-        mike.say "I...I'm sorry, Cupcake."
-    else:
-        mike.say "I...I'm sorry, Sam."
-    show samantha sad
-    samantha.say "You know, if you'd have just come out and told the truth, I'd have forgiven you."
-    samantha.say "What Ryan did taught me that nobody's perfect, [hero.name]."
-    samantha.say "And I didn't need to think that you're perfect."
-    samantha.say "All I needed was to know that you were honest with me..."
-    "With that, Sam turns her back on me and starts to walk away."
-    hide samantha with dissolve
-    "I think about running after her, about pleading with her."
-    "But my cheeks are still stinging from the slaps she gave me."
-    "And something tells me that there's going to be no talking her round this time."
-    "She doesn't even need to say that it's over in as many words."
-    "I know without being told that I just watched our relationship come to a crashing end."
-    "And all I did was stand here, watching Sam walk away from me."
-    $ samantha.set_gone_forever()
-    $ game.active_date.stay = False
-    $ renpy.hide(date_girl.id)
-    $ renpy.hide(active_girl.id)
-    $ game.room = game.room.replace("date_", "")
-    return
-
-label samantha_pregnant_request:
-    "Most of the time you can tell when a girl wants to ask something but can't summon up the courage."
-    "You know what I mean - they beat about the bush, or they try to come at it from another angle?"
-    "But then there are the girls that have enough confidence just to come out and say it."
-    "And guess which camp Sam falls into..."
-    show samantha
-    samantha.say "Hey, [hero.name]..."
-    samantha.say "What do you think about us having a baby?"
-    with vpunch
-    "I almost choke on my own tongue as what she just said sinks in."
-    "But all my apparent distress gets me from Sam is a chuckle and a shake of the head."
-    show samantha annoyed
-    samantha.say "Wow!"
-    samantha.say "I didn't think it was that repulsive of an idea!"
-    "Starting to recover a little, I shake my head desperately."
-    "The last thing that I want is for Sam to think that I find anything involving her repulsive!"
-    mike.say "Ah, no..."
-    if samantha.flags.nickname == "cupcake":
-        mike.say "No way, Cupcake!"
-    else:
-        mike.say "No way, Sam!"
-    mike.say "That's not what I meant."
-    mike.say "You just caught me off-guard, that's all."
-    show samantha normal
-    samantha.say "Okay, okay..."
-    samantha.say "I believe you, [hero.name], honestly I do!"
-    samantha.say "But take a moment to think about it, yeah?"
-    "I really wasn't joking when I said that Sam had taken me by surprise."
-    "And even now she's giving me some time to think about it, I'm still in a spin."
-    "Does she really expect me to be able to give her an answer on the spot?"
-    samantha.say "I said take a moment, [hero.name]."
-    samantha.say "I didn't say take forever!"
-    "Apparently that's exactly what she's expecting!"
-    if samantha.flags.nickname == "cupcake":
-        mike.say "Okay, Cupcake."
-    else:
-        mike.say "Okay, Sam."
-    mike.say "I'm thinking..."
-    mike.say "I'm still thinking..."
-    "I hate being put on the spot like this at the best of times."
-    "But this is a really serious decision, which makes it that much worse."
-    "If I spring for the wrong answer, then I've screwed up badly!"
-    menu:
-        "Agree":
-            "I always saw kids in the future for Sam and me."
-            "Only I never really thought about it being the immediate future!"
-            "But then when have we been able to plan for the long-term?"
-            "I spent so long holding a torch for Sam when she was with Ryan."
-            "And then, when that came to an end, everything seemed to happen so fast."
-            "So if there's something we both want out of life, why should we wait?"
-            if samantha.flags.nickname == "cupcake":
-                mike.say "I always wanted kids, Cupcake."
-            else:
-                mike.say "I always wanted kids, Sam."
-            mike.say "So why not now?"
-            "Sam's eyes go wide at this."
-            "And I can see she's delighted with my answer."
-            show samantha blush
-            samantha.say "You really mean that?"
-            samantha.say "You're not just saying it to make me happy?"
-            "I shake my head, dismissing her fears."
-            mike.say "I'm not Ryan, remember?"
-            mike.say "I love you too much not to be honest!"
-            show samantha close flirt
-            "Sam leans into me, wrapping her arms around my waist."
-            "I do the same in return, enjoying moment."
-            show samantha normal
-            samantha.say "This is a big step, [hero.name]."
-            samantha.say "Kids are going to change our lives forever."
-            show samantha happy
-            samantha.say "But at least we get to have some fun along the way!"
-            $ samantha.love += 2
-            $ samantha.flags.pregrequest = True
-        "Refuse":
-            "It's not like I don't see kids in the future for Sam and me."
-            "Just not in the immediate future, that's all!"
-            "I mean, it's not that long ago that she was planning her future with Ryan."
-            "Wait a minute..."
-            "What if this is something to do with how all of that ended?"
-            "It'd be a big mistake for us to have kids just because of that."
-            "Just because Sam maybe thinks it'd make our relationship more solid."
-            if samantha.flags.nickname == "cupcake":
-                mike.say "Cupcake, be honest with me, yeah?"
-            else:
-                mike.say "Sam, be honest with me, yeah?"
-            mike.say "This is different, totally different."
-            mike.say "But were you planning to have kids so soon with Ryan?"
-            show samantha annoyed
-            "Suddenly Sam becomes defensive."
-            "She frowns as she crosses her arms and glares at me."
-            samantha.say "What the hell's that supposed to mean?!?"
-            samantha.say "You think I'm just replacing him with you or something?"
-            if samantha.flags.nickname == "cupcake":
-                mike.say "No, Cupcake - of course not."
-            else:
-                mike.say "No, Sam - of course not."
-            mike.say "I just want to be sure that you're ready for kids, you know?"
-            mike.say "That you're not trying to do it for any other reason."
-            mike.say "Because I don't need you to have my babies to stay with you."
-            mike.say "And I'm willing to wait until the time is right."
-            "Sam opens her mouth to say something ferocious."
-            "But then she stops and her mood seems to change."
-            show samantha sad
-            "She nods, looking a little sad."
-            samantha.say "That...actually makes a lot of sense, [hero.name]."
-            samantha.say "I suppose I never looked at it that way before!"
-            samantha.say "Maybe we should wait after all?"
-            "I nod at this, happy we can agree with one another."
-            $ samantha.love -= 2
-    return
-
 
 label samantha_side_event_01:
     play sound cell_vibrate

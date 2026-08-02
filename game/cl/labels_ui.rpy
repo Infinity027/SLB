@@ -365,15 +365,6 @@ screen smartphone(char=None, selected_screen="home"):
                     text "{b}Job (day):{/b} [job_day]" alt ""
                     $ character_self_voicing += f". Job (day): {job_day}"
 
-                    if hero.is_female:
-                        text "{b}Sex:{/b} Female" alt ""
-                        if hero.is_visibly_pregnant or [guy for guy in Guy.all() if guy.flags.toldpreg]:
-                            text "{b}Fertility:{/b} Pregnant" alt ""
-                            $ character_self_voicing += f". Fertility: Pregnant"
-                        else:
-                            text "{b}Fertility:{/b} [hero.fertility]%" alt ""
-                            $ character_self_voicing += f". Fertility: {hero.fertility}%"
-                    else:
                         text "{b}Sex:{/b} Male" alt ""
 
                     button:
@@ -901,12 +892,8 @@ screen npc_info(girl, clear=False):
                                     $ info_self_voicing += "Birth control: No. "
                                 $ text_displayed += 1
                             if hero.has_skill("fertility_assessment"):
-                                if girl.is_visibly_pregnant or girl.flags.toldpreg:
-                                    text "{b}Fertility:{/b} Pregnant" size 15 color text_color font "exo2_regular" alt ""
-                                    $ info_self_voicing += f"Fertility: Pregnant. "
-                                else:
-                                    text "{b}Fertility:{/b} [girl.fertility]%" size 15 color text_color font "exo2_regular" alt ""
-                                    $ info_self_voicing += f"Fertility: {girl.fertility}%. "
+                                text "{b}Fertility:{/b} [girl.fertility]%" size 15 color text_color font "exo2_regular" alt ""
+                                $ info_self_voicing += f"Fertility: {girl.fertility}%. "
                                 $ text_displayed += 1
                         if girl.sexperience >= 1:
                             text "{b}Sex count:{/b} [girl.sexperience]" color text_color size 15 font "exo2_regular" alt ""

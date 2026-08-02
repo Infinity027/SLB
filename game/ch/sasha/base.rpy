@@ -215,7 +215,6 @@ init python:
     "conditions": [
         IsHour(20, 3),
         HeroTarget(
-            IsGender("male"),
             IsActivity("knock_bedroom3")),
         PersonTarget(sasha,
             Not(IsHidden()),
@@ -233,7 +232,6 @@ init python:
     "conditions": [
         IsTimeOfDay("evening"),
         HeroTarget(
-            IsGender("male"),
             IsActivity("watch_tv"),
             IsRoom("livingroom"),
             ),
@@ -517,10 +515,6 @@ label sasha_tv_footrub_2:
         $ sasha.flags.footrub = 0
     $ sasha.sub -= 5
     $ sasha.love += 5
-
-
-
-
     "I can't quite put my finger on it, but there's an odd cast in Sasha's eyes whenever she looks over in my direction."
     "It's not hostile in any way, just enough to make me feel a little nervous."
     "I feel as if she's watching me, waiting for the right moment to spring an unexpected surprise."
@@ -810,11 +804,6 @@ label sasha_greet_dialogues_male:
                 mike.say "Good evening Sasha."
     return
 
-label sasha_kiss_reaction_male:
-    if sasha.lesbian > MAX_LES_GUY_SEX:
-        $ sasha.lesbian -= 1
-    return
-
 label sasha_kiss_male:
     scene expression f"bg {game.room}"
     if sasha.love < 25 and not sasha.is_girlfriend and not game.active_date.score >= 75:
@@ -832,7 +821,6 @@ label sasha_kiss_male:
     elif not sasha.flags.kiss:
         hide sasha
         $ sasha.love += 5
-        call sasha_kiss_reaction_male from _call_expression_265
         show sasha kiss
         "Sasha seems, for the most part, to work more on instinct than conscious thought."
         "And being around her, it kind of starts to rub off on you too."
@@ -845,7 +833,6 @@ label sasha_kiss_male:
     else:
         hide sasha
         $ sasha.love += 2
-        call sasha_kiss_reaction_male from _call_expression_266
         show sasha kiss
         "Sasha's quick to steal a kiss where and whenever the mood takes her."
         "But once she's sneaked what was supposed to be a small show of affection, it never seems to be enough."

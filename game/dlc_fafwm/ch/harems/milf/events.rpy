@@ -3085,29 +3085,7 @@ label cherie_claire_kiara_male_ending:
     show kiara wedding at center, traveling( 1.25, 3.0, (940, 890))
     "Cherie walks with poise and confidence, a woman comfortable in her own authority."
     "Kiara radiates the control and charm that makes her so exotic, a knowing look in her eye."
-    if claire.is_visibly_pregnant and cherie.is_visibly_pregnant and kiara.is_visibly_pregnant:
-        "The exquisite cut of their dresses taking into account their being with child."
-        "Not seeking to hide it, and yet not making it stand out in any kind of stark manner."
-    elif claire.is_visibly_pregnant and cherie.is_visibly_pregnant:
-        "The exquisite cut of Claire and Cherie's dresses taking into account their being with child."
-        "Not seeking to hide it, and yet not making it stand out in any kind of stark manner."
-    elif claire.is_visibly_pregnant and kiara.is_visibly_pregnant:
-        "The exquisite cut of Claire and Kiara's dresses taking into account their being with child."
-        "Not seeking to hide it, and yet not making it stand out in any kind of stark manner."
-    elif cherie.is_visibly_pregnant and kiara.is_visibly_pregnant:
-        "The exquisite cut of Cherie and Kiara's dresses taking into account their being with child."
-        "Not seeking to hide it, and yet not making it stand out in any kind of stark manner."
-    elif claire.is_visibly_pregnant:
-        "The exquisite cut of Claire's dress taking into account her being with child."
-        "Not seeking to hide it, and yet not making it stand out in any kind of stark manner."
-    elif cherie.is_visibly_pregnant:
-        "The exquisite cut of Cherie's dress taking into account her being with child."
-        "Not seeking to hide it, and yet not making it stand out in any kind of stark manner."
-    elif kiara.is_visibly_pregnant:
-        "The exquisite cut of Kiara's dress taking into account her being with child."
-        "Not seeking to hide it, and yet not making it stand out in any kind of stark manner."
-    else:
-        "All in all, they look like a dream come true, a fantasy incarnate."
+    "All in all, they look like a dream come true, a fantasy incarnate."
     "And as they reach the altar, I can finally let all of my emotions come bursting out."
     mike.say "Oh man..."
     mike.say "You guys look SO beautiful."
@@ -3230,22 +3208,6 @@ label cherie_claire_kiara_male_ending:
     kiara.say "Book clubs to infiltrate, bake sales to be turned into a profitable racket."
     kiara.say "Who would have thought that the suburbs held so many things ready to be exploited?"
     kiara.say "Perhaps the future of the underworld lies here, rather than in the big city?"
-    if (claire.is_visibly_pregnant or claire.flags.mikeBabies >= 1):
-        claire.say "Oh, and little Mikey Junior is coming growing up so fast."
-        claire.say "They say that he's a natural at little league baseball."
-        claire.say "And not just because his dad's the head coach!"
-    if (cherie.is_visibly_pregnant or cherie.flags.mikeBabies >= 1):
-        cherie.say "My Francois is already saying that he wants to be like her mother."
-        cherie.say "And he looks so beautiful in his suits that match my own."
-        cherie.say "Already able to run rings around his father in negotiations!"
-    if (kiara.is_visibly_pregnant or kiara.flags.mikeBabies >= 1):
-        kiara.say "Sofia may have her father's looks and amiable nature."
-        kiara.say "But she is already the secret don of the day-care."
-        kiara.say "Cutting deals and dispensing favours like her mother!"
-    if not any(npc.is_visibly_pregnant or npc.flags.mikeBabies >= 1 for npc in (claire, cherie, kiara)):
-        claire.say "Something tells me it won't be long before we hear the pitter-patter of tiny feet too!"
-        cherie.say "The only question is, will it be one, two or all of us that are in the family way?"
-        kiara.say "I am sure we will soon find out that [hero.name] is man enough for the challenge that awaits him!"
     claire.say "So there you have it..."
     claire.say "Four people from such different places in life."
     cherie.say "All of us brought together by [hero.name]."
@@ -3262,4 +3224,3 @@ label cherie_claire_kiara_male_ending:
     $ game.set_new_game_plus()
     $ renpy.full_restart()
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

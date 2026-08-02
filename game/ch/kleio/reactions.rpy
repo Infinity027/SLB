@@ -50,14 +50,7 @@ label kleio_offer_a_drink_male:
     mike.say "I want another beer."
     mike.say "Should I grab one for you too?"
     "Almost the second the words are out of my mouth, Kleio turns to face me."
-    if kleio.is_visibly_pregnant:
-        show kleio angry
-        $ kleio.love -= 10
-        kleio.say "You already knocked me up, you jerk!"
-        kleio.say "Now you're trying to screw the baby up too?!?"
-        $ hero.cancel_activity()
-        hide kleio
-    elif (hero.charm >= 60 - kleio.love and kleio.flags.drinks < 2) or date_girl == kleio:
+    if (hero.charm >= 60 - kleio.love and kleio.flags.drinks < 2) or date_girl == kleio:
         show kleio happy
         kleio.say "Sounds good to me, Loverboy."
         kleio.say "Like you read my mind!"

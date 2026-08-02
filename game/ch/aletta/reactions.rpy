@@ -50,15 +50,7 @@ label aletta_offer_a_drink_male:
     mike.say "Hey, Aletta..."
     mike.say "Let me buy you a drink!"
     "Almost the second the words are out of my mouth, Aletta turns to face me."
-    if aletta.is_visibly_pregnant:
-        show aletta angry
-        $ aletta.love -= 10
-        aletta.say "I'm going to pretend you didn't say that, [hero.name]."
-        aletta.say "For your sake and the sake of our unborn child."
-        aletta.say "But I won't forget a second time!"
-        $ hero.cancel_activity()
-        hide aletta
-    elif (hero.charm >= 60 - aletta.love and aletta.flags.drinks < 2) or date_girl == aletta:
+    if (hero.charm >= 60 - aletta.love and aletta.flags.drinks < 2) or date_girl == aletta:
         show aletta happy
         aletta.say "Why thank you, [hero.name]."
         aletta.say "A glass of red wine, please."

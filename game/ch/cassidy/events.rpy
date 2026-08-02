@@ -1,23 +1,4 @@
 init python:
-    Event(**{
-    "name": "cassidy_preg_talk",
-    "label": "cassidy_preg_talk",
-    "conditions": [
-        HeroTarget(
-            IsGender("male"),
-            Not(OnDate())),
-        PersonTarget(cassidy,
-            IsPresent(),
-            Not(IsHidden()),
-            IsFlag("toldpreg", False),
-            MinCounter("pregnant", 6),
-            ),
-        ],
-    "music": "music/roa_music/no_regrets.ogg",
-    "once_day": True,
-    "do_once": False,
-    "quit": False,
-    })
 
     Event(**{
     "name": "cassidy_start",
@@ -470,26 +451,6 @@ init python:
     "do_once": False,
     "quit": False,
     })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     Event(**{
     "name": "cassidy_sub_01",
@@ -1663,128 +1624,6 @@ label cassidy_start:
             "There's no way anyone will be down there in ten minutes, though. This...this could come back to haunt me."
             $ cassidy.flags.investigationDelay = TemporaryFlag(True, 7, hook=[hook_set_flag, {"girl": cassidy, "flag": "startinvestigation", "value": True}])
             $ cassidy.unhide()
-    return
-
-label cassidy_preg_talk:
-    $ cassidy.flags.toldpreg = True
-    show cassidy talkative
-    cassidy.say "Hey, [hero.name], can we talk?"
-    show cassidy normal
-    mike.say "Sure, Cassidy. What's up?"
-    show cassidy talkative
-    cassidy.say "So you know how a few days ago you didn't use a condom? Well, you know how it works."
-    show cassidy normal
-    "Cassidy puts her hand on her belly."
-    show cassidy talkative
-    cassidy.say "There's a little [hero.name] growing inside of me."
-    show cassidy sadsmile
-    mike.say "Oh, oh. Oh wow. I mean..."
-    if cassidy.love < 200:
-        show cassidy whining
-        cassidy.say "Look, [hero.name], I don't want it. I'm not ready to have a baby. I'm going to have an abortion."
-        show cassidy sadsmile
-        menu:
-            "No! You can't!":
-                if cassidy.status == 'pet':
-                    show cassidy whining
-                    cassidy.say "No, [hero.name], our arrangement doesn't cover this. I'm not giving you a choice."
-                    show cassidy sad
-                    "Do I really want her to keep the child? She seems pretty adamant, but...it's my baby! And she's my pet!"
-                    menu:
-                        "Insist":
-                            mike.say "No, Cassidy. you can't abort the baby. I forbid it."
-                            show cassidy cry
-                            cassidy.say "[hero.name], you can do whatever you want, then. I quit."
-                            if cassidy.flags.collared:
-                                $ cassidy.collared = False
-                                "She reaches toward her neck and unfastens the collar from her neck, tossing it roughly aside."
-                            cassidy.say "We are done."
-                            hide cassidy with moveoutleft
-                            "And then she runs past me as quickly as she can. Gone. Just like that. Cassidy AND my baby."
-                            $ cassidy.set_gone_forever()
-                            $ cassidy.unpreg()
-                            $ game.flags.firedwayne = True
-                        "Let it go":
-                            mike.say "Okay. I guess. It's your body, but...damn it."
-                            show cassidy cry at center, zoomAt (1.25, (650, 850))
-                            "Cassidy steps toward me and puts her hand on my face. She speaks through tears that slowly drip down her cheeks."
-                            cassidy.say "Look, maybe...someday, okay? But not today. Not now."
-                            $ cassidy.love += 10
-                            $ cassidy.unpreg()
-                            cassidy.say "And thank you for being reasonable. I'm sorry this happened. Next time, wrap it up, okay?"
-                            mike.say "Yeah, I guess."
-                else:
-                    show cassidy angry
-                    cassidy.say "Fuck off, [hero.name]. My body, my rules. I don't want kids, and if you don't like it, you can fuck right the hell off."
-                    show cassidy upset
-                    "Cassidy's vehemence takes me by surprise, though I guess it really shouldn't surprise me all that much."
-                    mike.say "Fine, I guess. You're in charge. But just know that it makes me sad."
-                    show cassidy talkative
-                    $ cassidy.love += 2
-                    $ cassidy.sub -= 2
-                    cassidy.say "Fine, it makes you sad. Use a fucking rubber next time."
-                    show cassidy sadsmile
-                    if cassidy.status == 'mistress':
-                        mike.say "Yes, Mistress."
-                    else:
-                        mike.say "Yeah, I guess."
-                    $ cassidy.unpreg()
-            "It's for the best":
-                mike.say "I guess it's for the best. Our arrangement would be a little weird, with kids."
-                if cassidy.love > 120:
-                    show cassidy kiss
-                    $ cassidy.flags.kiss += 1
-                    "Cassidy launches herself at me and wraps herself around my neck. There's a long, slow kiss."
-                    $ cassidy.love += 5
-                    hide cassidy
-                    show cassidy at center, zoomAt (1.5, (650, 1050))
-                    cassidy.say "Maybe someday, [hero.name]. Okay?"
-                    mike.say "Sure."
-                else:
-                    cassidy.say "Yeah, can you imagine what our kid would be like? Would probably be a troll."
-                    mike.say "Hey, a sexy troll, at least."
-                    if hero.fitness > 60:
-                        cassidy.say "Okay, yes, two sexy parents, how could it not?"
-                    else:
-                        cassidy.say "Only if it takes after me. If it takes after you, it'd be the ugly troll."
-                        mike.say "Harsh, Cassidy. Harsh!"
-                $ cassidy.unpreg()
-    else:
-        show cassidy whining
-        cassidy.say "Sweetie, I don't...I don't know if I'm ready for a baby."
-        show cassidy sadsmile
-        mike.say "But--"
-        show cassidy whining
-        cassidy.say "Let me finish!"
-        show cassidy sadsmile
-        mike.say "Okay."
-        show cassidy whining
-        cassidy.say "Look, I didn't ever see myself as a mom. It's just not something I ever wanted. But the thing is..."
-        show cassidy talkative
-        cassidy.say "I love you, [hero.name]. I think...I might. I might be willing to, you know."
-        cassidy.say "Be a mom. With you. If you want?"
-        show cassidy normal
-        if cassidy.status == 'mistress':
-            mike.say "You're giving me a choice?"
-            show cassidy talkative
-            cassidy.say "What we have is fun, but this...this would be forever. So yeah, I want your complete and unconditional buy-in."
-        show cassidy sadsmile
-        menu:
-            "Yes":
-                mike.say "Yes, my love. Yes. Yes!! Let's do this, let's have a baby. Let's be a family."
-                show cassidy happy at center, zoomAt (1.5, (650, 1050))
-                "Cassidy throws herself at me and envelops me in a hug. I can feel the wet from the tears streaming down her face as she presses against me."
-                cassidy.say "You'll make a great dad, [hero.name]!"
-                mike.say "I love you!"
-            "No":
-                mike.say "Cassidy, I don't think...I don't think this is a good idea."
-                show cassidy cry
-                cassidy.say "I know, it's not, but...no, you're right. I thought maybe if you wanted, but you're right."
-                show cassidy at center, zoomAt (1.5, (650, 1050))
-                "I step up and wrap my arms around Cassidy while she babbles. Her words go incoherent as her face presses against my shoulder, and we hold each other tight."
-                mike.say "Maybe another time, when we're both more mature?"
-                "She nods into my chest, sobbing, but in agreement."
-                $ cassidy.unpreg()
     return
 
 label investigation_points(points):
@@ -5666,10 +5505,7 @@ label cassidy_male_ending:
     "And even crazier is the fact that I'm the one that's marrying her!"
     "The dress that she has on looks amazing, just amazing."
     "It complements her figure so well, I guess because it was made for her!"
-    if cassidy.is_visibly_pregnant:
-        "And if I didn't know she was pregnant, I doubt I'd have spotted it."
-    else:
-        "And part of me is glad I have no idea how much it cost!"
+    "And part of me is glad I have no idea how much it cost!"
     show cassidy wedding at center, traveling(1.5, 3.0, (640, 1040))
     "I can't help grinning like a fool as Cassidy reaches the altar."
     show cassidy happy at startle
@@ -5778,14 +5614,9 @@ label cassidy_male_ending:
     cassidy.say "It made me so proud of him, and it made me realise how much I loved him too."
     cassidy.say "He was the perfect guy to take over running dad's company."
     cassidy.say "And he's the perfect replacement for him as the man in my life too!"
-    if cassidy.is_visibly_pregnant:
-        cassidy.say "And we're well on the way to making our lives complete."
-        cassidy.say "Especially now that Sophia have come along."
-        cassidy.say "He's the best dad in the world to them - far better than mine ever was!"
-    else:
-        cassidy.say "And we'll soon be in the way to making our lives complete."
-        cassidy.say "Because we're going to start a family of our own."
-        cassidy.say "I know that he'll be the best dad in the world too - far better than mine ever was!"
+    cassidy.say "And we'll soon be in the way to making our lives complete."
+    cassidy.say "Because we're going to start a family of our own."
+    cassidy.say "I know that he'll be the best dad in the world too - far better than mine ever was!"
     cassidy.say "So things really couldn't have turned out better for me."
     cassidy.say "I got to step out from under my dad's shadow."
     cassidy.say "I got to marry the man of my dreams."
@@ -5806,4 +5637,3 @@ label cassidy_male_ending:
     $ game.set_new_game_plus()
     $ renpy.full_restart()
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

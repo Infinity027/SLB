@@ -346,37 +346,9 @@ label bree_talk_people_male:
 
 label bree_talk_computers_male:
     show bree
-    if not bree.is_visibly_pregnant:
-        $ result = randint(1, 4)
-        if result == 1:
-            bree.say "Computers are like Old Testament gods; lots of rules and no mercy."
-        elif result == 2:
-            mike.say "I think it's fair to say that personal computers have become the most empowering tool we've ever created."
-            mike.say "They're tools of communication, they're tools of creativity, and they can be shaped by their user."
-            bree.say "Yes but, man is still the most extraordinary computer of all."
-            show bree happy
-            bree.say "Or should I say woman?\nBecause a computer that freezes when it sees boobies is worth nothing."
-            $ bree.love += 1
-            if hero.knowledge >= 10:
-                mike.say "Well, women don't have our transfer rate..."
-                bree.say "Transfer rate?"
-                mike.say "A single sperm has ~37.5MB of DNA information in it."
-                mike.say "That means a normal ejaculation represents a data transfer of 1587GB in about 3 seconds."
-                show bree happy
-                mike.say "I must have accidentally uploaded an insane amount of data to my laptop over the years."
-                $ bree.love += 2
-        elif result == 3:
-            show bree wink
-            bree.say "Don't explain computers to laymen. Simpler to explain sex to a virgin."
-            $ bree.love += 2
-        else:
-            show bree happy
-            bree.say "No one messes around with a nerd's computer and escapes unscathed."
-            $ bree.love += 2
-    else:
-        bree.say "Hey [hero.name], I discovered this great website to find advices on pregnancy."
-        mike.say "What is it called?"
-        bree.say "Preger-net"
+    bree.say "Hey [hero.name], I discovered this great website to find advices on pregnancy."
+    mike.say "What is it called?"
+    bree.say "Preger-net"
     hide bree
     return
 

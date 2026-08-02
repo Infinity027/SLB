@@ -101,30 +101,19 @@ label claire_offer_a_drink_male:
     "Then I stand up, sure that Claire's attention is now focussed solely on me."
     mike.say "Okay, time for another one!"
     mike.say "You want me to grab one for you too, Claire?"
-    if claire.is_visibly_pregnant:
-        $ claire.love -= 10
-        "Claire's face instantly changes to show a look of amazement and disbelief."
-        "At the same time her hands close around her belly in a protective gesture."
-        show claire whining
-        claire.say "I'm sorry, [hero.name]..."
-        claire.say "But did you forget that someone's pregnant?!?"
-        show claire sadsmile
-        mike.say "Oh...oh yeah...sorry!"
-        $ hero.cancel_activity()
-    else:
-        show claire happy
-        "Claire's face lights up as soon as I make the offer."
-        "And she nods her head eagerly, making the gesture worthwhile."
-        claire.say "That's so kind of you, [hero.name]..."
-        claire.say "I'll have the same again, please."
-        show claire happy
-        mike.say "Coming right up!"
-        if claire.love <= 25:
-            $ claire.love += 1
-        elif date_girl == claire and game.active_date:
-            $ game.active_date.score += 5
-        call expression claire.get_chat from _call_expression_539
-        $ claire.set_flag("drinks", 1, "day", mod="+")
+    show claire happy
+    "Claire's face lights up as soon as I make the offer."
+    "And she nods her head eagerly, making the gesture worthwhile."
+    claire.say "That's so kind of you, [hero.name]..."
+    claire.say "I'll have the same again, please."
+    show claire happy
+    mike.say "Coming right up!"
+    if claire.love <= 25:
+        $ claire.love += 1
+    elif date_girl == claire and game.active_date:
+        $ game.active_date.score += 5
+    call expression claire.get_chat from _call_expression_539
+    $ claire.set_flag("drinks", 1, "day", mod="+")
     return
 
 label claire_slap_ass_intro_male:

@@ -230,33 +230,6 @@ init python:
     "do_once": True,
     })
 
-    Event(**{
-    "name": "morgan_preg_talk",
-    "label": "morgan_preg_talk",
-    "conditions": [
-        HeroTarget(
-            IsGender("male"),
-            Not(OnDate())),
-        PersonTarget(morgan,
-            IsPresent(),
-            Not(IsHidden()),
-            IsFlag("toldpreg", False),
-            MinCounter("pregnant", 6),
-            ),
-        ],
-    "music": "music/roa_music/underwater.ogg",
-    "once_day": True,
-    "do_once": False,
-    "quit": False,
-    })
-
-
-
-
-
-
-
-
     InteractEvent(**{
     "name": "morgan_male_90",
     "label": "morgan_male_90",
@@ -2218,12 +2191,8 @@ label morgan_male_ending:
         "We were partners when we were dating, so why should that change once we're married?"
         "And if walking up the aisle together isn't enough of a hint, then maybe Morgan's outfit will do the trick instead."
         "She chose to forego the dress altogether, replacing it with a black suit and white shirt."
-        if morgan.is_visibly_pregnant:
-            "The cut has been made specifically to accommodate the curve of Morgan's belly, but not to hide it."
-            "And she cradles it unconsciously with one hand as her other arm is wrapped in mine."
-        else:
-            "The colour's perfect, making her electric blue hair all the more striking."
-            "And I have to admit that she's making me feel pretty hot right now!"
+        "The colour's perfect, making her electric blue hair all the more striking."
+        "And I have to admit that she's making me feel pretty hot right now!"
         "As we approach the altar, I take the chance to lean over and whisper to Morgan."
         mike.say "This is your last chance, Morgan."
         mike.say "They'll be shutting the doors in a second."
@@ -2305,14 +2274,9 @@ label morgan_male_ending:
         "And then I found out just how wrong I'd been when she came back into my life."
         "So for us, showing off the fact that she's very much a woman is a pretty important statement!"
         show morgan at center, traveling(1.5, 5.0, (640, 1040))
-        if morgan.is_visibly_pregnant:
-            "Not to mention the way that the dress can't hope to conceal Morgan's rounded belly."
-            "As if there were any better testament to her femininity than that."
-            "And I can't begin to express how proud I am to be the father of her child."
-        else:
-            "And with every move she makes, it seems all the more incredible to me that I ever mistook her for a boy."
-            "I can't ever imagine there being a bigger mistake in my life."
-            "Or one that I was so happy to be corrected on either."
+        "And with every move she makes, it seems all the more incredible to me that I ever mistook her for a boy."
+        "I can't ever imagine there being a bigger mistake in my life."
+        "Or one that I was so happy to be corrected on either."
         show morgan at center, zoomAt(1.5, (640, 1040)) with fade
         "As she finally reaches the altar, I lean and whisper into Morgan's ear."
         mike.say "I can't believe this is actually happening."
@@ -2396,13 +2360,8 @@ label morgan_male_ending:
         "At first I can't quite make out whether Morgan is actually in the middle of it all."
         "There's so much fluffy, puffed up pink material on show that I have to search to spot her head atop it."
         show morgan at center, traveling(1.5, 5.0, (640, 1040))
-        if morgan.is_visibly_pregnant:
-            "In fact, the effect is so much, that it's impossible to see the shape of her body."
-            "Something which completely hides the fact that she's getting dangerously close to being due."
-            "Still, I'm pretty sure our baby's still under there somewhere!"
-        else:
-            "I watch in amazement as the pink mass that's my bride to be comes ever closer."
-            "Still not quite able to believe that she's somewhere in there!"
+        "I watch in amazement as the pink mass that's my bride to be comes ever closer."
+        "Still not quite able to believe that she's somewhere in there!"
         "But the very moment that my eyes meet Morgan's, all thoughts of the dress simply disappear."
         "And that's because of the smile that she has on her face."
         "One that lets me know that she's blissfully happy right now."
@@ -2511,16 +2470,10 @@ label morgan_male_ending:
         morgan.say "But he sees me now - I know that every single time he looks at me."
         morgan.say "And that makes me feel all gooey and girly inside!"
         morgan.say "So what else is there to say?"
-        if morgan.is_visibly_pregnant or morgan.flags.mikeBabies >= 1:
-            morgan.say "We're looking for a place to settle down."
-            morgan.say "Preferably BEFORE the baby arrives!"
-            morgan.say "So if you know of anywhere that's decent, let me know real quick."
-            morgan.say "Because I feel like I'm going to burst any time soon!"
-        else:
-            morgan.say "[hero.name] still lives with his housemates, [bree.name] and Sasha."
-            morgan.say "But I practically live there too most of the time."
-            morgan.say "He keeps saying we have to move out, find a place of our own."
-            morgan.say "I don't know though - they look like pretty broad-minded girls to me..."
+        morgan.say "[hero.name] still lives with his housemates, [bree.name] and Sasha."
+        morgan.say "But I practically live there too most of the time."
+        morgan.say "He keeps saying we have to move out, find a place of our own."
+        morgan.say "I don't know though - they look like pretty broad-minded girls to me..."
         morgan.say "Other than that, it's the promise of what's to come that's the best thing in life."
         morgan.say "Knowing that I have the chance to spend it with someone that I always held a candle for."
         morgan.say "As well as the knowledge that they turned out to be so much more than I ever imagined them to be!"
@@ -2582,13 +2535,8 @@ label morgan_male_ending:
         morgan.say "And [hero.name] likes it too!"
         morgan.say "So maybe one day it'll be time to dial it down a little."
         morgan.say "But for now, being all bubblegum and giggles is too good to pass up!"
-        if morgan.is_visibly_pregnant or morgan.flags.mikeBabies >= 1:
-            morgan.say "Oh, and I mustn't forget that I get to be a mommy too!"
-            morgan.say "Mmm...just the thought of pushing a stroller through the park with [hero.name]..."
-            morgan.say "It makes me go all weak in the knees!"
-        else:
-            morgan.say "In fact, [hero.name] and I are thinking of moving in together."
-            morgan.say "And I'm SO looking forward to playing the perfect little wife for him too!"
+        morgan.say "In fact, [hero.name] and I are thinking of moving in together."
+        morgan.say "And I'm SO looking forward to playing the perfect little wife for him too!"
         morgan.say "It's weird, how I always used to think that I was the strong, independent type of girl."
         morgan.say "I spent so long acting like a boy that it became a habit."
         morgan.say "So maybe all I'm doing now is swinging to the other extreme before I can balance out."
@@ -2651,14 +2599,9 @@ label morgan_male_ending:
         morgan.say "Let's not say it was written in the stars."
         morgan.say "Just that we had a second chance and took it."
         morgan.say "It's still early days, maybe too early to be talking about growing old together."
-        if morgan.is_visibly_pregnant or morgan.flags.mikeBabies >= 1:
-            morgan.say "All we really have time for right now is getting ready for the baby's arrival anyway."
-            morgan.say "There's so much to think of, but we've deliberately decided not to find out if it's a boy or a girl."
-            morgan.say "Because, with our track record, we're going to be easy and take things as they come!"
-        else:
-            morgan.say "For now, it's enough to be making plans to find a place to live together."
-            morgan.say "Maybe even think about whether or not we want to start a family of our own."
-            morgan.say "And with our track record, neither of us is worried about having boys or girls!"
+        morgan.say "For now, it's enough to be making plans to find a place to live together."
+        morgan.say "Maybe even think about whether or not we want to start a family of our own."
+        morgan.say "And with our track record, neither of us is worried about having boys or girls!"
         morgan.say "Whatever happens, I think that, between us, we're strong enough to handle it."
         morgan.say "After all, we waited so long to be together in the first place."
         morgan.say "And I'm not about to allow anything save for an end-of-the-world scenario end it now!"
@@ -2670,182 +2613,6 @@ label morgan_male_ending:
                 call sexperience_achievement_3 from _call_sexperience_achievement_3_16
     $ game.set_new_game_plus()
     $ renpy.full_restart()
-
-label morgan_preg_talk:
-    show morgan casual
-    mike.say "Morgan...hey there."
-    mike.say "Are you okay?"
-    if morgan.male >= 75:
-        "She looks at me whilst shaking her head and making a resigned sighing sound."
-        morgan.say "There's no easy way to say this, [hero.name], so I'm just going to come out and say it."
-        morgan.say "I'm pregnant, and it's yours."
-        morgan.say "And...and, well...you're just gonna have to man up!"
-        "There are times when Morgan's blunt nature makes things so much easier than they might otherwise be."
-        "But suffice to say, this isn't one of those time."
-        "The bald nature of the statement leaves me feeling like I've been punched in the gut."
-        morgan.say "[hero.name]...you're supposed to say something!"
-        mike.say "Sorry, Morgan - you just kind of took me by surprise..."
-    elif morgan.male >= 25:
-        "Now that she's looking me straight in the eye, I can see a measure of fear that wasn't apparent beforehand."
-        morgan.say "[hero.name]...I was late this month, so I took a pregnancy test, just to be sure..."
-        "I wait for her to go on, feeling my mouth go dry as the silence stretches by seconds to a minute."
-        mike.say "And...what did it say?"
-        morgan.say "It was...it was positive - I'm pregnant!"
-        "All that I can do at first is puff out my cheeks and then blow the air out of my lungs in a long sigh."
-        "I want to say something that will reassure Morgan and make everything alright."
-        "But the news is so monumental that I'm having enough trouble processing it myself right now."
-        mike.say "Morgan...I...I don't know what to say!"
-    else:
-        show morgan sad
-        "Morgan lays her head on my shoulder, and I can feel that she's scared of something."
-        morgan.say "Oh, [hero.name]...I have to tell you something."
-        morgan.say "You're going to be a daddy!"
-        "It takes me a moment to get my head around what she just said."
-        "But then the truth of what she's saying dawns on me."
-        mike.say "Morgan, are you saying that you're pregnant?!?"
-        "At this, she looks up from my shoulder, her eyes wide and seductive."
-        morgan.say "Uhuh, [hero.name] - I'm pregnant, and you're the father!"
-    show morgan normal
-    "I want to come over as the strong, masculine type, really I do."
-    "But after all that I've been through with Morgan already, the emotional roller-coaster it's been, discovering there's another time around the loops is really making that almost impossible to manage."
-    mike.say "What...what do you want to do, Morgan?"
-    "Morgan looks at me hard for a moment, but then her expression softens by a couple of degrees."
-    "I think that she was expecting me to step up and take control, but now realises the enormity of it all has hit me hard too."
-    if morgan.love >= 150:
-        morgan.say "I think that I want to keep the baby, [hero.name]."
-        morgan.say "But I can't do it on my own..."
-        "There's no need for Morgan to complete that last statement."
-        "I already know what she meant to say and just what it means for me."
-        menu:
-            "Refuse":
-                $ morgan.set_gone_forever()
-                mike.say "Morgan...I can't be a father right now."
-                mike.say "I'm not prepared for that kind of responsibility..."
-                "I hate myself even as I say the words, but I have to be brutally honest."
-                if morgan.male >= 75:
-                    show morgan angry
-                    "Morgan looks at me as though she's disgusted at first."
-                    "But then she looks away and shakes her head, emotion seeming to get the better of her."
-                    morgan.say "I...I thought you'd be a man about this, [hero.name]."
-                    morgan.say "But I guess I'll have to be man enough for both of us!"
-                    "She shakes her head again and turns her back on me as she does so."
-                    morgan.say "I'm not sure I know where this leaves me...or us!"
-                elif morgan.male >= 25:
-                    "There's the slightest hint of tears in Morgan's eyes as she nods, her lip quivering just a little."
-                    morgan.say "Well, I guess that's that..."
-                    morgan.say "We should have been more careful and used a..."
-                    "She stops before she can speak the last few words, something seeming to break inside of her."
-                    morgan.say "Fucking hell, [hero.name] - I really thought there was more to us than this!"
-                    "She shakes her head and looks away, as though she can't bring herself to as much as look at me right now."
-                else:
-                    "Morgan looks up at me with tears in her eyes."
-                    "I can see that she's doing her best not to cry."
-                    morgan.say "How could you, [hero.name]?"
-                    morgan.say "I'm not just a toy for you to play with and toss away like garbage!"
-                    "She spins on her heel and refuses to look me in the eye any longer."
-                    morgan.say "How could I have been so wrong about you?"
-            "Accept":
-                $ morgan.flags.toldpreg = True
-                mike.say "Morgan...of course I'll be there, for you and the baby!"
-                mike.say "How could you even think that I wouldn't want that?"
-                $ morgan.love += 10
-                "I haven't had time to really think about what I'm saying or practise the lines."
-                "I'm just saying what comes naturally to me on the spur of the moment."
-                if morgan.male >= 75:
-                    "Morgan's eyes widen a little, almost as though she's surprised at my enthusiasm."
-                    "I see her relax just enough to let the worry and weariness that must have been eating at her show through."
-                    morgan.say "You...you really mean that?"
-                    morgan.say "You want the baby...and me?"
-                    mike.say "Of course I mean it, Morgan."
-                    mike.say "How could you even think that I'd not be serious about something like this?"
-                    "Morgan wraps her arms around me suddenly, pulling me into a tight embrace."
-                    "It feels to me like she's accepted something deep inside, something that means she doesn't need to act so tough anymore."
-                elif morgan.male >= 25:
-                    "Morgan's eyes show her emotions, small tears forming in the corners that she wipes away quickly."
-                    morgan.say "Is that the truth - do you really want to make a go of this with me?"
-                    mike.say "Morgan, of course I do."
-                    mike.say "I don't think we should see this as an accident, but a chance to do something amazing together."
-                    "Morgan wraps her arms loosely around my waist and leans her head into my shoulder."
-                    morgan.say "I don't know how you do it, [hero.name] - but you make this whole thing sound simply wonderful."
-                    mike.say "Don't worry, it will be - because we'll make it wonderful together."
-                else:
-                    "I watch as Morgan clasps her hands together and smiles."
-                    morgan.say "Oh, [hero.name] - sometimes, you really are my hero!"
-                    morgan.say "I know we're going to make a great little family."
-                    "Morgan reaches up and wraps her arms around my neck, pulling me down to her level."
-                    "Her lips are right next to my ear as she whispers to me."
-                    morgan.say "I'm gonna make you so happy that you'll never want to let me go [hero.name] - just you wait and see!"
-    else:
-        morgan.say "I don't know about you, [hero.name], but I'm just not ready to be a parent, not right now."
-        morgan.say "I've thought long and hard about this before I told you, and I think that I want to have a termination."
-        "Things seem to be happening so fast, I feel as though I can't keep up."
-        "First Morgan tells me she's pregnant, and now she hits me with the fact that she wants to get rid of it!"
-        menu:
-            "Agree":
-                $ morgan.unpreg()
-                mike.say "I...I suppose that it's your decision, Morgan."
-                mike.say "I can't tell you what to do when it comes to your own body..."
-                "I feel like I'm taking the easy way out by not challenging her on this one."
-                "But do I really want a fight on my hands over something like this?"
-                if morgan.male >= 75:
-                    "Morgan's expression hardens, and she nods a little whilst looking away from me for a moment."
-                    "I get the distinct feeling that she was preparing herself for a fight on this one."
-                    morgan.say "Y...yeah, it is...of course it is!"
-                    morgan.say "I just wanted to level with you, yeah?"
-                    morgan.say "I feel better knowing that we're both on the same page."
-                    "She clasps my hand, and I return the gesture."
-                    "Neither of us speaks, but that's a relief as, under the circumstances, I have no idea what to say."
-                elif morgan.male >= 25:
-                    "Morgan gives me a smile at this, but it's a hard one and I can see that it's concealing her deeper emotions."
-                    "She almost starts to break down, and then fights back the urge and wipes a tear from the corner of her eye."
-                    morgan.say "I...I really think it's for the best, don't you?"
-                    mike.say "Yeah...I mean, yes - yes it is, Morgan."
-                    mike.say "We can't just sleepwalk into something like this."
-                    "Morgan looks up at me, and I can't keep the emotion out of my own face either."
-                    "At the sight of this, she clasps both of my hands in her own and offers me a fragile, but somehow more bitter-sweet smile."
-                else:
-                    "Morgan leans against me, and I take her in my arms on instinct."
-                    "Her head rests upon my chest, and I can hear her fighting off tears."
-                    mike.say "It's okay, Morgan."
-                    mike.say "Whatever happens, I'm here for you."
-                    "Morgan looks up at this, catching my eye."
-                    "She smiles weakly, and I feel my heart almost break for her."
-                    "She's trying the best she can to be strong, but her heart must be breaking too."
-            "Protest":
-                $ morgan.flags.toldpreg = True
-                mike.say "Morgan, no - you can't do that...I won't let you!"
-                mike.say "The child that you're talking about is a part of me too."
-                "I don't know where this will to fight for the life of an unborn child is coming from."
-                "All I do know is that it feels totally wrong to end a life before it's even begun."
-                if morgan.male >= 75:
-                    morgan.say "Well...well..."
-                    morgan.say "Maybe you should have thought about all of this."
-                    morgan.say "You know - BEFORE you went and knocked me up, huh?"
-                    "The aggression and anger with which Morgan spits her initial response soon drains out of her face once the words are spoken."
-                    morgan.say "Urrggh...I'm sorry, [hero.name] - but this is such a fucking mess!"
-                    mike.say "You're right, Morgan - but we both made that mess."
-                    mike.say "What kind of people are we if we just turn tail and run from it?"
-                    morgan.say "I...I hear what you're saying..."
-                    "I take hold of her hand and squeeze it, trying to show that even though I don't have an answer, I'm not going anywhere."
-                elif morgan.male >= 25:
-                    "Morgan regards me with what looks like surprise at my sudden outburst against her plan to have a termination."
-                    morgan.say "I...I suppose you're right, [hero.name]."
-                    morgan.say "I guess I just assumed that you'd be a typical guy and freak out at the idea."
-                    morgan.say "I'm sorry...I should have asked you first."
-                    "I nod my head slowly."
-                    mike.say "It's okay, Morgan, I understand - you're scared, and so am I."
-                    mike.say "Can we just talk this over before we make such a massive decision?"
-                else:
-                    "Morgan leans against me, and I take her in my arms on instinct."
-                    "Her head rests upon my chest, and I can hear her fighting off tears."
-                    morgan.say "I...I'm more than a little scared, [hero.name]!"
-                    morgan.say "Scared of the operation - but more scared of being a mother!"
-                    "I pull her closer to me, trying to reassure her with the warmth of my body."
-                    mike.say "It's...it's going to be okay, Morgan."
-                    mike.say "Don't worry about anything...I'll make sure that you're alright."
-    "There's a part of me that wonders if any of this would have come to pass had my relationship with Morgan been different back in the day."
-    "Was it the years of her holding a candle for me and my own thinking that she was a guy cause us to be this emotionally volatile when we finally came together?"
-    return
 
 label morgan_male_90:
     show morgan

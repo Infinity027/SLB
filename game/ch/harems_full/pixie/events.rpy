@@ -2417,22 +2417,10 @@ label kleio_morgan_male_ending:
     else:
         "And Morgan might be wearing a dress."
         "But it's pink, and a crazy caricature of the dress a cartoon princess might have chosen."
-    if morgan.is_visibly_pregnant and kleio.is_visibly_pregnant:
-        "I wonder if the guests are more surprised by Kleio and Morgan's clothes or their swollen bellies."
-        "After all, there's no way that their outfits could hope to hide it."
-        "But whatever they think, the three of us are eager to meet the babies."
-    elif kleio.is_visibly_pregnant:
-        "I wonder if the guests are more surprised by Kleio's clothes or her swollen belly."
-        "After all, there's no way that her outfit could hope to hide it."
-        "But whatever they think, the three of us are eager to meet the baby."
-    elif morgan.is_visibly_pregnant:
-        "I wonder if the guests are more surprised by Morgan's clothes or her swollen belly."
-        "After all, there's no way that her outfit could hope to hide it."
-        "But whatever they think, the three of us are eager to meet the baby."
-    else:
-        "In the end, I don't care what the guests that we invited here today think."
-        "I love the choices that they made for the statement that it makes about them."
-        "They remind me with each and every glance why I love the pair."
+    
+    "In the end, I don't care what the guests that we invited here today think."
+    "I love the choices that they made for the statement that it makes about them."
+    "They remind me with each and every glance why I love the pair."
     show kleio a seductive
     show fx question at right5
     kleio.say "Like what you see, Loverboy?"
@@ -2567,28 +2555,10 @@ label kleio_morgan_male_ending:
     kleio.say "Well, he does smell pretty strong sometimes."
     kleio.say "But I've been sniffing him for a while now and, well..."
     kleio.say "I have to admit, he's kind of addictive too!"
-    if (morgan.is_visibly_pregnant or morgan.flags.mikeBabies >= 1) and (kleio.is_visibly_pregnant or kleio.flags.mikeBabies >= 1):
-        kleio.say "You're being soft on him now, Morgan."
-        kleio.say "But I bet he wasn't when you let him knock you up!"
-        morgan.say "Hey, no fair - whatever happened to sisterhood?!?"
-        morgan.say "Anyway, you'd look more convincing without that big belly of yours, Kleio!"
-        kleio.say "I...I...he can be pretty persuasive, you know!"
-    elif kleio.is_visibly_pregnant or kleio.flags.mikeBabies >= 1:
-        morgan.say "You'd sound more convincing without that big belly of yours, Kleio!"
-        kleio.say "What...hey!"
-        kleio.say "You can't make fun of a pregnant woman - what happened to sisterhood?!?"
-        morgan.say "Aww, Kleio - you're blushing!"
-    elif morgan.is_visibly_pregnant or morgan.flags.mikeBabies >= 1:
-        kleio.say "You're being soft on him now, Morgan."
-        kleio.say "But I bet he wasn't when you let him knock you up!"
-        morgan.say "Hey, no fair - whatever happened to sisterhood?!?"
-        kleio.say "Aww, Morgan - you're blushing!"
-        kleio.say "Did you go that colour when it happened too?"
-    else:
-        morgan.say "Let's just say he's moorish, yeah?"
-        morgan.say "I think we can both agree on that."
-        kleio.say "Mmm...yeah."
-        kleio.say "We sure can!"
+    morgan.say "Let's just say he's moorish, yeah?"
+    morgan.say "I think we can both agree on that."
+    kleio.say "Mmm...yeah."
+    kleio.say "We sure can!"
     kleio.say "I guess I just never thought I'd end up married to the big oaf!"
     morgan.say "Neither did I, Kleio."
     morgan.say "But here we both are!"
@@ -2599,4 +2569,3 @@ label kleio_morgan_male_ending:
     $ game.set_new_game_plus()
     $ renpy.full_restart()
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

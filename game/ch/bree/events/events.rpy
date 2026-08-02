@@ -5,7 +5,7 @@ init python:
     "max_girls": 1,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("bathroom", "bedroom2")),
         PersonTarget(bree,
             IsPresent(),
@@ -24,7 +24,6 @@ init python:
     "label": "bree_talk_breakup_male",
     "max_girls": 1,
     "conditions": [
-        HeroTarget(IsGender("male")),
         PersonTarget(bree,
             IsPresent(),
             Not(IsHidden()),
@@ -40,7 +39,6 @@ init python:
     "label": "bree_kiss_me",
     "max_girls": 1,
     "conditions": [
-        HeroTarget(IsGender("male")),
         PersonTarget(bree,
             IsPresent(),
             Not(IsHidden()),
@@ -61,7 +59,7 @@ init python:
     "duration": 1,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("livingroom")),
         PersonTarget(bree,
             IsPresent(),
@@ -81,7 +79,7 @@ init python:
     "conditions": [
         IsDone("bree_event_01"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsRoom("arcade"),
             ),
@@ -104,7 +102,6 @@ init python:
         IsDone("bree_event_02"),
         IsHour(10, 19),
         HeroTarget(
-            IsGender("male"),
             IsRoom("livingroom")),
         InInventory("zbox_360"),
         PersonTarget(bree,
@@ -124,7 +121,7 @@ init python:
     "conditions": [
         IsHour(9, 19),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("swim_pool_home")),
         PersonTarget(bree,
             Not(IsHidden()),
@@ -148,7 +145,7 @@ init python:
         IsHour(18, 20),
         MinDaysPlayed(21),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("secondfloor", "bedroom2"),
             HasStamina()
             ),
@@ -162,23 +159,6 @@ init python:
     "priority": 500,
     "music": "music/roa_music/juice.ogg",
     "do_once": True,
-    })
-
-    InteractEvent(**{
-    "name": "bree_talk_preg",
-    "max_girls": 1,
-    "label": "bree_preg_talk",
-    "do_once": False,
-    "conditions": [
-        HeroTarget(
-            IsGender("male"),
-            Not(OnDate())),
-        PersonTarget(bree,
-            IsActive(),
-            IsFlag("pregtest", 1),
-            ),
-        ],
-    "music": "music/roa_music/juice.ogg",
     })
 
     Event(**{
@@ -216,7 +196,6 @@ init python:
     "priority": 500,
     "label": "bree_anal_confession",
     "conditions": [
-        HeroTarget(IsGender("male")),
         PersonTarget(bree,
             IsActive(),
             MinFlag("anal", 1),
@@ -231,7 +210,6 @@ init python:
     "label": "bree_shower_BJ",
     "duration": 1,
     "conditions": [
-        HeroTarget(IsGender("male")),
         IsHour(20, 0),
         HeroTarget(IsActivity("take_a_shower")),
         PersonTarget(bree,
@@ -253,7 +231,7 @@ init python:
     "conditions": [
         MinDaysPlayed(3),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("livingroom")),
         Not(HasVehicle()),
         PersonTarget(bree,
@@ -272,7 +250,7 @@ init python:
     "conditions": [
         Not(IsDone("bree_call_daddy_slutty")),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("bedroom2")),
         PersonTarget(bree,
             IsActive(),
@@ -291,7 +269,7 @@ init python:
     "conditions": [
         Not(IsDone("bree_call_daddy")),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("bedroom2")),
         PersonTarget(bree,
             IsActive(),
@@ -325,7 +303,6 @@ init python:
     "label": "bree_sasha_collar_reaction",
     "priority": 500,
     "conditions": [
-        HeroTarget(IsGender("male")),
         PersonTarget(bree,
             IsPresent(),
             Not(IsHidden()),
@@ -347,7 +324,7 @@ init python:
     "conditions": [
         IsDone("aletta_event_05"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("work_personal", "workhard_personal")
             ),
         GameTarget(
@@ -375,7 +352,6 @@ init python:
     "conditions": [
         IsDone("bree_event_office_01"),
         HeroTarget(
-            IsGender("male"),
             IsActivity("work_personal", "workhard_personal"),
             ),
         GameTarget(
@@ -398,7 +374,6 @@ init python:
     "icon": "button_dwayne",
     "conditions": [
         IsDone("bree_event_office_02"),
-        HeroTarget(IsGender("male")),
         PersonTarget(bree,
             IsActive(),
             ),
@@ -422,7 +397,7 @@ init python:
     "duration": 1,
     "conditions": [
         IsHour(5, 9),
-        HeroTarget(IsGender("male"),
+        HeroTarget(
             Not(InFlag("slept_with", "bree")),
             Not(IsFlag("morningwood")),
             ),
@@ -441,86 +416,12 @@ init python:
     "once_month": True,
     })
 
-    Event(**{
-    "name": "bree_sasha_pregnant",
-    "label": "bree_sasha_pregnant",
-    "duration": 1,
-    "priority": 1000,
-    "conditions": [
-        IsActiveHarem('home'),
-        Not(TogetherInHarem('home', 'bree', 'sasha')),
-        HeroTarget(IsGender("male")),
-        PersonTarget(bree,
-            IsPresent(),
-            Not(IsHidden()),
-            Not(IsActivity("sleep")),
-            Not(IsFlag("collared")),
-            MaxCounter("pregnant", 3),
-            MinStat("love", 100),
-            MinStat("sexperience", 1),
-            ),
-        PersonTarget(sasha,
-            Not(IsPresent()),
-            Not(IsHidden()),
-            MinCounter("pregnant", 9),
-            ),
-        ],
-    "do_once": True,
-    })
-
-    # Event(**{
-    # "name": "bree_fight_dad",
-    # "label": "bree_fight_dad",
-    # "duration": 4,
-    # "priority": 1500,
-    # "conditions": [
-    #     HeroTarget(
-    #         Or(
-    #             IsRoom("alley"),
-    #             HasRoomTag("street"),
-    #             ),
-    #         ),
-    #     PersonTarget(bree,
-    #         IsGone()
-    #         ),
-    #     PersonTarget("kylie",
-    #         Not(IsFlag("killed", "bree"))
-    #         ),
-    #     ],
-    # "do_once": True,
-    # })
-
-    # Event(**{
-    # "name": "bree_fight_mourning_dad",
-    # "label": "bree_fight_mourning_dad",
-    # "duration": 1,
-    # "priority": 1500,
-    # "conditions": [
-    #     HeroTarget(
-    #         Or(
-    #             IsRoom("alley"),
-    #             HasRoomTag("street"),
-    #             ),
-    #         ),
-    #     PersonTarget(bree,
-    #         IsGone()
-    #         ),
-    #     PersonTarget("kylie",
-    #         IsFlag("killed", "bree")
-    #         ),
-    #     ],
-    # "do_once": True,
-    # })
-
     AfterDateEvent(**{
     "name": "bree_stripclub_intro",
     "label": "bree_stripclub_intro",
     "priority": 1000,
     "duration": 1,
     "conditions": [
-        HeroTarget(
-            IsGender("male"),
-            ),
         MinDateScore(60),
         PersonTarget(bree,
             OnDate(),
@@ -1401,22 +1302,13 @@ label bree_male_ending:
     "They could not be there at all for the tiny amount of attention that I can spare for them."
     show bree at center, traveling (1.5, 5.0, (640, 1040))
     "Right now, [bree.name]'s the only person that I want to lay eyes on."
-    if not bree.is_visibly_pregnant:
-        "I'm surprised to see that, despite being fond of tradition, [bree.name]'s chosen to wear pink."
-        "A light, floating affair that's short in the front and long in the back."
-        "Pink roses woven into a headband and the locks of her hair compliment the delicate tones of her skin."
-        "And she clutches a bouquet of the same flowers, though their beauty is put to shame by the smile on her face as she walks towards me."
-        "The expression on my face must be as easy to read as words on a page, making [bree.name] blush a little as she reaches my side."
-        "Though my hand was supposed to be in my pocket to keep hold of the ring, I find myself now using it to pinch myself on the thigh instead."
-        "Part of me just can't believe this is actually happening!"
-    else:
-        "I'm surprised to see that, despite being fond of tradition, [bree.name]'s chosen to wear pink."
-        "A light, floating affair that's short in the front and long in the back."
-        "Pink roses woven into a headband and the locks of her hair compliment the delicate tones of her skin."
-        "And she clutches a bouquet of the same flowers, though their beauty is put to shame by the smile on her face as she walks towards me."
-        "The dress has been tastefully cut to accommodate the curve of [bree.name]'s belly, and so this only adds to her radiance."
-        "That's one thing that neither of us is old fashioned about."
-        "We both take delight in being reminded of the fact that we're expecting our first child together."
+    "I'm surprised to see that, despite being fond of tradition, [bree.name]'s chosen to wear pink."
+    "A light, floating affair that's short in the front and long in the back."
+    "Pink roses woven into a headband and the locks of her hair compliment the delicate tones of her skin."
+    "And she clutches a bouquet of the same flowers, though their beauty is put to shame by the smile on her face as she walks towards me."
+    "The dress has been tastefully cut to accommodate the curve of [bree.name]'s belly, and so this only adds to her radiance."
+    "That's one thing that neither of us is old fashioned about."
+    "We both take delight in being reminded of the fact that we're expecting our first child together."
     show wedding bree with fade
     "I'm about to say something to her, compliment the dress or make a comment about how good she looks."
     "But then there's a discreet cough, and I glance around to see the priest smiling and glancing at his watch."
@@ -1464,21 +1356,13 @@ label bree_male_ending:
     bree.say "And for a little while at least, things felt like they were pretty much back to normal."
     bree.say "But somehow we all knew that the old times were gone, no matter how much we hated to admit it."
     bree.say "Somehow the place felt crowded now, even though there were still only three of us under the same roof."
-    if not bree.is_visibly_pregnant:
-        bree.say "Sasha never said as much out loud, but I think that we were cramping her style."
-        bree.say "It's hard to be the spare wheel when the other people in the house do everything as a couple."
-        bree.say "So she moved out a couple of months after the wedding and found a place of her own."
-        bree.say "We still see her every now and again, though not as often as either of us would like."
-        bree.say "But I can't hide the fact that part of me likes the fact we now have the house to ourselves."
-        bree.say "It makes me feel like a wife from one of those silly, old-fashioned soap operas!"
-    else:
-        bree.say "Sasha never said as much out loud, but I think that we were cramping her style."
-        bree.say "It's hard to be the spare wheel when the other people in the house do everything as a couple."
-        bree.say "And when Poppy was born...well, that pretty much sealed the deal for her."
-        bree.say "So she moved out a couple of months after the wedding and found a place of her own."
-        bree.say "We still see her every now and again, though not as often as either of us would like."
-        bree.say "But I can't hide the fact that part of me likes the fact we now have the house to ourselves."
-        bree.say "I feel like we're a perfect little family unit!"
+    bree.say "Sasha never said as much out loud, but I think that we were cramping her style."
+    bree.say "It's hard to be the spare wheel when the other people in the house do everything as a couple."
+    bree.say "And when Poppy was born...well, that pretty much sealed the deal for her."
+    bree.say "So she moved out a couple of months after the wedding and found a place of her own."
+    bree.say "We still see her every now and again, though not as often as either of us would like."
+    bree.say "But I can't hide the fact that part of me likes the fact we now have the house to ourselves."
+    bree.say "I feel like we're a perfect little family unit!"
     bree.say "Is there much more to say than that?"
     bree.say "I mean, no one wants to be bored with details of what's happened to [hero.name] at work or me at uni, do they?"
     bree.say "It's like the way that you never see anyone use the toilet in a movie."
@@ -1615,114 +1499,6 @@ label bree_preg_test:
         show sasha upset
         mike.say "Just asking."
     $ bree.flags.pregtest = 1
-    return
-
-label bree_preg_talk:
-    if "Harem.together('bree', 'sasha', name='home')" and sasha.counters.pregnant >= 3 and bree.room == sasha.room:
-        call home_harem_preg_talk from _call_home_harem_preg_talk
-    else:
-        show bree cry
-        mike.say "[bree.name]?"
-        "Her blonde hair whips around as she turns to look behind her."
-        "Her eyes are rimmed red, her cheeks wet with tears."
-        "She attempts to compose herself, but her smile falls as soon as she tries."
-        show bree gloomy at center, zoomAt(1.5, (640, 1040))
-        "I take a seat next to her, not knowing what to say."
-        mike.say "What's wrong?"
-        "I'm pretty sure I know what's wrong."
-        bree.say "..."
-        mike.say "I just... wanted to talk to you."
-        show bree sad
-        bree.say "I need to talk to you too."
-        show bree gloomy
-        "I nod, and start taking the pregnancy test out of my pocket."
-        show bree sad
-        bree.say "I- I... went to the pharmacy yesterday-"
-        show bree gloomy
-        "Before she can finish, I hand her the white stick."
-        show bree stuned
-        "She stares at it for a moment then bursts into tears."
-        show bree cry blush
-        bree.say "I'm so sorry."
-        show bree gloomy
-        menu:
-            "You have nothing to be sorry about.":
-                mike.say "You don't have anything to be sorry about."
-                "[bree.name] slowly lifts her head."
-                show bree surprised
-                bree.say "You're not mad?"
-                show bree stuned
-                mike.say "Why would I be mad?"
-                show bree sad
-                if "bree_pregnant_request" in DONE:
-                    bree.say "I don't know!"
-                else:
-                    bree.say "I don't know! Because we never talked about having kids."
-                bree.say "I can barely afford rent and you need roommates."
-                bree.say "We're not even married!"
-                show bree gloomy
-                mike.say "..."
-                "She has a point. We're not exactly prepared for a baby."
-                mike.say "That doesn't mean we can't try."
-                show bree surprised
-                bree.say "... For real?"
-                show bree stuned
-                mike.say "Yeah."
-                show bree happy at center, traveling(2.5, 0.5, (640, 1640))
-                "Her eyes start to well up again. She lunges forward and pulls me into a hug and I hug her back, squeezing her tightly."
-                "Going through with this would be a struggle, but it would be worth it if I could do it with her."
-            "You should have told me.":
-                $ bree.love -= 25
-                mike.say "Why the hell wouldn't you tell me right away?!"
-                "[bree.name] winces as I raise my voice, but I can't help the irritation that rises in my chest."
-                show bree sad
-                bree.say "I'm sorry."
-                show bree gloomy
-                mike.say "This isn't something you just keep to yourself!"
-                show bree sad
-                bree.say "I wasn't going to! I was going to tell you."
-                show bree gloomy
-                mike.say "When?!"
-                show bree sad
-                bree.say "I don't know! When I was ready!"
-                show bree a angry blush
-                "Her face is turning red, the color crawling down her neck."
-                show bree a vangry
-                bree.say "You can't just like yell at me for this!"
-                show bree a angry
-                menu:
-                    "I'm sorry.":
-                        "I purse my lips and force myself to calm down. She was right. I may be upset, but I can't really imagine how she must be feeling."
-                        mike.say "You're right. I'm sorry, [bree.name]."
-                        show bree annoyed -blush
-                        "She takes a breath and her shoulders relax."
-                        show bree sad
-                        bree.say "It's okay."
-                        show bree sadsmile
-                        "Silence stretches between us for a long minute."
-                        show bree talkative
-                        bree.say "Are we good?"
-                        show bree sadsmile
-                        mike.say "Sure."
-                    "I'll do what I want.":
-                        "No. This is ridiculous. How could she just keep this to herself?"
-                        mike.say "You have to tell me when these things happen!"
-                        show bree vangry
-                        bree.say "I don't have to tell you anything!"
-                        show bree angry
-                        "Her face gets red, but I can tell it's from anger. She's more upset than I've ever seen her."
-                        mike.say "[bree.name]-"
-                        show bree vangry
-                        bree.say "Shut up!"
-                        bree.say "I'm leaving."
-                        show bree angry
-                        mike.say "What?!"
-                        show bree angry blush at center, traveling(1.0, 0.3, (640, 720))
-                        bree.say "I said I'm going! Leave me alone!"
-                        hide bree with easeoutleft
-                        "With that she stomps off angrily."
-                        $ bree.love -= 50
-        $ bree.flags.pregtest = 2
     return
 
 label bree_event_bowsette:
@@ -3660,132 +3436,6 @@ label bree_birthday_sex:
     "I try to do the same."
     "But somehow I just can't seem to think of anything apart from what just happened."
     "And afterwards, I couldn't have told you what happened in the film to save my life."
-    return
-
-label bree_pregnant_request:
-    "I know it's one of those guy things, yeah."
-    "When you realise your girlfriend is beating around the bush."
-    "But you just can't figure out what the hell it could be about."
-    show bree at center, zoomAt(1.25, (640, 880))
-    "[bree.name]'s got me in that position right now, and I'm stumped."
-    show bree talkative
-    bree.say "Ah, [hero.name]..."
-    show bree normal
-    mike.say "Yeah, [bree.name]?"
-    show bree talkative
-    bree.say "Are you happy with us?"
-    show bree normal
-    "That's one of those vague questions that turns a guy's guts to water."
-    "What does she mean by that?"
-    "As far as I knew, everything was going great between us."
-    "There's no arguments and we're getting along fine with one another."
-    "In fact, I was pretty sure that our relationship was solid as a rock."
-    mike.say "Well..."
-    mike.say "I don't know exactly what you mean, [bree.name]."
-    mike.say "I've never been happier than I am right now."
-    mike.say "And I thought you were too..."
-    show bree sadsmile
-    "[bree.name] shakes her head at this, as if alarmed by my reply."
-    show bree talkative
-    bree.say "Oh no...not like that!"
-    bree.say "I am happy, [hero.name]."
-    bree.say "It's just that..."
-    bree.say "I'm happy NOW, you know?"
-    show bree sadsmile
-    mike.say "But you might not be in the future?"
-    "[bree.name] shakes her head again."
-    show bree happy at startle
-    "But this time she laughs and a smile appears on her face."
-    show bree smile
-    bree.say "I'm not very good at this, am I?"
-    show bree normal
-    mike.say "Ah, I don't really know what this is, [bree.name]!"
-    show bree smile
-    bree.say "What I'm trying to say is that I've been thinking about the future."
-    bree.say "Our future together, and what we want it to look like."
-    show bree normal
-    "Ah, now we're getting down to it."
-    "This is all about commitment."
-    mike.say "I want it to look like it does now, [bree.name]."
-    mike.say "You and me together."
-    show bree talkative
-    bree.say "Is there room for anyone else in there too?"
-    show bree normal
-    mike.say "Well, I was kind of thinking that we'd be exclusive!"
-    show bree flirt
-    "[bree.name] gives me a gentle shove."
-    show bree smile blush
-    bree.say "No, you moron!"
-    bree.say "I mean kids."
-    bree.say "I think we should try to get pregnant!"
-    show bree normal
-    "My mouth drops open at the mention of kids."
-    "But she's serious, I can see that in her eyes."
-    "[bree.name]'s actually asking me to get her pregnant!"
-    menu:
-        "Agree":
-            "I'm not prepared for this in the slightest."
-            "But then what other good things was I not prepared for in my life?"
-            "I didn't plan to have [bree.name] move in here and hit it off with her."
-            "Likewise, I didn't plan to start dating her."
-            "Or for us to fall in love."
-            "This could be another one of those chances..."
-            mike.say "Now you mention it, [bree.name]..."
-            mike.say "That makes a lot of sense."
-            show bree stuned blush
-            "I see surprise and then delight appear on [bree.name]'s face."
-            show bree surprised
-            bree.say "Y...you do?!?"
-            show bree happy -blush
-            bree.say "I mean...that's great, [hero.name]!"
-            show bree talkative
-            bree.say "Oh, I was so worried you'd say no."
-            bree.say "That you'd want to wait and plan it all out..."
-            show bree normal
-            "I shake my head, dismissing [bree.name]'s concerns."
-            mike.say "Ah, don't worry about any of that stuff."
-            mike.say "It's all just details that we can sort out later."
-            mike.say "All that really matters is that we love each other."
-            mike.say "And we'll love our kid just as much."
-            show bree flirt at center, traveling(2.5, 0.3, (640, 1640))
-            "[bree.name] throws her arms around me and hugs me tightly."
-            "I return the gesture, already warming to the idea of being a dad."
-            "I feel [bree.name] rest her head on my shoulder."
-            "Her breath warm against my neck."
-            show bree smile
-            bree.say "So, next question."
-            show bree happy
-            bree.say "When do we start trying to get pregnant?"
-            $ bree.love += 2
-            $ bree.flags.pregrequest = True
-        "Refuse":
-            "I'm not prepared for this in the slightest."
-            "It's far too big of a decision to have dropped on me like this."
-            "Starting a family requires planning and preparation."
-            "Just throwing caution to the wind wouldn't be fair."
-            "Not on [bree.name] or myself, let alone our children!"
-            mike.say "Don't get me wrong, [bree.name]."
-            mike.say "I see kids in our future for sure."
-            show bree gloomy
-            "I can already see the disappointment on [bree.name]'s face."
-            show bree sad
-            bree.say "But not here and now?"
-            bree.say "I...I just thought that things were going well..."
-            show bree sadsmile
-            mike.say "Like I said, [bree.name] - I want a family."
-            mike.say "But I think we need to make a home first."
-            mike.say "Once we're married with a place of our own..."
-            show bree normal
-            "[bree.name] nods, and I can see that she's trying to put a brave face on it."
-            show bree sadsmile
-            "But she can't fully hide the fact that I've put paid to her dream."
-            show bree talkative
-            bree.say "I...I guess that makes sense, [hero.name]."
-            bree.say "I'll just have to wait a little longer."
-            show bree sadsmile
-            "I nod and smile, putting a brave face on too."
-            "I just have to hope that [bree.name] can wait long enough."
-            $ bree.love -= 2
     return
 
 label bree_event_office_01:

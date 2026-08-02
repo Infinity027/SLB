@@ -58,16 +58,6 @@ steps:
           - not samantha.flags.unknown_father
           - not samantha.pregnant
         next: clove160
-      threesome_and_pregnant:
-        description: We enjoyed the time together
-        conditions:
-          - '"samantha_event_B03" in DONE'
-          - not samantha.flags.knows_ryancheats
-          - samantha.flags.unknown_father
-          - samantha.pregnant or "samantha_wedding_baby" in DONE
-        next:
-          - clove160
-          - samantha_event_B04
       revenge:
         description: Samantha found out I knew about cheating and left crying
         conditions:
@@ -87,7 +77,6 @@ steps:
           - samantha.pregnant or "samantha_wedding_baby" in DONE
         next:
           - samantha_event_D01_wait
-          - samantha_event_B04
       divorce:
         description: Samantha found out I knew about cheating and she seemed to accept my apology
         conditions:
@@ -95,17 +84,6 @@ steps:
           - samantha.flags.knows_ryancheats
           - samantha.flags.excused
         next: elove160
-
-  samantha_event_B04:
-    name: Be home if the afternoon or evening
-    related_event: samantha_event_B04
-    conditions:
-      - '"samantha_event_B03" in DONE'
-      - samantha.flags.unknown_father
-    outcome:
-      description: Surprise! Samantha told me she is pregnant
-      next: None
-      condition: '"samantha_event_B04" in DONE'
 
   clove160:
     name: Get to know Samantha better

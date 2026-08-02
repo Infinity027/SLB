@@ -254,26 +254,6 @@ init python:
     })
 
     Event(**{
-    "name": "kiara_preg_talk",
-    "label": "kiara_preg_talk",
-    "do_once": False,
-    "conditions": [
-        HeroTarget(
-            IsGender("male"),
-            Not(OnDate()),
-            IsActivity("None"),
-            ),
-        PersonTarget(kiara,
-            IsPresent(),
-            Not(IsHidden()),
-            IsFlag("toldpreg", False),
-            MinCounter("pregnant", 6),
-            ),
-        ],
-    "music": "music/roa_music/focus.ogg",
-    })
-
-    Event(**{
     "name": "kiara_sub_event_01",
     "label": "kiara_sub_event_01",
     "duration": 1,
@@ -2382,14 +2362,9 @@ label kiara_male_ending:
         "The dress that she's chosen is more like something that I'd say belongs in her own wardrobe."
         "You know, rather than the kind of thing a bride of a more traditional bent might wear?"
         "And it works too, as I can't take my eyes off of her!"
-        if kiara.is_visibly_pregnant:
-            "Hell, I Love every detail of it - even where it's been let out to accommodate her belly."
-            "The growing curve of it reminding me of the fact that Kiara's well into her term by now."
-            "Not to mention all the fun that we had trying to get her into that state in the first place!"
-        else:
-            "She was the most glamorous woman I'd ever seen the first time I walked into her café."
-            "And there's no way that I can imagine meeting another with more mystique than she has."
-            "Or a bride that's able to move like the femme fatale in a black and white movie."
+        "She was the most glamorous woman I'd ever seen the first time I walked into her café."
+        "And there's no way that I can imagine meeting another with more mystique than she has."
+        "Or a bride that's able to move like the femme fatale in a black and white movie."
         show kiara at center, traveling (1.5, 5.0, (640, 1040))
         "All of those heads turn to follow Kiara as she makes it to the end of the aisle."
         "Even the guys with the bulges in their jackets watching as she reaches the altar."
@@ -2501,14 +2476,9 @@ label kiara_male_ending:
         kiara.say "He was born to stand at my side, as we wield a pair of matching machine-guns."
         kiara.say "Making the gutters run red with the blood of our enemies!"
         kiara.say "Naturally he quit his day-job, and now he's my right-hand man."
-        if kiara.is_visibly_pregnant or kiara.flags.mikeBabies >= 1:
-            kiara.say "Oh, and I should mention that he is also a devoted family man."
-            kiara.say "Already making sure that our little boy Michael is trained in the family business."
-            kiara.say "All in anticipation of the day when he takes the reigns himself."
-        else:
-            kiara.say "Oh, and I do not think it will be long before [hero.name] gives me an heir."
-            kiara.say "A child with all the combined ruthlessness of their parents."
-            kiara.say "The perfect apprentice to be trained to take the reigns in turn."
+        kiara.say "Oh, and I do not think it will be long before [hero.name] gives me an heir."
+        kiara.say "A child with all the combined ruthlessness of their parents."
+        kiara.say "The perfect apprentice to be trained to take the reigns in turn."
         kiara.say "I mean, there is the small matter of how the police keep on hounding us."
         kiara.say "Threatening to prosecute us for something as petty and stupid as tax-avoidance!"
         kiara.say "But they are no real concern for us, because there is always a way out."
@@ -3385,14 +3355,9 @@ label kiara_male_ending_b:
     "And all of the majestic presence she used to give off as an underworld kingpin is still there."
     "Only now she's somehow managed to channel it into a very different vibe indeed."
     "Now Kiara looks like the perfect bride, demure and understated in her demeanour."
-    if kiara.is_visibly_pregnant:
-        "Even the fact that she's getting close to full-term is taken into account."
-        "The cut of her dress subtle accommodating the curve of her belly."
-        "Serving as a reminder of the fact we'll soon be a family."
-    else:
-        "I've watched over the past few months as Kiara slowly shed her former identity."
-        "And been there with her every step of the way as she crafted a new one."
-        "So seeing her like this feels like we've come to the end of a long journey together."
+    "I've watched over the past few months as Kiara slowly shed her former identity."
+    "And been there with her every step of the way as she crafted a new one."
+    "So seeing her like this feels like we've come to the end of a long journey together."
     "All in all, the effect of finally seeing Kiara in her wedding dress is stunning."
     "So stunning, in fact, that I'm left staring and speechless when she gets to the altar."
     show kiara at center, zoomAt(1.5, (640, 1040))
@@ -3477,14 +3442,9 @@ label kiara_male_ending_b:
     kiara.say "And I have to say that the life of a home-maker is no less demanding."
     kiara.say "[hero.name] goes out to work every day, and expects me to keep things neat and tidy."
     kiara.say "To have a warm meal on the table for him when he comes home in the evenings."
-    if kiara.is_visibly_pregnant or kiara.flags.mikeBabies >= 1:
-        kiara.say "As well as to look after little Michael and see to his education."
-        kiara.say "Investing in the future of our little family unit."
-        kiara.say "To which I suspect there may soon be more additions."
-    else:
-        kiara.say "Though I suspect that there might soon be more for me to do."
-        kiara.say "As [hero.name] will no doubt wish to start a family before too long."
-        kiara.say "Something that I am more than ready to make happen for him."
+    kiara.say "Though I suspect that there might soon be more for me to do."
+    kiara.say "As [hero.name] will no doubt wish to start a family before too long."
+    kiara.say "Something that I am more than ready to make happen for him."
     kiara.say "But that is not all that there is to life, oh no."
     kiara.say "I have kept myself busy, getting involved in the local Women's Institute."
     kiara.say "An organisation that, in many way, reminds me of the underworld I left behind."
@@ -3492,204 +3452,6 @@ label kiara_male_ending_b:
     kiara.say "In fact, it is surprising how much that I learned in that part of my life is useful in my new one."
     kiara.say "So maybe you can take the woman out of the underworld..."
     kiara.say "But you cannot take the underworld out of the woman."
-    return
-
-
-label kiara_preg_talk:
-    $ kiara.flags.toldpreg = True
-    show kiara normal at center, zoomAt(1.0, (640, 720))
-    "I have the usual smile on my face as I see Kiara walking towards me."
-    "Because who wouldn't be smiling when the beautiful woman they're dating turns up?"
-    show kiara annoyed at center, traveling(1.5, 0.5, (640, 1040))
-    "But that soon changes when I see that she has a serious expression on her face."
-    "And when a woman like Kiara looks like that, you just know that she means business!"
-    mike.say "Erm..."
-    mike.say "Hi, Kiara..."
-    mike.say "Is everything okay?"
-    "As I say this I'm hoping that Kiara's going to suddenly snap out of it and change her mood."
-    "Because it wouldn't be the first time she's shown up with her mind on other things."
-    "Things that were capable of making her frown like that, and which I might help counter."
-    "But my hopes are dashed when she plants her balled fists on her hips and shakes her head."
-    show kiara irritated
-    kiara.say "No, [hero.name]…"
-    kiara.say "Everything is not okay."
-    kiara.say "We have to talk about something - a very serious something!"
-    show kiara annoyed
-    "Almost as soon as the words are out of Kiara's mouth, I can feel my guts begin to churn."
-    "Because that's something that no guy ever wants to hear coming from his other half."
-    "The vague declaration that there's something so serious it requires 'a talk'."
-    mike.say "Oh..."
-    mike.say "Okay..."
-    mike.say "Well, what exactly was it you wanted to talk about?"
-    "Kiara's mouth becomes a straight, hard line."
-    "And I watch as she takes in a deep breath through her nose."
-    "All in all, I get the feeling that she's preparing herself for what lies ahead."
-    show kiara irritated
-    kiara.say "You remember when we were...having fun recently?"
-    kiara.say "Specifically when we were having fun together?"
-    show kiara annoyed
-    "It takes me a moment to figure out what Kiara means by that."
-    "But then realisation dawns on me, and I nod my head."
-    mike.say "Oh yeah..."
-    mike.say "How could I forget?"
-    mike.say "That really was a lot of fun!"
-    kiara.say "Hmm..."
-    show kiara irritated
-    kiara.say "Maybe we should have had a little less fun, and taken a little more care."
-    show kiara annoyed
-    "Again I find myself staring at Kiara as I try to decipher the meaning of her words."
-    "But this time the delay on my part is more due to the gravity of what I think she's implying."
-    mike.say "You mean..."
-    mike.say "You mean you're..."
-    show kiara whining
-    kiara.say "Yes, [hero.name]…"
-    kiara.say "It would appear that I am pregnant."
-    kiara.say "Which would also mean that you are the baby's father."
-    show kiara sadsmile
-    "The force of it all seems to hit me almost the same moment that Kiara spells it out."
-    "Like it couldn't have been real until someone actually said the words in front of me."
-    "But now the weight of the revelation feels like it's pressing down, threatening to squash me."
-    mike.say "I..."
-    mike.say "I'm going to be a father?"
-    show kiara whining
-    kiara.say "No, [hero.name]…"
-    show kiara sad
-    mike.say "But you just said you were pregnant, right?"
-    show kiara whining
-    kiara.say "That's not what I mean..."
-    show kiara sad
-    mike.say "But that's what you said, just now!"
-    show kiara whining
-    kiara.say "NO!"
-    show kiara sad
-    "Kiara raises her voice and holds up her hands in an effort to silence me."
-    "And it works, as I can suddenly see the strain that's contorting her face."
-    show kiara whining
-    kiara.say "No, [hero.name]…"
-    kiara.say "I did not come to tell you that you are going to be a father."
-    kiara.say "I came to tell you because I believe you have a right to know."
-    kiara.say "That you should be told before I arrange to get rid of it."
-    show kiara sad
-    "I was silent before on account of Kiara cutting me off."
-    "But I'm speechless now from genuine shock and confusion."
-    mike.say "You..."
-    mike.say "You can't be serious?!?"
-    "I can see from the look in Kiara's eyes that she's not trying to be cruel."
-    "And I think there's part of her that wants to open up to me right now."
-    "But she also seems to be more than determined to make her point."
-    show kiara whining
-    kiara.say "But of course I am serious, [hero.name]!"
-    kiara.say "I am a businesswoman with many responsibilities."
-    kiara.say "Not some young girl in the first flush of youth."
-    kiara.say "There is no way that I can become a mother, not now."
-    show kiara sad
-    "I want to be able to go away and digest all of the things that I've been told."
-    "But there doesn't seem to be any time for that, as Kiara's mind is made up."
-    "So I feel like I'm reeling here, doing the best I can to keep up with what's happening to me."
-    mike.say "You want a termination?"
-    mike.say "You want me to agree to getting rid of it?"
-    show kiara whining
-    kiara.say "No, [hero.name], my mind is already made up."
-    kiara.say "I just wanted to tell you before it happens."
-    show kiara sad
-    menu:
-        "If you don't want to keep it then I'm not gonna force you...":
-            "I feel like I've run at full speed into a brick wall."
-            "Kiara's just told me that she's pregnant with my child."
-            "But then, just as bluntly, she's told me she wants to get rid of it too!"
-            "Part of me wants to scream and shout like madman."
-            "Part of me wants to grab her by the shoulders and plead with her."
-            "But another part of me, maybe a more selfish part, doesn't want to lose her."
-            "And in the end, that's the part of me that seems to win."
-            mike.say "Okay, Kiara..."
-            mike.say "If that's what you want, then I'll respect your wishes."
-            "Kiara nods as I agree to let her have her way."
-            "And as she does so, I see a relief in her eyes."
-            "Like she's finally able to let her guard down."
-            show kiara whining
-            kiara.say "Thank you, [hero.name]."
-            kiara.say "I know that I said I would have my way regardless..."
-            kiara.say "But having your approval is still important to me."
-            show kiara sadsmile
-            "I nod, silently letting Kiara know that I understand."
-            "And all the time I'm telling myself that this is just how things have played out now."
-            "Who knows what the future has in store for the two of us."
-            "And there's always the chance that we could try again."
-            "That circumstances might change to make raising a family possible."
-            $ kiara.love += 10
-            $ kiara.unpreg()
-        "You can't give up on this child!":
-            "I feel like my head is spinning right now, like the whole world's gone crazy."
-            "But in the middle of it all, I keep thinking about how much I want to be with Kiara."
-            "And the idea of us having a baby together, of starting a family..."
-            "Well, that just feels like the perfect way to cement our relationship for good."
-            "And so before I fully know what I'm doing, the words are coming out of my mouth."
-            "I'm trying to change her mind and to make her forget about getting a termination."
-            mike.say "That's the craziest thing I ever heard, Kiara!"
-            mike.say "You're the strongest woman I ever met, you know that?"
-            mike.say "You're totally crushing being a businesswoman."
-            mike.say "And I bet you'd be a brilliant mom too!"
-            "Kiara shakes her head, trying to dismiss everything I just said."
-            show kiara whining
-            kiara.say "[hero.name]…"
-            kiara.say "I know what you are trying to do..."
-            kiara.say "But..."
-            show kiara sad
-            "The only problem is that I'm not in the mood to let her stop me now."
-            "Not when I'm on a roll like this one."
-            mike.say "Hear me out, please..."
-            mike.say "Because it's not like you'd be on your own either, is it?"
-            mike.say "You'd have me to pick up the slack, and I'm not scared of being a stay-at-home dad!"
-            if kiara.love >= 150:
-                show kiara stuned
-                "I can see something starting to change in Kiara's demeanour."
-                "Before now she had all of her defences up and was fighting me."
-                "But now I think they're starting to come down as she listens to me."
-                show kiara surprised
-                kiara.say "I..."
-                kiara.say "I wanted to think that it might be possible..."
-                kiara.say "But I have always had to sacrifice in life."
-                kiara.say "Always had to give up on my dreams to achieve success."
-                show kiara stuned
-                "I take this as my cue to step forwards and take Kiara's hands in my own."
-                mike.say "That was before you had me, Kiara..."
-                mike.say "Before you had someone that was there to share the burden."
-                mike.say "I'm here to share your sacrifice and to make your dreams a reality."
-                "Kiara stares into my eyes as I say all of this."
-                "Almost like she can't believe what she's hearing."
-                "But then she nods her head."
-                show kiara talkative
-                kiara.say "I believe that you are telling the truth, [hero.name]."
-                kiara.say "And I believe that, together, we can do it!"
-                show kiara smile
-                "With that, Kiara leans her head against my chest."
-                "And I pull her into an embrace, holding her tightly."
-                $ kiara.love += 5
-                $ kiara.sub += 7
-            else:
-                show kiara whining
-                kiara.say "Please stop it!"
-                kiara.say "I already told you, my mind is made up."
-                show kiara sad
-                "This time there's a finality in Kiara's voice that stops me dead."
-                "One that tells me there's no point in arguing anymore."
-                mike.say "Okay, Kiara..."
-                mike.say "If that's what you want, then I'll respect your wishes."
-                "Kiara nods as I agree to let her have her way."
-                "And as she does so, I see a relief in her eyes."
-                "Like she's finally able to let her guard down."
-                show kiara talkative
-                kiara.say "Thank you, [hero.name]."
-                kiara.say "I know that I said I would have my way regardless..."
-                kiara.say "But having your approval is still important to me."
-                show kiara sad
-                "I nod, silently letting Kiara know that I understand."
-                "And all the time I'm telling myself that this is just how things have played out now."
-                "Who knows what the future has in store for the two of us."
-                "And there's always the chance that we could try again."
-                "That circumstances might change to make raising a family possible."
-                $ kiara.sub -= 10
-                $ kiara.unpreg()
     return
 
 label kiara_sub_event_01:

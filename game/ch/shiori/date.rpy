@@ -57,19 +57,10 @@ label shiori_date_eat_a_burger:
     return
 
 label shiori_date_buy_drink:
-    if shiori.is_visibly_pregnant:
-        show shiori angry
-        $ shiori.love -= 10
-        shiori.say "Oh...how could you, [hero.name]?"
-        shiori.say "You know I can't drink when I'm pregnant!"
-        shiori.say "I thought you cared about me and the baby?!?"
-        $ hero.cancel_activity()
-        hide shiori
-    else:
-        "When we order drinks, Shiori acts as though she's got literally no idea what to do or say."
-        "In the end, I have to choose a drink for her."
-        "And when it arrives, she looks at it with genuine fascination."
-        "By the look of her, you'd think she was about to drink some fantastical magic potion."
+    "When we order drinks, Shiori acts as though she's got literally no idea what to do or say."
+    "In the end, I have to choose a drink for her."
+    "And when it arrives, she looks at it with genuine fascination."
+    "By the look of her, you'd think she was about to drink some fantastical magic potion."
     return
 
 label shiori_date_play_darts:
@@ -86,14 +77,7 @@ label shiori_date_pub_play_pool:
     return
 
 label shiori_date_buy_a_round:
-    if shiori.is_visibly_pregnant:
-        show shiori angry
-        $ shiori.love -= 10
-        shiori.say "Oh...how could you, [hero.name]?"
-        shiori.say "You know I can't drink when I'm pregnant!"
-        shiori.say "I thought you cared about me and the baby?!?"
-        $ hero.cancel_activity()
-    elif (hero.charm >= 60 - shiori.love and shiori.flags.drinks < 2):
+    if (hero.charm >= 60 - shiori.love and shiori.flags.drinks < 2):
         show drink shiori
         "When I offer to buy another round, Shiori smiles sweetly."
         "But her expression clearly says that she's not bothered either way."

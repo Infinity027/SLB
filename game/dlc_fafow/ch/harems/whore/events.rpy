@@ -2880,25 +2880,14 @@ label lexi_reona_male_ending:
     "Lexi looks amazing in her wedding dress, such a contrast to her normal trashy style."
     "It highlights every bit of the natural beauty that she possesses."
     "Making me aware of just how special she truly is."
-    if lexi.is_visibly_pregnant:
-        "The cut of her dress compliments her curving belly, rather than trying to hide it."
-        "And I know full well that there's no way Lexi would ever deny the fact she's pregnant."
-        "Because I also know just how proud she is to be carrying our child."
-    else:
-        "But don't think that means I'll be trying to make Lexi into a proper lady."
-        "I fell in love with her for who she is, not what I thought I could make her into."
+    "But don't think that means I'll be trying to make Lexi into a proper lady."
+    "I fell in love with her for who she is, not what I thought I could make her into."
     "Reona's as beautiful as she was the first day I met her at college."
     "And she's walking with the same confidence she had that day as well."
     "Like Lexi, I never want her to chance."
     "I'll always be perfectly happy with her as the person she is."
-    if reona.is_visibly_pregnant:
-        "And the fact that she's visibly pregnant is a part of that too."
-        "I don't feel any shame as I gaze at Reona's belly."
-        "On the contrary, I feel a thrill knowing she's expecting."
-        "As well as the promise for the future that brings along with it."
-    else:
-        "Sometimes I wonder what would have happened if I hadn't talked to her that day."
-        "If I'd refused to offer the help that she needed to get ahead in her studies."
+    "Sometimes I wonder what would have happened if I hadn't talked to her that day."
+    "If I'd refused to offer the help that she needed to get ahead in her studies."
     show lexi at center, traveling(1.5, 5.0, (840, 1040))
     show reona at center, traveling(1.5, 5.0, (440, 1040))
     "I'm staring at the girls so hard and thinking so deeply about them that I kind of zone out."
@@ -3072,31 +3061,15 @@ label lexi_reona_male_ending:
     reona.say "Or that we'd both be on our hands and knees behind the front-door!"
     lexi.say "Ha!"
     lexi.say "I love the look on his face when we pull stunts like that!"
-    if (lexi.is_visibly_pregnant or lexi.flags.mikeBabies >= 1) and (reona.is_visibly_pregnant or reona.flags.mikeBabies >= 1):
-        lexi.say "Though we get to do less of it now Chantel and Laurel are around."
-        lexi.say "[hero.name]'s usually running around after them when he gets home."
-        reona.say "Yeah, but he loves being a daddy."
-        reona.say "And that's what makes it worthwhile."
-    elif (lexi.is_visibly_pregnant or lexi.flags.mikeBabies >= 1):
-        lexi.say "Though we get to do less of it now little Chantel's around."
-        lexi.say "[hero.name]'s usually running around after her when he gets home."
-        reona.say "Yeah, but he loves being a daddy."
-        reona.say "And that's what makes it worthwhile."
-    elif (reona.is_visibly_pregnant or reona.flags.mikeBabies >= 1):
-        reona.say "Though we get to do less of it now little Laurel's around."
-        reona.say "[hero.name]'s usually running around after her when he gets home."
-        lexi.say "Yeah, but he loves being a daddy."
-        lexi.say "And that's what makes it great."
-    else:
-        reona.say "We might want to make the most of it while we have the chance."
-        lexi.say "Huh?"
-        lexi.say "Wadda ya mean?"
-        reona.say "Well, [hero.name] has the wives, the house and the job."
-        reona.say "All he needs to complete the picture is a couple of kids."
-        lexi.say "Oh, you think?"
-        reona.say "I do think!"
-        lexi.say "No worries, we'll both look cute with big, pregnant bellies."
-        lexi.say "And we'll have some serious fun getting them too!"
+    reona.say "We might want to make the most of it while we have the chance."
+    lexi.say "Huh?"
+    lexi.say "Wadda ya mean?"
+    reona.say "Well, [hero.name] has the wives, the house and the job."
+    reona.say "All he needs to complete the picture is a couple of kids."
+    lexi.say "Oh, you think?"
+    reona.say "I do think!"
+    lexi.say "No worries, we'll both look cute with big, pregnant bellies."
+    lexi.say "And we'll have some serious fun getting them too!"
     reona.say "So all in all, I think things turned out pretty well for us."
     lexi.say "Yeah, life's pretty darn sweet."
     lexi.say "And I kinda want to see where we end up, you know?"
@@ -3108,4 +3081,3 @@ label lexi_reona_male_ending:
     $ game.set_new_game_plus()
     $ renpy.full_restart()
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

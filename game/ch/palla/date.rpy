@@ -61,19 +61,9 @@ label palla_date_eat_a_burger:
     return
 
 label palla_date_buy_drink:
-    if palla.is_visibly_pregnant:
-        show palla angry
-        $ palla.love -= 10
-        palla.say "Erm...don't you remember getting me pregnant, [hero.name]?"
-        palla.say "Because I certainly do!"
-        palla.say "It's basically your fault I can't do anything fun."
-        palla.say "At least not while I have your kid inside of me!"
-        $ hero.cancel_activity()
-        hide palla
-    else:
-        "As soon as she has a drink in her hand, Palla's mood seems to visibly improve."
-        "She becomes more animated and talkative in between sips."
-        "Maybe all she needed was something to loosen her tongue?"
+    "As soon as she has a drink in her hand, Palla's mood seems to visibly improve."
+    "She becomes more animated and talkative in between sips."
+    "Maybe all she needed was something to loosen her tongue?"
     return
 
 label palla_date_play_darts:
@@ -91,15 +81,7 @@ label palla_date_pub_play_pool:
     return
 
 label palla_date_buy_a_round:
-    if palla.is_visibly_pregnant:
-        show palla angry
-        $ palla.love -= 10
-        palla.say "Erm...don't you remember getting me pregnant, [hero.name]?"
-        palla.say "Because I certainly do!"
-        palla.say "It's basically your fault I can't do anything fun."
-        palla.say "At least not while I have your kid inside of me!"
-        $ hero.cancel_activity()
-    elif (hero.charm >= 60 - palla.love and palla.flags.drinks < 2):
+    if (hero.charm >= 60 - palla.love and palla.flags.drinks < 2):
         show drink palla
         if palla.love < 100:
             "Palla just kind of shrugs when I say that the next round is on me."

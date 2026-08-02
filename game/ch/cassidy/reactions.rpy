@@ -48,15 +48,7 @@ label cassidy_offer_a_drink_male:
     mike.say "Would you like a drink, Cassidy?"
     mike.say "Because I was just thinking of going to the bar."
     "Almost the second the words are out of my mouth, Cassidy turns to face me."
-    if cassidy.is_visibly_pregnant:
-        show cassidy angry
-        $ cassidy.love -= 10
-        cassidy.say "[hero.name], you...you beast!"
-        cassidy.say "First you get me pregnant."
-        cassidy.say "And then you put our child in danger by offering me alcohol!"
-        $ hero.cancel_activity()
-        hide cassidy
-    elif (hero.charm >= 60 - cassidy.love and cassidy.flags.drinks < 2) or date_girl == cassidy:
+    if (hero.charm >= 60 - cassidy.love and cassidy.flags.drinks < 2) or date_girl == cassidy:
         show cassidy happy
         cassidy.say "So nice of you to ask, [hero.name]."
         cassidy.say "I'll have one of those fancy cocktails, thank you!"

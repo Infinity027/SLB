@@ -1,11 +1,7 @@
 label morgan_talk_love_male:
     mike.say "What's your take on love, Morgan?"
     show morgan
-    if morgan.is_visibly_pregnant:
-        show morgan happy
-        morgan.say "I think this baby is proof enough that it's real."
-        $ morgan.love += 1
-    elif morgan.male >= 75:
+    if morgan.male >= 75:
         morgan.say "I'm not into all of that sappy stuff!"
     elif morgan.male >= 25:
         show morgan happy
@@ -28,11 +24,7 @@ label morgan_talk_love_male:
 label morgan_talk_sex_male:
     mike.say "Have you got a philosophy when it comes to sex, Morgan?"
     show morgan
-    if morgan.is_visibly_pregnant:
-        show morgan happy
-        morgan.say "It can lead you down some pretty life-changing roads."
-        $ morgan.sub += 1
-    elif morgan.male >= 75:
+    if morgan.male >= 75:
         show morgan happy
         morgan.say "Keep it fun and keep it casual - no one needs to be tied down when they can be having fun instead!"
         $ morgan.male += 1
@@ -55,9 +47,7 @@ label morgan_talk_sex_male:
 label morgan_talk_politics_male:
     mike.say "Elections are coming round again - will you be voting, Morgan?"
     show morgan
-    if morgan.is_visibly_pregnant:
-        morgan.say "Yeah, of course - I have someone else's future to think about now."
-    elif morgan.male >= 75:
+    if morgan.male >= 75:
         show morgan angry
         morgan.say "They're all a bunch of pricks and liars!"
         $ morgan.love += 1
@@ -73,12 +63,7 @@ label morgan_talk_politics_male:
 label morgan_talk_food_male:
     mike.say "Think quickly, Morgan - eat out or takeout?"
     show morgan
-    if morgan.is_visibly_pregnant:
-        morgan.say "If you want to take me out anytime soon - make it one of those all-you-can-eat buffets."
-        show morgan happy
-        morgan.say "This baby's got me eating like a horse!"
-        $ morgan.love += 1
-    elif morgan.male >= 75:
+    if morgan.male >= 75:
         morgan.say "Takeout, every time - less fuss more food!"
     elif morgan.male >= 25:
         morgan.say "Depends on my mood - sometimes I wanna be wined and dined, sometimes I just want a dirty slice of pizza."
@@ -96,11 +81,7 @@ label morgan_talk_food_male:
 label morgan_talk_travels_male:
     mike.say "If you could jet off anywhere in the world, where would it be?"
     show morgan
-    if morgan.is_visibly_pregnant:
-        show morgan happy
-        morgan.say "I'd like for us to go somewhere nice as a family, once the baby's here."
-        $ morgan.love += 1
-    elif morgan.male >= 75:
+    if morgan.male >= 75:
         morgan.say "I'd like to do one of those extreme hiking holidays, like through the desert or mountains, or something like that."
         $ morgan.male += 1
     elif morgan.male >= 25:
@@ -120,9 +101,7 @@ label morgan_talk_tv_male:
     mike.say "There's fuck all on TV right now."
     mike.say "I don't know why I bother with it!"
     show morgan
-    if morgan.is_visibly_pregnant:
-        morgan.say "I try to watch it, but I fall asleep whenever I lay down on the sofa."
-    elif morgan.male >= 75:
+    if morgan.male >= 75:
         show morgan annoyed
         morgan.say "Don't be such a pussy, man!"
         morgan.say "There's always a game or a fight on one of the channels."
@@ -143,11 +122,7 @@ label morgan_talk_tv_male:
 label morgan_talk_sports_male:
     mike.say "Sports, sports, sports - that's all some people ever seem to talk about!"
     show morgan
-    if morgan.is_visibly_pregnant:
-        show morgan annoyed
-        morgan.say "Those steroid-brained jocks want to try being pregnant - that'd show how tough they really are!"
-        $ morgan.love -= 1
-    elif morgan.male >= 75:
+    if morgan.male >= 75:
         show morgan annoyed
         morgan.say "What do you mean you don't like sports?"
         morgan.say "You're a guy, aren't you?"
@@ -171,11 +146,7 @@ label morgan_talk_sports_male:
 label morgan_talk_fashion_male:
     mike.say "Do you keep up with what's supposed to be in fashion, Morgan?"
     show morgan
-    if morgan.is_visibly_pregnant:
-        show morgan annoyed
-        morgan.say "Don't talk to me about fashion - it's the twenty-first century, and maternity clothes are still basically sacks with head and arm holes!"
-        $ morgan.love -= 1
-    elif morgan.male >= 75:
+    if morgan.male >= 75:
         morgan.say "It's important to have a style. That's why I always picked out clothes everyone thought was boyish!"
         $ morgan.love -= 1
         $ morgan.sub -= 1
@@ -199,10 +170,7 @@ label morgan_talk_fashion_male:
 label morgan_talk_books_male:
     mike.say "Recommend a good book, Morgan?"
     show morgan
-    if morgan.is_visibly_pregnant:
-        morgan.say "You bet - all I've been doing lately is sprawling around like a whale of an evening and devouring books!"
-        $ morgan.love += 1
-    elif morgan.male >= 75:
+    if morgan.male >= 75:
         show morgan annoyed
         morgan.say "Nope - you should do things in life, not read about them."
         $ morgan.love -= 1
@@ -229,11 +197,7 @@ label morgan_talk_books_male:
 label morgan_talk_people_male:
     mike.say "Are you a people person, Morgan?"
     show morgan
-    if morgan.is_visibly_pregnant:
-        show morgan annoyed
-        morgan.say "Not really - the pregnancy's made me kinda anti-social."
-        $ morgan.love -= 1
-    elif morgan.male >= 75:
+    if morgan.male >= 75:
         show morgan happy
         morgan.say "Sure, I'm always the life and soul of the party!"
         $ morgan.love += 1
@@ -254,11 +218,7 @@ label morgan_talk_people_male:
 label morgan_talk_computers_male:
     mike.say "Do you keep up to speed with the world of computers, Morgan?"
     show morgan
-    if morgan.is_visibly_pregnant:
-        show morgan annoyed
-        morgan.say "I've been getting better since I found myself stuck inside most of the time."
-        $ morgan.love -= 1
-    elif morgan.male >= 75:
+    if morgan.male >= 75:
         show morgan happy
         morgan.say "I know how to turn one on and find some decent porn - what more is there to know?"
         $ morgan.male += 1
@@ -280,11 +240,7 @@ label morgan_talk_computers_male:
 label morgan_talk_music_male:
     mike.say "I'm thinking of going to the record store - you interested, Morgan?"
     show morgan
-    if morgan.is_visibly_pregnant:
-        show morgan annoyed
-        morgan.say "Urrgh...count me out if it involves prolonged periods of walking and standing!"
-        $ morgan.love -= 1
-    elif morgan.male >= 75:
+    if morgan.male >= 75:
         morgan.say "I don't really like Jack's idea of metal, but maybe something a bit more modern that rocks out."
         $ morgan.love += 1
         $ morgan.sub -= 1
@@ -308,12 +264,7 @@ label morgan_talk_music_male:
 label morgan_talk_birthday_male:
     mike.say "Happy birthday, Morgan!"
     show morgan
-    if morgan.is_visibly_pregnant:
-        show morgan sad
-        "Morgan bursts into tears at the mere mention of her birthday."
-        morgan.say "Oh god, I'm so old!"
-        morgan.say "And there mood swings are no fun either!"
-    elif morgan.male >= 75:
+    if morgan.male >= 75:
         show morgan annoyed
         morgan.say "Geez, calm down - it happens every year, nothing to get worked up about!"
     elif morgan.male >= 25:

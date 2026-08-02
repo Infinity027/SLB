@@ -4460,13 +4460,8 @@ label amy_anna_kleio_sasha_male_ending:
     show kleio wedding
     "Kleio struts in a moment later, as cocky and confident as ever."
     "And my eyes are on her the whole time as she swaggers down the aisle."
-    if kleio.is_visibly_pregnant:
-        "I'm also in love with the way she makes no effort to hide her pregnant belly too!"
-        "In fact, Kleio almost shoves it in the faces of the guests as she walks past them."
-        "And I'm so proud of how she turns everything into a show of defiance."
-    else:
-        "I'm so proud of the way Kleio turns everything into a show of defiance."
-        "Almost like she's going to start giving everyone the middle-finger next!"
+    "I'm so proud of the way Kleio turns everything into a show of defiance."
+    "Almost like she's going to start giving everyone the middle-finger next!"
     show kleio at mostleft4 with move
     "Once she reaches my side, Kleio nods in my direction."
     "Almost like she's now challenging me too!"
@@ -4481,13 +4476,8 @@ label amy_anna_kleio_sasha_male_ending:
     "And we both look back to see Sasha walking down the aisle."
     "If Kleio's walk was a protest, then Sasha's is one of triumph."
     "Like the true lead guitarist she is, Sasha makes sure all attention is on her."
-    if sasha.is_visibly_pregnant:
-        "The cut of her dress perfectly accommodates the curve of her pregnant belly."
-        "And if that draws any disapproving looks from the guests, then I don't see them myself."
-        "Because I'm far too busy admiring Sasha as she walks towards me."
-    else:
-        "And it stays that way all the time Sasha is walking the aisle."
-        "In that space of time, all eyes are on her alone."
+    "And it stays that way all the time Sasha is walking the aisle."
+    "In that space of time, all eyes are on her alone."
     "As she gets to the altar, I finally recognise the music playing."
     show sasha at mostright4 with move
     mike.say "Sasha..."
@@ -4504,13 +4494,8 @@ label amy_anna_kleio_sasha_male_ending:
     "A moment later my suspicions are confirmed, as she hurries into view."
     "Where Kleio and Sasha strutted, Anna almost dashes down the aisle."
     "And she's waving to us the whole time too, a total ball of energy."
-    if anna.is_visibly_pregnant:
-        "I'm relieved to see that Anna's holding onto her belly."
-        "Because she's really starting to show now."
-        "And I'm always worried about keeping her and the baby as safe as possible."
-    else:
-        "In fact Anna's moving so quickly that I'm worried she's going to trip and fall."
-        "She seems to be rushing in an effort to get here as fast as she possibly can!"
+    "In fact Anna's moving so quickly that I'm worried she's going to trip and fall."
+    "She seems to be rushing in an effort to get here as fast as she possibly can!"
     show anna happy at right4 with move
     anna.say "Hey, guys!"
     anna.say "I am SO pumped for this!"
@@ -4523,13 +4508,8 @@ label amy_anna_kleio_sasha_male_ending:
     show amy wedding
     "All four of us turn in time to see Amy stride into the chapel."
     "And we all watch as the Goth princess of the band makes her entrance."
-    if amy.is_visibly_pregnant:
-        "For once I'm relieved that Amy's made concessions in terms of what she's wearing."
-        "Because there's no corset or tight clothing around her visibly pregnant belly."
-        "But apart from that she looks amazing, a vision of Gothic beauty."
-    else:
-        "I always love the fact that Amy's the one Goth in the band."
-        "A fact that makes her unique even amongst a bunch of weirdos like us."
+    "I always love the fact that Amy's the one Goth in the band."
+    "A fact that makes her unique even amongst a bunch of weirdos like us."
     show amy at left4 with move
     kleio.say "You too your time, Goth Barbie!"
     show amy happy

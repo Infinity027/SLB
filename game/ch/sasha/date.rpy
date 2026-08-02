@@ -55,18 +55,9 @@ label sasha_date_eat_a_burger:
     return
 
 label sasha_date_buy_drink:
-    if sasha.is_visibly_pregnant:
-        show sasha angry
-        $ sasha.love -= 10
-        sasha.say "What the..."
-        sasha.say "Are you taking the piss or what?"
-        sasha.say "Did you forget that I'm bloody pregnant?!?"
-        $ hero.cancel_activity()
-        hide sasha
-    else:
-        "Sasha seems to loosen up and crack a smile almost the same moment she has a drink in her hand."
-        "Not that I'm suggesting she spends most of her time being moody, of course."
-        "She just comes over as happier in general."
+    "Sasha seems to loosen up and crack a smile almost the same moment she has a drink in her hand."
+    "Not that I'm suggesting she spends most of her time being moody, of course."
+    "She just comes over as happier in general."
     return
 
 label sasha_date_play_darts:
@@ -82,14 +73,7 @@ label sasha_date_pub_play_pool:
     return
 
 label sasha_date_buy_a_round:
-    if sasha.is_visibly_pregnant:
-        show sasha angry
-        $ sasha.love -= 10
-        sasha.say "What the..."
-        sasha.say "Are you taking the piss or what?"
-        sasha.say "Did you forget that I'm bloody pregnant?!?"
-        $ hero.cancel_activity()
-    elif (hero.charm >= 60 - sasha.love and sasha.flags.drinks < 2):
+    if (hero.charm >= 60 - sasha.love and sasha.flags.drinks < 2):
         show drink sasha
         "Sasha smiles and thanks me almost before I've said that I'll get the next round."
         "It's not like she's expecting me to pay for her drinks all night either."

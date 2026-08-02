@@ -7,7 +7,6 @@ init python:
     "duration": 1,
     "icon": "hypnosis",
     "conditions": [
-        HeroTarget(IsGender("male")),
         HasSkill("hypnosis"),
         ActiveTarget(
             Not(IsActivity("sleep")),

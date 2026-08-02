@@ -383,33 +383,6 @@ init -11 python:
             else:
                 return 100
         
-        @staticmethod
-        def impregnate(force=False):
-            return False
-        
-        @property
-        def pregnant(self):
-            if self.is_female:
-                return self.get_counter("pregnant") >= 1
-            return False
-        
-        @property
-        def knowingly_pregnant(self):
-            return (
-            self.counters.pregnant >= 10 and self.flags.foundpreg
-        ) or self.is_visibly_pregnant
-        
-        @property
-        def is_visibly_pregnant(self):
-            if self.is_female:
-                return self.get_counter("pregnant") >= 30
-            return False
-        
-        def unpreg(self):
-            self.counters.pregnant = None
-            self.flags.pregnancy_father = False
-            self.flags.foundpreg = False
-        
         @property
         def is_collared(self):
             return self.flags.collared
@@ -557,9 +530,6 @@ init -11 python:
             return self._get_people(
             defaults, ignore, lambda x: x.is_girlfriend and not x.is_gone_forever
         )
-        
-        def get_pregs(self, defaults=None, ignore=None):
-            return self._get_people(defaults, ignore, lambda x: x.is_visibly_pregnant)
         
         @staticmethod
         def _get_people(defaults, ignore, fn):

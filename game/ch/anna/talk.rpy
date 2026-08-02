@@ -1,11 +1,8 @@
 label anna_talk_love_male:
     mike.say "I guess it's kind of a cliche - but what's your take on love, Anna?"
     show anna happy
-    if anna.is_visibly_pregnant:
-        anna.say "Of course I believe in love - how couldn't I with our baby growing inside of me?"
-    else:
-        anna.say "I think love is all around you - ha, there's another cliche!"
-        anna.say "Seriously though, you should be able to love whoever you choose."
+    anna.say "I think love is all around you - ha, there's another cliche!"
+    anna.say "Seriously though, you should be able to love whoever you choose."
     $ anna.love += 1
     hide anna
     return
@@ -13,12 +10,7 @@ label anna_talk_love_male:
 label anna_talk_sex_male:
     mike.say "You're a modern kind of girl, Anna - you're liberated when it comes to sex, right?"
     show anna
-    if anna.is_visibly_pregnant:
-        "Anna's face shows a comically exaggerated amount of concern and gravity."
-        anna.say "It's such a shame that the baby means my pussy's out of bounds for a while."
-        show anna wink
-        anna.say "Ah well - I guess you'll just have to find somewhere else to fuck me!"
-    elif anna.love < 40:
+    if anna.love < 40:
         show anna blush
         "Anna blushes and refuses to meet my eye."
         anna.say "I don't think I know you well enough to feel comfortable talking about it."
@@ -46,40 +38,25 @@ label anna_talk_sex_male:
 label anna_talk_politics_male:
     mike.say "Who's gonna get your vote the next time the elections come round, Anna?"
     show anna annoyed
-    if anna.is_visibly_pregnant:
-        anna.say "I used to just think that they were all shits."
-        anna.say "But now that we're going to be parents, I'm scared for our kid's future with them running things."
-    else:
-        "Anna crosses her arms over her considerable chest and frowns."
-        anna.say "They're all the same - just out to fuck us, and not in the good way, either!"
+    "Anna crosses her arms over her considerable chest and frowns."
+    anna.say "They're all the same - just out to fuck us, and not in the good way, either!"
     hide anna
     return
 
 label anna_talk_food_male:
     mike.say "I just can't think of what I want to eat tonight - how about you, Anna?"
     show anna
-    if anna.is_visibly_pregnant:
-        anna.say "Erm, I think the cravings have started."
-        show anna annoyed
-        anna.say "I still want sushi, but now I can't have it without peanut butter or ice cream!"
-    else:
-        anna.say "I just love japanese food - sushi, ramen, whatever!"
-        anna.say "It's all good!"
+    anna.say "I just love japanese food - sushi, ramen, whatever!"
+    anna.say "It's all good!"
     hide anna
     return
 
 label anna_talk_travels_male:
     mike.say "I'm tired of staring at the same four walls - wouldn't it be great to get away, Anna?"
     show anna
-    if anna.is_visibly_pregnant:
-        anna.say "I can't even walk across the street, my feet are so swollen!"
-        "She flutters her eyelids at me, clearly wanting something."
-        show anna wink
-        anna.say "Will you give me a foot-rub, [hero.name]?"
-    else:
-        show anna blush
-        "I can see the stars in Anna's eyes as she begins to daydream."
-        anna.say "Oh, [hero.name] - wouldn't it be wonderful if the band went on a tour?"
+    show anna blush
+    "I can see the stars in Anna's eyes as she begins to daydream."
+    anna.say "Oh, [hero.name] - wouldn't it be wonderful if the band went on a tour?"
     $ anna.love += 1
     hide anna
     return
@@ -99,11 +76,6 @@ label anna_talk_tv_male:
         mike.say "Oh...okay...it's a date then?"
         $ anna.love += 1
         $ anna.flags.horrorMovieDate = True
-    elif anna.is_visibly_pregnant:
-        mike.say "I feel like chilling out and watching some TV - any recommendations, Anna?"
-        anna.say "I used to be crazily into horror movies."
-        show anna annoyed
-        anna.say "But since we got pregnant, I just can't stomach them anymore."
     else:
         mike.say "I feel like chilling out and watching some TV - any recommendations, Anna?"
         anna.say "Oh, it has to be horror movies, all the way."
@@ -116,40 +88,30 @@ label anna_talk_tv_male:
 label anna_talk_sports_male:
     mike.say "There's just so much sport around these days, it kinda passes me by - how about you, Anna?"
     show anna
-    if anna.is_visibly_pregnant:
-        anna.say "I can't even see my toes right now, [hero.name], never mind touch them!"
-    else:
-        show anna annoyed
-        "Anna wrinkles her nose in apparent distaste for the subject."
-        anna.say "Eww, no - I hate sports, and I am so not into jocks..."
-        $ anna.love -= 1
+    show anna annoyed
+    "Anna wrinkles her nose in apparent distaste for the subject."
+    anna.say "Eww, no - I hate sports, and I am so not into jocks..."
+    $ anna.love -= 1
     hide anna
     return
 
 label anna_talk_fashion_male:
     mike.say "You never seem to be interested in the latest fashions, Anna."
     show anna
-    if anna.is_visibly_pregnant:
-        anna.say "I saw these really cool maternity tops with band logos on them the other day!"
-    else:
-        anna.say "I believe that fashion is a statement of who you are and what you think."
-        show anna angry
-        anna.say "If you follow the herd, you're pretty much saying you're a sheep."
-        $ anna.love -= 1
+    anna.say "I believe that fashion is a statement of who you are and what you think."
+    show anna angry
+    anna.say "If you follow the herd, you're pretty much saying you're a sheep."
+    $ anna.love -= 1
     hide anna
     return
 
 label anna_talk_books_male:
     mike.say "I've never seen you with a book, Anna - do you read much?"
     show anna
-    if anna.is_visibly_pregnant:
-        anna.say "I try to read in bed at night."
-        anna.say "But I'm usually so burnt out that I fall straight to sleep."
-    else:
-        show anna happy
-        anna.say "Oh yeah, I just don't carry books around with me all the time."
-        anna.say "I love reading philosophy, Spinoza is my favorite right now."
-        $ anna.love += 1
+    show anna happy
+    anna.say "Oh yeah, I just don't carry books around with me all the time."
+    anna.say "I love reading philosophy, Spinoza is my favorite right now."
+    $ anna.love += 1
     hide anna
     return
 
@@ -157,14 +119,10 @@ label anna_talk_people_male:
     mike.say "Is it just me, Anna, or are most of the people in the world assholes?"
     show anna
     "Anna frowns a little at my comment."
-    if anna.is_visibly_pregnant:
-        anna.say "I used to think that people were basically good."
-        anna.say "But now I have the baby to worry about, I keep seeing the worst in everyone."
-    else:
-        show anna angry
-        $ anna.love -= 1
-        anna.say "Hey, [hero.name], that's a pretty negative thing to think!"
-        anna.say "I think that everyone is basically good deep down, they just hide it well."
+    show anna angry
+    $ anna.love -= 1
+    anna.say "Hey, [hero.name], that's a pretty negative thing to think!"
+    anna.say "I think that everyone is basically good deep down, they just hide it well."
     hide anna
     return
 

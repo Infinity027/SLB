@@ -274,6 +274,14 @@ init -1 python:
                 return path
         return None
 
+    # Register {phone_image=...} as a no-op self-closing text tag so the raw
+    # message string can sit in the say screen's 'what' widget (satisfying
+    # Ren'Py's developer-mode "exact contents" check) without raising an
+    # "Unknown text tag" error. The image itself is drawn by nvl_phonetext.
+    def _phone_image_text_tag(tag, argument):
+        return []
+    config.self_closing_custom_text_tags["phone_image"] = _phone_image_text_tag
+
     def Phone_ReceiveSound(event, interact=True, **kwargs):
         if event == "show_done":
             renpy.sound.play("sd/msg_send.ogg", channel="sound")
@@ -404,8 +412,12 @@ screen nvl_phonetext(dialogue):
                             fixed:
                                 fit_first True
                                 add Transform(message_image, maxsize=(175, 300), fit="contain")
-                                text "":
+                                # Give the 'what' widget the exact message string so Ren'Py's
+                                # dev-mode consistency check passes. The {phone_image} tag renders
+                                # nothing (size 0), so only the image above is visible.
+                                text d.what:
                                     id d.what_id
+                                    size 0
                         else:
                             text d.what:
                                 pos (0, 0)
