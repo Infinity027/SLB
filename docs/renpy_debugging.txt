@@ -1,0 +1,136 @@
+Ren'Py debugging quick reference
+===============================
+
+This project already enables Ren'Py development mode in game/options.rpy:
+
+    define config.developer = True
+
+That enables the developer console, developer menu, script reload, and full
+tracebacks when the game is run from this checkout.
+
+Start the game
+--------------
+
+From the project root on Linux, run:
+
+    ./LoSeSb.sh
+
+Launch a new game or load a save first. Most game objects (hero, game,
+characters, and story state) are initialized only after start runs.
+
+Open the developer console
+--------------------------
+
+While the game is running, press Shift+O (the letter O). Press Esc to close
+it. The console accepts Python expressions to inspect a value, Python
+statements to change state or call a function, and Ren'Py statements including
+call and jump.
+
+Use Up/Down to recall previous commands. `help` lists console commands, and
+`help expression` shows help for an expression when available.
+
+Run a particular label
+----------------------
+
+Find labels with:
+
+    rg -n '^label ' game -g '*.rpy'
+
+Then enter one of these in the console:
+
+    # Run the label and return here when it finishes.
+    call angela_bj_bruce
+
+    # Run a label that requires parameters.
+    call girl_interact(angela)
+
+    # Leave the current flow and continue at this label. This does not return.
+    jump main
+
+call is normally safer for an isolated event. Use jump for a known stable
+entry point such as main, or when deliberately replacing the current flow.
+Labels still require valid prerequisite state; jumping directly to a late story
+event can fail if its characters, flags, scene, or call-stack context are not
+ready.
+
+Inspect and change values
+-------------------------
+
+Enter an expression by itself to display it:
+
+    hero.money.val
+    hero.energy.val
+    game.day, game.season, game.hour
+    angela.love
+
+Set the .val property for this project's stat objects. It preserves their
+normal minimum/maximum validation:
+
+    hero.money.val = 5000
+    hero.energy.val = hero.energy.max
+    hero.fitness.val = 20
+    angela.love = 100
+
+Useful project objects include hero, game, and character objects such as
+angela. Characters are created during start; if a name is not defined yet,
+load or start a game first. You can also resolve a character explicitly:
+
+    Person.find("angela")
+
+Avoid directly assigning internal calendar or story fields unless you know all
+of their related state. Prefer the game's existing methods when possible.
+
+Call functions and methods
+--------------------------
+
+Python calls execute immediately in the current game state:
+
+    # Advance through the game's normal time-handling code.
+    game.pass_time(1)
+
+    # Grant a known item through its normal inventory method.
+    hero.gain_item("item_id", 1)
+
+    # Existing debug helpers.
+    cheat_money(1000)
+    cheat_luck()
+    cheat_time(1)
+
+Replace "item_id" with an actual item ID from the game data. Prefer helper
+methods such as hero.gain_item(...) and game.pass_time(...) over mutating
+several connected data structures by hand.
+
+Watch values while playing
+--------------------------
+
+The console can continually display expressions:
+
+    watch hero.money.val
+    watch angela.love
+    watch game.day
+    unwatch hero.money.val
+    unwatchall
+
+Use long if the console shortens a large object representation; use short to
+restore the compact output.
+
+Other development shortcuts
+---------------------------
+
+* Shift+D: open Ren'Py's developer menu.
+* Shift+R: reload scripts after editing .rpy files.
+* Shift+O: open the console.
+
+Save before experiments that change story state. Console changes apply to the
+current in-memory game and can be saved; reload a clean save to undo an
+experiment reliably.
+
+A safe test routine
+-------------------
+
+1. Load a disposable save and open the console.
+2. Inspect the prerequisites, for example angela.love or game.day.
+3. Set only the prerequisite values needed for the test.
+4. Use call target_label where possible.
+5. Inspect the resulting state or use watch while the event plays.
+6. Reload the disposable save before a new unrelated test.

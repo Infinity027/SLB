@@ -2,9 +2,105 @@
 errors listed below, and try again.
 
 
-File "game/bg/bookstore/bookstore.rpy", line 4: invalid syntax. Perhaps you forgot a comma?
-    Gift("yuri_manga", price=50, tooltip="A manga that represents lesbian scenes", tags=["books", "manga"],romance les_bonus=1, bonus_traits=["not_religious", "bookworm"])
-                                                                                                               ^^^^^^^^^^^^^^^^^
+The label minami_couch_fun is defined twice, at File "game/ch/minami/base.rpy", line 261:
+label minami_couch_fun:
+and File "game/images/minami/sleepwear/base.rpyc", line 261:
+
+
+The label minami_masturbation is defined twice, at File "game/ch/minami/base.rpy", line 373:
+label minami_masturbation:
+and File "game/images/minami/sleepwear/base.rpyc", line 373:
+
+
+The label minami_cheated is defined twice, at File "game/ch/minami/base.rpy", line 466:
+label minami_cheated(action, cheat_npc=None):
+and File "game/images/minami/sleepwear/base.rpyc", line 466:
+
+
+The label minami_bye is defined twice, at File "game/ch/minami/base.rpy", line 493:
+label minami_bye(bye_outfit=None):
+and File "game/images/minami/sleepwear/base.rpyc", line 493:
+
+
+The label _call_npc_bye_outfit_15 is defined twice, at File "game/ch/minami/base.rpy", line 494:
+    call npc_bye_outfit (npc=minami, bye_outfit=bye_outfit) from _call_npc_bye_outfit_15
+and File "game/images/minami/sleepwear/base.rpyc", line 494:
+
+
+The label minami_play_pool is defined twice, at File "game/ch/minami/base.rpy", line 529:
+label minami_play_pool:
+and File "game/images/minami/sleepwear/base.rpyc", line 529:
+
+
+The label minami_tv is defined twice, at File "game/ch/minami/base.rpy", line 536:
+label minami_tv:
+and File "game/images/minami/sleepwear/base.rpyc", line 536:
+
+
+The label _call_minami_greet is defined twice, at File "game/ch/minami/base.rpy", line 537:
+    call minami_greet from _call_minami_greet
+and File "game/images/minami/sleepwear/base.rpyc", line 537:
+
+
+The label _call_watch_tv_with_3 is defined twice, at File "game/ch/minami/base.rpy", line 539:
+        call watch_tv_with (minami) from _call_watch_tv_with_3
+and File "game/images/minami/sleepwear/base.rpyc", line 539:
+
+
+The label minami_tv_reaction is defined twice, at File "game/ch/minami/base.rpy", line 547:
+label minami_tv_reaction:
+and File "game/images/minami/sleepwear/base.rpyc", line 547:
+
+
+The label minami_porn_bad_reaction is defined twice, at File "game/ch/minami/base.rpy", line 551:
+label minami_porn_bad_reaction:
+and File "game/images/minami/sleepwear/base.rpyc", line 551:
+
+
+The label minami_greet is defined twice, at File "game/ch/minami/base.rpy", line 555:
+label minami_greet:
+and File "game/images/minami/sleepwear/base.rpyc", line 555:
+
+
+The label _call_expression_253 is defined twice, at File "game/ch/minami/base.rpy", line 584:
+        call expression f"minami_greet_dialogues_{hero.gender}" from _call_expression_253
+and File "game/images/minami/sleepwear/base.rpyc", line 584:
+
+
+The label minami_greet_dialogues_male is defined twice, at File "game/ch/minami/base.rpy", line 596:
+label minami_greet_dialogues_male:
+and File "game/images/minami/sleepwear/base.rpyc", line 596:
+
+
+The label minami_kiss is defined twice, at File "game/ch/minami/base.rpy", line 613:
+label minami_kiss:
+and File "game/images/minami/sleepwear/base.rpyc", line 613:
+
+
+The label minami_sleep_date_fuck is defined twice, at File "game/ch/minami/base.rpy", line 658:
+label minami_sleep_date_fuck(location="hero"):
+and File "game/images/minami/sleepwear/base.rpyc", line 658:
+
+
+The label _call_sleep_44 is defined twice, at File "game/ch/minami/base.rpy", line 674:
+                call sleep from _call_sleep_44
+and File "game/images/minami/sleepwear/base.rpyc", line 674:
+
+
+The label _call_sleep_45 is defined twice, at File "game/ch/minami/base.rpy", line 689:
+                call sleep ("minami") from _call_sleep_45
+and File "game/images/minami/sleepwear/base.rpyc", line 689:
+
+
+The label minami_propose_male is defined twice, at File "game/ch/minami/base.rpy", line 693:
+label minami_propose_male:
+and File "game/images/minami/sleepwear/base.rpyc", line 693:
+
+
+The label unlock_minami_compliment is defined twice, at File "game/ch/minami/base.rpy", line 797:
+label unlock_minami_compliment:
+and File "game/images/minami/sleepwear/base.rpyc", line 797:
+
 
 Ren'Py Version: Ren'Py 8.5.2.26010301
-Sat Jul  4 09:24:08 2026
+Sun Aug  2 15:34:56 2026

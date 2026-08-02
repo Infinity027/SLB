@@ -26,7 +26,7 @@ label aletta_ask_phone_male:
         $ aletta.love -= 1
         aletta.say "You don't need to ask for it, [hero.name]."
         aletta.say "You can find my office number in the company directory."
-    return
+    return  
 
 label aletta_ask_birthday_male:
     mike.say "Hey, Aletta..."
