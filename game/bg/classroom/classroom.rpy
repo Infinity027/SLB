@@ -24,12 +24,9 @@ init python:
     "rooms": "classroom",
     "conditions": [
         HeroTarget(
-            Or(
-                IsGender("male"),
-                And(
-                    IsGender("female"),
-                    IsFlag("graduated", True),
-                    ),
+            And(
+                IsGender("female"),
+                IsFlag("graduated", True),
                 ),
             MinStat("energy", 3),
             MinStat("hunger", 3),

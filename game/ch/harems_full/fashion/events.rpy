@@ -7,7 +7,6 @@ init python:
     "conditions": [
         IsDone("palla_event_03b"),
         HeroTarget(
-            IsGender("male"),
             Not(OnDate()),
             HasRoomTag("home"),
             ),

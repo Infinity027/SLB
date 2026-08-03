@@ -7,15 +7,8 @@ init -2 python:
     display_name="Nightclub",
     money_cost=30,
     conditions=[
-        Or(
-            And(
-                HeroTarget(IsGender("female")),
-                InInventory("fancy_dress"),
-            ),
-            And(
-                HeroTarget(IsGender("male")),
-                InInventory("fancy_clothes"),
-            ),
+        And(  
+            InInventory("fancy_clothes"),
         ),
         ValidRooms("date_nightclub"),
     ],
@@ -38,7 +31,6 @@ init -2 python:
     }
 )
 
-
     Event(
     **{
         "name": "date_nightclub_random_events",
@@ -47,7 +39,6 @@ init -2 python:
         "conditions": [
             HeroTarget(
                 OnDate(),
-                IsGender("male"),
                 IsRoom("date_nightclub")
                 ),
         ],

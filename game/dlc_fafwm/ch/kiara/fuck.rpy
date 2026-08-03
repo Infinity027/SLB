@@ -5,7 +5,6 @@ init python:
     "label": "ACTIVE_GIRL_fuck_ROOM",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             HasStamina(),
             ),
         PersonTarget(kiara,
@@ -24,7 +23,7 @@ init python:
     "label": "kiara_hottub_sex_male",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             HasStamina(),
             IsActivity("date_hot_tub_home")),
         PersonTarget(kiara,

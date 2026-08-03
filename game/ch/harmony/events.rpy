@@ -4,7 +4,7 @@ init python:
     "label": "harmony_kiss_me",
     "max_girls": 1,
     "conditions": [
-        HeroTarget(IsGender("male")),
+        
         PersonTarget(harmony,
             IsPresent(),
             Not(IsHidden()),
@@ -49,7 +49,7 @@ init python:
     "priority": 500,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("bible_study"),
             IsRoom("church"),
             ),
@@ -268,7 +268,7 @@ init python:
     "conditions": [
         IsDone("harmony_event_06_vanilla"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_park")),
         PersonTarget(harmony,
             OnDate(),
@@ -323,8 +323,6 @@ init python:
     "priority": 500,
     "conditions": [
         IsDone("harmony_event_04_religious"),
-        HeroTarget(
-            IsGender("male")),
         PersonTarget(harmony,
             IsActive(),
             MinStat("love", 180),
@@ -343,7 +341,7 @@ init python:
         IsDone("harmony_event_05_religious"),
         IsHour(13),
         HeroTarget(
-            IsGender("male"),
+            
             Not(HasRoomTag("park"))
             ),
         PersonTarget(harmony,
@@ -366,7 +364,7 @@ init python:
         IsDone("harmony_event_06_religious"),
         IsDayOfWeek("7"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(IsRoom("church"))
             ),
         PersonTarget(harmony,
@@ -406,7 +404,7 @@ init python:
     "conditions": [
         IsDone("harmony_event_02_slutty"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_nightclub")),
         PersonTarget(harmony,
             OnDate(),
@@ -427,7 +425,7 @@ init python:
     "conditions": [
         IsDone("harmony_event_03_slutty"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_nightclub")),
         PersonTarget(harmony,
             OnDate(),
@@ -531,7 +529,7 @@ init python:
         IsDone("harmony_purity_04"),
         IsNotDone("harmony_purity_05"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("attend_mass"),
             IsRoom("church"),
             ),
@@ -555,7 +553,7 @@ init python:
         IsNotDone("harmony_purity_06"),
         IsDayOfWeek("67"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_nightclub"),
             HasStamina(),
             ),
@@ -682,7 +680,7 @@ init python:
     "priority": 500,
     "conditions": [
         IsDone("harmony_event_04_slutty"),
-        HeroTarget(IsGender("male")),
+        
         PersonTarget(harmony,
             IsActive(),
             MaxStat("purity", 10),
@@ -699,7 +697,7 @@ init python:
     "conditions": [
         IsDone("harmony_event_06_slutty", "harmony_stripclub_event_01"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("stripclub")
             ),
         PersonTarget(harmony,

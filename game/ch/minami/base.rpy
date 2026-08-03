@@ -9,7 +9,7 @@ init python:
     "rooms": "livingroom",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             MinStat("fun", 0)),
         PersonTarget(minami,
             IsPresent(),
@@ -28,7 +28,7 @@ init python:
     "display_name": "Play with Minami",
     "rooms": "pool",
     "conditions": [
-        HeroTarget(IsGender("male")),
+        
         IsSeason(0, 1),
         InInventory("swimsuit"),
         PersonTarget(minami,
@@ -48,7 +48,7 @@ init python:
     "label": "give_phone_number",
     "girl": "minami",
     "conditions": [
-        HeroTarget(IsGender("male")),
+        
         PersonTarget(minami,
             IsPresent(),
             Not(IsHidden()),
@@ -70,7 +70,7 @@ init python:
     "conditions": [
         IsHour(13, 14),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsActivity("None"),
             ),
@@ -98,7 +98,7 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("None")),
         PersonTarget(minami,
             IsPresent(),
@@ -121,7 +121,7 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsActivity("None"),
             ),
@@ -144,7 +144,7 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Not(IsActivity("sleep")),
             IsFlag("sick"),
             ),
@@ -167,7 +167,7 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Not(IsActivity("ask_date"))),
         PersonTarget(minami,
             IsPresent(),
@@ -191,7 +191,7 @@ init python:
     "girl": "minami",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             Not(IsActivity("sleep")),
             ),
@@ -214,7 +214,7 @@ init python:
     "conditions": [
         IsHour(20, 3),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("knock_bedroom5")),
         PersonTarget(minami,
             Not(IsHidden()),
@@ -238,7 +238,7 @@ init python:
                 Not(IsActivity("sleep")),
                 IsRoom("livingroom"),),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home")),
         ],
     "chances": 20,

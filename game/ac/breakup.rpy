@@ -10,7 +10,6 @@ init python:
             IsFlag("breakup", False),
             IsFlag("friendzone", False),
             IsFlag("nobreakup", False),
-            IsGender("female"),
             Or(
                 IsFlag("girlfriend"),
                 IsFlag("engagedmike"),
@@ -33,7 +32,6 @@ init python:
             IsFlag("breakup", False),
             IsFlag("friendzone", False),
             IsFlag("nobreakup", False),
-            IsGender("male"),
             Or(
                 IsFlag("boyfriend"),
                 IsFlag("engagedmike"),
@@ -77,7 +75,6 @@ init python:
             IsFlag("breakup", False),
             IsFlag("friendzone", False),
             IsFlag("nobreakup", False),
-            IsGender("male")
             ),
         InvalidActivities("breakup_him", "breakup_her"),
         ],

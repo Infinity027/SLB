@@ -20,7 +20,6 @@ init python:
     "label": "cassidy_hottub_sex_male",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             IsActivity("date_hot_tub_home")),
         PersonTarget(cassidy,
             OnDate(),
@@ -40,7 +39,6 @@ init python:
     "label": "cassidy_fuck_ROOM",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             HasStamina(),
             ),
         PersonTarget(cassidy,

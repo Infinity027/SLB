@@ -11,7 +11,6 @@ init python:
         IsDayOfWeek(6, 7),
         IsTimeOfDay("afternoon"),
         HeroTarget(
-            IsGender("male"),
             IsRoom("livingroom")),
         ],
     "do_once": True,

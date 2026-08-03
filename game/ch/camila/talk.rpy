@@ -5,7 +5,6 @@ init python:
     "priority": 500,
     "icon": "button_victor",
     "conditions": [
-        HeroTarget(IsGender("male")),
         PersonTarget(camila,
             IsActive(),
             MinStat("love", 50),
@@ -21,7 +20,7 @@ init python:
     "icon": "button_camila",
     "conditions": [
         IsNotDone("camila_talk_shark"),
-        HeroTarget(IsGender("male")),
+        
         PersonTarget(camila,
             IsActive(),
             MinStat("sexperience", 1),
@@ -36,7 +35,7 @@ init python:
     "priority": 500,
     "icon": "button_camila",
     "conditions": [
-        HeroTarget(IsGender("male")),
+        
         PersonTarget(camila,
             IsActive(),
             MinStat("love", 100),
@@ -52,7 +51,6 @@ init python:
     "icon": "button_camila",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             IsRoom("date_beach", "date_nudistbeach")),
         PersonTarget(camila,
             IsActive(),
@@ -70,7 +68,6 @@ init python:
     "icon": "button_investigate",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             IsFlag("underinvestigation"),
             MaxFlag("workinvestigation", 99)
             ),

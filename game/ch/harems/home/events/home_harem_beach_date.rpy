@@ -14,7 +14,6 @@ init python:
                 ),
             ),
         HeroTarget(
-            IsGender("male"),
             HasRoomTag("home")),
         HasVehicle(motor=True),
         ],

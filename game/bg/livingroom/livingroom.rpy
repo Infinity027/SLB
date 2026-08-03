@@ -106,7 +106,6 @@ init python:
     "rooms": "livingroom",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             MinStat("fun", 0),
             Not(OnDate()),
             ),
@@ -146,7 +145,6 @@ init python:
     "rooms": "livingroom",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             MinStat("energy", 2),
             MinStat("hunger", 2),
             MinStat("grooming", 2),
@@ -184,7 +182,6 @@ init python:
     "duration": 1,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             IsRoom("livingroom"),
             Not(OnDate()),
             ),
@@ -257,7 +254,6 @@ init python:
     "rooms": "livingroom",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             MinStat("energy", 0),
             MinStat("hunger", 0),
             MinStat("grooming", 0),

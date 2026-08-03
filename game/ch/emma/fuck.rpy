@@ -11,7 +11,7 @@ init python:
     "label": "emma_hottub_sex_male",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("date_hot_tub_home")),
         PersonTarget(emma,
             OnDate(),
@@ -31,7 +31,7 @@ init python:
     "label": "emma_fuck_ROOM",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             HasStamina(),
             ),
         PersonTarget(emma,

@@ -7,7 +7,6 @@ init python:
     "conditions": [
         HeroTarget(
             Or(
-                IsGender("male"),
                 MaxStat("morality", 75)
                 )
             ),

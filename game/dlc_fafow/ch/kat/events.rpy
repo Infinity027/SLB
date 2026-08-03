@@ -8,7 +8,7 @@ init python:
     "conditions": [
         IsDone("bree_event_11"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("arcade"),
             ),
         PersonTarget(kat,
@@ -81,7 +81,7 @@ init python:
         IsDone("kat_event_03"),
         MinDateScore(90),
         HeroTarget(
-            IsGender("male"),
+            
             ),
         PersonTarget(kat,
             MinStat("love", 80),
@@ -101,7 +101,7 @@ init python:
         IsDone("kat_event_04"),
         IsHour(10, 16),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("street"),
             Not(OnDate()),
             ),
@@ -121,7 +121,7 @@ init python:
         IsDone("kat_event_05"),
         MinDateScore(80),
         HeroTarget(
-            IsGender("male"),
+            
             ),
         PersonTarget(kat,
             OnDate(),
@@ -141,7 +141,7 @@ init python:
         IsDone("kat_event_06"),
         IsHour(14, 17),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("street"),
             Not(OnDate()),
             ),
@@ -161,7 +161,7 @@ init python:
     "conditions": [
         IsDone("kat_event_07"),
         HeroTarget(
-            IsGender("male"),
+            
             OnDate(),
             ),
         PersonTarget(kat,
@@ -181,7 +181,7 @@ init python:
     "conditions": [
         IsDone("kat_event_08"),
         HeroTarget(
-            IsGender("male"),
+            
             OnDate(),
             ),
         PersonTarget(kat,
@@ -202,7 +202,7 @@ init python:
     "conditions": [
         IsDone("kat_event_08"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             Not(HasRoomTag("work")),
             Not(HasRoomTag("home")),
@@ -227,7 +227,7 @@ init python:
     "conditions": [
         IsDone("kat_event_08b"),
         HeroTarget(
-            IsGender("male"),
+            
             OnDate(),
             ),
         PersonTarget(kat,
@@ -250,7 +250,7 @@ init python:
             IsDone("kat_event_08b"),
             ),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("street"),
             Not(OnDate()),
             ),
@@ -272,7 +272,7 @@ init python:
     "conditions": [
         IsDone("kat_event_09"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             Not(HasRoomTag("work")),
             Not(HasRoomTag("home")),
@@ -295,7 +295,7 @@ init python:
     "conditions": [
         IsDone("kat_event_01"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_livingroom"),
             IsActivity("date_play_console"),
             ),
@@ -317,7 +317,7 @@ init python:
     "conditions": [
         IsDone("kat_kink_01"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_pub"),
             Or(
                 IsActivity("buy_a_round"),
@@ -342,7 +342,7 @@ init python:
     "conditions": [
         IsDone("kat_kink_02"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("kiss"),
             ),
         PersonTarget(kat,
@@ -365,7 +365,7 @@ init python:
     "conditions": [
         IsDone("kat_kink_03"),
         HeroTarget(
-            IsGender("male"),
+            
             ),
         PersonTarget(kat,
             MinStat("sub", 60),
@@ -386,7 +386,7 @@ init python:
         IsDone("kat_kink_04"),
         MinDateScore(50),
         HeroTarget(
-            IsGender("male"),
+            
             ),
         PersonTarget(kat,
             MinStat("sub", 80),
@@ -406,7 +406,7 @@ init python:
     "conditions": [
         IsDone("kat_kink_05"),
         HeroTarget(
-            IsGender("male"),
+            
             ),
         PersonTarget(kat,
             MinStat("sub", 100),
@@ -424,7 +424,7 @@ init python:
         IsDone("kat_event_02"),
         IsHour(10, 16),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("street"),
             ),
         PersonTarget(kat,
@@ -443,7 +443,7 @@ init python:
         IsDone("kat_jack_01"),
         IsHour(10, 16),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("street"),
             ),
         PersonTarget(kat,
@@ -462,7 +462,7 @@ init python:
         IsDone("kat_jack_02"),
         IsHour(10, 16),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("street"),
             ),
         PersonTarget(kat,
@@ -485,7 +485,7 @@ init python:
         IsDone("kat_jack_03"),
         IsHour(8, 17),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("coffeeshop"),
             ),
         PersonTarget(kat,
@@ -505,7 +505,7 @@ init python:
         IsDone("kat_jack_04"),
         IsHour(10, 16),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("street"),
             ),
         PersonTarget(kat,
@@ -526,7 +526,7 @@ init python:
     "conditions": [
         IsDone("kat_jack_05"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("arcade"),
             ),
         PersonTarget(kat,
@@ -548,7 +548,7 @@ init python:
     "conditions": [
         IsDone("kat_jack_06"),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home"),
             ),
         PersonTarget(kat,
@@ -585,7 +585,7 @@ init python:
     "conditions": [
         IsDone("kat_jack_07"),
         HeroTarget(
-            IsGender("male"),
+            
             Or(
                 HasRoomTag("street"),
                 HasRoomTag("park"),
@@ -628,7 +628,7 @@ init python:
             IsFlag("agree_kat_jack_threesome", True),
             ),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsActivity("None"),
             ),
@@ -645,7 +645,7 @@ init python:
     "display_name": "Have fun with Kat",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             OnDate(),
             IsRoom("date_restaurant"),
         ),

@@ -110,7 +110,6 @@ init python:
     "rooms": "coffeeshop",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             MinStat("energy", 4),
             MinStat("hunger", 4),
             MinStat("grooming", 4),

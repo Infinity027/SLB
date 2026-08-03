@@ -102,7 +102,6 @@ init python:
     "label": "sasha_kitchen_bree",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             IsRoom("kitchen")
             ),
         "not Harem.find_by_name('home')",

@@ -6,7 +6,7 @@ init python:
     "conditions": [
         IsSeason(0, 1),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("pool")),
         PersonTarget(sasha,
             IsPresent(),
@@ -27,7 +27,7 @@ init python:
     "label": "sasha_hottub_sex_male",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("date_hot_tub_home"),
             HasStamina(),
             ),
@@ -49,7 +49,7 @@ init python:
     "label": "ACTIVE_GIRL_fuck_ROOM",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             HasStamina(),
             ),
         IsTimeOfDay("evening"),
@@ -71,7 +71,7 @@ init python:
     "conditions": [
         IsHour(14, 18),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("beach", "date_beach", "date_nudistbeach"),
             HasStamina(),
             ),
@@ -91,7 +91,7 @@ init python:
     "label": "sasha_dom_cunnilingus_male",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("watch_tv_with_everyone_male"),
             HasStamina(),
             ),

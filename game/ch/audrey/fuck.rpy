@@ -4,7 +4,7 @@ init python:
     "label": "audrey_hottub_sex_male",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("date_hot_tub_home")),
         PersonTarget(audrey,
             OnDate(),
@@ -44,7 +44,7 @@ init python:
     "label": "audrey_boardgame_sex",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("date_play_boardgame")),
         PersonTarget(audrey,
             OnDate(),
@@ -65,10 +65,7 @@ init python:
     "label": "ACTIVE_GIRL_fuck_ROOM",
     "conditions": [
         IsTimeOfDay("evening"),
-        HeroTarget(
-            IsGender("male"),
-            HasStamina(),
-            ),
+        HeroTarget(HasStamina()),
         PersonTarget(audrey,
             IsActive(),
             Not(HasCheated()),

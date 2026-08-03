@@ -4,7 +4,7 @@ init python:
     "label": "harmony_hottub_sex_male",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("date_hot_tub_home")),
         PersonTarget(harmony,
             OnDate(),
@@ -20,22 +20,14 @@ init python:
     })
 
 
-
 label harmony_fuck_date_male(location="hero"):
     $ game.play_music("music/roa_music/city_nights.ogg")
     $ prel = False
     show bg bedroom1
     $ game.room = "bedroom1"
-
-
     call harmony_fuck_date_intro_male (location) from _call_harmony_fuck_date_intro_male
-
-
     call harmony_dick_reactions from _call_harmony_dick_reactions_2
-
-
     call harmony_fuck_date_foreplay_male from _call_harmony_fuck_date_foreplay_male
-
 
     $ skip_to_sleep = _return
 

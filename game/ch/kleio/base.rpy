@@ -6,7 +6,7 @@ init python:
     "label": "give_phone_number",
     "girl": "kleio",
     "conditions": [
-        HeroTarget(IsGender("male")),
+        
         PersonTarget(kleio,
             IsPresent(),
             Not(IsHidden()),

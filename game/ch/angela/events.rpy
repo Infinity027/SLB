@@ -11,7 +11,6 @@ init python:
             IsDone("bree_event_14b"),  
             ),
         HeroTarget(
-            IsGender("male"),
             IsRoom("date_restaurant")),
         Or(
             PersonTarget(bree,
@@ -224,7 +223,6 @@ init python:
         IsDone("angela_bj_bruce"),
         GameTarget(IsFlag("angelaBlow", True)),
         HeroTarget(
-            IsGender("male"),
             Not(OnDate())),
         PersonTarget(bree,
             IsActive(),

@@ -6,7 +6,6 @@ init python:
         IsDone("cherie_event_01"),
         HeroTarget(
             Not(OnDate()),
-            IsGender("male"),
             ),
         Or(
             InInventory("dwayne_corpse"),
@@ -21,4 +20,3 @@ init python:
     "outfit": "casual",
     "tags": ["mansion"],
     })
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

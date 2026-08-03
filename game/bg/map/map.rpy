@@ -72,7 +72,6 @@ init python:
     "conditions": [
         IsHour(0, 4),
         HeroTarget(
-            IsGender("male"),
             IsRoom("map"),
             IsFlag("dannydead", False),
             ),
@@ -142,7 +141,6 @@ init python:
     "conditions": [
         IsHour(6, 20),
         HeroTarget(
-            IsGender("male"),
             Or(
                 IsRoom("map"),
                 HasRoomTag("street"),

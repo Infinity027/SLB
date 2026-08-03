@@ -8,7 +8,7 @@ init python:
     "conditions": [
         IsDone("reona_event_07"),
         HeroTarget(
-            IsGender("male"),
+            
             Or(
                 IsRoom("date_park"),
                 HasRoomTag("park"),
@@ -59,9 +59,7 @@ init python:
     "duration": 0,
     "conditions": [
         IsDone("purity_harem_event_01"),
-        HeroTarget(IsGender("male"),
-            Not(IsFlag("puritydelay")),
-            ),
+        HeroTarget(Not(IsFlag("puritydelay"))),
         PersonTarget("harmony",
             IsActive(),
             HasTrait("religious"),
@@ -93,7 +91,7 @@ init python:
         IsDone("purity_harem_event_01"),
         IsHour(14, 21),
         HeroTarget(
-            IsGender("male"),
+            
             Not(IsFlag("puritydelay")),
             ),
         PersonTarget("reona",
@@ -115,7 +113,7 @@ init python:
     "conditions": [
         IsDone("purity_harem_event_02a", "purity_harem_event_02b"),
         HeroTarget(
-            IsGender("male"),
+            
             Or(
                 IsRoom("church"),
                 HasRoomTag("street"),

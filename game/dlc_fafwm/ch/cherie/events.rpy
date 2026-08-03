@@ -7,7 +7,7 @@ init python:
             IsHour(9, 18),
             IsDone("dwayne_corpse_discovery"),
             HeroTarget(
-                IsGender("male"),
+                
                 IsRoom("bedroom1"),
                 ),
             PersonTarget("cherie",
@@ -28,7 +28,7 @@ init python:
             IsDone("cherie_event_01"),
             IsHour(8, 11),
             HeroTarget(
-                IsGender("male"),
+                
                 ),
             PersonTarget("cherie",
                 MinStat("love", 20),
@@ -46,7 +46,7 @@ init python:
             IsDone("cherie_event_02"),
             IsHour(9, 12),
             HeroTarget(
-                IsGender("male"),
+                
                 IsActivity("run_park"),
                 HasRoomTag("park"),
                 ),
@@ -67,7 +67,7 @@ init python:
             IsDone("cherie_event_03"),
             IsHour(18, 21),
             HeroTarget(
-                IsGender("male"),
+                
                 InInventory("fancy_clothes"),
                 ),
             PersonTarget("cherie",
@@ -86,7 +86,7 @@ init python:
         "conditions": [
             IsDone("cherie_event_04"),
             HeroTarget(
-                IsGender("male"),
+                
                 IsRoom("office")),
             PersonTarget("cherie",
                 IsFlag("cheriedelay", False)),
@@ -106,7 +106,7 @@ init python:
             IsDone("cherie_event_05"),
             IsTimeOfDay("evening"),
             HeroTarget(
-                IsGender("male"),
+                
                 HasRoomTag("home"),
                 ),
             PersonTarget("cherie",
@@ -126,7 +126,7 @@ init python:
             IsHour(22, 1),
             IsDayOfWeek("123456"),
             HeroTarget(
-                IsGender("male"),
+                
                 HasRoomTag("home"),
                 ),
             PersonTarget("cherie",
@@ -149,7 +149,7 @@ init python:
         "conditions": [
             IsDone("cherie_event_06"),
             HeroTarget(
-                IsGender("male"),
+                
                 HasRoomTag("work"),
                 IsActivity("None"),
                 ),
@@ -177,7 +177,7 @@ init python:
             IsDone("cherie_event_07_1", "cherie_event_07_2"),
             IsTimeOfDay("afternoon", "evening"),
             HeroTarget(
-                IsGender("male"),
+                
                 HasRoomTag("home"),
                 IsActivity("None"),
                 ),
@@ -196,7 +196,7 @@ init python:
         "conditions": [
             IsDone("cherie_event_07_1", "cherie_event_07_2"),
             HeroTarget(
-                IsGender("male"),
+                
                 IsActivity("work", "workhard", "work_personal", "workhard_personal"),
                 ),
             PersonTarget("cherie",
@@ -215,7 +215,7 @@ init python:
             IsDone("aletta_event_08", "cherie_event_08_1", "cherie_event_08_2"),
             IsTimeOfDay("afternoon"),
             HeroTarget(
-                IsGender("male"),
+                
                 HasRoomTag("work"),
                 IsActivity("None"),
                 ),
@@ -237,7 +237,7 @@ init python:
         "conditions": [
             IsDone("cherie_event_09"),
             HeroTarget(
-                IsGender("male"),
+                
                 HasRoomTag("mcoffice"),
                 IsActivity("work", "workhard", "work_personal", "workhard_personal"),
                 IsFlag("JudiciaryDelay", False),
@@ -257,7 +257,7 @@ init python:
             InInventory("swimsuit"),
             HasVehicle(motor=True),
             HeroTarget(
-                IsGender("male"),
+                
 
                 ),
             PersonTarget("cherie",
@@ -278,7 +278,7 @@ init python:
         "conditions": [
             IsDone("cherie_event_06"),
             HeroTarget(
-                IsGender("male"),
+                
                 IsActivity("work", "workhard", "work_personal", "workhard_personal"),
                 ),
             PersonTarget("cherie",
@@ -299,7 +299,7 @@ init python:
             IsDone("cherie_sub_event_01"),
             IsHour(14, 20),
             HeroTarget(
-                IsGender("male"),
+                
                 ),
             PersonTarget("cherie",
                 MinStat("sub", 50),
@@ -318,7 +318,7 @@ init python:
             IsDone("cherie_sub_event_02"),
             InInventory("slave_collar"),
             HeroTarget(
-                IsGender("male"),
+                
                 IsActivity("work", "workhard", "work_personal", "workhard_personal"),
                 ),
             PersonTarget("cherie",

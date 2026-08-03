@@ -164,9 +164,9 @@ init python:
     "conditions": [
         IsHour(23, 3),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("sleep"),
-           ),
+        ),
         PersonTarget(lexi,
             Not(IsHidden()),
             IsRoom("livingroom"),

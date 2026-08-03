@@ -47,7 +47,6 @@ init python:
     "conditions": [
         IsHour(10, 16),
         HeroTarget(
-            IsGender("male"),
             Not(HasSkill("martial_arts")),  
             MinStat("energy", 3),
             MinStat("hunger", 3),
@@ -83,7 +82,6 @@ init python:
         IsDayOfWeek("246"),
         IsHour(10, 16),
         HeroTarget(
-            IsGender("male"),
             IsRoom("beach")),
         Not(HasSkill("martial_arts")),
         ],
@@ -99,7 +97,6 @@ init python:
         IsDayOfWeek("246"),
         IsHour(10, 16),
         HeroTarget(
-            IsGender("male"),
             IsRoom("beach"),
             Not(HasSkill("martial_arts")),  
             IsFlag("masterStory", 6),
@@ -114,7 +111,6 @@ init python:
     "conditions": [
         IsHour(22, 6),
         HeroTarget(
-            IsGender("male"),
             IsActivity("swim_beach"),
             IsRoom("beach"),
             Not(InInventory("shark_training")),
@@ -136,7 +132,6 @@ init python:
     "conditions": [
         IsHour(22, 6),
         HeroTarget(
-            IsGender("male"),
             IsActivity("swim_beach"),
             IsRoom("beach"),
             InInventory("shark_training"),
@@ -159,7 +154,6 @@ init python:
     "conditions": [
         IsHour(6, 20),
         HeroTarget(
-            IsGender("male"),
             IsRoom("beach"),
             Or(
                 HasSkill("animalhated"),
@@ -178,7 +172,6 @@ init python:
         IsDone("bear_chan_pet", "shark_chan_pet"),
         IsTimeOfDay("afternoon", "evening"),
         HeroTarget(
-            IsGender("male"),
             IsRoom("beach"),
             ),
         "hero.sexperience == 0"

@@ -241,9 +241,6 @@ init python:
     "icon": "button_shawn",
     "conditions": [
         IsDone("palla_event_10"),
-        HeroTarget(
-            IsGender("male"),
-            ),
         PersonTarget(palla,
             IsActive(),
             IsFlag("talkedshawn", False)

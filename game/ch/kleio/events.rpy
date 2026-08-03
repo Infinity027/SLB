@@ -247,7 +247,7 @@ init python:
     "priority": 500,
     "conditions": [
         Or(IsDone("kleio_event_06"),IsDone("kleio_event_06b")),
-        HeroTarget(IsGender("male")),
+        
         MinDateScore(90),
         PersonTarget(kleio,
             OnDate(),
@@ -268,7 +268,7 @@ init python:
             IsDone("kleio_event_06b"),
             ),
         IsDone("kleio_getting_serious_01"),
-        HeroTarget(IsGender("male")),
+        
         PersonTarget(kleio,
             IsActive(),
             MinStat("love", 150),
@@ -284,7 +284,7 @@ init python:
     "priority": 500,
     "conditions": [
         IsDone("kleio_getting_serious_01"),
-        HeroTarget(IsGender("male")),
+        
         MinDateScore(90),
         PersonTarget(kleio,
             OnDate(),
@@ -447,7 +447,7 @@ init python:
     "label": "kleio_kiss_me",
     "max_girls": 1,
     "conditions": [
-        HeroTarget(IsGender("male")),
+        
         PersonTarget(kleio,
             IsPresent(),
             Not(IsHidden()),
@@ -556,8 +556,6 @@ init python:
     "priority": 500,
     "conditions": [
         IsHour(20, 6),
-        HeroTarget(
-            IsGender("male")),
         PersonTarget(kleio,
             IsActive(),
             Not(HasCheated()),

@@ -7,7 +7,7 @@ init python:
     "conditions": [
         IsHour(7, 10),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("kitchen")),
         PersonTarget(anna,
             Not(IsHidden()),
@@ -29,7 +29,7 @@ init python:
     "conditions": [
         IsDone("science_project_01"),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("uni")
             ),
         PersonTarget(anna,
@@ -51,7 +51,7 @@ init python:
     "conditions": [
         IsDone("science_project_02"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("livingroom")),
         PersonTarget(bree,
             Not(IsHidden()),
@@ -68,7 +68,7 @@ init python:
     "music": "music/roa_music/juice.ogg",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsFlag("sciencehelper"),
             HasRoomTag("uni"),
             ),

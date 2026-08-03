@@ -8,7 +8,7 @@ init python:
     "conditions": [
         MinDateScore(90),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_nightclub"),
             ),
         PersonTarget(reona,
@@ -35,7 +35,7 @@ init python:
     "conditions": [
         IsDone("whore_harem_event_01"),
         HeroTarget(
-            IsGender("male"),
+            
             ),
         PersonTarget(reona,
             IsActive(),
@@ -58,7 +58,7 @@ init python:
     "conditions": [
         IsDone("whore_harem_event_02"),
         HeroTarget(
-            IsGender("male"),
+            
             ),
         PersonTarget(lexi,
             IsActive(),
@@ -82,7 +82,7 @@ init python:
     "conditions": [
         IsDone("whore_harem_event_03"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_pub"),
             ),
         PersonTarget(lexi,
@@ -123,7 +123,7 @@ init python:
         IsSeason(0, 1),
         IsHour(9, 14),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("None"),
             IsFlag("nudistBeach")
             ),
@@ -148,7 +148,7 @@ init python:
     "conditions": [
         IsDone("whore_harem_event_05"),
         HeroTarget(
-            IsGender("male"),
+            
             IsFlag("whore_nudist_beach")
             ),
         MinDateScore(50),
@@ -172,7 +172,7 @@ init python:
         IsDone("whore_harem_event_05"),
         IsNotDone("whore_harem_event_07"),
         HeroTarget(
-            IsGender("male"),
+            
             IsFlag("whore_nudist_beach")
             ),
         PersonTarget(reona,
@@ -195,7 +195,7 @@ init python:
     "conditions": [
         IsDone("whore_harem_event_07_text"),
         HeroTarget(
-            IsGender("male"),
+            
             ),
         PersonTarget(reona,
             Not(IsHidden()),

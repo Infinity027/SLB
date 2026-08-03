@@ -22,7 +22,7 @@ init python:
     "do_once": True,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("work")),
         PersonTarget(audrey,
             IsActive(),
@@ -38,7 +38,7 @@ init python:
     "label": "audrey_gay_mistake",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("work", "workhard", "work_personal", "workhard_personal"),
             MinStat("charm", 20),
             ),
@@ -59,7 +59,7 @@ init python:
     "conditions": [
         Not(IsDone("audrey_event_01b")),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("pub"),
             MinStat("fitness", 20),
             MinStat("charm", 20),
@@ -88,7 +88,7 @@ init python:
             ),
         HeroTarget(
             Not(IsFlag("ryandead")),
-            IsGender("male"),
+            
             HasRoomTag("pub"),
             MinStat("fitness", 20),
             MinStat("charm", 20),
@@ -114,7 +114,7 @@ init python:
             IsDone("audrey_event_01b")
             ),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("work")),
         PersonTarget(audrey,
             Not(IsHidden()),
@@ -134,7 +134,7 @@ init python:
     "conditions": [
         IsDone("audrey_event_02"),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("gym")),
         PersonTarget(audrey,
             IsPresent(),
@@ -158,7 +158,7 @@ init python:
         IsDayOfWeek(6, 7),
         IsHour(12, 16),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             Not(HasRoomTag("waterpark"))),
         PersonTarget(audrey,
@@ -182,7 +182,7 @@ init python:
         IsDayOfWeek(6, 7),
         IsHour(12, 16),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             Not(HasRoomTag("park"))),
         PersonTarget(audrey,
@@ -204,7 +204,7 @@ init python:
            ),
         IsHour(19),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate())),
         PersonTarget(audrey,
             MinStat("love", 100),
@@ -223,7 +223,7 @@ init python:
     "conditions": [
         IsDone("audrey_event_05"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("work", "workhard", "work_personal", "workhard_personal"),
             MinStat("charm", 50),
             ),
@@ -241,7 +241,7 @@ init python:
     "conditions": [
         IsDone("audrey_event_06"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("work", "workhard", "work_personal", "workhard_personal"),
             MinStat("charm", 60),
             ),
@@ -263,7 +263,7 @@ init python:
     "conditions": [
         IsDone("audrey_event_07"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("work", "workhard", "work_personal", "workhard_personal")),
         PersonTarget(audrey,
             HasRoomTag("work"),
@@ -281,7 +281,7 @@ init python:
     "conditions": [
         IsDone("audrey_event_09_intro"),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("mcoffice"),
             ),
         PersonTarget(audrey,
@@ -301,7 +301,7 @@ init python:
     "conditions": [
         IsDone("audrey_event_09"),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("work")),
         PersonTarget(audrey,
             HasRoomTag("work"),
@@ -337,7 +337,7 @@ init python:
     "priority": 500,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_cinemaroom")
             ),
         PersonTarget(audrey,
@@ -358,7 +358,7 @@ init python:
     "priority": 500,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("workhard", "workhard_personal"),
             HasRoomTag("mcoffice"),
             ),
@@ -380,7 +380,7 @@ init python:
     "conditions": [
         IsDone("shiori_scold_3"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("work", "workhard", "work_personal", "workhard_personal")),
         PersonTarget(audrey,
             HasRoomTag("work"),
@@ -402,7 +402,7 @@ init python:
     "conditions": [
         IsDone("audrey_spanking_start"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("work", "workhard", "work_personal", "workhard_personal")),
         PersonTarget(audrey,
             HasRoomTag("work"),
@@ -425,7 +425,7 @@ init python:
     "conditions": [
         IsDone("audrey_spanking_1"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("work", "workhard", "work_personal", "workhard_personal")),
         PersonTarget(audrey,
             HasRoomTag("work"),
@@ -497,7 +497,7 @@ init python:
     "conditions": [
         IsTimeOfDay("evening", "night"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_livingroom"),
             HasStamina()
             ),
@@ -535,7 +535,7 @@ init python:
     "conditions": [
         IsTimeOfDay("evening"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("audreylivingroom"),
             ),
         PersonTarget(audrey,

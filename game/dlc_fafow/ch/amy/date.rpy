@@ -1118,7 +1118,6 @@ init python:
     "conditions": [
         IsTimeOfDay("afternoon"),
         HeroTarget(
-            IsGender("male"),
             OnDate(),
             IsRoom("date_park")
             ),

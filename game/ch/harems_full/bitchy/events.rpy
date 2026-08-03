@@ -154,8 +154,8 @@ init python:
         'Harem.together("audrey", "cassidy", "palla", name="bitchy")',
         HeroTarget(Not(OnDate())),
         PersonTarget(cassidy,
-                     IsActive(),
-                     ),
+                    IsActive(),
+                    ),
         ],
     "do_once": True,
     })
@@ -165,16 +165,16 @@ init python:
     "label": "bitchy_harem_nightclub_encounter",
     "priority": 500,
     "conditions": [
-        HeroTarget(IsGender("male")),
+        
         And(
             HeroTarget(
                 IsActivity("dance_with"),
                 OnDate()
                 ),
             PersonTarget(cassidy,
-                         IsActive(),
-                         IsFlag("bitchyHaremAgree", True)
-                         ),
+                        IsActive(),
+                        IsFlag("bitchyHaremAgree", True)
+                        ),
             ),
         ],
     "do_once": True,

@@ -377,7 +377,7 @@ init python:
     "duration": 1,
     "conditions": [
         IsDone("scottie_appears"),
-        HeroTarget(IsGender("male")),
+        
         PersonTarget(sasha,
             IsPresent(),
             Not(IsHidden()),
@@ -398,7 +398,7 @@ init python:
     "conditions": [
         IsDone("scottie_appears"),
         Not(IsDone("sasha_scottie_talk")),
-        HeroTarget(IsGender("male")),
+        
         PersonTarget(sasha,
             IsFlag("disable_scottie_events", False),
             MinStat("love", 100),
@@ -522,7 +522,7 @@ init python:
     "label": "sasha_kiss_me",
     "max_girls": 1,
     "conditions": [
-        HeroTarget(IsGender("male")),
+        
         PersonTarget(sasha,
             IsPresent(),
             Not(IsHidden()),
@@ -620,7 +620,7 @@ init python:
     "name": "sasha_nightclub_comment",
     "label": "sasha_nightclub_comment",
     "conditions": [
-        HeroTarget(IsGender("male")),
+        
         Not(InInventory("fancy_clothes")),
         PersonTarget(sasha,
             IsActive(),
@@ -657,7 +657,7 @@ init python:
     "label": "sasha_cheated_sam_advice",
     "icon": "button_sasha",
     "conditions": [
-        HeroTarget(IsGender("male")),
+        
         PersonTarget(samantha,
             IsActive(),
             IsFlag("knows_ryancheats"),

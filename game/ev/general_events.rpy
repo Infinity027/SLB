@@ -18,7 +18,7 @@ init python:
             IsHour(10, 17),
             MinDaysPlayed(7),
             HeroTarget(
-                IsGender("male"),
+                
                 IsRoom("map")
                 ),
             ],
@@ -35,7 +35,7 @@ init python:
             IsHour(10, 17),
             MinDaysPlayed(8),
             HeroTarget(
-                IsGender("male"),
+                
                 IsActivity("train_hard", "train"),
                 IsRoom("gym", "gymmachine"),
                 MinStat("fitness", 20),
@@ -43,27 +43,6 @@ init python:
             ],
         "do_once": True,
         })
-    
-    # Activity(**{
-    #     "name": "ayesha_teaser_2",
-    #     "display_name": "Go to Ayesha's show",
-    #     "label": "ayesha_teaser_2",
-    #     "duration": 0,
-    #     "conditions": [
-    #         IsDone("ayesha_teaser"),
-    #         HeroTarget(
-    #             IsGender("male"),
-    #             Not(OnDate()),
-    #             ),
-    #         IsDayOfWeek(6, 7),
-    #         IsHour(14, 18),
-    #         PersonTarget(bree,
-    #             Not(IsHidden())
-    #             ),
-    #         ],
-    #     "icon": "ayesha",
-    #     "do_once": True,
-    #     })
     
     Event(**{
         "name": "alexis_event_01",
@@ -73,7 +52,7 @@ init python:
         "conditions": [
             IsHour(10, 20),
             HeroTarget(
-                IsGender("male"),
+                
                 Not(OnDate()),
                 MinFlag("promoted", 6),
                 ),
@@ -87,25 +66,11 @@ init python:
         "duration": 1,
         "priority": 500,
         "conditions": [
-            HeroTarget(IsGender("male")),
             IsHour(10, 20),
             MinDaysPlayed(13),
             ],
         "do_once": True,
         })
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     Event(**{
         "name": "lexi_event_01",
@@ -116,7 +81,7 @@ init python:
             IsHour(22, 4),
             MinDaysPlayed(9),
             HeroTarget(
-                IsGender("male"),
+                
                 Not(OnDate()),
                 IsRoom("alley"),
                 MinStat("money", 250),
@@ -133,7 +98,7 @@ init python:
         "priority": 500,
         "conditions": [
             HeroTarget(
-                IsGender("male"),
+                
                 IsActivity("attend_mass"),
                 IsRoom("church"),
                 ),
@@ -148,7 +113,7 @@ init python:
         "priority": 500,
         "conditions": [
             HeroTarget(
-                IsGender("male"),
+                
                 IsActivity("attend_mass"),
                 IsRoom("church"),
                 IsFlag("harmonystart", 1),
@@ -166,7 +131,7 @@ init python:
             IsHour(14, 18),
             MinDaysPlayed(10),
             HeroTarget(
-                IsGender("male"),
+                
                 Not(OnDate()),
                 IsRoom("mall1", "mall2"),
                 ),
@@ -181,7 +146,7 @@ init python:
         "conditions": [
             IsDayOfWeek("123"),
             HeroTarget(
-                IsGender("male"),
+                
                 IsActivity("work", "workhard", "work_personal", "workhard_personal"),
                 MinFlag("promoted", 5),
                 ),
@@ -201,7 +166,7 @@ init python:
 
             IsDayOfWeek("6"),
             HeroTarget(
-                IsGender("male"),
+                
                 IsFlag("officeparty")),
             ],
         })
@@ -215,7 +180,7 @@ init python:
             IsTimeOfDay("afternoon", "evening"),
             MinDaysPlayed(40),
             HeroTarget(
-                IsGender("male"),
+                
                 Not(OnDate()),
                 HasRoomTag("home"),
                 ),
@@ -241,7 +206,7 @@ init python:
             IsTimeOfDay("morning", "afternoon"),
             MinDaysPlayed(47),
             HeroTarget(
-                IsGender("male"),
+                
                 IsFlag("chosen_pet", 'dog'),
                 IsFlag("petdelay", False),
                 Not(OnDate()),
@@ -265,7 +230,7 @@ init python:
             IsTimeOfDay("morning", "afternoon"),
             MinDaysPlayed(47),
             HeroTarget(
-                IsGender("male"),
+                
                 IsFlag("chosen_pet", 'cat'),
                 IsFlag("petdelay", False),
                 Not(OnDate()),
@@ -289,7 +254,7 @@ init python:
             IsTimeOfDay("afternoon", "evening"),
             MinDaysPlayed(50),
             HeroTarget(
-                IsGender("male"),
+                
                 IsFlag("petdelay", False),
                 Not(OnDate()),
                 HasRoomTag("home"),
@@ -316,7 +281,7 @@ init python:
             IsTimeOfDay("afternoon", "evening"),
             MinDaysPlayed(50),
             HeroTarget(
-                IsGender("male"),
+                
                 IsFlag("petdelay", False),
                 Not(OnDate()),
                 HasRoomTag("home"),

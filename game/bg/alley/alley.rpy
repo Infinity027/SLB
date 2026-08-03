@@ -33,7 +33,6 @@ init python:
     "conditions": [
         HeroTarget(
             Or(
-                IsGender("male"),
                 MaxStat("morality", 25)
                 ),
             )
@@ -49,4 +48,3 @@ label use_drugs:
         call expression f"use_drugs_{hero.gender}" from _call_expression_194
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

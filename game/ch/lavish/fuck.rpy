@@ -64,7 +64,6 @@ init python:
     "label": "lavish_hottub_sex_male",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             IsActivity("date_hot_tub_home")),
         PersonTarget(lavish,
             OnDate(),

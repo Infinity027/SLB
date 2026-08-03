@@ -5,7 +5,6 @@ init python:
     "conditions": [
         'active_girl.id not in ["cassidy", "cherie"]',
         HeroTarget(
-            IsGender("male"),
             IsRoom("office", "personal", "ceo", "alettaoffice"),
             MinStat("energy", 2),
             MinStat("hunger", 3),

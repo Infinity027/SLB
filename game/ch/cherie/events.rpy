@@ -109,7 +109,7 @@ init python:
         InInventory("dwayne_corpse"),
         HeroTarget(
             Not(OnDate()),
-            IsGender("male"),
+            
             ),
         ],
     "music": "music/roa_music/focus.ogg",
@@ -128,7 +128,7 @@ init python:
         IsHour(20, 6),
         HeroTarget(
             Not(OnDate()),
-            IsGender("male"),
+            
             ),
         ],
     "do_once": True,
@@ -146,7 +146,7 @@ init python:
         IsHour(20, 6),
         HeroTarget(
             Not(OnDate()),
-            IsGender("male"),
+            
             ),
         ],
     "do_once": True,
@@ -163,7 +163,7 @@ init python:
         InInventory("aletta_gun"),
         HeroTarget(
             Not(OnDate()),
-            IsGender("male"),
+            
             ),
         ],
     "do_once": True,
@@ -181,7 +181,7 @@ init python:
         IsHour(20, 6),
         HeroTarget(
             Not(OnDate()),
-            IsGender("male"),
+            
             ),
         ],
     "do_once": True,
@@ -199,7 +199,7 @@ init python:
         IsHour(20, 6),
         HeroTarget(
             Not(OnDate()),
-            IsGender("male"),
+            
             ),
         ],
     "do_once": True,
@@ -217,7 +217,7 @@ init python:
         IsHour(20, 6),
         HeroTarget(
             Not(OnDate()),
-            IsGender("male"),
+            
             ),
         ],
     "do_once": True,
@@ -236,7 +236,7 @@ init python:
         IsSeason(0, 1, 2),
         HeroTarget(
             Not(OnDate()),
-            IsGender("male"),
+            
             ),
         ],
     "do_once": True,

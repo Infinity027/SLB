@@ -4,7 +4,7 @@ init python:
     "label": "claire_event_01",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("street"),
             IsActivity("None"),
             ),
@@ -23,7 +23,7 @@ init python:
         IsDone("claire_event_01"),
         IsTimeOfDay("morning", "afternoon"),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home"),
             IsActivity("None"),
             ),
@@ -42,7 +42,7 @@ init python:
     "conditions": [
         IsDone("claire_event_02"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsActivity("None"),
             ),
@@ -64,7 +64,7 @@ init python:
         IsDone("claire_event_03"),
         IsTimeOfDay("morning", "afternoon"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("None"),
             Or(
                 HasRoomTag("mall_southside"),
@@ -87,7 +87,7 @@ init python:
         IsDone("claire_event_04"),
         IsTimeOfDay("morning"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsActivity("None"),
             ),
@@ -109,7 +109,7 @@ init python:
         IsDone("claire_event_05"),
         IsTimeOfDay("afternoon"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsActivity("None"),
             Not(HasRoomTag("home")),
@@ -133,7 +133,7 @@ init python:
         IsDone("claire_event_06"),
         IsTimeOfDay("morning"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsActivity("None"),
             IsRoom("coffeeshop"),
@@ -154,7 +154,7 @@ init python:
         IsDone("claire_event_07"),
         IsTimeOfDay("morning", "afternoon"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsActivity("None"),
             ),
@@ -174,7 +174,7 @@ init python:
         IsDone("claire_event_08"),
         IsTimeOfDay("morning", "afternoon"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsActivity("None"),
             Not(HasRoomTag("work")),
@@ -195,7 +195,7 @@ init python:
     "conditions": [
         IsDone("claire_event_04"),
         HeroTarget(
-            IsGender("male"),
+            
             OnDate(),
             ),
         MinDateScore(90),
@@ -217,7 +217,7 @@ init python:
     "conditions": [
         IsDone("claire_event_06"),
         HeroTarget(
-            IsGender("male"),
+            
             OnDate(),
             ),
         MinDateScore(90),
@@ -240,7 +240,7 @@ init python:
     "conditions": [
         IsDone("claire_event_08"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("run_park"),
             ),
         PersonTarget(claire,

@@ -9,13 +9,12 @@ init python:
             Or(
                 IsRoom("punkbar", "nightclub", "nightclubbar", "stripclub", "date_pub", "lounge", "date_nightclub", "vip", "date_stripclub"),
                 HasRoomTag("pub"),
-               ),
+            ),
             MinStat("energy", 3),
             MinStat("hunger", 0),
             MinStat("grooming", 3),
             MinStat("fun", 3),
             Or(
-                IsGender("male"),
                 MaxStat("morality", 50)
                 ),
             ),

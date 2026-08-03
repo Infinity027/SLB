@@ -12,7 +12,6 @@ init python:
             ),
         HeroTarget(
             Or(
-                IsGender("male"),
                 MaxStat("morality", 50)
                 ),
             ),

@@ -77,7 +77,7 @@ init python:
         IsActiveHarem('home'),
         IsHour(14, 18),
         HeroTarget(
-            IsGender("male"),
+            
             IsBirthday(),
             IsRoom("livingroom"),
             ),
@@ -106,7 +106,7 @@ init python:
     "conditions": [
         IsActiveHarem('home'),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("watch_tv_with_everyone_male")),
         PersonTarget(bree,
             IsPresent(),
@@ -133,7 +133,7 @@ init python:
         IsActiveHarem('home'),
         IsDone("bree_sasha_bitches_1"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("watch_tv_with_everyone_male")),
         PersonTarget(bree,
             IsPresent(),
@@ -161,7 +161,7 @@ init python:
         IsActiveHarem('home'),
         IsDone("bree_sasha_bitches_2"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("watch_tv_with_everyone_male")),
         PersonTarget(bree,
             IsPresent(),
@@ -225,7 +225,7 @@ init python:
         IsActiveHarem('home'),
         IsHour(19, 23),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home"),
             HasStamina(),
             IsFlag("bree_sasha_threesome", True),

@@ -23,7 +23,6 @@ init python:
                 Not(IsActivity("sleep")),
                 HasRoomTag("home")),
         HeroTarget(
-            IsGender("male"),
             HasRoomTag("home")),
         ],
     "chances": 20,
@@ -41,7 +40,6 @@ init python:
     "conditions": [
         IsActiveHarem('home'),
         HeroTarget(
-            IsGender("male"),
             HasRoomTag("home")),
         ],
     "do_once": False,

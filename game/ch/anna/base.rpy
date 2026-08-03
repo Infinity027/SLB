@@ -95,7 +95,6 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             Not(IsActivity("sleep")),
             IsFlag("sick"),
             ),

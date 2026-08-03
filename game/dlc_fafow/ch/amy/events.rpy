@@ -4,7 +4,7 @@ init python:
     "label": "amy_start",
     "priority": 1000,
     "conditions": [
-        HeroTarget(IsGender("male")),
+        
         GameTarget(
             IsFlag("amyStart", True),
             ),
@@ -72,11 +72,11 @@ init python:
     "conditions": [
         IsDone("amy_teaser"),
         PersonTarget("amy",
-                     MinStat("love", 20),
-                     IsRoom("electronic"),
-                     IsFlag("amydelay", False)),
+                    MinStat("love", 20),
+                    IsRoom("electronic"),
+                    IsFlag("amydelay", False)),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsRoom("electronic")),
         ],
@@ -92,11 +92,11 @@ init python:
     "conditions": [
         IsDone("amy_teaser_kiss"),
         PersonTarget("amy",
-                     MinStat("love", 60),
-                     IsRoom("electronic"),
-                     IsFlag("amydelay", False)),
+                    MinStat("love", 60),
+                    IsRoom("electronic"),
+                    IsFlag("amydelay", False)),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsRoom("electronic")),
         ],
@@ -112,12 +112,12 @@ init python:
     "conditions": [
         IsDone("amy_event_03"),
         Or(And(IsDayOfWeek("6"), IsHour(9, 13)),
-           And(IsDayOfWeek("7"), IsHour(16, 17))),
+        And(IsDayOfWeek("7"), IsHour(16, 17))),
         PersonTarget("amy",
-                     MinStat("love", 80),
-                     IsFlag("amydelay", False)),
+                    MinStat("love", 80),
+                    IsFlag("amydelay", False)),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsRoom("beach")),
         ],
@@ -136,7 +136,7 @@ init python:
                      MinStat("love", 120),
                      OnDate()),
         HeroTarget(
-            IsGender("male"),
+            
             OnDate(),
             IsRoom("date_cinema")),
         ],
@@ -158,7 +158,7 @@ init python:
                      IsFlag("amydelay", False),
                      ),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             ),
         ],
@@ -180,7 +180,7 @@ init python:
                      IsFlag("amydelay", False),
                      ),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             ),
         ],
@@ -200,7 +200,7 @@ init python:
                      IsFlag("amydelay", False),
                      ),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             ),
         ],
@@ -223,7 +223,7 @@ init python:
                      IsFlag("amydelay", False),
                      ),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             ),
         ],
@@ -243,7 +243,7 @@ init python:
                      OnDate(),
                      ),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_restaurant"),
             OnDate(),
             ),
@@ -266,7 +266,7 @@ init python:
                      IsFlag("amydelay", False),
                      ),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("ask_date"),
             ),
         ],
@@ -287,7 +287,7 @@ init python:
                      IsFlag("amydelay", False),
                      ),
         HeroTarget(
-            IsGender("male"),
+            
             ),
         ],
     "do_once": True,
@@ -304,7 +304,7 @@ init python:
                      IsFlag("police_ticket", True),
                      ),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("policestation"),
             ),
         ],
@@ -325,7 +325,7 @@ init python:
                      OnDate(),
                      ),
         HeroTarget(
-            IsGender("male"),
+            
             OnDate(),
             Not(HasRoomTag("home")),
             ),
@@ -347,7 +347,7 @@ init python:
                     MinStat("love", 150),
                     ),
         HeroTarget(
-            IsGender("male"),
+            
             ),
         ],
     "do_once": True,

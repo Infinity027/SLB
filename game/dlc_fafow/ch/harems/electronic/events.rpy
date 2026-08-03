@@ -12,7 +12,7 @@ init python:
                      IsFlag("amydelay", False),
                      Not(HasRoomTag("pub"),)),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             HasRoomTag("pub"),),
         ],
@@ -33,7 +33,7 @@ init python:
                      IsActive(),
                      ),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate())),
         ],
     "duration": 1,
@@ -51,7 +51,7 @@ init python:
         PersonTarget("amy",
                      Not(IsRoom("electronic"))),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("electronic"),
             Not(OnDate())),
         ],
@@ -75,7 +75,7 @@ init python:
                      IsPresent(),
                      ),
         HeroTarget(
-            IsGender("male"),
+            
             ),
         ],
     "duration": 0,
@@ -92,15 +92,15 @@ init python:
         IsDayOfWeek("123456"),
         IsHour(19, 21),
         PersonTarget("amy",
-                     InHarem('electronic'),
-                     MinStat("love", 140),
-                     MinStat("sub", 50),
-                     IsFlag("amydelay", False),
-                     IsFlag("agree_electronic_threesome", True),
-                     IsFlag("electronic_harem_delay", False),
-                     ),
+                    InHarem('electronic'),
+                    MinStat("love", 140),
+                    MinStat("sub", 50),
+                    IsFlag("amydelay", False),
+                    IsFlag("agree_electronic_threesome", True),
+                    IsFlag("electronic_harem_delay", False),
+                    ),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("pub"),
             Not(OnDate()),
             ),
@@ -118,12 +118,12 @@ init python:
         IsDone("electronic_harem_event_05", "palla_event_10"),
         IsHour(19, 23),
         PersonTarget("amy",
-                     InHarem('electronic'),
-                     IsFlag("electronic_harem_delay", False),
-                     ),
+                    InHarem('electronic'),
+                    IsFlag("electronic_harem_delay", False),
+                    ),
         PersonTarget(palla),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("pub"),
             Not(OnDate()),
             ),
@@ -141,7 +141,7 @@ init python:
     "conditions": [
         IsDone("electronic_harem_event_06"),
         HeroTarget(
-            IsGender("male"),
+            
             IsFlag("electronic_foursome", True),
             ),
         PersonTarget(palla,
@@ -160,7 +160,7 @@ init python:
     "conditions": [
         IsDone("electronic_harem_event_07"),
         HeroTarget(
-            IsGender("male"),
+            
             IsFlag("electronic_foursome", True),
             ),
         PersonTarget(amy,
@@ -179,7 +179,7 @@ init python:
         Not(IsDone("electronic_harem_event_09")),
         IsHour(19, 2),
         HeroTarget(
-            IsGender("male"),
+            
             MinStat("energy", 5),
             MinStat("hunger", 5),
             MinStat("grooming", 5),

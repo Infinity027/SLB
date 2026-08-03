@@ -66,7 +66,6 @@ init python:
         IsSeason(0, 1, 2),
         IsHour(20, 6),
         HeroTarget(
-            IsGender("male"),
             IsRoom("forest"),
             Not(InInventory("bear_bell")),
             Or(
@@ -88,7 +87,6 @@ init python:
         IsSeason(0, 1, 2),
         IsHour(20, 6),
         HeroTarget(
-            IsGender("male"),
             IsRoom("forest"),
             InInventory("bear_bell"),
             Or(

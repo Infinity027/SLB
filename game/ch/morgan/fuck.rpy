@@ -4,7 +4,6 @@ init python:
     "label": "morgan_hottub_sex_male",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             IsActivity("date_hot_tub_home")),
         PersonTarget(morgan,
             OnDate(),
@@ -24,7 +23,6 @@ init python:
     "label": "morgan_fuck_ROOM",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             HasStamina(),
             ),
         PersonTarget(morgan,

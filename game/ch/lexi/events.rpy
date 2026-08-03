@@ -7,7 +7,7 @@ init python:
     "priority": 500,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("nightclub", "nightclubbar"),
             IsFlag("lexiStart"),
             MinStat("money", 10),
@@ -31,7 +31,7 @@ init python:
         IsSeason(0, 1),
         IsHour(20, 0),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("livingroom"),
             HasStamina(),
             ),
@@ -57,7 +57,7 @@ init python:
         "game.day < 25",
         IsHour(12, 18),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("mall1"),
             HasStamina(),
             ),
@@ -95,7 +95,7 @@ init python:
         IsDayOfWeek(5, 6),
         IsHour(17, 23),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsActivity("None"),
             ),
@@ -236,7 +236,7 @@ init python:
         IsDone("lexi_event_05"),
         IsHour(5, 9),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate())),
         PersonTarget(lexi,
             IsFlag("DannyDelay", False),
@@ -286,7 +286,6 @@ init python:
     "label": "lexi_event_08",
     "duration": 1,
     "conditions": [
-        HeroTarget(IsGender("male")),
         Not(InInventory("danny_corpse")),
         IsDone("lexi_event_06"),
         PersonTarget(lexi,
@@ -302,7 +301,7 @@ init python:
     "label": "date_lexi_meet_jack",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_mall1")),
         PersonTarget(lexi,
             OnDate(),
@@ -321,7 +320,7 @@ init python:
         IsDone("date_lexi_meet_jack"),
         IsTimeOfDay("afternoon"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             ),
         PersonTarget(lexi,
@@ -359,7 +358,7 @@ init python:
         IsDone("date_lexi_meet_jack_3"),
         IsTimeOfDay("afternoon"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsRoom("map")
             ),
@@ -377,7 +376,7 @@ init python:
     "conditions": [
         IsDone("date_lexi_meet_jack_2"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_mall1"),
             Not(IsFlag("ryandead")),
             IsFlag("pimpingjack")
@@ -397,7 +396,7 @@ init python:
         IsDone("date_lexi_meet_ryan_1"),
         IsTimeOfDay("afternoon", "evening"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             Not(IsFlag("ryandead"))
             ),
@@ -414,7 +413,7 @@ init python:
     "conditions": [
         IsDone("date_lexi_meet_ryan_2"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             Not(IsFlag("ryandead"))
             ),
@@ -434,7 +433,7 @@ init python:
     "conditions": [
         IsDone("date_lexi_meet_jack_2"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_beach"),
             IsFlag("pimpingjack"),
             ),
@@ -451,7 +450,7 @@ init python:
     "conditions": [
         IsDone("date_lexi_meet_master_1"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_beach"),
             IsFlag("pimpingmaster"),
             ),
@@ -468,7 +467,7 @@ init python:
     "conditions": [
         IsDone("date_lexi_meet_master_2"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_beach"),
             IsFlag("pimpingmaster"),
             ),
@@ -486,7 +485,7 @@ init python:
     "conditions": [
         IsHour(0, 5),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsRoom("alley"),
             ),
@@ -506,7 +505,7 @@ init python:
     "conditions": [
         IsHour(0, 5),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsRoom("alley"),
             ),
@@ -526,7 +525,7 @@ init python:
     "music": "music/roa_music/alley.ogg",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_mall1")),
         PersonTarget(lexi,
             IsPresent(),
@@ -575,7 +574,7 @@ init python:
     "conditions": [
         IsDone("lexi_sasha_dance"),
         HeroTarget(
-            IsGender("male"),
+            
             HasStamina(),
             ),
         PersonTarget(sasha,
@@ -596,7 +595,7 @@ init python:
     "duration": 1,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("talk")),
         PersonTarget(lexi,
             IsActive(),
@@ -614,7 +613,7 @@ init python:
     "conditions": [
         IsDone("lexi_sasha_fuck", "samantha_event_A04"),
         HeroTarget(
-            IsGender("male"),
+            
             HasStamina(),
             ),
         Or(
@@ -742,7 +741,7 @@ init python:
     "duration": 1,
     "conditions": [
         IsHour(5, 9),
-        HeroTarget(IsGender("male"),
+        HeroTarget(
             Not(InFlag("slept_with", "lexi")),
             Not(IsFlag("morningwood")),
             ),

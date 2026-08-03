@@ -6,7 +6,6 @@ init python:
     "conditions": [
         "'fafwm' not in DLCS",
         HeroTarget(
-            IsGender("male"),
             IsActivity("work_personal", "workhard_personal"),
             IsFlag("dwaynedead"),
             IsFlag("cherie_ceooffer", False),
@@ -38,7 +37,6 @@ init python:
     "duration": 4,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             IsActivity("work_personal", "workhard_personal"),
             HasRoomTag("mcoffice"),
             IsFlag("isceo"),

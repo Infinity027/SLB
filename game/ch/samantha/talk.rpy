@@ -174,9 +174,6 @@ init python:
     "conditions": [
         IsDone("samantha_event_D03"),
         Not(IsDone("samantha_event_D04")),
-        HeroTarget(
-            IsGender("male"),
-            ),
         PersonTarget(samantha,
             IsActive(),
             MinStat("love", 140),

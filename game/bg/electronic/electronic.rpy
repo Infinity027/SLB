@@ -44,7 +44,6 @@ init python:
     "rooms": "electronic",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             MinStat("energy", 2),
             MinStat("hunger", 2),
             MinStat("grooming", 2),

@@ -1808,19 +1808,19 @@ init -30 python:
             )
 
 
-    class IsGender(TargetedChecker):
-        __slots__ = ("_gender",)
+    # class IsGender(TargetedChecker):
+    #     __slots__ = ("_gender",)
         
-        def __init__(self, gender):
-            if not isinstance(gender, basestring):
-                raise TypeError("gender must be a string")
-            gender = gender.lower()
-            if gender in ("male", "m"):
-                self._gender = "male"
-            elif gender in ("female", "f"):
-                self._gender = "female"
-            else:
-                raise ValueError("gender must be male or female")
+    #     def __init__(self, gender):
+    #         if not isinstance(gender, basestring):
+    #             raise TypeError("gender must be a string")
+    #         gender = gender.lower()
+    #         if gender in ("male", "m"):
+    #             self._gender = "male"
+    #         elif gender in ("female", "f"):
+    #             self._gender = "female"
+    #         else:
+    #             raise ValueError("gender must be male or female")
         
         @property
         def gender(self):
@@ -3932,11 +3932,6 @@ init -30 python:
                 + checkers_ui
             )
             return
-
-
-
-
-
 
     class And(WrapperChecker):
         """Logic AND combination of checkers."""

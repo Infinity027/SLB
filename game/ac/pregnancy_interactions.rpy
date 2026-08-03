@@ -5,10 +5,6 @@ init python:
         "display_name": "About your belly",
         "label": "belly_interactions_male",
         "conditions": [
-            HeroTarget(
-                IsGender("male"),
-
-                ),
             ActiveTarget(
                 IsActive(),
                 MinStat("love", 120),

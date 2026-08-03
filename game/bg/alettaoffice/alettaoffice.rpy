@@ -8,9 +8,6 @@ init python:
         IsDone("aletta_event_01"),
         IsDayOfWeek("123456"),
         IsHour(8, 20),
-        HeroTarget(
-            IsGender("male"),
-            ),
         ],
     "music": "music/roa_music/fly_high.ogg",
     "outfit": "work",

@@ -5,7 +5,6 @@ init python:
     "conditions": [
         IsDone("alexis_event_04"),
         HeroTarget(
-            IsGender("male"),
             IsActivity("date_watch_a_movie"),
             IsRoom("date_cinemaroom"),
             ),
@@ -25,10 +24,7 @@ init python:
     "label": "alexis_repeatable_beach_event",
     "conditions": [
         IsDone("alexis_event_05"),
-        HeroTarget(
-            IsGender("male"),
-            IsRoom("date_beach", "date_nudistbeach")
-            ),
+        HeroTarget(IsRoom("date_beach", "date_nudistbeach")),
         PersonTarget(alexis,
             IsPresent(),
             Not(IsHidden()),
@@ -1598,9 +1594,7 @@ init python:
     "name": "alexis_hottub_sex_male",
     "label": "alexis_hottub_sex_male",
     "conditions": [
-        HeroTarget(
-            IsGender("male"),
-            IsActivity("date_hot_tub_home")),
+        HeroTarget(IsActivity("date_hot_tub_home")),
         PersonTarget(alexis,
             OnDate(),
             MinStat("love", 100),

@@ -16,7 +16,6 @@ init python:
             ),
         IsDone("work_promoted"),
         HeroTarget(
-            IsGender("male"),
             Not(IsFlag("isceo"))
         )
         ],
@@ -106,7 +105,6 @@ init python:
             MinStat("fun", 2),
             IsFlag("suspended", False),
             IsFlag("fired", False),
-            IsGender("male"),
             ),
         ],
     "display_name": "Work",
@@ -131,7 +129,6 @@ init python:
             MinStat("fun", 4),
             IsFlag("suspended", False),
             IsFlag("fired", False),
-            IsGender("male"),
             ),
         ],
     "display_name": "Work hard",
@@ -147,7 +144,6 @@ init python:
     "label": "shiori_teaser",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             IsActivity("work_personal", "workhard_personal"),
             HasRoomTag("mcoffice"),
             ),

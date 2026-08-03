@@ -15,7 +15,6 @@ init python:
         Or(
             And(
                 HeroTarget(
-                    IsGender("male"),
                     IsFlag("isceo")
                     ),
                 ),

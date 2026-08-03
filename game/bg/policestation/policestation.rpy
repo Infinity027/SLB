@@ -16,16 +16,12 @@ init python:
                 IsDone("camila_event_01_alt"),
                 IsNotDone("camila_event_02_alt"),
                 HeroTarget(
-                    IsGender("male"),
                     IsFlag("undercover", True),
                     ),
                 ),
             And(
                 IsDone("camila_event_02_alt"),
                 IsNotDone("camila_event_04_alt"),
-                HeroTarget(
-                    IsGender("male"),
-                    ),
                 ),
             And(
                 PersonTarget("amy",

@@ -27,4 +27,3 @@ label nathalie_date_amusement_ice_cream_male:
     "You know, maybe when we're in more of a horizontal position?"
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

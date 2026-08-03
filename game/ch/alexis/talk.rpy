@@ -8,9 +8,6 @@ init python:
     "conditions": [
         Not(IsDone("alexis_event_07a")),
         Not(IsDone("alexis_event_07b")),
-        HeroTarget(
-            IsGender("male"),
-            ),
         PersonTarget(alexis,
             IsActive(),
             IsFlag("hired_PI", False),

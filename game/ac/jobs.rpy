@@ -6,7 +6,6 @@ init python:
     "rooms": ("bakery", "bookstore", "coffeeshop", "electronic", "gymreception", "sexshop"),
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             IsFlag("job_day", False),
             IsFlag("fired"),
             ),

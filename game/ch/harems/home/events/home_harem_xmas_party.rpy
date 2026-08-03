@@ -6,9 +6,6 @@ init python:
     "conditions": [
         IsSeason(3),
         'game.calendar.day_of_season == 18',
-        HeroTarget(
-            IsGender("male")
-            ),
         PersonTarget(bree,
             Not(IsHidden()),
             ),
@@ -27,9 +24,6 @@ init python:
     "conditions": [
         IsSeason(3),
         IsLabelAppointmentPlanned("xmas_party_snacks"),
-        HeroTarget(
-            IsGender("male")
-            ),
         Or(
             PersonTarget(bree,
                 Or(
@@ -1214,7 +1208,6 @@ label xmas_party_hh_display:
         show bree casual normal at left
         show minami casual normal at center
         show lexi casual normal at right
-
 
     elif not bree.hidden and not sasha.hidden:
         show bree casual normal at left

@@ -221,7 +221,7 @@ init python:
     "conditions": [
         IsDone("lavish_event_14"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_restaurant")),
         PersonTarget(lavish,
             OnDate(),
@@ -281,7 +281,7 @@ init python:
     "conditions": [
         IsDone("lavish_event_17"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("work", "workhard", "work_personal", "workhard_personal"),
             ),
         PersonTarget(lavish,
@@ -315,7 +315,6 @@ init python:
     "label": "lavish_kiss_me",
     "max_girls": 1,
     "conditions": [
-        HeroTarget(IsGender("male")),
         PersonTarget(lavish,
             IsPresent(),
             Not(IsHidden()),
@@ -336,7 +335,7 @@ init python:
     "priority": 200,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("mcoffice")),
         PersonTarget(lavish,
             Not(IsHidden()),
@@ -358,7 +357,7 @@ init python:
         IsDone("shiori_scold_5", "audrey_spanking_start"),
         IsNotDone("lavish_spanking_start"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("work", "workhard", "work_personal", "workhard_personal"),
             HasRoomTag("mcoffice"),
             ),
@@ -378,7 +377,7 @@ init python:
     "conditions": [
         IsDone("lavish_spanking_start"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("work", "workhard", "work_personal", "workhard_personal"),
             HasRoomTag("mcoffice"),
             ),
@@ -402,7 +401,7 @@ init python:
             IsDone("lavish_spanking_alternate_start"),
             ),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("work", "workhard", "work_personal", "workhard_personal"),
             HasRoomTag("mcoffice"),
             ),
@@ -424,7 +423,7 @@ init python:
     "conditions": [
         TogetherInHarem('office', 'audrey', 'lavish', 'shiori'),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("work", "workhard", "work_personal", "workhard_personal"),
             HasRoomTag("mcoffice"),
             ),

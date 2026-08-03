@@ -23,7 +23,7 @@ init python:
     "conditions": [
         IsDone("cassidy_start", "aletta_event_05"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("work_personal", "workhard_personal")),
         PersonTarget(cassidy,
             Not(IsHidden()),
@@ -361,7 +361,7 @@ init python:
     "duration": 1,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("mcoffice")),
         PersonTarget(cassidy,
             IsPresent(),
@@ -459,7 +459,7 @@ init python:
     "conditions": [
         IsDone("hanna_sub_event_02"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsActivity("None"),
             ),
@@ -482,7 +482,7 @@ init python:
         IsDone("cassidy_sub_01"),
         IsHour(1, 4),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("livingroom", "kitchen"),
             Not(OnDate()),
             ),
@@ -503,7 +503,7 @@ init python:
     "priority": 200,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("work", "workhard", "work_personal", "workhard_personal")),
         PersonTarget(cassidy,
             Not(IsHidden()),

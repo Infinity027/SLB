@@ -4,7 +4,7 @@ init python:
     "label": "hanna_hottub_sex_male",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("date_hot_tub_home")),
         PersonTarget(hanna,
             OnDate(),
@@ -25,9 +25,6 @@ init python:
     "rooms": "date_livingroom",
     "conditions": [
         IsDone("hanna_event_11"),
-        HeroTarget(
-            IsGender("male"),
-            ),
         PersonTarget(hanna,
             OnDate(),
             ),

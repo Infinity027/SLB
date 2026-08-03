@@ -26,7 +26,6 @@ init python:
         IsDone("cherie_event_01"),
         HeroTarget(
             Not(OnDate()),
-            IsGender("male"),
             ),
         Or(
             InInventory("dwayne_corpse"),

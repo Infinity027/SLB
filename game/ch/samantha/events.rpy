@@ -18,7 +18,7 @@ init python:
     "conditions": [
         IsDone("samantha_start"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("bakery")
             ),
         PersonTarget(samantha,
@@ -40,7 +40,7 @@ init python:
         IsDone("samantha_event_02"),
         IsHour(9, 17),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("park")
             ),
         PersonTarget(samantha,
@@ -62,7 +62,7 @@ init python:
         IsDone("samantha_event_03"),
         IsNotDone("samantha_event_B01"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(IsFlag("ryandead")),
             IsRoom("nightclub", "nightclubbar")),
         PersonTarget(samantha,
@@ -83,7 +83,7 @@ init python:
     "conditions": [
         IsDone("samantha_event_04"),
         IsNotDone("samantha_event_B01"),
-        HeroTarget(IsGender("male")),
+        
         PersonTarget(samantha,
             IsActive(),
             ),
@@ -103,7 +103,7 @@ init python:
         IsNotDone("samantha_event_A02"),
         IsHour(22, 4),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home"),
             HasStamina()),
         PersonTarget(samantha,
@@ -125,7 +125,7 @@ init python:
             IsDone("samantha_event_E01"),
         ),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("bakery")),
         PersonTarget(samantha,
             IsPresent(),
@@ -145,7 +145,7 @@ init python:
     "priority": 500,
     "conditions": [
         IsDone("samantha_event_A02"),
-        HeroTarget(IsGender("male")),
+        
         PersonTarget(samantha,
             IsActive(),
             MinStat("love", 150),
@@ -162,7 +162,7 @@ init python:
     "conditions": [
         IsDone("samantha_event_A03"),
         HeroTarget(
-            IsGender("male"),
+            
             IsFlag("ongoinghomeharem", False)
             ),
         PersonTarget(samantha,
@@ -186,7 +186,7 @@ init python:
         HeroTarget(
             Not(OnDate()),
             IsActivity("None"),
-            IsGender("male"),
+            
             ),
         PersonTarget(samantha,
             IsPresent(),
@@ -210,7 +210,7 @@ init python:
         IsDone("samantha_event_B02"),
         IsHour(20, 0),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home")
             ),
         PersonTarget(samantha,
@@ -230,7 +230,7 @@ init python:
         IsDone("samantha_event_B03"),
         IsHour(14, 15),
         HeroTarget(
-            IsGender("male"),
+            
             Not(IsFlag("ryandead")),
             Not(OnDate())),
         PersonTarget(samantha,
@@ -255,7 +255,7 @@ init python:
     "conditions": [
         IsDone("samantha_event_C01"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(IsFlag("ryandead")),
             IsRoom("bakery")),
         PersonTarget(samantha,
@@ -278,7 +278,7 @@ init python:
         IsDayOfWeek(5, 6, 7),
         IsHour(20, 22),
         HeroTarget(
-            IsGender("male"),
+            
             Not(IsFlag("ryandead")),
             IsRoom("livingroom"),
             IsFlag("sam_ryan_threesome"),
@@ -311,7 +311,7 @@ init python:
         IsDayOfWeek(6, 7),
         IsHour(14, 18),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home")),
         PersonTarget(samantha,
             Not(IsHidden()),
@@ -342,7 +342,7 @@ init python:
         IsDayOfWeek(6, 7),
         IsHour(14, 18),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home"),
             HasStamina(),
             ),
@@ -366,7 +366,7 @@ init python:
         IsDayOfWeek(6, 7),
         IsHour(14, 18),
         HeroTarget(
-            IsGender("male"),
+            
             Not(IsFlag("ryandead")),
             HasRoomTag("home"),
             HasStamina(),
@@ -391,7 +391,7 @@ init python:
         IsDayOfWeek(6, 7),
         IsHour(14, 18),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home"),
             HasStamina(),
             ),
@@ -416,7 +416,7 @@ init python:
         IsDayOfWeek(6, 7),
         IsHour(14, 18),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home"),
             HasStamina(),
             ),
@@ -448,7 +448,7 @@ init python:
         ),
         IsHour(14, 15),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate())),
         PersonTarget(samantha,
             Not(IsPresent()),
@@ -503,7 +503,7 @@ init python:
         MinDaysPlayed(12),
         HeroTarget(
             IsActivity("None"),
-            IsGender("male"),
+            
             HasRoomTag("pub"),),
         PersonTarget(samantha,
             Or(
@@ -536,7 +536,7 @@ init python:
     "label": "samantha_chat_bree",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Or(
                 IsRoom("date_pub"),
                 HasRoomTag("pub"),
@@ -575,7 +575,7 @@ init python:
     "name": "samantha_waterpark_comment",
     "label": "samantha_waterpark_comment",
     "conditions": [
-        HeroTarget(IsGender("male")),
+        
         Not(InInventory("swimsuit")),
         PersonTarget(samantha,
             IsActive(),
@@ -590,7 +590,7 @@ init python:
     "label": "samantha_forgot_money",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("pub"),),
         PersonTarget(samantha,
             IsPresent(),
@@ -608,7 +608,7 @@ init python:
     "label": "samantha_buy_dress",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("clothesshop")),
         PersonTarget(samantha,
             IsPresent(),
@@ -626,7 +626,7 @@ init python:
     "label": "samantha_kiss_me",
     "max_girls": 1,
     "conditions": [
-        HeroTarget(IsGender("male")),
+        
         PersonTarget(samantha,
             IsPresent(),
             Not(IsHidden()),
@@ -707,7 +707,7 @@ init python:
         Or(IsDone("samantha_event_D05"), IsDone("samantha_event_D05B")),
         IsTimeOfDay("afternoon", "evening"),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home"),
             Not(OnDate()),
             IsActivity("None"),
@@ -732,7 +732,7 @@ init python:
         Not(IsDone("samantha_event_E01")),
         IsHour(13, 18),
         HeroTarget(
-            IsGender("male"),
+            
             Not(IsFlag("ryandead")),
             Not(OnDate()),
             ),
@@ -760,7 +760,7 @@ init python:
         IsDayOfWeek("67"),
         IsTimeOfDay("evening"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(IsFlag("ryandead")),
             Not(OnDate()),
             ),

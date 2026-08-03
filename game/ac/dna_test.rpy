@@ -5,11 +5,7 @@ init python:
     "label": "dna_test",
     "duration": 0,
     "conditions": [
-        ActiveTarget(
-            IsGender("male")
-            ),
         HeroTarget(
-            IsGender("female"),
             IsFlag("foundpreg")
             ),
         InInventory("dna_test"),
@@ -27,4 +23,3 @@ label dna_test:
         "[active_girl.name] is not the father of my child..."
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

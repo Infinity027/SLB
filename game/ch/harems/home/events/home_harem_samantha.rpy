@@ -7,7 +7,6 @@ init python:
     "icon": "button_samantha",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             Or(
                 IsFlag("ongoinghomeharem", "samantha"),
                 IsFlag("ongoinghomeharem", False),
@@ -36,7 +35,7 @@ init python:
     "icon": "button_samantha",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Or(
                 IsFlag("ongoinghomeharem", "samantha"),
                 IsFlag("ongoinghomeharem", False),
@@ -65,7 +64,7 @@ init python:
     "icon": "button_samantha",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Or(
                 IsFlag("ongoinghomeharem", "samantha"),
                 IsFlag("ongoinghomeharem", False),
@@ -93,7 +92,7 @@ init python:
     "conditions": [
         IsHour(0, 18),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home"),
             IsFlag("ongoinghomeharem", "samantha"),
             ),
@@ -133,7 +132,7 @@ init python:
         "samantha.room == bree.room",
         GameTarget(IsFlag("sexual_tension", False)),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home"),
             ),
         PersonTarget(samantha,
@@ -163,7 +162,7 @@ init python:
         IsHour(1, 5),
         IsDone("sexual_tension_bree_sam"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("knock_bedroom2")),
         PersonTarget(samantha,
             Not(IsHidden()),
@@ -190,7 +189,7 @@ init python:
         "Person.find('lexi') and samantha.room == lexi.room",
         GameTarget(IsFlag("sexual_tension", False)),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home"),
             ),
         PersonTarget(samantha,
@@ -220,7 +219,7 @@ init python:
         IsHour(1, 5),
         IsDone("sexual_tension_sam_lexi"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("livingroom")),
         PersonTarget(samantha,
             Not(IsHidden()),
@@ -247,7 +246,7 @@ init python:
         "samantha.room == sasha.room",
         GameTarget(IsFlag("sexual_tension", False)),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home"),
             ),
         PersonTarget(samantha,
@@ -277,7 +276,7 @@ init python:
         IsHour(1, 5),
         IsDone("sexual_tension_sam_sasha"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("knock_bedroom3")),
         PersonTarget(samantha,
             Not(IsHidden()),
@@ -304,7 +303,7 @@ init python:
         "samantha.room == minami.room",
         GameTarget(IsFlag("sexual_tension", False)),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home"),
             ),
         PersonTarget(samantha,
@@ -334,7 +333,7 @@ init python:
         IsHour(1, 5),
         IsDone("sexual_tension_sam_minami"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("knock_bedroom5")),
         PersonTarget(samantha,
             Not(IsHidden()),
@@ -359,7 +358,7 @@ init python:
     "priority": 250,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsTimeOfDay("evening"),
             IsFlag("ongoinghomeharem", "samantha"),
@@ -407,7 +406,7 @@ init python:
                 ),
             ),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("sleep"),
             ),
         PersonTarget(samantha,
@@ -428,7 +427,7 @@ init python:
     "conditions": [
         IsTimeOfDay("evening", "night"),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home"),
             ),
         PersonTarget(bree,
@@ -474,7 +473,7 @@ init python:
                 Not(IsActivity("sleep")),
                 ),
         HeroTarget(
-            IsGender("male"),
+            
             ),
         ],
     "do_once": True,

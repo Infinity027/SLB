@@ -6,7 +6,7 @@ init python:
     "conditions": [
         IsDone("morgan_event_06", "kleio_event_01"),
         HeroTarget(
-            IsGender("male"),
+            
             Or(
                 IsRoom("date_pub"),
                 HasRoomTag("pub"),
@@ -48,7 +48,7 @@ init python:
     "conditions": [
         IsDone("morgan_kleio_event_01"),
         HeroTarget(
-            IsGender("male"),
+            
             MinStat("charm", 50)),
         PersonTarget(morgan,
             IsActive(),
@@ -67,7 +67,7 @@ init python:
     "conditions": [
         IsDone("morgan_kleio_event_01"),
         HeroTarget(
-            IsGender("male"),
+            
             MinStat("charm", 50)),
         PersonTarget(kleio,
             IsActive(),
@@ -85,7 +85,7 @@ init python:
         IsDone("morgan_kleio_event_02A", "morgan_kleio_event_02B"),
         IsNotDone("morgan_kleio_event_03_alternate"),
         HeroTarget(
-            IsGender("male"),
+            
             Or(
                 IsRoom("date_pub"),
                 HasRoomTag("pub"),
@@ -132,7 +132,7 @@ init python:
         IsDone("morgan_kleio_event_02A", "morgan_kleio_event_02B"),
         IsNotDone("morgan_kleio_event_03"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             ),
         PersonTarget(kleio,
@@ -159,7 +159,7 @@ init python:
     "conditions": [
         TogetherInHarem('pixie', 'kleio','morgan'),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("pub"),
             ),
         Or(
@@ -194,7 +194,7 @@ init python:
         'Harem.together("kleio", "morgan", name="pixie")',
         IsDone("pixie_threesome"),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("pub"),
             Not(OnDate())
             ),
@@ -218,7 +218,7 @@ init python:
         TogetherInHarem('pixie', 'kleio', 'morgan'),
         IsDone("morgan_kleio_event_04"),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("pub"),
             HasStamina(),
             ),

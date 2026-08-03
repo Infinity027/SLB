@@ -95,9 +95,6 @@ init -2 python:
         "icon": "guitar",
         "rooms": "date_livingroom",
         "conditions": [
-            HeroTarget(
-                IsGender("male"),
-            ),
             HasSkill("guitar"),
         ],
         "display_name": "Play guitar",

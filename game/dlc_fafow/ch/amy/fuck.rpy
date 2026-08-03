@@ -5,7 +5,7 @@ init python:
     "label": "ACTIVE_GIRL_fuck_ROOM",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             HasStamina(),
             ),
         PersonTarget(amy,
@@ -24,7 +24,7 @@ init python:
     "label": "amy_hottub_sex_male",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             HasStamina(),
             IsActivity("date_hot_tub_home")),
         PersonTarget(amy,

@@ -50,7 +50,6 @@ init python:
     "label": "play_with_bree",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             IsRoom("arcade")),
         PersonTarget(bree,
             IsPresent(),

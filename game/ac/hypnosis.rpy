@@ -25,9 +25,6 @@ init python:
     "icon": "button_hypnosis",
     "conditions": [
         HasSkill("hypnosis"),
-        HeroTarget(
-            IsGender("male"),
-            ),
         ActiveTarget(
             IsGender("female"),
             IsFlag("hypnosisConsent", False),
@@ -43,7 +40,6 @@ init python:
     "priority": 500,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             IsRoom("map")
             ),
         "randint(1, 100) <= hero.flags.hypnosisFailure"
@@ -61,7 +57,6 @@ init python:
         IsDayOfWeek("12345"),
         HeroTarget(
             MinStat("charm", 100),
-            IsGender("male"),
             HasRoomTag("home"),
             ),
         ],

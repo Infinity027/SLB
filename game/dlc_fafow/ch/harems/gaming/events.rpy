@@ -8,7 +8,7 @@ init python:
     "conditions": [
         IsDone("bree_event_11"),
         IsNotDone("bree_kat_threesome"),
-        HeroTarget(IsGender("male")),
+        
         PersonTarget(kat,
             IsActive(),
             MinStat("love", 50),
@@ -30,7 +30,7 @@ init python:
             Not(IsFlag("gaming_delay")),
             ),
         MinDateScore(90),
-        HeroTarget(IsGender("male")),
+        
         PersonTarget(kat,
             InHarem('gaming'),
             MinStat("love", 100),
@@ -52,7 +52,7 @@ init python:
         GameTarget(
             Not(IsFlag("gaming_delay")),
             ),
-        HeroTarget(IsGender("male"),
+        HeroTarget(
             HasRoomTag("home"),
             Not(OnDate()),
             ),
