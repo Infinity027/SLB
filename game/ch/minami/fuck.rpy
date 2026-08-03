@@ -6,7 +6,7 @@ init python:
     "conditions": [
         IsTimeOfDay("evening"),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home"),
             HasStamina(),
             ),
@@ -27,7 +27,7 @@ init python:
     "conditions": [
         IsHour(14, 18),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("beach", "date_beach", "date_nudistbeach"),
             HasStamina(),
             ),
@@ -46,7 +46,7 @@ init python:
     "label": "minami_hottub_sex_male",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("date_hot_tub_home")),
         PersonTarget(minami,
             OnDate(),

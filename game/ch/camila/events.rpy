@@ -249,7 +249,7 @@ init python:
     "priority": 500,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             ),
         MinDateScore(50),
         PersonTarget(camila,
@@ -269,7 +269,7 @@ init python:
     "conditions": [
         IsDone("camila_event_07"),
         HeroTarget(
-            IsGender("male"),
+            
             ),
         PersonTarget(camila,
             IsActive(),
@@ -288,7 +288,7 @@ init python:
     "conditions": [
         IsTimeOfDay("afternoon"),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home"),
             Not(IsRoom("house")),
             HasStamina(),
@@ -314,7 +314,7 @@ init python:
     "conditions": [
         IsTimeOfDay("afternoon"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("policestation"),
             HasStamina(),
             ),
@@ -356,7 +356,7 @@ init python:
         IsWearing("fancy_clothes"),
         IsWearing("luxury_watch"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsRoom("alley"),
         ),
@@ -373,7 +373,7 @@ init python:
     "conditions": [
         IsDone("camila_event_01_alt"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsFlag("undercover", True),
             IsFlag("undercoverdelay", False),
@@ -393,7 +393,7 @@ init python:
         IsDone("camila_event_02_alt"),
         IsHour(22, 2),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsFlag("undercover", True),
             IsRoom("street"),
@@ -412,7 +412,7 @@ init python:
         IsDone("camila_event_03_alt"),
         IsHour(16),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsRoom("policestation"),
             IsFlag("undercover", True),
@@ -434,7 +434,7 @@ init python:
         IsDone("camila_event_02_alt"),
         IsNotDone("camila_event_04_alt"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsFlag("undercover", False),
             IsRoom("policestation"),
@@ -452,7 +452,7 @@ init python:
     "conditions": [
         MinDateScore(50),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_mall1"),
             ),
         PersonTarget(camila,

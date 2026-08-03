@@ -4,9 +4,6 @@ init python:
     "display_name": "Go steady",
     "icon": "gosteady",
     "conditions": [
-        HeroTarget(
-            IsGender("male"),
-            ),
         ActiveTarget(
             Not(IsActivity("sleep")),
             IsFlag("engagedmike", False),

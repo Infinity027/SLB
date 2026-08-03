@@ -5,7 +5,7 @@ init python:
     "label": "ACTIVE_GIRL_fuck_ROOM",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Not(HasRoomTag("home")),
             Not(IsRoom("alley")),
             HasStamina(),
@@ -28,7 +28,7 @@ init python:
     "conditions": [
         IsTimeOfDay("afternoon", "evening"),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home"),
             HasStamina(),
             ),
@@ -50,7 +50,7 @@ init python:
     "duration": 1,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("alley"),
             HasStamina(),
             ),
@@ -69,7 +69,7 @@ init python:
     "label": "lexi_hottub_sex_male",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("date_hot_tub_home")),
         PersonTarget(lexi,
             OnDate(),

@@ -7,9 +7,6 @@ init python:
     "outfit": "casual",
     "music": "music/roa_music/juice.ogg",
     "conditions": [
-        HeroTarget(
-            IsGender("male"),
-            ),
         PersonTarget("palla",
             Not(IsHidden()),
             IsFlag("addressknown", True),
@@ -26,4 +23,3 @@ init python:
         ],
     "tags": ["pallahome"],
     })
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

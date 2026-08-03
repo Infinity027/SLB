@@ -8,7 +8,6 @@ init python:
         MinDaysPlayed(33),
         IsDayOfWeek("135"),
         HeroTarget(
-            IsGender("male"),
             Not(OnDate()),
             IsRoom("electronic"),
             MinStat("knowledge", 50),
@@ -39,7 +38,6 @@ init python:
                 )
             ),
         HeroTarget(
-            IsGender("male"),
             Not(OnDate()),
             IsRoom("electronic"),
             MinStat("charm", 50),
@@ -67,13 +65,12 @@ init python:
                 "'fafow' in DLCS",
                 IsDone("amy_event_04"),
                 PersonTarget("amy",
-                     MinStat("love", 100),
-                     IsFlag("amydelay", False)
-                     )
+                    MinStat("love", 100),
+                    IsFlag("amydelay", False)
+                    )
                 )
             ),
         HeroTarget(
-            IsGender("male"),
             Not(OnDate()),
             IsRoom("electronic"),
             MinStat("fitness", 50),

@@ -14,7 +14,6 @@ init python:
             MinStat("grooming", 3),
             MinStat("fun", 1),
             Or(
-                IsGender("male"),
                 MaxStat("morality", 90)
                 ),
             ),
@@ -32,13 +31,11 @@ init python:
     "conditions": [
         HeroTarget(
             IsRoom("nightclub", "nightclubbar", "date_nightclub", "vip"),
-            IsGender("male"),
             MinStat("energy", 2),
             MinStat("hunger", 3),
             MinStat("grooming", 3),
             MinStat("fun", 1),
             Or(
-                IsGender("male"),
                 MaxStat("morality", 90)
                 ),
             ),

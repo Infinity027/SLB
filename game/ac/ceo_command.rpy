@@ -7,7 +7,6 @@ init python:
     "rooms": "mcoffice",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             HasRoomTag("mcoffice"),
             ),
         Or(

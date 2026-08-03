@@ -40,9 +40,6 @@ init python:
     "money_cost": 10,
     "rooms": "stripclub",
     "conditions": [
-        HeroTarget(
-            IsGender("male"),
-            ),
         IsDone("harmony_event_04_slutty"),
         PersonTarget("harmony",
             Not(IsHidden()),

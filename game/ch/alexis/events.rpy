@@ -20,7 +20,6 @@ init python:
         IsDayOfWeek(5, 6, 7),
         IsHour(14, 15),
         HeroTarget(
-            IsGender("male"),
             Not(OnDate()),
             MinStat("money", 500),
             IsActivity("None")
@@ -41,7 +40,6 @@ init python:
     "conditions": [
         IsDone("alexis_event_02"),
         HeroTarget(
-            IsGender("male"),
             IsRoom("date_mall1"),
             ),
         PersonTarget(alexis,
@@ -60,7 +58,6 @@ init python:
     "conditions": [
         IsDone("alexis_event_03"),
         HeroTarget(
-            IsGender("male"),
             IsActivity("date_watch_a_movie"),
             IsRoom("date_cinemaroom"),
             ),
@@ -296,9 +293,9 @@ init python:
     "conditions": [
         IsDone("ceo_office_spy_camera"),
         HeroTarget(HasRoomTag("mcoffice"),
-                   IsFlag("ceoofficecameraplaced"),
-                   Not(IsFlag("dwaynedead")),
-                   ),
+                IsFlag("ceoofficecameraplaced"),
+                Not(IsFlag("dwaynedead")),
+                ),
         PersonTarget(alexis,
             Not(IsHidden()),
             IsFlag("story", 1, 3),
@@ -315,10 +312,10 @@ init python:
     "duration": 1,
     "conditions": [
         IsDone("alexis_event_ntr_03"),
-        HeroTarget(IsGender("male"),
-                   IsRoom("date_restaurant"),
-                   Not(IsFlag("alexis_dwayne_encounter")),
-                   ),
+        HeroTarget(
+                IsRoom("date_restaurant"),
+                Not(IsFlag("alexis_dwayne_encounter")),
+                ),
         PersonTarget(alexis,
             OnDate(),
             MinStat("love", 170),
@@ -339,8 +336,6 @@ init python:
     "duration": 1,
     "conditions": [
         IsDone("alexis_event_ntr_04"),
-        HeroTarget(IsGender("male"),
-                   ),
         PersonTarget(alexis,
             IsActive(),
             IsFlag("ntr_delay", False),
@@ -357,9 +352,7 @@ init python:
     "duration": 1,
     "conditions": [
         IsDone("alexis_event_ntr_05_intro"),
-        HeroTarget(IsGender("male"),
-                   IsRoom("date_restaurant"),
-                   ),
+        HeroTarget(IsRoom("date_restaurant")),
         PersonTarget(alexis,
             OnDate(),
             IsFlag("story", 1, 3),
@@ -382,9 +375,7 @@ init python:
         IsDone("alexis_event_ntr_05_intro"),
         IsTimeOfDay("afternoon", "evening"),
         "not Room.find('livingroom').get_present_girls_by_tag()",
-        HeroTarget(IsGender("male"),
-                   HasRoomTag("home"),
-                   ),
+        HeroTarget(HasRoomTag("home")),
         PersonTarget(alexis,
             Not(IsHidden()),
             IsFlag("ntr_05", "home"),

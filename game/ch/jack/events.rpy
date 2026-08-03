@@ -8,7 +8,7 @@ init python:
         IsDayOfWeek(6, 7),
         IsHour(14, 17),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("livingroom")
             ),
         PersonTarget(bree,
@@ -30,7 +30,7 @@ init python:
         IsDayOfWeek("12345"),
         IsHour(14, 17),
         HeroTarget(
-            IsGender("male"),
+            
             IsFlag("jackrpg", False)
             ),
         ],
@@ -47,7 +47,7 @@ init python:
         IsDayOfWeek(6, 7),
         IsHour(14, 17),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("livingroom")
             ),
         PersonTarget(bree,
@@ -70,7 +70,7 @@ init python:
         IsDayOfWeek(6, 7),
         IsHour(14, 17),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("livingroom")
             ),
         PersonTarget(bree,
@@ -95,7 +95,7 @@ init python:
         IsTimeOfDay("afternoon", "evening"),
         InInventory("zbox_360"),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home"),
             ),
         PersonTarget(bree,
@@ -120,7 +120,7 @@ init python:
     "conditions": [
         IsDone("jack_event_01"),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("pub"),
             ),
         "hero.sexperience >= 10"

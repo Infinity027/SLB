@@ -71,7 +71,6 @@ init python:
     "rooms": "bookstore",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             MinStat("energy", 2),
             MinStat("hunger", 2),
             MinStat("grooming", 2),
@@ -88,7 +87,6 @@ init python:
     "label": "book_signing",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             IsRoom("bookstore")),
         PersonTarget(bree,
             Not(IsHidden()),

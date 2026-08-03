@@ -8,7 +8,7 @@ init python:
         IsDone("hanna_event_01"),
         IsHour(10, 17),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("take_a_shower_gym"),
             IsRoom("gymlockers"),
             MinStat("fitness", 30),
@@ -27,7 +27,7 @@ init python:
     "conditions": [
         IsDone("hanna_masturbate"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("buymembership"),
             IsRoom("gymreception"),
             MinStat("fitness", 30),
@@ -45,7 +45,7 @@ init python:
     "conditions": [
         IsDone("hanna_event_02"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("take_a_shower_gym"),
             IsRoom("gymlockers"),
             MinStat("fitness", 40),
@@ -70,7 +70,7 @@ init python:
         IsDone("hanna_event_03"),
         IsHour(6, 10),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("run_park"),
             HasRoomTag("park"),
             MinStat("fitness", 50),
@@ -93,7 +93,7 @@ init python:
     "conditions": [
         IsDone("hanna_event_04"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("gym", "gymmachine"),
             MinStat("fitness", 70),
             ),
@@ -124,7 +124,7 @@ init python:
     "conditions": [
         IsDone("hanna_event_05"),
         HeroTarget(
-            IsGender("male"),
+            
             MinStat("fitness", 80)
             ),
         PersonTarget(hanna,
@@ -143,7 +143,7 @@ init python:
     "priority": 500,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("gym")),
         PersonTarget(hanna,
             IsActive(),
@@ -162,7 +162,7 @@ init python:
     "priority": 500,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("gym")),
         PersonTarget(hanna,
             IsActive(),
@@ -181,7 +181,7 @@ init python:
     "priority": 500,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("gym")),
         PersonTarget(hanna,
             IsActive(),
@@ -201,7 +201,7 @@ init python:
     "conditions": [
         IsDone("hanna_event_07b"),
         HeroTarget(
-            IsGender("male"),
+            
             ),
         MinDateScore(50),
         PersonTarget(hanna,
@@ -222,7 +222,7 @@ init python:
     "conditions": [
         IsDone("hanna_event_07a"),
         HeroTarget(
-            IsGender("male"),
+            
             ),
         PersonTarget(hanna,
             IsActive(),
@@ -243,7 +243,7 @@ init python:
     "conditions": [
         IsDone("hanna_event_08"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_stripclub")),
         PersonTarget(hanna,
             OnDate(),
@@ -267,7 +267,7 @@ init python:
     "conditions": [
         IsDone("hanna_event_09"),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("gym")),
         PersonTarget(hanna,
             IsPresent(),
@@ -288,7 +288,7 @@ init python:
         IsHour(10, 16),
         IsDone("hanna_event_10"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("house")),
         PersonTarget(hanna,
             Not(IsHidden()),
@@ -308,7 +308,7 @@ init python:
         IsDone("hanna_event_09a"),
         MinDateScore(50),
         HeroTarget(
-            IsGender("male"),
+            
             ),
         PersonTarget(hanna,
             IsPresent(),
@@ -344,7 +344,7 @@ init python:
         IsDone("hanna_event_07a"),
         IsNotDone("hanna_gym_profits_alternate"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate())
             ),
         PersonTarget(hanna,
@@ -365,7 +365,7 @@ init python:
         IsDone("hanna_event_07b"),
         IsNotDone("hanna_gym_profits"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate())
             ),
         PersonTarget(hanna,
@@ -387,7 +387,7 @@ init python:
     "conditions": [
         IsDone("hanna_event_07b"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsActivity("train_with"),
             ),
@@ -424,7 +424,7 @@ init python:
     "conditions": [
         IsDone("hanna_sub_event_01"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_livingroom")),
         IsTimeOfDay("evening"),
         MinDateScore(90),

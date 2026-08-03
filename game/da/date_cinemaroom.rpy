@@ -27,7 +27,6 @@ init -2 python:
         "label": "date_put_hand_on_leg",
         "rooms": "date_cinemaroom",
         "conditions": [
-            HeroTarget(IsGender("male")),
             ActiveTarget(
                 IsFlag("datehand", False)
                 ),
@@ -46,7 +45,7 @@ init -2 python:
         "once_day": True,
         "rooms": "date_cinemaroom",
         "conditions": [
-            HeroTarget(IsGender("male")),
+            
             ActiveTarget(
                 IsFlag("datehand", "leg")
                 ),
@@ -62,10 +61,9 @@ init -2 python:
         "icon": "finger",
         "rooms": "date_cinemaroom",
         "conditions": [
-            HeroTarget(IsGender("male")),
+            
             ActiveTarget(
                 IsFlag("datehand", "between"),
-                IsGender("female"),
             ),
         ],
         "label": "date_put_hand_in_panties",
@@ -80,10 +78,9 @@ init -2 python:
         "display_name": "Caress her boobs",
         "rooms": "date_cinemaroom",
         "conditions": [
-            HeroTarget(IsGender("male")),
+            
             ActiveTarget(
                 IsFlag("datehand", False),
-                IsGender("female"),
             ),
         ],
         "label": "date_caress_boobs",
@@ -100,10 +97,9 @@ init -2 python:
         "label": "date_caress_boobs_inside",
         "rooms": "date_cinemaroom",
         "conditions": [
-            HeroTarget(IsGender("male")),
+            
             ActiveTarget(
                 IsFlag("datehand", "breasts"),
-                IsGender("female"),
             ),
         ],
         "icon": "handinbra",
@@ -231,4 +227,3 @@ label date_put_hand_on_crotch:
     hide watch movie
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

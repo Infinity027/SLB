@@ -63,7 +63,6 @@ init python:
     "rooms": ["firstfloorbathroom","bathroom"],
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             MinStat("energy", 5),
             MinStat("hunger", 5),
             MinStat("grooming", 5),

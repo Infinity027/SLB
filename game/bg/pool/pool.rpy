@@ -179,9 +179,7 @@ init python:
     "display_name": "Play with the girls",
     "rooms": "pool",
     "conditions": [
-        HeroTarget(IsGender("male"),
-            Not(OnDate()),
-            ),
+        HeroTarget(Not(OnDate())),
         IsSeason(0, 1),
         InInventory("swimsuit"),
         PersonTarget(bree,

@@ -8,7 +8,7 @@ init python:
     "rooms": "livingroom",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             MinStat("fun", 0)),
         PersonTarget(samantha,
             IsPresent(),
@@ -27,7 +27,7 @@ init python:
     "conditions": [
         IsHour(10, 20),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsActivity("None"),
             ),
@@ -55,7 +55,7 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("None")),
         PersonTarget(samantha,
             IsPresent(),
@@ -78,7 +78,7 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsActivity("None"),
             ),
@@ -101,7 +101,7 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Not(IsActivity("sleep")),
             IsFlag("sick"),
             ),
@@ -124,7 +124,7 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Not(IsActivity("ask_date"))),
         PersonTarget(samantha,
             IsPresent(),
@@ -148,7 +148,7 @@ init python:
     "girl": "samantha",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             Not(IsActivity("sleep")),
             ),

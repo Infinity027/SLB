@@ -12,9 +12,6 @@ init python:
     "outfit": "casual",
     "music": "music/roa_music/esperanza.ogg",
     "conditions": [
-        HeroTarget(
-            IsGender("male"),
-            ),
         PersonTarget("audrey",
             Not(IsHidden()),
             IsFlag("addressknown", True),
@@ -31,4 +28,3 @@ init python:
         ],
     "tags": ["audreyhome"],
     })
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

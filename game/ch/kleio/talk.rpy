@@ -362,9 +362,6 @@ init python:
     "icon": "button_anna",
     "conditions": [
         IsDone("anna_event_06"),
-        HeroTarget(
-            IsGender("male"),
-            ),
         PersonTarget(kleio,
             IsActive(),
             ),

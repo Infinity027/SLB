@@ -19,7 +19,7 @@ init python:
     "conditions": [
         IsDone("palla_event_01"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsRoom("clothesshop"),
             MinStat("charm", 50),
@@ -500,7 +500,7 @@ init python:
     "label": "palla_apartment_first_visit",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("pallalivingroom"),
             MinStat("charm", 30),
             ),
@@ -519,10 +519,7 @@ init python:
     "label": "palla_repeat_naked_dogeza",
     "conditions": [
         IsDone("palla_apartment_first_visit"),
-        HeroTarget(
-            IsGender("male"),
-            IsRoom("pallalivingroom"),
-            ),
+        HeroTarget(IsRoom("pallalivingroom")),
         PersonTarget(palla,
             Not(IsActivity("sleep")),
             HasRoomTag("pallahome"),

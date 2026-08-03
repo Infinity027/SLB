@@ -7,7 +7,7 @@ init python:
             IsDone("claire_event_06", "kiara_event_06"),
             IsTimeOfDay("evening"),
             HeroTarget(
-                IsGender("male"),
+                
                 HasRoomTag("home"),
                 Not(OnDate()),
                 ),
@@ -31,7 +31,6 @@ init python:
             IsDone("cherie_event_06", "claire_event_06"),
             IsHour(11, 14),
             HeroTarget(
-                IsGender("male"),
                 HasRoomTag("mcoffice"),
                 Not(OnDate()),
                 IsActivity("work", "workhard", "work_personal", "workhard_personal"),
@@ -56,7 +55,7 @@ init python:
         "conditions": [
             IsDone("milf_harem_event_01", "milf_harem_event_02"),
             HeroTarget(
-                IsGender("male"),
+                
                 HasRoomTag("home"),
                 Not(OnDate()),
                 ),
@@ -86,7 +85,7 @@ init python:
             IsDone("milf_harem_event_03"),
             TogetherInHarem('milf', 'cherie', 'claire', 'kiara'),
             HeroTarget(
-                IsGender("male"),
+                
                 HasRoomTag("club"),
                 Not(OnDate()),
                 ),
@@ -116,7 +115,7 @@ init python:
             TogetherInHarem('milf', 'cherie', 'claire', 'kiara'),
             IsHour(10, 16),
             HeroTarget(
-                IsGender("male"),
+                
                 HasRoomTag("beach"),
                 Not(OnDate()),
                 ),
@@ -2354,12 +2353,6 @@ label milf_harem_event_05:
                 call milf_after_beach_sex from _call_milf_after_beach_sex
         "Make Cherie swallow":
 
-
-
-
-
-
-
             "I could shoot it into the faces of all three of them."
             "But for some reason I can't explain, I want Cherie to swallow."
             show milf 4some blowjob at startle(0.05,-10)
@@ -2377,12 +2370,6 @@ label milf_harem_event_05:
             else:
                 call milf_after_beach_sex from _call_milf_after_beach_sex_1
         "Hold it in":
-
-
-
-
-
-
 
             "No, I don't want this thing to end just yet."
             "I think that if I...just concentrate hard enough..."
@@ -2499,11 +2486,6 @@ label milf_fuck:
                             "More than ready to collapse into a helpless heap on the sand."
                 "Fuck Claire's ass":
 
-
-
-
-
-
                     mike.say "Ah..."
                     mike.say "Ass, Claire..."
                     mike.say "Please, put it in your ass!"
@@ -2585,11 +2567,6 @@ label milf_fuck:
                             show milf 4some fuckclaire -cum bodycum with vpunch
                             "More than ready to collapse into a helpless heap on the sand."
         "Fuck Cherie":
-
-
-
-
-
 
             "How in the hell am I supposed to choose between the three of them?"
             "That feels like an impossible choice for me to be forced to make."
@@ -2691,12 +2668,6 @@ label milf_fuck:
                             with hpunch
                             "And more than ready to collapse into a helpless heap on the sand."
                 "Fuck Cherie's ass":
-
-
-
-
-
-
                     "The position that Cherie's in right now means that I have two obvious choices."
                     "And the mood that the sight of her is getting me in means that it's going to be a simple one too."
                     "I can actually see the light of the sun, shining off the curve of Cherie's ass."
@@ -2776,11 +2747,6 @@ label milf_fuck:
                             with hpunch
                             "And more than ready to collapse into a helpless heap on the sand."
         "Fuck Kiara":
-
-
-
-
-
 
             "How in the hell am I supposed to choose between the three of them?"
             "That feels like an impossible choice for me to be forced to make."
@@ -2899,11 +2865,6 @@ label milf_fuck:
                             "And more than ready to collapse into a helpless heap on the sand."
                 "Fuck Kiara's ass":
 
-
-
-
-
-
                     "Chastened and more than a little affronted by Kiara's words, I leap into action."
                     "Determined to show her that I know what I'm doing and pay her back for squeezing my cock just now."
                     with vpunch
@@ -2998,11 +2959,6 @@ label milf_fuck:
                             "And she sags in my arms, like a puppet with suddenly severed strings."
                             with vpunch
                             "And more than ready to collapse into a helpless heap on the sand."
-
-
-
-
-
 
     call stop_all_sfx from _call_stop_all_sfx_64
     scene bg black with dissolve

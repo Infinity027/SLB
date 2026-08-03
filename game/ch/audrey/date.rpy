@@ -6,7 +6,6 @@ init python:
     "conditions": [
         IsDone("audrey_sub_event_02"),
         HeroTarget(
-            IsGender("male"),
             IsRoom("date_cinemaroom"),
             IsActivity("date_watch_the_movie")
             ),

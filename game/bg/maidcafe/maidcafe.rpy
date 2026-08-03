@@ -57,7 +57,6 @@ init python:
             MinStat("grooming", 0),
             MinStat("fun", 0),
             IsFlag("coffee", False),
-            IsGender("male"),
             ),
         PersonTarget(bree,
             Not(IsPresent()),
@@ -78,7 +77,6 @@ init python:
     "name": "maidcafe_welcome",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             IsRoom("maidcafe")
             ),
         PersonTarget(bree,
@@ -95,7 +93,6 @@ init python:
     "name": "kiara_special_coffee",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             IsRoom("maidcafe"),
             IsFlag("kiara_bj"),
             Or(

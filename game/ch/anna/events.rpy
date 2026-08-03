@@ -5,7 +5,6 @@ init python:
     "priority": 500,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             Or(
                 MinFlag("performance", 2),
                 MinFlag("band", 2),
@@ -27,7 +26,6 @@ init python:
         ),
         IsHour(20, 21),
         HeroTarget(
-            IsGender("male"),
             HasRoomTag("home"),
             Not(OnDate()),
             ),
@@ -51,7 +49,6 @@ init python:
         IsDone("anna_event_01"),
         IsHour(19, 22),
         HeroTarget(
-            IsGender("male"),
             Not(OnDate()),
             HasRoomTag("home"),
             ),
@@ -75,7 +72,6 @@ init python:
     "conditions": [
         IsDone("anna_event_02"),
         HeroTarget(
-            IsGender("male"),
             IsRoom("date_pub")),
         MinDateScore(50),
         PersonTarget(anna,
@@ -96,7 +92,6 @@ init python:
     "conditions": [
         IsDone("anna_event_03"),
         HeroTarget(
-            IsGender("male"),
             IsRoom("date_pub")),
         MinDateScore(50),
         PersonTarget(anna,
@@ -138,7 +133,6 @@ init python:
     "conditions": [
         IsDone("anna_event_05"),
         HeroTarget(
-            IsGender("male"),
             IsRoom("date_restaurant")),
         MinDateScore(50),
         PersonTarget(anna,
@@ -228,7 +222,7 @@ init python:
     "conditions": [
         IsDone("anna_event_10"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_livingroom")
             ),
         PersonTarget(anna,
@@ -247,7 +241,7 @@ init python:
     "conditions": [
         IsDone("anna_event_11"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_pub")
             ),
         PersonTarget(anna,
@@ -266,7 +260,7 @@ init python:
     "conditions": [
         IsDone("anna_event_12"),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("pub"),
             Not(OnDate()),
             ),
@@ -285,7 +279,7 @@ init python:
     "label": "anna_sub_event_01",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("date_bakery"),
             IsRoom("date_mall1"),
             ),
@@ -305,7 +299,7 @@ init python:
     "conditions": [
         IsDone("anna_sub_event_01"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("date_watch_tv"),
             IsRoom("date_livingroom"),
             ),
@@ -341,7 +335,7 @@ init python:
     "label": "anna_practice_01",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsActivity("practice_band"),
             MinFlag("bandpractice", 25),

@@ -1,29 +1,5 @@
 
 init python:
-    Event(**{
-    "name": "minami_request",
-    "priority": 500,
-    "label": "minami_request",
-    "conditions": [
-        IsDone("minami_snooping"),
-        IsHour(8, 22),
-        HeroTarget(
-            Not(OnDate()),
-            HasRoomTag("home"),
-            IsFlag("ongoinghomeharem", "minami"),
-            IsFlag("tempminamiharem", False),
-            ),
-        PersonTarget(minami,
-            IsPresent(),
-            Not(IsHidden()),
-            MaxFlag("haremdenied", 2),
-            MinStat("love", 150),
-            MinStat("lesbian", 5),
-            MinStat("sexperience", 1),
-            ),
-        ],
-    "do_once": True,
-    })
 
     SpecificTalkSubject(**{
     "name": "bree_sasha_request",
@@ -36,7 +12,7 @@ init python:
         IsNotDone("bree_request", "sasha_request"),
         IsHour(8, 22),
         HeroTarget(
-            IsGender("male"),
+            
             IsFlag("ongoinghomeharem", "minami"),
             IsFlag("minamirefusedinhomeharem", False),
             IsFlag("breerefusedminami", False),
@@ -78,7 +54,7 @@ init python:
         IsNotDone("bree_sasha_request"),
         IsHour(8, 22),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsFlag("ongoinghomeharem", "minami"),
             IsFlag("minamirefusedinhomeharem", False),
@@ -133,7 +109,7 @@ init python:
         IsNotDone("bree_sasha_request"),
         IsHour(8, 22),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsFlag("ongoinghomeharem", "minami"),
             IsFlag("minamirefusedinhomeharem", False),
@@ -187,7 +163,7 @@ init python:
         IsDone("minami_request"),
         IsHour(8, 22),
         HeroTarget(
-            IsGender("male"),
+            
             IsFlag("ongoinghomeharem", "minami"),
             IsFlag("minamirefusedinhomeharem", False),
             ),
@@ -210,7 +186,7 @@ init python:
         TogetherInHarem('home', 'bree', 'sasha', 'minami'),
         IsHour(7),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("bedroom1")),
         PersonTarget(minami,
             MinStat("love", 150),
@@ -237,7 +213,7 @@ init python:
         TogetherInHarem('home', 'bree', 'minami'),
         IsHour(20, 23),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home"),
             HasStamina(),
             ),
@@ -264,7 +240,7 @@ init python:
         TogetherInHarem('home', 'sasha', 'minami'),
         IsHour(20, 23),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home")),
         PersonTarget(sasha,
             Not(IsHidden()),
@@ -289,7 +265,7 @@ init python:
         TogetherInHarem('home', 'bree', 'sasha', 'minami'),
         IsHour(20, 23),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home")),
         PersonTarget(bree,
             Not(IsHidden()),
@@ -318,143 +294,6 @@ init python:
     "do_once": True,
     })
 
-label minami_request:
-    "It's only been a short while since I admitted the truth to Minami, telling her that [bree.name], Sasha and I are a threesome."
-    "But I can already sense that she's building up to something, just based on the way she's behaving right now."
-    "For one thing, Minami's going to great lengths to avoid me around the house."
-    "And when she does happen to see me, she keeps her mouth shut and just hurries away without any excuse."
-    "Believe me, that's out of character - my kid sister normally bugs me constantly."
-    "That and she can't keep her mouth shut for more than a couple of seconds at a time either!"
-    "Normally I'd just assume that she has something on her mind, or that she's sulking."
-    "But it's a pretty complicated situation, even without the revelation of the threesome."
-    "I mean, we finally bit the bullet and slept together not that long ago."
-    "So we're still kind of working out how our relationship works, now that we're much more than adopted siblings."
-    "More than once I think about confronting her about it, opening my mouth to speak when I see her."
-    "But I always let the words die in my mouth or she slips away before I can ask her to stop and listen to me."
-    "In the end, I resolve myself to waiting for Minami to talk to me."
-    "And even so, when she finally does, it still catches me a little off-guard."
-    show minami normal with dissolve
-    minami.say "Erm...hey, big bro."
-    mike.say "Hey, Minami..."
-    mike.say "This...is...kinda awkward!"
-    show minami annoyed
-    "Minami nods and lets out a weary sigh."
-    minami.say "Ah, yeah - isn't it just?"
-    minami.say "I wanted to talk to you, but I..."
-    mike.say "It's okay, Minami - I understand."
-    mike.say "Maybe I should have told you about [bree.name], Sasha and me before we..."
-    mike.say "Well, before we got so close, if you know what I mean?"
-    show minami normal
-    "Minami gives me a demure little smile at this, batting her eyelids as she looks up at me."
-    "She has that combination of innocence and the promise of something far more dirty underneath it in her eyes."
-    "You know, the look that makes her almost impossible for me to resist?"
-    minami.say "Uh, uh, big bro."
-    minami.say "You're not the one that should be saying sorry."
-    minami.say "I was just jealous when you told me, that's all."
-    mike.say "Y...you were?"
-    mike.say "And now you're...not?"
-    mike.say "Jealous, that is?"
-    show minami tehe at center, zoomAt(1.5, (640, 1000))
-    "Minami moves closer, her smile becoming less innocent with every step she takes towards me."
-    minami.say "Oh no, big bro."
-    minami.say "Now I've thought about it, the whole thing's really HOT!"
-    mike.say "It...it is?!?"
-    show minami happy at startle
-    "Minami lets out a trill of laughter, as if she's amused at my cluelessness."
-    show minami normal
-    minami.say "Of course it is!"
-    minami.say "Think about it - I come to the big city to be with my gorgeous big bro."
-    minami.say "And not only do I get him, and he's EVERYTHING I wanted him to be."
-    minami.say "But he's got a harem of girls already eating out of the palm of his hand too!"
-    minami.say "It's like they can't resist you, big bro."
-    show minami blush
-    minami.say "Just like I can't..."
-    "I know that I should be taking what she's saying with a massive pinch of salt."
-    "Minami's nothing if not manipulative when it comes to getting what she wants."
-    "But all the same, how much can a guy take when he's being described like that?"
-    "God knows that Minami used to wrap me around her little finger when we were kids."
-    "And now it seems like she's ten times better at it since she talked her way into my pants!"
-    mike.say "That's great to hear, Minami - really, it is!"
-    mike.say "So...so you're cool with me seeing [bree.name] and Sasha, right?"
-    "Minami cocks her head on one side, the smile still fixed upon her face."
-    minami.say "Sure, big bro, sure."
-    show minami tehe
-    minami.say "So long as you let me in on all of the fun too..."
-    menu:
-        "I can't do that":
-            mike.say "Yeah, that's not gonna happen, Minami."
-            mike.say "I should have just come out and said no when you started trying to butter me up!"
-            show minami surprised -blush
-            "Minami's smile turns instantly into a frown and she crosses her arms over her chest."
-            minami.say "What?"
-            show fx question
-            minami.say "Why the hell not?!?"
-            show minami annoyed
-            mike.say "Minami, please!"
-            mike.say "This thing I have going on with [bree.name] and Sasha, it's...complicated."
-            mike.say "I can't just stroll up to them and ask to let someone else in on it."
-            show minami normal
-            minami.say "You could try, big bro - they might say yes!"
-            mike.say "You really think so, Minami?"
-            mike.say "And just how would that go, huh?"
-            mike.say "'Hey, [bree.name], Sasha - you wanna let my little sister in on it when we all fuck?'"
-            mike.say "'Oh, and by the way, I've been screwing her on the side.'"
-            mike.say "'You know, keeping it in the family!'"
-            show minami sad
-            "From the look on Minami's face, I know that I probably shouldn't have gone there."
-            "When this was about [bree.name] and Sasha, I was on pretty solid ground."
-            "But I just made it about us being adopted siblings, which puts it all on her."
-            minami.say "So what, big bro?"
-            minami.say "Are you embarrassed about what we did?"
-            mike.say "No, Minami - that's not what I meant!"
-            show minami angry
-            show fx anger
-            minami.say "Well that's how it sounded, you jerk!"
-            hide minami with moveoutright
-            "And with that, she turns her back on me and storms off."
-            "Leaving me alone and worried about what she might say or do next."
-            $ game.flags.minamirefusedinhomeharem = True
-        "I have to ask the girls.":
-            "I think about saying no, but then it occurs to me that it's more of an instinct than anything else."
-            if Harem.find(samantha, name='home'):
-                "I mean sure, it was a serious leap to get involved with three girls at once."
-            else:
-                "I mean sure, it was a serious leap to get involved with two girls at once."
-            "But once you're over that first hurdle, why turn into a prude about it?"
-            "I'm not ashamed of Minami or what we've done together, not in the slightest."
-            if Harem.find(samantha, name='home'):
-                "Likewise I don't feel like [bree.name], Sasha, Samantha and me are doing anything wrong either."
-            else:
-                "Likewise I don't feel like [bree.name], Sasha and me are doing anything wrong either."
-            "So why should I hide one from the other or let either be ruined in the same way?"
-            if Harem.find(samantha, name='home'):
-                "I'm seriously into [bree.name], Sam and Sasha, but Minami's been a part of my life for much longer."
-            else:
-                "I'm seriously into [bree.name] and Sasha, but Minami's been a part of my life for much longer."
-            "I don't want to lose her for the sake of hooking up with my hot housemates."
-            mike.say "Sure, Minami."
-            mike.say "I'll talk to them as soon as I get the chance."
-            show minami happy
-            minami.say "Really, you will?!?"
-            show fx exclamation
-            minami.say "Oh, big bro, you're the best!"
-            "She throws her arms around my neck, almost having to jump up thanks to her short stature."
-            "This means that she's practically hanging off of me, and I have to cradle her buttocks to hold her up."
-            hide minami
-            show minami kiss
-            with fade
-            $ minami.flags.kiss += 1
-            "The feeling is something else, and when she begins to kiss me full on the lips..."
-            "Well, you get the idea."
-            "I know that I'm taking a risk doing this."
-            "But I truly believe that it's the right thing to do."
-            if Harem.find(samantha, name='home'):
-                "I just hope that [bree.name], Sam Sasha will see it that way too."
-            else:
-                "I just hope that [bree.name] and Sasha will see it that way too."
-            "Because otherwise, I might have just agreed to light the fuse on a powder-keg."
-            "One that could potentially blow the domestic harmony of the house to kingdom come!"
-    return
 
 label bree_sasha_request:
     "Let's just say that it takes me a while to be able to pluck up the courage to ask [bree.name] and Sasha about what Minami wants."

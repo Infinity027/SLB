@@ -4,7 +4,7 @@ init python:
     "label": "give_phone_number",
     "girl": "cassidy",
     "conditions": [
-        HeroTarget(IsGender("male")),
+        
         PersonTarget(cassidy,
             IsPresent(),
             Not(IsHidden()),
@@ -26,7 +26,7 @@ init python:
     "conditions": [
         IsHour(12, 13),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsActivity("None"),
             ),
@@ -54,7 +54,7 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("None")),
         PersonTarget(cassidy,
             IsPresent(),
@@ -77,7 +77,7 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsActivity("None"),
             ),
@@ -100,7 +100,7 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Not(IsActivity("sleep")),
             IsFlag("sick"),
             ),
@@ -123,7 +123,7 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Not(IsActivity("ask_date"))),
         PersonTarget(cassidy,
             IsPresent(),
@@ -147,7 +147,7 @@ init python:
     "girl": "cassidy",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             Not(IsActivity("sleep")),
             ),

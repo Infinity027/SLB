@@ -7,9 +7,6 @@ init python:
             And(
                 IsDayOfWeek("123456"),
                 IsHour(8, 20),
-                HeroTarget(
-                    IsGender("female"),
-                ),
                 Or(
                     PersonTarget("mike",
                         Not(IsHidden()),
@@ -36,8 +33,7 @@ init python:
                     ),
                 ),
                 Not(IsSpecialDate("christmas")),
-                HeroTarget(IsGender("male"),
-                    Not(OnDate()),
+                Not(OnDate()),
                 ),
             ),
         ),
@@ -65,7 +61,6 @@ init python:
             MinStat("fun", 2),
             IsFlag("promoted", False),
             IsFlag("suspended", False),
-            IsGender("male"),
             ),
         ],
     "display_name": "Work",
@@ -94,7 +89,6 @@ init python:
             MinStat("fun", 4),
             IsFlag("promoted", False),
             IsFlag("suspended", False),
-            IsGender("male"),
             ),
         ],
     "display_name": "Work hard",

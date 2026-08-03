@@ -25,7 +25,7 @@ init python:
     "conditions": [
         IsHour(12, 13),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsActivity("None"),
             ),
@@ -53,7 +53,7 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("None")),
         PersonTarget(audrey,
             IsPresent(),
@@ -76,7 +76,7 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsActivity("None"),
             ),
@@ -99,7 +99,7 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Not(IsActivity("sleep")),
             IsFlag("sick"),
             ),
@@ -122,7 +122,7 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Not(IsActivity("ask_date"))),
         PersonTarget(audrey,
             IsPresent(),
@@ -146,7 +146,7 @@ init python:
     "girl": "audrey",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             Not(IsActivity("sleep")),
             ),

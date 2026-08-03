@@ -6,7 +6,6 @@ init python:
     "conditions": [
         MinDaysPlayed(10),
         HeroTarget(
-            IsGender("male"),
             IsActivity("sleep"),
             MinStat("fun", 10),
             ),
@@ -416,7 +415,7 @@ init python:
     "conditions": [
         IsDone("emma_event_11"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_beach")),
         PersonTarget(emma,
             OnDate(),

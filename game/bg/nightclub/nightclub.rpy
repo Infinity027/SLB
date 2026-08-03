@@ -33,7 +33,6 @@ init python:
             MinStat("fun", 2),
             MinStat("charm", 10),
             Or(
-                IsGender("male"),
                 MaxStat("morality", 50)
                 ),
             )

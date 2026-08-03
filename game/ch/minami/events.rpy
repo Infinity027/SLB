@@ -5,7 +5,7 @@ init python:
     "max_girls": 1,
     "music": "music/roa_music/new_days.ogg",
     "conditions": [
-        HeroTarget(IsGender("male")),
+        
         PersonTarget(minami,
             IsPresent(),
             Not(IsHidden()),
@@ -27,7 +27,7 @@ init python:
     "priority": 500,
     "conditions": [
         IsDone("minami_event_01"),
-        HeroTarget(IsGender("male")),
+        
         IsHour(10, 20),
         MinDaysPlayed(26),
         ],
@@ -579,7 +579,7 @@ init python:
     "conditions": [
         IsDone("angela_visit"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_nightclub")),
         PersonTarget(minami,
             IsPresent(),
@@ -596,7 +596,7 @@ init python:
     "conditions": [
         IsDone("angela_visit"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_beach", "date_nudistbeach")),
         PersonTarget(minami,
             IsPresent(),
@@ -613,7 +613,7 @@ init python:
     "conditions": [
         IsDone("angela_visit"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_cinema")),
         PersonTarget(minami,
             IsPresent(),
@@ -630,7 +630,7 @@ init python:
     "conditions": [
         IsDone("angela_visit"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_livingroom")),
         PersonTarget(minami,
             IsPresent(),
@@ -647,7 +647,7 @@ init python:
     "conditions": [
         IsDone("angela_visit"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_mall1")),
         PersonTarget(minami,
             IsPresent(),
@@ -664,7 +664,7 @@ init python:
     "conditions": [
         IsDone("angela_visit"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_park")),
         PersonTarget(minami,
             IsPresent(),
@@ -681,7 +681,7 @@ init python:
     "conditions": [
         IsDone("angela_visit"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_pub")),
         PersonTarget(minami,
             IsPresent(),
@@ -698,7 +698,7 @@ init python:
     "conditions": [
         IsDone("angela_visit"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_restaurant")),
         PersonTarget(minami,
             IsPresent(),
@@ -715,7 +715,7 @@ init python:
     "conditions": [
         IsDone("angela_visit"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_waterpark")),
         PersonTarget(minami,
             IsPresent(),
@@ -775,7 +775,7 @@ init python:
         IsDone("sasha_likes_blondes_2"),
         IsTimeOfDay("morning", "afternoon"),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home")),
         PersonTarget(minami,
             IsPresent(),
@@ -793,7 +793,7 @@ init python:
     "conditions": [
         IsHour(5, 9),
         IsDone("minami_practice_sex"),
-        HeroTarget(IsGender("male"),
+        HeroTarget(
             Not(InFlag("slept_with", "minami")),
             Not(IsFlag("morningwood")),
             ),
@@ -813,31 +813,6 @@ init python:
     "once_month": True,
     })
 
-    WakeUpEvent(**{
-    "name": "minami_snooping",
-    "priority": 500,
-    "label": "minami_snooping",
-    "conditions": [
-        IsActiveHarem('home'),
-        IsHour(5, 9),
-        GameTarget(
-            IsFlag("threesomelastnight"),
-            IsFlag("ongoinghomeharem", False),
-            ),
-        PersonTarget(minami,
-            Not(IsHidden()),
-            MinStat("sexperience", 1),
-            ),
-        PersonTarget(bree,
-            Not(IsHidden()),
-            ),
-        PersonTarget(sasha,
-            Not(IsHidden()),
-            ),
-        ],
-    "do_once": True,
-    })
-
 
     SpecificTalkSubject(**{
     "name": "bree_talk_minami",
@@ -849,7 +824,7 @@ init python:
         IsDone("minami_event_02"),
         Not(IsDone("minami_event_03")),
         HeroTarget(
-            IsGender("male"),
+            
             ),
         PersonTarget(bree,
             IsActive(),
@@ -871,7 +846,7 @@ init python:
         IsDone("minami_event_02"),
         Not(IsDone("minami_event_03")),
         HeroTarget(
-            IsGender("male"),
+            
             ),
         PersonTarget(sasha,
             IsActive(),
@@ -5481,243 +5456,6 @@ label minami_morningwood:
     $ game.room = "bedroom5"
     $ hero.flags.morningwood = TemporaryFlag(True, "day")
     return
-
-label minami_snooping:
-    $ game.hour = 7
-    scene bg bedroom1
-    "I wake up fuzzily, the reluctance that I always feel to start the day making me want to turn over and go straight back to sleep."
-    "And so I fumble around blindly on the bedside table, trying to hit the snooze button on my phone and kill the alarm."
-    "It's then that I notice something really weird, namely that there's no alarm to silence."
-    "Before I can even begin to think about what's going on, I see the shape of something rising up beneath the covers."
-    "Look, before you say it, I know what you're thinking, and you're wrong."
-    "I get morning wood just like any other guy, sure."
-    "But if that's my dick, then there's something wrong down there."
-    "Because even I wouldn't want it to get that large - or want there to be two of them either!"
-    "I lift the bedclothes, still not totally awake or able to make sense of what's going on."
-    "Though hearing the sound of giggling coming from down there does start to help clear things up."
-    "And so it comes as less of a surprise when I see two faces staring up at me from under there."
-    scene bg black
-    show bj breeminamisasha bree sasha breehand
-    bree.say "[hero.name] - you're finally awake!"
-    sasha.say "Damn it..."
-    sasha.say "I was sure we could do this without waking him!"
-    "I shake my head, baffled by what I'm seeing."
-    mike.say "Huh..."
-    mike.say "Do...do what?"
-    show bj breeminamisasha sashahappy breehappy
-    "Rather than answer my question, [bree.name] and Sasha look at each other, giggling again."
-    "And then, almost as one, they lean in and begin to lick at the base of my cock."
-    mike.say "Oh...oh, I see!"
-    "[bree.name] and Sasha eye me as they go to work, impish delight clear to see in their gazes."
-    "First they suck on one of my balls each, making me gasp at the sudden sensation."
-    "And then they release them in order to start climbing the shaft with their lips and tongues."
-    "But at the same time, I feel fingers and thumbs still caressing my scrotum all the while."
-    "Though I can't tell whether they belong to [bree.name] or Sasha!"
-    "Not that it matters, as I'm far more interested in the sensations they're creating higher up."
-    "With [bree.name] on my left and Sasha on my right, they finally reach the head of my cock."
-    "There they take it in turns to take the head between their lips and caress the tip with their tongues."
-    "And only when both have had more turns than I can count does Sasha allow [bree.name] to swallow me deeper."
-    show bj breeminamisasha breeonmouth
-    "While [bree.name]'s head bobs up and down, Sasha goes back to licking me up and down."
-    "[bree.name] takes me right up to the point where I think I'm about to come."
-    show bj breeminamisasha sashaonmouth sashahand -breehand
-    "Then she releases me, allowing Sasha to eagerly take her place."
-    "The change is almost seamless for me, and soon they're working me in the same way again."
-    show bj breeminamisasha breeonmouth breehand -sashahand
-    "If we'd been doing this at the end of the day, or with more warning, I could have gone longer."
-    "But thanks to them taking me by surprise like this, I know I can't hold on anymore."
-    show bj breeminamisasha breeopen sashaopen -breeonmouth
-    "As if sensing what's about to happen, [bree.name] lets my cock fall out of her mouth just in time."
-    "And then they both lean in close, letting the inevitable happen."
-    show bj breeminamisasha breeshot breefacial sashafacial
-    "When it does, no more than a second or two later, [bree.name] and Sasha get a literal face-full."
-    "The cum hits the sides of their faces closest to me, striping their cheeks and foreheads."
-    "Holding their mouths open too, they even manage to catch some on their tongues."
-    "[bree.name] and Sasha giggle to one another as they swallow all that they can catch too."
-    scene bg bedroom1
-    show sasha underwear at left
-    show bree underwear at right
-    "I watch helplessly as they slip out from under the bedclothes, waving to me as they go."
-    sasha.say "I feel SO full, [bree.name]."
-    sasha.say "Might have to skip breakfast this morning."
-    bree.say "Ah, I know what you mean, Sasha."
-    bree.say "I wish I could start the day like this every time!"
-    hide bree
-    hide sasha
-    "I shake my head as the door closes behind them, unable to believe my luck."
-    "I'm living under the same roof as two insanely hot girls."
-    "And we're sharing each other at the same time as we're sharing the house!"
-    "Ah, no...that should be living with three hot girls."
-    "Can't forget Minami too..."
-    "For all that's changed between Minami and myself recently, some things are still just the same as they've always been."
-    "Of course the fact that we've actually bitten the bullet and slept together is a pretty big deal."
-    "Yet she's still the same old Minami, and that means she's just as nosey as ever!"
-    "At first I was sure that I could keep the fact that [bree.name], Sasha and I are a threesome hidden from her."
-    "But just recently I've noticed Minami sniffing around, looking for clues to see if something's going on."
-    "She keeps on quizzing me about what my plans are and whether I'll be in or out for most of the day."
-    "And I keep overhearing her asking [bree.name] and Sasha the same things too."
-    "I'm still laid there, naked under the covers and my mind wandering, when Minami literally bursts in on me."
-    show minami sleep with hpunch
-    minami.say "Hah, caught you!"
-    minami.say "I knew that you were..."
-    show fx question
-    minami.say "On your own in bed?!?"
-    "I sit bolt upright, genuinely shocked at her suddenly appearing out of nowhere."
-    mike.say "Jesus Christ, Minami!"
-    mike.say "Haven't you ever heard of knocking?!?"
-    mike.say "You scared the living shit out of me!"
-    "Minami does that thing to me then."
-    show minami sad
-    "The thing where she instantly turns into a frightened little animal caught in the headlights of oncoming traffic."
-    "And as much as I want to yell at her, tell her to get the hell out, I'm already regretting my harsh words to her."
-    show minami blush
-    minami.say "I...I'm sorry, big bro."
-    minami.say "I just wanted to...to..."
-    show minami normal -blush
-    minami.say "Surprise you...yeah, that's right - to surprise you!"
-    "I roll my eyes, sitting up in bed and letting the covers fall down to my waist."
-    "I should be telling her off for barging in like that."
-    "But then I see Minami eyeing me up from across the room."
-    show minami hunt
-    "She's all but licking her lips at what she can see, unable to keep from showing how horny she is right now."
-    "And if she thought she was going to walk in on [bree.name], Sasha and me, then there's no wonder!"
-    "Fuck me, but my sister's such a filthy little bitch."
-    "Though I can't deny she can have the same effect on me too!"
-    "And she looks super-hot, standing there in her pyjamas, wanting it so badly..."
-    minami.say "Ah, big bro..."
-    mike.say "Yeah, Minami?"
-    minami.say "Well...you're in bed."
-    minami.say "And I'm in your room."
-    minami.say "So...I could be in your bed."
-    show minami blush
-    minami.say "And you could be in me too..."
-    menu:
-        "I'm not in the mood.":
-            mike.say "Minami, it's first thing in the goddamn morning!"
-            show minami -blush
-            minami.say "Aww, big bro!"
-            minami.say "It doesn't have to be epic or anything."
-            minami.say "Even if it's over quickly, that's okay - I just want you in me, please!"
-            mike.say "No, Minami, no way."
-            mike.say "Maybe later, but not now - and that's final."
-            show minami angry
-            show fx exclamation
-            minami.say "No fair - I'm horny as hell!"
-            mike.say "Then go break out your toys, Minami!"
-            "Balling her fists and planting them on her waist, Minami gives me a sullen look."
-            minami.say "Why don't you want to fuck me, big bro?"
-            minami.say "Is it because you've got something going on with another girl?"
-            show fx question
-            minami.say "Maybe something with [bree.name] or Sasha, huh?"
-            menu:
-                "There's nothing between me and [bree.name] or Sasha!":
-                    "I shake my head, trying to laugh off the accusation as ridiculous."
-                    mike.say "That's crazy, Minami."
-                    mike.say "You should listen to yourself, you really should."
-                    mike.say "You're starting to sound paranoid!"
-                    show minami annoyed
-                    "Minami frowns at this, wrinkling her nose in annoyance."
-                    minami.say "Well, I think it's crazy that you won't fuck me, that's what I think."
-                    show fx anger
-                    show minami angry
-                    minami.say "And if I have to make do with a vibrator, then you can do the same with your hand!"
-                    hide minami
-                    "And with that, she storms out of my bedroom, leaving me alone and feeling frustrated."
-                    $ minami.love -= 5
-                    $ minami.flags.haremdenied += 1
-                    if minami.flags.haremdenied < 3:
-                        $ hero.cancel_event()
-                "I sleep with [bree.name] and Sasha.":
-                    "I shrug, feeling tired of keeping the secret and worrying about being discovered the whole time."
-                    "Sure, I maybe should have cleared it with [bree.name] and Sasha beforehand."
-                    "But the words are out of my mouth before the potential fallout can stop me."
-                    show minami normal
-                    mike.say "If you really want to know the truth Minami, then okay."
-                    mike.say "I'm sleeping with [bree.name] and Sasha."
-                    show fx exclamation
-                    "Minami's eyes go wide with shock, her mouth hanging open as she shakes her head."
-                    show fx question
-                    minami.say "You...you're serious, big bro?"
-                    minami.say "You're doing them both, and neither of them knows it?!?"
-                    "I shake my head, trying to sound as reasonable as I can."
-                    "Rather than like the kind of creep that sleeps with his little sister and his housemates under the same roof..."
-                    mike.say "No, Minami - it's not like that."
-                    mike.say "[bree.name], Sasha and I are in a committed relationship."
-                    mike.say "A threesome, if you like."
-                    "By now, Minami's eyes are like saucers, her mouth quivering at what she's hearing."
-                    "I honestly expect her to explode at any moment."
-                    "So it comes as some surprise when she simply nods instead."
-                    minami.say "Th...that makes sense...kind of...I guess."
-                    minami.say "This is the big city, after all..."
-                    minami.say "I'm sorry, big bro - things are just so...different here!"
-                    hide minami
-                    "And with that, Minami turns and walks out of my bedroom, leaving me alone again."
-                    "But as calm as she seemed to be just now, I can't help thinking this matter's not settled."
-                    # HOME HAREM DISABLED FOR MINAMI — the scene above still plays, but we no
-                    # longer start the home-harem join (which would need ongoinghomeharem="minami").
-                    # Her own route is unaffected. To re-enable, uncomment the two lines below.
-                    # $ game.flags.ongoinghomeharem = "minami"
-                    # $ game.flags.tempminamiharem = TemporaryFlag(True, randint(1, 3))
-            return
-        "Come here.":
-            "[bree.name] and Sasha took it out of me just now, but I know I still have enough left for Minami too."
-            "I don't have to be up for a while yet, so I can easily squeeze in some lazy sex with her."
-            "Plus it'll take her mind off the task of trying to find out what's going on between me and the other girls too..."
-            mike.say "You know what, Minami - that makes it sound like I'm still dreaming!"
-            mike.say "So let's see if I am, huh?"
-            "I lift the bedclothes, making it plain that she's about to get what she wants."
-            show minami hunt
-            show minami blush
-            "Minami's cheeks flush red at the compliment."
-            show minami naked
-            "And she instantly tears off her pyjamas, hopping to the side of the bed."
-            "If my cock had begun to get soft for even an instant, the sight of Minami soon fixes that."
-            "As she slips under the sheets and wriggles her ass into my lap, it's hard as rock once more."
-            scene minami cowgirl
-            "Minami wastes no time in grabbing it by the shaft and thrusting it between her thighs with one hand."
-            show minami cowgirl up
-            "And with the other, she pushes my hands onto her petite breasts without a second's pause."
-            show minami cowgirl surprised
-            minami.say "Whoa, big bro."
-            minami.say "You're a BEAST this early in the morning!"
-            show minami cowgirl vaginal
-            minami.say "Oh...oh, yeah!"
-            "She guides me into herself as she says this, quivering the whole time."
-            "There's no resistance whatsoever, meaning that she must have been slick well before now."
-            "And the thought of her standing there, dripping into her pyjamas makes me want her all the more."
-            mike.say "What about you, Minami?"
-            mike.say "You're the dirty little mare that wants it so bad!"
-            mike.say "I bet you woke up wanting it up you, right?"
-            show minami cowgirl orgasm
-            "By now I'm already as deep into Minami as I can go, gaining speed with every passing second."
-            "She's yelping and wailing too, nipples stiff between my fingers as I squeeze her breasts hard."
-            show minami cowgirl speed
-            minami.say "Yeah...yeah..."
-            minami.say "You know me...big bro..."
-            minami.say "I...dream of it...you...fucking me!"
-            minami.say "Wake up...wet...pussy wanting...you to fill it!"
-            "God but she's something else when she's like this!"
-            "All I can think of is how much I want her, how good she feels around my cock..."
-            "And then it's all over, just like that."
-            show minami cowgirl creampie ahegao with vpunch
-            "I feel myself cumming inside of Minami and her leaning back into me as hard as she possibly can."
-            with vpunch
-            "Even when I'm done, she's still wriggling and writhing on my cock, twitching with exquisite pleasure."
-            with vpunch
-            "Instinctively, I wrap Minami in my arms, spooning her with the whole of my body."
-            "I stay inside of her for as long as I possibly can."
-            "And I enjoy the sensation of surrounding her so completely."
-            "A part of me knows that I'll have to deal with the problem of [bree.name] and Sasha."
-            "Sooner or later, Minami will find out - of that I have no doubt."
-            "But for now, I don't want to do anything but lie here with her in my arms."
-            $ minami.flags.haremdenied += 1
-            if minami.flags.haremdenied < 3:
-                $ hero.cancel_event()
-    if minami.flags.haremdenied >= 3:
-        $ Harem.find(sasha, name="home")[0].leave("minami")
-        $ game.flags.ongoinghomeharem = False
-    return
-
 
 label minami_birthday_date_male:
     $ DONE["minami_birthday_date_male"] = game.days_played

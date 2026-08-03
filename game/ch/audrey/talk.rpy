@@ -138,7 +138,6 @@ init python:
     "icon": "button_investigate",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             IsFlag("underinvestigation"),
             MaxFlag("workinvestigation", 99)
             ),

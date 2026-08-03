@@ -7,7 +7,7 @@ init python:
     "conditions": [
         IsSeason(2),
         HeroTarget(
-            IsGender("male"),
+            
             IsFlag("party_planned"),
             Or(
                 IsFlag("halloween_girl", False),
@@ -36,7 +36,7 @@ init python:
     "icon": "button_aborthalloween",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             MinStat("energy", 2),
             MinStat("hunger", 2),
             MinStat("grooming", 2),
@@ -63,7 +63,7 @@ init python:
         'game.calendar.day_of_season in [20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]',
         IsHour(20, 23),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home"),
             IsActivity("None"),
             ),
@@ -110,7 +110,7 @@ init python:
         IsSeason(2),
         IsDone("halloween_intro"),
         HeroTarget(
-            IsGender("male"),
+            
             IsFlag("party_planned"),
             ),
         Or(

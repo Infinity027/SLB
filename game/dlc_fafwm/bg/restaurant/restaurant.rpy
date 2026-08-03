@@ -6,7 +6,6 @@ init python:
         IsHour(18, 23),
         HeroTarget(
             Not(OnDate()),
-            IsGender("male"),
             ),
         PersonTarget("cherie",
             ),
@@ -14,4 +13,3 @@ init python:
     "display_name": "Restaurant",
     "outfit": "date",
     })
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

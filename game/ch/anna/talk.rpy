@@ -186,9 +186,6 @@ init python:
     "icon": "button_kleio",
     "conditions": [
         IsDone("anna_event_06", "kleio_talk_anna"),
-        HeroTarget(
-            IsGender("male"),
-            ),
         PersonTarget(anna,
             IsActive(),
             ),

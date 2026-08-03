@@ -25,7 +25,6 @@ init python:
     "conditions": [
         IsHour(10, 11),
         HeroTarget(
-            IsGender("male"),
             Not(OnDate()),
             IsActivity("None"),
             ),
@@ -53,7 +52,6 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             IsActivity("None")),
         PersonTarget(aletta,
             IsPresent(),
@@ -76,7 +74,6 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             Not(OnDate()),
             IsActivity("None"),
             ),
@@ -99,7 +96,6 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             Not(IsActivity("sleep")),
             IsFlag("sick"),
             ),
@@ -122,7 +118,6 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             Not(IsActivity("ask_date"))),
         PersonTarget(aletta,
             IsPresent(),
@@ -146,7 +141,6 @@ init python:
     "girl": "aletta",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             Not(OnDate()),
             Not(IsActivity("sleep")),
             ),

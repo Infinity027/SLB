@@ -7,9 +7,5 @@ init python:
     "outfit": "casual",
     "conditions": [
         IsHour(9, 19),
-        HeroTarget(
-            IsGender("male"),
-            ),
         ],
     })
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

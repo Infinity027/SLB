@@ -7,7 +7,7 @@ init python:
     "duration": 0,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_mall1"),
             ),
         PersonTarget(reona,
@@ -36,7 +36,7 @@ init python:
     "conditions": [
         IsDone("thot_harem_event_01"),
         HeroTarget(
-            IsGender("male"),
+            
             IsFlag("thot_harem_delay", False)
             ),
         PersonTarget(reona,
@@ -60,7 +60,7 @@ init python:
     "conditions": [
         IsDone("thot_harem_event_02"),
         HeroTarget(
-            IsGender("male"),
+            
             IsFlag("thot_harem_delay", False),
             HasRoomTag("mall_northside"),
             ),
@@ -88,7 +88,7 @@ init python:
         IsSeason(0, 1),
         IsTimeOfDay("evening"),
         HeroTarget(
-            IsGender("male"),
+            
             IsFlag("thot_harem_delay", False),
             IsRoom("livingroom"),
             ),

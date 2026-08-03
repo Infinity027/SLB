@@ -29,7 +29,6 @@ init python:
     "display_name": "Play with Sasha",
     "rooms": "pool",
     "conditions": [
-        HeroTarget(IsGender("male")),
         IsSeason(0, 1),
         InInventory("swimsuit"),
         PersonTarget(sasha,

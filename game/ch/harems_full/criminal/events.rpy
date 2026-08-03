@@ -5,7 +5,6 @@ init python:
     "priority": 500,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             Not(OnDate()),
             IsFlag("CriminalRequest", 0),
             ),
@@ -30,7 +29,7 @@ init python:
     "label": "criminal_harem_event_02",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsFlag("CriminalRequest", 1),
             ),
         PersonTarget(camila,
@@ -49,7 +48,7 @@ init python:
         TogetherInHarem('criminal', 'camila', 'lexi'),
         IsHour(2, 4),
         HeroTarget(
-            IsGender("male"),
+            
             IsFlag("CriminalRequest", 2),
             IsRoom("date_nightclub"),
             ),

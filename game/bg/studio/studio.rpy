@@ -97,9 +97,6 @@ init python:
     "label": "hide_studio",
     "priority": 1000,
     "conditions": [
-        HeroTarget(
-            IsGender("male"),
-            ),
         Or(
             Or(
                 PersonTarget(anna,

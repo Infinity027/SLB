@@ -6,7 +6,6 @@ init python:
     "duration": 0,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             HasRoomTag("home"),
             Not(OnDate()),
             ),

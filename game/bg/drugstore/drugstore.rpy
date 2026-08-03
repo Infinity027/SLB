@@ -60,7 +60,6 @@ init python:
     "priority": 500,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             IsRoom("map")
             ),
         "randint(1, 100) <= hero.flags.bluepills -25"

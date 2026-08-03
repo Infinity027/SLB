@@ -4,9 +4,6 @@ init python:
     "label": "kiara_unhide",
     "conditions": [
         IsDone("bree_event_09b"),
-        HeroTarget(
-            IsGender("male"),
-            ),
         ],
     "do_once": True,
     })
@@ -19,7 +16,7 @@ init python:
         IsDone("bree_event_09b"),
         IsHour(17, 19),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("maidcafe"),
             MinStat("charm", 50),
             IsActivity("None"),
@@ -39,7 +36,7 @@ init python:
     "conditions": [
         IsDone("kiara_event_02"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("stripclub"),
             IsActivity("None"),
             ),
@@ -60,7 +57,7 @@ init python:
         IsDone("kiara_event_03"),
         IsHour(21, 2),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsActivity("None"),
             ),
@@ -82,7 +79,7 @@ init python:
         IsDone("kiara_event_04"),
         IsHour(21, 2),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsActivity("None"),
             ),
@@ -103,7 +100,7 @@ init python:
         IsDone("kiara_event_05"),
         IsHour(21, 22),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsActivity("None"),
             ),
@@ -125,7 +122,7 @@ init python:
         IsNotDone("kiara_event_07b"),
         IsHour(12, 18),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_mall1"),
             ),
         PersonTarget(kiara,
@@ -147,7 +144,7 @@ init python:
         IsDone("kiara_event_07"),
         IsHour(22, 4),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("nightclub"),
             Not(OnDate()),
             IsActivity("None"),
@@ -169,7 +166,7 @@ init python:
         IsDone("kiara_event_08"),
         IsHour(22, 4),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("nightclub"),
             Not(OnDate()),
             IsActivity("None"),
@@ -192,7 +189,7 @@ init python:
         IsNotDone("kiara_event_07"),
         IsHour(12, 18),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_mall1"),
             ),
         PersonTarget(kiara,
@@ -215,7 +212,7 @@ init python:
         IsHour(10, 18),
         IsSeason(0, 1, 2),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("park"),
             Not(OnDate()),
             IsActivity("None"),
@@ -237,7 +234,7 @@ init python:
         IsDone("kiara_event_08b"),
         IsHour(22, 2),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home"),
             Not(IsRoom("housemap")),
             Not(IsRoom("house")),
@@ -259,9 +256,6 @@ init python:
     "duration": 1,
     "conditions": [
         IsDone("kiara_event_06"),
-        HeroTarget(
-            IsGender("male"),
-            ),
         PersonTarget("kiara",
             IsPresent(),
             Not(IsHidden()),
@@ -281,7 +275,7 @@ init python:
     "conditions": [
         IsDone("kiara_sub_event_01"),
         HeroTarget(
-            IsGender("male"),
+            
             Or(
                 HasRoomTag("home"),
                 HasRoomTag("club"),
@@ -304,7 +298,7 @@ init python:
     "conditions": [
         IsDone("kiara_sub_event_02"),
         HeroTarget(
-            IsGender("male"),
+            
             Or(
                 HasRoomTag("club"),
                 IsRoom("maidcafe", "stripclub"),

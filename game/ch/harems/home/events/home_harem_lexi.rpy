@@ -11,7 +11,7 @@ init python:
             ),
         IsHour(8, 22),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home"),
             IsFlag("asklexiinhomeharem"),
             IsFlag("ongoinghomeharem", "lexi"),
@@ -37,7 +37,7 @@ init python:
             ),
         IsHour(8, 22),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home"),
             IsFlag("asklexiinhomeharem"),
             IsFlag("ongoinghomeharem", "lexi"),
@@ -63,7 +63,7 @@ init python:
             ),
         IsHour(8, 22),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home"),
             IsFlag("asklexiinhomeharem"),
             IsFlag("ongoinghomeharem", "lexi"),
@@ -89,7 +89,7 @@ init python:
             ),
         IsHour(8, 22),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home"),
             IsFlag("asklexiinhomeharem"),
             IsFlag("ongoinghomeharem", "lexi"),
@@ -130,7 +130,7 @@ init python:
     "conditions": [
         TogetherInHarem('home', 'bree', 'lexi'),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("bedroom1")
             ),
         PersonTarget(bree,
@@ -158,7 +158,7 @@ init python:
         IsDone("lexi_sasha_1"),
         TogetherInHarem('home', 'lexi', 'sasha'),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("nightclub", "date_nightclub")
             ),
         PersonTarget("lexi",
@@ -187,7 +187,7 @@ init python:
     "conditions": [
         TogetherInHarem('home', 'lexi', 'sasha'),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("bedroom1")
             ),
         PersonTarget("lexi",
@@ -224,7 +224,7 @@ init python:
                 Not(IsActivity("sleep")),
                 ),
         HeroTarget(
-            IsGender("male"),
+            
             ),
         ],
     "do_once": True,

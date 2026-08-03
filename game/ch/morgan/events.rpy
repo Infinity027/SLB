@@ -6,7 +6,7 @@ init python:
     "conditions": [
         IsNotDone("kleio_event_01"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_cinemaroom", "cinemaroom", "date_cinema", "cinema")),
         ],
     "music": "music/roa_music/underwater.ogg",
@@ -20,7 +20,7 @@ init python:
     "conditions": [
         IsDone("morgan_event_01"),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("pub"),),
         ],
     "do_once": True,
@@ -35,7 +35,7 @@ init python:
     "icon": "button_morgan",
     "conditions": [
         IsDone("morgan_event_02"),
-        HeroTarget(IsGender("male")),
+        
         PersonTarget(morgan,
             IsActive(),
             MinStat("love", 20),
@@ -51,7 +51,7 @@ init python:
     "conditions": [
         IsDone("morgan_event_03"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_pub")),
         PersonTarget(morgan,
             IsPresent(),
@@ -70,7 +70,7 @@ init python:
     "conditions": [
         IsDone("morgan_event_04"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_restaurant")),
         PersonTarget(morgan,
             IsPresent(),
@@ -89,7 +89,7 @@ init python:
     "conditions": [
         IsDone("morgan_event_05"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_cinema")),
         PersonTarget(morgan,
             IsPresent(),
@@ -110,7 +110,7 @@ init python:
         Not(IsDone("morgan_event_07b")),
         IsSeason(0, 1),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_waterpark")),
         PersonTarget(morgan,
             IsPresent(),
@@ -132,7 +132,7 @@ init python:
         IsSeason(3),
         "18 <= game.day < 25",
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_mall1")),
         PersonTarget(morgan,
             IsPresent(),
@@ -154,7 +154,7 @@ init python:
             IsDone("morgan_event_07b"),
             ),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_cinema", "date_cinemaroom")),
         MinDateScore(90),
         PersonTarget(morgan,
@@ -175,7 +175,7 @@ init python:
         IsDone("morgan_event_08"),
         IsTimeOfDay("afternoon"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             ),
         PersonTarget(morgan,
@@ -196,7 +196,7 @@ init python:
     "conditions": [
         IsDone("morgan_event_09"),
         HeroTarget(
-            IsGender("male"),
+            
             ),
         PersonTarget(morgan,
             IsActive(),
@@ -218,7 +218,7 @@ init python:
     "conditions": [
         IsDone("morgan_event_10"),
         HeroTarget(
-            IsGender("male"),
+            
             ),
         PersonTarget(morgan,
             IsActive(),
@@ -332,7 +332,7 @@ init python:
     "conditions": [
         IsDone("morgan_event_03"),
         HeroTarget(
-            IsGender("male"),
+            
             ),
         PersonTarget(morgan,
             IsPresent(),
@@ -454,7 +454,7 @@ init python:
     "priority": 500,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_mall1"),
             IsActivity("date_play_arcade"),
             MinStat("money", 100),

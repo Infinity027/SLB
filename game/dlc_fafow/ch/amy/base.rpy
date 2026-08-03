@@ -4,7 +4,7 @@ init python:
     "label": "give_phone_number",
     "girl": "amy",
     "conditions": [
-        HeroTarget(IsGender("male")),
+        
         PersonTarget(amy,
             Not(IsHidden()),
             IsPresent(),
@@ -28,7 +28,7 @@ init python:
     "conditions": [
         IsHour(13, 14),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             ),
         GameTarget(IsFlag("noTexting", False)),
@@ -53,7 +53,7 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("None")),
         PersonTarget(amy,
             Not(IsHidden()),
@@ -76,7 +76,7 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsActivity("None"),
             ),
@@ -99,7 +99,7 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Not(IsActivity("sleep")),
             IsFlag("sick"),
             ),
@@ -122,7 +122,7 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Not(IsActivity("ask_date"))),
         PersonTarget(amy,
             Not(IsHidden()),
@@ -147,7 +147,7 @@ init python:
     "girl": "amy",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             Not(IsActivity("sleep")),
             ),

@@ -17,19 +17,6 @@ init python:
             IsFlag("noproposedate", False),
             MinStat("love", 20),
             ),
-        Or(
-            And(
-                HeroTarget(
-                    IsGender("male")
-                    ),
-                ActiveTarget(
-                    IsGender("female")
-                    )
-                ),
-            HeroTarget(
-                IsGender("female")
-                )
-        )
         ],
     "icon": "askdate",
     "once_day": "ACTIVE",

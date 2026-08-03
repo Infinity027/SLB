@@ -8,14 +8,14 @@ init python:
         IsHour(1, 5),
         IsDone("amy_event_07_date"),
         PersonTarget("amy",
-                     MinStat("love", 170),
-                     MinStat("sub", 30),
-                     MinStat("sexperience", 3),
-                     InHarem("goth"),
-                     Not(IsPresent()),
-                     ),
+                    MinStat("love", 170),
+                    MinStat("sub", 30),
+                    MinStat("sexperience", 3),
+                    InHarem("goth"),
+                    Not(IsPresent()),
+                    ),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             Or(
                 IsActivity("None"),
@@ -36,14 +36,14 @@ init python:
         IsHour(14, 18),
         IsDone("goth_harem_event_01"),
         PersonTarget("amy",
-                     MinStat("love", 190),
-                     MinStat("sub", 50),
-                     MinStat("sexperience", 5),
-                     InHarem("goth"),
-                     Not(IsPresent()),
-                     ),
+                    MinStat("love", 190),
+                    MinStat("sub", 50),
+                    MinStat("sexperience", 5),
+                    InHarem("goth"),
+                    Not(IsPresent()),
+                    ),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("None"),
             ),
         ],
@@ -66,7 +66,7 @@ init python:
                      Not(IsPresent()),
                      ),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("None"),
             ),
         ],

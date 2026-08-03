@@ -11,16 +11,11 @@ init python:
             MinStat("love", 160),
             ),
         Or(
-            And(
-                HeroTarget(
-                    IsGender("male"),
-                    ),
-                ActiveTarget(
-                    And(
-                        IsFlag("engagedmike", False),
-                        IsFlag("engagedmc", False),
-                        )
-                    ),
+            ActiveTarget(
+                And(
+                    IsFlag("engagedmike", False),
+                    IsFlag("engagedmc", False),
+                    )
             ),
             And(
                 HeroTarget(
@@ -45,16 +40,11 @@ init python:
             Not(IsActivity("sleep")),
             ),
         Or(
-            And(
-                HeroTarget(
-                    IsGender("male"),
-                    ),
-                ActiveTarget(
-                    And(
-                        IsFlag("engagedmike", True),
-                        IsFlag("engagedmc", True),
-                        )
-                    ),
+            ActiveTarget(
+                And(
+                    IsFlag("engagedmike", True),
+                    IsFlag("engagedmc", True),
+                    )
             ),
             And(
                 HeroTarget(

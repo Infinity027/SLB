@@ -25,7 +25,7 @@ init python:
             MinStat("love", 50),
             ),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_pub"),
             ),
         PersonTarget(kleio,
@@ -52,7 +52,7 @@ init python:
             MinStat("love", 70),
             ),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_pub"),
             ),
         PersonTarget(kleio,
@@ -78,7 +78,7 @@ init python:
             MinStat("love", 100),
             ),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_waterpark"),
             ),
         PersonTarget(anna,
@@ -104,7 +104,7 @@ init python:
             MinStat("love", 120),
             ),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_waterpark"),
             ),
         PersonTarget(anna,
@@ -130,7 +130,7 @@ init python:
             MinStat("love", 130),
             ),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_amusement"),
             ),
         PersonTarget(sasha,
@@ -156,7 +156,7 @@ init python:
             MinStat("love", 140),
             ),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_amusement"),
             ),
         PersonTarget(sasha,
@@ -177,7 +177,7 @@ init python:
         "len([peace_flags for peace_flags in [amy.flags.peace_with_anna, amy.flags.peace_with_kleio, amy.flags.peace_with_sasha, amy.flags.possible_peace_with_anna, amy.flags.possible_peace_with_kleio, amy.flags.possible_peace_with_sasha] if peace_flags]) >= 2",
         IsDone("band_harem_amy_event_02", "band_harem_amy_event_04", "band_harem_amy_event_06"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             ),
         PersonTarget("amy",
@@ -199,7 +199,7 @@ init python:
     "conditions": [
         IsDone("band_harem_amy_event_07"),
         HeroTarget(
-            IsGender("male"),
+            
             ),
         PersonTarget(kleio,
             IsActive(),
@@ -221,7 +221,7 @@ init python:
     "conditions": [
         IsDone("band_harem_amy_event_07"),
         HeroTarget(
-            IsGender("male"),
+            
             ),
         PersonTarget(anna,
             IsActive(),
@@ -243,7 +243,7 @@ init python:
     "conditions": [
         IsDone("band_harem_amy_event_07"),
         HeroTarget(
-            IsGender("male"),
+            
             ),
         PersonTarget(sasha,
             IsActive(),
@@ -279,7 +279,7 @@ init python:
     "conditions": [
         IsDone("amy_join_band_harem"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             ),
         PersonTarget("amy",
@@ -302,7 +302,7 @@ init python:
     "duration": 0,
     "conditions": [
         IsDone("gig"),
-        HeroTarget(IsGender("male")),
+        
         PersonTarget(amy,
             IsActive(),
             InHarem("band"),

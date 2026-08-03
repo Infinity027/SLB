@@ -114,7 +114,6 @@ init python:
     "conditions": [
         IsHour(22, 4),
         HeroTarget(
-            IsGender("male"),
             HasRoomTag("park"),
             IsFlag("dannydead", False),
             ),

@@ -18,9 +18,6 @@ init python:
     "music": "music/roa_music/reflection.ogg",
     "outfit": "casual",
     "conditions": [
-        HeroTarget(
-            IsGender("male"),
-            ),
         PersonTarget("amy",
             Not(IsHidden()),
             IsRoom("amyhome"),
@@ -34,4 +31,3 @@ init python:
             ),
         ],
     })
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

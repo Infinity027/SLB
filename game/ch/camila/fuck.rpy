@@ -4,7 +4,6 @@ init python:
     "label": "camila_hottub_sex_male",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             IsActivity("date_hot_tub_home")),
         PersonTarget(camila,
             OnDate(),

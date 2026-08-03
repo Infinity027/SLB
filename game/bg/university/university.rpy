@@ -27,7 +27,6 @@ init python:
     "label": "reona_teaser",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             IsRoom("university")),
         PersonTarget(bree,
             IsPresent(),

@@ -6,7 +6,7 @@ init python:
     "priority": 500,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsFlag("hiringshiori")
             ),
         ],
@@ -21,7 +21,7 @@ init python:
     "conditions": [
         IsDone("shiori_start"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("work_personal", "workhard_personal")
             ),
         PersonTarget(shiori,
@@ -41,7 +41,7 @@ init python:
     "conditions": [
         IsDone("shiori_event_01"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("work_personal", "workhard_personal")
             ),
         PersonTarget(shiori,
@@ -64,7 +64,7 @@ init python:
     "conditions": [
         IsDone("shiori_event_02"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("work_personal", "workhard_personal")
             ),
         PersonTarget(shiori,
@@ -84,7 +84,7 @@ init python:
     "conditions": [
         IsDone("shiori_event_03"),
         IsNotDone("shiori_event_05"),
-        HeroTarget(IsGender("male")),
+        
         PersonTarget(shiori,
             IsActive(),
             HasRoomTag("work"),
@@ -104,7 +104,7 @@ init python:
     "conditions": [
         IsHour(19, 22),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             HasRoomTag("home"),
             ),
@@ -124,7 +124,7 @@ init python:
     "conditions": [
         IsDone("shiori_event_05"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("work_personal", "workhard_personal")
             ),
         PersonTarget(shiori,
@@ -158,7 +158,7 @@ init python:
     "conditions": [
         IsDone("shiori_has_had_sex"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("stripclub")
             ),
         PersonTarget(shiori,
@@ -178,7 +178,7 @@ init python:
     "conditions": [
         IsDone("shiori_stripclub"),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("mcoffice")
             ),
         PersonTarget(shiori,
@@ -200,7 +200,7 @@ init python:
     "conditions": [
         IsDone("shiori_event_01"),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("mcoffice"),
             ),
         PersonTarget(shiori,
@@ -220,7 +220,7 @@ init python:
     "conditions": [
         IsDone("shiori_scold_2"),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("mcoffice"),
             ),
         PersonTarget(shiori,
@@ -241,7 +241,7 @@ init python:
     "conditions": [
         IsDone("shiori_scold_3"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("work_personal", "workhard_personal")
             ),
         PersonTarget(shiori,
@@ -263,7 +263,7 @@ init python:
     "conditions": [
         IsDone("shiori_scold_4"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("work_personal", "workhard_personal")
             ),
         PersonTarget(shiori,
@@ -285,7 +285,7 @@ init python:
     "conditions": [
         IsDone("shiori_event_02"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("office", "personal", "ceo"),
             IsActivity("work_personal", "workhard_personal"),
             ),
@@ -309,7 +309,7 @@ init python:
     "priority": 100,
     "conditions": [
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("work_personal", "workhard_personal"),
             IsRoom("personal", "ceo"),
             ),
@@ -333,7 +333,7 @@ init python:
     "conditions": [
         IsDone("shiori_event_06"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("work_personal", "workhard_personal")
             ),
         PersonTarget(shiori,
@@ -354,7 +354,7 @@ init python:
     "conditions": [
         IsDone("shiori_scold_5"),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("work"),
             ),
         PersonTarget(shiori,
@@ -376,7 +376,6 @@ init python:
     "label": "shiori_kiss_me",
     "max_girls": 1,
     "conditions": [
-        HeroTarget(IsGender("male")),
         PersonTarget(shiori,
             IsPresent(),
             Not(IsHidden()),
@@ -421,7 +420,6 @@ init python:
     "icon": "button_shiori",
     "conditions": [
         IsDone("shiori_strip_club_payoff"),
-        HeroTarget(IsGender("male")),
         PersonTarget(shiori,
             IsActive(),
             MinStat("love", 180),
@@ -438,7 +436,7 @@ init python:
     "conditions": [
         IsDone("shiori_strip_club_manager"),
         HeroTarget(
-            IsGender("male"),
+            
             MinStat("money", 10000)
             ),
         ],
@@ -454,7 +452,7 @@ init python:
         IsDone("shiori_bruises"),
         IsHour(0, 21),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("stripclub")
             ),
         PersonTarget(shiori,
@@ -479,7 +477,7 @@ init python:
         IsDone("shiori_work_no_show"),
         IsHour(0, 11),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("work_personal", "workhard_personal")
             ),
         PersonTarget(shiori,
@@ -497,7 +495,7 @@ init python:
     "conditions": [
         IsDone("shiori_blackmail_confession"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("work_personal", "workhard_personal")
             ),
         PersonTarget(shiori,
@@ -518,7 +516,7 @@ init python:
     "conditions": [
         IsDone("shiori_stripclub_lapdance_1"),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("mcoffice")
             ),
         PersonTarget(shiori,
@@ -537,7 +535,7 @@ init python:
     "conditions": [
         IsDone("shiori_stripclub_confession"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("get_a_lapdance")
             ),
         PersonTarget(shiori,
@@ -557,7 +555,7 @@ init python:
     "conditions": [
         IsDone("shiori_stripclub_lapdance_1"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("get_a_lapdance"),
             HasStamina(),
             ),
@@ -570,8 +568,6 @@ init python:
     "do_once": True,
     "music": "music/roa_music/miss_summer.ogg",
     })
-
-
 
     Event(**{
     "name": "shiori_investigation_callback",

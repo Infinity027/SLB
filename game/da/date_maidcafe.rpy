@@ -24,9 +24,6 @@ init -2 python:
         "display_name": "Maid Cafe",
         "conditions": [
             ValidRooms("date_maidcafe"),
-            HeroTarget(
-                IsGender("male")
-            ),
             Not(IsDone("reona_redemption_03")),
             PersonTarget(
                 "reona",
@@ -43,4 +40,3 @@ init -2 python:
 label date_maidcafe:
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

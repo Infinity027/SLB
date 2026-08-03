@@ -9,7 +9,6 @@ init python:
             Not(IsFlag("gaming_delay")),
             ),
         HeroTarget(
-            IsGender("male"),
             IsRoom("livingroom"),
             Not(OnDate()),
             HasStamina(),

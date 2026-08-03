@@ -17,24 +17,3 @@ init -2 python:
         "tags": ["dateroom"],
     }
 )
-
-#     Date(
-#     **{
-#         "name": "aquarium",
-#         "display_name": "Aquarium",
-#         "conditions": [
-#             HeroTarget(
-#                 IsGender("male")
-#             ),
-#             Not(IsDone("ayesha_date_aquarium")),
-#             ValidRooms("date_aquarium"),
-#             PersonTarget(
-#                 "ayesha",
-#                 OnDate(),
-#                 MinStat("love", 60),
-#             ),
-#         ],
-#         "clothes": "casual",
-#         "love_gain": 1,
-#     }
-# )

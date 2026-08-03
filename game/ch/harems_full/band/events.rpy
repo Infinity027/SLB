@@ -7,7 +7,7 @@ init python:
     "conditions": [
         IsDone("kleio_and_anna"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsFlag("sashathreesomedelay", False),
             IsDone("battle_of_the_bands_win"),
@@ -29,7 +29,7 @@ init python:
     "conditions": [
         IsHour(10, 18),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             Or(
                 IsRoom("studio", "mall1", "mall2"),
@@ -70,7 +70,7 @@ init python:
     "conditions": [
         IsHour(20, 22),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsRoom("livingroom"),
             ),
@@ -98,7 +98,7 @@ init python:
         IsDone("kleioannafoursome"),
         IsHour(20, 0),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             IsRoom("studio"),
             ),
@@ -126,7 +126,7 @@ init python:
     "conditions": [
         'Harem.together("kleio", "anna")',
         HeroTarget(
-            IsGender("male"),
+            
             Or(
                 IsRoom("date_pub"),
                 HasRoomTag("pub"),
@@ -225,7 +225,7 @@ init python:
     "duration": 0,
     "conditions": [
         IsDone("gig"),
-        HeroTarget(IsGender("male")),
+        
         PersonTarget(anna,
             IsActive(),
             Not(IsFlag("agree_concert_naked")),
@@ -273,7 +273,7 @@ init python:
     "duration": 0,
     "conditions": [
         IsDone("gig"),
-        HeroTarget(IsGender("male")),
+        
         PersonTarget(kleio,
             IsActive(),
             Not(IsFlag("agree_concert_naked")),
@@ -321,7 +321,7 @@ init python:
     "duration": 0,
     "conditions": [
         IsDone("gig"),
-        HeroTarget(IsGender("male")),
+        
         PersonTarget(sasha,
             IsActive(),
             Not(IsFlag("agree_concert_naked")),

@@ -9,7 +9,7 @@ init python:
     "conditions": [
         IsDone("reona_teaser"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("university"),
             "hero.sexperience >= 10",
             MinStat("knowledge", 50),
@@ -28,7 +28,7 @@ init python:
     "conditions": [
         IsDone("reona_event_01"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("sexshop"),
             "hero.sexperience >= 20",
             Not(OnDate()),
@@ -53,7 +53,7 @@ init python:
         IsDone("reona_event_02"),
         IsHour(22, 5),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("livingroom", "bedroom1", "houselibrary"),
             "hero.sexperience >= 30",
             Not(OnDate()),
@@ -78,7 +78,7 @@ init python:
     "conditions": [
         IsDone("reona_event_03"),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("pub"),
             "hero.sexperience >= 40",
             Not(OnDate()),
@@ -102,7 +102,7 @@ init python:
     "conditions": [
         IsDone("reona_event_03"),
         HeroTarget(
-            IsGender("male"),
+            
             "hero.sexperience >= 40",
             ),
         PersonTarget(reona,
@@ -123,7 +123,7 @@ init python:
     "conditions": [
         IsDone("reona_event_04", "reona_event_04b"),
         HeroTarget(
-            IsGender("male"),
+            
             "hero.sexperience >= 50",
             ),
         PersonTarget(reona,
@@ -144,7 +144,7 @@ init python:
     "conditions": [
         IsDone("reona_event_05"),
         HeroTarget(
-            IsGender("male"),
+            
             OnDate(),
             IsRoom("date_restaurant"),
             "hero.sexperience >= 60",
@@ -169,7 +169,7 @@ init python:
         IsTimeOfDay("afternoon"),
         IsDayOfWeek("6"),
         HeroTarget(
-            IsGender("male"),
+            
             "hero.sexperience >= 70",
             IsRoom("date_livingroom"),
             ),
@@ -191,7 +191,7 @@ init python:
     "conditions": [
         IsDone("reona_event_07"),
         HeroTarget(
-            IsGender("male"),
+            
             "hero.sexperience >= 80",
             IsRoom("date_park"),
             ),
@@ -213,7 +213,7 @@ init python:
     "conditions": [
         IsDone("reona_event_08"),
         HeroTarget(
-            IsGender("male"),
+            
             "hero.sexperience >= 90",
             ),
         PersonTarget(reona,
@@ -234,7 +234,7 @@ init python:
     "conditions": [
         IsDone("reona_event_09"),
         HeroTarget(
-            IsGender("male"),
+            
             "hero.sexperience >= 100",
             IsRoom("date_livingroom"),
             ),
@@ -257,7 +257,7 @@ init python:
         IsDone("reona_event_04", "reona_event_04b"),
         MinDateScore(40),
         HeroTarget(
-            IsGender("male"),
+            
             "hero.sexperience >= 50",
             "len(hero.get_partners()) >= 4",
             OnDate(),
@@ -285,7 +285,7 @@ init python:
     "conditions": [
         IsDone("reona_kink_01"),
         HeroTarget(
-            IsGender("male"),
+            
             "hero.sexperience >= 60",
             "len(hero.get_partners()) >= 8",
             ),
@@ -312,7 +312,7 @@ init python:
     "conditions": [
         IsDone("reona_kink_02"),
         HeroTarget(
-            IsGender("male"),
+            
             "hero.sexperience >= 60",
             "len(hero.get_partners()) >= 12",
             OnDate(),
@@ -351,7 +351,7 @@ init python:
     "conditions": [
         IsDone("reona_kink_03"),
         HeroTarget(
-            IsGender("male"),
+            
             "hero.sexperience >= 70",
             "len(hero.get_partners()) >= 16",
             ),
@@ -374,7 +374,7 @@ init python:
     "conditions": [
         IsDone("reona_kink_04"),
         HeroTarget(
-            IsGender("male"),
+            
             "hero.sexperience >= 80",
             "len(hero.get_partners()) >= 18",
             ),
@@ -397,7 +397,7 @@ init python:
     "conditions": [
         IsDone("reona_kink_05"),
         HeroTarget(
-            IsGender("male"),
+            
             "hero.sexperience >= 110",
             "len(hero.get_partners()) >= 20",
             ),
@@ -420,7 +420,7 @@ init python:
     "conditions": [
         IsDone("reona_event_01"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("university"),
             ),
         PersonTarget(reona,
@@ -443,7 +443,7 @@ init python:
     "conditions": [
         IsDone("reona_redemption_01"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             ),
         PersonTarget(reona,
@@ -466,7 +466,7 @@ init python:
     "conditions": [
         IsDone("reona_redemption_02"),
         HeroTarget(
-            IsGender("male"),
+            
             OnDate(),
             IsRoom("date_maidcafe"),
             ),
@@ -490,7 +490,7 @@ init python:
     "conditions": [
         IsDone("reona_redemption_03"),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("street"),
             ),
         PersonTarget(reona,
@@ -513,7 +513,7 @@ init python:
     "conditions": [
         IsDone("reona_redemption_04"),
         HeroTarget(
-            IsGender("male"),
+            
             OnDate(),
             ),
         PersonTarget(reona,
@@ -536,7 +536,7 @@ init python:
     "conditions": [
         IsDone("reona_date_forest"),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("None"),
             ),
         PersonTarget(reona,
@@ -559,7 +559,7 @@ init python:
     "conditions": [
         IsDone("reona_event_01"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("university"),
             ),
         PersonTarget(reona,
@@ -587,7 +587,7 @@ init python:
         IsDayOfWeek(6, 7),
         IsHour(14, 17),
         HeroTarget(
-            IsGender("male"),
+            
             HasRoomTag("home"),
             ),
         PersonTarget(reona,
@@ -739,7 +739,7 @@ init python:
         IsDone("reona_jack_01"),
         IsNotDone("reona_jack_01a"),
         HeroTarget(
-            IsGender("male"),
+            
             ),
         PersonTarget(reona,
             MinStat("love", 80),
@@ -759,7 +759,7 @@ init python:
     "conditions": [
         IsDone("reona_jack_01b"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             Not(HasRoomTag("work")),
             Not(HasRoomTag("home")),
@@ -785,7 +785,7 @@ init python:
     "conditions": [
         IsDone("reona_jack_04b"),
         HeroTarget(
-            IsGender("male"),
+            
             Not(OnDate()),
             HasRoomTag("home"),
             ),
@@ -809,7 +809,7 @@ init python:
         IsNotDone("reona_enough_study"),
         IsHour(8, 22),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("date_livingroom"),
             MinStat("energy", 2),
             MinStat("hunger", 3),

@@ -45,7 +45,6 @@ init python:
     "label": "shiori_hottub_sex_male",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             IsActivity("date_hot_tub_home")
             ),
         PersonTarget(shiori,

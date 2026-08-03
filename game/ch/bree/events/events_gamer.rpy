@@ -1,26 +1,4 @@
 init python:
-    # InteractEvent(**{
-    # "name": "bree_event_05",
-    # "label": "bree_event_05",
-    # "duration": 2,
-    # "conditions": [
-    #     IsDone("bree_event_03"),
-    #     IsNotDone("bree_event_04"),
-    #     IsDayOfWeek("123456"),
-    #     IsHour(18, 20),
-    #     HeroTarget(
-    #         IsGender("male"),
-    #         IsRoom("livingroom")),
-    #     HasSkill("video_games"),
-    #     PersonTarget(bree,
-    #         IsActive(),
-    #         MinStat("love", 80),
-    #         ),
-    #     ],
-    # "priority": 500,
-    # "do_once": True,
-    # "music": "music/roa_music/juice.ogg",
-    # })
 
     InteractEvent(**{
     "name": "bree_event_06",
@@ -28,7 +6,7 @@ init python:
     "conditions": [
         IsDone("bree_event_05"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("livingroom")),
         PersonTarget(bree,
             IsActive(),
@@ -48,7 +26,7 @@ init python:
     "conditions": [
         IsDone("bree_event_06"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("livingroom")),
         PersonTarget(bree,
             IsActive(),
@@ -86,7 +64,7 @@ init python:
     "conditions": [
         IsDone("bree_event_08"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("livingroom")),
         PersonTarget(bree,
             IsPresent(),
@@ -108,7 +86,7 @@ init python:
         IsDone("bree_event_09"),
         IsHour(7, 20),
         HeroTarget(
-            IsGender("male"),
+            
             IsActivity("play_videogames"),
             IsRoom("livingroom"),
             ),
@@ -150,7 +128,7 @@ init python:
         IsDayOfWeek("67"),
         IsHour(8, 18),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("livingroom")),
         PersonTarget(bree,
             IsPresent(),
@@ -172,7 +150,7 @@ init python:
         IsDone("bree_event_12"),
         IsHour(20, 0),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("livingroom")),
         PersonTarget(bree,
             IsActive(),
@@ -192,7 +170,7 @@ init python:
         IsDone("bree_event_13"),
         IsHour(16, 0),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("livingroom")),
         PersonTarget(bree,
             IsActive(),
@@ -212,7 +190,7 @@ init python:
     "conditions": [
         IsDone("bree_event_14"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("livingroom")),
         PersonTarget(bree,
             IsActive(),
@@ -232,7 +210,7 @@ init python:
     "conditions": [
         IsDone("bree_event_15"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("livingroom")),
         PersonTarget(bree,
             IsActive(),
@@ -252,7 +230,7 @@ init python:
     "conditions": [
         IsDone("bree_event_16"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("livingroom"),
             Or(
                 IsActivity("play_videogames"),
@@ -282,7 +260,7 @@ init python:
     "conditions": [
         IsDone("bree_event_17"),
         HeroTarget(
-            IsGender("male"),
+            
             IsRoom("livingroom"),
             Or(
                 IsActivity("play_videogames"),

@@ -6,7 +6,6 @@ init python:
     "music": "music/roa_music/smile_for_me.ogg",
     "conditions": [
         HeroTarget(
-            IsGender("male"),
             IsRoom("date_nightclub")),
         PersonTarget(sasha,
             OnDate(),
