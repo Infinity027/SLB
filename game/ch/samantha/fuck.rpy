@@ -791,7 +791,7 @@ label samantha_fuck_date_bj:
             samantha.say "Please fuck my mouth."
         else:
             samantha.say "Oh, I'm so glad to hear that!"
-        elif samantha.flags.engaged and randint(0, 1):
+        if samantha.flags.engaged and randint(0, 1):
             "When her fingers wrap around me, the wedding ring throws a tiny spark of light; it keeps catching my eye as she moves."
         "Then she sets off to work."
         "As she rubs her breasts up and down along my shaft, the hunger in her eyes is almost too much to bear."
@@ -2151,7 +2151,7 @@ label samantha_fuck_date_cowgirl(sexperience_min):
             samantha.say "You haven't seen anything yet!"
             "Without waiting a second longer, Sam pushes herself down."
             show samantha cowgirl down vaginal
-            elif samantha.piercings.navel.worn and randint(0, 1):
+            if samantha.piercings.navel.worn and randint(0, 1):
                 "Her navel jewel glints as she swallows me inch by inch."
             elif FACIAL and randint(0, 1):
                 "A pearly sheen on her cheek catches the light when she throws her head back."
@@ -3799,7 +3799,7 @@ label samantha_fuck_date_beach:
         if samantha.flags.engaged and randint(0, 1):
             "When she squeezes my hand, her wedding ring throws a tiny star across the sand."
         "But I can't stop staring at Sam, beaming with happiness at the thought that she's all mine."
-        elif samantha.piercings.navel.worn and randint(0, 1):
+        if samantha.piercings.navel.worn and randint(0, 1):
             "Her navel jewel glimmers each time the light dances on the waves."
         "And she seems to feel the same way too, holding my hand and returning my smiles the whole time."
         show samantha normal

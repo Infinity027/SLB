@@ -7,7 +7,6 @@ init python:
     "conditions": [
         IsDone("kleio_and_anna"),
         HeroTarget(
-            
             Not(OnDate()),
             IsFlag("sashathreesomedelay", False),
             IsDone("battle_of_the_bands_win"),
@@ -176,9 +175,7 @@ init python:
     "priority": 500,
     "label": "kleio_anna_showdown",
     "conditions": [
-        HeroTarget(
-            Not(OnDate()),
-            ),
+        HeroTarget(Not(OnDate())),
         PersonTarget(anna,
             IsPresent(),
             Not(IsHidden()),

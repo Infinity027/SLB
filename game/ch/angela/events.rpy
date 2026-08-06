@@ -222,11 +222,8 @@ init python:
     "conditions": [
         IsDone("angela_bj_bruce"),
         GameTarget(IsFlag("angelaBlow", True)),
-        HeroTarget(
-            Not(OnDate())),
-        PersonTarget(bree,
-            IsActive(),
-            ),
+        HeroTarget(Not(OnDate())),
+        PersonTarget(bree,IsActive(),),
         ],
     "quit": False,
     })

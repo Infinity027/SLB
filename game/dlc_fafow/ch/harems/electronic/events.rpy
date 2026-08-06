@@ -28,14 +28,11 @@ init python:
     "conditions": [
         IsDone("electronic_harem_event_01"),
         PersonTarget("amy",
-                     InHarem('electronic'),
-                     IsFlag("amydelay", False),
-                     IsActive(),
-                     ),
-        HeroTarget(
-            
-            Not(OnDate())),
-        ],
+                    InHarem('electronic'),
+                    IsFlag("amydelay", False),
+                    IsActive(),
+                    ),
+        HeroTarget(Not(OnDate()))],
     "duration": 1,
     "do_once": True,
     })

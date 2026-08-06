@@ -4,9 +4,7 @@ init python:
     "exits": ["map"],
     "conditions":[
         IsHour(18, 23),
-        HeroTarget(
-            Not(OnDate()),
-            ),
+        HeroTarget(Not(OnDate())),
         PersonTarget("cherie",
             ),
         ],

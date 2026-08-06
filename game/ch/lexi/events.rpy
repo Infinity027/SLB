@@ -235,9 +235,7 @@ init python:
     "conditions": [
         IsDone("lexi_event_05"),
         IsHour(5, 9),
-        HeroTarget(
-            
-            Not(OnDate())),
+        HeroTarget(Not(OnDate())),
         PersonTarget(lexi,
             IsFlag("DannyDelay", False),
             MinStat("love", 140),
@@ -319,10 +317,7 @@ init python:
     "conditions": [
         IsDone("date_lexi_meet_jack"),
         IsTimeOfDay("afternoon"),
-        HeroTarget(
-            
-            Not(OnDate()),
-            ),
+        HeroTarget(Not(OnDate())),
         PersonTarget(lexi,
             Not(IsHidden()),
             IsFlag("lexijack", False),

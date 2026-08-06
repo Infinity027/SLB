@@ -1,4 +1,4 @@
-2026-08-02 10:09:18 UTC
+2026-08-03 12:55:18 UTC
 Linux-6.17.0-35-generic-x86_64-with-glibc2.39
 Ren'Py 8.5.2.26010301
  
@@ -7,386 +7,576 @@ Love & Sex : Second Base - 26.4.0c
 26.4.0c
 Built at 2026-05-04 17:19:49 UTC
 
-Early init took 753 ms
-Loading error handling took 666 ms
-Loading script took 11518 ms
-Loading save slot metadata took 454 ms
-Loading persistent took 10 ms
+Early init took 816 ms
+Loading error handling took 776 ms
+Loading script took 13589 ms
+Loading save slot metadata took 582 ms
+Loading persistent took 15 ms
 Failed to initialize steam: Exception("steamapi.InitFlat returned 1 (Failed to load module '/home/asim/.steam/sdk64/steamclient.so')")
 Set script version to: (8, 5, 2)
- - Init at game/updater_module/updater.rpy:24 took 293 ms.
- - Init at game/start.rpy:257 took 2680 ms.
- - Init at game/cl/labels_story.rpy:1 took 3140 ms.
- - Init at game/start.rpy:208 took 1859 ms.
+ - Init at game/updater_module/updater.rpy:24 took 376 ms.
+ - Init at game/start.rpy:257 took 2238 ms.
+ - Init at game/cl/labels_story.rpy:1 took 3075 ms.
+ - Init at game/start.rpy:208 took 1997 ms.
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: (<store.RawChecker object at 0x789215f95a50>,)
+    checker None Unknown instance: <store.RawChecker object at 0x789215f95a50>
+ERROR in checker target: (<store.RawChecker object at 0x789215f95cd0>,)
+    checker None Unknown instance: <store.RawChecker object at 0x789215f95cd0>
+ERROR in checker target: (<store.RawChecker object at 0x789215f96850>,)
+    checker None Unknown instance: <store.RawChecker object at 0x789215f96850>
+ERROR in checker target: (<store.RawChecker object at 0x789215f97150>, <store.RawChecker object at 0x789215f97290>)
+    checker None Unknown instance: <store.RawChecker object at 0x789215f97150>
+    checker None Unknown instance: <store.RawChecker object at 0x789215f97290>
+ERROR in checker target: (<store.RawChecker object at 0x789215f97a50>, <store.RawChecker object at 0x789215f97b90>)
+    checker None Unknown instance: <store.RawChecker object at 0x789215f97a50>
+    checker None Unknown instance: <store.RawChecker object at 0x789215f97b90>
+ERROR in checker target: (<store.RawChecker object at 0x789215f97d10>, <store.RawChecker object at 0x789215f97e50>)
+    checker None Unknown instance: <store.RawChecker object at 0x789215f97d10>
+    checker None Unknown instance: <store.RawChecker object at 0x789215f97e50>
+ERROR in checker target: (<store.RawChecker object at 0x789215f97fd0>, <store.RawChecker object at 0x789215f9c150>)
+    checker None Unknown instance: <store.RawChecker object at 0x789215f97fd0>
+    checker None Unknown instance: <store.RawChecker object at 0x789215f9c150>
+ERROR in checker target: ()
 Loading DLC: FAFOW
+ERROR in checker target: ()
+ERROR in checker target: (<store.InInventory object at 0x789215faebd0>,)
+    checker None Unknown instance: <store.InInventory object at 0x789215faebd0>
+ERROR in checker target: ()
+ERROR in checker target: ()
 Loading DLC: FAFWM
 Loading DLC: LIVELY
- - Init at game/ch/aletta/images.rpy:1 took 2601 ms.
- - Init at game/ch/alexis/images.rpy:1 took 2595 ms.
- - Init at game/ch/amy/images.rpy:1 took 908 ms.
- - Init at game/ch/angela/images.rpy:1 took 1212 ms.
- - Init at game/ch/anna/images.rpy:1 took 1595 ms.
- - Init at game/ch/audrey/images.rpy:1 took 2662 ms.
- - Init at game/ch/bree/images.rpy:1 took 6318 ms.
- - Init at game/ch/camila/images.rpy:1 took 1410 ms.
- - Init at game/ch/cassidy/images.rpy:1 took 1683 ms.
- - Init at game/ch/cherie/images.rpy:1 took 1517 ms.
- - Init at game/ch/claire/images.rpy:1 took 639 ms.
- - Init at game/ch/emma/images.rpy:1 took 1329 ms.
- - Init at game/ch/gen/beach_cream.rpy:27 took 517 ms.
- - Init at game/ch/gen/beach_icecream.rpy:22 took 431 ms.
- - Init at game/ch/gen/beach_sandcastle.rpy:29 took 482 ms.
- - Init at game/ch/gen/beach_volleyball.rpy:40 took 714 ms.
- - Init at game/ch/gen/board_games.rpy:21 took 517 ms.
- - Init at game/ch/gen/buy_popcorn.rpy:22 took 302 ms.
- - Init at game/ch/gen/chatting.rpy:17 took 515 ms.
- - Init at game/ch/gen/cinemaroom.rpy:23 took 692 ms.
- - Init at game/ch/gen/cuddles.rpy:1 took 384 ms.
- - Init at game/ch/gen/dance.rpy:1 took 669 ms.
- - Init at game/ch/gen/dick_reactions.rpy:19 took 466 ms.
- - Init at game/ch/gen/eat_snacks.rpy:29 took 280 ms.
- - Init at game/ch/gen/hottub.rpy:43 took 854 ms.
- - Init at game/ch/gen/images.rpy:52 took 2547 ms.
- - Init at game/ch/gen/kitchen_meal.rpy:12 took 327 ms.
- - Init at game/ch/gen/peeping.rpy:33 took 370 ms.
- - Init at game/ch/gen/photobooth.rpy:1 took 358 ms.
- - Init at game/ch/gen/play_console.rpy:17 took 404 ms.
- - Init at game/ch/gen/play_guitar.rpy:17 took 393 ms.
- - Init at game/ch/gen/playing_water.rpy:33 took 718 ms.
- - Init at game/ch/gen/poledance.rpy:73 took 1180 ms.
- - Init at game/ch/gen/restaurant_meal.rpy:20 took 668 ms.
- - Init at game/ch/gen/sexinserts.rpy:1 took 606 ms.
- - Init at game/ch/gen/slap.rpy:32 took 1203 ms.
- - Init at game/ch/gen/sleep.rpy:1 took 519 ms.
- - Init at game/ch/gen/spank.rpy:1 took 560 ms.
- - Init at game/ch/gen/swimmingrace.rpy:22 took 518 ms.
- - Init at game/ch/gen/tattooparlor.rpy:1 took 944 ms.
- - Init at game/ch/gen/watch_tv.rpy:22 took 702 ms.
- - Init at game/ch/gen/waterslide.rpy:16 took 430 ms.
- - Init at game/ch/gen/wedding.rpy:18 took 350 ms.
- - Init at game/ch/gen_full/images.rpy:1 took 389 ms.
- - Init at game/ch/hanna/images.rpy:1 took 1276 ms.
- - Init at game/ch/harems/friendly/images.rpy:1 took 590 ms.
- - Init at game/ch/harems/home/images.rpy:1 took 9212 ms.
- - Init at game/ch/harems_full/band/images.rpy:1 took 1113 ms.
- - Init at game/ch/harems_full/bitchy/images.rpy:1 took 1087 ms.
- - Init at game/ch/harems_full/college/images.rpy:1 took 486 ms.
- - Init at game/ch/harems_full/criminal/images.rpy:1 took 348 ms.
- - Init at game/ch/harems_full/fashion/images.rpy:1 took 267 ms.
- - Init at game/ch/harems_full/goodevil/images.rpy:1 took 434 ms.
- - Init at game/ch/harems_full/jealous/images.rpy:1 took 649 ms.
- - Init at game/ch/harems_full/office/images.rpy:1 took 1910 ms.
- - Init at game/ch/harems_full/pixie/images.rpy:17 took 630 ms.
- - Init at game/ch/harmony/images.rpy:1 took 1137 ms.
- - Init at game/ch/kat/images.rpy:1 took 458 ms.
- - Init at game/ch/kiara/images.rpy:1 took 1350 ms.
- - Init at game/ch/kleio/images.rpy:1 took 2230 ms.
- - Init at game/ch/lavish/images.rpy:1 took 1201 ms.
- - Init at game/ch/lexi/images.rpy:1 took 2143 ms.
- - Init at game/ch/mc/images.rpy:1 took 404 ms.
- - Init at game/ch/mike/images.rpy:1 took 418 ms.
- - Init at game/ch/minami/images.rpy:1 took 1815 ms.
- - Init at game/ch/morgan/images.rpy:1 took 1324 ms.
- - Init at game/ch/natalie/images.rpy:1 took 482 ms.
- - Init at game/ch/palla/images.rpy:1 took 1042 ms.
- - Init at game/ch/reona/images.rpy:1 took 637 ms.
- - Init at game/ch/samantha/images.rpy:1 took 1990 ms.
- - Init at game/ch/sasha/images.rpy:1 took 3424 ms.
- - Init at game/ch/scottie/images.rpy:1 took 350 ms.
- - Init at game/ch/shiori/images.rpy:1 took 1962 ms.
- - Init at game/ch/violaine/images.rpy:1 took 488 ms.
- - Init at game/dlc_fafow/ch/amy/images.rpy:1 took 1509 ms.
- - Init at game/dlc_fafow/ch/gen/ev2/amusement_icecream.rpy:26 took 393 ms.
- - Init at game/dlc_fafow/ch/gen/ev2/haunted_house.rpy:15 took 418 ms.
- - Init at game/dlc_fafow/ch/harems/band/images.rpy:1 took 2244 ms.
- - Init at game/dlc_fafow/ch/harems/electronic/images.rpy:1 took 746 ms.
- - Init at game/dlc_fafow/ch/harems/goth/images.rpy:1 took 1401 ms.
- - Init at game/dlc_fafow/ch/harems/petite/images.rpy:1 took 674 ms.
- - Init at game/dlc_fafow/ch/harems/purity/images.rpy:1 took 528 ms.
- - Init at game/dlc_fafow/ch/harems/thot/images.rpy:1 took 1520 ms.
- - Init at game/dlc_fafow/ch/harems/whore/images.rpy:1 took 1090 ms.
- - Init at game/dlc_fafow/ch/kat/images.rpy:1 took 1835 ms.
- - Init at game/dlc_fafow/ch/reona/images.rpy:1 took 3206 ms.
- - Init at game/dlc_fafwm/ch/cherie/images.rpy:1 took 1098 ms.
- - Init at game/dlc_fafwm/ch/claire/images.rpy:1 took 1048 ms.
- - Init at game/dlc_fafwm/ch/harems/milf/images.rpy:1 took 902 ms.
- - Init at game/dlc_fafwm/ch/kiara/images.rpy:1 took 1168 ms.
- - Init at game/cl/class_gallery.rpy:1206 took 9136 ms.
- - Init at game/dlc_lively/bg/bathroom/bathroom.rpy:66 took 486 ms.
- - Init at game/dlc_lively/bg/beach/beach.rpy:40 took 273 ms.
- - Init at game/dlc_lively/bg/ceo/ceo.rpy:46 took 266 ms.
- - Init at game/dlc_lively/bg/cinema/cinema.rpy:48 took 390 ms.
- - Init at game/dlc_lively/bg/park/park.rpy:44 took 311 ms.
- - Init at game/dlc_lively/bg/street/street.rpy:40 took 251 ms.
- - Init at game/dlc_lively/bg/street2/street2.rpy:40 took 266 ms.
-Running init code took 134198 ms
-Loading analysis data took 39 ms
-Analyze and compile ATL took 46 ms
-Reloading save slot metadata took 20 ms
-Dump and make backups took 0 ms
+ - Init at game/updater_module/websocket.rpy:2 took 272 ms.
+ - Init at game/ch/aletta/images.rpy:1 took 2309 ms.
+ - Init at game/ch/alexis/images.rpy:1 took 2637 ms.
+ - Init at game/ch/amy/images.rpy:1 took 960 ms.
+ - Init at game/ch/angela/images.rpy:1 took 1190 ms.
+ - Init at game/ch/anna/images.rpy:1 took 1608 ms.
+ - Init at game/ch/audrey/images.rpy:1 took 2652 ms.
+ - Init at game/ch/bree/images.rpy:1 took 8428 ms.
+ - Init at game/ch/camila/images.rpy:1 took 2385 ms.
+ - Init at game/ch/cassidy/images.rpy:1 took 2916 ms.
+ - Init at game/ch/cherie/images.rpy:1 took 2606 ms.
+ - Init at game/ch/claire/images.rpy:1 took 969 ms.
+ - Init at game/ch/emma/images.rpy:1 took 2122 ms.
+ - Init at game/ch/gen/beach_cream.rpy:27 took 836 ms.
+ - Init at game/ch/gen/beach_icecream.rpy:22 took 694 ms.
+ - Init at game/ch/gen/beach_sandcastle.rpy:29 took 793 ms.
+ - Init at game/ch/gen/beach_volleyball.rpy:40 took 1166 ms.
+ - Init at game/ch/gen/board_games.rpy:21 took 796 ms.
+ - Init at game/ch/gen/buy_popcorn.rpy:22 took 489 ms.
+ - Init at game/ch/gen/chatting.rpy:17 took 767 ms.
+ - Init at game/ch/gen/cinemaroom.rpy:23 took 926 ms.
+ - Init at game/ch/gen/cuddles.rpy:1 took 441 ms.
+ - Init at game/ch/gen/dance.rpy:1 took 1017 ms.
+ - Init at game/ch/gen/dick_reactions.rpy:19 took 738 ms.
+ - Init at game/ch/gen/drink_scenes.rpy:1 took 306 ms.
+ - Init at game/ch/gen/eat_snacks.rpy:29 took 454 ms.
+ - Init at game/ch/gen/game_arcade.rpy:27 took 270 ms.
+ - Init at game/ch/gen/hottub.rpy:43 took 1331 ms.
+ - Init at game/ch/gen/images.rpy:52 took 3034 ms.
+ - Init at game/ch/gen/kitchen_meal.rpy:12 took 356 ms.
+ - Init at game/ch/gen/peeping.rpy:33 took 382 ms.
+ - Init at game/ch/gen/photobooth.rpy:1 took 360 ms.
+ - Init at game/ch/gen/play_console.rpy:17 took 426 ms.
+ - Init at game/ch/gen/play_guitar.rpy:17 took 408 ms.
+ - Init at game/ch/gen/playing_water.rpy:33 took 725 ms.
+ - Init at game/ch/gen/poledance.rpy:73 took 1252 ms.
+ - Init at game/ch/gen/restaurant_meal.rpy:20 took 716 ms.
+ - Init at game/ch/gen/sexinserts.rpy:1 took 608 ms.
+ - Init at game/ch/gen/slap.rpy:32 took 1365 ms.
+ - Init at game/ch/gen/sleep.rpy:1 took 582 ms.
+ - Init at game/ch/gen/spank.rpy:1 took 551 ms.
+ - Init at game/ch/gen/swimmingrace.rpy:22 took 457 ms.
+ - Init at game/ch/gen/tattooparlor.rpy:1 took 997 ms.
+ - Init at game/ch/gen/watch_tv.rpy:22 took 831 ms.
+ - Init at game/ch/gen/waterslide.rpy:16 took 483 ms.
+ - Init at game/ch/gen/wedding.rpy:18 took 401 ms.
+ - Init at game/ch/gen_full/images.rpy:1 took 453 ms.
+ - Init at game/ch/hanna/images.rpy:1 took 1487 ms.
+ - Init at game/ch/harems/friendly/images.rpy:1 took 720 ms.
+ - Init at game/ch/harems/home/images.rpy:1 took 11221 ms.
+ - Init at game/ch/harems_full/band/images.rpy:1 took 1457 ms.
+ - Init at game/ch/harems_full/bitchy/images.rpy:1 took 1428 ms.
+ - Init at game/ch/harems_full/college/images.rpy:1 took 693 ms.
+ - Init at game/ch/harems_full/criminal/images.rpy:1 took 506 ms.
+ - Init at game/ch/harems_full/fashion/images.rpy:1 took 491 ms.
+ - Init at game/ch/harems_full/gaming/images.rpy:1 took 279 ms.
+ - Init at game/ch/harems_full/goodevil/images.rpy:1 took 731 ms.
+ - Init at game/ch/harems_full/jealous/images.rpy:1 took 1138 ms.
+ - Init at game/ch/harems_full/office/images.rpy:1 took 3113 ms.
+ - Init at game/ch/harems_full/pixie/images.rpy:17 took 1013 ms.
+ - Init at game/ch/harmony/images.rpy:1 took 1997 ms.
+ - Init at game/ch/kat/images.rpy:1 took 737 ms.
+ - Init at game/ch/kiara/images.rpy:1 took 2153 ms.
+ - Init at game/ch/kleio/images.rpy:1 took 3640 ms.
+ - Init at game/ch/lavish/images.rpy:1 took 1901 ms.
+ - Init at game/ch/lexi/images.rpy:1 took 3457 ms.
+ - Init at game/ch/mc/images.rpy:1 took 641 ms.
+ - Init at game/ch/mike/images.rpy:1 took 679 ms.
+ - Init at game/ch/minami/images.rpy:1 took 2917 ms.
+ - Init at game/ch/morgan/images.rpy:1 took 2123 ms.
+ - Init at game/ch/natalie/images.rpy:1 took 772 ms.
+ - Init at game/ch/palla/images.rpy:1 took 1757 ms.
+ - Init at game/ch/reona/images.rpy:1 took 1044 ms.
+ - Init at game/ch/samantha/images.rpy:1 took 3115 ms.
+ - Init at game/ch/sasha/images.rpy:1 took 5487 ms.
+ - Init at game/ch/scottie/images.rpy:1 took 554 ms.
+ - Init at game/ch/shiori/images.rpy:1 took 3186 ms.
+ - Init at game/ch/violaine/images.rpy:1 took 778 ms.
+ - Init at game/dlc_fafow/ch/amy/images.rpy:1 took 1713 ms.
+ - Init at game/dlc_fafow/ch/gen/ev2/amusement_icecream.rpy:26 took 371 ms.
+ - Init at game/dlc_fafow/ch/gen/ev2/ferris_wheel.rpy:1 took 260 ms.
+ - Init at game/dlc_fafow/ch/gen/ev2/haunted_house.rpy:15 took 554 ms.
+ - Init at game/dlc_fafow/ch/gen/ev2/hedge_maze.rpy:1 took 349 ms.
+ - Init at game/dlc_fafow/ch/gen/ev2/love_boat.rpy:1 took 274 ms.
+ - Init at game/dlc_fafow/ch/gen/ev2/merry_go_round.rpy:1 took 275 ms.
+ - Init at game/dlc_fafow/ch/harems/band/images.rpy:1 took 2535 ms.
+ - Init at game/dlc_fafow/ch/harems/electronic/images.rpy:1 took 888 ms.
+ - Init at game/dlc_fafow/ch/harems/goth/images.rpy:1 took 1771 ms.
+ - Init at game/dlc_fafow/ch/harems/petite/images.rpy:1 took 909 ms.
+ - Init at game/dlc_fafow/ch/harems/purity/images.rpy:1 took 583 ms.
+ - Init at game/dlc_fafow/ch/harems/thot/images.rpy:1 took 2014 ms.
+ - Init at game/dlc_fafow/ch/harems/whore/images.rpy:1 took 1574 ms.
+ - Init at game/dlc_fafow/ch/kat/images.rpy:1 took 2249 ms.
+ - Init at game/dlc_fafow/ch/reona/images.rpy:1 took 4388 ms.
+ - Init at game/dlc_fafwm/ch/cherie/images.rpy:1 took 1310 ms.
+ - Init at game/dlc_fafwm/ch/claire/images.rpy:1 took 1265 ms.
+ - Init at game/dlc_fafwm/ch/harems/milf/images.rpy:1 took 1231 ms.
+ - Init at game/dlc_fafwm/ch/kiara/images.rpy:1 took 1328 ms.
+ - Init at game/cl/class_gallery.rpy:1206 took 10671 ms.
+ - Init at game/dlc_lively/bg/bathroom/bathroom.rpy:66 took 713 ms.
+ - Init at game/dlc_lively/bg/beach/beach.rpy:40 took 404 ms.
+ - Init at game/dlc_lively/bg/bookstore/bookstore.rpy:38 took 303 ms.
+ - Init at game/dlc_lively/bg/breakroom/breakroom.rpy:40 took 318 ms.
+ - Init at game/dlc_lively/bg/ceo/ceo.rpy:46 took 454 ms.
+ - Init at game/dlc_lively/bg/cinema/cinema.rpy:48 took 660 ms.
+ - Init at game/dlc_lively/bg/drugstore/drugstore.rpy:38 took 288 ms.
+ - Init at game/dlc_lively/bg/gym/gym.rpy:40 took 417 ms.
+ - Init at game/dlc_lively/bg/gymlockers/gymlockers.rpy:38 took 281 ms.
+ - Init at game/dlc_lively/bg/gymreception/gymreception.rpy:38 took 311 ms.
+ - Init at game/dlc_lively/bg/jewelry/jewelry.rpy:42 took 394 ms.
+ - Init at game/dlc_lively/bg/kitchen/kitchen.rpy:40 took 457 ms.
+ - Init at game/dlc_lively/bg/livingroom/livingroom.rpy:65 took 358 ms.
+ - Init at game/dlc_lively/bg/park/park.rpy:44 took 625 ms.
+ - Init at game/dlc_lively/bg/personal/personal.rpy:38 took 327 ms.
+ - Init at game/dlc_lively/bg/pond/pond.rpy:40 took 461 ms.
+ - Init at game/dlc_lively/bg/pool/pool.rpy:40 took 379 ms.
+ - Init at game/dlc_lively/bg/pub/pub.rpy:38 took 364 ms.
+ - Init at game/dlc_lively/bg/pubexterior/pubexterior.rpy:36 took 286 ms.
+ - Init at game/dlc_lively/bg/pubplay/pubplay.rpy:38 took 326 ms.
+ - Init at game/dlc_lively/bg/pubseat/pubseat.rpy:40 took 425 ms.
+ - Init at game/dlc_lively/bg/street/street.rpy:40 took 509 ms.
+ - Init at game/dlc_lively/bg/street2/street2.rpy:40 took 395 ms.
+ - Init at game/dlc_lively/bg/waterpark/waterpark.rpy:38 took 276 ms.
+Running init code took 178352 ms
+Loading analysis data took 77 ms
+Analyze and compile ATL took 72 ms
+Reloading save slot metadata took 3 ms
+Dump and make backups took 1 ms
 Cleaning cache took 0 ms
 Making clean stores took 1 ms
-Initial gc took 706 ms
+Initial gc took 1486 ms
 DPI scale factor: 1.000000
-Creating interface object took 3 ms
-Init translation took 50 ms
+Creating interface object took 4 ms
+Init translation took 69 ms
 Cleaning stores took 0 ms
-Load screen analysis took 180 ms
-Analyze screens took 6 ms
-Save screen analysis took 0 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 16 ms
-Interface start took 2867 ms
+Load screen analysis took 0 ms
+Analyze screens took 93 ms
+Save screen analysis took 77 ms
+Save pyanalysis took 2 ms
+Save bytecode took 692 ms
+﻿Ren'Py 8.5.2.26010301 lint report, generated at: Mon Aug  3 18:28:34 2026
 
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: 'AMD'
-Renderer: 'AMD Radeon Vega 8 Graphics (radeonsi, raven, ACO, DRM 3.64, 6.17.0-35-generic)'
-Version: '4.6 (Compatibility Profile) Mesa 25.2.8-0ubuntu0.24.04.2'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1280, 720) physical=(1920, 1080) drawable=(1920, 1080)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1920, 1080) drawable=(1920, 1080)
-Maximum texture size: 4096x4096
-e_image=phone/alexis/ass.webp}")
+game/bg/coffeeshop/coffeeshop.rpy:144 'chibi coffeeshop' is not an image.
 
-game/ch/alexis/texts.rpy:52 Text tag 'phone_image' is not known. (in "{phone_image=phone/alexis/cleavage.webp}")
+game/bg/livingroom/livingroom.rpy:735 The call is to nonexistent label 'mike_greet'.
 
-game/ch/alexis/texts.rpy:57 Text tag 'phone_image' is not known. (in "{phone_image=phone/alexis/bath.webp}")
+game/bg/office/office.rpy:195 'aletta work upset' is not an image.
 
-game/ch/anna/texts.rpy:32 Text tag 'phone_image' is not known. (in "{phone_image=phone/anna/cleavage.webp}")
+game/ch/aletta/events.rpy:953 'aletta annoyed blush' is not an image.
 
-game/ch/anna/texts.rpy:47 Text tag 'phone_image' is not known. (in "{phone_image=phone/anna/butt_plug.webp}")
+game/ch/aletta/events.rpy:1001 'aletta surprised blush' is not an image.
 
-game/ch/audrey/fuck.rpy:658 channel 'shound' is not defined
+game/ch/aletta/events.rpy:1042 'aletta embarrassed blush' is not an image.
 
-game/ch/audrey/fuck.rpy:866 'audrey_mis_enter' is not an image.
+game/ch/aletta/events.rpy:1076 'aletta close flirt' is not an image.
 
-game/ch/audrey/fuck.rpy:1007 'audrey_miss_kiss' is not an image.
+game/ch/aletta/events.rpy:1170 'aletta flirt blush' is not an image.
 
-game/ch/audrey/fuck.rpy:1009 'audrey_miss_kiss' is not an image.
+game/ch/aletta/events.rpy:1369 'aletta pleasure blush' is not an image.
 
-game/ch/audrey/texts.rpy:16 Text tag 'phone_image' is not known. (in "{phone_image=phone/audrey/lingerie.webp}")
+game/ch/aletta/events.rpy:1378 'aletta dreamy blush' is not an image.
 
-game/ch/audrey/texts.rpy:44 Text tag 'phone_image' is not known. (in "{phone_image=phone/audrey/work_off.webp}")
+game/ch/aletta/events.rpy:1383 'aletta flirt blush' is not an image.
 
-game/ch/audrey/texts.rpy:47 Text tag 'phone_image' is not known. (in "{phone_image=phone/audrey/naked.webp}")
+game/ch/aletta/events.rpy:1423 'aletta pleasure blush' is not an image.
 
-game/ch/audrey/texts.rpy:50 Text tag 'phone_image' is not known. (in "{phone_image=phone/audrey/ass_view.webp}")
+game/ch/aletta/events.rpy:1689 'aletta underwear blush' is not an image.
 
-game/ch/bree/events/events.rpy:1264 'bree flirtsurprise' is not an image.
+game/ch/aletta/events.rpy:1790 'aletta embarrassed blush' is not an image.
 
-game/ch/bree/images.rpy:1881 Image bree_pool_play uses file 'ch/bree/images/home/pool_play.webp', which is not loadable.
+game/ch/aletta/events.rpy:1863 'aletta flirt close' is not an image.
 
-game/ch/bree/images.rpy:1882 Image bree_casual_talk uses file 'ch/bree/images/casual/talk.webp', which is not loadable.
+game/ch/aletta/events.rpy:2262 'aletta work angry' is not an image.
 
-game/ch/bree/images.rpy:1883 Image bree_casual_annoyed uses file 'ch/bree/images/casual/annoyed.webp', which is not loadable.
+game/ch/aletta/events.rpy:2666 'aletta work dreamy' is not an image.
 
-game/ch/bree/images.rpy:1884 Image bree_casual_kiss uses file 'ch/bree/images/casual/kiss.webp', which is not loadable.
+game/ch/aletta/events.rpy:2685 'aletta work dreamy' is not an image.
 
-game/ch/bree/images.rpy:1885 Image bree_casual_blush uses file 'ch/bree/images/casual/blush.webp', which is not loadable.
+game/ch/aletta/events.rpy:2755 'aletta close work flirt' is not an image.
 
-game/ch/bree/texts.rpy:32 Text tag 'phone_image' is not known. (in "{phone_image=phone/bree/naked.webp}")
+game/ch/aletta/events.rpy:2907 'aletta work dreamy' is not an image.
 
-game/ch/bree/texts.rpy:36 Text tag 'phone_image' is not known. (in "{phone_image=phone/bree/cleavage.webp}")
+game/ch/aletta/events.rpy:3113 'aletta work dreamy' is not an image.
 
-game/ch/bree/texts.rpy:47 Text tag 'phone_image' is not known. (in "{phone_image=phone/bree/pose.webp}")
+game/ch/aletta/events.rpy:3117 'aletta b pain' is not an image.
 
-game/ch/bree/texts.rpy:51 Text tag 'phone_image' is not known. (in "{phone_image=phone/bree/ass.webp}")
+game/ch/aletta/events.rpy:3156 'aletta work dreamy' is not an image.
 
-game/ch/camila/events.rpy:2958 'kylie_bj_bg_jail' is not an image.
+game/ch/aletta/events.rpy:3188 'aletta close work dreamy' is not an image.
 
-game/ch/camila/events.rpy:2959 'kylie sad jail' is not an image.
+game/ch/aletta/events.rpy:3232 'aletta b pain' is not an image.
 
-game/ch/camila/events.rpy:2960 'kylie_bj_bars' is not an image.
+game/ch/aletta/events.rpy:3265 'aletta close work blush embarrassed' is not an image.
 
-game/ch/camila/events.rpy:2961 'kylie_bj_bars' is not an image.
+game/ch/aletta/events.rpy:3337 'aletta close normal' is not an image.
 
-game/ch/camila/events.rpy:2967 'kylie surprised' is not an image.
+game/ch/aletta/events.rpy:4112 'aletta date flirt' is not an image.
 
-game/ch/camila/events.rpy:2968 Could not evaluate 'kylie.say' in the who part of a say statement.
+game/ch/aletta/events.rpy:4158 'aletta date flirt' is not an image.
+
+game/ch/aletta/events.rpy:4661 'aletta naked whining haircut' is not an image.
+
+game/ch/aletta/events.rpy:4669 'aletta embarrassed blush' is not an image.
+
+game/ch/aletta/events.rpy:4818 'aletta close a' is not an image.
+
+game/ch/aletta/events.rpy:5213 'aletta flirt blush' is not an image.
+
+game/ch/aletta/events.rpy:5519 'aletta wedding normal noglasses' is not an image.
+
+game/ch/aletta/fuck.rpy:1555 'aletta flirt blush' is not an image.
+
+game/ch/aletta/fuck.rpy:1641 'aletta pleasure blush' is not an image.
+
+game/ch/aletta/fuck.rpy:1732 'aletta pleasure blush' is not an image.
+
+game/ch/aletta/images.rpy:7 Image aletta uses file 'ch/images/aletta/casual/normal.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:8 Image aletta normal uses file 'ch/images/aletta/casual/normal.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:9 Image aletta happy uses file 'ch/images/aletta/casual/happy.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:10 Image aletta sad uses file 'ch/images/aletta/casual/sad.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:11 Image aletta angry uses file 'ch/images/aletta/casual/angry.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:12 Image aletta flirt uses file 'ch/images/aletta/casual/flirt.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:13 Image aletta blush uses file 'ch/images/aletta/casual/blush.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:14 Image aletta surprised uses file 'ch/images/aletta/casual/surprised.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:15 Image aletta talkative uses file 'ch/images/aletta/casual/talkative.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:16 Image aletta dreamy uses file 'ch/images/aletta/casual/dreamy.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:17 Image aletta pain uses file 'ch/images/aletta/casual/pain.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:18 Image aletta whining uses file 'ch/images/aletta/casual/whining.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:19 Image aletta sadsmile uses file 'ch/images/aletta/casual/sadsmile.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:20 Image aletta wink uses file 'ch/images/aletta/casual/wink.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:21 Image aletta annoyed uses file 'ch/images/aletta/casual/annoyed.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:22 Image aletta upset uses file 'ch/images/aletta/casual/upset.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:23 Image aletta embarrassed uses file 'ch/images/aletta/casual/embarrassed.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:24 Image aletta stuned uses file 'ch/images/aletta/casual/stunned.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:25 Image aletta normal blush uses file 'ch/images/aletta/casual/blush.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:28 Image aletta b uses file 'ch/images/aletta/casual_b/normal.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:29 Image aletta b flirt uses file 'ch/images/aletta/casual_b/flirt.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:30 Image aletta b underwear uses file 'ch/images/aletta/casual_b/underwear.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:31 Image aletta normal b underwear uses file 'ch/images/aletta/casual_b/underwear.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:34 Image aletta date normal uses file 'ch/images/aletta/date/normal.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:35 Image aletta date happy uses file 'ch/images/aletta/date/happy.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:38 Image aletta underwear uses file 'ch/images/aletta/casual/underwear.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:41 Image aletta naked uses file 'ch/images/aletta/nude/normal.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:42 Image aletta naked angry uses file 'ch/images/aletta/nude/angry.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:43 Image aletta naked blush uses file 'ch/images/aletta/nude/blush.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:44 Image aletta b naked uses file 'ch/images/aletta/nude/normal.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:45 Image aletta blush b naked uses file 'ch/images/aletta/nude/blush.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:48 Image aletta halloween uses file 'ch/images/aletta/special_event/halloween.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:49 Image aletta halloween talkative uses file 'ch/images/aletta/special_event/halloween_talkative.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:50 Image aletta halloween flirt uses file 'ch/images/aletta/special_event/halloween_flirt.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:55 Image aletta close uses file 'ch/images/aletta/casual/close_normal.webp', which is not loadable.
+
+game/ch/aletta/images.rpy:56 Image aletta close b naked uses file 'ch/images/aletta/nude/close_normal.webp', which is not loadable.
+
+game/ch/audrey/fuck.rpy:655 channel 'shound' is not defined
+
+game/ch/audrey/fuck.rpy:863 'audrey_mis_enter' is not an image.
+
+game/ch/audrey/fuck.rpy:1004 'audrey_miss_kiss' is not an image.
+
+game/ch/audrey/fuck.rpy:1006 'audrey_miss_kiss' is not an image.
+
+game/ch/bree/events/events.rpy:1165 'bree flirtsurprise' is not an image.
+
+game/ch/bree/images.rpy:1880 Image bree_pool_play uses file 'ch/bree/images/home/pool_play.webp', which is not loadable.
+
+game/ch/bree/images.rpy:1881 Image bree_casual_talk uses file 'ch/bree/images/casual/talk.webp', which is not loadable.
+
+game/ch/bree/images.rpy:1882 Image bree_casual_annoyed uses file 'ch/bree/images/casual/annoyed.webp', which is not loadable.
+
+game/ch/bree/images.rpy:1883 Image bree_casual_kiss uses file 'ch/bree/images/casual/kiss.webp', which is not loadable.
+
+game/ch/bree/images.rpy:1884 Image bree_casual_blush uses file 'ch/bree/images/casual/blush.webp', which is not loadable.
+
+game/ch/camila/events.rpy:2845 'kylie_bj_bg_jail' is not an image.
+
+game/ch/camila/events.rpy:2846 'kylie sad jail' is not an image.
+
+game/ch/camila/events.rpy:2847 'kylie_bj_bars' is not an image.
+
+game/ch/camila/events.rpy:2848 'kylie_bj_bars' is not an image.
+
+game/ch/camila/events.rpy:2854 'kylie surprised' is not an image.
+
+game/ch/camila/events.rpy:2855 Could not evaluate 'kylie.say' in the who part of a say statement.
 Perhaps you forgot to define a character?
 
-game/ch/camila/events.rpy:2969 Could not evaluate 'kylie.say' in the who part of a say statement.
+game/ch/camila/events.rpy:2856 Could not evaluate 'kylie.say' in the who part of a say statement.
 
-game/ch/camila/events.rpy:2975 'kylie crazyhappy jail' is not an image.
+game/ch/camila/events.rpy:2862 'kylie crazyhappy jail' is not an image.
 
-game/ch/camila/events.rpy:2985 'kylie happy' is not an image.
+game/ch/camila/events.rpy:2872 'kylie happy' is not an image.
 
-game/ch/camila/events.rpy:2986 Could not evaluate 'kylie.say' in the who part of a say statement.
+game/ch/camila/events.rpy:2873 Could not evaluate 'kylie.say' in the who part of a say statement.
 
-game/ch/camila/events.rpy:2987 Could not evaluate 'kylie.say' in the who part of a say statement.
+game/ch/camila/events.rpy:2874 Could not evaluate 'kylie.say' in the who part of a say statement.
 
-game/ch/camila/events.rpy:2988 Could not evaluate 'kylie.say' in the who part of a say statement.
+game/ch/camila/events.rpy:2875 Could not evaluate 'kylie.say' in the who part of a say statement.
 
-game/ch/camila/events.rpy:2989 Could not evaluate 'kylie.say' in the who part of a say statement.
+game/ch/camila/events.rpy:2876 Could not evaluate 'kylie.say' in the who part of a say statement.
 
-game/ch/camila/events.rpy:2990 Could not evaluate 'kylie.say' in the who part of a say statement.
+game/ch/camila/events.rpy:2877 Could not evaluate 'kylie.say' in the who part of a say statement.
 
-game/ch/camila/events.rpy:2997 'kylie angry' is not an image.
+game/ch/camila/events.rpy:2884 'kylie angry' is not an image.
 
-game/ch/camila/events.rpy:3001 'kylie yandere' is not an image.
+game/ch/camila/events.rpy:2888 'kylie yandere' is not an image.
 
-game/ch/camila/events.rpy:3002 Could not evaluate 'kylie.say' in the who part of a say statement.
+game/ch/camila/events.rpy:2889 Could not evaluate 'kylie.say' in the who part of a say statement.
 
-game/ch/camila/events.rpy:3003 'kylie' is not an image.
+game/ch/camila/events.rpy:2890 'kylie' is not an image.
 
-game/ch/camila/events.rpy:3004 Could not evaluate 'kylie.say' in the who part of a say statement.
+game/ch/camila/events.rpy:2891 Could not evaluate 'kylie.say' in the who part of a say statement.
 
-game/ch/camila/events.rpy:3005 'kylie' is not an image.
+game/ch/camila/events.rpy:2892 'kylie' is not an image.
 
-game/ch/camila/events.rpy:3006 Could not evaluate 'kylie.say' in the who part of a say statement.
+game/ch/camila/events.rpy:2893 Could not evaluate 'kylie.say' in the who part of a say statement.
 
-game/ch/camila/events.rpy:3007 'kylie' is not an image.
+game/ch/camila/events.rpy:2894 'kylie' is not an image.
 
-game/ch/camila/events.rpy:3008 Could not evaluate 'kylie.say' in the who part of a say statement.
+game/ch/camila/events.rpy:2895 Could not evaluate 'kylie.say' in the who part of a say statement.
 
-game/ch/camila/events.rpy:3017 'kylie angry' is not an image.
+game/ch/camila/events.rpy:2904 'kylie angry' is not an image.
 
-game/ch/camila/events.rpy:3018 Could not evaluate 'kylie.say' in the who part of a say statement.
+game/ch/camila/events.rpy:2905 Could not evaluate 'kylie.say' in the who part of a say statement.
 
-game/ch/camila/events.rpy:3019 Could not evaluate 'kylie.say' in the who part of a say statement.
+game/ch/camila/events.rpy:2906 Could not evaluate 'kylie.say' in the who part of a say statement.
 
-game/ch/camila/events.rpy:3020 Could not evaluate 'kylie.say' in the who part of a say statement.
+game/ch/camila/events.rpy:2907 Could not evaluate 'kylie.say' in the who part of a say statement.
 
-game/ch/camila/events.rpy:3021 Could not evaluate 'kylie.say' in the who part of a say statement.
+game/ch/camila/events.rpy:2908 Could not evaluate 'kylie.say' in the who part of a say statement.
 
-game/ch/camila/events.rpy:3033 'kylie annoyed' is not an image.
+game/ch/camila/events.rpy:2920 'kylie annoyed' is not an image.
 
-game/ch/camila/events.rpy:3040 Could not evaluate 'kylie.say' in the who part of a say statement.
+game/ch/camila/events.rpy:2927 Could not evaluate 'kylie.say' in the who part of a say statement.
 
-game/ch/camila/events.rpy:3041 Could not evaluate 'kylie.say' in the who part of a say statement.
+game/ch/camila/events.rpy:2928 Could not evaluate 'kylie.say' in the who part of a say statement.
 
-game/ch/camila/events.rpy:3046 'kylie' is not an image.
+game/ch/camila/events.rpy:2933 'kylie' is not an image.
 
-game/ch/camila/events.rpy:3051 'kylie angry' is not an image.
+game/ch/camila/events.rpy:2938 'kylie angry' is not an image.
 
-game/ch/camila/events.rpy:3056 'kylie normal' is not an image.
+game/ch/camila/events.rpy:2943 'kylie normal' is not an image.
 
-game/ch/camila/events.rpy:3059 Could not evaluate 'kylie.say' in the who part of a say statement.
+game/ch/camila/events.rpy:2946 Could not evaluate 'kylie.say' in the who part of a say statement.
 
-game/ch/camila/events.rpy:3060 Could not evaluate 'kylie.say' in the who part of a say statement.
+game/ch/camila/events.rpy:2947 Could not evaluate 'kylie.say' in the who part of a say statement.
 
-game/ch/camila/events.rpy:3061 Could not evaluate 'kylie.say' in the who part of a say statement.
+game/ch/camila/events.rpy:2948 Could not evaluate 'kylie.say' in the who part of a say statement.
 
-game/ch/camila/events.rpy:3063 'kylie_bj_bg_jail' is not an image.
+game/ch/camila/events.rpy:2950 'kylie_bj_bg_jail' is not an image.
 
-game/ch/camila/events.rpy:3064 'kylie sad jail' is not an image.
+game/ch/camila/events.rpy:2951 'kylie sad jail' is not an image.
 
-game/ch/camila/events.rpy:3065 'kylie_bj_bars' is not an image.
+game/ch/camila/events.rpy:2952 'kylie_bj_bars' is not an image.
 
-game/ch/camila/events.rpy:3068 Could not evaluate 'kylie.say' in the who part of a say statement.
+game/ch/camila/events.rpy:2955 Could not evaluate 'kylie.say' in the who part of a say statement.
 
-game/ch/camila/events.rpy:3069 Could not evaluate 'kylie.say' in the who part of a say statement.
+game/ch/camila/events.rpy:2956 Could not evaluate 'kylie.say' in the who part of a say statement.
 
-game/ch/camila/events.rpy:3070 'kylie blush' is not an image.
+game/ch/camila/events.rpy:2957 'kylie blush' is not an image.
 
-game/ch/camila/events.rpy:3071 Could not evaluate 'kylie.say' in the who part of a say statement.
+game/ch/camila/events.rpy:2958 Could not evaluate 'kylie.say' in the who part of a say statement.
 
-game/ch/camila/events.rpy:3076 'kylie happy' is not an image.
+game/ch/camila/events.rpy:2963 'kylie happy' is not an image.
 
-game/ch/camila/events.rpy:3077 Could not evaluate 'kylie.say' in the who part of a say statement.
+game/ch/camila/events.rpy:2964 Could not evaluate 'kylie.say' in the who part of a say statement.
 
-game/ch/camila/events.rpy:3078 'kylie blush' is not an image.
+game/ch/camila/events.rpy:2965 'kylie blush' is not an image.
 
-game/ch/camila/events.rpy:3079 Could not evaluate 'kylie.say' in the who part of a say statement.
+game/ch/camila/events.rpy:2966 Could not evaluate 'kylie.say' in the who part of a say statement.
 
-game/ch/camila/events.rpy:3080 Could not evaluate 'kylie.say' in the who part of a say statement.
+game/ch/camila/events.rpy:2967 Could not evaluate 'kylie.say' in the who part of a say statement.
 
-game/ch/camila/events.rpy:3123 'kylie_bj_bg_jail' is not an image.
+game/ch/camila/events.rpy:3010 'kylie_bj_bg_jail' is not an image.
 
-game/ch/camila/events.rpy:3124 'kylie sad jail' is not an image.
+game/ch/camila/events.rpy:3011 'kylie sad jail' is not an image.
 
-game/ch/camila/events.rpy:3125 'kylie_bj_bars' is not an image.
+game/ch/camila/events.rpy:3012 'kylie_bj_bars' is not an image.
 
-game/ch/camila/events.rpy:3126 'kylie_bj_bars' is not an image.
+game/ch/camila/events.rpy:3013 'kylie_bj_bars' is not an image.
 
-game/ch/camila/events.rpy:3133 'kylie crazyhappy jail' is not an image.
+game/ch/camila/events.rpy:3020 'kylie crazyhappy jail' is not an image.
 
-game/ch/camila/events.rpy:3136 'kylie yandere' is not an image.
+game/ch/camila/events.rpy:3023 'kylie yandere' is not an image.
 
-game/ch/camila/events.rpy:3140 Could not evaluate 'kylie.say' in the who part of a say statement.
+game/ch/camila/events.rpy:3027 Could not evaluate 'kylie.say' in the who part of a say statement.
 
-game/ch/camila/events.rpy:3141 Could not evaluate 'kylie.say' in the who part of a say statement.
+game/ch/camila/events.rpy:3028 Could not evaluate 'kylie.say' in the who part of a say statement.
 
-game/ch/camila/events.rpy:3221 'kylie_bj_bg_jail' is not an image.
+game/ch/camila/events.rpy:3108 'kylie_bj_bg_jail' is not an image.
 
-game/ch/camila/events.rpy:3222 'kylie blush jail' is not an image.
+game/ch/camila/events.rpy:3109 'kylie blush jail' is not an image.
 
-game/ch/camila/events.rpy:3223 'kylie_bj_bars' is not an image.
+game/ch/camila/events.rpy:3110 'kylie_bj_bars' is not an image.
 
-game/ch/camila/events.rpy:3224 'kylie_bj_bars' is not an image.
+game/ch/camila/events.rpy:3111 'kylie_bj_bars' is not an image.
 
-game/ch/camila/events.rpy:3231 'camila handlick kylie' is not an image.
+game/ch/camila/events.rpy:3118 'camila handlick kylie' is not an image.
 
-game/ch/camila/events.rpy:3237 'camila handlick kylie stand cum surprised' is not an image.
+game/ch/camila/events.rpy:3124 'camila handlick kylie stand cum surprised' is not an image.
 
-game/ch/camila/events.rpy:3240 'camila handlick kylie close lick' is not an image.
+game/ch/camila/events.rpy:3127 'camila handlick kylie close lick' is not an image.
 
-game/ch/camila/events.rpy:3242 'camila handlick kylie up' is not an image.
+game/ch/camila/events.rpy:3129 'camila handlick kylie up' is not an image.
 
-game/ch/camila/events.rpy:3244 'camila handlick kylie hold pleasure' is not an image.
+game/ch/camila/events.rpy:3131 'camila handlick kylie hold pleasure' is not an image.
 
-game/ch/camila/events.rpy:3246 'camila handlick kylie mike' is not an image.
+game/ch/camila/events.rpy:3133 'camila handlick kylie mike' is not an image.
 
-game/ch/camila/events.rpy:3248 'camila handlick kylie sad' is not an image.
+game/ch/camila/events.rpy:3135 'camila handlick kylie sad' is not an image.
 
-game/ch/camila/events.rpy:3250 'camila handlick kylie normal' is not an image.
+game/ch/camila/events.rpy:3137 'camila handlick kylie normal' is not an image.
 
-game/ch/camila/events.rpy:4940 'ryan date' is not an image.
+game/ch/camila/events.rpy:4686 'ryan date' is not an image.
 
-game/ch/camila/events.rpy:5007 'ryan date' is not an image.
+game/ch/camila/events.rpy:4753 'ryan date' is not an image.
 
-game/ch/cassidy/texts.rpy:28 Text tag 'phone_image' is not known. (in "{phone_image=phone/cassidy/pose.webp}")
+game/ch/cassidy/events.rpy:2450 'aletta work sad a' is not an image.
 
-game/ch/cassidy/texts.rpy:47 Text tag 'phone_image' is not known. (in "{phone_image=phone/cassidy/ass_view.webp}")
+game/ch/cassidy/events.rpy:2479 'aletta a work whining' is not an image.
 
-game/ch/cassidy/texts.rpy:51 Text tag 'phone_image' is not known. (in "{phone_image=phone/cassidy/touching.webp}")
+game/ch/cassidy/events.rpy:2482 'aletta a sad' is not an image.
 
-game/ch/cassidy/texts.rpy:54 Text tag 'phone_image' is not known. (in "{phone_image=phone/cassidy/vibrator.webp}")
+game/ch/cherie/events.rpy:1432 'aletta casual pain' is not an image.
 
-game/ch/kleio/texts.rpy:32 Text tag 'phone_image' is not known. (in "{phone_image=phone/kleio/ass.webp}")
+game/ch/cherie/events.rpy:1555 'aletta scared' is not an image.
 
-game/ch/kleio/texts.rpy:51 Text tag 'phone_image' is not known. (in "{phone_image=phone/kleio/tattoo.webp}")
+game/ch/cherie/events.rpy:1569 'aletta scared' is not an image.
 
-game/ch/kleio/texts.rpy:54 Text tag 'phone_image' is not known. (in "{phone_image=phone/kleio/buttplug.webp}")
+game/ch/cherie/events.rpy:1606 'aletta scared' is not an image.
 
-game/ch/lavish/texts.rpy:32 Text tag 'phone_image' is not known. (in "{phone_image=phone/lavish/pantie.webp}")
+game/ch/cherie/events.rpy:1633 'aletta scared' is not an image.
 
-game/ch/lavish/texts.rpy:47 Text tag 'phone_image' is not known. (in "{phone_image=phone/lavish/work_off.webp}")
+game/ch/cherie/events.rpy:1705 'aletta scared' is not an image.
 
-game/ch/lavish/texts.rpy:51 Text tag 'phone_image' is not known. (in "{phone_image=phone/lavish/lingerie.webp}")
+game/ch/harems_full/office/events/events.rpy:1572 'aletta b naked embarrassed blush' is not an image.
 
-game/ch/lavish/texts.rpy:55 Text tag 'phone_image' is not known. (in "{phone_image=phone/lavish/naked.webp}")
+game/ch/harems_full/office/events/events.rpy:5389 'aletta embarrassed blush' is not an image.
 
-game/ch/lexi/texts.rpy:28 Text tag 'phone_image' is not known. (in "{phone_image=phone/lexi/submissive.webp}")
+game/ch/harems_full/office/events/events.rpy:5480 'aletta b naked flirt blush' is not an image.
 
-game/ch/lexi/texts.rpy:36 Text tag 'phone_image' is not known. (in "{phone_image=phone/lexi/pantie.webp}")
+game/ch/harems_full/office/events/office_christmas_party.rpy:91 'aletta work angry' is not an image.
 
-game/ch/lexi/texts.rpy:51 Text tag 'phone_image' is not known. (in "{phone_image=phone/lexi/pussy.webp}")
+game/ch/harems_full/office/events/office_christmas_party.rpy:144 'aletta work happy' is not an image.
 
-game/ch/minami/texts.rpy:31 Text tag 'phone_image' is not known. (in "{phone_image=phone/minami/skirt.webp}")
+game/ch/harems_full/office/events/office_christmas_party.rpy:188 'aletta work angry' is not an image.
 
-game/ch/minami/texts.rpy:46 Text tag 'phone_image' is not known. (in "{phone_image=phone/minami/lunar_mariner.webp}")
+game/ch/harems_full/office/events/office_christmas_party.rpy:238 'aletta work annoyed' is not an image.
 
-game/ch/minami/texts.rpy:50 Text tag 'phone_image' is not known. (in "{phone_image=phone/minami/pose.webp}")
+game/ch/harems_full/office/events/office_christmas_party.rpy:303 'aletta work happy' is not an image.
 
-game/ch/minami/texts.rpy:54 Text tag 'phone_image' is not known. (in "{phone_image=phone/minami/pool.webp}")
+game/ch/harems_full/office/events/office_christmas_party.rpy:359 'aletta work happy' is not an image.
 
-game/ch/morgan/texts.rpy:28 Text tag 'phone_image' is not known. (in "{phone_image=phone/morgan/tits.webp}")
+game/ch/harems_full/office/events/office_christmas_party.rpy:469 'aletta work happy' is not an image.
 
-game/ch/morgan/texts.rpy:47 Text tag 'phone_image' is not known. (in "{phone_image=phone/morgan/costume.webp}")
+game/ch/harems_full/office/events/office_christmas_party.rpy:674 'aletta work sad' is not an image.
 
-game/ch/morgan/texts.rpy:51 Text tag 'phone_image' is not known. (in "{phone_image=phone/morgan/pussy.webp}")
+game/ch/harems_full/office/events/office_christmas_party.rpy:815 'aletta close work normal' is not an image.
 
-game/ch/morgan/texts.rpy:54 Text tag 'phone_image' is not known. (in "{phone_image=phone/morgan/pose.webp}")
+game/ch/harems_full/office/events/office_christmas_party.rpy:832 'aletta close flirt' is not an image.
 
-game/ch/shiori/texts.rpy:47 Text tag 'phone_image' is not known. (in "{phone_image=phone/shiori/touching.webp}")
+game/ch/harems_full/office/events/office_christmas_party.rpy:1106 'aletta flirt work' is not an image.
 
-game/ch/shiori/texts.rpy:54 Text tag 'phone_image' is not known. (in "{phone_image=phone/shiori/no_pantie.webp}")
+game/ch/harems_full/office/events/office_christmas_party.rpy:1307 'aletta work annoyed' is not an image.
+
+game/ch/harems_full/office/events/office_christmas_party.rpy:1602 'aletta flirt work' is not an image.
+
+game/ch/harems_full/office/events/office_christmas_party.rpy:2519 'aletta annoyed blush haircut noglasses naked' is not an image.
+
+game/ch/lexi/events.rpy:5383 'aletta date normal blush' is not an image.
+
+game/ch/lexi/events.rpy:5546 'aletta flirt blush' is not an image.
 
 game/dlc_fafow/ch/ayesha/date.rpy:54 Could not evaluate 'ayesha.say' in the who part of a say statement.
 
@@ -600,6 +790,10 @@ game/dlc_fafow/ch/harems/band/events.rpy:1149 'drink_table_pub_victor' is not an
 
 game/dlc_fafow/ch/harems/band/events.rpy:1159 'drink_table_pub_victor' is not an image.
 
+game/dlc_fafow/ch/harems/band/events.rpy:1297 'aletta a swimsuit' is not an image.
+
+game/dlc_fafow/ch/harems/band/events.rpy:1298 'aletta a swimsuit' is not an image.
+
 game/dlc_fafow/ch/harems/electronic/events.rpy:249 'drink_table_pub_victor' is not an image.
 
 game/dlc_fafow/ch/harems/electronic/events.rpy:1379 'drink_table_pub_victor' is not an image.
@@ -804,39 +998,284 @@ game/dlc_fafow/ch/kylie/date.rpy:460 Could not evaluate 'kylie.say' in the who p
 
 game/dlc_fafow/ch/kylie/date.rpy:461 Could not evaluate 'kylie.say' in the who part of a say statement.
 
-game/dlc_fafwm/ch/cherie/events.rpy:899 'audrey teaser' is not an image.
+game/dlc_fafwm/ch/cherie/events.rpy:702 'audrey teaser' is not an image.
 
-game/dlc_fafwm/ch/harems/milf/events.rpy:378 'kiara amused' is not an image.
+game/dlc_fafwm/ch/cherie/events.rpy:942 'aletta a sport upset' is not an image.
 
-game/dlc_fafwm/ch/harems/milf/events.rpy:1933 'bg masterhouse' is not an image.
+game/dlc_fafwm/ch/cherie/events.rpy:954 'aletta scared' is not an image.
 
-game/dlc_fafwm/ch/harems/milf/events.rpy:2074 'bg masterhouse' is not an image.
+game/dlc_fafwm/ch/cherie/events.rpy:960 'aletta scared' is not an image.
 
-game/dlc_fafwm/ch/harems/milf/events.rpy:2228 'bg masterhouse' is not an image.
+game/dlc_fafwm/ch/cherie/events.rpy:966 'aletta scared' is not an image.
 
-game/dlc_fafwm/ch/harems/milf/events.rpy:3011 'bg masterhouse night' is not an image.
+game/dlc_fafwm/ch/cherie/events.rpy:969 'aletta scared' is not an image.
 
-game/dlc_fafwm/ch/kiara/events.rpy:3058 'kiara uninterest' is not an image.
+game/dlc_fafwm/ch/cherie/events.rpy:994 'aletta b happy' is not an image.
 
-game/dlc_fafwm/ch/kiara/events.rpy:3065 'kiara uninterest' is not an image.
+game/dlc_fafwm/ch/cherie/events.rpy:1021 'aletta scared' is not an image.
 
-game/dlc_fafwm/ch/kiara/events.rpy:3132 'kiara uninterest' is not an image.
+game/dlc_fafwm/ch/cherie/events.rpy:1039 'aletta scared' is not an image.
 
-game/dlc_fafwm/ch/kiara/events.rpy:3141 'kiara uninterest' is not an image.
+game/dlc_fafwm/ch/cherie/events.rpy:1134 'aletta scared' is not an image.
 
-game/dlc_fafwm/ch/kiara/events.rpy:3357 'kiara date uninterest' is not an image.
+game/dlc_fafwm/ch/harems/milf/events.rpy:377 'kiara amused' is not an image.
 
-game/intro.rpy:15 The call is to nonexistent label 'mc_selection_female'.
+game/dlc_fafwm/ch/harems/milf/events.rpy:1932 'bg masterhouse' is not an image.
 
+game/dlc_fafwm/ch/harems/milf/events.rpy:2073 'bg masterhouse' is not an image.
 
-Statistics:
+game/dlc_fafwm/ch/harems/milf/events.rpResetting cache.
+Early init took 710 ms
+Loading error handling took 692 ms
+Loading script took 33842 ms
+Loading save slot metadata took 315 ms
+Loading persistent took 7 ms
+Failed to initialize steam: Exception("steamapi.InitFlat returned 1 (Failed to load module '/home/asim/.steam/sdk64/steamclient.so')")
+Set script version to: (8, 5, 2)
+ - Init at game/start.rpy:257 took 1943 ms.
+ - Init at game/cl/labels_story.rpy:1 took 2148 ms.
+ - Init at game/start.rpy:208 took 1414 ms.
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: ()
+ERROR in checker target: (<store.RawChecker object at 0x73d4882a44d0>,)
+    checker None Unknown instance: <store.RawChecker object at 0x73d4882a44d0>
+ERROR in checker target: (<store.RawChecker object at 0x73d4882a4710>,)
+    checker None Unknown instance: <store.RawChecker object at 0x73d4882a4710>
+ERROR in checker target: (<store.RawChecker object at 0x73d4882a5290>,)
+    checker None Unknown instance: <store.RawChecker object at 0x73d4882a5290>
+ERROR in checker target: (<store.RawChecker object at 0x73d4882a5b90>, <store.RawChecker object at 0x73d4882a5cd0>)
+    checker None Unknown instance: <store.RawChecker object at 0x73d4882a5b90>
+    checker None Unknown instance: <store.RawChecker object at 0x73d4882a5cd0>
+ERROR in checker target: (<store.RawChecker object at 0x73d4882a6490>, <store.RawChecker object at 0x73d4882a65d0>)
+    checker None Unknown instance: <store.RawChecker object at 0x73d4882a6490>
+    checker None Unknown instance: <store.RawChecker object at 0x73d4882a65d0>
+ERROR in checker target: (<store.RawChecker object at 0x73d4882a6750>, <store.RawChecker object at 0x73d4882a6890>)
+    checker None Unknown instance: <store.RawChecker object at 0x73d4882a6750>
+    checker None Unknown instance: <store.RawChecker object at 0x73d4882a6890>
+ERROR in checker target: (<store.RawChecker object at 0x73d4882a6a10>, <store.RawChecker object at 0x73d4882a6b50>)
+    checker None Unknown instance: <store.RawChecker object at 0x73d4882a6a10>
+    checker None Unknown instance: <store.RawChecker object at 0x73d4882a6b50>
+ERROR in checker target: ()
+Loading DLC: FAFOW
+ERROR in checker target: ()
+ERROR in checker target: (<store.InInventory object at 0x73d4882bd650>,)
+    checker None Unknown instance: <store.InInventory object at 0x73d4882bd650>
+ERROR in checker target: ()
+ERROR in checker target: ()
+Loading DLC: FAFWM
+Loading DLC: LIVELY
+ - Init at game/ch/aletta/images.rpy:1 took 1614 ms.
+ - Init at game/ch/alexis/images.rpy:1 took 2317 ms.
+ - Init at game/ch/amy/images.rpy:1 took 789 ms.
+ - Init at game/ch/angela/images.rpy:1 took 1055 ms.
+ - Init at game/ch/anna/images.rpy:1 took 1410 ms.
+ - Init at game/ch/audrey/images.rpy:1 took 2260 ms.
+ - Init at game/ch/bree/images.rpy:1 took 5853 ms.
+ - Init at game/ch/camila/images.rpy:1 took 1668 ms.
+ - Init at game/ch/cassidy/images.rpy:1 took 2390 ms.
+ - Init at game/ch/cherie/images.rpy:1 took 2307 ms.
+ - Init at game/ch/claire/images.rpy:1 took 961 ms.
+ - Init at game/ch/emma/images.rpy:1 took 2119 ms.
+ - Init at game/ch/gen/beach_cream.rpy:27 took 819 ms.
+ - Init at game/ch/gen/beach_icecream.rpy:22 took 780 ms.
+ - Init at game/ch/gen/beach_sandcastle.rpy:29 took 756 ms.
+ - Init at game/ch/gen/beach_volleyball.rpy:40 took 1135 ms.
+ - Init at game/ch/gen/board_games.rpy:21 took 812 ms.
+ - Init at game/ch/gen/buy_popcorn.rpy:22 took 483 ms.
+ - Init at game/ch/gen/chatting.rpy:17 took 818 ms.
+ - Init at game/ch/gen/cinemaroom.rpy:23 took 1096 ms.
+ - Init at game/ch/gen/cuddles.rpy:1 took 601 ms.
+ - Init at game/ch/gen/dance.rpy:1 took 1072 ms.
+ - Init at game/ch/gen/dick_reactions.rpy:19 took 760 ms.
+ - Init at game/ch/gen/drink_scenes.rpy:1 took 302 ms.
+ - Init at game/ch/gen/eat_snacks.rpy:29 took 521 ms.
+ - Init at game/ch/gen/game_arcade.rpy:27 took 277 ms.
+ - Init at game/ch/gen/hottub.rpy:43 took 1354 ms.
+ - Init at game/ch/gen/images.rpy:52 took 3035 ms.
+ - Init at game/ch/gen/kitchen_meal.rpy:12 took 360 ms.
+ - Init at game/ch/gen/peeping.rpy:33 took 388 ms.
+ - Init at game/ch/gen/photobooth.rpy:1 took 365 ms.
+ - Init at game/ch/gen/play_console.rpy:17 took 427 ms.
+ - Init at game/ch/gen/play_guitar.rpy:17 took 412 ms.
+ - Init at game/ch/gen/playing_water.rpy:33 took 737 ms.
+ - Init at game/ch/gen/poledance.rpy:73 took 1259 ms.
+ - Init at game/ch/gen/restaurant_meal.rpy:20 took 697 ms.
+ - Init at game/ch/gen/sexinserts.rpy:1 took 618 ms.
+ - Init at game/ch/gen/slap.rpy:32 took 1372 ms.
+ - Init at game/ch/gen/sleep.rpy:1 took 600 ms.
+ - Init at game/ch/gen/spank.rpy:1 took 653 ms.
+ - Init at game/ch/gen/swimmingrace.rpy:22 took 600 ms.
+ - Init at game/ch/gen/tattooparlor.rpy:1 took 1075 ms.
+ - Init at game/ch/gen/watch_tv.rpy:22 took 850 ms.
+ - Init at game/ch/gen/waterslide.rpy:16 took 499 ms.
+ - Init at game/ch/gen/wedding.rpy:18 took 426 ms.
+ - Init at game/ch/gen_full/images.rpy:1 took 463 ms.
+ - Init at game/ch/hanna/images.rpy:1 took 1512 ms.
+ - Init at game/ch/harems/friendly/images.rpy:1 took 694 ms.
+ - Init at game/ch/harems/home/images.rpy:1 took 10354 ms.
+ - Init at game/ch/harems_full/band/images.rpy:1 took 1288 ms.
+ - Init at game/ch/harems_full/bitchy/images.rpy:1 took 1270 ms.
+ - Init at game/ch/harems_full/college/images.rpy:1 took 697 ms.
+ - Init at game/ch/harems_full/criminal/images.rpy:1 took 532 ms.
+ - Init at game/ch/harems_full/fashion/images.rpy:1 took 442 ms.
+ - Init at game/ch/harems_full/goodevil/images.rpy:1 took 686 ms.
+ - Init at game/ch/harems_full/jealous/images.rpy:1 took 1039 ms.
+ - Init at game/ch/harems_full/office/images.rpy:1 took 3109 ms.
+ - Init at game/ch/harems_full/pixie/images.rpy:17 took 1015 ms.
+ - Init at game/ch/harmony/images.rpy:1 took 1788 ms.
+ - Init at game/ch/kat/images.rpy:1 took 734 ms.
+ - Init at game/ch/kiara/images.rpy:1 took 2061 ms.
+ - Init at game/ch/kleio/images.rpy:1 took 3529 ms.
+ - Init at game/ch/lavish/images.rpy:1 took 1902 ms.
+ - Init at game/ch/lexi/images.rpy:1 took 3440 ms.
+ - Init at game/ch/mc/images.rpy:1 took 650 ms.
+ - Init at game/ch/mike/images.rpy:1 took 667 ms.
+ - Init at game/ch/minami/images.rpy:1 took 2336 ms.
+ - Init at game/ch/morgan/images.rpy:1 took 1576 ms.
+ - Init at game/ch/natalie/images.rpy:1 took 568 ms.
+ - Init at game/ch/palla/images.rpy:1 took 1275 ms.
+ - Init at game/ch/reona/images.rpy:1 took 766 ms.
+ - Init at game/ch/samantha/images.rpy:1 took 2366 ms.
+ - Init at game/ch/sasha/images.rpy:1 took 4079 ms.
+ - Init at game/ch/scottie/images.rpy:1 took 415 ms.
+ - Init at game/ch/shiori/images.rpy:1 took 2464 ms.
+ - Init at game/ch/violaine/images.rpy:1 took 591 ms.
+ - Init at game/dlc_fafow/ch/amy/images.rpy:1 took 1320 ms.
+ - Init at game/dlc_fafow/ch/gen/ev2/amusement_icecream.rpy:26 took 282 ms.
+ - Init at game/dlc_fafow/ch/gen/ev2/haunted_house.rpy:15 took 358 ms.
+ - Init at game/dlc_fafow/ch/harems/band/images.rpy:1 took 1863 ms.
+ - Init at game/dlc_fafow/ch/harems/electronic/images.rpy:1 took 657 ms.
+ - Init at game/dlc_fafow/ch/harems/goth/images.rpy:1 took 1246 ms.
+ - Init at game/dlc_fafow/ch/harems/petite/images.rpy:1 took 586 ms.
+ - Init at game/dlc_fafow/ch/harems/purity/images.rpy:1 took 435 ms.
+ - Init at game/dlc_fafow/ch/harems/thot/images.rpy:1 took 1343 ms.
+ - Init at game/dlc_fafow/ch/harems/whore/images.rpy:1 took 1183 ms.
+ - Init at game/dlc_fafow/ch/kat/images.rpy:1 took 2120 ms.
+ - Init at game/dlc_fafow/ch/reona/images.rpy:1 took 3585 ms.
+ - Init at game/dlc_fafwm/ch/cherie/images.rpy:1 took 1247 ms.
+ - Init at game/dlc_fafwm/ch/claire/images.rpy:1 took 1193 ms.
+ - Init at game/dlc_fafwm/ch/harems/milf/images.rpy:1 took 1069 ms.
+ - Init at game/dlc_fafwm/ch/kiara/images.rpy:1 took 1246 ms.
+ - Init at game/cl/class_gallery.rpy:1206 took 10511 ms.
+ - Init at game/dlc_lively/bg/bathroom/bathroom.rpy:66 took 650 ms.
+ - Init at game/dlc_lively/bg/beach/beach.rpy:40 took 397 ms.
+ - Init at game/dlc_lively/bg/bookstore/bookstore.rpy:38 took 286 ms.
+ - Init at game/dlc_lively/bg/breakroom/breakroom.rpy:40 took 315 ms.
+ - Init at game/dlc_lively/bg/ceo/ceo.rpy:46 took 449 ms.
+ - Init at game/dlc_lively/bg/cinema/cinema.rpy:48 took 664 ms.
+ - Init at game/dlc_lively/bg/drugstore/drugstore.rpy:38 took 259 ms.
+ - Init at game/dlc_lively/bg/gym/gym.rpy:40 took 347 ms.
+ - Init at game/dlc_lively/bg/gymreception/gymreception.rpy:38 took 285 ms.
+ - Init at game/dlc_lively/bg/jewelry/jewelry.rpy:42 took 350 ms.
+ - Init at game/dlc_lively/bg/kitchen/kitchen.rpy:40 took 398 ms.
+ - Init at game/dlc_lively/bg/livingroom/livingroom.rpy:65 took 301 ms.
+ - Init at game/dlc_lively/bg/park/park.rpy:44 took 514 ms.
+ - Init at game/dlc_lively/bg/personal/personal.rpy:38 took 273 ms.
+ - Init at game/dlc_lively/bg/pond/pond.rpy:40 took 380 ms.
+ - Init at game/dlc_lively/bg/pool/pool.rpy:40 took 340 ms.
+ - Init at game/dlc_lively/bg/pub/pub.rpy:38 took 426 ms.
+ - Init at game/dlc_lively/bg/pubplay/pubplay.rpy:38 took 297 ms.
+ - Init at game/dlc_lively/bg/pubseat/pubseat.rpy:40 took 355 ms.
+ - Init at game/dlc_lively/bg/street/street.rpy:40 took 431 ms.
+ - Init at game/dlc_lively/bg/street2/street2.rpy:40 took 434 ms.
+ - Init at game/dlc_lively/bg/waterpark/waterpark.rpy:38 took 331 ms.
+Running init code took 156426 ms
+Loading analysis data took 106 ms
+Analyze and compile ATL took 87 ms
+Reloading save slot metadata took 14 ms
+Dump and make backups took 1 ms
+Cleaning cache took 0 ms
+Making clean stores took 1 ms
+Initial gc took 1641 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 86 ms
+Cleaning stores took 1 ms
+Load screen analysis took 0 ms
+Analyze screens took 90 ms
+Save screen analysis took 70 ms
+Save pyanalysis took 43 ms
+Save bytecode took 56 ms
+Running _start took 36 ms
+Interface start took 4205 ms
 
-The game contains 241,363 dialogue blocks, containing 2,512,337 words and
-12,864,663 characters, for an average of 10.4 words and 53 characters per
-block.
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'AMD'
+Renderer: 'AMD Radeon Vega 8 Graphics (radeonsi, raven, ACO, DRM 3.64, 6.17.0-35-generic)'
+Version: '4.6 (Compatibility Profile) Mesa 25.2.8-0ubuntu0.24.04.2'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1280, 720) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
 
-The game contains 2,320 menus, 35 images, and 93 screens.
+Full traceback:
+  File "game/start.rpy", line 1226, in script call
+    call enter_room from _call_enter_room
+  File "game/cl/labels_room.rpy", line 100, in script call
+    call activity_do (_return) from _call_activity_do_1
+  File "game/cl/labels_activity.rpy", line 44, in script call
+    call expression lab pass (*args) from _call_expression_512
+  File "game/ac/appointment.rpy", line 55, in script call
+    call expression appointment.do() pass (appointment) from _call_expression_84
+  File "game/ev/romance.rpy", line 147, in script
+    $ renpy.show(f"{date_girl.id} casual")
+  File "renpy/ast.py", line 1187, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "renpy/python.py", line 1273, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/ev/romance.rpy", line 147, in <module>
+    $ renpy.show(f"{date_girl.id} casual")
+  File "renpy/exports/displayexports.py", line 486, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "renpy/display/image.py", line 444, in find_target
+    self.target = target._duplicate(a)
+  File "renpy/display/displayable.py", line 278, in _duplicate
+    args.extraneous()
+  File "renpy/display/displayable.py", line 118, in extraneous
+    raise Exception(
+    ...<4 lines>...
+    )
+Exception: Image 'aletta' does not accept attributes 'casual'.
 
-
-Lint is not a substitute for thorough testing. Remember to update Ren'Py
-before releasing. New releases fix bugs and improve compatibility.
+While running game code:
+  File "game/start.rpy", line 1226, in script call
+    call enter_room from _call_enter_room
+  File "game/cl/labels_room.rpy", line 100, in script call
+    call activity_do (_return) from _call_activity_do_1
+  File "game/cl/labels_activity.rpy", line 44, in script call
+    call expression lab pass (*args) from _call_expression_512
+  File "game/ac/appointment.rpy", line 55, in script call
+    call expression appointment.do() pass (appointment) from _call_expression_84
+  File "game/ev/romance.rpy", line 147, in script
+    $ renpy.show(f"{date_girl.id} casual")
+  File "game/ev/romance.rpy", line 147, in <module>
+    $ renpy.show(f"{date_girl.id} casual")
+Exception: Image 'aletta' does not accept attributes 'casual'.

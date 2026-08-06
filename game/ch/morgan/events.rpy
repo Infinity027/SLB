@@ -174,10 +174,7 @@ init python:
     "conditions": [
         IsDone("morgan_event_08"),
         IsTimeOfDay("afternoon"),
-        HeroTarget(
-            
-            Not(OnDate()),
-            ),
+        HeroTarget(Not(OnDate())),
         PersonTarget(morgan,
             Not(IsPresent()),
             Not(IsHidden()),

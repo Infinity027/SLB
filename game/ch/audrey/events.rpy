@@ -203,9 +203,7 @@ init python:
             IsDone("audrey_event_04b")
            ),
         IsHour(19),
-        HeroTarget(
-            
-            Not(OnDate())),
+        HeroTarget(Not(OnDate())),
         PersonTarget(audrey,
             MinStat("love", 100),
             Not(IsFlag("delay"))

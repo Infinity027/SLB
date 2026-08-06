@@ -1,18 +1,18 @@
-init python:
-    # InteractActivity(**{
-    # "name": "command",
-    # "label": "command_girl",
-    # "display_name": "Command",
-    # "icon": "command",
-    # "duration": 0,
-    # "conditions": [
-    #     ActiveTarget(
-    #         IsFlag("breakup", False),
-    #         MinStat("sub", 50),
-    #         ),
-    #     ],
-    # "once_day": "ACTIVE",
-    # })
+# init python:
+#     # InteractActivity(**{
+#     # "name": "command",
+#     # "label": "command_girl",
+#     # "display_name": "Command",
+#     # "icon": "command",
+#     # "duration": 0,
+#     # "conditions": [
+#     #     ActiveTarget(
+#     #         IsFlag("breakup", False),
+#     #         MinStat("sub", 50),
+#     #         ),
+#     #     ],
+#     # "once_day": "ACTIVE",
+#     # })
 
 
 label command_girl:

@@ -27,10 +27,7 @@ init python:
     "girl": "cherie",
     "conditions": [
         IsHour(13, 14),
-        HeroTarget(
-            
-            Not(OnDate()),
-            ),
+        HeroTarget(Not(OnDate())),
         GameTarget(IsFlag("noTexting", False)),
         PersonTarget(cherie,
             Not(IsHidden()),

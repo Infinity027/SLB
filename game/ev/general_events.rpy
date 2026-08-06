@@ -17,10 +17,7 @@ init python:
         "conditions": [
             IsHour(10, 17),
             MinDaysPlayed(7),
-            HeroTarget(
-                
-                IsRoom("map")
-                ),
+            HeroTarget(IsRoom("map")),
             ],
         "do_once": True,
         "music": "music/roa_music/the_one.ogg",

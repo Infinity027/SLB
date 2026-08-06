@@ -343,10 +343,7 @@ init python:
     "conditions": [
         IsDone("hanna_event_07a"),
         IsNotDone("hanna_gym_profits_alternate"),
-        HeroTarget(
-            
-            Not(OnDate())
-            ),
+        HeroTarget(Not(OnDate()),),
         PersonTarget(hanna,
             IsPresent(),
             Not(IsHidden()),
@@ -364,10 +361,7 @@ init python:
     "conditions": [
         IsDone("hanna_event_07b"),
         IsNotDone("hanna_gym_profits"),
-        HeroTarget(
-            
-            Not(OnDate())
-            ),
+        HeroTarget(Not(OnDate())),
         PersonTarget(hanna,
             IsPresent(),
             Not(IsHidden()),

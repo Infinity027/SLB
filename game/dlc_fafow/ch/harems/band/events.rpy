@@ -176,10 +176,7 @@ init python:
     "conditions": [
         "len([peace_flags for peace_flags in [amy.flags.peace_with_anna, amy.flags.peace_with_kleio, amy.flags.peace_with_sasha, amy.flags.possible_peace_with_anna, amy.flags.possible_peace_with_kleio, amy.flags.possible_peace_with_sasha] if peace_flags]) >= 2",
         IsDone("band_harem_amy_event_02", "band_harem_amy_event_04", "band_harem_amy_event_06"),
-        HeroTarget(
-            
-            Not(OnDate()),
-            ),
+        HeroTarget(Not(OnDate())),
         PersonTarget("amy",
             IsFlag("amydelay", False),
             IsActive(),

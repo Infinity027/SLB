@@ -9,7 +9,6 @@ init python:
                 IsActive(),
                 MinStat("love", 120),
                 Not(IsActivity("sleep")),
-                IsVisiblyPregnant(),
                 "active_girl not in [cherie, claire, kiara]",
                 ),
             ],

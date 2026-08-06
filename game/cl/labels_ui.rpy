@@ -365,8 +365,7 @@ screen smartphone(char=None, selected_screen="home"):
                     text "{b}Job (day):{/b} [job_day]" alt ""
                     $ character_self_voicing += f". Job (day): {job_day}"
 
-                        text "{b}Sex:{/b} Male" alt ""
-
+                    text "{b}Sex:{/b} Male" alt ""
                     button:
                         style "empty"
                         action NullAction()

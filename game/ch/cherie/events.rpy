@@ -61,9 +61,7 @@ init python:
     "conditions": [
         IsDone("cassidy_chat_about_cherie2", "aletta_chat_about_cherie2"),
         IsHour(10, 22),
-        HeroTarget(
-            Not(OnDate()),
-            ),
+        HeroTarget(Not(OnDate()),),
         ],
     "priority": 1000,
     "music": "music/roa_music/focus.ogg",
@@ -107,10 +105,7 @@ init python:
     "rooms": "mansion",
     "conditions": [
         InInventory("dwayne_corpse"),
-        HeroTarget(
-            Not(OnDate()),
-            
-            ),
+        HeroTarget(Not(OnDate()),),
         ],
     "music": "music/roa_music/focus.ogg",
     "do_once": True,
@@ -144,10 +139,7 @@ init python:
     "conditions": [
         InInventory("dwayne_corpse"),
         IsHour(20, 6),
-        HeroTarget(
-            Not(OnDate()),
-            
-            ),
+        HeroTarget(Not(OnDate()),),
         ],
     "do_once": True,
     "icon": "dwayne",
@@ -161,10 +153,7 @@ init python:
     "rooms": "mansion",
     "conditions": [
         InInventory("aletta_gun"),
-        HeroTarget(
-            Not(OnDate()),
-            
-            ),
+        HeroTarget(Not(OnDate()),),
         ],
     "do_once": True,
     "icon": "aletta",
@@ -179,10 +168,7 @@ init python:
     "conditions": [
         InInventory("aletta_gun"),
         IsHour(20, 6),
-        HeroTarget(
-            Not(OnDate()),
-            
-            ),
+        HeroTarget(Not(OnDate()),),
         ],
     "do_once": True,
     "icon": "aletta",
@@ -198,9 +184,7 @@ init python:
         InInventory("aletta_gun"),
         IsHour(20, 6),
         HeroTarget(
-            Not(OnDate()),
-            
-            ),
+            Not(OnDate()),),
         ],
     "do_once": True,
     "icon": "aletta",
@@ -216,9 +200,7 @@ init python:
         InInventory("aletta_gun"),
         IsHour(20, 6),
         HeroTarget(
-            Not(OnDate()),
-            
-            ),
+            Not(OnDate()),),
         ],
     "do_once": True,
     "icon": "aletta",
@@ -234,10 +216,7 @@ init python:
         InInventory("aletta_gun"),
         IsHour(20, 6),
         IsSeason(0, 1, 2),
-        HeroTarget(
-            Not(OnDate()),
-            
-            ),
+        HeroTarget(Not(OnDate()),),
         ],
     "do_once": True,
     "icon": "aletta",

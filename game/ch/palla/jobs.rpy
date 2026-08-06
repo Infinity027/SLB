@@ -463,8 +463,6 @@ init python:
     "do_once": True,
     })
 
-
-
 label palla_new_job(job):
     $ palla.flags.schedule = "working"
     if job.id == 'hawtbitches':

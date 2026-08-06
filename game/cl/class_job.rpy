@@ -1,8 +1,6 @@
 
 init -20 python:
 
-
-
     class Job(Conditioned):
         def __init__(
         self,
@@ -27,8 +25,6 @@ init -20 python:
             self.difficulty = difficulty
             
             JOBS[self.id] = self
-
-
 
 init python:
     def career_daily_girl(girl):

@@ -442,10 +442,7 @@ init python:
     "duration": 1,
     "conditions": [
         IsDone("reona_redemption_01"),
-        HeroTarget(
-            
-            Not(OnDate()),
-            ),
+        HeroTarget(Not(OnDate())),
         PersonTarget(reona,
             IsPresent(),
             MinStat("purity", 20),

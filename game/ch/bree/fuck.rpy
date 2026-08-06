@@ -1726,7 +1726,7 @@ label bree_fuck_date_doggy(sexperience_min):
         mike.say "I know...it was touch and go for a while!"
         mike.say "You get me so worked up with passion, [bree.name] - I think we need to use a condom in future!"
         "My compliment does nothing to keep her from blushing all the more."
-            "[bree.name] doesn't say anything more, but she wraps her arms around me in an embrace that's worth a thousand words."
+        "[bree.name] doesn't say anything more, but she wraps her arms around me in an embrace that's worth a thousand words."
     elif _return == "vaginal_inside_pill":
         $ bree.sub += 1
         "I'm too far gone to even think about pulling out of [bree.name] by now, and so I press on regardless."

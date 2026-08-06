@@ -131,10 +131,7 @@ init python:
     "conditions": [
         IsDone("morgan_kleio_event_02A", "morgan_kleio_event_02B"),
         IsNotDone("morgan_kleio_event_03"),
-        HeroTarget(
-            
-            Not(OnDate()),
-            ),
+        HeroTarget(Not(OnDate()),),
         PersonTarget(kleio,
             Not(IsHidden()),
             IsActive(),

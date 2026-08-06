@@ -447,9 +447,7 @@ init python:
             IsDone("samantha_event_D05B"),
         ),
         IsHour(14, 15),
-        HeroTarget(
-            
-            Not(OnDate())),
+        HeroTarget(Not(OnDate())),
         PersonTarget(samantha,
             Not(IsPresent()),
             Not(IsHidden()),

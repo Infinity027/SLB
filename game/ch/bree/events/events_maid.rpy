@@ -8,8 +8,7 @@ init python:
         IsNotDone("bree_event_05"),
         IsDayOfWeek("12345"),
         IsHour(12, 18),
-        HeroTarget(       
-            Not(OnDate())),
+        HeroTarget(Not(OnDate())),
         PersonTarget(bree,
             Not(IsPresent()),
             Not(IsHidden()),

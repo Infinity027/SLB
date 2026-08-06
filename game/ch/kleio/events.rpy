@@ -75,9 +75,7 @@ init python:
     "conditions": [
         IsDone("kleio_event_02"),
         IsHour(5, 8),
-        HeroTarget(
-            
-            Not(OnDate())),
+        HeroTarget(Not(OnDate())),
         PersonTarget(kleio,
             Not(IsPresent()),
             Not(IsHidden()),
@@ -208,10 +206,7 @@ init python:
             ),
         Not(IsDone("kleio_event_06b")),
         IsHour(12, 18),
-        HeroTarget(
-            
-            Not(OnDate()),
-            ),
+        HeroTarget(Not(OnDate())),
         PersonTarget(kleio,
             Not(IsPresent()),
             Not(IsHidden()),
@@ -499,9 +494,7 @@ init python:
     "priority": 500,
     "label": "kleio_twintails_01",
     "conditions": [
-        HeroTarget(
-            Not(OnDate()),
-            ),
+        HeroTarget(Not(OnDate())),
         PersonTarget(kleio,
             IsActive(),
             IsFlag("chosenbree"),
@@ -517,9 +510,7 @@ init python:
     "priority": 1000,
     "label": "kleio_twintails_02",
     "conditions": [
-        HeroTarget(
-            Not(OnDate()),
-            ),
+        HeroTarget(Not(OnDate())),
         PersonTarget(kleio,
             IsPresent(),
             Not(IsHidden()),
@@ -535,10 +526,7 @@ init python:
     "priority": 500,
     "label": "kleio_call_me_master",
     "conditions": [
-        HeroTarget(
-            
-            Not(OnDate()),
-            ),
+        HeroTarget(Not(OnDate())),
         PersonTarget(kleio,
             IsActive(),
             IsFlag("girlfriend"),
