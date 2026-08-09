@@ -600,28 +600,28 @@ init -11 python:
                 raise Exception("Using hero.cancel_event outside an event.")
 
 
-    def random_npc_impregnate(npc_name, force=False, x="left", y="top"):
-        """
-    Use for BreeMC when impregnate by random npc (pornstar)
-    """
+    # def random_npc_impregnate(npc_name, force=False, x="left", y="top"):
+    #     """
+    # Use for BreeMC when impregnate by random npc (pornstar)
+    # """
         
-        if game.flags.nopreg or hero.is_male:
-            return False
+    #     if game.flags.nopreg or hero.is_male:
+    #         return False
         
-        if hero.counters.pregnant == 0 and (force or (randint(1, 100) <= hero.fertility)):
-            hero.set_counter("pregnant")
-            hero.flags.pregnancy_father = npc_name
-            if persistent.pregnancy_notification:
-                renpy.show(
-                f"fx impregnate rnd{randint(1, 5)}",
-                at_list=[
-                    impregnate_display(
-                        0.05 if x == "left" else 0.95, 0.05 if y == "top" else 0.95
-                    )
-                ],
-            )
-            return True
-        return False
+    #     if hero.counters.pregnant == 0 and (force or (randint(1, 100) <= hero.fertility)):
+    #         hero.set_counter("pregnant")
+    #         hero.flags.pregnancy_father = npc_name
+    #         if persistent.pregnancy_notification:
+    #             renpy.show(
+    #             f"fx impregnate rnd{randint(1, 5)}",
+    #             at_list=[
+    #                 impregnate_display(
+    #                     0.05 if x == "left" else 0.95, 0.05 if y == "top" else 0.95
+    #                 )
+    #             ],
+    #         )
+    #         return True
+    #     return False
 
 
     def artificial_impregnate():

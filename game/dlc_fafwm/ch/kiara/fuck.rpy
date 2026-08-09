@@ -1101,9 +1101,6 @@ label kiara_fuck_date_cowgirl(sexperience_min):
             "Kiara seems to be holding onto me for dear life, pinning me to the bed."
             "At the same time I'm desperately pushing upwards, gripping her tightly."
 
-
-
-
             play sexsfx1 fuck_sprint loop
             show kiara cowgirl at startle(0.04,-10)
             pause 0.15
@@ -1128,7 +1125,6 @@ label kiara_fuck_date_cowgirl(sexperience_min):
                 "Faced with the choice of pulling out or keeping going, I choose to keep going."
                 with vpunch
                 "Putting all of my energies into one last effort to please Kiara as I cum myself."
-                $ kiara.impregnate()
                 play sexsfx1 final_thrust
                 show kiara cowgirl pleasure ahegao cum with vpunch
                 "This means that I shoot my load while I'm as deep inside of her as it's possible to be."

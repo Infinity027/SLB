@@ -47,7 +47,7 @@ init -15 python:
                 self.set_counter("pregnant")
                 self.flags.pregnancies_number += 1
                 self.flags.pregrequest = False
-                if persistent.pregnancy_notification and not secret:
+                if not secret:
                     renpy.show(
                     f"fx impregnate rnd{randint(1, 5)}",
                     at_list=[

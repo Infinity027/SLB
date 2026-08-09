@@ -872,8 +872,6 @@ init -999 python:
 
 
     def update_23_6_0():
-        persistent.pregnancy_notification = True
-        
         if shiori.flags.analSex:
             shiori.flags.analsex = True
 

@@ -1085,12 +1085,8 @@ label audrey_fuck_date_spoon(sexperience_min):
         audrey.say "Yes, That's soooo good... [hero.name]!"
         $ audrey.love += 2
     else:
-        if persistent.xray:
-            show audrey spoon xray xraycream ahegao
-        else:
-            show audrey spoon creampie ahegao
         audrey.say "Yes, fill me up, I am yours... [hero.name]!"
-        #$ audrey.impregnate()
+        
         play sexsfx1 cum_inside
         with hpunch
         play sound [audrey_moans_happy_orgasm_1, audrey_moans_breathing_fast, audrey_moans_breathing_slow]
@@ -1322,7 +1318,7 @@ label audrey_fuck_date_doggy(sexperience_min):
                 stop sound
                 audrey.say "Wait..."
                 audrey.say "Don't you..."
-                #$ audrey.impregnate()
+                
                 play sexsfx1 cum_inside
                 with hpunch
                 "But it's already too late, as I feel myself cumming inside of Audrey."
@@ -1342,7 +1338,7 @@ label audrey_fuck_date_doggy(sexperience_min):
                 play sound audrey_moans_happy_orgasm_1
                 $ audrey.love += 5
                 show audrey doggy ahegao with hpunch
-                #$ audrey.impregnate()
+                
                 "She takes me by complete surprise, and I lose myself inside of her a moment later."
                 with hpunch
                 "Audrey rides my cock until the very last, gasping in delight as she does so."
@@ -1569,7 +1565,7 @@ label audrey_fuck_date_cowgirl(sexperience_min):
                 "I only realise the mistake I've made as Audrey tries to clamber off of me."
                 show audrey cowgirl creampie with vpunch
                 play sexsfx1 cum_inside
-                #$ audrey.impregnate()
+                
                 "But it's too late, and a second later I cum deep inside of her."
                 $ audrey.love -= 5
                 with vpunch
@@ -1584,7 +1580,7 @@ label audrey_fuck_date_cowgirl(sexperience_min):
                 play sexsfx1 final_thrust
                 show audrey cowgirl creampie ahegao with vpunch
                 play sound [audrey_moans_happy_orgasm_1, audrey_moans_breathing_fast, audrey_moans_breathing_slow]
-                #$ audrey.impregnate()
+                
                 "But it's too late, as I'm already shooting my load inside of Audrey."
                 "I fix her with a horrified look as I do so, expecting to see her doing the same."
                 $ audrey.love += 5
@@ -1884,7 +1880,7 @@ label audrey_fuck_date_reverse_cowgirl(sexperience_min):
                 show audrey reverse cowgirl creampie with vpunch
                 play sexsfx1 cum_inside
                 with vpunch
-                #$ audrey.impregnate()
+                
                 "Audrey desperately tries to clamber off me, but it's no good."
                 $ audrey.love -= 5
                 "What on earth did I just do?"
@@ -1902,7 +1898,7 @@ label audrey_fuck_date_reverse_cowgirl(sexperience_min):
                 show audrey reverse cowgirl creampie with vpunch
                 play sexsfx1 final_thrust
                 play sound [audrey_moans_happy_orgasm_1, audrey_moans_breathing_fast, audrey_moans_breathing_slow]
-                #$ audrey.impregnate()
+                
                 with vpunch
                 "But she seems delighted, grinding herself on me the whole time."
                 $ audrey.love += 5
@@ -2077,7 +2073,7 @@ label audrey_fuck_date_stand(sexperience_min):
                 play sexsfx1 cum_inside
                 play sound [audrey_moans_happy_orgasm_1, audrey_moans_breathing_fast, audrey_moans_breathing_slow]
                 $ audrey.love += 5
-                #$ audrey.impregnate()
+                
                 show audrey standing cum ahegao with vpunch
                 "There's no way I can stop myself from losing it inside of her."
                 with vpunch
@@ -2093,7 +2089,7 @@ label audrey_fuck_date_stand(sexperience_min):
                 play sexsfx1 final_thrust
                 play sound [audrey_moans_happy_orgasm_1, audrey_moans_breathing_fast, audrey_moans_breathing_slow]
                 $ audrey.love -= 5
-                #$ audrey.impregnate()
+                
                 show audrey standing cum normal -blush with vpunch
                 "There's no way I can stop myself from losing it inside of her."
                 with vpunch
@@ -2714,7 +2710,7 @@ label audrey_fuck_office_missionary(sexperience_min):
                 show audrey missionary creampie ahegao with vpunch
                 play sexsfx1 final_thrust
                 play sound [audrey_moans_happy_orgasm_1, audrey_moans_breathing_fast, audrey_moans_breathing_slow]
-                #$ audrey.impregnate()
+                
                 "And so, with one last thrust, I let go and shoot my load."
                 with vpunch
                 "Audrey's already shaking from her own orgasm."
@@ -2734,7 +2730,7 @@ label audrey_fuck_office_missionary(sexperience_min):
                 play sexsfx1 final_thrust
                 $ audrey.love -= 5
                 show audrey missionary creampie ahegao with vpunch
-                #$ audrey.impregnate()
+                
                 "And so, with one last thrust, I let go and shoot my load."
                 with vpunch
                 "Audrey's already shaking from her own orgasm."

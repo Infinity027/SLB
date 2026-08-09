@@ -23,7 +23,7 @@ init -100:
     define DAYS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
     default LAST_HEARTBEAT = 0
 
-
+#
     define MAX_LES_GUY_DATE = 18
     define MAX_LES_GUY_KISS = 16
     define MAX_LES_GUY_SEX = 12
@@ -116,8 +116,6 @@ init -100 python:
         persistent.room_display = "h"
         persistent.window_opacity = 1.0
         persistent.set_default = True
-        persistent.pregnancy_end = True
-        persistent.pregnancy_notification = True
         persistent.mute_characters = False
         persistent.tts_override = False
         persistent.selector = True

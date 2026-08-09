@@ -458,12 +458,6 @@ init -15 python:
             ):
                     renpy.say("", "It's " + g() + "'s birthday.")
                     g.flags.age_increase += 1
-                if g.counters.pregnant >= 60 and persistent.pregnancy_end:
-                    g.flags.mikeBabies += 1
-                    g.unpreg()
-                    if not g.flags.engagedmike:
-                        g.love -= g.flags.birthPenalty + 25
-                    renpy.say("", g.name + " gave birth today.")
             if self.calendar.is_today("valentine"):
                 renpy.say("", "It's Valentine's Day.")
             elif self.calendar.is_today("christmas"):
