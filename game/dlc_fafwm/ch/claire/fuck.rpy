@@ -279,7 +279,7 @@ label claire_hottub_sex_male:
             "And it doesn't take me long to feel it pressing at the edge of her hole."
             scene expression make_anim(claire_hottub03, time=0.4, loop=True)
             "I can see the effect that even something as small as this is having on her."
-            play sound "vo/claire/light_moan.ogg" loop True
+            play sound "vo/claire/light_moan.ogg" loop
             "Claire's cheeks are more than flushed now, they're practically red and glowing."
             "But I can already feel that there's blood rushing to another part of her body too."
             "All I can think to do is push ahead, literally driving myself all the way into her."

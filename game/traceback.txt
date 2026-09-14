@@ -1,0 +1,145 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/ch/kiara/images_new.rpy", line 14, in script
+    init python:
+  File "game/ch/kiara/images_new.rpy", line 26, in <module>
+    kiara_blow_03,
+    ^^^^^^^^^^^^^ 
+NameError: name 'kiara_blow_03' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "game/ch/kiara/images_new.rpy", line 14, in script
+    init python:
+  File "game/ch/kiara/images_new.rpy", line 14, in script
+    init python:
+  File "game/cl/labels_ui.rpy", line 101, in prepare_screen
+    screen smartphone(char=None, selected_screen="home"):
+  File "game/cl/labels_ui.rpy", line 101, in prepare
+    screen smartphone(char=None, selected_screen="home"):
+  File "game/cl/labels_ui.rpy", line 119, in prepare
+    frame:
+  File "game/cl/labels_ui.rpy", line 119, in prepare
+    frame:
+  File "game/cl/labels_ui.rpy", line 123, in prepare
+    if smartphone_screen == "home":
+  File "game/cl/labels_ui.rpy", line 261, in prepare
+    elif smartphone_screen == "character":
+  File "game/cl/labels_ui.rpy", line 279, in prepare
+    text f"{hero.age + hero.flags.age_increase}" size 18 pos (249, 41) alt ""
+  File "game/cl/labels_ui.rpy", line 279, in <module>
+    text f"{hero.age + hero.flags.age_increase}" size 18 pos (249, 41) alt ""
+             ^^^^^^^^                                                        
+  File "game/cl/class_hero.rpy", line 134, in __getattr__
+    raise e
+  File "game/cl/class_hero.rpy", line 130, in __getattr__
+    return Proxied.__getattr__(self, attr)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "game/cl/class_proxied.rpy", line 28, in __getattr__
+    return getattr(store, self._store)[attr]
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^      
+AttributeError: 'StoreModule' object has no attribute 'DATA_HERO'
+
+-- Full Traceback ------------------------------------------------------------
+
+Traceback (most recent call last):
+  File "game/ch/kiara/images_new.rpy", line 14, in script
+    init python:
+  File "renpy/ast.py", line 1187, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1273, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "game/ch/kiara/images_new.rpy", line 26, in <module>
+    kiara_blow_03,
+    ^^^^^^^^^^^^^ 
+NameError: name 'kiara_blow_03' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "renpy/bootstrap.py", line 401, in bootstrap
+    renpy.main.main()
+    ~~~~~~~~~~~~~~~^^
+  File "renpy/main.py", line 556, in main
+    node.execute_init()
+    ~~~~~~~~~~~~~~~~~^^
+  File "renpy/ast.py", line 1071, in execute_init
+    renpy.game.context().run(self.block[0])
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "game/ch/kiara/images_new.rpy", line 14, in script
+    init python:
+  File "game/ch/kiara/images_new.rpy", line 14, in script
+    init python:
+  File "renpy/display/error.py", line 135, in report_exception
+    renpy.game.invoke_in_new_context(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        call_exception_screen,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        ignore_action=ignore_action,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "renpy/game.py", line 285, in invoke_in_new_context
+    return callable(*args, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "renpy/display/error.py", line 44, in call_exception_screen
+    return renpy.ui.interact(mouse="screen", type="screen", suppress_overlay=True, suppress_underlay=True)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/ui.py", line 306, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 2154, in interact
+    repeat, rv = self.interact_core(
+                 ~~~~~~~~~~~~~~~~~~^
+        preloads=preloads,
+        ^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "renpy/display/core.py", line 2384, in interact_core
+    renpy.display.screen.prepare_screens()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "renpy/display/screen.py", line 1035, in prepare_screens
+    s.ast.prepare_screen()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "game/cl/labels_ui.rpy", line 101, in prepare_screen
+    screen smartphone(char=None, selected_screen="home"):
+  File "game/cl/labels_ui.rpy", line 101, in prepare
+    screen smartphone(char=None, selected_screen="home"):
+  File "game/cl/labels_ui.rpy", line 119, in prepare
+    frame:
+  File "game/cl/labels_ui.rpy", line 119, in prepare
+    frame:
+  File "game/cl/labels_ui.rpy", line 123, in prepare
+    if smartphone_screen == "home":
+  File "game/cl/labels_ui.rpy", line 261, in prepare
+    elif smartphone_screen == "character":
+  File "game/cl/labels_ui.rpy", line 279, in prepare
+    text f"{hero.age + hero.flags.age_increase}" size 18 pos (249, 41) alt ""
+  File "renpy/python.py", line 1298, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "game/cl/labels_ui.rpy", line 279, in <module>
+    text f"{hero.age + hero.flags.age_increase}" size 18 pos (249, 41) alt ""
+             ^^^^^^^^                                                        
+  File "game/cl/class_hero.rpy", line 134, in __getattr__
+    raise e
+  File "game/cl/class_hero.rpy", line 130, in __getattr__
+    return Proxied.__getattr__(self, attr)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "game/cl/class_proxied.rpy", line 28, in __getattr__
+    return getattr(store, self._store)[attr]
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^      
+AttributeError: 'StoreModule' object has no attribute 'DATA_HERO'
+
+Linux-7.0.0-31-generic-x86_64-with-glibc2.39 x86_64
+Ren'Py 8.5.2.26010301
+Love & Sex : Second Base -  26.4.0c
+Mon Sep 14 23:42:41 2026
