@@ -5072,9 +5072,6 @@ label palla_apartment_sex:
                         scene bg black
                         show palla missionary pallabedroom
                         with fade
-                        call check_condom_usage (palla) from _call_check_condom_usage_154
-                        if _return == False:
-                            return "leave_without_gain"
                         "Eager to make the most of the time that I have with Palla, I begin to get myself into position."
                         "She lies still beneath me, not moving an inch, but also not doing a thing to impede my efforts either."
                         "So it's simplicity itself to line myself up, pointing my manhood straight between Palla's thighs."
@@ -5460,9 +5457,6 @@ label palla_apartment_sex:
                         scene bg black
                         show palla missionary shawnbedroom
                         with fade
-                        call check_condom_usage (palla) from _call_check_condom_usage_157
-                        if _return == False:
-                            return "leave_without_gain"
                         "Eager to make the most of the time that I have with Palla, I begin to get myself into position."
                         "She lies still beneath me, not moving an inch, but also not doing a thing to impede my efforts either."
                         "So it's simplicity itself to line myself up, pointing my manhood straight between Palla's thighs."
@@ -5925,9 +5919,6 @@ label palla_apartment_sex:
                         "Zeroing in on the exquisite prize that I can seer peeking out from between her buttocks."
                         scene bg black
                         show palla doggy shawnbedroom with fade
-                        call check_condom_usage (palla) from _call_check_condom_usage_155
-                        if _return == False:
-                            return "leave_without_gain"
                         "Like I already said, there's only one thing of Palla's that I want right now."
                         "And every fleeting glimpse of it that I get as she moves her legs makes me all the more sure."
                         "I want that neat little pussy, and I want it as soon as I can get a hold of it!"
@@ -6165,9 +6156,6 @@ label palla_apartment_sex:
                         "I instantly push her against the bay windows."
                         scene bg black
                         show palla stand pleasure balcony dick with fade
-                        call check_condom_usage (palla) from _call_check_condom_usage_156
-                        if _return == False:
-                            return "leave_without_gain"
                         "Like I already said, there's only one thing of Palla's that I want right now."
                         "And every fleeting glimpse of it that I get as she moves her legs makes me all the more sure."
                         "I want that neat little pussy, and I want it as soon as I can get a hold of it!"

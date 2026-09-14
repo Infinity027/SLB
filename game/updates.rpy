@@ -1388,26 +1388,15 @@ init -999 python:
                 persistent.schedule_randomness = persistent.needs_randomness = False
         
         
-        if hero.gender == 'male':
-            if Person.find('minami'):
-                minami.family_name = hero.family_name
-            if Person.find('angela'):
-                angela.family_name = hero.family_name
-                angela.flags.status = angela.status.replace("Mike", hero.name)
-            if Person.find('dwayne'):
-                dwayne.flags.status = dwayne.status.replace("Mike", hero.name)
-            if Person.find('ryan'):
-                ryan.flags.status = ryan.status.replace("Mike", hero.name)
-        else:
-            if Person.find('minami'):
-                minami.family_name = mike.family_name
-            if Person.find('angela'):
-                angela.family_name = mike.family_name
-                angela.flags.status = angela.status.replace("Mike", mike.name)
-            if Person.find('dwayne'):
-                dwayne.flags.status = dwayne.status.replace("Mike", mike.name)
-            if Person.find('ryan'):
-                ryan.flags.status = ryan.status.replace("Mike", mike.name)
+        if Person.find('minami'):
+            minami.family_name = hero.family_name
+        if Person.find('angela'):
+            angela.family_name = hero.family_name
+            angela.flags.status = angela.status.replace("Mike", hero.name)
+        if Person.find('dwayne'):
+            dwayne.flags.status = dwayne.status.replace("Mike", hero.name)
+        if Person.find('ryan'):
+            ryan.flags.status = ryan.status.replace("Mike", hero.name)
 
     def update_24_7_0d():
         appointments = copy.deepcopy(hero.calendar.appointments)
@@ -1720,16 +1709,10 @@ init -999 python:
             if person:
                 if "[hero.name]" in person.status:
                     person.status = person.status.replace("[hero.name]", hero.name)
-                elif "[bree.name]" in person.status:
-                    if hero.gender == "female":
-                        person.status = person.status.replace("[bree.name]", hero.name)
-                    elif Person.find("bree"):
-                        person.status = person.status.replace("[bree.name]", bree.name)
-                elif "[mike.name]" in person.status:
-                    if hero.gender == "male":
-                        person.status = person.status.replace("[mike.name]", hero.name)
-                    elif Person.find("mike"):
-                        person.status = person.status.replace("[mike.name]", mike.name)
+                elif "[bree.name]" in person.status and Person.find("bree"):
+                    person.status = person.status.replace("[bree.name]", bree.name)
+                elif "[mike.name]" in person.status and Person.find("mike"):
+                    person.status = person.status.replace("[mike.name]", mike.name)
 
     def update_26_1_0():
         if Person.find("reona"):

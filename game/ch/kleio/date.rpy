@@ -177,24 +177,23 @@ label kleio_dick_reactions:
     if not kleio.flags.seendick:
         $ kleio.flags.seendick = 1
         if hero.has_skill("hung"):
-            show dick reactions kleio smile
+            show kleio_dick_reaction
             kleio.say "Ahah!"
             kleio.say "I always said you were a big prick!"
             mike.say "Gee, thanks, Kleio!"
             kleio.say "Ah, don't be like that, Loverboy."
-            show dick reactions kleio tasty
             kleio.say "Get over here and thank me with that thing instead!"
             $ kleio.sub += 10
+            hide kleio_dick_reaction
         elif hero.has_skill("smalldick"):
-            show dick reactions kleio mock
+            show kleio annoyed
             kleio.say "I take it back, Loverboy."
             kleio.say "You're a little prick, not a big one!"
             mike.say "Hey!"
             kleio.say "Oh, you don't like that, huh?"
-            show dick reactions kleio tasty
             kleio.say "Then show me what you can do with that thing!"
             $ kleio.sub -= 10
-        hide dick reactions
+            hide kleio annoyed
     return
 
 label kleio_halloween_invitation:

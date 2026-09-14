@@ -172,27 +172,26 @@ label alexis_dick_reactions:
     if not alexis.flags.seendick:
         $ alexis.flags.seendick = 1
         if hero.has_skill("hung"):
-            show dick reactions alexis scared
+            show alexis_dick_reaction
             alexis.say "Whoa!"
             mike.say "What's up, Alexis?"
             mike.say "It's not like you never saw it before now!"
-            show dick reactions alexis smile
             alexis.say "I...I know..."
             alexis.say "I just never remembered it being THAT big!"
             $ alexis.sub += 10
             $ alexis.love += 10
+            hide alexis_dick_reaction
         elif hero.has_skill("smalldick"):
-            show dick reactions alexis disgusted
+            show alexis annoyed
             alexis.say "Oh my god!"
             mike.say "What's up, Alexis?"
             mike.say "It's not like you never saw it before now!"
             alexis.say "I...I know..."
             alexis.say "I just remembered it being bigger, that's all."
-            show dick reactions alexis mock
             alexis.say "Did you have surgery to make it smaller or something?"
             $ alexis.sub -= 10
             $ alexis.love -= 10
-        hide dick reactions
+            hide alexis annoyed
     return
 
 label alexis_halloween_invitation:

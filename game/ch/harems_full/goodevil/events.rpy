@@ -6,7 +6,7 @@ init python:
     "conditions": [
         HeroTarget(
             OnDate(),
-            IsRoom("date_beach", "date_nudistbeach"),
+            IsRoom("date_beach"),
             ),
         PersonTarget(lexi,
             OnDate(),

@@ -205,59 +205,40 @@ label cherie_hottub_sex_male:
     "And then she pushes herself towards me through the water."
     "Instinctively I open my arms to her, guiding her to me."
     "Then, without the need for another word, she straddles my waist and puts her arms around my neck."
+    scene cherie hottub_kiss with fade
     "Cherie begins to kiss me passionately a moment later, almost instantly using her tongue."
     "And I don't resist her for a second, already feeling the passion that she's stoked inside of me."
-    "By now there's no need for us to communicate with words, our actions doing the speaking for us."
-    "Cherie's pretty much sitting astride me by now, firmly in place and staying there."
-    "Which means that my hands are free to begin exploring her body, and they do so in earnest."
-    "I feel her shiver and wriggle as I run them down her back, then caress her buttocks."
-    "But as soon as they're below her waist, Cherie bears down on me."
-    "Almost like she's trying to plant herself on top of my hands and trap them."
-    "My brain's working on instinct alone, and so it easily interprets Cherie's intent."
-    "Wrapping my fingers around the gusset of her bikini bottoms, I pull it aside."
-    "And then I begin to stroke the lips of her pussy with the fingers of the other hand."
-    "Cherie instantly breaks off the kiss, throwing her head back in dramatic fashion."
     "But I can see that she's nodding, telling me that she wants more of the same."
     "So I start to hastily tug at my trunks, pulling them down to release my cock."
     "Needless to say it's already hard, and pops up the moment it's freed."
     "And then I line Cherie up, getting ready to take things to the next stage."
     menu:
         "Fuck her ass":
-            scene hottub sex male cherie sexyswimsuit with fade
+            scene hottub07 with fade
             "And she does all that she can to help make it happen too."
             "Pushing herself straight down and onto me a moment later."
             "But I think she's expecting me to make a beeline for her pussy."
             "Which is a shame, because I have something a little different in mind."
             "Pulling Cherie towards me so that my manhood pokes between her buttocks."
             "This means that the head of my cock is pressed hard against her hole."
-            "The tip skidding around the edge, which only seems to make her want it all the more."
-            "Taking a more firm hold on Cherie, I make sure that I'm in the right spot."
+            scene hottub08 with fade
             "Then I begin to move with a more controlled kind of motion than before."
             "The regular pattern of my movements seems to do the trick, making Cherie slow down."
             "Not only that, but I feel her yield to me as well, letting me set the pace."
             "Soon enough my strategy starts to get results, as I feel her muscles relax."
-            "And then I half gasp as I feel the head slide perhaps half in inch inside."
-            "But that's all I need to make it happen, instantly thrusting harder than before."
+            scene expression make_anim(cherie_ass01, time=0.5, loop=True)
             "Cherie moans and puts her head on my shoulder as my cock pushes into her."
             "And I can feel the sensation of her sinking down and onto me too."
-            "I slow down while it happens, almost coming to a complete stop."
             "Just letting gravity and Cherie's own weight do all of the work for me."
             "Soon enough I'm as far into her as it's physically possible for me to go."
             "And she's clinging on as if for dear life, quaking the whole time."
-            "Part of me wants to stay like this for as long as possible, to savour the sensation."
-            "But the part of me that wins is the one that desperately wants to grind away at Cherie."
-            "So almost without a conscious thought, I start to move inside of her."
-            "Pulling back and then thrusting forwards, I set the pace I intend to keep."
-            "And before either of us know it, I'm pounding away at Cherie for all I'm worth."
-            "She responds in kind, tightening her grip on me and pushing downwards."
-            "Her actions letting me know that she's completely down with what I'm doing."
-            "There's no way that Cherie could hope to tell me that using coherent words."
+            scene expression make_anim(cherie_ass02, time=0.4, loop=True)
             "As my ear is already filled with the sound of her gasping for breath."
             "The ragged sound of her breathing telling the tale of her tumultuous passion."
             "And it's not just the sensation of my cock inside of Cherie that's doing it for me either."
-            "I'm loving the way that her arms and legs are hugging me close right now."
             "That and the sensation of her flat belly against mine."
             "And obviously I couldn't fail to mention her breasts, right here in front of me."
+            scene hottub15 with fade
             "Her bikini top is straining to keep them under control as I pound away at her."
             "Pushing Cherie's cleavage ever closer to my face and threatening to smother me!"
             "But then, to my surprise, Cherie does actually manage to string together a couple of words."
@@ -269,81 +250,56 @@ label cherie_hottub_sex_male:
             "And I realise that she's about to cum!"
             call cum_reaction (cherie, 'vaginal', 1) from _call_cum_reaction_322
             if _return == "vaginal_outside":
-                show hottub sex male outside
+                show hottub12
                 "I choose this as the moment to pull back and make sure that I slide out of Cherie's ass."
-                show hottub cumshot ahegao with vpunch
                 $ cherie.sub += 1
-                "But the motion does nothing to lessen the impact of her orgasm when it hits."
                 with vpunch
-                "In fact it only seems to add to the intensity of the pleasure she's feeling."
+                "It only seems to add to the intensity of the pleasure she's feeling."
                 "Pushing her higher than ever and adding to the pleasure overwhelming her body."
             else:
                 "Wanting the exact same thing as Cherie does, I push myself harder than ever."
-                show hottub cumshot ahegao inside with vpunch
+                show hottub11 with vpunch
                 $ cherie.love += 1
                 "Meaning that I start to cum at the same time her orgasm really takes hold."
                 with vpunch
                 "And I make sure to let go when I'm as deep inside of her ass as I can get."
                 with vpunch
                 "Pushing her higher than ever and adding to the pleasure overwhelming her body."
+        
         "Fuck her pussy":
-            scene hottub sex male cherie sexyswimsuit with fade
+            scene hottub01 with fade
             "And she does all that she can to help make it happen too."
             "Pushing herself straight down and onto me a moment later."
+            scene hottub02 with fade
             "This means that the head of my cock is pressed hard against her pussy."
             "The tip skidding along her lips, which only seems to make her want it all the more."
-            "Taking a more firm hold on Cherie, I make sure that I'm in the right spot."
             "Then I begin to move with a more controlled kind of motion than before."
+            scene expression make_anim(cherie_pussy, time=0.5, loop=True)
             "The regular pattern of my movements seems to do the trick, making Cherie slow down."
             "Not only that, but I feel her yield to me as well, letting me set the pace."
             "Soon enough my strategy starts to get results, as I feel her pussy relax."
             "And then I half gasp as I feel the head slide perhaps half in inch inside."
             "But that's all I need to make it happen, instantly thrusting harder than before."
             "Cherie moans and puts her head on my shoulder as my cock pushes into her."
-            "And I can feel the sensation of her sinking down and onto me too."
-            "I slow down while it happens, almost coming to a complete stop."
-            "Just letting gravity and Cherie's own weight do all of the work for me."
-            "Soon enough I'm as far into her as it's physically possible for me to go."
-            "And she's clinging on as if for dear life, quaking the whole time."
-            "Part of me wants to stay like this for as long as possible, to savour the sensation."
-            "But the part of me that wins is the one that desperately wants to grind away at Cherie."
-            "So almost without a conscious thought, I start to move inside of her."
-            "Pulling back and then thrusting forwards, I set the pace I intend to keep."
-            "And before either of us know it, I'm pounding away at Cherie for all I'm worth."
-            "She responds in kind, tightening her grip on me and pushing downwards."
-            "Her actions letting me know that she's completely down with what I'm doing."
-            "There's no way that Cherie could hope to tell me that using coherent words."
-            "As my ear is already filled with the sound of her gasping for breath."
-            "The ragged sound of her breathing telling the tale of her tumultuous passion."
-            "And it's not just the sensation of my cock inside of Cherie that's doing it for me either."
-            "I'm loving the way that her arms and legs are hugging me close right now."
-            "That and the sensation of her flat belly against mine."
-            "And obviously I couldn't fail to mention her breasts, right here in front of me."
-            "Her bikini top is straining to keep them under control as I pound away at her."
-            "Pushing Cherie's cleavage ever closer to my face and threatening to smother me!"
-            "But then, to my surprise, Cherie does actually manage to string together a couple of words."
             cherie.say "Oh..."
             cherie.say "Oh, [hero.name]…"
             cherie.say "Here it comes...{i}la petite mort!{/i}"
+            scene hottub04 with fade
             "For a moment I have no idea what Cherie's even talking about."
             "But then I feel the sensation of her muscles squeezing my cock."
             "And I realise that she's about to cum!"
             call cum_reaction (cherie, 'anal', 1) from _call_cum_reaction_323
             if _return == "anal_outside":
-                show hottub sex male outside
+                show hottub05
                 "I choose this as the moment to pull back and make sure that I slide out of Cherie."
-                show hottub cumshot ahegao with vpunch
-                $ cherie.sub += 1
-                "But the motion does nothing to lessen the impact of her orgasm when it hits."
                 with vpunch
-                "In fact it only seems to add to the intensity of the pleasure she's feeling."
+                $ cherie.sub += 1
+                "It only seems to add to the intensity of the pleasure she's feeling."
                 "Pushing her higher than ever and adding to the pleasure overwhelming her body."
             else:
                 "Wanting the exact same thing as Cherie does, I push myself harder than ever."
-                show hottub cumshot ahegao with vpunch
+                show hottub06 with vpunch
                 $ cherie.love += 1
-                "Meaning that I start to cum at the same time her orgasm really takes hold."
-                with vpunch
                 "And I make sure to let go when I'm as deep inside of her as I can get."
                 with vpunch
                 "Pushing her higher than ever and adding to the pleasure overwhelming her body."
@@ -365,23 +321,17 @@ label cherie_fuck_date_male(location="hero"):
     scene bg street
     show cherie
 
-
     call cherie_fuck_date_intro_male (location) from _call_cherie_fuck_date_intro
-
 
     call cherie_dick_reactions from _call_cherie_dick_reactions
 
-
     call cherie_fuck_date_foreplay_male from _call_cherie_fuck_date_foreplay_male
 
-
     call cherie_fuck_date_choices_male from _call_cherie_fuck_date_choices_male
-
 
     call handle_npc_leaving (cherie, _return) from _call_handle_npc_leaving_30
     if _return:
         return
-
 
     hide cherie
     call cherie_fuck_date_sleep (location="hero") from _call_cherie_fuck_date_sleep
@@ -791,11 +741,6 @@ label cherie_fuck_date_doggy(sexperience_min):
                 cherie.say "Oh, [hero.name] - I want to feel you inside of me!"
             "Oh man - like I needed any encouragement to want to do that!"
             "The only thing that I can think of right now is getting inside of Cherie."
-            call check_condom_usage (cherie) from _call_check_condom_usage_160
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show cherie doggy condom
             show cherie doggy
             with fade
             "I'm about to begin lining myself up to take advantage of the position that Cherie's in."
@@ -1230,9 +1175,6 @@ label cherie_fuck_date_cowgirl(sexperience_min):
             "I'm way too invested in what we're doing to even think about parts of Cherie hidden from view right now."
             "So to me, the only possible goal that I could be working towards is getting inside of her pussy."
             "And luckily for me, the position that she's adopted means that it's no more than an inch away from my cock."
-            call check_condom_usage (cherie) from _call_check_condom_usage_161
-            if _return == False:
-                return "leave_without_gain"
             show cherie cowgirl at startle(0.05,-10)
             with fade
             "Putting my hands on the top of Cherie's thighs, I begin to pull her downwards."
@@ -1620,11 +1562,6 @@ label cherie_fuck_date_standing(sexperience_min):
             "And at the same time she looks back over her shoulder, eyes filled with anticipation."
             "Obviously wondering with great interest what's going to happen next."
             "But all it takes is one brief glimpse of her pussy for me to know the answer to that question."
-            call check_condom_usage (cherie) from _call_check_condom_usage_162
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show cherie standing condom
             show cherie standing
             with fade
             "Forced to stoop a little in order to be able to aim my cock between Cherie's thighs, I make to get things started."
@@ -2014,11 +1951,6 @@ label cherie_fuck_date_reverse(sexperience_min):
             "And she nods her head in a similarly languid manner."
             cherie.say "Very well, mon ami..."
             cherie.say "Then that is where it will go."
-            call check_condom_usage (cherie) from _call_check_condom_usage_163
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show cherie reverse condom
             show cherie reverse
             with fade
             "Almost as soon as we're even vaguely in the right position to get it on, Cherie makes her move."

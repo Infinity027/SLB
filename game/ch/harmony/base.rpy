@@ -224,7 +224,7 @@ label harmony_cheated(action, cheat_npc=None):
     return
 
 label harmony_greet:
-    if renpy.has_label(f"harmony_greet_dialogues_{hero.gender}") and not harmony.flags.greeted:
+    if renpy.has_label(f"harmony_greet_dialogues_male") and not harmony.flags.greeted:
         scene expression f"bg {game.room}"
         $ harmony.flags.greeted = TemporaryFlag(True, 1)
         show harmony
@@ -242,7 +242,7 @@ label harmony_greet:
                 harmony.say "Good afternoon [hero.name]."
             else:
                 harmony.say "Good evening [hero.name]."
-        call expression f"harmony_greet_dialogues_{hero.gender}" from _call_expression_239
+        call expression f"harmony_greet_dialogues_male" from _call_expression_239
         if harmony.flags.submissive_interact:
             if randint(0, 1) == 0:
                 harmony.say "Mmm...I wanna get down on my knees and worship your cock!"

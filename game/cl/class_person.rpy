@@ -334,7 +334,7 @@ init -16 python:
             nbr = max(min(self.love // 40, 5), 0)
             if self.flags.randomChat:
                 nbr = randint(0, nbr)
-            return f"{self.id}_{chat}_{nbr}_{hero.gender}"
+            return f"{self.id}_{chat}_{nbr}_male"
         
         def get_room(self):
             return self.room

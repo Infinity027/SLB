@@ -214,24 +214,24 @@ label morgan_dick_reactions:
     if not morgan.flags.seendick:
         $ morgan.flags.seendick = 1
         if hero.has_skill("hung"):
-            show dick reactions morgan scared
+            show morgan_dick_reaction
             morgan.say "Gee, [hero.name]..."
             morgan.say "You sure grew up big down there!"
             mike.say "Is...that a problem, Morgan?"
             morgan.say "I...I don't really know!"
             morgan.say "Just promise you'll be gentle, okay?"
             $ morgan.sub += 10
+            hide morgan_dick_reaction
         elif hero.has_skill("smalldick"):
-            show dick reactions morgan tasty
+            show morgan annoyed
             morgan.say "Mmm..."
             morgan.say "Pocket rocket!"
             mike.say "Is...that a problem, Morgan?"
-            show dick reactions morgan smile
             morgan.say "No way!"
             morgan.say "I don't need a monster cock to get me off."
             morgan.say "All I need is to want the guy attached to it!"
             $ morgan.sub -= 10
-        hide dick reactions
+            hide morgan annoyed
     return
 
 label morgan_halloween_invitation:

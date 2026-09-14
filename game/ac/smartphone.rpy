@@ -5,14 +5,14 @@ label smartphone_booty_call(girl):
         "I call [girl.name]."
         "No answer."
     else:
-        if renpy.has_label(f"{girl.id}_smartphone_booty_call_{hero.gender}"):
-            call expression f"{girl.id}_smartphone_booty_call_{hero.gender}" from _call_expression_120
+        if renpy.has_label(f"{girl.id}_smartphone_booty_call_male"):
+            call expression f"{girl.id}_smartphone_booty_call_male" from _call_expression_120
         else:
-            call expression f"smartphone_booty_call_dialogues_1_{hero.gender}" from _call_expression_139
+            call expression f"smartphone_booty_call_dialogues_1_male" from _call_expression_139
 
-            if ((girl.love >= 150 and girl.sub >= 25 and girl.sexperience >= 1) or (girl.id == "reona" and Person.find("reona").purity < 50)) and renpy.has_label(f"{girl.id}_fuck_date_{hero.gender}"):
+            if ((girl.love >= 150 and girl.sub >= 25 and girl.sexperience >= 1) or (girl.id == "reona" and Person.find("reona").purity < 50)) and renpy.has_label(f"{girl.id}_fuck_date_male"):
                 smartphone_girl.say "Sure."
-                call expression f"{girl.id}_fuck_date_{hero.gender}" from _call_expression_135
+                call expression f"{girl.id}_fuck_date_male" from _call_expression_135
             else:
                 smartphone_girl.say "No fucking way!"
                 $ girl.love -= 1
@@ -29,15 +29,15 @@ label smartphone_send_friendly_text(girl):
         "..."
         "[girl.subject_pronoun.capitalize()] doesn't answer..."
     else:
-        if renpy.has_label(f"{smartphone_girl.id}_friendly_texts_{hero.gender}") and randint(0, 2) >= 1:
-            call expression f"{smartphone_girl.id}_friendly_texts_{hero.gender}" from _call_expression_140
+        if renpy.has_label(f"{smartphone_girl.id}_friendly_texts_male") and randint(0, 2) >= 1:
+            call expression f"{smartphone_girl.id}_friendly_texts_male" from _call_expression_140
         else:
             $ renpy.dynamic("text_list", "text_index", "text_line")
             $ text_list = list(enumerate(randchoice(mc_friendly_texts)))
             while text_list:
                 $ text_index, text_line = text_list.pop(0)
                 if text_line[0] == "mc":
-                    call expression f"text_sentence_{hero.gender}" pass (sentence=text_line[1]) from _call_expression_152
+                    call expression f"text_sentence_male" pass (sentence=text_line[1]) from _call_expression_152
                 else:
                     call expression f"text_sentence_{smartphone_girl.id}" pass (sentence=text_line[1]) from _call_expression_494
                 if text_index == 0:
@@ -70,15 +70,15 @@ label smartphone_send_flirty_text(girl):
         "..."
         "[girl.subject_pronoun.capitalize()] doesn't answer..."
     else:
-        if renpy.has_label(f"{smartphone_girl.id}_flirty_texts_{hero.gender}") and randint(0, 2) >= 1:
-            call expression f"{smartphone_girl.id}_flirty_texts_{hero.gender}" from _call_expression_153
+        if renpy.has_label(f"{smartphone_girl.id}_flirty_texts_male") and randint(0, 2) >= 1:
+            call expression f"{smartphone_girl.id}_flirty_texts_male" from _call_expression_153
         else:
             $ renpy.dynamic("text_list", "text_index", "text_line")
             $ text_list = list(enumerate(randchoice(mc_flirty_texts)))
             while text_list:
                 $ text_index, text_line = text_list.pop(0)
                 if text_line[0] == "mc":
-                    call expression f"text_sentence_{hero.gender}" pass (sentence=text_line[1]) from _call_expression_155
+                    call expression f"text_sentence_male" pass (sentence=text_line[1]) from _call_expression_155
                 else:
                     call expression f"text_sentence_{smartphone_girl.id}" pass (sentence=text_line[1]) from _call_expression_496
                 if text_index == 0:
@@ -119,15 +119,15 @@ label smartphone_send_dirty_text(girl):
         "..."
         "She's doesn't answer..."
     else:
-        if renpy.has_label(f"{smartphone_girl.id}_dirty_texts_{hero.gender}") and randint(0, 2) >= 1:
-            call expression f"{smartphone_girl.id}_dirty_texts_{hero.gender}" from _call_expression_158
+        if renpy.has_label(f"{smartphone_girl.id}_dirty_texts_male") and randint(0, 2) >= 1:
+            call expression f"{smartphone_girl.id}_dirty_texts_male" from _call_expression_158
         else:
             $ renpy.dynamic("text_list", "text_index", "text_line")
             $ text_list = list(enumerate(randchoice(mc_dirty_texts)))
             while text_list:
                 $ text_index, text_line = text_list.pop(0)
                 if text_line[0] == "mc":
-                    call expression f"text_sentence_{hero.gender}" pass (sentence=text_line[1]) from _call_expression_162
+                    call expression f"text_sentence_male" pass (sentence=text_line[1]) from _call_expression_162
                 else:
                     call expression f"text_sentence_{smartphone_girl.id}" pass (sentence=text_line[1]) from _call_expression_501
                 if text_index == 0:
@@ -193,13 +193,11 @@ label smartphone_call(girl):
             if result == 1:
                 call expression girl.get_chat from _call_expression_57
             elif result == 2:
-                call expression f"smartphone_call_dialogues_1_{hero.gender}" from _call_expression_163
+                call expression f"smartphone_call_dialogues_1_male" from _call_expression_163
                 $ smart_room = girl.room
                 if smart_room != "None":
                     if girl.love >= 40:
-                        if smart_room in ["amusementpark"]:
-                            smartphone_girl.say "I am at the amusement park."
-                        elif smart_room in ["apartmentbuilding", "house", "bedroom1", "bedroom2", "bedroom3", "bedroom4", "bedroom5", "bedroom6", "bathroom", "kitchen", "pool", "livingroom", "secondfloor", "attic"]:
+                        if smart_room in ["apartmentbuilding", "house", "bedroom1", "bedroom2", "bedroom3", "bedroom4", "bedroom5", "bedroom6", "bathroom", "kitchen", "pool", "livingroom", "secondfloor", "attic"]:
                             smartphone_girl.say "I am at home."
                         elif smart_room in ["map", "alley", "street", "street2"]:
                             smartphone_girl.say "I am in the city."
@@ -264,7 +262,7 @@ label smartphone_call(girl):
                 else:
                     smartphone_girl.say "Try to guess."
             elif result == 3:
-                call expression f"smartphone_call_dialogues_2_{hero.gender}" from _call_expression_178
+                call expression f"smartphone_call_dialogues_2_male" from _call_expression_178
                 if girl.status == "mistress":
                     smartphone_girl.say "Not a chance. You do the travel, not I!"
                 elif girl.activity_name == "work" and (girl.status in ["sex slave", "pet"] or girl.sub < 75):

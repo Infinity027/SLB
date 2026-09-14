@@ -29,15 +29,15 @@ label train_with:
     $ active_girl.set_flag("interact", 1, 1, "+")
     call expression f"{active_girl.id}_greet" from _call_expression_149
     $ renpy.show(active_girl.id)
-    if renpy.has_label(f"{active_girl.id}_train_with_replace_{hero.gender}"):
-        call expression f"{active_girl.id}_train_with_replace_{hero.gender}" from _call_expression_150
+    if renpy.has_label(f"{active_girl.id}_train_with_replace_male"):
+        call expression f"{active_girl.id}_train_with_replace_male" from _call_expression_150
     else:
-        call expression f"train_with_dialogues_1_{hero.gender}" from _call_expression_187
+        call expression f"train_with_dialogues_1_male" from _call_expression_187
         if hero.fitness * 2 >= 40 - active_girl.love:
             $ hero.flags.dirty = TemporaryFlag(True, "day")
             active_girl.say "Why not."
-            if renpy.has_label(f"{active_girl.id}_train_with_{hero.gender}"):
-                call expression f"{active_girl.id}_train_with_{hero.gender}" from _call_expression_151
+            if renpy.has_label(f"{active_girl.id}_train_with_male"):
+                call expression f"{active_girl.id}_train_with_male" from _call_expression_151
             else:
                 "I work out with [active_girl.name]."
             $ bonus = 1

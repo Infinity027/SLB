@@ -79,20 +79,13 @@ label palla_fuck_date_male(location="hero"):
         call handle_npc_leaving (palla, _return) from _call_handle_npc_leaving_20
     else:
 
-
         call palla_fuck_date_intro_male (location) from _call_palla_fuck_date_intro
-
 
         call palla_dick_reactions from _call_palla_dick_reactions_2
 
-
         call palla_fuck_date_foreplay_male from _call_palla_fuck_date_foreplay_male
 
-
-
-
         call palla_fuck_date_choices_male from _call_palla_fuck_date_choices_male
-
 
         call handle_npc_leaving (palla, _return) from _call_handle_npc_leaving_21
         if _return:
@@ -1099,39 +1092,22 @@ label palla_hottub_sex_male:
     palla.say "That's right, [hero.name]."
     palla.say "Just sit back and let me have my way."
     palla.say "Do that, and I promise you'll like it too!"
+    scene palla_hottub01 with fade
     "Once she has my trunks off, Palla keeps on working my cock."
     "By now she has a firm grip on the shaft, rubbing it until it gets good and hard."
-    call palla_dick_reactions from _call_palla_dick_reactions_1
-    "At the same time, she uses her free hand to do the same thing to herself too."
-    "My eyes are fixated on the way that she rubs her own pussy under the water."
-    "Pretty soon Palla begins to pluck away at her clit as well."
-    "And each time she lets out a low, almost desperate moan of desire."
-    "I lick my own lips as she plays with the ones between her thighs."
-    "And I swallow slowly, already imagining how they must feel."
-    show hottub palla naked with dissolve
-    "In an elegant move, she takes off her swimsuit, exposing her incredible body to my lustful gaze."
-    show hottub sex male palla outside naked with fade
-    "When she's finally ready to go further, Palla slips onto my lap."
-    "She reaches back and wraps one hand around my neck, pulling herself up."
-    show hottub sex male palla inside
+    scene palla_hottub02
     "Then she lowers herself back down, using the other to steer my cock home."
     palla.say "Ah..."
     palla.say "Yeah..."
     palla.say "That's it - right there!"
     "It sounds like Palla's getting almost desperate to have me inside of her."
-    "But all the same there's some resistance as the head slips between her lips."
-    "Not that the sensation is enough to out either of us off for as much as a second."
-    "In fact, the way that my cock inches into her makes the whole thing even more intense!"
-    "And by the time I'm as deep into Palla as I can go, she's panting desperately."
+    scene expression make_anim(palla_hottub, time=0.5, loop=True)
     "Palla leans back against me, letting me take her weight as she does so."
     "I don't know if it's her intention, but the gesture places her completely in my hands."
     "And that means I can immediately start to move beneath her."
     "I begin slowly, still enjoying the sensation of her tight pussy around my cock."
     "But as I start to pick up some speed, I can feel Palla start to melt."
-    "Where before she was hesitant and needed to be convinced, she quickly becomes eager."
-    "Palla glances back at me over her shoulder, her eyes wide."
-    "She could be nodding in an effort to urge me on."
-    "But then again, that might just be the motion of me pounding her from below!"
+    scene palla_hottub05 with fade
     "By now, Palla seems to be letting out a sharp cry with each and every thrust."
     "Her cheeks are flushed and I swear that I can hear her heart pounding inside of her chest."
     "And it's not just her feeling the effects either."
@@ -1140,30 +1116,19 @@ label palla_hottub_sex_male:
     menu:
         "Cum inside":
             "Knowing that, I keep a tight hold on Palla as I lose it."
-            show hottub sex male palla inside cumshot
+            scene palla_hottub06
             $ palla.love += 1
             "And the sensation of her coming down one last time is what pushes me over the edge."
             with vpunch
             "Palla practically wails as I let go deep inside of her."
-            show hottub sex male palla ahegao with vpunch
-            "She squeezes her eyes tight shut and writhes against me the whole time."
-            with vpunch
-            "Her own weight keeping her on my cock the whole time."
         "Cum outside":
             "As Palla goes up, I make sure that I go down at just the right moment."
-            show hottub sex male palla outside
-            show chest_insert palla zorder 1 at zoomAt(1, (840, 100))
-            show belly_insert palla zorder 2 at zoomAt(1, (840, 380))
+            scene hottub01
             "This means that my cock pops out of her a second later, much to her surprise."
-            "Palla wails at the sensation, squeezing her eyes shut as she falls back into the water."
-            show chest_insert palla cum
-            show belly_insert palla cum
-            show hottub sex male palla outside cumshot
             with vpunch
             $ palla.sub += 1
-            "And at the same time, I shoot my load over her breasts and belly."
-            show hottub sex male palla outside -cumshot with vpunch
-            "She pants almost desperately as the cum runs down her body and disappears in the water."
+            "And at the same time, I shoot my load to her thigh."
+
     "Palla almost collapses onto me, utterly spent and unable to support her own weight."
     "All she seems capable of doing right now is floating silently in the tub."
     hide chest_insert
@@ -1390,13 +1355,8 @@ label palla_fuck_date_cowgirl(sexperience_min):
             $ palla.sub += 1
             $ palla.flags.anal += 1
         "Fuck her pussy":
-            call check_condom_usage (palla) from _call_check_condom_usage_94
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show palla cowgirl condom
-            else:
-                show palla cowgirl vaginal pleasure
+            
+            show palla cowgirl vaginal pleasure
             "I slip my cock into her dripping pussy and, grasping her by the hips, thrust myself all the way up inside her."
             palla.say "Mmmm, oh fuck, [hero.name]!"
             "I grab her hips with my hands, pulling her down against me as I thrust up, then pushing her up and away as I pull out."
@@ -1523,11 +1483,6 @@ label palla_fuck_date_missionary(sexperience_min):
             $ palla.sub += 1
             $ palla.flags.anal += 1
         "Fuck her pussy":
-            call check_condom_usage (palla) from _call_check_condom_usage_95
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show palla missionary condom
             show palla missionary vaginal
             "I slip my cock into her dripping pussy and, grasping her by the hips, thrust myself all the way inside."
             "Palla shrieks. As wet and ready as she was, she wasn't quite ready for that."
@@ -1657,9 +1612,6 @@ label palla_fuck_date_doggy(sexperience_min):
             $ palla.love += 2
             $ palla.sub += 1
         "Fuck her pussy":
-            call check_condom_usage (palla) from _call_check_condom_usage_96
-            if _return == False:
-                return "leave_without_gain"
             show palla doggy
             "I hear Palla take a sharp breath as I press my cock up against the lips of her pussy."
             "She cries out in delight as I sink into her."

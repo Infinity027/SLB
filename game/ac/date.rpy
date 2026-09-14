@@ -88,7 +88,7 @@ label cancel_date_internal:
         $ hero.calendar.remove(day, appointment, cancelled=True)
     else:
         $ hero.calendar.find_and_remove(girl=active_girl.id, cancelled=True)
-    call expression f"cancel_date_internal_dialogues_1_{hero.gender}" from _call_expression_62
+    call expression f"cancel_date_internal_dialogues_1_male" from _call_expression_62
     active_girl.say "Okay, don't worry."
     $ active_girl.love -= 5
     return
@@ -104,13 +104,13 @@ label date_her:
     return
 
 label date_her_internal(smartphone):
-    if renpy.has_label(f"{active_girl.id}_ask_date_{hero.gender}"):
-        call expression f"{active_girl.id}_ask_date_{hero.gender}" from _call_expression_50
+    if renpy.has_label(f"{active_girl.id}_ask_date_male"):
+        call expression f"{active_girl.id}_ask_date_male" from _call_expression_50
         if _return is None or _return == False:
             return
         $ date_choice = _return
     else:
-        call expression f"date_her_internal_dialogues_1_{hero.gender}" from _call_expression_63
+        call expression f"date_her_internal_dialogues_1_male" from _call_expression_63
         if active_girl.flags.nodate or (active_girl.love < 50 and active_girl.id != "reona"):
             active_girl.say "I'm sorry [hero.name], I don't see you that way."
             return
@@ -170,7 +170,7 @@ label date_her_internal(smartphone):
                 $ s = f"Let's meet up {game.get_day_str(week_day).capitalize()} evening."
             elif hour == 14:
                 $ s = f"Let's meet up {game.get_day_str(week_day).capitalize()} afternoon."
-            call expression f"say_sentence_{hero.gender}" pass (sentence=s) from _call_expression_66
+            call expression f"say_sentence_male" pass (sentence=s) from _call_expression_66
             python:
                 from operator import attrgetter
                 if isinstance(date_choice, Appointment):

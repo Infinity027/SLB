@@ -51,7 +51,7 @@ init python:
     "icon": "button_camila",
     "conditions": [
         HeroTarget(
-            IsRoom("date_beach", "date_nudistbeach")),
+            IsRoom("date_beach")),
         PersonTarget(camila,
             IsActive(),
             MinStat("love", 25),

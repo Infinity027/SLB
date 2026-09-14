@@ -171,23 +171,21 @@ label sasha_dick_reactions:
     if not sasha.flags.seendick:
         $ sasha.flags.seendick = 1
         if hero.has_skill("hung"):
-            show dick reactions sasha scared
+            show sasha_dick_reaction
             sasha.say "Where did that thing come from, [hero.name]?"
             sasha.say "It's fucking huge!"
             mike.say "Who's fault do you think that is, Sasha?"
-            show dick reactions sasha tasty
             sasha.say "Well, I better do something about it then..."
             $ sasha.sub += 10
+            hide sasha_dick_reaction
         elif hero.has_skill("smalldick"):
-            show dick reactions sasha mock
+            show sasha annoyed
             sasha.say "Is that all I'm getting out of you?"
             mike.say "I...I guess so - sorry!"
-            show dick reactions sasha smile
             sasha.say "Don't apologise, [hero.name] - size isn't everything."
-            show dick reactions sasha tasty
             sasha.say "Come over here and let me show you what I mean..."
             $ sasha.sub -= 10
-        hide dick reactions
+            hide sasha annoyed
     return
 
 label sasha_peeping_scene_male:

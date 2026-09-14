@@ -38,7 +38,6 @@ init python:
 
 
 label morgan_hottub_sex_male:
-    $ CONDOM = False
     $ game.play_music("music/roa_music/city_nights.ogg")
     $ game.active_date.clothes = "swimsuit"
     scene bg pool with fade
@@ -106,12 +105,11 @@ label morgan_hottub_sex_male:
     "And kisses me back with an equal amount of desire on her part too."
     "I can feel Morgan's nipples stiffening as they rub against my chest."
     "At the same time she's yanking down my trunks to get at my cock."
-    show hottub sex male morgan outside with fade
+    scene morgan_hottub01 with fade
     "Soon enough she has them down and begins to take hold of it."
-    call morgan_dick_reactions from _call_morgan_dick_reactions_1
     "I don't interfere, letting Morgan guide me home all on her own."
     "Only when I feel the slick sensation of her lips do I take any action."
-    show hottub sex male morgan inside
+    scene morgan_hottub02
     "Taking Morgan a little by surprise, I thrust forwards."
     "She yelps as the head of my cock pressed against the folds of her pussy."
     "And then she lets out a low moan as it pushes inside of her."
@@ -121,55 +119,34 @@ label morgan_hottub_sex_male:
         morgan.say "Mmm...oh shit!"
     else:
         morgan.say "Oh yeah...that's what I'm talking about!"
-    "I lift one of Morgan's legs out of the water and sling it over my shoulder."
+    "I lift one of Morgan's legs and stick on the air."
     "This means that her muscles are stretched and I can sink deeper still."
+    scene expression make_anim(morgan_hottub, time=0.3, loop=True)
     "And then I start to thrust in and out, using all of my leverage as I do so."
     "By now, Morgan seems to have lost the power of speech."
     "Instead she keep on making sounds that are almost animal in nature."
-    "And I'm no different, grunting and sighing as I keep up the pace."
-    "Morgan is still leaning back against the edge of the tub."
-    "Her hands are hanging at her sides, her arms seemingly lifeless."
-    "I can't help wondering if the only thing holding her up is my cock!"
-    "I can certainly see that Morgan's in the process of zoning out."
-    "Her mouth is starting to hang open and her eyes are rolling back into her head!"
-    "For my own part, I'm finding the whole thing almost hypnotic too."
-    "I can't tear my eyes away from her breasts as they move before me."
-    "Small as they are, they're still jiggling in time with my thrusts!"
+    scene morgan_hottub06
     "I reach out, taking hold of one in the palm of my hand."
     "And then I squeeze it, caressing the nipple between my finger and thumb."
     "At this, Morgan lets out a deeper moan than ever before."
-    "I swear that I feel her tighten around the shaft of my cock."
-    "It's like she's squeezing me back in return."
-    "But I can't take the sensation of it."
     "And I start to cum..."
     menu:
         "Cum inside":
             "I could easily pull out of Morgan before it's too late."
             "But I'm still worried that she might tumble backwards."
             "And so I keep as tight a hold on her as I can until the end."
-            show hottub sex male cumshot with vpunch
+            scene morgan_hottub07 with vpunch
             $ morgan.love += 1
             "This means that I shoot my load inside of her."
             with vpunch
             "And the effect is quite something to see!"
-            show hottub sex male ahegao with vpunch
-            "Morgan squeezes her eyes closed and wails as I cum."
-            "She reaches out, digging her fingers into my arms as she holds on for dear life!"
         "Pull out":
             "I make sure that I have a tight hold on Morgan as I make to pull out."
-            "The last thing that I want is for her to go toppling over backwards and fall out of the tub!"
-            show sexinserts chest morgan zorder 1 at center, zoomAt(1, (-140, 940))
+            scene morgan_hottub08
             "She moans at the sensation of my cock sliding out of her."
-            show sexinserts chest morgan cum
-            show hottub sex male outside cumshot
             with vpunch
             $ morgan.sub += 1
-            "But then I shoot my load up and onto her exposed chest."
-            with vpunch
             "And the feeling of cum raining down on her skin is more than enough to distract her!"
-            show hottub sex male outside -cumshot
-            "Morgan makes little sounds that are more like growls than human cries."
-            "And she holds onto me for dear life the whole time."
     hide hottub
     hide sexinserts
     show hottub morgan
@@ -415,12 +392,9 @@ label morgan_fuck_date_male(location="hero"):
     show morgan
     with fade
 
-
     call morgan_fuck_date_intro_male (location) from _call_morgan_fuck_date_intro_male
 
-
     call morgan_dick_reactions from _call_morgan_dick_reactions
-
 
     call morgan_fuck_date_foreplay_male from _call_morgan_fuck_date_foreplay_male
 
@@ -428,16 +402,11 @@ label morgan_fuck_date_male(location="hero"):
     if _return:
         return
 
-
-
-
     call morgan_fuck_date_choices_male from _call_morgan_fuck_date_choices_male
-
 
     call handle_npc_leaving (morgan, _return) from _call_handle_npc_leaving_17
     if _return:
         return
-
 
     hide morgan
     call morgan_sleep_date_fuck (location) from _call_morgan_sleep_date_fuck
@@ -1279,18 +1248,11 @@ label morgan_fuck_date_doggy(sexperience_min):
                     "But if she feels it at all, she shows no outward sign."
                 $ morgan.flags.anal += 1
             "Fuck her pussy":
-                call check_condom_usage (morgan) from _call_check_condom_usage_87
-                if _return == False:
-                    return
                 "I push the head of my cock a little further between Morgan's cheeks."
                 "She jumps a little, squealing again in that very pleasant manner."
                 "And with that sound still fresh in my ears, I get ready to make good on all of my threats."
                 "There's no question that I want to be inside of Morgan's tight little pussy right now."
                 show morgan doggy vaginal pleasure
-                if persistent.xray:
-                    show morgan doggy xray
-                if CONDOM:
-                    show morgan doggy condom
                 "So I don't hesitate to pull her backwards and push the head of my cock against her slick lips."
                 "Though she makes a couple of almost desperate yelping sounds at the sudden sensation, there's no sign of a fight."
                 "Morgan's pussy betrays her true feelings too, letting me slip inside with only a token show of resistance."
@@ -1468,12 +1430,7 @@ label morgan_fuck_date_doggy(sexperience_min):
                     "I watch all of this as I collapse onto my own ass, panting and gasping almost as much as Morgan herself."
                 $ morgan.flags.anal += 1
             "Fuck her pussy":
-                call check_condom_usage (morgan) from _call_check_condom_usage_88
-                if _return == False:
-                    return
                 show morgan doggy
-                if CONDOM:
-                    show morgan doggy condom
                 "Just because I have Morgan completely at my mercy right now, that doesn't mean I have to go crazy."
                 "I mean, I want to enjoy this as well as getting off on the fact I'm in charge, don't I?"
                 "And so that's why I resist the all too real temptation to take her up the ass."
@@ -1658,16 +1615,9 @@ label morgan_fuck_date_doggy(sexperience_min):
                     "She doesn't say a thing the whole time, only lays there in silence, panting and exhausted."
                 $ morgan.flags.anal += 1
             "Fuck her pussy":
-                call check_condom_usage (morgan) from _call_check_condom_usage_89
-                if _return == False:
-                    return
                 show morgan doggy
-                if CONDOM:
-                    show morgan doggy condom
                 "Sometimes the best course of action is the most familiar."
                 show morgan doggy vaginal pleasure
-                if persistent.xray:
-                    show morgan doggy xray
                 "That's why I take a firm hold of Morgan and push myself straight into her pussy."
                 "I think she was expecting something more unusual or complicated from me."
                 "As she makes a yelping sound that I'd have thought more in keeping with being taken up the ass."
@@ -1856,17 +1806,11 @@ label morgan_fuck_date_cowgirl(sexperience_min):
                     $ morgan.sub += 5
                 $ morgan.flags.anal += 1
             "Fuck her pussy":
-                call check_condom_usage (morgan) from _call_check_condom_usage_90
-                if _return == False:
-                    return
                 "I can already feel just how slick the lips of Morgan's pussy have gotten with every move my cock makes."
                 "So it seems a no-brainer to just push a little harder and angle myself a little higher, until..."
                 morgan.say "Oh, hello down there!"
                 morgan.say "Looks like someone wants to come inside..."
                 show morgan reverse cowgirl vaginal
-
-
-
                 "Her words trail off as she actually feels my cock pushing it's way into the folds of her pussy."
                 "She might be in the mood for playful banter of that kind, sure enough."
                 "But right now, my cock is all business!"
@@ -2054,17 +1998,11 @@ label morgan_fuck_date_cowgirl(sexperience_min):
                     $ morgan.sub += 2
                 $ morgan.flags.anal += 1
             "Fuck her pussy":
-                call check_condom_usage (morgan) from _call_check_condom_usage_91
-                if _return == False:
-                    return
                 "Morgan's basically putting her fate in my hands right now."
                 "And that means I can't take advantage of her without it playing on my conscience."
                 show morgan reverse cowgirl
                 "Which means that I choose to pull her gently down and onto my cock pretty much where she's already pressing against me."
                 show morgan reverse cowgirl vaginal pleasure
-
-
-
                 "Morgan moans a little as the lips of her pussy are forced apart and the head of my dick enters her."
                 "I deliberately take it slow, enjoying the way that what she's feeling is written all over her face."
                 "Morgan has her hands pressed flat against my thighs, still fending off the last of her apparent dizziness."
@@ -2249,9 +2187,6 @@ label morgan_fuck_date_cowgirl(sexperience_min):
                     "It hits her on her delicate breasts, making her squeal, and then runs down her belly and onto her thighs below."
                 $ morgan.flags.anal += 1
             "Fuck her pussy":
-                call check_condom_usage (morgan) from _call_check_condom_usage_92
-                if _return == False:
-                    return
                 "I can practically feel the lips of Morgan's already slick pussy pulling me in."
                 "And why go all the way round to knock on the back door when the front's already wide open?"
                 mike.say "Knock, knock - can I come in?"
@@ -2365,9 +2300,6 @@ label morgan_fuck_date_missionary(sexperience_min):
     scene morgan missionary
     "With Morgan pinned to the bed and myself firmly atop her, I'm eager to take things to the next logical step."
     "Beneath me, Morgan looks flushed and more than willing to let me have my way with her."
-    call check_condom_usage (morgan) from _call_check_condom_usage_93
-    if _return == False:
-        return
     "Here goes - this is it."
     "Not only have I had the revelations of rediscovering an old friend and then being told that he was a she all along."
     "She's also on the brink of becoming something far more to me than a face newly returned from the past."
@@ -2533,11 +2465,6 @@ label morgan_fuck_date_standing(sexperience_min):
             "But the moment that my eyes settle on her neat, perfect little pussy..."
             show morgan standing -nomc
             "Well, there's nothing else that I want more in this world!"
-            call check_condom_usage (morgan) from _call_check_condom_usage_142
-            if CONDOM:
-                show morgan standing condom
-            if _return == False:
-                return
             play sound spank
             show morgan standing spank closed pleasure with hpunch
             "I reach out and clap my hands onto Morgan's haunches."

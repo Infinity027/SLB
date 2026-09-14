@@ -70,8 +70,8 @@ init python:
 label attend_mass:
     show chibi mass
     "I attend a service."
-    if renpy.has_label(f"attend_mass_{hero.gender}"):
-        call expression f"attend_mass_{hero.gender}" from _call_expression_197
+    if renpy.has_label(f"attend_mass_male"):
+        call expression f"attend_mass_male" from _call_expression_197
     return
 
 label bible_study:
@@ -81,4 +81,3 @@ label bible_study:
     "I do some bible study at church..."
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

@@ -83,11 +83,11 @@ label date_no_seat_left:
         $ choices.append(("Bribe the employee", 3))
     $ result = renpy.display_menu(choices)
     if result == 1:
-        call expression f"date_no_seat_left_dialogues_1_{hero.gender}" from _call_expression_283
+        call expression f"date_no_seat_left_dialogues_1_male" from _call_expression_283
         $ game.active_date.score += 5
         $ game.pass_time(2, needs=True)
     elif result ==2:
-        call expression f"date_no_seat_left_dialogues_2_{hero.gender}" from _call_expression_284
+        call expression f"date_no_seat_left_dialogues_2_male" from _call_expression_284
         if hero.charm >= 20:
             $ renpy.say("Employee", "Ok, but just this time.")
             $ game.active_date.score += 5
@@ -96,7 +96,7 @@ label date_no_seat_left:
             $ game.active_date.score += 5
             $ game.pass_time(2, needs=True)
     elif result ==3:
-        call expression f"date_no_seat_left_dialogues_3_{hero.gender}" from _call_expression_285
+        call expression f"date_no_seat_left_dialogues_3_male" from _call_expression_285
         $ hero.money -= 10
         $ renpy.say("Employee", "Ok, but just this time.")
         $ game.active_date.score += 5

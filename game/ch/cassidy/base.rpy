@@ -219,23 +219,23 @@ label cassidy_cheated(action, cheat_npc=None):
     return
 
 label cassidy_greet:
-    if renpy.has_label(f"cassidy_greet_dialogues_{hero.gender}") and not cassidy.flags.greeted:
+    if renpy.has_label(f"cassidy_greet_dialogues_male") and not cassidy.flags.greeted:
         scene expression f"bg {game.room}"
         $ cassidy.flags.greeted = TemporaryFlag(True, 1)
         show cassidy
         if cassidy.status == 'mistress':
             cassidy.say "Hello, [hero.name]."
-            call expression f"cassidy_greet_dialogues_3_{hero.gender}" from _call_expression_221
+            call expression f"cassidy_greet_dialogues_3_male" from _call_expression_221
         elif cassidy.status == 'pet':
             if cassidy.love < 120:
                 cassidy.say "Hi, [hero.name]."
-                call expression f"cassidy_greet_dialogues_1_{hero.gender}" from _call_expression_219
+                call expression f"cassidy_greet_dialogues_1_male" from _call_expression_219
             else:
                 if cassidy.flags.mikeNickname in nickname_master:
                     cassidy.say "Hello, my [hero.name]!"
                 else:
                     cassidy.say "Hello, [hero.name]!"
-                call expression f"cassidy_greet_dialogues_2_{hero.gender}" from _call_expression_220
+                call expression f"cassidy_greet_dialogues_2_male" from _call_expression_220
             if cassidy.flags.submissive_interact:
                 if randint(0, 1) == 0:
                     cassidy.say "Please, [hero.name] - would your French kiss ALL my lips?"
@@ -246,7 +246,7 @@ label cassidy_greet:
                 cassidy.say "Hi, I guess, [hero.name]."
             else:
                 cassidy.say "Oh, it's you, [hero.name]."
-            call expression f"cassidy_greet_dialogues_4_{hero.gender}" from _call_expression_222
+            call expression f"cassidy_greet_dialogues_4_male" from _call_expression_222
             if cassidy.flags.submissive_interact:
                 if randint(0, 1) == 0:
                     cassidy.say "Please, [hero.name] - would your French kiss ALL my lips?"

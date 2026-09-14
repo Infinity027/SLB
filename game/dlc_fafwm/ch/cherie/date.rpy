@@ -124,14 +124,12 @@ label cherie_dick_reactions:
         "Laying it all out before her and waiting to see what she has to say."
         show cherie normal
         if hero.has_skill("hung"):
-            show cherie surprised
+            show cherie_dick_reaction
             "Cherie's eyes bulge in their sockets as she stares at my manhood."
-            show dick reactions cherie scared
             cherie.say "Oh my goodness!"
             mike.say "You...you don't like it, Cherie?"
             mike.say "You think it's too big?"
             "Cherie shakes her head as she keeps on staring at it."
-            show dick reactions cherie smile
             if cherie.sub >= 66:
                 cherie.say "Oh no, {i}mon ami{/i}- I am just amazed at the size of it."
                 cherie.say "Please, promise to be gentle with me?"
@@ -139,28 +137,25 @@ label cherie_dick_reactions:
                 cherie.say "I did not say that it was too big, {i}mon ami{/i}..."
                 cherie.say "I am just amazed by the size of it, of how it will feel inside of me!"
             $ cherie.sub += 10
+            hide cherie_dick_reaction
         elif hero.has_skill("smalldick"):
-            show dick reactions cherie mock
+            show cherie annoyed
             "Cherie looks instantly disappointed, her expression downcast."
             if cherie.sub >= 66:
                 cherie.say "Oh dear..."
                 cherie.say "I mean...oh heavens!"
                 mike.say "You...you mean it's too small?"
-                show dick reactions cherie smile
                 cherie.say "No, of course not!"
-                show dick reactions cherie mock
                 cherie.say "It is...a masterpiece in miniature, yes?"
             else:
                 cherie.say "Oh..."
                 cherie.say "Ah well, one cannot ask for everything."
                 mike.say "You...you mean it's too small?"
-                show dick reactions cherie smile
                 cherie.say "Well, maybe smaller than I would have liked."
                 cherie.say "But therein lies the challenge - prove to me that it doesn't matter, yes?"
-                show dick reactions cherie mock
                 cherie.say "Show me that it's how you use it that counts!"
             $ cherie.sub -= 10
-        hide dick reactions
+            hide cherie annoyed
     return
 
 label cherie_date_intro_valentine_male:

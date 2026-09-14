@@ -251,15 +251,13 @@ label lexi_fuck_home:
         call lexi_fuck_date_male (called_from_date=False) from _call_lexi_fuck_date_2
     return
 
-label lexi_fuck_date_nudistbeach:
 label lexi_fuck_date_beach:
 label lexi_fuck_beach:
     $ game.play_music("music/roa_music/city_nights.ogg")
     scene bg beach
     show lexi nophone
     if game.week_day % 2 == 0:
-        if game.room != "date_nudistbeach":
-            "She wears next to nothing on an average day, and the bikini she has on is almost non-existent."
+        "She wears next to nothing on an average day, and the bikini she has on is almost non-existent."
         "I consciously choose a spot a way from the nearest beach-goers, where we'll be out of sight."
         "It's not because I resent other guys looking at Lexi, I swear."
         "More because I want to have the option of doing more than just looking."
@@ -300,16 +298,10 @@ label lexi_fuck_beach:
         mike.say "Even though you're telling me that you're definitely going to put out?"
         show lexi annoyed blush
         lexi.say "Shit, [hero.name] - do you have to make it sound so complicated?!?"
-        if game.room == "date_nudistbeach":
-            "Lexi shakes her head."
-        else:
-            "Lexi shakes her head and starts unceremoniously tugging down her bikini bottoms."
+        "Lexi shakes her head and starts unceremoniously tugging down her bikini bottoms."
         lexi.say "You'd better get on with fucking me."
         lexi.say "Before this turns into some kind of debate!"
-        if game.room == "date_nudistbeach":
-            "I lie down hastily on the blanket beside Lexi."
-        else:
-            "I lie down hastily on the blanket beside Lexi, following her lead with my own shorts."
+        "I lie down hastily on the blanket beside Lexi, following her lead with my own shorts."
         show lexi annoyed -blush
         "But then she holds up a finger, a stern look crossing her face as she does so."
         lexi.say "One thing, [hero.name]."
@@ -326,8 +318,7 @@ label lexi_fuck_beach:
         show lexi missionary beach outside with fade
         "So I push Lexi down until she's flat on her back, then lie atop her."
         "She smiles at the prospect of getting the length of my cock inside."
-        if game.room != "date_nudistbeach":
-            "And then pulls down her bikini top, letting her breasts fall free upon her chest."
+        "And then pulls down her bikini top, letting her breasts fall free upon her chest."
         "The gesture is more than enough to spur me on, and I thrust my cock forward without warning."
         "For a moment, the lips of Lexi's pussy resist me."
         show lexi missionary beach vaginal
@@ -450,8 +441,7 @@ label lexi_fuck_beach:
         "This means that the desperate groping continues almost as soon as we're horizontal."
         "There's no need for either of us to say a word."
         "I know what I want and I know that Lexi wants the same thing too."
-        if game.room != "date_nudistbeach":
-            "And even if I didn't, she nods as I yank down my shorts, tugging aside her bikini bottoms."
+        "And even if I didn't, she nods as I yank down my shorts, tugging aside her bikini bottoms."
         "I guess all of the flirting and beating around the bush beforehand counted as foreplay."
         scene lexi missionary
         show lexi missionary beach
@@ -669,28 +659,22 @@ label lexi_fuck_date_male(location="hero", called_from_date=True):
     $ lexi.flags.drugs = False
     $ lexi.flags.facecum = False
 
-
     call lexi_fuck_date_intro_male (location, called_from_date) from _call_lexi_fuck_date_intro_male
 
-
     call lexi_dick_reactions from _call_lexi_dick_reactions
-
 
     if lexi.sub >= 25:
         call lexi_fuck_date_foreplay_male from _call_lexi_fuck_date_foreplay_male
     $ skip_to_sleep = _return
 
-
     if not skip_to_sleep:
 
         call lexi_fuck_date_choices_male from _call_lexi_fuck_date_choices_male
-
 
         call handle_npc_leaving (lexi, _return) from _call_handle_npc_leaving_14
         if _return:
             $ lexi.flags.facecum = False
             return
-
 
     hide lexi
     call lexi_sleep_date_fuck_male (location) from _call_lexi_sleep_date_fuck
@@ -1151,11 +1135,6 @@ label lexi_fuck_date_missionary(sexperience_min):
                 "I think I finally decided which pair of lips on Lexi I simply can't resist."
                 "Especially when they're glistening like you'd see a precious jewel shine!"
                 "Lexi's ass can wait, as it's her pussy that I want tonight..."
-                call check_condom_usage (lexi, love=180) from _call_check_condom_usage_77
-                if _return == False:
-                    return
-                if CONDOM:
-                    show lexi missionary condom
                 "Not wanting to waste another second, I begin to rub my cock against the lips of Lexi's pussy."
                 "Even on the outside, the feeling is simply incredible against the sensitive shaft."
                 "Lexi's folds are soft to the touch and already delightfully slippery too."
@@ -1339,9 +1318,6 @@ label lexi_fuck_date_missionary(sexperience_min):
                 "And I don't need anymore of an invitation than that."
                 "I brush the head of my cock against Lexi's lips."
                 "An action that rewards me with a little yelp of surprise."
-                call check_condom_usage (lexi, love=180) from _call_check_condom_usage_78
-                if _return == False:
-                    return
                 "But as wet and willing as Lexi seems to be, I still have to work for my reward."
                 "Her pussy puts up a token resistance as I try to push my way into her."
                 show lexi missionary vaginal
@@ -1666,11 +1642,6 @@ label lexi_fuck_date_cowgirl(sexperience_min):
             "I can feel the urgency in Lexi's body almost as easily as its weight."
             "Every muscle is tensed for what lies ahead, every fibre coiled in anticipation."
             "And I feel the same way too, champing at the bit to get it on."
-            call check_condom_usage (lexi, love=180) from _call_check_condom_usage_79
-            if _return == False:
-                return
-            if CONDOM:
-                show lexi cowgirl condom
             show lexi cowgirl up vaginal
             "I have a firm hold of Lexi's haunches, and I begin to guide her downwards."
             "But she's never been the kind of girl to let herself be lead by the hand."
@@ -1970,9 +1941,6 @@ label lexi_fuck_date_standing(sexperience_min):
     if game.week_day % 2 == 0:
         "I'm ready and raring to go, with nothing else on my mind save for Lexi's pussy."
         "So I waste no time in lining myself up to take the plunge."
-        call check_condom_usage (lexi, love=180) from _call_check_condom_usage_80
-        if _return == False:
-            return
         "I snicker."
         mike.say "Oh, no, we're definitely not done yet."
         mike.say "You're my whore all night long tonight!"
@@ -2237,14 +2205,9 @@ label lexi_fuck_date_standing(sexperience_min):
                     "Fuck her pussy":
                         "I can practically smell Lexi's pussy right now."
                         "And there's nothing going to come between me and getting it!"
-                        call check_condom_usage (lexi, love=180) from _call_check_condom_usage_81
-                        if _return == False:
-                            return
                         "Lexi aims the head of my cock squarely at her pussy."
-                        if persistent.xray:
-                            show lexi stand2 vaginal xray with fade
-                        else:
-                            show lexi stand2 vaginal with fade
+                        
+                        show lexi stand2 vaginal with fade
                         "And then she practically wriggles onto it."
                         "I hardly have to do any of the work myself."
                         "So instead I lift her legs and spread them."
@@ -2504,11 +2467,6 @@ label lexi_fuck_date_standing(sexperience_min):
                         "All the exclamation gets me in return is a filthy laugh from Lexi."
                         "But I take that as permission to get on with it."
                         show lexi stand
-                        call check_condom_usage (lexi, love=180) from _call_check_condom_usage_82
-                        if _return == False:
-                            return
-                        if CONDOM:
-                            show lexi stand condom vaginal
                         with fade
                         "I have a firm hold on Lexi's waist, and I make good use of it."
                         "Pulling her backwards, I push myself forwards at the same time."
@@ -2764,11 +2722,6 @@ label lexi_fuck_date_doggy(sexperience_min):
             lexi.say "Something feels nice and hard back there!"
             lexi.say "Why don't you stick in in me and see how soft you're making me?"
             lexi.say "I'm melting to have that thing inside of me!"
-            call check_condom_usage (lexi, love=180) from _call_check_condom_usage_83
-            if _return == False:
-                return
-            if CONDOM:
-                show lexi doggy condom
             "As soon as I get a hold of Lexi, I thrust my cock between her legs."
             "And the first thing I feel is just how slick and warm she is down there."
             "She wasn't lying when she said that she was ready for me just now."
@@ -2991,60 +2944,50 @@ label lexi_hottub_sex_male:
     "Lexi gives a little shiver, like she's relieved to be free of it."
     "And this makes her chest jiggle and shake in an almost hypnotic fashion."
     lexi.say "Oh, I think you know what I want!"
-    "With that, Lexi turns her back on me and leans against the edge of the tub."
-    show hottub sex male lexi outside with fade
-    "She pushes her ass in my direction, shaking it in a suggestive manner."
+    "With that, Lexi lie on her back against the edge of the tub."
+    scene lexi_hottub01 with fade
     mike.say "Yeah, Lexi."
     mike.say "I think I know what you want!"
     "Any thought of trying to play the innocent vanishes in that moment."
     "Lexi's made it more than plain that she wants to get it on."
     "So what's the point in pretending that I don't want to do it too?"
-    "I tug down my trunks as quickly as I can, hurrying towards Lexi's ass."
-    "She looks back over her shoulder at me, nodding eagerly as I come."
-    call lexi_dick_reactions from _call_lexi_dick_reactions_1
     lexi.say "That's right, [hero.name]."
     lexi.say "You DO know what I want!"
-    "I don't hesitate to reach out and take a firm hold of Lexi's ass."
-    "She giggles and squirms playfully as I part her buttocks."
-    show hottub sex male lexi inside
-    "But when I push the head of my cock against her pussy, her mood changes."
+    scene lexi_hottub02
+    "I push the head of my cock against her pussy, her mood changed."
     "Now she's moaning and panting, anticipating what's coming next."
     "I'm feeling the same way too, and so I waste no more time."
     "A second later, I shove myself forwards, forcing my cock into Lexi."
     "She shudders at the sensation of me entering her."
     "But I hold her firmly, making sure that I can slide in with one motion."
+    scene expression make_anim(lexi01_hottub, time=0.25, loop=True)
     "I don't stop once I'm as deep as I can go."
     "Instead I keep on moving back and forth, in and out."
     "I also keep my speed constant, never going faster or slower."
-    "This means that Lexi is forced to ride the length of my cock over and again."
-    "She rocks beneath me, the constant motion occupying her senses."
-    "Before now, Lexi was all cheeky lines and teasing gestures."
+    scene expression make_anim(lexi02_hottub, time=0.18, loop=True)
     "Yet now she has no choice but to surrender as I fuck her."
     "It's not like I mind Lexi's smart comments and flirty gestures."
     "But shutting her up like this is a hell of a lot of fun!"
     "And maybe that's why I know that it's not going to be long before I cum?"
+    scene lexi_hottub06
     "Maybe it's because I'm enjoying myself that much?"
     call cum_reaction (lexi, 'vaginal', 1) from _call_cum_reaction_124
     if _return == "vaginal_outside":
-        show hottub sex male outside
+        scene lexi_hottub07
         "I pull my cock out of Lexi without warning and in one smooth motion."
         "She yelps in alarm at the sensation, looking over her shoulder at me."
         "But it's far too late for any such protest to matter."
         $ lexi.sub += 1
-        show hottub sex male cumshot with hpunch
+        with hpunch
         "I shoot my load over her a few seconds later."
-        with hpunch
-        "Streamers of sticky white cum stripe Lexi's buttocks."
-        with hpunch
-        "And then it runs down her legs to mingle with the water below."
     else:
         "I make a point of keeping my pace steady as I get ready to shoot my load."
         "And I doubt that Lexi knows it's coming until the very last moment."
         "But she's not the kind of girl to mind me cumming inside of her."
-        show hottub sex male cumshot with hpunch
+        scene lexi_hottub12 with hpunch
         $ lexi.love += 1
         "Which means that when I lost it, she gasps in mixture of surprise and delight."
-        show hottub sex male ahegao with hpunch
+        scene lexi_hottub06 with hpunch
         "Lexi makes a soft, almost delirious sound of pleasure afterwards."
         with hpunch
         "Even as it begins to seep out and run down the inside of her thighs."

@@ -180,7 +180,7 @@ init python:
                "office_audrey_lavish_01",
                "office_lavish_shiori_01"),
         HeroTarget(
-            IsRoom("date_beach", "date_nudistbeach"),
+            IsRoom("date_beach"),
             IsFlag("isceo"),
             ),
         PersonTarget(audrey,

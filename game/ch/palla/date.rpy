@@ -298,24 +298,22 @@ label palla_dick_reactions:
     if not palla.flags.seendick:
         $ palla.flags.seendick = 1
         if hero.has_skill("hung"):
-            show dick reactions palla smile
+            show palla_dick_reaction
             palla.say "Nice to see you have some upsides!"
             mike.say "Hey - nice time to pick to be mean!"
-            show dick reactions palla mock
             palla.say "Blah, blah, blah..."
-            show dick reactions palla tasty
             palla.say "Just stop talking and do something with it already!"
             $ palla.sub += 10
+            hide palla_dick_reaction
         elif hero.has_skill("smalldick"):
-            show dick reactions palla mock
+            show palla annoyed
             palla.say "Hmm..."
             mike.say "What's the problem, Palla?"
             palla.say "Well, let's just say I'm disappointed."
-            show dick reactions palla smile
             palla.say "But I'm not surprised!"
             $ palla.sub -= 10
             $ palla.love -= 10
-        hide dick reactions
+            hide palla annoyed
     return
 
 label palla_halloween_invitation:

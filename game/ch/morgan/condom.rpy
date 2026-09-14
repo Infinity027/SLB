@@ -31,43 +31,9 @@ label morgan_use_condom:
     return
 
 
-
-
-
-
-
-label morgan_warn_condom:
-    if morgan.male >= 50:
-        morgan.say "Whoa...what the fuck!"
-        "I come to a complete halt as Morgan's tone and expression make it clear I can go no further."
-        morgan.say "You're not sticking that thing inside of me without a condom, man!"
-    else:
-        morgan.say "Oh, [hero.name]...you bad boy!"
-        "I stop dead in my tracks, suddenly aware of the chiding tone in Morgan's voice."
-        morgan.say "You can't come in without protection!"
-    return
-
-label morgan_force_condom:
-    if morgan.male >= 50:
-        "She reaches for her jacket, which just so happens to be within grabbing distance."
-        "Her hand comes back a moment later, clutching a condom."
-        morgan.say "If you'd be so kind?!?"
-    else:
-        "She reaches for her jacket, which is atop a pile of clothes within grabbing distance."
-        "And then she offers me the condom she's recovered."
-        morgan.say "You can come on in once you're properly dressed!"
-    return
-
-
-
-
-
-
-
 label morgan_no_condom:
     "I'm too lost in the moment to be thinking about anything other than sinking down atop Morgan right now."
     "She seems to feel the exact same way, eagerly welcoming me as I come to her, wrapping herself around me."
     "I can't imagine how long she's been waiting for this moment, and the last thing that I want is to deny it to her any longer."
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

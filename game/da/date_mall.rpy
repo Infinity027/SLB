@@ -162,7 +162,7 @@ label date_kart:
     if renpy.has_label(date_girl.id + "_kart_with"):
         call expression date_girl.id + "_kart_with" from _call_expression_289
     else:
-        call expression f"date_kart_dialogues_1_{hero.gender}" from _call_expression_290
+        call expression f"date_kart_dialogues_1_male" from _call_expression_290
         if hero.charm >= 40 - date_girl.love:
             date_girl.say "Sure, why not?"
             "I race [active_girl.name]."
@@ -259,8 +259,8 @@ label piercings_reactions(current_girl, chosen_piercing, piercing_state):
         $ piercings[chosen_piercing].pierced = piercing_state
         $ piercings[chosen_piercing].worn = piercing_state
         $ renpy.show("tattooparlor " + current_girl + " topless focused")
-        if renpy.has_label(f"{current_girl}_piercing_nipples_reaction_{hero.gender}"):
-            call expression f"{current_girl}_piercing_nipples_reaction_{hero.gender}" from _call_expression_291
+        if renpy.has_label(f"{current_girl}_piercing_nipples_reaction_male"):
+            call expression f"{current_girl}_piercing_nipples_reaction_male" from _call_expression_291
         else:
             pause 2
     elif chosen_piercing in ["navel"]:
@@ -269,8 +269,8 @@ label piercings_reactions(current_girl, chosen_piercing, piercing_state):
         $ piercings[chosen_piercing].pierced = piercing_state
         $ piercings[chosen_piercing].worn = piercing_state
         $ renpy.show("tattooparlor " + current_girl + " notop focused belly")
-        if renpy.has_label(f"{current_girl}_piercing_navel_reaction_{hero.gender}"):
-            call expression f"{current_girl}_piercing_navel_reaction_{hero.gender}" from _call_expression_292
+        if renpy.has_label(f"{current_girl}_piercing_navel_reaction_male"):
+            call expression f"{current_girl}_piercing_navel_reaction_male" from _call_expression_292
         else:
             pause 2
     elif chosen_piercing in ["clit", "dick"]:
@@ -279,8 +279,8 @@ label piercings_reactions(current_girl, chosen_piercing, piercing_state):
         $ piercings[chosen_piercing].pierced = piercing_state
         $ piercings[chosen_piercing].worn = piercing_state
         $ renpy.show("tattooparlor " + current_girl + " bottomless focused")
-        if renpy.has_label(f"{current_girl}_piercing_clit_reaction_{hero.gender}"):
-            call expression f"{current_girl}_piercing_clit_reaction_{hero.gender}" from _call_expression_293
+        if renpy.has_label(f"{current_girl}_piercing_clit_reaction_male"):
+            call expression f"{current_girl}_piercing_clit_reaction_male" from _call_expression_293
         else:
             pause 2
     elif chosen_piercing in ["tongue", "lips"]:
@@ -289,8 +289,8 @@ label piercings_reactions(current_girl, chosen_piercing, piercing_state):
         $ piercings[chosen_piercing].pierced = piercing_state
         $ piercings[chosen_piercing].worn = piercing_state
         $ renpy.show("tattooparlor " + current_girl + " head focused")
-        if renpy.has_label(f"{current_girl}_piercing_head_reaction_{hero.gender}"):
-            call expression f"{current_girl}_piercing_head_reaction_{hero.gender}" from _call_expression_294
+        if renpy.has_label(f"{current_girl}_piercing_head_reaction_male"):
+            call expression f"{current_girl}_piercing_head_reaction_male" from _call_expression_294
         else:
             pause 2
     elif chosen_piercing in ["ears"]:
@@ -299,8 +299,8 @@ label piercings_reactions(current_girl, chosen_piercing, piercing_state):
         $ piercings[chosen_piercing].pierced = piercing_state
         $ piercings[chosen_piercing].worn = piercing_state
         $ renpy.show("tattooparlor " + current_girl + " head focused")
-        if renpy.has_label(f"{current_girl}_piercing_ears_reaction_{hero.gender}"):
-            call expression f"{current_girl}_piercing_ears_reaction_{hero.gender}" from _call_expression_402
+        if renpy.has_label(f"{current_girl}_piercing_ears_reaction_male"):
+            call expression f"{current_girl}_piercing_ears_reaction_male" from _call_expression_402
         else:
             pause 2
     else:
@@ -309,8 +309,8 @@ label piercings_reactions(current_girl, chosen_piercing, piercing_state):
         $ piercings[chosen_piercing].pierced = piercing_state
         $ piercings[chosen_piercing].worn = piercing_state
         $ renpy.show("tattooparlor " + current_girl)
-        if renpy.has_label(f"{current_girl}_piercing_nose_reaction_{hero.gender}"):
-            call expression f"{current_girl}_piercing_nose_reaction_{hero.gender}" from _call_expression_295
+        if renpy.has_label(f"{current_girl}_piercing_nose_reaction_male"):
+            call expression f"{current_girl}_piercing_nose_reaction_male" from _call_expression_295
         else:
             pause 2
     scene bg black
@@ -331,21 +331,21 @@ label date_play_arcade:
     if "not_playful" in date_girl.traits:
         $ d -= 1
     $ game.active_date.score += d * 5
-    if renpy.has_label(f"{date_girl.id}_date_play_arcade_intro_{hero.gender}"):
-        call expression f"{date_girl.id}_date_play_arcade_intro_{hero.gender}" from _call_expression_296
+    if renpy.has_label(f"{date_girl.id}_date_play_arcade_intro_male"):
+        call expression f"{date_girl.id}_date_play_arcade_intro_male" from _call_expression_296
     else:
         "We played some games."
     $ renpy.hide(date_girl.id)
     show expression "game arcade " + date_girl.id
     if hero.has_skill("video_games") or hero.knowledge >= date_girl.sub:
-        if renpy.has_label(f"{date_girl.id}_date_play_arcade_win_{hero.gender}"):
-            call expression f"{date_girl.id}_date_play_arcade_win_{hero.gender}" from _call_expression_297
+        if renpy.has_label(f"{date_girl.id}_date_play_arcade_win_male"):
+            call expression f"{date_girl.id}_date_play_arcade_win_male" from _call_expression_297
         else:
             "I won!"
         $ date_girl.sub += 2
     else:
-        if renpy.has_label(f"{date_girl.id}_date_play_arcade_lose_{hero.gender}"):
-            call expression f"{date_girl.id}_date_play_arcade_lose_{hero.gender}" from _call_expression_298
+        if renpy.has_label(f"{date_girl.id}_date_play_arcade_lose_male"):
+            call expression f"{date_girl.id}_date_play_arcade_lose_male" from _call_expression_298
         else:
             "I lost..."
         $ date_girl.sub -= 2

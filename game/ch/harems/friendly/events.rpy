@@ -698,11 +698,6 @@ label emma_samantha_threesome:
                     mike.say "You want more, yeah?"
                     "Sam nods again, already pushing herself down and onto me."
                     "I nod and smile, all too willing to indulge her."
-                    call check_condom_usage (samantha) from _call_check_condom_usage_56
-                    if _return == False:
-                        return "leave_without_gain"
-                    if CONDOM:
-                        show friendly harem cowgirl condom
                     "And all it takes is a little thrust on my part and a wriggle on hers."
                     "Then I feel the sensation of Sam's lips beginning to part."
                     "At first I expect her to slide down slowly, a little at a time."
@@ -944,11 +939,6 @@ label emma_samantha_threesome:
                     "My cock is gently stroking Emma's lips, going back and forth."
                     "She's quivering at the sensation, her entire body shivering."
                     "But I can tell that it's in anticipation of what's coming next."
-                    call check_condom_usage (emma) from _call_check_condom_usage_57
-                    if _return == False:
-                        return "leave_without_gain"
-                    if CONDOM:
-                        show friendly harem doggy condom
                     "And then I apply just a little more pressure..."
                     emma.say "Mmm..."
                     emma.say "Oh wow..."

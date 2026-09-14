@@ -177,23 +177,23 @@ label shiori_dick_reactions:
     if not shiori.flags.seendick:
         $ shiori.flags.seendick = 1
         if hero.has_skill("hung"):
-            show dick reactions shiori scared
+            show shiori_dick_reaction
             shiori.say "Oh dear...oh dear..."
             shiori.say "You never said it would be THAT big!"
             mike.say "Don't worry, Shiori - I promise I'll be gentle."
             shiori.say "R...really?"
-            show dick reactions shiori smile
             shiori.say "Well...okay - if you say so..."
             $ shiori.sub += 10
+            hide shiori_dick_reaction
         elif hero.has_skill("smalldick"):
-            show dick reactions shiori smile
+            show shiori annoyed
             shiori.say "Oh...so neat!"
             mike.say "Are...are you saying it's small?!?"
             shiori.say "Oh no - it's perfect!"
             shiori.say "The bigger they are, the more they hurt."
             shiori.say "I like it when someone's gentle with me..."
             $ shiori.sub -= 10
-        hide dick reactions
+            hide shiori annoyed
     return
 
 label shiori_halloween_invitation:

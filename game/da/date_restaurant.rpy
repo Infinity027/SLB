@@ -165,7 +165,7 @@ label date_order_for_her:
         $ game.active_date.score -= 10
     else:
         $ renpy.show("restaurant meal blush " + date_girl.id)
-        call expression f"date_order_for_her_dialogues_1_{hero.gender}" from _call_expression_355
+        call expression f"date_order_for_her_dialogues_1_male" from _call_expression_355
         $ game.active_date.score += 5
     $ date_girl.sub += 1
     $ date_girl.flags.orderedrestaurant = TemporaryFlag(True, "day")
@@ -208,7 +208,7 @@ label date_restaurant_gazpachosoup:
     menu:
         "Complain that the soup is cold":
             $ renpy.show("restaurant meal -eat bored " + date_girl.id)
-            call expression f"date_restaurant_gazpachosoup_dialogues_1_{hero.gender}" from _call_expression_357
+            call expression f"date_restaurant_gazpachosoup_dialogues_1_male" from _call_expression_357
             if "bookworm" in date_girl.traits:
                 $ renpy.show("restaurant meal eat happy " + date_girl.id)
                 $ game.active_date.score += 5
@@ -264,7 +264,7 @@ label date_restaurant_flirtywaiter:
             "Who in the hell does this guy think he is?!?"
             "Well, he's wrong if he thinks that I'm going to sit back and let him get away with this shit!"
             $ renpy.show("restaurant meal waiter bored " + date_girl.id)
-            call expression f"date_restaurant_flirtywaiter_dialogues_1_{hero.gender}" from _call_expression_358
+            call expression f"date_restaurant_flirtywaiter_dialogues_1_male" from _call_expression_358
             if "dominant" in date_girl.traits:
                 $ renpy.show("restaurant meal waiter happy " + date_girl.id)
                 $ game.active_date.score += 10
@@ -289,7 +289,7 @@ label date_restaurant_noisykids:
     menu:
         "Complain about the kids":
             $ renpy.show("restaurant meal waiter bored " + date_girl.id)
-            call expression f"date_restaurant_noisykids_dialogues_1_{hero.gender}" from _call_expression_359
+            call expression f"date_restaurant_noisykids_dialogues_1_male" from _call_expression_359
             if "bitchy" in date_girl.traits:
                 $ renpy.show("restaurant meal waiter happy " + date_girl.id)
                 $ game.active_date.score += 5
@@ -297,7 +297,7 @@ label date_restaurant_noisykids:
             else:
                 "[date_girl.name] wears an expression that's sympathetic, but ultimately as helpless as anyone else."
         "Fawn over the kids":
-            call expression f"date_restaurant_noisykids_dialogues_2_{hero.gender}" from _call_expression_360
+            call expression f"date_restaurant_noisykids_dialogues_2_male" from _call_expression_360
             if "bitchy" in date_girl.traits:
                 $ renpy.show("restaurant meal waiter bored " + date_girl.id)
                 $ game.active_date.score -= 5
@@ -314,7 +314,7 @@ label date_restaurant_lostreservation:
     "But we're still no closer to actually getting shown to a table."
     menu:
         "Give the waiter a piece of your mind":
-            call expression f"date_restaurant_lostreservation_dialogues_1_{hero.gender}" from _call_expression_361
+            call expression f"date_restaurant_lostreservation_dialogues_1_male" from _call_expression_361
             if "yandere" in date_girl.traits:
                 $ renpy.show(date_girl.id + " happy")
                 $ game.active_date.score += 5
@@ -328,7 +328,7 @@ label date_restaurant_lostreservation:
                 $ game.active_date.score -= 5
                 "[date_girl.name] looks irritated and maybe even a little embarrassed."
         "Stand there and wait":
-            call expression f"date_restaurant_lostreservation_dialogues_2_{hero.gender}" from _call_expression_362
+            call expression f"date_restaurant_lostreservation_dialogues_2_male" from _call_expression_362
             if "yandere" in date_girl.traits:
                 $ renpy.show(date_girl.id + " angry")
                 $ game.active_date.score -= 10
@@ -349,7 +349,7 @@ label date_restaurant_bill:
     "Just how are we going to handle actually paying for the meal?"
     menu:
         "Offer to cover the bill" if hero.money >= 40:
-            call expression f"date_restaurant_bill_dialogues_1_{hero.gender}" from _call_expression_363
+            call expression f"date_restaurant_bill_dialogues_1_male" from _call_expression_363
             if "rebel" in date_girl.traits or "workaholic" in date_girl.traits:
                 $ renpy.show("restaurant meal askbill bored " + date_girl.id)
                 $ game.active_date.score -= 5
@@ -363,7 +363,7 @@ label date_restaurant_bill:
                 "[date_girl.name] shrugs and nods, as if to say that she doesn't expect it, but it's a nice gesture all the same."
             $ hero.money -= 40
         "Suggest they split the bill":
-            call expression f"date_restaurant_bill_dialogues_2_{hero.gender}" from _call_expression_364
+            call expression f"date_restaurant_bill_dialogues_2_male" from _call_expression_364
             if "rebel" in date_girl.traits or "workaholic" in date_girl.traits:
                 $ renpy.show("restaurant meal askbill happy " + date_girl.id)
                 $ game.active_date.score += 5
@@ -405,7 +405,7 @@ label date_restaurant_music:
                 "[date_girl.name] seems to be ignoring the music too, and so I go right along with her."
         "Complain about the music":
             $ renpy.show("restaurant meal bored " + date_girl.id)
-            call expression f"date_restaurant_music_dialogues_1_{hero.gender}" from _call_expression_365
+            call expression f"date_restaurant_music_dialogues_1_male" from _call_expression_365
             if "trashy" in date_girl.traits:
                 $ renpy.show("restaurant meal bored " + date_girl.id)
                 $ game.active_date.score -= 5
@@ -428,7 +428,7 @@ label date_restaurant_specialboard:
     "And they sound even better when the waiter's described them to us in minute detail."
     menu:
         "Order something adventurous":
-            call expression f"date_restaurant_specialboard_dialogues_1_{hero.gender}" from _call_expression_366
+            call expression f"date_restaurant_specialboard_dialogues_1_male" from _call_expression_366
             if "playful" in date_girl.traits:
                 $ renpy.show("restaurant meal happy " + date_girl.id)
                 $ game.active_date.score += 10
@@ -442,7 +442,7 @@ label date_restaurant_specialboard:
                 $ game.active_date.score += 5
                 "[date_girl.name] raises her eyebrows at my choice, while she orders something a little less adventurous."
         "Order something safe":
-            call expression f"date_restaurant_specialboard_dialogues_2_{hero.gender}" from _call_expression_367
+            call expression f"date_restaurant_specialboard_dialogues_2_male" from _call_expression_367
             if "playful" in date_girl.traits:
                 $ renpy.show("restaurant meal bored " + date_girl.id)
                 $ game.active_date.score -= 10
@@ -467,7 +467,7 @@ label date_restaurant_service:
     menu:
         "Make a scene to get the waiter's attention":
             $ renpy.show("restaurant meal order " + date_girl.id)
-            call expression f"date_restaurant_service_dialogues_1_{hero.gender}" from _call_expression_368
+            call expression f"date_restaurant_service_dialogues_1_male" from _call_expression_368
             "Sure, I feel like a jerk doing it - but within seconds we have a waiter by the table, apologizing and ready to take our orders."
             "I shrug as I look over at my date, seeking her approval for what I've done."
             if "dominant" in date_girl.traits or "bitchy" in date_girl.traits:
@@ -482,7 +482,7 @@ label date_restaurant_service:
                 $ game.active_date.score -= 5
                 "[date_girl.name] looks glad that I've shut up, and like she just wants to order her food already."
         "Wait patiently for the waiter's attention":
-            call expression f"date_restaurant_service_dialogues_2_{hero.gender}" from _call_expression_369
+            call expression f"date_restaurant_service_dialogues_2_male" from _call_expression_369
             if "dominant" in date_girl.traits or "bitchy" in date_girl.traits:
                 $ renpy.show("restaurant meal bored " + date_girl.id)
                 $ game.active_date.score -= 5
@@ -505,7 +505,7 @@ label date_restaurant_eatingspeed:
         "Eat quickly":
             "My hunger means that I pretty much demolish my food in record time."
             "Wiping my mouth with my napkin, I shrug and try to laugh it off."
-            call expression f"date_restaurant_eatingspeed_dialogues_1_{hero.gender}" from _call_expression_370
+            call expression f"date_restaurant_eatingspeed_dialogues_1_male" from _call_expression_370
             if "workaholic" in date_girl.traits:
                 $ renpy.show("restaurant meal eat happy " + date_girl.id)
                 $ game.active_date.score += 5
@@ -519,7 +519,7 @@ label date_restaurant_eatingspeed:
         "Savor your food":
             "I slow down pretty quickly, enjoying the chance to actually taste the food that I'm eating for the first time."
             "This means that I finish my meal after [date_girl.name], who has to wait for me to catch up."
-            call expression f"date_restaurant_eatingspeed_dialogues_2_{hero.gender}" from _call_expression_371
+            call expression f"date_restaurant_eatingspeed_dialogues_2_male" from _call_expression_371
             if "workaholic" in date_girl.traits:
                 $ renpy.show("restaurant meal eat bored " + date_girl.id)
                 $ game.active_date.score -= 5
@@ -542,7 +542,7 @@ label date_restaurant_ordering:
         "Suggest a choice of dish":
             "I guess [date_girl.subject_pronoun]'s having trouble deciding just what [date_girl.subject_pronoun] wants."
             "So maybe I should step in and offer [date_girl.personal_pronoun] a helping hand?"
-            call expression f"date_restaurant_ordering_dialogues_1_{hero.gender}" from _call_expression_372
+            call expression f"date_restaurant_ordering_dialogues_1_male" from _call_expression_372
             if "dominant" in date_girl.traits:
                 $ renpy.show("restaurant meal bored " + date_girl.id)
                 $ game.active_date.score -= 5
@@ -557,7 +557,7 @@ label date_restaurant_ordering:
         "Ask [date_girl.personal_pronoun] to suggest a dish":
             "I guess [date_girl.personal_pronoun] interest in the menu must mean that [date_girl.subject_pronoun] knows what [date_girl.subject_pronoun] wants and is hunting it out."
             "And if that's so, then I should probably be asking [date_girl.personal_pronoun] to advise me too!"
-            call expression f"date_restaurant_ordering_dialogues_2_{hero.gender}" from _call_expression_373
+            call expression f"date_restaurant_ordering_dialogues_2_male" from _call_expression_373
             if "dominant" in date_girl.traits:
                 $ renpy.show("restaurant meal happy " + date_girl.id)
                 $ game.active_date.score += 5

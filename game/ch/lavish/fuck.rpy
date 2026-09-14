@@ -195,22 +195,15 @@ label lavish_fuck_date_male(location="hero"):
 
     call lavish_fuck_date_intro_male (location) from _call_lavish_fuck_date_intro_male
 
-
     call lavish_dick_reactions from _call_lavish_dick_reactions_5
-
 
     call lavish_fuck_date_foreplay_male from _call_lavish_fuck_date_foreplay_male
 
-
-
-
     call lavish_fuck_date_choices_male from _call_lavish_fuck_date_choices_male
-
 
     call handle_npc_leaving (lavish, _return) from _call_handle_npc_leaving_13
     if _return:
         return
-
 
     hide lavish
     call lavish_sleep_date_fuck (location) from _call_lavish_sleep_date_fuck
@@ -930,15 +923,9 @@ label lavish_fuck_date_missionary(sexperience_min):
     "She draws her legs up and spreads them, reaching down a graceful hand to rub a moment over the soft mounds of her pussy."
     "Then, using two fingers, she spreads them, giving me a clear show of the slick, pink folds waiting for me."
     "She's glistening, almost dripping wet. My heart gives a hard thud in my chest."
-    call check_condom_usage (lavish, 175) from _call_check_condom_usage_73
-    if _return == False:
-        return "leave_without_gain"
     "My cock gives an eager, appreciative throb at her presentation as I step forward over her, positioning myself at her entrance."
     hide lavish
-    if CONDOM:
-        show lavish missionary normal vaginal condom
-    else:
-        show lavish missionary normal vaginal
+    show lavish missionary normal vaginal
     "A soft, mewling moan escapes her when I press the tip against her clit, guiding it up and down her slick folds for a moment, coating myself in her silky nectar."
     "She's wanted this from that first moment she laid eyes on me at my cubicle."
     "Her lips part in her flushed, knit-browed panting as she looks up at me with puppy dog eyes that beg for my entrance."
@@ -1077,11 +1064,6 @@ label lavish_fuck_date_cowgirl(sexperience_min):
         "Fuck her pussy":
             "Not that I don't want to get inside of Lavish, you understand?"
             "I just want to do it on my own terms!"
-            call check_condom_usage (lavish, 175) from _call_check_condom_usage_74
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show lavish cowgirl condom
             "Now that we're all set to go, I take a firm hold of Lavish around the waist."
             "She lets out a yelp of surprise, which quickly turns into a giggle of delight."
             "And that's because she feels the sensation of my cock against her pussy."
@@ -1295,11 +1277,6 @@ label lavish_fuck_date_doggy(sexperience_min):
                 "Like her it's beautiful to behold, tight and enticing."
                 "And the moment that I lay eyes on it, I know that I want it!"
                 "I put my hands on Lavish's pert, perfect buttocks..."
-                call check_condom_usage (lavish, 175) from _call_check_condom_usage_75
-                if _return == False:
-                    return "leave_without_gain"
-                if CONDOM:
-                    show lavish doggy condom
                 show lavish doggy vaginal lust
                 "Lavish quivers as I rub the head of my cock against her pussy."
                 lavish.say "Oh..."
@@ -1527,11 +1504,6 @@ label lavish_fuck_date_doggy(sexperience_min):
                 "I can already feel the lips of Lavish's pussy."
                 "It's slick and wet, more than ready for me."
                 "And so what's the point in holding back?"
-                call check_condom_usage (lavish, 175) from _call_check_condom_usage_76
-                if _return == False:
-                    return "leave_without_gain"
-                if CONDOM:
-                    show lavish doggy condom
                 show lavish doggy vaginal lust
                 "I waste no time in thrusting myself forwards."
                 "And I'm rewarded with the sound of Lavish moaning a second later."
@@ -1653,33 +1625,14 @@ label lavish_sleep_date_fuck(location="hero"):
 
 label lavish_hottub_sex_male:
     $ game.active_date.clothes = "swimsuit"
-    $ CONDOM = False
     show bg pool
     "It took a little bit of convincing on my part, but I finally sold Lavish on the idea of the hot-tub."
-    "Well, to be more precise, the idea of the hot-tub at my place and her coming over to take a dip in it."
-    "I had to assure her it'll be just the two of us and that no one will be able to see us while we're in there."
-    "But once she's had enough time for the notion to sink in, she seems really excited at the prospect."
-    "And needless to say I'm more than a little excited too!"
     "I'd like to be able to say that it's just for the chance to spend some quality time with Lavish."
     "But I'd be lying if I said I wasn't looking forward to seeing her in a swimsuit!"
     "All the same, I try to play it straight as I sit in the tub and wait for Lavish to join me."
-    "There's no point in making myself look like a drooling pervert and scaring her off."
-    "Not before I've managed to convince her that a little bit of perversion might be a good thing!"
     lavish.say "Ready or not, [hero.name]."
     lavish.say "Here I come!"
-    "I can tell from the sound of her voice that Lavish is trying her best to sound confident."
-    "But the hints are still there under the surface, telling me that she's nervous."
     show lavish swimsuit with dissolve
-    "I look up to see her hurrying towards the tub, still wrapped in a towel."
-    "She lifts one shapely, elegant leg over the side."
-    "But then she stops, as if realising for the first time that she hasn't shed the towel."
-    mike.say "Probably best if you leave that out of the tub, Lavish!"
-    "I see her cheeks flush at this."
-    "But she shakes it off and unwraps the towel all the same."
-    lavish.say "Sure...of course..."
-    lavish.say "How silly of me!"
-    "I start to say something that I hope will be reassuring."
-    "And then the words die in my throat as I see what's under the towel."
     "I swallow audibly at the sight of Lavish's body in the tight, revealing swimsuit."
     "How can a girl so hot be worried about anyone seeing what I can see right now?"
     "She's practically perfect in every way!"
@@ -1691,12 +1644,9 @@ label lavish_hottub_sex_male:
     mike.say "I...I'm sorry, Lavish."
     mike.say "You just look so...well, so amazing!"
     "Lavish's cheeks become a deeper shade of red as she hears the compliment."
-    "She looks away for a moment, shaking her head like she thinks I'm kidding her."
     lavish.say "I thought it might be too revealing, you know?"
     lavish.say "But if you like it..."
     mike.say "I love it, Lavish!"
-    "Lavish smiles as she lowers herself into the water."
-    "And my approval seems to go a long way to curing her former shyness."
     "She inches over to where I'm sitting and leans almost close enough to touch me."
     lavish.say "Mmm..."
     lavish.say "The bubbles feel really nice against my skin!"
@@ -1715,7 +1665,6 @@ label lavish_hottub_sex_male:
     lavish.say "Well, I can see one part of you that's definitely not relaxed!"
     "I follow her gaze, only realising as I do so that I have a massive erection."
     "It's so large that it's actually straining the elastic of my trunks."
-    "I must have gotten so used to having a hard-on around Lavish that I don't notice anymore!"
     mike.say "Oh...well..."
     mike.say "I did say that you looked amazing just now, Lavish."
     mike.say "And I meant it too!"
@@ -1738,48 +1687,38 @@ label lavish_hottub_sex_male:
     "That's what I've been trying to build up to all this time!"
     mike.say "S...sure, Lavish..."
     mike.say "If that's what you want to do!"
-    "My voice falters a little and I stutter out the words."
-    "On the one hand this is because I don't want to sound too eager."
-    "But on the other it's also on account of just how hard a grip she has on my cock!"
     lavish.say "I think we should just go crazy and do it, [hero.name]."
     lavish.say "Then it can be our little secret that we did it in a hot-tub!"
-    show hottub sex male lavish outside with fade
-    "I nod and begin to pull down my trunks, Lavish still holding my cock the whole time."
-    "And as soon as I'm free of them, she aims it straight between her thighs."
-    call lavish_dick_reactions from _call_lavish_dick_reactions_4
-    "Lavish sits down on it slowly, smiling over her shoulder at me as she does so."
-    "But when I start to feel it pressing against the lips of her pussy, her expression changes."
-    show hottub sex male lavish inside
+    scene lavish_hottub02 with fade
+    "Lavish lies down on the edge of the hottub surface and I aim my erect dick on her pussy."
+    "I start to feel it pressing against the lips of her pussy, her expression changes."
+    scene lavish_hottub01 with fade
     "Now she starts to breath more heavily, almost whimpering as it pushes inside of her."
     "The sound is a massive turn on, matching the look in her huge, doe-like eyes."
     "Lavish nods, letting me know that she's liking the sensation too."
+    scene expression make_anim(lavish_hottub, time=0.4, loop=True)
     "And by the time I'm balls deep in her, it feels more like I'm in heaven!"
     "As soon as she's conquered her misgivings, Lavish is a woman unleashed."
-    "She doesn't just lie back and let me do all the work."
-    "Instead she rides my cock like it's a wild horse, grinding on me ever harder."
-    "And she practically grabs my hands, guiding them to her breasts."
-    "Lavish's nipples are stiff as I squeeze them between my fingers."
-    "She rewards my efforts by squealing with delight."
     "I swear that the muscles of her pussy clamp down that much harder on my cock too."
     "It's more than I can take, and I can already feel myself cumming..."
+    scene lavish_hottub04
     call cum_reaction (lavish, 'vaginal', 1) from _call_cum_reaction_110
     if _return == "vaginal_outside":
         "It might feel like Lavish has a firm hold on me, but I know better."
-        show hottub sex male lavish outside
+        scene lavish_hottub06
         "And all it takes is a backwards motion from me to free my cock at the last moment."
         "Lavish moans as she feels me pull out of her pussy, quivering as I go."
-        show hottub sex male lavish cumshot with vpunch
+        scene lavish_hottub06 with vpunch
         $ lavish.sub += 1
         "But then I cum, shooting my load up her stomach and onto her breasts."
     else:
         "I feel almost like Lavish is milking me with her pussy, determined not to let me go."
         "And if that's the case, it works like a charm."
         $ lavish.love += 1
-        show hottub sex male lavish cumshot with vpunch
+        scene lavish_hottub05 with vpunch
         "I lose it moments later, filling her with everything I have to give."
-        show hottub sex male lavish ahegao with vpunch
+        with vpunch
         "Lavish quivers and twitches as she takes it, gasping with each and every thrust."
-    hide hottub
     show hottub lavish
     with fade
     "Lavish wraps her arms around my neck and collapses against me once it's over."

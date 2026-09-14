@@ -37,7 +37,7 @@ init -2 python:
         "money_cost": 10,
         "hunger": 1,
         "icon": "icecream",
-        "rooms": ("date_beach", "date_nudistbeach"),
+        "rooms": ("date_beach"),
         "display_name": "Have an ice cream",
         "label": "date_icecream_beach",
         "once_day": True,
@@ -49,7 +49,7 @@ init -2 python:
         "name": "date_suntan",
         "energy": 2,
         "icon": "tan",
-        "rooms": ("date_beach", "date_nudistbeach"),
+        "rooms": ("date_beach"),
         "conditions": [
             InInventory("lotion"),
         ],
@@ -64,7 +64,7 @@ init -2 python:
         "name": "date_swimmingrace_beach",
         "energy": -2,
         "icon": "swim",
-        "rooms": ("date_beach", "date_nudistbeach"),
+        "rooms": ("date_beach"),
         "display_name": "Swim together in the sea",
         "label": "date_swimmingrace_beach",
         "once_day": True,
@@ -73,20 +73,9 @@ init -2 python:
 
     Activity(
     **{
-        "name": "date_play_beach",
-        "icon": "playinsea",
-        "rooms": ("date_beach", "date_nudistbeach"),
-        "display_name": "Play in the sea",
-        "label": "date_play_beach",
-        "once_day": True,
-    }
-)
-
-    Activity(
-    **{
         "name": "date_volley_beach",
         "icon": "beachvolleyball",
-        "rooms": ("date_beach", "date_nudistbeach"),
+        "rooms": ("date_beach"),
         "conditions": [
             HeroTarget(MinStat("fitness", 50)),
         ],
@@ -100,7 +89,7 @@ init -2 python:
     **{
         "name": "date_castle_beach",
         "icon": "sandcastle",
-        "rooms": ("date_beach", "date_nudistbeach"),
+        "rooms": ("date_beach"),
         "conditions": [
             HeroTarget(MinStat("charm", 50)),
         ],
@@ -116,9 +105,9 @@ init -2 python:
         "label": "date_beach_random_events",
         "priority": 0,
         "conditions": [
-            HeroTarget(OnDate(), IsRoom("date_beach", "date_nudistbeach")),
+            HeroTarget(OnDate(), IsRoom("date_beach")),
         ],
-        "chances": 20,
+        "chances": 25,
         "do_once": False,
         "once_day": True,
     }
@@ -134,7 +123,7 @@ label date_beach_random_events:
         "I shrug, trying to laugh it off as best I can while coming up with a good excuse for my behaviour."
         menu:
             "Deny":
-                call expression f"date_beach_random_events_dialogues_1_{hero.gender}" from _call_expression_271
+                call expression f"date_beach_random_events_dialogues_1_male" from _call_expression_271
                 if "innocent" in date_girl.traits:
                     $ game.active_date.score += 10
                     "[date_girl.name] blushes at the mention of the revealing swimsuits and nods in agreement."
@@ -145,7 +134,7 @@ label date_beach_random_events:
                     $ game.active_date.score -= 5
                     "[date_girl.name] strains to see the girls I'm talking about, but looks less than convinced of my professed disapproval."
             "Admit":
-                call expression f"date_beach_random_events_dialogues_2_{hero.gender}" from _call_expression_272
+                call expression f"date_beach_random_events_dialogues_2_male" from _call_expression_272
                 if "innocent" in date_girl.traits:
                     $ game.active_date.score -= 10
                     "[date_girl.name] looks instantly hurt and like she just can't understand why I'm looking at other girls."
@@ -161,7 +150,7 @@ label date_beach_random_events:
         "But all too soon the tide starts to come in, washing away all of their work in mere moments."
         menu:
             "Laugh":
-                call expression f"date_beach_random_events_dialogues_3_{hero.gender}" from _call_expression_273
+                call expression f"date_beach_random_events_dialogues_3_male" from _call_expression_273
                 if "bitchy" in date_girl.traits:
                     $ game.active_date.score += 5
                     "[date_girl.name] laughs as she watches the kids trying in vain to save their work."
@@ -171,7 +160,7 @@ label date_beach_random_events:
                 else:
                     "[date_girl.name] looks over at the kids, but doesn't seem overly concerned about their plight."
             "Sympathise":
-                call expression f"date_beach_random_events_dialogues_4_{hero.gender}" from _call_expression_274
+                call expression f"date_beach_random_events_dialogues_4_male" from _call_expression_274
                 if "bitchy" in date_girl.traits:
                     $ game.active_date.score -= 5
                     "[date_girl.name] tuts and shakes her head, like she's disappointed in my compassion for the kids."
@@ -186,7 +175,7 @@ label date_beach_random_events:
         "She's seen that I have it with me, but I'm still not sure if she'll be into it..."
         menu:
             "Play the guitar":
-                call expression f"date_beach_random_events_dialogues_5_{hero.gender}" from _call_expression_275
+                call expression f"date_beach_random_events_dialogues_5_male" from _call_expression_275
                 "I smile as I begin to strum the instrument and clear my throat."
                 if "music" in date_girl.traits:
                     $ game.active_date.score += 10
@@ -199,7 +188,7 @@ label date_beach_random_events:
                     "[date_girl.name] rolls onto her side to listen, but keeps on sunbathing all the same."
             "Don't play the guitar":
                 "I reach for the guitar, but then hesitate and pull my hand away from it again."
-                call expression f"date_beach_random_events_dialogues_6_{hero.gender}" from _call_expression_276
+                call expression f"date_beach_random_events_dialogues_6_male" from _call_expression_276
                 if "music" in date_girl.traits:
                     $ game.active_date.score -= 5
                     "[date_girl.name]'s mouth falls open, as if she's disappointed."
@@ -215,7 +204,7 @@ label date_beach_random_events:
         "I see that they're a couple of players short, and so when their ball lands by my foot, they call for us to come join their game."
         menu:
             "Accept":
-                call expression f"date_beach_random_events_dialogues_7_{hero.gender}" from _call_expression_277
+                call expression f"date_beach_random_events_dialogues_7_male" from _call_expression_277
                 "I pull [date_girl.name] to her feet, giving her little choice in the matter."
                 if "sporty" in date_girl.traits:
                     $ game.active_date.score += 10
@@ -230,7 +219,7 @@ label date_beach_random_events:
                     "[date_girl.name] shrugs and allows me to drag her along in my wake."
             "Refuse":
                 "I toss the ball back to the girls, but shake my head at their invitation to play."
-                call expression f"date_beach_random_events_dialogues_8_{hero.gender}" from _call_expression_278
+                call expression f"date_beach_random_events_dialogues_8_male" from _call_expression_278
                 if "sporty" in date_girl.traits:
                     $ game.active_date.score -= 10
                     "[date_girl.name] nods, but looks pouty and somewhat disappointed at the missed chance to compete."
@@ -248,7 +237,7 @@ label date_beach_random_events:
         "And I'm still looking at her when [date_girl.name] catches me in the act."
         menu:
             "Play it down":
-                call expression f"date_beach_random_events_dialogues_9_{hero.gender}" from _call_expression_279
+                call expression f"date_beach_random_events_dialogues_9_male" from _call_expression_279
                 if "family" in date_girl.traits:
                     $ game.active_date.score -= 10
                     "[date_girl.name] looks at the pregnant girl, and then down at the ground, as if my words have made her feel sad."
@@ -261,7 +250,7 @@ label date_beach_random_events:
                 else:
                     "[date_girl.name] nods and then shakes her head, leaving me wondering what she really thinks."
             "Own it":
-                call expression f"date_beach_random_events_dialogues_10_{hero.gender}" from _call_expression_280
+                call expression f"date_beach_random_events_dialogues_10_male" from _call_expression_280
                 if "family" in date_girl.traits:
                     $ game.active_date.score += 10
                     "[date_girl.name] gives me a wide smile and nods with genuine enthusiasm, as if I've said just the right thing."
@@ -276,10 +265,7 @@ label date_beach_random_events:
     return
 
 label date_castle_beach:
-    if game.room == 'date_nudistbeach':
-        show expression "beach sandcastle " + date_girl.id + " naked mc_naked"
-    else:
-        show expression "beach sandcastle " + date_girl.id
+    show expression "beach sandcastle " + date_girl.id
     "I make a sand castle with [date_girl.name]."
     call expression date_girl.get_chat from _call_expression_64
     if "playful" in date_girl.traits:
@@ -290,10 +276,7 @@ label date_castle_beach:
     return
 
 label date_volley_beach:
-    if game.room == 'date_nudistbeach':
-        show expression "beach volleyball " + date_girl.id + " naked"
-    else:
-        show expression "beach volleyball " + date_girl.id
+    show expression "beach volleyball " + date_girl.id
     "I play some beach volley with [date_girl.name]."
     $ game.active_date.score += 5
     call expression date_girl.get_chat from _call_expression_65
@@ -311,10 +294,7 @@ label date_volley_beach:
     return
 
 label date_play_beach:
-    if game.room == 'date_nudistbeach':
-        show expression "playing water " + date_girl.id + " naked mc_naked"
-    else:
-        show expression "playing water " + date_girl.id
+    show expression "playing water " + date_girl.id
     "I play with [date_girl.name] in the sea."
     $ game.active_date.score += 5
     call expression date_girl.get_chat from _call_expression_90
@@ -326,10 +306,7 @@ label date_play_beach:
     return
 
 label date_swimmingrace_beach:
-    if game.room == 'date_nudistbeach':
-        show expression "swimmingrace " + date_girl.id + " naked"
-    else:
-        show expression "swimmingrace " + date_girl.id
+    show expression "swimmingrace " + date_girl.id
     "I swim with [date_girl.name] in the sea."
     $ game.active_date.score += 5
     call expression date_girl.get_chat from _call_expression_92
@@ -345,10 +322,7 @@ label date_swimmingrace_beach:
     return
 
 label date_suntan:
-    if game.room == 'date_nudistbeach':
-        show expression "beach cream " + date_girl.id + " naked"
-    else:
-        show expression "beach cream " + date_girl.id
+    show expression "beach cream " + date_girl.id
     "I put sunscreen lotion on [date_girl.name]."
     $ game.active_date.score += 5
     call expression date_girl.get_chat from _call_expression_132
@@ -358,12 +332,9 @@ label date_suntan:
     return
 
 label date_icecream_beach:
-    if game.room == 'date_nudistbeach':
-        show expression "beach icecream " + date_girl.id + " naked mc_naked"
-    else:
-        show expression "beach icecream " + date_girl.id
-    if renpy.has_label(f"{active_girl.id}_ice_cream_reaction_{hero.gender}"):
-        call expression f"{active_girl.id}_ice_cream_reaction_{hero.gender}" from _call_expression_281
+    show expression "beach icecream " + date_girl.id
+    if renpy.has_label(f"{active_girl.id}_ice_cream_reaction_male"):
+        call expression f"{active_girl.id}_ice_cream_reaction_male" from _call_expression_281
     else:
         "We eat an ice cream together."
     call expression date_girl.get_chat from _call_expression_282
@@ -373,10 +344,7 @@ label date_icecream_beach:
     return
 
 label date_beach:
-    if game.room == 'date_nudistbeach':
-        $ renpy.show(date_girl.id + " naked")
-    else:
-        $ renpy.show(date_girl.id)
+    $ renpy.show(date_girl.id)
     "We go to the beach."
     if "sports_car" in hero.inventory:
         $ game.active_date.score += 5

@@ -178,24 +178,22 @@ label anna_dick_reactions:
     if not anna.flags.seendick:
         $ anna.flags.seendick = 1
         if hero.has_skill("hung"):
-            show dick reactions anna scared
+            show anna_dick_reaction
             anna.say "WOW!"
             anna.say "That thing's SO big!"
             mike.say "Is...is that a problem?"
-            show dick reactions smile
             anna.say "Oh no - don't worry about it."
-            show dick reactions tasty
             anna.say "I'll find room for it somehow!"
             $ anna.sub += 10
+            hide anna_dick_reaction
         elif hero.has_skill("smalldick"):
-            show dick reactions mock
+            show anna annoyed
             anna.say "Oooh!"
             mike.say "Is...is there a problem, Anna?"
-            show dick reactions smile
             anna.say "No, no - it's all good."
             anna.say "It's what you do with it that counts!"
             $ anna.sub -= 10
-        hide dick reactions
+            hide anna annoyed
     return
 
 label anna_halloween_invitation:

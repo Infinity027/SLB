@@ -63,7 +63,6 @@ init python:
 
 label kleio_hottub_sex_male:
     $ game.active_date.clothes = "swimsuit"
-    $ CONDOM = False
     show bg pool
     "When I asked Kleio over to take a dip in the hot-tub, I tried to make it sound innocent."
     "You know, like it was just a chance to relax and hang out?"
@@ -132,23 +131,23 @@ label kleio_hottub_sex_male:
     "And it can't help but make me all the more eager to my hands on her."
     "All thought of the previous awkwardness seems to vanish as we get down to it."
     "Now the only thing that I can think of is Kleio."
-    show hottub sex male kleio outside with fade
-    call kleio_dick_reactions from _call_kleio_dick_reactions
+    scene kleio_hottub01 with fade
     "She leans forwards, pushing her ass into my lap."
     "And I don't need to be told what needs to happen next."
     "The sensation of my cock against her pussy is almost too much to bear."
-    show hottub sex male kleio inside
+    scene kleio_hottub03
     "But when it finally begins to push inside, the feeling of release is incredible."
     "Kleio seems to be in the exact same place as me too."
     "As she gasps more with each inch that sinks into her!"
-    "She looks over her shoulder at me, mouth open and eyes wide."
-    "And she nods the whole time, urging me on until I can't go any deeper."
+    scene expression make_anim(kleio01_hottub, time=0.3, loop=True)
     "I stay still for a moment, and then start to move slowly back and forth."
     "Kleio moves in sympathy too, breasts swaying as she does so."
     "But it's almost impossible to keep from picking up speed."
+    scene expression make_anim(kleio02_hottub, time=0.2, loop=True)
     "That means it's not long before I'm slapping my thighs against Kleio's."
     "She yelps and squeals the whole time, unable to keep quiet."
     "And I hear myself making deeper sounds too, panting and groaning."
+    scene kleio_hottub09 with fade
     kleio.say "Oh...my...god!"
     kleio.say "You're making me cum..."
     kleio.say "Please...don't...stop!"
@@ -157,20 +156,20 @@ label kleio_hottub_sex_male:
     menu:
         "Cum inside":
             "There's no way I can stop it now, I'm already losing it."
-            show hottub sex male kleio cumshot with hpunch
+            scene kleio_hottub10 with vpunch
             $ kleio.love += 1
             "I feel myself shooting my load into Kleio, as deep as it can go."
-            show hottub sex male kleio ahegao with hpunch
+            scene kleio_hottub09 with vpunch
             "She loses the power of speech in that moment, making animal sounds instead."
-            with hpunch
+            with vpunch
             "And I just manage to catch her before she collapses, face first, into the water."
         "Cum outside":
-            show hottub sex male kleio outside
+            scene kleio_hottub08
             "I pull back at the very last moment, enough to make my cock pop out of Kleio."
             "She makes an almost desperate animal sound as it slides out."
             "But the sensation is more than enough to finish her off."
             $ kleio.sub += 1
-            show hottub sex male kleio cumshot with hpunch
+            with hpunch
             "And Kleio surrenders to her orgasm as I shoot my load over her."
             with hpunch
             "It splashes down across her back, buttocks and thighs."
@@ -641,12 +640,7 @@ label kleio_fuck_date_cowgirl(sexperience_min):
             $ kleio.flags.anal += 1
 
         "Fuck her pussy":
-            call check_condom_usage (kleio, love=180, drinks=3) from _call_check_condom_usage_62
-            if _return == False:
-                return "leave_without_gain"
             show kleio cowgirl vaginal
-            if CONDOM:
-                show kleio cowgirl condom
             with fade
             "I can already feel the warmth of Kleio's pussy, how wet she is too."
             "Just knowing that she's been thinking of this moment all night is enough to make my mind up."
@@ -846,12 +840,7 @@ label kleio_fuck_date_cowgirl2(sexperience_min):
                 hide bellycum
             $ kleio.flags.anal += 1
         "Fuck her pussy":
-            call check_condom_usage (kleio, love=180, drinks=3) from _call_check_condom_usage_63
-            if _return == False:
-                return "leave_without_gain"
             show kleio cowgirl vaginal
-            if CONDOM:
-                show kleio cowgirl condom
             "I know I said that Kleio was already nice and slippery down there."
             "And of course, that means I slide straight into her."
             "But that doesn't mean it's not a feeling that takes my breath away."
@@ -1037,17 +1026,12 @@ label kleio_fuck_date_doggy2(sexperience_min):
                 "I stay where I am, kneeling over her and allowing the last few spurts of cum to drip down onto her thighs."
             $ kleio.flags.anal += 1
         "Fuck her pussy":
-            call check_condom_usage (kleio, love=180, drinks=3) from _call_check_condom_usage_64
-            if _return == False:
-                return "leave_without_gain"
             "If I were feeling more cruel than I am right now, I might do something like take Kleio up the ass without warning."
             "But this is supposed to be fun for both of us, right?"
             "And anyway, the feeling of those slick lips down there is almost too much to resist."
             "I take a firm hold of her buttocks, using them as an anchor as I pull her back and onto my waiting cock."
             "For all of her nervous glances and whimpering beforehand, there's no question in my mind that Kleio wanted this as much as me."
             show kleio_doggy2 vaginal
-            if CONDOM:
-                show kleio_doggy2 vaginal condom
             "She parts like a flower opening for the sunlight, letting me straight into her in one smooth motion."
             "The sound of her gasping in reaction to my entry is almost as much of a turn on as the actual sensation of the thing."
             "And I don't stop pushing into her on that first thrust until I can't go any deeper."
@@ -1153,11 +1137,6 @@ label kleio_fuck_date_doggy(sexperience_min):
     mike.say "No amount of spanking's ever going to fix you, Kleio...no amount of cock, either...but that's not gonna stop me from trying."
     menu:
         "Fuck her pussy":
-            call check_condom_usage (kleio, love=180, drinks=3) from _call_check_condom_usage_65
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show kleio doggy condom
             show kleio doggy vaginal hurt
             "I mount her before she can say another word, enjoying the sensation of pushing into Kleio's tight lips and feeling her tremble in reply."
             show kleio doggy shake
@@ -1263,11 +1242,6 @@ label kleio_fuck_date_missionary(sexperience_min):
     "The force makes her legs ride up in the air, and she quickly wraps them around my back."
     menu:
         "Fuck her pussy":
-            call check_condom_usage (kleio, love=180, drinks=3) from _call_check_condom_usage_66
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show kleio rough condom
             show kleio rough vaginal pleasure
             with fade
             "I'm inside of her before she can fully make sense of what's happening."
@@ -1441,12 +1415,7 @@ label kleio_garage_fuck:
             "Kleio's pussy is right there in front of me."
             "And from the look of it, ripe for the taking too!"
             "So that's exactly where I aim for..."
-            call check_condom_usage (kleio, love=180, drinks=3) from _call_check_condom_usage_67
-            if _return == False:
-                return "leave_without_gain"
             show kleio missionary vaginal
-            if CONDOM:
-                show kleio missionary vaginal condom
             "Kleio stares downwards, wide-eyed as I push my cock against her lips."
             "She gasps as the head begins to slip between them, a little at a time."
             "There's resistance at first, enough to spur me on to push harder."

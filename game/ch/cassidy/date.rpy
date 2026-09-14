@@ -179,22 +179,22 @@ label cassidy_dick_reactions:
     if not cassidy.flags.seendick:
         $ cassidy.flags.seendick = 1
         if hero.has_skill("hung"):
-            show dick reactions cassidy tasty
+            show cassidy_dick_reaction
             cassidy.say "That's a pretty impressive size!"
             mike.say "Ah...thanks for the compliment."
-            show dick reactions cassidy smile
             cassidy.say "Don't mention it, [hero.name]."
             cassidy.say "Just get over here and give me some of that thing!"
             $ cassidy.sub += 10
+            hide cassidy_dick_reaction
+
         elif hero.has_skill("smalldick"):
-            show dick reactions cassidy mock
+            show cassidy annoyed
             cassidy.say "Aw...I was expecting it to be bigger!"
             mike.say "Ah...sorry to disappoint you, Cassidy!"
             cassidy.say "Ah well..."
-            show dick reactions cassidy smile
             cassidy.say "I guess I'll just have to make the best of it!"
             $ cassidy.sub -= 10
-        hide dick reactions
+            hide cassidy annoyed
     return
 
 label cassidy_halloween_invitation:

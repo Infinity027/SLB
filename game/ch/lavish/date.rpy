@@ -176,23 +176,22 @@ label lavish_dick_reactions:
     if not lavish.flags.seendick:
         $ lavish.flags.seendick = 1
         if hero.has_skill("hung"):
-            show dick reactions lavish smile
+            show lavish_dick_reaction
             lavish.say "You certainly are big down there!"
             mike.say "That's not a problem - is it?"
             lavish.say "Oh no...not at all."
-            show dick reactions lavish tasty
             lavish.say "I just hope I can find room for it, that's all!"
             $ lavish.sub += 10
+            hide lavish_dick_reaction
         elif hero.has_skill("smalldick"):
-            show dick reactions lavish mock
+            show lavish annoyed
             lavish.say "Is that as big as it's going to get?"
             mike.say "Uhm...yeah."
             mike.say "That's not a problem - is it?"
-            show dick reactions lavish smile
             lavish.say "Oh no...not at all."
             lavish.say "There'll be plenty of room for it!"
             $ lavish.sub -= 10
-        hide dick reactions
+            hide lavish annoyed
     return
 
 label lavish_halloween_invitation:

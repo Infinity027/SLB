@@ -217,7 +217,7 @@ label alexis_cheated(action, cheat_npc=None):
     return
 
 label alexis_greet:
-    if renpy.has_label(f"alexis_greet_dialogues_{hero.gender}") and not alexis.flags.greeted:
+    if renpy.has_label(f"alexis_greet_dialogues_male") and not alexis.flags.greeted:
         scene expression f"bg {game.room}"
         $ alexis.flags.greeted = TemporaryFlag(True, 1)
         show alexis
@@ -235,7 +235,7 @@ label alexis_greet:
                 alexis.say "Good afternoon [hero.name]."
             else:
                 alexis.say "Good evening [hero.name]."
-        call expression f"alexis_greet_dialogues_{hero.gender}" from _call_expression_206
+        call expression f"alexis_greet_dialogues_male" from _call_expression_206
         if alexis.flags.submissive_interact:
             if randint(0, 1) == 0:
                 alexis.say "I need your cock inside of me so bad, [hero.name]!"

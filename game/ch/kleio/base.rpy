@@ -224,7 +224,7 @@ label kleio_cheated(action, cheat_npc=None):
     return
 
 label kleio_greet:
-    if renpy.has_label(f"kleio_greet_dialogues_{hero.gender}") and not kleio.flags.greeted:
+    if renpy.has_label(f"kleio_greet_dialogues_male") and not kleio.flags.greeted:
         scene expression f"bg {game.room}"
         $ kleio.flags.greeted = TemporaryFlag(True, 1)
         show kleio
@@ -242,7 +242,7 @@ label kleio_greet:
                 kleio.say "Good afternoon [hero.name]."
             else:
                 kleio.say "Good evening [hero.name]."
-        call expression f"kleio_greet_dialogues_{hero.gender}" from _call_expression_242
+        call expression f"kleio_greet_dialogues_male" from _call_expression_242
         if kleio.flags.submissive_interact:
             if randint(0, 1) == 0:
                 kleio.say "I hate that you made me say it, Loverboy - but I NEED your cock in me so bad!"

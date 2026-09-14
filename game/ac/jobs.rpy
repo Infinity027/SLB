@@ -47,7 +47,7 @@ init python:
     })
 
 label ask_for_a_job:
-    call expression f"ask_for_a_job_dialogues_1_{hero.gender}" from _call_expression_113
+    call expression f"ask_for_a_job_dialogues_1_male" from _call_expression_113
     "Shop owner" "Sure, the job is yours."
     if not game.flags.job_day:
         $ game.flags.job_day = game.room
@@ -56,25 +56,25 @@ label ask_for_a_job:
     return
 
 label ask_for_a_job_day:
-    call expression f"ask_for_a_job_dialogues_1_{hero.gender}" from _call_expression_249
+    call expression f"ask_for_a_job_dialogues_1_male" from _call_expression_249
     "Shop owner" "Sure, the job is yours."
     $ game.flags.job_day = game.room
     return
 
 label ask_for_a_job_night:
-    call expression f"ask_for_a_job_dialogues_1_{hero.gender}" from _call_expression_250
+    call expression f"ask_for_a_job_dialogues_1_male" from _call_expression_250
     "Shop owner" "Sure, the job is yours."
     $ game.flags.job_night = game.room
     return
 
 label quit_a_job_day:
-    call expression f"quit_a_job_dialogues_1_{hero.gender}" from _call_expression_114
+    call expression f"quit_a_job_dialogues_1_male" from _call_expression_114
     "Shop owner" "That's a shame..."
     $ game.flags.job_day = False
     return
 
 label quit_a_job_night:
-    call expression f"quit_a_job_dialogues_1_{hero.gender}" from _call_expression_251
+    call expression f"quit_a_job_dialogues_1_male" from _call_expression_251
     "Shop owner" "That's a shame..."
     $ game.flags.job_night = False
     return

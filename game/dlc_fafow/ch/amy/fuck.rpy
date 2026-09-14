@@ -42,7 +42,6 @@ init python:
 
 label amy_hottub_sex_male:
     $ game.active_date.clothes = "swimsuit"
-    $ CONDOM = False
     scene bg pool with fade
     "When I invited Amy over to take a dip in the hot-tub, I had no idea what she'd say."
     "I mean, who knows if goths are really into that kind of thing?"
@@ -128,61 +127,35 @@ label amy_hottub_sex_male:
     "So it looks like she's skipping ahead a good couple of steps."
     "Which, for the record, is fine by me!"
     hide amy kiss
-    show hottub sex male amy outside
+    scene amy_hottub01
     with fade
-    "I move towards the edge of the hot-tub, hoping all the time that I don't fall in."
-    "Amy matches my steps perfectly, so that we can slip into the water together."
-    "At the same time we're doing all we can to undress each other too."
-    "Amy has my shorts down just as I manage to free her breasts."
-    "The bob and float in the water as we sink down."
-    "And I stare in sheer awe as her nipples stiffen before my eyes."
-    "Amy chuckles as she strokes my cock, slipping off her swimming costume."
-    "Then she turns her back to me, pushing her ass in my direction."
     "I hardly need to pull her onto me, as she sits on my cock herself."
-    "Then Amy starts to work herself backwards, pushing it between her buttocks."
     "All this time her bunches are swaying this way and that."
     "I find my eyes following them closely, like I can't look away."
     "Without a conscious thought, my hands reach out."
     "And then I grab hold of them."
-    "Amy lets out a squeal of surprise."
-    "But I note that she doesn't tell me to stop."
-    "At the same time, I can feel the head of my cock rubbing against the lips of her pussy."
-    "Amy's wriggling around, like she's trying to make it sink into her without me getting involved."
-    show hottub sex male inside
-    "So I pull back on her hair while thrusting my groin forwards at the same time."
+    "I can feel the head of my cock rubbing against the lips of her pussy."
+    scene amy_hottub02
     amy.say "OH..."
     amy.say "Oh fuck..."
     amy.say "Y...yeah!"
-    "I can feel myself sinking into Amy in that moment."
-    "But it can't just be on account of me tugging at her hair."
-    "It must be from that sensation making her pussy surrender."
-    "Which must in turn mean that she's getting off on it!"
     "The realisation spurs me on, making me pick up pace."
+    scene expression make_anim(amy_hottub, time=0.4, loop=True)
     "Now I'm thrusting into her faster and harder than ever."
-    "I keep a firm hold on Amy's hair, but more to keep her in place than anything else."
-    "Even so, it doesn't seem to do anything to lessen her desire for more."
-    "Amy braces her hands against my thighs, holding on as best she can."
     amy.say "H...harder..."
     amy.say "Fuck me...harder..."
     amy.say "Please?"
+    scene amy_hottub03
     "I do all that I can to obey Amy's demands."
     "But the truth is that I'm already going all out."
     "So I pull harder and make more noise in the hope that it'll have the desired effect."
     "And it seems that it does the trick, as Amy stops forming actual words."
     "Instead her mouth hangs open and nothing but animalistic moans emerge from it."
-    show hottub cumshot with hpunch
-    $ amy.impregnate()
+    show amy_hottub04 with hpunch
     "With one last gasp of my own, I realise that I can't hold on any longer."
     $ amy.love += 1
-    show hottub sex male ahegao with hpunch
-    "As soon as I'm as deep into Amy as I can go, I shoot my load."
     with hpunch
-    "And then I collapse into the water, my muscles losing all strength."
-    "Amy falls with me, floating in front of me as she begins to cum too."
-    "I can barely hold onto her as it happens, just floating in the water."
-    "Maybe now we can enjoy the wine and the warmth."
-    "Just as soon as we regain the power of speech."
-    "That and the ability to move our limp bodies again."
+    "As soon as I'm as deep into Amy as I can go, I shoot my load."
     $ hero.replace_activity()
     $ game.active_date.score += 20
     $ amy.sexperience += 1
@@ -195,18 +168,13 @@ label amy_fuck_date_male(location="hero"):
     scene bg street
     show amy
 
-
     call amy_fuck_date_intro_male (location) from _call_amy_fuck_date_intro
-
 
     call amy_dick_reactions from _call_amy_dick_reactions
 
-
     call amy_fuck_date_foreplay_male from _call_amy_fuck_date_foreplay_male
 
-
     call amy_fuck_date_choices_male from _call_amy_fuck_date_choices_male
-
 
     call handle_npc_leaving (amy, _return) from _call_handle_npc_leaving_27
     if _return:
@@ -586,8 +554,6 @@ label amy_fuck_date_foreplay_male:
     menu:
         "Suggest a blowjob" if amy.sub >= 10:
             call amy_fuck_date_blowjob from _call_amy_fuck_date_blowjob
-        "Ask for a footjob" if amy.sub >= 25:
-            call amy_fuck_date_footjob from _call_amy_fuck_date_footjob
         "Eat her pussy" if hero.sexperience >= 5:
             call amy_fuck_date_cunnilingus from _call_amy_fuck_date_cunnilingus
         "Fuck her right now":
@@ -644,151 +610,52 @@ label amy_fuck_date_blowjob:
     "I move at the same time, lowering myself onto it."
     "And so in this odd way we change places without a word."
     scene bg black
-    show amy bj naked handjob
-    with fade
-    "Once she's kneeling on the floor, Amy wastes no time."
+    scene amy_blow_01 with fade
+    "Once she's lied on my body, she takes hold of my cock."
     "In fact she seems to move with an almost desperate urgency."
     "So I just lean back and watch."
-    "Amy has my cock in her hands and from the look on her face right now, she's happy to have it."
-    "Needless to say, I'm already good and hard."
-    "Which means I'm ready for what she has in mind."
-    "I'm honestly expecting her to put it straight into her mouth."
-    "So when she takes hold of her breasts and parts them, it's a surprise."
-    show amy bj -handjob with vpunch
-    "My mouth is open as Amy clasps my cock between her breasts."
-    "So that as she starts to move up and down a moment later, I begin to gasp."
-    "She's pushing them together with both hands, squeezing my cock at the same time."
+    scene amy_blow_02
+    "Amy started to lick the head of my cock, teasing it with her tongue."
+    "As she starts to move up and down a moment later, I begin to gasp."
+    scene expression amke_anim(amy_blowjob02, time=0.3, loop=True)
+    "She's using her lips and tongue in a way that I never thought possible."
     "And the sensation is pretty hard to put into words!"
     "Soft and yet firm at the same time, totally enveloping my cock."
     "No hand-job could ever feel as good as this!"
-    "Amy looks up at me as she massages me with her breasts."
-    "And I can see the mischief in her smile as she does so."
-    "It's almost impossible to see from my viewpoint."
-    "But I can feel that she's slowly working her way downwards."
-    "Little by little, the tip of my cock begins to emerge from her cleavage."
-    "At first there's no way Amy can reach it with her mouth."
-    "So she makes do by casting longing glances down at it."
-    "And she underlines her desire for it by slowly licking her lips too."
-    "A fraction of an inch at a time, it rises higher."
-    "And as soon as it's within reach, Amy leans her head forwards."
-    show amy bj down mouthtongue
     "I barely manage to suppress a gasp of anticipation as it happens."
     "But once it does, there's no turning back."
-    show amy bj eyesclosed blow
-    "Amy treats the head of my cock just like I did her nipple."
+    scene amy_blow_02
     "She employs lips, tongue and teeth as she sees fit."
     "And I never seem to know what's going to come next."
-    show amy bj hard eyeslust
+    scene expression amke_anim(amy_blowjob01, time=0.3, loop=True)
     "In my state of confused arousal, I hardly notice what she's doing."
     "So I'm surprised to see that I'm suddenly pretty deep into her mouth!"
     "In fact, Amy's pretty much taking me into her throat!"
     "The deeper she takes me the more intense the sensations become."
+    scene amy_blow_04 with fade
     "I have no idea how she's able to do all of this."
     "But I do know that I can't hold on for much longer!"
     menu:
         "Free meal in{b}cum{/b}ing!" if amy.sub >= 20:
             "I have no idea if I could even get my cock out of Amy's mouth right now."
             "So I make the decision to stay exactly where I am until the very end."
+            scene amy_blow_cum with dissolve
             "She seems to pick up on this and doesn't stop what she's doing for an instant."
-            "This means that when it happens, Amy's more than ready to handle it."
-            show amy bj eyesahegao cum with vpunch
+            play sound "vo/mc/bj_load.ogg"
+            with vpunch
             $ amy.love += 2
             "She lets out a slight gasp as I shoot my load, but then recovers a second later."
             with vpunch
             "Then I collapse onto my back as she swallows every last drop."
-            show amy bj up mouthcum -blow -cum
         "Watch out, it's about to explode!":
             "I do all that I can to pull out before the last moment."
             "And luckily for me, Amy seems to realise what I'm trying to do."
-            show amy bj eyeslust mouthpleasure -blow
+            scene amy_blow_01 with dissolve
+            play sound "vo/mc/bj_load.ogg"
             "In one smooth motion she releases me from her mouth."
-            "Then she sits patiently before me, waiting for the inevitable to happen."
-            show amy bj eyesclosed mouthtongue cum with vpunch
+            with vpunch
             $ amy.sub += 1
             "A moment later I shoot my load straight into her face."
-            with vpunch
-            "Then I collapse onto my back as she licks the cum from her lips."
-            show amy bj up eyeslust facecum -cum
-    return
-
-label amy_fuck_date_footjob:
-    "Amy gives me an enigmatic smile as she walks over to the bed."
-    scene bg black
-    show amy cunnilingus open naked
-    with fade
-    "Once there, she lies down on her back, hands under her."
-    "Then she looks up at me, as if daring me to come closer."
-    "Needless to say, I'm more than a little intrigued."
-    "And I want to see exactly what she has in mind."
-    "So with a shrug, I walk over and stand in front of her."
-    "Amy doesn't have to do much to get me interested."
-    "The mere sight of her lying there naked is getting me hard."
-    show amy cunnilingus pleasure
-    "And when she raises her legs into the air, I can see even more!"
-    "For a moment I think that this is going to be her game."
-    "To get me so worked up that I do the job myself."
-    "But then Amy stretches her feet out towards me."
-    "And I can see that she's flexing her toes too."
-    "What does she think?"
-    "That I'm some kind of foot-fetishist?"
-    "Unless..."
-    "Is she actually going to..."
-    "My questions are answered a moment later."
-    show amy cunnilingus footjob
-    "Specifically when Amy wraps her toes around the shaft of my cock." with vpunch
-    "She is!"
-    "She's going too give me a foot-job!"
-    "Amy's smiling up at me the whole time, apparently amused by my surprise."
-    "And right away I can see that she's got amazingly mobile toes."
-    "I mean, they're not freakishly long like a monkey's or anything."
-    "But still they move almost like fingers!"
-    show amy cunnilingus at startle(0.05,-10)
-    "Before I know it, Amy's using them just like she would her hands too."
-    "Her toes have hold of the shaft of my cock."
-    "And they're working it with incredible dexterity."
-    "Sure, it's not as precise or delicate as hands would be."
-    show amy cunnilingus at startle(0.05,-10)
-    "But it's more than enough to get the job done."
-    "It's not just the toes that Amy uses either."
-    "The soles of her feet cradle my cock as well."
-    "And those are much larger than the palms of her hands."
-    show amy cunnilingus at startle(0.05,-10)
-    "Which means the sensation of them is that much more intense too!"
-    show amy cunnilingus speed with vpunch
-    "Her speed seems to be picking up as well."
-    "Not that it makes her efforts any less dextrous."
-    "Soon it's hard to tell which one of Amy's feet is where."
-    show amy cunnilingus at startle(0.05,-10)
-    "Because they're moving too fast for me to spot!"
-    "And they're totally in control of me too."
-    "Amy's got me in the palm of her hand."
-    "Or to be more specific, on the sole of her foot!"
-    show amy cunnilingus normal
-    amy.say "See, [hero.name]..."
-    amy.say "I told you!"
-    "I nod desperately, unable to do anything else."
-    "Amy seems gratified by this."
-    show amy cunnilingus at startle(0.05,-10)
-    "And I feel her squeeze with her toes, even more intensely than before."
-    show amy cunnilingus at startle(0.05,-10)
-    "It's like she knows exactly what she's doing and the effect it will have."
-    show amy cunnilingus at startle(0.05,-10)
-    "Because a moment later I can feel myself starting to lose it."
-    show amy cunnilingus orgasm cumshot -speed with vpunch
-    "I gasp as I shoot my load, helpless to resist."
-    with vpunch
-    "Amy keeps right on squeezing the whole time, even as I shoot my load."
-    with vpunch
-    "The result is that it oozes from between her toes, then runs down her legs."
-    $ amy.love += 2
-    show amy cunnilingus open normal -footjob -cumshot
-    "Only when I'm finished does she let me go, allowing me to flop onto the bed beside her."
-    mike.say "Oh fuck..."
-    mike.say "Amy..."
-    mike.say "What else...can you do...with your feet?"
-    show amy cunnilingus pleasure
-    amy.say "Just you wait and see, [hero.name]."
-    amy.say "Just you wait and see."
     return
 
 label amy_fuck_date_cunnilingus:
@@ -950,12 +817,7 @@ label amy_fuck_date_missionary(sexperience_min):
             "Amy's pussy is calling to me right now."
             "Like it's impossible to think of anything else."
             "So I decide to go for it."
-            call check_condom_usage (amy) from _call_check_condom_usage_124
-            if _return == False:
-                return "leave_without_gain"
             show amy missionary spread mike
-            if CONDOM:
-                show amy missionary condom
             "I begin to lower myself down onto Amy."
             "I can already image the sensation of sinking into her."
             if amy.flags.buttplug:
@@ -1204,11 +1066,6 @@ label amy_fuck_date_doggy(sexperience_min):
             "Like everything's been building up to it since the very beginning."
             "All I can think about is the sweet spot between Amy's thighs."
             show amy doggy -nomc
-            call check_condom_usage (amy) from _call_check_condom_usage_125
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show amy doggy condom
             call amy_fuck_doggy_ask_accessories from _call_amy_fuck_doggy_ask_accessories
             if BEADS:
                 "Though it doesn't take me long to see the problem here."
@@ -1596,11 +1453,6 @@ label amy_fuck_date_cowgirl(sexperience_min):
             "Amy's question has an instant effect on me."
             "For the first time my hands reach out."
             "And I find myself taking the lead."
-            call check_condom_usage (amy) from _call_check_condom_usage_126
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show amy cowgirl condom
             show amy cowgirl mikehand
             "My hands firmly gripping Amy's waist, I begin to pull her downwards."
             "She doesn't resist for a moment, letting me guide her where I desire."
@@ -2167,13 +2019,12 @@ label amy_fuck_date_cowgirl(sexperience_min):
                 "Shooting my load up and over her belly."
     return
 
-label amy_fuck_date_nudistbeach:
 label amy_fuck_date_beach:
 label amy_fuck_beach:
     menu:
         "Doggy":
             call amy_fuck_beach_doggy (0) from _call_amy_fuck_beach_doggy
-        "Cowgirl" if hero.sexperience >= 10 and not game.room == "date_nudistbeach":
+        "Cowgirl" if hero.sexperience >= 10:
             call amy_fuck_beach_cowgirl (10) from _call_amy_fuck_beach_cowgirl
     return
 
@@ -2215,34 +2066,32 @@ label amy_fuck_beach_doggy(sexperience_min):
     mike.say "I was going to say..."
     "Amy has her back to me as I arrive."
     "And I don't really notice what she's doing."
-    if not game.room == 'date_nudistbeach':
-        show amy topless with dissolve
-        "That is until she unties the top of her swimsuit, revealing her breasts."
-        "And yeah, I know that I said she has her back turned to me already."
-        "But maybe you don't really understand how large her breasts really are!"
-        amy.say "Huh?"
-        amy.say "What was that, [hero.name]?"
-        mike.say "Oh..."
-        mike.say "It was nothing, Amy!"
-        mike.say "I didn't realise you wanted to sunbathe topless!"
-        show amy normal
-        "Amy chuckles at this and shakes her head."
-        "Like I just said something dumb as hell."
-        amy.say "I don't want to sunbathe, [hero.name]."
-        show amy flirt
-        amy.say "I want to do something far more fun than that!"
-        show amy naked with dissolve
-        "With that, Amy pulls down the rest of her swimsuit."
-        "Then she steps out of it completely and turns to face me."
+    show amy topless with dissolve
+    "That is until she unties the top of her swimsuit, revealing her breasts."
+    "And yeah, I know that I said she has her back turned to me already."
+    "But maybe you don't really understand how large her breasts really are!"
+    amy.say "Huh?"
+    amy.say "What was that, [hero.name]?"
+    mike.say "Oh..."
+    mike.say "It was nothing, Amy!"
+    mike.say "I didn't realise you wanted to sunbathe topless!"
+    show amy normal
+    "Amy chuckles at this and shakes her head."
+    "Like I just said something dumb as hell."
+    amy.say "I don't want to sunbathe, [hero.name]."
+    show amy flirt
+    amy.say "I want to do something far more fun than that!"
+    show amy naked with dissolve
+    "With that, Amy pulls down the rest of her swimsuit."
+    "Then she steps out of it completely and turns to face me."
     amy.say "Come on, [hero.name]..."
     amy.say "Don't just stand there staring."
     amy.say "Let's fuck!"
     "My head starts to nod and my hands to move before I even think about it."
-    if not game.room == 'date_nudistbeach':
-        "Which means that I'm more than half out of my shorts before I snap back to reality."
-        "And what the hell was I even thinking wanting to be where we could be seen?"
-        "Amy's idea is a hundred times better than that!"
-        "By the time I kick my shorts off, she's already down on her hands and knees."
+    "Which means that I'm more than half out of my shorts before I snap back to reality."
+    "And what the hell was I even thinking wanting to be where we could be seen?"
+    "Amy's idea is a hundred times better than that!"
+    "By the time I kick my shorts off, she's already down on her hands and knees."
     "She looks back over her shoulder at me, beckoning with her eyes."
     amy.say "Let's get going."
     amy.say "Because you look like you're ready for it!"
@@ -2698,27 +2547,6 @@ label amy_fuck_doggy_ask_accessories:
             show amy doggy pleasure buttplug
             "She gasps and sighs as I work it up there."
             show amy doggy normal
-            "Then we're ready to get on with it."
-        "Use beads and butt-plug" if "anal_beads" in hero.inventory and amy.flags.buttplug:
-            $ BEADS = PLUG = True
-            amy.say "Wait a minute..."
-            amy.say "I want to use these."
-            "I pause as Amy hands me a string of pleasure beads and a butt-plug."
-            "Then she nods back over her shoulder."
-            amy.say "Push the beads into my pussy and the plug up my ass, okay?"
-            amy.say "Then pull them out just as I cum!"
-            show amy doggy nomc
-            "I nod as I take the beads and the butt-plug."
-            "And then I do as Amy says."
-            show amy doggy pleasure beads beads4
-            pause 1
-            show amy doggy beads3
-            "She gasps and sighs as I push each bead home."
-            show amy doggy buttplug
-            "Then she moans as I work the plug up her ass."
-            show amy doggy beads2
-            pause 1
-            show amy doggy normal beads1
             "Then we're ready to get on with it."
         "No time for toys":
             amy.say "Hurry up, [hero.name]!"

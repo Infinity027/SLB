@@ -77,7 +77,7 @@ init python:
     "conditions": [
         IsDone("alexis_event_04"),
         HeroTarget(
-            IsRoom("date_beach", "date_nudistbeach")),
+            IsRoom("date_beach")),
         PersonTarget(alexis,
             IsPresent(),
             Not(IsHidden()),

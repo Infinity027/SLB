@@ -553,7 +553,7 @@ label minami_porn_bad_reaction:
     return
 
 label minami_greet:
-    if renpy.has_label(f"minami_greet_dialogues_{hero.gender}") and not minami.flags.greeted:
+    if renpy.has_label(f"minami_greet_dialogues_male") and not minami.flags.greeted:
         scene expression f"bg {game.room}"
         show minami
         $ minami.flags.greeted = TemporaryFlag(True, 1)
@@ -581,7 +581,7 @@ label minami_greet:
                     minami.say "Good evening [hero.name]."
                 else:
                     minami.say "Good evening big bro."
-        call expression f"minami_greet_dialogues_{hero.gender}" from _call_expression_253
+        call expression f"minami_greet_dialogues_male" from _call_expression_253
         if minami.flags.submissive_interact:
             if randint(0, 1) == 0:
                 minami.say "Big bro, you wanna break a taboo and make me cum all at once?"

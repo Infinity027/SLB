@@ -44,7 +44,7 @@ label buy_drugs:
     return
 
 label use_drugs:
-    if renpy.has_label(f"use_drugs_{hero.gender}"):
-        call expression f"use_drugs_{hero.gender}" from _call_expression_194
+    if renpy.has_label(f"use_drugs_male"):
+        call expression f"use_drugs_male" from _call_expression_194
     return
 return

@@ -42,10 +42,6 @@ init python:
                 Not(IsHidden()),
                 IsRoom("bathroom"),
                 ),
-            PersonTarget("lexi",
-                Not(IsHidden()),
-                IsRoom("bathroom"),
-                ),
             PersonTarget("mike",
                 Not(IsHidden()),
                 IsRoom("bathroom"),
@@ -150,35 +146,35 @@ label clean_the_secondfloor:
     if (not bree.hidden and bree.activity_name == 'sleep') and (not sasha.hidden and sasha.activity_name == 'sleep') and (not minami.hidden and minami.activity_name == 'sleep'):
         $ wake_up = randint(1, 3)
         if wake_up == 1:
-            call expression f"vacuum_bree_sleep_{hero.gender}" from _call_vacuum_bree_sleep
+            call expression f"vacuum_bree_sleep_male" from _call_vacuum_bree_sleep
         elif wake_up == 2:
-            call expression f"vacuum_sasha_sleep_{hero.gender}" from _call_vacuum_sasha_sleep
+            call expression f"vacuum_sasha_sleep_male" from _call_vacuum_sasha_sleep
         elif wake_up == 3:
-            call expression f"vacuum_minami_sleep_{hero.gender}" from _call_vacuum_minami_sleep
+            call expression f"vacuum_minami_sleep_male" from _call_vacuum_minami_sleep
     elif (not bree.hidden and bree.activity_name == 'sleep') and (not sasha.hidden and sasha.activity_name == 'sleep'):
         $ wake_up = randint(1, 2)
         if wake_up == 1:
-            call expression f"vacuum_bree_sleep_{hero.gender}" from _call_vacuum_bree_sleep_1
+            call expression f"vacuum_bree_sleep_male" from _call_vacuum_bree_sleep_1
         elif wake_up == 2:
-            call expression f"vacuum_sasha_sleep_{hero.gender}" from _call_vacuum_sasha_sleep_1
+            call expression f"vacuum_sasha_sleep_male" from _call_vacuum_sasha_sleep_1
     elif (not bree.hidden and bree.activity_name == 'sleep') and (not minami.hidden and minami.activity_name == 'sleep'):
         $ wake_up = randint(1, 2)
         if wake_up == 1:
-            call expression f"vacuum_bree_sleep_{hero.gender}" from _call_vacuum_bree_sleep_2
+            call expression f"vacuum_bree_sleep_male" from _call_vacuum_bree_sleep_2
         elif wake_up == 2:
-            call expression f"vacuum_minami_sleep_{hero.gender}" from _call_vacuum_minami_sleep_1
+            call expression f"vacuum_minami_sleep_male" from _call_vacuum_minami_sleep_1
     elif (not sasha.hidden and sasha.activity_name == 'sleep') and (not minami.hidden and minami.activity_name == 'sleep'):
         $ wake_up = randint(1, 2)
         if wake_up == 1:
-            call expression f"vacuum_sasha_sleep_{hero.gender}" from _call_vacuum_sasha_sleep_2
+            call expression f"vacuum_sasha_sleep_male" from _call_vacuum_sasha_sleep_2
         elif wake_up == 2:
-            call expression f"vacuum_minami_sleep_{hero.gender}" from _call_vacuum_minami_sleep_2
+            call expression f"vacuum_minami_sleep_male" from _call_vacuum_minami_sleep_2
     elif not bree.hidden and bree.activity_name == 'sleep':
-        call expression f"vacuum_bree_sleep_{hero.gender}" from _call_vacuum_bree_sleep_3
+        call expression f"vacuum_bree_sleep_male" from _call_vacuum_bree_sleep_3
     elif not sasha.hidden and sasha.activity_name == 'sleep':
-        call expression f"vacuum_sasha_sleep_{hero.gender}" from _call_vacuum_sasha_sleep_3
+        call expression f"vacuum_sasha_sleep_male" from _call_vacuum_sasha_sleep_3
     elif not minami.hidden and minami.activity_name == 'sleep':
-        call expression f"vacuum_minami_sleep_{hero.gender}" from _call_vacuum_minami_sleep_3
+        call expression f"vacuum_minami_sleep_male" from _call_vacuum_minami_sleep_3
     else:
         play sound vacuum
         $ game.set_flag("chores", 25, "week", "+")
@@ -504,79 +500,6 @@ label knock_bathroom:
                 $ sasha.flags.peeped_count += 1
                 $ hero.flags.peeped += 1
                 hide peeping_bath
-            elif all(g in peeping_girls and g.lesbian >= 5 for g in (bree, minami)):
-                show peeping_bath minami bree
-                "I see [bree.name] and Minami bathing together..."
-                "They are so cute!"
-                $ bree.flags.peeped = TemporaryFlag(True, "day")
-                $ bree.flags.peeped_count += 1
-                $ minami.flags.peeped = TemporaryFlag(True, "day")
-                $ minami.flags.peeped_count += 1
-                $ hero.flags.peeped += 1
-                hide peeping_bath
-            elif Person.is_not_hidden("lexi") and all(g in peeping_girls and g.lesbian >= 5 for g in (lexi, sasha)):
-                if game.week_day % 2 == 0:
-                    show peeping_bath lexi sasha
-                    "I see Lexi and Sasha bathing together..."
-                    "They are so cute!"
-                    $ lexi.flags.peeped = TemporaryFlag(True, "day")
-                    $ lexi.flags.peeped_count += 1
-                    $ sasha.flags.peeped = TemporaryFlag(True, "day")
-                    $ sasha.flags.peeped_count += 1
-                    $ hero.flags.peeped += 1
-                    hide peeping_bath
-                else:
-                    show peeping_shower lexi sasha
-                    "I see Lexi and Sasha showering together..."
-                    "They are so cute!"
-                    $ lexi.flags.peeped = TemporaryFlag(True, "day")
-                    $ lexi.flags.peeped_count += 1
-                    $ sasha.flags.peeped = TemporaryFlag(True, "day")
-                    $ sasha.flags.peeped_count += 1
-                    $ hero.flags.peeped += 1
-                    hide peeping_shower
-            elif Person.is_not_hidden("lexi") and all(g in peeping_girls and g.lesbian >= 5 for g in (lexi, minami)):
-                if game.week_day % 2 == 0:
-                    show peeping_bath lexi minami
-                    "I see Lexi and Minami bathing together..."
-                    "They are so cute!"
-                    $ lexi.flags.peeped = TemporaryFlag(True, "day")
-                    $ lexi.flags.peeped_count += 1
-                    $ minami.flags.peeped = TemporaryFlag(True, "day")
-                    $ minami.flags.peeped_count += 1
-                    $ hero.flags.peeped += 1
-                    hide peeping_bath
-                else:
-                    show peeping_shower lexi minami
-                    "I see Lexi and Minami showering together..."
-                    "They are so cute!"
-                    $ lexi.flags.peeped = TemporaryFlag(True, "day")
-                    $ lexi.flags.peeped_count += 1
-                    $ minami.flags.peeped = TemporaryFlag(True, "day")
-                    $ minami.flags.peeped_count += 1
-                    $ hero.flags.peeped += 1
-                    hide peeping_shower
-            elif all(g in peeping_girls and g.lesbian >= 5 for g in (samantha, minami)):
-                if game.week_day % 2 == 0:
-                    show peeping_bath samantha minami
-                    "I see Samantha and Minami bathing together..."
-                    "They are so cute!"
-                    $ samantha.flags.peeped = TemporaryFlag(True, "day")
-                    $ samantha.flags.peeped_count += 1
-                    $ minami.flags.peeped = TemporaryFlag(True, "day")
-                    $ minami.flags.peeped_count += 1
-                    $ hero.flags.peeped += 1
-                    hide peeping_bath
-                else:
-                    show peeping_shower samantha minami
-                    "I see Samantha and Minami showering together..."
-                    "They are so cute!"
-                    $ samantha.flags.peeped = TemporaryFlag(True, "day")
-                    $ samantha.flags.peeped_count += 1
-                    $ minami.flags.peeped = TemporaryFlag(True, "day")
-                    $ minami.flags.peeped_count += 1
-                    $ hero.flags.peeped += 1
-                    hide peeping_shower
             elif all(g in peeping_girls and g.lesbian >= 5 for g in (samantha, sasha)):
 
                 show peeping_bath samantha sasha
@@ -588,17 +511,6 @@ label knock_bathroom:
                 $ sasha.flags.peeped_count += 1
                 $ hero.flags.peeped += 1
                 hide peeping_bath
-
-
-
-
-
-
-
-
-
-
-
             elif all(g in peeping_girls for g in (mike, sasha)):
                 show peeping_bath mike sasha
                 "I see [mike.name] and Sasha bathing together..."
@@ -618,17 +530,11 @@ label knock_bathroom:
                 $ hero.flags.peeped += 1
                 hide peeping_bath
             else:
-                show expression "peeping " + girl.id
-                if renpy.has_label(f"{girl.id}_peeping_scene_{hero.gender}"):
-                    call expression f"{girl.id}_peeping_scene_{hero.gender}" from _call_expression_199
-                else:
-                    "I see [girl.name] showering..."
-                    "She is so beautiful."
+                call expression f"{girl.id}_peeping_scene_male" from _call_expression_199
                 $ girl.flags.peeped = TemporaryFlag(True, "day")
                 $ girl.flags.peeped_count += 1
                 $ hero.flags.peeped += 1
-                hide expression "peeping " + girl.id
-            call expression f"peeping_result_{hero.gender}" from _call_expression_200
+            call expression f"peeping_result_male" from _call_expression_200
         "Knock":
 
             $ upset_girls = Room.find("bathroom").get_upset_girls()
@@ -653,7 +559,7 @@ label peeping_result_male:
     if randint(1, 100) > hero.flags.peeped * 10 or hero.has_skill("sneaky"):
         $ hero.fun += 1
     else:
-        call expression f"{girl.id}_peeping_reactions_{hero.gender}" from _call_expression_201
+        call expression f"{girl.id}_peeping_reactions_male" from _call_expression_201
     return
 
 label caught_peeping(peeping_girls):
@@ -666,13 +572,13 @@ label caught_peeping(peeping_girls):
     $ roaming_girls = [g for g in roaming_girls if Room.has_tag(g.room, "home") and g.activity_name != "sleep" and g.sub < 90]
     if roaming_girls:
         $ caught_girl = randchoice(roaming_girls)
-        if renpy.has_label(f"{caught_girl.id}_caught_peeping_{hero.gender}"):
-            call expression f"{caught_girl.id}_caught_peeping_{hero.gender}" from _call_expression_202
+        if renpy.has_label(f"{caught_girl.id}_caught_peeping_male"):
+            call expression f"{caught_girl.id}_caught_peeping_male" from _call_expression_202
         else:
             $ renpy.say(caught_girl.id, "HEY!")
             show expression caught_girl.id + " angry"
             $ renpy.say(caught_girl.id, "What are you doing?!?")
-            call expression f"caught_peeping_dialogues_1_{hero.gender}" pass (caught_girl=caught_girl.name) from _call_expression_203
+            call expression f"caught_peeping_dialogues_1_male" pass (caught_girl=caught_girl.name) from _call_expression_203
             $ caught_girl.love -= 10
             $ caught_girl.sub -= 2
 
@@ -945,4 +851,3 @@ label sasha_caught_peeping_male:
     "With that, Sasha storms off."
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

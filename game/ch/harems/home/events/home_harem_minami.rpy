@@ -1882,11 +1882,6 @@ label bree_minami_threesome:
             "All I can think about is the same part of her body and how much I want it."
             show threesome breeminami breetongueup
             "So I stroke the head of my cock along the lips between her legs."
-            call check_condom_usage (bree) from _call_check_condom_usage_49
-            if _return == False:
-                return
-            if CONDOM:
-                show threesome breeminami condom
             "She lets out another muffled moan, quivering with anticipation."
             "And I don't need any more of an invitation than that."
             show threesome breeminami breetonguemid mike vaginal
@@ -2280,12 +2275,6 @@ label bree_minami_sandwich:
             show sandwich breeminami mike
             "If I just get myself into position..."
             "Oh yeah - I knew it!"
-            "Aiming the head of my cock at [bree.name]'s pussy, I go for it."
-            call check_condom_usage (bree) from _call_check_condom_usage_50
-            if _return == False:
-                return
-            if CONDOM:
-                show sandwich breeminami condom
             "I feel it slide along the slick lips to either side."
             "Then all it takes is for me to give one last push."
             show sandwich breeminami breefuck vaginal
@@ -2326,11 +2315,6 @@ label bree_minami_sandwich:
             "If I just get myself into position..."
             "Oh yeah - I knew it!"
             "Aiming the head of my cock at Minami's pussy, I go for it."
-            call check_condom_usage (minami) from _call_check_condom_usage_51
-            if _return == False:
-                return
-            if CONDOM:
-                show sandwich breeminami condom
             "I feel it slide along the slick lips to either side."
             "Then all it takes is for me to give one last push."
             show sandwich breeminami minamifuck vaginal
@@ -2609,12 +2593,7 @@ label minami_sasha_threesome:
                     "And I also don't want to do something so crazy that it freaks her out either."
                     "Which is why I aim straight for her pussy, keeping things simple."
                     "And the moment I do that, I can't help smiling at what I feel."
-                    call check_condom_usage (minami) from _call_check_condom_usage_52
-                    if _return == False:
-                        return
                     show threesome minamisasha fuckminami vaginal
-                    if CONDOM:
-                        show threesome minamisasha fuckminami vaginal condom
                     "Minami's lips are already slippery and soft against the head of my cock."
                     "That means for all her nerves, she's still massively turned-on!"
                     "Realising that, I feel myself spurred on in turn."
@@ -2736,12 +2715,7 @@ label minami_sasha_threesome:
                 "Fuck her pussy":
                     "With Sasha pressing herself into me so hard, it's tricky to get things to go where I want them."
                     "So in the end, my cock finds its way to her pussy almost by accident."
-                    call check_condom_usage (sasha) from _call_check_condom_usage_53
-                    if _return == False:
-                        return
                     show threesome minamisasha fucksasha vaginal
-                    if CONDOM:
-                        show threesome minamisasha fucksasha vaginal condom
                     "She's already more than willing, her lips wet and slippery."
                     "Meaning that the head's in there before I know it."
                     "Sasha moans and I swear she actually purrs too as it slides into her."
@@ -3019,11 +2993,6 @@ label minami_sasha_sandwich:
             "The lips are already slick and slippery."
             "And it's almost like her pussy is sucking me in!"
             "Seriously, all I have to do is rub the head against it."
-            call check_condom_usage (sasha) from _call_check_condom_usage_54
-            if _return == False:
-                return
-            if CONDOM:
-                show sandwich minamisasha condom
             "The next thing I know it's already in there and going deeper by the second!"
             show sandwich minamisasha fucksasha vaginal
             "I feel like I couldn't stop it, even if I wanted to!"
@@ -3066,11 +3035,6 @@ label minami_sasha_sandwich:
             "The lips are already slick and slippery."
             "And it's almost like her pussy is sucking me in!"
             "Seriously, all I have to do is rub the head against it."
-            call check_condom_usage (minami) from _call_check_condom_usage_55
-            if _return == False:
-                return
-            if CONDOM:
-                show sandwich minamisasha condom
             "The next thing I know it's already in there and going deeper by the second!"
             show sandwich minamisasha fuckminami vaginal
             "I feel like I couldn't stop it, even if I wanted to!"

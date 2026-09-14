@@ -182,7 +182,7 @@ label date_park_random_events:
         "But a casual glance at [date_girl.name] shows me that she's shivering and I can almost hear her teeth chattering."
         menu:
             "Offer her your coat":
-                call expression f"date_park_random_events_dialogues_1_{hero.gender}" from _call_expression_315
+                call expression f"date_park_random_events_dialogues_1_male" from _call_expression_315
                 if "princess" in date_girl.traits:
                     "[date_girl.name] accepts the offer without hesitation, happy to be on the receiving end of such kindness."
                     $ game.active_date.score += 10
@@ -193,7 +193,7 @@ label date_park_random_events:
                     "[date_girl.name] refuses for a short while, and then grudgingly accepts the offer."
                     $ game.active_date.score += 5
             "Do not offer her your coat":
-                call expression f"date_park_random_events_dialogues_2_{hero.gender}" from _call_expression_316
+                call expression f"date_park_random_events_dialogues_2_male" from _call_expression_316
                 if "princess" in date_girl.traits:
                     "[date_girl.name] makes a haughty noise and turns her nose up at me, clearly having been expecting more than a critical comment."
                     $ game.active_date.score -= 10
@@ -263,7 +263,7 @@ label date_park_random_events:
         "[date_girl.name] notices the attention that I'm giving the little nook and looks at me for an explanation."
         menu:
             "Admit it looks inviting for an amorous liaison":
-                call expression f"date_park_random_events_dialogues_3_{hero.gender}" from _call_expression_317
+                call expression f"date_park_random_events_dialogues_3_male" from _call_expression_317
                 if "slutty" in date_girl.traits:
                     $ game.active_date.score += 10
                     "[date_girl.name] grins wickedly, instantly picking up on the possibilities of sex in a public place."
@@ -274,7 +274,7 @@ label date_park_random_events:
                     $ game.active_date.score -= 5
                     "[date_girl.name] smiles indulgently, but I get the impression she has a more pure and romantic image of the whole thing than I do."
             "Say it could be used for a prank":
-                call expression f"date_park_random_events_dialogues_4_{hero.gender}" from _call_expression_318
+                call expression f"date_park_random_events_dialogues_4_male" from _call_expression_318
                 if "slutty" in date_girl.traits:
                     $ game.active_date.score -= 10
                     "[date_girl.name] stares at me, amazed that I'd miss such a blatant opportunity to misbehave in public."
@@ -290,7 +290,7 @@ label date_park_random_events:
         "[date_girl.name] notes my interest in their lycra-clad forms, making me stutter to explain myself."
         menu:
             "Admit that you were looking":
-                call expression f"date_park_random_events_dialogues_5_{hero.gender}" from _call_expression_319
+                call expression f"date_park_random_events_dialogues_5_male" from _call_expression_319
                 if "flirty" in date_girl.traits:
                     $ game.active_date.score += 10
                     "[date_girl.name] smiles and squeezes my hand, giving me the distinct impression that she's storing that little admission away for a later date."
@@ -301,7 +301,7 @@ label date_park_random_events:
                 else:
                     "[date_girl.name] shakes her head a little ruefully, but seems to appreciate my honesty all the same."
             "Make an insulting comment":
-                call expression f"date_park_random_events_dialogues_6_{hero.gender}" from _call_expression_320
+                call expression f"date_park_random_events_dialogues_6_male" from _call_expression_320
                 if "bitchy" in date_girl.traits:
                     $ game.active_date.score += 10
                     "[date_girl.name] sneers a little and nods in agreement, clearly amused by my putting the other girls down in front of her."
@@ -314,7 +314,7 @@ label date_park_random_events:
         "[date_girl.name] smiles sideways at me, clearly looking to discover just what I think of the scene."
         menu:
             "Dismiss the guitarist as a jerk":
-                call expression f"date_park_random_events_dialogues_7_{hero.gender}" from _call_expression_321
+                call expression f"date_park_random_events_dialogues_7_male" from _call_expression_321
                 if "workaholic" in date_girl.traits:
                     $ game.active_date.score += 10
                     "[date_girl.name] raises her eyebrows in approval and snorts derisively at the fawning crowd around the bohemian guitarist."
@@ -324,7 +324,7 @@ label date_park_random_events:
                 else:
                     "[date_girl.name] shrugs, as if she's not convinced that I'm being entirely unbiased in my assessment of the guitarist and might be just a little jealous."
             "Envy the guitarist his popularity":
-                call expression f"date_park_random_events_dialogues_8_{hero.gender}" from _call_expression_322
+                call expression f"date_park_random_events_dialogues_8_male" from _call_expression_322
                 if "workaholic" in date_girl.traits:
                     $ game.active_date.score -= 10
                     "[date_girl.name] shakes her head in disapproval, clearly not impressed by the bohemian guitarist or my desire to emulate him."
@@ -339,7 +339,7 @@ label date_park_random_events:
         "I see that [date_girl.name] is staring intently at the scene, and she turns her head, catching me staring at her in turn."
         menu:
             "Gush over the happy families":
-                call expression f"date_park_random_events_dialogues_9_{hero.gender}" from _call_expression_323
+                call expression f"date_park_random_events_dialogues_9_male" from _call_expression_323
                 if "family" in date_girl.traits:
                     $ game.active_date.score += 10
                     "[date_girl.name] squeezes my hand suddenly and smiles as widely as her mouth can manage."
@@ -350,7 +350,7 @@ label date_park_random_events:
                 else:
                     "[date_girl.name] gives me an enigmatic grin, but doesn't say as much as a word in way of response."
             "Shudder at the thought of being tied down with a family":
-                call expression f"date_park_random_events_dialogues_10_{hero.gender}" from _call_expression_324
+                call expression f"date_park_random_events_dialogues_10_male" from _call_expression_324
                 if "family" in date_girl.traits:
                     $ game.active_date.score -= 10
                     "[date_girl.name] looks at me with an expression of surprise and not a little sadness on her face."
@@ -365,7 +365,7 @@ label date_park_random_events:
         "[date_girl.name] follows my gaze and sees the same thing, and then looks at me as if challenging me to explain my interest in the sight."
         menu:
             "Disapprove of the topless sunbathing":
-                call expression f"date_park_random_events_dialogues_11_{hero.gender}" from _call_expression_325
+                call expression f"date_park_random_events_dialogues_11_male" from _call_expression_325
                 if "trashy" in date_girl.traits:
                     $ game.active_date.score -= 10
                     "[date_girl.name] shrugs and keeps on admiring the sight of the girls, as if she's impressed by their boldness."
@@ -375,7 +375,7 @@ label date_park_random_events:
                 else:
                     "[date_girl.name] shrugs, as if to say that she's not particularly interested in what other people are doing right now."
             "Applaud the topless sunbathers":
-                call expression f"date_park_random_events_dialogues_12_{hero.gender}" from _call_expression_326
+                call expression f"date_park_random_events_dialogues_12_male" from _call_expression_326
                 if "trashy" in date_girl.traits:
                     $ game.active_date.score += 10
                     "[date_girl.name] chuckles and shakes her head, as if taking my admiration for the topless sunbathers as a personal challenge."
@@ -391,7 +391,7 @@ label date_park_random_events:
         "[date_girl.name] notices the cafe too, and then that I'm looking at it with interest."
         menu:
             "Suggest that you grab a bite to eat at the cafe":
-                call expression f"date_park_random_events_dialogues_13_{hero.gender}" from _call_expression_327
+                call expression f"date_park_random_events_dialogues_13_male" from _call_expression_327
                 if "poor" in date_girl.traits:
                     $ game.active_date.score -= 10
                     "[date_girl.name] keeps on staring at the fancy decor of the place, and I begin to wonder if I've made a mistake."
@@ -401,7 +401,7 @@ label date_park_random_events:
                 else:
                     "[date_girl.name] give me a 'what-the-hell' smile, and seems to want to leave the ultimate decision up to me."
             "Suggest that you just eat a hotdog":
-                call expression f"date_park_random_events_dialogues_14_{hero.gender}" from _call_expression_328
+                call expression f"date_park_random_events_dialogues_14_male" from _call_expression_328
                 if "poor" in date_girl.traits:
                     $ game.active_date.score += 10
                     "[date_girl.name] nods and smiles, looking positively relieved at my suggestion."
@@ -416,7 +416,7 @@ label date_park_random_events:
         "[date_girl.name] spots the same thing, standing up on her tip-toes to get a better look."
         menu:
             "Suggest that you stay and watch":
-                call expression f"date_park_random_events_dialogues_15_{hero.gender}" from _call_expression_329
+                call expression f"date_park_random_events_dialogues_15_male" from _call_expression_329
                 if "bookworm" in date_girl.traits:
                     $ game.active_date.score += 10
                     "[date_girl.name] nods with enthusiasm, already looking for a way into the crowd."
@@ -426,7 +426,7 @@ label date_park_random_events:
                 else:
                     "[date_girl.name] gives a nonchalant shrug, as if she's equally happy to indulge me or simply walk on by."
             "Sneer at the players":
-                call expression f"date_park_random_events_dialogues_16_{hero.gender}" from _call_expression_330
+                call expression f"date_park_random_events_dialogues_16_male" from _call_expression_330
                 if "bookworm" in date_girl.traits:
                     $ game.active_date.score -= 10
                     "[date_girl.name] frowns at me and furrows her brows, as if resisting the temptation to call me an uncultured oaf."
@@ -453,7 +453,7 @@ label date_hold_hand:
 
 label date_picnic:
     $ renpy.show(active_girl.id)
-    call expression f"date_picnic_dialogues_1_{hero.gender}" from _call_expression_331
+    call expression f"date_picnic_dialogues_1_male" from _call_expression_331
     if "gourmand" in active_girl.traits:
         active_girl.say "Great idea!"
         $ game.active_date.score += 10
@@ -465,7 +465,7 @@ label date_picnic:
 
 label date_make_snowman:
     $ renpy.show(active_girl.id)
-    call expression f"date_make_snowman_dialogues_1_{hero.gender}" from _call_expression_332
+    call expression f"date_make_snowman_dialogues_1_male" from _call_expression_332
     if "not_artsy" in active_girl.traits or "not_playful" in active_girl.traits:
         active_girl.say "I don't feel like it."
         $ game.active_date.score -= 20
@@ -518,7 +518,7 @@ label date_ice_skating:
 
 label date_cloud_gaze:
     $ renpy.show(active_girl.id)
-    call expression f"date_cloud_gaze_dialogues_1_{hero.gender}" from _call_expression_333
+    call expression f"date_cloud_gaze_dialogues_1_male" from _call_expression_333
     if "dreamer" not in active_girl.traits:
         active_girl.say "No, thank you."
         $ game.active_date.score -= 10
@@ -532,7 +532,7 @@ label date_cloud_gaze:
 
 label date_read_poetry:
     $ renpy.show(active_girl.id)
-    call expression f"date_read_poetry_dialogues_1_{hero.gender}" from _call_expression_334
+    call expression f"date_read_poetry_dialogues_1_male" from _call_expression_334
     if "not_bookworm" in active_girl.traits or "not_artsy" in active_girl.traits or "not_dreamer" in active_girl.traits:
         active_girl.say "No, thank you."
         $ game.active_date.score -= 20
@@ -550,7 +550,7 @@ label date_read_poetry:
 
 label date_go_for_a_run:
     $ renpy.show(active_girl.id)
-    call expression f"date_go_for_a_run_dialogues_1_{hero.gender}" from _call_expression_335
+    call expression f"date_go_for_a_run_dialogues_1_male" from _call_expression_335
     if "sporty" not in active_girl.traits:
         active_girl.say "No, thank you."
         $ game.active_date.score -= 10

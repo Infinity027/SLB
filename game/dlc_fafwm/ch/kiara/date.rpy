@@ -103,31 +103,28 @@ label kiara_date_play_arcade_lose:
 label kiara_dick_reactions_male:
     if not kiara.flags.seendick:
         $ kiara.flags.seendick = 1
-        "I feel more than a little exposed as I'm standing naked in front of Kiara for the first time."
         "Her eyes are wandering all over me, taking everything in with great interest."
         "But when her gaze finally settles on my groin, those eyes suddenly go wide with surprise."
         mike.say "Erm...what's up, Kiara?"
         mike.say "Is there something wrong with what you're seeing down there?"
         if hero.has_skill("hung"):
             "Kiara shakes her head, eyes growing wider still."
-            show dick reactions kiara scared
+            show kiara_dick_reaction
             kiara.say "But it is so...so big!"
             kiara.say "I had not thought one could grow to be so large."
-            show dick reactions kiara smile
             kiara.say "I am thrilled at the thought of seeing what it can do."
             kiara.say "But also a little afraid of it too!"
             $ kiara.sub += 10
+            hide kiara_dick_reaction
         elif hero.has_skill("smalldick"):
             "Kiara shrugs and shakes her head."
-            show dick reactions kiara mock
+            show kiara annoyed
             kiara.say "Hmm..."
             kiara.say "Maybe it is a little smaller than I would have liked."
-            show dick reactions kiara smile
             kiara.say "But then you will have to rise to the challenge, [hero.name]."
-            show dick reactions kiara mock
             kiara.say "You will have to show me how you make the most of it!"
             $ kiara.sub -= 10
-        hide dick reactions
+            hide kiara annoyed
     return
 
 label kiara_date_intro_valentine_male:

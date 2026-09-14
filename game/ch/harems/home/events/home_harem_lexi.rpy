@@ -1131,12 +1131,7 @@ label bree_lexi_threesome_breefuck:
             bree.say "Feels good to me too!"
             bree.say "Are you going to..."
             "By way of answer, I push against [bree.name]'s lips."
-            call check_condom_usage (bree) from _call_check_condom_usage_47
-            if _return == False:
-                return
             show threesome breelexi breefuck vaginal
-            if CONDOM:
-                show threesome breelexi breefuck vaginal condom
             "I make it gentle, but at the same time firm and insistent."
             "And as I feel her pussy resist me, her words melt into mere sounds of pleasure."
             "At the same time, I can feel the physical manifestation of those same sounds."
@@ -1303,13 +1298,8 @@ label bree_lexi_threesome_lexifuck:
             "The sight of Lexi's naked body."
             "Or the filthy shit that comes out of her mouth!"
             "But either way, she's going to get exactly what she wants."
-            call check_condom_usage (lexi) from _call_check_condom_usage_48
-            if _return == False:
-                return
             "With both hands on her breasts, I pull Lexi backwards."
             show threesome breelexi lexifuck vaginal
-            if CONDOM:
-                show threesome breelexi lexifuck vaginal condom
             "This pushes her hard against my cock, pressing it against her lips."
             "Lexi whimpers and moans as the muscles of her pussy resist for a moment."
             "But then those same sounds turn into a groan of pleasure as it give up the fight."

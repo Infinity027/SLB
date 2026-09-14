@@ -395,7 +395,7 @@ label lexi_dick_reactions:
     if not lexi.flags.seendick:
         $ lexi.flags.seendick = 1
         if hero.has_skill("hung"):
-            show dick reactions lexi tasty
+            show lexi_dick_reaction
             lexi.say "Oh yeah - now THAT's what I'm talkin' about!"
             lexi.say "You come on and park that thing in me, right now!"
             mike.say "Ah...so, you like what you see?"
@@ -403,44 +403,18 @@ label lexi_dick_reactions:
             lexi.say "I want that thing inside of me!"
             $ lexi.sub += 10
             $ lexi.love += 10
+            hide lexi_dick_reaction
         elif hero.has_skill("smalldick"):
-            show dick reactions lexi mock
+            show lexi annoyed
             lexi.say "Whoops!"
             mike.say "Wha...what's wrong?"
             lexi.say "Nothing...nothing at all!"
             mike.say "It's too small, isn't it?"
-            show dick reactions lexi smile
             lexi.say "No...oh no!"
             lexi.say "Just...just be sure to tell me when it's in there, okay?"
             $ lexi.sub -= 10
             $ lexi.love -= 10
-        hide dick reactions
-    return
-
-label lexi_peeping_scene_male:
-    "Walking out of my room I pass the door to the bathroom on my way downstairs."
-    "I can hear the sound of the shower running inside, which is no big deal."
-    "But what catches my attention is the steam around the door."
-    "Normally that stuff stays inside of the bathroom."
-    "That is unless..."
-    "Stopping and taking a closer look, my suspicions are confirmed."
-    "Someone left the bathroom door open while taking a shower."
-    "Just a crack, but enough to let the steam out."
-    "I take hold of the handle, meaning to shut the door."
-    "But then a thought occurs to me."
-    "I wonder who's in there right now?"
-    "I know that I shouldn't be doing this."
-    "And yet I can't help sneaking a quick peek around the door."
-    "I'm not really snooping, just satisfying my natural curiosity, that's all."
-    "But the moment I look inside, I can't tear my eyes away from what I see."
-    "It's Lexi, I know it is!"
-    "I can tell from the shape of the body in the shower cubicle."
-    "I hardly need to catch a sight of her face to know that it's her."
-    "And yeah, I know Lexi hardly tries to cover herself up most of the time."
-    "But seeing her like this is somehow different, more intimate."
-    "Even a little dangerous too!"
-    "I can't seem to tear myself away from the crack in the door."
-    "All I want to do is watch the water cascading down her body!"
+            hide lexi annoyed
     return
 
 label lexi_peeping_reactions_male:

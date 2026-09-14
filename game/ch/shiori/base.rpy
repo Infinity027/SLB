@@ -219,7 +219,7 @@ label shiori_cheated(action, cheat_npc=None):
     return
 
 label shiori_greet:
-    if renpy.has_label(f"shiori_greet_dialogues_{hero.gender}") and not shiori.flags.greeted:
+    if renpy.has_label(f"shiori_greet_dialogues_male") and not shiori.flags.greeted:
         scene expression f"bg {game.room}"
         $ shiori.flags.greeted = TemporaryFlag(True, 1)
         show shiori
@@ -237,7 +237,7 @@ label shiori_greet:
                 shiori.say "Good afternoon [hero.name]."
             else:
                 shiori.say "Good evening [hero.name]."
-        call expression f"shiori_greet_dialogues_{hero.gender}" from _call_expression_269
+        call expression f"shiori_greet_dialogues_male" from _call_expression_269
         if shiori.flags.submissive_interact:
             shiori.say "Moo...moo...mooooo - is it time to milk me yet, [hero.name]?"
         hide shiori

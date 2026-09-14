@@ -1,30 +1,22 @@
 init python:
     class SlapPositionPicker(object):
         def __call__(self, attr):
-            if hero.gender == "female":
-                if attr & {"sasha"}:
-                    attr.add("pose01")
-                elif attr & {"lexi"}:
-                    attr.add("pose03")
-                elif attr & {"angela", "danny", "dwayne", "jack", "master", "mike", "ryan", "scottie", "shawn", "victor"}:
-                    attr.add("pose04")
-            else:
-                if attr & {"bree", "emma", "kleio", "minami", "morgan", "sasha"}:
-                    attr.add("pose01")
-                elif attr & { "hanna", "lavish", "palla"}:
-                    attr.add("pose02")
-                elif attr & {"aletta", "anna", "cassidy", "harmony", "lexi", "samantha"}:
-                    attr.add("pose03")
-                elif attr & {"alexis", "angela", "audrey", "camila", "shiori", "amy", "reona", "kat", "cherie", "claire", "kiara"}:
-                    attr.add("pose04")
-                
-                if {"mc_work"} & attr:
-                    if attr & {"aletta", "audrey", "cassidy", "lavish", "shiori"}:
-                        attr.add('mc_workoffice')
-                    elif attr & {"hanna"}:
-                        attr.add('mc_worksport')
-                    elif attr & {"camila", "kleio"}:
-                        attr.add('mc_workcasual')
+            if attr & {"bree", "emma", "kleio", "minami", "morgan", "sasha"}:
+                attr.add("pose01")
+            elif attr & { "hanna", "lavish", "palla"}:
+                attr.add("pose02")
+            elif attr & {"aletta", "anna", "cassidy", "harmony", "lexi", "samantha"}:
+                attr.add("pose03")
+            elif attr & {"alexis", "angela", "audrey", "camila", "shiori", "amy", "reona", "kat", "cherie", "claire", "kiara"}:
+                attr.add("pose04")
+            
+            if {"mc_work"} & attr:
+                if attr & {"aletta", "audrey", "cassidy", "lavish", "shiori"}:
+                    attr.add('mc_workoffice')
+                elif attr & {"hanna"}:
+                    attr.add('mc_worksport')
+                elif attr & {"camila", "kleio"}:
+                    attr.add('mc_workcasual')
             if enable_debug_picker:
                 renpy.log(f"SlapPositionPicker results: {attr}")
             return attr

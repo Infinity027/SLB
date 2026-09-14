@@ -92,7 +92,7 @@ label low_energy:
 
 label sick:
 
-    call expression f"sick_dialogues_1_{hero.gender}" from _call_expression_405
+    call expression f"sick_dialogues_1_male" from _call_expression_405
     "I think I might be sick."
     $ game.flags.sick = TemporaryFlag(True, randint(1, 3), hook="clear_sickness_penalties")
     $ hero.energy.decay_penalty = True
@@ -111,7 +111,7 @@ label clear_sickness_penalties:
     return
 
 label cured:
-    call expression f"cured_dialogues_1_{hero.gender}" from _call_expression_406
+    call expression f"cured_dialogues_1_male" from _call_expression_406
     $ game.flags.sick = False
     $ hero.energy.decay_penalty = False
     $ hero.energy.gain_penalty = False
@@ -139,7 +139,7 @@ label clear_injury_penalties:
     return
 
 label healed:
-    call expression f"healed_dialogues_1_{hero.gender}" from _call_expression_542
+    call expression f"healed_dialogues_1_male" from _call_expression_542
     $ game.flags.injured = False
     $ hero.fun.decay_penalty = False
     $ hero.grooming.decay_penalty = False

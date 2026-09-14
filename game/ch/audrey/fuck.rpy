@@ -79,28 +79,17 @@ init python:
 
 label audrey_hottub_sex_male:
     $ game.active_date.clothes = "swimsuit"
-    $ CONDOM = False
     show bg pool
     "I should be over the moon that Audrey agreed to come over to my place to use the hot-tub."
-    "I mean, who wouldn't want to share that hot bubbling water with a girl that's just as hot?"
-    "It's just that I know Audrey better than that by now, and I know what to expect too!"
-    "Sure, she might have said yes, but there's got to be a catch somewhere."
-    "She's the kind of girl that thrives on conflict and drama."
-    "So I'm on the lookout for the signs almost as soon as she turns up on the doorstep."
     show audrey swimsuit at center, zoomAt(1.2, (640, 820))
     "Well, that is until I catch sight of her in a swimsuit..."
     audrey.say "Hey, [hero.name]."
     "Audrey saunters out of the house and towards the hot-tub."
-    "And I'm instantly glad that I'm already sitting in the water."
-    "Because it means she can't see the effect she's having on my cock right now!"
     "All the same, Audrey looks me in the eye as she climbs into the tub."
     audrey.say "I see the way you're looking at me, [hero.name]!"
     audrey.say "You should be thankful we're not at work."
     audrey.say "Because I'd be reporting you for sexual harassment!"
     "I laugh nervously, choosing to take what Audrey just said as a joke."
-    "But Audrey just holds my eye, not changing the look on her face."
-    "The serious look on her face makes me start to feel nervous."
-    "I swallow audibly, starting to think that she's serious."
     show audrey happy at startle(0.1, -5)
     play sound audrey_laughs_light_2
     audrey.say "Got you, [hero.name]!"
@@ -128,18 +117,8 @@ label audrey_hottub_sex_male:
     mike.say "I never really thought about it before now!"
     audrey.say "Yeah, there must be more semen in here than in a sperm bank!"
     audrey.say "In fact, I bet I could get pregnant just sitting on one of the water jets!"
-    "I can already feel my confusion turning into anger."
-    "Why did Audrey even bother to come here if she wanted to insult me?"
-    "Why did she even get into a hot-tub that makes her feel that way?"
-    "But as my blood begins to bubble and boil like the water in the tub, I remember something."
-    "This is Audrey we're talking about, and she likes to get a rise out of people."
-    "In fact, she always seems to be at her happiest when she's making someone mad."
-    "And right now, that someone is me!"
-    "So what else can I do but play along with her little game?"
     mike.say "You want to watch your mouth, Audrey."
     mike.say "Some guys wouldn't like to hear you talking to them like that!"
-    "I see a light appear in Audrey's eyes as I say this."
-    "The tone of my voice seems to perk up her interest too."
     audrey.say "Oh yeah?"
     audrey.say "And just what would a guy like that do about it, [hero.name]?"
     audrey.say "As if you'd even know!"
@@ -153,59 +132,35 @@ label audrey_hottub_sex_male:
     audrey.say "Oh, [hero.name]!"
     audrey.say "You beast!"
     audrey.say "You absolute beast!"
-    if audrey.sub >= 25:
-        show hottub sex male audrey outside naked
-    else:
-        show hottub sex male audrey outside
-    with fade
+    scene audrey_hottub01 with fade
     "Sure, I know all too well that I'm playing Audrey's sick little game."
     "But the sight of her as she turns her back on me and presents her backside..."
     "Well, it's too good of an opportunity for me to pass up."
     "I reach out with one hand, taking a firm hold of Audrey."
     "And I use the other to pull down my trunks."
     "My cock is already good and hard from Audrey's teasing."
-    "So it only takes me a moment to have it pressed up against her ass."
-    call audrey_dick_reactions from _call_audrey_dick_reactions_1
-    "Audrey makes a good show of wriggling and squirming as I do so."
-    "But there's no way she's doing anything other than putting on an act."
-    "Because I see her look over her shoulder a moment later."
-    "And it's pretty obvious that she's making sure I'm on target!"
+    scene audrey_hottub02
     "There's no need for her to be concerned in that department though."
     "I feel the head of my cock press against her pussy."
-    show hottub sex male inside
-    play sexsfx1 slide_in
-    play sound audrey_generic_oh_1
     "And then I give it a firm push, parting her lips with relative ease."
-    "Audrey lets out a moan of almost desperate release as I enter her."
-    "The noise doesn't stop until I'm all the way in either."
-    play sexsfx1 fuck_moderate loop
-    play sound audrey_moans_happy_medium loop
+    scene expression make_anim(audrey_hottub, time=0.5, loop=True)
+    "Audrey lets out a moan of almost desperate release."
     "And even then she keeps on panting as I begin to thrust in and out."
     "There's nothing subtle or sweet about what follows between us."
+    scene audrey_hottub04 with fade
     "Audrey provoked me into giving it to her without holding back."
-    "And that's just what she's getting from me now."
-    "The only thing that changes is the speed that I'm pounding her at."
-    "That and the amount of energy that I put into my efforts too."
-    play sexsfx1 fuck_speed loop
-    play sound audrey_moans_happy_high loop
-    "But to her credit, Audrey takes everything that I give her."
-    "Not only that, she keeps up with me the whole time, almost begging for more!"
-    "Normally I'd be trying to keep it up for as long as I was able."
-    "But the sheer amount of energy I've already put into it is taking it's toll."
     "I can already feel the end coming, my climax approaching..."
     call cum_reaction (audrey, 'vaginal', 1) from _call_cum_reaction_24
     if _return == "vaginal_outside":
         "I might have been playing Audrey's game up until now."
         "But I have one last trick up my sleeve before it's all over."
-        show hottub outside
+        scene audrey_hottub06
         play sexsfx1 pull_out
         play sound audrey_generic_oh_3
         queue sound audrey_moans_happy_orgasm_1
         "Just before I finally cum, I yank my cock out of her without warning."
         "Audrey all but shudders and cries out at the sudden sensation."
-        show hottub cumshot with vpunch
-        pause 0.2
-        with vpunch
+        scene audrey_hottub05 with vpunch
         pause 0.2
         with vpunch
         $ audrey.sub += 1
@@ -214,12 +169,10 @@ label audrey_hottub_sex_male:
         "There's no chance of me being able to pull out of Audrey before the end."
         "And I doubt that either one of us actually wants that to happen."
         "So I keep right on until the end, pushing as deep into her as possible."
-        show hottub cumshot ahegao with hpunch
+        show audrey_hottub05 with hpunch
         play sexsfx1 final_thrust
         play sound audrey_generic_oh_3
         queue sound audrey_moans_happy_orgasm_1
-        pause 0.2
-        with hpunch
         pause 0.2
         with hpunch
         $ audrey.love += 1
@@ -293,23 +246,16 @@ label audrey_fuck_date_male(location="hero"):
 
         call audrey_fuck_date_intro_male (location) from _call_audrey_fuck_date_intro_male
 
-
     call audrey_dick_reactions from _call_audrey_dick_reactions
-
 
     if not skip_foreplay:
         call audrey_fuck_date_foreplay_male from _call_audrey_fuck_date_foreplay_male
 
-
-
-
     call audrey_fuck_date_choices_male from _call_audrey_fuck_date_choices_male
-
 
     call handle_npc_leaving (audrey, _return) from _call_handle_npc_leaving_3
     if _return:
         return
-
 
     hide audrey
     call audrey_sleep_date_fuck (location) from _call_audrey_sleep_date_fuck
@@ -351,31 +297,6 @@ label audrey_fuck_date_intro_male(location="hero"):
         hide audrey
         show audrey blush
         with fade
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         mike.say "Take your clothes off!"
         show audrey underwear with dissolve
         "Audrey gets up and submissively comply to my order."
@@ -630,7 +551,7 @@ label audrey_sleep_date_fuck(location="hero"):
 
 label audrey_fuck_date_blowjob:
     scene
-    show audrey_bj01
+    scene audrey_bj01
     with fade
     audrey.say "There it is!"
     audrey.say "It's huge!"
@@ -639,33 +560,33 @@ label audrey_fuck_date_blowjob:
     mike.say "It's not like I'm resisting!"
     "Audrey shoots me a look that shuts me up in an instant."
     "Her eyes are wide and full of predatory instinct."
-    show audrey_bj02
+    scene audrey_bj02
     "And she give my cock an even harder squeeze, just to make her point."
     "My cock was already getting hard before we even got into my bedroom."
     "But now that it's in Audrey's hands, it's getting harder still."
     "It seems like the more she squeezes and tugs, the more I like it!"
     "Her hand moves downwards as her lips part."
-    show audrey_bj03
+    scene audrey_bj03
     "I watch Audrey's tongue emerge from between her lips."
     play sound "vo/audrey/suck.mp3" loop
     "Audrey doesn't look like she's going through the motions of giving head."
     "It seems more like she's doing something that she needs in order to live!"
-    show expression make_anim(audrey_blow, time=1.5, loop=True)
+    scene expression make_anim(audrey_blow, time=0.5, loop=True)
     "And then she swallows it deep into her mouth in one smooth motion."
     stop shound
     mike.say "Oh fuck..."
     mike.say "Audrey..."
     "If she hears me cry out, then Audrey makes no show of it."
-    show audrey_bj04
+    scene audrey_bj04
     "Instead she moves faster still, head bobbing up and down."
     "She seems to be swallowing almost all of me each and every time."
     play sound "vo/audrey/suck.mp3" loop
     "And the feeling of being in her mouth is impossibly good."
-    show expression make_anim(audrey_blow, time=1.5, time_factor=1.2, loop=True)
+    scene expression make_anim(audrey_blow, time=1.5, time_factor=1.2, loop=True)
     "Audrey's hands goes down as her head goes up."
     "Each time I honestly think I'm going to lose it."
     "But somehow I still manage to hang on, gasping for breath."
-    show audrey_bj05
+    scene audrey_bj05
     "Audrey seems to sense that I'm getting close to the end."
     "I think she's trying to guess where I want this thing to go!"
     menu:
@@ -703,6 +624,7 @@ label audrey_fuck_date_blowjob:
     stop sexsfx1 fadeout 1
     stop sound fadeout 1
     hide audrey
+    scene bg bedroom
     scene expression f"bg {game.room}"
     show audrey close naked
     with fade
@@ -968,16 +890,13 @@ label audrey_fuck_date_missionary(sexperience_min):
             "But the fact that she's already soft and slick down there kind of gives that away."
             audrey.say "That's it..."
             audrey.say "Show me what I'm missing!"
-            call check_condom_usage (audrey, 180) from _call_check_condom_usage_12
-            if _return == False:
-                return "leave_without_gain"
             play sexsfx1 slide_in
             "The feeling of my cock sliding into Audrey is simply incredible."
             "After so much goading beforehand, actually getting my hands on her is just so gratifying."
             "And it seems to be pretty much the same for Audrey too."
             "She lies back on the pillows as I get as deep into her as I can manage."
             play sound audrey_moans_happy_medium
-            show expression make_anim(audrey_miss_pussy01, time=1.5, loop=True)
+            show expression make_anim(audrey_miss_pussy01, time=0.5, loop=True)
             "And finally her cutting words are replaced by deep moans of pure pleasure."
             "Audrey seems to surrender to me then, laying back on the bed, eyes rolling back into her head."
             "Her chin is cast back, exposing her neck."
@@ -989,7 +908,7 @@ label audrey_fuck_date_missionary(sexperience_min):
                     "Gingerly I reach out with both hands, placing them around her neck."
                     "I squeeze gently at first, just to let her know what I have in mind."
                     "Her eyes never open, but she nods her head just enough for me to notice."
-                    show expression make_anim(audrey_miss_pussy02, time=1.5, loop=True)
+                    show expression make_anim(audrey_miss_pussy02, time=0.5, loop=True)
                     play sound audrey_moans_pained_high
                     "I can feel her body trembling from what I'm doing."
                     "And though I never thought I'd admit this - it's turning me on seeing her reaction!"
@@ -997,7 +916,7 @@ label audrey_fuck_date_missionary(sexperience_min):
                 "Kiss her":
                     $ audrey.love += 1
                     play sound audrey_moans_happy_high
-                    show expression make_anim(audrey_miss_pussy03, time=1.7, loop=True)
+                    scene expression make_anim(audrey_miss_pussy03, time=0.6, loop=True)
                     "Seeing her give in so completely to what I'm doing is a massive turn on."
                     "And I respond by quickening my pace as I pound into Audrey's pussy."
                     "Her body absorbs the force of each and every thrust."
@@ -1032,12 +951,7 @@ label audrey_fuck_date_spoon(sexperience_min):
     "She bucks her hips up into mine and whispers..."
     audrey.say "What are you waiting for, fuck me you idiot."
     "I look her in the eyes and she seems to be daring me to do it as she lets her legs fall open slowly to either side."
-    call check_condom_usage (audrey, 180) from _call_check_condom_usage_13
-    if _return == False:
-        return "leave_without_gain"
     hide audrey
-    if CONDOM:
-        show audrey spoon condom
     show audrey spoon limp with fade
     "I push her on the bed and slide behind her, my hand caressing her tits."
     show audrey spoon vaginal
@@ -1198,11 +1112,6 @@ label audrey_fuck_date_doggy(sexperience_min):
             $ audrey.flags.anal += 1
         "Fuck her pussy":
             "Suddenly, my thoughts return to the way that Audrey tried to steer my cock into her pussy."
-            call check_condom_usage (audrey, 180) from _call_check_condom_usage_145
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show audrey doggy condom
             "Making sure that my cock is at just the right angle, I give a gentle but firm tug on her hair."
             "I hear Audrey make a sharp gasp, and then hurry to shuffle backwards in order to loosen my grip."
             "She only stops when her path inevitably leads to the head of my cock jabbing her in the ass."
@@ -1454,11 +1363,6 @@ label audrey_fuck_date_cowgirl(sexperience_min):
             "And I hear her gasp at the sensation, unable to hide her delight."
             "But now a smile spreads across my own face."
             "As I have a chance to turn the tables on Audrey and torment her!"
-            call check_condom_usage (audrey, 180) from _call_check_condom_usage_170
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show audrey cowgirl condom
             "All it takes is a slight pull on Audrey's thighs."
             "And then I feel the head of my cock slide into her."
             "For all of her teasing and tempting, she's as slick as she can be."
@@ -1735,11 +1639,6 @@ label audrey_fuck_date_reverse_cowgirl(sexperience_min):
                 hide sexinserts
             $ audrey.flags.anal += 1
         "Fuck her pussy":
-            call check_condom_usage (audrey, 180) from _call_check_condom_usage_14
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show audrey reverse cowgirl condom
             "Audrey takes a firm hold of my cock and raises herself up on her haunches."
             audrey.say "Mmm..."
             audrey.say "This is going to be fun!"
@@ -1945,9 +1844,6 @@ label audrey_fuck_date_stand(sexperience_min):
         "Fuck her pussy":
             "I pull Audrey closer still."
             "Already thinking about how it's going to feel to be inside of her."
-            call check_condom_usage (audrey, 180) from _call_check_condom_usage_15
-            if _return == False:
-                return "leave_without_gain"
             "And I guess that me being inside of her is all that's on Audrey's mind too."
             "As she wastes no time in grabbing hold of my cock and thrusting it between her thighs."
             "But as she does so, I feel something taking over inside of me."
@@ -2562,11 +2458,6 @@ label audrey_fuck_office_missionary(sexperience_min):
                 hide bellycum
             $ audrey.flags.anal += 1
         "Fuck her pussy":
-            call check_condom_usage (audrey, 180) from _call_check_condom_usage_16
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show audrey missionary condom
             show audrey missionary -nomike
             "Audrey must be as eager for this as I am."
             "Because all it takes is a slight push from me."
@@ -3027,11 +2918,6 @@ label audrey_boardgame_sex:
             audrey.say "Oh yeah..."
             play sexsfx1 slide_in
             "I slide slowly into Audrey as her lips part."
-            call check_condom_usage (audrey) from _call_check_condom_usage_17
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show audrey missionary condom
             "It's a gradual surrender, every inch feeling a little more intense."
             "Until I'm as deep into her as I can possibly go."
             if CONDOM:
@@ -3405,11 +3291,6 @@ label audrey_fuck_audreybedroom_fuck(sexperience_min=10):
                 scene bg black
                 show audrey missionary audreybedroom naked
                 with fade
-                call check_condom_usage (audrey, 180) from _call_check_condom_usage_171
-                if _return == False:
-                    return "leave_without_gain"
-                if CONDOM:
-                    show audrey missionary audreybedroom condom
                 "Laying atop Audrey, I make sure to aim my cock straight at the target I've chosen."
                 "And she does nothing to keep me from beginning my efforts to claim my prize straight away."
                 "In fact Audrey does nothing but lie there, unresisting and totally open to letting me have my way with her."

@@ -207,12 +207,12 @@ label palla_cheated(action, cheat_npc=None):
     return
 
 label palla_greet:
-    if renpy.has_label(f"palla_greet_dialogues_{hero.gender}") and not palla.flags.greeted:
+    if renpy.has_label(f"palla_greet_dialogues_male") and not palla.flags.greeted:
         scene expression f"bg {game.room}"
         $ palla.flags.greeted = TemporaryFlag(True, 1)
         show palla
         palla.say "..."
-        call expression f"palla_greet_dialogues_{hero.gender}" from _call_expression_258
+        call expression f"palla_greet_dialogues_male" from _call_expression_258
         if palla.flags.submissive_interact:
             palla.say "H...hi, y...you sick bastard...I...I'm a bitch in heat...and I love it...there, you made me say it - happy now, [hero.name]?"
         hide palla

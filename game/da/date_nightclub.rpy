@@ -75,7 +75,7 @@ label date_nightclub_random_events:
                 else:
                     "[date_girl.name] shakes her head at the guy's obvious attempt to cut in and then turns her back on him."
             "Tell the guy where to get off":
-                call expression f"date_nightclub_random_events_dialogues_1_{hero.gender}" from _call_expression_299
+                call expression f"date_nightclub_random_events_dialogues_1_male" from _call_expression_299
                 if "flirty" in date_girl.traits:
                     $ game.active_date.score += 10
                     "[date_girl.name] smiles broadly at my asserting my manhood, and disdainfully shoos the other guy away."
@@ -91,12 +91,12 @@ label date_nightclub_random_events:
     elif r <= 2:
         "We're sitting at a table away from the dance-floor, waiting for the music to get better when one of the bar-staff comes over with a tray of drinks."
         "She puts one down in front of me and turns to go without as much as a word of explanation, and so I stop her before she can leave."
-        call expression f"date_nightclub_random_events_dialogues_2_{hero.gender}" from _call_expression_300
+        call expression f"date_nightclub_random_events_dialogues_2_male" from _call_expression_300
         "She shrugs and points to a table of girls nearby, indicating that they sent the drink over for me."
         "[date_girl.name] looks in the direction that the barmaid is pointing and sees the girls laughing and waving at me."
         menu:
             "Refuse the drink":
-                call expression f"date_nightclub_random_events_dialogues_3_{hero.gender}" from _call_expression_301
+                call expression f"date_nightclub_random_events_dialogues_3_male" from _call_expression_301
                 if "yandere" in date_girl.traits:
                     $ game.active_date.score += 10
                     "[date_girl.name]'s eyes almost flash with delight at this gesture, delighting in my show of loyalty to her."
@@ -107,7 +107,7 @@ label date_nightclub_random_events:
                     $ game.active_date.score += 10
                     "[date_girl.name] smiles and shakes her head, annoyed at the other girls flirting, but also pleased at my ignoring their efforts in favour of her."
             "Accept the drink":
-                call expression f"date_nightclub_random_events_dialogues_4_{hero.gender}" from _call_expression_302
+                call expression f"date_nightclub_random_events_dialogues_4_male" from _call_expression_302
                 if "yandere" in date_girl.traits:
                     $ game.active_date.score -= 10
                     $ date_girl.yandere += 1
@@ -147,7 +147,7 @@ label date_nightclub_random_events:
         "I take [date_girl.name] by the hand and shove my way through to where a bouncer is manning the entrance."
         menu:
             "Bribe the bouncer to get into the VIP section":
-                call expression f"date_nightclub_random_events_dialogues_5_{hero.gender}" from _call_expression_303
+                call expression f"date_nightclub_random_events_dialogues_5_male" from _call_expression_303
                 "As the bouncer leans over, I shove as much money as I can spare into his hand."
                 "In response, he nods briefly and lifts the rope to allow us entry."
                 if hero.money < 20:
@@ -164,7 +164,7 @@ label date_nightclub_random_events:
                     "[date_girl.name] laughs at my audacity to offer the bouncer a bribe, but follows close on my heels all the same."
                 $ game.flags.bribe_bouncer = TemporaryFlag(True, 1)
             "Make fun of the fact the VIP section is so empty":
-                call expression f"date_nightclub_random_events_dialogues_6_{hero.gender}" from _call_expression_304
+                call expression f"date_nightclub_random_events_dialogues_6_male" from _call_expression_304
                 if "princess" in date_girl.traits:
                     $ game.active_date.score -= 10
                     "[date_girl.name] pouts and makes a huffing sound, clearly thinking that I was going to get us in there somehow."
@@ -179,7 +179,7 @@ label date_nightclub_random_events:
         "But all it takes is one glance at [date_girl.name] to see that she's still full of energy and wanting to keep on going."
         menu:
             "Say that you want to call it a night":
-                call expression f"date_nightclub_random_events_dialogues_7_{hero.gender}" from _call_expression_305
+                call expression f"date_nightclub_random_events_dialogues_7_male" from _call_expression_305
                 if "workaholic" in date_girl.traits:
                     $ game.active_date.score -= 10
                     "[date_girl.name] looks disappointed, but nods as if she understands the need to be fresh for the office in the morning."
@@ -207,7 +207,7 @@ label date_nightclub_random_events:
         "Clearly she's interested in hearing what I have to say about the pole..."
         menu:
             "Suggest that she try it out":
-                call expression f"date_nightclub_random_events_dialogues_8_{hero.gender}" from _call_expression_306
+                call expression f"date_nightclub_random_events_dialogues_8_male" from _call_expression_306
                 if "trashy" in date_girl.traits:
                     $ game.active_date.score += 10
                     "[date_girl.name] seems to catch my drift almost instantly, smiling and walking over to the pole in a provocative manner."
@@ -220,7 +220,7 @@ label date_nightclub_random_events:
                 else:
                     "[date_girl.name] gives me a mock scowl of offence, but doesn't seem like she's going to take the hint and actually use the pole."
             "Dismiss the pole as sexist":
-                call expression f"date_nightclub_random_events_dialogues_9_{hero.gender}" from _call_expression_307
+                call expression f"date_nightclub_random_events_dialogues_9_male" from _call_expression_307
                 if "trashy" in date_girl.traits:
                     $ game.active_date.score -= 10
                     "[date_girl.name] frowns at me, as if I'm speaking a foreign language that she doesn't understand."
@@ -245,7 +245,7 @@ label date_nightclub_random_events:
                 else:
                     "[date_girl.name] looks surprised, like she's not sure what to make of my actions."
             "Walk off the dance-floor":
-                call expression f"date_nightclub_random_events_dialogues_10_{hero.gender}" from _call_expression_308
+                call expression f"date_nightclub_random_events_dialogues_10_male" from _call_expression_308
                 if "dumb" in date_girl.traits:
                     $ game.active_date.score -= 10
                     "[date_girl.name] follows in my wake, looking puzzled as to what's gone wrong with the music all of a sudden."
@@ -256,12 +256,12 @@ label date_nightclub_random_events:
                     "[date_girl.name] doesn't seem as concerned as me, but follows me off of the dance-floor all the same."
     elif r <= 7:
         "Before I've even raised the drink I just bought halfway to my mouth, a guy bumps into me and sends it spilling to the floor."
-        call expression f"date_nightclub_random_events_dialogues_11_{hero.gender}" from _call_expression_309
+        call expression f"date_nightclub_random_events_dialogues_11_male" from _call_expression_309
         "The culprit stops in his tracks and then turns to regard me."
         "[date_girl.name] looks on with interest to see what my next move will be."
         menu:
             "Tell the guy off":
-                call expression f"date_nightclub_random_events_dialogues_12_{hero.gender}" from _call_expression_310
+                call expression f"date_nightclub_random_events_dialogues_12_male" from _call_expression_310
                 "Much to my relief, the guy apologises and hands over the money to replace my drink."
                 if "submissive" in date_girl.traits:
                     $ game.active_date.score += 10
@@ -272,7 +272,7 @@ label date_nightclub_random_events:
                 else:
                     "[date_girl.name] looks relieved that the confrontation is over, but doesn't object to me standing my ground all the same."
             "Let it go":
-                call expression f"date_nightclub_random_events_dialogues_13_{hero.gender}" from _call_expression_311
+                call expression f"date_nightclub_random_events_dialogues_13_male" from _call_expression_311
                 if "submissive" in date_girl.traits:
                     $ game.active_date.score -= 10
                     "[date_girl.name] looks puzzled, as though she's disappointed in my lack of spine."
@@ -287,7 +287,7 @@ label date_nightclub_random_events:
         "I'm not sure whether [date_girl.name] is jealous or disdainful of them, but I get the impression I should say something either way..."
         menu:
             "Compliment the girls":
-                call expression f"date_nightclub_random_events_dialogues_14_{hero.gender}" from _call_expression_312
+                call expression f"date_nightclub_random_events_dialogues_14_male" from _call_expression_312
                 if "bitchy" in date_girl.traits:
                     $ game.active_date.score -= 10
                     "[date_girl.name] snorts and looks at me as though my spine just dropped out of my arsehole."
@@ -295,7 +295,7 @@ label date_nightclub_random_events:
                     $ game.active_date.score -= 5
                     "[date_girl.name] sighs and nods, clearly not happy with the situation, but powerless to do anything about it either."
             "Insult the girls":
-                call expression f"date_nightclub_random_events_dialogues_15_{hero.gender}" from _call_expression_313
+                call expression f"date_nightclub_random_events_dialogues_15_male" from _call_expression_313
                 if "bitchy" in date_girl.traits:
                     $ game.active_date.score += 10
                     "[date_girl.name] laughs out loud at my taking such a shot at the tarted-up girls, grinning wickedly the whole time."
@@ -307,7 +307,7 @@ label date_nightclub_random_events:
         "I only have a couple of seconds in which to decide what I should do..."
         menu:
             "Wade in and pull the other girl off":
-                call expression f"date_nightclub_random_events_dialogues_16_{hero.gender}" from _call_expression_314
+                call expression f"date_nightclub_random_events_dialogues_16_male" from _call_expression_314
                 "I wade straight into the middle of them, stepping in front of [date_girl.name] and shoving the other girl firmly away."
                 "The stranger shouts something at [date_girl.name] while I block her way, and then pushes her way through the crowd and disappears."
                 if "rebel" in date_girl.traits:

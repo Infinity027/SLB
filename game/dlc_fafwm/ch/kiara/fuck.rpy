@@ -41,7 +41,6 @@ init python:
 
 label kiara_hottub_sex_male:
     $ game.active_date.clothes = "swimsuit"
-    $ CONDOM = False
     "When I invited Kiara to come around for a dip in the hot-tub, I was only really half serious about it."
     "Because like, sure I want her to come over to my place and strut around in her swimming-costume."
     "But part of me is always convinced something like is only ever going to be a fantasy I dreamed up."
@@ -186,11 +185,8 @@ label kiara_hottub_sex_male:
     kiara.say "Urgh..."
     kiara.say "I...I need more, [hero.name]…"
     kiara.say "I must have you...inside of me!"
-    "I nod, tyring to make it look like I'm selflessly doing all I can to satisfy Kiara."
-    "When the reality is that I want to be inching into her more than anything right now."
-    "And so I pull the gusset of her swimming-costume aside with one hand."
-    "While clumsily pulling down my own trunks with the other."
-    show hottub sex male kiara outside with fade
+    "I nod, clumsily pulling down my own trunks with my hand."
+    scene hottub01 with fade
     "As soon as it's free, my cock bobs up in the water, breaking the surface."
     "And it the tip brushes against the exposed lips of Kiara's pussy."
     "Instantly she tries as best she can to sit down on it."
@@ -198,49 +194,29 @@ label kiara_hottub_sex_male:
     menu:
         "Fuck her pussy":
             "And there's no mystery about that, now is there?"
-            "I want to feel myself sinking into Kiara's pussy."
-            "So all I need to do is make sure that's where it goes."
-            "A little at a time, Kiara lowers herself onto me."
-            "The head pressing against her lips for a prolonged moment as they resist."
-            "But then gravity and the sheer need between us becomes too much."
-            "Kiara lets out a little cry and clings onto me as they begin to part."
-            "And I do the same, gasping and holding her tightly as we come together."
             "She sinks down a fraction of an inch at a time, prolonging the experience."
-            show hottub sex male kiara inside with dissolve
-            "Which means that by the time I can go no further, we're both totally flustered."
+            scene hottub02 with dissolve
             "There's no sudden and explosive thrusting going on here."
-            "Instead Kiara moves slowly in my arms, and I move in sympathy with her."
-            "Using the side of the tub to prop myself up, I make love to her gently."
-            "And she lets the water bear her weight, allowing me to slide back and forth."
-            "Knowing that I can still hold her up, I begin to let my hands roam."
-            "They travel over the curves of Kiara's body, stroking and caressing her."
-            "The feel of the swimming-costume stretched over her contrasting with her naked skin."
-            "But as soon as they settle on her chest, I feel something stirring inside of me."
-            "And instead of gentle caresses, I squeeze and massage her breasts like never before."
-            "In the blink of an eye, I've pulled down the front of Kiara's swimming-costume."
-            "Freeing her breasts and spilling them onto her chest, bare and exposed."
-            "At the same time my pace quickens below, pushing into her harder than before."
             "Kiara responds in kind, pushing down and griding herself into me."
+            scene expression make_anim(kiara_pussy, time=0.4, loop=True)
             "Of course her enthusiasm only serves to make me try harder still."
             "And soon enough I can feel the sensation of her pussy beginning to squeeze me."
             "A moment later Kiara's entire body stiffens and she bears down on me like never before."
+            scene hottub03 with dissolve
             "Her orgasm is so intense that it gives me no chance to prepare myself."
             "And I know that I'm going to be swept away any second."
             call cum_reaction (kiara, 'vaginal', 1) from _call_cum_reaction_326
             if _return == "vaginal_outside":
                 "Holding onto Kiara more tightly than ever, I pull myself downwards."
-                show hottub sex male outside ahegao
-                "And at the same time I lift her up and off of me in one smooth motion."
-                show hottub cumshot with vpunch
-                $ kiara.sub += 1
-                "This means that my cock slides out of her just before I explode."
+                scene hottub07
+                "And at the same time I pull out my cock, letting it slide out of her pussy just before I explode."
                 with vpunch
-                "Making her arch her back and cry out, before slumping back against me."
+                $ kiara.sub += 1
                 "Cum spattering down on her exposed buttocks."
             else:
                 "Holding onto Kiara more tightly than ever, I pull her downwards."
-                "And at the same time I thrust myself up from below."
-                show hottub cumshot ahegao with vpunch
+                "And at the same time I thrust myself up from aside."
+                scene hottub04 with vpunch
                 $ kiara.love += 1
                 "This means that I'm as deep into her as possible when I explode."
                 with vpunch
@@ -249,53 +225,40 @@ label kiara_hottub_sex_male:
             "But the twist is that I want very badly to put it in the other hole."
             "I want to feel myself sinking into Kiara's beautifully tight ass."
             "So all I need to do is make sure that's where it goes."
-            "A little at a time, Kiara lowers herself onto me."
+            scene hottub08 with dissolve
             "The head pressing between her buttocks and wedging against the edge of her hole."
-            "But then gravity and the sheer need between us becomes too much."
             "Kiara lets out a little cry and clings onto me as her muscles begin to relax."
             "And I do the same, gasping and holding her tightly as we come together."
-            "She sinks down a fraction of an inch at a time, prolonging the experience."
-            show hottub sex male kiara inside with dissolve
-            "Which means that by the time I can go no further, we're both totally flustered."
+            scene hottub09 with dissolve
             "There's no sudden and explosive thrusting going on here."
             "Instead Kiara moves slowly in my arms, and I move in sympathy with her."
             "Using the side of the tub to prop myself up, I make love to her gently."
-            "And she lets the water bear her weight, allowing me to slide back and forth."
-            "Knowing that I can still hold her up, I begin to let my hands roam."
-            "They travel over the curves of Kiara's body, stroking and caressing her."
-            "The feel of the swimming-costume stretched over her contrasting with her naked skin."
-            "But as soon as they settle on her chest, I feel something stirring inside of me."
-            "And instead of gentle caresses, I squeeze and massage her breasts like never before."
-            "In the blink of an eye, I've pulled down the front of Kiara's swimming-costume."
-            "Freeing her breasts and spilling them onto her chest, bare and exposed."
-            "At the same time my pace quickens below, pushing into her harder than before."
             "Kiara responds in kind, pushing down and griding herself into me."
+            scene expression make_anim(kiara_ass, time=0.4, loop=True)
             "Of course her enthusiasm only serves to make me try harder still."
             "And soon enough I can feel the sensation of her muscles beginning to squeeze me."
             "A moment later Kiara's entire body stiffens and she bears down on me like never before."
+            scene hottub03 with dissolve
             "Her orgasm is so intense that it gives me no chance to prepare myself."
             "And I know that I'm going to be swept away any second."
             call cum_reaction (kiara, 'anal', 1) from _call_cum_reaction_327
             if _return == "anal_outside":
                 "Holding onto Kiara more tightly than ever, I pull myself downwards."
-                show hottub sex male outside
-                "And at the same time I lift her up and off of me in one smooth motion."
-                show hottub cumshot ahegao with vpunch
+                show hottub12
+                "And at the same time I pull out my cock, letting it slide out of her pussy just before I explode."
+                with vpunch
                 $ kiara.sub += 1
                 "This means that my cock slides out of her ass just before I explode."
-                with vpunch
-                "Making her arch her back and cry out, before slumping back against me."
                 "Cum spattering down on her exposed buttocks."
             else:
                 "Holding onto Kiara more tightly than ever, I pull her downwards."
                 "And at the same time I thrust myself up from below."
-                show hottub cumshot ahegao with vpunch
+                show hottub13
                 $ kiara.love += 1
                 "This means that I'm as deep into her ass as possible when I explode."
                 with vpunch
                 "Making her arch her back and cry out, before slumping back against me."
     "Once we're both spent, Kiara lets herself go limp in my arms."
-    "And she floats in the water, head resting on my shoulder."
     kiara.say "Oh yes..."
     kiara.say "That is exactly what we used to do in those pools back home!"
     kiara.say "Who knows, [hero.name]…"
@@ -318,15 +281,11 @@ label kiara_fuck_date_male(location="hero"):
     scene bg street
     show kiara
 
-
     call kiara_fuck_date_intro_male (location) from _call_kiara_fuck_date_intro
-
 
     call kiara_dick_reactions_male from _call_kiara_dick_reactions
 
-
     call kiara_fuck_date_foreplay_male from _call_kiara_fuck_date_foreplay_male
-
 
     if skip_foreplay:
         pass
@@ -628,11 +587,8 @@ label kiara_fuck_date_sleep(location="hero"):
 
 label kiara_fuck_date_blowjob:
     "I can see the way that Kiara's eyes are lingering on my manhood."
-    "The way that they seem to almost flare with naked desire for it."
     "And the result is that I can already feel it beginning to stiffen and rise."
     "Hell, it would have been hard soon enough with me simply staring at her naked body."
-    "But with her looking at me like that, it's going to take mere seconds."
-    "And now I'm more than intrigued to see what she wants to do with it."
     mike.say "Well, maybe you could..."
     mike.say "I dunno...give me a BJ?"
     mike.say "You know, if it's not too much trouble?"
@@ -640,17 +596,10 @@ label kiara_fuck_date_blowjob:
     "But now they seem to burst into a veritable blaze of naked lust."
     "And without another word, she stretches out one arm."
     show kiara naked evil at center, zoomAt(1.25, (640, 880)) with hpunch
-    "Kiara's open palm slaps into my chest, and then she gives me a shove."
-    "It's hard and totally unexpected, which means I'm instantly pushed backwards."
-    with hpunch
     "I bump into the shelves I was standing in front of, shaking them and their contents."
     mike.say "Wha…"
     mike.say "Urgh..."
-    "Kiara doesn't seem in the least bit concerned by the sounds that I'm making."
-    "Even less so if any of he valuable collectables on the shelves are dislodged."
-    "In fact I doubt that she's even aware of the shelf being there at all."
-    hide kiara with easeoutbottom
-    "Because she's already crouching down in front of me."
+    "she's already crouching down in front of me."
     scene bg black
     show kiara bj happy
     with fade
@@ -659,38 +608,26 @@ label kiara_fuck_date_blowjob:
     "Her fingers wrap around the base of the shaft, giving it a light squeeze."
     mike.say "Ah..."
     "Even something so soft is enough to make me gasp at the sensation."
-    "And I swear that I see the corner of Kiara's mouth twist into a smile."
-    "But there's no time to wonder if she's getting a kick out of my reaction."
     show kiara bj blowjob
     "Because the very next moment, her lips part and her tongue darts out."
     "And the second it makes contact with the tip of my cock, that's it."
-    "All I can do is flatten myself against the shelves, almost like I'm clinging on for dear life."
     play sexsfx1 bj_openmouth
     show kiara bj at stepback(0.09, 10, 0)
     "Kiara takes it inside of her mouth a little at a time, upping the stakes with aching slowness."
     "As my cock travels deeper into Kiara's mouth, her hand moves up the shaft."
-    "It's not like she's really working it with her fingers, at least not like a genuine hand-job."
-    "More like her hand is serving to steer her efforts and keep everything in place."
-    "But once her lips and fingertips meet, Kiara's hand falls away, leaving it to her mouth."
-    "And that's when things seem to change into a whole different gear for me."
     "Now she uses her hands to hold onto my legs, bracing herself against my calves."
-    "And I can feel the soft pressure of her breasts against me as she leans into it."
-    play sexsfx1 bj_sucking loop
     show kiara bj at stepback(0.07, 10, 0)
     pause 0.2
     show kiara bj at stepback(0.07, 10, 0)
     "Kiara's head moves back and forth, working away at my cock inside of her mouth."
     "From the outside, it might not look like there's much going into the effort."
     "But I can feel everything that's happening inside of there, and it's pretty crazy."
-    "From the way my cock is being caressed, I'd swear Kiara had more than one tongue!"
     show kiara bj at stepback(0.07, 10, 0)
     pause 0.2
     show kiara bj at stepback(0.07, 10, 0)
     "And part of me is sure that it's already starting to reach all the way into her throat."
     "Until now, she's had her eyes firmly closed, as if totally devoted to the act."
     "So it almost makes me jump in surprise when they suddenly open again."
-    "My own eyes must be wide with amazement as I gaze into Kiara's."
-    "But that doesn't last long, as I soon see the way she's looking at me."
     show kiara bj pleasure at stepback(0.07, 10, 0)
     pause 0.2
     show kiara bj at stepback(0.07, 10, 0)
@@ -1020,11 +957,6 @@ label kiara_fuck_date_cowgirl(sexperience_min):
             "One glance at the neat pink folds between her thighs and I'm sold."
             "I can already feel my cock getting harder at the mere thought of it."
             "And all I need to do is pull her forwards just a little more..."
-            call check_condom_usage (kiara) from _call_check_condom_usage_167
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show kiara cowgirl condom out
             show kiara cowgirl out
             with fade
             "Kiara looks down at me, fully knowing that I'm ready to go."
@@ -1077,14 +1009,6 @@ label kiara_fuck_date_cowgirl(sexperience_min):
             "Kiara's using every ounce of her strength to ride my cock, and it feels incredible."
             "Pinned beneath her, I do all that I can to move in sympathy with her body."
             "Trying to heighten the effect that she's having on me and double the pleasure for us both."
-
-
-
-
-
-
-
-
 
             "I shake my head to focus my thoughts, doing the best I can to keep my mind on the task at hand."
             show kiara cowgirl at startle(0.07,-15)
@@ -1379,11 +1303,6 @@ label kiara_fuck_date_missionary(sexperience_min):
             "One glance at the neat pink folds between her thighs and I'm sold."
             "I can already feel my cock getting harder at the thought of it."
             "And all I need to do is lower myself down just a little more..."
-            call check_condom_usage (kiara) from _call_check_condom_usage_168
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show kiara missionary condom out
             show kiara missionary out
             with fade
             "Kiara seems to be every bit as much into the idea as I am."
@@ -1727,11 +1646,6 @@ label kiara_fuck_date_standing(sexperience_min):
             "Maybe it means that I'm obsessed with what's right in front of me."
             "But right now I can't think of anything apart from Kiara's sweet little pussy."
             "And I want to make straight for it, forgetting about absolutely everything else."
-            call check_condom_usage (kiara) from _call_check_condom_usage_169
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show kiara stand condom
             "Now that all the pieces are in place, I feel like we're ready to go."
             "And so I get ready to make the first move, to take the lead."
             "But it seems like Kiara has exactly the same thing in mind."

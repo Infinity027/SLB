@@ -15,7 +15,7 @@ label watch_tv_with(*people):
         if len(people) > 2:
             $ renpy.show(people[2].id)
 
-    call expression f"watch_tv_with_dialogues_1_{hero.gender}" from _call_expression_188
+    call expression f"watch_tv_with_dialogues_1_male" from _call_expression_188
     if len(people) == 1 and renpy.has_label(people[0].id + "_tv_reaction"):
         call expression people[0].id + "_tv_reaction" from _call_expression_189
     $ renpy.dynamic("choices", "genre")
@@ -134,14 +134,6 @@ label watch_tv_with(*people):
     $ hero.fun += 1.5
     hide watch tv
 
-
-    if hero.is_male and len(people) == 1 and sasha in people and hero.has_skill("massage") and (1 <= game.week_day <= 5) and game.hour > 20:
-        if sasha.sub <= -50 and sasha.love >= 100 and sasha.flags.footrub == 4:
-            call sasha_tv_footrub_3 from _call_sasha_tv_footrub_3
-        elif sasha.sub <= -25 and sasha.love >= 100 and sasha.flags.footrub >= 5:
-            call sasha_tv_footrub_2 from _call_sasha_tv_footrub_2
-        elif sasha.sub <= 0 and sasha.love >= 50:
-            call sasha_tv_footrub_1 from _call_sasha_tv_footrub_1
     return
 
 label apply_movie_gain(genre, *people):
@@ -276,8 +268,8 @@ label movie_reactions(genre, liked, indifferent, disliked):
 
     if len(liked) == 1:
         $ who = liked[0].name
-        if renpy.has_label(f"{who.lower()}_movie_liked_reaction_{hero.gender}") and randint(0, 2) >= 1:
-            call expression f"{who.lower()}_movie_liked_reaction_{hero.gender}" from _call_expression_191
+        if renpy.has_label(f"{who.lower()}_movie_liked_reaction_male") and randint(0, 2) >= 1:
+            call expression f"{who.lower()}_movie_liked_reaction_male" from _call_expression_191
         else:
             if genre == "fashion":
                 "[who] seems mesmerized."
@@ -310,8 +302,8 @@ label movie_reactions(genre, liked, indifferent, disliked):
 
     if len(indifferent) == 1:
         $ who = indifferent[0].name
-        if renpy.has_label(f"{who.lower()}_movie_indifferent_reaction_{hero.gender}") and randint(0, 2) >= 1:
-            call expression f"{who.lower()}_movie_indifferent_reaction_{hero.gender}" from _call_expression_192
+        if renpy.has_label(f"{who.lower()}_movie_indifferent_reaction_male") and randint(0, 2) >= 1:
+            call expression f"{who.lower()}_movie_indifferent_reaction_male" from _call_expression_192
         else:
             "[who] doesn't seem to be paying too much attention to the movie."
     elif len(indifferent) > 1:
@@ -320,8 +312,8 @@ label movie_reactions(genre, liked, indifferent, disliked):
 
     if len(disliked) == 1:
         $ who = disliked[0].name
-        if renpy.has_label(f"{who.lower()}_movie_disliked_reaction_{hero.gender}") and randint(0, 2) >= 1:
-            call expression f"{who.lower()}_movie_disliked_reaction_{hero.gender}" from _call_expression_193
+        if renpy.has_label(f"{who.lower()}_movie_disliked_reaction_male") and randint(0, 2) >= 1:
+            call expression f"{who.lower()}_movie_disliked_reaction_male" from _call_expression_193
         else:
             if genre == "horror":
                 "[who] seems to be more scared than entertained."

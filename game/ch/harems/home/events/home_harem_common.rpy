@@ -4353,7 +4353,6 @@ label home_harem_fuck_choices(from_girl=None):
                     hide lexi
                     call sasha_fuck_date_male from _call_sasha_fuck_date_9
     else:
-        call expression f"{from_girl}_fuck_date_{hero.gender}" from _call_expression_230
+        call expression f"{from_girl}_fuck_date_male" from _call_expression_230
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

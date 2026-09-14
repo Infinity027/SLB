@@ -59,7 +59,6 @@ init python:
     "duration": 1,
     })
 
-label shiori_fuck_date_nudistbeach:
 label shiori_fuck_date_beach:
 label shiori_fuck_beach:
     $ game.play_music("music/roa_music/city_nights.ogg")
@@ -146,7 +145,6 @@ label shiori_fuck_beach:
 
 label shiori_hottub_sex_male:
     $ game.active_date.clothes = "swimsuit"
-    $ CONDOM = False
     show bg pool
     "Normally the invitation to hop into a hot-tub is one that a girl can't resist, as sure thing."
     "But then Shiori's not like most girls, she's more than a little meek and shy."
@@ -227,60 +225,44 @@ label shiori_hottub_sex_male:
     "I can feel the sensation of Shiori's nipples as they stiffen against my chest."
     "She sighs through the kiss, helping to pull down her swimsuit."
     "And at the same time, she's tugging down my own trunks."
-    "My cock rubs against Shiori's belly and I know that I can't wait any longer."
-    show hottub sex male shiori outside
-    call shiori_dick_reactions from _call_shiori_dick_reactions_1
+    "My cock rubs against Shiori's thigh and I know that I can't wait any longer."
+    scene shiori_hottub01
     with fade
-    "Without waiting for permission, I turn her around and pull her onto my lap."
     "Shiori lets out a yelp of surprise, but she offers no resistance."
-    "And the way she wriggles against me is almost too much to bear!"
-    "I can't wait any longer, and so pull her hastily onto me."
+    "I can't wait any longer."
     "Shiori yelps again as her pussy holds out for a brief moment."
-    show hottub sex male shiori inside
+    scene shiori_hottub02
     "And then her yelp turns into a sensual moan as her body surrenders to me."
-    "She sinks slowly down as my cock pushes its way into her."
-    "Every fraction of an inch feels incredible as she does so."
     "I wait until I'm as deep in her as I can possibly go."
     "And only then do I start to thrust in and out of her."
+    scene expression make_anim(shiori_hottub, time=0.4, loop=True)
     "Every motion sends Shiori's full, heavy breasts jiggling and bouncing."
     "The water is beading on them, dripping from her stiff nipples the whole time."
     "They seem to hypnotise me then, moving in a way that's impossible to ignore."
     "And so I lean my head around and catch one in my mouth."
     shiori.say "Oooh!"
     shiori.say "Mmmm..."
-    "If anything, this makes Shiori even more excited than before."
-    "She's riding my cock now like her life depends on it!"
-    "I have my hands under her thighs, lifting her up to make each thrust more intense."
+    scene shiori_hottub03
     "Another time I might have been worried about her cries attracting unwanted attention."
     "But here and now, all I can think about is keeping right on pounding her as hard as possible!"
     menu:
         "Cum inside":
-            "Made slippery by the water, Shiori shifts and slides in my hands."
-            "And for a moment I think that she's about to slide right off of my cock!"
-            "Not about to let such a thing happen, I make a desperate grab for her."
-            "But even then I can still feel Shiori slipping away from me."
-            "And so rather than just holding onto her, I almost squeeze her against me!"
             "Shiori squeals as I do so, all of her weight pressing down on my cock."
             "The sensation is more than enough to push me over the edge."
-            show hottub sex male shiori cumshot
+            scene shiori_hottub07
             $ shiori.love += 1
             "And I lose it there and then, shooting my load deep into Shiori as I cum."
+            with hpunch
             "I hold her tightly as her squeals fade into satisfied moans."
-            show hottub sex male shiori ahegao
             "She squirms in my grasp, riding out the last of her own orgasm on my cock."
         "Pull out":
             "Made slippery by the water, Shiori shifts and slips out of my grasp for a moment."
-            show hottub sex male shiori outside
+            scene shiori_hottub06
             "It's only a couple of seconds, but long enough for my cock to pop out of her pussy."
+            with hpunch
             "She yelps and squeals at the sensation, taken completely by surprise."
-            "And instinctively, she clamps her thighs around my cock."
-            "The feel of Shiori's thick haunches is enough to push me over the edge."
             $ shiori.sub += 1
-            show hottub sex male shiori cumshot
-            "Which means that I cum mere seconds later between her thighs."
             "Shiori gasps as the sticky, white streamers spatter against her breasts."
-            "And without thinking, she begins to massage them as she cums herself."
-            "She kneads and squeezes away, rubbing the cum into her pale skin."
     hide hottub
     show hottub shiori
     with fade
@@ -301,12 +283,9 @@ label shiori_fuck_date_male(location="hero"):
     scene bg livingroom
     show shiori
 
-
     call shiori_fuck_date_intro_male (location) from _call_shiori_fuck_date_intro_male
 
-
     call shiori_dick_reactions from _call_shiori_dick_reactions
-
 
     if shiori.sub >= 25:
         call shiori_fuck_date_foreplay_male from _call_shiori_fuck_date_foreplay_male
@@ -314,7 +293,6 @@ label shiori_fuck_date_male(location="hero"):
         call handle_npc_leaving (shiori, _return, from_foreplay=True) from _call_handle_npc_leaving_25
         if _return:
             return
-
 
     scene bg bedroom1
     show shiori naked blush
@@ -769,12 +747,6 @@ label shiori_fuck_date_doggy(sexperience_min):
                 "Mine to do with as I please..."
             $ shiori.flags.anal += 1
         "Fuck her pussy":
-            call check_condom_usage (shiori, 120) from _call_check_condom_usage_107
-            if _return == False:
-                return
-
-            if CONDOM:
-                show shiori doggy condom
 
             "Deep down I know that the only thing that'll satisfy me is getting deep down in her pussy."
             "I lean forward, just enough to let the head of my cock brush at the bottom of Shiori's lips."
@@ -888,13 +860,8 @@ label shiori_fuck_date_reverse_cowgirl(sexperience_min):
             "Her ass feels very inviting indeed, but then I notice that her neat little pussy feels so exposed and inviting that I can't resist."
             "Shiori's lips look so perfect and petite that for a moment I wonder if she was actually play-acting when she said I wouldn't fit."
             "But there's only one way to find out the truth."
-            call check_condom_usage (shiori, 120) from _call_check_condom_usage_108
-            if _return == False:
-                return
 
             show shiori reverse vaginal
-            if CONDOM:
-                show shiori reverse vaginal condom
             with fade
             "Shiori begins to moan, even before the head of my dick actually makes contact with her lips."
             "This means that when I finally do slide my cock along the length of her pussy, she draws in several short, sharp breaths at the sensation."
@@ -1107,12 +1074,7 @@ label shiori_fuck_date_missionary(sexperience_min):
                 "I move forward just a little."
                 "Enough for the head of my cock to stroke the lips of Shiori's pussy."
                 "She gasps and nods even more eagerly than before."
-                call check_condom_usage (shiori, 120) from _call_check_condom_usage_109
-                if _return == False:
-                    return
                 show shiori missionary vaginal
-                if CONDOM:
-                    show shiori missionary vaginal condom
                 "Feeling more confident that she's into it, I push a little harder down there."
                 "And I'm instantly rewarded when Shiori lets out a peal of giggling laughter."
                 "It's totally spontaneous and seems to come from the delight she's feeling right now."
@@ -1343,12 +1305,7 @@ label shiori_fuck_date_missionary(sexperience_min):
                 "Instead she seems happy to put herself totally in my hands, trusting me implicitly."
                 "And that trust is something that means a hell of a lot to me."
                 "So I'm not going to do anything that might damage it."
-                call check_condom_usage (shiori, 120) from _call_check_condom_usage_110
-                if _return == False:
-                    return
                 show shiori missionary2
-                if CONDOM:
-                    show shiori missionary2 condom
                 "I give Shiori what I hope is a reassuring smile as I lie atop her."
                 "And she smiles back at me, but the nerves she's feeling are still visible."
                 "That's why I go as slowly and gently as I possibly can."
@@ -1595,11 +1552,6 @@ label shiori_fuck_date_piledriver(sexperience_min):
             "I focus all of my attention on Shiori's exposed pussy."
             "All the time she's watching me too."
             "And I swear I can see it begin to glisten all the more."
-            call check_condom_usage (shiori, 120) from _call_check_condom_usage_111
-            if _return == False:
-                return
-            if CONDOM:
-                show shiori piledriver condom
             "The angle I have Shiori at means that it's an easy task to slip inside of her."
             "All I need to do is push downwards, and my cock sinks between her lips."
             "By now, Shiori's so worked up that there's no resistance whatsoever."
@@ -2170,9 +2122,6 @@ label shiori_fuck_office_missionary(sexperience_min):
             "And to that end, I part her legs and lower myself down atop her slowly."
             "The tip of my cock brushes the lips of her pussy, making her gasp."
             "But I hold back from pushing it any further, keeping my desires under control."
-            call check_condom_usage (shiori, 120) from _call_check_condom_usage_112
-            if CONDOM:
-                show shiori missionary2 condom
             "Shiori bites her lip as I stroke her pussy with the had of my cock."
             show shiori missionary2 -blush
             "And the moment I see her nod, I make a subtle movement and push."
@@ -2475,13 +2424,8 @@ label shiori_fuck_office_reverse(sexperience_min):
             "The lips of her pussy slide along the length of my cock."
             "And I can instantly feel just how slick she is down there."
             "Which means I want to get inside of her as soon as I possibly can!"
-            call check_condom_usage (shiori, 120) from _call_check_condom_usage_113
-            if _return == False:
-                return
             "When the moment comes and I pull Shiori downwards, it's as smooth as can be."
             "All of her weight is behind her and she's more than ready for me too."
-            if CONDOM:
-                show shiori reverse condom pain
             show shiori reverse vaginal pain
             "Which means that after a few seconds of resistance, I slide right into her."
             "The feeling is like nothing I can describe, but I'll try all the same!"

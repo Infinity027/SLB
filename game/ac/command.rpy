@@ -78,7 +78,7 @@ label command_girl:
                     $ active_girl.flags.noaskout = True
                 "Cancel":
                     $ hero.cancel_activity()
-        "About what we call each other" if hero.gender == 'male':
+        "About what we call each other":
             menu:
 
 
@@ -120,8 +120,8 @@ label command_girl:
                 "Talk about personal nickname" if renpy.has_label(f"command_nickname_{active_girl.id.lower()}"):
                     call expression "command_nickname_" + active_girl.id.lower() from _call_expression_68
 
-                "Let's spice up our interactions" if renpy.has_label(f"submissive_interact_{active_girl.id}_{hero.gender}"):
-                    call expression f"submissive_interact_{active_girl.id}_{hero.gender}" from _call_expression_14
+                "Let's spice up our interactions" if renpy.has_label(f"submissive_interact_{active_girl.id}_male"):
+                    call expression f"submissive_interact_{active_girl.id}_male" from _call_expression_14
                 "Cancel":
 
                     $ hero.cancel_activity()

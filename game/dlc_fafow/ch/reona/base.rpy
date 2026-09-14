@@ -264,7 +264,7 @@ label reona_ask_date_lexi:
     return
 
 label reona_greet:
-    if renpy.has_label(f"reona_greet_dialogues_{hero.gender}") and not reona.flags.greeted:
+    if renpy.has_label(f"reona_greet_dialogues_male") and not reona.flags.greeted:
         scene expression f"bg {game.room}"
         show reona
         $ reona.flags.greeted = TemporaryFlag(True, 1)
@@ -280,7 +280,7 @@ label reona_greet:
                 reona.say "Good afternoon [hero.name]."
             else:
                 reona.say "Good evening [hero.name]."
-        call expression f"reona_greet_dialogues_{hero.gender}" from _call_expression_465
+        call expression f"reona_greet_dialogues_male" from _call_expression_465
         hide reona
     return
 

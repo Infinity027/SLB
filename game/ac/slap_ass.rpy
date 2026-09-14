@@ -24,8 +24,8 @@ label slap:
     call expression f"{active_girl.id}_greet" from _call_expression_131
     $ renpy.hide(active_girl.id)
     $ renpy.show(f"slap {active_girl.id} happy waiting")
-    if renpy.has_label(f"{active_girl.id}_slap_ass_intro_{hero.gender}"):
-        call expression f"{active_girl.id}_slap_ass_intro_{hero.gender}" from _call_expression_133
+    if renpy.has_label(f"{active_girl.id}_slap_ass_intro_male"):
+        call expression f"{active_girl.id}_slap_ass_intro_male" from _call_expression_133
     else:
         "I slap [active_girl.name] on the ass."
     if active_girl.sub >= 10 - active_girl.flags.slapassmod:
@@ -40,8 +40,8 @@ label slap:
             $ active_girl.sub += randchoice([0, 0, 0, 1])
         elif active_girl.sub < 50 + active_girl.flags.slapassmod:
             $ active_girl.sub += randchoice([0, 0, 0, 0, 2])
-        if renpy.has_label(f"{active_girl.id}_slap_ass_happy_{hero.gender}"):
-            call expression f"{active_girl.id}_slap_ass_happy_{hero.gender}" from _call_expression_134
+        if renpy.has_label(f"{active_girl.id}_slap_ass_happy_male"):
+            call expression f"{active_girl.id}_slap_ass_happy_male" from _call_expression_134
         else:
 
             "She smiles and blushes..."
@@ -49,8 +49,8 @@ label slap:
         $ renpy.show(f"slap {active_girl.id} angry slapping")
         $ active_girl.love -= 1
         $ active_girl.sub -= 1
-        if renpy.has_label(f"{active_girl.id}_slap_ass_angry_{hero.gender}"):
-            call expression f"{active_girl.id}_slap_ass_angry_{hero.gender}" from _call_expression_136
+        if renpy.has_label(f"{active_girl.id}_slap_ass_angry_male"):
+            call expression f"{active_girl.id}_slap_ass_angry_male" from _call_expression_136
         else:
             active_girl.say "What are you doing?"
     if hero.is_female and hero.morality >= 25:

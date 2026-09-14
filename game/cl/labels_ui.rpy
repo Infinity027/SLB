@@ -269,9 +269,9 @@ screen smartphone(char=None, selected_screen="home"):
             $ luck_value = 3 + hero.luck.val
             add f"gui/icons/icon_clover_small_{luck_value}.png" pos (250, 75) size (25, 25)
             if hero.stamina:
-                add f"gui/icons/icon_stamina_small_{hero.gender}.png" pos (220, 75)
+                add f"gui/icons/icon_stamina_small_male.png" pos (220, 75)
             else:
-                add f"gui/icons/icon_stamina_small_{hero.gender}.png" pos (220, 75) matrixcolor SaturationMatrix(0)
+                add f"gui/icons/icon_stamina_small_male.png" pos (220, 75) matrixcolor SaturationMatrix(0)
             if hero.flags.pill:
                 add "gui/icons/icon_pill_small.png" pos 190, 75
             $ heroname_ui = f"{hero.name.upper()} {hero.family_name.upper()}"

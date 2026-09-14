@@ -20,7 +20,7 @@ label common_ending:
         available_weddings = list()
 
         for fiance in fiances:
-            ending_label = f"{fiance.id}_{hero.gender}_ending"
+            ending_label = f"{fiance.id}_male_ending"
             if renpy.has_label(ending_label):
                 available_weddings.append((f"{fiance.name}", renpy.Choice(ending_label, displayed_fiances=[fiance.id])))
             else:
@@ -37,7 +37,7 @@ label common_ending:
         for k,v in harem_fiances.items():
             harems_partial_combinations = list(reversed(list(itertools.chain.from_iterable(itertools.combinations(v, r) for r in range(2, len(v) + 1)))))
             for partial_harem in harems_partial_combinations:
-                ending_label = f"{'_'.join([f.id for f in partial_harem])}_{hero.gender}_ending"
+                ending_label = f"{'_'.join([f.id for f in partial_harem])}_male_ending"
                 if renpy.has_label(ending_label) and Harem.find_by_name(k).test():
                     harems_weddings.append((f"{k.capitalize()} Harem", renpy.Choice(ending_label, displayed_fiances=[f.id for f in partial_harem])))
                 elif not renpy.has_label(ending_label):
@@ -97,14 +97,14 @@ label date_do_date(date):
 
     $ date_girl.flags.dates += 1
 
-    if game.calendar.is_today(*date_girl.birthday) and date_girl.flags.birthdayknown and renpy.has_label(f"{date_girl.id}_birthday_date_{hero.gender}"):
+    if game.calendar.is_today(*date_girl.birthday) and date_girl.flags.birthdayknown and renpy.has_label(f"{date_girl.id}_birthday_date_male"):
 
         if game.hour in [14, 15, 16, 17] and date_girl.id in ["audrey", "lavish", "lexi", "reona", "scottie", "morgan"]:
-            call expression f"{date_girl.id}_birthday_date_{hero.gender}" from _call_expression_466
+            call expression f"{date_girl.id}_birthday_date_male" from _call_expression_466
             $ date.stay = False
             $ game.pass_time(2)
         elif game.hour in [20, 21, 22, 23] and date_girl.id not in ["audrey", "lavish", "lexi", "reona", "scottie", "morgan"]:
-            call expression f"{date_girl.id}_birthday_date_{hero.gender}" from _call_expression_407
+            call expression f"{date_girl.id}_birthday_date_male" from _call_expression_407
             $ game.pass_time(2)
             $ date.stay = False
     while date.stay:
@@ -131,15 +131,15 @@ label date_do_date(date):
             date_girl.say "I really don't want to end things right now, maybe we can do something else?"
             menu:
                 "Yes":
-                    call expression f"date_do_date_dialogues_1_{hero.gender}" from _call_expression_408
+                    call expression f"date_do_date_dialogues_1_male" from _call_expression_408
                     $ game.pass_time(2)
                     call choose_and_do_date from _date_do_date_evening
                 "No":
-                    call expression f"date_do_date_dialogues_2_{hero.gender}" from _call_expression_409
+                    call expression f"date_do_date_dialogues_2_male" from _call_expression_409
                     $ date.stay = False
         elif game.hour in [20, 21, 22, 23] and not dinner:
-            if game.calendar.is_today(*date_girl.birthday) and date_girl.flags.birthdayknown and renpy.has_label(f"{date_girl.id}_birthday_date_{hero.gender}"):
-                call expression f"{date_girl.id}_birthday_date_{hero.gender}" from _call_expression_457
+            if game.calendar.is_today(*date_girl.birthday) and date_girl.flags.birthdayknown and renpy.has_label(f"{date_girl.id}_birthday_date_male"):
+                call expression f"{date_girl.id}_birthday_date_male" from _call_expression_457
                 $ game.pass_time(2)
                 $ date.stay = False
             else:
@@ -160,12 +160,12 @@ label date_do_date(date):
                 if "nightclub" in DATES and DATES["nightclub"].test():
                     $ result = renpy.display_menu([("Yes", True), ("No", False)])
                     if result:
-                        call expression f"date_do_date_dialogues_3_{hero.gender}" from _call_expression_410
+                        call expression f"date_do_date_dialogues_3_male" from _call_expression_410
                         call date_do (DATES["nightclub"]) from _date_do_date_night
                     else:
-                        call expression f"date_do_date_dialogues_4_{hero.gender}" from _call_expression_411
+                        call expression f"date_do_date_dialogues_4_male" from _call_expression_411
                 else:
-                    call expression f"date_do_date_dialogues_5_{hero.gender}" from _call_expression_412
+                    call expression f"date_do_date_dialogues_5_male" from _call_expression_412
                     $ date.stay = False
         else:
 
@@ -189,7 +189,7 @@ label date_do_date(date):
 
             if date.stay_coffee:
                 $ renpy.show(date_girl.id)
-                call expression f"date_stay_coffee_{hero.gender}" from _call_expression_413
+                call expression f"date_stay_coffee_male" from _call_expression_413
             $ date.stay = False
             $ renpy.hide(date_girl.id)
 
@@ -210,44 +210,44 @@ label date_do_date(date):
     return
 
 label date_stay_coffee_male:
-    if renpy.has_label(f"{date_girl.id}_ask_fuck_date_{hero.gender}"):
-        call expression f"{date_girl.id}_ask_fuck_date_{hero.gender}" from _call_expression_414
+    if renpy.has_label(f"{date_girl.id}_ask_fuck_date_male"):
+        call expression f"{date_girl.id}_ask_fuck_date_male" from _call_expression_414
     else:
         call date_ask_fuck_date from _call_date_ask_fuck_date
     if _return:
         $ renpy.hide(date_girl.id)
-        call expression f"{date_girl.id}_fuck_date_{hero.gender}" pass (_return) from _call_expression_415
+        call expression f"{date_girl.id}_fuck_date_male" pass (_return) from _call_expression_415
     return
 
 label date_ask_fuck_date:
-    if renpy.has_label(f"{date_girl.id}_fuck_date_{hero.gender}") and (
+    if renpy.has_label(f"{date_girl.id}_fuck_date_male") and (
         game.active_date.score >= (100 - date_girl.flags.drinks * 5) and (
         date_girl.love >= 100 or date_girl.flags.drinks >= 3 or (
         date_girl.id == "reona" and date_girl.purity < 50)) and not date_girl.flags.nosex):
-        if renpy.has_label(f"{date_girl.id}_ask_hot_coffee_{hero.gender}"):
-            call expression f"{date_girl.id}_ask_hot_coffee_{hero.gender}" from _call_expression_531
+        if renpy.has_label(f"{date_girl.id}_ask_hot_coffee_male"):
+            call expression f"{date_girl.id}_ask_hot_coffee_male" from _call_expression_531
         else:
             date_girl.say "Maybe I could, you know..."
             date_girl.say "Come for a hot coffee."
         menu:
             "Yes" if hero.stamina and (not date_girl.flags.addressknown or date_girl.id not in ["audrey"]):
-                call expression f"date_ask_fuck_date_dialogues_1_{hero.gender}" from _call_expression_416
+                call expression f"date_ask_fuck_date_dialogues_1_male" from _call_expression_416
                 return "hero"
             "My place" if hero.stamina and date_girl.flags.addressknown and date_girl.id in ["audrey"]:
-                call expression f"date_ask_fuck_date_dialogues_1_{hero.gender}" from _call_expression_532
+                call expression f"date_ask_fuck_date_dialogues_1_male" from _call_expression_532
                 return "hero"
             "Your place" if hero.stamina and date_girl.flags.addressknown and date_girl.id in ["audrey"]:
-                call expression f"date_ask_fuck_date_dialogues_1_{hero.gender}" from _call_expression_533
+                call expression f"date_ask_fuck_date_dialogues_1_male" from _call_expression_533
                 return date_girl.id
             "No" if hero.stamina:
-                call expression f"date_ask_fuck_date_dialogues_2_{hero.gender}" from _call_expression_417
+                call expression f"date_ask_fuck_date_dialogues_2_male" from _call_expression_417
                 $ date_girl.love -= 5
                 if date_girl.id == "reona" and date_girl.purity < 50:
                     $ reona.sub -= 2
                 return False
             "No. I'm exhausted." if not hero.stamina:
                 "I had too much 'hot coffee' lately, I should rest."
-                call expression f"date_ask_fuck_date_dialogues_3_{hero.gender}" from _call_expression_418
+                call expression f"date_ask_fuck_date_dialogues_3_male" from _call_expression_418
                 $ date_girl.love -= 5
                 if date_girl.id == "reona" and date_girl.purity < 50:
                     $ reona.sub -= 5
@@ -260,16 +260,16 @@ label choose_and_do_date:
     show bg street
 
     if sum([afternoon, evening, dinner]) == 1:
-        if game.calendar.is_today("valentine") and renpy.has_label(f"{date_girl.id}_date_intro_valentine_{hero.gender}"):
-            call expression f"{date_girl.id}_date_intro_valentine_{hero.gender}" from _call_expression_419
-        elif game.calendar.is_today("halloween") and renpy.has_label(f"{date_girl.id}_date_intro_halloween_{hero.gender}"):
-            call expression f"{date_girl.id}_date_intro_halloween_{hero.gender}" from _call_expression_420
-        elif game.calendar.is_today("christmas")and renpy.has_label(f"{date_girl.id}_date_intro_christmas_{hero.gender}"):
-            call expression f"{date_girl.id}_date_intro_christmas_{hero.gender}" from _call_expression_421
-        elif game.calendar.is_today(*date_girl.birthday) and date_girl.flags.birthdayknown and renpy.has_label(f"{date_girl.id}_date_intro_birthday_{hero.gender}"):
-            call expression f"{date_girl.id}_date_intro_birthday_{hero.gender}" from _call_expression_422
-        elif game.calendar.is_today(*hero.birthday) and renpy.has_label(f"{date_girl.id}_date_intro_mc_birthday_{hero.gender}"):
-            call expression f"{date_girl.id}_date_intro_mc_birthday_{hero.gender}" from _call_expression_423
+        if game.calendar.is_today("valentine") and renpy.has_label(f"{date_girl.id}_date_intro_valentine_male"):
+            call expression f"{date_girl.id}_date_intro_valentine_male" from _call_expression_419
+        elif game.calendar.is_today("halloween") and renpy.has_label(f"{date_girl.id}_date_intro_halloween_male"):
+            call expression f"{date_girl.id}_date_intro_halloween_male" from _call_expression_420
+        elif game.calendar.is_today("christmas")and renpy.has_label(f"{date_girl.id}_date_intro_christmas_male"):
+            call expression f"{date_girl.id}_date_intro_christmas_male" from _call_expression_421
+        elif game.calendar.is_today(*date_girl.birthday) and date_girl.flags.birthdayknown and renpy.has_label(f"{date_girl.id}_date_intro_birthday_male"):
+            call expression f"{date_girl.id}_date_intro_birthday_male" from _call_expression_422
+        elif game.calendar.is_today(*hero.birthday) and renpy.has_label(f"{date_girl.id}_date_intro_mc_birthday_male"):
+            call expression f"{date_girl.id}_date_intro_mc_birthday_male" from _call_expression_423
 
     $ spots = game.get_dates()
     $ spot = "None"
@@ -314,8 +314,8 @@ label date_do(date):
         pass
     else:
         call expression f"{date_girl.id}_greet" from _date_do_greet
-    if renpy.has_label(f"{date_girl.id}_date_{date.name}_{hero.gender}"):
-        call expression f"{date_girl.id}_date_{date.name}_{hero.gender}" from _date_do_girl_date
+    if renpy.has_label(f"{date_girl.id}_date_{date.name}_male"):
+        call expression f"{date_girl.id}_date_{date.name}_male" from _date_do_girl_date
     else:
         call expression f"date_{date.name}" from _date_do_date
 
@@ -356,12 +356,12 @@ label time_for_our_date:
     active_girl.say "Let's go on our date [hero.name]."
     menu:
         "Yes":
-            call expression f"time_for_our_date_dialogues_1_{hero.gender}" from _call_expression_424
+            call expression f"time_for_our_date_dialogues_1_male" from _call_expression_424
             $ hero.calendar.remove(game.days_played, appointment)
             if isinstance(appointment, Appointment) and appointment.do() != None:
                 call expression appointment.do() pass (appointment) from _call_expression_138
         "No":
-            call expression f"time_for_our_date_dialogues_2_{hero.gender}" from _call_expression_425
+            call expression f"time_for_our_date_dialogues_2_male" from _call_expression_425
     if active_girl:
         $ renpy.hide(active_girl.id)
     return
@@ -397,11 +397,11 @@ label ask_out:
         active_girl.say "Would you like to go somewhere with me [str_day] [str_hour]?"
         $ choices = [("Yes", 1), ("No", 2)]
         if renpy.display_menu(choices) == 1:
-            call expression f"ask_out_dialogues_1_{hero.gender}" from _call_expression_426
+            call expression f"ask_out_dialogues_1_male" from _call_expression_426
             $ hero.calendar.add(day, DateAppointment(hour, active_girl.id))
             $ active_girl.love += 1
         else:
-            call expression f"ask_out_dialogues_2_{hero.gender}" from _call_expression_427
+            call expression f"ask_out_dialogues_2_male" from _call_expression_427
             $ active_girl.love -= 1
         $ renpy.hide(active_girl.id)
     return
@@ -467,7 +467,7 @@ label send_text:
             while t:
                 $ line = t.pop(0)
                 if line[0] == "mc":
-                    call expression f"text_sentence_{hero.gender}" pass (sentence=line[1]) from _call_expression_429
+                    call expression f"text_sentence_male" pass (sentence=line[1]) from _call_expression_429
                 else:
                     call expression f"text_sentence_{active_girl.id}" pass (sentence=line[1]) from _call_expression_506
         $ active_girl.love += 2
@@ -479,7 +479,7 @@ label send_text:
             while t:
                 $ line = t.pop(0)
                 if line[0] == "mc":
-                    call expression f"text_sentence_{hero.gender}" pass (sentence=line[1]) from _call_expression_431
+                    call expression f"text_sentence_male" pass (sentence=line[1]) from _call_expression_431
                 else:
                     call expression f"text_sentence_{active_girl.id}" pass (sentence=line[1]) from _call_expression_507
         $ active_girl.love += 1
@@ -491,7 +491,7 @@ label send_text:
             while t:
                 $ line = t.pop(0)
                 if line[0] == "mc":
-                    call expression f"text_sentence_{hero.gender}" pass (sentence=line[1]) from _call_expression_433
+                    call expression f"text_sentence_male" pass (sentence=line[1]) from _call_expression_433
                 else:
                     call expression f"text_sentence_{active_girl.id}" pass (sentence=line[1]) from _call_expression_508
         $ active_girl.love += 1
@@ -501,72 +501,10 @@ label give_phone_number:
     call expression f"{active_girl.id}_greet" from _call_expression_15
     $ renpy.show(active_girl.id)
     active_girl.say "We should exchange our phone numbers."
-    call expression f"give_phone_number_dialogues_1_{hero.gender}" from _call_expression_434
+    call expression f"give_phone_number_dialogues_1_male" from _call_expression_434
     $ hero.smartphone_contacts.append(active_girl.id)
     $ renpy.hide(active_girl.id)
     return
-
-label check_condom_usage(f_npc, love=160, drinks=1, sub=None):
-    $ CONDOM = False
-    if not (f_npc.flags.pregnant or f_npc.flags.pill or f_npc.flags.pregrequest):
-        menu:
-            "Use protection" if hero.has_condom():
-                $ CONDOM = hero.use_condom()
-                if renpy.has_label(f"{f_npc.id}_use_condom"):
-                    call expression f"{f_npc.id}_use_condom" from _call_expression_435
-                    if _return in ["leave_without_gain", "leave_with_gain"]:
-                        return False
-                    elif _return == False:
-                        $ CONDOM = False
-                else:
-                    "I grab a condom from the bedside table before going any further."
-            "Don't use protection":
-                if renpy.has_label(f"{f_npc.id}_intro_condom"):
-                    call expression f"{f_npc.id}_intro_condom" from _call_expression_436
-                if f_npc.force_condom_use(love=love, drinks=drinks, sub=sub):
-                    if sub and renpy.has_label(f"{f_npc.id}_sub_warn_condom"):
-                        call expression f"{f_npc.id}_warn_condom" from _call_expression_437
-                    elif renpy.has_label(f"{f_npc.id}_warn_condom"):
-                        call expression f"{f_npc.id}_warn_condom" from _call_expression_438
-                    else:
-                        $ renpy.say(f_npc.id, "Aren't you forgetting a little something?")
-                    if sub and f_npc.sub < sub:
-                        if renpy.has_label(f"{f_npc.id}_sub_condom_menu"):
-                            call expression f"{f_npc.id}_sub_condom_menu" from _call_expression_439
-                            return _return
-                        else:
-                            mike.say "You're going to take my cock raw and you're going to like it!"
-                    elif f_npc.love >= love - int(love * .15):
-
-                        if renpy.has_label(f"{f_npc.id}_force_condom"):
-                            call expression f"{f_npc.id}_force_condom" from _call_expression_440
-                            if _return == False:
-                                $ f_npc.love -= 10
-                                return False
-                            $ CONDOM = True
-                        else:
-                            "I grab a condom."
-                            $ CONDOM = hero.use_condom()
-                    else:
-                        scene expression f"bg {game.room}"
-                        $ renpy.show(f"{f_npc.id} angry naked")
-                        show fx anger
-                        if renpy.has_label(f"{f_npc.id}_mad_condom"):
-                            call expression f"{f_npc.id}_mad_condom" from _call_expression_441
-                        else:
-                            $ renpy.say(f_npc.id, "No condom, no sex.")
-                        $ f_npc.love -= 10
-                        return False
-                else:
-                    if f_npc.pregnant and renpy.has_label(f"{f_npc.id}_pregnant_condom"):
-                        call expression f"{f_npc.id}_pregnant_condom" from _call_expression_442
-                    elif f_npc.flags.pill and renpy.has_label(f"{f_npc.id}_pill_condom"):
-                        call expression f"{f_npc.id}_pill_condom" from _call_expression_443
-                    elif f_npc.flags.drugs and renpy.has_label(f"{f_npc.id}_drugs_condom"):
-                        call expression f"{f_npc.id}_drugs_condom" from _call_expression_444
-                    elif renpy.has_label(f"{f_npc.id}_no_condom"):
-                        call expression f"{f_npc.id}_no_condom" from _call_expression_445
-    return True
 
 label cum_reaction(fuck_npc, fuck_location, sexperience_min=0, love_min=180, check_sub=False, sub_min=75):
     if hero.is_male:
@@ -578,24 +516,22 @@ label cum_reaction(fuck_npc, fuck_location, sexperience_min=0, love_min=180, che
                     return "anal_outside"
         elif fuck_location == "vaginal":
             menu:
-                "Cum inside" if CONDOM:
-                    return "vaginal_condom"
                 "Pull out" if hero.sexperience >= sexperience_min + 5:
                     return "vaginal_outside"
 
-                "Cum inside" if not CONDOM and fuck_npc.flags.pill:
+                "Cum inside" if fuck_npc.flags.pill:
                     return "vaginal_inside_pill"
 
-                "Cum inside" if not CONDOM and not fuck_npc.flags.pill and fuck_npc.love < love_min and check_sub and fuck_npc.sub >= sub_min and not fuck_npc.flags.pregrequest and not fuck_npc.is_sex_slave and not fuck_npc.flags.drugs:
+                "Cum inside" if not fuck_npc.flags.pill and fuck_npc.love < love_min and check_sub and fuck_npc.sub >= sub_min and not fuck_npc.flags.pregrequest and not fuck_npc.is_sex_slave and not fuck_npc.flags.drugs:
                     return "vaginal_inside_sub"
 
-                "Cum inside" if not CONDOM and not fuck_npc.flags.pill and fuck_npc.love < love_min and check_sub and fuck_npc.sub < sub_min and not fuck_npc.flags.pregrequest and not fuck_npc.is_sex_slave and not fuck_npc.flags.drugs:
+                "Cum inside" if not fuck_npc.flags.pill and fuck_npc.love < love_min and check_sub and fuck_npc.sub < sub_min and not fuck_npc.flags.pregrequest and not fuck_npc.is_sex_slave and not fuck_npc.flags.drugs:
                     return "vaginal_inside_mad"
 
-                "Cum inside" if not CONDOM and not fuck_npc.flags.pill and fuck_npc.love < love_min and not check_sub and not fuck_npc.flags.pregrequest and not fuck_npc.is_sex_slave and not fuck_npc.flags.drugs:
+                "Cum inside" if not fuck_npc.flags.pill and fuck_npc.love < love_min and not check_sub and not fuck_npc.flags.pregrequest and not fuck_npc.is_sex_slave and not fuck_npc.flags.drugs:
                     return "vaginal_inside_mad"
 
-                "Cum inside" if not CONDOM and not fuck_npc.flags.pill and (fuck_npc.love >= love_min or fuck_npc.flags.pregrequest or fuck_npc.is_sex_slave or fuck_npc.flags.drugs):
+                "Cum inside" if not fuck_npc.flags.pill and (fuck_npc.love >= love_min or fuck_npc.flags.pregrequest or fuck_npc.is_sex_slave or fuck_npc.flags.drugs):
                     return "vaginal_inside_happy"
     else:
         if fuck_location == "anal":
@@ -606,8 +542,6 @@ label cum_reaction(fuck_npc, fuck_location, sexperience_min=0, love_min=180, che
                     return "anal_outside"
         elif fuck_location == "vaginal":
             menu:
-                "Let him cum inside" if CONDOM:
-                    return "vaginal_condom"
                 "Pull him out" if hero.sexperience >= sexperience_min + 5:
                     return "vaginal_outside"
 

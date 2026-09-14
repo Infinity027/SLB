@@ -21,7 +21,7 @@ init python:
     })
 
 label jack_greet:
-    if renpy.has_label(f"jack_greet_dialogues_{hero.gender}") and not jack.flags.greeted:
+    if renpy.has_label(f"jack_greet_dialogues_male") and not jack.flags.greeted:
         scene expression f"bg {game.room}"
         $ jack.flags.greeted = TemporaryFlag(True, 1)
         show jack
@@ -39,7 +39,7 @@ label jack_greet:
                 jack.say "Good afternoon [hero.name]."
             else:
                 jack.say "Good evening [hero.name]."
-        call expression f"jack_greet_dialogues_{hero.gender}" from _call_expression_241
+        call expression f"jack_greet_dialogues_male" from _call_expression_241
         hide jack
     return
 

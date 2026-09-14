@@ -171,26 +171,26 @@ label hypnosis_arrested:
 label hypnosis_talk:
     call expression f"{active_girl.id}_greet" from _call_expression_104
     $ renpy.show(active_girl.id)
-    if renpy.has_label(f"{active_girl.id}_hypnosis_talk_{hero.gender}"):
-        call expression f"{active_girl.id}_hypnosis_talk_{hero.gender}" from _call_expression_107
+    if renpy.has_label(f"{active_girl.id}_hypnosis_talk_male"):
+        call expression f"{active_girl.id}_hypnosis_talk_male" from _call_expression_107
     else:
-        if renpy.has_label(f"{active_girl.id}_hypnosis_talk_intro_{hero.gender}"):
-            call expression f"{active_girl.id}_hypnosis_talk_intro_{hero.gender}" from _call_expression_108
+        if renpy.has_label(f"{active_girl.id}_hypnosis_talk_intro_male"):
+            call expression f"{active_girl.id}_hypnosis_talk_intro_male" from _call_expression_108
         else:
             mike.say "Hey [active_girl.name], I have a question..."
             mike.say "Would it be ok if I used hypnosis on you to alter your behaviour?"
         if active_girl.love >= 75 and active_girl.sub >= 25:
             $ renpy.show(f"{active_girl.id} happy")
             $ active_girl.flags.hypnosisConsent = True
-            if renpy.has_label(f"{active_girl.id}_hypnosis_talk_accept_{hero.gender}"):
-                call expression f"{active_girl.id}_hypnosis_talk_accept_{hero.gender}" from _call_expression_109
+            if renpy.has_label(f"{active_girl.id}_hypnosis_talk_accept_male"):
+                call expression f"{active_girl.id}_hypnosis_talk_accept_male" from _call_expression_109
             else:
                 active_girl.say "Sure!"
         else:
             $ renpy.show(f"{active_girl.id} annoyed")
             $ active_girl.love -= 10
-            if renpy.has_label(f"{active_girl.id}_hypnosis_talk_refuse_{hero.gender}"):
-                call expression f"{active_girl.id}_hypnosis_talk_refuse_{hero.gender}" from _call_expression_110
+            if renpy.has_label(f"{active_girl.id}_hypnosis_talk_refuse_male"):
+                call expression f"{active_girl.id}_hypnosis_talk_refuse_male" from _call_expression_110
             else:
                 active_girl.say "No way!"
     $ renpy.hide(active_girl.id)

@@ -247,7 +247,7 @@ label bree_dick_reactions:
     if not bree.flags.seendick:
         $ bree.flags.seendick = 1
         if hero.has_skill("hung"):
-            show dick reactions bree scared
+            show bree_dick_reaction
             bree.say "O...M...G!"
             bree.say "We've been living together so long, [hero.name]."
             bree.say "How did you manage to keep this thing hidden?!?"
@@ -255,15 +255,15 @@ label bree_dick_reactions:
             show dick reactions bree tasty
             bree.say "Oooh...that sounds like fun!"
             $ bree.sub += 10
+            hide bree_dick_reaction
         elif hero.has_skill("smalldick"):
-            show dick reactions bree smile
+            show bree annoyed
             bree.say "Oh..."
-            show dick reactions bree mock
             bree.say "Oh well - you can't win them all!"
             mike.say "Is there a problem, [bree.name]?"
             bree.say "Well...let's just say it's a good thing I like your personality!"
             $ bree.sub -= 10
-        hide dick reactions
+            hide bree annoyed
     return
 
 label bree_peeping_scene_male:
@@ -291,12 +291,12 @@ label bree_peeping_scene_male:
 
 label bree_peeping_reactions_male:
     if (bree.love >= 150 or bree.sub >= 50) and bree.sexperience:
-        show bree naked stuned
+        show bree naked surprise
         "So much so that I don't even notice the fact that I've been spotted!"
-        show bree talkative
+        show bree talk
         bree.say "Hey - who's out there?"
         bree.say "Is that you, [hero.name]?"
-        show bree happy blush
+        show bree blush
         bree.say "That's so naughty of you - watching me in the shower!"
         show bree normal
         "I hold my breath, waiting for the inevitable tirade of abuse."
@@ -318,7 +318,7 @@ label bree_peeping_reactions_male:
         "But impressed as she goes back over them time and again."
         "And when she's done, all I can do is stare in amazement."
         "Honestly, I've never gotten so hard over personal hygiene before!"
-        show bree close smile
+        show bree smile
         $ bree.love += 1
         $ bree.sub += 1
         bree.say "There you go, [hero.name]."

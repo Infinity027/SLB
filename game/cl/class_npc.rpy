@@ -98,30 +98,6 @@ init -15 python:
                 self.status = self.flags.previous_status
             self.love -= 25
             self.sub -= 25
-        
-        def force_condom_use(self, love, drinks, sub):
-            """
-        Return False if:
-          - on pill
-          - pregnant
-          - drunk (girl.flags.drinks)
-          - on drugs
-          - girl's love is higher or equal than love parameter
-          - sub parameter is passed and girl's sub is higher or equal than sub parameter
-        """
-            if self.pregnant:
-                return False
-            if self.flags.pill:
-                return False
-            if self.flags.drinks >= drinks:
-                return False
-            if self.flags.drugs:
-                return False
-            if self.love >= love:
-                return False
-            if sub and self.sub >= sub:
-                return False
-            return True
 
 
     class Guy(Registry, Person):
@@ -183,30 +159,6 @@ init -15 python:
         
         def unpreg(self):
             pass
-        
-        def force_condom_use(self, love, drinks, sub):
-            """
-        Return False if:
-          - hero on pill
-          - hero pregnant
-          - drunk (girl.flags.drinks)
-          - on drugs
-          - guy's love is higher or equal than love parameter
-          - sub parameter is passed and guy's sub is higher or equal than sub parameter
-        """
-            if hero.pregnant:
-                return False
-            if hero.flags.pill:
-                return False
-            if self.flags.drinks >= drinks:
-                return False
-            if self.flags.drugs:
-                return False
-            if self.love >= love:
-                return False
-            if sub and self.sub >= sub:
-                return False
-            return True
         
         def set_boyfriend(self):
             self.flags.boyfriend = True

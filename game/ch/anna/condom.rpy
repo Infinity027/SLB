@@ -22,19 +22,3 @@ label anna_use_condom:
         "I take the hint, grabbing a condom and slipping it on in record time."
         "That done, we're ready to go."
     return
-
-label anna_intro_condom:
-    $ result = randint(1, 3)
-    if result == 1:
-        mike.say "It's fully-charged and ready to go!"
-    elif result == 2:
-        "I'm sure a less suggestible and easily lead girl would have stopped me dead in my tracks without a condom."
-        "But with Anna, there's no such problem, as she seems happy to leave any responsibility in my hands alone."
-        "Eager to take full advantage of her being so easy, I don't hesitate to leap straight onto her."
-    else:
-        "I roll slightly onto my back, and my very erect cock pulls the sheets with it like a tentpole."
-        "Anna watches my cock, and not me, eyeing it up like it's all she cares about in the world right now."
-        "I can't shake the feeling that she's already imagining how it'll feel once it's inside of her."
-    return
-return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

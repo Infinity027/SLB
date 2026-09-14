@@ -183,20 +183,21 @@ label aletta_dick_reactions:
     if not aletta.flags.seendick:
         $ aletta.flags.seendick = 1
         if hero.has_skill("hung"):
-            show dick reactions aletta tasty
+            show aletta_dick_reaction
             aletta.say "Hmm..."
             aletta.say "Now that's certainly not a disappointment!"
             mike.say "Like what you see, Aletta?"
             aletta.say "It's certainly more impressive than your CV!"
             $ aletta.sub += 10
+            hide aletta_dick_reaction
         elif hero.has_skill("smalldick"):
-            show dick reactions aletta mock
+            show aletta annoyed
             aletta.say "Ah well..."
             mike.say "You...you sound disappointed, Aletta!"
             aletta.say "It's kind of like lying on your CV."
             aletta.say "And then getting the job anyway!"
             $ aletta.sub -= 10
-        hide dick reactions
+            hide aletta_dick_reaction
     return
 
 label aletta_halloween_invitation:

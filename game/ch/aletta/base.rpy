@@ -157,7 +157,7 @@ init python:
 
 
 label aletta_bye(bye_outfit=None):
-    call npc_bye_outfit (npc=aletta, bye_outfit=bye_outfit) from _call_npc_bye_outfit
+    # call npc_bye_outfit (npc=aletta, bye_outfit=bye_outfit) from _call_npc_bye_outfit
     $ (day, h, activity, bye_outfit) = _return
     if not activity == aletta.activity:
         if day != game.week_day:
@@ -193,11 +193,11 @@ label aletta_bye(bye_outfit=None):
     return
 
 label aletta_cheated(action, cheat_npc=None):
-    show aletta
+    show aletta normal
     if cheat_npc and Harem.together(cheat_npc, aletta):
         show aletta flirt
         aletta.say "Aren't you forgetting something?"
-        show aletta
+        show aletta kiss
         "And without warning Aletta kisses me."
         $ aletta.love += 1
         $ aletta.flags.kiss += 1
@@ -218,7 +218,7 @@ label aletta_cheated(action, cheat_npc=None):
     return
 
 label aletta_greet:
-    if renpy.has_label(f"aletta_greet_dialogues_{hero.gender}") and not aletta.flags.greeted:
+    if renpy.has_label(f"aletta_greet_dialogues_male") and not aletta.flags.greeted:
         scene expression f"bg {game.room}"
         $ aletta.flags.greeted = TemporaryFlag(True, 1)
         show aletta
@@ -236,7 +236,7 @@ label aletta_greet:
                 aletta.say "Good afternoon [hero.name]."
             else:
                 aletta.say "Good evening [hero.name]."
-        call expression f"aletta_greet_dialogues_{hero.gender}" from _call_expression_204
+        call expression f"aletta_greet_dialogues_male" from _call_expression_204
         hide aletta
     return
 

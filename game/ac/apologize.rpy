@@ -33,7 +33,7 @@ init python:
 label apologize:
     call expression f"{active_girl.id}_greet" from _call_expression_82
     $ renpy.show(active_girl.id)
-    call expression f"apologize_dialogues_1_{hero.gender}" from _call_expression_20
+    call apologize_dialogues_1_male from _call_expression_20
     active_girl.say "Alright, but don't ever do this again."
     $ active_girl.flags.breakup = False
     $ active_girl.flags.friendzone = False
@@ -46,4 +46,3 @@ label apologize:
             harem.apologize(active_girl)
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

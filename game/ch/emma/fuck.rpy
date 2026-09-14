@@ -1070,11 +1070,6 @@ label emma_fuck_date_missionary(sexperience_min):
             "Sure, it looks pretty tiny from this angle."
             "But somethings really are bigger on the inside..."
             show emma missionary normal
-            call check_condom_usage (emma, 180) from _call_check_condom_usage_37
-            if _return == False:
-                return
-            if CONDOM:
-                show emma missionary condom
             "At first I just tease Emma's lips with the head of my cock."
             "The idea was to get her used to the feeling and relax her a little."
             show emma missionary pleasure
@@ -1443,11 +1438,6 @@ label emma_fuck_date_cowgirl(sexperience_min):
             "But then she pauses and looks me straight in the eye."
             "I nod eagerly, urging her on and trying to show her that it's okay."
             "And my reward is the sensation of her taking a firmer hold of my cock."
-            call check_condom_usage (emma, 180) from _call_check_condom_usage_38
-            if _return == False:
-                return
-            if CONDOM:
-                show emma cowgirl condom
             "Emma's hand is on my cock in almost the next breath."
             show emma cowgirl vaginal eyes_close mouth_pleasure
             "And I watch in silence as she steers it between her legs."
@@ -1881,11 +1871,6 @@ label emma_fuck_date_reverse_cowgirl(sexperience_min):
             "That's because I know just what it takes for her to be so bold."
             "I almost find myself holding my breath as I wait for what comes next."
             "As Emma raises herself up just enough to aim my cock at her pussy..."
-            call check_condom_usage (emma, 180) from _call_check_condom_usage_39
-            if _return == False:
-                return
-            if CONDOM:
-                show emma reverse condom
             "Emma raises herself up again."
             "And then she lowers herself slowly down."
             "I feel the head of my cock press against her lips."
@@ -2363,9 +2348,6 @@ label emma_fuck_date_doggy(sexperience_min):
             "As soon as she feels my cock between her legs, Emma lets out a squeak."
             emma.say "Ooh..."
             emma.say "There you are, [hero.name]!"
-            call check_condom_usage (emma, 180) from _call_check_condom_usage_40
-            if _return == False:
-                return
             "I rub the head of my cock against the lips of Emma's pussy."
             "The sensation is incredible, soft, warm and welcoming."
             "And the cooing sound she makes as I do so is almost a bigger turn on."
@@ -2671,7 +2653,6 @@ label emma_hottub_sex_male:
     "Getting flustered, I look down at my trunks."
     "Noticing for the first time how hard Emma's got me right now."
     "She follows my gaze, and I hear her gasp in surprise."
-    call emma_dick_reactions from _emma_hottub_sex_male_dick_reactions
     if emma_too_small(5):
         mike.say "Well..."
         mike.say "You don't look fine, Emma."
@@ -2706,24 +2687,18 @@ label emma_hottub_sex_male:
     mike.say "Sure Emma, if you want."
     "She gives me a nervous smile and reaches out again."
     "This time she actually strokes it with the tips of her fingers."
-    "And even though she only brushes it, I feel a tingle pass through me."
-    "Emma seems to notice this, looking me in the eye again."
     emma.say "Did that feel good?"
     mike.say "Yeah, Emma - it felt really good!"
     "Emma's smile grows wider and her cheeks begin to flush with colour."
     emma.say "W...would you like to..."
     emma.say "To put it inside of me?"
     emma.say "To see how it'd feel?"
-    show hottub sex male emma outside with fade
+    scene emma_hottub01 with fade
     "By way of answer, I pull down my trunks and place Emma's hand on my cock."
     "She finches for a moment, but then takes a firmer hold."
-    "I pull her closer, holding her gently as I do so."
-    "And then I kiss her, full on the lips, feeling her resistance melt away."
-    "The effect seems to take hold of Emma in a dramatic fashion."
     "She clings onto me with one hand and holds my cock with the other."
     "And when the time comes to guide it between her legs, she doesn't hesitate."
-    "Emma perches on the edge of the tub as it pushes aside the lips of her pussy."
-    show hottub sex male inside
+    scene emma_hottub02
     if emma_too_small(5):
         emma.say "Ow...ow...ow..."
         emma.say "Please, [hero.name]..."
@@ -2755,13 +2730,8 @@ label emma_hottub_sex_male:
         call emma_achievement_5 from _call_emma_achievement_5_4
     "Once I'm all the way in, I start to move as gently as I can."
     "Emma seems to appreciate this, sighing and cooing as I move back and forth."
+    scene expression make_anim(emma_hottub, time=0.7, loop=True)
     "Almost immediately I feel the urge to go faster, the need to push harder."
-    "But I reign it in, not wanting to do anything that might upset Emma."
-    "And so I keep on going with all of my efforts focused on that goal."
-    "At first it feels a little frustrating, like I'm giving without getting."
-    "But soon enough I begin to sense just how completely I have her in my power."
-    "I realise that it's only through my exertions that Emma's enjoying this at all!"
-    "And I'm damn sure she is enjoying it too."
     "Emma's clinging onto me for dear life by now."
     "I can feel her entire body quivering from the sensations she's feeling."
     "For her to go from feeling self-conscious to this!"
@@ -2773,24 +2743,19 @@ label emma_hottub_sex_male:
     if _return == "vaginal_outside":
         "I make a special effort to be ready as I feel the moment getting closer."
         "And just before it happens, I manage to gently pull out of Emma before it's too late."
-        "Normally I'd be less worried about it, but she's too sensitive to leave it to chance."
-        show hottub sex male outside
+        scene emma_hottub06 with vpunch
         "Emma's eyes open wide at the sensation of my cock pulling out of her pussy."
-        show hottub sex male cumshot with vpunch
         $ emma.sub += 1
         "But they become wider still when she sees me shoot my load over her a moment later!"
-        with vpunch
-        "She jumps in surprise and shock as the cum lands on her breasts and belly."
     else:
         "Part of me feels like I should be trying to pull out of Emma before it's too late."
         "But another tells me that all I'd be doing is ruining the work I've already done."
         "And in the end, the latter wins out, as I keep up the same pace to the very end."
-        show hottub sex male cumshot with vpunch
+        scene emma_hottub05 with vpunch
         $ emma.love += 1
         "Emma moans and bites her lip as I cum inside of her, but she doesn't seem upset."
-        show hottub sex male ahegao with vpunch
+        scene emma_hottub_ahegeo with vpunch
         "Quite the opposite as she wears a broad smile the whole time."
-    hide hottub sex male
     show hottub emma
     with fade
     "Afterwards, Emma looks exhausted and more than a little shaky."
@@ -2803,7 +2768,6 @@ label emma_hottub_sex_male:
     $ game.active_date.clothes = None
     return
 
-label emma_fuck_date_nudistbeach:
 label emma_fuck_date_beach:
 label emma_fuck_beach:
     $ game.play_music("music/roa_music/tiny_love.ogg")
@@ -3068,11 +3032,6 @@ label emma_fuck_beach:
             "I want to make this as pleasant of an experience as possible for Emma."
             "And so I set my sights firmly on what's hidden between her legs."
             "I already have my own shorts down, and I pull her swimsuit aside too."
-            call check_condom_usage (emma, 180) from _call_check_condom_usage_41
-            if _return == False:
-                return
-            if CONDOM:
-                show emma reverse condom
             "Emma nods as I pull her downwards, wriggling her ass into my lap."
             "She seems to be more ready for it than she was before, more prepared."
             "And I nod too as I feel my cock pressing against the lips of her pussy."

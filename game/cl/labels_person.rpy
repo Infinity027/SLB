@@ -105,4 +105,3 @@ label npc_bye_outfit(npc, bye_outfit=None):
     $ (h, activity) = npc.get_activity(bye_hour)
     return bye_day, h, activity, npc_outfit
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

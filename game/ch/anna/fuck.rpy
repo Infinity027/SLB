@@ -76,35 +76,26 @@ label anna_hottub_sex_male:
     mike.say "Sure thing, Anna."
     mike.say "That sounds like a great idea!"
     mike.say "What did you have in mind?"
-    show hottub sex male anna outside with fade
-    "By way of answer, Anna returns my smile and turns around in the water."
-    "She presents her ass to me, shaking it in the most provocative manner."
-    "Anna glances back over her shoulder at me, winking wickedly."
-    "But it's not like I really need to be given such a strong hint."
+    scene anna_hottub01 with fade
+    "By way of answer, Anna returns my smile and lie on the edge of the pool."
     "What she has in mind is exactly what I do too!"
     "I grab hold of Anna at the waist with one hand."
     "And with the other I pull down my trunks."
     "She giggles with anticipation as I do this."
     "And her eyes go wide as soon as she sees how hard I am for her."
-    call anna_dick_reactions from _call_anna_dick_reactions_1
     "Anna bites her lips and turns her head back so that she's looking forwards."
-    show hottub sex male anna inside
+    scene anna_hottub02 
     "Which I take as my cue to begin probing between her legs with my cock."
     "She's already nicely slick when the head finds her pussy."
     "The lips tell me just how much she wants this."
-    "And there's little resistance as I find my way inside of her."
     "Anna makes a satisfied sound as I push the length of my cock further."
-    "A sound that doesn't stop until it's buried as deep in her as it'll go."
-    "But as soon as I start moving back and forth, the sound changes."
+    scene expression make_anim(anna_hottub, time=0.5, loop=True)
     "Within seconds, I hear it transform into a panting and moaning."
     "And Anna begins to rock to the rhythm that I'm fucking her with."
     "I feel like she's totally surrendering herself to me."
     "Like she's losing the will to do anything but let me have my way."
     "Which only makes me all the more eager to push deeper and harder."
-    "By now I have one hand on Anna's shoulder, holding her in place."
-    "The other is resting on the edge of the tub behind me, stopping me from falling."
-    "And between the two, I move in and out of Anna like a tireless machine."
-    "Yet for all that I'm making a show of being tireless, I'm only human."
+    scene anna_hottub04 with fade
     "Anna might seem to be able to keep on taking what I'm giving her forever."
     "But that doesn't mean that the same is true of my ability to keep it up!"
     "Even as her hot little body is eating it up, I can feel the end approaching."
@@ -113,24 +104,22 @@ label anna_hottub_sex_male:
     "But I'm damned if it's not going to be an explosive one too!"
     call cum_reaction (anna, 'vaginal', 1) from _call_cum_reaction_18
     if _return == "vaginal_outside":
-        show hottub sex male outside
+        scene anna_hottub02 sex male outside
         "Anna quivers and wriggles as I pull my cock out of her before the end."
         "The sensation seems to have a dramatic effect, making her moan and yelp."
-        show hottub cumshot with vpunch
+        with vpunch
         $ anna.sub += 1
         "And I only realise that it's pushed her over the edge as I shoot my load a second later."
-        with vpunch
+        with hpunch
         "I hold Anna in place as the cum rains down on her ass and spatters her thighs."
-        with vpunch
+        with hpunch
         "She cums at the same time, writhing in my grip as it takes a hold of her."
         "And only when I feel it passing do I finally let her go."
     else:
         "Anna's shaking with the sensation of what I'm doing to her by now."
         "And even she's starting to show signs of reaching her climax."
-        show hottub cumshot with hpunch
+        scene hottub05 with hpunch
         $ anna.love += 1
-        "So when I shoot my load inside of her, it has a dramatic effect."
-        show hottub sex male ahegao with hpunch
         "She seems to cum a second later, wriggling on the end of my cock."
         with hpunch
         "I hold her in place the entire time, making sure Anna takes the whole thing."
@@ -155,20 +144,13 @@ label anna_fuck_date_male(location="hero"):
     scene bg bedroom1
     $ game.room = "bedroom1"
 
-
     call anna_fuck_date_intro_male (location) from _call_anna_fuck_date_intro_male
-
 
     call anna_dick_reactions from _call_anna_dick_reactions
 
-
     call anna_fuck_date_foreplay_male from _call_anna_fuck_date_foreplay_male
 
-
-
-
     call anna_fuck_date_choices_male from _call_anna_fuck_date_choices_male
-
 
     call handle_npc_leaving (anna, _return) from _call_handle_npc_leaving_2
     if _return:
@@ -788,11 +770,6 @@ label anna_fuck_date_missionary(sexperience_min):
             $ anna.flags.anal += 1
         "Fuck her pussy" if hero.sexperience >= (sexperience_min + 5):
             show anna missionary
-            call check_condom_usage (anna) from _call_check_condom_usage_9
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show anna missionary condom
             "I pull Anna closer to me, making sure that she can feel just how much of an effect she's having on me down there already."
             "She starts to giggle and twist as the head of my cock brushes against the inside of her thighs, trying to sneak closer the whole time."
             "I know just how much of an appetite Anna has for anal, and I have every intention of making for her ass."
@@ -1155,14 +1132,7 @@ label anna_fuck_date_cowgirl(sexperience_min):
             $ anna.love += 3
             $ anna.flags.anal += 1
         "Fuck her pussy" if hero.sexperience >= (sexperience_min + 5):
-            call check_condom_usage (anna) from _call_check_condom_usage_11
-            if _return == False:
-                return "leave_without_gain"
-            hide anna
-            if CONDOM:
-                show anna cowgirl vaginal condom
-            else:
-                show anna cowgirl vaginal
+            show anna cowgirl vaginal
             with fade
             "Anna throws me a curve ball by angling herself forward so that my cock rubs against her clit and then begins to push inside."
             "She feels tight and it seems like an age as she sinks down onto me, but that only makes it all the more incredible, almost like it's her first time."

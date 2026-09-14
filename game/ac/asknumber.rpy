@@ -16,10 +16,10 @@ init python:
 label ask_number:
     call expression f"{active_girl.id}_greet" from _call_expression_17
     $ renpy.show(active_girl.id)
-    if renpy.has_label(f"{active_girl.id}_ask_phone_{hero.gender}"):
-        call expression f"{active_girl.id}_ask_phone_{hero.gender}" from _call_expression_43
+    if renpy.has_label(f"{active_girl.id}_ask_phone_male"):
+        call expression f"{active_girl.id}_ask_phone_male" from _call_expression_43
     else:
-        call expression f"ask_number_dialogues_1_{hero.gender}" from _call_expression_44
+        call expression f"ask_number_dialogues_1_male" from _call_expression_44
         if hero.charm < 20 - active_girl.love:
             active_girl.say "I don't think so."
         else:
@@ -28,4 +28,3 @@ label ask_number:
     $ renpy.hide(active_girl.id)
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

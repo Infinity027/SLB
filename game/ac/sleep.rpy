@@ -73,7 +73,7 @@ label sleep_nightmare:
     scene expression f"bg {game.room}" at blur(16), dark with dissolve
     $ game.pass_time(randint(1, 3), True)
     $ hero.cancel_activity()
-    call expression f"sleep_nightmare_dialogues_1_{hero.gender}" from _call_expression_137
+    call expression f"sleep_nightmare_dialogues_1_male" from _call_expression_137
     "What a horrible nightmare..."
     return
 

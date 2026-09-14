@@ -638,23 +638,22 @@ label camila_dick_reactions:
     if not camila.flags.seendick:
         $ camila.flags.seendick = 1
         if hero.has_skill("hung"):
-            show dick reactions camila smile
+            show camila_dick_reaction
             camila.say "Whoa...hello there!"
             mike.say "You like what you see, Camila?"
             mike.say "Like, it's big enough for you?"
             camila.say "Let's just say it's like a roller-coaster, [hero.name]."
-            show dick reactions camila tasty
             camila.say "I wanna stand in line to ride it!"
             $ camila.sub += 10
+            hide camila_dick_reaction
         elif hero.has_skill("smalldick"):
-            show dick reactions camila disgusted
+            show camila annoyed
             camila.say "Geez, [hero.name] - is that it?!?"
             mike.say "Wh...what do you mean, Camila?"
             mike.say "Is it too small?"
             camila.say "For a cigarette butt, no."
             camila.say "For a cock, yes!"
             $ camila.sub -= 10
-        hide dick reactions
+            hide camila annoyed
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

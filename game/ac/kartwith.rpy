@@ -22,10 +22,10 @@ label kart_with:
     $ active_girl.set_flag("interact", 1, 1, "+")
     call expression f"{active_girl.id}_greet" from _call_expression_170
     $ renpy.show(active_girl.id)
-    if renpy.has_label(f"{active_girl.id}_kart_with_{hero.gender}"):
-        call expression f"{active_girl.id}_kart_with_{hero.gender}" from _call_expression_171
+    if renpy.has_label(f"{active_girl.id}_kart_with_male"):
+        call expression f"{active_girl.id}_kart_with_male" from _call_expression_171
     else:
-        call expression f"kart_with_dialogues_1_{hero.gender}" from _call_expression_115
+        call expression f"kart_with_dialogues_1_male" from _call_expression_115
         if hero.charm >= 40 - active_girl.love:
             active_girl.say "Sure, why not?"
             "I race [active_girl.name]."
@@ -37,4 +37,3 @@ label kart_with:
     $ renpy.hide(active_girl.id)
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

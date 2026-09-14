@@ -29,10 +29,10 @@ init python:
 label offer_a_drink:
     call expression f"{active_girl.id}_greet" from _call_expression_37
     $ renpy.show(active_girl.id)
-    if renpy.has_label(f"{active_girl.id}_offer_a_drink_{hero.gender}"):
-        call expression f"{active_girl.id}_offer_a_drink_{hero.gender}" from _call_expression_38
+    if renpy.has_label(f"{active_girl.id}_offer_a_drink_male"):
+        call expression f"{active_girl.id}_offer_a_drink_male" from _call_expression_38
     else:
-        call expression f"offer_a_drink_dialogues_1_{hero.gender}" from _call_expression_124
+        call expression f"offer_a_drink_dialogues_1_male" from _call_expression_124
         if (hero.charm >= 60 - active_girl.love and active_girl.flags.drinks < 2) or date_girl == active_girl:
             active_girl.say "Sure!"
             $ renpy.hide(active_girl.id)

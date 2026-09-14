@@ -28,7 +28,7 @@ init python:
         IsHour(14, 18),
         HeroTarget(
             
-            IsRoom("beach", "date_beach", "date_nudistbeach"),
+            IsRoom("beach", "date_beach"),
             HasStamina(),
             ),
         PersonTarget(minami,
@@ -60,7 +60,6 @@ init python:
     "duration": 1,
     })
 
-label minami_fuck_date_nudistbeach:
 label minami_fuck_beach:
 label minami_fuck_date_beach:
     $ game.play_music("music/roa_music/new_days.ogg")
@@ -68,10 +67,7 @@ label minami_fuck_date_beach:
     "I love the chance to leave all my worries behind and just spend a couple of hours at the beach."
     "Somehow everything seems better when I'm there, the bad stuff smaller and the good stuff even better still."
     "But what makes it even more amazing is when I get to go to the beach with a really hot girl!"
-    if game.room != "date_nudistbeach":
-        "And right now, I can't imagine anything hotter than Minami!"
-    else:
-        "And right now, I can't imagine anything hotter than Minami in her swimsuit!"
+    "And right now, I can't imagine anything hotter than Minami in her swimsuit!"
     show minami b at left5 with ease
     "All we're supposed to be doing is soaking up some sun, and she's making that into genuine torture."
     "You see that's the only problem with coming to the beach along with a hot girl."
@@ -100,32 +96,27 @@ label minami_fuck_date_beach:
     minami.say "Well...you keep staring at me all the time!"
     mike.say "I was?!?"
     mike.say "Oh...I'm sorry, Minami."
-    if game.room == 'date_nudistbeach':
-        mike.say "I was just admiring you, that's all!"
-    else:
-        mike.say "I was just admiring your swimsuit, that's all!"
-        "Yeah, more like admiring everything that it doesn't cover up!"
-        "It really leaves nothing to the imagination at all."
+    mike.say "I was just admiring your swimsuit, that's all!"
+    "Yeah, more like admiring everything that it doesn't cover up!"
+    "It really leaves nothing to the imagination at all."
     show minami -close
     minami.say "Oh, thanks, big bro!"
-    if not game.room == 'date_nudistbeach':
-        minami.say "I'm glad that you like it."
-        minami.say "I was worried you might think it was too..."
-        minami.say "You know, too revealing!"
-        mike.say "No way, Minami!"
-        mike.say "I love how revealing it is!"
-        "Way to go there, Mister Tactless!"
-        "I shake my head desperately, trying to take it back."
-        mike.say "I...I didn't mean it like that, Minami!"
-        mike.say "I meant it...it complements your figure..."
-        mike.say "I mean...it's very flattering!"
+    minami.say "I'm glad that you like it."
+    minami.say "I was worried you might think it was too..."
+    minami.say "You know, too revealing!"
+    mike.say "No way, Minami!"
+    mike.say "I love how revealing it is!"
+    "Way to go there, Mister Tactless!"
+    "I shake my head desperately, trying to take it back."
+    mike.say "I...I didn't mean it like that, Minami!"
+    mike.say "I meant it...it complements your figure..."
+    mike.say "I mean...it's very flattering!"
     "Minami giggles, clearly enjoying how tongue-tied she's making me."
     "She rolls onto her side, deliberately showing herself off even more."
     minami.say "Aww...that's so sweet, big bro!"
-    if not game.room == 'date_nudistbeach':
-        minami.say "I wore this for you - you know that?"
-        minami.say "Because I thought you'd like it."
-        minami.say "AND like to fuck me in it too..."
+    minami.say "I wore this for you - you know that?"
+    minami.say "Because I thought you'd like it."
+    minami.say "AND like to fuck me in it too..."
     hide minami
     show minami doggy beach
     with fade
@@ -137,8 +128,7 @@ label minami_fuck_date_beach:
     minami.say "I don't just want your eyes on me."
     minami.say "I want you inside of me too!"
     "Well, that does it for lying around, just relaxing on the beach!"
-    if not game.room == 'date_nudistbeach':
-        "Before I know it, I'm up and yanking off my shorts too."
+    "Before I know it, I'm up and yanking off my shorts too."
     show minami doggy mike
     "Minami giggles and shakes her ass as I crawl over to her."
     "Looking back over her shoulder with a grin on her face."
@@ -224,9 +214,7 @@ label minami_fuck_date_male(location="hero", called_from_date=True):
     show bg livingroom
     show minami
 
-
     call minami_fuck_date_intro_male (location, called_from_date) from _call_minami_fuck_date_intro_male
-
 
     call minami_dick_reactions from _call_minami_dick_reactions_3
 
@@ -234,11 +222,7 @@ label minami_fuck_date_male(location="hero", called_from_date=True):
     show minami naked
     with fade
 
-
     call minami_fuck_date_foreplay_male from _call_minami_fuck_date_foreplay_male
-
-
-
 
     call minami_fuck_date_choices_male from _call_minami_fuck_date_choices_male
 
@@ -247,7 +231,6 @@ label minami_fuck_date_male(location="hero", called_from_date=True):
     call handle_npc_leaving (minami, _return) from _call_handle_npc_leaving_15
     if _return:
         return
-
 
     hide minami
     call minami_sleep_date_fuck (location) from _call_minami_sleep_date_fuck
@@ -565,9 +548,6 @@ label minami_fuck_date_doggy(sexperience_min):
             "The moment that Minami waggles her ass at me, I only have one thing on my mind."
             "I want to get my hands on what's hiding between her thighs, and I want to do it now."
             "Or to be more precise, I want to get my cock inside of it in record time!"
-            call check_condom_usage (minami) from _call_check_condom_usage_84
-            if _return == False:
-                return "leave_without_gain"
             show minami doggy mike
             "I take a firm hold of Minami's haunches, pulling her towards me."
             "But it's not like I have to try all that hard to grab her."
@@ -962,9 +942,6 @@ label minami_fuck_date_missionary(sexperience_min):
             "I can already feel the state of Minami's pussy as my cock rubs between her thighs."
             "She's getting wet enough down there to make it pretty hard to think about much else!"
             "But then, I guess there's nothing wrong with keeping things simple."
-            call check_condom_usage (minami) from _call_check_condom_usage_85
-            if _return == False:
-                return "leave_without_gain"
             hide minami
             scene minami missionary
             with fade
@@ -1170,12 +1147,7 @@ label minami_fuck_date_cowgirl(sexperience_min):
             "As Minami's ass settles into my lap, I feel the wet warmth of her pussy against my cock."
             "She wriggles and giggles at the sensation, clearly excited at the prospect of what's coming next."
             "And once I know that's what she has on her mind, I can't help but start wanting the same thing too."
-            call check_condom_usage (minami) from _call_check_condom_usage_86
-            if _return == False:
-                return "leave_without_gain"
             show minami cowgirl down
-            if CONDOM:
-                show minami cowgirl condom
             "Putting a hand on Minami's waist, I stroke my cock up and down a couple more times."
             if not minami.flags.handcuffs:
                 show minami cowgirl up
@@ -1665,69 +1637,54 @@ label minami_hottub_sex_male:
     minami.say "It's so big!"
     minami.say "You'll end up sinking me for sure."
     minami.say "But it'll be worth it!"
+    scene minami hottub_kiss
     "With that, Minami kisses me full on the lips."
     "Her tongue darts into my mouth, probing like an eel."
     "And all the time she's still massaging my painfully stiff cock."
     "She already has my trunks off when I decide I can't wait any longer."
-    show hottub sex male minami outside with fade
-    call minami_dick_reactions from _call_minami_dick_reactions_2
+    scene minami_hottub01 with fade
     "I have to get my cock as deep inside of Minami as I can and as soon as I can!"
-    "My hands take hold of her and turn her around, pushing her against the side of the tub."
     "Minami yelps in surprise, but then sighs and lets me have my way with her."
     "My sense of urgency means I don't indulge in any kind of teasing."
     "Instead I simply begin to push my cock into Minami without delay."
     minami.say "Oh..."
     minami.say "Oh, big bro..."
     minami.say "Give it to me...please!"
-    "The combination of Minami urging me on while her pussy resists turns me on even more."
-    show hottub sex male minami inside
+    scene minami_hottub02
     "And it only takes me a couple more thrusts to push all the way inside of her."
     "Minami quivers and moans as I sink up to my balls, every inch of my cock in her pussy."
-    "She looks back over her shoulder, eyes wide and head nodding almost desperately."
+    scene expression make_anim(minami_hottub, time=0.2, loop=True)
     "I begin to thrust in and out of her then, with the same haste and force."
     "But the look on Minami's face only becomes more needy as she takes all I have to give."
     "Her moans have given way to animal sounds of sheer passion by now."
     "She seems to purr as my cock pounds her to within an inch of her life."
+    scene minami_hottub02 with fade
     "And to think, all I wanted to do was lie on the hot-tub and relax!"
     call cum_reaction (minami, 'vaginal', 1) from _call_cum_reaction_131
     if _return == "vaginal_outside":
-        show hottub sex male minami outside
+        scene minami_hottub07
         "All of a sudden, my cock pops out of Minami's pussy."
         "She jumps and lets out a cry of surprise at the unexpected sensation."
         "I gasp too, feeling that the motion has kicked something off inside of me."
-        show hottub sex male minami cumshot with vpunch
+        with vpunch
         "And so it comes as no great shock to me that I shoot my load a second later."
         with vpunch
-        "The cum spatters down on Minami's exposed ass."
         $ minami.sub += 1
-        "It runs down her slick thighs and into the water below."
-        with vpunch
-        "Minami jumps as it hits her, beginning to cum as well."
-        "And all I can do is watch as she desperately fingers her pussy."
-        "Minami rubs my cum into the lips between her legs, panting the whole time."
-        "She holds my eye while she brings herself off."
-        "And I see the exact moment that she cums too."
-        "Minami looks at me, a helpless expression in her eyes."
-        "It's almost enough to make me cum again too!"
+        "The cum spatters down on Minami's exposed ass."
     else:
         "I have a firm hold on Minami right now."
         "And there's no way I'm letting go of her until it's over."
         "The sound of our wet skin slapping together is almost as loud as her cries."
         "And every time her buttocks hit my thighs, I grunt in passion too."
+        scene minami_hottub07
         minami.say "Oh..."
         minami.say "Oh shit..."
         minami.say "I'm...I'm gonna cum!"
-        "Minami's not kidding either!"
-        "Within seconds of gasping the words out, I can feel it beginning."
-        "She writhes and wriggles on the end of my cock as her orgasm takes over."
-        "But there's nowhere for her to go, so she can only ride it out to the end."
         "I push as hard as I can, trying to make it as intense as possible."
-        show hottub sex male minami cumshot with hpunch
+        scene minami_hottub06 with vpunch
         "And in doing so, I lose it almost at the same moment."
         $ minami.love += 1
         with vpunch
-        "Which means that we cum close on each other's heels."
-        show hottub sex male minami ahegao with vpunch
         "I shoot my load into Minami as she shudders from head to toe."
         "And then all that I can hear is the sound of us both panting as we let go."
     hide hottub

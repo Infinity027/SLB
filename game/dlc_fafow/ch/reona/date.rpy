@@ -106,7 +106,7 @@ label reona_dick_reactions:
         mike.say "Are you okay?"
         mike.say "Is there a problem?"
         if hero.has_skill("hung"):
-            show dick reactions reona mock
+            show reona_dick_reaction
             "Reona shakes her head and then lets out a long sigh."
             reona.say "I'm fine, [hero.name], just fine."
             reona.say "Or at least I will be when I figure out what to do with all that!"
@@ -114,16 +114,15 @@ label reona_dick_reactions:
             mike.say "Yeah, I know..."
             mike.say "It is kind of big..."
             mike.say "Is that going to be a problem?"
-            show dick reactions reona smile
             "Reona seems to snap out of it as I ask the question."
             "She shakes her head and begins to smile."
             reona.say "Oh no..."
             reona.say "No way!"
-            show dick reactions reona tasty
             reona.say "I just kinda feel like I won the lottery, that's all!"
             $ reona.sub += 10
+            hide reona_dick_reaction
         elif hero.has_skill("smalldick"):
-            show dick reactions reona mock
+            show reona annoyed
             "Suddenly, Reona bursts out laughing."
             reona.say "Ha, ha, ha!"
             reona.say "Is that all of it?"
@@ -132,13 +131,11 @@ label reona_dick_reactions:
             mike.say "I...I can't help it, Reona!"
             mike.say "It's been cold all day, you know?"
             mike.say "And I'm pretty nervous right now!"
-            show dick reactions reona smile
             reona.say "Ah, don't worry about it, [hero.name]."
             reona.say "You're not the first guy with a tiny cock I dated!"
-            show dick reactions reona tasty
             reona.say "It just means I'm gonna have get creative, that's all..."
             $ reona.sub -= 10
-        hide dick reactions
+            hide reona annoyed  
     return
 
 label reona_date_amusement_park_male:

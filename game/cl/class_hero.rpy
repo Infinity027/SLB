@@ -142,7 +142,7 @@ init -11 python:
                 if self.has_skill("low_libido"):
                     threshold = 240
                 threshold += self.flags.bluepills
-                threshold -= self.fitness + self.sexperience * 0.5
+                threshold -= (self.fitness + self.sexperience * 0.5)
                 return threshold <= 24 * (game.days_played - self.flags.last_sex[1]) + (
                 game.hour - self.flags.last_sex[0]
             )

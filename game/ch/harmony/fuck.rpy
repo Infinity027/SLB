@@ -1083,13 +1083,6 @@ label harmony_fuck_missionary(sexperience_min):
                 "This is no time to get fancy - Harmony wants an express delivery of hard cock."
                 "And I very much want to be the one to give it to her!"
                 "She can sense it as well, smiling up at me as she feels me climbing atop her."
-                call check_condom_usage (harmony, 150) from _call_check_condom_usage_58
-                if _return == False:
-                    call sleep from _call_sleep_55
-                    return
-
-                if CONDOM:
-                    show harmony missionary condom
                 show harmony missionary mike
                 "The tip of my cock begins to rub against Harmony's lips."
                 "And I can feel just how slick and ready for it she is right now."
@@ -1208,13 +1201,7 @@ label harmony_fuck_missionary(sexperience_min):
     elif harmony.purity <= LP:
         "With that, Harmony smiles as I push her gently down onto the bed."
         show harmony missionary
-        call check_condom_usage (harmony, 150) from _call_check_condom_usage_59
-        if _return == False:
-            call sleep from _call_sleep_56
-            return
         "Before this moment, I was only aware of just how much I wanted this."
-        if CONDOM:
-            show harmony missionary condom
         show harmony missionary mike
         "But it doesn't take more than a gentle stroke of Harmony's pussy for me to realise I'm not alone."
         "Her lips are already slick and more than ready for what lies ahead."
@@ -1333,12 +1320,6 @@ label harmony_fuck_missionary(sexperience_min):
             harmony.say "That thing looks very big!"
             "I give Harmony a reassuring nod, while her words give my ego a polish at the same time."
         show harmony missionary with fade
-        call check_condom_usage (harmony, 150) from _call_check_condom_usage_60
-        if _return == False:
-            call sleep from _call_sleep_57
-            return
-        if CONDOM:
-            show harmony missionary condom
         show harmony missionary mike
         "I smile at Harmony in what I hope is a reassuring manner, and then get down to it."
         if not harmony.sexperience:
@@ -1571,12 +1552,6 @@ label harmony_fuck_doggy(sexperience_min):
             "Because she makes me want it just as badly as she does!"
             "I can already imagine my cock sliding into her pussy."
             "So it's time to make that a reality..."
-            call check_condom_usage (harmony, 150) from _call_check_condom_usage_61
-            if _return == False:
-                call sleep from _call_sleep_58
-                return
-            if CONDOM:
-                show harmony doggy condom
             show harmony doggy vaginaltip
             "All it takes is a little push forwards, just a little."
             show harmony doggy vaginal surprised
@@ -1840,10 +1815,9 @@ label harmony_hottub_sex_male:
     "She moans and pants, even while we kiss."
     "And I can almost sense how much she wants me inside of her!"
     "I feel her hand tugging down my trunks and then grabbing my cock."
-    call harmony_dick_reactions from _call_harmony_dick_reactions_1
+    scene harmony_hottub02 with fade
     "Harmony rubs the shaft as she parts her own legs in anticipation."
     "But it's not like I need to be encouraged, and I soon respond in kind."
-    show hottub sex male harmony outside with fade
     "I lift one of Harmony's legs, spreading her pussy as I do so."
     "And then I waste no time in rubbing the head of my cock against her lips."
     if harmony.purity > LP:
@@ -1854,35 +1828,29 @@ label harmony_hottub_sex_male:
         harmony.say "Oh fuck..."
         harmony.say "What are you waiting for?"
         harmony.say "Stick your cock in me!"
+    scene harmony_hottub03
     "I hurry to do as I'm told, thrusting my cock forwards."
     "Harmony is already wet from the water and slick from excitement."
     "Which means that there's no more than a few seconds of resistance."
-    show hottub sex male harmony inside
     "And then she surrenders to me, letting it sink into her in one smooth motion."
+    scene expression make_anim(harmony_hottub, time=0.4, loop=True)
     "Harmony's mouth opens wide as she moans from the sensation."
     "She looks up at me, her eyes half-closed."
-    "But her head is nodding as she shows an almost desperate need for more."
     "I begin to thrust in and out of her then, faster with every passing moment."
-    "Normally I might have been more gentle, built up speed slowly at first."
-    "But there's just something so sturdy and satisfying about pounding Harmony."
-    "No matter how hard I push into her, she takes it and asks for more!"
     "And then there's the way that her entire body shakes and jiggles too."
     "Breasts, belly thighs and buttocks, all swaying and swinging."
+    scene harmony_hottub01
     "She takes every ounce of energy that I put into her."
-    "And then she transforms it into hypnotic motion that makes me want more!"
-    "When she's not holding on for dear life, Harmony keeps her hands busy."
-    "She squeezes her breasts and rubs at her clit, adding to her pleasure."
     "It seems like there's not enough that she can do to satisfy herself."
     "But the sight of it all and the feel of being inside her is more than enough for me."
     "And I can feel myself on the brink of cumming..."
     menu:
         "Cum inside":
             "I hold onto Harmony as tightly as I can, pushing into her as deeply as possible."
-            show hottub sex male harmony cumshot with hpunch
+            scene harmony_hottub05
             "And then I shoot all that I have straight into her, losing myself completely."
-            with hpunch
+            scene harmony_hottub07 with hpunch
             "She lets out a cry as I fill her pussy, shaking the whole time."
-            show hottub sex male harmony ahegao with hpunch
             if harmony.purity > LP:
                 harmony.say "Oh god..."
                 harmony.say "I'm cumming!"
@@ -1892,9 +1860,8 @@ label harmony_hottub_sex_male:
                 harmony.say "I love it when you cum in me!"
             $ harmony.love += 1
             "Cum is already leaking our of Harmony as she succumbs to her own orgasm."
-            "And I hold her up in the water while it takes hold."
         "Pull out":
-            show hottub sex male harmony outside
+            scene harmony_hottub06
             "I yank my cock out of Harmony in the last few seconds before I cum."
             "She moans at the sensation, shaking her head the whole time."
             if harmony.purity > LP:
@@ -1905,14 +1872,10 @@ label harmony_hottub_sex_male:
                 harmony.say "I want it..."
                 harmony.say "Cum in me - please!"
             $ harmony.sub += 1
-            show hottub sex male harmony cumshot with hpunch
+            with hpunch
             "But by now it's too late, as I'm already shooting my load over Harmony."
             with hpunch
             "It rains down on her breasts and belly."
-            with hpunch
-            "And there it mixes with the droplets of water on her skin."
-            "Her hands are all over her body a moment later."
-            "Rubbing as much as she can into her breasts and pussy."
     hide hottub
     show hottub harmony
     with fade

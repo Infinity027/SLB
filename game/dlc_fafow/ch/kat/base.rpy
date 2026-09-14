@@ -160,7 +160,7 @@ init python:
     })
 
 label kat_greet:
-    if renpy.has_label(f"kat_greet_dialogues_{hero.gender}") and not kat.flags.greeted:
+    if renpy.has_label(f"kat_greet_dialogues_male") and not kat.flags.greeted:
         scene expression f"bg {game.room}"
         show kat
         $ kat.flags.greeted = TemporaryFlag(True, 1)
@@ -176,7 +176,7 @@ label kat_greet:
                 kat.say "Good afternoon [hero.name]."
             else:
                 kat.say "Good evening [hero.name]."
-        call expression f"kat_greet_dialogues_{hero.gender}" from _call_expression_456
+        call expression f"kat_greet_dialogues_male" from _call_expression_456
         hide kat
     return
 

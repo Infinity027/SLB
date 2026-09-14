@@ -219,8 +219,8 @@ label found_money:
     if hero.is_lucky:
         $ amount *= 2
     "I found [amount]{image=gui/icons/icon_money.png} on the sidewalk!"
-    if renpy.has_label(f"found_money_{hero.gender}"):
-        call expression f"found_money_{hero.gender}" from _call_expression_198
+    if renpy.has_label(f"found_money_male"):
+        call expression f"found_money_male" from _call_expression_198
     return
 
 label found_money_male:

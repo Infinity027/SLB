@@ -160,7 +160,7 @@ init python:
     })
 
 label cherie_greet:
-    if renpy.has_label(f"cherie_greet_dialogues_{hero.gender}") and not cherie.flags.greeted:
+    if renpy.has_label(f"cherie_greet_dialogues_male") and not cherie.flags.greeted:
         scene expression f"bg {game.room}"
         show cherie normal
         $ cherie.flags.greeted = TemporaryFlag(True, 1)
@@ -178,7 +178,7 @@ label cherie_greet:
             else:
                 cherie.say "Good evening [hero.name]."
         show cherie normal
-        call expression f"cherie_greet_dialogues_{hero.gender}" from _call_expression_529
+        call expression f"cherie_greet_dialogues_male" from _call_expression_529
         hide cherie
     return
 

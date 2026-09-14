@@ -266,24 +266,24 @@ label harmony_dick_reactions:
     if not harmony.flags.seendick:
         $ harmony.flags.seendick = 1
         if hero.has_skill("hung"):
-            show dick reactions harmony scared
+            show harmony_dick_reaction
             harmony.say "Oh, good lord!"
             harmony.say "I never thought one could be THAT big!"
             mike.say "Hah...yeah...it is kind of big, I guess!"
             harmony.say "B...but still, it's a part of God's miracle."
-            show dick reactions harmony smile
             harmony.say "And so I...I should be thankful for it..."
             $ harmony.sub += 10
             $ harmony.purity -= 10
+            hide harmony_dick_reaction
         elif hero.has_skill("smalldick"):
-            show dick reactions harmony smile
+            show harmony annoyed
             harmony.say "My goodness - it's so tiny!"
             mike.say "Hey - that's not something a guy likes to hear!"
             harmony.say "No, I mean it's small - but it's perfectly formed."
             harmony.say "It's like God made a little work of art!"
             mike.say "Thanks...I guess..."
             $ harmony.sub -= 10
-        hide dick reactions
+            hide harmony annoyed
     return
 
 label harmony_halloween_invitation:

@@ -244,7 +244,7 @@ label samantha_porn_bad_reaction:
 
 
 label samantha_greet:
-    if renpy.has_label(f"samantha_greet_dialogues_{hero.gender}") and not samantha.flags.greeted:
+    if renpy.has_label(f"samantha_greet_dialogues_male") and not samantha.flags.greeted:
         scene expression f"bg {game.room}"
         show samantha
         $ samantha.flags.greeted = TemporaryFlag(True, 1)
@@ -264,7 +264,7 @@ label samantha_greet:
                 samantha.say "Good afternoon [hero.name]."
             else:
                 samantha.say "Good evening [hero.name]."
-        call expression f"samantha_greet_dialogues_{hero.gender}" from _call_expression_260
+        call expression f"samantha_greet_dialogues_male" from _call_expression_260
         if samantha.flags.submissive_interact:
             samantha.say "Oops...I need my daily dose of vitamins - which means your cock, [hero.name]!"
         hide samantha

@@ -24,7 +24,7 @@ init python:
     "label": "alexis_repeatable_beach_event",
     "conditions": [
         IsDone("alexis_event_05"),
-        HeroTarget(IsRoom("date_beach", "date_nudistbeach")),
+        HeroTarget(IsRoom("date_beach")),
         PersonTarget(alexis,
             IsPresent(),
             Not(IsHidden()),
@@ -234,10 +234,7 @@ label alexis_repeatable_beach_event:
     "It seemed like a good idea at the time, when I remembered just how often Alexis and I used to hang-out at the beach back in high-school."
     "So much so, in fact, that going back there now seemed to be a complete no-brainer."
     if alexis.flags.story == 2:
-        if game.room == "date_nudistbeach":
-            show alexis happy naked at center with ease
-        else:
-            show alexis happy swimsuit at center with ease
+        show alexis happy swimsuit at center with ease
         "But as we walk across the sand, looking for a spot to claim, it doesn't take long for me to see the essential flaw in my plan."
         "I've been wandering in Alexis' wake since we got out of the car, totally distracted by the sight of her in a swimsuit."
         "And it's only when we actually stop and I glance around that I begin to see I'm not the only guy that she's having that effect on."
@@ -266,10 +263,7 @@ label alexis_repeatable_beach_event:
         "I can't make a scene in front of all these people and show her just how paranoid and insecure she makes me feel."
         "And what kind of message would that send to all of the other guys checking her out too?"
         hide alexis
-        if game.room == "date_nudistbeach":
-            show beach cream alexis naked with fade
-        else:
-            show beach cream alexis swimsuit with fade
+        show beach cream alexis swimsuit with fade
         "So I obligingly squeeze the cream onto my hands and start to work it into Alexis' shoulders and back."
         "She lies flat on her belly while I do this, making appreciative noises as I progress down her spine and toward her waist."
         "I'd thought that my mind would be churning over the way Alexis flaunts herself, ruminating on the way she's silently showing me up."
@@ -289,20 +283,14 @@ label alexis_repeatable_beach_event:
         "I keep that in mind for the rest of the time that we spend at the beach."
         "And it means that I hardly notice the attention that she receives as we walk along the beach or play in the crashing waves."
         hide beach cream
-        if game.room == "date_nudistbeach":
-            show alexis flirt naked
-        else:
-            show alexis flirt swimsuit
+        show alexis flirt swimsuit
         with fade
         "All the time, while it's clear that Alexis is still enjoying the feeling of having so many eyes upon her, she never once leaves my side."
         "I guess that's one of the things that I have to come to terms with myself, if I want to keep a hold of her this time around."
         "I need to stop thinking about other people noticing her, and make sure that enough of Alexis' attention is focused on me instead."
         $ game.active_date.score += 10
     else:
-        if game.room == "date_nudistbeach":
-            show alexis happy naked at center with ease
-        else:
-            show alexis happy swimsuit at center with ease
+        show alexis happy swimsuit at center with ease
         "But I'm already starting to wonder if coming down here today was such a good idea after all."
         "The sun is just scorching, meaning that the sand is likewise almost too hot to walk on."
         "All around us, I can see people either trying to get out of the sun or else frying themselves under its relentless heat."
@@ -320,10 +308,7 @@ label alexis_repeatable_beach_event:
         show alexis normal
         "And with that, she puts on her sunglasses and lies down to take advantage of the sun's rays."
         hide alexis
-        if game.room == "date_nudistbeach":
-            show beach cream alexis naked nomc with fade
-        else:
-            show beach cream alexis swimsuit nomc with fade
+        show beach cream alexis swimsuit nomc with fade
         "I mutter something rather passive aggressive under my breath and start to plaster myself in sun-cream."
         "Alexis makes no sign that she's heard me, and for all I can tell she could already be asleep at my side."
         "I lie down too, only meaning to close my eyes for a couple of moments."
@@ -338,10 +323,7 @@ label alexis_repeatable_beach_event:
         alexis.say "You must have fallen asleep almost as soon as you shut your eyes."
         "I grab my phone, checking the time and finding that she's not pulling my leg."
         hide beach cream
-        if game.room == "date_nudistbeach":
-            show alexis naked talkative
-        else:
-            show alexis swimsuit talkative
+        show alexis swimsuit talkative
         with fade
         alexis.say "Anyway, I'm thirsty."
         alexis.say "So I'm going to grab some water from the kiosk over by the dunes."
@@ -356,10 +338,7 @@ label alexis_repeatable_beach_event:
             "Wait for her":
                 "I can guess what's she doing right now. And I don't really want to confirm my suspicion."
                 "So I just close my eyes and resign myself to waiting until she comes back in her own good time."
-                if game.room == "date_nudistbeach":
-                    show alexis naked blush with easeinright
-                else:
-                    show alexis swimsuit blush with easeinright
+                show alexis swimsuit blush with easeinright
                 "When she finally does so, I deliberately ignore the fact she's been gone almost an hour."
                 mike.say "I was starting to worry there a little, Alexis."
                 mike.say "Any longer and I'd have filed a missing person's report!"
@@ -453,10 +432,7 @@ label alexis_repeatable_beach_event:
                         "All the way I feel sure that all it'll take is one look at me for everyone to know what just took place back there."
                         "But of course, no one suspects a thing."
                         "I lay myself back down on the towel and try to regain control, waiting for Alexis to show herself again."
-                        if game.room == "date_nudistbeach":
-                            show alexis blush naked with easeinright
-                        else:
-                            show alexis blush swimsuit with easeinright
+                        show alexis blush swimsuit with easeinright
                         "When she finally does come back, she's done a remarkable job of cleaning herself up."
                         "And from the expression on her face, I could almost believe nothing out of the ordinary took place while she was gone."
                         "If, that is, I hadn't seen it with my own eyes..."
@@ -849,11 +825,6 @@ label alexis_fuck_date_reverse(sexperience_min):
             "I tease Alexis a little to begin with, just to see what her reaction will be."
             "Stroking the head of my cock against the lips of her pussy, I pretend to pull her downwards."
             "She gasps in anticipation, but then sighs with frustration as she's denied at the last."
-            call check_condom_usage (alexis, 180) from _call_check_condom_usage_5
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show alexis reverse condom
             "I tease Alexis a second time, enjoying the heightened desire in her moans."
             "But then I surprise her by pulling her down and onto my cock."
             "In one smooth motion I'm inside of her and she's sinking onto me."
@@ -1025,11 +996,6 @@ label alexis_fuck_date_doggy(sexperience_min):
                 "I doubt she feels it when I cum all over her buttocks and thighs as she lays slumped before me either."
             $ alexis.flags.anal += 1
         "Fuck her pussy":
-            call check_condom_usage (alexis, 180) from _call_check_condom_usage_6
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show alexis doggy condom -nomc
             "Call me a traditionalist if you like, but when I see the slick and already glistening lips of Alexis's pussy, my mind's made up."
             show alexis doggy -nomc
             "Angling my cock down just enough to be sure of missing her asshole, I slide the head along the length of her folds."
@@ -1232,11 +1198,6 @@ label alexis_fuck_date_cowgirl(sexperience_min):
             mike.say "How about this Alexis?"
             "I smile up at Alexis as I guide her downwards."
             "And she returns the gesture as she realises my intentions."
-            call check_condom_usage (alexis, 180) from _call_check_condom_usage_7
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show alexis cowgirl condom
 
             alexis.say "Now..."
             alexis.say "Where were we?"
@@ -1462,11 +1423,6 @@ label alexis_fuck_date_missionary(sexperience_min):
         "Fuck her pussy":
             "The only part of Alexis's body that's as beautiful as her face is her pussy."
             "And that's where I'm headed right now!"
-            call check_condom_usage (alexis, 180) from _call_check_condom_usage_8
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show alexis missionary condom outside
 
             show alexis missionary
             if randint(1, 2) == 1:
@@ -1609,7 +1565,6 @@ init python:
 
 label alexis_hottub_sex_male:
     $ game.active_date.clothes = "swimsuit"
-    $ CONDOM = False
     show bg pool
     "It didn't take much for me to get Alexis over to my place and into the hot-tub with me."
     "In fact, she'd been mentioning the fact that I had one for a while before I actually asked her."
@@ -1657,61 +1612,47 @@ label alexis_hottub_sex_male:
     mike.say "Oh, shit, Alexis..."
     mike.say "I...I think I like your thing!"
     alexis.say "I knew you would, [hero.name]!"
-    show hottub sex male alexis outside with fade
+    scene alexis_hottub01 with fade
     "Together, Alexis and I yank down my trunks and toss them aside."
-    call alexis_dick_reactions from _call_alexis_dick_reactions_1
     "She still has a firm hold on my cock, not letting go for an instant."
     "And as soon as it's freed from it's prison, she raises herself up from my lap."
     "Then she sits down again, aiming the head squarely at her pussy."
-    "Even though she seems to want this like crazy, there's still some resistance."
-    "But all that means is that I get to feel the sensation of Alexis coaxing herself."
     "She teases the lips of her pussy, rubbing them against the head of my cock."
-    show hottub sex male alexis inside
+    scene alexis_hottub02
     "And as she inches it inside of her, I can feel my heart pounding in my chest."
     "The whole time that she's lowering herself onto me, Alexis is panting too."
-    "She keeps one hand down there to direct traffic."
-    "But the other one she uses to free her breasts from her swimsuit."
-    "My eyes go even wider than before as she begins to squeeze them."
-    "The whole time it's as if Alexis is feeling too much pleasure to bear."
-    "And the only way she can bleed it off is to play with her own body!"
-    "I can't help but reach out and take a firm hold of her chest myself."
-    "And as soon as I do so, she releases her own grip, as if passing them to me."
     "There's no way that I can be gentle or take my time here."
+    scene expression make_anim(alexis01_hottub, time=0.2, loop=True)
     "Which means that I instantly start to massage Alexis's breasts without holding back."
     "But she shows no sign of discomfort, quite the opposite!"
     "The more I squeeze and press them between my fingers, the more she seems to love it."
+    scene expression make_anim(alexis02_hottub, time=0.2, loop=True)
     "Alexis grinds herself ever deeper into my lap the whole time."
     "Her moans have now been replaced by deep, sensual groans."
     "Alexis is moving her ass in a circular motion."
     "And so my cock is being moved in the same way too."
+    scene alexis_hottub06 with fade
     "It's getting to feel like I'm going to explode any moment."
     "I guess that's because I'm mere moments from shooting my load!"
     call cum_reaction (alexis, 'vaginal', 1) from _call_cum_reaction_17
     if _return == "vaginal_outside":
         "As Alexis grinds in my lap, I choose the exact moment to make my move."
         "When she's at the highest point of the circle she's describing, I pull my groin downwards."
-        show chest_insert alexis zorder 1 at zoomAt(1, (860, 80))
-        show hottub sex outside
+        scene alexis_hottub08
         "My cock pops straight out of her pussy, sitting up out of the water between her thighs."
         "Alexis yelps in surprise, at first because of the sensation she's feeling."
-        show chest_insert alexis cum
-        show hottub cumshot
         with vpunch
         $ alexis.sub += 1
         "But then she yelps again, higher still as I cum over her belly and chest."
-        with vpunch
-        "I watch as Alexis seizes her breasts, rubbing the sticky, white stuff into them."
-        hide chest_insert
     else:
         "Alexis has almost all of her weight pressing down on me right now."
         "But she must know that I'm dangerously close to cumming too."
         "So I assume she also realises what that means in terms of where it'll end up."
-        show hottub cumshot with vpunch
+        scene alexis_hottub12 with vpunch
         $ alexis.love += 1
         "And the matter's taken out of my hands a second later when I lost it inside of her!"
-        show hottub ahegao with vpunch
+        scene alexis_hottub07
         "Alexis stiffens, sitting upright as I fill her pussy to the limit."
-        with vpunch
         "Then she flops down in my lap like a puppet with severed strings."
     "All of the attitude and sass that Alexis was showing off before we did it seems to have vanished."
     "And once we're both spent, she's happy to simply slump against me in the tub, breathing hard."
@@ -1723,4 +1664,3 @@ label alexis_hottub_sex_male:
     $ game.active_date.clothes = None
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

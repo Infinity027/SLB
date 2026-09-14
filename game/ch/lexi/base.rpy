@@ -223,7 +223,7 @@ label lexi_cheated(action, cheat_npc=None):
     return
 
 label lexi_greet:
-    if renpy.has_label(f"lexi_greet_dialogues_{hero.gender}") and not lexi.flags.greeted:
+    if renpy.has_label(f"lexi_greet_dialogues_male") and not lexi.flags.greeted:
         scene expression f"bg {game.room}"
         $ lexi.flags.greeted = TemporaryFlag(True, 1)
         show lexi
@@ -241,7 +241,7 @@ label lexi_greet:
                 lexi.say "Good afternoon [hero.name]."
             else:
                 lexi.say "Good evening [hero.name]."
-        call expression f"lexi_greet_dialogues_{hero.gender}" from _call_expression_248
+        call expression f"lexi_greet_dialogues_male" from _call_expression_248
         if lexi.flags.submissive_interact:
             if randint(0, 1) == 0:
                 lexi.say "Hey, [hero.name] - you wanna grab a piece of this?"

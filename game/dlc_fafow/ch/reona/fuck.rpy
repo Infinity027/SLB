@@ -19,7 +19,6 @@ init python:
     })
 
 label reona_hottub_sex_male:
-    $ CONDOM = False
     scene bg pool
     "I've spent most of the day getting everything ready for Reona coming over."
     "The space around the hot-tub has never been cleaner or more pristine."
@@ -138,66 +137,35 @@ label reona_hottub_sex_male:
     "But now she's doing everything she can to avoid me!"
     "Eventually, by some minor miracle, I finally manage to catch Reona."
     "And once I do, there's only one thing on my mind."
-    "Wrapping my arms around her, I press my belly against her back."
-    "To my surprise, she doesn't try to wriggle free or resist in any way."
-    show hottub sex male reona outside with fade
-    "In fact she leans backwards, pushing her ass against my groin."
-    "It's only when I hear the sound of her filthy giggles that I realise what's going on."
-    "I thought I was the one trying to catch Reona."
-    "But the truth is she was leading me on the whole time."
-    "Teasing me to the point where I couldn't control myself."
-    "And now she's got me right where she wants me."
-    "The realisation doesn't make me want to stop."
-    "Instead it makes me all the more determined to press on."
-    "To show Reona just what I'm capable of under pressure!"
-    "What takes over in my now is pure base instinct."
+    scene reona_hottub01 with fade
     "The simple desire have my way with Reona."
     "And in doing so find a release from the pressure she's built up in me."
     "My cock is as hard as it's possible to get."
     "But my hold on Reona's waist is almost as hard too."
     "And when I pull her backwards and onto me, I feel the state she's in too."
-    show hottub sex male reona inside
+    scene reona_hottub03
     "The lips of Reona's pussy are hot and slick, slippery to the touch."
     "There's only the slightest moment of resistance before the inevitable happens."
     "All it takes is one more thrust, and she opens to me like a flower to the light."
-    show hottub sex male at startle(0.05,-10)
-    "I keep on pulling her back and pushing myself forwards."
     "And soon enough I'm sinking all the way in."
     "I don't stop until there's no room to go further."
-    show hottub sex male at startle(0.05,-10)
+    scene expression make_anim(reona_hottub, time=0.5, loop=True)
     "And then I begin to move in and out in earnest."
     "Up to now, Reona's been quiet, almost like she was unable to make a sound."
-    show hottub sex male at startle(0.05,-10)
     "But all of that changes as I begin to pick up speed."
     "Within seconds I can hear the sound of her panting."
     "Then she starts to moan."
-    show hottub sex male at startle(0.05,-10)
+    scene expression make_anim(reona_hottub, time=0.4, loop=True)
     "Finally the sounds she's making turn into cries."
     "And it's clear they're cries of sheer and helpless pleasure."
     "Reona bounces up and down in my lap, breasts bouncing as buttocks slapping."
-    show hottub sex male at startle(0.05,-10)
-    "Her hands clench into fists, nails digging into her palms."
-    "And then they begin to roam over her body."
-    "I see them pinching and squeezing as they go."
-    show hottub sex male at startle(0.05,-10)
-    "As if she's trying to find a way to release the pleasure she's feeling."
-    "Reona does look like it's steadily building up inside of her."
-    "Like it won't be long before she can't take any more."
-    show hottub sex male at startle(0.05,-10)
-    "I know this from the sounds that Reona's making."
-    "But also from the way that she's holding onto me tighter than ever."
-    "And by that I don't just mean the grip of her hands."
-    show hottub sex male at startle(0.05,-10)
     "I can already feel the muscles of her pussy clenching like a fist."
     "The sensation is enough to speed up the arrival of my own climax too."
-    show hottub sex male ahegao at startle(0.05,-10)
+    scene reona_hottub04
     "So when Reona finally succumbs to her orgasm, I follow on her heels."
-    show hottub cumshot inside with vpunch
-    $ reona.impregnate()
+    with vpunch
     $ reona.sub += 1
     "Letting go, I shoot everything that I have into her."
-    with vpunch
-    "And only then to I feel her body go limp."
     with vpunch
     "Once it's over, neither of us seems to be able to move a muscle."
     "We simply float in the water, still gripped by the afterglow."
@@ -217,18 +185,13 @@ label reona_fuck_date_male(location="hero"):
     scene bg street
     show reona
 
-
     call reona_fuck_date_intro_male (location) from _call_reona_fuck_date_intro
-
 
     call reona_dick_reactions from _call_reona_dick_reactions
 
-
     call reona_fuck_date_foreplay_male from _call_reona_fuck_date_foreplay_male
 
-
     call reona_fuck_date_choices_male from _call_reona_fuck_date_choices_male
-
 
     call handle_npc_leaving (reona, _return) from _call_handle_npc_leaving_29
     if _return:
@@ -889,11 +852,6 @@ label reona_fuck_date_missionary(sexperience_min):
             "So I do the best I can to clear my mind of all superfluous thoughts."
             "Then I look down and allow myself to be drawn in by the first thing I see."
             "And the moment that I set eyes on Reona's pussy, my mind's made up."
-            call check_condom_usage (reona) from _call_check_condom_usage_10
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show reona missionary condom
             show reona missionary mouth_orgasm
             reona.say "Come on, [hero.name]..."
             reona.say "What are you waiting for?"
@@ -1284,11 +1242,6 @@ label reona_fuck_date_cowgirl(sexperience_min):
             "She's kind of issuing a challenge to me, boldly proclaiming that she's not going to be holding back."
             "And I feel the urge to rise to that same challenge growing within me even as she's saying it."
             "So I make a silent declaration to myself, deciding what my mission is going to be here."
-            call check_condom_usage (reona) from _call_check_condom_usage_136
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show reona cowgirl condom
             "I can already feel how hot and wet she is down there, how slippery her pussy is."
             "And now she's being pulled downwards by gravity, while my cock is positioned beneath it."
             "Reona begins to wriggle and writhe as more pressure is put on her lips."
@@ -1540,14 +1493,6 @@ label reona_fuck_date_reverse_cowgirl(sexperience_min):
     menu:
         "Fuck her pussy":
 
-
-
-
-            call check_condom_usage (reona) from _call_check_condom_usage_137
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show reona reverse cowgirl condom
             show reona reverse cowgirl out
             "At first Reona seems reluctant to release her grip on my cock."
             "But it doesn't take her long to see that she's standing in the way of what she wants."
@@ -1837,11 +1782,6 @@ label reona_fuck_date_doggy(sexperience_min):
             "It's warm, slick and more than inviting right now."
             "So I line myself up and take aim..."
             show reona doggy mouth_normal
-            call check_condom_usage (reona) from _call_check_condom_usage_138
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show reona doggy condom
             reona.say "Come on, [hero.name]…"
             reona.say "Get your cock inside me already!"
             "I'd been feeling more than a little sure I was the one in charge."

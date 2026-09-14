@@ -78,8 +78,8 @@ label common_propose(from_girl=None):
             if unengaged_active_harem_girls:
                 
                 
-                propose_choices.extend([(f"Propose to {h_id.capitalize()} harem", h_members) for h_id, h_members in unengaged_active_harem_girls.items() if len(h_members) > 1 and renpy.has_label(f"{'_'.join(h_members)}_propose_{hero.gender}")])
-            if renpy.has_label(f"{from_girl.id}_propose_{hero.gender}"):
+                propose_choices.extend([(f"Propose to {h_id.capitalize()} harem", h_members) for h_id, h_members in unengaged_active_harem_girls.items() if len(h_members) > 1 and renpy.has_label(f"{'_'.join(h_members)}_propose_male")])
+            if renpy.has_label(f"{from_girl.id}_propose_male"):
                 propose_choices.append((f"Propose to {from_girl.name}", [from_girl.id]))
             propose_choices.append(("Cancel", "canceled"))
         if len(propose_choices) > 2:
@@ -91,10 +91,10 @@ label common_propose(from_girl=None):
             "I will try again later."
             $ hero.cancel_activity()
             return
-        call expression f"{'_'.join(propose_choice)}_propose_{hero.gender}" from _call_expression_446
+        call expression f"{'_'.join(propose_choice)}_propose_male" from _call_expression_446
     else:
-        if renpy.has_label(f"{from_girl.id}_propose_{hero.gender}"):
-            call expression f"{from_girl.id}_propose_{hero.gender}" from _call_expression_447
+        if renpy.has_label(f"{from_girl.id}_propose_male"):
+            call expression f"{from_girl.id}_propose_male" from _call_expression_447
         else:
             "I should try again later."
             $ hero.cancel_activity()
@@ -103,8 +103,8 @@ label common_propose(from_girl=None):
 label common_cancel_propose(from_girl=None):
     if not from_girl:
         $ from_girl = active_girl
-    if renpy.has_label(f"{from_girl.id}_cancel_propose_{hero.gender}"):
-        call expression f"{from_girl.id}_cancel_propose_{hero.gender}" from _call_expression_523
+    if renpy.has_label(f"{from_girl.id}_cancel_propose_male"):
+        call expression f"{from_girl.id}_cancel_propose_male" from _call_expression_523
     else:
         $ renpy.show(f"{from_girl.id} surprised")
         if hero.is_male:

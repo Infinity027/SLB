@@ -23,14 +23,14 @@ label play_with:
     $ active_girl.set_flag("interact", 1, 1, "+")
     call expression f"{active_girl.id}_greet" from _call_expression_173
     $ renpy.show(active_girl.id)
-    if renpy.has_label(f"{active_girl.id}_play_with_replace_{hero.gender}"):
-        call expression f"{active_girl.id}_play_with_replace_{hero.gender}" from _call_expression_174
+    if renpy.has_label(f"{active_girl.id}_play_with_replace_male"):
+        call expression f"{active_girl.id}_play_with_replace_male" from _call_expression_174
     else:
-        call expression f"play_with_dialogues_1_{hero.gender}" from _call_expression_129
+        call expression f"play_with_dialogues_1_male" from _call_expression_129
         if hero.fitness >= 40 - active_girl.love:
             active_girl.say "Sure, why not?"
-            if renpy.has_label(f"{active_girl.id}_play_with_{hero.gender}"):
-                call expression f"{active_girl.id}_play_with_{hero.gender}" from _call_expression_175
+            if renpy.has_label(f"{active_girl.id}_play_with_male"):
+                call expression f"{active_girl.id}_play_with_male" from _call_expression_175
             else:
                 "I play a game with [active_girl.name]."
             $ bonus = 1

@@ -222,7 +222,7 @@ label lavish_cheated(action, cheat_npc=None):
     return
 
 label lavish_greet:
-    if renpy.has_label(f"lavish_greet_dialogues_{hero.gender}") and not lavish.flags.greeted:
+    if renpy.has_label(f"lavish_greet_dialogues_male") and not lavish.flags.greeted:
         scene expression f"bg {game.room}"
         $ lavish.flags.greeted = TemporaryFlag(True, 1)
         show lavish
@@ -240,7 +240,7 @@ label lavish_greet:
                 lavish.say "Good afternoon [hero.name]."
             else:
                 lavish.say "Good evening [hero.name]."
-        call expression f"lavish_greet_dialogues_{hero.gender}" from _call_expression_246
+        call expression f"lavish_greet_dialogues_male" from _call_expression_246
         if lavish.flags.submissive_interact:
             if randint(0, 1) == 0:
                 lavish.say "I'm one hundred percent professional, [hero.name] - when it comes to pleasing you."

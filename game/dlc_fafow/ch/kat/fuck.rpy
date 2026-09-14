@@ -902,11 +902,6 @@ label kat_fuck_date_missionary(sexperience_min):
             "And I catch the slightest sensation of it rubbing against her pussy."
             "That's all it takes to make up my mind."
             "From that point on, I'm almost on auto-pilot."
-            call check_condom_usage (kat) from _call_check_condom_usage_133
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show kat missionary condom
             "Without a conscious thought, my hands reach out and take hold of Kat's thighs."
             "Then I part them, making sure that they're spread wide enough for me to get right in there."
             "With all that done, there's nothing to stop me from finally getting down to it."
@@ -1216,9 +1211,6 @@ label kat_fuck_date_doggy(sexperience_min):
             "And that makes the pussy the obvious choice out of the two options."
             "So I make sure that I'm at the correct angle."
             "And then I get ready to make my first move."
-            call check_condom_usage (kat) from _call_check_condom_usage_134
-            if _return == False:
-                return "leave_without_gain"
             "All it takes is one experimental move forwards for my eyes to pop open."
             "And that's because all at once, I know what kind of a state Kat's in."
             "No wonder she came right out and asked me to fuck her like an animal."
@@ -1430,11 +1422,6 @@ label kat_fuck_date_cowgirl(sexperience_min):
         "Fuck her pussy":
             "Kat nods and reaches down to take a firm hold of my cock."
             mike.say "How about right there, Kat?"
-            call check_condom_usage (kat) from _call_check_condom_usage_135
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show kat cowgirl condom
             "Kat's still got hold of my cock as we finally get down to it."
             "And now that we are, she doesn't seem inclined to let go of it either."
             "Instead I watch as she presses the head against the lips of her pussy."
@@ -2456,7 +2443,6 @@ label kat_fuck_date_restaurant:
     $ game.active_date.score += 40
     return
 
-label kat_fuck_date_nudistbeach:
 label kat_fuck_date_beach:
 label kat_fuck_beach:
     scene bg beach

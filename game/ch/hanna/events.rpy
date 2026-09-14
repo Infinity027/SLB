@@ -1202,13 +1202,7 @@ label hanna_event_10:
             "It makes me hurry to get on with things, eagerly grabbing hold of Hanna's haunches."
             "The sense of danger is also making me pretty hard right now."
             "And I can already see that it's having a similar effect on Hanna too!"
-            call check_condom_usage (hanna) from _call_check_condom_usage_42
-            if _return == False:
-                $ hero.cancel_event()
-                return
             show hanna doggy
-            if CONDOM:
-                show hanna doggy condom
             hanna.say "Come on, [hero.name]."
             hanna.say "What are you waiting for?"
             hanna.say "Stick it in me already!"

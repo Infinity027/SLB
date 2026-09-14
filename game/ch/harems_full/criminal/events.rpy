@@ -2010,55 +2010,6 @@ label camila_lexi_threesome_fuck:
                     "I can't be sure that Camila's even aware of what I'm doing."
                     "But that doesn't stop me from aiming for what's between her thighs."
                     "I can practically smell her pussy from here, and that's my intended target."
-                    $ CONDOM = False
-                    if not (camila.flags.pregnant or camila.flags.pill or camila.flags.pregrequest):
-                        menu:
-                            "Use protection" if hero.has_condom():
-                                $ CONDOM = hero.use_condom()
-                                "But in that same moment I remember something important."
-                                mike.say "Whoa..."
-                                mike.say "We need to use a condom!"
-                                "The sound of my voice is enough to get Camila's attention."
-                                "She breaks away from Lexi and looks back over her shoulder."
-                                camila.say "You bet we should!"
-                                camila.say "Is that one right there?"
-                                "I nod as Camila reaches over to the bedside table."
-                                "Mere moments later she has the condom out of the packet."
-                                "And a few seconds after that it's on my cock."
-                                "So now we really are ready to go."
-                            "Do not use protection":
-                                if camila.force_condom_use(love=160, drinks=1, sub=None):
-                                    "Suddenly Camila pulls away from Lexi."
-                                    "Then she looks back over her shoulder at me."
-                                    camila.say "Wait a minute..."
-                                    camila.say "We need to use a condom!"
-                                    if camila.love >= 160 - int(160 * .15):
-                                        camila.say "And I have one right here..."
-                                        "I nod as Camila reaches over to where she has the protection stashed."
-                                        "Mere moments later she has the condom out of the packet."
-                                        "And a few seconds after that it's on my cock."
-                                        "So now we really are ready to go."
-                                        $ CONDOM = True
-                                    else:
-                                        mike.say "Come on, Camila."
-                                        mike.say "Let's just get on with it already!"
-                                        mike.say "Forget about the condom, okay?"
-                                        "Camila shakes her head as she climbs off me and then off the bed."
-                                        "And much to my dismay, Lexi follows her example a moment later."
-                                        camila.say "Come on, Lexi..."
-                                        camila.say "That's our cue to get out of here."
-                                        lexi.say "Yeah, Camila..."
-                                        lexi.say "Maybe we can still find a real man to have some fun with."
-                                        mike.say "Girls, please!"
-                                        mike.say "This is all just a misunderstanding."
-                                        mike.say "Can't we talk about it?"
-                                        "But no matter what I say, it doesn't change their minds."
-                                        "As soon as they're dressed, Camila and Lexi walk out."
-                                        "Which leaves me alone and very much unfulfilled."
-                                        hide criminal harem threesome camilafuck
-                                        return "leave_without_gain"
-                    if CONDOM:
-                        show criminal harem threesome camilafuck condom
                     "Using both hands, I raise Camila up until she's in just the right position."
                     "I know that it's the right position because I can feel the lips of her pussy."
                     "They're getting slicker by the second as they rub against the head of my cock."
@@ -2275,58 +2226,6 @@ label camila_lexi_threesome_fuck:
                     lexi.say "Is all of that for me?"
                     mike.say "It is, Lexi..."
                     mike.say "If you think you can handle it?"
-                    $ CONDOM = False
-                    if not (lexi.flags.pregnant or lexi.flags.pill or lexi.flags.pregrequest):
-                        menu:
-                            "Use protection" if hero.has_condom():
-                                $ CONDOM = hero.use_condom()
-                                "Before Lexi can answer, a thought occurs to me."
-                                mike.say "Wait a minute..."
-                                mike.say "We really should use some protection."
-                                "Lexi looks surprised for a moment."
-                                "But then she seems to realise what I just said."
-                                "And she nods in agreement."
-                                lexi.say "I guess you're right, [hero.name]."
-                                lexi.say "You've got one around here, right?"
-                                mike.say "On the bedside table."
-                                camila.say "I'm already on it!"
-                                "Camila grabs a condom and tears open the packet."
-                                "And between the two of them, they have it on in a matter of seconds."
-                                "Which means that we're ready to go."
-                            "Do not use protection":
-                                if lexi.force_condom_use(love=180, drinks=1, sub=None):
-                                    "Before I can make another move, Lexi holds up a hand."
-                                    lexi.say "Whoa!"
-                                    lexi.say "What about a condom?"
-                                    if lexi.love >= 180 - int(180 * .15):
-                                        lexi.say "Don't worry, [hero.name]..."
-                                        lexi.say "I got one in my pocket."
-                                        lexi.say "Right over there..."
-                                        camila.say "I'm already on it!"
-                                        "Camila grabs a condom and tears open the packet."
-                                        "And between the two of them, they have it on in a matter of seconds."
-                                        "Which means that we're ready to go."
-                                        $ CONDOM = True
-                                    else:
-                                        mike.say "Come on, Lexi."
-                                        mike.say "Let's just get on with it already!"
-                                        mike.say "Forget about the condom, okay?"
-                                        "Lexi shakes her head as she climbs off me and then off the bed."
-                                        "And much to my dismay, Camila follows her example a moment later."
-                                        camila.say "Come on, Lexi..."
-                                        camila.say "That's our cue to get out of here."
-                                        lexi.say "Yeah, Camila..."
-                                        lexi.say "Maybe we can still find a real man to have some fun with."
-                                        mike.say "Girls, please!"
-                                        mike.say "This is all just a misunderstanding."
-                                        mike.say "Can't we talk about it?"
-                                        "But no matter what I say, it doesn't change their minds."
-                                        "As soon as they're dressed, Camila and Lexi walk out."
-                                        "Which leaves me alone and very much unfulfilled."
-                                        hide criminal harem threesome lexifuck
-                                        return "leave_without_gain"
-                    if CONDOM:
-                        show criminal harem threesome lexifuck condom
                     "Lexi reaches out and takes hold of my cock a moment later."
                     "And when I say that, I mean she actually grabs it and squeezes!"
                     "Not hard enough to make me cry out in pain."

@@ -176,7 +176,7 @@ label claire_greet:
                 claire.say "Good afternoon [hero.name]."
             else:
                 claire.say "Good evening [hero.name]."
-        call expression f"claire_greet_dialogues_{hero.gender}" from _call_expression_538
+        call expression f"claire_greet_dialogues_male" from _call_expression_538
         hide claire
     return
 

@@ -299,7 +299,7 @@ init python:
         IsSeason(1),
         HeroTarget(
             
-            IsRoom("date_beach", "date_nudistbeach")),
+            IsRoom("date_beach")),
         PersonTarget(bree,
             IsPresent(),
             Not(IsHidden()),

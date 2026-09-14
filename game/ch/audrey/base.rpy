@@ -208,7 +208,7 @@ label audrey_cheated(action, cheat_npc=None):
     return
 
 label audrey_greet:
-    if renpy.has_label(f"audrey_greet_dialogues_{hero.gender}") and not audrey.flags.greeted:
+    if renpy.has_label(f"audrey_greet_dialogues_male") and not audrey.flags.greeted:
         scene expression f"bg {game.room}"
         $ audrey.flags.greeted = TemporaryFlag(True, 1)
         show audrey
@@ -226,7 +226,7 @@ label audrey_greet:
                 audrey.say "Good afternoon [hero.name]."
             else:
                 audrey.say "Good evening [hero.name]."
-        call expression f"audrey_greet_dialogues_{hero.gender}" from _call_expression_210
+        call expression f"audrey_greet_dialogues_male" from _call_expression_210
         if audrey.flags.submissive_interact:
             if randint(0, 1) == 0:
                 "Play with me, [hero.name] - make me your toy?"

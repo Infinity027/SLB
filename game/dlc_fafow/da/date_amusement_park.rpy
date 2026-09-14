@@ -104,8 +104,8 @@ init -2 python:
 
 label date_hedge_maze:
     show expression "hedge maze " + date_girl.id
-    if renpy.has_label(f"{active_girl.id}_hedge_maze_reaction_{hero.gender}"):
-        call expression f"{active_girl.id}_hedge_maze_reaction_{hero.gender}" from _call_expression_482
+    if renpy.has_label(f"{active_girl.id}_hedge_maze_reaction_male"):
+        call expression f"{active_girl.id}_hedge_maze_reaction_male" from _call_expression_482
     else:
         "We try out the hedge maze together."
     call expression date_girl.get_chat from _call_expression_483
@@ -115,8 +115,8 @@ label date_hedge_maze:
 
 label date_love_boat:
     show expression "love boat " + date_girl.id
-    if renpy.has_label(f"{active_girl.id}_love_boat_reaction_{hero.gender}"):
-        call expression f"{active_girl.id}_love_boat_reaction_{hero.gender}" from _call_expression_484
+    if renpy.has_label(f"{active_girl.id}_love_boat_reaction_male"):
+        call expression f"{active_girl.id}_love_boat_reaction_male" from _call_expression_484
     else:
         "We ride a love boat together."
     call expression date_girl.get_chat from _call_expression_485
@@ -125,8 +125,8 @@ label date_love_boat:
 
 label date_haunted_house:
     show expression "haunted house " + date_girl.id
-    if renpy.has_label(f"{active_girl.id}_haunted_house_reaction_{hero.gender}"):
-        call expression f"{active_girl.id}_haunted_house_reaction_{hero.gender}" from _call_expression_486
+    if renpy.has_label(f"{active_girl.id}_haunted_house_reaction_male"):
+        call expression f"{active_girl.id}_haunted_house_reaction_male" from _call_expression_486
     else:
         "We go to the haunted house together."
     call expression date_girl.get_chat from _call_expression_487
@@ -135,8 +135,8 @@ label date_haunted_house:
 
 label date_merry_go_round:
     show expression "merry go round " + date_girl.id
-    if renpy.has_label(f"{active_girl.id}_merry_go_round_reaction_{hero.gender}"):
-        call expression f"{active_girl.id}_merry_go_round_reaction_{hero.gender}" from _call_expression_488
+    if renpy.has_label(f"{active_girl.id}_merry_go_round_reaction_male"):
+        call expression f"{active_girl.id}_merry_go_round_reaction_male" from _call_expression_488
     else:
         "We ride the merry go round together."
     call expression date_girl.get_chat from _call_expression_489
@@ -145,8 +145,8 @@ label date_merry_go_round:
 
 label date_ferris_wheel:
     show expression f"ferris wheel {date_girl.id}"
-    if renpy.has_label(f"{active_girl.id}_ferris_wheel_reaction_{hero.gender}"):
-        call expression f"{active_girl.id}_ferris_wheel_reaction_{hero.gender}" from _call_expression_490
+    if renpy.has_label(f"{active_girl.id}_ferris_wheel_reaction_male"):
+        call expression f"{active_girl.id}_ferris_wheel_reaction_male" from _call_expression_490
     else:
         "We ride the ferris wheel together."
     call expression date_girl.get_chat from _call_expression_491
@@ -155,8 +155,8 @@ label date_ferris_wheel:
 
 label date_icecream_amusement:
     show expression f"amusement icecream {date_girl.id}"
-    if renpy.has_label(f"{active_girl.id}_date_amusement_ice_cream_{hero.gender}"):
-        call expression f"{active_girl.id}_date_amusement_ice_cream_{hero.gender}" from _call_expression_519
+    if renpy.has_label(f"{active_girl.id}_date_amusement_ice_cream_male"):
+        call expression f"{active_girl.id}_date_amusement_ice_cream_male" from _call_expression_519
     else:
         "We eat an ice cream together."
     call expression date_girl.get_chat from _call_expression_493
@@ -174,4 +174,3 @@ label date_amusement:
     $ renpy.hide(date_girl.id)
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

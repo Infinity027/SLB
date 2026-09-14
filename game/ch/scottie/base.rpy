@@ -23,7 +23,7 @@ init python:
     })
 
 label scottie_greet:
-    if renpy.has_label(f"scottie_greet_dialogues_{hero.gender}") and not scottie.flags.greeted:
+    if renpy.has_label(f"scottie_greet_dialogues_male") and not scottie.flags.greeted:
         scene expression f"bg {game.room}"
         $ scottie.flags.greeted = TemporaryFlag(True, 1)
         show scottie
@@ -41,7 +41,7 @@ label scottie_greet:
                 scottie.say "Good afternoon baby."
             else:
                 scottie.say "Good evening babe."
-        call expression f"scottie_greet_dialogues_{hero.gender}" from _call_expression_268
+        call expression f"scottie_greet_dialogues_male" from _call_expression_268
         hide scottie
     return
 

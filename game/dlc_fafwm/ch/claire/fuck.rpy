@@ -42,7 +42,6 @@ init python:
 
 label claire_hottub_sex_male:
     $ game.active_date.clothes = "swimsuit"
-    $ CONDOM = False
     play sound door_knock
     "I'm still in the middle of running around the house trying to tidy up the place when I hear a knock at the door."
     "And the very next second I drop what I'm doing and hurry into the hallway to answer it, sure I know who's there."
@@ -60,7 +59,7 @@ label claire_hottub_sex_male:
     mike.say "Hi, Claire!"
     "The words are out of my mouth even before I've got the door fully open."
     "But much to my relief, I see that it really is Claire standing out on the porch."
-    show claire talkative
+    show claire talk
     claire.say "Oh, hello, [hero.name]…"
     claire.say "Did I hear you talking to someone just now?"
     claire.say "Because I thought that you said we had your house to ourselves?"
@@ -79,7 +78,7 @@ label claire_hottub_sex_male:
     "And she makes a dismissive gesture with her hand as she steps into the hallway."
     play sound door_close
     scene bg livingroom with fade
-    show claire talkative with easeinleft
+    show claire talk with easeinleft
     claire.say "I know exactly what you mean, really I do."
     claire.say "It's been so long since I did something like this."
     claire.say "I'd almost forgotten what it was like to be excited to see someone!"
@@ -91,14 +90,14 @@ label claire_hottub_sex_male:
     mike.say "Sorry about the state of the place, Claire..."
     mike.say "My housemates are a proper couple of pigs!"
     "Claire chuckles and shakes her head."
-    show claire talkative
+    show claire talk
     claire.say "Oh, I know how messy girls can be!"
     claire.say "And it's so unfair they left you to clean up their mess too."
     claire.say "Now if it were me, I'd have this place spick and span in no time."
     show claire normal
     mike.say "Oh, I couldn't let you do that, Claire..."
     mike.say "Not when you're my guest."
-    show claire talkative
+    show claire talk
     claire.say "Don't be silly, [hero.name]!"
     claire.say "It would be my pleasure to show you true domestic bliss."
     claire.say "And once you've tasted it, I guarantee you'll never look back!"
@@ -120,7 +119,7 @@ label claire_hottub_sex_male:
     mike.say "Of course I did, Claire..."
     mike.say "I just wish I could have done more."
     "Claire turns on her heel to face me, putting a finger to my lips."
-    show claire talkative
+    show claire talk
     claire.say "No, [hero.name], don't apologise."
     claire.say "This is just perfect, and it makes me feel so special."
     show claire normal
@@ -132,7 +131,7 @@ label claire_hottub_sex_male:
     "Claire's stepping out of her shoes as I say all of this."
     "But she seems to be more than a little amused by my words."
     "Which is weird, as I assume she's not going to jump into the tub with her clothes on."
-    show claire talkative
+    show claire talk
     claire.say "No need for that!"
     show claire c normal
     "Claire says this as she reaches up and tugs at a part of her dress."
@@ -141,9 +140,6 @@ label claire_hottub_sex_male:
     "So when she undoes it, the whole thing just drops away."
     "Seriously, it's just one of those wrap-around kind of dresses."
     "But to my smitten eyes, it looks like some kind of awesome magic trick."
-    "Because suddenly Claire's naked, right in front of my eyes!"
-    "Well...not totally naked...she has a bikini on underneath."
-    "It's just that now the exquisite curves of her body are on show."
     "And I'm totally spellbound by the sight of them."
     mike.say "WOW..." with hpunch
     show bg pool at center, traveling(1.2, 1, (640, 720))
@@ -154,20 +150,20 @@ label claire_hottub_sex_male:
     show claire at center, traveling(1.4, 1, (640, 920))
     pause 2
     mike.say "Did you get that bikini just for today?"
-    show claire conceited
+    show claire
     "Claire makes a point of rolling her eyes and shaking her head."
     "As if she's dismissing my compliments and questions as nothing at all."
-    show claire evil blush
+    show claire blush
     "But there's no way she can hide the flush that's spreading over her cheeks."
     "And she's clearly loving the reaction that her swimming-costume is getting."
     "A reminder of the fact that she's usually so criminally starved of attention."
-    show claire careless at startle(0.1, -5)
+    show claire smile at startle(0.1, -5)
     claire.say "What?!?"
     claire.say "This old thing?"
-    show claire startle
+    show claire talk
     claire.say "This is just something I threw on before I ran out of the door."
     claire.say "But I am glad that you approve - a girl does like to be noticed!"
-    show claire wink
+    show claire flirt
     show claire normal
     "Peeling off my top, I hold out a hand for Claire to take."
     show hottub claire swimsuit with fade
@@ -223,33 +219,18 @@ label claire_hottub_sex_male:
     mike.say "Go easy on me!"
     "Claire doesn't seem to even hear my pleas for her to be gentle."
     "She just pulls me between her open legs with the one hand."
-    "And with the other she reaches down and pulls aside the gusset of her bikini bottoms."
-    claire.say "Yes, [hero.name], yes..."
-    claire.say "If I made you this hard, then I need to see it through."
-    claire.say "I need you to stick that thing inside of me and put it to good use!"
-    "Before I can even think of responding, Claire presses the head of my cock against the lips of her pussy."
-    "And man, does it ever feel good!"
-    "In that same moment, all of my resistance vanishes."
-    "And now all I want to do is give Claire exactly what she wants."
-    "Because it's the exact same thing that I want too!"
     menu:
         "Fuck her pussy":
-            scene hottub sex male claire swimsuit with fade
+            scene claire_hottub01
+            claire.say "Yes, [hero.name], yes..."
+            claire.say "If I made you this hard, then I need to see it through."
+            claire.say "I need you to stick that thing inside of me and put it to good use!"
+            play sound "vo/claire/insert_moan.ogg"
+            scene claire_hottub02
+            "Before I can even think of responding, Claire presses the head of my cock against the lips of her pussy."
             "Starting to move back and forth, I draw the tip of my cock up and down."
             "Making one slow pass of Claire's pussy each time that I do so."
-            "I can see the effect that even something as small as this is having on her."
-            "She's now relying totally on the side of the tub to support herself."
-            "Almost floating in the shallow water as I lift her legs up from below."
-            "And most importantly, she's offering no resistance whatsoever as I rub against her."
-            "Claire's cheeks are more than flushed now, they're practically red and glowing."
-            "But I can already feel that there's blood rushing to another part of her body too."
-            "Because every second makes the sensation of her lips softer and more pliant."
-            "Right up until the moment when we seem to pass some invisible point of no return."
-            "Which is when all resistance simply vanishes, and Claire opens up to me like a flower."
-            "I only wish that I could describe my part in what happens next as poetically."
-            "And that's because the second I feel myself slipping into her, I seem to lose it."
-            "The feeling is too much for me, the gratification overwhelming my senses."
-            "All I can think to do is push ahead, literally driving myself all the way into her."
+            scene expression make_anim(claire_hottub01, time=0.4, loop=True)
             "Claire moans with pleasure as I fill her in one rough thrust."
             "And once I'm there, I hold still and just enjoy the feeling of it."
             "Something that's made all the more intense by how Claire wriggles and writhes."
@@ -257,102 +238,84 @@ label claire_hottub_sex_male:
             claire.say "Ah..."
             claire.say "Squeeze..."
             claire.say "Squeeze me!"
-            "Claire's hand flies to her chest, tugging desperately at her bikini top."
-            "And it doesn't take much to dislodge something of their size from such a flimsy prison either."
+            scene expression make_anim(claire_hottub02, time=0.4, loop=True)
             "Soon enough, her generous breasts are swinging free on her chest, begging to be touched."
             "Without thinking, I reach out and grab hold of them with my own hands, one over each."
-            "Then I start to do just as Claire demanded, squeezing and massaging them like warm dough."
-            "Of course Claire doesn't stay still while all of this is happening to her."
             "Oh no, she moans and cries out more than ever, almost thrashing in the water."
             "And her base, animal response elicits the very same thing in me."
             "Soon enough I'm moving again, drawing myself back and then thrusting forwards for all I'm worth."
             "This means that I'm pounding away at Claire, fucking her without a hint of mercy."
             "But the thing is that she seems to love every second of it."
-            "Her body soaks up everything that I have to give without protest."
-            "And she seems to be nodding the whole time."
-            "Though that could be more to do with being rocked back and forth..."
             "Soon enough I can feel Claire's legs pull together and her back arch."
+            scene claire_hottub02 with fade
             "She's about to lose it, and there's no way that I can hope to regain control."
             "Which means that when it happens, she takes me along with her!"
             call cum_reaction (claire, 'vaginal', 1) from _call_cum_reaction_324
             if _return == "vaginal_outside":
                 "With Claire holding onto me so tightly, I only have one chance to make my move."
-                show hottub sex male outside
+                scene claire_hottub08
                 "So with one last step backwards, I pull myself all the way out of Claire."
-                show hottub cumshot with vpunch
+                play sound "vo/mc/bj_load.ogg"
+                with vpunch
                 $ claire.sub += 1
                 "The motion her seconds after her own orgasm begins for real, instantly doubling the effect."
-                with vpunch
-                "Leaving her helpless as she floats in the water, head lolling on the edge of the tub."
             else:
                 "With Claire holding onto me so tightly, there's really only one course of action I can take."
-                show hottub cumshot with vpunch
+                scene claire_hottub07
                 $ claire.love += 1
                 "So with one last thrust forwards, I let go and shoot my load straight into Claire."
+                play sound "vo/mc/bj_load.ogg"
                 with vpunch
                 "It hits her seconds after her own orgasm begins for real, instantly doubling the effect."
-                "Leaving her helpless as she floats in the water, head lolling on the edge of the tub."
+        
         "Fuck her ass":
-            scene hottub sex male claire swimsuit with fade
-            "Well, maybe I want a slight variation on what Claire does."
+            scene claire_hottub09
+            claire.say "Yes, [hero.name], yes..."
+            claire.say "If I made you this hard, then I need to see it through."
+            claire.say "I need you to stick that thing inside of me and put it to good use!"
+            play sound "vo/claire/insert_moan.ogg"
             "Starting to move back and forth, I draw the tip of my cock up and down."
             "Pushing it a little further between Claire's buttocks each time that I do so."
             "And it doesn't take me long to feel it pressing at the edge of her hole."
+            scene expression make_anim(claire_hottub03, time=0.4, loop=True)
             "I can see the effect that even something as small as this is having on her."
-            "She's now relying totally on the side of the tub to support herself."
-            "Almost floating in the shallow water as I lift her legs up from below."
-            "And most importantly, she's offering no resistance whatsoever as I rub against her."
+            play sound "vo/claire/light_moan.ogg" loop True
             "Claire's cheeks are more than flushed now, they're practically red and glowing."
             "But I can already feel that there's blood rushing to another part of her body too."
-            "Because every second makes the sensation of her hole softer and more pliant."
-            "Right up until the moment when we seem to pass some invisible point of no return."
-            "Which is when all resistance simply vanishes, and Claire's ass opens up to me like a flower."
-            "I only wish that I could describe my part in what happens next as poetically."
-            "And that's because the second I feel myself slipping into her, I seem to lose it."
-            "The feeling is too much for me, the gratification overwhelming my senses."
             "All I can think to do is push ahead, literally driving myself all the way into her."
             "Claire moans with pleasure as I fill her in one rough thrust."
             "And once I'm there, I hold still and just enjoy the feeling of it."
-            "Something that's made all the more intense by how Claire wriggles and writhes."
-            "Totally unable to escape the position that I have her pinned down in."
+            scene claire_hottub12 with dissolve
             claire.say "Ah..."
             claire.say "Squeeze..."
             claire.say "Squeeze me!"
-            "Claire's hand flies to her chest, tugging desperately at her bikini top."
-            "And it doesn't take much to dislodge something of their size from such a flimsy prison either."
-            "Soon enough, her generous breasts are swinging free on her chest, begging to be touched."
-            "Without thinking, I reach out and grab hold of them with my own hands, one over each."
-            "Then I start to do just as Claire demanded, squeezing and massaging them like warm dough."
-            "Of course Claire doesn't stay still while all of this is happening to her."
             "Oh no, she moans and cries out more than ever, almost thrashing in the water."
             "And her base, animal response elicits the very same thing in me."
+            scene claire_hottub15 with fade
             "Soon enough I'm moving again, drawing myself back and then thrusting forwards for all I'm worth."
             "This means that I'm pounding away at Claire, fucking her without a hint of mercy."
             "But the thing is that she seems to love every second of it."
-            "Her body soaks up everything that I have to give without protest."
-            "And she seems to be nodding the whole time."
-            "Though that could be more to do with being rocked back and forth..."
             "Soon enough I can feel Claire's legs pull together and her back arch."
             "She's about to lose it, and there's no way that I can hope to regain control."
             "Which means that when it happens, she takes me along with her!"
             call cum_reaction (claire, 'anal', 1) from _call_cum_reaction_325
             if _return == "anal_outside":
                 "With Claire holding onto me so tightly, I only have one chance to make my move."
-                show hottub sex male outside
+                scene claire_hottub13
                 "So with one last step backwards, I pull myself all the way out of Claire's ass."
-                show hottub cumshot with vpunch
+                play sound "vo/mc/bj_load.ogg"
+                with vpunch
                 $ claire.sub += 1
                 "The motion her seconds after her own orgasm begins for real, instantly doubling the effect."
-                with vpunch
-                "Leaving her helpless as she floats in the water, head lolling on the edge of the tub."
             else:
                 "With Claire holding onto me so tightly, there's really only one course of action I can take."
-                show hottub cumshot with vpunch
+                scene claire_hottub14
                 $ claire.love += 1
+                play sound "vo/mc/bj_load.ogg"
                 "So with one last thrust forwards, I let go and shoot my load straight into Claire's ass."
                 with vpunch
                 "It hits her seconds after her own orgasm begins for real, instantly doubling the effect."
-                "Leaving her helpless as she floats in the water, head lolling on the edge of the tub."
+                
     "I sag back in the water, pushing myself backwards until I reach the edge of the tub."
     "And then I prop myself up against the side, letting it take all of my weight."
     claire.say "Oh..."
@@ -372,23 +335,17 @@ label claire_fuck_date_male(location="hero"):
     scene bg street
     show claire
 
-
     call claire_fuck_date_intro_male (location) from _call_claire_fuck_date_intro
-
 
     call claire_dick_reactions from _call_claire_dick_reactions
 
-
     call claire_fuck_date_foreplay_male from _call_claire_fuck_date_foreplay_male
 
-
     call claire_fuck_date_choices_male from _call_claire_fuck_date_choices_male
-
 
     call handle_npc_leaving (claire, _return) from _call_handle_npc_leaving_31
     if _return:
         return
-
 
     hide claire
     call claire_fuck_date_sleep (location="hero") from _call_claire_fuck_date_sleep
@@ -888,11 +845,6 @@ label claire_fuck_date_missionary(sexperience_min):
             "Needless to say that my cock is getting harder by the second."
             "And I can see Claire checking it out as I get ever closer."
             "But soon enough my eyes are focussed solely on the lips of her pussy."
-            call check_condom_usage (claire) from _call_check_condom_usage_164
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show claire missionary condom
             show claire missionary closed hurt
             with fade
             "Leaning forwards, I take aim for Claire's lower lips."
@@ -1240,11 +1192,6 @@ label claire_fuck_date_doggy(sexperience_min):
             "She turns her head back around to face the front."
             "And at the same time leans forwards and down."
             "Pushing her ass towards me as she does so."
-            call check_condom_usage (claire) from _call_check_condom_usage_165
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show claire doggy condom
             show claire doggy
             with fade
             "My plan had been to pull Claire slowly backwards and so gradually onto me."
@@ -1535,15 +1482,10 @@ label claire_fuck_date_fullnelson(sexperience_min):
     "All the time acting like I'm just going to match her own pose."
     menu:
         "Fuck her pussy":
-            call check_condom_usage (claire) from _call_check_condom_usage_166
-            if _return == False:
-                return "leave_without_gain"
             "But the moment that I'm in position, I make my move."
             "Slipping behind Claire, I slide my hands under her thighs."
             "And then I starts to almost fold her in half."
             scene bg black
-            if CONDOM:
-                show claire fullnelson condom hurt
             show claire fullnelson hurt
             with fade
             "Before she even knows what's happening, my hands are behind her head."

@@ -55,28 +55,25 @@ init python:
 
 label cassidy_hottub_sex_male:
     $ game.active_date.clothes = "swimsuit"
-    $ CONDOM = False
     show bg pool
     "Ever since she heard that I have a hot-tub, Cassidy's been bugging me to use it."
     "And trust me, it's not like I don't want to have her over and hop in there with her."
-    "I mean, who wouldn't want that, right?"
     "It's just that something always seemed to come up when I'd remember she wanted to come over."
     "Which means that by the time I finally manage to invite her, Cassidy's almost champing at the bit!"
-    show cassidy swimsuit with dissolve
+    show cassidy normal
     "I'm already in my trunks when she turns up, with the tub all ready and bubbling away."
+    show cassidy talk
     cassidy.say "Hi, [hero.name]!"
     cassidy.say "I got here as fast as I could."
-    "I can't help smiling like a fool at Cassidy's enthusiasm."
-    "It makes her look even more stunning than usual - if that's even possible!"
     mike.say "Hey, Cassidy."
     mike.say "You're here, that's all that matters."
+    show cassidy normal
     "I cock my head towards the hot-tub, inviting her to follow me over there."
     mike.say "You see, it does actually exist."
     mike.say "I hope it was worth the wait."
     "Cassidy nods as she walks over to join me by the side of the tub."
+    show cassidy hottub with fade
     "She seems happy with what she sees, if not blown away by it."
-    "And a thought occurs to me then."
-    "Something that's been on my mind the whole time."
     mike.say "Cassidy..."
     cassidy.say "Yeah, [hero.name]?"
     mike.say "You've been in a hot-tub before, right?"
@@ -87,43 +84,23 @@ label cassidy_hottub_sex_male:
     cassidy.say "Of course I've been in one before!"
     cassidy.say "Daddy always had a hot-tub."
     cassidy.say "But I never did it inside..."
-    "Before I can fully comprehend what she just said, Cassidy takes off her coat."
-    "She lets it drop to the ground in a deliberate gesture intended to grab my attention."
-    "And it sure does, as she's wearing nothing underneath except her swimsuit!"
-    mike.say "I..."
-    mike.say "Erm..."
     mike.say "Wow, Cassidy..."
-    show cassidy happy
     "Cassidy laughs again, louder this time."
     "And her entire body shakes as she does so."
-    "All of which means my eyes become wider with every passing second."
-    show cassidy normal
     cassidy.say "You wanna do it, [hero.name]?"
     cassidy.say "Then come on, what are you waiting for?"
-    hide cassidy
-    show hottub cassidy
-    with fade
+    scene cassidy_hottub01
     "With that, Cassidy turns her back on me and climbs into the tub."
     "She glances back over her shoulder, making sure that I'm following."
-    "But she needn't have worried, as I'm practically on her heels!"
-    "Cassidy lets out another one of those intoxicating chuckles as she sinks into the water."
-    "I reach out as I slide into the tub after her, but she slips out of my grasp."
-    "By now my cock is getting painfully hard for her."
-    "And as when she eludes me, I swear I can feel a twinge of need down there!"
-    "When I finally catch her on the far side of the tub, I grab Cassidy and hold on tight."
-    "She yelps and squeals with sheer delight, thrashing about in the water as I do so."
+    "I grab Cassidy and hold on tight."
     cassidy.say "Oh, [hero.name] - you got me!"
     cassidy.say "Whatever are you going to do with me, huh?"
     "I couldn't answer that even if I tried."
-    "And that's because I'm already yanking down my trunks with one hand."
-    show hottub sex male cassidy outside with fade
-    call cassidy_dick_reactions from _call_cassidy_dick_reactions
-    "The other I keep on Cassidy as she squirms and wriggles before me."
-    "Her giggles turn into moans of anticipation as I finally pin her down."
-    show hottub sex male cassidy inside
+    scene cassidy_hottub02 with fade
     "And Cassidy looks back over her shoulder as I push my cock between her thighs."
     "She holds my eye the entire time, so I can see every moment of her reaction."
     "Which makes the sensation of pushing inside her tight pussy that much more intense."
+    scene cassidy_hottub_ahegeo with fade
     cassidy.say "Oh..."
     cassidy.say "Oh, [hero.name]..."
     cassidy.say "You're so big!"
@@ -131,39 +108,33 @@ label cassidy_hottub_sex_male:
     mike.say "I want to fuck you so hard!"
     cassidy.say "Mmm..."
     cassidy.say "So do I!"
-    "That's all the permission I need."
-    "I make one final thrust, pushing my cock as deep into Cassidy as I can."
-    "Her words trail off into a deep, almost desperate moan."
-    "A moan that sounds almost as good as it feels to be inside of her."
-    "But I don't waste any time in savouring the moment."
+    scene expression make_anim(cassidy_hottub, time=0.4, loop=True)
+    "I don't waste any time in savouring the moment."
     "Instead I begin to pound Cassidy with all my might."
-    "There's a time to be subtle and use the lightest touch."
-    "And this is definitely not it!"
     "Cassidy lets me know that this is what she wants by nodding her head desperately."
     "But I hardly need the reassurance, as he body responds in kind."
-    "No matter how much I give her, Cassidy takes it almost greedily."
-    "She soaks it up and seems to ask for more!"
     "By now, Cassidy is panting, her eyes glazing over as I pound her."
     "I'm putting so much into each and every thrust, I expect to cum with each one."
     "But somehow the sheer excitement that I get from doing Cassidy keeps me going."
+    scene cassidy_hottub06
     "Evert thrust seems to push her further and make me want her that much more!"
     "So when I finally do feel myself starting to cum, it takes me by complete surprise..."
     menu:
         "Cum inside":
             "I'm so deep into Cassidy and so lost in the moment I can't hope to pull out."
             $ cassidy.love += 1
-            show hottub sex male cassidy cumshot with hpunch
+            play sound "vo/mc/bj_load.ogg"
             "All I can do is grab hold of her and cling on for dear life as I cum."
-            show hottub sex male cassidy ahegao with hpunch
+            with hpunch
             "She quivers as I grasp her haunches and pull her backwards."
             with hpunch
             "And then she actually whimpers as I shoot my load into her."
         "Pull out":
-            show hottub sex male cassidy outside
             "It takes the very last of my energy to pull it off in time."
-            show hottub sex male cassidy cumshot with hpunch
+            scene cassidy_hottub05
             $ cassidy.sub += 1
             "But somehow I manage to drag my cock out of Cassidy the moment before I cum."
+            play sound "vo/mc/bj_load.ogg"
             with hpunch
             "Her entire body quivers at the sensation and she whimpers quietly."
             with hpunch
@@ -172,15 +143,12 @@ label cassidy_hottub_sex_male:
     "There's no way either of us can hold onto the other, our limbs are too weak."
     "Instead we end up in a tangle of limbs, floating together in the bubbling water."
     "We can't speak either, only pant and gasp as we try to slow our hammering heartbeats."
-    "But all the same, I feel Cassidy rest her head gently on my shoulder, pressing herself against me."
-    "And that tells me, as sure as words ever could, that she's happy and satisfied with my efforts."
     $ hero.replace_activity()
     $ game.active_date.score += 20
     $ cassidy.sexperience += 1
     $ game.active_date.clothes = None
     return
 
-label cassidy_fuck_date_nudistbeach:
 label cassidy_fuck_date_beach:
 label cassidy_fuck_beach:
     $ game.play_music("music/roa_music/no_regrets.ogg")
@@ -246,20 +214,19 @@ label cassidy_fuck_beach:
     show cassidy happy
     "And then she gives me a smile and a quick nod."
     "A smile that I can feel make my cock beging to harden."
-    if game.room != "date_nudistbeach":
-        show cassidy naked
-        "Before I can say another word, Cassidy begins to strip off her swimsuit."
-        "I look around, worried that somebody might be able to see."
-        mike.say "Cassidy!"
-        mike.say "What are you doing?!?"
-        cassidy.say "Just what comes naturally!"
-        show cassidy normal
-        cassidy.say "Come on, [hero.name]!"
-        cassidy.say "Who cares if someone sees us?"
-        cassidy.say "That's their problem!"
-        "I hesitate for a moment, torn between my desire for her and the fear of discovery."
-        "But in the end, it's my desire that wins out."
-        "I follow Cassidy's example and tear off my shorts."
+    show cassidy naked
+    "Before I can say another word, Cassidy begins to strip off her swimsuit."
+    "I look around, worried that somebody might be able to see."
+    mike.say "Cassidy!"
+    mike.say "What are you doing?!?"
+    cassidy.say "Just what comes naturally!"
+    show cassidy normal
+    cassidy.say "Come on, [hero.name]!"
+    cassidy.say "Who cares if someone sees us?"
+    cassidy.say "That's their problem!"
+    "I hesitate for a moment, torn between my desire for her and the fear of discovery."
+    "But in the end, it's my desire that wins out."
+    "I follow Cassidy's example and tear off my shorts."
     show cassidy happy
     "She giggles in surprise at the sudden show of enthusiasm on my part."
     show cassidy cowgirl beach with fade
@@ -591,14 +558,6 @@ label cassidy_missionary(sexperience_min):
 
     menu:
         "Fuck her pussy":
-            call check_condom_usage (cassidy, love=200, sub=100) from _call_check_condom_usage_32
-            if _return == 'sad':
-                $ cassidy_sad = True
-            elif _return == 'anal':
-                call cassidy_missionary_anal_sub from _call_cassidy_missionary_anal_sub
-                return
-            elif _return == False:
-                return "leave_without_gain"
             call cassidy_missionary_pussy_sub from _call_cassidy_missionary_pussy_sub
         "Fuck her ass" if hero.sexperience >= (sexperience_min + 5):
             call cassidy_missionary_anal_sub from _call_cassidy_missionary_anal_sub_1
@@ -843,11 +802,6 @@ label cassidy_doggy(sexperience_min):
             "Just the smallest glimpse of what's waiting for me down there."
             "And all I want is to get my hands on the work of art that is her pussy!"
             "It's glistening in the light, almost calling out to me!"
-            call check_condom_usage (cassidy, 200) from _call_check_condom_usage_33
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show cassidy doggy condom
             "Once I finally have my cock between Cassidy's thighs, everything clicks."
             "The feeling of her lips as I slide the tip along them."
             "The scent of her that I can just catch as it reaches me."
@@ -1057,11 +1011,6 @@ label cassidy_cowgirl(sexperience_min):
             "And I'm more than happy to follow her lead like an obedient puppy too."
             "So when she reaches down and takes a hold of my cock I keep right on nodding."
             "And I nod even faster when she begins to rub it against the lips of her pussy too!"
-            call check_condom_usage (cassidy, 200) from _call_check_condom_usage_34
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show cassidy cowgirl condom
             "I'm still nodding as Cassidy pushes my cock between her lips."
             show cassidy cowgirl vaginal
             "And my head only starts to bob faster as I feel it pushing inside of her."
@@ -1298,11 +1247,6 @@ label cassidy_reverse_cowgirl(sexperience_min):
             "I can't wait to get my hands on Cassidy right now."
             "Especially after I got a feel of her pussy a few moments ago!"
             "And so I don't waste anytime in getting down to business."
-            call check_condom_usage (cassidy, 200) from _call_check_condom_usage_35
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show cassidy reverse cowgirl condom
             "Taking a firm hold of Cassidy's haunches, I pull her downwards."
             "This means that she sits squarely on my cock, just as I intended."
             "I feel the tip slide along the lips of her pussy."
@@ -1939,11 +1883,6 @@ label cassidy_fuck_office_reverse_cowgirl(sexperience_min):
             "And getting into the same mood, I grab hold of her buttocks."
             cassidy.say "Ooh!"
             cassidy.say "I like where this is going!"
-            call check_condom_usage (cassidy, 180) from _call_check_condom_usage_36
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show cassidy reverse cowgirl condom
             cassidy.say "Mmm..."
             cassidy.say "Hurry up and get that thing inside me!"
             cassidy.say "I wanna feel you filling me up, [hero.name]!"

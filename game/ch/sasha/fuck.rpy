@@ -1,26 +1,4 @@
 init python:
-    Event(**{
-    "name": "sasha_pool_foreplay",
-    "label": "sasha_pool_foreplay",
-    "max_girls": 1,
-    "conditions": [
-        IsSeason(0, 1),
-        HeroTarget(
-            
-            IsRoom("pool")),
-        PersonTarget(sasha,
-            IsPresent(),
-            Not(IsHidden()),
-            MinStat("love", 100),
-            MinStat("sexperience", 1),
-            ),
-        ],
-    "priority": 500,
-    "do_once": False,
-    "once_week": True,
-    "chances": 25,
-    "duration": 1,
-    })
 
     Event(**{
     "name": "sasha_hottub_sex_male",
@@ -72,7 +50,7 @@ init python:
         IsHour(14, 18),
         HeroTarget(
             
-            IsRoom("beach", "date_beach", "date_nudistbeach"),
+            IsRoom("beach", "date_beach"),
             HasStamina(),
             ),
         PersonTarget(sasha,
@@ -129,217 +107,7 @@ init python:
     "duration": 1,
     })
 
-label sasha_pool_foreplay:
-    scene bg pool
-    if sasha.sexperience % 2 == 1:
-        "It's been one of those days, too much work and stress, plus seriously hot weather."
-        "The kind of day that makes me thankful we have a pool out back that I can use to unwind."
-        "So as soon as the chance presents itself, I change into my trunks and head into the garden."
-        "But as soon as I make it out there, I can hear the sound of splashing from the pool."
-        "At first I feel more than a little annoyed."
-        "It was my idea to come out and chill on my own."
-        "Bit it looks like someone's beaten me to it."
-        "Now I have to either wait for them to come out, or else share the pool!"
-        mike.say "Urgh..."
-        mike.say "What a fucking..."
-        "My words fade away as I catch my first sight of just who beat me to the pool."
-        scene bg black
-        show swimmingrace sasha nomc
-        with fade
-        "And I watch in stunned silence as Sasha swims past me, a smile on her face."
-        "She waves happily at me, but I'm more interested in staring at the rest of her."
-        "Sasha's wearing a bikini, so almost everything is on show right now!"
-        mike.say "What a siren!"
-        "I hurry over to the edge of the pool as Sasha swims towards me."
-        "And then I sit down as she pulls up beside me, leaning on her forearms."
-        sasha.say "Looks like you had the same idea as me, [hero.name]!"
-        sasha.say "You should jump right in and join me."
-        sasha.say "The water's SO cool right now!"
-        "I nod eagerly at Sasha's invitation."
-        "All of my irritation has vanished by now."
-        "And it's been replaced with sheer lust and the need to get closer to Sasha."
-        mike.say "Great minds think alike, Sasha!"
-        mike.say "Move over a little, will you?"
-        mike.say "Then I can get in too."
-        "Sasha nods and kicks back, pushing herself away from the side of the pool."
-        play sound water_splash
-        pause 0.2
-        scene swimmingrace_bg_03 at center, zoomAt(1.75, (1000, 1040)), blur(5) with vpunch
-        "As soon as there's room, I jump right, just like she told me to."
-        "The water's a little colder than I anticipated."
-        scene bg black
-        show swimmingrace sasha nomc at center, zoomAt (2.5, (1600, 720)) with vpunch
-        "So when I pop up, I'm gasping from the change in temperature."
-        mike.say "Urgh..."
-        mike.say "Whoa!"
-        show swimmingrace sasha nomc at center, traveling (1.85, 10.0, (440, 840))
-        sasha.say "[hero.name]!"
-        sasha.say "Are you okay?!?"
-        "Sasha seems to think that I'm in some kind of trouble."
-        "As she swims straight over to me and grabbing hold."
-        "And on pure instinct, I do the same."
-        "Which leaves us clinging to each other was we float in the water."
-        mike.say "I...I'm fine, Sasha!"
-        mike.say "The water was just a little cold, that's all!"
-        sasha.say "Oh!"
-        sasha.say "Okay, okay...I see."
-        mike.say "We should..."
-        mike.say "We should probably let go of each other now!"
-        sasha.say "Y...yeah..."
-        sasha.say "I mean...you kind of have your hand between my legs right now!"
-        scene sasha foreplay
-        show sasha foreplay pool boxer
-        with fade
-        "Sheer surprise makes me move the hand in question."
-        "Then I feel that Sasha's right - it's practically cupping her pussy right now!"
-        "But the unconscious movement seems to only make things worse."
-        sasha.say "Mmm..."
-        sasha.say "Oh...oh fuck..."
-        mike.say "I'm so sorry, Sasha!"
-        mike.say "Let me just..."
-        "As I make to pull my hand away, I feel Sasha's own hand grab my wrist."
-        "Surprised again, I look her in the face, and she shakes her head."
-        sasha.say "No..."
-        sasha.say "Don't stop!"
-        show sasha foreplay pleasure
-        sasha.say "It feels SO good - and nobody can see!"
-        $ renpy.sound.play("sd/moans/sasha/sasha_moans_hard_low.ogg", loop=True)
-        "I stare at Sasha for a few seconds, too taken aback to do anything."
-        "But then I start nodding eagerly."
-        "And I set my fingers to work under the water."
-        "I begin by taking full advantage of where my hand ended up."
-        "Cupping Sasha's pussy means I can use my thumb to stroke the top."
-        "And at the same time I can explore the folds of her lips with my other fingers."
-        "So that's exactly what I get down to doing."
-        "The material of her bikini doesn't stop me for a moment."
-        "Instead the soft, stretchy lycra actually enhances it."
-        "And I find that I can rub and squeeze pretty hard right from the start."
-        $ renpy.sound.play("sd/moans/sasha/sasha_moans_hard_medium.ogg", loop=True)
-        "Sasha keeps her arms wrapped around me as I play with her."
-        "Clinging to me, I can feel how much she's getting off on this."
-        "Because she only seems to be hanging on tighter with each passing second."
-        "I keep on working Sasha's pussy through her bikini bottoms."
-        "Going on instinct, I really don't have a plan for what to do next."
-        "But luckily for me, my fingers soon begin to slip under the fabric."
-        "All of a sudden I can feel the soft, sensitive skin of Sasha's pussy."
-        $ renpy.sound.play("sd/moans/sasha/sasha_moans_hard_high.ogg", loop=True)
-        "And it seems like the transition is something she feels too."
-        show sasha foreplay up
-        "Sasha nods, burying her head into my shoulder."
-        "But she also reaches down and pushes my hand deeper still."
-        "Spurred on by her actions, I start to explore with my fingertips."
-        "Sasha moans with pleasure as they find their way inside of her."
-        show sasha foreplay orgasm
-        "And her pussy mirrors this by opening up at my attentions."
-        "Soon enough, I'm tracing the inside of her lips."
-        "Trying to be as gentle as I can, I inch Sasha onwards."
-        "And with every twitch of my fingers, she quivers even more."
-        "Finally I can feel her entire body stiffening under my touch."
-        "So I make sure to support her in the water as the inevitable happens."
-        "Sasha cums as she floats in the water, the thighs squeezing my hand."
-        $ renpy.sound.play("sd/moans/sasha/sasha_moans_hard_orgasm.ogg", loop=True)
-        show sasha foreplay pussycum
-        "She hangs onto me the whole time, even once her orgasm is done."
-        mike.say "Are..."
-        mike.say "Are you okay, Sasha?"
-        stop sound
-        sasha.say "Mmm..."
-        sasha.say "Better than okay..."
-        sasha.say "I wanna fall asleep right here!"
-        "Maybe that's not such a good idea."
-        "But I'm happy to stay right there for the time being."
-        "Just holding onto Sasha as she floats in the grip of the afterglow."
-    else:
-        "While it's not exactly rare that there's a window of nice weather or that I have some time off of work in which I can lounge about the house, it is rare that both occur on the same day."
-        "And it's on those few and far between occasions that having a swimming pool of your own really comes into its own."
-        "But of course, there's one other thing in my own life that probably puts it over the top in terms of warm weather and the pool."
-        "Which is living with a couple of rather hot female housemates that are thinking about using it to cool off as well."
-        "You'll just have to take my word for it when I say that I did come down to the side of the pool in my shorts just for a swim."
-        scene bg black
-        show swimmingrace sasha nomc
-        with fade
-        "I honestly had no idea that I'd be greeted with the sight of Sasha, already in the water and swimming the short length from one end to the other."
-        "She doesn't see me at first, meaning that I have the chance to sit down on one of the sun loungers at the side of the pool and watch."
-        "Again, I'm not just perving on her - seriously I'm not!"
-        "Okay...maybe just a little."
-        "But how bad mannered would it be to just jump straight in there without letting her know that I'm here?"
-        "Surely the more gentlemanly thing to do would be to let her finish up swimming her lengths and then make myself known to her?"
-        "Making sure to keep quiet, I settle down to watch Sasha's progress."
-        if sasha.flags.boobjob:
-            "I've never seen Sasha wearing the bikini that she has on today, but then she must have had to update her wardrobe since she got her implants anyway."
-            "Myself, I've gotten used to them to the point where it's almost hard to imagine her with the petite chest that she had before the operation."
-            "They also look to be no impediment in the water either, and I marvel again at the confidence and even happiness they seem to have given her."
-            "In fact, they float so well in the water that I can't help but wonder if, were she to get in trouble, there's be any need for another flotation device besides them."
-        if sasha.flags.haircut:
-            "It's still weird to see Sasha's long, lustrous hair shimmering with blonde tones, rather than her natural black."
-            "But as it stretches out behind her in the water, it seems to give her a more vital appearance than before."
-            "To me at least, she looks more vibrant, more alive than ever before."
-        if not any([sasha.flags.boobjob, sasha.flags.haircut]):
-            "I know that the normal image of the bathing beauty is buxom and blonde."
-            "But maybe that's why the sight of Sasha, with her black hair and alternative look turns me on so much."
-            "Even while she's in the pool, she still has her usual dark, heavy eye-shadow and lipstick on, contrasting so well with her pale skin."
-            "I can already see her petite breasts and their tiny nipples beneath the stretched material of her bikini top, stiff and upright from the cold of the water."
-        "I don't know if Sasha's aware of me watching her as she swims, but it seems to me that she takes a lot longer about wrapping it up than she might otherwise have."
-        "She keeps switching from one stroke to another, as if she knows full well that this will allow me to see almost every curve of her body as she moves through the water."
-        "This means that by the time she finally does decide to come to a gentle stop and swim to the side of the pool, I have an enormous erection that's simply impossible to hide."
-        sasha.say "Hey, [hero.name] - is that a mast in your pants, or are you just glad to see me?"
-        "Oh yes, she definitely knew what she was doing and no mistake!"
-        sasha.say "I think you should come join me in here?"
-        sasha.say "Maybe see if there's anything I can do about it - seeing as how it was my fault!"
-        "Not needing any more of an invitation than that, I stand up and awkwardly hurry over to the side of the pool."
-        "My erection waggles embarrassingly in front of me, threatening to stretch the waistband of my short as I go."
-        scene swimmingrace_bg_03 at center, zoomAt(1.75, (1000, 1040)), blur(5) with vpunch
-        "I lower myself into the water and feel the initial chill spread through me, made worse by my current state of arousal."
-        scene bg black
-        show swimmingrace sasha nomc at center, zoomAt (2.5, (1600, 720)) with vpunch
-        show swimmingrace sasha nomc at center, traveling (1.85, 10.0, (440, 840))
-        "The water at this end of the pool only comes up to my chest, meaning that I'm able to stand up as Sasha swims the short distance between us."
-        scene swimmingrace_bg_03 at center, zoomAt(1.75, (1000, 1040)), blur(5)
-        show sasha kiss
-        with fade
-        $ sasha.flags.kiss += 1
-        "Letting her legs find the bottom of the pool, she leans in close for a kiss that lingers pleasantly and I swear helps to acclimatise me to the cold water with surprising speed."
-        "And it's right in the middle of the kiss that I can feel her hand stroking the front of my shorts, as if sizing up lies inside."
-        "Once Sasha's found what she's looking for and had enough of a squeeze and a stroke to know that wants more, she doesn't simply slip her hand under the waistband."
-        "Instead I feel a hand grip my shorts on both sides, pulling them down and letting them drop to the bottom of the pool."
-        "I'm not concerned about being stripped of the one item of clothing that I was wearing."
-        "I happen to be standing up to my chest in a pool that's located in my own back yard."
-        "And even if If there were any chance of being seen, I have enough distraction in the form of Sasha for me to forget all about it in short order."
-        "Her hand's got a good hold on my cock now, sliding up and down under the water."
-        "There's no way that this is going to be any kind of dexterous hand-job, just a rough tug and pull."
-        "But it hardly seems fair that I should be the only one getting this kind of treatment."
-        "Especially when Sasha went to all that trouble just now to get me excited and then lure me into the water with her."
-        "Still with my eyes closed as I kiss her, I reach out with one hand and grope for the inside of Sasha's thigh."
-        scene sasha foreplay
-        show sasha foreplay pool boxer up
-        with fade
-        "I find it without too much effort, noting the way she draws in a ragged breath in anticipation as I begin to walk my fingers upwards."
-        "Her bikini bottoms are slight, little more than enough to preserve her modesty - not that I have any such thing in mind."
-        "At first I restrict myself to gently stroking Sasha through the stretchy material, enjoying the sensation of what lies beneath."
-        show sasha foreplay pleasure
-        $ renpy.sound.play("sd/moans/sasha/sasha_moans_hard_low.ogg", loop=True)
-        "The more that I tease her, the more I can feel the way that she reacts to it in the way her tongue probes my mouth and the vigour with which she rubs my cock."
-        "And of course, this only encourages me to go further, pushing one of my fingers against the gusset of her bottoms so that it presses into her pussy beneath."
-        "As hard as it is to tell if Sasha's ready for more whilst stroking her under the water, I feel only soft and welcoming sensations beneath my fingertips."
-        "On the strength of this, I slip those same fingers under the material and begin to stoke at the naked lips of her pussy instead."
-        $ renpy.sound.play("sd/moans/sasha/sasha_moans_hard_medium.ogg", loop=True)
-        "Touching Sasha with nothing in between the tips of my fingers and her delicate folds makes her begin to melt almost instantly."
-        "The only thing that gets harder is the hold that she has on my cock, as she grips the shaft and rubs now like her life depended on it."
-        "At the same time as I start to push two of my fingers into her, one slow inch at a time, I can feel her less than gentle attentions finally pushing me to the end."
-        show sasha foreplay pussycum
-        $ renpy.sound.play("sd/moans/sasha/sasha_moans_hard_high.ogg", loop=True)
-        "I try desperately to keep my fingers inside of Sasha and do the same in return, even as I know my cock is letting go beneath the water of the pool."
-        $ renpy.sound.play("sd/moans/sasha/sasha_moans_hard_orgasm.ogg")
-        show sasha foreplay orgasm
-        "Luckily for me, it's not long after this that Sasha comes to the point where I was a moment before."
-        "Feeling as though I've swum the same number of lengths as she did before we got to playing in the water, I climb out after Sasha and collapse back into my sun lounger."
-        stop sound fadeout 0.5
-        "As I lie there, I absently begin to think about just how often we have the pool cleaned, and if we might not want to think about doing it a little more often."
-    $ sasha.love += 2
-    return
-
 label sasha_hottub_sex_male:
-    $ CONDOM = False
     $ game.active_date.clothes = "swimsuit"
     show bg pool
     show hottub sasha
@@ -347,20 +115,15 @@ label sasha_hottub_sex_male:
     sasha.say "Why don't you jump in and join me?"
     "I open my mouth to refuse the offer, still set on my whim of this morning."
     "But then it hits me - why in the hell would I say no to that offer?"
-    "After all, it's not like I have don't like getting closer to Sasha, is it?"
     mike.say "Sure, Sasha."
     mike.say "That sounds like a great idea!"
     "Sasha smiles as I walk over to the tub and start to climb in."
     "She scoots a little way over to make sure there's room for me."
     "But I note that she doesn't go as far away as she could."
     "Instead she settles only a little way from where I sit down in the water."
-    "And there's no way that she can have failed to see how I'm looking at her right now!"
-    "But how can you blame me for that?"
     "Sasha looks super hot in her swimsuit."
-    "I could believe it's her making the water bubble, not the jets in the tub!"
     sasha.say "Like what you see, huh?"
     "She raises an eyebrow as she says this."
-    "And then she giggles as I flush with embarrassment."
     mike.say "What..."
     mike.say "No...I mean yeah..."
     mike.say "I mean...you know what I mean!"
@@ -369,6 +132,7 @@ label sasha_hottub_sex_male:
     sasha.say "You wanted some time to chill out in the hot-tub."
     sasha.say "And here I am, forcing you to stare at my tits, right?"
     "I shake my head, starting to laugh too."
+    scene sasha hottube
     mike.say "Okay, Sasha, you got me."
     "Sasha gives me a playful slap on the shoulder."
     "But then she leans in closer, becoming suddenly conspiratorial."
@@ -380,49 +144,37 @@ label sasha_hottub_sex_male:
     "Leaning in closer still, Sasha plants a kiss on my unsuspecting lips."
     "It's long, lingering and insanely passionate."
     "And as such, it's more than enough to let me know where she wants this to go!"
-    show hottub sex male sasha outside with fade
-    "Without saying a word, I pull Sasha onto my lap."
-    "She offers no resistance, coming willingly and without protest."
-    "And it's only when she's actually sitting in my lap that I realise what she's done."
-    "Somehow, she managed to pull down my trunks while I was distracted."
+    show sasha_hottub01 with fade
     "Now Sasha has my cock in her hands, gripping it like a joystick."
-    call sasha_dick_reactions from _call_sasha_dick_reactions
-    "And she wastes no time in pointing it at a target between her thighs."
-    "I gasp at the sensation, breaking the kiss."
-    "But Sasha doesn't stop for a second."
     "She rubs the head against the lips of her pussy."
-    show hottub sex male inside
-    play sound "sd/moans/sasha/sasha_moans_light_low.ogg" loop
     "Once, twice...and then she sits down on it in one smooth motion."
+    show sasha_hottub02 with fade
+    play sound "vo/sasha/sasha_moans_light_low.ogg" loop
     "The feeling is incredible, as Sasha uses her weight to force me into her."
     "And once I'm inside, she relaxes, letting gravity do all the work."
     "All I can do is sit back and let her take the lead."
+    scene expression make_anim(sasha_hottub, time=0.5, loop=True)
     "Sasha does just that, rocking back and forth as she rides me."
-    "I have her chest in my face, like a pair of thrusting, pink airbags."
-    "And so I do the only thing that makes sense in the heat of the moment."
-    "I push my face between them, burying myself in Sasha's cleavage."
-    "This means that I can't see what's going on around me."
     play sound "sd/moans/sasha/sasha_moans_light_medium.ogg" loop
-    "But I can hear the sounds that Sasha's making the whole time."
+    "I can hear the sounds that Sasha's making the whole time."
     "And I can certainly feel the way she's bouncing in my lap too!"
     "The water splashes and slaps at her buttocks as she rides me."
-    play sound "sd/moans/sasha/sasha_moans_light_high.ogg" loop
+    scene expression make_anim(sasha_hottub, time=0.4, loop=True)
+    play sound "vo/sasha/sasha_moans_light_high.ogg" loop
     "Almost as loud as the moans of pleasure that she's making, but not quite."
+    scene sasha_hottub03 with fade
     "She keeps on grinding herself against me ever harder."
     "Which means I begin to feel something else too."
     "I can feel that I'm going to cum!"
     call cum_reaction (sasha, 'vaginal', 1) from _call_cum_reaction_158
     if _return == "vaginal_outside":
-        show hottub sex male outside
+        scene sasha_hottub05 with fade
         "I lift Sasha higher and pull down my groin, making my cock slide out of her."
         play sound "sd/moans/sasha/sasha_moans_light_orgasm.ogg"
         queue sound "sd/moans/sasha/sasha_panting.ogg" loop
         "Sasha makes a sound that seems to be formed of desperation."
-        with vpunch
-        "And she tries her best to climb back onto my cock before the end arrives."
-        show hottub sex male cumshot with vpunch
         $ sasha.sub += 1
-        "But even as she does so, I shoot my load up and over her."
+        "I shoot my load up and over her."
         with vpunch
         "The cum hits Sasha's ass and her lower back."
         "And then it runs down between her legs and into the water below."
@@ -431,12 +183,11 @@ label sasha_hottub_sex_male:
         play sound "sd/moans/sasha/sasha_moans_light_orgasm.ogg"
         queue sound "sd/moans/sasha/sasha_panting.ogg" loop
         "She yelps in surprise, clinging to me tighter still, and that's all it takes."
-        show hottub sex male cumshot with vpunch
+        scene sasha_hottub06
         $ sasha.love += 1
         "I let go in one sudden surge, pumping everything I have into Sasha."
-        show hottub sex male ahegao with vpunch
-        "She bucks in my lap, trying to pull free before the sensation becomes too much."
         with vpunch
+        "She bucks in my lap, trying to pull free before the sensation becomes too much."
         "But I hold her in place, my limbs feeling like they're locked in place as I cum."
     hide hottub sex male
     show hottub sasha
@@ -452,7 +203,6 @@ label sasha_hottub_sex_male:
     $ game.active_date.clothes = None
     return
 
-label sasha_fuck_date_nudistbeach:
 label sasha_fuck_date_beach:
 label sasha_fuck_beach:
     $ game.play_music("music/roa_music/city_nights.ogg")
@@ -551,49 +301,30 @@ label sasha_fuck_beach:
         sasha.say "How about you?"
     show sasha topless
     "As if she needs to underline the point, Sasha pulls down the straps of her swimsuit top."
-    if sasha.flags.boobjob:
-        "This releases her large, round breasts so that they bob heavily upon her chest."
-    else:
-        "This frees her pert, petite breasts so that they stand proud upon her chest."
+    "This frees her pert, petite breasts so that they stand proud upon her chest."
     mike.say "Whoa..."
     mike.say "That's something I've always got an appetite for, Sasha!"
-    show sasha happy
+    show sasha happy with dissolve
     "Sasha smiles at my enthusiasm and beckons me closer."
     "She pushes me down flat on my back, looming over me and putting her hands on my shoulders."
     "The first thing that I notice is just how warm her entire body feels."
     "It's as though she's held onto every bit of the sun's heat that's touched her skin."
-    show sasha cowgirl beach swimsuit with fade
+    scene sasha_cowgirl_beach_insert
     "I reach down and begin to tug at Sasha's swimsuit bottoms, pulling them down her thighs."
-    "She leaves the task to me until they reach her knees, and then kicks them off with ease."
-    "All that remains is to hastily pull off my own shorts, and then we're both naked."
     "Of course, my cock needed no encouragement to become as stiff as a board."
     "But what surprises me is just how slick Sasha's pussy feels when the tip brushes its lips for the first time."
-    "She can't have gotten that wet in the few short moments since she opened her eyes and wanted to get frisky."
-    "So she must have been awake for a good while before that, getting excited at the thought of doing just this."
     "As usual, the knowledge of just how horny she is makes me all the more into it myself."
-    show sasha cowgirl pleasure
-    $ renpy.sound.play("sd/moans/sasha/sasha_moans_light_low.ogg", loop=True)
-    "And so I don't waste another moment, pulling her down onto me in one smooth motion."
+    scene expression make_anim(sasha_beach_cowgirl, time=0.5, loop=True)
+    $ renpy.sound.play("vo/sasha/light_moan.ogg", loop=True)
     "Sasha, it seems, is every bit as ready and willing as her pussy right now."
     "I slide into her without the smallest hint of resistance, sinking in until I'm balls deep."
     "Her entire body seems to yield to me in the exact same manner."
-    "Legs parting, belly and breasts pressed against me, lips wet against my throat."
-    "Maybe it's the heat of the day and the fact that we're laid under the baking sun."
-    "Or maybe I just want to be able to savour every moment of this intimacy with Sasha."
-    "But either way I find myself going slowly as I begin to move in and out of her."
-    "Sasha's body feels so soft above me, and the release of being inside her is something to take time over."
-    $ renpy.sound.play("sd/moans/sasha/sasha_moans_light_medium.ogg", loop=True)
+    "I find myself going slowly as I begin to move in and out of her."
+    "Sasha's body feels so soft above me."
+    scene expression make_anim(sasha_beach_cowgirl_rough, time=0.4, loop=True)
+    $ renpy.sound.play("vo/sasha/mid_moan.ogg", loop=True)
     "And she seems to have the same exact sentiment as I do too."
     "Because all I can hear from Sasha as I make long, lingering thrusts into her, are moans of approval."
-    "By now, it's getting hard to tell if the slickness of my thighs is from sweating or Sasha herself."
-    "But it's certainly sweat that's making her breasts slip and slither around above me."
-    if sasha.flags.boobjob:
-        "Those massive orbs are squeezed between our chests."
-        "Making me feel like I'm laid beneath a pair of bouncy, wobbling balls."
-    else:
-        "Those palm-sized orbs are pressing against me the whole time."
-        "And I can feel the stiff little nipples rubbing against me."
-    "But as pleasant as this moment is, there's no way it can last forever."
     "And all too soon, I feel that I'm about to cum."
     $ renpy.sound.play("sd/moans/sasha/sasha_moans_light_orgasm.ogg", loop=True)
     show sasha cowgirl ahegao cum with vpunch
@@ -824,20 +555,15 @@ label sasha_fuck_date_male(location="hero"):
     scene bg bedroom1
     show sasha
 
-
     call sasha_fuck_date_intro_male (location) from _call_sasha_fuck_date_intro_male
 
-
     call sasha_dick_reactions from _call_sasha_dick_reactions_1
-
 
     call sasha_fuck_date_foreplay_male from _call_sasha_fuck_date_foreplay_male
 
     call handle_npc_leaving (sasha, _return, from_foreplay=True) from _call_handle_npc_leaving_23
     if _return:
         return
-
-
 
     call sasha_fuck_date_choices_male from _call_sasha_fuck_date_choices_male_1
 
@@ -1706,105 +1432,78 @@ label sasha_fuck_date_cunnilingus:
 label sasha_fuck_date_bj:
     if hero.sexperience % 3 == 0:
         "Sasha kneels down in front of me, holding my eye and smiling up at me the whole time."
-        scene sasha bj2
-        show sasha bj2 naked
+        scene sasha_blow_01
         "In fact, I'm so busy staring into her eyes that I don't notice what she's doing with her hands."
         "Which is why I'm taken by surprise when she takes a firm hold of my cock!"
         mike.say "Ah..."
         mike.say "Hey, Sasha!"
         mike.say "Be gentle, okay?"
-        show sasha bj2 smile
         "All this gets in response from Sasha is a wicked laugh."
-        "Sasha's mouth is wide open as she laughs too."
-        "Which means she's more than prepared when she pounces a moment later!"
-        show sasha bj2 open
+        scene sasha_blow_02
         "Sasha takes almost a third of my cock into her mouth at once."
         "There's no pause or hesitation, almost no time to take a breath."
         "And there's no messing around with foreplay here either."
-        $ renpy.sound.play("sd/moans/sasha/sasha_blowjob_low.ogg", loop=True)
-        show sasha bj2 suck
+        $ renpy.sound.play("vo/sasha/bj01.ogg", loop=True)
+        scene expression make_anim(sasha_blow, time=0.5, loop=True)
         "One minute she's teasing me with it."
         "And the next she's actually doing it!"
         "I gasp as Sasha bites down a little too, letting me know she's serious."
         "Right from the start she used her lips and tongue to great effect."
         "I feel them slithering over the head and shaft of my cock inside her mouth."
-        $ renpy.sound.play("sd/moans/sasha/sasha_blowjob_medium.ogg", loop=True)
-        show sasha bj2 closed
+        $ renpy.sound.play("vo/sasha/bj01.ogg", loop=True)
+        scene expression make_anim(sasha_blow_hand, time=0.6, loop=True)
         "And the portion of it that's not in her mouth isn't neglected either."
         "Because Sasha rubs her hand up and down it the whole time too."
         "Head and hand are moving in perfect harmony."
-        "Which means nothing is left out of the act."
         mike.say "Sasha..."
-        show sasha bj2 opened
         mike.say "Of fuck..."
         mike.say "Sasha!"
+        scene sasha_blow_08
         "Sasha looks at me for a moment, out of the corner of her eye."
         "It's really nothing more than the briefest of passing glances."
-        "But somehow it lets me know just what she's feeling in that moment."
-        "Pleasure, confidence - and more than a little amusement too."
-        show sasha bj2 closed
+        scene sasha_blow_07
         "Then Sasha's eye closes again, and all I can do is let her have her way with me."
-        $ renpy.sound.play("sd/moans/sasha/sasha_blowjob_high.ogg", loop=True)
         "She does that by upping the stakes a moment later."
+        scene sasha_blow_05
         "Specifically by taking ever more of the length into her mouth."
         "Soon enough, Sasha has all but the smallest part of my cock in there."
         "And she's not slowing down to handle it either!"
-        show sasha bj2 opened
+        $ renpy.sound.play("vo/sasha/bj01.ogg", loop=True)
+        scene expression make_anim(sasha_blow_hand, time=0.6, loop=True)
         "If anything, Sasha seems to actually be picking up speed."
         "There's no room for her hands to get in on the action now."
         "So only her head is going back and forth."
         "The motion becomes almost hypnotic as I watch her go at it."
         "But then I begin to feel the effect the muscles of her throat are having on me."
-        show sasha bj2 closed
+        scene sasha_blow_07
         "And I realise that she's going faster because she's pushing me towards the end!"
         menu:
             "Cum in her mouth":
-                "All at once I feel it starting to happen."
                 "A cascade of sensation that I can't hope to stop."
                 "Sasha must know that it's coming too."
-                show mouth_insert sasha zorder 1 at center, zoomAt(1.0, (940, 440))
+                scene sasha_blow_05 with vpunch
+                $ renpy.sound.play("vo/mc/bj_load.ogg")
                 "She allows my cock to retreat from her throat."
-                show mouth_insert sasha cum
-                show sasha bj2 cum
-                with vpunch
+                scene sasha_blow_06 with vpunch
                 "But she keeps it in her mouth as I shoot my load."
-                show sasha bj2 closedb with vpunch
-                pause 0.2
-                with vpunch
-                pause 0.2
-                with vpunch
-                "And then she swallows the entire thing, from start to finish."
-                $ renpy.sound.play("sd/moans/sasha/sasha_blowjob_swallow.ogg", loop=True)
-                show mouth_insert sasha -cum
-                show sasha bj2 opened
                 "Expertly keeping the whole thing inside of her mouth."
                 $ sasha.love += 2
-                hide mouth_insert
+                scene bg bedroom
             "Cum on her face" if sasha.sub >= 50:
                 "All at once I feel it starting to happen."
                 "A cascade of sensation that I can't hope to stop."
                 "Sasha must know that it's coming too."
-                stop sound
-                show sasha bj2 -suck opened
+                scene sasha_blow_05
                 "As she pulls her head back, releasing my cock a moment later."
+                $ renpy.sound.play("vo/mc/bj_load.ogg")
                 with vpunch
                 "Then she leans back and smiles as I shoot my load into her face."
-                with vpunch
-                pause 0.2
-                show sasha bj2 closedb with vpunch
-                pause 0.3
-                show sasha bj2 cum face opened
-                "Stripe of sticky white cum paint her cheeks."
-                "Then it begins to run downwards over her lips and drip from her chin."
+                scene bg bedroom
                 $ sasha.sub += 1
         stop sound
     else:
         mike.say "On your knees."
         scene sasha bj
-        if sasha_beads:
-            show sasha bj beads
-        if sasha_ropes:
-            show sasha bj rope
         with fade
         "I need more. I want to feel her bobbing on my dick."
         "Groaning, I lean back a little more and brace on one hand."
@@ -1995,35 +1694,14 @@ label sasha_fuck_date_foreplay:
 
 label sasha_fuck_date_rimjob:
     sasha.say "Okay, [hero.name]..."
-    sasha.say "Lie down on the bed, yeah?"
+    sasha.say "sit down on the couch, yeah?"
     "Now it's my turn to nod as I hurry to do as Sasha tells me."
-    show sasha rimjob with fade
-    "Once I'm laid on the mattress, she climbs up beside me."
-    "And I watch with intense interest as Sasha parts my legs."
-    "I keep glancing down there as she lowers herself between them."
-    "Watching as her head disappears from view and waiting for what happens next."
-    "The first thing that I feel is the slightest touch of Sasha's tongue."
+    show sasha_low_tip with fade
     "She must be using nothing more then the tip as she begins."
     "But all the same, I feel a shiver spread out from down there."
     "It seems to travel in all directions at once."
-    "And it reaches my fingers, toes and scalp all at the same time."
-    "If Sasha even notices the effect, she doesn't stop for a moment."
-    "Because now I can feel her really starting to move inwards."
-    "Her tongue isn't tickling and being delicate any more."
-    "Instead I feel it sink deeper than before, pushing its way inside."
-    "The muscles of my ass do just what they were made to do as this happens."
-    "They tighten, trying as best they can to keep Sasha from getting any further."
-    "Part of me thinks that this is going to be the end of it."
-    "That Sasha's being presented with an impenetrable barrier."
-    "But she surprised me by redoubling the strength of her efforts."
-    "And rather than my tensed muscles stopping me feeling anything, the opposite is true."
-    "Their resistance only serves to make what I'm experiencing that much more intense."
-    "So much so that it takes me some time to notice how deep Sasha's managed to get."
-    "Deep enough for her to be able to bring her lips into play too."
-    "I know this because I can feel them now, kissing around the edges."
-    "As if that weren't enough, Sasha reaches up to grab my cock too."
-    "Obviously it's hard and standing to attention by now."
-    "And she takes full advantage of that, stroking it with her hand."
+    "I can feel her really starting to move inwards."
+    scene expression make_anim(sasha_rimjob, time=0.3, loop=True)
     mike.say "Oh god..."
     with vpunch
     mike.say "Sasha..."
@@ -2032,14 +1710,11 @@ label sasha_fuck_date_rimjob:
     "I have no idea if Sasha even hears what I'm saying."
     "And even if she does, nothing changes as a result."
     "Sasha simply keeps on going, as if I never said a word."
-    "I was twitching and tensing before, helpless to keep still."
-    "But now things have gone so far and become so intense, the opposite is true."
     "I feel like I'm paralysed by Sasha's touch, unable to move an inch."
     with vpunch
     "That is until the dam breaks inside of me."
-    with vpunch
     "When it does, I just go with it, feeling myself lose it."
-    show sasha rimjob cum with vpunch
+    show sasha_blow_facial with vpunch
     "I shoot my load as my entire body starts to quake from my orgasm."
     "Only then does Sasha haul herself up and release me from her grasp."
     "She leans on my thighs, waiting for me to subside and come back to reality."
@@ -2384,6 +2059,7 @@ label sasha_fuck_date_cowgirl(sexperience_min):
             sasha.say "Oh yeah?"
             sasha.say "And just what would that condition be, huh?"
         "I smile as I grip her firmly by the haunches, pulling her down onto me."
+        scene sasha_cowgirl_01
         mike.say "That I get to choose where I stick this thing!"
         "Sasha's eyes go wide and her mouth gapes as she yelps in surprise at the sensation of my cock."
         "It's gotten pretty hard in a short space of time, and she's evidently failed to notice."
@@ -2487,56 +2163,38 @@ label sasha_fuck_date_cowgirl(sexperience_min):
             "Call me old-fashioned if you like."
             "But all I hear right now is the call of Sasha's pussy."
             "And I'm more than eager to answer it!"
-            call check_condom_usage (sasha, 150) from _call_check_condom_usage_101
-            if _return == False:
-                return "leave_without_gain"
-            scene sasha cowgirl
-            show sasha cowgirl vaginal
-            if CONDOM:
-                show sasha cowgirl vaginal condom
-            "Sasha seems to sense what my intentions are, and she leans forward to make it happen."
             "I hardly have to do a thing, as she takes hold of my cock and guides it between her thighs."
+            scene sasha_cowgirl_pussy01
             "She rubs the head against the already slick lips of her pussy, sighing the whole time."
-            $ renpy.sound.play("sd/moans/sasha/sasha_moans_light_low.ogg", loop=True)
+            $ renpy.sound.play("vo/sasha/pussy_insert.ogg")
             "And then she pushes it a little way inside, the sensation belying the subtlety of the movement."
             "Once the head is inside of her, Sasha wriggles and writhes atop me."
             "The motion serves to ease me inside of her, letting her work herself down and onto me."
             "Apart from feeling incredible as she does this to me, the view is something else as well."
+            $ renpy.sound.play("vo/sasha/light_moan.ogg")
+            scene expression make_anim(sasha_cowgirl_jump, time=0.7, loop=True)
             "Every motion of Sasha's hips is mirrored in the way that her chest shakes and bounces above me."
-            if not sasha.flags.boobjob:
-                "Sasha's small, round and pert breasts bob up and down the whole time."
-                "And her nipples top them, becoming stiff and erect."
-            else:
-                "Sasha's augmented chest is so large that it almost keeps me from seeing her face!"
-                "They bounce and jiggle the whole time, like heavy balloons filled with water."
-            show sasha cowgirl hands vaginal
-            if CONDOM:
-                show sasha cowgirl hands vaginal condom
+            "Sasha's augmented chest is so large that it almost keeps me from seeing her face!"
+            "They bounce and jiggle the whole time, like heavy balloons filled with water."
             if sasha.sexperience % 3 == 0:
                 "Hypnotised by the sight of them, I have to reach up and take a hold."
                 "Sasha's face breaks into a sensual expression as she feels me do so."
-                $ renpy.sound.play("sd/moans/sasha/sasha_moans_light_medium.ogg", loop=True)
-                "And her moaning becomes that much louder as I massage and squeeze them a moment later."
-                "This seems to awaken a new level of appetite in Sasha altogether."
-                "Before she was happy to ride my cock at a sedate speed, taking whatever it gave her."
-                "But now she begins to quicken her pace and intensify her movements."
+                $ renpy.sound.play("vo/sasha/mid_moan.ogg")
+                scene expression make_anim(sasha_cowgirl_speed, time=0.4, loop=True)
+                "She begins to quicken her pace and intensify her movements."
                 "At the same time her expression tips over into one of almost dazed pleasure."
                 "Sasha's mouth begins to hang open, her tongue almost lolling out over her bottom lip."
                 "I don't know how much longer she can keep up this pace."
                 "But one thing that I do know is I can't keep it up any longer!"
             else:
                 "I can't hold back any longer anyway; it feels too good."
+                scene expression make_anim(sasha_cowgirl_rough, time=0.4, loop=True)
                 "I start rocking my hips at a quick pace, keeping the angle of her lower body tilted so that each thrust teases over her G-spot."
-                $ renpy.sound.play("sd/moans/sasha/sasha_moans_light_medium.ogg", loop=True)
+                $ renpy.sound.play("vo/sasha/mid_moan.ogg")
                 "With that kind of attention, she's gasping for breath and squirming soon, her lips parted and a flush across her cheeks."
                 "I love the lusty look in her eyes."
                 "I don't bother to vary my pace or position."
                 "It's clear by her whimpers and gasps that I'm doing just what she wants, and it feels wonderful to me too."
-                "Her cunt is so tight and I can feel it getting more and more slippery the longer I fuck her."
-                "The smell of sex rises in the air, arousing both of us even further."
-                "I can tell by the way she trembles and how tight she holds onto my wrists that she's close."
-                "Groaning, right on the edge myself, I shorten my thrusts and fuck her harder, entranced by the way her small breasts jiggle and bounce with each impact."
-                "Finally, I can't hold it off any more."
                 "Just as I shove deep, my cock starting to throb, she cries out and arches to grind against me."
             if sasha.sub >= 25 and hero.sexperience >= 25:
                 menu:
@@ -2547,19 +2205,7 @@ label sasha_fuck_date_cowgirl(sexperience_min):
                     "Just go on":
                         pass
             call cum_reaction (sasha, 'vaginal', sexperience_min, 190, check_sub=True, sub_min=50) from _call_cum_reaction_160
-            if _return == "vaginal_condom":
-                $ sasha.love += 1
-                "Knowing that I have the condom on means that I don't as much as miss a beat."
-                "I keep right on thrusting into Sasha until the very end."
-                with vpunch
-                "And I don't have to worry about whether or not it's the right thing to do."
-                $ renpy.sound.play("sd/moans/sasha/sasha_moans_light_orgasm.ogg", loop=True)
-                show sasha cowgirl ahegao vaginal condom with vpunch
-                "As the way she reacts and the almost desperate sounds that she makes tell me all I need to know."
-                with vpunch
-                "Sasha clings to me until the very last, riding it out as we spend the last of our energies."
-                "And then she collapses atop me, the only sound being our out of breath panting."
-            elif _return == "vaginal_outside":
+            if _return == "vaginal_outside":
                 $ sasha.sub += 1
                 show sasha cowgirl outside -hands
                 "As deep into the act as I might be, that doesn't stop me from knowing when to pull out."
@@ -2671,9 +2317,6 @@ label sasha_fuck_date_cowgirl(sexperience_min):
 
 label sasha_fuck_date_missionary(sexperience_min):
     if hero.sexperience % 3 == 0:
-        call check_condom_usage (sasha, 150) from _call_check_condom_usage_102
-        if _return == False:
-            return "leave_without_gain"
         mike.say "On your back."
         "I want to be able to see the desire and pleasure in her eyes while I'm fucking her."
         scene bg black
@@ -2817,9 +2460,6 @@ label sasha_fuck_date_missionary(sexperience_min):
             "Fuck her pussy":
                 "I must be naked and across the room in no more than a couple of seconds."
                 "Ready to throw myself onto the bed and literally land atop Sasha."
-                call check_condom_usage (sasha, 150) from _call_check_condom_usage_172
-                if _return == False:
-                    return "leave_without_gain"
                 "I can't remember the last time that someone got me as hard as I am right now."
                 "And so all that I can think about is getting myself some of that sweet little pussy."
                 show sasha missionary -nomc
@@ -3150,9 +2790,6 @@ label sasha_fuck_date_missionary(sexperience_min):
 
 label sasha_fuck_date_standing(sexperience_min):
     if hero.sexperience % 3 == 0:
-        call check_condom_usage (sasha, 150) from _call_check_condom_usage_103
-        if _return == False:
-            return "leave_without_gain"
         mike.say "Come here."
         "I lead Sasha over to the dresser."
         mike.say "Bend over."
@@ -3356,11 +2993,6 @@ label sasha_fuck_date_standing(sexperience_min):
                 "Like I really need to be reminded!"
                 "All I can think about right now is getting my hands on Sasha."
                 "And so I flex my fingers in anticipation, ready make a grab for her haunches."
-                call check_condom_usage (sasha, 150) from _call_check_condom_usage_173
-                if _return == False:
-                    return "leave_without_gain"
-                if CONDOM:
-                    show sasha stand condom
                 "Clapping my hands onto Sasha's waist, I smile as she yelps and flinches."
                 sasha.say "Oooh!"
                 sasha.say "Mmm…"
@@ -3434,16 +3066,6 @@ label sasha_fuck_date_standing(sexperience_min):
                         "So that it's all I can do to match her pace and keep up now!"
                         $ sasha_ballgag = True
                     "Just fuck her":
-
-
-
-
-
-
-
-
-
-
                         "I could take a risk and do something pretty crazy right now."
                         "But the truth is that I'm too worried about making the wrong choice."
                         "And the last thing that I want to do is blow it with Sasha."
@@ -3652,15 +3274,6 @@ label sasha_fuck_date_standing(sexperience_min):
                         $ sasha_ballgag = True
                     "Just fuck her":
 
-
-
-
-
-
-
-
-
-
                         "I could take a risk and do something pretty crazy right now."
                         "But the truth is that I'm too worried about making the wrong choice."
                         "And the last thing that I want to do is blow it with Sasha."
@@ -3819,9 +3432,6 @@ label sasha_fuck_date_doggy(sexperience_min):
                 $ sasha.sub += 2
                 $ sasha.flags.anal += 1
             "Fuck her pussy":
-                call check_condom_usage (sasha, 160) from _call_check_condom_usage_104
-                if _return == False:
-                    return "leave_without_gain"
                 "My cock is still a little slippery with cum, but it doesn't look like she'll need the extra lube."
                 show sasha doggy beads2 entered mike vaginal
                 if CONDOM:
@@ -3903,9 +3513,6 @@ label sasha_fuck_date_doggy(sexperience_min):
                 $ sasha.love += 2
                 $ sasha.sub += 1
     else:
-        call check_condom_usage (sasha, 150) from _call_check_condom_usage_105
-        if _return == False:
-            return "leave_without_gain"
         "Much as I might enjoy drawing it out longer, at this moment there's nothing I want more than to pound her little pussy until she screams."
         "So I give her a shove between the shoulder-blades, sending her to her hands and knees."
         scene bg black
@@ -4028,11 +3635,6 @@ label sasha_fuck_date_doggy(sexperience_min):
 label sasha_bondage_sex:
     scene bg bedroom1
 
-
-
-
-
-
     show sasha foreplay rope
     with fade
     "I tie Sasha up, using a length of rope to create a series of intricate knots across her body."
@@ -4123,9 +3725,6 @@ label sasha_bondage_sex:
 label sasha_bondage_sex_second_round:
     "Both of us are panting now, red-faced and overcome by the excitement of what we've just done."
     "As Sasha waits obediently on the bed before me, I take a moment to plan my next move."
-    call check_condom_usage (sasha, 150) from _call_check_condom_usage_106
-    if _return == False:
-        return "leave_without_gain"
     "I motion for Sasha to come closer as I decide what's in store for her."
     "She crawls towards the edge of the bed, clearly eager to see what fate awaits her."
     menu:
@@ -4608,4 +4207,3 @@ label sasha_dom_cunnilingus_male:
     $ hero.cancel_activity()
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

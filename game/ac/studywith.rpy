@@ -22,11 +22,11 @@ label study_with:
     $ active_girl.set_flag("interact", 1, 1, "+")
     call expression f"{active_girl.id}_greet" from _call_expression_85
     $ renpy.show(active_girl.id)
-    call expression f"study_with_dialogues_1_{hero.gender}" from _call_expression_164
+    call expression f"study_with_dialogues_1_male" from _call_expression_164
     if hero.knowledge * 2 >= 40 - active_girl.love:
-        if renpy.has_label(f"{active_girl.id}_study_with_intro_{hero.gender}"):
+        if renpy.has_label(f"{active_girl.id}_study_with_intro_male"):
             show expression f"studywith {active_girl.id}"
-            call expression f"{active_girl.id}_study_with_intro_{hero.gender}" from _call_expression_95
+            call expression f"{active_girl.id}_study_with_intro_male" from _call_expression_95
         else:
             active_girl.say "In fact, yes!"
             $ renpy.hide(active_girl.id)
@@ -39,14 +39,14 @@ label study_with:
             if "bookworm" in active_girl.traits:
                 $ bonus += 1
             $ active_girl.love += bonus
-            if renpy.has_label(f"{active_girl.id}_study_with_success_{hero.gender}"):
-                call expression f"{active_girl.id}_study_with_success_{hero.gender}" from _call_expression_165
+            if renpy.has_label(f"{active_girl.id}_study_with_success_male"):
+                call expression f"{active_girl.id}_study_with_success_male" from _call_expression_165
             if hero.knowledge >= active_girl.sub:
                 $ active_girl.sub += 1
             elif "bookworm" in active_girl.traits:
                 $ active_girl.sub -= 1
-        elif renpy.has_label(f"{active_girl.id}_study_with_failure_{hero.gender}"):
-            call expression f"{active_girl.id}_study_with_failure_{hero.gender}" from _call_expression_166
+        elif renpy.has_label(f"{active_girl.id}_study_with_failure_male"):
+            call expression f"{active_girl.id}_study_with_failure_male" from _call_expression_166
         hide expression f"studywith {active_girl.id}"
     else:
         active_girl.say "I'm fine."

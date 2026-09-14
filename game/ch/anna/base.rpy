@@ -213,7 +213,7 @@ label anna_cheated(action, cheat_npc=None):
     return
 
 label anna_greet:
-    if renpy.has_label(f"anna_greet_dialogues_{hero.gender}") and not anna.flags.greeted:
+    if renpy.has_label(f"anna_greet_dialogues_male") and not anna.flags.greeted:
         scene expression f"bg {game.room}"
         $ anna.flags.greeted = TemporaryFlag(True, 1)
         show anna
@@ -231,7 +231,7 @@ label anna_greet:
                 anna.say "Good afternoon [hero.name]."
             else:
                 anna.say "Good evening [hero.name]."
-        call expression f"anna_greet_dialogues_{hero.gender}" from _call_expression_208
+        call expression f"anna_greet_dialogues_male" from _call_expression_208
         if anna.flags.submissive_interact:
             if randint(0, 1) == 0:
                 anna.say "You can use the front door or the back, [hero.name] - as long as you cum inside!"

@@ -84,7 +84,7 @@ screen cheats():
             use cheats_viewport("characters"):
                 vbox spacing 5:
                     for person in Person.sort(key=lambda x: x.id):
-                        if (hero.gender == "female" and person.id == "bree") or (hero.gender == "male" and person.id == "mike"):
+                        if person.id == "mike":
                             continue
                         else:
                             textbutton person.name action [SetScreenVariable("cheat_char", person.id), SetScreenVariable("cheat_screen", "attributes")] style "cheats_button"

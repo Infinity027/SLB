@@ -22,7 +22,7 @@ label cinema_with:
     $ active_girl.set_flag("interact", 1, 1, "+")
     call expression f"{active_girl.id}_greet" from _call_expression_35
     $ renpy.show(active_girl.id)
-    call expression f"cinema_with_dialogues_1_{hero.gender}" from _call_expression_53
+    call expression f"cinema_with_dialogues_1_male" from _call_expression_53
     if hero.charm >= 40 - active_girl.love:
         active_girl.say "Sure, why not?"
         "I watch a movie with [active_girl.name]."

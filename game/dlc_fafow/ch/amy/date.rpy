@@ -96,25 +96,23 @@ label amy_dick_reactions:
         "I turn around, conscious of this being a first."
         "Specifically the first time Amy's seen me naked."
         if hero.has_skill("hung"):
-            show dick reactions amy scared
+            show amy_dick_reaction
             amy.say "Sweet Jesus!"
             mike.say "Is...is there something wrong?"
-            show dick reactions amy smile
             amy.say "NO...no, of course not."
             amy.say "I just wasn't prepared for it to be..."
             amy.say "To be so BIG!"
             $ amy.sub += 10
+            hide amy_dick_reaction
         elif hero.has_skill("smalldick"):
-            show dick reactions amy mock
+            show amy annoyed
             amy.say "Oh..."
             amy.say "It's...it's perfectly formed!"
             mike.say "Is...is there something wrong?"
-            show dick reactions amy smile
             amy.say "NO...no, of course not."
-            show dick reactions amy mock
             amy.say "I'm just...surprised, that's all..."
             $ amy.sub -= 10
-        hide dick reactions
+            hide amy annoyed
     return
 
 label amy_date_intro_valentine_male:

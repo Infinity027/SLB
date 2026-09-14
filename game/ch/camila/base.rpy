@@ -222,7 +222,7 @@ label camila_bye(bye_outfit=None):
     return
 
 label camila_greet:
-    if renpy.has_label(f"camila_greet_dialogues_{hero.gender}") and not camila.flags.greeted:
+    if renpy.has_label(f"camila_greet_dialogues_male") and not camila.flags.greeted:
         scene expression f"bg {game.room}"
         show camila
         $ camila.flags.greeted = TemporaryFlag(True, 1)
@@ -238,7 +238,7 @@ label camila_greet:
                 camila.say "Good afternoon [hero.name]."
             else:
                 camila.say "Good evening [hero.name]."
-        call expression f"camila_greet_dialogues_{hero.gender}" from _call_expression_217
+        call expression f"camila_greet_dialogues_male" from _call_expression_217
         if camila.flags.submissive_interact:
             if randint(0, 1) == 0:
                 camila.say "It's my duty to protect and serve, but your word is law, [hero.name]!"

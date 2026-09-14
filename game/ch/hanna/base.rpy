@@ -223,7 +223,7 @@ label hanna_cheated(action, cheat_npc=None):
     return
 
 label hanna_greet:
-    if renpy.has_label(f"hanna_greet_dialogues_{hero.gender}") and not hanna.flags.greeted:
+    if renpy.has_label(f"hanna_greet_dialogues_male") and not hanna.flags.greeted:
         scene expression f"bg {game.room}"
         $ hanna.flags.greeted = TemporaryFlag(True, 1)
         show hanna
@@ -241,7 +241,7 @@ label hanna_greet:
                 hanna.say "Good afternoon [hero.name]."
             else:
                 hanna.say "Good evening [hero.name]."
-        call expression f"hanna_greet_dialogues_{hero.gender}" from _call_expression_228
+        call expression f"hanna_greet_dialogues_male" from _call_expression_228
         if hanna.flags.submissive_interact:
             if randint(0, 1) == 0:
                 hanna.say "Walk me down the street like a dog, [hero.name] - show me off like the bitch I am!"

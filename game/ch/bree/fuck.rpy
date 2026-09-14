@@ -25,7 +25,7 @@ init python:
     "conditions": [
         IsHour(14, 18),
         HeroTarget(        
-            IsRoom("beach", "date_beach", "date_nudistbeach"),
+            IsRoom("beach", "date_beach"),
             HasStamina(),
             ),
         PersonTarget(bree,
@@ -193,7 +193,6 @@ label bree_fuck_home:
         call bree_fuck_date_male from _call_bree_fuck_date
     return
 
-label bree_fuck_date_nudistbeach:
 label bree_fuck_beach:
 label bree_fuck_date_beach:
     $ game.play_music("music/roa_music/city_nights.ogg")
@@ -350,7 +349,6 @@ label bree_fuck_date_beach:
 
 label bree_hottub_sex_male:
     $ game.active_date.clothes = "swimsuit"
-    $ CONDOM = False
     show bg pool
     show hottub bree
     "Today's one of those days when everyone's trying to act normal, like there's nothing on their minds."
@@ -413,53 +411,49 @@ label bree_hottub_sex_male:
     bree.say "You weren't kidding!"
     "[bree.name] wastes no time in pulling down my trunks to reveal my stiff cock."
     "And she can't help eyeing it with what looks like real hunger too!"
-    call bree_dick_reactions from _call_bree_dick_reactions_1
     bree.say "I...I think we'd better get that inside of me, [hero.name]."
     bree.say "We'll both feel so much better then!"
-    show hottub sex male bree outside with fade
+    scene bree_hottub01 with fade
     "With that, [bree.name] crouches in the water and angles herself towards my cock."
     "I sit back and watch in fascination as she lowers herself onto it."
     "Even as keen as she is, it still takes a little teasing to convince her pussy."
     "And so [bree.name] rubs the head up and down her lips until they're good and slick."
-    show hottub sex male bree inside
-    "Then she guides the tip in just enough to be sure."
+    scene bree_hottub02
+    "Then I guides the tip in just enough to be sure."
     "As if watching her do this wasn't hot to begin with, the feeling is incredible."
     "[bree.name] looks like a work of art as she sinks down onto me."
-    "And all I have to do is support her as she rides my cock."
     "The smile that she has on her face the whole time sweet too."
     "Almost as sweet as her pussy feels around my dick."
+    scene expression make_anim(bree_hottub, time=0.2, loop=True)
     mike.say "Oh, shit, [bree.name]!"
     mike.say "That feels amazing!"
     bree.say "Ah..."
     bree.say "It...it's pretty good for me too!"
-    "I reach out and take hold of [bree.name] around the waist."
-    "This means that I can start to use my own strength as well."
-    "And the effect seems to be instant, making her toss her head from side to side."
+    scene bree_hottub02
     "I feel like [bree.name] was the one that started this thing off."
     "But now it's my turn to do all that I can to take it to the next level."
     "And so I use all of the energy that I possess to make that happen."
     "Pretty soon I can see the rewards of my efforts."
+    scene bree_hottub06
     "[bree.name] had her eyes squeezed tightly shut, like she's about to lose it."
     "And I can feel the way that her muscles are starting to twitch."
     "She's about to cum, and she's squeezing me until I cum too!"
     call cum_reaction (bree, 'vaginal', 1) from _call_cum_reaction_51
     if _return == "vaginal_outside":
-        show hottub sex male outside
+        scene bree_hottub08
         "Somehow I manage to pull out of [bree.name] at the very last moment."
         "She lets out a moan at the sensation, clinging to me the whole time."
-        show hottub sex male cumshot with vpunch
+        with hpunch
         pause 0.25
-        with vpunch
-        pause 0.25
-        with vpunch
-        "And that means I shoot my load all over her chest and belly."
+        with hpunch
+        "And that means I shoot my load all over her ass and back."
         $ bree.sub += 1
         "I pant as I watch it hit her skin and then start to run down into the water."
     else:
         "I was right, [bree.name]'s cumming right now - and she's taking me with her!"
-        show hottub sex male cumshot with vpunch
+        scene bree_hottub07 with hpunch
         "All I can do is hold on until the end, and then lose myself totally."
-        show hottub sex male ahegao with vpunch
+        scene bree_hottub06 with hpunch
         "I hear myself groan as I fill [bree.name] with all I have, and she moans in turn."
         with vpunch
         $ bree.love += 1
@@ -1580,9 +1574,6 @@ label bree_fuck_date_doggy(sexperience_min):
     hide bree
     show bree doggy
     with fade
-    call check_condom_usage (bree) from _call_check_condom_usage_23
-    if _return == False:
-        return "leave_without_gain"
     "[bree.name] offers no resistance whatsoever as I turn her around and push her gently onto the bed before me."
     "For a moment she goes to lay flat upon her stomach, but I put a hand at the top of each of her thighs and pull her upright once more."
     "She seems to get the message, and raises herself up on her elbows and knees, shuffling the last bit of the way onto the bed."
@@ -1851,12 +1842,7 @@ label bree_fuck_date_doggy_rough(sexperience_min):
             "As she lets out a cry of surprise and then a filthy giggle."
             "But a moment later, [bree.name] seems to remember something important."
             bree.say "Aren't you forgetting something?"
-            call check_condom_usage (bree) from _call_check_condom_usage_24
-            if _return == False:
-                return "leave_without_gain"
             show bree rough doggy
-            if CONDOM:
-                show bree rough doggy condom
             with fade
             "The first thing that springs to mind is the fact that [bree.name] wanted me to be firm."
             "You know, like she wanted me to take charge from the beginning."
@@ -2185,11 +2171,6 @@ label bree_fuck_date_cowgirl(sexperience_min):
             "Which means the moment I pull her towards me I feel a thrill."
             "All it takes is for the tip of my cock to brush against [bree.name]'s lips."
             "Just that and I know that we're both ready to go!"
-            call check_condom_usage (bree) from _call_check_condom_usage_25
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show bree cowgirl condom
             "By now my cock is practically begging for me to put it inside of [bree.name]."
             "And I can tell from the feeling of her atop me that her pussy wants it badly too!"
             "Wasting no more time, I thrust my groin upwards and pull [bree.name] down in one move."
@@ -2468,11 +2449,6 @@ label bree_fuck_date_reverse_cowgirl(sexperience_min):
         "Fuck her pussy":
             "Part of me kind of resents being compared to a mechanical bull."
             "And so maybe that's why I think up a small measure of revenge."
-            call check_condom_usage (bree) from _call_check_condom_usage_118
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show bree reverse cowgirl condom
             "[bree.name] lifts herself up to allow me the space to get my cock ready for her."
             "And that's the moment I choose to strike!"
             "I tighten my grip on her haunches and then pull her downwards."
@@ -2654,9 +2630,6 @@ label bree_fuck_date_reverse_cowgirl(sexperience_min):
     return
 
 label bree_fuck_date_missionary(sexperience_min):
-    call check_condom_usage (bree) from _call_check_condom_usage_26
-    if _return == False:
-        return "leave_without_gain"
     "I take [bree.name] firmly by the hand and lead her over to the side of the bed."
     "She still seems nervous, stealing glances at me as we go and smiling weakly."
     mike.say "You don't have to be afraid, [bree.name]."
@@ -2877,11 +2850,6 @@ label bree_fuck_date_spoon(sexperience_min):
             "Placing a hand on [bree.name]'s waist, I pull her towards me."
             "Now she's snuggling down into my lap with nothing at all between us."
             "And the sensation is a hundred times more pleasurable than before."
-            call check_condom_usage (bree) from _call_check_condom_usage_27
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show bree spoon condom
             "[bree.name] seems more than content just to lie back and leave things to me."
             "So I take full advantage, gently sliding my cock between her thighs."
             "I begin by slowly teasing the lips of her pussy with the head."
@@ -3268,11 +3236,6 @@ label bree_fuck_sasha_bedroom(sexperience_min=10):
             "And I take full advantage of the fact, pushing my cock between her legs."
             bree.say "Oh my!"
             bree.say "[hero.name] - you beast!"
-            call check_condom_usage (bree) from _call_check_condom_usage_28
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show bree doggy condom
             "Strengthening my grip on [bree.name]'s waist, I push myself forwards."
             "This means that my cock slides along her pussy."
             "And as it does so there are no smart remarks or quips from [bree.name]."
@@ -3754,11 +3717,6 @@ label bree_zbox_penalty(sexperience_min=0):
             "I can hear her actually chuckling a little, and she even wiggles her butt!"
             "All of which makes me feel better about collecting on the bet we made."
             "It helps to get my cock all the way up too, meaning that I'm ready to go."
-            call check_condom_usage (bree) from _call_check_condom_usage_29
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show bree doggy condom
             "I start slow and gentle, just pushing my cock between [bree.name]'s thighs."
             "But as soon as it touches her lips a little, she giggles and shivers."
             bree.say "Ooh..."

@@ -49,7 +49,7 @@ init python:
         IsHour(14, 18),
         HeroTarget(
             
-            IsRoom("beach", "date_beach", "date_nudistbeach"),
+            IsRoom("beach", "date_beach"),
             HasStamina(),
             ),
         PersonTarget(samantha,
@@ -64,7 +64,6 @@ init python:
 
 label samantha_hottub_sex_male:
     $ game.active_date.clothes = "swimsuit"
-    $ CONDOM = False
     scene bg pool
     "I have to admit that getting Sam into the hot-tub with me was one of those things on my bucket list."
     "Well, maybe that's an overstatement, but in all the time we lived together, we never took a dip together."
@@ -151,12 +150,9 @@ label samantha_hottub_sex_male:
                 $ samantha.love -= 1
             else:
                 samantha.say "Bossy. I like it."
-    show hottub sex male samantha outside with fade
-    call samantha_dick_reactions from _call_samantha_dick_reactions
+    scene samnatha_hottub06 with fade
     "Holding onto my already hard cock, Sam turns her back to me."
     "She leans against the side of the tub, lifting her ass out of the water."
-    "And then she shakes it in a way that says more than words ever could."
-    "I don't need to be told what to do next, especially since she still has a hold of me!"
     "I follow Sam's lead, instinctively reaching out to grab hold of her at the waist."
     "She pushes her ass into me then, grinding it into my groin."
     samantha.say "Like I said, [hero.name], we're making memories."
@@ -165,12 +161,10 @@ label samantha_hottub_sex_male:
     "By now I'm getting so excited that all I can do is nod."
     "And my hand is already exploring between Sam's thighs."
     "She giggles as I use the other hand to pull down my trunks."
-    show hottub sex male samantha inside
+    scene samnatha_hottub01
     "A few seconds later, the giggles turn into a sensual sigh."
     "I can't help letting out a moan too, as I feel myself pushing into her."
     "Sam's at that halfway point as I part the lips of her pussy."
-    "She's willing to be persuaded, but not surrendering without a fight."
-    "Which means that every inch I gain comes with an intense sensation."
     "Sam seems to urge me on without saying a word."
     "She nods as she gazes back over her shoulder."
     "The look in her eyes telling me that she's loving it as much as I am."
@@ -181,40 +175,30 @@ label samantha_hottub_sex_male:
     elif samantha.sub >=25:
         mike.say "You feel unbelievable."
         samantha.say "Keep going."
+
+    scene expression make_anim(samnatha_hottub, time=0.5, loop=True)
     "Knowing that Sam's getting off on my efforts only makes me try harder."
-    "And soon enough she's practically forced up against the edge of the tub."
-    "All that's keeping her from falling out is the fact that I'm so deep into her."
-    "I don't want to push too hard or too far."
-    "But at the same time I'm determined to make this a moment Sam will never forget."
-    "And so all I can do is listen as closely as possible to the sounds she makes."
-    "That and trust to the fact that I know her well enough to pull it off."
     "Sam certainly seems to like what I'm doing to her."
     "She's moving in time with me, riding my cock like a jockey on a horse!"
-    if samantha.flags.toldpreg:
-        "Her free hand drifts to her belly for a heartbeat; the sight makes something fierce and protective flare in my chest."
-    elif samantha.flags.NPCpregnancy == "ryan":
-        "Her free hand drifts to her belly for a heartbeat."
     "In fact, I think I can feel her starting to twitch on the end of it."
+    scene samnatha_hottub04 with fade
     "I think we're both about to cum!"
     call cum_reaction (samantha, 'vaginal', 1) from _call_cum_reaction_150
     if _return == "vaginal_outside":
-        show hottub sex male outside
+        scene samnatha_hottub06
         if game.days_played%2 == 1:
             "I drag in a breath and yank myself free just in time, hot slickness striping her lower back."
         else:
             "I mean to hold on a second longer, but the wave crests and I spill across her back in shuddering pulses."
-        show hottub sex male cumshot with hpunch
         $ samantha.sub += 1
         with hpunch
         "And she seems to cum at the same time, shuddering as the sensation overtakes her."
     else:
         "I'm so deep inside of Sam now, and she's pressed so hard against the edge of the tub."
         "There's no way I can do anything other than keep right on going to the end."
-        show hottub sex male cumshot with hpunch
+        scene samnatha_hottub05 with hpunch
         $ samantha.love += 1
         "That means I cum inside of Sam with all of the force I've been using to fuck her."
-        show hottub sex male ahegao with hpunch
-        "And the sensation of me bursting deep in her pushes her over the edge too."
         with hpunch
         "She cums almost a second after me, release coming for us both at the same time."
     hide hottub
@@ -222,24 +206,10 @@ label samantha_hottub_sex_male:
     with fade
     "Sam clings to me in the moments afterwards, shivering as the aftershocks hit her."
     "She chuckles to herself a little, nestling her head against my chest."
-    if samantha.flags.toldpreg:
-        "She touches her baby bump."
-        samantha.say "That's ours."
-        if samantha.sub >= 50:
-            mike.say "Mine."
-            samantha.say "Yours."
-            $ samantha.sub += 1
-        else:
-            mike.say "Ours."
-            $ samantha.love += 1
-    elif samantha.flags.NPCpregnancy == "ryan":
-        samantha.say "Hold me a second longer."
-        mike.say "I've got you."
+    if samantha.flags.nickname == "cupcake":
+        mike.say "Hey, Cupcake."
     else:
-        if samantha.flags.nickname == "cupcake":
-            mike.say "Hey, Cupcake."
-        else:
-            mike.say "Hey, Sam."
+        mike.say "Hey, Sam."
     mike.say "What's so funny?"
     samantha.say "Oh, nothing much."
     samantha.say "Just that I'll never be able to look at this tub the same way again!"
@@ -304,7 +274,6 @@ label samantha_fuck_date_male(location="hero"):
     show samantha
     play music "music/roa_music/the_one.ogg" loop fadeout .5 fadein .5
 
-
     if game.week_day % 3 == 0 and hero.sexperience >= 20 and samantha.sexperience >= 1:
         call samantha_fuck_date_cunnilingus_intro from _call_samantha_fuck_date_cunnilingus_intro
         call samantha_fuck_date_cunnilingus from _call_samantha_fuck_date_cunnilingus
@@ -312,20 +281,14 @@ label samantha_fuck_date_male(location="hero"):
     else:
         call samantha_fuck_date_intro_male (location) from _call_samantha_fuck_date_intro_male
 
-
     call samantha_dick_reactions from _call_samantha_dick_reactions_5
-
 
     call samantha_fuck_date_foreplay_male from _call_samantha_fuck_date_foreplay_male
 
     $ skip_to_sleep = _return
 
-
-
-
     if not skip_to_sleep:
         call samantha_fuck_date_choices_male from _call_samantha_fuck_date_choices_male
-
 
         call handle_npc_leaving (samantha, _return) from _call_handle_npc_leaving_22
         if _return:
@@ -1464,17 +1427,8 @@ label samantha_fuck_date_doggy(sexperience_min):
                 show expression f"samantha doggy nomike asscum bodycum{FACIAL} {BLINDFOLD} {DILDO}"
             $ samantha.flags.anal += 1
         "Fuck her pussy" if not DILDO:
-            call check_condom_usage (samantha) from _call_check_condom_usage_97
-            if _return == False:
-                return
             "Meanwhile, my cock rests between her asscheeks."
-            if CONDOM:
-                show expression f"samantha doggy {FACIAL} {BEADS} {BLINDFOLD} condom"
-            else:
-                show expression f"samantha doggy {FACIAL} {BEADS} {BLINDFOLD}"
-            if samantha.piercings.clit.worn and randint(0, 1):
-                "When I slide lower, a cool piercing kisses the crown of my cock and she jolts."
-                "I slide the length down between those wonderful curves, soon finding her womanhood."
+            show expression f"samantha doggy {FACIAL} {BEADS} {BLINDFOLD}"
             "With a thrust, I take her, and she squeaks as I penetrate."
             "My chest presses up against her naked back, our bodies warming each other as I rut away like a wild animal."
             if BEADS:
@@ -1483,10 +1437,7 @@ label samantha_fuck_date_doggy(sexperience_min):
                         call samantha_date_fuck_beads_out from _call_samantha_date_fuck_beads_out
                     "Don't":
                         pass
-            if CONDOM:
-                show expression f"samantha doggy {FACIAL} {BEADS} {BLINDFOLD} condom"
-            else:
-                show expression f"samantha doggy {FACIAL} {BEADS} {BLINDFOLD}"
+            show expression f"samantha doggy {FACIAL} {BEADS} {BLINDFOLD}"
             if samantha.flags.engaged and randint(0, 1):
                 "Her wedding ring ticks against the sheet when she braces, flashing each time I drive in."
             elif samantha.piercings.navel.worn and randint(0, 1):
@@ -1700,11 +1651,6 @@ label samantha_fuck_date_reverse_cowgirl(sexperience_min):
             if samantha.piercings.clit.worn and randint(0, 1):
                 "The crown kisses a cool ring; she jolts and then aims me again with a hungry little noise."
             "And there's nothing more I want right now than to push it right in there."
-            call check_condom_usage (samantha) from _call_check_condom_usage_98
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show samantha reverse condom
             "Sam doesn't waste any time."
             "She knows what she wants and she's going to get it."
             "I feel her pressing herself down, using all of her weight."
@@ -2130,11 +2076,6 @@ label samantha_fuck_date_cowgirl(sexperience_min):
             "Sam laughs with evident delight."
             samantha.say "Sure thing, [hero.name]."
             samantha.say "We can do that!"
-            call check_condom_usage (samantha) from _call_check_condom_usage_99
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show samantha cowgirl condom
             "Sam raises herself up and pulls my cock towards her at the same time."
             "And I find myself gasping again as she rubs it against the lips of her pussy."
             if samantha.piercings.clit.worn and randint(0, 1):
@@ -2194,8 +2135,6 @@ label samantha_fuck_date_cowgirl(sexperience_min):
             "It feels incredible, making me want to lie back and leave her to it."
             "But then I feel her hands grabbing my wrists."
             "Sam pulls my arms up, pressing my hands against her breasts."
-            if samantha.piercings.nipples.worn and randint(0, 1):
-                "Her nipples piercings press into my palms; the tug makes her gasp."
             show samantha cowgirl up
             samantha.say "[hero.name]..."
             samantha.say "Make the fantasy come true..."
@@ -2450,19 +2389,11 @@ label samantha_fuck_date_cowgirl(sexperience_min):
 label samantha_fuck_date_missionary(sexperience_min):
     $ result = randint(1, 2)
     if result == 1:
-        call check_condom_usage (samantha) from _call_check_condom_usage_100
-        if _return == False:
-            return
-        if not CONDOM:
-            show samantha missionary pussy
-        else:
-            show samantha missionary condom
+        show samantha missionary pussy
         if FACIAL:
             show samantha missionary cumface
         with fade
-        if samantha.flags.engaged and randint(0, 1):
-            "Her wedding ring flashes beside my cheek when she cups my face."
-        elif FACIAL and randint(0, 1):
+        if FACIAL and randint(0, 1):
             "A glossy sheen still clings to her cheek; she licks a streak from her lip and smiles."
         if samantha.is_sex_slave and randint(0, 1):
             samantha.say "Your slave is open. Take me."
@@ -2612,9 +2543,6 @@ label samantha_fuck_date_missionary(sexperience_min):
                 "So I direct my gaze downwards, glancing between Sam's thighs."
                 "And the moment I do that, what I see does the trick."
                 "That neat, perfect little pussy - that's what I want!"
-                call check_condom_usage (samantha) from _call_check_condom_usage_158
-                if _return == False:
-                    return
                 "Sam seals the deal a moment later, when she draws up her legs so that they part."
                 "And at the same time she extends her arms, beckoning me to come to her."
                 "Of course there's nothing that I want more in the world right now than to do that."
@@ -3058,13 +2986,6 @@ label samantha_fuck_flat_doggy(sexperience_min):
                 samantha.say "Oh oh!"
                 show samantha flat doggy normal
                 samantha.say "Someone's keen tonight!"
-                call check_condom_usage (samantha) from _call_check_condom_usage_139
-                if _return == False:
-                    return
-                if CONDOM:
-                    show samantha flat doggy condom
-                if samantha.piercings.clit.worn and randint(0, 1):
-                    "The crown kisses a cool piercing as I line up; she shivers and pushes back."
                 mike.say "With an ass like that..."
                 mike.say "Can you blame me?!?"
                 "Sam giggles and gives me a shake of her ass as a reward."
@@ -3784,7 +3705,6 @@ label samantha_fuck_bathroom:
     $ samantha.sexperience += 1
     return
 
-label samantha_fuck_date_nudistbeach:
 label samantha_fuck_beach:
 label samantha_fuck_date_beach:
     $ game.play_music("music/roa_music/city_nights.ogg")
@@ -3852,12 +3772,11 @@ label samantha_fuck_date_beach:
         samantha.say "I always wanted to do it as the sun goes down."
         samantha.say "So how about it?"
         samantha.say "You want to fuck me where the sun doesn't shine?"
-        if not game.room == "date_nudistbeach":
-            show beach cream samantha naked
-            "As if there's any need to underline the point, Sam pulls her swimsuit away."
-            if samantha.piercings.clit.worn and randint(0, 1):
-                "A tiny cool piercing flashes as she parts herself for me."
-            "This reveals her sweet, tight ass like an irresistible seashell upon the sand."
+        show beach cream samantha naked
+        "As if there's any need to underline the point, Sam pulls her swimsuit away."
+        if samantha.piercings.clit.worn and randint(0, 1):
+            "A tiny cool piercing flashes as she parts herself for me."
+        "This reveals her sweet, tight ass like an irresistible seashell upon the sand."
         "I nod, hastily pulling down my trunks as I check that there's no one around."
         "Sam sees my cock bobbing up and down as I do this and lets out a cute little laugh."
         if samantha.piercings.tongue.worn and randint(0, 1):
@@ -3987,10 +3906,7 @@ label samantha_fuck_date_beach:
         samantha.say "That means you can do me a favour."
         "Sam's been lying on her back this whole time."
         hide samantha
-        if game.room == "date_nudistbeach":
-            show beach cream samantha naked nomc
-        else:
-            show beach cream samantha nomc
+        show beach cream samantha nomc
         with fade
         "But now she rolls over until her belly's on the sand."
         if samantha.flags.engaged and randint(0, 1):
@@ -4059,11 +3975,10 @@ label samantha_fuck_date_beach:
         samantha.say "Yeah, [hero.name], I do!"
         samantha.say "I've got an itch there and I want you to scratch it!"
         "As if she needed to make her point clear, Sam uses one hand to stroke my cock."
-        if not game.room == "date_nudistbeach":
-            show beach cream samantha naked
-            "And at the same time, she uses the other to pull aside her swimsuit!"
-            if samantha.piercings.clit.worn and randint(0, 1):
-                "A cool little piercing winks at me when she parts herself."
+        show beach cream samantha naked
+        "And at the same time, she uses the other to pull aside her swimsuit!"
+        if samantha.piercings.clit.worn and randint(0, 1):
+            "A cool little piercing winks at me when she parts herself."
         "I nod eagerly, any thought of keeping things clean vanishing from my mind."
         "It only takes me a moment to yank off my trunks."
         "And then I take advantage of the invitation Sam just made."

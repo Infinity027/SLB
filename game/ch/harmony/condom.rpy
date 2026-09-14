@@ -15,31 +15,3 @@ label harmony_use_condom:
         "I take the hint, grabbing a condom and slipping it on in record time."
         "That done, we're ready to go."
     return
-
-label harmony_intro_condom:
-    "Pulling my shorts down, I prepare myself for the more than pleasant task ahead."
-    return
-
-label harmony_warn_condom:
-    "But then I hear a quiet but insistent cough from Harmony below me."
-    return
-
-label harmony_force_condom:
-    "Harmony holds up a condom, and I take it from her sheepishly."
-    "It feels bad to have been reminded of such a basic precaution."
-    "And doubly so from someone as innocent as Harmony!"
-    "But a couple of seconds later, it's on and I'm ready to go."
-    return
-
-label harmony_mad_condom:
-    harmony.say "[hero.name], whatever are you thinking?"
-    harmony.say "You know how sensitive I am about this kind of thing!"
-    harmony.say "Where's the condom?"
-    mike.say "Oh come on, Harmony!"
-    mike.say "What are the chances of you getting pregnant anyway?"
-    "At this, Harmony's eyes become wide with disbelief and anger."
-    "She pushes me off of her and roll to the edge of the bed."
-    "Grabbing her clothes, she storms out of the room, leaving me alone and frustrated."
-    return
-return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

@@ -236,25 +236,23 @@ label hanna_dick_reactions:
     if not hanna.flags.seendick:
         $ hanna.flags.seendick = 1
         if hero.has_skill("hung"):
-            show dick reactions hanna smile
+            show hanna_dick_reaction
             hanna.say "Mmm..."
             hanna.say "Hello - what have we here!"
             mike.say "Y...you like what you see, Hanna?"
-            show dick reactions hanna tasty
             hanna.say "You bet, [hero.name]."
             hanna.say "Now let's see where we can put this monster!"
             $ hanna.sub += 10
+            hide hanna_dick_reaction
         elif hero.has_skill("smalldick"):
-            show dick reactions hanna smile
+            show hanna annoyed
             hanna.say "Ah..."
-            show dick reactions hanna mock
             hanna.say "Is that all that you got in there?"
             mike.say "Um...yeah, I guess so!"
             hanna.say "Well, I'm sure you can make up for it."
-            show dick reactions hanna tasty
             hanna.say "You're just gonna have to work extra hard, okay?"
             $ hanna.sub -= 10
-        hide dick reactions
+            hide hanna annoyed
     return
 
 label hanna_halloween_invitation:

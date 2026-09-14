@@ -125,20 +125,13 @@ label aletta_fuck_date_male(location="hero"):
     $ game.play_music("music/roa_music/city_nights.ogg")
     $ foreplay = False
 
-
     call aletta_fuck_date_intro_male (location) from _call_aletta_fuck_date_intro_male
-
 
     call aletta_dick_reactions from _call_aletta_dick_reactions
 
-
     call aletta_fuck_date_foreplay_male from _call_aletta_fuck_date_foreplay_male
 
-
-
-
     call aletta_fuck_date_choices_male from _call_aletta_fuck_date_choices_male
-
 
     call handle_npc_leaving (aletta, _return) from _call_handle_npc_leaving
     if _return:
@@ -623,11 +616,6 @@ label aletta_fuck_date_missionary(sexperience_min):
             "I have Aletta spread out before me, there for the taking."
             "So the last thing I'm going to do is overthink this thing."
             "I can see Aletta's pussy right now, and it's calling to me!"
-            call check_condom_usage (aletta, 180) from _call_check_condom_usage
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show aletta missionary condom
             "As the head begins to rub against the folds of her pussy, Aletta lets out a soft moan."
             "It's such a quiet, gentle sound that it takes me by surprise coming from such a forceful woman."
             show aletta missionary vaginal at stepback(speed=0.1, h=10, v=5)
@@ -817,11 +805,6 @@ label aletta_fuck_date_cowgirl(sexperience_min):
             show aletta cowgirl with fade
             "It'd be just as easy to slip my dick into Aletta's ass, she's already so well lubricated with sweat."
             "But her pussy just seems to be calling out to me right now, and it's not something that I'm going to ignore."
-            call check_condom_usage (aletta, 180) from _call_check_condom_usage_1
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show aletta cowgirl condom
             "All it takes is one or two subtle moves on her part, and she has me just where she wants me."
             "I suppose it's a happy coincidence that's right where I want to be right now too."
             show aletta cowgirl vaginal
@@ -1125,17 +1108,12 @@ label aletta_fuck_date_doggy(sexperience_min):
                 "And when the moment comes to make a choice between the two, I don't even hesitate."
             "I can feel just how ready her pussy is for my cock, almost desperate for it."
             "So I waste no time in parting her buttocks just so, enough to let me get at my desired goal."
-            call check_condom_usage (aletta, 180) from _call_check_condom_usage_2
-            if _return == False:
-                return "leave_without_gain"
             "I swear that I can already see the light reflecting off of Aletta's glistening lips."
             "And a moment later I feel them too, as the head of my cock slides along them."
             "Aletta shudders at the touch, and I feel myself doing the same in sympathy."
             "But then I take full advantage of just how ready for this she is right now."
-            if CONDOM:
-                show aletta doggy vaginal mike hand condom
-            else:
-                show aletta doggy vaginal mike hand
+            
+            show aletta doggy vaginal mike hand
             "Wasting no more time, I push myself into Aletta's pussy in one smooth movement."
             "After the first instinctive resistance of her lips, there's nothing at all to hold me back."
             "And so I sink deep into her, feeling the way in which she responds to every inch of progress."
@@ -1239,7 +1217,6 @@ label aletta_fuck_date_doggy(sexperience_min):
 
 label aletta_hottub_sex_male:
     $ game.active_date.clothes = "swimsuit"
-    $ CONDOM = False
     show bg pool
     "Normally when you invite a girl over to your place, you want to impress them, right?"
     "You're worried about giving off the right signals and coming over as a nice guy."
@@ -1307,26 +1284,19 @@ label aletta_hottub_sex_male:
     "A need that she seems to want me to fulfil."
     "And so I don't hesitate to take hold of her a moment later."
     "Aletta makes a squealing noise as I grab her."
-    "But I can't tell if it's from surprise or excitement."
-    "Either way, she offers no resistance as I push her up against the edge of the tub."
-    show hottub sex male aletta outside with fade
+    scene audrey_hottub01 with fade
     "At the same time, I'm tugging down my trunks and kicking them away."
     "Being so close to Aletta means that I'm hard as a rock."
     "And I see her eyes go wide as she glimpses my stiff cock over her shoulder."
-    call aletta_dick_reactions from _call_aletta_dick_reactions_1
     aletta.say "Mmm..."
     aletta.say "Now that does look good!"
+    scene audrey_hottub02 with fade
     "A moment later, I part her buttocks and push it between them."
     "Aletta closes her eyes as I rub the head up and down the lips of her pussy."
     aletta.say "Oh..."
     aletta.say "It feels good too!"
     "I feel her open to me, and I don't hesitate to push inside."
-    "And now it seems that she can't offer any more words to describe what she's feeling."
     show hottub sex male inside
-    "Instead, Aletta lets out a long, low moan as I sink all the way into her."
-    "By now, she's leaning against the edge of the tub as I push forwards."
-    "And clinging onto it is all that seems to be keeping her from falling out."
-    "But that doesn't stop me from keeping up the same pace that I've already set."
     "Aletta's pussy feels so good around my cock that I can't think of anything else."
     "All I want is to keep right on fucking her like this until the very end!"
     "And that's what she seems to want as well, nodding her head as I pound her."
@@ -2123,11 +2093,6 @@ label aletta_fuck_office_cowgirl(sexperience_min):
                 "And then she flops backwards, barely able to hold herself up."
             $ aletta.flags.anal += 1
         "Fuck her pussy":
-            call check_condom_usage (aletta, 180) from _call_check_condom_usage_3
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show aletta cowgirl condom
             "Aletta all but pounces on me, grabbing hold of my cock as she does so."
             "I can't help gasping in shock, my eyes going wide at the sensation."
             "Which in turn makes Aletta's grin become wolfish in nature."
@@ -2455,14 +2420,8 @@ label aletta_fuck_office_doggy(sexperience_min):
                 $ aletta.sub += 4
             $ aletta.flags.anal += 1
         "Fuck her pussy":
-            call check_condom_usage (aletta, 180) from _call_check_condom_usage_4
-            if _return == False:
-                return "leave_without_gain"
             "Aletta practically purrs with pleasure as I stroke my cock against her pussy."
-            if CONDOM:
-                show aletta doggy mike hand condom
-            else:
-                show aletta doggy mike hand
+            show aletta doggy mike hand
             "And I can feel my own heart beginning to beat faster in my chest too."
             "Because her lips are already nice and slick, like they're inviting me inside."
             aletta.say "Oh..."

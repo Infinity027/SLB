@@ -204,7 +204,7 @@ label emma_cheated(action, cheat_npc=None):
     return
 
 label emma_greet:
-    if renpy.has_label(f"emma_greet_dialogues_{hero.gender}") and not emma.flags.greeted:
+    if renpy.has_label(f"emma_greet_dialogues_male") and not emma.flags.greeted:
         scene expression f"bg {game.room}"
         show emma
         $ emma.flags.greeted = TemporaryFlag(True, 1)
@@ -227,7 +227,7 @@ label emma_greet:
                 emma.say "It's always good to see you, [hero.name]!"
             else:
                 emma.say "I've missed you!"
-        call expression f"emma_greet_dialogues_{hero.gender}" from _call_expression_225
+        call expression f"emma_greet_dialogues_male" from _call_expression_225
         if emma.flags.submissive_interact:
             if randint(0, 1) == 0:
                 emma.say "I'm the girl of your dreams, [hero.name] - but all your dreams are SO dirty!"

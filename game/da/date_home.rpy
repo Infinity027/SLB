@@ -232,8 +232,8 @@ label date_watch_tv:
 
 label date_swim_pool_home:
     scene bg pool
-    if renpy.has_label(f"{active_girl.id}_date_swim_pool_home_{hero.gender}"):
-        call expression f"{active_girl.id}_date_swim_pool_home_{hero.gender}" from _call_expression_286
+    if renpy.has_label(f"{active_girl.id}_date_swim_pool_home_male"):
+        call expression f"{active_girl.id}_date_swim_pool_home_male" from _call_expression_286
     else:
         $ game.active_date.clothes = "swimsuit"
         show expression "playing water pool " + date_girl.id

@@ -209,7 +209,7 @@ label emma_dick_reactions:
     if not emma.flags.seendick:
         $ emma.flags.seendick = 1
         if hero.has_skill("hung"):
-            show dick reactions emma scared
+            show emma_dick_reaction
             emma.say "Th...that's...big!"
             emma.say "That's VERY big!"
             mike.say "Don't worry, Emma - I'll be gentle."
@@ -217,8 +217,9 @@ label emma_dick_reactions:
             emma.say "So long as you promise not to hurt me..."
             $ emma.sub += 10
             $ emma.love -= 10
+            hide emma_dick_reaction
         elif hero.has_skill("smalldick"):
-            show dick reactions emma smile
+            show emma annoyed
             emma.say "Oh, there he is."
             emma.say "Hey there, little guy!"
             mike.say "What do you mean 'little'!"
@@ -226,7 +227,7 @@ label emma_dick_reactions:
             emma.say "It's just cute, that's all!"
             $ emma.sub -= 10
             $ emma.love += 10
-        hide dick reactions
+            hide emma annoyed
     return
 
 label emma_halloween_invitation:

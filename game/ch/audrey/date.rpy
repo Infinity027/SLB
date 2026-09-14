@@ -219,7 +219,7 @@ label audrey_dick_reactions:
     if not audrey.flags.seendick:
         $ audrey.flags.seendick = 1
         if hero.has_skill("hung"):
-            show dick reactions audrey tasty
+            show audrey_dick_reaction
             audrey.say "Yeah - that's what I like!"
             audrey.say "Bring that thing over here!"
             if audrey.flags.nickname == "toy":
@@ -229,17 +229,17 @@ label audrey_dick_reactions:
             audrey.say "I'm gonna enjoy this!"
             $ audrey.sub += 10
             $ audrey.love += 10
+            hide audrey_dick_reaction
         elif hero.has_skill("smalldick"):
-            show dick reactions audrey disgusted
+            show audrey annoyed
             audrey.say "Hah!"
             audrey.say "Is that IT?!?"
             mike.say "H...hey..."
             mike.say "That's kind of mean, don't you think?"
-            show dick reactions audrey mock
             audrey.say "Well, that's kinda small - don't YOU think?"
             $ audrey.sub -= 10
             $ audrey.love -= 10
-        hide dick reactions
+            hide audrey annoyed
     return
 
 label audrey_halloween_invitation:

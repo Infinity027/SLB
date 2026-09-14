@@ -219,29 +219,28 @@ label samantha_dick_reactions:
     if not samantha.flags.seendick:
         $ samantha.flags.seendick = 1
         if hero.has_skill("hung"):
-            show dick reactions samantha smile
+            show samantha_dick_reaction
             samantha.say "Oh geez..."
             samantha.say "Was this ever worth waiting for!"
             mike.say "Y...you're serious?!?"
             samantha.say "Oh yeah - I always knew you'd be hung like this."
-            show dick reactions samantha tasty
             samantha.say "I always wondered what one this big would taste like!"
             $ samantha.sub += 10
             $ samantha.love += 10
+            hide samantha_dick_reaction
         elif hero.has_skill("smalldick"):
-            show dick reactions samantha mock
+            show samantha annoyed
             samantha.say "Oh...oh well..."
             if samantha.flags.nickname == "cupcake":
                 mike.say "Wha...what's the matter, Cupcake?"
             else:
                 mike.say "Wha...what's the matter, Sam?"
             mike.say "It's because it's so small, isn't it?"
-            show dick reactions samantha smile
             samantha.say "Oh, [hero.name] - it's still bigger than Ryan's!"
             mike.say "Okay...maybe that's not so bad!"
             $ samantha.sub -= 10
             $ samantha.love -= 10
-        hide dick reactions
+            hide samantha annoyed
     return
 
 label samantha_peeping_scene_male:

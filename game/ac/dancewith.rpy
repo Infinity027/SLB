@@ -67,10 +67,10 @@ label dance_with:
     $ active_girl.set_flag("interact", 1, 1, "+")
     call expression f"{active_girl.id}_greet" from _call_expression_21
     $ renpy.show(active_girl.id)
-    if renpy.has_label(f"{active_girl.id}_dance_with_replace_{hero.gender}"):
-        call expression f"{active_girl.id}_dance_with_replace_{hero.gender}" from _call_expression_22
+    if renpy.has_label(f"{active_girl.id}_dance_with_replace_male"):
+        call expression f"{active_girl.id}_dance_with_replace_male" from _call_expression_22
     else:
-        call expression f"dance_with_dialogues_1_{hero.gender}" from _call_expression_61
+        call expression f"dance_with_dialogues_1_male" from _call_expression_61
         if hero.charm >= 40 - active_girl.love or date_girl == active_girl:
             active_girl.say "Sure, why not?"
             $ renpy.hide(active_girl.id)
@@ -86,10 +86,10 @@ label dance_with:
             $ hero.fun += 2
             $ renpy.hide(f"dance {active_girl.id}")
             if hero.is_female:
-                if renpy.has_label(f"{active_girl.id}_after_dance_success_with_{hero.gender}") and (hero.has_skill("dance") or hero.fitness >= 50):
-                    call expression f"{active_girl.id}_after_dance_success_with_{hero.gender}" from _call_expression_83
-                elif renpy.has_label(f"{active_girl.id}_after_dance_failure_with_{hero.gender}"):
-                    call expression f"{active_girl.id}_after_dance_failure_with_{hero.gender}" from _call_expression_169
+                if renpy.has_label(f"{active_girl.id}_after_dance_success_with_male") and (hero.has_skill("dance") or hero.fitness >= 50):
+                    call expression f"{active_girl.id}_after_dance_success_with_male" from _call_expression_83
+                elif renpy.has_label(f"{active_girl.id}_after_dance_failure_with_male"):
+                    call expression f"{active_girl.id}_after_dance_failure_with_male" from _call_expression_169
         else:
             active_girl.say "Sorry, I don't feel like dancing."
             $ hero.cancel_activity()

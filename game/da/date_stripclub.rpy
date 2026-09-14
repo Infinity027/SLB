@@ -66,7 +66,7 @@ label date_stripclub_dance_on_stage:
     $ active_girl.set_flag("interact", 1, 1, "+")
     call expression f"{active_girl.id}_greet" from _call_expression_374
     $ renpy.show(active_girl.id)
-    call expression f"date_stripclub_dance_on_stage_dialogues_1_{hero.gender}" from _call_expression_375
+    call expression f"date_stripclub_dance_on_stage_dialogues_1_male" from _call_expression_375
     if hero.charm >= 40 - active_girl.love or date_girl == active_girl:
         active_girl.say "Sure, why not?"
         $ renpy.hide(active_girl.id)

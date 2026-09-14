@@ -23,14 +23,14 @@ label shop_with:
     $ active_girl.set_flag("interact", 1, 1, "+")
     call expression f"{active_girl.id}_greet" from _call_expression_146
     $ renpy.show(active_girl.id)
-    if renpy.has_label(f"{active_girl.id}_shop_with_replace_{hero.gender}"):
-        call expression f"{active_girl.id}_shop_with_replace_{hero.gender}" from _call_expression_147
+    if renpy.has_label(f"{active_girl.id}_shop_with_replace_male"):
+        call expression f"{active_girl.id}_shop_with_replace_male" from _call_expression_147
     else:
-        call expression f"shop_with_dialogues_1_{hero.gender}" from _call_expression_130
+        call expression f"shop_with_dialogues_1_male" from _call_expression_130
         if hero.fitness >= 40 - active_girl.love:
             active_girl.say "Sure, why not?"
-            if renpy.has_label(f"{active_girl.id}_shop_with_{hero.gender}"):
-                call expression f"{active_girl.id}_shop_with_{hero.gender}" from _call_expression_148
+            if renpy.has_label(f"{active_girl.id}_shop_with_male"):
+                call expression f"{active_girl.id}_shop_with_male" from _call_expression_148
             else:
                 "I go shopping with [active_girl.name]."
             $ bonus = 1

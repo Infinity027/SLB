@@ -175,7 +175,7 @@ label kiara_greet:
                 kiara.say "Good afternoon [hero.name]."
             else:
                 kiara.say "Good evening [hero.name]."
-        call expression f"kiara_greet_dialogues_{hero.gender}" from _call_expression_540
+        call expression f"kiara_greet_dialogues_male" from _call_expression_540
         hide kiara
     return
 

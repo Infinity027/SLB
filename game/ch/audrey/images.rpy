@@ -728,25 +728,3 @@ init 1:
         attribute hand
         attribute cum
 
-
-init:
-    $ audrey_blow = [
-        "anim/audrey/blowjob2_1.jpg",
-        "anim/audrey/blowjob2_2.jpg",
-        "anim/audrey/blowjob2_3.jpg"
-    ]
-
-    $ audrey_miss_pussy01 = [
-        "anim/audrey/missionary1.jpg",
-        "anim/audrey/missionary1.jpg"
-    ]
-
-    $ audrey_miss_pussy02 = [
-        "anim/audrey/missionary3.jpg",
-        "anim/audrey/missionary4.jpg"
-    ]
-
-    $ audrey_miss_pussy03 = [
-        "anim/audrey/missionary5.jpg",
-        "anim/audrey/missionary6.jpg"
-    ]

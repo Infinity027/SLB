@@ -597,7 +597,7 @@ init python:
         IsDone("angela_visit"),
         HeroTarget(
             
-            IsRoom("date_beach", "date_nudistbeach")),
+            IsRoom("date_beach")),
         PersonTarget(minami,
             IsPresent(),
             Not(IsHidden()),

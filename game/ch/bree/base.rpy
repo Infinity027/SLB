@@ -452,7 +452,7 @@ label bree_tv_bj:
     return
 
 label bree_greet:
-    if renpy.has_label(f"bree_greet_dialogues_{hero.gender}") and not bree.flags.greeted:
+    if renpy.has_label(f"bree_greet_dialogues_male") and not bree.flags.greeted:
         scene expression f"bg {game.room}"
         show bree
         $ bree.flags.greeted = TemporaryFlag(True, 1)
@@ -468,7 +468,7 @@ label bree_greet:
                 bree.say "Good afternoon [hero.name]."
             else:
                 bree.say "Good evening [hero.name]."
-        call expression f"bree_greet_dialogues_{hero.gender}" from _call_expression_524
+        call expression f"bree_greet_dialogues_male" from _call_expression_524
         if bree.flags.submissive_interact:
             if randint(0, 1) == 0:
                 bree.say "Hey, [hero.name] - can I play with YOUR joystick today?"

@@ -19,8 +19,8 @@ init python:
 label kiss_her:
     $ active_girl.flags.greeted = TemporaryFlag(True, "day")
     $ active_girl.set_flag("interact", 1, 1, "+")
-    if renpy.has_label(f"{active_girl.id}_kiss_{hero.gender}"):
-        call expression f"{active_girl.id}_kiss_{hero.gender}" from _call_expression_12
+    if renpy.has_label(f"{active_girl.id}_kiss_male"):
+        call expression f"{active_girl.id}_kiss_male" from _call_expression_12
         call check_cheated ("kissing") from _call_check_cheated
     elif renpy.has_label(f"{active_girl.id}_kiss"):
         call expression f"{active_girl.id}_kiss" from _call_expression_32
@@ -69,10 +69,10 @@ label check_cheated(action, cheat_npc=None):
         $ cheated_girls = game.get_cheated_girls(cheat_npc)
         if cheated_girls:
             $ cheated_girl = renpy.random.choice(cheated_girls)
-            if cheated_girl and renpy.has_label(f"{cheated_girl.id}_beats_{cheat_npc.id}_{hero.gender}"):
-                call expression f"{cheated_girl.id}_beats_{cheat_npc.id}_{hero.gender}" from _call_expression_467
+            if cheated_girl and renpy.has_label(f"{cheated_girl.id}_beats_{cheat_npc.id}_male"):
+                call expression f"{cheated_girl.id}_beats_{cheat_npc.id}_male" from _call_expression_467
                 if _return is None or _return == False:
-                    call expression f"postfight_{hero.gender}" from _call_expression_468
+                    call expression f"postfight_male" from _call_expression_468
                     return True
             if cheated_girl and renpy.has_label(cheated_girl.id + "_cheated"):
                 call expression cheated_girl.id + "_cheated" pass (action, cheat_npc) from _call_expression_34

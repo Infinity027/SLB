@@ -296,7 +296,7 @@ init python:
         })
 
 label love_lesbian_adjust:
-    call expression f"love_lesbian_adjust_{hero.gender}" from _call_expression_404
+    call expression f"love_lesbian_adjust_male" from _call_expression_404
     return
 label love_lesbian_adjust_male:
     python:

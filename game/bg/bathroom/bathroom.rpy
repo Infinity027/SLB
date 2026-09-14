@@ -150,12 +150,12 @@ label generic_get_out:
             else:
                 $ npc = randchoice(shown_people)
 
-            if len(shown_people) == 1 and renpy.has_label(f"{npc.id}_get_out_{hero.gender}"):
+            if len(shown_people) == 1 and renpy.has_label(f"{npc.id}_get_out_male"):
 
                 python:
                     for p in shown_people:
                         renpy.hide(p.id)
-                call expression f"{npc.id}_get_out_{hero.gender}" from _call_expression_33
+                call expression f"{npc.id}_get_out_male" from _call_expression_33
             else:
                 $ renpy.say(npc.id, "[get_out_say] Please can you step out?")
 
@@ -175,11 +175,11 @@ label generic_get_out:
                         p.love += 1
 
             $ npc = randchoice(upset_npcs)
-            if renpy.has_label(f"{npc.id}_get_out_{hero.gender}"):
-                call expression f"{npc.id}_get_out_{hero.gender}" from _call_expression_449
+            if renpy.has_label(f"{npc.id}_get_out_male"):
+                call expression f"{npc.id}_get_out_male" from _call_expression_449
             else:
                 $ renpy.say(npc.id, "[hero.name] I need the bathroom, can you step out?")
-                call expression f"generic_get_out_dialogues_1_{hero.gender}" from _call_expression_195
+                call expression f"generic_get_out_dialogues_1_male" from _call_expression_195
 
         $ game.room = "secondfloor"
     else:
@@ -205,12 +205,12 @@ label generic_get_out:
                 $ first_person = "we"
                 $ towel = "towels"
                 $ third_person = "their"
-            if npc and renpy.has_label(f"{npc.id}_not_get_out_{hero.gender}"):
+            if npc and renpy.has_label(f"{npc.id}_not_get_out_male"):
 
                 python:
                     for p in shown_people:
                         renpy.hide(p.id)
-                call expression f"{npc.id}_not_get_out_{hero.gender}" from _call_expression_450
+                call expression f"{npc.id}_not_get_out_male" from _call_expression_450
             else:
 
                 if all(p.activity['clothes'] == 'naked' for p in shown_people):
@@ -224,7 +224,7 @@ label generic_get_out:
                 else:
                     return
 
-                call expression f"generic_get_out_dialogues_2_{hero.gender}" from _call_expression_196
+                call expression f"generic_get_out_dialogues_2_male" from _call_expression_196
 
                 $ npc = randchoice(shown_people)
                 if all(p.activity['clothes'] == 'naked' for p in shown_people):
@@ -281,7 +281,7 @@ label take_a_bath:
         $ choose_girl.append(("Bath alone", 'alone'))
         $ girl_id = menu(choose_girl)
         if girl_id != 'alone':
-            show expression f"peeping_bath {hero.gender} {girl_id}"
+            show expression f"peeping_bath male {girl_id}"
             $ Person.find(girl_id).love += 4
             "We spend a relaxing time in the bath."
             $ game.flags.showered = True

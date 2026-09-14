@@ -34,7 +34,6 @@ init python:
     "once_day": True,
     })
 
-
 label hanna_hottub_sex_male:
     $ game.active_date.clothes = "swimsuit"
     $ CONDOM = False
@@ -105,46 +104,30 @@ label hanna_hottub_sex_male:
     "Hanna leans back against the edge of the tub."
     "She beckons to me with one hand at the same time."
     "And the wink that she adds as I come closer tells me all I need to know."
-    "The part of me that's going to be giving the massage is already starting to stretch!"
     "Hanna opens her arms and legs at the same time, welcoming me as I reach her."
-    "She wraps them around me as I do the same to her, pulling me into her embrace."
-    "For all that Hanna might act coy, I know that's all it really is."
     "She wanted this the moment that she agreed to come over and use the hot-tub."
     "And I'm not about to disappoint her either!"
-    "Almost as soon as I have my trunks down, I feel Hanna pull me closer still."
-    show hottub sex male hanna outside with fade
-    call hanna_dick_reactions from _call_hanna_dick_reactions_1
+    scene hanna_hottub01 with fade
     "It's all that I can do to make sure my cock is aimed at the right spot."
     "Luckily for me, I manage it and hear her moan as the head rubs against her lips."
     "The sensation seems to catch Hanna off guard."
     "And I take full advantage of that, taking hold of her thighs."
-    show hottub sex male hanna inside
-    "I hoist them into the air and then push myself straight into her."
-    "If Hanna really was as stiff and sore as she says, that seems to cure it."
+    scene hanna_hottub02
     "Her pussy is as soft and welcoming as can be, surrendering without resistance."
     "Which means I can sink into her all the way, not stopping until I can go no deeper."
     "By now there's no way that Hanna can hope to keep up the act."
-    "Her eyes are almost glazed over and her mouth hangs open."
     "She sighs in sympathy as I thrust back and forth."
     "And I feel like the momentum has shifted between us in that moment."
-    "Before she was the one teasing me, leading me in the direction she desired."
-    "But now Hanna's on the receiving end, helplessly taking all I have to give."
-    "Her legs are tossed over my shoulders and her arms cling onto the edge of the tub."
-    "This means that she's almost sitting on my cock the whole time!"
-    "All I have to do is move my hips, and she's riding me like a bucking mule."
-    "I'm having the time of my life fucking Hanna right now."
-    "But I still can't help taking the time to admire her as I do so."
-    "I know that she takes a great deal of pride in her appearance."
-    "That and how much she enjoys the attention it gets from admirers."
-    "And she's certainly not deluding herself either!"
+    scene expression make_anim(hanna_hottub, time=0.4, loop=True)
     "Hanna's body is like a perfectly sculpted work of art."
     "Every muscle moves just so and every inch of her skin is flawless."
     "How many guys can say that they're gotten to make love to a girl like that?"
     "One that you could show off in an art gallery?"
+
     "And how many guys have had to decide what to do when they're about to cum inside of her too?!?"
     call cum_reaction (hanna, 'vaginal', 1) from _call_cum_reaction_80
     if _return == "vaginal_outside":
-        show hottub sex male hanna outside cumshot with hpunch
+        scene hanna_hottub06 with hpunch
         "I just manage to pull my cock out of Hanna the moment before I cum."
         with hpunch
         "Her eyes go wide and she moans at the sensation, shaking her head."
@@ -152,17 +135,14 @@ label hanna_hottub_sex_male:
         "But then the sudden motion seems to push her over the edge too."
         $ hanna.sub += 1
         "Hanna grabs me and holds on for dear life as her orgasm takes over."
-        "She buries her head against my shoulder, clinging to me as she cums."
     else:
         "A few seconds of hesitation is enough to take the decision out of my hands."
         $ hanna.love += 1
-        show hottub sex male hanna cumshot with hpunch
+        scene hanna_hottub05 with hpunch
         "I shoot my entire load into Hanna at the end of one particularly enthusiastic thrust."
         with hpunch
         "And for the first time since we began, her eyes open wide."
-        show hottub sex male hanna ahegao with hpunch
         "Hanna holds onto me as if for dear life as my orgasm starts her own."
-        "She throws her head back and moans as she does so, almost squeezing the life out of me!"
     hide hottub
     show hottub hanna
     with fade
@@ -182,25 +162,15 @@ label hanna_fuck_date_male(location="hero"):
     scene bg bedroom1
     show hanna
 
-
     call hanna_fuck_date_intro_male (location) from _call_hanna_fuck_date_intro_male
-
 
     call hanna_dick_reactions from _call_hanna_dick_reactions
 
-
-
-
-
-
-
     call hanna_fuck_date_choices_male from _call_hanna_fuck_date_choices_male
-
 
     call handle_npc_leaving (hanna, _return) from _call_handle_npc_leaving_8
     if _return:
         return
-
 
     hide hanna
     call hanna_sleep_date_fuck (location) from _call_hanna_sleep_date_fuck
@@ -331,9 +301,6 @@ label hanna_sleep_date_fuck(location="hero"):
 
 label hanna_fuck_date_cowgirl(sexperience_min):
     $ game.play_music("music/roa_music/city_nights.ogg")
-    call check_condom_usage (hanna) from _call_check_condom_usage_43
-    if _return == False:
-        return "leave_without_gain"
     "I crawl myself back up and over her, where I had been when we'd been kissing here moments before."
     "She seems to hesitate, again, though I know by the look deep in her eyes that she wants it, and I expect fully to take control of this from beginning to end, which is fine by me."
     "But she stops me, just as I'm about to dip down and slip it in, pressing one of her hands to the center of my chest."
@@ -636,12 +603,7 @@ label hanna_fuck_date_doggy(sexperience_min):
                 "And I can tell just from looking at her that Hanna feels the same way too."
                 "So I waste no time in aiming straight for her pussy and getting down to business."
             "Almost as soon as she feels me pull her ass backwards, Hanna seems to know what's coming."
-            call check_condom_usage (hanna) from _call_check_condom_usage_44
-            if _return == False:
-                return "leave_without_gain"
             show hanna doggy
-            if CONDOM:
-                show hanna doggy condom
             "Now that there's nothing between me and where I'm aiming to go, I push straight on."
             "Not even Hanna's own lips provide much more than a moment of resistance."
             show hanna doggy vaginal
@@ -829,12 +791,7 @@ label hanna_fuck_date_missionary(sexperience_min):
                 "Soft, pink and inviting, it's calling to me from between Hanna's thighs!"
                 "I look down and then back up again, catching her eye as I do so."
                 "And she nods frantically, letting me know that she wants the exact same thing too!"
-                call check_condom_usage (hanna) from _call_check_condom_usage_45
-                if _return == False:
-                    return "leave_without_gain"
                 show hanna missionary out
-                if CONDOM:
-                    show hanna missionary condom
                 "Hanna nods again as I lean in closer, reaching up to guide my cock home."
                 "She's more than ready for it now, and so her lips are already slick in anticipation."
                 "They offer only the smallest token of resistance as the head rubs against them."
@@ -1018,12 +975,7 @@ label hanna_fuck_date_missionary(sexperience_min):
                 "Even though it's only been a couple of hours since we met up!"
                 "All I want is to clamber straight on top of her and get something going."
                 "And I think that she wants the exact same thing as me!"
-                call check_condom_usage (hanna) from _call_check_condom_usage_46
-                if _return == False:
-                    return "leave_without_gain"
                 show hanna missionary out
-                if CONDOM:
-                    show hanna missionary condom
                 "That's it - I can't wait even a moment longer!"
                 "I thrust my groin forwards and my cock between Hanna's lips."
                 "By this time she's every bit as excited and up for it as I am."

@@ -20,7 +20,6 @@ init python:
 label camila_hottub_sex_male:
     $ game.active_date.clothes = "swimsuit"
     $ game.play_music("music/roa_music/hero.ogg")
-    $ CONDOM = False
     show bg pool
     "I figure that it's a no-brainer to invite Camila over to my place for a dip in the hot-tub."
     "She's a cop, after all, and that can only mean that her working day is full of stress and tension."
@@ -70,77 +69,38 @@ label camila_hottub_sex_male:
     "And I know that she knows it too, but it doesn't make me feel at all insecure."
     "Somehow knowing that she wants me all the same is a massive turn-on."
     camila.say "Come over here, [hero.name]."
-    show hottub sex male camila outside with fade
-    "Camila leans her back against the wall behind the tub, sitting on the edge."
-    "I hurry over to do as she says, drawn to her like a moth to a flame."
+    scene camila_hottub01 with fade
     "Camila wastes no time in pulling down my trunks and stroking my cock."
     "And if this is the way that she wants to unwind, who am I to argue!"
-    "I stand back, letting Camila stroke my cock to life with her hand."
     "I'm also more than happy to let her steer me straight towards her pussy too!"
-    show hottub sex male camila inside
-    "She sighs and smiles as I first press against her lips."
-    "And then she lets out a moan of release as I push into her."
+    scene camila_hottub02
     "It's like I can feel the tension in her body the moment I'm inside."
     "Camila's tense and taut, like a coiled spring that need to be released."
     "But I can already feel the sensation of her beginning to melt."
     "She softens around my cock, even though I'm not moving an inch."
-    camila.say "There's something else I need you to do, [hero.name]."
-    camila.say "Just trust me, okay?"
-    camila.say "And remember, I know what I'm doing."
-    "I have no idea what Camila could be talking about."
-    "But I nod in agreement all the same."
-    "Camila takes my left hand and has me use it to pin her right wrist against the wall."
-    "And then she guides my right hand to her neck, placing it beneath her chin."
-    "She must read the look of surprise on my face the instant she does this."
-    "Because she shakes her head, trying to dismiss my fears."
-    camila.say "Don't worry, [hero.name]."
-    camila.say "I've done this a thousand times."
-    camila.say "Just squeeze a little - enough so that I can feel it, yeah?"
-    "I nod, trying to look like I believe that this is okay."
-    "And I suppose that if it's Camila actually asking me to do it..."
-    "Well, it must be okay - right?"
-    "I squeeze just a little with my hand, afraid of hurting Camila."
-    "But the effect this has on her is instant and startling."
-    "Her eyes pop open and she gasps in delight at the pressure I'm applying."
-    "Camila also surprises me by grinding herself on my cock below."
-    "She nods desperately, urging me on, asking for more of the same."
-    "I have to admit, that felt better than I could have imagined!"
-    "And if it's what she wants..."
-    "I squeeze Camila's neck again, a little harder this time."
-    "She writhes in delight the moment I do so, and that's all it takes."
-    "A moment later, she's riding my cock as I choke her."
+    scene expression make_anim(cassidy_hottub, time=0.3, loop=True)
+    "A moment later, she's riding my cock."
     "I would never have imagined that it could feel this way."
-    "The very notion of putting my hand around someone's neck - let alone a girl's..."
     "Well, it seemed nothing short of crazy just a couple of minutes ago."
-    "But if a tough, no-nonsense cop like Camila wants this..."
-    "She must be able to handle it."
-    "And it must be okay for me to be enjoying it too, right?"
     "I'm sure that I can keep from going too far."
     "And I'm sure Camila won't let it get out of hand either."
+    scene camila_hottub05 with fade
     "So I just try to forget my former misgivings and live in the moment."
     "But it seems like I needn't have worried too much about any of that."
     "Because I can feel myself cumming even now!"
     call cum_reaction (camila, 'vaginal', 1) from _call_cum_reaction_65
     if _return == "vaginal_outside":
         "I don't know what makes me force myself to pull out before the very last moment."
-        "Maybe it's the need to assert control of the situation for the sake of my ego."
-        "Or perhaps it's just because I don't feel comfortable with cumming inside Camila."
-        "Not at the same time as I have my had clamped around her throat!"
-        show hottub sex male outside
+        scene camila_hottub06
         "She grunts and moans as I drag my cock out of her, but doesn't try to stop me."
-        show hottub cumshot with vpunch
+        with vpunch
         $ camila.sub += 1
         "We both pant and gasp for breath as I cum over her flat, muscular stomach a second later."
-        with vpunch
-        "At first, I think the gasping she makes is simply on account of being released."
-        with vpunch
-        "But then I realise that she's actually cumming too."
-        "The combination of the two things pushing her over the edge."
     else:
-        "Still with my hand around Camila's neck, I can't even think of pulling out."
-        "And it seems weird to be even thinking about something like that right now."
+        "I can't even think of pulling out."
+        "It seems weird to be even thinking about something like that right now."
         "So I keep on going until the last second, letting Camila ride me the whole time."
-        show hottub cumshot with vpunch
+        scene camila_hottub07 with vpunch
         $ camila.love += 1
         "Only when I finally shoot my load into her do I let go of her neck."
     "Letting go of Camila, I collapse into the water, my head spinning."
@@ -163,25 +123,17 @@ label camila_fuck_date_male(location="hero"):
     $ game.room = "bedroom1"
     show camila
 
-
     call camila_fuck_date_intro_male (location) from _call_camila_fuck_date_intro_male
-
 
     call camila_dick_reactions from _call_camila_dick_reactions
 
-
     call camila_fuck_date_foreplay_male from _call_camila_fuck_date_foreplay_male
 
-
-
-
     call camila_fuck_date_choices_male from _call_camila_date_fuck_choice
-
 
     call handle_npc_leaving (camila, _return) from _call_handle_npc_leaving_7
     if _return:
         return
-
 
     hide camila
     call camila_sleep_date_fuck (location) from _call_camila_sleep_date_fuck
@@ -463,13 +415,7 @@ label camila_date_fuck_cowgirl(sexperience_min):
             "I don't know if I could manage to get my cock anywhere but Camila's pussy right now."
             "Or even if she'd let me try!"
             "And so I set my mind to making that my target."
-            call check_condom_usage (camila) from _call_check_condom_usage_30
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show camila cowgirl condom big
-            else:
-                show camila cowgirl big
+            show camila cowgirl big
             "But it seems like she's already had the same thought."
             "Camila pushes my legs into the air and straddles the underside of my thighs."
             "I gasp as I feel her grab hold of my cock."
@@ -634,13 +580,7 @@ label camila_date_fuck_doggy(sexperience_min):
             "I don't even think about any of the other options open to me."
             "All I know is that it's going into Camila's pussy."
             "And as soon as possible!"
-            call check_condom_usage (camila) from _call_check_condom_usage_31
-            if _return == False:
-                return "leave_without_gain"
-            if CONDOM:
-                show camila doggy condom
-            else:
-                show camila doggy
+            show camila doggy
             "She looks over her shoulder the whole time, eyes wide with anticipation."
             "But when I feel the head of my cock pressing against her lips, Camila closes her eyes tight."
             "One more pull is all that it takes for me to sink into her, the slick folds parting for me."
@@ -801,19 +741,13 @@ label camila_date_fuck_stand(sexperience_min):
             "I get the feeling that Camila's about to leap into action."
             "She seems to be tensing her body and bending at the knees."
             "But I still can't guess just what she's actually going to do."
-            call check_condom_usage (camila) from _call_check_condom_usage_127
-            if _return == False:
-                return "leave_without_gain"
             camila.say "Okay, [hero.name]..."
             camila.say "Get ready to catch me!"
             mike.say "Huh?"
             mike.say "Catch you?"
             mike.say "What does that..."
             scene bg black
-            if CONDOM:
-                show camila stand bedroom fuck pose2 naked condom with vpunch
-            else:
-                show camila stand bedroom fuck pose2 naked with vpunch
+            show camila stand bedroom fuck pose2 naked with vpunch
             "Before I can say another word, Camila leaps upwards."
             "She already has her hands wrapped around my neck."
             "But now she wraps her legs around my waist too."
@@ -1367,4 +1301,3 @@ label camila_date_fuck_blowjob:
     "And I think how easily I could fall asleep like this, with her by my side."
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

@@ -374,18 +374,18 @@ init python:
             if mc_prefixed_outfit_list & attr:
                 mc_outfit = list(mc_prefixed_outfit_list & attr)[0]
                 if enable_debug_picker:
-                    renpy.log(f"MCOutfitPicker: {hero.gender} mc fixed {mc_outfit}")
+                    renpy.log(f"MCOutfitPicker: male mc fixed {mc_outfit}")
             else:
                 for o in copy.copy(attr):
                     if o in outfit_list:
                         mc_outfit = o
                         if enable_debug_picker:
-                            renpy.log(f"MCOutfitPicker: {hero.gender} fixed {mc_outfit}")
+                            renpy.log(f"MCOutfitPicker: male fixed {mc_outfit}")
                         break
                 else:
                     mc_outfit = hero.get_clothes()
                     if enable_debug_picker:
-                        renpy.log(f"MCOutfitPicker: {hero.gender} getclothes {mc_outfit}")
+                        renpy.log(f"MCOutfitPicker: male getclothes {mc_outfit}")
                 
                 
                 mc_outfit = mc_outfit.removeprefix("sexy")
@@ -397,7 +397,7 @@ init python:
             
             if enable_debug_picker:
                 renpy.log(
-                f"MCOutfitPicker between for: {hero.gender} with {mc_outfit} attrs: {attr}"
+                f"MCOutfitPicker between for: male with {mc_outfit} attrs: {attr}"
             )
             if (
             hero.has_item(f"slutty_{mc_outfit}_equip")

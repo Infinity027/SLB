@@ -105,28 +105,26 @@ label claire_date_play_arcade_lose:
 label claire_dick_reactions:
     if not claire.flags.seendick:
         $ claire.flags.seendick = 1
-        "I'm feeling the usual nerves from this being the first time a girl's seen me naked."
-        "But it's not helping that Claire's eyes are totally glued on my junk right now."
         mike.say "Ah, Claire..."
         mike.say "Is there a problem down there?"
         mike.say "Because you seem to be staring at it a hell of a lot!"
         show claire normal
         if hero.has_skill("smalldick"):
             "Claire looks up, as if snapped back to reality by my words."
-            show dick reactions claire smile
+            show claire_dick_reaction
             claire.say "Oh, well..."
             claire.say "I guess that I was expecting it to be a little bigger."
             claire.say "But that's not a deal-breaker, not by any means."
             claire.say "I always say that it's what you do with one that really counts."
+            hide claire_dick_reaction
         elif hero.has_skill("hung"):
             "Claire looks up, as if snapped back to reality by my words."
-            show dick reactions claire smile
+            show claire annoyed
             claire.say "Oh, well..."
             claire.say "It's just that it's so...so big!"
             claire.say "Not that I mean it's too big, you understand?"
             claire.say "It's just that I've never had one that size before."
             claire.say "And I'm looking forward to finding out how it feels!"
-        hide dick reactions
+            hide claire annoyed
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

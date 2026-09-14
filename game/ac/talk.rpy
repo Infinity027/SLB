@@ -225,11 +225,11 @@ label talk:
                 if renpy.has_label(chosen_subject.label):
                     call expression chosen_subject.label from _call_expression_185
                     $ chosen_subject.apply_changes()
-                elif renpy.has_label(f"{active_girl.id}{chosen_subject.label}{hero.gender}"):
-                    call expression f"{active_girl.id}{chosen_subject.label}{hero.gender}" from _call_expression_186
+                elif renpy.has_label(f"{active_girl.id}{chosen_subject.label}male"):
+                    call expression f"{active_girl.id}{chosen_subject.label}male" from _call_expression_186
                     $ chosen_subject.apply_changes()
                 else:
-                    $ renpy.log(f"Unable to find label: {active_girl.id}{chosen_subject.label}{hero.gender}")
+                    $ renpy.log(f"Unable to find label: {active_girl.id}{chosen_subject.label}male")
                 $ renpy.hide(active_girl.id)
             else:
                 $ hero.cancel_activity()

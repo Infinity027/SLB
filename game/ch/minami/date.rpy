@@ -86,13 +86,6 @@ label minami_date_restaurant_male:
     hide minami
     return
 
-label minami_date_amusmentpark_male:
-    show minami
-    minami.say "Ooh, I just LOVE amusement parks."
-    minami.say "I want to ride that, and that...AND THAT RIGHT NOW!"
-    hide minami
-    return
-
 label minami_date_ride_the_ferris_wheel:
     show minami
     minami.say "Sure, it moves kinda slow."
@@ -258,25 +251,24 @@ label minami_dick_reactions:
     if not minami.flags.seendick:
         $ minami.flags.seendick = 1
         if hero.has_skill("hung"):
-            show dick reactions minami scared
+            show minami_dick_reaction
             minami.say "Whoa, big bro - you are seriously BIG!"
             minami.say "I mean, I've seen it before, but..."
             mike.say "Hey...what does that mean?"
-            show dick reactions minami smile
             minami.say "Who cares - we're doing this thing now."
             minami.say "I waited long enough to get that thing inside of me already!"
             $ minami.sub += 10
+            hide minami_dick_reaction
         elif hero.has_skill("smalldick"):
-            show dick reactions smile
+            show minami annoyed
             minami.say "Aww..."
             minami.say "Big bro and little bro!"
             mike.say "Hey!"
             minami.say "Don't worry about it, big bro."
             minami.say "He's just the right size for my little pussy!"
-            show dick reactions minami tasty
             minami.say "Come and see for yourself..."
             $ minami.sub -= 10
-        hide dick reactions
+            hide minami annoyed
     return
 
 label minami_peeping_scene_male:
