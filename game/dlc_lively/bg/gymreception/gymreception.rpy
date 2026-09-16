@@ -37,7 +37,7 @@ init 5 python:
 
 init 6:
     layeredimage bg gymreception:
-        attribute_function MultiPickers([PiercingsPicker, CollarPicker, PregnancyPicker, OutfitPicker, HaircutPicker, GymReceptionPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([ CollarPicker, OutfitPicker, HaircutPicker, GymReceptionPicker], append_npc_from_attributes=True)
 
 
         attribute empty null            
@@ -64,7 +64,6 @@ init 6:
         attribute bree
         attribute bree_pregnant when bree
         attribute bree_collar when bree
-        group multiple auto variant bree_piercings when bree
         group bree_bot auto variant preg when bree and bree_pregnant
         group bree_bot auto variant nopreg when bree and not bree_pregnant
         group bree_top auto variant preg when bree and bree_pregnant
@@ -76,7 +75,6 @@ init 6:
         attribute cassidy_pregnant when cassidy
         attribute cassidy_collar when cassidy
         attribute cassidy_nohaircut when cassidy
-        group multiple auto variant cassidy_piercings when cassidy
         group cassidy_bot auto variant preg when cassidy and cassidy_pregnant
         group cassidy_bot auto variant nopreg when cassidy and not cassidy_pregnant
         group cassidy_top auto variant preg when cassidy and cassidy_pregnant
@@ -86,7 +84,6 @@ init 6:
         attribute samantha
         attribute samantha_pregnant when samantha
         attribute samantha_collar when samantha
-        group multiple auto variant samantha_piercings when samantha
         group samantha_bot auto variant preg when samantha and samantha_pregnant
         group samantha_bot auto variant nopreg when samantha and not samantha_pregnant
         group samantha_top auto variant preg when samantha and samantha_pregnant
@@ -97,10 +94,8 @@ init 6:
         attribute claire
         attribute claire_pregnant when claire
         attribute claire_collar when claire
-        group multiple auto variant claire_piercings when claire
         group claire_bot auto variant preg when claire and claire_pregnant
         group claire_bot auto variant nopreg when claire and not claire_pregnant
         group claire_top auto variant preg when claire and claire_pregnant
         group claire_top auto variant nopreg when claire and not claire_pregnant
         group claire_hair auto when claire
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

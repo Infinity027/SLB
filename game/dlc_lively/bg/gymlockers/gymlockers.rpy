@@ -37,7 +37,7 @@ init 5 python:
 
 init 6:
     layeredimage bg gymlockers:
-        attribute_function MultiPickers([PiercingsPicker, CollarPicker, PregnancyPicker, OutfitPicker, HaircutPicker, GymLockersPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([ CollarPicker, OutfitPicker, HaircutPicker, GymLockersPicker], append_npc_from_attributes=True)
 
 
         attribute empty null            
@@ -56,18 +56,13 @@ init 6:
         attribute reona_nose null
         attribute reona_tongue null
 
-
         always "gymlockers"
-
 
         attribute lavish
         attribute lavish_collar when lavish
-        group multiple auto variant lavish_piercings when lavish:
-            attribute lavish_nipples when not lavish_sport
         group lavish_bot auto when lavish
         group lavish_top auto when lavish
         attribute lavish_nohaircut when lavish
-
 
         attribute reona
         attribute reona_pregnant when reona
@@ -78,24 +73,19 @@ init 6:
         group reona_top auto variant nopreg when reona and not reona_pregnant
         group reona_hair auto when reona
 
-
         attribute alexis
         attribute alexis_pregnant when alexis
         attribute alexis_collar when alexis
-        group multiple auto variant alexis_piercings when alexis
         group alexis_bot auto variant preg when alexis and alexis_pregnant
         group alexis_bot auto variant nopreg when alexis and not alexis_pregnant
         group alexis_top auto variant preg when alexis and alexis_pregnant
         group alexis_top auto variant nopreg when alexis and not alexis_pregnant
         attribute alexis_nohaircut when alexis
 
-
         attribute emma
         attribute emma_pregnant when emma
-        group multiple auto variant emma_piercings when emma
         group emma_bot auto variant preg when emma and emma_pregnant
         group emma_bot auto variant nopreg when emma and not emma_pregnant
         group emma_top auto variant preg when emma and emma_pregnant
         group emma_top auto variant nopreg when emma and not emma_pregnant
         attribute emma_nohaircut when emma
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

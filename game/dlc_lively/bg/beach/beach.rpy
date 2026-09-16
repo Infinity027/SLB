@@ -39,7 +39,7 @@ init 5 python:
 
 init 6:
     layeredimage bg beach:
-        attribute_function MultiPickers([DayNightPicker, PiercingsPicker, CollarPicker, PregnancyPicker, HaircutPicker, OutfitPicker, BeachPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([DayNightPicker,  CollarPicker, HaircutPicker, OutfitPicker, BeachPicker], append_npc_from_attributes=True)
 
 
         attribute empty null            
@@ -70,7 +70,6 @@ init 6:
 
         attribute reona
         attribute reona_pregnant when reona
-        group multiple auto variant reona_piercings when reona
         group reona_hair auto when reona
         attribute reona_pureglasses when reona
         group reona_bot auto variant nopreg when reona and not reona_pregnant and not reona_naked
@@ -82,7 +81,6 @@ init 6:
         attribute lavish
         attribute lavish_nohaircut when lavish
         attribute lavish_pregnant when lavish
-        group multiple auto variant lavish_piercings when lavish
         group lavish_top auto variant nopreg when lavish and not lavish_pregnant and not lavish_naked
         group lavish_top auto variant preg when lavish and lavish_pregnant and not lavish_naked
         attribute lavish_collar when lavish
@@ -91,7 +89,6 @@ init 6:
         attribute aletta
         attribute aletta_collar when aletta
         attribute aletta_pregnant when aletta
-        group multiple auto variant aletta_piercings when aletta
         group aletta_bot auto variant nopreg when aletta and not aletta_pregnant and not aletta_naked
         group aletta_bot auto variant preg when aletta and aletta_pregnant and not aletta_naked
         group aletta_top auto variant nopreg when aletta and not aletta_pregnant and not aletta_naked
@@ -103,7 +100,6 @@ init 6:
         attribute alexis
         attribute alexis_pregnant when alexis
         attribute alexis_nohaircut when alexis
-        group multiple auto variant alexis_piercings when alexis
         group alexis_bot auto variant nopreg when alexis and not alexis_pregnant and not alexis_naked
         group alexis_bot auto variant preg when alexis and alexis_pregnant and not alexis_naked
         group alexis_top auto when alexis and not alexis_naked
@@ -116,7 +112,6 @@ init 6:
         attribute cassidy_collar when cassidy
         attribute cassidy_nohaircut when cassidy
         attribute cassidy_pregnant when cassidy
-        group multiple auto variant cassidy_piercings when cassidy
         group cassidy_bot auto variant nopreg when cassidy and not cassidy_pregnant and not cassidy_gold and not cassidy_naked
         group cassidy_bot auto variant preg when cassidy and cassidy_pregnant and not cassidy_gold and not cassidy_naked
         group cassidy_bot auto variant nopreg_gold when cassidy and not cassidy_pregnant and cassidy_gold and not cassidy_naked
@@ -125,4 +120,3 @@ init 6:
         group cassidy_top auto variant preg when cassidy and cassidy_pregnant and not cassidy_gold and not cassidy_naked
         group cassidy_top auto variant nopreg_gold when cassidy and not cassidy_pregnant and cassidy_gold and not cassidy_naked
         group cassidy_top auto variant preg_gold when cassidy and cassidy_pregnant and cassidy_gold and not cassidy_naked
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

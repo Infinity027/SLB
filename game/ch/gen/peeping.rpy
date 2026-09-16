@@ -32,7 +32,7 @@ init python:
 
 init 1:
     layeredimage peeping:
-        attribute_function MultiPickers([HaircutPicker, CollarPicker, PregnancyPicker, PiercingsPicker, OutfitPicker, PubesPicker], add_simple_pregnant_attribute=True, append_npc_from_attributes=True)
+        attribute_function MultiPickers([HaircutPicker, CollarPicker,  OutfitPicker, PubesPicker], add_simple_pregnant_attribute=True, append_npc_from_attributes=True)
 
         always:
             "peeping_bg"
@@ -40,16 +40,12 @@ init 1:
         group bb auto
         group collars auto
         group haircuts auto
-        group pregnancy auto if_any "pregnant"
-        group multiple auto variant piercings
-        group multiple auto variant piercings_boobjob when boobjob
-        group multiple auto variant piercings_noboobjob when not sasha_boobjob
         group pubes auto
         always:
             "peeping_fg"
 
     layeredimage peeping_bath:
-        attribute_function MultiPickers([CollarPicker, PiercingsPicker, HaircutPicker, BathPositionPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([CollarPicker,  HaircutPicker, BathPositionPicker], append_npc_from_attributes=True)
         attribute male null
         attribute mike null
         attribute female null
@@ -68,10 +64,6 @@ init 1:
         always:
             "peeping_bath_faucets"
 
-        group multiple auto variant piercings
-        group multiple auto variant piercings_boobjob when sasha_boobjob
-        group multiple auto variant piercings_noboobjob when not sasha_boobjob
-
         group multiple auto variant haircuts
 
         group multiple auto variant collars
@@ -80,25 +72,20 @@ init 1:
             "peeping_bath_fg"
 
     layeredimage peeping_shower:
-        attribute_function MultiPickers([CollarPicker, PiercingsPicker, HaircutPicker, PregnancyPicker], add_simple_pregnant_attribute=True, append_npc_from_attributes=True)
+        attribute_function MultiPickers([CollarPicker,  HaircutPicker], add_simple_pregnant_attribute=True, append_npc_from_attributes=True)
 
         always:
             "peeping_shower_bg"
 
         group bggirls auto
-        group bgpregnancy auto if_any "pregnant"
-        group multiple auto variant bgpiercings
         group bghaircuts auto
         group bgcollars auto
 
         group fggirls auto
         group fghaircuts auto if_any ["sasha"]
-        group fgpregnancy auto if_any "pregnant"
-        group multiple auto variant fgpiercings
         group fgcollars auto
         group arms auto
         group fghaircuts auto if_any ["minami"]
 
         always:
             "peeping_shower_fg"
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

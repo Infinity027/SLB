@@ -17,7 +17,7 @@ init python:
 
 init 1:
     layeredimage wedding:
-        attribute_function MultiPickers([PregnancyPicker, PiercingsPicker, HaircutPicker, CollarPicker, MCCGPicker, CG_Wedding_Picker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([ HaircutPicker, CollarPicker, MCCGPicker, CG_Wedding_Picker], append_npc_from_attributes=True)
 
 
         attribute mc_casual null
@@ -58,12 +58,8 @@ init 1:
         group npc_collars auto when (aletta or angela or anna or claire or hanna or shiori)
 
 
-        group multiple auto variant npc_piercings
-
-
         group npc_outfit auto
         group npc_outfit_preg auto
-
 
         group npc_boobs auto
 

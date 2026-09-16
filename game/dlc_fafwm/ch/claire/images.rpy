@@ -1,6 +1,6 @@
 init 1:
     layeredimage claire kiss:
-        attribute_function Pickers([CollarPicker, PiercingsPicker, HaircutPicker, OutfitPicker, PregnancyPicker], npc=claire)
+        attribute_function Pickers([CollarPicker,  HaircutPicker, OutfitPicker], npc=claire)
 
 
         always "claire_kiss_mbody"
@@ -10,12 +10,7 @@ init 1:
             attribute wedding "claire_kiss_outfitmike_date"
             attribute sluttydate "claire_kiss_outfitmike_date"
 
-
         always "claire_kiss_cbody"
-
-
-        attribute pregnant
-
 
         attribute collar
 
@@ -23,9 +18,6 @@ init 1:
         attribute clit null
         attribute lips null
         attribute nipples null
-        attribute pregnant_navel null
-        group multiple auto variant piercings
-
 
         attribute naked null
         attribute topless null
@@ -63,7 +55,7 @@ init 1:
 
 
     layeredimage claire bj:
-        attribute_function Pickers([HaircutPicker, PiercingsPicker, CollarPicker, DickPicker], npc=claire)
+        attribute_function Pickers([HaircutPicker,  CollarPicker, DickPicker], npc=claire)
 
 
         group bg auto:
@@ -92,23 +84,18 @@ init 1:
         attribute naked null
         group outfit auto if_not "naked"
 
-
         attribute clit null
         attribute lips null
         attribute navel null
         attribute nipples null
         attribute pregnant_navel null
-        group multiple auto variant piercings
-
 
         always "claire_bj_hairshadow"
         group haircuts auto:
             attribute nohaircut default
 
-
         group mike auto:
             attribute down default
-
 
         attribute mc_casual null
         group mikeoutfit auto if_not ["naked"]:
@@ -139,14 +126,13 @@ init 1:
         attribute bodycum if_not "down"
 
     layeredimage claire cunnilingus:
-        attribute_function Pickers([CollarPicker, PiercingsPicker, HaircutPicker, PubesPicker, OutfitPicker, PregnancyPicker, ButtplugPicker, RoomPicker], npc=claire)
+        attribute_function Pickers([CollarPicker,  HaircutPicker, PubesPicker, OutfitPicker, ButtplugPicker, RoomPicker], npc=claire)
 
         group bg auto
 
         always "claire_cunnilingus_bodies"
 
-        attribute pregnant
-
+        
         attribute pubes
 
         attribute buttplug
@@ -163,8 +149,7 @@ init 1:
 
         group pussy auto
 
-        group multiple auto variant piercings
-        attribute nose null
+               attribute nose null
 
         attribute cum null
         group cum auto when cum
@@ -181,7 +166,7 @@ init 1:
         attribute tongue
 
     layeredimage claire doggy:
-        attribute_function Pickers([CollarPicker, PiercingsPicker, HaircutPicker, OutfitPicker, ButtplugPicker, RoomPicker, DickPicker], npc=claire)
+        attribute_function Pickers([CollarPicker,  HaircutPicker, OutfitPicker, ButtplugPicker, RoomPicker, DickPicker], npc=claire)
 
         group multiple:
             attribute casual null
@@ -217,8 +202,7 @@ init 1:
             attribute wide default
 
         always "claire_doggy_piercings_ears"
-        group multiple auto variant piercings
-
+       
         attribute drool
 
         attribute cum null
@@ -234,7 +218,7 @@ init 1:
         group cumshot auto when cum and outside and not condom
 
     layeredimage claire sixtynine:
-        attribute_function Pickers([HaircutPicker, CollarPicker, PiercingsPicker, OutfitPicker, DickPicker, RoomPicker], npc=claire)
+        attribute_function Pickers([HaircutPicker, CollarPicker,  OutfitPicker, DickPicker, RoomPicker], npc=claire)
 
 
         group bg auto
@@ -285,7 +269,7 @@ init 1:
         group multiple auto variant cum when cum
 
     layeredimage claire fullnelson:
-        attribute_function Pickers([HaircutPicker, PregnancyPicker, PubesPicker, CollarPicker, PiercingsPicker, OutfitPicker, ButtplugPicker, DickPicker, RoomPicker], npc=claire)
+        attribute_function Pickers([HaircutPicker, PubesPicker, CollarPicker,  OutfitPicker, ButtplugPicker, DickPicker, RoomPicker], npc=claire)
 
         group bg auto
 
@@ -295,8 +279,7 @@ init 1:
 
         always "claire_fullnelson_novaginal" when not vaginal
 
-        attribute pregnant
-        attribute buttplug
+                attribute buttplug
 
         group eyes auto:
             attribute wide default
@@ -304,8 +287,7 @@ init 1:
         group mouth auto:
             attribute happy default
 
-        group multiple auto variant piercings
-        attribute pubes
+               attribute pubes
 
         attribute naked null
         attribute casual null
@@ -337,7 +319,7 @@ init 1:
         group multiple auto variant bodycum
 
     layeredimage claire missionary:
-        attribute_function Pickers([HaircutPicker, PregnancyPicker, PiercingsPicker, CollarPicker, DickPicker, PubesPicker, OutfitPicker], npc=claire)
+        attribute_function Pickers([HaircutPicker,  CollarPicker, DickPicker, PubesPicker, OutfitPicker], npc=claire)
 
 
         group bg auto:
@@ -353,8 +335,7 @@ init 1:
         attribute pubes
 
 
-        attribute pregnant
-
+        
 
         group haircuts auto:
             attribute nohaircut default
@@ -369,8 +350,7 @@ init 1:
 
 
         attribute lips null
-        group multiple auto variant piercings
-
+       
 
         attribute naked null
         attribute casual null
@@ -457,7 +437,7 @@ init -35 python:
             attrs = list(attrs)
         
         
-        add_pickers_attrs = Pickers([PiercingsPicker, PregnancyPicker, CollarPicker, PubesPicker, HaircutPicker, PositionPicker], npc=claire)(set(attrs))
+        add_pickers_attrs = Pickers([ CollarPicker, PubesPicker, HaircutPicker, PositionPicker], npc=claire)(set(attrs))
         if "pregnant_navel" in add_pickers_attrs:
             add_pickers_attrs.remove("pregnant_navel")
             add_pickers_attrs.add("navel")

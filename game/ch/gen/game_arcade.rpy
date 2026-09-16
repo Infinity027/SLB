@@ -26,7 +26,7 @@ init python:
 
 init 1:
     layeredimage game arcade:
-        attribute_function MultiPickers([GameArcadePositionPicker, HaircutPicker, CollarPicker, PregnancyPicker, PiercingsPicker, OutfitPicker], add_simple_pregnant_attribute=True, append_npc_from_attributes=True)
+        attribute_function MultiPickers([GameArcadePositionPicker, HaircutPicker, CollarPicker,  OutfitPicker], add_simple_pregnant_attribute=True, append_npc_from_attributes=True)
 
 
         group bg auto
@@ -67,20 +67,9 @@ init 1:
 
         group haircuts auto
 
-
-        group multiple auto variant piercings_hidden when not reona_purecasual
-        group multiple auto variant piercings_hidden_haircut when camila_haircut and not reona_purecasual
-
-
-        group multiple auto variant piercings
-        group multiple auto variant piercings_haircut when haircut
-
-
         group acc
 
 
         group fg auto
 
-
         group title auto
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

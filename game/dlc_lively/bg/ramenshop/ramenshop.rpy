@@ -31,21 +31,17 @@ init 5 python:
 
 init 6:
     layeredimage bg ramenshop:
-        attribute_function MultiPickers([PiercingsPicker, CollarPicker, PregnancyPicker, HaircutPicker, OutfitPicker, RamenShopPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([ CollarPicker, HaircutPicker, OutfitPicker, RamenShopPicker], append_npc_from_attributes=True)
 
 
         attribute empty null            
         attribute force_display null        
         attribute claire_clit null
 
-
         always "ramenshop"
 
-
         attribute claire
-        attribute claire_pregnant when claire
         attribute claire_collar when claire
-        group multiple auto variant claire_piercings when claire
         group claire_bot auto variant preg when claire and claire_pregnant
         group claire_bot auto variant nopreg when claire and not claire_pregnant
         group claire_top auto variant preg when claire and claire_pregnant

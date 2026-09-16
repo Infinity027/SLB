@@ -25,7 +25,7 @@ init python:
 
 init 1:
     layeredimage amusement icecream:
-        attribute_function MultiPickers([PregnancyPicker, PiercingsPicker, HaircutPicker, CollarPicker, OutfitPicker, MCCGPicker, DayNightPicker, SeasonPicker, CGAmusementIceCreamPicker], append_npc_from_attributes=True, use_morgan_cg_outfits=True)
+        attribute_function MultiPickers([ HaircutPicker, CollarPicker, OutfitPicker, MCCGPicker, DayNightPicker, SeasonPicker, CGAmusementIceCreamPicker], append_npc_from_attributes=True, use_morgan_cg_outfits=True)
 
         attribute nomc null
 
@@ -54,18 +54,9 @@ init 1:
         group haircuts auto:
             attribute morgan_nohaircut null
 
-        group pregnancies auto
-
-        group multiple auto variant piercings
-
-        group outfits auto variant "pregnant" if_any ["morgan_pregnant", "reona_pregnant"]
-
         group amy_necktie auto if_any "amy"
 
         group collars_fore auto
-
-        group piercings auto variant "morgan_navel" if_any "morgan_navel"
-        group piercings auto variant "morgan_pregnant_navel" if_any "morgan_pregnant_navel"
 
         group ice auto
 
@@ -81,12 +72,9 @@ init 1:
         group mc_haircuts auto variant "breemc_01" if_all ["breemc", "01"] if_not ["nomc"]:
             attribute mc_nohaircut null
         group mc_outfits auto variant "breemc_01" if_all ["breemc", "01"] if_not ["nomc"]
-        group multiple auto variant mc_piercings_breemc_01 when breemc and 01 and not nomc
         group mc_collars auto variant "breemc_01" if_all ["breemc", "01"] if_not ["nomc"]
 
         group mc_haircuts auto variant "breemc_02" if_all ["breemc", "02"] if_not ["nomc"]:
             attribute mc_nohaircut null
         group mc_outfits auto variant "breemc_02" if_all ["breemc", "02"] if_not ["nomc"]
-        group multiple auto variant mc_piercings_breemc_02 when breemc and 02 and not nomc
         group mc_collars auto variant "breemc_02" if_all ["breemc", "02"] if_not ["nomc"]
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

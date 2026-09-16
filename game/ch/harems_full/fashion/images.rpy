@@ -1,10 +1,9 @@
 init 1:
     layeredimage fashion doggy:
-        attribute_function MultiPickers([CollarPicker, DickPicker, PiercingsPicker, PregnancyPicker, HaircutPicker], npcs=[palla, sasha])
+        attribute_function MultiPickers([CollarPicker, DickPicker, HaircutPicker], npcs=[palla, sasha])
 
         attribute sasha null
         attribute palla_glasses null
-
 
         group bg auto:
             attribute store default
@@ -97,12 +96,6 @@ init 1:
             attribute pony default
             attribute loose
 
-
-        group multiple auto variant piercings
-        group multiple auto variant piercings_bb when bb
-        group multiple auto variant piercings_notbb when not sasha_boobjob
-        group multiple auto variant piercings_bj when bj
-        group multiple auto variant piercings_notbj when not bj
         attribute palla_clit null
         attribute palla_lips null
         attribute palla_tongue null
@@ -149,7 +142,7 @@ init 1:
             "fashion_doggy_closeup_sexpose_analdp"
 
     layeredimage fashion licking:
-        attribute_function MultiPickers([CollarPicker, PubesPicker, PiercingsPicker, PregnancyPicker, HaircutPicker], npcs=[palla, sasha])
+        attribute_function MultiPickers([CollarPicker, PubesPicker, HaircutPicker], npcs=[palla, sasha])
 
 
         group bg auto:
@@ -204,12 +197,6 @@ init 1:
             attribute pleasure
             attribute climax
 
-
-        group multiple auto variant piercings
-        group multiple auto variant piercings_kiss when kiss
-        group multiple auto variant piercings_nokiss when not mike
-        group multiple auto variant piercings_nokiss_bb when sasha_boobjob and not mike
-        group multiple auto variant piercings_nokiss_notbb when not (sasha_boobjob or mike)
         attribute palla_clit null
         attribute palla_lips null
         attribute palla_tongue null

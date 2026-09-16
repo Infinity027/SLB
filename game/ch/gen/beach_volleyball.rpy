@@ -39,7 +39,7 @@ init python:
 
 init 1:
     layeredimage beach volleyball:
-        attribute_function Pickers([PubesPicker, PregnancyPicker, CollarPicker, HaircutPicker, OutfitPicker, PiercingsPicker, MCCGPicker, CG_BeachVolleyball_Picker], clear_npc=True)
+        attribute_function Pickers([PubesPicker, CollarPicker, HaircutPicker, OutfitPicker,  MCCGPicker, CG_BeachVolleyball_Picker], clear_npc=True)
 
         attribute mc_naked null
 

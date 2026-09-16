@@ -24,26 +24,6 @@ attributes:
 flags:
   nodate: true
   dicksize: medium
-piercings:
-  ears:
-    outfits:
-      - date
-  navel:
-    outfits:
-      - naked
-      - swimsuit
-      - sexyswimsuit
-      - underwear
-  dick:
-    outfits:
-      - naked
-  nipples:
-    outfits:
-      - naked
-  tongue:
-    expressions:
-      - happy
-  nose: { }
 traits:
   - not_family
   - playful

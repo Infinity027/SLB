@@ -31,38 +31,6 @@ attributes:
     min: 0
     max: null
     default: 0
-piercings:
-  ears:
-    outfits:
-      - date
-    pierced: true
-  navel:
-    outfits:
-      - naked
-      - swimsuit
-      - sexyswimsuit
-      - underwear
-      - sport
-      - casual
-      - work
-      - date
-  clit:
-    outfits:
-      - naked
-  nipples:
-    outfits:
-      - naked
-  tongue:
-    expressions:
-      - happy
-  lips:
-    expressions:
-      - happy
-      - sad
-      - blush
-      - angry
-      - normal
-  nose: { }
 birthday:
   - spring
   - 3

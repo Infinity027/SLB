@@ -31,7 +31,7 @@ init 5 python:
 
 init 6:
     layeredimage bg bedroom5:
-        attribute_function Pickers([DayNightPicker, PiercingsPicker, CollarPicker, PregnancyPicker, HaircutPicker, OutfitPicker, Bedroom5Picker], npc=minami)
+        attribute_function Pickers([DayNightPicker,  CollarPicker, HaircutPicker, OutfitPicker, Bedroom5Picker], npc=minami)
 
 
         attribute empty null            

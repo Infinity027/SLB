@@ -1,6 +1,6 @@
 init 1:
     layeredimage whore reverse cowgirl:
-        attribute_function MultiPickers([CollarPicker, PregnancyPicker, PiercingsPicker, HaircutPicker, DickPicker, PubesPicker], npcs=[lexi, reona])
+        attribute_function MultiPickers([CollarPicker,  HaircutPicker, DickPicker, PubesPicker], npcs=[lexi, reona])
 
 
         group bg auto:
@@ -28,11 +28,8 @@ init 1:
         group butt auto:
             attribute up default
 
-
         attribute lexi_tongue
 
-
-        group multiple auto variant piercings
         group multiple:
             attribute lexi_clit null
             attribute lexi_ears null
@@ -84,26 +81,19 @@ init 1:
 
     layeredimage whore lexiblowjob:
 
-        attribute_function MultiPickers([PregnancyPicker, CollarPicker, PiercingsPicker, DickPicker], npcs=[lexi, reona])
+        attribute_function MultiPickers([CollarPicker,  DickPicker], npcs=[lexi, reona])
 
 
         group bg auto:
             attribute beach default
 
-
         always "whore_lexiblowjob_bodies"
 
-
-        group multiple auto variant piercings
-
-
         attribute lexi_collar
-
 
         group lexi_eyes auto:
             attribute opened default
         always "whore_lexiblowjob_reona_eyes"
-
 
         group reona_tongue auto:
             attribute up default
@@ -130,7 +120,7 @@ init 1:
 
     layeredimage whore reonablowjob:
 
-        attribute_function MultiPickers([PregnancyPicker, CollarPicker, PiercingsPicker, MCCGPicker], npcs=[lexi, reona])
+        attribute_function MultiPickers([CollarPicker,  MCCGPicker], npcs=[lexi, reona])
 
         attribute mikemc null
         attribute lexi null
@@ -156,8 +146,6 @@ init 1:
         group head auto:
             attribute lick default
 
-
-        group multiple auto variant piercings
         group multiple:
             attribute lexi_clit null
             attribute lexi_ears null
@@ -198,7 +186,7 @@ init 1:
         group fg auto
 
     layeredimage whore handjob:
-        attribute_function MultiPickers([PiercingsPicker, PregnancyPicker, PubesPicker, OutfitPicker, MCCGPicker], npcs=[lexi, reona], add_simple_outfit_attribute=True, add_simple_naked_attribute=True)
+        attribute_function MultiPickers([ PubesPicker, OutfitPicker, MCCGPicker], npcs=[lexi, reona], add_simple_outfit_attribute=True, add_simple_naked_attribute=True)
 
         attribute lexi null
         attribute reona null
@@ -223,18 +211,11 @@ init 1:
 
         group multiple auto variant pubes
 
-        group multiple auto variant piercings_hidden when naked
-
-        group multiple auto variant piercings
         group multiple:
             attribute lexi_ears null
             attribute lexi_tongue null
             attribute reona_ears null
             attribute reona_tongue null
-
-        group multiple auto variant pregnancies
-
-        group multiple auto variant piercings_front
 
         group multiple auto variant collars
 
@@ -269,7 +250,7 @@ init 1:
 
     layeredimage whore doggy:
 
-        attribute_function MultiPickers([PregnancyPicker, CollarPicker, PiercingsPicker, MCCGPicker], npcs=[lexi, reona])
+        attribute_function MultiPickers([CollarPicker,  MCCGPicker], npcs=[lexi, reona])
 
         attribute nomc null
         attribute mikemc null
@@ -282,9 +263,6 @@ init 1:
         always:
             "whore_doggy_bodies"
 
-        attribute reona_pregnant
-
-        group multiple auto variant piercings
         group multiple:
             attribute lexi_clit null
             attribute lexi_ears null
@@ -341,7 +319,7 @@ init 1:
         group fg auto
 
     layeredimage whore blowjob:
-        attribute_function MultiPickers([PiercingsPicker, MCCGPicker], npcs=[lexi, reona])
+        attribute_function MultiPickers([ MCCGPicker], npcs=[lexi, reona])
 
         attribute mikemc null
         attribute lexi null
@@ -354,7 +332,6 @@ init 1:
 
         always "whore_blowjob_bodies"
 
-        group multiple auto variant piercings
         group multiple:
             attribute lexi_clit null
             attribute lexi_ears null
@@ -391,8 +368,6 @@ init 1:
             attribute reonablow null
 
         group dick auto variant "out" if_any "out"
-
-        group piercings_reonaup auto if_any "reonaup"
 
         group lexihand auto
         group reonahand auto

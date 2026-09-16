@@ -1,11 +1,21 @@
 init python hide:
-    for file in renpy.list_files():
-        if file.startswith('ev2/'):
-            if file.endswith(('.jpg', '.png', '.webp')):
-                name = file.replace('ev2/','').replace('/', '_').replace('.jpg','')
-                renpy.image(name, Image(file))
-                continue
-            continue
+    # ==== DEV FAST-RELOAD CACHE (ev2 image scan) =============================
+    #  Skips re-walking every game file on Shift+R by caching the scan in
+    #  renpy.session (survives a reload, RESETS on a full restart -> newly added
+    #  ev2 images appear after a full relaunch, not on Shift+R).
+    #  TO DISABLE: delete this block and restore the plain
+    #      for file in renpy.list_files(): ...  loop.
+    if "ev2_scan" not in renpy.session:
+        _ev2 = []
+        for file in renpy.list_files():
+            if file.startswith('ev2/'):
+                if file.endswith(('.jpg', '.png', '.webp')):
+                    name = file.replace('ev2/','').replace('/', '_').replace('.jpg','')
+                    _ev2.append((name, file))
+        renpy.session["ev2_scan"] = _ev2
+    for _name, _file in renpy.session["ev2_scan"]:   # re-register (cheap) each reload
+        renpy.image(_name, Image(_file))
+    # ==== END DEV FAST-RELOAD CACHE =========================================
 
 init python:
     # Use Ren'Py's Animation displayable

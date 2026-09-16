@@ -63,4 +63,3 @@ init 1:
 
     layeredimage danny corpse:
         group location auto
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

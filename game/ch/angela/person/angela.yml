@@ -24,38 +24,6 @@ attributes:
     min: 0
     max: null
     default: 0
-piercings:
-  ears:
-    outfits:
-      - all
-    pierced: true
-  navel:
-    outfits:
-      - underwear
-      - sport
-      - sexydate
-      - sexyswimsuit
-      - naked
-    pierced: false
-  clit:
-    outfits:
-      - underwear
-      - sexydate
-      - sexyswimsuit
-      - naked
-    pierced: false
-  nipples:
-    outfits:
-      - underwear
-      - sexydate
-      - sexyswimsuit
-      - naked
-    pierced: false
-  lips: {}
-  nose:
-    outfits:
-      - all
-    pierced: false
 birthday:
   - summer
   - 17

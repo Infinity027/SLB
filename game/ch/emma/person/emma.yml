@@ -9,31 +9,6 @@ flags:
   nodate: true
   nokiss: true
   hidden: true
-piercings:
-  navel:
-    outfits:
-      - naked
-      - swimsuit
-      - sexyswimsuit
-      - sport
-  clit:
-    outfits:
-      - naked
-  nipples:
-    outfits:
-      - naked
-  tongue:
-    expressions:
-      - happy
-      - angry
-  lips:
-    expressions:
-      - happy
-      - sad
-      - angry
-      - blush
-      - normal
-  nose: {}
 birthday:
   - spring
   - 27

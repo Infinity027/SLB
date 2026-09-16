@@ -39,7 +39,7 @@ init 5 python:
 
 init 6:
     layeredimage bg kitchen:
-        attribute_function MultiPickers([DayNightPicker, PiercingsPicker, CollarPicker, PregnancyPicker, HaircutPicker, OutfitPicker, KitchenPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([DayNightPicker,  CollarPicker, HaircutPicker, OutfitPicker, KitchenPicker], append_npc_from_attributes=True)
 
 
         attribute empty null            
@@ -86,7 +86,6 @@ init 6:
         attribute day "kitchen_day"
         attribute night "kitchen_night"
 
-
         attribute bree
         attribute bree_pregnant when bree
         group bree_bot auto when bree and not (bottomless or naked)
@@ -94,21 +93,16 @@ init 6:
         group bree_top auto variant pregnant when bree and bree_pregnant and not (bree_topless or bree_naked)
         group bree_hair auto when bree
 
-
         attribute samantha
-        group multiple auto variant samantha_piercings when samantha
         attribute samantha_collar when samantha
         group samantha_bot auto when samantha and not (samantha_bottomless or samantha_naked)
         group samantha_top auto when samantha and not (samantha_topless or samantha_naked)
         attribute samantha_nohaircut when samantha
 
-
         attribute sasha null
         group sasha_body auto when sasha
         group sasha_preg auto variant bb when sasha and sasha_boobjob
         group sasha_preg auto variant nobb when sasha and sasha_noboobjob
-        group multiple auto variant sasha_piercings_bb when sasha and sasha_boobjob
-        group multiple auto variant sasha_piercings_nobb when sasha and sasha_noboobjob
         group sasha_bot auto when sasha and not (sasha_bottomless or sasha_naked)
         group sasha_top_bb auto when sasha and not sasha_pregnant and sasha_boobjob and not (sasha_topless or sasha_naked)
         group sasha_top_nobb auto when sasha and not sasha_pregnant and sasha_noboobjob and not (sasha_topless or sasha_naked)
@@ -116,19 +110,14 @@ init 6:
         group sasha_top_pregnant_nobb auto when sasha and sasha_pregnant and sasha_noboobjob and not (sasha_topless or sasha_naked)
         group sasha_hair auto when sasha
         attribute sasha_collar when sasha
-        group multiple auto variant sasha_piercings when sasha
-
 
         attribute lexi
-        group multiple auto variant lexi_piercings when lexi
         attribute lexi_collar when lexi
         group lexi_bot auto when lexi and not lexi_pregnant and not (lexi_bottomless or lexi_naked)
         group lexi_bot auto variant pregnant when lexi and lexi_pregnant and not (lexi_bottomless or lexi_naked)
         attribute lexi_pregnant when lexi
         group lexi_top auto when lexi and not lexi_pregnant and not (lexi_topless or lexi_naked)
         attribute lexi_nohaircut when lexi
-        group multiple auto variant lexi_piercings_front when lexi
-
 
         attribute minami
         attribute minami_collar when minami
@@ -138,4 +127,3 @@ init 6:
         group minami_top auto when minami and not minami_pregnant and not (minami_topless or minami_naked)
         group minami_top auto variant pregnant when minami and minami_pregnant and not (minami_topless or minami_naked)
         group minami_hair auto when minami
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

@@ -16,7 +16,7 @@ init python:
 
 init 1:
     layeredimage play console:
-        attribute_function Pickers([CG_PlayConsole_Picker, PregnancyPicker, CollarPicker, HaircutPicker, OutfitPicker, PiercingsPicker, MCGenderPicker], clear_npc=True)
+        attribute_function Pickers([CG_PlayConsole_Picker, CollarPicker, HaircutPicker, OutfitPicker,  MCGenderPicker], clear_npc=True)
 
         attribute mcalone null
         attribute nomike null

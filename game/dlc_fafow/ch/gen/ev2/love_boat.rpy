@@ -1,6 +1,6 @@
 init 1:
     layeredimage love boat:
-        attribute_function MultiPickers([PregnancyPicker, PiercingsPicker, HaircutPicker, CollarPicker, OutfitPicker, MCCGPicker], append_npc_from_attributes=True, use_morgan_cg_outfits=True)
+        attribute_function MultiPickers([ HaircutPicker, CollarPicker, OutfitPicker, MCCGPicker], append_npc_from_attributes=True, use_morgan_cg_outfits=True)
 
         always:
             "love_boat_bg"
@@ -17,7 +17,6 @@ init 1:
         group mc_haircuts auto variant "breemc" if_any "breemc":
             attribute mc_nohaircut null
         group mc_outfits auto variant "breemc" if_any "breemc"
-        group multiple auto variant mc_piercings_breemc when breemc
         group mc_collars auto variant "breemc" if_any "breemc"
 
         group npc auto
@@ -41,8 +40,6 @@ init 1:
         group pregnancies auto
 
         group amy_necktie auto if_any "amy"
-
-        group multiple auto variant piercings
 
         group fx auto
 

@@ -1,6 +1,6 @@
 init 1:
     layeredimage electronic 3some bukkake:
-        attribute_function Pickers([PiercingsPicker, CollarPicker], npc=amy)
+        attribute_function Pickers([ CollarPicker], npc=amy)
 
 
         always "electronic_3some_bukkake_bg_amylivingroom"
@@ -10,16 +10,12 @@ init 1:
 
 
         attribute collar
-        group multiple auto variant piercings
-
 
         group amyeyes auto:
             attribute eyes_open default
 
-
         group amymouth auto:
             attribute mouth_open default
-
 
         attribute cumtongueout
         attribute cumrightbreath
@@ -62,7 +58,7 @@ init 1:
             attribute rhanddown default
 
     layeredimage electronic 3some mikeamydoggy:
-        attribute_function Pickers([PiercingsPicker, CollarPicker, PregnancyPicker, PubesPicker, DickPicker], npc=amy)
+        attribute_function Pickers([ CollarPicker, PubesPicker, DickPicker], npc=amy)
 
 
         always "electronic_3some_mikeamydoggy_bg_house"
@@ -74,8 +70,6 @@ init 1:
         attribute pubes
         attribute pregnant
         attribute collar
-        group multiple auto variant piercings
-
 
         attribute butplug
 
@@ -138,7 +132,7 @@ init 1:
             attribute blowjob if_any ["shawn"]
 
     layeredimage electronic 3some shawnamyspoon:
-        attribute_function Pickers([PiercingsPicker, PregnancyPicker, PubesPicker, DickPicker], npc=amy)
+        attribute_function Pickers([ PubesPicker, DickPicker], npc=amy)
 
 
         always "electronic_3some_shawnamyspoon_bg"
@@ -157,13 +151,8 @@ init 1:
         group eyes auto:
             attribute eyes_normal default
 
-
-        group multiple auto variant piercings
-
-
         attribute fingering null
         always "electronic_3some_shawnamyspoon_nofingering" if_not ["fingering"]
-
 
         group dick auto:
             attribute out default
@@ -192,7 +181,7 @@ init 1:
         always "electronic_3some_shawnamyspoon_mikecum_blowjob" if_all ["mike", "mikecum", "blowjob"]
 
     layeredimage electronic 4some fuckamy:
-        attribute_function MultiPickers([CollarPicker, PiercingsPicker, PregnancyPicker], npcs=[amy, palla])
+        attribute_function MultiPickers([CollarPicker], npcs=[amy, palla])
 
 
         always "electronic_4some_fuckamy_bg"
@@ -213,13 +202,8 @@ init 1:
         group collars auto variant "pose1" if_any ["pose1"]
         group collars auto variant "pose2" if_any ["pose2"]
 
-
-        group multiple auto variant piercings
-        group multiple auto variant piercings_pose1 when pose1
-        group multiple auto variant piercings_pose2 when pose2
-
     layeredimage electronic 4some fuckpalla:
-        attribute_function MultiPickers([CollarPicker, PiercingsPicker, PregnancyPicker, DickPicker], npcs=[amy, palla])
+        attribute_function MultiPickers([CollarPicker,  DickPicker], npcs=[amy, palla])
 
 
         always "electronic_4some_fuckpalla_bg"
@@ -245,14 +229,6 @@ init 1:
 
         group pubes auto variant "normal" if_any ["normal"]
         group pubes auto variant "dildo" if_any ["dildo"]
-
-
-        group pregnancy auto variant "normal" if_any ["normal"]
-        group pregnancy auto variant "dildo" if_any ["dildo"]
-
-
-        group multiple auto variant piercings_normal when normal
-        group multiple auto variant piercings_dildo when dildo
 
 
         attribute shawnholdamy if_all ["normal", "shawn"]
@@ -312,7 +288,7 @@ init 1:
         always "electronic_4some_fuckpalla_mikecondomcum_small" if_all ["mike", "mikecondom", "mikecum", "small", "dildo"]
 
     layeredimage electronic 4some bj:
-        attribute_function MultiPickers([CollarPicker, PiercingsPicker, PregnancyPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([CollarPicker], append_npc_from_attributes=True)
 
 
         always "electronic_4some_bj_bg"
@@ -344,11 +320,7 @@ init 1:
 
         attribute palla_pubes if_any ["palla"]
 
-        attribute palla_pregnant if_any ["palla"]
-
         attribute palla_collar if_any ["palla"]
-
-        group multiple auto variant piercings_palla when palla
 
         always "electronic_4some_bj_pallafingering" if_any ["palla"] if_not ["mike"]
         always "electronic_4some_bj_pallafingering" if_all ["palla", "amy", "mike"]
@@ -370,29 +342,18 @@ init 1:
 
         attribute amy_collar if_any ["amy"]
 
-        group multiple auto variant piercings_amy when amy
-        group multiple auto variant piercings_amy_noplayleftboob when amy and not playleftboob
-        group multiple auto variant piercings_amy_noplayrightboob when amy and not playrightboob
-
-
         always "electronic_4some_bj_amyrighthand_playrightboob" if_any ["amy"] if_not ["mike"]
         group amyrighthand if_all ["amy", "mike"]:
             attribute playrightboob
-        group multiple auto variant piercings_amy_playrightboob when amy and not mike
-        group multiple auto variant piercings_amy_playrightboob when amy and mike and playrightboob
-
         always "electronic_4some_bj_amyfingering" if_any ["amy"] if_not ["shawn", "playleftboob"]
         always "electronic_4some_bj_amyfingering" if_all ["amy", "palla", "shawn"] if_not ["playleftboob"]
         group amylefthand if_any ["amy"]:
             attribute playleftboob
-        group multiple auto variant piercings_amy_playleftboob when amy and playleftboob
 
         always "electronic_4some_bj_amyhair" if_any ["amy"]
 
         attribute amybodycum if_any ["amy"]
         attribute amyfacecum if_any ["amy"]
-
-
 
         attribute mike null
         always "electronic_4some_bj_mike_amyhandjob" if_any ["mike"] if_not ["amy", "palla"]

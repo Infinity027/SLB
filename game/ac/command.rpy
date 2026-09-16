@@ -163,13 +163,13 @@ screen appearance(npc=None):
     default shown_attributes = set()
     default refresh = False
 
-    $ pierced_piercings = [v for _, v in shown_npc.piercings.items() if v.pierced]
+    # $ pierced_piercings = [v for _, v in shown_npc.piercings.items() if v.pierced]
 
     frame:
         background None
         if not shown_attributes:
             $ shown_attributes = {shown_npc.get_clothes()}
-        $ shown_attributes.update({pi.location for pi in pierced_piercings if pi.worn})
+        # $ shown_attributes.update({pi.location for pi in pierced_piercings if pi.worn})
         $ display_shown = " ".join(shown_attributes)
         add "[shown_npc.id] [''] [display_shown]" xalign 0.25
 
@@ -427,27 +427,27 @@ screen appearance(npc=None):
                                 selected not shown_npc.flags.collared
 
 
-                if pierced_piercings:
-                    vbox:
-                        xfill True
-                        textbutton "Piercings":
-                            action [
-                                    ToggleScreenVariable("submenu", "piercings", None),
-                                    SetScreenVariable("shown_attributes", {"naked"})
-                                    ]
-                            hovered If(not submenu, SetScreenVariable("shown_attributes", {"naked"}.union({pi.location for pi in pierced_piercings if pi.worn})))
-                    if submenu == "piercings":
-                        vbox:
-                            style_prefix "appearance_submenu_items"
-                            xfill True
-                            for piercing in pierced_piercings:
-                                textbutton "[piercing.location!cl]":
-                                    selected piercing.worn
-                                    xpos 0.10
-                                    action [
-                                            ToggleField(shown_npc.piercings, f"{piercing.location}.worn", True, False),
-                                            ToggleSetMembership(shown_attributes, piercing.location)
-                                            ]
+                # if pierced_piercings:
+                #     vbox:
+                #         xfill True
+                #         textbutton "Piercings":
+                #             action [
+                #                     ToggleScreenVariable("submenu", "piercings", None),
+                #                     SetScreenVariable("shown_attributes", {"naked"})
+                #                     ]
+                #             hovered If(not submenu, SetScreenVariable("shown_attributes", {"naked"}.union({pi.location for pi in pierced_piercings if pi.worn})))
+                #     if submenu == "piercings":
+                #         vbox:
+                #             style_prefix "appearance_submenu_items"
+                #             xfill True
+                #             for piercing in pierced_piercings:
+                #                 textbutton "[piercing.location!cl]":
+                #                     selected piercing.worn
+                #                     xpos 0.10
+                #                     action [
+                #                             ToggleField(shown_npc.piercings, f"{piercing.location}.worn", True, False),
+                #                             ToggleSetMembership(shown_attributes, piercing.location)
+                #                             ]
 
 
                 if shown_npc.is_female and shown_npc.sub >= 75:

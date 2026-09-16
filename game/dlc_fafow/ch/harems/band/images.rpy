@@ -1,6 +1,6 @@
 init 1:
     layeredimage band threesome fuckamy:
-        attribute_function MultiPickers([CollarPicker, PregnancyPicker, PiercingsPicker, HaircutPicker, OutfitPicker, MCCGPicker], npcs=[amy, sasha], add_simple_outfit_attribute=True)
+        attribute_function MultiPickers([CollarPicker,  HaircutPicker, OutfitPicker, MCCGPicker], npcs=[amy, sasha], add_simple_outfit_attribute=True)
 
         attribute mikemc null
         attribute amy null
@@ -20,7 +20,6 @@ init 1:
         attribute sasha_boobjob
         attribute sasha_noboobjob null
 
-        group multiple auto variant piercings
         group multiple:
             attribute amy_nipples null
             attribute amy_navel null
@@ -28,8 +27,6 @@ init 1:
             attribute sasha_lips null
             attribute sasha_nose null
             attribute sasha_tongue null
-        group piercings auto variant "boobjob" if_any "sasha_boobjob"
-        group piercings auto variant "noboobjob" if_any "sasha_noboobjob"
 
         attribute naked null
         attribute amy_naked null
@@ -61,7 +58,7 @@ init 1:
         attribute wet
 
     layeredimage band threesome fucksasha:
-        attribute_function MultiPickers([CollarPicker, PregnancyPicker, PiercingsPicker, HaircutPicker, OutfitPicker, MCCGPicker], npcs=[amy, sasha], add_simple_outfit_attribute=True)
+        attribute_function MultiPickers([CollarPicker,  HaircutPicker, OutfitPicker, MCCGPicker], npcs=[amy, sasha], add_simple_outfit_attribute=True)
 
         attribute mikemc null
         attribute amy null
@@ -84,7 +81,6 @@ init 1:
         attribute sasha_boobjob
         attribute sasha_noboobjob null
 
-        group multiple auto variant piercings
         group multiple:
             attribute amy_clit null
             attribute amy_navel null
@@ -95,8 +91,6 @@ init 1:
             attribute sasha_navel null
             attribute sasha_pregnant_navel null
             attribute sasha_tongue null
-        group piercings auto variant "boobjob" if_all ["sasha_boobjob", "naked"]
-        group piercings auto variant "noboobjob" if_all ["sasha_noboobjob", "naked"]
 
         attribute naked null
         attribute amy_naked null
@@ -110,8 +104,6 @@ init 1:
         group multiple auto variant collars
         group multiple:
             attribute sasha_collar null
-
-
 
         group dick_location:
             attribute out null default
@@ -129,7 +121,7 @@ init 1:
         attribute wet
 
     layeredimage ferris lookout amysasha:
-        attribute_function MultiPickers([CollarPicker, PregnancyPicker, PiercingsPicker, HaircutPicker, OutfitPicker, MCCGPicker], npcs=[amy, sasha], add_simple_outfit_attribute=True)
+        attribute_function MultiPickers([CollarPicker,  HaircutPicker, OutfitPicker, MCCGPicker], npcs=[amy, sasha], add_simple_outfit_attribute=True)
 
         attribute naked null
         attribute amy_naked null
@@ -163,10 +155,6 @@ init 1:
         group boobjobs auto:
             attribute sasha_noboobjob null
 
-        group multiple auto variant piercings_hidden
-        group piercings_boobjob auto if_any "sasha_boobjob"
-        group piercings_noboobjob auto if_any "sasha_noboobjob"
-
         group multiple auto variant outfits when not naked
 
         attribute amy_pregnant
@@ -175,7 +163,6 @@ init 1:
         group outfits_boobjob auto if_any "sasha_boobjob" if_not "naked"
         group outfits_amy_pregnant auto if_any "amy_pregnant" if_not "naked"
 
-        group multiple auto variant piercings
         group multiple:
             attribute sasha_lips null
 
@@ -186,7 +173,7 @@ init 1:
 
 
     layeredimage band handjob amysasha:
-        attribute_function MultiPickers([CollarPicker, PregnancyPicker, PiercingsPicker, HaircutPicker, OutfitPicker, MCCGPicker], npcs=[amy, sasha], add_simple_outfit_attribute=True)
+        attribute_function MultiPickers([CollarPicker,  HaircutPicker, OutfitPicker, MCCGPicker], npcs=[amy, sasha], add_simple_outfit_attribute=True)
 
         attribute naked null
         attribute amy_naked null
@@ -216,10 +203,6 @@ init 1:
         group boobjobs auto:
             attribute sasha_noboobjob null
 
-        group multiple auto variant piercings_hidden
-        group piercings_boobjob auto if_any "sasha_boobjob"
-        group piercings_noboobjob auto if_any "sasha_noboobjob"
-
         group multiple auto variant outfits when not naked
 
         attribute amy_pregnant
@@ -228,7 +211,6 @@ init 1:
         group outfits_boobjob auto if_any "sasha_boobjob" if_not "naked"
         group outfits_amy_pregnant auto if_any "amy_pregnant" if_not "naked"
 
-        group multiple auto variant piercings
         group multiple:
             attribute amy_clit null
             attribute amy_pregnant_navel null
@@ -251,7 +233,7 @@ init 1:
 
 
     layeredimage band blowjob amykleio:
-        attribute_function MultiPickers([CollarPicker, PregnancyPicker, PiercingsPicker, HaircutPicker, MCCGPicker], npcs=[amy, kleio])
+        attribute_function MultiPickers([CollarPicker,  HaircutPicker, MCCGPicker], npcs=[amy, kleio])
 
 
         attribute mc_casual null
@@ -311,7 +293,6 @@ init 1:
 
         group multiple auto variant backs
 
-        group multiple auto variant piercings
         group multiple:
             attribute amy_clit null
             attribute amy_navel null
@@ -339,7 +320,7 @@ init 1:
 
 
     layeredimage band threesome amykleio fuckamy:
-        attribute_function MultiPickers([CollarPicker, PregnancyPicker, PiercingsPicker, HaircutPicker, MCCGPicker], npcs=[amy, kleio])
+        attribute_function MultiPickers([CollarPicker,  HaircutPicker, MCCGPicker], npcs=[amy, kleio])
 
         attribute nomc null
         attribute mikemc null
@@ -393,7 +374,6 @@ init 1:
             attribute kleio_angel null
             attribute kleio_wolf null
 
-        group multiple auto variant piercings
         group multiple:
             attribute amy_clit null
             attribute amy_navel null
@@ -414,7 +394,7 @@ init 1:
         group fg auto
 
     layeredimage band threesome amykleio fuckkleio:
-        attribute_function MultiPickers([CollarPicker, PregnancyPicker, PiercingsPicker, HaircutPicker, MCCGPicker], npcs=[amy, kleio])
+        attribute_function MultiPickers([CollarPicker,  HaircutPicker, MCCGPicker], npcs=[amy, kleio])
 
         attribute nomc null
         attribute mikemc null
@@ -440,7 +420,6 @@ init 1:
         group kleiomouth auto:
             attribute kleionormal default
 
-        group multiple auto variant piercings
         group multiple:
             attribute amy_clit null
             attribute amy_navel null
@@ -490,7 +469,7 @@ init 1:
         group fg auto
 
     layeredimage band foreplay amyanna:
-        attribute_function MultiPickers([CollarPicker, PregnancyPicker, PiercingsPicker, MCCGPicker], npcs=[amy, anna])
+        attribute_function MultiPickers([CollarPicker,  MCCGPicker], npcs=[amy, anna])
 
         attribute nomc null
         attribute mikemc null
@@ -531,11 +510,8 @@ init 1:
             attribute handjob if_not "inside"
         always "band_foreplay_amyanna_anna_elbow" if_any "handjob" if_not "inside"
 
-
         group multiple auto variant pregnancies
 
-
-        group multiple auto variant piercings
         group multiple:
             attribute anna_clit null
             attribute anna_ears null
@@ -549,7 +525,7 @@ init 1:
         group multiple auto variant fx
 
     layeredimage band threesome amyanna fuckanna:
-        attribute_function MultiPickers([CollarPicker, PregnancyPicker, PiercingsPicker, PubesPicker, MCCGPicker], npcs=[amy, anna])
+        attribute_function MultiPickers([CollarPicker,  PubesPicker, MCCGPicker], npcs=[amy, anna])
 
         attribute amy null
         attribute anna null
@@ -567,16 +543,12 @@ init 1:
 
         group multiple auto variant pregnancies
 
-        group multiple auto variant piercings
         group multiple:
             attribute amy_clit null
             attribute amy_navel null
             attribute amy_pregnant_navel null
             attribute anna_ears null
             attribute anna_tongue null
-
-        group piercings auto variant "vaginal" if_any "vaginal"
-        group piercings auto variant "anal" if_any "anal"
 
         group multiple auto variant collars
 
@@ -590,10 +562,6 @@ init 1:
 
         group tits auto:
             attribute still default
-
-        group piercings auto variant "still" if_any "still"
-        group piercings auto variant "bouncing1" if_any "bouncing1"
-        group piercings auto variant "bouncing2" if_any "bouncing2"
 
         group dick auto:
             attribute outside null default
@@ -620,7 +588,7 @@ init 1:
 
 
     layeredimage band threesome amyanna fuckamy:
-        attribute_function MultiPickers([CollarPicker, PregnancyPicker, PiercingsPicker, MCCGPicker], npcs=[amy, anna])
+        attribute_function MultiPickers([CollarPicker,  MCCGPicker], npcs=[amy, anna])
 
         attribute amy null
         attribute anna null
@@ -648,7 +616,6 @@ init 1:
 
         group multiple auto variant pregnancies
 
-        group multiple auto variant piercings
         group multiple:
             attribute amy_clit null
             attribute amy_ears null
@@ -683,7 +650,7 @@ init 1:
 
 
     layeredimage fivesome amyannakleiosasha:
-        attribute_function MultiPickers([CollarPicker, PregnancyPicker, PiercingsPicker, PubesPicker, HaircutPicker, MCCGPicker], npcs=[amy, anna, kleio, sasha])
+        attribute_function MultiPickers([CollarPicker,  PubesPicker, HaircutPicker, MCCGPicker], npcs=[amy, anna, kleio, sasha])
 
         attribute mikemc null
         attribute mc_casual null
@@ -696,12 +663,7 @@ init 1:
         always "fivesome_amyannakleiosasha_kleio_sasha" if_not "nokleiosasha"
 
         attribute kleio null
-        group multiple auto variant kleio_piercings when not nokleiosasha:
-            attribute kleio_clit null
-            attribute kleio_nipples null
-            attribute kleio_navel null
-            attribute kleio_pregnant_navel null
-            attribute kleio_tongue null
+
         attribute kleio_collar if_not "nokleiosasha"
         attribute kleio_pregnant if_not "nokleiosasha"
         attribute kleio_pubes null
@@ -712,22 +674,12 @@ init 1:
         attribute sasha null
         attribute sasha_boobjob null
         attribute sasha_noboobjob null
-        group multiple auto variant sasha_piercings when not nokleiosasha:
-            attribute sasha_clit null
-            attribute sasha_ears null
-            attribute sasha_lips null
-            attribute sasha_nipples null
-            attribute sasha_navel null
-            attribute sasha_pregnant_navel null
-            attribute sasha_nose null
-            attribute sasha_tongue null
         attribute sasha_collar if_not "nokleiosasha"
         attribute sasha_pregnant if_not "nokleiosasha"
         attribute sasha_nohaircut if_not "nokleiosasha"
         attribute sasha_haircut null
 
         attribute amy
-        group multiple auto variant amy_piercings
         group multiple:
             attribute amy_clit null
             attribute amy_navel null
@@ -737,9 +689,6 @@ init 1:
 
         attribute noanna null
         attribute anna if_not "noanna"
-        group multiple auto variant anna_piercings when not noanna:
-            attribute anna_ears null
-            attribute anna_tongue null
         attribute anna_collar if_not "noanna"
         attribute anna_pubes if_not "noanna"
         attribute anna_pregnant if_not "noanna"

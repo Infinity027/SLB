@@ -21,7 +21,7 @@ init python:
 
 init 1:
     layeredimage watch tv:
-        attribute_function MultiPickers([DayNightPicker, CollarPicker, PiercingsPicker, OutfitPicker, PregnancyPicker, HaircutPicker, MCCGPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([DayNightPicker, CollarPicker,  OutfitPicker, HaircutPicker, MCCGPicker], append_npc_from_attributes=True)
 
         attribute naked null
         attribute nopopcorn null
@@ -38,18 +38,11 @@ init 1:
 
         attribute mc_collar if_any ["breemc"]
 
-        group multiple auto variant breemc_piercings when breemc
-        group multiple:
-            attribute mc_clit null
-            attribute mc_ears null
-
         attribute mc_nohaircut null
 
         attribute mc_naked null
         group breemc_outfit auto if_any ["breemc"] if_not ["mc_naked"]
         group breemc_outfit auto variant "preg" if_all ["mc_pregnant", "breemc"] if_not ["mc_naked"]
-
-
 
         attribute bree
         always "watch_tv_bree" if_any ["bree"]
@@ -57,12 +50,6 @@ init 1:
         attribute bree_pregnant if_all ["bree_naked"] if_any ["bree"]
 
         attribute bree_collar if_any ["bree"]
-
-        group multiple auto variant bree_piercings when bree
-        group multiple:
-            attribute bree_clit null
-            attribute bree_ears null
-
         attribute bree_nohaircut null
 
         attribute bree_naked null
@@ -100,37 +87,20 @@ init 1:
 
         attribute sasha_collar if_any ["sasha"]
 
-        group multiple auto variant sasha_piercings when sasha
-        group multiple:
-            attribute sasha_lips null
-            attribute sasha_tongue null
-        group multiple auto variant sasha_piercings_bb when sasha and sasha_boobjob
-        group multiple auto variant sasha_piercings_notbb when sasha and not sasha_boobjob
-
         attribute sasha_naked null
         group sasha_outfit auto if_any ["sasha"] if_not ["sasha_naked"]
         group sasha_outfit auto variant "preg" if_all ["sasha", "sasha_pregnant"] if_not ["sasha_naked"]
         group sasha_outfit auto variant "bb" if_all ["sasha", "sasha_boobjob"] if_not ["sasha_naked"]
 
-
         attribute samantha
 
-        attribute samantha_pregnant if_all ["samantha", "samantha_naked"]
-
         attribute samantha_collar if_any ["samantha"]
-
-        group multiple auto variant samantha_piercings when samantha
-        group multiple:
-            attribute samantha_clit null
-            attribute samantha_ears null
-            attribute samantha_tongue null
 
         attribute samantha_nohaircut null
 
         attribute samantha_naked null
         group samantha_outfit auto if_any ["samantha"] if_not ["samantha_naked"]
         group samantha_outfit auto variant "preg" if_all ["samantha", "samantha_pregnant"] if_not ["samantha_naked"]
-
 
         attribute minami
 
@@ -141,7 +111,6 @@ init 1:
 
         attribute minami_collar if_any ["minami"]
 
-        group multiple auto variant minami_piercings when minami
         group multiple:
             attribute minami_ears null
             attribute minami_navel null
@@ -158,7 +127,6 @@ init 1:
 
         attribute lexi_collar if_any ["lexi"]
 
-        group multiple auto variant lexi_piercings when lexi
         group multiple:
             attribute lexi_clit null
             attribute lexi_tongue null
@@ -172,21 +140,13 @@ init 1:
 
         always "watch_tv_bottom_popcorn" if_any ["minami", "samantha", "lexi"]
 
-
-
-
-
-
-
-
     layeredimage watch date tv:
-        attribute_function Pickers([CG_WatchDateTV_Picker, PregnancyPicker, CollarPicker, HaircutPicker, OutfitPicker, PiercingsPicker, MCCGPicker], clear_npc=True)
+        attribute_function Pickers([CG_WatchDateTV_Picker, CollarPicker, HaircutPicker, OutfitPicker,  MCCGPicker], clear_npc=True)
 
         attribute mikemc null
         attribute breemc null
 
         group bg auto
-
 
         attribute mc_haircut null
         attribute mc_nohaircut null
@@ -195,38 +155,29 @@ init 1:
         group breemc auto variant "haircut" if_all ["breemc", "mc_haircut"]
         group breemc auto variant "nohaircut" if_all ["breemc"] if_not "mc_haircut"
 
-
         group npc auto
-
 
         attribute pregnant null
         group pregnant auto if_any ["pregnant"]
 
-
         attribute boobjob null
         group boobjob auto if_any ["boobjob"]
 
-
         attribute makeup null
         group makeup auto if_any ["makeup"]
-
 
         attribute haircut null
         attribute nohaircut null
         group haircut auto if_all ["haircut"] if_any ["camila", "morgan", "sasha", "bree"]
         group nohaircut auto if_all ["nohaircut"] if_any ["camila", "morgan", "sasha"]
 
-
         attribute naked null
         group outfit auto if_not ["naked"]
         group outfit auto variant "pregnant" if_any ["pregnant"] if_not ["naked"]
         group outfit auto variant "boobjob" if_any ["boobjob"] if_not ["naked"]
 
-
         attribute collar null
         group collar auto if_any ["collar"]
-
-
 
         attribute lips null
         group lips auto if_any ["lips"]

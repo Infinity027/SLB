@@ -1,6 +1,6 @@
 init 1:
     layeredimage purity foreplay:
-        attribute_function MultiPickers([PiercingsPicker, PubesPicker, CollarPicker, PregnancyPicker, HaircutPicker, DickPicker], npcs=[harmony,reona])
+        attribute_function MultiPickers([ PubesPicker, CollarPicker, HaircutPicker, DickPicker], npcs=[harmony,reona])
 
 
         attribute harmony null
@@ -15,20 +15,14 @@ init 1:
 
         always "purity_foreplay_bg_bedroom"
 
-
         always "purity_foreplay_bodies"
 
 
         group multiple auto variant pregnancies
 
-
-        group piercings auto
-
-
         always "purity_foreplay_reona_eyes"
         group harmony_eyes auto:
             attribute lookreona default
-
 
         group outfits_harmony auto when not harmony_pregnant
         group outfits_harmony auto variant pregnant when harmony_pregnant
@@ -61,7 +55,7 @@ init 1:
             attribute down default
 
     layeredimage purity threesome reona:
-        attribute_function MultiPickers([PiercingsPicker, PubesPicker, CollarPicker, PregnancyPicker, HaircutPicker, DickPicker], npcs=[harmony,reona])
+        attribute_function MultiPickers([ PubesPicker, CollarPicker, HaircutPicker, DickPicker], npcs=[harmony,reona])
 
 
         attribute harmony null
@@ -82,13 +76,6 @@ init 1:
         always "purity_threesome_reona_bodies"
         attribute bulge
         always "purity_threesome_reona_tattoo"
-
-
-        group multiple auto variant pregnancies
-
-
-        group piercings auto
-
 
         group harmony_eyes auto:
             attribute lookreona default
@@ -113,26 +100,21 @@ init 1:
             attribute out null
         group condom auto variant condom_out when condom and out
 
-
         attribute cumshot null
         group cumshot auto when cumshot
-
 
         attribute creampie
         group creampie auto when creampie
 
-
         group harmony_hand auto:
             attribute up default
-
 
         group multiple auto variant haircuts
 
         group fx auto
 
     layeredimage purity threesome harmony:
-        attribute_function MultiPickers([PiercingsPicker, PubesPicker, CollarPicker, PregnancyPicker, HaircutPicker, DickPicker], npcs=[harmony,reona])
-
+        attribute_function MultiPickers([ PubesPicker, CollarPicker, HaircutPicker, DickPicker], npcs=[harmony,reona])
 
         attribute harmony null
         attribute reona null
@@ -153,13 +135,6 @@ init 1:
         always "purity_threesome_harmony_bodies"
         always "purity_threesome_harmony_reona_tattoo_belly"
         always "purity_threesome_harmony_reona_tattoo_face" when reona_nohaircut
-
-
-        group multiple auto variant pregnancies
-
-
-        group piercings auto
-
 
         group harmony_eyes auto:
             attribute back default

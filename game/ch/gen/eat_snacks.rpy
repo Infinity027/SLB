@@ -28,7 +28,7 @@ init python:
 
 init 1:
     layeredimage eat snacks:
-        attribute_function MultiPickers([PregnancyPicker, PiercingsPicker, HaircutPicker, CollarPicker, OutfitPicker, MCCGPicker, CG_EatSnacks_Picker], add_simple_pregnant_attribute=True, append_npc_from_attributes=True)
+        attribute_function MultiPickers([ HaircutPicker, CollarPicker, OutfitPicker, MCCGPicker, CG_EatSnacks_Picker], add_simple_pregnant_attribute=True, append_npc_from_attributes=True)
 
         attribute pregnant null
         attribute mikemc null
@@ -61,18 +61,8 @@ init 1:
         group outfits auto
         group outfits_boobjob auto if_all ["sasha_boobjob"]
         group outfits_noboobjob auto if_all ["sasha_noboobjob"]
-        group outfits_pregnant auto if_all ["pregnant"]
 
-        group pregnancies auto
-
-        group multiple auto variant piercings
-
-        group bot auto
-        group bot_pregnant auto if_all "morgan_pregnant"
-        group top auto
-        group top_pregnant auto if_all "morgan_pregnant"
         attribute morgan_makeup
-
 
         group mc auto variant "03" if_any "03"
         group mcoutfits_03 auto variant "mikemc" if_all ["mikemc", "03"]
@@ -87,4 +77,3 @@ init 1:
         group mc_snack auto variant "04" if_all ["04"]
 
         group glasses auto
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

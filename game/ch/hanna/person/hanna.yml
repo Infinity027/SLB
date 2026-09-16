@@ -24,31 +24,6 @@ attributes:
     min: 0
     max: null
     default: 0
-piercings:
-# art assets don't exist, and may never since her ears are never seen
-#  ears:
-#    outfits:
-#    - date
-#    pierced: true
-  navel:
-    outfits:
-    - naked
-    - swimsuit
-    - sexyswimsuit
-    - underwear
-    - sport
-    pierced: true
-  clit:
-    outfits:
-    - naked
-  nipples:
-    outfits:
-    - naked
-  tongue:
-    expressions:
-    - blush
-  nose:
-    pierced: true
 birthday:
 - fall
 - 30

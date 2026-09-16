@@ -35,7 +35,7 @@ init 5 python:
 
 init 6:
     layeredimage bg pubexterior:
-        attribute_function MultiPickers([DayNightPicker, SeasonPicker, PiercingsPicker, CollarPicker, PregnancyPicker, OutfitPicker, PubExteriorPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([DayNightPicker, SeasonPicker,  CollarPicker, OutfitPicker, PubExteriorPicker], append_npc_from_attributes=True)
 
 
         attribute empty null            
@@ -61,10 +61,9 @@ init 6:
 
 
         attribute kat
-        attribute kat_pregnant when kat
+        
         attribute kat_collar when kat
         always "bg_pubexterior_kat_nohaircut" when kat
-        group multiple auto variant kat_piercings when kat
         group kat_bot auto variant preg when kat and kat_pregnant
         group kat_bot auto variant nopreg when kat and not kat_pregnant
         group kat_top auto variant preg when kat and kat_pregnant
@@ -72,10 +71,9 @@ init 6:
 
 
         attribute anna
-        attribute anna_pregnant when anna
+        
         attribute anna_collar when anna
         always "bg_pubexterior_anna_nohaircut" when anna
-        group multiple auto variant anna_piercings when anna
         group anna_bot auto variant preg when anna and anna_pregnant
         group anna_bot auto variant nopreg when anna and not anna_pregnant
         group anna_top auto variant preg when anna and anna_pregnant
@@ -83,12 +81,10 @@ init 6:
 
 
         attribute emma
-        attribute emma_pregnant when emma
+        
         attribute emma_collar when emma
         always "bg_pubexterior_emma_nohaircut" when emma
-        group multiple auto variant emma_piercings when emma
         group emma_bot auto variant preg when emma and emma_pregnant
         group emma_bot auto variant nopreg when emma and not emma_pregnant
         group emma_top auto variant preg when emma and emma_pregnant
         group emma_top auto variant nopreg when emma and not emma_pregnant
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

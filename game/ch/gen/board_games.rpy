@@ -20,7 +20,7 @@ init python:
 
 init 1:
     layeredimage board games:
-        attribute_function MultiPickers([PubesPicker, PregnancyPicker, PiercingsPicker, HaircutPicker, CollarPicker, OutfitPicker, MCCGPicker, CG_BoardGames_Picker], append_npc_from_attributes=True, add_simple_pregnant_attribute=True, add_simple_naked_attribute=True)
+        attribute_function MultiPickers([PubesPicker,  HaircutPicker, CollarPicker, OutfitPicker, MCCGPicker, CG_BoardGames_Picker], append_npc_from_attributes=True, add_simple_pregnant_attribute=True, add_simple_naked_attribute=True)
 
         attribute naked null
         attribute mc_naked null
@@ -32,19 +32,12 @@ init 1:
 
         group bg auto
 
-
-
-
         group couch_behind_npc auto
         group couch_behind_boobjobs auto:
             attribute sasha_noboobjob null
         group couch_behind_pregnancies auto
         group couch_behind_collars auto
         group couch_behind_haircuts auto
-
-        group multiple auto variant couch_behind_piercings_under
-        group multiple auto variant couch_behind_piercings_under_boobjob when sasha_boobjob
-        group multiple auto variant couch_behind_piercings_under_noboobjob when sasha_noboobjob
 
         group couch_behind_outfits auto when not naked
         group couch_behind_outfits auto variant boobjob when sasha_boobjob and not naked
@@ -58,9 +51,6 @@ init 1:
         group couch_behind_top auto when not naked
         group couch_behind_top auto variant pregnant when pregnant and not naked
         group couch_behind_makeup auto
-
-        group multiple auto variant couch_behind_piercings
-
 
         group mc auto variant 01 when 01
         group mc auto variant 02 when 02
@@ -92,14 +82,8 @@ init 1:
         group couch_ahead_collars auto when collar
         group couch_ahead_haircuts auto
 
-        group multiple auto variant couch_ahead_piercings_under
-
         group couch_ahead_outfits auto when not naked
         group couch_ahead_outfits auto variant pregnant when pregnant and not naked
-
-        group multiple auto variant couch_ahead_piercings
-
-
         group table_npc auto
         group table_pubes auto when pubes and naked
         group table_armpits auto when armpits
@@ -107,16 +91,10 @@ init 1:
         group table_collars auto when collar
         group table_haircuts auto
 
-        group multiple auto variant table_piercings_under
-
         group table_outfits auto when not naked
         group table_outfits auto variant pregnant when pregnant and not naked
 
-        group multiple auto variant table_piercings
-
-
         group table auto
-
 
         group boardgames:
             attribute dungeon null
@@ -130,13 +108,3 @@ init 1:
         group boardgame auto variant island when island
         group boardgame auto variant lovecraft when lovecraft
         group boardgame auto variant zombie when zombie
-
-
-        group multiple:
-            attribute hanna_clit null
-            attribute hanna_navel null
-            attribute hanna_nipples null
-            attribute hanna_tongue null
-            attribute minami_clit null
-            attribute minami_ears null
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

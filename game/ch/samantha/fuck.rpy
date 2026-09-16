@@ -762,8 +762,6 @@ label samantha_fuck_date_bj:
             "Her nipple piercings kiss my skin each stroke; the cool tug makes her gasp against me."
         show samantha bj closed suck with fade
         "She's a thirsty girl, and she lets her tongue lick over my head."
-        if samantha.piercings.tongue.worn and randint(0, 1):
-            "The little stud taps my crown before she seals her lips, a faint click that shoots straight through me."
         "She swirls over it a moment, getting the head nice and wet before she kisses me with those wonderful and soft lips of hers."
         if samantha.piercings.navel.worn and randint(0, 1):
             "When she arches, her navel jewel gleams up at me like a tiny lighthouse."

@@ -293,9 +293,8 @@ init python:
             else:
                 attr = MCCollarPicker().__call__(attr, self.add_mc_prefix)
                 attr = MCHaircutPicker().__call__(attr, self.add_mc_prefix)
-                attr = MCPiercingsPicker().__call__(attr, self.add_mc_prefix)
                 attr = MCPubesPicker().__call__(attr, self.add_mc_prefix)
-                attr = MCPregnancyPicker().__call__(attr, self.add_mc_prefix)
+                # attr = MCPregnancyPicker().__call__(attr, self.add_mc_prefix)
             attr = MCOutfitPicker().__call__(attr, self.add_mc_prefix)
             if enable_debug_picker:
                 renpy.log(f"MCCGPicker results: {attr}")
@@ -480,21 +479,21 @@ init python:
             return attr
 
 
-    class MCPiercingsPicker(object):
-        """
-    Iteration over piercings. No check on outfits or expressions.
-    """
+    # class MCPiercingsPicker(object):
+    #     """
+    # Iteration over piercings. No check on outfits or expressions.
+    # """
         
-        def __call__(self, attr, add_mc_prefix):
-            for p, status in hero.piercings.items():
-                if status.worn:
-                    if add_mc_prefix:
-                        attr.add(f"mc_{p}")
-                    else:
-                        attr.add(f"{p}")
-            if enable_debug_picker:
-                renpy.log(f"MCPiercingsPicker results: {attr}")
-            return attr
+    #     def __call__(self, attr, add_mc_prefix):
+    #         for p, status in hero.piercings.items():
+    #             if status.worn:
+    #                 if add_mc_prefix:
+    #                     attr.add(f"mc_{p}")
+    #                 else:
+    #                     attr.add(f"{p}")
+    #         if enable_debug_picker:
+    #             renpy.log(f"MCPiercingsPicker results: {attr}")
+    #         return attr
 
 
     class MCPubesPicker(object):
@@ -533,20 +532,20 @@ init python:
             return attr
 
 
-    class MCPregnancyPicker(object):
-        """
-    Check if the hero is pregnant, add 'pregnant' attribute if that's the case.
-    """
+    # class MCPregnancyPicker(object):
+    #     """
+    # Check if the hero is pregnant, add 'pregnant' attribute if that's the case.
+    # """
 
-        def __call__(self, attr, add_mc_prefix):
-            if hero.is_visibly_pregnant:
-                if add_mc_prefix:
-                    attr.add("mc_pregnant")
-                else:
-                    attr.add("pregnant")
-            if enable_debug_picker:
-                renpy.log(f"MCPregnancyPicker results: {attr}")
-            return attr
+    #     def __call__(self, attr, add_mc_prefix):
+    #         if hero.is_visibly_pregnant:
+    #             if add_mc_prefix:
+    #                 attr.add("mc_pregnant")
+    #             else:
+    #                 attr.add("pregnant")
+    #         if enable_debug_picker:
+    #             renpy.log(f"MCPregnancyPicker results: {attr}")
+    #         return attr
 
 
     class MCPositionPicker(object):
@@ -871,36 +870,34 @@ init python:
             )
 
 
-    class PiercingsPicker(NPCPicker):
-        """
-    Iteration over piercings. No check on outfits or expressions.
-    Now with smart attribute prefixing for layeredimage optimization.
-    """
+    # class PiercingsPicker(NPCPicker):
+    #     """
+    # Iteration over piercings. No check on outfits or expressions.
+    # Now with smart attribute prefixing for layeredimage optimization.
+    # """
 
-        def __init__(
-        self, npc=None, id_prefix=False, clear_npc=None, piercings_prefix=False
-    ):
-            super().__init__(npc, id_prefix, clear_npc)
-            self.piercings_prefix = piercings_prefix
+    #     def __init__(
+    #     self, npc=None, id_prefix=False, clear_npc=None, piercings_prefix=False
+    # ):
+    #         super().__init__(npc, id_prefix, clear_npc)
+    #         self.piercings_prefix = piercings_prefix
 
-        def __call__(self, attr):
-            attr = super(PiercingsPicker, self).__call__(attr)
+    #     def __call__(self, attr):
+    #         attr = super(PiercingsPicker, self).__call__(attr)
 
-            for p, status in self.npc.piercings.items():
-                if status.worn:
-                    p_name = p
-                    if p == "navel" and self.npc.is_visibly_pregnant:
-                        p_name = "pregnant_navel"
+    #         for p, status in self.npc.piercings.items():
+    #             if status.worn:
+    #                 p_name = p
+    #                 if p == "navel" and self.npc.is_visibly_pregnant:
+    #                     p_name = "pregnant_navel"
 
-                    if self.id_prefix or self.piercings_prefix:
-                        attr.add(f"{self.npc_id}_{p_name}")
-                    else:
-                        attr.add(p_name)
+    #                 if self.id_prefix or self.piercings_prefix:
+    #                     attr.add(f"{self.npc_id}_{p_name}")
+    #                 else:
+    #                     attr.add(p_name)
 
-            if enable_debug_picker:
-                renpy.log(f"PiercingsPicker results: {attr}")
-            self.clean()
-            return attr
+    #         self.clean()
+    #         return attr
 
 
     class PositionPicker(NPCPicker):
@@ -1108,35 +1105,35 @@ init python:
                 position.append("-y")
 
 
-    class PregnancyPicker(NPCPicker):
-        """
-    Check if a npc is pregnant, add 'pregnant' attribute if she is.
-    """
+    # class PregnancyPicker(NPCPicker):
+    #     """
+    # Check if a npc is pregnant, add 'pregnant' attribute if she is.
+    # """
 
-        def __init__(
-        self,
-        npc=None,
-        id_prefix=False,
-        clear_npc=None,
-        add_simple_pregnant_attribute=False,
-    ):
-            super().__init__(npc, id_prefix, clear_npc)
-            self.add_simple_pregnant_attribute = add_simple_pregnant_attribute
+    #     def __init__(
+    #     self,
+    #     npc=None,
+    #     id_prefix=False,
+    #     clear_npc=None,
+    #     add_simple_pregnant_attribute=False,
+    # ):
+    #         super().__init__(npc, id_prefix, clear_npc)
+    #         self.add_simple_pregnant_attribute = add_simple_pregnant_attribute
 
-        def __call__(self, attr):
-            attr = super(PregnancyPicker, self).__call__(attr)
+    #     def __call__(self, attr):
+    #         attr = super(PregnancyPicker, self).__call__(attr)
 
-            if self.npc.is_visibly_pregnant:
-                if self.id_prefix:
-                    attr.add(f"{self.npc_id}_pregnant")
-                    if self.add_simple_pregnant_attribute:
-                        attr.add("pregnant")
-                else:
-                    attr.add("pregnant")
-            if enable_debug_picker:
-                renpy.log(f"PregnancyPicker results: {attr}")
-            self.clean()
-            return attr
+    #         if self.npc.is_visibly_pregnant:
+    #             if self.id_prefix:
+    #                 attr.add(f"{self.npc_id}_pregnant")
+    #                 if self.add_simple_pregnant_attribute:
+    #                     attr.add("pregnant")
+    #             else:
+    #                 attr.add("pregnant")
+    #         if enable_debug_picker:
+    #             renpy.log(f"PregnancyPicker results: {attr}")
+    #         self.clean()
+    #         return attr
 
 
     class ButtplugPicker(NPCPicker):

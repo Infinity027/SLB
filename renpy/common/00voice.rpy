@@ -61,7 +61,7 @@ init -1500 python:
 
     # This is formatted with {id} to produce a filename. If the filename
     # exists, it's played as a voice file.
-    config.auto_voice = None
+    # config.auto_voice = None
 
     # A list of voice callbacks.
     config.voice_callbacks = []
@@ -345,38 +345,38 @@ init -1500 python:
             self.auto_filename = None
             self.tlid = None
 
-            if not self.filename and config.auto_voice:
+            # if not self.filename and config.auto_voice:
 
-                if predict:
-                    tlids = renpy.display.predict.tlids
-                else:
-                    tlids = [
-                        renpy.game.context().translate_identifier,
-                        renpy.game.context().alternate_translate_identifier,
-                        renpy.game.context().deferred_translate_identifier,
-                    ]
+            #     if predict:
+            #         tlids = renpy.display.predict.tlids
+            #     else:
+            #         tlids = [
+            #             renpy.game.context().translate_identifier,
+            #             renpy.game.context().alternate_translate_identifier,
+            #             renpy.game.context().deferred_translate_identifier,
+            #         ]
 
-                for tlid in tlids:
+            #     for tlid in tlids:
 
-                    if tlid is None:
-                        continue
+            #         if tlid is None:
+            #             continue
 
-                    if isinstance(config.auto_voice, str):
-                        fn = config.auto_voice.format(id=tlid)
-                    else:
-                        fn = config.auto_voice(tlid)
+            #         if isinstance(config.auto_voice, str):
+            #             fn = config.auto_voice.format(id=tlid)
+            #         else:
+            #             fn = config.auto_voice(tlid)
 
-                    if self.auto_filename is None:
-                        self.auto_filename = fn
+            #         if self.auto_filename is None:
+            #             self.auto_filename = fn
 
-                    if fn and renpy.loadable(fn, directory="audio"):
+            #         if fn and renpy.loadable(fn, directory="audio"):
 
-                        if _voice.tlid == tlid:
-                            self.sustain = True
-                        else:
-                            self.filename = fn
+            #             if _voice.tlid == tlid:
+            #                 self.sustain = True
+            #             else:
+            #                 self.filename = fn
 
-                        break
+            #             break
 
             self.tlid = renpy.game.context().translate_identifier or renpy.game.context().deferred_translate_identifier
 
@@ -554,50 +554,50 @@ init -1500 python hide:
     config.periodic_callbacks.append(_voice_periodic_callback)
 
 
-    def _auto_voice_predict_callback(tag):
-        """
-        Called to perform auto-voice prediction.
-        """
+    # def _auto_voice_predict_callback(tag):
+    #     """
+    #     Called to perform auto-voice prediction.
+    #     """
 
-        if renpy.emscripten or os.environ.get('RENPY_SIMULATE_DOWNLOAD', False):
-            vi = VoiceInfo(predict=True, tag=tag)
+    #     if renpy.emscripten or os.environ.get('RENPY_SIMULATE_DOWNLOAD', False):
+    #         vi = VoiceInfo(predict=True, tag=tag)
 
-            fn = vi.filename
+    #         fn = vi.filename
 
-            if not fn:
-                return
+    #         if not fn:
+    #             return
 
-            try:
-                with renpy.loader.load(fn, directory="audio") as f:
-                    pass
+    #         try:
+    #             with renpy.loader.load(fn, directory="audio") as f:
+    #                 pass
 
-                renpy.webloader.extend(fn)
-            except renpy.webloader.DownloadNeeded as exception:
-                renpy.webloader.enqueue(exception.relpath, 'voice', None)
+    #             renpy.webloader.extend(fn)
+    #         except renpy.webloader.DownloadNeeded as exception:
+    #             renpy.webloader.enqueue(exception.relpath, 'voice', None)
 
-    config.auto_voice_predict_callback = _auto_voice_predict_callback
+    # config.auto_voice_predict_callback = _auto_voice_predict_callback
 
 
-screen _auto_voice:
-    layer config.interface_layer
+# screen _auto_voice:
+#     layer config.interface_layer
 
-    if _voice.auto_file:
+#     if _voice.auto_file:
 
-        if renpy.loadable(_voice.auto_file, directory="audio"):
-            $ color = "#ffffff"
-        else:
-            $ color = "#ffcccc"
+#         if renpy.loadable(_voice.auto_file, directory="audio"):
+#             $ color = "#ffffff"
+#         else:
+#             $ color = "#ffcccc"
 
-        frame:
-            xalign 0.5
-            yalign 0.0
-            xpadding 5
-            ypadding 5
-            background "#0004"
+#         frame:
+#             xalign 0.5
+#             yalign 0.0
+#             xpadding 5
+#             ypadding 5
+#             background "#0004"
 
-            text "auto voice: [_voice.auto_file!sq]":
-                color color
-                size 12
+#             text "auto voice: [_voice.auto_file!sq]":
+#                 color color
+#                 size 12
 
 python early hide:
 

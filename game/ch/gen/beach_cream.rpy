@@ -26,7 +26,7 @@ init python:
 
 init 1:
     layeredimage beach cream:
-        attribute_function MultiPickers([BeachCreamPicker, PiercingsPicker, PregnancyPicker, CollarPicker, PubesPicker, OutfitPicker, HaircutPicker, MCCGPicker], use_morgan_cg_outfits=True, append_npc_from_attributes=True, add_simple_pregnant_attribute=True)
+        attribute_function MultiPickers([BeachCreamPicker,  CollarPicker, PubesPicker, OutfitPicker, HaircutPicker, MCCGPicker], use_morgan_cg_outfits=True, append_npc_from_attributes=True, add_simple_pregnant_attribute=True)
 
         attribute mikemc null
         attribute breemc null
@@ -64,21 +64,6 @@ init 1:
 
         group collars auto variant mikemc when mikemc
         group collars auto variant breemc when breemc
-
-
-        group multiple auto variant piercings_hidden when topless and naked
-
-        group multiple auto variant piercings
-        group multiple auto variant piercings_mikemc when mikemc
-        group multiple auto variant piercings_breemc when breemc
-        group multiple:
-            attribute aletta_clit null
-            attribute aletta_ears null
-            attribute aletta_nipples null
-            attribute aletta_navel null
-            attribute aletta_pregnant_navel null
-            attribute aletta_tongue null
-
 
         attribute naked null
         attribute topless null
@@ -119,8 +104,6 @@ init 1:
 
 
         group breemc auto when breemc and not nomc
-        group multiple auto variant mcpiercings_01 when breemc and 01 and not nomc
-        group multiple auto variant mcpiercings_02 when breemc and 02 and not nomc
         group mchaircuts auto variant 01 when breemc and 01 and not nomc:
             attribute mc_nohaircut null
         group mchaircuts auto variant 02 when breemc and 02 and not nomc:
@@ -133,8 +116,6 @@ init 1:
         group npc auto variant breemc_right when breemc and right
 
         group collars auto variant breemc_right when breemc and right
-
-        group multiple auto variant piercings_breemc_right when breemc and right
 
         group top auto variant breemc_right when breemc and right and not (naked or topless)
         group bot auto variant breemc_right when breemc and right and not naked

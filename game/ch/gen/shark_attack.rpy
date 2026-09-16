@@ -13,7 +13,5 @@ init 1:
         attribute mc_haircut if_any "breemc"
 
         group outfits auto if_any "breemc"
-        group multiple auto variant piercings when breemc
-
+  
         always "shark_attack_fg"
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

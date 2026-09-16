@@ -169,7 +169,6 @@ screen cheats_attr_change(owner):
                 else:
                     textbutton "Switch to big breasts" action [SetVariable(f"{tgt.id}.flags.boobjob", True)] style "cheats_button" yalign 0
 
-            textbutton "Wear all piercings" action [Function(cheat_piercings, tgt)] selected cheat_has_piercings(tgt) style "cheats_button" yalign 0
             null height 10
             $ attrs = sorted(cheat_get_attributes(owner), key=lambda x: x.name)
             $ cnt = len(attrs)
@@ -189,16 +188,6 @@ screen cheats_attr_change(owner):
                         textbutton "+" action [Function(cheat_attribute, attr, 10)] sensitive not attr.is_max xsize 40 text_size 30 style "cheats_button" text_xalign 0.5 text_yalign 0.63
 
 init -10 python:
-    def cheat_piercings(target):
-        value = not cheat_has_piercings(target)
-        for k, v in target.piercings.items():
-            v.pierced = value
-            v.worn = value
-
-
-    def cheat_has_piercings(target):
-        return all([v.worn for _, v in target.piercings.items()])
-
 
     def cheat_is_not_lucky():
         

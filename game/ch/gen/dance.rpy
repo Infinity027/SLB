@@ -1,6 +1,6 @@
 init 1:
     layeredimage dance:
-        attribute_function MultiPickers([HaircutPicker, CollarPicker, PregnancyPicker, PiercingsPicker, OutfitPicker, PubesPicker, MCGenderPicker], add_simple_pregnant_attribute=True, add_simple_outfit_attribute=True, use_morgan_cg_outfits=True, append_npc_from_attributes=True)
+        attribute_function MultiPickers([HaircutPicker, CollarPicker,  OutfitPicker, PubesPicker, MCGenderPicker], add_simple_pregnant_attribute=True, add_simple_outfit_attribute=True, use_morgan_cg_outfits=True, append_npc_from_attributes=True)
         attribute date null
         attribute work null
 
@@ -52,9 +52,6 @@ init 1:
         group boobjob:
             attribute sasha_boobjob null
             attribute sasha_noboobjob null
-
-
-        group multiple auto variant piercings when not camila_halloween
 
         group underwear auto
         group underdress auto

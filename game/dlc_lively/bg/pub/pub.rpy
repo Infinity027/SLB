@@ -37,7 +37,7 @@ init 5 python:
 
 init 6:
     layeredimage bg pub:
-        attribute_function MultiPickers([PiercingsPicker, CollarPicker, PregnancyPicker, OutfitPicker, HaircutPicker, PubPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([ CollarPicker, OutfitPicker, HaircutPicker, PubPicker], append_npc_from_attributes=True)
 
 
         attribute empty null            
@@ -65,9 +65,6 @@ init 6:
         attribute sasha_pregnant variant bb when sasha and sasha_boobjob
         attribute sasha_pregnant variant nobb when sasha and not sasha_boobjob
         attribute sasha_collar when sasha
-        group multiple auto variant sasha_piercings_back when sasha
-        group multiple auto variant sasha_piercings_back_bb when sasha and sasha_boobjob
-        group multiple auto variant sasha_piercings_back_nobb when sasha and not sasha_boobjob
         group sasha_bot auto variant preg when sasha and sasha_pregnant
         group sasha_bot auto variant nopreg when sasha and not sasha_pregnant
         group sasha_top auto variant preg_bb when sasha and sasha_pregnant and sasha_boobjob
@@ -75,24 +72,17 @@ init 6:
         group sasha_top auto variant nopreg_bb when sasha and not sasha_pregnant and sasha_boobjob
         group sasha_top auto variant nopreg_nobb when sasha and not sasha_pregnant and not sasha_boobjob
         group sasha_hair auto when sasha
-        group multiple auto variant sasha_piercings_front when sasha
-
 
         attribute amy
-        attribute amy_pregnant when amy
         attribute amy_collar when amy
-        group multiple auto variant amy_piercings when amy
         group amy_bot auto variant preg when amy and amy_pregnant
         group amy_bot auto variant nopreg when amy and not amy_pregnant
         group amy_top auto variant preg when amy and amy_pregnant
         group amy_top auto variant nopreg when amy and not amy_pregnant
         attribute amy_nohaircut when amy
 
-
         attribute alexis
-        attribute alexis_pregnant when alexis
         attribute alexis_collar when alexis
-        group multiple auto variant alexis_piercings when alexis
         group alexis_bot auto variant preg when alexis and alexis_pregnant
         group alexis_bot auto variant nopreg when alexis and not alexis_pregnant
         group alexis_top auto variant preg when alexis and alexis_pregnant
@@ -101,9 +91,7 @@ init 6:
 
 
         attribute samantha
-        attribute samantha_pregnant when samantha
         attribute samantha_collar when samantha
-        group multiple auto variant samantha_piercings when samantha
         group samantha_bot auto variant preg when samantha and samantha_pregnant
         group samantha_bot auto variant nopreg when samantha and not samantha_pregnant
         group samantha_top auto variant preg when samantha and samantha_pregnant

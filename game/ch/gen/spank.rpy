@@ -1,6 +1,6 @@
 init 1:
     layeredimage spank:
-        attribute_function Pickers([OutfitPicker, CollarPicker, PiercingsPicker, PregnancyPicker], clear_npc=True)
+        attribute_function Pickers([OutfitPicker, CollarPicker], clear_npc=True)
 
         attribute pregnant
         attribute clit null
@@ -55,11 +55,6 @@ init 1:
             attribute normal default
         group exp auto variant "shiori" if_any "shiori":
             attribute normal default
-
-        group multiple auto variant piercings_aletta when aletta
-        group multiple auto variant piercings_audrey when audrey
-        group multiple auto variant piercings_lavish when lavish
-        group multiple auto variant piercings_shiori when shiori
 
         group fx auto variant "aletta" if_any ["aletta"]
         group fx auto variant "audrey" if_any ["audrey"]

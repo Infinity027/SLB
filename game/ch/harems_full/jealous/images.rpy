@@ -1,6 +1,6 @@
 init 1:
     layeredimage jealous bj:
-        attribute_function MultiPickers([PiercingsPicker, PregnancyPicker, HaircutPicker, CollarPicker, MCCGPicker], npcs=[audrey, sasha])
+        attribute_function MultiPickers([ HaircutPicker, CollarPicker, MCCGPicker], npcs=[audrey, sasha])
 
 
         attribute audrey null
@@ -61,18 +61,7 @@ init 1:
         group audreycollar auto variant "audreysuck" when audreysuck
         group audreycollar auto variant "audreywatch" when not audreysuck
 
-        group multiple auto variant pregnancy
-
         attribute sasha_boobjob
-
-        group multiple auto variant piercings_audreysuck when audreysuck
-        group multiple auto variant piercings_audreywatch when not audreysuck
-        group multiple auto variant piercings_sashasuck when sashasuck
-        group multiple auto variant piercings_sashawatch when not sashasuck
-
-        group multiple auto variant piercings_boobjob when sasha_boobjob
-        group multiple auto variant piercings_noboobjob when not sasha_boobjob
-
 
         group haircuts auto variant "sashawatch" if_not "sashasuck"
 
@@ -102,7 +91,7 @@ init 1:
         group multiple auto variant cum when cum
 
     layeredimage jealous cowgirl:
-        attribute_function MultiPickers([PiercingsPicker, PregnancyPicker, HaircutPicker, CollarPicker, MCCGPicker], npcs=[audrey, sasha])
+        attribute_function MultiPickers([ HaircutPicker, CollarPicker, MCCGPicker], npcs=[audrey, sasha])
 
 
         attribute audrey null
@@ -132,8 +121,6 @@ init 1:
         group audreyexp auto:
             attribute audreynormal default
 
-
-        group multiple auto variant audrey_piercings
         attribute audrey_collar
 
 
@@ -179,15 +166,6 @@ init 1:
         group sashaexp auto variant sashafinger if_not "sashasuck":
             attribute sashanormal default
 
-
-        group multiple auto variant sashapiercings_sashasuck if_any "sashasuck"
-        group multiple auto variant sashapiercings_sashasuck_boobjob if_all ["sashasuck","sasha_boobjob"]
-        group multiple auto variant sashapiercings_sashasuck_noboobjob if_not ["sasha_boobjob"]
-        group multiple auto variant sashapiercings_sashafinger if_not "sashasuck"
-        group multiple auto variant sashapiercings_sashafinger_boobjob if_not ["sashasuck"] if_any ["sasha_boobjob"]
-        group multiple auto variant sashapiercings_sashafinger_noboobjob if_not ["sashasuck", "sasha_boobjob"]
-
-
         attribute sasha_collar if_not "sashasuck"
 
 
@@ -207,7 +185,7 @@ init 1:
         attribute bodycum null
 
     layeredimage jealous doggy:
-        attribute_function MultiPickers([PiercingsPicker, PregnancyPicker, HaircutPicker, CollarPicker, MCCGPicker], npcs=[audrey, sasha])
+        attribute_function MultiPickers([ HaircutPicker, CollarPicker, MCCGPicker], npcs=[audrey, sasha])
 
 
         attribute audrey null
@@ -238,10 +216,6 @@ init 1:
 
         group haircuts auto
 
-
-        group multiple auto variant facepiercings
-
-
         attribute mike null
         always:
             if_any "mike"
@@ -260,12 +234,6 @@ init 1:
         always:
             if_any "sasha_boobjob"
             "jealous_doggy_sasha_boobjob"
-
-
-        group multiple auto variant sashapiercings
-        group multiple auto variant sashapiercings_boobjob if_any ["sasha_boobjob"]
-        group multiple auto variant sashapiercings_noboobjob if_not ["sasha_boobjob"]
-
 
         group sashaexp auto:
             attribute sashanormal default
@@ -312,7 +280,7 @@ init 1:
         group cum auto variant anal if_all ["anal", "cum"] if_not ["audreysuck", "vaginal"]
 
     layeredimage jealous missionary:
-        attribute_function MultiPickers([PiercingsPicker, PregnancyPicker, HaircutPicker, CollarPicker, MCCGPicker], npcs=[audrey, sasha])
+        attribute_function MultiPickers([ HaircutPicker, CollarPicker, MCCGPicker], npcs=[audrey, sasha])
 
 
         always:
@@ -330,29 +298,20 @@ init 1:
         always:
             "jealous_missionary_audrey_shadow"
 
-
         attribute squirt
 
-
         attribute audrey_collar
-        group multiple auto variant audrey_piercings
-
 
         attribute kiss null
         group audrey_exp auto variant "nokiss" if_not ["kiss"]:
             attribute normal default
-
 
         always:
             if_any ["kiss"]
             "jealous_missionary_audrey_kiss"
         group audrey_exp auto variant "kiss" if_any ["kiss"]
 
-
-
-
         group sasha_hairstrand auto
-
 
         always:
             "jealous_missionary_sasha_body"
@@ -373,14 +332,5 @@ init 1:
 
         group sasha_haircuts auto variant "nokiss" if_not ["kiss"]
 
-
-        group multiple auto variant sasha_piercings
-        group sasha_piercings auto variant "nokiss" if_any ["kiss"]
-        group multiple auto variant sasha_piercings_boobjob if_any ["sasha_boobjob"]
-        group multiple auto variant sasha_piercings_noboobjob if_not ["sasha_boobjob"]
-
-
         group sasha_exp auto variant "kiss" if_any ["kiss"]
         group sasha_haircuts auto variant "kiss" if_any ["kiss"]
-        group sasha_piercings auto variant "kiss" if_any ["kiss"]
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

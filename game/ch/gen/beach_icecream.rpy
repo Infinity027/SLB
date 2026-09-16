@@ -21,11 +21,10 @@ init python:
 
 init 1:
     layeredimage beach icecream:
-        attribute_function Pickers([PubesPicker, PregnancyPicker, PiercingsPicker, HaircutPicker, CollarPicker, OutfitPicker, MCCGPicker, CG_BeachIceCream_Picker],clear_npc=True,piercings_prefix=True)
+        attribute_function Pickers([PubesPicker,  HaircutPicker, CollarPicker, OutfitPicker, MCCGPicker, CG_BeachIceCream_Picker], clear_npc=True, piercings_prefix=True)
 
         attribute nomc null
         attribute naked null
-
 
         attribute waterpark "beach_icecream_bg_waterpark"
         always "beach_icecream_bg" if_not ["waterpark"]
@@ -120,20 +119,9 @@ init 1:
         group pregnant auto if_all ["naked","pregnant"]
         group pregnant auto variant "breemc" if_all ["breemc", "naked","mc_pregnant"] if_not ["nomc"]
 
-
-        group multiple auto variant piercings
-        group multiple auto variant piercings_naked when naked
-        group multiple auto variant piercings_notswimsuit when not swimsuit
-        group multiple auto variant piercings_notsexyswimsuit when not sexyswimsuit
-        group multiple auto variant piercings_notblueblackswimsuit when not blueblackswimsuit
-        group multiple auto variant piercings_breemc when not nomc
-        group multiple auto variant piercings_naked_breemc when breemc and naked and not nomc
-
-
         attribute glasses null
         group glasses auto if_any ["glasses"]
 
 
         attribute makeup null
         group makeup auto if_any ["makeup"]
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

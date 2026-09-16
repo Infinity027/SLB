@@ -31,7 +31,7 @@ init 5 python:
 
 init 6:
     layeredimage bg garage:
-        attribute_function Pickers([PiercingsPicker, CollarPicker, PregnancyPicker, HaircutPicker, OutfitPicker, GaragePicker], npc=kleio)
+        attribute_function Pickers([ CollarPicker, HaircutPicker, OutfitPicker, GaragePicker], npc=kleio)
 
 
         attribute empty null            
@@ -40,18 +40,14 @@ init 6:
         attribute nose null
         attribute tongue null
 
-
         always "garage" when not kleio
         always "bg_garage_bg" when kleio
-
 
         attribute kleio
         attribute pregnant when kleio
         attribute collar when kleio
-        group multiple auto variant piercings when kleio
         group bot auto variant nopreg when kleio and not (pregnant or naked)
         group bot auto variant preg when kleio and pregnant and not naked
         group top auto variant nopreg when kleio and not (pregnant or naked)
         group top auto variant preg when kleio and pregnant and not naked
         group hair auto when kleio
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

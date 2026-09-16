@@ -17,7 +17,7 @@ init -35 python:
             attrs = list(attrs)
         
         
-        add_pickers_attrs = Pickers([PiercingsPicker, PregnancyPicker, CollarPicker, PubesPicker, HaircutPicker, PositionPicker], npc=shiori)(set(attrs))
+        add_pickers_attrs = Pickers([ CollarPicker, PubesPicker, HaircutPicker, PositionPicker], npc=shiori)(set(attrs))
         if "pregnant_navel" in add_pickers_attrs:
             add_pickers_attrs.remove("pregnant_navel")
             add_pickers_attrs.add("navel")

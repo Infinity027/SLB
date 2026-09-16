@@ -24,13 +24,6 @@ attributes:
     min: 0
     max: null
     default: 0
-piercings:
-  ears: { }
-  navel: { }
-  clit: { }
-  nipples: { }
-  tongue: { }
-  nose: { }
 birthday:
   - spring
   - 15

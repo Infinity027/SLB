@@ -37,7 +37,7 @@ init 5 python:
 
 init 6:
     layeredimage bg pubplay:
-        attribute_function MultiPickers([PiercingsPicker, CollarPicker, PregnancyPicker, OutfitPicker, HaircutPicker, PubPlayPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([ CollarPicker, OutfitPicker, HaircutPicker, PubPlayPicker], append_npc_from_attributes=True)
 
 
         attribute empty null            
@@ -66,9 +66,8 @@ init 6:
 
 
         attribute bree
-        attribute bree_pregnant when bree
+        
         attribute bree_collar when bree
-        group multiple auto variant bree_piercings when bree
         group bree_bot auto variant nopreg when bree and not bree_pregnant
         group bree_bot auto variant preg when bree and bree_pregnant
         group bree_top auto variant nopreg when bree and not bree_pregnant
@@ -77,19 +76,17 @@ init 6:
 
 
         attribute palla
-        attribute palla_pregnant when palla
+        
         attribute palla_collar when palla
-        group multiple auto variant palla_piercings_back when palla
         group palla_bot auto variant nopreg when palla and not palla_pregnant
         group palla_bot auto variant preg when palla and palla_pregnant
         group palla_top auto variant nopreg when palla and not palla_pregnant
         group palla_top auto variant preg when palla and palla_pregnant
-        group multiple auto variant palla_piercings_front when palla
         attribute palla_nohaircut when palla
 
 
         attribute minami
-        attribute minami_pregnant when minami
+        
         attribute minami_collar when minami
         group minami_bot auto variant nopreg when minami and not minami_pregnant
         group minami_bot auto variant preg when minami and minami_pregnant
@@ -99,13 +96,10 @@ init 6:
 
 
         attribute lavish
-        attribute lavish_pregnant when lavish
+        
         attribute lavish_collar when lavish
-        group multiple auto variant lavish_piercings_back when lavish
         group lavish_bot auto variant nopreg when lavish and not lavish_pregnant
         group lavish_bot auto variant preg when lavish and lavish_pregnant
         group lavish_top auto variant nopreg when lavish and not lavish_pregnant
         group lavish_top auto variant preg when lavish and lavish_pregnant
-        group multiple auto variant lavish_piercings_front when lavish
         attribute lavish_nohaircut when lavish
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

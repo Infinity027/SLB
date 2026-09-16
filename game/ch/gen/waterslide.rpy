@@ -15,7 +15,7 @@ init python:
 
 init 1:
     layeredimage waterslide:
-        attribute_function MultiPickers([HaircutPicker, CollarPicker, PregnancyPicker, PiercingsPicker, OutfitPicker, PubesPicker, MCCGPicker, WaterslidePositionPicker], add_simple_pregnant_attribute=True, append_npc_from_attributes=True, use_morgan_cg_outfits=True)
+        attribute_function MultiPickers([HaircutPicker, CollarPicker,  OutfitPicker, PubesPicker, MCCGPicker, WaterslidePositionPicker], add_simple_pregnant_attribute=True, append_npc_from_attributes=True, use_morgan_cg_outfits=True)
 
         attribute naked null
 
@@ -32,8 +32,6 @@ init 1:
         group mccollars auto variant "back" if_any "back"
         group mchaircuts auto variant "back" if_any "back"
 
-        group multiple auto variant mcpiercings_back when back
-
         group mcoutfits auto variant "back" if_any "back"
         group mcpregnant auto variant "back" if_any "back"
         group mcoutfits auto variant "back_pregnant" if_any "back"
@@ -45,12 +43,6 @@ init 1:
 
         group boobjob auto:
             attribute sasha_noboobjob null
-
-        group multiple auto variant piercings_hidden when naked
-
-        group multiple auto variant piercings
-        group piercings auto variant "noboobjob" if_all ["sasha_noboobjob", "naked"]
-        group piercings auto variant "boobjob" if_all ["sasha_boobjob", "naked"]
 
         group outfits auto
 
@@ -76,10 +68,6 @@ init 1:
         group mcposition auto variant "ahead" if_any "ahead"
         group mccollars auto variant "ahead" if_any "ahead"
         group mchaircuts auto variant "ahead" if_any "ahead"
-
-        group multiple auto variant mcpiercings_ahead_hidden when naked and breemc and ahead
-
-        group multiple auto variant mcpiercings_ahead when ahead
 
         group mcoutfits auto variant "ahead" if_any "ahead"
         group mcpregnant auto variant "ahead" if_any "ahead"

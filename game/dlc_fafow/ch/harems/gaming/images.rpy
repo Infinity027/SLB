@@ -1,6 +1,6 @@
 init 1:
     layeredimage kat cunnilingus bree:
-        attribute_function MultiPickers([PiercingsPicker, CollarPicker, PregnancyPicker, PubesPicker, HaircutPicker], npcs=[bree, kat])
+        attribute_function MultiPickers([ CollarPicker, PubesPicker, HaircutPicker], npcs=[bree, kat])
 
 
         attribute bree null
@@ -62,19 +62,6 @@ init 1:
         group kat_eyes auto:
             attribute open default
 
-
-        attribute bree_pregnant
-
-
-        group multiple auto variant bree_piercings
-
-
-        attribute kat_pregnant
-
-
-        group multiple auto variant kat_piercings
-
-
         attribute kat_pubes
         attribute bree_pubes
 
@@ -85,7 +72,7 @@ init 1:
         always "kat_cunnilingus_bree_fg"
 
     layeredimage bree cunnilingus kat:
-        attribute_function MultiPickers([PiercingsPicker, CollarPicker, PregnancyPicker, HaircutPicker], npcs=[bree, kat])
+        attribute_function MultiPickers([ CollarPicker, HaircutPicker], npcs=[bree, kat])
 
 
         attribute bree null
@@ -133,40 +120,28 @@ init 1:
         group katmouths auto:
             attribute normal default
 
-
         attribute blush
-
 
         group kateyes auto:
             attribute lookfront default
 
-
         attribute kat_collar
-
-
-        group multiple auto variant piercings
-
 
         attribute breath
 
     layeredimage kat bree ending:
         attribute_function MultiPickers([HaircutPicker, EndingKidPicker], npcs=[bree, kat])
 
-
         always "kat_bree_ending_bg"
-
 
         attribute kat
         attribute kat_nohaircut null
-
 
         attribute bree
         attribute bree_nohaircut when bree
         attribute bree_haircut when bree
 
-
         group multiple auto variant kids
-
 
         always "kat_bree_ending_fx"
 # Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

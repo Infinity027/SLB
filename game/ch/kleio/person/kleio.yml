@@ -25,34 +25,6 @@ attributes:
     min: 0
     max: null
     default: 0
-piercings:
-  ears:
-    pierced: true
-  navel:
-    outfits:
-      - casual
-      - naked
-      - swimsuit
-      - sexyswimsuit
-      - underwear
-      - sport
-      - date
-    pierced: true
-  clit:
-    outfits:
-      - naked
-  nipples:
-    outfits:
-      - naked
-  tongue:
-    expressions:
-      - happy
-      - angry
-      - annoyed
-      - surprised
-      - punk
-  nose:
-    pierced: true
 birthday:
   - winter
   - 16

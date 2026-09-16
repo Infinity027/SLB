@@ -21,7 +21,7 @@ init python:
 
 init 1:
     layeredimage swimmingrace:
-        attribute_function Pickers([CG_Swimming_Picker, PregnancyPicker, CollarPicker, HaircutPicker, OutfitPicker, PiercingsPicker, PubesPicker, MCCGPicker], clear_npc=True, use_morgan_cg_outfits=True)
+        attribute_function Pickers([CG_Swimming_Picker, CollarPicker, HaircutPicker, OutfitPicker,  PubesPicker, MCCGPicker], clear_npc=True, use_morgan_cg_outfits=True)
 
 
         group bg auto

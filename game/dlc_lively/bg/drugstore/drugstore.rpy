@@ -37,7 +37,7 @@ init 5 python:
 
 init 6:
     layeredimage bg drugstore:
-        attribute_function MultiPickers([PiercingsPicker, CollarPicker, PregnancyPicker, HaircutPicker, OutfitPicker, DrugstorePicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([ CollarPicker, HaircutPicker, OutfitPicker, DrugstorePicker], append_npc_from_attributes=True)
 
 
         attribute empty null            
@@ -64,15 +64,11 @@ init 6:
         attribute shiori_lips null
         attribute shiori_tongue null
 
-
         always "drugstore"
-
 
         attribute anna
         attribute anna_collar when anna
         attribute anna_nohaircut when anna
-        attribute anna_pregnant when anna
-        group multiple auto variant anna_piercings
         group anna_bot auto variant nopreg when anna and not anna_pregnant
         group anna_bot auto variant preg when anna and anna_pregnant
         group anna_top auto variant nopreg when anna and not anna_pregnant
@@ -80,17 +76,12 @@ init 6:
 
 
         attribute shiori
-        attribute shiori_pregnant when shiori
-        group multiple auto variant shiori_piercings
         group shiori_top auto variant nopreg when shiori and not shiori_pregnant
         group shiori_top auto variant preg when shiori and shiori_pregnant
         attribute shiori_collar when shiori
         attribute shiori_nohaircut when shiori
 
-
         attribute kat
-        attribute kat_pregnant when kat
-        group multiple auto variant kat_piercings
         group kat_bot auto variant nopreg when kat and not kat_pregnant
         group kat_bot auto variant preg when kat and kat_pregnant
         group kat_top auto variant nopreg when kat and not kat_pregnant
@@ -100,8 +91,6 @@ init 6:
 
 
         attribute reona
-        attribute reona_pregnant when reona
-        group multiple auto variant reona_piercings
         attribute reona_collar when reona
         group reona_bot auto variant nopreg when reona and not reona_pregnant
         group reona_bot auto variant preg when reona and reona_pregnant
@@ -109,4 +98,3 @@ init 6:
         group reona_top auto variant preg when reona and reona_pregnant
         group reona_hair auto when reona
         attribute reona_pureglasses when reona
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

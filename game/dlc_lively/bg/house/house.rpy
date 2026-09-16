@@ -34,7 +34,7 @@ init 5 python:
 
 init 6:
     layeredimage bg house:
-        attribute_function MultiPickers([DayNightPicker, SeasonPicker, PiercingsPicker, CollarPicker, HaircutPicker, OutfitPicker,VehiclePicker, HousePicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([DayNightPicker, SeasonPicker,  CollarPicker, HaircutPicker, OutfitPicker,VehiclePicker, HousePicker], append_npc_from_attributes=True)
 
 
         attribute night null
@@ -71,7 +71,6 @@ init 6:
 
         attribute minami
         attribute minami_collar when minami
-        group multiple auto variant piercings_minami when minami
         group minami_hair auto when minami
         always "bg_house_minami_bot_minami_underwear" when minami and minami_casual and not (minami_naked or minami_bottomless)
         group minami_bot auto when minami and not (minami_naked or minami_bottomless)

@@ -14,7 +14,7 @@ init python:
 
 init 1:
     layeredimage haunted house:
-        attribute_function MultiPickers([PregnancyPicker, PiercingsPicker, HaircutPicker, CollarPicker, OutfitPicker, MCCGPicker, CGHauntedHousePicker], append_npc_from_attributes=True, use_morgan_cg_outfits=True)
+        attribute_function MultiPickers([ HaircutPicker, CollarPicker, OutfitPicker, MCCGPicker, CGHauntedHousePicker], append_npc_from_attributes=True, use_morgan_cg_outfits=True)
 
         group bg auto
 
@@ -40,7 +40,6 @@ init 1:
 
         attribute mc_pregnant null
         group breemc_pregnant_outfits auto variant "01" if_all ["mc_pregnant", "breemc", "01"]
-        group multiple auto variant mc_piercings_01 when breemc and 01
         group mc_haircuts auto variant "01" if_all ["breemc", "01"]
 
         attribute mc_nohaircut null
@@ -49,8 +48,6 @@ init 1:
 
         attribute morgan_makeup
         group glasses auto
-
-        group multiple auto variant piercings
 
         group outfits auto
         group outfits auto variant "pregnant" if_any ["morgan_pregnant", "reona_pregnant"]
@@ -79,8 +76,6 @@ init 1:
         group breemc_outfits auto variant "03" if_all ["breemc", "03"]
         group breemc_pregnant_outfits auto variant "02" if_all ["mc_pregnant", "breemc", "02"]
         group breemc_pregnant_outfits auto variant "03" if_all ["mc_pregnant", "breemc", "03"]
-        group multiple auto variant mc_piercings_02 when breemc and 02
-        group multiple auto variant mc_piercings_03 when breemc and 03
         group mc_haircuts auto variant "02" if_all ["breemc", "02"]
         group mc_haircuts auto variant "03" if_all ["breemc", "03"]
 

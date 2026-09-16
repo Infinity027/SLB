@@ -1,6 +1,6 @@
 init 1:
     layeredimage goodevil bj:
-        attribute_function MultiPickers([OutfitPicker, PiercingsPicker, CollarPicker, MCPicker], npcs=[harmony, lexi], add_simple_outfit_attribute=True)
+        attribute_function MultiPickers([OutfitPicker,  CollarPicker, MCPicker], npcs=[harmony, lexi], add_simple_outfit_attribute=True)
 
         attribute mikemc null
 
@@ -19,10 +19,6 @@ init 1:
 
         group heads auto:
             attribute normal default
-
-        group multiple auto variant piercings_normal when normal or suck
-        group multiple auto variant piercings_lick when lick
-        group multiple auto variant piercings_facial when facial
 
         attribute saliva if_any "lick"
 
@@ -64,7 +60,7 @@ init 1:
 
 
     layeredimage goodevil threesome harmonyfuck:
-        attribute_function MultiPickers([PiercingsPicker, CollarPicker, PregnancyPicker, MCCGPicker], npcs=[harmony, lexi])
+        attribute_function MultiPickers([ CollarPicker, MCCGPicker], npcs=[harmony, lexi])
         attribute mikemc null
         group mcoutfits:
             attribute mc_casual null
@@ -98,11 +94,8 @@ init 1:
             attribute harmony_nipples null
             attribute lexi_clit null
 
-        group multiple auto variant piercings
-
-
     layeredimage goodevil threesome lexifuck:
-        attribute_function MultiPickers([DickPicker, PiercingsPicker, CollarPicker, PregnancyPicker], npcs=[harmony, lexi])
+        attribute_function MultiPickers([DickPicker,  CollarPicker], npcs=[harmony, lexi])
 
 
         group bg auto:
@@ -112,11 +105,8 @@ init 1:
         always:
             "goodevil_threesome_lexifuck_bodies"
 
-
         group multiple auto variant collars
 
-
-        group multiple auto variant piercings
         group multiple:
             attribute harmony_ears null
             attribute harmony_nose null
@@ -145,7 +135,7 @@ init 1:
 
 
     layeredimage goodevil threesome cumshare:
-        attribute_function MultiPickers([PiercingsPicker, CollarPicker, PregnancyPicker, MCCGPicker], npcs=[harmony, lexi])
+        attribute_function MultiPickers([ CollarPicker, MCCGPicker], npcs=[harmony, lexi])
         attribute mikemc null
         group mcoutfits:
             attribute mc_casual null
@@ -158,8 +148,6 @@ init 1:
             "goodevil_threesome_cumshare_bodies"
 
         group multiple auto variant collars
-        group multiple auto variant pregnancies
-        group multiple auto variant piercings
         group multiple:
             attribute lexi_navel null
             attribute lexi_tongue null
@@ -173,4 +161,3 @@ init 1:
 
         attribute cumshot null
         group cumshot auto if_any "cumshot"
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

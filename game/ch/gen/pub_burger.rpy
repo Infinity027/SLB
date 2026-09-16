@@ -1,6 +1,6 @@
 init 1:
     layeredimage date pub burger:
-        attribute_function MultiPickers([CollarPicker, PiercingsPicker, OutfitPicker, PregnancyPicker, HaircutPicker, MCCGPicker], use_morgan_cg_outfits=True, append_npc_from_attributes=True)
+        attribute_function MultiPickers([CollarPicker,  OutfitPicker, HaircutPicker, MCCGPicker], use_morgan_cg_outfits=True, append_npc_from_attributes=True)
 
         attribute makeup null
 
@@ -18,10 +18,6 @@ init 1:
 
         group npc auto:
             attribute none default null
-
-        group multiple auto variant piercings
-
-        group pregnancies auto
 
         group outfit auto
         group outfit auto variant "pregnant" if_any ["morgan_pregnant", "reona_pregnant"]

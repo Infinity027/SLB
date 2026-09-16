@@ -3,24 +3,19 @@ init 1:
         always "kat_smartphone"
 
     layeredimage kat kiss:
-        attribute_function Pickers([PiercingsPicker, CollarPicker, OutfitPicker], npc=kat)
-
+        attribute_function Pickers([ CollarPicker, OutfitPicker], npc=kat)
 
         always "kat_kiss_bodies"
-
 
         group mikeoutfit auto if_not ["naked"]:
             attribute normal default
 
-
-        group multiple auto variant piercings
         group multiple:
             attribute clit null
             attribute ears null
             attribute navel null
             attribute pregnant_navel null
             attribute tongue null
-
 
         attribute naked null
         attribute topless null
@@ -59,7 +54,7 @@ init 1:
 
 
     layeredimage kat mast:
-        attribute_function Pickers([PiercingsPicker, CollarPicker, PubesPicker], npc=kat)
+        attribute_function Pickers([ CollarPicker, PubesPicker], npc=kat)
 
         attribute squirt null
 
@@ -74,7 +69,7 @@ init 1:
         attribute collar
 
 
-        group multiple auto variant piercings
+       
 
 
 
@@ -114,7 +109,7 @@ init 1:
         attribute shake
 
     layeredimage kat missionary:
-        attribute_function Pickers([PiercingsPicker, CollarPicker, PregnancyPicker, PubesPicker, DickPicker], npc=kat)
+        attribute_function Pickers([ CollarPicker, PubesPicker, DickPicker], npc=kat)
 
 
         group bg auto:
@@ -128,8 +123,8 @@ init 1:
 
 
         attribute collar
-        attribute pregnant
-        group multiple auto variant piercings
+        
+       
         attribute pubes
 
 
@@ -188,7 +183,7 @@ init 1:
         group light auto
 
     layeredimage kat cowgirl:
-        attribute_function Pickers([PiercingsPicker, CollarPicker, PregnancyPicker, PubesPicker, DickPicker], npc=kat)
+        attribute_function Pickers([ CollarPicker, PubesPicker, DickPicker], npc=kat)
 
 
         group bg auto:
@@ -202,9 +197,9 @@ init 1:
 
 
         attribute pubes
-        attribute pregnant
+        
         attribute collar
-        group multiple auto variant piercings
+       
 
 
         group kateyes auto:
@@ -242,7 +237,7 @@ init 1:
         group dickcum_pussy auto variant "out" if_all ["out","dickcum_pussy"] if_not ["condom"]
 
     layeredimage kat doggy:
-        attribute_function Pickers([PiercingsPicker, CollarPicker, PregnancyPicker, OutfitPicker], npc=kat)
+        attribute_function Pickers([ CollarPicker, OutfitPicker], npc=kat)
 
         group bg auto:
             attribute bedroom default
@@ -259,9 +254,9 @@ init 1:
         group kat_outfit if_not ["naked"]:
             attribute casual
 
-        attribute pregnant
+        
 
-        group multiple auto variant piercings
+       
         group multiple:
             attribute clit null
             attribute ears null
@@ -311,7 +306,7 @@ init 1:
 
 
     layeredimage kat blowjob:
-        attribute_function Pickers([PiercingsPicker, CollarPicker, DickPicker, OutfitPicker], npc=kat)
+        attribute_function Pickers([ CollarPicker, DickPicker, OutfitPicker], npc=kat)
 
         attribute no_people null
 
@@ -339,11 +334,6 @@ init 1:
 
         group kat auto if_not ["no_people"]:
             attribute out default
-
-
-        group multiple auto variant piercings_out when out and not no_people
-        group multiple auto variant piercings_blow when blow and not no_people
-
 
         attribute collar null
         group collar auto if_any ["collar"] if_not ["no_people"]
@@ -383,7 +373,7 @@ init 1:
         group curtain auto variant "shadows" if_all ["curtain", "shadows"]
 
     layeredimage kat cunnilingus:
-        attribute_function Pickers([PiercingsPicker, CollarPicker, PregnancyPicker, PubesPicker, OutfitPicker, MCCGPicker], npc=kat)
+        attribute_function Pickers([ CollarPicker, PubesPicker, OutfitPicker, MCCGPicker], npc=kat)
 
 
         group bg auto:
@@ -395,12 +385,12 @@ init 1:
 
 
         always "kat_cunnilingus_kat"
-        attribute pregnant
+        
 
 
         attribute collar when date or naked
 
-        group multiple auto variant piercings
+       
         attribute ears null
         attribute tongue null
 
@@ -461,17 +451,12 @@ init 1:
         always "kat_mask_fx"
 
     layeredimage katjack bj:
-        attribute_function Pickers([PiercingsPicker, CollarPicker, PregnancyPicker], npc=kat)
-
+        attribute_function Pickers([ CollarPicker], npc=kat)
 
         group bg auto:
             attribute bedroom default
 
-
         always "katjack_bj_kat"
-
-
-        attribute pregnant
 
 
         group head auto:
@@ -482,11 +467,7 @@ init 1:
         attribute ears null
         attribute navel null
         attribute tongue null
-        group multiple auto variant piercings
-        group multiple auto variant piercings_normal when normal
-        group multiple auto variant piercings_suckjack when suckjack
-        group multiple auto variant piercings_suckmike when suckmike
-
+       
 
         attribute collar null
         group collar auto if_any ["collar"]
@@ -536,23 +517,15 @@ init 1:
         always "katjack_bj_jack"
 
     layeredimage katjack doublepen:
-        attribute_function Pickers([PiercingsPicker, CollarPicker, PregnancyPicker, PubesPicker, DickPicker], npc=kat)
+        attribute_function Pickers([ CollarPicker, PubesPicker, DickPicker], npc=kat)
 
 
         group bg auto:
             attribute bedroom default
 
-
         group backmale auto
 
-
         always "katjack_doublepen_top"
-
-
-        attribute pregnant
-
-
-        group multiple auto variant piercings_top
 
 
         always "katjack_doublepen_bot"
@@ -560,19 +533,12 @@ init 1:
 
         attribute pubes
 
-
-        group multiple auto variant piercings_bot
-
-
         group head auto:
             attribute normal default
 
 
         attribute ears null
         attribute tongue null
-        group multiple auto variant piercings_normal when normal
-        group multiple auto variant piercings_orgasm when orgasm
-
 
         attribute collar null
         group collar auto if_any ["collar"]
@@ -650,7 +616,7 @@ init 1:
             attribute jackfront
 
     layeredimage katjack foreplay:
-        attribute_function Pickers([PiercingsPicker, CollarPicker, PregnancyPicker, PubesPicker], npc=kat)
+        attribute_function Pickers([ CollarPicker, PubesPicker], npc=kat)
 
 
         group bg auto:
@@ -660,13 +626,13 @@ init 1:
         always "katjack_foreplay_bodies"
 
 
-        attribute pregnant
+        
 
 
         attribute pubes
 
 
-        group multiple auto variant piercings
+       
         group multiple:
             attribute clit null
             attribute ears null
@@ -701,7 +667,7 @@ init 1:
             attribute shy default
 
     layeredimage katjack jackfuck:
-        attribute_function Pickers([PiercingsPicker, DickPicker, PregnancyPicker, PubesPicker], npc=kat)
+        attribute_function Pickers([ DickPicker, PubesPicker], npc=kat)
 
 
         group bg auto:
@@ -711,13 +677,13 @@ init 1:
         always "katjack_jackfuck_bodies"
 
 
-        attribute pregnant
+        
 
 
         attribute pubes
 
 
-        group multiple auto variant piercings
+       
         group multiple:
             attribute clit null
             attribute ears null
@@ -773,7 +739,7 @@ init 1:
         always "katjack_jackfuck_jackhand" if_any ["jack"]
 
     layeredimage katjack mikefuck:
-        attribute_function Pickers([PiercingsPicker, CollarPicker, PregnancyPicker, DickPicker, XrayPicker], npc=kat)
+        attribute_function Pickers([ CollarPicker, DickPicker, XrayPicker], npc=kat)
 
 
         group bg auto:
@@ -786,7 +752,7 @@ init 1:
         attribute collar
 
 
-        group multiple auto variant piercings
+       
         group multiple:
             attribute clit null
             attribute ears null
@@ -824,7 +790,7 @@ init 1:
         attribute mike
 
 
-        attribute pregnant
+        
         attribute pregnant_navel
 
 
@@ -880,7 +846,7 @@ init -35 python:
             attrs = list(attrs)
         
         
-        add_pickers_attrs = Pickers([PubesPicker, PiercingsPicker, PregnancyPicker, CollarPicker, PositionPicker], npc=kat)(set(attrs))
+        add_pickers_attrs = Pickers([PubesPicker,  CollarPicker, PositionPicker], npc=kat)(set(attrs))
         if "pregnant_navel" in add_pickers_attrs:
             add_pickers_attrs.remove("pregnant_navel")
             add_pickers_attrs.add("navel")

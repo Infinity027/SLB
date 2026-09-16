@@ -16,7 +16,7 @@ init python:
 
 init 1:
     layeredimage chatting:
-        attribute_function MultiPickers([CG_Chatting_Picker, SeasonPicker, PregnancyPicker, CollarPicker, HaircutPicker, OutfitPicker, PiercingsPicker, MCCGPicker], add_simple_pregnant_attribute=True, append_npc_from_attributes=True, add_simple_outfit_attribute=True)
+        attribute_function MultiPickers([CG_Chatting_Picker, SeasonPicker, CollarPicker, HaircutPicker, OutfitPicker,  MCCGPicker], add_simple_pregnant_attribute=True, append_npc_from_attributes=True, add_simple_outfit_attribute=True)
 
         group mc_dicks auto:
             attribute mc_small null
@@ -87,7 +87,6 @@ init 1:
 
         group npc auto
 
-
         attribute morgan_makeup null
         group makeup auto variant "eyes" if_any ["morgan_makeup"]
 
@@ -108,12 +107,6 @@ init 1:
         group boobjobs auto if_any ["naked", "sasha_naked"]:
             attribute sasha_noboobjob null
 
-
-        group multiple auto variant piercings
-        group piercings auto variant "noboobjob" if_any "sasha_noboobjob"
-        group piercings auto variant "boobjob" if_any "sasha_boobjob"
-
-
         group outfits auto
         group outfits auto variant "pregnant" if_any "pregnant"
 
@@ -126,12 +119,6 @@ init 1:
 
         group bot auto if_not ["naked"] if_all ["morgan"]
         group bot auto variant "pregnant" if_all ["pregnant", "morgan"] if_not ["naked"]
-
-
-        group piercings auto variant "sport" if_all ["pregnant", "sport"]
-        group piercings auto variant "casual" if_all ["pregnant", "casual"]
-        group piercings auto variant "underwear" if_all ["pregnant", "underwear"]
-        group piercings auto variant "sleep" if_all ["pregnant", "sleep"]
 
 
         group top auto if_not ["naked"] if_all ["morgan"]
@@ -149,4 +136,3 @@ init 1:
         group fg auto variant "coffeeshop" if_any ["coffeeshop"]
         group fg auto variant pub_notsasha when pub or pubplay or pubseat and not sasha
         group fg auto variant "livingroom_notdwayne" if_any ["livingroom"] if_not ["dwayne"]
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

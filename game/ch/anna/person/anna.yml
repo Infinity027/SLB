@@ -23,7 +23,6 @@ attributes:
     min: 0
     max: null
     default: 0
-piercings:
   ears:
     outfits:
       - date

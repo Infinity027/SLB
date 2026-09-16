@@ -25,17 +25,6 @@ attributes:
     min: 0
     max: null
     default: 0
-piercings:
-  ears:
-    pierced: false
-  navel:
-    pierced: false
-  clit:
-    pierced: true
-  nipples:
-    pierced: false
-  nose:
-    pierced: false
 birthday:
   - MONTH
   - DAY

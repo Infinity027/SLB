@@ -72,7 +72,7 @@ init python:
 
 init 1:
     layeredimage poledance:
-        attribute_function MultiPickers([StripClubPositionPicker, CollarPicker, PiercingsPicker, PregnancyPicker, PubesPicker, OutfitPicker], add_simple_naked_attribute=True, append_npc_from_attributes=True)
+        attribute_function MultiPickers([StripClubPositionPicker, CollarPicker,  PubesPicker, OutfitPicker], add_simple_naked_attribute=True, append_npc_from_attributes=True)
 
 
         attribute alone null
@@ -128,39 +128,6 @@ init 1:
         group armpits auto variant "harmony" if_any "harmony_pubes"
 
         group tanlines auto
-
-        group multiple auto variant piercings_hannaback when hannaback
-        group multiple auto variant piercings_hannafront when hannafront
-        group multiple:
-            attribute hanna_tongue null
-
-        group multiple auto variant piercings_shioriback when shioriback
-        group multiple auto variant piercings_shiorifront when shiorifront
-        group multiple:
-            attribute shiori_clit null
-            attribute shiori_ears null
-            attribute shiori_pregnant_navel null
-
-        group multiple auto variant piercings_harmonyback when harmonyback
-        group multiple auto variant piercings_harmonyfront when harmonyfront
-        group multiple:
-            attribute harmony_nose null
-            attribute harmony_tongue null
-
-        group multiple auto variant piercings_breeback when breeback
-        group multiple auto variant piercings_breefront when breefront
-        group multiple:
-            attribute bree_tongue null
-
-        group multiple auto variant piercings_lexiback when lexiback and not lexireona
-        group multiple auto variant piercings_lexifront when lexifront and not lexireona
-
-        group multiple auto variant piercings_reonaback when reonaback and not lexireona
-        group multiple auto variant piercings_reonafront when reonafront and not lexireona
-
-        group multiple auto variant piercings_lexireonaback when lexireonaback
-        group multiple auto variant piercings_lexireonafront when lexireonafront
-
 
         group multiple auto variant outfits when not naked:
             attribute shiori_date null
@@ -228,33 +195,6 @@ init 1:
         attribute bree_pregnant null
         attribute lexi_pregnant null
         attribute reona_pregnant null
-        group multiple auto variant pregnancy_shiori when shiori_pregnant
-        group multiple auto variant pregnancy_hanna when hanna_pregnant
-        group multiple auto variant pregnancy_harmony when harmony_pregnant
-        group multiple auto variant pregnancy_bree when bree_pregnant
-        group multiple auto variant pregnancy_lexi when lexi_pregnant and not lexireona
-        group multiple auto variant pregnancy_reona when reona_pregnant and not lexireona
-
-        group piercings_pregnant auto variant "hannafront" if_any "hannafront"
-        group piercings_pregnant auto variant "harmonyfront" if_any "harmonyfront"
-        group piercings_pregnant auto variant "breeback" if_any "breeback"
-        group piercings_pregnant auto variant "lexiback" if_any "lexiback" if_not "lexireona"
-        group piercings_pregnant auto variant "reonaback" if_any "reonaback" if_not "lexireona"
-
-        group pregnant_outfits auto variant shiorifront when shiori_pregnant and shiorifront and not naked
-        group pregnant_outfits auto variant shioriback when shiori_pregnant and shioriback and not naked
-
-        group pregnant_outfits auto variant hannafront when hanna_pregnant and hannafront and not naked
-        group pregnant_outfits auto variant hannaback when hanna_pregnant and hannaback and not naked
-
-        group pregnant_outfits auto variant lexifront when lexi_pregnant and lexifront and not (naked or lexireona)
-        group pregnant_outfits auto variant lexiback when lexi_pregnant and lexiback and not (naked or lexireona)
-
-        group pregnant_outfits auto variant harmonyfront when harmony_pregnant and harmonyfront and not naked
-        group pregnant_outfits auto variant harmonyback when harmony_pregnant and harmonyback and not naked
-
-        group pregnant_outfits auto variant breefront when bree_pregnant and breefront and not naked
-        group pregnant_outfits auto variant breeback when bree_pregnant and breeback and not naked
 
         group multiple auto variant pregnant_outfits_reonafront when reona_pregnant and reonafront and not (naked or lexireona)
         group multiple auto variant pregnant_outfits_reonaback when reona_pregnant and reonaback and not (naked or lexireona)
@@ -286,4 +226,3 @@ init 1:
         group glasses auto variant "lexireonaback" if_any "lexireonaback" if_not "naked"
 
         group multiple auto variant lights
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

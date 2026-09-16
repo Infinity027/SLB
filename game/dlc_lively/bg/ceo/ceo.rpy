@@ -45,7 +45,7 @@ init 5 python:
 
 init 6:
     layeredimage bg ceo:
-        attribute_function MultiPickers([PiercingsPicker, CollarPicker, PregnancyPicker, OutfitPicker, HaircutPicker, CEOPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([ CollarPicker, OutfitPicker, HaircutPicker, CEOPicker], append_npc_from_attributes=True)
 
 
         attribute empty null            
@@ -102,14 +102,11 @@ init 6:
         attribute pressed null
         attribute notpressed null
 
-
         always "ceo"
-
 
         attribute shiori
         attribute shiori_pregnant when shiori
         always "bg_ceo_shiori_nohaircut" when shiori
-        group multiple auto variant shiori_piercings when shiori
         group shiori_bot auto variant preg when shiori and shiori_pregnant and not (shiori_bottomless or shiori_naked)
         group shiori_bot auto variant nopreg when shiori and not shiori_pregnant and not (shiori_bottomless or shiori_naked)
         group shiori_top auto variant preg when shiori and shiori_pregnant and not (shiori_topless or shiori_naked)
@@ -120,7 +117,6 @@ init 6:
         attribute audrey
         attribute audrey_pregnant when audrey
         attribute audrey_collar when audrey
-        group multiple auto variant audrey_piercings when audrey
         group audrey_bot auto variant preg when audrey and audrey_pregnant and not (audrey_bottomless or audrey_naked)
         group audrey_bot auto variant nopreg when audrey and not audrey_pregnant and not (audrey_bottomless or audrey_naked)
         group audrey_top auto variant preg when audrey and audrey_pregnant and not (audrey_topless or audrey_naked)
@@ -132,7 +128,6 @@ init 6:
         attribute aletta_pregnant when aletta
         attribute aletta_collar when aletta
         attribute aletta_glasses when aletta
-        group multiple auto variant aletta_piercings when aletta
         group aletta_bot auto variant preg when aletta and aletta_pregnant and not (aletta_bottomless or aletta_naked)
         group aletta_bot auto variant nopreg when aletta and not aletta_pregnant and not (aletta_bottomless or aletta_naked)
         group aletta_top auto variant preg when aletta and aletta_pregnant and not (aletta_topless or aletta_naked)
@@ -144,13 +139,11 @@ init 6:
 
         attribute cherie_pregnant variant desk when cherie and desk
         attribute cherie_collar variant desk when cherie and desk
-        group multiple auto variant cherie_piercings_desk when cherie and desk
         group cherie_top_preg auto variant desk when cherie and desk and cherie_pregnant and not (cherie_topless or cherie_naked)
         group cherie_top_nopreg auto variant desk when cherie and desk and not cherie_pregnant and not (cherie_topless or cherie_naked)
         group cherie_hair auto variant desk when cherie and desk
 
         attribute cherie_collar variant couch when cherie and couch
-        group multiple auto variant cherie_piercings_couch when cherie and couch
         group cherie_top auto variant couch when cherie and couch and not (cherie_topless or cherie_naked)
         group cherie_hair auto variant couch when cherie and couch
 
@@ -159,7 +152,6 @@ init 6:
         attribute lavish_pregnant when lavish
         attribute lavish_collar when lavish
         attribute lavish_nohaircut when lavish
-        group multiple auto variant lavish_piercings when lavish
         group lavish_bot auto variant preg when lavish and lavish_pregnant and not (lavish_bottomless or lavish_naked)
         group lavish_bot auto variant nopreg when lavish and not lavish_pregnant and not (lavish_bottomless or lavish_naked)
         group lavish_top auto variant preg when lavish and lavish_pregnant and not (lavish_topless or lavish_naked)

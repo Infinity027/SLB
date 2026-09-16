@@ -37,7 +37,7 @@ init 5 python:
 
 init 6:
     layeredimage bg waterpark:
-        attribute_function MultiPickers([PiercingsPicker, CollarPicker, PregnancyPicker, HaircutPicker, OutfitPicker, WaterparkPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([ CollarPicker, HaircutPicker, OutfitPicker, WaterparkPicker], append_npc_from_attributes=True)
 
 
         attribute empty null            
@@ -62,10 +62,9 @@ init 6:
 
 
         attribute claire
-        attribute claire_pregnant when claire
+        
         attribute claire_collar when claire
         group claire_hair auto when claire
-        group multiple auto variant claire_piercings when claire
         group claire_bot auto variant preg when claire and claire_pregnant
         group claire_bot auto variant nopreg when claire and not claire_pregnant
         group claire_top auto variant preg when claire and claire_pregnant
@@ -73,23 +72,18 @@ init 6:
 
 
         attribute sasha
-        attribute sasha_pregnant when sasha
+        
         attribute sasha_boobjob when sasha
         attribute sasha_collar when sasha
-        group multiple auto variant sasha_piercings_bb when sasha and sasha_boobjob
-        group multiple auto variant sasha_piercings_nobb when sasha and not sasha_boobjob
         group sasha_bot auto when sasha
         group sasha_top auto variant bb when sasha and sasha_boobjob
         group sasha_top auto variant nobb when sasha and not sasha_boobjob
         group sasha_hair auto when sasha
-        group multiple auto variant sasha_piercings_front when sasha
-
 
         attribute audrey
-        attribute audrey_pregnant when audrey
+        
         attribute audrey_collar when audrey
         attribute audrey_nohaircut when audrey
-        group multiple auto variant audrey_piercings when audrey
         group audrey_bot auto variant preg when audrey and audrey_pregnant
         group audrey_bot auto variant nopreg when audrey and not audrey_pregnant
         group audrey_top auto variant preg when audrey and audrey_pregnant
@@ -97,15 +91,11 @@ init 6:
 
 
         attribute palla
-        attribute palla_pregnant when palla
         attribute palla_collar when palla
         attribute palla_nohaircut when palla
-        group multiple auto variant palla_piercings when palla
         group palla_bot auto variant preg when palla and palla_pregnant
         group palla_bot auto variant nopreg when palla and not palla_pregnant
         group palla_top auto variant preg when palla and palla_pregnant
         group palla_top auto variant nopreg when palla and not palla_pregnant
 
-
         group multiple auto variant water
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

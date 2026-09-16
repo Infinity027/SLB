@@ -35,17 +35,6 @@ attributes:
     min: 0
     max: null
     default: 0
-piercings:
-  ears: { }
-  navel:
-    pierced: true
-  clit:
-    pierced: true
-  nipples:
-    pierced: true
-  tongue:
-    pierced: true
-  nose: { }
 birthday:
   - fall
   - 10

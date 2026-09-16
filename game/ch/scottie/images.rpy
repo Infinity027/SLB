@@ -1,6 +1,6 @@
 init 1:
     layeredimage scottie:
-        attribute_function Pickers([PositionPicker, OutfitPicker, PiercingsPicker], npc=scottie)
+        attribute_function Pickers([PositionPicker, OutfitPicker], npc=scottie)
 
 
         group position auto:
@@ -9,9 +9,6 @@ init 1:
         always:
             if_all ["naked"]
             "scottie_dick"
-        group multiple auto variant piercings
-        group piercings auto variant "b" if_any "b"
-
 
         group outfit auto variant "a" if_any "a":
             attribute naked null
@@ -29,7 +26,7 @@ init 1:
 
     layeredimage scottie close:
         yalign 0.05
-        attribute_function Pickers([PositionPicker, OutfitPicker, PiercingsPicker], npc=scottie)
+        attribute_function Pickers([PositionPicker, OutfitPicker], npc=scottie)
 
 
         group position auto:
@@ -38,9 +35,6 @@ init 1:
         always:
             if_all ["naked"]
             "scottie_close_dick"
-        group multiple auto variant piercings
-        group piercings auto variant "b" if_any "b"
-
 
         group outfit auto variant "a" if_any "a":
             attribute naked null
@@ -60,7 +54,7 @@ init 1:
         always "scottie_smartphone"
 
     layeredimage scottie 2hj:
-        attribute_function Pickers([CollarPicker, PiercingsPicker, PubesPicker, HaircutPicker], npc=sasha)
+        attribute_function Pickers([CollarPicker,  PubesPicker, HaircutPicker], npc=sasha)
 
         always:
             "scottie_2hj_bg"
@@ -81,12 +75,6 @@ init 1:
         always:
             "scottie_2hj_scottie"
 
-
-
-        group multiple auto variant piercings
-        group piercings auto variant "boobjob" if_any "boobjob"
-        group piercings auto variant "noboobjob" if_not "boobjob"
-
         group mouth auto:
             attribute shut default
         group eyes auto:
@@ -95,7 +83,7 @@ init 1:
         group multiple auto variant cum
 
     layeredimage scottie dp:
-        attribute_function Pickers([PiercingsPicker, CollarPicker, HaircutPicker, PregnancyPicker], npc=sasha)
+        attribute_function Pickers([ CollarPicker, HaircutPicker], npc=sasha)
 
         attribute bottom null
         attribute bottomcondom null
@@ -114,12 +102,7 @@ init 1:
 
         attribute haircut
         attribute collar
-        attribute pregnant
         attribute boobjob
-
-        group multiple auto variant piercings
-        group piercings auto variant "boobjob" if_any "boobjob"
-        group piercings auto variant "noboobjob" if_not "boobjob"
 
         group exp auto:
             attribute normal default
@@ -141,4 +124,3 @@ init 1:
             attribute topout default
         group topcondom auto if_all ["top","topcondom"]
         group multiple auto variant topcum when top and topcum and not topcondom
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

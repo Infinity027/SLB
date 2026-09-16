@@ -1,6 +1,6 @@
 init 1:
     layeredimage bitches:
-        attribute_function MultiPickers([PregnancyPicker, CollarPicker, PubesPicker, HaircutPicker, PiercingsPicker], npcs=[bree, sasha])
+        attribute_function MultiPickers([CollarPicker, PubesPicker, HaircutPicker], npcs=[bree, sasha])
         attribute bree null
         attribute sasha null
 
@@ -52,10 +52,6 @@ init 1:
         group haircuts auto variant "walk" if_any ["walk"]
         group haircuts auto variant "stand" if_any ["stand"]
 
-
-        group multiple auto variant piercings_behind_walk when walk
-
-
         group multiple auto variant pregnancy_walk when walk
         group multiple auto variant pregnancy_stand when stand
 
@@ -88,15 +84,6 @@ init 1:
 
         group mouth_bree auto if_all ["stand", "inside", "sashabj"]
         group mouth_sasha auto if_all ["stand", "inside", "breebj"]
-
-
-        group piercings multiple:
-            attribute bree_ears null
-        group multiple auto variant piercings_walk when walk
-        group multiple auto variant piercings_stand when stand
-        group multiple auto variant piercings_walk_notbb when walk and not sasha_boobjob
-        group multiple auto variant piercings_walk_bb when walk and sasha_boobjob
-
 
         group multiple auto variant collars_walk when walk
         group multiple auto variant collars_stand when stand
@@ -142,8 +129,6 @@ init 1:
 
 
         group bb auto variant "stand" if_any ["stand"]
-        group multiple auto variant piercings_stand_notbb when stand and not sasha_boobjob
-        group multiple auto variant piercings_stand_bb when stand and sasha_boobjob
         group sashaleash auto variant "sashabj" if_all ["sashabj", "sasha_collar", "leash"]
 
 
@@ -151,7 +136,7 @@ init 1:
             "bitches_light"
 
     layeredimage bj breeleximinamisamsasha:
-        attribute_function MultiPickers([PregnancyPicker, CollarPicker, HaircutPicker, PiercingsPicker, DickPicker], npcs=[bree, "lexi", minami, samantha, sasha])
+        attribute_function MultiPickers([CollarPicker, HaircutPicker,  DickPicker], npcs=[bree, "lexi", minami, samantha, sasha])
         attribute mike
         always:
             "bj_breeleximinamisamsasha_bg"
@@ -177,10 +162,6 @@ init 1:
         group collars auto variant "sashaback" if_any "sashaback"
         group boobjob auto variant "sashaback" if_any "sashaback"
         group haircuts auto variant "sashaback" if_any "sashaback"
-        group multiple auto variant piercings_sashaback when sashaback
-        group multiple auto variant piercings_sashaback_boobjob when sashaback and sasha_boobjob
-        group multiple auto variant piercings_sashaback_noboobjob when sashaback and not sasha_boobjob
-
 
 
         group sashafront_exp auto:
@@ -190,10 +171,6 @@ init 1:
         group collars auto variant "sashafront" if_any "sashafront"
         group boobjob auto variant "sashafront" if_any "sashafront"
         group haircuts auto variant "sashafront" if_any "sashafront"
-        group multiple auto variant piercings_sashafront when sashafront
-        group multiple auto variant piercings_sashafront_boobjob when sashafront and sasha_boobjob
-        group multiple auto variant piercings_sashafront_noboobjob when sashafront and not sasha_boobjob
-
 
         group samanthaloc auto:
             attribute samanthaback default
@@ -209,13 +186,9 @@ init 1:
             "bj_breeleximinamisamsasha_samanthaback_exp_samanthaopenmouth"
         group pregnancies auto variant "samanthaback" if_any "samanthaback"
         group collars auto variant "samanthaback" if_any "samanthaback"
-        group multiple auto variant piercings_samanthaback when samanthaback
-
 
         group pregnancies auto variant "samanthafront" if_any "samanthafront"
         group collars auto variant "samanthafront" if_any "samanthafront"
-        group multiple auto variant piercings_samanthafront when samanthafront
-
 
         group breeloc auto:
             attribute breeback default
@@ -232,13 +205,9 @@ init 1:
 
         group pregnancies auto variant "breeback" if_any "breeback"
         group collars auto variant "breeback" if_any "breeback"
-        group multiple auto variant piercings_breeback when breeback
-
 
         group pregnancies auto variant "breefront" if_any "breefront"
         group collars auto variant "breefront" if_any "breefront"
-        group multiple auto variant piercings_breefront when breefront
-
 
         group minamiloc auto:
             attribute minamiback default
@@ -256,18 +225,13 @@ init 1:
             if_not "minamifront"
             "bj_breeleximinamisamsasha_minamiback_exp_minamiopenmouth"
         group pregnancies auto variant "minamiback" if_any "minamiback"
-        group multiple auto variant piercings_minamiback when minamiback
-
 
         group collars auto variant "minamifront" if_any "minamifront"
         group haircuts auto variant "minamifront" if_any "minamifront"
         group pregnancies auto variant "minamifront" if_any "minamifront"
-        group multiple auto variant piercings_minamifront when minamifront
-
 
         group lexiloc auto:
             attribute lexiback default
-
 
         group lexiback_exp auto:
             if_any "lexiback"
@@ -280,13 +244,10 @@ init 1:
 
         group pregnancies auto variant "lexiback" if_any "lexiback"
         group collars auto variant "lexiback" if_any "lexiback"
-        group multiple auto variant piercings_lexiback when lexiback
-
 
 
         group pregnancies auto variant "lexifront" if_any "lexifront"
         group collars auto variant "lexifront" if_any "lexifront"
-        group multiple auto variant piercings_lexifront when lexifront
 
         group dick auto:
             if_any ["mike"]
@@ -338,7 +299,7 @@ init 1:
         group mikecum auto
 
     layeredimage bj breeminamisamsasha:
-        attribute_function MultiPickers([PiercingsPicker, DickPicker, HaircutPicker], npcs=[bree, minami, samantha, sasha])
+        attribute_function MultiPickers([ DickPicker, HaircutPicker], npcs=[bree, minami, samantha, sasha])
         attribute cumshot
         attribute breesuck
         attribute breeinmouth
@@ -354,7 +315,6 @@ init 1:
         always:
             "bj_breeminamisamsasha_body"
 
-        group multiple auto variant bree_piercings
         always:
             if_any "breeonmouth"
             "bj_breeminamisamsasha_bree_exp_breeopen"
@@ -365,7 +325,6 @@ init 1:
         always:
             if_any "minami_haircut"
             "bj_breeminamisamsasha_minami_blonde"
-        group multiple auto variant minami_piercings
         always:
             if_all ["minamionmouth", "minami_nohaircut"]
             "bj_breeminamisamsasha_minami_exp_nohaircut_minamiopen"
@@ -380,7 +339,6 @@ init 1:
             if_not "minamionmouth"
             attribute minaminormal default
 
-        group multiple auto variant samantha_piercings
         always:
             if_any "samanthaonmouth"
             "bj_breeminamisamsasha_samantha_exp_samanthaopen"
@@ -391,7 +349,7 @@ init 1:
         always:
             if_any "sasha_haircut"
             "bj_breeminamisamsasha_sasha_blonde"
-        group multiple auto variant sasha_piercings
+
         always:
             if_any "sashaonmouth"
             "bj_breeminamisamsasha_sasha_exp_sashaopen"
@@ -502,7 +460,7 @@ init 1:
         attribute sashahand if_any ["sasha"] if_not ["nohandssasha", "minamihand", "breehand"]
 
     layeredimage bj breeminamisasha2:
-        attribute_function MultiPickers([CollarPicker, PiercingsPicker, HaircutPicker, DickPicker], npcs=[bree,minami,sasha])
+        attribute_function MultiPickers([CollarPicker,  HaircutPicker, DickPicker], npcs=[bree,minami,sasha])
 
 
         always:
@@ -678,7 +636,7 @@ init 1:
         group cuminmouth auto if_any "inmouth"
 
     layeredimage bj breesasha:
-        attribute_function MultiPickers([HaircutPicker, PiercingsPicker, CollarPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([HaircutPicker,  CollarPicker], append_npc_from_attributes=True)
         always:
             "bj_breesasha_bg"
 
@@ -687,8 +645,7 @@ init 1:
         attribute sasha
 
         group multiple auto variant collars
-        group multiple auto variant piercings
-
+        
         group multiple auto variant haircuts
         group multiple:
             attribute bree_nohaircut null
@@ -742,7 +699,7 @@ init 1:
         attribute wet
 
     layeredimage bj leximinamisam:
-        attribute_function MultiPickers([PiercingsPicker, PregnancyPicker, HaircutPicker, CollarPicker, PubesPicker], npcs=["lexi", minami, samantha])
+        attribute_function MultiPickers([ HaircutPicker, CollarPicker, PubesPicker], npcs=["lexi", minami, samantha])
 
         group bg auto:
             attribute beach default
@@ -850,7 +807,7 @@ init 1:
         group multiple auto variant kids
 
     layeredimage breesasha kiss:
-        attribute_function MultiPickers([OutfitPicker, HaircutPicker, PregnancyPicker, CollarPicker, PiercingsPicker], npcs=[bree, sasha], add_simple_outfit_attribute=True)
+        attribute_function MultiPickers([OutfitPicker, HaircutPicker, CollarPicker], npcs=[bree, sasha], add_simple_outfit_attribute=True)
 
 
         always "breesasha_kiss_base"
@@ -867,8 +824,7 @@ init 1:
         group hairs auto
 
 
-        group multiple auto variant piercings
-
+        
 
         attribute naked null
         attribute topless null
@@ -882,7 +838,6 @@ init 1:
         attribute cum
 
     layeredimage couch fun:
-        attribute_function MultiPickers([PiercingsPicker], append_npc_from_attributes=True)
         attribute facial null
         attribute masturbate null
 
@@ -906,8 +861,7 @@ init 1:
 
         attribute bree
 
-        group multiple auto variant piercings
-
+        
         always:
             if_all ["bree","facial"]
             "couch_fun_bree_facial"
@@ -917,7 +871,7 @@ init 1:
             "couch_fun_cumshot"
 
     layeredimage cumshot breesamsasha:
-        attribute_function MultiPickers([CollarPicker, PiercingsPicker, HaircutPicker], npcs=[bree, samantha, sasha])
+        attribute_function MultiPickers([CollarPicker,  HaircutPicker], npcs=[bree, samantha, sasha])
 
         attribute bree null
         attribute samantha null
@@ -937,8 +891,7 @@ init 1:
         attribute sasha_nohaircut
         attribute sasha_haircut null
         group multiple auto variant collars
-        group multiple auto variant piercings
-        group multiple:
+                group multiple:
             attribute bree_clit null
             attribute bree_ears null
             attribute bree_lips null
@@ -967,7 +920,7 @@ init 1:
         group multiple auto variant cum
 
     layeredimage cumshot breesasha:
-        attribute_function MultiPickers([CollarPicker, PregnancyPicker, HaircutPicker], npcs=[bree, sasha])
+        attribute_function MultiPickers([CollarPicker, HaircutPicker], npcs=[bree, sasha])
 
 
         always:
@@ -1084,7 +1037,7 @@ init 1:
         group handle auto
 
     layeredimage fivesome breeminamisamsasha:
-        attribute_function MultiPickers([CollarPicker, PiercingsPicker, HaircutPicker, DickPicker, PregnancyPicker, PubesPicker], npcs=[bree, minami, samantha, sasha])
+        attribute_function MultiPickers([CollarPicker,  HaircutPicker, DickPicker, PubesPicker], npcs=[bree, minami, samantha, sasha])
         attribute condom
         always:
             "fivesome_breeminamisamsasha_bg"
@@ -1098,13 +1051,7 @@ init 1:
         attribute sasha_boobjob
 
 
-        group multiple auto variant pregnancy
         group multiple auto variant collars
-        group multiple auto variant piercings
-        group multiple auto variant piercings_novaginal when not vaginal
-        group multiple auto variant piercings_vaginal when vaginal
-        group multiple auto variant piercings_boobjob when sasha_boobjob
-        group multiple auto variant piercings_noboobjob when not sasha_boobjob
         group multiple auto variant haircuts
 
         group bree_exp auto:
@@ -1139,7 +1086,7 @@ init 1:
             "fivesome_breeminamisamsasha_dick_condom_big"
 
     layeredimage foursome breeminamisasha:
-        attribute_function MultiPickers([CollarPicker, PiercingsPicker, HaircutPicker, PregnancyPicker], npcs=[bree, minami, sasha])
+        attribute_function MultiPickers([CollarPicker,  HaircutPicker], npcs=[bree, minami, sasha])
 
         attribute bree null
         attribute minami null
@@ -1158,8 +1105,7 @@ init 1:
         group boobjobs auto variant "pregnant" if_all ["sasha_boobjob", "sasha_pregnant"]
         group boobjobs auto variant "nopregnant" if_any "sasha_boobjob" if_not "sasha_pregnant"
 
-        group multiple auto variant piercings
-        group multiple:
+                group multiple:
             attribute bree_ears null
             attribute bree_clit null
             attribute bree_lips null
@@ -1168,8 +1114,6 @@ init 1:
             attribute minami_ears null
             attribute sasha_lips null
             attribute sasha_tongue null
-        group piercings auto variant "boobjob" if_any "sasha_boobjob"
-        group piercings auto variant "noboobjob" if_not "sasha_boobjob"
 
         group multiple auto variant collars
 
@@ -1192,7 +1136,7 @@ init 1:
         group sasha_fx auto
 
     layeredimage foursome breesamsasha:
-        attribute_function MultiPickers([CollarPicker, PiercingsPicker, HaircutPicker, DickPicker, PregnancyPicker, PubesPicker], npcs=[bree, samantha, sasha])
+        attribute_function MultiPickers([CollarPicker,  HaircutPicker, DickPicker, PubesPicker], npcs=[bree, samantha, sasha])
         always:
             "foursome_breesamsasha_bg"
         always:
@@ -1207,8 +1151,7 @@ init 1:
 
         group multiple auto variant pregnancy
 
-        group multiple auto variant piercings
-        group multiple:
+                group multiple:
             attribute bree_clit null
             attribute bree_ears null
             attribute bree_lips null
@@ -1223,9 +1166,6 @@ init 1:
             attribute sasha_lips null
             attribute sasha_nipples null
             attribute sasha_tongue null
-
-        group piercings auto variant "vaginal" if_any "vaginal"
-        group piercings auto variant "novaginal" if_not "vaginal"
 
         group multiple auto variant collars
         group multiple:
@@ -1254,7 +1194,7 @@ init 1:
         group multiple auto variant finger
 
     layeredimage foursome leximinamisam:
-        attribute_function MultiPickers([PiercingsPicker, PregnancyPicker, HaircutPicker, DickPicker, OutfitPicker, CollarPicker, HaircutPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([ HaircutPicker, DickPicker, OutfitPicker, CollarPicker, HaircutPicker], append_npc_from_attributes=True)
 
         group bg auto:
             attribute bedroom default
@@ -1274,8 +1214,6 @@ init 1:
         group multiple auto variant pregnancy
 
         group multiple auto variant collars
-        group multiple auto variant piercings_minami
-        group multiple auto variant piercings_lexi when lexi
 
         attribute lexifingering
 
@@ -1284,10 +1222,6 @@ init 1:
             "foursome_leximinamisam_samantha_lexishadow"
 
         attribute samantha
-
-        attribute samantha_pregnant
-
-        group multiple auto variant piercings_samantha when samantha
 
         attribute samantha_collar
 
@@ -1322,17 +1256,14 @@ init 1:
             "foursome_leximinamisam_fg"
 
     layeredimage foursome lexisamsasha:
-        attribute_function MultiPickers([HaircutPicker, PiercingsPicker, PregnancyPicker, DickPicker], npcs=["lexi", samantha, sasha])
+        attribute_function MultiPickers([HaircutPicker,  DickPicker], npcs=["lexi", samantha, sasha])
         attribute lollipop
         always:
             "foursome_lexisamsasha_bg"
         always:
             "foursome_lexisamsasha_body"
         attribute sasha_haircut
-        group multiple auto variant pregnancy
-        group multiple auto variant piercings
-        group piercings auto variant "boobjob" if_any "sasha_boobjob"
-        group piercings auto variant "noboobjob" if_not "sasha_boobjob"
+
         group multiple auto variant collars
         attribute sasha_boobjob
         group lexi_exp auto:
@@ -1353,7 +1284,7 @@ init 1:
         group cum auto
 
     layeredimage girls couch fun:
-        attribute_function MultiPickers([HaircutPicker, PregnancyPicker, CollarPicker, PiercingsPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([HaircutPicker, CollarPicker], append_npc_from_attributes=True)
         attribute bree null
         attribute minami null
         attribute samantha null
@@ -1375,8 +1306,7 @@ init 1:
         group multiple auto variant pregnancies
         attribute lexi_pregnant if_any ["lexi"]
 
-        group multiple auto variant piercings
-        group multiple:
+                group multiple:
             attribute bree_clit null
             attribute bree_ears null
             attribute bree_lips null
@@ -1419,7 +1349,7 @@ init 1:
         group multiple auto variant vibrators
 
     layeredimage home ending:
-        attribute_function MultiPickers([CollarPicker, PiercingsPicker, DickPicker, PregnancyPicker, HaircutPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([CollarPicker,  DickPicker, HaircutPicker], append_npc_from_attributes=True)
 
         attribute cum
 
@@ -1430,7 +1360,6 @@ init 1:
 
         attribute samantha
         attribute samantha_pregnant
-        group multiple auto variant piercings_samantha when samantha or samantha_pregnant
         group multiple auto variant cum_samantha when cum and (samantha or samantha_pregnant)
 
 
@@ -1467,18 +1396,9 @@ init 1:
 
         group multiple auto variant exp
 
-
         attribute minami_haircut
 
-
         attribute sasha_collar
-
-
-        group multiple auto variant piercings_bree when bree or bree_pregnant
-        group multiple auto variant piercings_lexi when lexi or lexi_pregnant
-        group multiple auto variant piercings_minami when minami or minami_pregnant
-        group multiple auto variant piercings_sasha when sasha or sasha_pregnant
-
 
         group cumdick auto if_any ["cum"]
 
@@ -1496,25 +1416,20 @@ init 1:
             "home_ending_fg"
 
     layeredimage lesbian sex breesam:
-        attribute_function MultiPickers([CollarPicker, PiercingsPicker, PregnancyPicker, HaircutPicker], npcs=[bree, samantha])
+        attribute_function MultiPickers([CollarPicker,  HaircutPicker], npcs=[bree, samantha])
 
 
         always "lesbian_sex_breesam_bg"
         always "lesbian_sex_breesam_bodies"
 
-
         group multiple auto variant collars
 
-
         attribute strapon
-
-        group multiple auto variant piercings_back
 
         group multiple auto variant pregnancy
 
 
-        group multiple auto variant piercings
-
+        
 
         group exp auto:
             attribute pleasure default
@@ -1523,7 +1438,7 @@ init 1:
         always "lesbian_sex_breesam_fg"
 
     layeredimage lesbian sex minsam:
-        attribute_function MultiPickers([PubesPicker, PregnancyPicker, PiercingsPicker, CollarPicker, HaircutPicker], npcs=[minami, samantha])
+        attribute_function MultiPickers([PubesPicker,  CollarPicker, HaircutPicker], npcs=[minami, samantha])
 
 
         always "lesbian_sex_minsam_bg"
@@ -1532,8 +1447,7 @@ init 1:
 
         group pubic auto
         group pregnancy auto
-        group multiple auto variant piercings
-        group collars auto
+                group collars auto
         group hair auto
 
 
@@ -1543,28 +1457,23 @@ init 1:
         always "lesbian_sex_minsam_light"
 
     layeredimage lesbian sex samlexi:
-        attribute_function MultiPickers([PubesPicker, PregnancyPicker, CollarPicker, PiercingsPicker], npcs=["lexi", samantha])
-
+        attribute_function MultiPickers([PubesPicker, CollarPicker], npcs=["lexi", samantha])
 
         always "lesbian_sex_samlexi_bg"
         always "lesbian_sex_samlexi_bodies"
-
 
         group expsam auto:
             attribute sampleasure default
         group explexi auto:
             attribute lexismile default
 
-
         attribute vibratorsam
         attribute vibratorlexi
-
 
         group pubic auto
         group pregnancy auto
         group collars auto
-        group multiple auto variant piercings
-
+        
 
         always "lesbian_sex_samlexi_light"
 
@@ -1572,7 +1481,7 @@ init 1:
         attribute squirt
 
     layeredimage lesbian sex samsasha:
-        attribute_function MultiPickers([CollarPicker, PiercingsPicker, PregnancyPicker, HaircutPicker], npcs=[samantha, sasha])
+        attribute_function MultiPickers([CollarPicker,  HaircutPicker], npcs=[samantha, sasha])
 
 
         always "lesbian_sex_samsasha_bg"
@@ -1595,12 +1504,6 @@ init 1:
 
         attribute sasha_boobjob
 
-
-        group multiple auto variant piercings
-        group multiple auto variant piercings_bb when bb
-        group multiple auto variant piercings_nobb when not sasha_boobjob
-
-
         group exp auto:
             attribute normal default
 
@@ -1614,7 +1517,7 @@ init 1:
         always "lesbian_sex_samsasha_fg"
 
     layeredimage sandwich breeminami:
-        attribute_function MultiPickers([PubesPicker, PiercingsPicker, HaircutPicker, DickPicker], npcs=[bree, minami])
+        attribute_function MultiPickers([PubesPicker,  HaircutPicker, DickPicker], npcs=[bree, minami])
 
 
         always:
@@ -1642,13 +1545,7 @@ init 1:
         attribute minami_nohaircut
         attribute minami_haircut
 
-
         attribute tongueout
-
-
-        group multiple auto variant piercings
-        group multiple auto variant piercings_tongueout when tongueout
-
 
         attribute dripcum
 
@@ -1737,7 +1634,7 @@ init 1:
             attribute lickboobs default
 
     layeredimage sandwich minamisasha:
-        attribute_function MultiPickers([PiercingsPicker, PubesPicker, HaircutPicker, DickPicker], npcs=[sasha, minami])
+        attribute_function MultiPickers([ PubesPicker, HaircutPicker, DickPicker], npcs=[sasha, minami])
 
 
         always:
@@ -1747,13 +1644,7 @@ init 1:
         always:
             "sandwich_minamisasha_bodies"
 
-
         group multiple auto variant pubic
-
-
-        group multiple auto variant piercings
-        group multiple auto variant piercings_nodildo when not dildo
-
 
         attribute sasha_boobjob
 
@@ -1780,13 +1671,9 @@ init 1:
         group dild auto if_all ["mike", "fucksasha"] if_not ["vaginal"]
         group dild auto if_any ["fuckminami", "fucksasha"] if_not ["mike"]
         group dild auto if_not ["fuckminami", "fucksasha"]
-        group multiple auto variant piercings_dildo when dildo
-
 
         always:
             "sandwich_minamisasha_sheets"
-
-
 
         group sas_beads if_all ["mike", "fucksasha"]:
             attribute sashabeads if_not ["anal"]
@@ -1867,7 +1754,7 @@ init 1:
             "sandwich_minamisasha_cumonhand_wank"
 
     layeredimage shower bj breesasha:
-        attribute_function MultiPickers([PiercingsPicker, PregnancyPicker, CollarPicker, HaircutPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([ CollarPicker, HaircutPicker], append_npc_from_attributes=True)
         always:
             "shower_bj_breesasha_bg"
         always:
@@ -1885,12 +1772,8 @@ init 1:
             "shower_bj_breesasha_sasha_hair_line"
         attribute sasha_collar
 
-        group multiple auto variant sasha_piercings
         group multiple:
             attribute sasha_lips null
-        group sasha_piercings auto variant "boobjob" if_any "sasha_boobjob"
-        group sasha_piercings auto variant "noboobjob" if_not "sasha_boobjob"
-
         attribute bodycum:
             if_any "sasha"
             "shower_bj_breesasha_sasha_bodycum"
@@ -1901,8 +1784,6 @@ init 1:
         attribute bree
         attribute bree_nohaircut null
         attribute bree_pregnant
-
-        group multiple auto variant bree_piercings
 
         attribute bodycum:
             if_any "bree"
@@ -1923,7 +1804,7 @@ init 1:
             attribute up default
 
     layeredimage shower breesasha:
-        attribute_function MultiPickers([PregnancyPicker, CollarPicker, HaircutPicker, PiercingsPicker], npcs=[bree, sasha])
+        attribute_function MultiPickers([CollarPicker, HaircutPicker], npcs=[bree, sasha])
         always:
             "shower_breesasha_bg"
 
@@ -1931,22 +1812,17 @@ init 1:
 
         attribute bree_pregnant
         attribute bree_collar
-        group multiple auto variant bree_piercings
 
         attribute sasha
         attribute sasha_pregnant
         attribute sasha_boobjob
         group haircuts auto
 
-        group multiple auto variant sasha_piercings
-        group sasha_piercings auto variant "boobjob" if_any "sasha_boobjob"
-        group sasha_piercings auto variant "noboobjob" if_not "sasha_boobjob"
-
         always:
             "shower_breesasha_wet"
 
     layeredimage shower threesome breesasha:
-        attribute_function MultiPickers([CollarPicker, PiercingsPicker, HaircutPicker, PregnancyPicker], npcs=[bree, sasha])
+        attribute_function MultiPickers([CollarPicker,  HaircutPicker], npcs=[bree, sasha])
         attribute bree null
 
         attribute sasha null
@@ -1960,8 +1836,7 @@ init 1:
 
 
         group multiple auto variant collars
-        group multiple auto variant piercings
-        group multiple:
+                group multiple:
             attribute bree_ears null
             attribute sasha_ears null
 
@@ -1983,7 +1858,7 @@ init 1:
             "shower_threesome_breesasha_wet"
 
     layeredimage sixsome breeleximinamisamsasha:
-        attribute_function MultiPickers([CollarPicker, PiercingsPicker, HaircutPicker, PregnancyPicker, DickPicker], npcs=[bree, "lexi", minami, samantha, sasha])
+        attribute_function MultiPickers([CollarPicker,  HaircutPicker, DickPicker], npcs=[bree, "lexi", minami, samantha, sasha])
 
         attribute anal null
         attribute vaginal null
@@ -1999,31 +1874,21 @@ init 1:
         group multiple auto variant pregnancy
         group multiple auto variant haircuts
 
-        group piercings auto variant "breevaginalgape" if_any "breevaginalgape"
-        group piercings auto variant "breenogape" if_not "breevaginalgape"
         group bree_exp auto:
             attribute breenormal default
 
-        group piercings auto variant "lexivaginalgape" if_any "lexivaginalgape"
-        group piercings auto variant "lexinogape" if_not "lexivaginalgape"
         group lexi_exp auto:
             attribute lexinormal default
         always:
             if_any "bubblegum"
             "sixsome_breeleximinamisamsasha_lexi_bubblegum"
 
-        group piercings auto variant "minamivaginalgape" if_any "minamivaginalgape"
-        group piercings auto variant "minaminogape" if_not "minamivaginalgape"
         group minami_exp auto:
             attribute minaminormal default
 
-        group piercings auto variant "samanthavaginalgape" if_any "samanthavaginalgape"
-        group piercings auto variant "samanthanogape" if_not "samanthavaginalgape"
         group samantha_exp auto:
             attribute samanthanormal default
 
-        group piercings auto variant "sashavaginalgape" if_any "sashavaginalgape"
-        group piercings auto variant "sashanogape" if_not "sashavaginalgape"
         group sasha_exp auto:
             attribute sashanormal default
 
@@ -2053,7 +1918,7 @@ init 1:
         group multiple auto variant fx_dick
 
     layeredimage smoking pot:
-        attribute_function MultiPickers([PregnancyPicker, CollarPicker, PiercingsPicker, PubesPicker, OutfitPicker, DickPicker, SeasonPicker, MCCGPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([CollarPicker,  PubesPicker, OutfitPicker, DickPicker, SeasonPicker, MCCGPicker], append_npc_from_attributes=True)
 
         attribute topless null
         attribute bottomless null
@@ -2088,7 +1953,6 @@ init 1:
         attribute lexi
         attribute lexi_collar if_any ["lexi"]
         attribute lexi_pregnant if_any ["lexi"]
-        group multiple auto variant piercings_lexi when lexi
         group multiple:
             attribute lexi_clit null
             attribute lexi_navel null
@@ -2111,7 +1975,6 @@ init 1:
         attribute mc_pubes if_any ["breemc"]
         attribute mc_collar if_any ["breemc"]
         attribute mc_pregnant if_any ["breemc"]
-        group multiple auto variant piercings_breemc when breemc
         group bot auto variant "breemc" if_any ["breemc"] if_not ["mc_pregnant", "bottomless", "naked"]
         group top auto variant "breemc" if_any ["breemc"] if_not ["mc_pregnant", "topless", "naked"]
         group bot auto variant "breemc_pregnant" if_all ["breemc", "mc_pregnant"] if_not ["bottomless", "naked"]
@@ -2149,7 +2012,7 @@ init 1:
         attribute winter if_any ["parking"]
 
     layeredimage threesome breelexi breefuck:
-        attribute_function MultiPickers([PiercingsPicker, PregnancyPicker, DickPicker, OutfitPicker, CollarPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([ DickPicker, OutfitPicker, CollarPicker], append_npc_from_attributes=True)
 
         group multiple:
             attribute bree_ears null
@@ -2169,7 +2032,6 @@ init 1:
         group multiple auto variant pregnancy
 
         attribute bree_hand
-        group multiple auto variant piercings_bree
         attribute bree_naked null
         group outfits_bree auto if_not "bree_naked"
 
@@ -2179,7 +2041,6 @@ init 1:
         attribute lexi
 
         group multiple auto variant collars
-        group multiple auto variant piercings_lexi when lexi
 
         attribute lexi_naked null
         group outfits_lexi auto if_any "lexi" if_not "lexi_naked"
@@ -2214,7 +2075,7 @@ init 1:
             attribute bedroom default
 
     layeredimage threesome breelexi lexifuck:
-        attribute_function MultiPickers([PiercingsPicker, PregnancyPicker, DickPicker, OutfitPicker, CollarPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([ DickPicker, OutfitPicker, CollarPicker], append_npc_from_attributes=True)
 
         group bg auto:
             attribute bedroom default
@@ -2226,10 +2087,6 @@ init 1:
         group multiple auto variant pregnancy
 
         attribute mike
-
-        group multiple auto variant piercings_lexi
-
-        group multiple auto variant piercings_bree when bree
 
         group exp_lexi auto:
             attribute lexinormal default
@@ -2263,7 +2120,7 @@ init 1:
             attribute bedroom default
 
     layeredimage threesome breeminami:
-        attribute_function MultiPickers([HaircutPicker, PiercingsPicker, PregnancyPicker, DickPicker], npcs=[bree, minami])
+        attribute_function MultiPickers([HaircutPicker,  DickPicker], npcs=[bree, minami])
 
 
         always:
@@ -2329,10 +2186,9 @@ init 1:
         group condomcum auto if_all ["mike", "out", "cumshot", "condom"]
 
 
-        group multiple auto variant piercings
-
+        
     layeredimage threesome breesasha:
-        attribute_function MultiPickers([CollarPicker, PregnancyPicker, HaircutPicker], npcs=[bree, sasha])
+        attribute_function MultiPickers([CollarPicker, HaircutPicker], npcs=[bree, sasha])
 
 
         group bg auto:
@@ -2371,8 +2227,7 @@ init 1:
             attribute sashaahegao
 
 
-        group multiple auto variant piercings
-
+        
 
         attribute cum null
         group multiple auto variant cum when cum 
@@ -2460,7 +2315,7 @@ init 1:
         attribute breeleash default if_all ["leash", "bree_collar"]
 
     layeredimage threesome minamisasha :
-        attribute_function MultiPickers([PiercingsPicker, PregnancyPicker, HaircutPicker, DickPicker], npcs=[minami], append_npc_from_attributes=True)
+        attribute_function MultiPickers([ HaircutPicker, DickPicker], npcs=[minami], append_npc_from_attributes=True)
 
 
         always:
@@ -2468,10 +2323,6 @@ init 1:
 
 
         attribute minami
-
-
-        group multiple auto variant piercings_minami
-
 
         group exp_minami auto:
             attribute minaminormal default
@@ -2493,19 +2344,9 @@ init 1:
 
         attribute sasha
 
-
-        group multiple auto variant piercings_sasha when sasha
-        group multiple auto variant piercings_sasha_noboobjob when sasha and not sasha_boobjob
-
-
-        attribute sasha_pregnant if_any ["sasha"]
-
-
         attribute sasha_boobjob if_any ["sasha"]
 
-
         group sashahair auto if_any ["sasha"]
-
 
         group exp_sasha auto if_any ["sasha"]:
             attribute sashanormal default
@@ -2548,7 +2389,7 @@ init 1:
         group cumshot auto variant "fucksasha" if_all ["mike", "out", "sasha", "fucksasha", "cumshot"] if_not ["condom"]
 
     layeredimage xmas diner:
-        attribute_function MultiPickers([PiercingsPicker, PregnancyPicker, HaircutPicker, CollarPicker, OutfitPicker, MCCGPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([ HaircutPicker, CollarPicker, OutfitPicker, MCCGPicker], append_npc_from_attributes=True)
 
 
         always "xmas_diner_bg"
@@ -2616,8 +2457,6 @@ init 1:
         group bree_exp auto if_any ["bree"]:
             attribute bree_yummy default
 
-
-        group multiple auto variant bree_piercings when bree
         group multiple:
             attribute bree_clit null
             attribute bree_tongue null
@@ -2645,10 +2484,6 @@ init 1:
         group breemc_exp auto if_any ["breemc"]:
             attribute breemc_yummy default
 
-
-        group multiple auto variant breemc_piercings when breemc
-
-
         group breemc_outfit auto if_any ["breemc"] if_not ["mc_naked"]
         group breemc_outfit auto variant "pregnant" if_all ["breemc", "mc_pregnant"] if_not ["mc_naked"]
 
@@ -2672,16 +2507,10 @@ init 1:
         group sasha_exp auto if_any ["sasha"]:
             attribute sasha_yummy default
 
-
-        group multiple auto variant sasha_piercings when sasha
         group multiple:
             attribute sasha_clit null
             attribute sasha_lips null
             attribute sasha_navel null
-        group multiple auto variant sasha_piercings_bb when sasha and sasha_boobjob
-        group multiple auto variant sasha_piercings_notbb when sasha and not sasha_boobjob
-        group multiple auto variant sasha_piercings_sasha_disgust when sasha and sasha_disgust
-
 
         group sasha_outfits:
             attribute sasha_casual default null
@@ -2700,22 +2529,13 @@ init 1:
         attribute sasha_haircut if_any ["sasha"]
         attribute sasha_nohaircut if_any ["sasha"]
 
-
-        group multiple auto variant sasha_piercings_ears when sasha and sasha_ears
-
-
         attribute samantha
 
         attribute samantha_nohaircut null
 
-        attribute samantha_pregnant if_any ["samantha"]
-
-
         group samantha_exp auto if_any ["samantha"]:
             attribute samantha_yummy default
 
-
-        group multiple auto variant samantha_piercings when samantha
         group multiple:
             attribute samantha_clit null
             attribute samantha_ears null
@@ -2748,8 +2568,6 @@ init 1:
         group lexi_exp auto if_any ["lexi"]:
             attribute lexi_yummy default
 
-
-        group multiple auto variant lexi_piercings when lexi
         group multiple:
             attribute lexi_clit null
             attribute lexi_tongue null
@@ -2779,8 +2597,6 @@ init 1:
         group minami_exp auto if_any ["minami"]:
             attribute minami_yummy default
 
-
-        group multiple auto variant minami_piercings when minami
         group multiple:
             attribute minami_nose null
             attribute minami_ears null
@@ -2829,24 +2645,20 @@ init 1:
         always "xmas_diner_turkey_spices"
 
     layeredimage xmas singing:
-        attribute_function MultiPickers([PiercingsPicker, PregnancyPicker, HaircutPicker, CollarPicker, OutfitPicker, MCCGPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([ HaircutPicker, CollarPicker, OutfitPicker, MCCGPicker], append_npc_from_attributes=True)
 
         attribute mc_casual default null
         attribute mc_naked null
         attribute mc_pubes null
-
 
         group singer:
             attribute singmikemc default null
             attribute singbreemc null
             attribute singminami null
 
-
         always "xmas_singing_bg"
 
-
         attribute bree
-
 
         attribute bree_pregnant null
         group bree_outfit:
@@ -2854,18 +2666,13 @@ init 1:
             attribute bree_naked null
         group bree_outfit auto if_any ["bree"]
 
-
         group bree_exp auto if_any ["bree"]:
             attribute bree_happy default
 
-
         group bree_outfit_arm auto variant "bree_happy" if_all ["bree", "bree_happy"]
-
 
         attribute bree_collar if_any ["bree"]
 
-
-        group multiple auto variant bree_piercings when bree
         group multiple:
             attribute bree_clit null
             attribute bree_navel null
@@ -2875,28 +2682,19 @@ init 1:
 
         group bree_outfit_arm auto variant "bree_annoyed" if_all ["bree", "bree_annoyed"]
 
-
         attribute breemc if_not ["singbreemc"]
 
         attribute mc_pregnant null if_not ["singbreemc"]
 
-
         group breemc_outfit auto if_any ["breemc"] if_not ["singbreemc"]
-
 
         group breemc_exp auto if_any ["breemc"] if_not ["singbreemc"]:
             attribute breemc_happy default
 
-
         group breemc_outfit_arm auto variant "breemc_happy" if_all ["breemc", "breemc_happy"] if_not ["singbreemc"]
         group breemc_outfit_arm auto variant "breemc_annoyed" if_all ["breemc", "breemc_annoyed"] if_not ["singbreemc"]
 
-
         attribute mc_collar if_any ["breemc"] if_not ["singbreemc"]
-
-
-        group multiple auto variant breemc_piercings when breemc and not singbreemc
-
 
         attribute lexi
 
@@ -2904,11 +2702,8 @@ init 1:
 
         attribute lexi_pregnant if_any ["lexi"]
 
-
-        group multiple auto variant lexi_piercings when lexi
         group multiple:
             attribute lexi_tongue null
-
 
         group lexi_outfits:
             attribute lexi_casual default null
@@ -2920,11 +2715,7 @@ init 1:
         group lexi_exp auto if_any ["lexi"]:
             attribute lexi_happy default
 
-
         attribute lexi_collar if_any ["lexi"]
-
-
-
 
         attribute samantha
 
@@ -2932,13 +2723,10 @@ init 1:
 
         attribute samantha_pregnant if_any ["samantha"]
 
-
-        group multiple auto variant samantha_piercings when samantha
         group multiple:
             attribute samantha_ears null
             attribute samantha_nose null
             attribute samantha_tongue null
-
 
         group samantha_outfits:
             attribute samantha_casual default null
@@ -2947,95 +2735,61 @@ init 1:
         group samantha_outfit auto if_any ["samantha"]
         group samantha_outfit auto variant "pregnant" if_all ["samantha", "samantha_pregnant"]
 
-
         group samantha_exp auto if_any ["samantha"]:
             attribute samantha_happy default
 
-        group multiple auto variant samantha_piercings_samantha_happy when samantha and samantha_happy
-        group multiple auto variant samantha_piercings_samantha_annoyed when samantha and samantha_annoyed
-
-
         attribute samantha_collar if_any ["samantha"]
 
-
-
-
         attribute sasha
-
-
-        attribute sasha_pregnant if_any ["sasha"]
-
 
         group sasha_outfits:
             attribute sasha_casual default null
             attribute sasha_naked null
         group sasha_outfit auto if_any ["sasha"]
 
-
         attribute sasha_haircut if_any ["sasha"]
         attribute sasha_nohaircut if_any ["sasha"]
-
-
-        group multiple auto variant sasha_piercings_bb when sasha and sasha_boobjob
-        group multiple auto variant sasha_piercings_notbb when sasha and not sasha_boobjob
-        group multiple auto variant sasha_piercings when sasha
         group multiple:
             attribute sasha_lips null
 
         group sasha_outfit auto variant "pregnant" if_all ["sasha", "sasha_pregnant"]
 
-
         group sasha_exp auto if_any ["sasha"]:
             attribute sasha_happy default
-
 
         group sasha_outfit_arm auto variant "sasha_happy" if_all ["sasha", "sasha_happy"]
 
         group sasha_outfit_arm auto variant "sasha_annoyed" if_all ["sasha", "sasha_annoyed"]
 
-
         attribute sasha_boobjob null
         attribute sasha_noboobjob null
         group sasha_boobjob auto if_all ["sasha", "sasha_boobjob"]
 
-
         attribute sasha_collar if_any ["sasha"]
-
 
         attribute minami if_not ["singminami"]
 
-
         attribute minami_pregnant if_any ["minami"] if_not ["singminami"]
 
-
-        group multiple auto variant minami_piercings when minami and not singminami
         group multiple:
             attribute minami_ears null
-
 
         group minami_outfits:
             attribute minami_casual default null
             attribute minami_naked null
         group minami_outfit auto if_any ["minami"] if_not ["singminami"]
 
-
         attribute minami_collar if_any ["minami"] if_not ["singminami"]
-
 
         group minami_haircuts auto if_any ["minami"] if_not ["singminami"]
 
-
-
         group minami_outfit auto variant "pregnant" if_all ["minami", "minami_pregnant"] if_not ["singminami"]
-
 
         group minami_exp auto if_any ["minami"] if_not ["singminami"]:
             attribute minami_happy default
 
-
         group minami_outfit_arm auto variant "minami_happy" if_all ["minami", "minami_happy"] if_not ["singminami"]
         group minami_outfit_arm auto variant "minami_annoyed" if_all ["minami", "minami_annoyed"] if_not ["singminami"]
-
 
         attribute mike if_not ["singmike"]
 
@@ -3048,18 +2802,14 @@ init 1:
             attribute mike_haircut null
             attribute mike_nohaircut null
 
-
         attribute mike_casual default null
         group mike_outfit auto if_not ["singmike"] if_any "mike"
-
 
         group mike_exp auto if_not ["singmike"] if_any "mike":
             attribute mike_happy default
 
-
         group mike_outfit_arm auto variant "mike_happy" if_all ["mike_happy", "mike"] if_not ["singmike"]
         group mike_outfit_arm auto variant "mike_annoyed" if_all ["mike_annoyed", "mike"] if_not ["singmike"]
-
 
         attribute mikemc if_not ["singmikemc"]
 
@@ -3068,81 +2818,56 @@ init 1:
             attribute mc_medium null
             attribute mc_small null
 
-
         group mikemc_outfit auto if_any "mikemc" if_not ["singmikemc"]
-
 
         group mikemc_exp auto if_any "mikemc" if_not ["singmikemc"]:
             attribute mikemc_happy default
 
-
         group mikemc_outfit_arm auto variant "mikemc_happy" if_all ["mikemc", "mikemc_happy"] if_not ["singmikemc"]
         group mikemc_outfit_arm auto variant "mikemc_annoyed" if_all ["mikemc", "mikemc_annoyed"] if_not ["singmikemc"]
-
 
         attribute singminami
 
         always "xmas_singing_singminami_pregnant" if_all ["singminami", "minami_pregnant"]
 
-
-        group multiple auto variant singminami_piercings when singminami
-
-
         group singminami_outfit auto if_any ["singminami"]
         group singminami_outfit auto variant "pregnant" if_all ["singminami", "minami_pregnant"]
 
-
         group singminami_collar auto if_any ["singminami"]
-
 
         group singminami_haircuts auto if_any ["singminami"]
 
-
         attribute singmike
-
 
         group singmike_outfit auto if_any ["singmike"]
 
-
         attribute singmikemc
 
-
         group singmikemc_outfit auto if_any ["singmikemc"]
-
 
         attribute singbreemc
 
         always "xmas_singing_singbreemc_mc_pregnant" if_all ["singbreemc", "mc_pregnant"]
 
-
-        group multiple auto variant singbreemc_piercings when singbreemc
-
-
         group singbreemc_outfit auto if_any ["singbreemc"]
         group singbreemc_outfit auto variant "pregnant" if_all ["singbreemc", "mc_pregnant"]
 
-
         group singbreemc_collar auto if_any ["singbreemc"]
-
 
         group singbreemc_haircuts auto if_any ["singbreemc"]:
             attribute mc_nohaircut null
-
-
 
         group light auto
 
 
     layeredimage xmas snacks:
-        attribute_function MultiPickers([PiercingsPicker, PregnancyPicker, HaircutPicker, CollarPicker, OutfitPicker, MCCGPicker], append_npc_from_attributes=True)
-
+        attribute_function MultiPickers([ HaircutPicker, CollarPicker, OutfitPicker, MCCGPicker], append_npc_from_attributes=True)
 
         always "xmas_snacks_bg"
 
         attribute mc_naked null
         attribute mc_casual default null
         attribute mc_pubes null
-
 
         attribute mike
 
@@ -3155,15 +2880,12 @@ init 1:
             attribute mike_haircut null
             attribute mike_nohaircut null
 
-
         group mike_exp auto if_any ["mike"]:
             attribute mike_yummy default
-
 
         attribute mike_naked null
         attribute mike_casual default null
         group mike_outfit auto if_any ["mike"] if_not ["mike_naked"]
-
 
         attribute mikemc
 
@@ -3172,68 +2894,46 @@ init 1:
             attribute mc_medium null
             attribute mc_small null
 
-
         group mikemc_exp auto if_any ["mikemc"]:
             attribute mikemc_yummy default
 
-
         group mikemc_outfit auto if_any ["mikemc"] if_not ["mc_naked"]
-
 
         attribute minami
 
-
         attribute minami_pregnant if_all ["minami", "minami_naked"]
-
 
         group minami_exp auto if_any ["minami"]:
             attribute minami_yummy default
 
-
-        group multiple auto variant minami_piercings_under when minami
         group multiple:
             attribute minami_clit null
             attribute minami_ears null
-
 
         attribute minami_naked null
         attribute minami_casual default null
         group minami_outfit auto if_any ["minami"] if_not ["minami_naked"]
         group minami_outfit auto variant "pregnant" if_all ["minami", "minami_pregnant"] if_not ["minami_naked"]
 
-
         attribute minami_collar if_any ["minami"]
-
 
         attribute minami_haircut if_any ["minami"]
         attribute minami_nohaircut if_any ["minami"]
 
-
-        group multiple auto variant minami_piercings when minami
-
-
         attribute sasha
 
-
         attribute sasha_pregnant if_all ["sasha", "sasha_naked"]
-
 
         attribute sasha_boobjob if_all ["sasha", "sasha_naked"]
         attribute sasha_noboobjob null
 
-
         group sasha_exp auto if_any ["sasha"]:
             attribute sasha_yummy default
 
-
-        group multiple auto variant sasha_piercings_under when sasha
         group multiple:
             attribute sasha_clit null
             attribute sasha_lips null
             attribute sasha_tongue null
-        group multiple auto variant sasha_piercings_under_bb when sasha and sasha_boobjob
-        group multiple auto variant sasha_piercings_under_notbb when sasha and not sasha_boobjob
-
 
         attribute sasha_naked null
         attribute sasha_casual default null
@@ -3241,124 +2941,87 @@ init 1:
         group sasha_outfit auto variant "pregnant" if_all ["sasha", "sasha_pregnant"] if_not ["sasha_naked"]
         group sasha_outfit auto variant "boobjob" if_all ["sasha", "sasha_boobjob"] if_not ["sasha_naked"]
 
-
         attribute sasha_collar if_any ["sasha"]
-
 
         attribute sasha_haircut if_any ["sasha"]
         attribute sasha_nohaircut if_any ["sasha"]
-
-
-        group multiple auto variant sasha_piercings when sasha
-
 
         attribute samantha
 
         attribute samantha_haircut null
         attribute samantha_nohaircut null
 
-
         attribute samantha_pregnant if_all ["samantha", "samantha_naked"]
-
 
         group samantha_exp auto if_any ["samantha"]:
             attribute samantha_yummy default
 
-
-        group multiple auto variant samantha_piercings_under when samantha
         group multiple:
             attribute samantha_ears null
             attribute samantha_clit null
             attribute samantha_tongue null
-
 
         attribute samantha_naked null
         attribute samantha_casual default null
         group samantha_outfit auto if_any ["samantha"] if_not ["samantha_naked"]
         group samantha_outfit auto variant "pregnant" if_all ["samantha", "samantha_pregnant"] if_not ["samantha_naked"]
 
-
         attribute samantha_collar if_any ["samantha"]
-
-
-        group multiple auto variant samantha_piercings when samantha
-
 
         attribute lexi
 
         attribute lexi_haircut null
         attribute lexi_nohaircut null
 
-
         attribute lexi_pregnant if_all ["lexi", "lexi_naked"]
-
 
         group lexi_exp auto if_any ["lexi"]:
             attribute lexi_yummy default
 
-
-        group multiple auto variant lexi_piercings_under when lexi
         group multiple:
             attribute lexi_clit null
             attribute lexi_tongue null
-
 
         attribute lexi_naked null
         attribute lexi_casual default null
         group lexi_outfit auto if_any ["lexi"] if_not ["lexi_naked"]
         group lexi_outfit auto variant "pregnant" if_all ["lexi", "lexi_pregnant"] if_not ["lexi_naked"]
 
-
         attribute lexi_collar
-
-
-        group multiple auto variant lexi_piercings when lexi
-
 
         attribute bree
 
         attribute bree_haircut null
         attribute bree_nohaircut null
 
-
         attribute bree_pregnant if_all ["bree", "bree_naked"]
-
 
         group bree_exp auto if_any ["bree"]:
             attribute bree_yummy default
 
-
-        group multiple auto variant bree_piercings when bree
         group multiple:
             attribute bree_clit null
             attribute bree_ears null
             attribute bree_nose null
             attribute bree_tongue null
 
-
         attribute bree_naked null
         attribute bree_casual default null
         group bree_outfit auto if_any ["bree"] if_not ["bree_naked"]
         group bree_outfit auto variant "pregnant" if_all ["bree", "bree_pregnant"] if_not ["bree_naked"]
 
-
         attribute bree_collar if_any ["bree"]
-
 
         attribute breemc
 
         attribute mc_haircut if_any ["breemc"]
         attribute mc_nohaircut null if_any ["breemc"]
 
-
         attribute mc_pregnant if_all ["breemc", "mc_naked"]
-
 
         group breemc_exp auto if_any ["breemc"]:
             attribute breemc_yummy default
 
-
-        group multiple auto variant breemc_piercings when breemc
         group multiple:
             attribute mc_ears null
 
@@ -3379,7 +3042,7 @@ init 1:
 
 
     layeredimage threesome samsasha samfuck:
-        attribute_function MultiPickers([PiercingsPicker, PregnancyPicker, HaircutPicker, OutfitPicker, CollarPicker, RoomPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([ HaircutPicker, OutfitPicker, CollarPicker, RoomPicker], append_npc_from_attributes=True)
 
         attribute naked null
         attribute samantha_naked null
@@ -3400,7 +3063,6 @@ init 1:
 
         group mikemc_hands auto if_not "nomc"
 
-        group multiple auto variant piercings_samantha
         group multiple:
             attribute samantha_clit null
             attribute samantha_ears null
@@ -3418,7 +3080,6 @@ init 1:
         attribute sasha_nohaircut if_any "sasha"
         attribute sasha_haircut null
 
-        group multiple auto variant piercings_sasha when sasha
         group multiple:
             attribute sasha_clit null
             attribute sasha_nose null
@@ -3426,9 +3087,6 @@ init 1:
             attribute sasha_navel null
             attribute sasha_pregnant_navel null
             attribute sasha_tongue null
-
-        group piercings_sasha auto variant "boobjob" if_all ["sasha", "sasha_boobjob"]
-        group piercings_sasha auto variant "noboobjob" if_all ["sasha"] if_not ["sasha_boobjob"]
 
         group outfits_samantha_front auto if_not "samantha_naked"
 
@@ -3441,14 +3099,6 @@ init 1:
             if_not "sasha"
             "threesome_samsasha_samfuck_samantha_hands"
 
-        group multiple auto variant piercings_samantha when not sasha:
-            attribute samantha_clit null
-            attribute samantha_ears null
-            attribute samantha_lips null
-            attribute samantha_navel null
-            attribute samantha_pregnant_navel null
-            attribute samantha_tongue null
-
         group outfits_samantha_hands auto if_not ["samantha_naked", "sasha"]
 
         group exp_sam auto:
@@ -3459,7 +3109,7 @@ init 1:
         group fg auto
 
     layeredimage threesome samsasha sashafuck:
-        attribute_function MultiPickers([PubesPicker, PiercingsPicker, PregnancyPicker, HaircutPicker, OutfitPicker, CollarPicker, DickPicker, RoomPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([PubesPicker,  HaircutPicker, OutfitPicker, CollarPicker, DickPicker, RoomPicker], append_npc_from_attributes=True)
 
         attribute naked null
         attribute samantha_naked null
@@ -3492,18 +3142,12 @@ init 1:
 
         group boobs auto
 
-        group multiple auto variant piercings_sasha_up when up
-        group multiple auto variant piercings_sasha_down when down
-        group piercings_sasha auto variant "boobjob" if_any "sasha_boobjob"
-        group piercings_sasha auto variant "noboobjob" if_any "sasha_noboobjob"
-
         group outfits_sasha auto variant "boobjob" if_any "sasha_boobjob"
         group outfits_sasha auto variant "noboobjob" if_any "sasha_noboobjob"
 
         attribute sasha_pregnant null
         group sasha_pregnant auto if_any "sasha_pregnant"
 
-        group multiple auto variant piercings_sasha
         group multiple:
             attribute sasha_lips null
             attribute sasha_tongue null
@@ -3516,7 +3160,6 @@ init 1:
         group cum auto if_any "cum" if_not "condom"
 
         group haircuts_straight auto if_not "samantha"
-        group multiple auto variant piercings_sasha_straight when not samantha
         group mouth_straight auto if_not "samantha":
             attribute sasha_normal default
         group eyes_straight auto if_not "samantha":
@@ -3529,8 +3172,6 @@ init 1:
         group haircuts_left auto if_any "samantha":
             attribute sasha_haircut null
 
-        group multiple auto variant piercings_sasha_left when samantha
-
         attribute samantha_collar
 
         group eyes_left auto if_any "samantha":
@@ -3538,7 +3179,6 @@ init 1:
         group eyes_samantha auto if_any "samantha":
             attribute samantha_opened default
 
-        group multiple auto variant piercings_samantha
         group multiple:
             attribute samantha_clit null
             attribute samantha_navel null
@@ -3579,7 +3219,7 @@ init 1:
         group fg auto
 
     layeredimage sunscreen bree sasha:
-        attribute_function MultiPickers([PregnancyPicker, CollarPicker, OutfitPicker, HaircutPicker, PiercingsPicker], npcs=[bree, sasha])
+        attribute_function MultiPickers([CollarPicker, OutfitPicker, HaircutPicker], npcs=[bree, sasha])
 
         attribute naked null
         attribute topless null
@@ -3604,10 +3244,6 @@ init 1:
         attribute sasha_boobjob when not nosasha
         group haircuts auto when not nosasha
 
-        group multiple auto variant sasha_piercings when not nosasha
-        group sasha_piercings auto variant noboobjob when not sasha_boobjob and not nosasha
-        group sasha_piercings auto variant boobjob when sasha_boobjob and not nosasha
-
         group sasha_bot auto when not (naked or nosasha or sasha_pregnant)
         group sasha_bot auto variant pregnant when sasha_pregnant and not (naked or nosasha)
         group sasha_top auto variant noboobjob when not sasha_boobjob and not (naked or topless or sasha_topless or nosasha)
@@ -3619,10 +3255,8 @@ init 1:
         attribute bree_haircut
         attribute bree_nohaircut null
         attribute bree_pregnant null
-        group multiple auto variant bree_piercings
 
         group bree_bot auto when not (naked)
         group bree_top auto when not (naked or topless or bree_topless)
 
         always "sunscreen_bree_sasha_bottle"
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

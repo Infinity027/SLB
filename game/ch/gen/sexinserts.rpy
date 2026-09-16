@@ -1,6 +1,6 @@
 init 1:
     layeredimage sexinserts:
-        attribute_function MultiPickers([HaircutPicker, PiercingsPicker, PubesPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([HaircutPicker,  PubesPicker], append_npc_from_attributes=True)
 
         attribute chest null
         attribute bottom null
@@ -43,7 +43,7 @@ init 1:
         group insert_cum auto variant "head" if_all ["head", "cum"]
 
     layeredimage pussy_insert:
-        attribute_function MultiPickers([PiercingsPicker, PubesPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([ PubesPicker], append_npc_from_attributes=True)
 
         attribute cum null
 
@@ -53,7 +53,7 @@ init 1:
         group cum auto when cum
 
     layeredimage mouth_insert:
-        attribute_function MultiPickers([HaircutPicker, PiercingsPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([HaircutPicker], append_npc_from_attributes=True)
 
         attribute cum null
 
@@ -66,8 +66,6 @@ init 1:
         group cum auto when cum
 
     layeredimage belly_insert:
-        attribute_function MultiPickers([PiercingsPicker], append_npc_from_attributes=True)
-
         attribute cum null
 
         group base auto
@@ -75,7 +73,6 @@ init 1:
         group cum auto when cum
 
     layeredimage chest_insert:
-        attribute_function MultiPickers([PiercingsPicker], append_npc_from_attributes=True)
 
         attribute sasha_boobjob null
         attribute sasha_noboobjob null

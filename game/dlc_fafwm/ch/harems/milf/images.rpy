@@ -1,6 +1,6 @@
 init 1:
     layeredimage milf 4some blowjob:
-        attribute_function MultiPickers([CollarPicker, PiercingsPicker, HaircutPicker, MCCGPicker], npcs=[cherie, claire, kiara])
+        attribute_function MultiPickers([CollarPicker,  HaircutPicker, MCCGPicker], npcs=[cherie, claire, kiara])
 
 
         attribute mikemc null
@@ -60,9 +60,6 @@ init 1:
             attribute cherie_nohaircut
 
 
-        group multiple auto variant piercings
-
-
         group multiple auto variant facecum
 
 
@@ -76,7 +73,7 @@ init 1:
         always "milf_4some_blowjob_fg"
 
     layeredimage milf 4some fuckcherie:
-        attribute_function MultiPickers([PiercingsPicker, PregnancyPicker, CollarPicker, PubesPicker, OutfitPicker, HaircutPicker, MCCGPicker], npcs=[cherie, claire, kiara])
+        attribute_function MultiPickers([ CollarPicker, PubesPicker, OutfitPicker, HaircutPicker, MCCGPicker], npcs=[cherie, claire, kiara])
 
 
         attribute mikemc null
@@ -116,8 +113,7 @@ init 1:
         group multiple auto variant pregnancies
 
 
-        group multiple auto variant piercings
-
+       
 
         group multiple auto variant collars
 
@@ -164,7 +160,7 @@ init 1:
         group fg auto
 
     layeredimage milf 4some fuckclaire:
-        attribute_function MultiPickers([PiercingsPicker, PregnancyPicker, CollarPicker, OutfitPicker, HaircutPicker, MCCGPicker], npcs=[cherie, claire, kiara])
+        attribute_function MultiPickers([ CollarPicker, OutfitPicker, HaircutPicker, MCCGPicker], npcs=[cherie, claire, kiara])
 
 
         attribute mikemc null
@@ -200,8 +196,7 @@ init 1:
         group multiple auto variant pregnancies
 
 
-        group multiple auto variant piercings
-
+       
 
         group multiple auto variant collars
 
@@ -249,7 +244,7 @@ init 1:
         group fg auto
 
     layeredimage milf 4some fuckkiara:
-        attribute_function MultiPickers([PiercingsPicker, PregnancyPicker, CollarPicker, PubesPicker, OutfitPicker, HaircutPicker, MCCGPicker], npcs=[cherie, claire, kiara])
+        attribute_function MultiPickers([ CollarPicker, PubesPicker, OutfitPicker, HaircutPicker, MCCGPicker], npcs=[cherie, claire, kiara])
 
 
         attribute mikemc null
@@ -275,10 +270,7 @@ init 1:
 
         group multiple auto variant pubic
 
-
         attribute kiara_clit when not vaginal
-        group multiple auto variant piercings_back
-
 
         group multiple auto variant outfits
         group multiple auto variant outfits_top when not cherie_pregnant
@@ -290,14 +282,9 @@ init 1:
         group kiara_exp auto:
             attribute kiara_normal default
 
-
         group multiple auto variant collars
 
-
         group multiple auto variant haircuts
-
-
-        group multiple auto variant piercings_front
 
 
         attribute bodycum

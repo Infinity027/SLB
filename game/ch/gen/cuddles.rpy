@@ -1,6 +1,6 @@
 init 1:
     layeredimage cuddle:
-        attribute_function MultiPickers([RoomPicker, SeasonPicker, HaircutPicker, CollarPicker, PiercingsPicker, PregnancyPicker, PubesPicker, MCCGPicker], append_npc_from_attributes=True, add_simple_pregnant_attribute=True)
+        attribute_function MultiPickers([RoomPicker, SeasonPicker, HaircutPicker, CollarPicker,  PubesPicker, MCCGPicker], append_npc_from_attributes=True, add_simple_pregnant_attribute=True)
 
         attribute mikemc null
         attribute breemc null
@@ -71,10 +71,6 @@ init 1:
 
         group makeup auto if_any ["makeup"]
 
-        group multiple auto variant piercings
-        group piercings auto variant boobjob when sasha_boobjob
-        group piercings auto variant noboobjob when sasha_noboobjob
-
         group collars auto
 
         attribute dressed null
@@ -90,14 +86,6 @@ init 1:
         group mchaircuts_above auto variant haircut when breemc and mc_haircut
         group mchaircuts_above auto variant nohaircut when breemc and mc_nohaircut
 
-        group mcpiercings auto variant mc_clit when breemc and mc_clit
-        group mcpiercings auto variant mc_ears when breemc and mc_ears
-        group mcpiercings auto variant mc_navel when breemc and mc_navel
-        group mcpiercings auto variant mc_pregnant_navel when breemc and mc_pregnant_navel
-        group mcpiercings auto variant mc_nipples when breemc and mc_nipples
-        group mcpiercings auto variant mc_nose when breemc and mc_nose
-        group mcpiercings auto variant mc_tongue when breemc and mc_tongue
-
         attribute mc_collar null
         group mccollar auto when breemc and mc_collar
 
@@ -106,4 +94,3 @@ init 1:
 
         group blanket auto variant mikemc when mikemc and (fall or winter or morgan)
         group blanket auto variant breemc when breemc and (fall or winter)
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

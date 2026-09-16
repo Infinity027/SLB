@@ -31,7 +31,7 @@ init 5 python:
 
 init 6:
     layeredimage bg alettaoffice:
-        attribute_function Pickers([DayNightPicker, PiercingsPicker, CollarPicker, PregnancyPicker, HaircutPicker, OutfitPicker, AlettaOfficePicker], npc=aletta)
+        attribute_function Pickers([DayNightPicker,  CollarPicker, HaircutPicker, OutfitPicker, AlettaOfficePicker], npc=aletta)
 
 
         attribute empty null            
@@ -44,17 +44,13 @@ init 6:
         attribute navel null
         attribute tongue null
 
-
         attribute day "alettaoffice_day"
         attribute night "alettaoffice_night"
-
 
         attribute aletta
         attribute pregnant when aletta
         attribute collar when aletta
-        group multiple auto variant piercings when aletta
         attribute glasses when aletta
         group outfit auto variant nopreg when aletta and not (pregnant or naked or topless)
         group outfit auto variant preg when aletta and pregnant and not (naked or topless)
         group hair auto when aletta
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

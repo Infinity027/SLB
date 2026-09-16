@@ -39,7 +39,7 @@ init 5 python:
 
 init 6:
     layeredimage bg pubseat:
-        attribute_function MultiPickers([PiercingsPicker, CollarPicker, PregnancyPicker, OutfitPicker, HaircutPicker, PubSeatPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([ CollarPicker, OutfitPicker, HaircutPicker, PubSeatPicker], append_npc_from_attributes=True)
 
 
         attribute empty null            
@@ -71,11 +71,10 @@ init 6:
 
 
         attribute morgan
-        attribute morgan_pregnant when morgan
+        
         attribute morgan_makeup when morgan
         attribute morgan_collar when morgan
         group morgan_hair auto when morgan
-        group multiple auto variant morgan_piercings when morgan
         group morgan_bot auto variant preg when morgan and morgan_pregnant
         group morgan_bot auto variant nopreg when morgan and not morgan_pregnant
         group morgan_top auto variant preg when morgan and morgan_pregnant
@@ -83,10 +82,9 @@ init 6:
 
 
         attribute audrey
-        attribute audrey_pregnant when audrey
+        
         attribute audrey_collar when audrey
         attribute audrey_nohaircut when audrey
-        group multiple auto variant audrey_piercings when audrey
         group audrey_bot auto variant preg when audrey and audrey_pregnant
         group audrey_bot auto variant nopreg when audrey and not audrey_pregnant
         group audrey_top auto variant preg when audrey and audrey_pregnant
@@ -94,7 +92,7 @@ init 6:
 
 
         attribute kleio
-        attribute kleio_pregnant when kleio
+        
         attribute kleio_collar when kleio
         group kleio_tattoo auto when kleio
         group kleio_bot auto variant preg when kleio and kleio_pregnant
@@ -106,20 +104,17 @@ init 6:
 
         attribute lexi
         attribute lexi_collar when lexi
-        group multiple auto variant lexi_piercings when lexi
         group lexi_bot auto when lexi
         group lexi_top auto when lexi
         attribute lexi_nohaircut when lexi
 
 
         attribute reona
-        attribute reona_pregnant when reona
+        
         attribute reona_collar when reona
         attribute reona_pureglasses when reona
         group reona_hair auto when reona
-        group multiple auto variant reona_piercings when reona
         group reona_bot auto variant preg when reona and reona_pregnant
         group reona_bot auto variant nopreg when reona and not reona_pregnant
         group reona_top auto variant preg when reona and reona_pregnant
         group reona_top auto variant nopreg when reona and not reona_pregnant
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

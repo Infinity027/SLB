@@ -10,9 +10,6 @@ init 1:
 
         attribute mc_collar
 
-        group multiple auto variant mc_piercings
-
         group mc_outfits auto if_any ["breemc"]
 
         attribute mikemc
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

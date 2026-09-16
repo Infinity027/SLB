@@ -13,13 +13,11 @@ init -35 python:
         if not isinstance(attrs, list):
             attrs = list(attrs)
         
-        
-        add_pickers_attrs = Pickers([PregnancyPicker, CollarPicker, PubesPicker, PiercingsPicker], npc=audrey)(set(attrs))
+        add_pickers_attrs = Pickers([CollarPicker, PubesPicker], npc=audrey)(set(attrs))
         if "pregnant_navel" in add_pickers_attrs:
             add_pickers_attrs.remove("pregnant_navel")
             add_pickers_attrs.add("navel")
         attrs.extend(add_pickers_attrs)
-        
         
         pwet_pickers_attrs = Pickers([PositionPicker], npc=audrey)(set(attrs))
         attrs.extend(pwet_pickers_attrs)

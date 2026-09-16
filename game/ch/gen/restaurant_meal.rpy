@@ -19,7 +19,7 @@ init python:
             return attr
 init 1:
     layeredimage restaurant meal:
-        attribute_function MultiPickers([PregnancyPicker, PiercingsPicker, HaircutPicker, CollarPicker, OutfitPicker, MCGenderPicker, RestaurantMealPositionPicker], add_simple_pregnant_attribute=True, append_npc_from_attributes=True)
+        attribute_function MultiPickers([ HaircutPicker, CollarPicker, OutfitPicker, MCGenderPicker, RestaurantMealPositionPicker], add_simple_pregnant_attribute=True, append_npc_from_attributes=True)
 
         attribute hold null
         attribute waiter null
@@ -44,8 +44,6 @@ init 1:
         group makeup auto if_any "morgan_makeup" if_not "nonpc"
 
         group collars auto if_not "nonpc"
-
-        group multiple auto variant piercings when not nonpc
 
         group arms auto variant "normal" if_not ["hold", "askbill", "nonpc"]
         group arms auto variant "under" if_any "hold" if_not "nonpc"

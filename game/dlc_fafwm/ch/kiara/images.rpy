@@ -5,7 +5,7 @@ init 1:
 
 
     layeredimage kiara kiss:
-        attribute_function Pickers([CollarPicker, PiercingsPicker, HaircutPicker, OutfitPicker], npc=kiara)
+        attribute_function Pickers([CollarPicker,  HaircutPicker, OutfitPicker], npc=kiara)
 
 
         group haircuts auto when not casual:
@@ -51,16 +51,14 @@ init 1:
         attribute nipples null
         attribute nose null
         attribute pregnant_navel null
-        group multiple auto variant piercings
-
-
+       
         always "kiara_kiss_khand"
 
 
         always "kiara_kiss_outfit_acc_wedding" when wedding
 
     layeredimage kiara bj:
-        attribute_function Pickers([HaircutPicker, CollarPicker, PiercingsPicker, PubesPicker, OutfitPicker, PregnancyPicker, MCCGPicker], npc=kiara)
+        attribute_function Pickers([HaircutPicker, CollarPicker,  PubesPicker, OutfitPicker, MCCGPicker], npc=kiara)
 
 
         attribute clit null
@@ -99,8 +97,7 @@ init 1:
 
         attribute collar
 
-        group multiple auto variant piercings
-
+       
         group haircuts auto
 
         group eyes auto:
@@ -123,7 +120,7 @@ init 1:
         group cumshot auto when cum and not blowjob
 
     layeredimage kiara cowgirl:
-        attribute_function Pickers([HaircutPicker, CollarPicker, PiercingsPicker, PubesPicker, OutfitPicker, PregnancyPicker, MCCGPicker], npc=kiara)
+        attribute_function Pickers([HaircutPicker, CollarPicker,  PubesPicker, OutfitPicker, MCCGPicker], npc=kiara)
 
         attribute mikemc null
 
@@ -154,8 +151,7 @@ init 1:
 
         attribute collar
 
-        group multiple auto variant piercings
-
+       
         group haircuts auto
 
         group eyes auto:
@@ -195,7 +191,7 @@ init 1:
         group cumshot auto when cum and out and not (vaginal or condom)
 
     layeredimage kiara missionary:
-        attribute_function Pickers([HaircutPicker, CollarPicker, PiercingsPicker, PubesPicker, OutfitPicker, PregnancyPicker, MCCGPicker], npc=kiara)
+        attribute_function Pickers([HaircutPicker, CollarPicker,  PubesPicker, OutfitPicker, MCCGPicker], npc=kiara)
 
 
         group bg auto:
@@ -217,8 +213,7 @@ init 1:
 
         attribute collar
 
-        group multiple auto variant piercings
-
+       
         group haircuts auto
 
         group eyes auto:
@@ -253,7 +248,7 @@ init 1:
         group cumshot auto when cum and out and not (vaginal or condom)
 
     layeredimage kiara doggy:
-        attribute_function Pickers([HaircutPicker, CollarPicker, PiercingsPicker, PregnancyPicker, MCCGPicker], npc=kiara)
+        attribute_function Pickers([HaircutPicker, CollarPicker,  MCCGPicker], npc=kiara)
 
 
         attribute mikemc null
@@ -291,8 +286,7 @@ init 1:
             attribute normal default
 
 
-        group multiple auto variant piercings
-
+       
 
         group multiple auto variant spanks
 
@@ -340,7 +334,7 @@ init 1:
         group fg auto
 
     layeredimage kiara oral:
-        attribute_function Pickers([HaircutPicker, CollarPicker, PiercingsPicker, PubesPicker, OutfitPicker, PregnancyPicker, MCCGPicker], npc=kiara)
+        attribute_function Pickers([HaircutPicker, CollarPicker,  PubesPicker, OutfitPicker, MCCGPicker], npc=kiara)
 
 
         group bg auto:
@@ -388,7 +382,7 @@ init 1:
         group mc_outfit auto when not mc_naked
 
     layeredimage kiara sixtynine:
-        attribute_function Pickers([HaircutPicker, CollarPicker, PiercingsPicker, PubesPicker, OutfitPicker, PregnancyPicker, MCCGPicker], npc=kiara)
+        attribute_function Pickers([HaircutPicker, CollarPicker,  PubesPicker, OutfitPicker, MCCGPicker], npc=kiara)
 
 
         group bg auto:
@@ -456,8 +450,7 @@ init 1:
             "kiara_sixtynine_mc_arm"
 
 
-        group multiple auto variant piercings
-
+       
 
         attribute naked null
         group outfit auto when not (naked and pregnant)
@@ -473,7 +466,7 @@ init 1:
             "kiara_sixtynine_cum_inside" when cum and blowjob
 
     layeredimage kiara stand:
-        attribute_function Pickers([HaircutPicker, CollarPicker, PiercingsPicker, PubesPicker, OutfitPicker, PregnancyPicker, DickPicker, MCCGPicker], npc=kiara)
+        attribute_function Pickers([HaircutPicker, CollarPicker,  PubesPicker, OutfitPicker, DickPicker, MCCGPicker], npc=kiara)
 
 
         group bg auto:
@@ -578,7 +571,7 @@ init -35 python:
             attrs = list(attrs)
         
         
-        add_pickers_attrs = Pickers([CollarPicker, PiercingsPicker, PubesPicker, PregnancyPicker, HaircutPicker, PositionPicker], npc=kiara)(set(attrs))
+        add_pickers_attrs = Pickers([CollarPicker,  PubesPicker, HaircutPicker, PositionPicker], npc=kiara)(set(attrs))
         if "pregnant_navel" in add_pickers_attrs:
             add_pickers_attrs.remove("pregnant_navel")
             add_pickers_attrs.add("navel")

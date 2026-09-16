@@ -33,7 +33,7 @@ init 5 python:
 
 init 6:
     layeredimage bg arcade:
-        attribute_function MultiPickers([CollarPicker, PregnancyPicker, OutfitPicker, ArcadePicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([CollarPicker, OutfitPicker, ArcadePicker], append_npc_from_attributes=True)
 
 
         attribute empty null            

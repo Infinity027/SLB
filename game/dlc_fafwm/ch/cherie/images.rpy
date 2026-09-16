@@ -1,20 +1,14 @@
 init 1:
     layeredimage cherie kiss:
-        attribute_function Pickers([CollarPicker, PiercingsPicker, HaircutPicker, OutfitPicker, PregnancyPicker], npc=cherie)
-
+        attribute_function Pickers([CollarPicker,  HaircutPicker, OutfitPicker], npc=cherie)
 
         always "cherie_kiss_arm"
 
-
         always "cherie_kiss_mbody"
-
 
         always "cherie_kiss_cbody"
 
-
-        attribute pregnant
-
-
+        
         attribute naked null
         attribute topless null
         group outfit auto if_not["naked", "topless"]:
@@ -24,12 +18,9 @@ init 1:
             attribute santa "cherie_kiss_outfit_pregnant_date"
             attribute rpg "cherie_kiss_outfit_pregnant_date"
 
-
         attribute collar
 
-
         always "cherie_kiss_armmike" if_not ["halloween"]
-
 
         group outfitmike auto if_not ["naked"]:
             attribute work "cherie_kiss_outfitmike_date"
@@ -37,31 +28,21 @@ init 1:
             attribute sexydate "cherie_kiss_outfitmike_date"
             attribute sluttydate "cherie_kiss_outfitmike_date"
 
-
         group multiple:
             attribute clit null
             attribute lips null
             attribute nipples null
             attribute nose null
-        group multiple auto variant piercings
-        group piercings auto variant casual when casual
-        group piercings auto variant date when date
-        group piercings auto variant sexydate when sexydate
-        group piercings auto variant wedding when wedding
 
         group necklace auto when not collar
-
 
         group haircuts auto:
             attribute haircut if_not[ "wedding", "swimsuit"]
             attribute nohaircut if_not ["wedding", "swimsuit"]
 
-
         always "cherie_kiss_hairmike" if_not ["santa"]
 
-
         always "cherie_kiss_hand"
-
 
         always "cherie_kiss_acc_halloween" if_any["halloween"]
 
@@ -69,7 +50,7 @@ init 1:
         always "cherie_kiss_handmike"
 
     layeredimage cherie bj:
-        attribute_function Pickers([HaircutPicker, PregnancyPicker, PiercingsPicker, CollarPicker, DickPicker], npc=cherie)
+        attribute_function Pickers([HaircutPicker,  CollarPicker, DickPicker], npc=cherie)
 
 
         group bg auto:
@@ -79,8 +60,7 @@ init 1:
         group bodies auto
 
 
-        attribute pregnant
-
+        
 
         always "cherie_bj_haircuts_haircut" if_any "haircut" if_not "swimsuit"
         always "cherie_bj_haircuts_haircut_swimsuit" if_all ["haircut", "swimsuit"]
@@ -107,10 +87,7 @@ init 1:
         attribute clit null
         attribute lips null
         attribute navel null
-        attribute pregnant_navel null
-        group multiple auto variant piercings
-
-
+  
         attribute collar null
         group collar auto if_any "collar"
 
@@ -141,7 +118,7 @@ init 1:
 
 
     layeredimage cherie doggy:
-        attribute_function Pickers([HaircutPicker, PiercingsPicker, DickPicker], npc=cherie)
+        attribute_function Pickers([HaircutPicker,  DickPicker], npc=cherie)
 
 
         group bg auto:
@@ -174,7 +151,6 @@ init 1:
         attribute nose null
         attribute nipples null
         attribute pregnant_navel null
-        group multiple auto variant piercings if_any "haircut"
 
         always "cherie_doggy_anus" if_any "anal"
 
@@ -209,7 +185,7 @@ init 1:
 
 
     layeredimage cherie cowgirl:
-        attribute_function Pickers([HaircutPicker, PregnancyPicker, PiercingsPicker, CollarPicker], npc=cherie)
+        attribute_function Pickers([HaircutPicker,  CollarPicker], npc=cherie)
 
 
         group bg auto:
@@ -219,22 +195,16 @@ init 1:
         group bodies auto
 
 
-        attribute pregnant
-
+        
 
         group exp auto:
             attribute happy default
 
-
         always "cherie_cowgirl_haircut" if_any "haircut" if_not "swimsuit"
         always "cherie_cowgirl_haircut_swimsuit" if_all ["haircut", "swimsuit"]
 
-
         attribute lips null
         attribute ears if_not "nohaircut"
-        group multiple auto variant piercings
-
-
         attribute naked null
         group outfits auto if_not "naked"
         group outfits auto variant "haircut" if_any ["haircut"] if_not "naked"
@@ -249,15 +219,13 @@ init 1:
         group mikeoutfits auto if_not ["naked"]:
             attribute sexyswimsuit "cherie_cowgirl_mikeoutfits_swimsuit"
 
-        group multiple auto variant mikepiercings
-
         attribute cum
 
         attribute bodycum
 
 
     layeredimage cherie cunnilingus:
-        attribute_function Pickers([HaircutPicker, PregnancyPicker, PiercingsPicker, CollarPicker], npc=cherie)
+        attribute_function Pickers([HaircutPicker,  CollarPicker], npc=cherie)
 
 
         group bg auto:
@@ -283,12 +251,9 @@ init 1:
         attribute navel null
         attribute nipples null
         attribute pregnant_navel null
-        group multiple auto variant piercings
-
 
         attribute collar null
         group collar auto if_any "collar"
-
 
         attribute mc_casual null
         group mikeoutfits auto if_not ["naked"]:
@@ -296,7 +261,7 @@ init 1:
 
 
     layeredimage cherie standing:
-        attribute_function Pickers([HaircutPicker, PregnancyPicker, PiercingsPicker, CollarPicker, DickPicker], npc=cherie)
+        attribute_function Pickers([HaircutPicker,  CollarPicker, DickPicker], npc=cherie)
 
 
         group bg auto:
@@ -312,8 +277,7 @@ init 1:
         group bodies auto
 
 
-        attribute pregnant
-
+        
 
         always "cherie_standing_haircut" if_any "haircut" if_not "swimsuit"
         always "cherie_bj_standing_swimsuit" if_all ["haircut", "swimsuit"]
@@ -337,8 +301,6 @@ init 1:
         attribute lips null
         attribute navel null
         attribute pregnant_navel null
-        group multiple auto variant piercings
-
 
         attribute collar null
         group collar auto if_any "collar"
@@ -376,7 +338,7 @@ init 1:
 
 
     layeredimage cherie reverse:
-        attribute_function Pickers([HaircutPicker, PregnancyPicker, PiercingsPicker, PubesPicker, DickPicker], npc=cherie)
+        attribute_function Pickers([HaircutPicker,  PubesPicker, DickPicker], npc=cherie)
 
 
         group bg auto:
@@ -418,8 +380,7 @@ init 1:
 
         attribute ears if_not "nohaircut"
         attribute lips null
-        group multiple auto variant piercings
-
+       
 
         attribute naked null
         group outfits auto if_not "naked"
@@ -496,7 +457,7 @@ init -35 python:
             attrs = list(attrs)
         
         
-        add_pickers_attrs = Pickers([CollarPicker, PiercingsPicker, PubesPicker, PregnancyPicker, HaircutPicker, PositionPicker], npc=cherie)(set(attrs))
+        add_pickers_attrs = Pickers([CollarPicker,  PubesPicker, HaircutPicker, PositionPicker], npc=cherie)(set(attrs))
         if "pregnant_navel" in add_pickers_attrs:
             add_pickers_attrs.remove("pregnant_navel")
             add_pickers_attrs.add("navel")

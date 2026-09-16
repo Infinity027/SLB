@@ -16,26 +16,20 @@ init python:
 
 init 1:
     layeredimage play guitar:
-        attribute_function Pickers([CG_PlayGuitar_Picker, PregnancyPicker, CollarPicker, HaircutPicker, OutfitPicker, PiercingsPicker, MCGenderPicker], clear_npc=True)
-
+        attribute_function Pickers([CG_PlayGuitar_Picker, CollarPicker, HaircutPicker, OutfitPicker,  MCGenderPicker], clear_npc=True)
 
         group bg auto
-
 
         attribute mikemc null
         group mikemc auto if_any ["mikemc"] if_not ["03"]
 
-
         group npc auto
-
 
         attribute pregnant null
         group pregnant auto if_all ["pregnant"]
 
-
         attribute boobjob null
         group boobjob auto if_any ["boobjob"]
-
 
         attribute naked null
         attribute casual null
@@ -46,27 +40,21 @@ init 1:
         group outfit_reona auto if_all "reona" if_not ["naked"]
         group outfit_reona auto variant "pregnant" if_all ["reona", "pregnant"] if_not ["naked"]
 
-
         group bot auto if_all "morgan" if_not ["naked"]
         group bot auto variant "pregnant" if_all ["morgan", "pregnant"] if_not ["naked"]
         group top auto if_all "morgan" if_not ["naked"]
         group top auto variant "pregnant" if_all ["morgan", "pregnant"] if_not ["naked"]
 
-
         attribute collar null
         group collar auto if_any ["collar"]
 
-
         attribute makeup null
         group makeup auto if_any ["makeup"]
-
 
         attribute haircut null
         attribute nohaircut null
         group haircut auto if_any ["haircut"]
         group nohaircut auto if_any ["nohaircut"]
-
-
 
         attribute lips null
         group lips auto if_any ["lips"]
@@ -81,10 +69,8 @@ init 1:
         group ears auto if_any ["ears"]
 
         attribute navel null
-        attribute pregnant_navel null
         group navel auto variant "naked" if_all ["navel", "naked"]
-        group pregnant_navel auto variant "naked" if_all ["pregnant_navel", "naked"]
-
+ 
         attribute eyebrow null
         group eyebrow auto if_any ["eyebrow"]
 
@@ -93,11 +79,6 @@ init 1:
         group nipples auto variant "bb" if_all ["nipples", "naked", "boobjob"]
         group nipples auto variant "notbb" if_all ["nipples", "naked"] if_not ["boobjob"]
 
-        group piercings:
-            attribute clit null
-
         group glasses auto
 
-
         group mikemc auto if_all ["mikemc", "03"]
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

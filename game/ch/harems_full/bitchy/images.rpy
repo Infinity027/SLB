@@ -1,6 +1,6 @@
 init 1:
     layeredimage bitchy threesome pallafuck:
-        attribute_function MultiPickers([CollarPicker, PiercingsPicker, DickPicker, PregnancyPicker, PubesPicker], npcs=[audrey, palla])
+        attribute_function MultiPickers([CollarPicker,  DickPicker, PubesPicker], npcs=[audrey, palla])
         attribute cum null
         always "bitchy_threesome_pallafuck_bg"
         always "bitchy_threesome_pallafuck_girls"
@@ -15,8 +15,7 @@ init 1:
 
         group multiple auto variant collars
 
-        group multiple auto variant piercings
-
+        
         attribute strapon
 
         group multiple auto variant acc
@@ -34,7 +33,7 @@ init 1:
         group multiple auto variant fx
 
     layeredimage bitchy foursome audreyfuck:
-        attribute_function MultiPickers([CollarPicker, PiercingsPicker, DickPicker, PregnancyPicker, PubesPicker], npcs=[audrey], append_npc_from_attributes=True)
+        attribute_function MultiPickers([CollarPicker,  DickPicker, PubesPicker], npcs=[audrey], append_npc_from_attributes=True)
 
         group fuck:
             attribute out null default
@@ -70,15 +69,7 @@ init 1:
 
         attribute audrey_pubes
 
-
-        attribute audrey_pregnant
-
-
-        group multiple auto variant piercings_aud
-
-
         attribute audrey_collar
-
 
         attribute bodycum
 
@@ -99,26 +90,23 @@ init 1:
 
 
         attribute cassidy
-        group multiple auto variant piercings_cass when cass
         attribute cassidy_collar if_any ["cassidy"]
         attribute cassidy_pregnant if_any ["cassidy"]
         always:
             if_all ["cassidy", "out", "dickcum"] if_not ["condom"]
             "bitchy_foursome_audreyfuck_cassidyhand_dickcum"
 
-
         attribute palla
         attribute palla_pregnant if_any ["palla"]
         group pallabody auto if_any ["palla"]
         attribute palla_collar if_any ["palla"]
-        group multiple auto variant piercings_pal when pal
 
 
         always:
             "bitchy_foursome_audreyfuck_light"
 
     layeredimage bitchy foursome cassidyfuck:
-        attribute_function MultiPickers([CollarPicker, PiercingsPicker, DickPicker, PregnancyPicker, PubesPicker], npcs=[cassidy], append_npc_from_attributes=True)
+        attribute_function MultiPickers([CollarPicker,  DickPicker, PubesPicker], npcs=[cassidy], append_npc_from_attributes=True)
 
         group fuck:
             attribute out null default
@@ -134,13 +122,6 @@ init 1:
 
 
         attribute cassidy_pubes
-
-
-        attribute cassidy_pregnant
-
-
-        group multiple auto variant piercings_cass
-
 
         group dick auto
         group dick auto variant "out" if_any ["out"]
@@ -159,7 +140,6 @@ init 1:
         group condom auto variant "out" if_all ["out", "condom"] if_not ["cumshot"]
         group condomcum auto if_all ["out", "condom", "cumshot"]
 
-
         attribute cassidy_collar
 
 
@@ -174,8 +154,6 @@ init 1:
 
         attribute palla
         attribute palla_pubes if_any ["palla"]
-        attribute palla_pregnant if_any ["palla"]
-        group multiple auto variant piercings_pal when pal
         attribute lick if_any ["palla"]
         attribute pallasquirt if_any ["palla"]
         attribute palla_collar if_any ["palla"]
@@ -183,17 +161,14 @@ init 1:
 
         attribute audrey
         attribute audrey_pubes if_any ["audrey"]
-        attribute audrey_pregnant if_any ["audrey"]
         attribute audreysquirt if_any ["audrey"]
         attribute audrey_collar if_any ["audrey"]
-        group multiple auto variant piercings_aud when aud
-
 
         always:
             "bitchy_foursome_cassidyfuck_light"
 
     layeredimage bitchy foursome pallafuck:
-        attribute_function MultiPickers([CollarPicker, PiercingsPicker, DickPicker, PregnancyPicker, PubesPicker], npcs=[palla], append_npc_from_attributes=True)
+        attribute_function MultiPickers([CollarPicker,  DickPicker, PubesPicker], npcs=[palla], append_npc_from_attributes=True)
 
         group fuck:
             attribute out null default
@@ -234,10 +209,6 @@ init 1:
         attribute creampie null
         group creampie auto if_any ["creampie"]
 
-
-        group multiple auto variant piercings_pal
-
-
         group dick auto variant "out" if_any ["out"]
 
 
@@ -255,35 +226,24 @@ init 1:
 
         attribute audrey
         attribute audrey_pregnant if_any ["audrey"]
-        group multiple auto variant piercings_aud when aud
         attribute audrey_collar if_any ["audrey"]
         attribute audrey_pubes if_any ["audrey"]
 
-
-        attribute palla_pregnant
-        group multiple auto variant piercings_palpreg
-
-
         attribute cassidy
-        group multiple auto variant piercings_cass when cass
         attribute cassidydrip if_any ["cassidy"]
         attribute cassidy_pregnant if_any ["cassidy"]
         attribute cassidy_pubes if_any ["cassidy"]
 
     layeredimage bitchy foursome cumshare:
-        attribute_function MultiPickers([CollarPicker, PiercingsPicker, DickPicker, PregnancyPicker], append_npc_from_attributes=True)
-
+        attribute_function MultiPickers([CollarPicker,  DickPicker], append_npc_from_attributes=True)
 
         group bg auto:
             attribute mansion default
 
-
         always:
             "bitchy_foursome_cumshare_mike"
 
-
         attribute palla
-
 
         always:
             if_all ["palla"]
@@ -303,10 +263,6 @@ init 1:
 
 
         attribute pallamouthcum if_all ["palla", "pallamouth"] if_not ["pallasuck"]
-
-
-        group multiple auto variant piercings_pal when palla
-
 
         attribute cassidy
         attribute audrey
@@ -338,11 +294,6 @@ init 1:
 
         attribute cassidy_collar if_all ["cassidy"]
         attribute audrey_collar if_all ["audrey"]
-
-
-        group multiple auto variant piercings_cass when cassidy
-        group multiple auto variant piercings_aud when audrey
-
 
         attribute cassidy_pregnant if_all ["cassidy"]
         attribute audrey_pregnant if_all ["audrey"]
@@ -444,7 +395,7 @@ init 1:
         attribute cassidy_gold null
 
     layeredimage bitchy harem ending:
-        attribute_function MultiPickers([CollarPicker, PiercingsPicker, EndingKidPicker], npcs=[audrey, palla], append_npc_from_attributes=True)
+        attribute_function MultiPickers([CollarPicker,  EndingKidPicker], npcs=[audrey, palla], append_npc_from_attributes=True)
 
         always:
             "bitchy_harem_ending_bg"
@@ -453,8 +404,7 @@ init 1:
         attribute audrey
         attribute palla
         group multiple auto variant collars
-        group multiple auto variant piercings
-
+        
         group multiple auto variant kids
 
         attribute cassidy_kid null

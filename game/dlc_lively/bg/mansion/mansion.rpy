@@ -31,7 +31,7 @@ init 5 python:
 
 init 6:
     layeredimage bg mansion:
-        attribute_function MultiPickers([DayNightPicker, PiercingsPicker, CollarPicker, PregnancyPicker, HaircutPicker, OutfitPicker, MansionPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([DayNightPicker,  CollarPicker, HaircutPicker, OutfitPicker, MansionPicker], append_npc_from_attributes=True)
 
 
         attribute empty null            
@@ -47,10 +47,8 @@ init 6:
         attribute cherie
         attribute cherie_pregnant when cherie
         attribute cherie_collar when cherie
-        group multiple auto variant cherie_piercings when cherie
         group cherie_bot auto variant preg when cherie and cherie_pregnant
         group cherie_bot auto variant nopreg when cherie and not cherie_pregnant
         group cherie_top auto variant preg when cherie and cherie_pregnant
         group cherie_top auto variant nopreg when cherie and not cherie_pregnant
         group cherie_hair auto when cherie
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

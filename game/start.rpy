@@ -23,7 +23,6 @@ init -100:
     define DAYS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
     default LAST_HEARTBEAT = 0
 
-#
     define MAX_LES_GUY_DATE = 18
     define MAX_LES_GUY_KISS = 16
     define MAX_LES_GUY_SEX = 12
@@ -32,7 +31,6 @@ init -100:
     define MIN_LES_GIRL_DATE = 2
     define DECAY_PENALTY_MODIFIER = .25
     define GAIN_PENALTY_MODIFIER = .25
-
 
     define randint = renpy.random.randint
     define randchoice = renpy.random.choice
@@ -54,7 +52,6 @@ init -100:
     default _portal_token = None
 
     define DLCS = {}
-
 
     define MC_DUPLICATES_PREFIXES = {'tattooparlor_': None,
                                      'bree_spoon': ('scottie',),
@@ -85,7 +82,7 @@ init -100:
     define anim_tag = []
 
 init -100 python:
-    LIVE2D_ENABLED = False
+    # LIVE2D_ENABLED = False
 
     import locale
     import copy
@@ -94,7 +91,7 @@ init -100 python:
     import time
     import re
 
-    config.auto_voice = "vo/{id}.ogg"
+    # config.auto_voice = "vo/{id}.ogg"
     FLAGS = {}
     DATES = {}
 
@@ -121,7 +118,7 @@ init -100 python:
         persistent.selector = True
         persistent.new_ui = True
 
-    persistent.live2d_on = False
+    # persistent.live2d_on = False
 
     def display_notifications():
         import re
@@ -285,7 +282,25 @@ init -30 python:
 
     anim_files = defaultdict(list)
 
+    # ==== DEV FAST-RELOAD CACHE (image scan #1: people / bg / character files) ====
+    #  Reuses the previous scan on Shift+R via renpy.session (survives a reload,
+    #  RESETS on a full restart -> newly added image files appear after a full
+    #  relaunch, not on Shift+R). Only the file WALK is cached; the image
+    #  registration further below still runs every reload.
+    #  TO DISABLE: remove this block, the "if _scan1 is not None: break" line in
+    #  the loop just below, and the "if _scan1 is None: ... renpy.session[...]"
+    #  store block after the loop.
+    _scan1 = renpy.session.get("startrpy_scan1")
+    if _scan1 is not None:
+        people_ids, bg_files, ch_files, _afc, _atc = _scan1
+        anim_files = defaultdict(list, _afc)
+        for _c in _atc:
+            if _c not in anim_tag:
+                anim_tag.append(_c)
+
     for f in files:
+        if _scan1 is not None:
+            break   # cached this session -> skip the file walk (Shift+R speedup)
         m = re_peoples.match(f)
         if m:
             people_ids.append(m.group(1))
@@ -301,15 +316,13 @@ init -30 python:
             ch_files.append((m.group(1), m.group(0)))
             continue
         
-        if LIVE2D_ENABLED and "/st2_anim/" in f:
-            folder_name = "/".join(f.split("/")[:5])
-            anim_files[folder_name].append(f)
-            ch_name = folder_name.split("/")[2]
-            if not ch_name in anim_tag:
-                anim_tag.append(ch_name)
-            continue
 
-
+    # ==== DEV FAST-RELOAD CACHE (store scan #1) — part of the block above =========
+    #  Save this session's scan so subsequent Shift+R reloads reuse it. Resets on a
+    #  full restart. TO DISABLE: remove this block (see the matching note above).
+    if _scan1 is None:
+        renpy.session["startrpy_scan1"] = (people_ids, bg_files, ch_files, dict(anim_files), list(anim_tag))
+    # ==== END DEV FAST-RELOAD CACHE ==============================================
 
     for img_name, img_path in bg_files:
         name = img_name.split("_")
@@ -403,47 +416,6 @@ init -30 python:
             name = tuple(img_name.split("_"))
             renpy.image(name, img_path)
 
-
-
-    if LIVE2D_ENABLED and renpy.has_live2d():
-        for anims in anim_files:
-            
-            is_sprite = True if "/st2_anim" in anims else False
-            
-            expressions = []
-            info = None
-            
-            name = " ".join(anims.split("/")[-1].split("_"))
-            name = (name + " anim") if is_sprite else ("cg anim " + name)
-            
-            if not getattr(store, name.replace(" ", "_") + "_filter"):
-                continue
-            
-            for f in anim_files.get(anims):
-                if f.endswith('exp3.json'):
-                    expressions.append(Path(f).stem.split(".")[0])
-                elif f.endswith('/info.json'):
-                    info = json.load(renpy.file(f))
-            
-            anims_params = dict(
-            zoom=info.get('zoom', None) if info else None,
-            top=info.get('top', 0.0) if info else 0.0,
-            base=info.get('base', 1.0) if info else 1.0,
-            height=info.get('height', 1.0) if info else 1.0,
-            loop=True,
-            nonexclusive=expressions,
-            seamless=True,
-            default_fade=0.0,
-            attribute_filter=getattr(store, name.replace(" ", "_") + "_filter"),
-            xoffset=info.get('xoffset', 0) if info else 0,
-            yoffset=info.get('yoffset', 0) if info else 0,
-        )
-            if info and 'xalign' in info:
-                anims_params['xalign'] = info.get('xalign')
-            if info and 'yalign' in info:
-                anims_params['yalign'] = info.get('yalign')
-            
-            renpy.image(name, Live2D(anims, **anims_params))
 
     for f in files:
         m_action = re_action_icons.match(f)
@@ -726,7 +698,7 @@ init python:
 init:
     default SAVE_VERSION = config.version
 
-    define config.adjust_attributes = dict.fromkeys(anim_tag, add_anim_attr) if LIVE2D_ENABLED else {}
+    define config.adjust_attributes = {}
     define config.log_live2d_loading = False
 
 

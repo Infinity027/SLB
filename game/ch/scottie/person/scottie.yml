@@ -7,26 +7,6 @@ gender: male
 flags:
   hidden: true
   pubes: true
-piercings:
-  navel:
-    outfits:
-      - naked
-      - sexyswimsuit
-      - underwear
-      - swimsuit
-  dick:
-    outfits:
-      - naked
-    pierced: true
-  nipples:
-    outfits:
-      - naked
-    pierced: true
-  tongue:
-    expressions:
-      - happy
-      - blush
-  nose: { }
 birthday:
   - summer
   - 1

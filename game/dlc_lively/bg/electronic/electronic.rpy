@@ -35,7 +35,7 @@ init 5 python:
 
 init 6:
     layeredimage bg electronic:
-        attribute_function MultiPickers([PiercingsPicker, CollarPicker, PregnancyPicker, HaircutPicker, OutfitPicker, ElectronicPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([ CollarPicker, HaircutPicker, OutfitPicker, ElectronicPicker], append_npc_from_attributes=True)
 
 
         attribute empty null            
@@ -52,9 +52,7 @@ init 6:
 
 
         attribute morgan
-        attribute morgan_pregnant when morgan
         attribute morgan_collar when morgan
-        group multiple auto variant morgan_piercings when morgan
         always "bg_electronic_morgan_face" when morgan and not morgan_makeup
         attribute morgan_makeup when morgan
         group morgan_hair auto when morgan
@@ -63,24 +61,19 @@ init 6:
         group morgan_top auto variant nopreg when morgan and not morgan_pregnant
         group morgan_top auto variant preg when morgan and morgan_pregnant
 
-
         attribute amy
         attribute amy_pregnant when amy
         attribute amy_collar when amy
         attribute amy_nohaircut when amy
         always "bg_electronic_amy_earphones" when amy
-        group multiple auto variant amy_piercings when amy
         group amy_bot auto variant nopreg when amy and not amy_pregnant
         group amy_bot auto variant preg when amy and amy_pregnant
         group amy_top auto variant nopreg when amy and not amy_pregnant
         group amy_top auto variant preg when amy and amy_pregnant
 
-
         attribute kat
-        attribute kat_pregnant when kat
         attribute kat_collar when kat
         attribute kat_nohaircut when kat
-        group multiple auto variant kat_piercings when kat
         group kat_bot auto when kat
         group kat_top auto variant nopreg when kat and not kat_pregnant
         group kat_top auto variant preg when kat and kat_pregnant

@@ -39,7 +39,7 @@ init 5 python:
 
 init 6:
     layeredimage bg street2:
-        attribute_function MultiPickers([DayNightPicker, SeasonPicker, PiercingsPicker, CollarPicker, PregnancyPicker, OutfitPicker, HaircutPicker, Street2Picker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([DayNightPicker, SeasonPicker,  CollarPicker, OutfitPicker, HaircutPicker, Street2Picker], append_npc_from_attributes=True)
 
 
         attribute empty null            
@@ -62,10 +62,9 @@ init 6:
 
 
         attribute kiara
-        attribute kiara_pregnant when kiara
+        
         attribute kiara_collar when kiara
         group kiara_hair auto when kiara
-        group multiple auto variant kiara_piercings when kiara
         group kiara_bot auto variant preg when kiara and kiara_pregnant
         group kiara_bot auto variant nopreg when kiara and not kiara_pregnant
         group kiara_top auto variant preg when kiara and kiara_pregnant
@@ -73,11 +72,10 @@ init 6:
 
 
         attribute reona
-        attribute reona_pregnant when reona
+        
         attribute reona_collar when reona
         attribute reona_pureglasses when reona
         group reona_hair auto when reona
-        group multiple auto variant reona_piercings when reona
         group reona_bot auto variant preg when reona and reona_pregnant
         group reona_bot auto variant nopreg when reona and not reona_pregnant
         group reona_top auto variant preg when reona and reona_pregnant
@@ -85,9 +83,8 @@ init 6:
 
 
         attribute cherie
-        attribute cherie_pregnant when cherie
+        
         attribute cherie_collar when cherie
-        group multiple auto variant cherie_piercings when cherie
         group cherie_bot auto variant preg when cherie and cherie_pregnant
         group cherie_bot auto variant nopreg when cherie and not cherie_pregnant
         group cherie_top auto variant preg when cherie and cherie_pregnant
@@ -96,11 +93,10 @@ init 6:
 
 
         attribute aletta
-        attribute aletta_pregnant when aletta
+        
         attribute aletta_collar when aletta
         group aletta_hair auto when aletta
         attribute aletta_glasses when aletta
-        group multiple auto variant aletta_piercings when aletta
         group aletta_bot auto variant preg when aletta and aletta_pregnant
         group aletta_bot auto variant nopreg when aletta and not aletta_pregnant
         group aletta_top auto variant preg when aletta and aletta_pregnant
@@ -108,10 +104,8 @@ init 6:
 
 
         attribute kleio
-        attribute kleio_pregnant when kleio
         attribute kleio_collar when kleio
         group kleio_hair auto when kleio
-        group multiple auto variant kleio_piercings when kleio
         group kleio_bot auto variant preg when kleio and kleio_pregnant
         group kleio_bot auto variant nopreg when kleio and not kleio_pregnant
         group kleio_top auto variant preg when kleio and kleio_pregnant

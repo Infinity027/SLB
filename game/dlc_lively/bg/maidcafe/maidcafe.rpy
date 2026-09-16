@@ -33,7 +33,7 @@ init 5 python:
 
 init 6:
     layeredimage bg maidcafe:
-        attribute_function MultiPickers([PiercingsPicker, CollarPicker, PregnancyPicker, HaircutPicker, OutfitPicker, MaidCafePicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([ CollarPicker, HaircutPicker, OutfitPicker, MaidCafePicker], append_npc_from_attributes=True)
 
 
         attribute empty null            
@@ -43,14 +43,11 @@ init 6:
         attribute bree_tongue null
         attribute kiara_clit null
 
-
         always "maidcafe"
-
 
         attribute kiara
         attribute kiara_pregnant when kiara
         attribute kiara_collar when kiara
-        group multiple auto variant kiara_piercings when kiara
         group kiara_bot auto variant preg when kiara and kiara_pregnant
         group kiara_bot auto variant nopreg when kiara and not kiara_pregnant
         group kiara_top auto variant preg when kiara and kiara_pregnant
@@ -62,7 +59,5 @@ init 6:
         attribute bree_pregnant when bree
         attribute bree_collar when bree
         attribute bree_nohaircut when bree
-        group multiple auto variant bree_piercings when bree
         group bree_bot auto when bree
         group bree_top auto when bree
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

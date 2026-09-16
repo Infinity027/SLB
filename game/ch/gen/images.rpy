@@ -70,7 +70,7 @@ init 1:
             "hand_leash_sasha"
 
     layeredimage 3dance:
-        attribute_function MultiPickers([HaircutPicker, CollarPicker, PregnancyPicker, PiercingsPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([HaircutPicker, CollarPicker], append_npc_from_attributes=True)
         always:
             "3dance_mike"
 
@@ -418,7 +418,7 @@ init 1:
             "bar_light"
 
     layeredimage tv:
-        attribute_function MultiPickers([CollarPicker, PiercingsPicker, OutfitPicker, HaircutPicker, MCCGPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([CollarPicker,  OutfitPicker, HaircutPicker, MCCGPicker], append_npc_from_attributes=True)
         always:
             "tv_bg"
 
@@ -427,13 +427,11 @@ init 1:
 
         attribute bree
         attribute bree_collar
-        group multiple auto variant bree_piercings
         group bree_outfit auto if_not "naked"
 
         attribute breemc
         attribute mc_collar if_any "breemc"
         attribute mc_nohaircut null
-        group multiple auto variant breemc_piercings when breemc
         group breemc_outfit auto if_any "breemc" if_not "naked"
 
         attribute mike
@@ -445,7 +443,6 @@ init 1:
         attribute sasha_collar
         attribute sasha_haircut
         attribute sasha_nohaircut null
-        group multiple auto variant sasha_piercings
         group sasha_outfit auto if_not "naked"
         group sasha_outfit auto variant "boobjob" if_any "sasha_boobjob" if_not "naked"
 
@@ -466,7 +463,7 @@ init 1:
             attribute underwear null
 
     layeredimage concert:
-        attribute_function MultiPickers([PubesPicker, CollarPicker, PiercingsPicker, OutfitPicker, PregnancyPicker, HaircutPicker, MCCGPicker, MCCrossdressPicker, ConcertPicker], append_npc_from_attributes=True, add_simple_outfit_attribute=True)
+        attribute_function MultiPickers([PubesPicker, CollarPicker,  OutfitPicker, HaircutPicker, MCCGPicker, MCCrossdressPicker, ConcertPicker], append_npc_from_attributes=True, add_simple_outfit_attribute=True)
         attribute naked null
         attribute mc_hard null
         attribute mc_flaccid null
@@ -498,23 +495,9 @@ init 1:
         group multiple auto variant npc
         group multiple auto variant pubes
 
-        attribute anna_pregnant null
-        attribute kleio_pregnant if_any ["kleio"]
-        attribute sasha_pregnant if_any ["sasha"]
-
-        group multiple auto variant piercings
-        group multiple:
-            attribute anna_clit null
-            attribute anna_ears null
-            attribute anna_tongue null
-            attribute kleio_ears null
-            attribute sasha_lips null
-            attribute sasha_tongue null
-
         attribute sasha_noboobjob null
         attribute sasha_boobjob if_any ["sasha"]
-        group multiple auto variant piercings_boobjob when boobjob
-
+ 
         group multiple auto variant outfits when not naked
         group outfits auto variant "boobjob" if_any "sasha_boobjob" if_not "naked"
 
@@ -546,15 +529,6 @@ init 1:
 
         group front_outfits auto if_not "naked"
 
-        group front_pregnancy auto
-
-        group front_outfits auto variant "amy_pregnant" if_any "amy_pregnant" if_not "naked"
-
-        group multiple auto variant front_piercings
-        group multiple:
-            attribute amy_clit null
-            attribute amy_nipples null
-
         group front_collars auto
 
         group front_instruments auto
@@ -566,7 +540,7 @@ init 1:
             "concert_fg"
 
     layeredimage concert solo:
-        attribute_function Pickers([PubesPicker, PregnancyPicker, CollarPicker, HaircutPicker, OutfitPicker, PiercingsPicker, MCCrossdressPicker, DickPicker], clear_npc=True)
+        attribute_function Pickers([PubesPicker, CollarPicker, HaircutPicker, OutfitPicker,  MCCrossdressPicker, DickPicker], clear_npc=True)
 
         group kleio_tattoos:
             attribute angel null
@@ -669,7 +643,7 @@ init 1:
         group light auto variant stage when stage and not nobg
 
     layeredimage rpg:
-        attribute_function MultiPickers([PregnancyPicker, HaircutPicker, CollarPicker, PiercingsPicker, OutfitPicker], npcs=[bree, sasha], append_npc_from_attributes=True)
+        attribute_function MultiPickers([HaircutPicker, CollarPicker,  OutfitPicker], npcs=[bree, sasha], append_npc_from_attributes=True)
 
         attribute nojack null
         attribute nomc null
@@ -697,9 +671,6 @@ init 1:
         attribute minami_pregnant if_all ["minami", "minami_naked"] if_not ["mikealone"]
         group minami_pregnant auto if_all ["minami", "minami_pregnant"] if_not ["minami_naked", "mikealone"]
         group minami_collar auto if_all ["minami", "minami_collar"] if_not ["mikealone"]
-        group multiple auto variant minami_piercings when minami and not mikealone
-        group multiple auto variant minami_piercings_naked when minami and minami_naked and not mikealone
-
 
         group mike auto if_not ["nomc"]
 
@@ -717,11 +688,6 @@ init 1:
         attribute sasha_boobjob if_any ["sasha_naked"] if_not ["mikealone", "nosasha"]
         group sasha_boobjob auto if_any ["sasha_boobjob"] if_not ["sasha_naked", "mikealone", "nosasha"]
         attribute sasha_collar if_not ["mikealone", "nosasha"]
-        group multiple auto variant sasha_piercings when not (mikealone or nosasha)
-        group multiple auto variant sasha_piercings_naked when sasha_naked and not (mikealone or nosasha)
-        group multiple auto variant sasha_piercings_naked_bb when sasha_naked and sasha_boobjob and not (mikealone or nosasha)
-        group multiple auto variant sasha_piercings_naked_notbb when sasha_naked and not (sasha_boobjob or mikealone or nosasha)
-
 
         always "rpg_bree" if_not ["mikealone", "nobree"]
         group exp_bree auto if_not ["mikealone", "nobree"]:
@@ -731,11 +697,6 @@ init 1:
         attribute bree_pregnant if_any ["bree_naked"] if_not ["mikealone", "nobree"]
         group bree_pregnant auto if_any ["bree_pregnant"] if_not ["bree_naked", "mikealone", "nobree"]
         attribute bree_collar if_not ["mikealone"]
-        group multiple auto variant bree_piercings when not (mikealone or nobree)
-        group multiple auto variant bree_piercings_breenormal when breenormal and not (mikealone or nobree)
-        group multiple auto variant bree_piercings_naked when bree_naked and not (mikealone or nobree)
-        group multiple auto variant bree_piercings_notliving when not (livingroom or mikealone or nobree)
-
 
         group table auto
         always "rpg_cup_sasha" if_any ["tavern"] if_not ["mikealone", "nosasha"]
@@ -746,7 +707,7 @@ init 1:
 
 
     layeredimage petplay:
-        attribute_function MultiPickers([PregnancyPicker, CollarPicker, PubesPicker, HaircutPicker, PiercingsPicker, DickPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([CollarPicker, PubesPicker, HaircutPicker,  DickPicker], append_npc_from_attributes=True)
 
         attribute bree null
         attribute cassidy null
@@ -818,17 +779,10 @@ init 1:
         group haircuts auto variant "walk" if_any ["walk"]
         group haircuts auto variant "stand" if_any ["stand"]
 
-
-        group multiple auto variant piercings_behind_walk when walk
-
-
         group multiple auto variant pregnancy_walk when walk
         group multiple auto variant pregnancy_stand when stand
 
-
         group bb auto variant "walk" if_any ["walk"]
-
-
 
         group exp_bree auto variant "walk" if_all ["walk", "bree"]:
             attribute breenormal default
@@ -868,13 +822,6 @@ init 1:
         group mouth_hanna auto if_all ["stand", "hanna"] if_not ["inside"]:
             attribute hannatongueout default
             attribute hannaswallow
-
-
-        group multiple auto variant piercings_walk when walk
-        group multiple auto variant piercings_stand when stand
-        group multiple auto variant piercings_walk_notbb when walk and not sasha_boobjob
-        group multiple auto variant piercings_walk_bb when walk and sasha_boobjob
-
 
         group multiple auto variant collars_walk when walk
         group multiple auto variant collars_stand when stand
@@ -969,39 +916,30 @@ init 1:
         group cumshot_outside_small auto variant "cassidybj" if_all ["cumshot", "outside", "cassidybj", "small"]
         group cumshot_outside_small auto variant "hannabj" if_all ["cumshot", "outside", "hannabj", "small"]
 
-
         group breearm auto variant "hold_breebj" if_all ["hold", "breebj"]
         group sashaarm auto variant "hold_sashabj" if_all ["hold", "sashabj"]
         group hannaarm auto variant "hold_hannabj" if_all ["hold", "hannabj"]
         group cassidyarm auto variant "hold_cassidybj" if_all ["hold", "cassidybj"]
 
-
         group bb auto variant "stand" if_any ["stand"]
-        group multiple auto variant piercings_stand_notbb when stand and not sasha_boobjob
-        group multiple auto variant piercings_stand_bb when stand and sasha_boobjob
         group sashaleash auto variant "sashabj" if_all ["sashabj", "sasha_collar", "leash"]
-
 
         always:
             "petplay_light"
 
 
     layeredimage new petplay:
-        attribute_function MultiPickers([PregnancyPicker, CollarPicker, PubesPicker, PiercingsPicker], append_npc_from_attributes=True)
-
+        attribute_function MultiPickers([CollarPicker, PubesPicker], append_npc_from_attributes=True)
 
         group pose:
             attribute walk null default
             attribute pee null
             attribute back null
 
-
         always "new_petplay_bg_front" if_any ["walk", "pee"]
         always "new_petplay_bg_back" if_any ["back"]
 
-
         always "new_petplay_mike_front" if_any ["walk", "pee"]
-
 
         attribute leash_hanna "new_petplay_leash_hanna_front" if_all ["hanna", "hanna_collar"] if_any ["walk", "pee"]
         attribute leash_cassidy "new_petplay_leash_cassidy_front" if_all ["cassidy", "cassidy_collar"] if_any ["walk", "pee"]
@@ -1014,26 +952,17 @@ init 1:
         group multiple auto variant girls_pee when pee
         group multiple auto variant girls_back when back
 
-
         group multiple auto variant pubes_walk when walk
         group multiple auto variant pubes_pee when pee
         group multiple auto variant pubes_back when back
-
 
         group multiple auto variant collars_walk when walk
         group multiple auto variant collars_pee when pee
         group multiple auto variant collars_back when back
 
-
-        group multiple auto variant piercings_walk when walk
-        group multiple auto variant piercings_pee when pee
-        group multiple auto variant piercings_back when back
-
-
         group multiple auto variant pregnancy_walk when walk
         group multiple auto variant pregnancy_pee when pee
         group multiple auto variant pregnancy_back when back
-
 
         attribute leash_cassidy "new_petplay_leash_cassidy_back" if_all ["back", "cassidy", "cassidy_collar"]
         attribute leash_hanna "new_petplay_leash_hanna_back" if_all ["back", "hanna", "hanna_collar"]

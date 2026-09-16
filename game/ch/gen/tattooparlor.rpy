@@ -1,6 +1,6 @@
 init 1:
     layeredimage tattooparlor:
-        attribute_function MultiPickers([HaircutPicker, CollarPicker, PregnancyPicker, PiercingsPicker, OutfitPicker, PubesPicker], add_simple_pregnant_attribute=True, append_npc_from_attributes=True)
+        attribute_function MultiPickers([HaircutPicker, CollarPicker,  OutfitPicker, PubesPicker], add_simple_pregnant_attribute=True, append_npc_from_attributes=True)
 
         attribute pregnant null
         attribute collar null
@@ -37,32 +37,17 @@ init 1:
         group bot_opened auto if_any ["bottomless"]
         group bot_closed auto if_not ["bottomless"]
 
-        group pregnancy auto if_any ["pregnant"]
-
-        group bot_opened variant "pregnant" auto if_all ["pregnant", "bottomless"]
-        group bot_closed variant "pregnant" auto if_any ["pregnant"] if_not ["bottomless"]
-        group bot variant "pregnant" auto if_any ["pregnant"]
-
-        group multiple auto variant piercings
-
         group top auto
 
         group top_opened auto if_any ["topless"] if_not ["notop"]
         group top_opened auto variant "boobjob" if_all ["topless", "sasha_boobjob"] if_not ["notop"]
         group top_opened auto variant "pregnant" if_all ["topless", "pregnant"] if_not ["notop"]
 
-        group piercings_opened auto if_any ["topless"] if_not ["notop"]
-
         group top_closed auto if_not ["topless", "notop"]
         group top_closed auto variant "boobjob" if_not ["topless", "notop"] if_all ["sasha_boobjob"]
         group top_closed auto variant "pregnant" if_not ["topless", "notop"] if_any ["pregnant"]
 
-        group top auto variant "pregnant" if_any ["pregnant"] if_not ["notop"]
-        group piercings_preg auto if_any ["pregnant"] if_not ["notop"]
-
         attribute sasha_boobjob if_all "sasha_boobjob" if_any ["topless", "notop"]
-        group multiple auto variant piercings_noboobjob when (topless or notop) and not sasha_boobjob
-        group multiple auto variant piercings_boobjob when (topless or notop) and sasha_boobjob
 
         group haircuts auto
         group glasses auto
@@ -131,22 +116,16 @@ init 1:
 
         group bot_opened variant "pregnant_breemc" auto if_all ["mc_pregnant", "bottomless", "breemc"]
         group bot_closed variant "pregnant_breemc" auto if_all ["mc_pregnant", "breemc"] if_not ["bottomless"]
-        group bot variant "pregnant_breemc" auto if_all ["mc_pregnant", "breemc"] if_not ["bottomless"]
-
-        group multiple auto variant piercings_breemc when breemc
 
         group top auto
 
         group top_opened auto variant "breemc" if_all ["topless", "breemc"] if_not ["notop"]
         group top_opened auto variant "pregnant_breemc" if_all ["topless", "mc_pregnant", "breemc"] if_not ["notop"]
 
-        group piercings_opened auto variant "breemc" if_all ["topless", "breemc"] if_not ["notop"]
-
         group top_closed auto variant "breemc" if_any "breemc" if_not ["topless", "notop"]
         group top_closed auto variant "pregnant_breemc" if_not ["topless", "notop"] if_all ["mc_pregnant", "breemc"]
 
         group top auto variant "pregnant" if_any ["pregnant"] if_not ["notop"]
-        group piercings_preg auto if_any ["mc_pregnant"] if_not ["notop"]
 
         group focused auto variant "head" if_all ["focused", "head"]
         group add_piercing auto if_all ["focused", "head"]

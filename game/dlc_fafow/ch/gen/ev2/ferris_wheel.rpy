@@ -1,6 +1,6 @@
 init 1:
     layeredimage ferris wheel:
-        attribute_function MultiPickers([PregnancyPicker, PiercingsPicker, HaircutPicker, CollarPicker, OutfitPicker, MCCGPicker, DayNightPicker], append_npc_from_attributes=True, use_morgan_cg_outfits=True)
+        attribute_function MultiPickers([ HaircutPicker, CollarPicker, OutfitPicker, MCCGPicker, DayNightPicker], append_npc_from_attributes=True, use_morgan_cg_outfits=True)
 
         group bg auto
 
@@ -17,11 +17,7 @@ init 1:
         attribute morgan_makeup
         attribute aletta_glasses if_any "aletta"
 
-        group multiple auto variant piercings
-
         group outfits auto
-        group outfits auto variant "pregnant" if_any ["morgan_pregnant", "reona_pregnant"]
-
         attribute sasha_boobjob if_any "sasha"
 
         group collars auto
@@ -41,6 +37,4 @@ init 1:
         group mc_haircuts auto variant "breemc" if_any "breemc":
             attribute mc_nohaircut null
         group mc_outfits auto variant "breemc" if_any "breemc"
-        group multiple auto variant mc_piercings_breemc when breemc
         group mc_collars auto variant "breemc" if_any "breemc"
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

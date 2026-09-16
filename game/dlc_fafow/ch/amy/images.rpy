@@ -3,17 +3,14 @@ init 1:
         always "amy_smartphone"
 
     layeredimage amy kiss:
-        attribute_function Pickers([PiercingsPicker, CollarPicker, OutfitPicker], npc=amy)
+        attribute_function Pickers([ CollarPicker, OutfitPicker], npc=amy)
 
 
         always "amy_kiss_bodies"
 
-
         group mikeoutfit auto if_not ["naked"]:
             attribute normal default
 
-
-        group multiple auto variant piercings
         group multiple:
             attribute clit null
             attribute navel null
@@ -29,7 +26,7 @@ init 1:
         attribute collar
 
     layeredimage amy cunnilingus:
-        attribute_function Pickers([PiercingsPicker, OutfitPicker, PubesPicker, CollarPicker], npc=amy)
+        attribute_function Pickers([ OutfitPicker, PubesPicker, CollarPicker], npc=amy)
 
         attribute naked null
         group mike:
@@ -42,10 +39,6 @@ init 1:
 
 
         always "amy_cunnilingus_upperbody"
-
-
-        group multiple auto variant piercings
-
 
         attribute topless null
         group top auto if_not ["topless", "naked"]
@@ -83,10 +76,6 @@ init 1:
 
         attribute openass if_any ["open"]
         attribute openpussy if_any ["open"]
-
-
-        group multiple auto variant piercings_open when open
-
 
         attribute vibrator if_any ["open"]
         attribute buttplug if_any ["open"]
@@ -133,11 +122,6 @@ init 1:
         group exp auto variant "down" if_any ["down"]:
             attribute normal default
 
-
-        group multiple auto variant piercings_down when down
-        group multiple auto variant piercings_up when up
-
-
         attribute cumshot if_any ["footjob"] if_not ["mikesit", "mikelick"]
 
 
@@ -152,7 +136,7 @@ init 1:
             attribute tonguedown default
 
     layeredimage amy bj:
-        attribute_function Pickers([PiercingsPicker, CollarPicker, OutfitPicker, DickPicker], npc=amy)
+        attribute_function Pickers([ CollarPicker, OutfitPicker, DickPicker], npc=amy)
 
 
         group bg auto:
@@ -234,28 +218,20 @@ init 1:
 
 
     layeredimage amy missionary:
-        attribute_function Pickers([PiercingsPicker, CollarPicker, PregnancyPicker, PubesPicker, DickPicker], npc=amy)
+        attribute_function Pickers([ CollarPicker, PubesPicker, DickPicker], npc=amy)
 
 
         group bg auto:
             attribute bedroom default
 
-
         always "amy_missionary_amy"
 
-
         attribute collar
-
-
-        group multiple auto variant piercings
-
 
         group exp auto:
             attribute normal default
 
-
         group fg auto
-
 
         group leg auto:
             attribute spread default
@@ -264,18 +240,10 @@ init 1:
         attribute pubes null
         group pubes auto if_any ["pubes"]
 
-
-        group multiple auto variant piercings_spread when spread
-        group multiple auto variant piercings_lock when lock
-
-
         attribute pregnant null
-        group pregnant auto if_any ["pregnant"]
-
 
         attribute buttplug null
         group buttplug auto if_any ["buttplug"] if_not ["anal"]
-
 
         group hole:
             attribute mike null
@@ -285,10 +253,8 @@ init 1:
             attribute finger1 default
         attribute openpussy if_any ["lock"] if_not ["mike"]
 
-
         always "amy_missionary_dripcum" if_all ["openpussy", "cum", "vaginal"] if_not ["mike"]
         attribute bodycum if_any ["spread"]
-
 
         group dick:
             attribute out null default
@@ -311,14 +277,13 @@ init 1:
         group cum auto variant "spread" if_all ["mike", "cum", "spread"] if_not ["condom"]
         group cum auto variant "lock" if_all ["mike", "cum", "lock"] if_not ["condom"]
 
-
         group mike auto if_any ["mike"]
 
 
         group light auto
 
     layeredimage amy doggy:
-        attribute_function Pickers([PregnancyPicker, PiercingsPicker, DickPicker, CollarPicker, PubesPicker], npc=amy)
+        attribute_function Pickers([ DickPicker, CollarPicker, PubesPicker], npc=amy)
 
 
         group bg auto:
@@ -346,15 +311,8 @@ init 1:
         group exp auto variant "lookup" if_any ["lookup"]:
             attribute normal default
 
-
         attribute collar null
         group collar auto if_any ["collar"]
-
-
-        group multiple auto variant piercings_lookdown when lookdown
-        group multiple auto variant piercings_lookup when lookup
-        group multiple auto variant piercings
-
 
         always "amy_doggy_asshole" if_any ["buttplug", "assgap"] if_not ["anal"]
         attribute assgap null
@@ -398,8 +356,6 @@ init 1:
 
         group boobs auto:
             attribute down default
-        group multiple auto variant piercings_nipples when nipples
-
 
         attribute speed if_any ["vaginal", "anal"]
         attribute screencum
@@ -409,7 +365,7 @@ init 1:
 
     layeredimage amy cowgirl:
         zoom 1.07 xoffset 40 yoffset 27
-        attribute_function Pickers([PregnancyPicker, PiercingsPicker, DickPicker], npc=amy)
+        attribute_function Pickers([ DickPicker], npc=amy)
 
 
         group bg auto:
@@ -431,24 +387,15 @@ init 1:
         group exp auto variant "down" if_any ["down"]:
             attribute normal default
 
-
         attribute halloween null
         group wig_halloween auto if_any ["halloween"]
-
-
-        group multiple auto variant piercings_up when up
-        group multiple auto variant piercings_down when down
-
 
         attribute speed null
         group speed auto if_any ["speed"]
 
-
         attribute mikehand
 
-
         attribute bodycum
-
 
         group dick:
             attribute out null default
@@ -458,11 +405,9 @@ init 1:
         group anal auto if_any ["anal"]
         group vaginal auto if_any ["vaginal"]
 
-
         attribute condom null
         group condom auto variant "out" if_all ["out", "condom"] if_not ["cum"]
         group condom_cum auto variant "out" if_all ["out", "condom", "cum"]
-
 
         attribute cum null
         group cum auto variant "out" if_all ["out", "cum"] if_not ["condom"]
@@ -472,25 +417,19 @@ init 1:
     layeredimage amy ending:
         attribute_function Pickers([EndingKidPicker], npc=amy)
 
-
         always "amy_ending_bg"
         always "amy_ending_mike"
-
 
         attribute kid null
         always "amy_ending_daughter" when kid
         always "amy_ending_amyhand" when not kid
 
-
         always "amy_ending_amy"
-
 
         always "amy_ending_head2" when kid
         always "amy_ending_head1" when not kid
 
     layeredimage amy kneeling:
-        attribute_function Pickers([PregnancyPicker, PiercingsPicker], npc=amy)
-
         attribute naked null
 
 
@@ -509,12 +448,8 @@ init 1:
 
         attribute clit null
         attribute navel null
-        group multiple auto variant piercings
-        group multiple auto variant piercings_naked when naked
-
 
         always "amy_kneeling_outfit" if_not ["naked"]
-
 
         always "amy_kneeling_arm_normal" if_not ["pat"]
         always "amy_kneeling_tshirt" if_not ["naked"]
@@ -523,7 +458,7 @@ init 1:
         attribute leash
 
     layeredimage amy stand:
-        attribute_function Pickers([PregnancyPicker, CollarPicker, PiercingsPicker], npc=amy)
+        attribute_function Pickers([CollarPicker], npc=amy)
 
         attribute insert null
         attribute mike null
@@ -581,8 +516,6 @@ init 1:
         attribute clit null
         attribute nose null
         attribute nipples null
-        group main_piercings auto variant "nipples"
-
 
         always "amy_stand_main_ponytails" if_not ["hair"]
 
@@ -602,7 +535,7 @@ init -35 python:
     amy_attrs = {
     'motions': ['idle'],
     'positions': ['a', 'b'],
-    'piercings': ['clit', 'navel', 'nipples', 'nose'],
+    # 'piercings': ['clit', 'navel', 'nipples', 'nose'],
     'exps': ['normal', 'angry', 'annoyed', 'embarrassed', 'flirt', 'grumpy', 'guilty', 'happy', 'lying', 'mad', 'mindless', 'pain', 'pout', 'puzzled', 'sad', 'sadsmile', 'shy', 'stuned', 'surprised', 'upset', 'whining', 'worried'],
     'outfits': ['casual', 'sport', 'date', 'sexydate', 'sluttydate', 'swimsuit', 'sexyswimsuit', 'halloween', 'wedding', 'underwear', 'work', 'naked'],
     'others': ['pregnant', 'pubes', 'collar', 'blush', 'bottomless', 'topless', 'noacc'],
@@ -614,7 +547,7 @@ init -35 python:
             attrs = list(attrs)
         
         
-        add_pickers_attrs = Pickers([PregnancyPicker, CollarPicker, PubesPicker, PiercingsPicker], npc=amy)(set(attrs))
+        add_pickers_attrs = Pickers([CollarPicker, PubesPicker], npc=amy)(set(attrs))
         if "pregnant_navel" in add_pickers_attrs:
             add_pickers_attrs.remove("pregnant_navel")
             add_pickers_attrs.add("navel")

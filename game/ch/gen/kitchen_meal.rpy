@@ -11,7 +11,7 @@ init python:
             return attr
 init 1:
     layeredimage kitchen meal multi:
-        attribute_function MultiPickers([MCCGPicker, PregnancyPicker, CollarPicker, OutfitPicker, PiercingsPicker, HaircutPicker, KitchenMealPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([MCCGPicker, CollarPicker, OutfitPicker,  HaircutPicker, KitchenMealPicker], append_npc_from_attributes=True)
 
         group mc_dicks auto:
             attribute mc_small null
@@ -38,10 +38,7 @@ init 1:
         attribute samantha_pregnant if_any ["samantha_naked", "samantha_topless"]
         attribute sasha_pregnant if_any ["sasha_naked", "sasha_topless"]
 
-        group multiple auto variant piercings 
-
         attribute mc_naked null
-        group breemcoutfit auto variant "notpregnant" if_any ["breemc"] if_not ["mc_pregnant", "mc_naked"]
         group breemcoutfit auto variant "pregnant" if_all ["breemc", "mc_pregnant"] if_not ["mc_naked"]
 
         attribute bree_naked null
@@ -72,10 +69,6 @@ init 1:
         attribute sasha_noboobjob null
         attribute sasha_boobjob if_any ["sasha_naked", "sasha_topless"]
         group boobs auto if_all ["sasha_boobjob"] if_not ["sasha_naked", "sasha_topless"]
-
-        group multiple auto variant piercings_bb when sasha_boobjob and (sasha_naked or sasha_topless)
-        group multiple auto variant piercings_notbb when (sasha_naked or sasha_topless) and not sasha_boobjob
-
 
         always "kitchen_meal_multi_counter"
 

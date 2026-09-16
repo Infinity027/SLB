@@ -27,42 +27,6 @@ attributes:
     min: 0
     max: null
     default: 0
-piercings:
-  ears:
-    outfits:
-      - date
-    pierced: true
-  navel:
-    outfits:
-      - naked
-      - swimsuit
-      - sexyswimsuit
-      - sexydate
-      - underwear
-      - sport
-  clit:
-    outfits:
-      - naked
-      - sexyswimsuit
-      - bottomless
-  nipples:
-    outfits:
-      - naked
-      - sexyswimsuit
-      - topless
-  tongue:
-    expressions:
-      - cry
-      - lose
-      - mouthful
-      - thumb
-      - surprised
-  lips:
-    outfits:
-      - all
-  nose:
-    outfits:
-      - all
 traits:
   - bookworm
   - playful

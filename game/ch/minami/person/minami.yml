@@ -42,24 +42,6 @@ attributes:
     min: 0
     max: null
     default: 0
-piercings:
-  navel:
-    outfits:
-    - naked
-    - swimsuit
-    - sexyswimsuit
-    - underwear
-    - sport
-  clit:
-    outfits:
-    - naked
-    - bottomless
-  nipples:
-    outfits:
-    - naked
-    - topless
-  nose: {}
-  ears: {}
 traits:
 - flirty
 - playful

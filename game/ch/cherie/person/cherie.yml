@@ -26,17 +26,6 @@ attributes:
     min: 0
     max: null
     default: 0
-piercings:
-  clit:
-    pierced: False
-  ears:
-    pierced: False
-  navel:
-    pierced: False
-  nipples:
-    pierced: False
-  nose:
-    pierced: False
 birthday:
   - fall
   - 29

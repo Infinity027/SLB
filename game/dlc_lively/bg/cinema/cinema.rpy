@@ -47,7 +47,7 @@ init 5 python:
 
 init 6:
     layeredimage bg cinema:
-        attribute_function MultiPickers([DayNightPicker, SeasonPicker, PiercingsPicker, CollarPicker, PregnancyPicker, OutfitPicker, HaircutPicker, CinemaPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([DayNightPicker, SeasonPicker,  CollarPicker, OutfitPicker, HaircutPicker, CinemaPicker], append_npc_from_attributes=True)
 
 
         attribute empty null            
@@ -96,7 +96,6 @@ init 6:
         attribute morgan
         attribute morgan_pregnant when morgan
         attribute morgan_collar when morgan
-        group multiple auto variant morgan_piercings when morgan
         group morgan_bot auto variant preg when morgan and morgan_pregnant
         group morgan_bot auto variant nopreg when morgan and not morgan_pregnant
         group morgan_top auto variant preg when morgan and morgan_pregnant
@@ -107,7 +106,6 @@ init 6:
         attribute reona
         attribute reona_pregnant when reona
         attribute reona_collar when reona
-        group multiple auto variant reona_piercings when reona
         group reona_top variant preg when reona and reona_pregnant:
             attribute reona_casual
         group reona_top variant nopreg when reona and not reona_pregnant:
@@ -125,7 +123,6 @@ init 6:
         attribute minami
         attribute minami_pregnant when minami
         attribute minami_collar when minami
-        group multiple auto variant minami_piercings when minami
         group minami_bot auto variant preg when minami and minami_pregnant
         group minami_bot auto variant nopreg when minami and not minami_pregnant
         group minami_top auto variant preg when minami and minami_pregnant
@@ -136,7 +133,6 @@ init 6:
         attribute camila
         attribute camila_pregnant when camila
         attribute camila_collar when camila
-        group multiple auto variant camila_piercings when camila
         group camila_bot auto variant preg when camila and camila_pregnant
         group camila_bot auto variant nopreg when camila and not camila_pregnant
         group camila_top auto variant preg when camila and camila_pregnant
@@ -147,7 +143,6 @@ init 6:
         attribute amy
         attribute amy_pregnant when amy
         attribute amy_collar when amy
-        group multiple auto variant amy_piercings when amy
         group amy_bot auto variant preg when amy and amy_pregnant
         group amy_bot auto variant nopreg when amy and not amy_pregnant
         group amy_top auto variant preg when amy and amy_pregnant
@@ -158,7 +153,6 @@ init 6:
         attribute kat
         attribute kat_pregnant when kat
         attribute kat_collar when kat
-        group multiple auto variant kat_piercings when kat
         group kat_bot auto variant preg when kat and kat_pregnant
         group kat_bot auto variant nopreg when kat and not kat_pregnant
         group kat_top auto variant preg when kat and kat_pregnant
@@ -169,7 +163,6 @@ init 6:
         attribute lavish
         attribute lavish_pregnant when lavish
         attribute lavish_collar when lavish
-        group multiple auto variant lavish_piercings when lavish
         group lavish_bot auto variant preg when lavish and lavish_pregnant
         group lavish_bot auto variant nopreg when lavish and not lavish_pregnant
         group lavish_top auto variant preg when lavish and lavish_pregnant

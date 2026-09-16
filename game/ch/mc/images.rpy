@@ -17,9 +17,6 @@ init 1:
             attribute b null
             attribute p null
 
-
-        group multiple auto variant piercings
-
         attribute pubes
 
         group dick_position auto:
@@ -86,10 +83,7 @@ init 1:
             attribute a null default
             attribute b null
             attribute p null
-
-
-        group multiple auto variant piercings
-
+            
         attribute pubes
 
         group dick_position auto:

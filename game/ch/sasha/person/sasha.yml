@@ -26,39 +26,6 @@ birthday:
 - 21
 flags:
  lesbian: 5
-piercings:
-  ears:
-    outfits:
-    - date
-    pierced: true
-  navel:
-    outfits:
-    - naked
-    - swimsuit
-    - sexyswimsuit
-    - underwear
-    - sport
-    - sexydate
-  clit:
-    outfits:
-    - naked
-    - bottomless
-  nipples:
-    outfits:
-    - naked
-    - topless
-  tongue:
-    expressions:
-    - happy
-    - blush
-    - angry
-  nose: {}
-  lips:
-    expressions:
-    - happy
-    - blush
-    - angry
-
 traits:
 - dominant
 - submissive

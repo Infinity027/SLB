@@ -35,7 +35,7 @@ init 5 python:
 
 init 6:
     layeredimage bg office:
-        attribute_function MultiPickers([DayNightPicker, PiercingsPicker, CollarPicker, PregnancyPicker, HaircutPicker, OutfitPicker, OfficePicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([DayNightPicker,  CollarPicker, HaircutPicker, OutfitPicker, OfficePicker], append_npc_from_attributes=True)
 
 
         attribute empty null            
@@ -97,14 +97,11 @@ init 6:
         group top_audrey auto variant preg when audrey and audrey_pregnant and not (audrey_topless or audrey_naked)
         attribute audrey_nohaircut when audrey
 
-
         attribute shiori
         attribute shiori_pregnant when shiori
-        group multiple auto variant shiori_piercings when shiori
         group bot_shiori auto variant nopreg when shiori and not (shiori_pregnant or shiori_bottomless or shiori_naked)
         group bot_shiori auto variant preg when shiori and shiori_pregnant and not (shiori_bottomless or shiori_naked)
         group top_shiori auto variant nopreg when shiori and not (shiori_pregnant or shiori_topless or shiori_naked)
         group top_shiori auto variant preg when shiori and shiori_pregnant and not (shiori_topless or shiori_naked)
         attribute shiori_collar when shiori
         attribute shiori_nohaircut when shiori
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

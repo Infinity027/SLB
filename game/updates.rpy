@@ -805,18 +805,18 @@ init -999 python:
 
 
     def update_23_4_0():
-        if not hasattr(hero, "piercings"):
-            if hero.is_male:
-                hero_file = "ch/mike/person/mike.yml"
-            else:
-                hero_file = "ch/bree/person/bree.yml"
+        # if not hasattr(hero, "piercings"):
+        #     if hero.is_male:
+        #         hero_file = "ch/mike/person/mike.yml"
+        #     else:
+        #         hero_file = "ch/bree/person/bree.yml"
             
-            with renpy.file(hero_file) as stream:
-                hero_yaml = yaml.load(stream, OrderedLoader)
+        #     with renpy.file(hero_file) as stream:
+        #         hero_yaml = yaml.load(stream, OrderedLoader)
             
-            hero.piercings = Piercings(
-            "hero", hero_yaml["piercings"] if "piercings" in hero_yaml else {}
-        )
+        #     hero.piercings = Piercings(
+        #     "hero", hero_yaml["piercings"] if "piercings" in hero_yaml else {}
+        # )
         
         if not hasattr(hero, "counters"):
             hero.counters = CountersShortcut(hero.id)

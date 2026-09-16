@@ -3,7 +3,7 @@ init 1:
         always "reona_smartphone"
 
     layeredimage reona kiss:
-        attribute_function Pickers([PiercingsPicker, CollarPicker, OutfitPicker, HaircutPicker, MCCGPicker], npc=reona)
+        attribute_function Pickers([ CollarPicker, OutfitPicker, HaircutPicker, MCCGPicker], npc=reona)
 
         attribute reona null
         attribute mikemc null
@@ -13,19 +13,12 @@ init 1:
             attribute mc_medium null
             attribute mc_small null
 
-
         group wings auto
-
 
         group bodies auto
 
-
-
-
         attribute collar
 
-
-        group multiple auto variant piercings
         group multiple:
             attribute clit null
             attribute nipples null
@@ -50,7 +43,7 @@ init 1:
 
 
     layeredimage reona kiss jack:
-        attribute_function MultiPickers([PiercingsPicker, CollarPicker, OutfitPicker, PregnancyPicker], npcs=[jack, reona], add_simple_outfit_attribute=True)
+        attribute_function MultiPickers([ CollarPicker, OutfitPicker], npcs=[jack, reona], add_simple_outfit_attribute=True)
 
         attribute reona null
         attribute jack null
@@ -62,13 +55,8 @@ init 1:
 
         group eyes auto
 
-        attribute reona_pregnant
-
-
         attribute reona_collar
 
-
-        group multiple auto variant piercings
         group multiple:
             attribute reona_clit null
             attribute reona_tongue null
@@ -106,7 +94,7 @@ init 1:
 
 
     layeredimage reona cunnilingus:
-        attribute_function Pickers([MCCGPicker, OutfitPicker, PubesPicker, PregnancyPicker, PiercingsPicker], npc=reona)
+        attribute_function Pickers([MCCGPicker, OutfitPicker, PubesPicker], npc=reona)
 
 
         group bg auto:
@@ -119,7 +107,7 @@ init 1:
         attribute pubes
 
 
-        attribute pregnant
+        
 
 
         group head auto:
@@ -191,37 +179,25 @@ init 1:
             attribute mc_medium null
             attribute mc_small null
 
-
-        group multiple auto variant piercings
         group multiple:
             attribute navel null
             attribute pregnant_navel null
             attribute tongue null
-        group multiple auto variant piercings_notop when (topless or naked)
-        group multiple auto variant piercings_dildo when dildo
-        group multiple auto variant piercings_notdildo when not dildo
-
 
         attribute squirt
 
     layeredimage reona bj:
-        attribute_function Pickers([PiercingsPicker, PubesPicker, CollarPicker, DickPicker], npc=reona)
-
+        attribute_function Pickers([ PubesPicker, CollarPicker, DickPicker], npc=reona)
 
         group bg auto:
             attribute bedroom default
 
-
         always "reona_bj_body"
-
 
         attribute pubes
 
-
         attribute collar
 
-
-        group multiple auto variant piercings
         group multiple:
             attribute ears null
             attribute tongue null
@@ -234,12 +210,6 @@ init 1:
 
         group head auto variant "haircut" if_all "haircut"
         group head auto variant "nohaircut" if_all "nohaircut"
-
-
-        group multiple auto variant piercings_down when down
-        group multiple auto variant piercings_up when up
-        group multiple auto variant piercings_suck when suck
-
 
         group mouth auto variant "down" if_any ["down"]:
             attribute mouth_open default
@@ -325,7 +295,7 @@ init 1:
         always "reona_bj_left_hold" if_all ["mike"] if_not ["handjob", "finger", "leftpeace"]
 
     layeredimage reona missionary:
-        attribute_function Pickers([PubesPicker, CollarPicker, PregnancyPicker, PiercingsPicker, DickPicker], npc=reona)
+        attribute_function Pickers([PubesPicker, CollarPicker,  DickPicker], npc=reona)
 
 
         group bg auto:
@@ -343,9 +313,8 @@ init 1:
 
 
         attribute pubes
-        attribute pregnant
+        
         attribute collar
-        group multiple auto variant piercings
         group multiple:
             attribute clit null
             attribute ears null
@@ -411,10 +380,6 @@ init 1:
             attribute standby
             attribute pulled
 
-
-        group multiple auto variant piercings_vaginal when vaginalgape or vaginaldrip or vaginal or beads
-
-
         attribute naked null
         group top auto if_not ["naked"]
         group bot auto if_not ["naked"]
@@ -453,7 +418,7 @@ init 1:
         always "reona_missionary_mikehand_right" if_all ["mike"] if_any ["beads"] if_not ["standby", "pulled"]
 
     layeredimage reona cowgirl:
-        attribute_function Pickers([PiercingsPicker, CollarPicker, PregnancyPicker, PubesPicker, DickPicker], npc=reona)
+        attribute_function Pickers([ CollarPicker, PubesPicker, DickPicker], npc=reona)
 
 
         always "reona_cowgirl_bg"
@@ -481,37 +446,23 @@ init 1:
         attribute condom null
         group condom auto if_any ["condom"]
 
-
         attribute cum null
         group cum auto if_any ["cum"] if_not ["condom"]
 
-
-        attribute pregnant
-
-
-        group multiple auto variant piercings
-        group multiple auto variant piercings_vaginal when vaginal
-
-
         group dick auto variant "out" if_any ["out"]
-
 
         group condom auto variant "out" if_all ["condom", "out"] if_not ["cum"]
         group condom auto variant "cum" if_all ["condom", "cum", "out"]
 
-
         group cum auto variant "out" if_all ["cum", "out"] if_not ["condom"]
-
 
         group fg auto
 
     layeredimage reona reverse cowgirl:
-        attribute_function Pickers([PiercingsPicker, CollarPicker, DickPicker, PubesPicker, PregnancyPicker], npc=reona)
-
+        attribute_function Pickers([ CollarPicker, DickPicker, PubesPicker], npc=reona)
 
         group bg auto:
             attribute cinema default
-
 
         always "reona_reverse_cowgirl_bodies_mikemc"
         always "reona_reverse_cowgirl_bodies_reona"
@@ -560,7 +511,7 @@ init 1:
             attribute anal
 
 
-        attribute pregnant
+        
 
 
         always "reona_reverse_cowgirl_mike_righthand1"
@@ -577,16 +528,11 @@ init 1:
         always "reona_reverse_cowgirl_reona_lefthand"
         always "reona_reverse_cowgirl_mike_lefthand"
 
-
-        group multiple auto variant piercings
         group multiple:
             attribute tongue null
-        group multiple auto variant piercings_vaginal when vaginal
-
 
         group condom auto variant "out" if_all ["condom", "out"] if_not ["cum"]
         group condom auto variant "cum" if_all ["condom", "cum", "out"]
-
 
         group cum if_any ["cum"]:
             attribute handjob
@@ -596,7 +542,7 @@ init 1:
         group fg auto
 
     layeredimage reona doggy:
-        attribute_function Pickers([PiercingsPicker, CollarPicker, PregnancyPicker, DickPicker], npc=reona)
+        attribute_function Pickers([ CollarPicker, DickPicker], npc=reona)
 
         group smashed auto:
             attribute notsmash null default
@@ -654,7 +600,7 @@ init 1:
         group lowerbody auto
 
 
-        attribute pregnant null
+         null
         group pregnant auto if_any ["pregnant"]
 
 
@@ -701,44 +647,24 @@ init 1:
         group reonaeyes auto variant "smash_notpulled_haircut" if_all ["smash", "notpulled", "haircut"]
         group reonaeyes auto variant "smash_notpulled_nohaircut" if_all ["smash", "notpulled", "nohaircut"]
 
-
         group backhand auto
-
 
         attribute naked null
         group underwear auto if_not "naked"
 
-
-
-        group multiple auto variant piercings
         group multiple:
             attribute clit null
             attribute tongue null
-
-
-        group multiple auto variant piercings_notsmash when notsmash
-        group multiple auto variant piercings_notsmash_rest when notsmash and rest
-        group multiple auto variant piercings_notsmash_bounce when notsmash and bounce
-        group multiple auto variant piercings_notsmash_notpulled when notsmash and notpulled
-        group multiple auto variant piercings_notsmash_pulled when notsmash and pulled
-
-
-        group multiple auto variant piercings_smash when smash
-        group multiple auto variant piercings_smash_rest when smash and rest
-        group multiple auto variant piercings_smash_bounce when smash and bounce
-        group multiple auto variant piercings_smash_pulled when smash and pulled
-        group multiple auto variant piercings_smash_notpulled when smash and notpulled
 
         group glasses auto variant "notsmash_notpulled_haircut" if_all ["notsmash", "notpulled", "haircut"]
         group glasses auto variant "notsmash_pulled_haircut" if_all ["notsmash", "pulled", "haircut"]
         group glasses auto variant "smash_pulled_haircut" if_all ["smash", "pulled", "haircut"]
         group glasses auto variant "smash_notpulled_haircut" if_all ["smash", "notpulled", "haircut"]
 
-
         group mike_front auto if_any "mike"
 
     layeredimage reona double hj jack:
-        attribute_function Pickers([PiercingsPicker, CollarPicker, DickPicker, PubesPicker, OutfitPicker], npc=reona)
+        attribute_function Pickers([ CollarPicker, DickPicker, PubesPicker, OutfitPicker], npc=reona)
 
         attribute jacknpc null
         attribute mikenpc null
@@ -821,8 +747,6 @@ init 1:
         group glasses auto variant "up" if_any "up"
         group glasses auto variant "down" if_any "down"
 
-
-        group multiple auto variant piercings
         group multiple:
             attribute tongue null
 
@@ -857,7 +781,7 @@ init 1:
             attribute opaque default
 
     layeredimage reona threesome mikefuck:
-        attribute_function Pickers([PiercingsPicker, PubesPicker], npc=reona)
+        attribute_function Pickers([ PubesPicker], npc=reona)
 
 
         group bg auto:
@@ -912,13 +836,8 @@ init 1:
         always "reona_threesome_mikefuck_bodies"
         attribute pubes
 
-
-        group multiple auto variant piercings
         group multiple:
             attribute tongue null
-        group multiple auto variant piercings_novaginal when not vaginal
-
-
         attribute bodycum
 
 
@@ -954,14 +873,10 @@ init 1:
 
         attribute analdrip if_any ["up", "vaginal", "anal"]
 
-
-        group multiple auto variant piercings_vaginal when vaginal
-
-
         attribute fx if_any ["normal", "orgasm"]
 
     layeredimage reona threesome jackfuck:
-        attribute_function Pickers([PiercingsPicker, CollarPicker, PubesPicker], npc=reona)
+        attribute_function Pickers([ CollarPicker, PubesPicker], npc=reona)
 
 
         group bg auto:
@@ -1016,17 +931,10 @@ init 1:
         group glasses auto variant "normal" if_any "normal"
         group glasses auto variant "turn" if_any "turn"
 
-
-        group multiple auto variant piercings_normal when normal
-
-
         attribute facecum
 
 
         attribute dildo if_not ["jack"]
-
-
-        group multiple auto variant piercings
         group multiple:
             attribute tongue null
 
@@ -1071,7 +979,7 @@ init 1:
         attribute kid
 
     layeredimage reona lapdance:
-        attribute_function Pickers([HaircutPicker, OutfitPicker, PiercingsPicker, MCCGPicker], npc=reona)
+        attribute_function Pickers([HaircutPicker, OutfitPicker,  MCCGPicker], npc=reona)
 
         group bg auto:
             attribute stripclub default
@@ -1097,8 +1005,6 @@ init 1:
 
         group exp auto when not nonpc:
             attribute normal default
-
-        group multiple auto variant piercings when not nonpc
 
         attribute reona_naked null
         attribute innersexy null
@@ -1131,7 +1037,7 @@ init -35 python:
             attrs = list(attrs)
         
         
-        add_pickers_attrs = Pickers([PiercingsPicker, PregnancyPicker, PubesPicker, CollarPicker], npc=reona)(set(attrs))
+        add_pickers_attrs = Pickers([ PubesPicker, CollarPicker], npc=reona)(set(attrs))
         if "pregnant_navel" in add_pickers_attrs:
             add_pickers_attrs.remove("pregnant_navel")
             add_pickers_attrs.add("navel")

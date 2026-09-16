@@ -31,7 +31,7 @@ init 5 python:
 
 init 6:
     layeredimage bg bedroom3:
-        attribute_function Pickers([DayNightPicker, PiercingsPicker, CollarPicker, PregnancyPicker, HaircutPicker, OutfitPicker, Bedroom3Picker], npc=sasha)
+        attribute_function Pickers([DayNightPicker,  CollarPicker, HaircutPicker, OutfitPicker, Bedroom3Picker], npc=sasha)
 
 
         attribute empty null            
@@ -55,9 +55,6 @@ init 6:
         attribute pregnant when sasha and not boobjob
         attribute pregnant variant boobjob when sasha and boobjob
         attribute boobjob when sasha
-        group multiple auto variant piercings when sasha
-        group multiple auto variant piercings_bb when sasha and boobjob
-        group multiple auto variant piercings_bobb when sasha and not boobjob
         group bot auto when sasha and not (naked or bottomless)
         group top auto variant bb_preg when sasha and boobjob and pregnant and not (naked or bottomless)
         group top auto variant bb_nopreg when sasha and boobjob and not (pregnant or naked or bottomless)
@@ -65,4 +62,3 @@ init 6:
         group top auto variant nobb_nopreg when sasha and not (boobjob or pregnant or naked or bottomless)
         group hair auto when sasha
         attribute collar when sasha
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

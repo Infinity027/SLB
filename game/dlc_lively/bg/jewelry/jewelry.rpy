@@ -41,7 +41,7 @@ init 5 python:
 
 init 6:
     layeredimage bg jewelrystore:
-        attribute_function MultiPickers([CollarPicker, PregnancyPicker, PiercingsPicker, HaircutPicker, OutfitPicker, JewelryStorePicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([CollarPicker,  HaircutPicker, OutfitPicker, JewelryStorePicker], append_npc_from_attributes=True)
 
 
         attribute empty null            
@@ -74,14 +74,11 @@ init 6:
         attribute reona_pregnant_navel null
         attribute reona_tongue null
 
-
         always "jewelrystore"
-
 
         attribute reona
         attribute reona_pregnant when reona
         attribute reona_collar when reona
-        group multiple auto variant reona_piercings when reona
         group reona_bot auto variant preg when reona and reona_pregnant
         group reona_bot auto variant nopreg when reona and not reona_pregnant
         group reona_top auto when reona
@@ -90,52 +87,41 @@ init 6:
         attribute reona_pureglasses when reona
         group reona_hair auto when reona
 
-
         attribute lexi
         attribute lexi_pregnant when lexi
         attribute lexi_collar when lexi
-        group multiple auto variant lexi_piercings when lexi
         group lexi_top auto when lexi
         attribute lexi_nohaircut when lexi
         attribute lexi_ears when lexi
 
-
         attribute palla
         attribute palla_pregnant when palla
         attribute palla_collar when palla
-        group multiple auto variant palla_piercings when palla
         group palla_top auto variant preg when palla and palla_pregnant
         group palla_top auto variant nopreg when palla and not palla_pregnant
         attribute palla_nohaircut when palla
 
-
         attribute cherie
         attribute cherie_pregnant when cherie
         attribute cherie_collar when cherie
-        group multiple auto variant cherie_piercings when cherie
         group cherie_top auto variant preg when cherie and cherie_pregnant
         group cherie_top auto variant nopreg when cherie and not cherie_pregnant
         group cherie_hair auto when cherie
 
-
         attribute alexis
         attribute alexis_pregnant when alexis
         attribute alexis_collar when alexis
-        group multiple auto variant alexis_piercings when alexis
         group alexis_bot auto variant preg when alexis and alexis_pregnant
         group alexis_bot auto variant nopreg when alexis and not alexis_pregnant
         group alexis_top auto variant preg when alexis and alexis_pregnant
         group alexis_top auto variant nopreg when alexis and not alexis_pregnant
         attribute alexis_nohaircut when alexis
 
-
         attribute audrey
         attribute audrey_pregnant when audrey
         attribute audrey_collar when audrey
-        group multiple auto variant audrey_piercings when audrey
         group audrey_bot auto variant preg when audrey and audrey_pregnant
         group audrey_bot auto variant nopreg when audrey and not audrey_pregnant
         group audrey_top auto variant preg when audrey and audrey_pregnant
         group audrey_top auto variant nopreg when audrey and not audrey_pregnant
         attribute audrey_nohaircut when audrey
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

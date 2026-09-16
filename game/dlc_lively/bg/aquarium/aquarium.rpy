@@ -37,7 +37,7 @@ init 5 python:
 
 init 6:
     layeredimage bg aquarium:
-        attribute_function MultiPickers([CollarPicker, PregnancyPicker, PiercingsPicker, HaircutPicker, OutfitPicker, AquariumPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([CollarPicker,  HaircutPicker, OutfitPicker, AquariumPicker], append_npc_from_attributes=True)
 
 
         attribute empty null            
@@ -58,7 +58,6 @@ init 6:
             attribute normal
         attribute morgan_pregnant variant normal when morgan and normal
         attribute morgan_collar variant normal when morgan and normal
-        group multiple auto variant morgan_piercings_normal when morgan and normal
         group morgan_bot auto variant preg when morgan and normal and morgan_pregnant
         group morgan_bot auto variant nopreg when morgan and normal and not morgan_pregnant
         group morgan_top auto variant preg when morgan and normal and morgan_pregnant
@@ -80,7 +79,5 @@ init 6:
             attribute tank
         attribute morgan_pregnant variant tank when morgan and tank
         attribute morgan_collar variant tank when morgan and tank
-        group multiple auto variant morgan_piercings_tank when morgan and tank
         always "bg_aquarium_tank_morgan_top" when morgan and tank
         group morgan_hair auto variant tank when morgan and tank
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

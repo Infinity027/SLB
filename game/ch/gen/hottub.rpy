@@ -42,7 +42,7 @@ init python:
 
 init 1:
     layeredimage hottub sex male:
-        attribute_function Pickers([PregnancyPicker, CollarPicker, HaircutPicker, PubesPicker, PiercingsPicker, OutfitPicker, DickPicker, HottubSexPicker], clear_npc=True)
+        attribute_function Pickers([CollarPicker, HaircutPicker, PubesPicker,  OutfitPicker, DickPicker, HottubSexPicker], clear_npc=True)
 
 
         group tattoo:
@@ -78,39 +78,6 @@ init 1:
         attribute ahegao null
         group ahegao auto if_any ["ahegao"]
         group normal auto if_not ["ahegao"]
-
-
-
-        attribute lips null
-        group piercings_lips auto if_any ["lips"]
-
-        attribute tongue null
-        group piercings_tongue auto if_any ["tongue"]
-
-        attribute nipples null
-        group piercings_nipples auto if_any ["nipples"] if_not ["boobjob", "aletta"]
-        group piercings_nipples_bb auto if_all ["nipples", "boobjob"]
-
-        attribute nose null
-        group piercings_nose auto if_any ["nose"]
-
-        attribute ears null
-        group piercings_ears auto if_any ["nose"]
-
-        attribute clit null
-        group piercings_clit auto if_any ["clit"] if_not ["inside"]
-        group piercings_clit auto variant "inside" if_all ["clit", "inside"]
-
-        attribute navel null
-        attribute pregnant_navel null
-        group piercings_navel auto if_any ["navel"] if_not ["pregnant"]
-        group piercings_navel_pregnant auto if_all ["navel", "pregnant"]
-
-
-        always:
-            if_all ["aletta","nipples", "naked"]
-            "hottub_sex_male_piercings_nipples_aletta"
-
 
         group fuck:
             attribute inside null
@@ -206,7 +173,7 @@ init 1:
         group light auto
 
     layeredimage hottub:
-        attribute_function MultiPickers([PregnancyPicker, CollarPicker, HaircutPicker, PiercingsPicker, OutfitPicker, PubesPicker, HottubPicker, MCCGPicker, DayNightPicker, SeasonPicker, SpecialDayPicker], add_simple_pregnant_attribute=True, append_npc_from_attributes=True)
+        attribute_function MultiPickers([CollarPicker, HaircutPicker,  OutfitPicker, PubesPicker, HottubPicker, MCCGPicker, DayNightPicker, SeasonPicker, SpecialDayPicker], add_simple_pregnant_attribute=True, append_npc_from_attributes=True)
 
         attribute mikemc null
         attribute breemc null
@@ -259,8 +226,6 @@ init 1:
         group smoke auto if_not "mcalone"
 
         group collars auto if_any "collar" if_not "mcalone"
-
-        group multiple auto variant piercings
 
         group outfits auto if_not "naked"
         group outfits_boobjob auto if_any "sasha_boobjob" if_not "naked"

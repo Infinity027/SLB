@@ -1,6 +1,6 @@
 init 1:
     layeredimage friendly harem bj:
-        attribute_function MultiPickers([DickPicker, PiercingsPicker, PubesPicker, CollarPicker], npcs=[samantha], append_npc_from_attributes=True)
+        attribute_function MultiPickers([DickPicker,  PubesPicker, CollarPicker], npcs=[samantha], append_npc_from_attributes=True)
 
         attribute samantha default
         attribute emma null
@@ -27,10 +27,6 @@ init 1:
             attribute down default
         group emmatongue auto variant "rimming" if_all ["emma", "rimming"]
 
-        group piercings auto
-        group piercings auto variant "licking" if_all ["emma", "licking"]
-        group piercings auto variant "rimming" if_all ["emma", "rimming"]
-
         group balls auto
         group balls auto variant "emma" if_all ["emma"] if_not ["emmahj"]
         group balls auto variant "emmahj" if_all ["emma", "emmahj"]
@@ -51,7 +47,7 @@ init 1:
         group saliva
 
     layeredimage friendly harem cowgirl:
-        attribute_function MultiPickers([DickPicker, PiercingsPicker, PregnancyPicker, PubesPicker, CollarPicker], npcs=[emma, samantha])
+        attribute_function MultiPickers([DickPicker,  PubesPicker, CollarPicker], npcs=[emma, samantha])
 
         attribute emma null
         attribute samantha null
@@ -70,7 +66,6 @@ init 1:
         group samantha_exp auto:
             attribute normal default
 
-        group multiple auto variant piercings
         group multiple:
             attribute emma_clit null
             attribute emma_lips null
@@ -116,7 +111,7 @@ init 1:
 
 
     layeredimage friendly harem doggy:
-        attribute_function MultiPickers([DickPicker, PiercingsPicker, PregnancyPicker, PubesPicker, CollarPicker], npcs=[emma, samantha])
+        attribute_function MultiPickers([DickPicker,  PubesPicker, CollarPicker], npcs=[emma, samantha])
 
         always "friendly_harem_doggy_bg"
         always "friendly_harem_doggy_bodies"
@@ -128,7 +123,6 @@ init 1:
         group samantha_exp auto:
             attribute normal default
 
-        group multiple auto variant piercings
         group multiple auto variant collars
 
         group dick auto if_any "mike"

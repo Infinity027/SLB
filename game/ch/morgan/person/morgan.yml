@@ -29,27 +29,6 @@ attributes:
     min: 0
     max: null
     default: 0
-piercings:
-  ears:
-    outfits:
-      - date
-  navel:
-    outfits:
-      - naked
-      - sexyswimsuit
-      - sweatpants
-      - bluebikinibottom
-      - redbluebikinibottom
-  clit:
-    outfits:
-      - naked
-  nipples:
-    outfits:
-      - naked
-  tongue:
-    expressions:
-      - happy
-  nose: { }
 birthday:
   - winter
   - 15

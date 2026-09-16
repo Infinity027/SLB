@@ -1,6 +1,6 @@
 init 1:
     layeredimage mike:
-        attribute_function Pickers([PositionPicker, OutfitPicker, PubesPicker, PiercingsPicker, DickPicker, CollarPicker], npc=mike)
+        attribute_function Pickers([PositionPicker, OutfitPicker, PubesPicker,  DickPicker, CollarPicker], npc=mike)
 
         attribute naked null
 
@@ -15,9 +15,6 @@ init 1:
             attribute a null default
             attribute b null
             attribute p null
-
-
-        group multiple auto variant piercings
 
         attribute pubes
 
@@ -72,7 +69,7 @@ init 1:
 
     layeredimage mike close:
         yalign 0.12
-        attribute_function Pickers([PositionPicker, OutfitPicker, PubesPicker, PiercingsPicker, DickPicker, CollarPicker], npc=mike)
+        attribute_function Pickers([PositionPicker, OutfitPicker, PubesPicker,  DickPicker, CollarPicker], npc=mike)
 
         attribute naked null
 
@@ -87,9 +84,6 @@ init 1:
             attribute a null default
             attribute b null
             attribute p null
-
-
-        group multiple auto variant piercings
 
         attribute pubes
 

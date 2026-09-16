@@ -23,57 +23,34 @@ init python:
 
 init 1:
     layeredimage slap:
-        attribute_function MultiPickers([HaircutPicker, CollarPicker, PregnancyPicker, PiercingsPicker, OutfitPicker, SeasonPicker, IndoorOutdoorPicker, SlapPositionPicker, MCCGPicker], add_simple_pregnant_attribute=True, append_npc_from_attributes=True)
+        attribute_function MultiPickers([HaircutPicker, CollarPicker,  OutfitPicker, SeasonPicker, IndoorOutdoorPicker, SlapPositionPicker, MCCGPicker], add_simple_pregnant_attribute=True, append_npc_from_attributes=True)
 
         group arms_position:
             attribute waiting null default
             attribute slapping null
-
 
         group mc_body auto variant "pose03" if_any ["pose03"]
 
         group mc_haircuts_breemc auto variant "pose03" if_all ["pose03", "breemc"]
         group mc_exp auto variant "pose03" if_all ["pose03"]
 
-
         group mc_outfits_mikemc auto variant "pose03" if_all ["mikemc", "pose03"]:
             attribute naked null
-
 
         group mc_outfits_breemc auto variant "pose03" if_all ["breemc", "pose03"]:
             attribute naked null
 
-
-
-
         group npc auto if_not ["bree_bowsette"]
-
 
         attribute pregnant null
 
-
         group pregnancy auto if_not ["aletta", "harmony", "minami_halloween", "minami_rpg", "samantha_sexyswimsuit"]
-
 
         group boobjob auto
 
-
         group collars auto if_not ["aletta_date", "aletta_sexyswimsuit", "aletta_wedding", "aletta_work", "morgan_whitetank", "morgan_redhalf", "morgan_tightsport", "hanna_date", "hanna_sexydate", "hanna_wedding", "hanna_sexyswimsuit", "lavish", "minami_bikini", "minami_rpg", "palla_casual", "palla_date" , "palla_sexydate", "palla_sexyswimsuit", "palla_swimsuit", "palla_wedding"]
 
-
         group necklace auto
-
-
-        group multiple auto variant piercings when not palla_ears
-        group multiple auto variant piercings_hidden when naked
-        group multiple auto variant piercings_hidden when cassidy_work and cassidy_topless
-        group multiple auto variant piercings_hidden when palla_sluttyswimsuit
-        group multiple auto variant piercings_date when camila_date or camila_sexydate
-        group multiple auto variant piercings_casual when camila and not (camila_date or camila_sexydate)
-        group multiple auto variant piercings_happy when happy
-        group multiple auto variant piercings_angry when angry
-
-
 
         group outfit auto variant "bot" if_not ["naked"]
         group multiple auto variant outfit_pregnant_bot when pregnant and not naked
@@ -105,12 +82,7 @@ init 1:
 
         group collars auto if_any ["aletta_date", "aletta_sexyswimsuit", "aletta_wedding", "aletta_work", "morgan_whitetank", "morgan_redhalf", "morgan_tightsport", "hanna_date", "hanna_sexydate", "hanna_wedding", "hanna_sexyswimsuit", "lavish", "minami_bikini", "minami_rpg", "palla_casual", "palla_date" , "palla_sexydate", "palla_sexyswimsuit", "palla_swimsuit", "palla_wedding"]
 
-
-        group multiple auto variant piercings when palla_ears
-
-
         group hairs auto when not (harmony_nun or camila_halloween or (kiara_casual and not naked))
-
 
         group exp auto variant "angry" if_any ["angry"]
         group exp auto variant "happy" if_any ["happy"]

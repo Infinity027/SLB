@@ -39,7 +39,7 @@ init 5 python:
 
 init 6:
     layeredimage bg breakroom:
-        attribute_function MultiPickers([DayNightPicker, PiercingsPicker, CollarPicker, PregnancyPicker, OutfitPicker, BreakroomPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([DayNightPicker,  CollarPicker, OutfitPicker, BreakroomPicker], append_npc_from_attributes=True)
 
 
         attribute empty null            
@@ -108,19 +108,15 @@ init 6:
         group top_audrey auto variant preg when audrey and audrey_pregnant and not (audrey_topless or audrey_naked)
         always "bg_breakroom_audrey_hair" when audrey
 
-
         attribute cassidy
         attribute cassidy_collar when cassidy
-        group multiple auto variant piercings_cassidy when cassidy
         group bot_cassidy auto when cassidy and not (cassidy_bottomless or cassidy_naked)
         group top_cassidy auto when cassidy and not (cassidy_topless or cassidy_naked)
         always "bg_breakroom_cassidy_hair" when cassidy
 
-
         attribute shiori
         attribute shiori_pregnant when shiori
         attribute shiori_collar when shiori
-        group multiple auto variant piercings_shiori when shiori
         group bot_shiori auto variant nopreg when shiori and not (shiori_pregnant or shiori_bottomless or shiori_naked)
         group bot_shiori auto variant preg when shiori and shiori_pregnant and not (shiori_bottomless or shiori_naked)
         group top_shiori auto variant nopreg when shiori and not (shiori_pregnant or shiori_topless or shiori_naked)
@@ -131,22 +127,18 @@ init 6:
         attribute lavish
         attribute lavish_pregnant when lavish
         attribute lavish_collar when lavish
-        group multiple auto variant piercings_lavish when lavish
         group bot_lavish auto variant nopreg when lavish and not (lavish_pregnant or lavish_bottomless or lavish_naked)
         group bot_lavish auto variant preg when lavish and lavish_pregnant and not (lavish_bottomless or lavish_naked)
         group top_lavish auto variant nopreg when lavish and not (lavish_pregnant or lavish_topless or lavish_naked)
         group top_lavish auto variant preg when lavish and lavish_pregnant and not (lavish_topless or lavish_naked)
         always "bg_breakroom_lavish_hair" when lavish
 
-
         attribute aletta
         attribute aletta_pregnant when aletta
         attribute aletta_collar when aletta
-        group multiple auto variant piercings_aletta when aletta
         group bot_aletta auto variant nopreg when aletta and not (aletta_pregnant or aletta_bottomless or aletta_naked)
         group bot_aletta auto variant preg when aletta and aletta_pregnant and not (aletta_bottomless or aletta_naked)
         group top_aletta auto variant nopreg when aletta and not (aletta_pregnant or aletta_topless or aletta_naked)
         group top_aletta auto variant preg when aletta and aletta_pregnant and not (aletta_topless or aletta_naked)
         attribute aletta_glasses when aletta
         group aletta_hair auto when aletta
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

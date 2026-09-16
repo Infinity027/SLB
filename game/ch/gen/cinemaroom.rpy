@@ -22,7 +22,7 @@ init python:
 
 init 1:
     layeredimage watch movie:
-        attribute_function MultiPickers([CG_WatchMovie_Picker, PregnancyPicker, CollarPicker, HaircutPicker, OutfitPicker, PiercingsPicker, MCCGPicker], append_npc_from_attributes=True, add_simple_pregnant_attribute=True)
+        attribute_function MultiPickers([CG_WatchMovie_Picker, CollarPicker, HaircutPicker, OutfitPicker,  MCCGPicker], append_npc_from_attributes=True, add_simple_pregnant_attribute=True)
 
 
         group bg auto
@@ -126,11 +126,6 @@ init 1:
         attribute morgan_makeup null
         group makeup auto if_any ["morgan_makeup"]
 
-
-        group multiple auto variant piercings
-
-        group piercings_hidden auto when not (morgan_blackjacket or morgan_bluesweater or reona_purecasual)
-
         group npc_arm_positions auto:
             attribute still null default
             attribute leg null
@@ -143,11 +138,6 @@ init 1:
         group npc_arm auto variant "grab_inside" if_all ["breemc", "grab", "inside"] if_not ["blowjob", "handjob"]
         group npc_arm auto variant "finger_outside" if_all ["breemc", "finger", "outside"] if_not ["blowjob", "handjob"]
         group npc_arm auto variant "finger_inside" if_all ["breemc", "finger", "inside"] if_not ["blowjob", "handjob"]
-
-
-        group handjob auto if_all ["handjob", "breemc"]
-        group blowjob auto if_all ["blowjob", "breemc"]
-
 
         group clothsdepth:
             attribute outside null default

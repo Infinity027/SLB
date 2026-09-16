@@ -28,7 +28,7 @@ init python:
 
 init 1:
     layeredimage beach sandcastle:
-        attribute_function MultiPickers([PregnancyPicker, PubesPicker, CollarPicker, HaircutPicker, OutfitPicker, PiercingsPicker, MCCGPicker, CG_BeachSandCastle_Picker], add_simple_pregnant_attribute=True, add_simple_outfit_attribute=True, append_npc_from_attributes=True, use_morgan_cg_outfits=True)
+        attribute_function MultiPickers([PubesPicker, CollarPicker, HaircutPicker, OutfitPicker,  MCCGPicker, CG_BeachSandCastle_Picker], add_simple_pregnant_attribute=True, add_simple_outfit_attribute=True, append_npc_from_attributes=True, use_morgan_cg_outfits=True)
 
 
         group bg auto
@@ -50,31 +50,19 @@ init 1:
 
         group mchaircuts auto variant "breemc_left_01" if_all ["breemc", "01", "left"]:
             attribute mc_nohaircut null
-        group mcpregnant auto variant "breemc_left_01" if_all ["breemc", "mc_pregnant", "mc_naked", "01", "left"]
-        group mcpiercings auto variant "breemc_left_01" if_all ["breemc", "01", "left"]
+
         group mcoutfits auto variant "breemc_left_01" if_all ["breemc", "01", "left"] if_not ["mc_pregnant", "mc_naked"]
         group mcoutfits auto variant "breemc_left_01_pregnant" if_all ["breemc", "mc_pregnant", "01", "left"] if_not ["mc_naked"]
         group mccollars auto variant "breemc_left_01" if_all ["breemc", "mc_collar", "01", "left"]
-        group mcpiercings auto variant "breemc_left_01_swimsuit" if_all ["breemc", "mc_swimsuit", "01", "left"]
-        group mcpiercings auto variant "breemc_left_01_sexyswimsuit" if_all ["breemc", "mc_sexyswimsuit", "01", "left"]
-
+  
         group mchaircuts auto variant "breemc_right_01" if_all ["breemc", "01", "right"]:
             attribute mc_nohaircut null
-        group mcpregnant auto variant "breemc_right_01" if_all ["breemc", "mc_pregnant", "mc_naked", "01", "right"]
-        group mcpiercings auto variant "breemc_right_01" if_all ["breemc", "01", "right"]
         group mcoutfits auto variant "breemc_right_01" if_all ["breemc", "01", "right"] if_not ["mc_pregnant", "mc_naked"]
         group mcoutfits auto variant "breemc_right_01_pregnant" if_all ["breemc", "mc_pregnant", "01", "right"] if_not ["mc_naked"]
         group mccollars auto variant "breemc_right_01" if_all ["breemc", "mc_collar", "01", "right"]
-        group mcpiercings auto variant "breemc_right_01_swimsuit" if_all ["breemc", "mc_swimsuit", "01", "right"]
-        group mcpiercings auto variant "breemc_right_01_sexyswimsuit" if_all ["breemc", "mc_sexyswimsuit", "01", "right"]
-
 
         group haircuts auto if_not ["alonemc"]:
             attribute emma_nohaircut null
-
-
-        group multiple auto variant piercings_behind when not alonemc
-
 
         attribute pregnant null
         group pregnancies auto if_all ["pregnant", "naked"] if_not ["alonemc"]
@@ -82,18 +70,6 @@ init 1:
 
         group boobjobs auto if_not ["alonemc"]:
             attribute sasha_noboobjob null
-
-
-        attribute mc_clit null
-        attribute mc_ears null
-
-        group multiple auto variant piercings when not alonemc
-        group multiple:
-            attribute emma_clit null
-        group piercings auto variant "noboobjob" if_all ["sasha_noboobjob"] if_any ["naked" , "sasha_naked" ] if_not ["alonemc"]
-        group piercings auto variant "boobjob" if_all ["sasha_boobjob"] if_any ["naked" , "sasha_naked" ] if_not ["alonemc"]
-
-        group multiple auto variant piercings_naked when naked and not alonemc
 
         group outfits auto if_not ["alonemc", "naked"]
 
@@ -109,13 +85,6 @@ init 1:
 
         attribute swimsuit null
         attribute sexyswimsuit null
-        group piercings auto variant "swimsuit" if_any "swimsuit" if_not ["alonemc"]
-        group piercings auto variant "sexyswimsuit" if_any "sexyswimsuit" if_not ["alonemc"]
-
-        group piercings auto variant "bluebikini" if_any "bluebikini_morgan" if_not ["alonemc"]
-        group piercings auto variant "redbluebikini" if_any "redbluebikini_morgan" if_not ["alonemc"]
-        group piercings auto variant "sexyswimsuit" if_any "sexyswimsuit_morgan" if_not ["alonemc"]
-
 
         group dicks auto
 

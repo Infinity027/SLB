@@ -1,6 +1,6 @@
 init 1:
     layeredimage pool:
-        attribute_function MultiPickers([CollarPicker, PiercingsPicker, OutfitPicker, PregnancyPicker, HaircutPicker, MCCGPicker], use_morgan_cg_outfits=True, append_npc_from_attributes=True)
+        attribute_function MultiPickers([CollarPicker,  OutfitPicker, HaircutPicker, MCCGPicker], use_morgan_cg_outfits=True, append_npc_from_attributes=True)
 
         attribute shiori null
         attribute makeup null
@@ -19,14 +19,9 @@ init 1:
 
         group haircuts auto
 
-        group multiple auto variant piercings
-
-        group pregnancies auto
-
         attribute morgan_makeup
 
         group outfit auto
-        group outfit auto variant "pregnant" if_any "morgan_pregnant"
 
         group collars auto if_not ["bluesweater_morgan"]
         group queue auto

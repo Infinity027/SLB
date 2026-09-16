@@ -1,6 +1,6 @@
 init 1:
     layeredimage date pub dart:
-        attribute_function MultiPickers([CollarPicker, PiercingsPicker, OutfitPicker, PregnancyPicker, HaircutPicker, MCCGPicker], use_morgan_cg_outfits=True, append_npc_from_attributes=True)
+        attribute_function MultiPickers([CollarPicker,  OutfitPicker, HaircutPicker, MCCGPicker], use_morgan_cg_outfits=True, append_npc_from_attributes=True)
 
         attribute makeup null
 
@@ -10,10 +10,7 @@ init 1:
         group npc auto:
             attribute none default null
 
-        group pregnancies auto
-
         group outfit auto
-        group outfit auto variant "pregnant" if_any ["morgan_pregnant", "reona_pregnant", "kiara_pregnant", "claire_pregnant", "cherie_pregnant"]
 
         group haircuts auto
 
@@ -24,8 +21,6 @@ init 1:
         attribute morgan_makeup
         group gun auto
 
-        group multiple auto variant piercings
-
         group glasses auto
 
         group darts auto
@@ -34,4 +29,3 @@ init 1:
             attribute nodart null
 
         group mc auto
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

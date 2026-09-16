@@ -33,8 +33,7 @@ init 5 python:
 
 init 6:
     layeredimage bg gymmachine:
-        attribute_function MultiPickers([PiercingsPicker, CollarPicker, PregnancyPicker, OutfitPicker, HaircutPicker, GymMachinePicker], append_npc_from_attributes=True)
-
+        attribute_function MultiPickers([ CollarPicker, OutfitPicker, HaircutPicker, GymMachinePicker], append_npc_from_attributes=True)
 
         attribute empty null            
         attribute force_display null        
@@ -48,26 +47,22 @@ init 6:
         attribute camila_nose null
         attribute camila_tongue null
 
-
         always "gymmachine"
 
 
         attribute camila
         attribute camila_pregnant when camila
         attribute camila_collar when camila
-        group multiple auto variant camila_piercings_back when camila
+
         group camila_bot auto variant nopreg when camila and not camila_pregnant
         group camila_bot auto variant preg when camila and camila_pregnant
         group camila_top auto variant nopreg when camila and not camila_pregnant
         group camila_top auto variant preg when camila and camila_pregnant
         group camila_hair auto when camila
-        group multiple auto variant camila_piercings_front when camila
-
 
         attribute aletta
         attribute aletta_pregnant when aletta
         attribute aletta_collar when aletta
-        group multiple auto variant aletta_piercings when aletta
         group aletta_bot auto variant nopreg when aletta and not aletta_pregnant
         group aletta_bot auto variant preg when aletta and aletta_pregnant
         group aletta_top auto variant nopreg when aletta and not aletta_pregnant

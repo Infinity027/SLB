@@ -39,7 +39,7 @@ init 5 python:
 
 init 6:
     layeredimage bg pond:
-        attribute_function MultiPickers([DayNightPicker, SeasonPicker, PiercingsPicker, CollarPicker, PregnancyPicker, HaircutPicker, OutfitPicker, PondPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([DayNightPicker, SeasonPicker,  CollarPicker, HaircutPicker, OutfitPicker, PondPicker], append_npc_from_attributes=True)
 
 
         attribute empty null            
@@ -74,8 +74,6 @@ init 6:
 
         attribute reona
         attribute reona_collar when reona
-        attribute reona_pregnant when reona
-        group multiple auto variant reona_piercings when reona
         group reona_bot auto variant nopreg when reona and not reona_pregnant
         group reona_bot auto variant preg when reona and reona_pregnant
         group reona_top auto variant nopreg when reona and not reona_pregnant
@@ -84,10 +82,10 @@ init 6:
 
 
         attribute morgan
-        attribute morgan_pregnant when morgan
+        
         attribute morgan_makeup when morgan
         attribute morgan_collar when morgan
-        group multiple auto variant morgan_piercings when morgan
+
         group morgan_bot auto variant nopreg when morgan and not morgan_pregnant
         group morgan_bot auto variant preg when morgan and morgan_pregnant
         group morgan_top auto variant nopreg when morgan and not morgan_pregnant
@@ -96,8 +94,7 @@ init 6:
 
         attribute anna
         attribute anna_collar when anna
-        attribute anna_pregnant when anna
-        group multiple auto variant anna_piercings when anna
+        
         group anna_bot auto variant nopreg when anna and not anna_pregnant
         group anna_bot auto variant preg when anna and anna_pregnant
         group anna_top auto variant nopreg when anna and not anna_pregnant
@@ -107,8 +104,6 @@ init 6:
 
         attribute hanna
         attribute hanna_collar when hanna
-        attribute hanna_pregnant when hanna
-        group multiple auto variant hanna_piercings when hanna
         group hanna_bot auto variant nopreg when hanna and not hanna_pregnant
         group hanna_bot auto variant preg when hanna and hanna_pregnant
         group hanna_top auto variant nopreg when hanna and not hanna_pregnant
@@ -117,11 +112,10 @@ init 6:
 
 
         attribute samantha
-        attribute samantha_pregnant when samantha
+        
         attribute samantha_collar when samantha
         group samantha_bot auto variant nopreg when samantha and not samantha_pregnant
         group samantha_bot auto variant preg when samantha and samantha_pregnant
         group samantha_top auto variant nopreg when samantha and not samantha_pregnant
         group samantha_top auto variant preg when samantha and samantha_pregnant
         attribute samantha_nohaircut when samantha
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

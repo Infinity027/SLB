@@ -37,7 +37,7 @@ init 5 python:
 
 init 6:
     layeredimage bg personal:
-        attribute_function MultiPickers([DayNightPicker, PiercingsPicker, CollarPicker, PregnancyPicker, OutfitPicker, PersonalPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([DayNightPicker,  CollarPicker, OutfitPicker, PersonalPicker], append_npc_from_attributes=True)
 
 
         attribute empty null            
@@ -77,9 +77,8 @@ init 6:
 
 
         attribute audrey
-        attribute audrey_pregnant when audrey
+        
         attribute audrey_collar when audrey
-        group multiple auto variant audrey_piercings when audrey
         group audrey_bot auto variant preg when audrey and audrey_pregnant and not (audrey_bottomless or audrey_naked)
         group audrey_bot auto variant nopreg when audrey and not audrey_pregnant and not (audrey_bottomless or audrey_naked)
         group audrey_top auto variant preg when audrey and audrey_pregnant and not (audrey_topless or audrey_naked)
@@ -88,10 +87,9 @@ init 6:
 
 
         attribute lavish
-        attribute lavish_pregnant when lavish
+        
         attribute lavish_collar when lavish
         always "bg_personal_lavish_nohaircut" when lavish
-        group multiple auto variant lavish_piercings when lavish
         group lavish_bot auto variant preg when lavish and lavish_pregnant and not (lavish_bottomless or lavish_naked)
         group lavish_bot auto variant nopreg when lavish and not lavish_pregnant and not (lavish_bottomless or lavish_naked)
         group lavish_top auto variant preg when lavish and lavish_pregnant and not (lavish_topless or lavish_naked)
@@ -99,10 +97,9 @@ init 6:
 
 
         attribute shiori
-        attribute shiori_pregnant when shiori
+        
         attribute shiori_collar when shiori
         always "bg_personal_shiori_nohaircut" when shiori
-        group multiple auto variant shiori_piercings when shiori
         group shiori_bot auto variant preg when shiori and shiori_pregnant and not (shiori_bottomless or shiori_naked)
         group shiori_bot auto variant nopreg when shiori and not shiori_pregnant and not (shiori_bottomless or shiori_naked)
         group shiori_top auto variant preg when shiori and shiori_pregnant and not (shiori_topless or shiori_naked)
@@ -110,12 +107,10 @@ init 6:
 
 
         attribute cassidy
-        attribute cassidy_pregnant when cassidy
+        
         attribute cassidy_collar when cassidy
-        group multiple auto variant cassidy_piercings when cassidy
         group cassidy_bot auto variant preg when cassidy and cassidy_pregnant and not (cassidy_bottomless or cassidy_naked)
         group cassidy_bot auto variant nopreg when cassidy and not cassidy_pregnant and not (cassidy_bottomless or cassidy_naked)
         group cassidy_top auto variant preg when cassidy and cassidy_pregnant and not (cassidy_topless or cassidy_naked)
         group cassidy_top auto variant nopreg when cassidy and not cassidy_pregnant and not (cassidy_topless or cassidy_naked)
         always "bg_personal_cassidy_nohaircut" when cassidy
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

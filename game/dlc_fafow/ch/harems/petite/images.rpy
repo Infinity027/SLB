@@ -1,6 +1,6 @@
 init 1:
     layeredimage petite 4some cumshare:
-        attribute_function MultiPickers([PiercingsPicker, CollarPicker, DickPicker], npcs=[anna,emma,kat])
+        attribute_function MultiPickers([ CollarPicker, DickPicker], npcs=[anna,emma,kat])
 
 
         group bg auto:
@@ -69,7 +69,7 @@ init 1:
         group throb auto if_any ["throb"]
 
     layeredimage petite 4some foreplay:
-        attribute_function MultiPickers([PiercingsPicker, PregnancyPicker, CollarPicker, DickPicker], npcs=[anna], append_npc_from_attributes=True)
+        attribute_function MultiPickers([ CollarPicker, DickPicker], npcs=[anna], append_npc_from_attributes=True)
 
 
         group bg auto:
@@ -115,9 +115,6 @@ init 1:
         attribute kat_haircut if_any ["kat"]
 
     layeredimage petite 4some fuckall:
-        attribute_function MultiPickers([PiercingsPicker, PregnancyPicker], append_npc_from_attributes=True)
-
-
         group bg auto:
             attribute bedroom default
 
@@ -203,7 +200,7 @@ init 1:
             attribute anal null
 
     layeredimage petite 4some fuckanna:
-        attribute_function MultiPickers([PubesPicker, PregnancyPicker, PiercingsPicker, CollarPicker, DickPicker], npcs=[anna,emma,kat])
+        attribute_function MultiPickers([PubesPicker,  CollarPicker, DickPicker], npcs=[anna,emma,kat])
 
 
         attribute anna null
@@ -230,15 +227,10 @@ init 1:
 
         always "petite_4some_fuckanna_girls"
 
-
         attribute bodycum
 
-
         group multiple auto variant pubic
-        group multiple auto variant pregnancy
-        group multiple auto variant piercings
         group multiple auto variant collars
-
 
         group exp auto:
             attribute anna_lookfront default
@@ -272,7 +264,7 @@ init 1:
         group fg auto
 
     layeredimage petite 4some fuckemma:
-        attribute_function MultiPickers([PubesPicker, PregnancyPicker, PiercingsPicker, CollarPicker, DickPicker], npcs=[anna,emma,kat])
+        attribute_function MultiPickers([PubesPicker,  CollarPicker, DickPicker], npcs=[anna,emma,kat])
 
 
         attribute anna null
@@ -360,7 +352,7 @@ init 1:
         group condom auto variant "out" if_all ["mike", "out", "condom"]
 
     layeredimage petite 4some fuckkat:
-        attribute_function MultiPickers([PubesPicker, PregnancyPicker, PiercingsPicker, CollarPicker], npcs=[kat], append_npc_from_attributes=True)
+        attribute_function MultiPickers([PubesPicker,  CollarPicker], npcs=[kat], append_npc_from_attributes=True)
 
 
         attribute anna_clit null

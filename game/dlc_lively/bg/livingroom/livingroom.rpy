@@ -64,8 +64,7 @@ init 5 python:
 
 init 6:
     layeredimage bg livingroom:
-        attribute_function MultiPickers([DayNightPicker, PiercingsPicker, CollarPicker, PregnancyPicker, HaircutPicker, OutfitPicker, LivingroomPicker], append_npc_from_attributes=True)
-
+        attribute_function MultiPickers([DayNightPicker,  CollarPicker, HaircutPicker, OutfitPicker, LivingroomPicker], append_npc_from_attributes=True)
 
         attribute empty null            
         attribute force_display null        
@@ -96,7 +95,6 @@ init 6:
 
         group collars auto
 
-        group multiple auto variant piercings
         group multiple:
             attribute bree_clit null
             attribute bree_pregnant_navel null

@@ -33,7 +33,7 @@ init 5 python:
 
 init 6:
     layeredimage bg church:
-        attribute_function MultiPickers([PiercingsPicker, CollarPicker, PregnancyPicker, HaircutPicker, OutfitPicker, ChurchPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([ CollarPicker, HaircutPicker, OutfitPicker, ChurchPicker], append_npc_from_attributes=True)
 
 
         attribute empty null            
@@ -50,22 +50,16 @@ init 6:
         attribute harmony_pregnant_navel null
         attribute harmony_tongue null
 
-
         always "church"
-
 
         attribute harmony
         attribute harmony_collar when harmony
-        group multiple auto variant harmony_piercings when harmony
         group harmony_bot auto when harmony
         group harmony_top auto when harmony
         group harmony_hair auto when harmony and not harmony_nun
 
-
         attribute claire
         attribute claire_collar when claire
-        group multiple auto variant claire_piercings when claire
         group claire_bot auto when claire
         group claire_top auto when claire
         group claire_hair auto when claire
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

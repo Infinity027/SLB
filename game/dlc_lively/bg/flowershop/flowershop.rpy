@@ -33,7 +33,7 @@ init 5 python:
 
 init 6:
     layeredimage bg flowershop:
-        attribute_function MultiPickers([PiercingsPicker, CollarPicker, PregnancyPicker, HaircutPicker, OutfitPicker, FlowerShopPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([ CollarPicker, HaircutPicker, OutfitPicker, FlowerShopPicker], append_npc_from_attributes=True)
 
 
         attribute empty null            
@@ -42,29 +42,23 @@ init 6:
         attribute reona_nose null
         attribute reona_tongue null
 
-
         always "flowershop"
-
 
         attribute claire
         attribute claire_pregnant when claire
         attribute claire_collar when claire
-        group multiple auto variant claire_piercings when claire
         group claire_bot auto variant preg when claire and claire_pregnant
         group claire_bot auto variant nopreg when claire and not claire_pregnant
         group claire_top auto variant preg when claire and claire_pregnant
         group claire_top auto variant nopreg when claire and not claire_pregnant
         group claire_hair auto when claire
 
-
         attribute reona
         attribute reona_pregnant when reona
         attribute reona_collar when reona
-        group multiple auto variant reona_piercings when reona
         group reona_bot auto variant preg when reona and reona_pregnant
         group reona_bot auto variant nopreg when reona and not reona_pregnant
         group reona_top auto variant preg when reona and reona_pregnant
         group reona_top auto variant nopreg when reona and not reona_pregnant
         attribute reona_pureglasses when reona
         group reona_hair auto when reona
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

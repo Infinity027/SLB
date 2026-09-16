@@ -1,6 +1,6 @@
 init 1:
     layeredimage natalie:
-        attribute_function Pickers([PositionPicker, PregnancyPicker, PubesPicker, PiercingsPicker, CollarPicker, OutfitPicker], npc=natalie)
+        attribute_function Pickers([PositionPicker, PubesPicker,  CollarPicker, OutfitPicker], npc=natalie)
 
 
         attribute naked null
@@ -11,12 +11,6 @@ init 1:
 
 
         attribute pregnant null
-        group pregnant auto when pregnant
-
-
-        group multiple auto variant piercings_a when a
-        group multiple auto variant piercings_b when b
-
 
         attribute collar null
         group collar auto when collar
@@ -38,27 +32,20 @@ init 1:
 
 
         attribute bottomless null
-        group bot auto variant a when a and not (pregnant or bottomless or naked)
+        group bot auto variant a when a and not (bottomless or naked)
         group bot auto variant a_preg when a and pregnant and not (bottomless or naked)
-        group bot auto variant b when b and not (pregnant or bottomless or naked)
+        group bot auto variant b when b and not (bottomless or naked)
         group bot auto variant b_preg when b and pregnant and not (bottomless or naked)
 
 
         attribute topless null
-        group top auto variant a when a and not (pregnant or topless or naked)
-        group top auto variant a_preg when a and pregnant and not (topless or naked)
-        group top auto variant b when b and not (pregnant or topless or naked)
-        group top auto variant b_preg when b and pregnant and not (topless or naked)
-
-
-        group multiple auto variant piercings_a_poke when a and not (topless or naked)
-        group multiple auto variant piercings_b_poke when b and not (topless or naked)
-
+        group top auto variant a when a and not (topless or naked)
+        group top auto variant b when b and not (topless or naked)
 
         attribute nobraces null
-        group braces auto variant a when a and not (pregnant or nobraces or topless or naked)
+        group braces auto variant a when a and not (nobraces or topless or naked)
         group braces auto variant a_preg when a and pregnant and not (nobraces or topless or naked)
-        group braces auto variant b when b and not (pregnant or nobraces or topless or naked)
+        group braces auto variant b when b and not (nobraces or topless or naked)
         group braces auto variant b_preg when b and pregnant and not (nobraces or topless or naked)
 
 
@@ -71,7 +58,7 @@ init 1:
 
     layeredimage natalie close:
         yalign 0.12
-        attribute_function Pickers([PositionPicker, PregnancyPicker, PubesPicker, PiercingsPicker, CollarPicker, OutfitPicker], npc=natalie)
+        attribute_function Pickers([PositionPicker, PubesPicker,  CollarPicker, OutfitPicker], npc=natalie)
 
 
         group position auto
@@ -81,12 +68,6 @@ init 1:
 
 
         attribute pregnant null
-        group pregnant auto when pregnant
-
-
-        group multiple auto variant piercings_a when a
-        group multiple auto variant piercings_b when b
-
 
         attribute collar null
         group collar auto when collar
@@ -108,27 +89,22 @@ init 1:
 
 
         attribute bottomless null
-        group bot auto variant a when a and not (pregnant or bottomless or naked)
+        group bot auto variant a when a and not (bottomless or naked)
         group bot auto variant a_preg when a and pregnant and not (bottomless or naked)
-        group bot auto variant b when b and not (pregnant or bottomless or naked)
+        group bot auto variant b when b and not (bottomless or naked)
         group bot auto variant b_preg when b and pregnant and not (bottomless or naked)
 
 
         attribute topless null
-        group top auto variant a when a and not (pregnant or topless or naked)
+        group top auto variant a when a and not (topless or naked)
         group top auto variant a_preg when a and pregnant and not (topless or naked)
-        group top auto variant b when b and not (pregnant or topless or naked)
+        group top auto variant b when b and not (topless or naked)
         group top auto variant b_preg when b and pregnant and not (topless or naked)
 
-
-        group multiple auto variant piercings_a_poke when a and not (topless or naked)
-        group multiple auto variant piercings_b_poke when b and not (topless or naked)
-
-
         attribute nobraces null
-        group braces auto variant a when a and not (pregnant or nobraces or topless or naked)
+        group braces auto variant a when a and not (nobraces or topless or naked)
         group braces auto variant a_preg when a and pregnant and not (nobraces or topless or naked)
-        group braces auto variant b when b and not (pregnant or nobraces or topless or naked)
+        group braces auto variant b when b and not (nobraces or topless or naked)
         group braces auto variant b_preg when b and pregnant and not (nobraces or topless or naked)
 
 

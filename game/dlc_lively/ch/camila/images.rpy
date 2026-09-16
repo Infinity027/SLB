@@ -16,7 +16,7 @@ init -35 python:
             attrs = list(attrs)
         
         
-        add_pickers_attrs = Pickers([PiercingsPicker, PregnancyPicker, CollarPicker, PubesPicker, HaircutPicker, PositionPicker], npc=camila)(set(attrs))
+        add_pickers_attrs = Pickers([ CollarPicker, PubesPicker, HaircutPicker, PositionPicker], npc=camila)(set(attrs))
         if "pregnant_navel" in add_pickers_attrs:
             add_pickers_attrs.remove("pregnant_navel")
             add_pickers_attrs.add("navel")
@@ -46,21 +46,7 @@ init -35 python:
         if sgl_attrs['outfits'][0] == 'sluttydate':
             attr_acc_head = "acc_head_" + sgl_attrs['outfits'][0]
         
-        
-        if 'ears' in mult_attrs['piercings'][0]:
-            if sgl_attrs['outfits'][0] == 'halloween':
-                mult_attrs['piercings'][0].remove('ears')
-            elif sgl_attrs['outfits'][0] == 'date':
-                mult_attrs['piercings'][0].remove('ears')
-                mult_attrs['piercings'][0].append('date_ears')
-            elif sgl_attrs['outfits'][0] == 'sexydate':
-                mult_attrs['piercings'][0].remove('ears')
-                mult_attrs['piercings'][0].append('sexydate_ears')
-        if 'date_ears' in mult_attrs['piercings'][0] and sgl_attrs['outfits'][0] != 'date':
-            mult_attrs['piercings'][0].remove('date_ears')
-        if 'sexydate_ears' in mult_attrs['piercings'][0] and sgl_attrs['outfits'][0] != 'sexydate':
-            mult_attrs['piercings'][0].remove('sexydate_ears')
-        
+
         
         attr_necklace = None
         if not 'collar' in mult_attrs['others'][0] and sgl_attrs['outfits'][0] in ['casual', 'date', 'work']:

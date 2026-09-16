@@ -16,7 +16,7 @@ init python:
 
 init 1:
     layeredimage kleio morgan threesome:
-        attribute_function MultiPickers([CollarPicker, PiercingsPicker, PregnancyPicker], npcs=[kleio, morgan])
+        attribute_function MultiPickers([CollarPicker], npcs=[kleio, morgan])
         attribute cumshot null
 
         always:
@@ -37,8 +37,6 @@ init 1:
 
         group haircuts auto
 
-        group multiple auto variant piercings
-
         attribute morgan_collar
 
         group fuck auto:
@@ -50,7 +48,7 @@ init 1:
         group multiple auto variant fx
 
     layeredimage kleio morgan cumshot:
-        attribute_function MultiPickers([PiercingsPicker, CollarPicker, HaircutPicker, MCCGPicker], npcs=[kleio, morgan])
+        attribute_function MultiPickers([ CollarPicker, HaircutPicker, MCCGPicker], npcs=[kleio, morgan])
 
 
         attribute cum null
@@ -97,12 +95,6 @@ init 1:
         group facecum auto when facecum
         group cum auto when cum
 
-
-        group multiple auto variant piercings
-        group multiple auto variant piercings_look when look
-        group multiple auto variant piercings_kiss when kiss
-
-
         always "kleio_morgan_cumshot_hands"
         attribute wiggle
 
@@ -110,7 +102,7 @@ init 1:
 
 
     layeredimage pixie morgan cunnilingus:
-        attribute_function MultiPickers([CollarPicker, HaircutPicker, PiercingsPicker, PregnancyPicker, PubesPicker], npcs=[kleio, morgan])
+        attribute_function MultiPickers([CollarPicker, HaircutPicker, PubesPicker], npcs=[kleio, morgan])
 
         always:
             "pixie_morgan_cunnilingus_bg"
@@ -134,28 +126,23 @@ init 1:
         group multiple:
             attribute morgan_nohaircut null
 
-        group multiple auto variant piercings
         group multiple:
             attribute kleio_ears null
 
         attribute morgan_makeup
 
     layeredimage pixie threesome kleiofuck:
-        attribute_function MultiPickers([CollarPicker, PiercingsPicker, PregnancyPicker, DickPicker, HaircutPicker], npcs=[kleio, morgan])
+        attribute_function MultiPickers([CollarPicker,  DickPicker, HaircutPicker], npcs=[kleio, morgan])
 
         always:
             "pixie_threesome_kleiofuck_bg"
 
         attribute kleio
 
-        attribute kleio_pregnant
         attribute kleio_collar
-
-        group multiple auto variant piercings
 
         attribute morgan
 
-        attribute morgan_pregnant
         attribute morgan_collar
 
         always:
@@ -178,7 +165,7 @@ init 1:
             "pixie_threesome_kleiofuck_fg"
 
     layeredimage pixie kleio cunnilingus:
-        attribute_function MultiPickers([CollarPicker, HaircutPicker, PiercingsPicker, PregnancyPicker, PubesPicker], npcs=[kleio, morgan])
+        attribute_function MultiPickers([CollarPicker, HaircutPicker,  PubesPicker], npcs=[kleio, morgan])
 
         always:
             "pixie_kleio_cunnilingus_bg"
@@ -198,15 +185,13 @@ init 1:
 
         group multiple auto variant hairs
 
-        group multiple auto variant piercings
-
         attribute morgan_makeup
 
         always:
             "pixie_kleio_cunnilingus_fg"
 
     layeredimage pixie cumshare:
-        attribute_function MultiPickers([CollarPicker, HaircutPicker, PiercingsPicker, PregnancyPicker, PubesPicker, DickPicker], npcs=[kleio, morgan])
+        attribute_function MultiPickers([CollarPicker, HaircutPicker,  PubesPicker, DickPicker], npcs=[kleio, morgan])
 
         always:
             "pixie_cumshare_bg"
@@ -227,10 +212,6 @@ init 1:
         attribute morgan
 
         group multiple auto variant pubes
-
-        group multiple auto variant piercings
-
-        attribute morgan_pregnant
 
         group multiple auto variant collars
 
@@ -253,7 +234,7 @@ init 1:
         group cumshot auto if_any "cum"
 
     layeredimage pixie handjob:
-        attribute_function MultiPickers([CollarPicker, HaircutPicker, DickPicker, PiercingsPicker, PregnancyPicker, PubesPicker], npcs=[kleio, morgan])
+        attribute_function MultiPickers([CollarPicker, HaircutPicker, DickPicker,  PubesPicker], npcs=[kleio, morgan])
 
         always:
             "pixie_handjob_bg"
@@ -276,17 +257,13 @@ init 1:
 
         group multiple auto variant hairs
 
-        group multiple auto variant pregnancy
-
-        group multiple auto variant piercings
-
         attribute morgan_makeup
 
         always:
             "pixie_handjob_mike_hands"
 
     layeredimage pixie threesome morganfuck:
-        attribute_function MultiPickers([CollarPicker, PiercingsPicker, PregnancyPicker, DickPicker, PubesPicker, HaircutPicker], npcs=[kleio, morgan])
+        attribute_function MultiPickers([CollarPicker,  DickPicker, PubesPicker, HaircutPicker], npcs=[kleio, morgan])
 
         always:
             "pixie_threesome_morganfuck_bg"
@@ -305,11 +282,8 @@ init 1:
 
         group multiple auto variant collars
 
-        group multiple auto variant pregnancy
-
         attribute drool
 
-        group multiple auto variant piercings
         group multiple:
             attribute kleio_ears null
 
@@ -318,8 +292,6 @@ init 1:
         group multiple auto variant hairs
         group multiple:
             attribute morgan_nohaircut null
-
-        group piercings auto variant "out" if_not "vaginal"
 
         attribute vaginal null
         attribute anal null
@@ -332,13 +304,11 @@ init 1:
         attribute cum null
         group cumshot auto if_any "cum" if_not ["anal", "vaginal"]
 
-        group piercings auto variant "vaginal" if_any "vaginal"
-
         always:
             "pixie_threesome_morganfuck_fg"
 
     layeredimage pixie blowjob:
-        attribute_function MultiPickers([CollarPicker, HaircutPicker, DickPicker, PiercingsPicker, PregnancyPicker], npcs=[kleio, morgan])
+        attribute_function MultiPickers([CollarPicker, HaircutPicker, DickPicker], npcs=[kleio, morgan])
 
         always:
             "pixie_blowjob_bg"
@@ -369,8 +339,6 @@ init 1:
 
         group multiple auto variant hairs
 
-        group multiple auto variant piercings
-
         attribute morgan_makeup
 
         always:
@@ -383,7 +351,7 @@ init 1:
             "pixie_blowjob_drool"
 
     layeredimage pixie ending:
-        attribute_function MultiPickers([CollarPicker, HaircutPicker, PiercingsPicker, PregnancyPicker, OutfitPicker, PixieEndingPicker], npcs=[kleio, morgan], add_simple_outfit_attribute=True)
+        attribute_function MultiPickers([CollarPicker, HaircutPicker,  OutfitPicker, PixieEndingPicker], npcs=[kleio, morgan], add_simple_outfit_attribute=True)
         attribute swimsuit default null
         always:
             "pixie_ending_bg"
@@ -405,11 +373,7 @@ init 1:
 
         group multiple auto variant hairs
 
-        group multiple auto variant pregnancy
-
         group multiple auto variant collars
-
-        group multiple auto variant piercings
 
         group botkleio auto
 

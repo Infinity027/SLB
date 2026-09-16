@@ -21,7 +21,7 @@ init python:
 
 init 1:
     layeredimage buy popcorn:
-        attribute_function Pickers([CG_BuyPopcorn_Picker, PregnancyPicker, CollarPicker, HaircutPicker, OutfitPicker, PiercingsPicker, MCGenderPicker], clear_npc=True)
+        attribute_function Pickers([CG_BuyPopcorn_Picker, CollarPicker, HaircutPicker, OutfitPicker,  MCGenderPicker], clear_npc=True)
 
 
         group bg auto

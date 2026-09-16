@@ -24,69 +24,68 @@ init python:
         "naked",
     ])
 
+    #sasha_mast01 = [
+    #         sasha_mast_01,
+    #         sasha_mast_02,
+    #         sasha_mast_03,
+    #         sasha_mast_02,
+    #     ]
 
-$ sasha_mast01 = [
-        sasha_mast_01,
-        sasha_mast_02,
-        sasha_mast_03,
-        sasha_mast_02,
-    ]
+    sasha_mast02 = [
+            "ev2/sasha/mast_04.jpg",
+            "ev2/sasha/mast_05.jpg",
+        ]
 
-$ sasha_mast02 = [
-        sasha_mast_04,
-        sasha_mast_05,
-    ]
+    sasha_blow_couch = [
+            "ev2/sasha/blow_couch01.jpg",
+            "ev2/sasha/blow_couch02.jpg",
+        ]
 
-$ sasha_blow_couch = [
-        sasha_blow_couch01,
-        sasha_blow_couch02,
-    ]
+    sasha_blow = [
+            "ev2/sasha/blow_03.jpg",
+            "ev2/sasha/blow_04.jpg",
+        ]
 
-$ sasha_blow = [
-        sasha_blow_03,
-        sasha_blow_04,
-    ]
+    sasha_rimjob = [
+            "ev2/sasha/blow_03.jpg",
+            "ev2/sasha/blow_04.jpg",
+        ]
 
-$ sasha_rimjob = [
-        sasha_blow_03,
-        sasha_blow_04,
-    ]
+    sasha_blow_hand = [
+            "ev2/sasha/blow_08.jpg",
+            "ev2/sasha/blow_09.jpg",
+        ]
 
-$ sasha_blow_hand = [
-        sasha_blow_08,
-        sasha_blow_09,
-    ]
+    sasha_cowgirl_jump = [
+            "ev2/sasha/cowgirl_pussy07.jpg",
+            "ev2/sasha/cowgirl_pussy06.jpg",
+            "ev2/sasha/cowgirl_pussy05.jpg",
+            "ev2/sasha/cowgirl_pussy06.jpg",
+        ]
 
-$ sasha_cowgirl_jump = [
-        sasha_cowgirl_pussy07,
-        sasha_cowgirl_pussy06,
-        sasha_cowgirl_pussy05,
-        sasha_cowgirl_pussy06
-    ]
+    sasha_cowgirl_speed = [
+            "ev2/sasha/cowgirl_pussy08.jpg",
+            "ev2/sasha/cowgirl_pussy09.jpg",
+        ]
 
-$ sasha_cowgirl_speed = [
-        sasha_cowgirl_pussy08,
-        sasha_cowgirl_pussy09
-    ]
+    sasha_cowgirl_rough = [
+            "ev2/sasha/cowgirl_pussy02.jpg",
+            "ev2/sasha/cowgirl_pussy03.jpg",
+        ]
 
-$ sasha_cowgirl_rough = [
-        sasha_cowgirl_pussy02,
-        sasha_cowgirl_pussy03
-    ]
+    sasha_beach_cowgirl = [
+            "ev2/sasha/cowgirl_beach01.jpg",
+            "ev2/sasha/cowgirl_beach02.jpg",
+            "ev2/sasha/cowgirl_beach03.jpg",
+            "ev2/sasha/cowgirl_beach02.jpg",
+        ]
 
-$ sasha_beach_cowgirl = [
-        sasha_cowgirl_beach01,
-        sasha_cowgirl_beach02,
-        sasha_cowgirl_beach03,
-        sasha_cowgirl_beach02,
-    ]
+    sasha_beach_cowgirl_rough = [
+            "ev2/sasha/cowgirl_beach04.jpg",
+            "ev2/sasha/cowgirl_beach05.jpg",
+        ]  
 
-$ sasha_beach_cowgirl_rough = [
-        sasha_cowgirl_beach04,
-        sasha_cowgirl_beach05
-    ]  
-
-$ sasha_hottub = [
-        sasha_hottub03,
-        sasha_hottub04
-    ]  
+    sasha_hottub = [
+            "ev2/sasha/hottub03.jpg",
+            "ev2/sasha/hottub04.jpg",
+        ]  

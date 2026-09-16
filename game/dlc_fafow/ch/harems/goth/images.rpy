@@ -1,20 +1,11 @@
 init 1:
     layeredimage goth 3some blowjob:
-        attribute_function Pickers([PiercingsPicker, PregnancyPicker], npc=amy)
-
-
-
-
         always "goth_3some_blowjob_bg"
-
 
         attribute amyblow null
         attribute violaineblow null
 
-
         always "goth_3some_blowjob_mike_dualblow" if_all ["amyblow", "violaineblow"]
-
-
 
         group amybackarm auto
         always "goth_3some_blowjob_amybackarm_amylick" if_any ["violaineblow"] if_not ["amyblow"]
@@ -31,11 +22,6 @@ init 1:
             attribute amyopen default
         group amyeyes auto variant "amylick" if_any ["violaineblow"] if_not ["amyblow"]:
             attribute amyopen default
-
-        group multiple auto variant piercings_amyblow when amyblow
-        group multiple auto variant piercings_amylick when violaineblow and not amyblow
-
-
 
         group violainebackarm auto
         always "goth_3some_blowjob_violainebackarm_violainelick" if_any ["amyblow"] if_not ["violaineblow"]
@@ -82,7 +68,7 @@ init 1:
         always "goth_3some_blowjob_violainefrontarm_violainelick" if_any ["amyblow"] if_not ["violaineblow"]
 
     layeredimage goth 3some amyfuck:
-        attribute_function Pickers([CollarPicker, PiercingsPicker, PubesPicker, PregnancyPicker, DickPicker], npc=amy)
+        attribute_function Pickers([CollarPicker,  PubesPicker, DickPicker], npc=amy)
 
 
         always "goth_3some_amyfuck_bg"
@@ -110,15 +96,6 @@ init 1:
         attribute mike
         always "goth_3some_amyfuck_mikenormal" if_any ["mike"] if_not ["mikesuck"]
         attribute mikesuck if_any ["mike"]
-
-
-        attribute pregnant
-
-
-        group multiple auto variant piercings
-        group multiple auto variant piercings_suck when suck
-        group multiple auto variant piercings_nosuck when not mikesuck
-
 
         always "goth_3some_amyfuck_violaine_lefthand" if_any ["violaine"] if_not ["bj", "vaginal"]
 
@@ -212,12 +189,10 @@ init 1:
         always "goth_3some_violainefuck_mike_hand" if_any ["mike"]
 
     layeredimage goth 3some amydoubleblowjob:
-        attribute_function Pickers([CollarPicker, PiercingsPicker], npc=amy)
+        attribute_function Pickers([CollarPicker], npc=amy)
 
         always "goth_3some_amydoubleblowjob_bg_room"
         always "goth_3some_amydoubleblowjob_amybody"
-
-        group multiple auto variant piercings
 
         attribute collar
 
@@ -271,34 +246,24 @@ init 1:
         group amyhandpose auto if_not ["leftnormal", "leftpull", "rightnormal", "rightpull"]
 
     layeredimage goth 3some amydoggy:
-        attribute_function Pickers([PregnancyPicker, CollarPicker, PiercingsPicker, DickPicker, PubesPicker], npc=amy)
-
+        attribute_function Pickers([CollarPicker,  DickPicker, PubesPicker], npc=amy)
 
         always "goth_3some_amydoggy_bg"
         always "goth_3some_amydoggy_amy"
 
-
         attribute pubes
         attribute collar
-        group multiple auto variant piercings
-        attribute pregnant
-
 
         attribute vaginaldrip
         attribute bodycum
         attribute facecum
-
 
         group mouth auto if_not ["blowjob"]:
             attribute mouth_open default
         group eyes auto:
             attribute eyes_open default
 
-
         attribute vincent
-
-        attribute blowjob if_any ["vincent"]
-        always "goth_3some_amydoggy_vincent_dickout" if_any ["vincent"] if_not ["blowjob"]
 
         attribute vindickcum null
         always "goth_3some_amydoggy_vindickcum_blowjob" if_all ["vincent" ,"vindickcum", "blowjob"]
@@ -329,21 +294,15 @@ init 1:
         group mikecum auto variant "out" if_all ["mikecum", "out"] if_not ["condom"]
 
     layeredimage goth 3some amyrevcow:
-        attribute_function Pickers([PregnancyPicker, PiercingsPicker, DickPicker], npc=amy)
+        attribute_function Pickers([ DickPicker], npc=amy)
 
 
         always "goth_3some_amyrevcow_bg"
         always "goth_3some_amyrevcow_base"
 
-
         attribute wet
         attribute bodycum
         attribute facecum
-
-
-        attribute pregnant
-        group multiple auto variant piercings
-
 
         attribute vincent null
         group vincent auto if_any ["vincent"]:
@@ -384,27 +343,21 @@ init 1:
         attribute speed if_any ["handjob"] if_not ["blowjob"]
 
     layeredimage goth 4some fuckamy:
-        attribute_function Pickers([PregnancyPicker, CollarPicker, PiercingsPicker, DickPicker], npc=amy)
+        attribute_function Pickers([CollarPicker,  DickPicker], npc=amy)
 
 
         always "goth_4some_fuckamy_bg"
         always "goth_4some_fuckamy_bodies"
 
-
         attribute amy_bodycum
         attribute violaine_bodycum
 
-
-        group multiple auto variant piercings
-        attribute pregnant
         attribute collar
-
 
         group amyeyes auto:
             attribute amyeyes_normal default
         group violaineeyes auto:
             attribute violaineeyes_normal default
-
 
         group vindick auto:
             attribute vinout default
@@ -450,7 +403,7 @@ init 1:
             attribute onmike default
 
     layeredimage goth 4some fuckviolaine:
-        attribute_function Pickers([PubesPicker, PregnancyPicker, CollarPicker, PiercingsPicker, DickPicker], npc=amy)
+        attribute_function Pickers([PubesPicker, CollarPicker,  DickPicker], npc=amy)
 
 
         always "goth_4some_fuckviolaine_bg"
@@ -473,15 +426,7 @@ init 1:
             attribute bounce1 default
             attribute bounce2
 
-
-        group multiple auto variant piercings when amy
-        group multiple auto variant piercings_normal when amy and not amybounce
-        group multiple auto variant piercings_bounce1 when amy and amybounce and bounce1
-        group multiple auto variant piercings_bounce2 when amy and amybounce and bounce2
-
-
         attribute bouncespeed if_all ["amy", "amybounce"]
-
 
         group amymouths auto if_any ["amy"]:
             attribute amymouth_pleasure default

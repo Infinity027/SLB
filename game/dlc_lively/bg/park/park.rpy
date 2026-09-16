@@ -43,7 +43,7 @@ init 5 python:
 
 init 6:
     layeredimage bg park:
-        attribute_function MultiPickers([DayNightPicker, SeasonPicker, PiercingsPicker, CollarPicker, PregnancyPicker, OutfitPicker, ParkPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([DayNightPicker, SeasonPicker,  CollarPicker, OutfitPicker, ParkPicker], append_npc_from_attributes=True)
 
 
         attribute empty null            
@@ -86,9 +86,8 @@ init 6:
 
 
         attribute shiori
-        attribute shiori_pregnant when shiori
+       
         attribute shiori_collar when shiori
-        group multiple auto variant shiori_piercings when shiori
         group shiori_bot auto variant preg when shiori and shiori_pregnant
         group shiori_bot auto variant nopreg when shiori and not shiori_pregnant
         group shiori_top auto variant preg when shiori and shiori_pregnant
@@ -97,9 +96,8 @@ init 6:
 
 
         attribute lavish
-        attribute lavish_pregnant when lavish
+       
         attribute lavish_collar when lavish
-        group multiple auto variant lavish_piercings when lavish
         group lavish_bot auto variant preg when lavish and lavish_pregnant
         group lavish_bot auto variant nopreg when lavish and not lavish_pregnant
         group lavish_top auto variant preg when lavish and lavish_pregnant
@@ -108,9 +106,7 @@ init 6:
 
 
         attribute emma
-        attribute emma_pregnant when emma
         attribute emma_collar when emma
-        group multiple auto variant emma_piercings when emma
         group emma_bot auto variant preg when emma and emma_pregnant
         group emma_bot auto variant nopreg when emma and not emma_pregnant
         group emma_top auto variant preg when emma and emma_pregnant
@@ -119,21 +115,17 @@ init 6:
 
 
         attribute harmony
-        attribute harmony_pregnant when harmony
+       
         attribute harmony_collar when harmony
-        group multiple auto variant harmony_piercings_back when harmony
         group harmony_bot auto variant preg when harmony and harmony_pregnant
         group harmony_bot auto variant nopreg when harmony and not harmony_pregnant
         group harmony_top auto variant preg when harmony and harmony_pregnant
         group harmony_top auto variant nopreg when harmony and not harmony_pregnant
         always "bg_park_harmony_nohaircut" when harmony
-        group multiple auto variant harmony_piercings_front when harmony
-
 
         attribute kat
-        attribute kat_pregnant when kat
+       
         attribute kat_collar when kat
-        group multiple auto variant kat_piercings when kat
         group kat_bot auto variant preg when kat and kat_pregnant
         group kat_bot auto variant nopreg when kat and not kat_pregnant
         group kat_top auto variant preg when kat and kat_pregnant
@@ -142,9 +134,8 @@ init 6:
 
 
         attribute palla
-        attribute palla_pregnant when palla
+       
         attribute palla_collar when palla
-        group multiple auto variant palla_piercings when palla
         group palla_bot auto variant preg when palla and palla_pregnant
         group palla_bot auto variant nopreg when palla and not palla_pregnant
         group palla_top auto variant preg when palla and palla_pregnant
@@ -153,12 +144,9 @@ init 6:
 
 
         attribute audrey
-        attribute audrey_pregnant when audrey
         attribute audrey_collar when audrey
-        group multiple auto variant audrey_piercings when audrey
         group audrey_bot auto variant preg when audrey and audrey_pregnant
         group audrey_bot auto variant nopreg when audrey and not audrey_pregnant
         group audrey_top auto variant preg when audrey and audrey_pregnant
         group audrey_top auto variant nopreg when audrey and not audrey_pregnant
         always "bg_park_audrey_nohaircut" when audrey
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

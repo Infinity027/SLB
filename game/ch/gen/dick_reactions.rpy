@@ -18,7 +18,7 @@ init python:
 
 init 1:
     layeredimage dick reactions:
-        attribute_function Pickers([PiercingsPicker, HaircutPicker, CollarPicker, MCCGPicker, CG_DickReactions_Picker], clear_npc=True)
+        attribute_function Pickers([ HaircutPicker, CollarPicker, MCCGPicker, CG_DickReactions_Picker], clear_npc=True)
 
         attribute mikemc null
 

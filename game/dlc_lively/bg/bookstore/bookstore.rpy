@@ -37,7 +37,7 @@ init 5 python:
 
 init 6:
     layeredimage bg bookstore:
-        attribute_function MultiPickers([PiercingsPicker, CollarPicker, PregnancyPicker, HaircutPicker, OutfitPicker, BookstorePicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([ CollarPicker, HaircutPicker, OutfitPicker, BookstorePicker], append_npc_from_attributes=True)
 
 
         attribute empty null            
@@ -53,14 +53,11 @@ init 6:
         attribute minami_navel null
         attribute minami_pregnant_navel null
 
-
         always "bookstore"
-
 
         attribute harmony
         attribute harmony_pregnant when harmony
         attribute harmony_collar when harmony
-        group multiple auto variant harmony_piercings when harmony
         attribute harmony_nohaircut when harmony
         group harmony_bot auto variant nopreg when harmony and not harmony_pregnant
         group harmony_bot auto variant preg when harmony and harmony_pregnant
@@ -71,7 +68,6 @@ init 6:
         attribute minami
         attribute minami_pregnant when minami
         attribute minami_collar when minami
-        group multiple auto variant minami_piercings when minami
         group minami_hair auto when minami
         group minami_bot auto variant nopreg when minami and not minami_pregnant
         group minami_bot auto variant preg when minami and minami_pregnant
@@ -82,7 +78,6 @@ init 6:
         attribute amy
         attribute amy_pregnant when amy
         attribute amy_collar when amy
-        group multiple auto variant amy_piercings when amy
         attribute amy_nohaircut when amy
         group amy_bot auto variant nopreg when amy and not amy_pregnant
         group amy_bot auto variant preg when amy and amy_pregnant
@@ -93,10 +88,8 @@ init 6:
         attribute bree
         attribute bree_pregnant when bree
         attribute bree_collar when bree
-        group multiple auto variant bree_piercings when bree
         group bree_bot auto variant nopreg when bree and not bree_pregnant
         group bree_bot auto variant preg when bree and bree_pregnant
         group bree_top auto variant nopreg when bree and not bree_pregnant
         group bree_top auto variant preg when bree and bree_pregnant
         attribute bree_nohaircut when bree
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

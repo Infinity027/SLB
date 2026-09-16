@@ -1,6 +1,6 @@
 init 1:
     layeredimage sleep:
-        attribute_function Pickers([SeasonPicker, HaircutPicker, CollarPicker, PregnancyPicker, PiercingsPicker], clear_npc=True)
+        attribute_function Pickers([SeasonPicker, HaircutPicker, CollarPicker], clear_npc=True)
         group seasons:
             attribute summer null
             attribute spring null
@@ -24,18 +24,8 @@ init 1:
         group line auto
 
         attribute pregnant null
-        group preg auto if_any "pregnant"
 
         attribute boobjob null
-
-        group piercings:
-            attribute nipples null
-            attribute navel null
-            attribute nose null
-            attribute clit null
-            attribute lips null
-            attribute ears null
-            attribute tongue null
 
         group nipples auto if_any "nipples" if_not "boobjob"
         group nipples_bb auto if_all ["nipples", "boobjob"]
@@ -56,7 +46,7 @@ init 1:
         group warmcover auto if_any "winter"
 
     layeredimage multisleep sashasam:
-        attribute_function MultiPickers([SeasonPicker, CollarPicker, PregnancyPicker, PiercingsPicker, OutfitPicker, HaircutPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([SeasonPicker, CollarPicker,  OutfitPicker, HaircutPicker], append_npc_from_attributes=True)
         attribute sasha null
         attribute samantha null
 
@@ -73,10 +63,6 @@ init 1:
         always:
             if_any "sasha"
             "multisleep_sashasam_sasha"
-        attribute sasha_pregnant
-
-        group multiple auto variant sashapiercings
-        group multiple auto variant sashapiercings_sasha_noboobjob when not sasha_boobjob
 
         always:
             if_any "sasha"
@@ -92,7 +78,6 @@ init 1:
         attribute sasha_nohaircut
 
         attribute sasha_boobjob when summer
-        group multiple auto variant sashapiercings_sasha_boobjob when sasha_boobjob
 
         always:
             if_all ["sasha", "sasha_boobjob"]
@@ -101,11 +86,8 @@ init 1:
 
         always:
             "multisleep_sashasam_samantha"
-        attribute samantha_pregnant
 
         group multiple auto variant collars
-
-        group multiple auto variant piercings
 
         always:
             if_not "summer"
@@ -121,7 +103,7 @@ init 1:
             "multisleep_sashasam_warmcover"
 
     layeredimage multisleep breesam:
-        attribute_function MultiPickers([SeasonPicker, CollarPicker, PregnancyPicker, PiercingsPicker, OutfitPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([SeasonPicker, CollarPicker,  OutfitPicker], append_npc_from_attributes=True)
         attribute bree null
         attribute samantha null
 
@@ -148,7 +130,6 @@ init 1:
         group multiple:
             attribute bree_collar null
 
-        group multiple auto variant piercings
         group multiple:
             attribute bree_clit null
             attribute bree_tongue null
@@ -167,7 +148,7 @@ init 1:
             "multisleep_breesam_warmcover"
 
     layeredimage multisleep minamisam:
-        attribute_function MultiPickers([SeasonPicker, CollarPicker, PregnancyPicker, PiercingsPicker, OutfitPicker, HaircutPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([SeasonPicker, CollarPicker,  OutfitPicker, HaircutPicker], append_npc_from_attributes=True)
         attribute minami null
         attribute samantha null
         group seasons:
@@ -188,11 +169,9 @@ init 1:
 
         always:
             "multisleep_minamisam_samantha"
-        attribute samantha_pregnant
 
         group multiple auto variant collars
 
-        group multiple auto variant piercings
         group multiple auto variant outfit when not summer
         group multiple auto variant pregnant_outfit_minami_pregnant when minami_pregnant and not summer
         group multiple auto variant pregnant_outfit_samantha_pregnant when samantha_pregnant and not summer
@@ -205,7 +184,7 @@ init 1:
             "multisleep_minamisam_warmcover"
 
     layeredimage multisleep homeharem:
-        attribute_function MultiPickers([SeasonPicker, CollarPicker, PregnancyPicker, PiercingsPicker, OutfitPicker, HaircutPicker], append_npc_from_attributes=True)
+        attribute_function MultiPickers([SeasonPicker, CollarPicker,  OutfitPicker, HaircutPicker], append_npc_from_attributes=True)
         attribute bree
         attribute lexi
         attribute minami
@@ -280,9 +259,7 @@ init 1:
         always:
             if_any ["samantha", "samantha_pregnant"]
             "multisleep_homeharem_samantha"
-        attribute samantha_pregnant
         attribute samantha_collar
-
 
 
         always:
@@ -292,27 +269,10 @@ init 1:
         attribute minami_haircut
         attribute minami_nohaircut
 
-
-        group multiple auto variant piercings
-        group multiple:
-            attribute lexi_navel null
-            attribute lexi_pregnant_navel null
-            attribute lexi_nipples null
-            attribute lexi_tongue null
-            attribute samantha_tongue null
-            attribute sasha_lips null
-            attribute sasha_navel null
-            attribute sasha_pregnant_navel null
-            attribute sasha_tongue null
-        group multiple auto variant piercings_boobjob when sasha_boobjob
-        group multiple auto variant piercings_noboobjob when not sasha_boobjob
-
-
         group multiple auto variant outfit when not (summer or naked)
         group multiple auto variant outfit_bree_pregnant when bree_pregnant and not (summer or naked)
         group multiple auto variant outfit_sasha_pregnant when sasha_pregnant and not (summer or naked)
         group multiple auto variant outfit_sasha_boobjob when sasha_boobjob and not (summer or naked)
-
 
         group collars multiple
 
@@ -322,4 +282,3 @@ init 1:
         always:
             if_any "winter"
             "multisleep_homeharem_warmcover"
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

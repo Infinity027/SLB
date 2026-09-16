@@ -32,27 +32,6 @@ attributes:
     min: 0
     max: null
     default: 0
-piercings:
-  ears:
-    outfits:
-    - date
-  navel:
-    outfits:
-    - naked
-    - swimsuit
-    - sexyswimsuit
-    - underwear
-    - sport
-  clit:
-    outfits:
-    - naked
-  nipples:
-    outfits:
-    - naked
-  tongue:
-    expressions:
-    - happy
-  nose: {}
 birthday:
   - fall
   - 22
