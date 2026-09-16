@@ -1,7 +1,7 @@
 init python hide:
     for file in renpy.list_files():
         if file.startswith('ev2/'):
-            if file.endswith('.jpg', '.png', '.webp'):
+            if file.endswith(('.jpg', '.png', '.webp')):
                 name = file.replace('ev2/','').replace('/', '_').replace('.jpg','')
                 renpy.image(name, Image(file))
                 continue

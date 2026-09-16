@@ -22,28 +22,28 @@ init python:
         "naked",
     ])
 
-$ claire_blowjob01 = [
-    claire_blow_03,
-    claire_blow_04,
-    claire_blow_05
-]
+    # claire_blowjob01 = [
+    #     "ev2/claire/blow_03.jpg",
+    #     "ev2/claire/blow_04.jpg",
+    #     "ev2/claire/blow_05.jpg"
+    # ]
 
-$ claire_blowjob02 = [
-    claire_blow_06,
-    claire_blow_07
-]
+    # claire_blowjob02 = [
+    #     "ev2/claire/blow_06.jpg",
+    #     "ev2/claire/blow_07.jpg"
+    # ]
 
-$ claire_hottub01 = [
-    claire_hottub03,
-    claire_hottub04
-]
+    claire_hottub01 = [
+        "ev2/claire/hottub03.jpg",
+        "ev2/claire/hottub04.jpg"
+    ]
 
-$ claire_hottub02 = [
-    claire_hottub05,
-    claire_hottub06
-]
+    claire_hottub02 = [
+        "ev2/claire/hottub05.jpg",
+        "ev2/claire/hottub06.jpg"
+    ]
 
-$ claire_hottub03 = [
-    claire_hottub10,
-    claire_hottub11
-]
+    claire_hottub03 = [
+        "ev2/claire/hottub10.jpg",
+        "ev2/claire/hottub11.jpg"
+    ]

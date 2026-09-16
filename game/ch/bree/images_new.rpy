@@ -24,19 +24,19 @@ init python:
     ])
 
 $ bree_blowjob01 = [
-    bree_blow_03,
-    bree_blow_04,
-    bree_blow_05
+    "ev2/bree/blow_03",
+    "ev2/bree/blow_04",
+    "ev2/bree/blow_05"
 ]
 
 $ bree_blowjob02 = [
-    bree_blow_06,
-    bree_blow_07
+    "ev2/bree/blow_06",
+    "ev2/bree/blow_07"
 ]
 
 $ bree_hottub = [
-    bree_hottub03,
-    bree_hottub04,
-    bree_hottub05,
-    bree_hottub04
+    "ev2/bree/hottub03",
+    "ev2/bree/hottub04",
+    "ev2/bree/hottub05",
+    "ev2/bree/hottub04"
 ]

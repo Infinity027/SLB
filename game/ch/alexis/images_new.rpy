@@ -23,29 +23,29 @@ init python:
         "naked",
     ])
 
-$ alexis_blowjob01 = [
-    alexis_blow_03,
-    alexis_blow_04,
-    alexis_blow_05
-]
+# $ alexis_blowjob01 = [
+#     alexis_blow_03,
+#     alexis_blow_04,
+#     alexis_blow_05
+# ]
 
-$ alexis_blowjob02 = [
-    alexis_blow_06,
-    alexis_blow_07
-]
+# $ alexis_blowjob02 = [
+#     alexis_blow_06,
+#     alexis_blow_07
+# ]
 
-$ alexis01_hottub = [
-    alexis_hottub03,
-    alexis_hottub04,
-    alexis_hottub05,
-    alexis_hottub06,
-    alexis_hottub05,
-    alexis_hottub04
-]
+    alexis01_hottub = [
+        "ev2/alexis/hottub03.jpg",
+        "ev2/alexis/hottub04.jpg",
+        "ev2/alexis/hottub05.jpg",
+        "ev2/alexis/hottub06.jpg",
+        "ev2/alexis/hottub05.jpg",
+        "ev2/alexis/hottub04.jpg"
+    ]
 
-$ alexis02_hottub = [
-    alexis_hottub09,
-    alexis_hottub10,
-    alexis_hottub11,
-    alexis_hottub10
-]
+    alexis02_hottub = [
+        "ev2/alexis/hottub09.jpg",
+        "ev2/alexis/hottub10.jpg",
+        "ev2/alexis/hottub11.jpg",
+        "ev2/alexis/hottub10.jpg"
+    ]

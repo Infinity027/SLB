@@ -1284,13 +1284,13 @@ label aletta_hottub_sex_male:
     "A need that she seems to want me to fulfil."
     "And so I don't hesitate to take hold of her a moment later."
     "Aletta makes a squealing noise as I grab her."
-    scene audrey_hottub01 with fade
+    scene aletta_hottub01 with fade
     "At the same time, I'm tugging down my trunks and kicking them away."
     "Being so close to Aletta means that I'm hard as a rock."
     "And I see her eyes go wide as she glimpses my stiff cock over her shoulder."
     aletta.say "Mmm..."
     aletta.say "Now that does look good!"
-    scene audrey_hottub02 with fade
+    scene aletta_hottub02 with fade
     "A moment later, I part her buttocks and push it between them."
     "Aletta closes her eyes as I rub the head up and down the lips of her pussy."
     aletta.say "Oh..."

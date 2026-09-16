@@ -23,6 +23,6 @@ init python:
     ])
 
 $ lavish_hottub = [
-    lavish_hottub03,
-    lavish_hottub04
+    "ev2/lavish/hottub03.jpg",
+    "ev2/lavish/hottub04.jpg"
 ]

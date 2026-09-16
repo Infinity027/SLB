@@ -23,18 +23,18 @@ init python:
         "naked",
     ])
 
-$ hanna_blowjob01 = [
-    hanna_blow_03,
-    hanna_blow_04,
-    hanna_blow_05
-]
+    # $ hanna_blowjob01 = [
+    #     hanna_blow_03,
+    #     hanna_blow_04,
+    #     hanna_blow_05
+    # ]
 
-$ hanna_blowjob02 = [
-    hanna_blow_06,
-    hanna_blow_07
-]
+    # $ hanna_blowjob02 = [
+    #     hanna_blow_06,
+    #     hanna_blow_07
+    # ]
 
-$ hanna_hottub = [
-    hanna_hottub03,
-    hanna_hottub04
-]
+    $ hanna_hottub = [
+        "ev2/hanna/hottub03.jpg",
+        "ev2/hanna/hottub04.jpg"
+    ]

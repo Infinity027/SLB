@@ -23,27 +23,27 @@ init python:
     ])
 
 $ audrey_blow = [
-    audrey_blowjob2_1,
-    audrey_blowjob2_2,
-    audrey_blowjob2_3
+    "ev2/audrey/blowjob2_1",
+    "ev2/audrey/blowjob2_2",
+    "ev2/audrey/blowjob2_3"
 ]
 
 $ audrey_miss_pussy01 = [
-    audrey_missionary1,
-    audrey_missionary2
+    "ev2/audrey/missionary1",
+    "ev2/audrey/missionary2"
 ]
 
 $ audrey_miss_pussy02 = [
-    audrey_missionary3,
-    audrey_missionary4
+    "ev2/audrey/missionary3",
+    "ev2/audrey/missionary4"
 ]
 
 $ audrey_miss_pussy03 = [
-    audrey_missionary5,
-    audrey_missionary6
+    "ev2/audrey/missionary5",
+    "ev2/audrey/missionary6"
 ]
 
 $ audrey_hottub = [
-    audrey_hottub03,
-    audrey_hottub04
+    "ev2/audrey/hottub03",
+    "ev2/audrey/hottub04"
 ]

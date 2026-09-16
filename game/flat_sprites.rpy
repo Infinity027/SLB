@@ -15,10 +15,7 @@ init -5 python:
 
     # --- the expression vocabulary the game actually uses (filenames must match) ---
     FLAT_EXPRESSIONS = [
-        "normal", "talkative", "happy", "smile", "sad", "sadsmile", "angry",
-        "vangry", "annoyed", "upset", "surprised", "blush", "flirt", "shy",
-        "embarrassed", "wink", "cry", "shout", "joke", "whining", "confused",
-        "evil", "bored", "stuned", "sleep",
+        "normal", "talk", "happy", "smile", "sad", "angry", "annoyed", "surprise", "blush", "flirt", "sleep",
     ]
 
     # --- sex-scene poses are a SEPARATE axis: images/<char>/poses/<pose>/<face>.png

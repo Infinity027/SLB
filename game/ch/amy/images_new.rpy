@@ -22,18 +22,18 @@ init python:
         "naked",
     ])
 
-$ amy_blowjob01 = [
-    amy_blow_03,
-    amy_blow_04,
-    amy_blow_05
-]
+# $ amy_blowjob01 = [
+#     amy_blow_03,
+#     amy_blow_04,
+#     amy_blow_05
+# ]
 
-$ amy_blowjob02 = [
-    amy_blow_06,
-    amy_blow_07
-]
+    amy_blowjob02 = [
+        "ev2/amy/blow/06.jpg",
+        "ev2/amy/blow/07.jpg"
+    ]
 
-$ amy_hottub = [
-    amy_hottub05,
-    amy_hottub06
-]
+    amy_hottub = [
+        "ev2/amy/hottub05.jpg",
+        "ev2/amy/hottub06.jpg"
+    ]

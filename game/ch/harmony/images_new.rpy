@@ -22,13 +22,13 @@ init python:
         "naked",
     ])
 
-$ harmony_blowjob01 = [
-    harmony_blow_03,
-    harmony_blow_04,
-    harmony_blow_05
-]
+    harmony_blowjob01 = [
+        "ev2/harmony/blow_03.jpg",
+        "ev2/harmony/blow_04.jpg",
+        "ev2/harmony/blow_05.jpg"
+    ]
 
-$ harmony_hottub = [
-    harmony_hottub04,
-    harmony_hottub05
-]
+    harmony_hottub = [
+        "ev2/harmony/hottub04.jpg",
+        "ev2/harmony/hottub05.jpg"
+    ]

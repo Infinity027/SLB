@@ -1572,7 +1572,7 @@ label alexis_hottub_sex_male:
     "But what the hell - am I really going to pass up the chance?"
     "Sure, I could say I'm the one in control then."
     "But I'd also be the guy who'd said no to hopping into the water with Alexis!"
-    show alexis swimsuit
+    show alexis normal
     "And the moment that I see her, sitting in the tub and waiting for me..."
     "Well, let's just say that I forget all about who asked who and why!"
     alexis.say "Hey, [hero.name]."

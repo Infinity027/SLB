@@ -22,15 +22,15 @@ init python:
         "naked",
     ])
 
-$ camila_blowjob01 = [
-    camila_blow_03,
-    camila_blow_04,
-    camila_blow_05
-]
+    # camila_blowjob01 = [
+    #     "ev2/camila/blow_03.jpg",
+    #     "ev2/camila/blow_04.jpg",
+    #     "ev2/camila/blow_05.jpg"
+    # ]
 
-$ camila_hottub = [
-    camila_hottub03,
-    camila_hottub04,
-    camila_hottub05,
-    camila_hottub04
-]
+    camila_hottub = [
+        "ev2/camila/hottub03.jpg",
+        "ev2/camila/hottub04.jpg",
+        "ev2/camila/hottub05.jpg",
+        "ev2/camila/hottub04.jpg"
+    ]

@@ -22,18 +22,18 @@ init python:
         "naked",
     ])
 
-$ cassidy_blowjob01 = [
-    cassidy_blow_03,
-    cassidy_blow_04,
-    cassidy_blow_05
-]
+    # cassidy_blowjob01 = [
+    #     "ev2/cassidy/blow_03.jpg",
+    #     "ev2/cassidy/blow_04.jpg",
+    #     "ev2/cassidy/blow_05.jpg"
+    # ]
 
-$ cassidy_blowjob02 = [
-    cassidy_blow_06,
-    cassidy_blow_07
-]
+    # cassidy_blowjob02 = [
+    #     "ev2/cassidy/blow_06.jpg",
+    #     "ev2/cassidy/blow_07.jpg"
+    # ]
 
-$ cassidy_hottub = [
-    cassidy_hottub03,
-    cassidy_hottub04
-]
+    cassidy_hottub = [
+        "ev2/cassidy/hottub03.jpg",
+        "ev2/cassidy/hottub04.jpg"
+    ]

@@ -22,23 +22,23 @@ init python:
         "naked",
     ])
 
-    kiara_blowjob01 = [
-        kiara_blow_03,
-        kiara_blow_04,
-        kiara_blow_05
-    ]
+    # kiara_blowjob01 = [
+    #     kiara_blow_03,
+    #     kiara_blow_04,
+    #     kiara_blow_05
+    # ]
 
-    kiara_blowjob02 = [
-        kiara_blow_06,
-        kiara_blow_07
-    ]
+    # kiara_blowjob02 = [
+    #     kiara_blow_06,
+    #     kiara_blow_07
+    # ]
 
     kiara_pussy = [
-        kiara_hottub05,
-        kiara_hottub06
+        "ev2/kiara/hottub05.jpg",
+        "ev2/kiara/hottub06.jpg",
     ]
 
     kiara_ass= [
-        kiara_hottub10,
-        kiara_hottub11
+        "ev2/kiara/hottub10.jpg",
+        "ev2/kiara/hottub11.jpg",
     ]

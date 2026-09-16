@@ -23,27 +23,27 @@ init python:
     ])
 
 $ cherie_blowjob01 = [
-    cherie_blow_03,
-    cherie_blow_04,
-    cherie_blow_05
+    "ev2/cherie/blow_03.jpg",
+    "ev2/cherie/blow_04.jpg",
+    "ev2/cherie/blow_05.jpg"
 ]
 
 $ cherie_blowjob02 = [
-    cherie_blow_06,
-    cherie_blow_07
+    "ev2/cherie/blow_06.jpg",
+    "ev2/cherie/blow_07.jpg"
 ]
 
 $ cherie_pussy = [
-    cherie_hottub03,
-    cherie_hottub04
+    "ev2/cherie/hottub03.jpg",
+    "ev2/cherie/hottub04.jpg"
 ]
 
 $ cherie_ass01 = [
-    cherie_hottub09,
-    cherie_hottub10
+    "ev2/cherie/hottub09.jpg",
+    "ev2/cherie/hottub10.jpg"
 ]
 
 $ cherie_ass02 = [
-    cherie_hottub13,
-    cherie_hottub14
+    "ev2/cherie/hottub13.jpg",
+    "ev2/cherie/hottub14.jpg"
 ]
