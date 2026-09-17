@@ -43,7 +43,6 @@ init 6:
     layeredimage bg jewelrystore:
         attribute_function MultiPickers([CollarPicker,  HaircutPicker, OutfitPicker, JewelryStorePicker], append_npc_from_attributes=True)
 
-
         attribute empty null            
         attribute force_display null        
         attribute alexis_clit null
@@ -52,76 +51,57 @@ init 6:
         attribute audrey_navel null
         attribute audrey_nipples null
         attribute audrey_nose null
-        attribute audrey_pregnant_navel null
         attribute audrey_tongue null
         attribute cherie_clit null
         attribute cherie_navel null
         attribute cherie_nose null
-        attribute cherie_pregnant_navel null
         attribute lexi_clit null
         attribute lexi_navel null
-        attribute lexi_pregnant_navel null
         attribute lexi_tongue null
         attribute palla_clit null
         attribute palla_ears null
         attribute palla_glasses null
         attribute palla_navel null
         attribute palla_nose null
-        attribute palla_pregnant_navel null
         attribute palla_tongue null
         attribute reona_clit null
         attribute reona_navel null
-        attribute reona_pregnant_navel null
         attribute reona_tongue null
 
         always "jewelrystore"
 
         attribute reona
-        attribute reona_pregnant when reona
         attribute reona_collar when reona
-        group reona_bot auto variant preg when reona and reona_pregnant
-        group reona_bot auto variant nopreg when reona and not reona_pregnant
+        group reona_bot auto variant nopreg when reona
         group reona_top auto when reona
-        group reona_top auto variant preg when reona and reona_pregnant
-        group reona_top auto variant nopreg when reona and not reona_pregnant
+        group reona_top auto variant nopreg when reona
         attribute reona_pureglasses when reona
         group reona_hair auto when reona
 
         attribute lexi
-        attribute lexi_pregnant when lexi
         attribute lexi_collar when lexi
         group lexi_top auto when lexi
         attribute lexi_nohaircut when lexi
         attribute lexi_ears when lexi
 
         attribute palla
-        attribute palla_pregnant when palla
         attribute palla_collar when palla
-        group palla_top auto variant preg when palla and palla_pregnant
-        group palla_top auto variant nopreg when palla and not palla_pregnant
+        group palla_top auto variant nopreg when palla
         attribute palla_nohaircut when palla
 
         attribute cherie
-        attribute cherie_pregnant when cherie
         attribute cherie_collar when cherie
-        group cherie_top auto variant preg when cherie and cherie_pregnant
-        group cherie_top auto variant nopreg when cherie and not cherie_pregnant
+        group cherie_top auto variant nopreg when cherie
         group cherie_hair auto when cherie
 
         attribute alexis
-        attribute alexis_pregnant when alexis
         attribute alexis_collar when alexis
-        group alexis_bot auto variant preg when alexis and alexis_pregnant
-        group alexis_bot auto variant nopreg when alexis and not alexis_pregnant
-        group alexis_top auto variant preg when alexis and alexis_pregnant
-        group alexis_top auto variant nopreg when alexis and not alexis_pregnant
+        group alexis_bot auto variant nopreg when alexis
+        group alexis_top auto variant nopreg when alexis
         attribute alexis_nohaircut when alexis
 
         attribute audrey
-        attribute audrey_pregnant when audrey
         attribute audrey_collar when audrey
-        group audrey_bot auto variant preg when audrey and audrey_pregnant
-        group audrey_bot auto variant nopreg when audrey and not audrey_pregnant
-        group audrey_top auto variant preg when audrey and audrey_pregnant
-        group audrey_top auto variant nopreg when audrey and not audrey_pregnant
+        group audrey_bot auto variant nopreg when audrey
+        group audrey_top auto variant nopreg when audrey
         attribute audrey_nohaircut when audrey

@@ -42,8 +42,6 @@ init 1:
 
         group npc auto if_not ["bree_bowsette"]
 
-        attribute pregnant null
-
         group pregnancy auto if_not ["aletta", "harmony", "minami_halloween", "minami_rpg", "samantha_sexyswimsuit"]
 
         group boobjob auto
@@ -53,11 +51,6 @@ init 1:
         group necklace auto
 
         group outfit auto variant "bot" if_not ["naked"]
-        group multiple auto variant outfit_pregnant_bot when pregnant and not naked
-
-
-        group multiple auto variant outfit_pregnant when alexis and pregnant and not naked
-
 
         group outfit auto if_not ["naked"]
         group outfit auto variant "gold" if_not ["naked"] if_all ["cassidy_gold"]
@@ -65,20 +58,11 @@ init 1:
         group outfit auto variant "topless" if_not ["naked"] if_all ["cassidy_topless"]
         group outfit_boobjob auto if_any ["sasha_boobjob"] if_not ["naked"]
 
-
         group pregnancy auto if_all ["aletta"] if_any ["naked", "aletta_cosplay", "aletta_swimsuit", "aletta_sexyswimsuit"]
         group pregnancy auto if_all ["harmony"] if_any ["naked", "harmony_underwear"]
         group pregnancy auto if_all ["samantha"] if_any ["naked", "samantha_sexyswimsuit"]
 
-
         group outfit auto variant "top" if_not ["naked"]
-        group multiple auto variant outfit_pregnant_top when pregnant and not naked
-
-
-        group multiple auto variant outfit_pregnant when pregnant and not (naked or alexis)
-        group multiple auto variant outfit_pregnant_full when pregnant and cassidy and not (naked or cassidy_topless)
-        group multiple auto variant outfit_pregnant_topless when pregnant and cassidy_topless and not naked
-
 
         group collars auto if_any ["aletta_date", "aletta_sexyswimsuit", "aletta_wedding", "aletta_work", "morgan_whitetank", "morgan_redhalf", "morgan_tightsport", "hanna_date", "hanna_sexydate", "hanna_wedding", "hanna_sexyswimsuit", "lavish", "minami_bikini", "minami_rpg", "palla_casual", "palla_date" , "palla_sexydate", "palla_sexyswimsuit", "palla_swimsuit", "palla_wedding"]
 
@@ -90,19 +74,15 @@ init 1:
             attribute happy null default
             attribute angry null
 
-
         group acc auto
 
-
         group hat auto if_not ["naked", "emma_casual"]
-
 
         group sam_hood:
             attribute hoodin null
             attribute hoodout null
         group hat auto variant "hoodin" if_any ["hoodin"] if_not ["naked"]
         group hat auto variant "hoodout" if_any ["hoodout"] if_not ["naked"]
-
 
         attribute hat null
         group hat auto if_all ["emma_casual", "hat"] if_any ["winter", "fall"] if_not ["naked"]
@@ -113,10 +93,8 @@ init 1:
             attribute winter null
             attribute fall null
 
-
         attribute helmet null
         group helmet auto if_any ["helmet"] if_not ["naked"]
-
 
         attribute blazer null
         group blazer auto if_all ["outdoor"] if_any ["winter", "fall"] if_not ["naked"]
@@ -124,10 +102,6 @@ init 1:
         group inout:
             attribute indoor null
             attribute outdoor null
-
-
-
-
 
         group mc_body auto variant "pose01" if_any ["pose01"]
         group mc_body auto variant "pose02" if_any ["pose02"]

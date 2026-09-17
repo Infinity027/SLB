@@ -1213,16 +1213,6 @@ label lexi_fuck_date_missionary(sexperience_min):
                     "I can tell that Lexi feels it too, as she lets out a cry of sensual satisfaction a moment later."
                     with hpunch
                     "And so I ride my orgasm to the very last, until we're both utterly spent."
-                elif _return == "vaginal_inside_pregnant":
-                    $ lexi.love += 3
-                    "I've been practically leaning on Lexi's swollen belly this whole time."
-                    "So I hardly need a reminder that there's no danger in failing to pull out."
-                    show lexi missionary cum with hpunch
-                    "Instead I gently ride out my orgasm deep inside of her, enjoying every last moment."
-                    with hpunch
-                    "And she seems to appreciate it too, moaning and sighing to the very end."
-                    with hpunch
-                    "Afterwards, Lexi curls into a tight little ball, clutching at her belly and its precious contents."
                 elif _return == "vaginal_inside_mad":
                     $ lexi.love -= 1
                     $ lexi.sub += 5
@@ -1381,16 +1371,6 @@ label lexi_fuck_date_missionary(sexperience_min):
                     show lexi missionary ahegao with hpunch
                     "Then her own back arches and she begins to cum too."
                     with hpunch
-                    "We end with her pinned beneath me, the both of us panting in sheer exhaustion."
-                elif _return == "vaginal_inside_pregnant":
-                    $ lexi.love += 3
-                    "Her swollen belly beneath me, I feel no guilt in just keeping on going."
-                    show lexi missionary cum with hpunch
-                    "Which means that I pound away into Lexi until the very moment that I cum."
-                    show lexi missionary ahegao with hpunch
-                    "She twitches and squirms on the end of my cock, absorbing the whole thing like a sponge."
-                    with hpunch
-                    "Then her own back arches and she begins to cum too."
                     "We end with her pinned beneath me, the both of us panting in sheer exhaustion."
                 elif _return == "vaginal_inside_mad":
                     $ lexi.love -= 1
@@ -1825,26 +1805,6 @@ label lexi_fuck_date_cowgirl(sexperience_min):
                 pause 0.15
                 show lexi cowgirl down creampie vaginaldrip with vpunch
                 $ lexi.love += 2
-                "Which means that I lose it as deep inside of her as I can go."
-                with vpunch
-                "And when I do, her eyes pop open at the same moment."
-                with vpunch
-                "Lexi cries out as she begins to cum too, clinging onto me the whole time."
-            elif _return == "vaginal_inside_pregnant":
-                lexi.say "Don't...don't pull out!"
-                lexi.say "You can't get me...pregnant again!"
-                show lexi cowgirl middle
-                pause 0.15
-                show lexi cowgirl down at startle(0.05,-10)
-                pause 0.15
-                show lexi cowgirl middle
-                pause 0.15
-                show lexi cowgirl down at startle(0.05,-10)
-                "I silently thank Lexi for the timely reminder."
-                "Because it lets me keep on going until the very end."
-                "Lexi's practically grinding herself into me by now."
-                show lexi cowgirl down ahegao creampie vaginaldrip with hpunch
-                $ lexi.love += 3
                 "Which means that I lose it as deep inside of her as I can go."
                 with vpunch
                 "And when I do, her eyes pop open at the same moment."
@@ -2300,21 +2260,6 @@ label lexi_fuck_date_standing(sexperience_min):
                             $ lexi.love += 2
                             "And I keep a tight hold on her as well."
                             "Just in case the table doesn't hold up to all of this punishment!"
-                        elif _return == "vaginal_inside_pregnant":
-                            lexi.say "Urgh..."
-                            lexi.say "Cum...in...me..."
-                            lexi.say "I'm fucking pregnant already!"
-                            "I smirk at the thought of needing to be reminded of that fact."
-                            "But it does mean that I can keep right on going until I actually cum."
-                            with hpunch
-                            "And when I do, I make sure that it's while I'm buried deep inside Lexi."
-                            with hpunch
-                            "She squeals at the sensation, clinging to me even tighter than before."
-                            with hpunch
-                            "I can feel her starting to cum too, squeezing my cock inside of her."
-                            $ lexi.love += 3
-                            "And I keep a tight hold on her as well."
-                            "Just in case the table doesn't hold up to all of this punishment!"
                         elif _return == "vaginal_inside_mad":
                             lexi.say "Urgh..."
                             lexi.say "Don't...cum...in...me..."
@@ -2552,21 +2497,6 @@ label lexi_fuck_date_standing(sexperience_min):
                             $ lexi.love += 2
                             "And I keep a tight hold on her as well."
                             "Just in case her legs decide to give out before the end."
-                        elif _return == "vaginal_inside_pregnant":
-                            lexi.say "Urgh..."
-                            lexi.say "Cum...in...me..."
-                            lexi.say "I'm fucking pregnant already!"
-                            "I smirk at the thought of needing to be reminded of that fact."
-                            "But it does mean that I can keep right on going until I actually cum."
-                            with hpunch
-                            "And when I do, I make sure that it's while I'm buried deep inside Lexi."
-                            with hpunch
-                            "She squeals at the sensation, pushing against me more then ever."
-                            with hpunch
-                            "I can feel her starting to cum too, squeezing my cock inside of her."
-                            $ lexi.love += 3
-                            "And I keep a tight hold on her as well."
-                            "Just in case her legs decide to give out before the end."
                         elif _return == "vaginal_inside_mad":
                             lexi.say "Urgh..."
                             lexi.say "Don't...cum...in...me..."
@@ -2796,18 +2726,6 @@ label lexi_fuck_date_doggy(sexperience_min):
                 show lexi doggy creampie ahegao with hpunch
                 $ lexi.love += 2
                 "She lets out a cry of release as I shoot my load into her."
-                with hpunch
-                "Her muscles twinge and twitch, letting me know that she's cumming too."
-                with hpunch
-                "But I don't even think of pulling out until I'm completely spent."
-                show lexi doggy pleasure -vaginal dickcum vaginaldrip -tongueout
-                "And when I do, it sends streams of sticky, white semen running down her legs."
-            elif _return == "vaginal_inside_pregnant":
-                "Both of us know there's no danger while Lexi's pregnant."
-                "And so I don't stop what I'm doing for a moment, I just keep on going."
-                show lexi doggy creampie ahegao with hpunch
-                $ lexi.love += 3
-                "Lexi lets out a cry of release as I shoot my load into her."
                 with hpunch
                 "Her muscles twinge and twitch, letting me know that she's cumming too."
                 with hpunch

@@ -465,14 +465,6 @@ steps:
       condition: audrey.flags.engagedmike
       next: None
 
-  preg:
-    name: Get Audrey pregnant
-    optional: True
-    condition: True
-    outcome:
-      condition: audrey.flags.pregnancies_number > 0
-      next: None
-
   slave:
     name: Make Audrey my sex slave
     optional: True

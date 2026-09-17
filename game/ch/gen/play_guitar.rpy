@@ -25,25 +25,18 @@ init 1:
 
         group npc auto
 
-        attribute pregnant null
-        group pregnant auto if_all ["pregnant"]
-
         attribute boobjob null
         group boobjob auto if_any ["boobjob"]
 
         attribute naked null
         attribute casual null
         group outfit auto if_not ["naked"]
-        group outfit auto variant "pregnant" if_any ["pregnant"] if_not ["naked"]
         group outfit auto variant "boobjob" if_any ["boobjob"] if_not ["naked"]
 
         group outfit_reona auto if_all "reona" if_not ["naked"]
-        group outfit_reona auto variant "pregnant" if_all ["reona", "pregnant"] if_not ["naked"]
 
         group bot auto if_all "morgan" if_not ["naked"]
-        group bot auto variant "pregnant" if_all ["morgan", "pregnant"] if_not ["naked"]
         group top auto if_all "morgan" if_not ["naked"]
-        group top auto variant "pregnant" if_all ["morgan", "pregnant"] if_not ["naked"]
 
         attribute collar null
         group collar auto if_any ["collar"]

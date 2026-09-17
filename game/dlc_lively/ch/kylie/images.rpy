@@ -6,7 +6,7 @@ init -35 python:
     'exps': ['normal', 'angry', 'annoyed', 'blush', 'crazyhappy', 'crazysad', 'happy', 'impressed', 'mindless', 'sad', 'sadhappy', 'shy', 'shout', 'smile', 'stuned', 'surprised', 'talkative', 'vangry', 'whining', 'yandere'],
     'outfits': ['casual', 'sport', 'date', 'sexydate', 'sluttydate', 'swimsuit', 'sexyswimsuit', 'halloween', 'christmas', 'jail', 'wedding', 'sleep', 'underwear', 'naked'],
     'hoods': ['hooddown', 'hoodup'],
-    'others': ['pregnant', 'pubes', 'collar', 'bloodyface', 'bottomless', 'topless'],
+    'others': ['pubes', 'collar', 'bloodyface', 'bottomless', 'topless'],
     'accessories': ['knife', 'bloodyknife', 'handcuffs', 'hoodie'],
 }
 
@@ -17,9 +17,6 @@ init -35 python:
         
         
         add_pickers_attrs = Pickers([ CollarPicker, PubesPicker, PositionPicker], npc=kylie)(set(attrs))
-        if "pregnant_navel" in add_pickers_attrs:
-            add_pickers_attrs.remove("pregnant_navel")
-            add_pickers_attrs.add("navel")
         attrs.extend(add_pickers_attrs)
         
         

@@ -20,7 +20,6 @@ init 1:
             attribute none default null
 
         group outfit auto
-        group outfit auto variant "pregnant" if_any ["morgan_pregnant", "reona_pregnant"]
 
         attribute sasha_boobjob
 

@@ -5,7 +5,7 @@ init -35 python:
     'piercings': ['clit', 'navel', 'nipples', 'nose'],
     'exps': ['normal', 'angry', 'annoyed', 'awkward', 'cry', 'embarrassed', 'flirt', 'frown', 'gloomy', 'happy', 'joke', 'lying', 'mindless', 'mock', 'sad', 'sadsmile', 'scared', 'stuned', 'surprised', 'talkative', 'upset', 'whining', 'yawn'],
     'outfits': ['casual', 'sport', 'date', 'sexydate', 'sluttydate', 'swimsuit', 'sexyswimsuit', 'halloween', 'wedding', 'underwear', 'work', 'sexywork', 'strapon', 'naked'],
-    'others': ['pregnant', 'pubes', 'collar', 'blush', 'facecum', 'bottomless', 'topless', 'noacc'],
+    'others': ['pubes', 'collar', 'blush', 'facecum', 'bottomless', 'topless', 'noacc'],
 }
 
     def audrey_anim_filter(attrs, anim_dict=audrey_attrs):
@@ -14,9 +14,6 @@ init -35 python:
             attrs = list(attrs)
         
         add_pickers_attrs = Pickers([CollarPicker, PubesPicker], npc=audrey)(set(attrs))
-        if "pregnant_navel" in add_pickers_attrs:
-            add_pickers_attrs.remove("pregnant_navel")
-            add_pickers_attrs.add("navel")
         attrs.extend(add_pickers_attrs)
         
         pwet_pickers_attrs = Pickers([PositionPicker], npc=audrey)(set(attrs))
@@ -27,8 +24,7 @@ init -35 python:
         {k: [[], anim_dict[k]] for k in ['motions', 'piercings', 'others']},
         prv_def_vals=['outfits']
     )
-        
-        
+          
         sgl_attrs['outfits'][0] = (Pickers([OutfitPicker], npc=audrey)(set(attrs) if not sgl_attrs['outfits'][0] else {sgl_attrs['outfits'][0]}) & set(anim_dict['outfits']) or {"casual"}).pop()
         
         if not game.flags.disable_clothing_policy and Room.has_tag(game.room, "work"):
@@ -61,4 +57,3 @@ init -35 python:
 
     def audrey_close_anim_filter(attrs, anim_dict=audrey_attrs):
         return audrey_anim_filter(attrs, anim_dict)
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

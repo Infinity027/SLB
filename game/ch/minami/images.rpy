@@ -136,9 +136,6 @@ init 1:
 
     layeredimage minami ending:
         attribute_function Pickers([CollarPicker, HaircutPicker, EndingKidPicker], npc=minami)
-
-        attribute pregnant null
-
         always "minami_ending_bg"
 
         attribute collar
@@ -187,17 +184,9 @@ init 1:
         group bot auto variant "down" if_any ["down"]:
             attribute naked null
 
-        group bot_pregnant auto variant "up" if_all ["up", "minami_pregnant"]:
-            attribute naked null
-        group bot_pregnant auto variant "down" if_all ["down", "minami_pregnant"]:
-            attribute naked null
-
         group outfit auto if_any ["bree"]:
             attribute bree_casual default
             attribute nakedbree null
-        group outfit_pregnant auto if_any ["bree_pregnant"]:
-            attribute nakedbree null
-
         always "minami_stuck_bodymike" if_any ["mike"]
 
         group mikeoutfit auto if_any ["mike"]:
@@ -215,8 +204,6 @@ init 1:
         always "minami_stuck_mike_botup" if_all ["mike", "up"]
 
         always "minami_stuck_fg"
-
-        group top auto variant "pregnant" if_any ["minami_pregnant"]
 
         group arms auto if_not ["minami_casual"]
         group arms_outfit auto variant "lay" if_any ["lay"]

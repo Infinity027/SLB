@@ -5,7 +5,6 @@ init 1:
         always:
             "hedge_maze_bg"
 
-
         group mc_dicks auto:
             attribute mc_big null
             attribute mc_medium null
@@ -14,18 +13,12 @@ init 1:
         attribute morgan_clit null
         attribute morgan_nipples null
         attribute morgan_tongue null
-        attribute morgan_pregnant null
-
 
         group mcbody auto
-
 
         group mc_haircuts auto variant "breemc" if_any "breemc"
         group mc_outfits auto variant "mikemc" if_any "mikemc"
         group mc_outfits auto variant "breemc" if_any "breemc"
-
-        attribute mc_pregnant null
-        group mc_outfits auto variant "mc_pregnant" if_all ["breemc", "mc_pregnant"]
 
         group mc_collars auto variant "breemc" if_any "breemc"
 
@@ -37,7 +30,6 @@ init 1:
         group outfits auto variant "nakedbelly" if_any ["morgan", "aletta", "amy", "audrey", "cassidy", "kleio", "lexi", "reona", "samantha"]
 
         group outfits auto
-        group outfits auto variant "pregnant" if_any "morgan_pregnant"
 
         attribute sasha_boobjob if_any "sasha"
 
@@ -53,7 +45,5 @@ init 1:
 
         group amy_necktie auto if_any "amy"
 
-
         group outfits auto variant "collarcover" if_any "morgan"
-        group outfits auto variant "collarcover_pregnant" if_any "morgan_pregnant"
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc
+

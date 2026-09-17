@@ -37,7 +37,6 @@ init 6:
     layeredimage bg electronic:
         attribute_function MultiPickers([ CollarPicker, HaircutPicker, OutfitPicker, ElectronicPicker], append_npc_from_attributes=True)
 
-
         attribute empty null            
         attribute force_display null        
         attribute kat_clit null
@@ -47,34 +46,25 @@ init 6:
         attribute morgan_clit null
         attribute morgan_tongue null
 
-
         always "electronic"
-
 
         attribute morgan
         attribute morgan_collar when morgan
         always "bg_electronic_morgan_face" when morgan and not morgan_makeup
         attribute morgan_makeup when morgan
         group morgan_hair auto when morgan
-        group morgan_bot auto variant nopreg when morgan and not morgan_pregnant
-        group morgan_bot auto variant preg when morgan and morgan_pregnant
-        group morgan_top auto variant nopreg when morgan and not morgan_pregnant
-        group morgan_top auto variant preg when morgan and morgan_pregnant
+        group morgan_bot auto variant nopreg when morgan
+        group morgan_top auto variant nopreg when morgan
 
         attribute amy
-        attribute amy_pregnant when amy
         attribute amy_collar when amy
         attribute amy_nohaircut when amy
         always "bg_electronic_amy_earphones" when amy
-        group amy_bot auto variant nopreg when amy and not amy_pregnant
-        group amy_bot auto variant preg when amy and amy_pregnant
-        group amy_top auto variant nopreg when amy and not amy_pregnant
-        group amy_top auto variant preg when amy and amy_pregnant
+        group amy_bot auto variant nopreg when amy
+        group amy_top auto variant nopreg when amy
 
         attribute kat
         attribute kat_collar when kat
         attribute kat_nohaircut when kat
         group kat_bot auto when kat
-        group kat_top auto variant nopreg when kat and not kat_pregnant
-        group kat_top auto variant preg when kat and kat_pregnant
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc
+        group kat_top auto variant nopreg when kat

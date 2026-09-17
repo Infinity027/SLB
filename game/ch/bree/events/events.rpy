@@ -152,7 +152,6 @@ init python:
         PersonTarget(bree,
             Not(IsHidden()),
             IsRoom("bedroom2"),
-            IsFlag("pregnant", False),
             MinStat("love", 100),
             ),
         ],
@@ -171,8 +170,7 @@ init python:
         HeroTarget(IsRoom("bathroom")),
         PersonTarget(bree,
             Not(IsHidden()),
-            IsFlag("pregtest", False),
-            MinCounter("pregnant", 6),
+            IsFlag("pregtest", False)
             ),
         ],
     "music": "music/roa_music/juice.ogg",

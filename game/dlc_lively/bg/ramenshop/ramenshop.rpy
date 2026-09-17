@@ -42,12 +42,9 @@ init 6:
 
         attribute claire
         attribute claire_collar when claire
-        group claire_bot auto variant preg when claire and claire_pregnant
-        group claire_bot auto variant nopreg when claire and not claire_pregnant
-        group claire_top auto variant preg when claire and claire_pregnant
-        group claire_top auto variant nopreg when claire and not claire_pregnant
+        group claire_bot auto variant nopreg when claire
+        group claire_top auto variant nopreg when claire
         group claire_hair auto when claire
 
 
         group multiple auto variant ramen
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

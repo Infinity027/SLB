@@ -120,8 +120,6 @@ init 1:
 
         always "cassidy_ending_bg"
 
-        attribute pregnant null
-
         attribute kid
 
         always "cassidy_ending_cassidy"

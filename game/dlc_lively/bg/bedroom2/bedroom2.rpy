@@ -33,7 +33,6 @@ init 6:
     layeredimage bg bedroom2:
         attribute_function Pickers([DayNightPicker,  CollarPicker, HaircutPicker, OutfitPicker, Bedroom2Picker], npc=bree)
 
-
         attribute empty null            
         attribute force_display null        
         attribute naked null
@@ -44,19 +43,15 @@ init 6:
         attribute lips null
         attribute navel null
         attribute nipples null
-        attribute pregnant_navel null
         attribute tongue null
-
 
         attribute day "bedroom2_day"
         attribute night "bedroom2_night"
 
-
         attribute bree
-        attribute pregnant when bree
         attribute collar when bree
         group bot auto when bree and not (naked or bottomless)
         group top auto when bree and not (naked or topless)
-        group top auto variant preg when bree and pregnant and not (naked or topless)
-        group top auto variant nopreg when bree and not (pregnant or naked or topless)
+        group top auto variant preg when bree and not (naked or topless)
+        group top auto variant nopreg when bree and not (naked or topless)
         group hair auto when bree

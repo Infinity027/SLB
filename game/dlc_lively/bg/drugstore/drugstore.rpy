@@ -56,7 +56,6 @@ init 6:
         attribute reona_clit null
         attribute reona_innersexy null
         attribute reona_navel null
-        attribute reona_pregnant_navel null
         attribute reona_nose null
         attribute reona_tongue null
         attribute shiori_clit null
@@ -69,32 +68,24 @@ init 6:
         attribute anna
         attribute anna_collar when anna
         attribute anna_nohaircut when anna
-        group anna_bot auto variant nopreg when anna and not anna_pregnant
-        group anna_bot auto variant preg when anna and anna_pregnant
-        group anna_top auto variant nopreg when anna and not anna_pregnant
-        group anna_top auto variant preg when anna and anna_pregnant
+        group anna_bot auto variant nopreg when anna
+        group anna_top auto variant nopreg when anna
 
 
         attribute shiori
-        group shiori_top auto variant nopreg when shiori and not shiori_pregnant
-        group shiori_top auto variant preg when shiori and shiori_pregnant
+        group shiori_top auto variant nopreg when shiori
         attribute shiori_collar when shiori
         attribute shiori_nohaircut when shiori
 
         attribute kat
-        group kat_bot auto variant nopreg when kat and not kat_pregnant
-        group kat_bot auto variant preg when kat and kat_pregnant
-        group kat_top auto variant nopreg when kat and not kat_pregnant
-        group kat_top auto variant preg when kat and kat_pregnant
+        group kat_bot auto variant nopreg when kat
+        group kat_top auto variant nopreg when kat
         attribute kat_collar when kat
         attribute kat_nohaircut when kat
 
-
         attribute reona
         attribute reona_collar when reona
-        group reona_bot auto variant nopreg when reona and not reona_pregnant
-        group reona_bot auto variant preg when reona and reona_pregnant
-        group reona_top auto variant nopreg when reona and not reona_pregnant
-        group reona_top auto variant preg when reona and reona_pregnant
+        group reona_bot auto variant nopreg when reona
+        group reona_top auto variant nopreg when reona
         group reona_hair auto when reona
         attribute reona_pureglasses when reona

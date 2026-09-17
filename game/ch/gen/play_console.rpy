@@ -31,25 +31,15 @@ init 1:
         group mikemc auto if_any ["mikemc"] if_not "nomike"
         group breemc auto if_any ["breemc"] if_not "nobree"
 
-
         group npc auto if_not "mcalone"
 
-
         group haircut auto if_all ["haircut", "sasha"] if_not "mcalone"
-
-
-        attribute pregnant null
-        group pregnant auto if_all ["pregnant"] if_not "mcalone"
-
 
         attribute boobjob null
         group boobjob auto if_all ["boobjob", "naked"] if_not "mcalone"
 
-
         attribute makeup null
         group makeup auto if_any ["makeup"] if_not "mcalone"
-
-
 
         attribute lips null
         group lips auto if_any ["lips"] if_not "mcalone"
@@ -64,9 +54,7 @@ init 1:
         group ears auto if_any ["ears"] if_not "mcalone"
 
         attribute navel null
-        attribute pregnant_navel null
         group navel auto if_any ["navel"] if_not "mcalone"
-        group pregnant_navel auto if_any ["pregnant_navel"] if_not "mcalone"
 
         attribute eyebrow null
         group eyebrow auto if_any ["eyebrow"] if_not "mcalone"
@@ -85,28 +73,19 @@ init 1:
         group haircut auto if_any ["haircut"] if_not "mcalone"
         group nohaircut auto if_any ["nohaircut"] if_not "mcalone"
 
-
         attribute naked null
         attribute casual null
         group outfit auto if_not ["naked", "mcalone"]
-        group outfit auto variant "pregnant" if_any ["pregnant"] if_not ["naked", "mcalone"]
-
 
         group outfit_reona auto if_all "reona" if_not ["naked", "mcalone"]
-        group outfit_reona auto variant "pregnant" if_all ["reona", "pregnant"] if_not ["naked", "mcalone"]
-
 
         group outfit auto variant "boobjob" if_any ["boobjob"] if_not ["naked", "mcalone"]
 
-
         group top auto if_all "morgan" if_not ["naked", "mcalone"]
-        group top auto variant "pregnant" if_all ["morgan", "pregnant"] if_not ["naked", "mcalone"]
         group bot auto if_all ["morgan"] if_not ["naked", "mcalone"]
-
 
         attribute necklace null
         attribute collar null
         group collar auto if_any ["collar"] if_not "mcalone"
 
         group glasses auto
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

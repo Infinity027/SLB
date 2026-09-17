@@ -5,7 +5,7 @@ init -35 python:
     'piercings': ['clit', 'ears', 'navel', 'nipples', 'nose'],
     'exps': ['normal', 'angry', 'annoyed', 'beat', 'blank', 'bored', 'bubblegum', 'flirt', 'happy', 'lollipop', 'mindless', 'sad', 'sadsmile', 'smile', 'surprised', 'wink', 'wow', 'yawn'],
     'outfits': ['casual', 'underwear', 'sport', 'date', 'sexydate', 'sluttydate', 'swimsuit', 'sexyswimsuit', 'jail', 'halloween', 'wedding', 'naked'],
-    'others': ['pregnant', 'pubes', 'collar', 'blush', 'cum', 'topless', 'bottomless'],
+    'others': ['pubes', 'collar', 'blush', 'cum', 'topless', 'bottomless'],
     'accessories': ['nophone', 'bandaid', 'lolly'],
     'lolly': ['inside', 'outside'],
 }
@@ -17,11 +17,7 @@ init -35 python:
         
         
         pickers_attrs = Pickers([CollarPicker, PubesPicker,  PositionPicker], npc=lexi)(set(attrs))
-        if "pregnant_navel" in pickers_attrs:
-            pickers_attrs.remove("pregnant_navel")
-            pickers_attrs.add("navel")
         attrs.extend(pickers_attrs)
-        
         
         sgl_attrs, mult_attrs = anim_attrs_filter(attrs,
         {k: [None, anim_dict[k]] for k in ['positions', 'exps', 'outfits', 'lolly']},
@@ -189,10 +185,6 @@ label test_lexi_outfits:
         $ renpy.show(f"lexi b wedding{pregnancy}", tag="l2", at_list=[center])
         $ renpy.show(f"lexi c wedding{pregnancy}", tag="l3", at_list=[right])
         "wedding"
-
-        $ pregnancy = ' pregnant'
-        $ count += 1
-
     return
 return
 # Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

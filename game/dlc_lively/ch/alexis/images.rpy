@@ -5,7 +5,7 @@ init -35 python:
     'piercings': ['clit', 'ears', 'lips', 'navel', 'nipples', 'nose'],
     'exps': ['normal', 'angry', 'annoyed', 'confused', 'cry', 'flirt', 'happy', 'mean', 'mindless', 'sad', 'sadsmile', 'smile', 'stuned', 'surprised', 'talkative', 'upset', 'whining', 'wink'],
     'outfits': ['casual', 'sport', 'date', 'sexydate', 'sluttydate', 'swimsuit', 'sexyswimsuit', 'halloween', 'wedding', 'naked'],
-    'others': ['pregnant', 'pubes', 'collar', 'collar2', 'blush', 'cum', 'bottomless', 'topless', 'nopatsies'],
+    'others': ['pubes', 'collar', 'collar2', 'blush', 'cum', 'bottomless', 'topless', 'nopatsies'],
 }
 
     def alexis_anim_filter(attrs, anim_dict=alexis_attrs):
@@ -13,20 +13,14 @@ init -35 python:
         if not isinstance(attrs, list):
             attrs = list(attrs)
         
-        
         add_pickers_attrs = Pickers([ CollarPicker, PubesPicker, PositionPicker], npc=alexis)(set(attrs))
-        if "pregnant_navel" in add_pickers_attrs:
-            add_pickers_attrs.remove("pregnant_navel")
-            add_pickers_attrs.add("navel")
         attrs.extend(add_pickers_attrs)
-        
         
         sgl_attrs, mult_attrs = anim_attrs_filter(attrs,
         {k: [None, anim_dict[k]] for k in ['positions', 'exps', 'outfits']},
         {k: [[], anim_dict[k]] for k in ['motions', 'others', 'piercings']},
         prv_def_vals=['outfits']
     )
-        
         
         sgl_attrs['outfits'][0] = (Pickers([OutfitPicker], npc=alexis)(set(attrs) if not sgl_attrs['outfits'][0] else {sgl_attrs['outfits'][0]}) & set(anim_dict['outfits']) or {"casual"}).pop()
         
@@ -189,9 +183,5 @@ label test_alexis_outfits:
         $ renpy.show(f"alexis b wedding{pregnancy}", tag="a2", at_list=[right])
         "wedding"
 
-        $ pregnancy = ' pregnant'
-        $ count += 1
-
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

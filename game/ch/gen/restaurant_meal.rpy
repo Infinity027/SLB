@@ -36,8 +36,6 @@ init 1:
         group bg auto
 
         group npc auto if_not "nonpc"
-        group npc auto variant "pregnant" if_any "pregnant" if_not "nonpc"
-
         group multiple auto variant exp when not nonpc
 
         attribute morgan_makeup null
@@ -50,17 +48,13 @@ init 1:
         group arms auto variant "askbill" if_any "askbill" if_not "nonpc"
 
         group outfits auto if_not "nonpc"
-        group outfits auto variant "pregnant" if_any "pregnant" if_not "nonpc"
 
         group bot_outfits auto if_not "nonpc"
-        group bot_outfits auto variant "pregnant" if_any "pregnant" if_not "nonpc"
 
         group top_outfits auto if_not "nonpc"
-        group top_outfits auto variant "pregnant" if_any "pregnant" if_not "nonpc"
 
         group haircuts auto if_not ["camila", "nonpc"]
         group haircuts auto if_any ["camila"] if_not ["camila_sluttydate", "nonpc"]
-
 
         group table auto
 
@@ -71,9 +65,6 @@ init 1:
         group arms_outfits auto variant "under" if_any "hold" if_not "nonpc"
         group arms_outfits auto variant "askbill" if_any "askbill" if_not "nonpc"
 
-        group table_outfit auto variant "pregnant" if_any "pregnant" if_not "nonpc"
-
-
         group mc auto variant "pose01" if_any "pose01" if_not "nomc"
         group meals auto variant "pose01" if_any "pose01" if_not ["nomc", "nomeals"]
         group hands auto variant "mikemc_pose01" if_all ["mikemc", "pose01"] if_not "nomc":
@@ -82,7 +73,6 @@ init 1:
             attribute normal default
         group exp_pose01 auto variant "bored" if_all ["bored", "pose01"] if_not "nomc"
         group exp_pose01 auto variant "eat" if_all ["eat", "pose01"] if_not "nomc"
-
 
         group mc auto variant "pose02" if_any "pose02" if_not "nomc"
         group table auto variant "pose02" if_any "pose02" if_not "nomc"
@@ -99,7 +89,6 @@ init 1:
         group exp_pose02 auto variant "bored" if_all ["bored", "pose02"] if_not "nomc"
         group exp_pose02 auto variant "eat" if_all ["eat", "pose02"] if_not "nomc"
 
-
         group mc auto variant "pose03" if_any "pose03" if_not "nomc"
         group meals auto variant "pose03" if_any "pose03" if_not ["nomc", "nomeals"]
         group hands auto variant "mikemc_pose03" if_all ["mikemc", "pose03"] if_not "nomc":
@@ -113,4 +102,3 @@ init 1:
         group acc auto
 
         group waiter auto if_any ["waiter"]
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

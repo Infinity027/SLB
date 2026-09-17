@@ -229,13 +229,13 @@ steps:
       condition: bree.flags.engagedmike
       next: None
 
-  preg:
-    name: "Get [bree.name] pregnant"
-    optional: True
-    condition: True
-    outcome:
-      condition: bree.flags.pregnancies_number > 0
-      next: None
+  # preg:
+  #   name: "Get [bree.name] pregnant"
+  #   optional: True
+  #   condition: True
+  #   outcome:
+  #     condition: bree.flags.pregnancies_number > 0
+  #     next: None
 
   slave:
     name: "Make [bree.name] my sex slave"

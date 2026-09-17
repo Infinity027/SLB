@@ -36,49 +36,31 @@ init 1:
         group mikemc auto if_any ["mikemc"]
         group breemc auto if_any ["breemc"]
 
-
         group outfit auto variant "mikemc" if_any ["mikemc"]
         group outfit auto variant "breemc" if_any ["breemc"]
-
 
         attribute nogirl null
         group girl auto if_not ["nogirl"]
 
 
-        attribute pregnant null
-        group pregnant auto if_any ["pregnant"] if_not ["nogirl"]
-
-
         group outfit auto if_not ["nogirl"]
-        group outfit auto variant "pregnant" if_any ["pregnant"] if_not ["nogirl"]
         group outfit auto variant "boobjob" if_any ["boobjob"] if_not ["nogirl"]
 
-
         group outfits_reona auto if_all "reona"
-        group outfits_reona auto variant "pregnant" if_all ["pregnant", "reona"]
 
-
-
-        group top_morgan auto if_all ["morgan"] if_not ["pregnant", "nogirl"]
-        group bot_morgan auto if_all ["morgan"] if_not ["pregnant", "nogirl"]
-        group top_morgan auto variant "pregnant" if_all ["morgan", "pregnant"] if_not ["nogirl"]
-        group bot_morgan auto variant "pregnant" if_all ["morgan", "pregnant"] if_not ["nogirl"]
-
+        group top_morgan auto if_all ["morgan"] if_not ["nogirl"]
+        group bot_morgan auto if_all ["morgan"] if_not ["nogirl"]
 
         attribute collar null
         group collar auto if_any ["collar"] if_not ["nogirl"]
 
-
         attribute makeup null
         group makeup auto if_any ["makeup"] if_not ["nogirl"]
-
 
         attribute haircut null
         attribute nohaircut null
         group haircut auto if_all ["haircut"] if_not ["camila", "minami", "morgan", "nogirl"]
         group nohaircut auto if_all ["nohaircut"] if_not ["camila", "minami", "morgan", "nogirl"]
-
-
 
         attribute lips null
         group lips auto if_any ["lips"] if_not ["nogirl"]
@@ -100,9 +82,7 @@ init 1:
         group clit auto if_any ["clit"] if_not ["nogirl"]
 
         attribute navel null
-        attribute pregnant_navel null
         group navel auto if_any ["navel"] if_not ["nogirl", "purecasual"]
-        group pregnant_navel auto if_any ["pregnant_navel"] if_not ["nogirl", "purecasual"]
 
         attribute eyebrow null
         group eyebrow auto if_any ["eyebrow"] if_not ["nogirl"]
@@ -115,4 +95,3 @@ init 1:
 
 
         group fg auto if_not ["04"]
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

@@ -19,7 +19,6 @@ init 1:
         group glasses auto
 
         group outfits auto
-        group outfits auto variant "pregnant" if_any ["morgan_pregnant", "reona_pregnant"]
 
         attribute sasha_boobjob if_any "sasha"
 
@@ -33,7 +32,6 @@ init 1:
         group amy_necktie auto if_any "amy"
 
         group outfits auto variant "collarcover" if_any "morgan"
-        group outfits auto variant "collarcover_pregnant" if_any "morgan_pregnant"
 
         attribute breemc
         group mc_haircuts auto variant "breemc" if_any "breemc":

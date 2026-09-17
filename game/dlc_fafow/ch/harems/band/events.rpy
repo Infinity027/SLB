@@ -4657,18 +4657,7 @@ label amy_anna_kleio_sasha_male_ending:
     anna.say "We've like, played on every continent and in almost every country!"
     anna.say "Lots of them I'd never even heard of before too."
     amy.say "Yet somehow we've still managed to keep it together as a family."
-    if amy.pregnant:
-        amy.say "Raising my girl on the road is hard."
-        amy.say "But Raven's got so many people to help with that."
-    if anna.pregnant:
-        anna.say "Tommy's always running me in crazy circles."
-        anna.say "And I know he does the same to you guys too!"
-    if kleio.pregnant:
-        kleio.say "I know that this is where I want Kurt to grow up."
-        kleio.say "Surrounded by kick-ass female role-models."
-    if sasha.pregnant:
-        sasha.say "Veronica doesn't see our lives as anything unusual."
-        sasha.say "And that's the way I want it to stay."
+
     kleio.say "Geez..."
     kleio.say "We're like a musical version of the Manson Family!"
     anna.say "Oooh..."

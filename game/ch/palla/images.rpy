@@ -120,8 +120,6 @@ init 1:
 
         always "palla_model_ending_fashion" if_not ["naked"]
 
-        always "palla_model_ending_pregnant_fashion" if_any ["pregnant"] if_not ["naked"]
-
         attribute collar
 
         always "palla_model_ending_glasses" if_not ["naked"]

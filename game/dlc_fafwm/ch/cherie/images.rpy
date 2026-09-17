@@ -14,9 +14,6 @@ init 1:
         group outfit auto if_not["naked", "topless"]:
             attribute santa "cherie_kiss_outfit_date"
             attribute rpg "cherie_kiss_outfit_date"
-        group outfit auto variant "pregnant" if_any ["pregnant"] if_not ["naked", "topless"]:
-            attribute santa "cherie_kiss_outfit_pregnant_date"
-            attribute rpg "cherie_kiss_outfit_pregnant_date"
 
         attribute collar
 
@@ -52,37 +49,25 @@ init 1:
     layeredimage cherie bj:
         attribute_function Pickers([HaircutPicker,  CollarPicker, DickPicker], npc=cherie)
 
-
         group bg auto:
             attribute bedroom default
-
-
         group bodies auto
-
-
-        
 
         always "cherie_bj_haircuts_haircut" if_any "haircut" if_not "swimsuit"
         always "cherie_bj_haircuts_haircut_swimsuit" if_all ["haircut", "swimsuit"]
 
-
         group ceyes auto:
             attribute open default
 
-
         always "cherie_bj_haircuts_nohaircut_front" if_any "nohaircut"
-
 
         attribute naked null
         group outfit auto if_not "naked"
         group outfit auto variant "haircut" if_any ["haircut"] if_not "naked"
         group outfit auto variant "nohaircut" if_any ["nohaircut"] if_not "naked"
-        group outfit auto variant "pregnant" if_any ["pregnant"] if_not "naked"
-
 
         group cmouth auto:
             attribute happy default
-
 
         attribute clit null
         attribute lips null
@@ -90,7 +75,6 @@ init 1:
   
         attribute collar null
         group collar auto if_any "collar"
-
 
         attribute mc_casual null
         group mikeoutfit auto if_not ["naked"]:
@@ -139,21 +123,17 @@ init 1:
         group outfit auto variant "haircut" if_any ["haircut"] if_not "naked"
         group outfit auto variant "nohaircut" if_any ["nohaircut"] if_not "naked"
 
-
         attribute haircut
         always "cherie_doggy_haircut_bun" if_any "haircut"
         always "cherie_doggy_haircut_brand" if_any "haircut"
-
 
         attribute clit null
         attribute lips null
         attribute navel null
         attribute nose null
         attribute nipples null
-        attribute pregnant_navel null
 
         always "cherie_doggy_anus" if_any "anal"
-
 
         group dickpos:
             attribute anal null
@@ -209,11 +189,8 @@ init 1:
         group outfits auto if_not "naked"
         group outfits auto variant "haircut" if_any ["haircut"] if_not "naked"
         group outfits auto variant "nohaircut" if_any ["nohaircut"] if_not "naked"
-        group outfits auto variant "pregnant" if_any ["pregnant"] if_not "naked"
-
 
         attribute collar
-
 
         attribute mc_casual null
         group mikeoutfits auto if_not ["naked"]:
@@ -244,14 +221,11 @@ init 1:
         group outfits auto variant "haircut" if_any ["haircut"] if_not "naked"
         group outfits auto variant "nohaircut" if_any ["nohaircut"] if_not "naked"
 
-
         attribute ears if_not "nohaircut"
         attribute clit null
         attribute lips null
         attribute navel null
         attribute nipples null
-        attribute pregnant_navel null
-
         attribute collar null
         group collar auto if_any "collar"
 
@@ -259,58 +233,41 @@ init 1:
         group mikeoutfits auto if_not ["naked"]:
             attribute sexyswimsuit "cherie_cunnilingus_mikeoutfits_swimsuit"
 
-
     layeredimage cherie standing:
         attribute_function Pickers([HaircutPicker,  CollarPicker, DickPicker], npc=cherie)
-
 
         group bg auto:
             attribute bedroom default
 
-
         always "cherie_standing_hand"
-
 
         always "cherie_standing_mike"
 
-
         group bodies auto
-
-
-        
 
         always "cherie_standing_haircut" if_any "haircut" if_not "swimsuit"
         always "cherie_bj_standing_swimsuit" if_all ["haircut", "swimsuit"]
 
-
         group exp auto:
             attribute happy default
 
-
         always "cherie_standing_haircuts_nohaircut_front" if_any "nohaircut"
-
 
         attribute naked null
         group outfits auto if_not "naked"
         group outfits auto variant "haircut" if_any ["haircut"] if_not "naked"
         group outfits auto variant "nohaircut" if_any ["nohaircut"] if_not "naked"
-        group outfits auto variant "pregnant" if_any ["pregnant"] if_not "naked"
-
 
         attribute clit null
         attribute lips null
         attribute navel null
-        attribute pregnant_navel null
-
+ 
         attribute collar null
         group collar auto if_any "collar"
-
 
         attribute mc_casual null
         group mikeoutfits auto if_not ["naked"]:
             attribute sexyswimsuit "cherie_standing_mikeoutfits_swimsuit"
-
-
 
         group dickpos:
             attribute anal null
@@ -320,12 +277,10 @@ init 1:
         group dick auto variant "vaginal" if_any "vaginal"
         group dick auto variant "outside" if_any "outside"
 
-
         attribute condom null
         group condom auto variant "anal" if_all ["condom", "anal"]
         group condom auto variant "vaginal" if_all ["condom", "vaginal"]
         group condom auto variant "outside" if_all ["condom", "outside"]
-
 
         attribute cum null
         always "cherie_standing_cum_anal" if_all ["anal", "cum"]
@@ -347,55 +302,38 @@ init 1:
 
         always "cherie_reverse_mike_body"
 
-
         always "cherie_reverse_bodies_haircut" if_any "haircut"
         always "cherie_reverse_bodies_nohaircut" if_any "nohaircut" if_not "swimsuit"
         always "cherie_reverse_bodies_nohaircut_swimsuit" if_all ["nohaircut", "swimsuit"]
 
-
         always "cherie_reverse_novaginal" if_not "vaginal"
-
 
         attribute dickbump null
         group dick auto if_any ["dickbump"]
 
-
-        attribute pregnant null
-        group pregnant auto if_any ["pregnant"]
-
-
         attribute pubes
-
 
         always "cherie_reverse_haircut" if_any "haircut" if_not "swimsuit"
         always "cherie_reverse_haircut_swimsuit" if_all ["haircut", "swimsuit"]
 
-
         group exp auto:
             attribute happy default
 
-
         always "cherie_reverse_nohaircut_brand" if_any "nohaircut"
-
 
         attribute ears if_not "nohaircut"
         attribute lips null
        
-
         attribute naked null
         group outfits auto if_not "naked"
         group outfits auto variant "haircut" if_any ["haircut"] if_not "naked"
         group outfits auto variant "nohaircut" if_any ["nohaircut"] if_not "naked"
-        group outfits auto variant "pregnant" if_any ["pregnant"] if_not "naked"
-
 
         always "cherie_reverse_mike"
-
 
         attribute mc_casual null
         group mikeoutfits auto if_not ["naked"]:
             attribute sexyswimsuit "cherie_reverse_mikeoutfits_swimsuit"
-
 
         group dickpos:
             attribute anal null
@@ -448,7 +386,7 @@ init -35 python:
     'haircuts': ['nohaircut', 'haircut'],
     'exps': ['normal', 'amused', 'angry', 'annoyed', 'closed', 'cry', 'flirt', 'happy', 'mindless', 'sad', 'sadsmile', 'smile', 'stuned', 'surprised', 'talkative', 'upset', 'whining', 'wink'],
     'outfits': ['casual', 'work', 'sport', 'date', 'sexydate', 'sluttydate', 'swimsuit', 'sexyswimsuit', 'halloween', 'funeral', 'wedding', 'underwear', 'naked'],
-    'others': ['pregnant', 'pubes', 'collar', 'blush', 'bottomless', 'topless', 'chainless', 'noglasses'],
+    'others': ['pubes', 'collar', 'blush', 'bottomless', 'topless', 'chainless', 'noglasses'],
 }
 
     def cherie_anim_filter(attrs, anim_dict=cherie_attrs):
@@ -456,13 +394,8 @@ init -35 python:
         if not isinstance(attrs, list):
             attrs = list(attrs)
         
-        
         add_pickers_attrs = Pickers([CollarPicker,  PubesPicker, HaircutPicker, PositionPicker], npc=cherie)(set(attrs))
-        if "pregnant_navel" in add_pickers_attrs:
-            add_pickers_attrs.remove("pregnant_navel")
-            add_pickers_attrs.add("navel")
         attrs.extend(add_pickers_attrs)
-        
         
         sgl_attrs, mult_attrs = anim_attrs_filter(attrs,
         {k: [None, anim_dict[k]] for k in ['positions', 'exps', 'outfits', 'haircuts']},
@@ -470,12 +403,9 @@ init -35 python:
         prv_def_vals=['outfits']
     )
         
-        
         attr_hair = 'hair_appear'
         
-        
         sgl_attrs['outfits'][0] = (Pickers([OutfitPicker], npc=cherie)(set(attrs) if not sgl_attrs['outfits'][0] else {sgl_attrs['outfits'][0]}) & set(anim_dict['outfits']) or {"casual"}).pop()
-        
         
         attr_acc = None
         if 'topless' not in mult_attrs['others'][0] and sgl_attrs['outfits'][0] in ['date', 'swimsuit']:

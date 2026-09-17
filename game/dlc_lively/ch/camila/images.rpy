@@ -6,7 +6,7 @@ init -35 python:
     'haircuts': ['nohaircut', 'haircut'],
     'exps': ['normal', 'angry', 'annoyed','blush', 'bored', 'flirt', 'happy', 'mindless', 'sad', 'sadsmile', 'stuned', 'surprised', 'talkative', 'upset', 'weird', 'whining', 'wink'],
     'outfits': ['casual', 'work', 'sport', 'date', 'sexydate', 'sluttydate', 'swimsuit', 'sexyswimsuit', 'halloween', 'wedding', 'naked'],
-    'others': ['pregnant', 'pubes', 'collar', 'bottomless', 'topless', 'nojacket'],
+    'others': ['pubes', 'collar', 'bottomless', 'topless', 'nojacket'],
     'accessories': ['bullet', 'card', 'handcuff', 'mug', 'donut', 'wine', 'smoke'],
 }
 
@@ -15,11 +15,7 @@ init -35 python:
         if not isinstance(attrs, list):
             attrs = list(attrs)
         
-        
         add_pickers_attrs = Pickers([ CollarPicker, PubesPicker, HaircutPicker, PositionPicker], npc=camila)(set(attrs))
-        if "pregnant_navel" in add_pickers_attrs:
-            add_pickers_attrs.remove("pregnant_navel")
-            add_pickers_attrs.add("navel")
         attrs.extend(add_pickers_attrs)
         
         
@@ -191,9 +187,5 @@ label test_camila_outfits:
         $ renpy.show(f"camila b work{pregnancy}", tag="c2", at_list=[right])
         "work"
 
-        $ pregnancy = ' pregnant'
-        $ count += 1
-
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

@@ -25,14 +25,12 @@ init 1:
         attribute aletta_glasses if_any "aletta"
 
         group outfits auto
-        group outfits auto variant "pregnant" if_any "morgan_pregnant"
-
+ 
         attribute sasha_boobjob if_any "sasha"
 
         group collars auto
 
         group outfits auto variant "collarcover" if_any "morgan"
-        group outfits auto variant "collarcover_pregnant" if_any "morgan_pregnant"
 
         group haircuts auto:
             attribute morgan_nohaircut null

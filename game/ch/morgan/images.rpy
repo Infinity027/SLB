@@ -35,10 +35,8 @@ init 1:
 
         group hairs auto
 
-        group top auto variant "a" if_all ["a","halloween"] if_not ["pregnant","topless","naked"]
-        group top auto variant "b" if_all ["b","halloween"] if_not ["pregnant","topless","naked"]
-        group top auto variant "a_pregnant" if_all ["a","pregnant","halloween"] if_not ["topless","naked"]
-        group top auto variant "b_pregnant" if_all ["b","pregnant","halloween"] if_not ["topless","naked"]
+        group top auto variant "a" if_all ["a","halloween"] if_not ["topless","naked"]
+        group top auto variant "b" if_all ["b","halloween"] if_not ["topless","naked"]
 
         attribute makeup null
         group exp auto:
@@ -78,21 +76,15 @@ init 1:
             attribute wedding null
 
         attribute bottomless null
-        group bot auto variant "a" if_any ["a"] if_not ["pregnant","bottomless","naked"]
-        group bot auto variant "b" if_any ["b"] if_not ["pregnant","bottomless","naked"]
-        group bot auto variant "a_pregnant" if_all ["a","pregnant"] if_not ["bottomless","naked"]
-        group bot auto variant "b_pregnant" if_all ["b","pregnant"] if_not ["bottomless","naked"]
+        group bot auto variant "a" if_any ["a"] if_not ["bottomless","naked"]
+        group bot auto variant "b" if_any ["b"] if_not ["bottomless","naked"]
 
         attribute topless null
-        group top auto variant "a" if_any ["a"] if_not ["pregnant","topless","naked","halloween"]
-        group top auto variant "b" if_any ["b"] if_not ["pregnant","topless","naked","halloween"]
-        group top auto variant "a_pregnant" if_all ["a","pregnant"] if_not ["topless","naked","halloween"]
-        group top auto variant "b_pregnant" if_all ["b","pregnant"] if_not ["topless","naked","halloween"]
+        group top auto variant "a" if_any ["a"] if_not ["topless","naked","halloween"]
+        group top auto variant "b" if_any ["b"] if_not ["topless","naked","halloween"]
 
-        group acc_top auto variant "a" if_any ["a"] if_not ["topless", "naked", "pregnant"]
-        group acc_top auto variant "b" if_any ["b"] if_not ["topless", "naked", "pregnant"]
-        group acc_top auto variant "a_pregnant" if_all ["a","pregnant"] if_not ["topless","naked"]
-        group acc_top auto variant "b_pregnant" if_all ["b","pregnant"] if_not ["topless","naked"]
+        group acc_top auto variant "a" if_any ["a"] if_not ["topless", "naked"]
+        group acc_top auto variant "b" if_any ["b"] if_not ["topless", "naked"]
 
         attribute collar null
         group collar auto if_any ["collar"]
@@ -102,10 +94,8 @@ init 1:
 
         group hairs auto
 
-        group top auto variant "a" if_all ["a","halloween"] if_not ["pregnant","topless","naked"]
-        group top auto variant "b" if_all ["b","halloween"] if_not ["pregnant","topless","naked"]
-        group top auto variant "a_pregnant" if_all ["a","pregnant","halloween"] if_not ["topless","naked"]
-        group top auto variant "b_pregnant" if_all ["b","pregnant","halloween"] if_not ["topless","naked"]
+        group top auto variant "a" if_all ["a","halloween"] if_not ["topless","naked"]
+        group top auto variant "b" if_all ["b","halloween"] if_not ["topless","naked"]
 
         attribute makeup null
         group exp auto:
@@ -172,10 +162,8 @@ init 1:
         attribute haircut
 
         attribute naked null
-        attribute pregnant
-        group outfit auto if_not "naked"
 
-        group outfit_pregnant auto if_any "pregnant" if_not "naked"
+        group outfit auto if_not "naked"
 
         attribute collar
         attribute necklace
@@ -197,12 +185,8 @@ init 1:
 
         attribute haircut
 
-        
         attribute naked null
-        attribute pregnant
         group outfit auto if_not "naked"
-
-        group outfit_pregnant auto if_any "pregnant" if_not "naked"
 
         attribute collar
         attribute necklace
@@ -244,8 +228,6 @@ init 1:
 
         always:
             "morgan_standing_morgan"
-        attribute pregnant
-
         attribute haircut null
         group haircut auto if_any "haircut"
 

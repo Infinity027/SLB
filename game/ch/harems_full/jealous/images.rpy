@@ -104,8 +104,6 @@ init 1:
         attribute sasha_lips null
         attribute sasha_nose null
         attribute sasha_tongue null
-        attribute sasha_pregnant_navel null
-
         always:
             "jealous_cowgirl_bg"
         always:
@@ -115,8 +113,6 @@ init 1:
 
         always:
             "jealous_cowgirl_audrey"
-        attribute audrey_pregnant
-
 
         group audreyexp auto:
             attribute audreynormal default
@@ -199,7 +195,6 @@ init 1:
         attribute sasha null
         attribute sasha_collar null
         attribute sasha_lips null
-        attribute sasha_pregnant_navel null
         attribute sasha_tongue null
         attribute mikemc null
 
@@ -224,10 +219,6 @@ init 1:
 
         always:
             "jealous_doggy_sasha_body"
-
-
-        attribute sasha_pregnant
-
 
         attribute sasha_boobjob null
         attribute sasha_noboobjob null
@@ -291,10 +282,6 @@ init 1:
         always:
             "jealous_missionary_audrey_body"
 
-
-        attribute audrey_pregnant
-
-
         always:
             "jealous_missionary_audrey_shadow"
 
@@ -315,10 +302,6 @@ init 1:
 
         always:
             "jealous_missionary_sasha_body"
-
-
-        attribute sasha_pregnant
-
 
         attribute sasha_boobjob
         always:

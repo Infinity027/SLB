@@ -24,7 +24,6 @@ init 1:
             attribute nipples null
             attribute tongue null
             attribute navel null
-            attribute pregnant_navel null
 
 
         attribute naked null
@@ -61,8 +60,6 @@ init 1:
             attribute reona_clit null
             attribute reona_tongue null
             attribute reona_navel null
-            attribute reona_pregnant_navel null
-
 
         attribute jack_naked null
         group jackoutfit auto if_not ["naked", "jack_naked"]
@@ -140,14 +137,11 @@ init 1:
         group glasses auto variant "up" if_any "up"
         group glasses auto variant "down" if_any "down"
 
-
         attribute topless null
         attribute bottomless null
         attribute naked null
         group top auto if_not ["topless", "naked"]
-        group top auto variant "pregnant" if_not ["topless", "naked"] if_any "pregnant"
         group bot auto if_not ["bottomless", "naked"]
-
 
         attribute collar
 
@@ -181,7 +175,6 @@ init 1:
 
         group multiple:
             attribute navel null
-            attribute pregnant_navel null
             attribute tongue null
 
         attribute squirt
@@ -595,14 +588,7 @@ init 1:
 
         group body auto variant "notsmash" if_any ["notsmash"]
         group body auto variant "smash" if_any ["smash"]
-
-
         group lowerbody auto
-
-
-         null
-        group pregnant auto if_any ["pregnant"]
-
 
         group head auto variant "notsmash_notpulled" if_all ["notsmash", "notpulled"]
         group head auto variant "notsmash_pulled" if_all ["notsmash", "pulled"]
@@ -1027,7 +1013,7 @@ init -35 python:
     'haircuts': ['nohaircut', 'haircut'],
     'exps': ['normal', 'angry', 'annoyed', 'devious', 'embarrassed', 'flirt', 'guilty', 'happy', 'interested', 'lying', 'mindless', 'pensive', 'sad', 'sadangry', 'sadfrustrated', 'sadshock', 'sadsmile', 'shock', 'shout', 'shy', 'stuned', 'surprised', 'talkative', 'upset', 'whining'],
     'outfits': ['casual', 'purecasual', 'sport', 'date', 'puredate', 'sexydate', 'sluttydate', 'swimsuit', 'sexyswimsuit', 'rpg', 'halloween', 'wedding', 'underwear', 'sexyunderwear'],
-    'others': ['pregnant', 'pubes', 'collar', 'blush', 'bottomless', 'topless', 'naked', 'noacc', 'saliva'],
+    'others': ['pubes', 'collar', 'blush', 'bottomless', 'topless', 'naked', 'noacc', 'saliva'],
     'accessories': ['glasses', 'pureglasses', 'dildo', 'mask', 'wallet'],
 }
 
@@ -1038,11 +1024,6 @@ init -35 python:
         
         
         add_pickers_attrs = Pickers([ PubesPicker, CollarPicker], npc=reona)(set(attrs))
-        if "pregnant_navel" in add_pickers_attrs:
-            add_pickers_attrs.remove("pregnant_navel")
-            add_pickers_attrs.add("navel")
-        attrs.extend(add_pickers_attrs)
-        
         
         sgl_attrs, mult_attrs = anim_attrs_filter(attrs,
         {k: [None, anim_dict[k]] for k in ['lefthands', 'righthands', 'exps', 'outfits', 'haircuts']},
@@ -1087,7 +1068,7 @@ init -35 python:
         
         
         attr_jacket = None
-        if not any(attr in mult_attrs['others'][0] for attr in ('nojacket', 'bottomless', 'naked', 'pregnant')) and sgl_attrs['outfits'][0] in ['casual']:
+        if not any(attr in mult_attrs['others'][0] for attr in ('nojacket', 'bottomless', 'naked')) and sgl_attrs['outfits'][0] in ['casual']:
             attr_jacket = "jacket_" + sgl_attrs['outfits'][0]
         
         
@@ -1349,9 +1330,6 @@ label test_reona_outfits:
         $ renpy.show(f"reona wedding{pregnancy} leftnormal rightopen", tag="r4", at_list=[right5])
         $ renpy.show(f"reona wedding{pregnancy} leftback righthold", tag="r5", at_list=[mostright5])
         "wedding"
-
-        $ pregnancy = ' pregnant'
-        $ count += 1
 
     return
 return

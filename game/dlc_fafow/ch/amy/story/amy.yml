@@ -499,13 +499,13 @@ steps:
       condition: amy.flags.engagedmike
       next: None
 
-  preg:
-    name: Get Amy pregnant
-    optional: True
-    condition: True
-    outcome:
-      condition: amy.flags.pregnancies_number > 0
-      next: None
+  # preg:
+  #   name: Get Amy pregnant
+  #   optional: True
+  #   condition: True
+  #   outcome:
+  #     condition: amy.flags.pregnancies_number > 0
+  #     next: None
 
   slave:
     name: Make Amy my sex slave

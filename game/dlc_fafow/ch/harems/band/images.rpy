@@ -23,7 +23,6 @@ init 1:
         group multiple:
             attribute amy_nipples null
             attribute amy_navel null
-            attribute amy_pregnant_navel null
             attribute sasha_lips null
             attribute sasha_nose null
             attribute sasha_tongue null
@@ -33,8 +32,6 @@ init 1:
         attribute sasha_naked null
 
         group multiple auto variant outfits when not naked
-        group outfits auto variant "amy_pregnant" if_any "amy_pregnant" if_not "naked"
-        group outfits auto variant "sasha_pregnant" if_any "sasha_pregnant" if_not "naked"
         group outfits auto variant "boobjob" if_any "sasha_boobjob" if_not "naked"
 
         group multiple auto variant collars
@@ -84,12 +81,10 @@ init 1:
         group multiple:
             attribute amy_clit null
             attribute amy_navel null
-            attribute amy_pregnant_navel null
             attribute amy_nipples null
             attribute amy_nose null
             attribute sasha_lips null
             attribute sasha_navel null
-            attribute sasha_pregnant_navel null
             attribute sasha_tongue null
 
         attribute naked null
@@ -97,8 +92,6 @@ init 1:
         attribute sasha_naked null
 
         group multiple auto variant outfits when not naked
-        group outfits auto variant "amy_pregnant" if_any "amy_pregnant" if_not "naked"
-        group outfits auto variant "sasha_pregnant" if_any "sasha_pregnant" if_not "naked"
         group outfits auto variant "boobjob" if_any "sasha_boobjob" if_not "naked"
 
         group multiple auto variant collars
@@ -148,8 +141,6 @@ init 1:
 
         group multiple auto variant npcs
 
-        attribute sasha_pregnant
-
         group multiple auto variant collars
 
         group boobjobs auto:
@@ -157,11 +148,7 @@ init 1:
 
         group multiple auto variant outfits when not naked
 
-        attribute amy_pregnant
-
-        group outfits_sasha_pregnant auto if_any "sasha_pregnant" if_not "naked"
         group outfits_boobjob auto if_any "sasha_boobjob" if_not "naked"
-        group outfits_amy_pregnant auto if_any "amy_pregnant" if_not "naked"
 
         group multiple:
             attribute sasha_lips null
@@ -196,8 +183,6 @@ init 1:
 
         group multiple auto variant npcs
 
-        attribute sasha_pregnant
-
         group multiple auto variant collars
 
         group boobjobs auto:
@@ -205,15 +190,10 @@ init 1:
 
         group multiple auto variant outfits when not naked
 
-        attribute amy_pregnant
-
-        group outfits_sasha_pregnant auto if_any "sasha_pregnant" if_not "naked"
         group outfits_boobjob auto if_any "sasha_boobjob" if_not "naked"
-        group outfits_amy_pregnant auto if_any "amy_pregnant" if_not "naked"
 
         group multiple:
             attribute amy_clit null
-            attribute amy_pregnant_navel null
             attribute sasha_lips null
             attribute sasha_nipples null
             attribute sasha_tongue null
@@ -296,13 +276,11 @@ init 1:
         group multiple:
             attribute amy_clit null
             attribute amy_navel null
-            attribute amy_pregnant_navel null
             attribute amy_nipples null
             attribute amy_nose null
             attribute kleio_clit null
             attribute kleio_ears null
             attribute kleio_navel null
-            attribute kleio_pregnant_navel null
             attribute kleio_nipples null
             attribute kleio_nose null
             attribute kleio_tongue null
@@ -377,11 +355,9 @@ init 1:
         group multiple:
             attribute amy_clit null
             attribute amy_navel null
-            attribute amy_pregnant_navel null
             attribute kleio_clit null
             attribute kleio_ears null
             attribute kleio_navel null
-            attribute kleio_pregnant_navel null
             attribute kleio_tongue null
 
         group multiple auto variant collars
@@ -423,11 +399,9 @@ init 1:
         group multiple:
             attribute amy_clit null
             attribute amy_navel null
-            attribute amy_pregnant_navel null
             attribute amy_nipples null
             attribute kleio_clit null
             attribute kleio_navel null
-            attribute kleio_pregnant_navel null
             attribute kleio_nipples null
             attribute kleio_tongue null
 
@@ -436,9 +410,6 @@ init 1:
 
         attribute amy_nohaircut null
         group haircuts auto
-
-        attribute amy_pregnant null
-        attribute kleio_pregnant null
 
         always "band_threesome_amykleio_fuckkleio_bodies"
 
@@ -546,7 +517,6 @@ init 1:
         group multiple:
             attribute amy_clit null
             attribute amy_navel null
-            attribute amy_pregnant_navel null
             attribute anna_ears null
             attribute anna_tongue null
 
@@ -620,12 +590,10 @@ init 1:
             attribute amy_clit null
             attribute amy_ears null
             attribute amy_navel null
-            attribute amy_pregnant_navel null
             attribute amy_nipples null
             attribute anna_clit null
             attribute anna_ears null
             attribute anna_navel null
-            attribute anna_pregnant_navel null
             attribute anna_tongue null
 
         group multiple auto variant collars
@@ -665,7 +633,6 @@ init 1:
         attribute kleio null
 
         attribute kleio_collar if_not "nokleiosasha"
-        attribute kleio_pregnant if_not "nokleiosasha"
         attribute kleio_pubes null
         attribute kleio_nohaircut null
         attribute kleio_haircut if_not "nokleiosasha"
@@ -675,7 +642,6 @@ init 1:
         attribute sasha_boobjob null
         attribute sasha_noboobjob null
         attribute sasha_collar if_not "nokleiosasha"
-        attribute sasha_pregnant if_not "nokleiosasha"
         attribute sasha_nohaircut if_not "nokleiosasha"
         attribute sasha_haircut null
 
@@ -683,15 +649,12 @@ init 1:
         group multiple:
             attribute amy_clit null
             attribute amy_navel null
-            attribute amy_pregnant_navel null
         attribute amy_collar
-        attribute amy_pregnant null
 
         attribute noanna null
         attribute anna if_not "noanna"
         attribute anna_collar if_not "noanna"
         attribute anna_pubes if_not "noanna"
-        attribute anna_pregnant if_not "noanna"
 
         group dick auto:
             attribute outside null default

@@ -20,9 +20,6 @@ init 1:
         attribute pubes null
         group pubes auto if_any "pubes"
 
-        attribute pregnant null
-        group pregnant auto if_any ["pregnant"]
-
         attribute blush
 
         attribute collar null
@@ -251,11 +248,9 @@ init 1:
         attribute_function Pickers([CollarPicker,  OutfitPicker], npc=bree)
 
         always "bree_pillow_attack_bree"
-        attribute pregnant
         attribute naked null
         group outfit auto if_not ["naked"]:
             attribute sleep default
-        group outfit auto variant "pregnant" if_any ["pregnant"] if_not ["naked"]
         attribute collar
 
     image breedad fx exclamation:
@@ -308,8 +303,6 @@ init 1:
         always "bree_scissorhands_bg"
 
         always "bree_scissorhands_bodies"
-
-        attribute pregnant
 
         group bree auto:
             attribute normal default
@@ -398,10 +391,7 @@ init 1:
 
         attribute collar
         attribute nohaircut null
-        attribute pregnant
-
         group outfit auto if_not ["naked"]
-        group pregnant_outfit auto if_any ["pregnant"] if_not ["naked"]
 
     layeredimage bree spying:
         attribute_function Pickers([HaircutPicker, CollarPicker,  OutfitPicker], npc=bree)

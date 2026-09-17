@@ -1177,16 +1177,6 @@ label kleio_fuck_date_doggy(sexperience_min):
                 "She cries out, almost like she's in pain, and I can feel her nails digging into my skin, drawing blood."
                 show kleio doggy smoke -squirt with hpunch
                 "Kleio's cries fade along with my own motions as the climax passes and we sink into a tangled mess amongst the tossed sheets."
-            elif _return == "vaginal_inside_pregnant":
-                "I can't tell if Kleio is clawing at the sheets in passion or else in an effort to free herself."
-                "Either way it doesn't matter - my weight is too much for her to slip out from under, and there's no time left."
-                show kleio doggy ahegao creampie squirt -shake with hpunch
-                $ kleio.love += 3
-                "The convulsions grip me and are instantly transferred into Kleio's body, making her buck in sympathy."
-                with hpunch
-                "She cries out, almost like she's in pain, and I can feel her nails digging into my skin, drawing blood."
-                show kleio doggy smoke -squirt with hpunch
-                "Kleio's cries fade along with my own motions as the climax passes and we sink into a tangled mess amongst the tossed sheets."
             else:
                 "I can't tell if Kleio is clawing at the sheets in passion or else in an effort to free herself."
                 "Either way it doesn't matter - my weight is too much for her to slip out from under, and there's no time left."

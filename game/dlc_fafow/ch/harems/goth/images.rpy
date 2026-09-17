@@ -15,7 +15,6 @@ init 1:
         group amy auto
         always "goth_3some_blowjob_amy_amylick" if_any ["violaineblow"] if_not ["amyblow"]
 
-        group pregnant auto if_any ["pregnant"]
         always "goth_3some_blowjob_pregnant_amylick" if_all ["pregnant", "violaineblow"] if_not ["amyblow"]
 
         group amyeyes auto variant "amyblow" if_any ["amyblow"]:
@@ -405,20 +404,14 @@ init 1:
     layeredimage goth 4some fuckviolaine:
         attribute_function Pickers([PubesPicker, CollarPicker,  DickPicker], npc=amy)
 
-
         always "goth_4some_fuckviolaine_bg"
-
 
         attribute amy
 
-
         attribute collar if_any ["amy"]
         attribute pubes if_any ["amy"]
-        attribute pregnant if_any ["amy"]
-
 
         attribute amy_bodycum if_any ["amy"]
-
 
         always "goth_4some_fuckviolaine_boobs_normal" if_any ["amy"] if_not ["amybounce"]
         attribute amybounce null

@@ -1312,17 +1312,6 @@ label morgan_fuck_date_doggy(sexperience_min):
                     "The sound Morgan makes is the most animalistic yet."
                     with hpunch
                     "And as soon as I'm done, she slides off of me and onto the bed in exhausted silence."
-                elif _return == "vaginal_inside_pregnant":
-                    "I'd like to think that the reason I keep right on going until I lose myself inside Morgan is obvious enough."
-                    "All the while we've been having sex, I've felt the weight of her belly in each and every thrust."
-                    "But the truth is that I'm too far gone to be sure that I'm not just caught up in the moment!"
-                    show morgan doggy creampie ahegao with hpunch
-                    $ morgan.love += 2
-                    "Either way, I fill Morgan when I'm at the deepest point I can reach inside of her."
-                    with hpunch
-                    "She sags as if stunned by the sensation, lowing almost like a cow."
-                    with hpunch
-                    "I hold her as she folds up and sinks onto the bed, supporting the weight of her belly the whole time."
                 elif _return == "vaginal_inside_mad":
                     "If I'm really the one getting to make all of the choices tonight, then that's just what I'll do!"
                     "I'm having far too good of a time to even think about stopping now."
@@ -1493,18 +1482,6 @@ label morgan_fuck_date_doggy(sexperience_min):
                     "Only after I've let it all go inside of her do I finally let go of Morgan."
                     with hpunch
                     "With nothing to support her any longer, she collapses into a heap on the bed."
-                elif _return == "vaginal_inside_pregnant":
-                    "I don't have to worry for a moment about pulling out of Morgan before I cum."
-                    "Not when her pregnant belly is as visibly swollen as it is right now!"
-                    "The weight of it adds to the sensation of every thrust that I make into her."
-                    "And I can't help wondering if it's all that's keeping her upright too!"
-                    show morgan doggy creampie ahegao with hpunch
-                    $ morgan.love += 2
-                    "But then I lose myself, and fill Morgan a second later."
-                    with hpunch
-                    "My job done, I can finally let go and allow her to collapse onto the bed."
-                    with hpunch
-                    "Morgan rolls onto her side before me, cradling her belly with both arms."
                 elif _return == "vaginal_inside_mad":
                     "When I feel Morgan trying to wriggle off of me before I cum, I can't help smiling at the sensation."
                     mike.say "Oh no, you're not going anywhere."
@@ -1674,16 +1651,6 @@ label morgan_fuck_date_doggy(sexperience_min):
                     "I lose myself deep inside of Morgan, hearing her gasp in delight."
                     with hpunch
                     "After it's all over and done with, we topple over onto the bed, neither of us able to move or speak."
-                elif _return == "vaginal_inside_pregnant":
-                    "How could I forget that Morgan's carrying our baby?"
-                    "Especially when I've been feeling the weight of her belly this whole time!"
-                    "It adds to the sensations that I experience when making love to her."
-                    show morgan doggy creampie ahegao with hpunch
-                    $ morgan.love += 2
-                    "And it anchors me as I lose myself inside of her too."
-                    with hpunch
-                    "When Morgan collapses onto the bed, I support her the entire way."
-                    "And then we lie together, exhausted as I stroke it lazily."
                 elif _return == "vaginal_inside_mad":
                     show morgan doggy creampie normal -tongueout with hpunch
                     $ morgan.impregnate()
@@ -1866,17 +1833,6 @@ label morgan_fuck_date_cowgirl(sexperience_min):
                     with vpunch
                     "More prepared for the tumult, she rides it out like a pro."
                     "When we're both finished, she's panting, but I sound like I'm close to death!"
-                    $ morgan.love += 2
-                elif _return == "vaginal_inside_pregnant":
-                    "I don't need to be reminded of the fact that it's okay to keep right on going to the end."
-                    "After all, I've had Morgan's swollen little belly pressed against my thighs the whole time."
-                    "It stands out so much against her otherwise petite frame, making her look almost ready to burst."
-                    "Truth be told, I love the feeling of its weight and it makes me want her all the more whenever I see it."
-                    show morgan reverse cowgirl cum with vpunch
-                    "And though Morgan doesn't burst just yet, I do a moment later, filling her as I cum."
-                    with vpunch
-                    "She lowers herself onto me backwards as she begins to shake from her own orgasm which follows."
-                    "Her increased weight feels oddly comforting as she lays atop me back to stomach, still quivering with the aftershocks of her climax."
                     $ morgan.love += 2
                 elif _return == "vaginal_inside_mad":
                     show morgan reverse cowgirl cum with vpunch
@@ -2067,17 +2023,6 @@ label morgan_fuck_date_cowgirl(sexperience_min):
                     with vpunch
                     "I cum like my life depends on it, groaning and panting almost as much as Morgan is herself."
                     $ morgan.love += 2
-                elif _return == "vaginal_inside_pregnant":
-                    "Neither Morgan nor I need to be reminded of just why it's safe for me to keep on going right now."
-                    "I can feel the weight of her swollen belly pressing down on mine from above all too well."
-                    "But the weight is in no way an impediment or something that I need to ignore."
-                    "In fact it makes me all the more intense in my need to please Morgan, to show her how much I desire her."
-                    "It's something that we've created together, a living symbol of our love for each other."
-                    show morgan reverse cowgirl cum ahegao with vpunch
-                    "I cradle Morgan's weight as I fill her, feeling her lay ever more of it back onto me as she cums herself."
-                    with vpunch
-                    "She ends panting and soaked in sweat, laid backwards onto me as best she can with her belly sticking up on top."
-                    $ morgan.love += 2
                 elif _return == "vaginal_inside_mad":
                     morgan.say "[hero.name]...[hero.name]!"
                     morgan.say "You have to get it out of me - RIGHT NOW!"
@@ -2255,16 +2200,6 @@ label morgan_fuck_date_cowgirl(sexperience_min):
                     with vpunch
                     "Once it's over, Morgan collapses backwards onto me, the pair of us totally and utterly spent."
                     $ morgan.love += 2
-                elif _return == "vaginal_inside_pregnant":
-                    "I've been able to feel the heavy, reassuring weight of Morgan's swollen belly atop me this whole time."
-                    "As if I need anything else to remind me of the fact that it's okay to cum inside of her!"
-                    "It's pressed between us as she presses her weight down upon me, trying to get as close as possible."
-                    "All the same, I try to support it as best I can, keen to protect what's already growing inside of her."
-                    show morgan reverse cowgirl cum with vpunch
-                    "Morgan clings to me tighter than ever, riding out every last second."
-                    with vpunch
-                    "Once it's over, Morgan collapses backwards onto me, the pair of us totally and utterly spent."
-                    $ morgan.love += 2
                 elif _return == "vaginal_inside_mad":
                     morgan.say "[hero.name] - you're gonna cum inside of me!"
                     mike.say "Wha...what?!?"
@@ -2392,12 +2327,6 @@ label morgan_fuck_date_missionary(sexperience_min):
         "Gasping at the sensations racking her body, Morgan barely manages to gasp out as I reach my end."
         with hpunch
         morgan.say "I...on...pill....fuck!"
-        $ morgan.love += 2
-    elif _return == "vaginal_inside_pregnant":
-        show morgan missionary vaginal cum with hpunch
-        "Gasping at the sensations racking her body, Morgan barely manages to gasp out as I reach my end."
-        with hpunch
-        morgan.say "I...pregnant....fuck!"
         $ morgan.love += 2
     elif _return == "vaginal_inside_mad":
         show morgan missionary vaginal cum with hpunch
@@ -2655,27 +2584,6 @@ label morgan_fuck_date_standing(sexperience_min):
                 with hpunch
                 "She's already starting to cum herself, and the sensation seems to push her along faster."
                 show morgan standing half pinch pullout cum -shaking -vaginal with hpunch
-                $ morgan.love += 2
-                "So much so that I feel the need to hold on tighter, to keep her from toppling over!"
-            elif _return == "vaginal_inside_pregnant":
-                show morgan standing half pinch
-                morgan.say "It's...okay..."
-                morgan.say "I'm pregnant...remember?"
-                show morgan standing at stepback(speed=0.1, h=-10, v=-20)
-                pause 0.2
-                show morgan standing at stepback(speed=0.1, h=-10, v=-20)
-                "I silently thank Morgan for the timely reminder, because with it I feel confident ploughing straight on."
-                show morgan standing at stepback(speed=0.1, h=-10, v=-20)
-                pause 0.2
-                show morgan standing at stepback(speed=0.1, h=-10, v=-20)
-                "And that's just what I do, keeping up the same speed and intensity until the very last moment."
-                show morgan standing at stepback(speed=0.1, h=-10, v=-20)
-                pause 0.2
-                show morgan standing pleasure closed cumshot shaking with hpunch
-                "Then I just let go, allowing myself to lose it as deep inside Morgan as I can go."
-                with hpunch
-                "She's already starting to cum herself, and the sensation seems to push her along faster."
-                show morgan standing half pinch pullout cum -shaking -vaginal
                 $ morgan.love += 2
                 "So much so that I feel the need to hold on tighter, to keep her from toppling over!"
             elif _return == "vaginal_inside_mad":

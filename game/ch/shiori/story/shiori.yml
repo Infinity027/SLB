@@ -462,13 +462,13 @@ steps:
       condition: shiori.flags.engagedmike
       next: None
 
-  preg:
-    name: Get Shiori pregnant
-    optional: True
-    condition: True
-    outcome:
-      condition: shiori.flags.pregnancies_number > 0
-      next: None
+  # preg:
+  #   name: Get Shiori pregnant
+  #   optional: True
+  #   condition: True
+  #   outcome:
+  #     condition: shiori.flags.pregnancies_number > 0
+  #     next: None
 
   slave:
     name: Make Shiori my sex slave

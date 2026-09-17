@@ -27,7 +27,6 @@ init 1:
 
         attribute clit null
         attribute navel null
-        attribute pregnant_navel null
         attribute nipples null
 
 

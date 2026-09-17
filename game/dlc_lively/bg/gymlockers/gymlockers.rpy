@@ -39,7 +39,6 @@ init 6:
     layeredimage bg gymlockers:
         attribute_function MultiPickers([ CollarPicker, OutfitPicker, HaircutPicker, GymLockersPicker], append_npc_from_attributes=True)
 
-
         attribute empty null            
         attribute force_display null        
         attribute alexis_clit null
@@ -65,27 +64,18 @@ init 6:
         attribute lavish_nohaircut when lavish
 
         attribute reona
-        attribute reona_pregnant when reona
         attribute reona_collar when reona
-        group reona_bot auto variant preg when reona and reona_pregnant
-        group reona_bot auto variant nopreg when reona and not reona_pregnant
-        group reona_top auto variant preg when reona and reona_pregnant
-        group reona_top auto variant nopreg when reona and not reona_pregnant
+        group reona_bot auto variant nopreg when reona
+        group reona_top auto variant nopreg when reona
         group reona_hair auto when reona
 
         attribute alexis
-        attribute alexis_pregnant when alexis
         attribute alexis_collar when alexis
-        group alexis_bot auto variant preg when alexis and alexis_pregnant
-        group alexis_bot auto variant nopreg when alexis and not alexis_pregnant
-        group alexis_top auto variant preg when alexis and alexis_pregnant
-        group alexis_top auto variant nopreg when alexis and not alexis_pregnant
+        group alexis_bot auto variant nopreg when alexis
+        group alexis_top auto variant nopreg when alexis
         attribute alexis_nohaircut when alexis
 
         attribute emma
-        attribute emma_pregnant when emma
-        group emma_bot auto variant preg when emma and emma_pregnant
-        group emma_bot auto variant nopreg when emma and not emma_pregnant
-        group emma_top auto variant preg when emma and emma_pregnant
-        group emma_top auto variant nopreg when emma and not emma_pregnant
+        group emma_bot auto variant nopreg when emma
+        group emma_top auto variant nopreg when emma
         attribute emma_nohaircut when emma

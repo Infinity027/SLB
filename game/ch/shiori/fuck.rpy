@@ -809,17 +809,6 @@ label shiori_fuck_date_doggy(sexperience_min):
                 with vpunch
                 "We both collapse onto the bed, exhausted and yet completely satisfied."
                 "Shiori wears a weak and yet blissful smile as I feel my cock finally slither out of her."
-            elif _return == "vaginal_inside_pregnant":
-                "There's nothing to keep me from keeping right on, as I've already made Shiori pregnant before now."
-                "Indeed, it's the weight of her growing belly and the amount by which her breasts have grown that's making this so memorable."
-                "It's weird - I never thought I'd be turned on by a pregnant woman's body."
-                "But with Shiori, it makes me desire her all the more, so maybe it's different when you're the one responsible?"
-                $ shiori.love += 3
-                show shiori doggy cumshot with vpunch
-                "And that's it - with my head full of Shiori's swollen belly and breasts, I cum inside of her."
-                with vpunch
-                "Her legs buckle and she collapses onto the bed."
-                "But I'm there to catch her, and guide her gently down, holding her in my arms the whole time."
             elif _return == "vaginal_inside_mad":
                 "I might well have managed to forget the fact that I'm not wearing any protection."
                 "But as she realises I'm about to cum, Shiori certainly shows that she hasn't."
@@ -1149,18 +1138,6 @@ label shiori_fuck_date_missionary(sexperience_min):
                     with hpunch
                     "Shiori rides me to the very end, and then collapses onto the bed."
                     "And I fall down beside her, panting and utterly spent."
-                elif _return == "vaginal_inside_pregnant":
-                    "Shiori smiles up at me as she cradles her swollen belly."
-                    "We both know that it means there's no need for me to stop."
-                    "And I don't, keeping on until the very last moment."
-                    $ shiori.love += 3
-                    show shiori missionary cum ahegao with hpunch
-                    "Shiori moans as I shoot my load inside of her."
-                    with hpunch
-                    "And I gasp as I fill her too."
-                    with hpunch
-                    "Shiori rides me to the very end."
-                    "And then we collapse onto the bed, panting and utterly spent."
                 elif _return == "vaginal_inside_mad":
                     shiori.say "Oh...oh...[hero.name]!"
                     shiori.say "You can't..."
@@ -1410,17 +1387,6 @@ label shiori_fuck_date_missionary(sexperience_min):
                     "She begins to cum almost the same moment I lose it inside of her."
                     with vpunch
                     "And she clings to me the whole time, sighing with delight."
-                elif _return == "vaginal_inside_pregnant":
-                    "Still going as fast as I dare, I push on at the very end."
-                    "Shiori's belly is a reminder of the fact she's already pregnant."
-                    "So there's no danger in me not pulling out."
-                    $ shiori.love += 3
-                    show shiori missionary2 creampie ahegao with vpunch
-                    "And Shiori seems to appreciate me doing so no end."
-                    with vpunch
-                    "She begins to cum almost the same moment I lose it inside of her."
-                    with vpunch
-                    "And she clings to me the whole time, sighing with delight."
                 elif _return == "vaginal_inside_mad":
                     shiori.say "Please..."
                     shiori.say "Don't cum in me!"
@@ -1612,16 +1578,6 @@ label shiori_fuck_date_piledriver(sexperience_min):
                 "And she cums a second later, crying out at the sensation."
                 with hpunch
                 "Afterwards I collapse into a heap, pulling Shiori over with me."
-            elif _return == "vaginal_inside_pregnant":
-                "All the while I've been careful to protect Shiori's swollen belly."
-                "But it also means that there's no need to stop what I'm doing."
-                show shiori piledriver cumshot with hpunch
-                "And so I keep right on going until I shoot my load inside of her."
-                $ shiori.love += 3
-                show shiori piledriver ahegao squirt with hpunch
-                "Shiori moans as I fill her, riding me to the very end."
-                with hpunch
-                "And then we collapse onto the bed, panting and utterly spent."
             elif _return == "vaginal_inside_mad":
                 shiori.say "[hero.name]!"
                 shiori.say "The condom..."
@@ -2214,20 +2170,6 @@ label shiori_fuck_office_missionary(sexperience_min):
                 "Shiori squeaks and squeals under me as I fill her up."
                 "She clings onto me until it's over, twitching around my cock."
                 "And then her head falls back onto the sofa and she flops like a ragdoll."
-            elif _return == "vaginal_inside_pregnant":
-                shiori.say "Do it, [hero.name], please?"
-                shiori.say "You already got me pregnant!"
-                "I clap a hand over Shiori's mouth as I shoot my load."
-                "Not hard enough to keep her from breathing, of course."
-                show shiori missionary2 ahegao creampie -bounce -speed with vpunch
-                "Just enough to muffle the noise she makes as I cum in her pussy."
-                with vpunch
-                "She just reminded me she's pregnant, so there's no danger in doing this."
-                with vpunch
-                $ shiori.love += 3
-                "Shiori squeaks and squeals under me as I fill her up."
-                "She clings onto me until it's over, twitching around my cock."
-                "And then her head falls back onto the sofa and she flops like a ragdoll."
             elif _return == "vaginal_inside_happy":
                 shiori.say "Oh, [hero.name]..."
                 shiori.say "I want to have your babies!"
@@ -2511,22 +2453,6 @@ label shiori_fuck_office_reverse(sexperience_min):
                 "Or at least she does until I shoot my load into her."
                 show shiori reverse milk cum with vpunch
                 $ shiori.love += 2
-                "Then she begins to buck and squirm on my cock."
-                with vpunch
-                "And it's all I can do to keep a hold of her while I cum."
-                show shiori reverse nodick cum pussy -milk with vpunch
-                "By the time she slides off my cock, Shiori seems exhausted."
-                "Panting and slick with sweat, she falls onto her face on the desk."
-            elif _return == "vaginal_inside_pregnant":
-                shiori.say "Please cum inside me, [hero.name], please!"
-                shiori.say "Like you did before, remember?"
-                shiori.say "Like the time you got me pregnant!"
-                "I mentally thank Shiori for the timely reminder."
-                "And at the same time I pull her down like never before."
-                "She gasps in surprise, but then nods her approval."
-                "Or at least she does until I shoot my load into her."
-                show shiori reverse milk cum with vpunch
-                $ shiori.love += 3
                 "Then she begins to buck and squirm on my cock."
                 with vpunch
                 "And it's all I can do to keep a hold of her while I cum."

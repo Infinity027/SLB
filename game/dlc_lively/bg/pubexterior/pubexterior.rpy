@@ -46,45 +46,36 @@ init 6:
         attribute anna_tongue null
         attribute emma_clit null
         attribute emma_navel null
-        attribute emma_pregnant_navel null
         attribute emma_tongue null
         attribute kat_clit null
         attribute kat_ears null
         attribute kat_navel null
-        attribute kat_pregnant_navel null
         attribute kat_tongue null
-
 
         group season auto variant "day" if_any "day"
         group season auto variant "night" if_any "night"
         always "snow"
 
-
         attribute kat
         
         attribute kat_collar when kat
         always "bg_pubexterior_kat_nohaircut" when kat
-        group kat_bot auto variant preg when kat and kat_pregnant
-        group kat_bot auto variant nopreg when kat and not kat_pregnant
-        group kat_top auto variant preg when kat and kat_pregnant
-        group kat_top auto variant nopreg when kat and not kat_pregnant
-
+        group kat_bot auto variant nopreg when kat
+        group kat_top auto variant preg when kat
+        group kat_top auto variant nopreg when kat
 
         attribute anna
         
         attribute anna_collar when anna
         always "bg_pubexterior_anna_nohaircut" when anna
-        group anna_bot auto variant preg when anna and anna_pregnant
-        group anna_bot auto variant nopreg when anna and not anna_pregnant
-        group anna_top auto variant preg when anna and anna_pregnant
-        group anna_top auto variant nopreg when anna and not anna_pregnant
-
+        group anna_bot auto variant nopreg when anna
+        group anna_top auto variant preg when anna
+        group anna_top auto variant nopreg when anna
 
         attribute emma
         
         attribute emma_collar when emma
         always "bg_pubexterior_emma_nohaircut" when emma
-        group emma_bot auto variant preg when emma and emma_pregnant
-        group emma_bot auto variant nopreg when emma and not emma_pregnant
-        group emma_top auto variant preg when emma and emma_pregnant
-        group emma_top auto variant nopreg when emma and not emma_pregnant
+        group emma_bot auto variant nopreg when emma
+        group emma_top auto variant preg when emma
+        group emma_top auto variant nopreg when emma

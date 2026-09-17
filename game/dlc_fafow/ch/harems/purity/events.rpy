@@ -1320,17 +1320,8 @@ label harmony_reona_male_ending:
     reona.say "You are so right, Harmony."
     reona.say "And how we have been rewarded for our perseverance too!"
     reona.say "We have a beautiful home and a perfect little family."
-    if harmony.pregnant and reona.pregnant:
-        harmony.say "Damien and Lilith are so much like their father!"
-        harmony.say "I just wish that he could be around to spend more time with them."
-    elif harmony.pregnant:
-        harmony.say "Lilith is so much like her father!"
-        harmony.say "I just wish that he could be around to spend more time with her."
-    elif reona.pregnant:
-        harmony.say "Damien is so much like his father!"
-        harmony.say "I just wish that he could be around to spend more time with him."
-    else:
-        harmony.say "I just wish that he could be around to spend more time with us."
+    
+    harmony.say "I just wish that he could be around to spend more time with us."
     reona.say "Now, now, Harmony..."
     reona.say "We both know that [hero.name] works very hard to keep us all."
     reona.say "And that our lot is to keep a well-ordered house in return."

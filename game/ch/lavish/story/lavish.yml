@@ -538,13 +538,13 @@ steps:
       condition: lavish.flags.engagedmike
       next: None
 
-  preg:
-    name: Get Lavish pregnant
-    optional: True
-    condition: True
-    outcome:
-      condition: lavish.flags.pregnancies_number > 0
-      next: None
+  # preg:
+  #   name: Get Lavish pregnant
+  #   optional: True
+  #   condition: True
+  #   outcome:
+  #     condition: lavish.flags.pregnancies_number > 0
+  #     next: None
 
   slave:
     name: Make Lavish my sex slave

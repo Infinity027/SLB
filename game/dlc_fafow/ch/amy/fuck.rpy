@@ -924,17 +924,6 @@ label amy_fuck_date_missionary(sexperience_min):
                 "Only when I shoot my load do I let myself stop."
                 show amy missionary spread
                 "Falling sideways and hitting the mattress beside Amy."
-            elif _return == "vaginal_inside_pregnant":
-                "I've been making sure Amy's belly was safe this whole time."
-                "And now it serves as a reminder of the fact I don't need to pull out."
-                "It means I can keep on until the end."
-                with vpunch
-                "And I don't let up until it happens either."
-                $ amy.love += 2
-                show amy missionary cum ahegao with vpunch
-                "Only when I shoot my load do I let myself stop."
-                show amy missionary spread
-                "Falling sideways and hitting the mattress beside Amy."
             elif _return == "vaginal_inside_pill":
                 amy.say "Don't stop..."
                 amy.say "I'm on the pill!"
@@ -1234,26 +1223,6 @@ label amy_fuck_date_doggy(sexperience_min):
                 pause 0.1
                 show amy doggy cum down -speed with hpunch
                 "Amy's arms and legs wobble, then they give out and she collapses onto the bed."
-            elif _return == "vaginal_inside_pregnant":
-                show amy doggy normal
-                amy.say "Don't stop..."
-                show amy doggy -trust
-                pause 0.1
-                show amy doggy trust speed up with hpunch
-                pause 0.1
-                show amy doggy -speed down
-                amy.say "I'm pregnant - remember?!?"
-                "Amy being pregnant means that there's no danger in going all the way."
-                "And that's just what I do, holding Amy up as I make one that thrust into her."
-                show amy doggy ahegao -trust
-                pause 0.1
-                show amy doggy trust speed up with hpunch
-                pause 0.1
-                show amy doggy cum down -speed with hpunch
-                $ amy.love += 2
-                "Amy's arms and legs wobble, then they give out and she collapses onto the bed."
-                show amy doggy pleasure nomc openpussy screencum with hpunch
-                "My cock slides out of her at the same time, bobbing over her ass."
             elif _return == "vaginal_inside_pill":
                 show amy doggy normal
                 amy.say "Don't stop..."
@@ -1619,56 +1588,6 @@ label amy_fuck_date_cowgirl(sexperience_min):
                 show amy cowgirl up
                 pause 0.15
                 show amy cowgirl down ahegao cum -speed with vpunch
-                pause 0.35
-                show amy cowgirl up
-                pause 0.35
-                show amy cowgirl down with vpunch
-                pause 0.5
-                show amy cowgirl up
-                pause 0.5
-                show amy cowgirl down with vpunch
-                pause 0.75
-                show amy cowgirl up
-                "Which means that I cum a few moments after Amy."
-                show amy cowgirl down pleasure at startle
-                "Releasing my own energies and adding to the intensity of her own."
-            elif _return == "vaginal_inside_pregnant":
-                amy.say "Don't stop..."
-                show amy cowgirl up
-                pause 0.15
-                show amy cowgirl down speed at startle(0.05,-10)
-                pause 0.15
-                show amy cowgirl up
-                pause 0.15
-                show amy cowgirl down at startle(0.05,-10)
-                pause 0.15
-                show amy cowgirl up
-                pause 0.15
-                show amy cowgirl down at startle(0.05,-10)
-                amy.say "I'm pregnant - remember?!?"
-                "Amy's timely warning gives me the permission I needed."
-                "And so I can keep right on going until the very last moment."
-                "When it comes, I put all of my effort into one final push."
-                show amy cowgirl up
-                pause 0.15
-                show amy cowgirl down speed at startle(0.05,-10)
-                pause 0.15
-                show amy cowgirl up
-                pause 0.15
-                show amy cowgirl down at startle(0.05,-10)
-                pause 0.15
-                show amy cowgirl up
-                pause 0.15
-                show amy cowgirl down at startle(0.05,-10)
-                pause 0.15
-                show amy cowgirl up
-                pause 0.15
-                show amy cowgirl down at startle(0.05,-10)
-                pause 0.15
-                show amy cowgirl up
-                pause 0.15
-                show amy cowgirl down ahegao cum -speed with vpunch
-                $ amy.love += 2
                 pause 0.35
                 show amy cowgirl up
                 pause 0.35

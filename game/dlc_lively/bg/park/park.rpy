@@ -45,7 +45,6 @@ init 6:
     layeredimage bg park:
         attribute_function MultiPickers([DayNightPicker, SeasonPicker,  CollarPicker, OutfitPicker, ParkPicker], append_npc_from_attributes=True)
 
-
         attribute empty null            
         attribute force_display null        
         attribute audrey_ears null
@@ -54,7 +53,6 @@ init 6:
         attribute emma_tongue null
         attribute harmony_clit null
         attribute harmony_navel null
-        attribute harmony_pregnant_navel null
         attribute harmony_tongue null
         attribute kat_clit null
         attribute kat_ears null
@@ -69,13 +67,11 @@ init 6:
         attribute shiori_ears null
         attribute shiori_lips null
         attribute shiori_navel null
-        attribute shiori_pregnant_navel null
         attribute shiori_tongue null
         attribute peace null
         attribute nopeace null
         attribute pressed null
         attribute notpressed null
-
 
         attribute day null
         attribute night null
@@ -84,69 +80,51 @@ init 6:
         always:
             "snow"
 
-
         attribute shiori
        
         attribute shiori_collar when shiori
-        group shiori_bot auto variant preg when shiori and shiori_pregnant
-        group shiori_bot auto variant nopreg when shiori and not shiori_pregnant
-        group shiori_top auto variant preg when shiori and shiori_pregnant
-        group shiori_top auto variant nopreg when shiori and not shiori_pregnant
+        group shiori_bot auto variant nopreg when shiori
+        group shiori_top auto variant nopreg when shiori
         always "bg_park_shiori_nohaircut" when shiori
 
 
         attribute lavish
-       
         attribute lavish_collar when lavish
-        group lavish_bot auto variant preg when lavish and lavish_pregnant
-        group lavish_bot auto variant nopreg when lavish and not lavish_pregnant
-        group lavish_top auto variant preg when lavish and lavish_pregnant
-        group lavish_top auto variant nopreg when lavish and not lavish_pregnant
+        group lavish_bot auto variant nopreg when lavish
+        group lavish_top auto variant nopreg when lavish
         always "bg_park_lavish_nohaircut" when lavish
 
 
         attribute emma
         attribute emma_collar when emma
-        group emma_bot auto variant preg when emma and emma_pregnant
-        group emma_bot auto variant nopreg when emma and not emma_pregnant
-        group emma_top auto variant preg when emma and emma_pregnant
-        group emma_top auto variant nopreg when emma and not emma_pregnant
+        group emma_bot auto variant nopreg when emma
+        group emma_top auto variant nopreg when emma
         always "bg_park_emma_nohaircut" when emma
 
 
         attribute harmony
        
         attribute harmony_collar when harmony
-        group harmony_bot auto variant preg when harmony and harmony_pregnant
-        group harmony_bot auto variant nopreg when harmony and not harmony_pregnant
-        group harmony_top auto variant preg when harmony and harmony_pregnant
-        group harmony_top auto variant nopreg when harmony and not harmony_pregnant
+        group harmony_bot auto variant nopreg when harmony
+        group harmony_top auto variant nopreg when harmony
         always "bg_park_harmony_nohaircut" when harmony
 
         attribute kat
        
         attribute kat_collar when kat
-        group kat_bot auto variant preg when kat and kat_pregnant
-        group kat_bot auto variant nopreg when kat and not kat_pregnant
-        group kat_top auto variant preg when kat and kat_pregnant
-        group kat_top auto variant nopreg when kat and not kat_pregnant
+        group kat_bot auto variant nopreg when kat
+        group kat_top auto variant nopreg when kat
         always "bg_park_kat_nohaircut" when kat
-
 
         attribute palla
        
         attribute palla_collar when palla
-        group palla_bot auto variant preg when palla and palla_pregnant
-        group palla_bot auto variant nopreg when palla and not palla_pregnant
-        group palla_top auto variant preg when palla and palla_pregnant
-        group palla_top auto variant nopreg when palla and not palla_pregnant
+        group palla_bot auto variant nopreg when palla
+        group palla_top auto variant nopreg when palla
         always "bg_park_palla_nohaircut" when palla
-
 
         attribute audrey
         attribute audrey_collar when audrey
-        group audrey_bot auto variant preg when audrey and audrey_pregnant
-        group audrey_bot auto variant nopreg when audrey and not audrey_pregnant
-        group audrey_top auto variant preg when audrey and audrey_pregnant
-        group audrey_top auto variant nopreg when audrey and not audrey_pregnant
+        group audrey_bot auto variant nopreg when audrey
+        group audrey_top auto variant nopreg when audrey
         always "bg_park_audrey_nohaircut" when audrey

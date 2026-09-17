@@ -1142,18 +1142,6 @@ label lavish_fuck_date_cowgirl(sexperience_min):
                 "We cling tightly to each other, refusing to be separated."
                 "Then, as we relax, Lavish lies down atop me."
                 "And I swear I can feel her heart beating against my chest."
-            elif _return == "vaginal_inside_pregnant":
-                "We both know there's no danger in me going all the way."
-                "And Lavish cradles her belly, as if to underline the point."
-                show lavish cowgirl creampie ahegao with vpunch
-                $ lavish.love += 3
-                "Lavish and I climax at almost the same instant."
-                with vpunch
-                "I shoot my load and she tosses her head from side to side."
-                with vpunch
-                "We cling tightly to each other, refusing to be separated."
-                "Then, as we relax, Lavish lies down atop me."
-                "And I swear I can feel her heart beating against my chest."
             elif _return == "vaginal_inside_mad":
                 lavish.say "No..."
                 lavish.say "Stop - right now!"
@@ -1347,22 +1335,6 @@ label lavish_fuck_date_doggy(sexperience_min):
                     "I'm more than happy to do as Lavish asks."
                     show lavish doggy creampie ahegao with hpunch
                     $ lavish.love += 2
-                    "Her eyes roll back into her head as I cum."
-                    with hpunch
-                    "I can't get deeper than this, and she knows it."
-                    with hpunch
-                    "She pants and wriggles under me, struggling with all her strength."
-                    "But there's nowhere for her to go, no escape from what's happening."
-                    show lavish doggy pleasure
-                    "Lavish lets out one last groan, and then she flops onto the bed."
-                    "And if I weren't holding her up, I'm sure she'd collapse onto the floor!"
-                elif _return == "vaginal_inside_pregnant":
-                    lavish.say "Mmm..."
-                    lavish.say "Go ahead..."
-                    lavish.say "I'm already knocked up!"
-                    "I'm more than happy to do as Lavish asks."
-                    show lavish doggy creampie ahegao with hpunch
-                    $ lavish.love += 3
                     "Her eyes roll back into her head as I cum."
                     with hpunch
                     "I can't get deeper than this, and she knows it."
@@ -1570,17 +1542,6 @@ label lavish_fuck_date_doggy(sexperience_min):
                     with hpunch
                     "She rides my cock until it's all over."
                     show lavish doggy pleasure with hpunch
-                    "And then she slumps forwards onto the bed."
-                    "Which leaves me kneeling upright, panting for breath."
-                elif _return == "vaginal_inside_pregnant":
-                    "Lavish's swelling belly is a constant reminder of her being pregnant."
-                    "But now it also means I can go all the way without worrying about it too!"
-                    show lavish doggy creampie ahegao with hpunch
-                    $ lavish.love += 3
-                    "And so I do just that, shooting my load into her without stopping."
-                    with hpunch
-                    "She rides my cock until it's all over."
-                    with hpunch
                     "And then she slumps forwards onto the bed."
                     "Which leaves me kneeling upright, panting for breath."
                 elif _return == "vaginal_inside_mad":

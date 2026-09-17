@@ -176,8 +176,6 @@ init 1:
 
         group multiple auto variant pubic_vaginal when vaginal
 
-        attribute sasha_pregnant
-
         group multiple auto variant collars
 
         attribute onsashabody if_any ["cum"]

@@ -14,7 +14,6 @@ init 1:
         group multiple:
             attribute clit null
             attribute navel null
-            attribute pregnant_navel null
             attribute nipples null
 
 
@@ -240,8 +239,6 @@ init 1:
         attribute pubes null
         group pubes auto if_any ["pubes"]
 
-        attribute pregnant null
-
         attribute buttplug null
         group buttplug auto if_any ["buttplug"] if_not ["anal"]
 
@@ -297,8 +294,6 @@ init 1:
         always "amy_doggy_amy"
         attribute pubes
         always "amy_doggy_mikehand" if_not ["finger", "grab", "nomc"]
-        attribute pregnant
-
 
         group puss auto:
             attribute closedpussy null default
@@ -367,20 +362,15 @@ init 1:
         zoom 1.07 xoffset 40 yoffset 27
         attribute_function Pickers([ DickPicker], npc=amy)
 
-
         group bg auto:
             attribute bedroom default
 
-
         always "amy_cowgirl_mike"
 
-
         group lower auto
-        group pregnant auto if_any ["pregnant"]
         group upper auto
         group head auto:
             attribute up default
-
 
         group exp auto variant "up" if_any ["up"]:
             attribute normal default
@@ -432,15 +422,11 @@ init 1:
     layeredimage amy kneeling:
         attribute naked null
 
-
         always "amy_kneeling_bg"
         always "amy_kneeling_mike"
 
-
         always "amy_kneeling_short"
         always "amy_kneeling_amy"
-        attribute pregnant
-
 
         always "amy_kneeling_hand" if_not ["leash"]
         always "amy_kneeling_hand_leash" if_any ["leash"]
@@ -480,24 +466,16 @@ init 1:
             attribute condom
             attribute cum
 
-
         always "amy_stand_main_mikemc" if_any ["mike"]
 
-
         always "amy_stand_main_amy"
-        attribute pregnant null
-        always "amy_stand_main_pregnant" when pregnant
-
 
         group main_mhands auto if_any ["mike"]:
             attribute butt default
 
-
-
         group main_boobs auto:
             attribute up
             attribute down default
-
 
         attribute collar null
         always "amy_stand_main_collar" when collar
@@ -538,7 +516,7 @@ init -35 python:
     # 'piercings': ['clit', 'navel', 'nipples', 'nose'],
     'exps': ['normal', 'angry', 'annoyed', 'embarrassed', 'flirt', 'grumpy', 'guilty', 'happy', 'lying', 'mad', 'mindless', 'pain', 'pout', 'puzzled', 'sad', 'sadsmile', 'shy', 'stuned', 'surprised', 'upset', 'whining', 'worried'],
     'outfits': ['casual', 'sport', 'date', 'sexydate', 'sluttydate', 'swimsuit', 'sexyswimsuit', 'halloween', 'wedding', 'underwear', 'work', 'naked'],
-    'others': ['pregnant', 'pubes', 'collar', 'blush', 'bottomless', 'topless', 'noacc'],
+    'others': ['pubes', 'collar', 'blush', 'bottomless', 'topless', 'noacc'],
 }
 
     def amy_anim_filter(attrs, anim_dict=amy_attrs):
@@ -548,9 +526,6 @@ init -35 python:
         
         
         add_pickers_attrs = Pickers([CollarPicker, PubesPicker], npc=amy)(set(attrs))
-        if "pregnant_navel" in add_pickers_attrs:
-            add_pickers_attrs.remove("pregnant_navel")
-            add_pickers_attrs.add("navel")
         attrs.extend(add_pickers_attrs)
         
         

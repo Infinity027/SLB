@@ -301,13 +301,13 @@ steps:
       condition: claire.flags.engagedmike
       next: None
 
-  preg:
-    name: Get Claire pregnant
-    optional: True
-    condition: True
-    outcome:
-      condition: claire.flags.pregnancies_number > 0
-      next: None
+  # preg:
+  #   name: Get Claire pregnant
+  #   optional: True
+  #   condition: True
+  #   outcome:
+  #     condition: claire.flags.pregnancies_number > 0
+  #     next: None
 
   slave:
     name: Make Claire my sex slave

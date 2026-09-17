@@ -6,7 +6,7 @@ init -35 python:
     'haircuts': ['nohaircut', 'haircut'],
     'exps': ['normal', 'angry', 'annoyed', 'blank', 'cry', 'dazed', 'evil', 'flirt', 'gloomy', 'happy', 'hesitating', 'lose', 'mindless', 'mouthful', 'sad', 'sadsmile', 'sleepy', 'smile', 'stuned', 'surprised', 'talkative', 'thumb', 'vangry', 'wink'],
     'outfits': ['casual', 'innocentcasual', 'work', 'sport', 'date', 'puredate', 'innocentdate', 'sexydate', 'sluttydate', 'swimsuit', 'innocentswimsuit', 'sexyswimsuit', 'towel', 'underwear', 'daddy', 'rpg', 'bowsette', 'karate', 'halloween', 'invisible', 'chinese', 'dominatrix', 'apron', 'maid', 'pinkmaid', 'sleep', 'wedding', 'naked'],
-    'others': ['pregnant', 'pubes', 'collar', 'leash', 'blush', 'cum_mouthful', 'cum_face', 'bottomless', 'topless'],
+    'others': ['pubes', 'collar', 'leash', 'blush', 'cum_mouthful', 'cum_face', 'bottomless', 'topless'],
 }
 
     def bree_anim_filter(attrs, anim_dict=bree_attrs):
@@ -14,28 +14,20 @@ init -35 python:
         if not isinstance(attrs, list):
             attrs = list(attrs)
         
-        
         pickers_attrs = Pickers([ CollarPicker, PubesPicker, OutfitPicker, PositionPicker], npc=bree)(set(attrs))
-        if "pregnant_navel" in pickers_attrs:
-            pickers_attrs.remove("pregnant_navel")
-            pickers_attrs.add("navel")
         attrs.extend(pickers_attrs)
-        
         
         sgl_attrs, mult_attrs = anim_attrs_filter(attrs,
         {k: [None, anim_dict[k]] for k in ['positions', 'haircuts', 'exps', 'outfits']},
         {k: [[], anim_dict[k]] for k in ['motions', 'piercings', 'others']},
         prv_def_vals=['outfits']
     )
-        
-        
+             
         if (sgl_attrs['positions'][0] == 'z') != (sgl_attrs['outfits'][0] == 'dominatrix'):
             sgl_attrs['positions'][0] = "a"
             sgl_attrs['outfits'][0] = "casual"
-        
-        
+            
         exp = sgl_attrs['positions'][0] + '_' + sgl_attrs['exps'][0]
-        
         
         sgl_attrs['outfits'][0] = (Pickers([OutfitPicker], npc=bree)(set(attrs) if not sgl_attrs['outfits'][0] else {sgl_attrs['outfits'][0]}) & set(anim_dict['outfits']) or {"casual"}).pop()
         
@@ -45,7 +37,6 @@ init -35 python:
                     mult_attrs['others'][0].append('topless')
                 if sgl_attrs['outfits'][0] == 'sleep':
                     sgl_attrs['outfits'][0] = 'underwear'
-        
         
         if sgl_attrs['outfits'][0] in ['rpg']:
             attr_acc_tattoo = "acc_tattoo_" + sgl_attrs['outfits'][0]

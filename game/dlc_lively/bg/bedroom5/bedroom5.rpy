@@ -44,21 +44,16 @@ init 6:
         attribute navel null
         attribute nipples null
         attribute nose null
-        attribute pregnant_navel null
-
 
         attribute day "bedroom5_day"
         attribute night "bedroom5_night"
 
-
         attribute minami
-        attribute pregnant when minami
         attribute collar when minami
         group hair auto when minami
         group stockings auto when minami and not (naked or bottomless)
-        group bot auto variant preg when minami and pregnant and not (naked or bottomless)
-        group bot auto variant nopreg when minami and not (pregnant or naked or bottomless)
+        group bot auto variant preg when minami and not (naked or bottomless)
+        group bot auto variant nopreg when minami and not (naked or bottomless)
         group top auto when minami and not (naked or topless)
-        group top auto variant preg when minami and pregnant and not (naked or topless)
-        group top auto variant nopreg when minami and not (pregnant or naked or topless)
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc
+        group top auto variant preg when minami and not (naked or topless)
+        group top auto variant nopreg when minami and not (naked or topless)

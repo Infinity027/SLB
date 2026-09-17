@@ -17,12 +17,6 @@ init 1:
         attribute pubes null
         group pubes auto when pubes
 
-
-        attribute pregnant null
-        group pregnancy auto when pregnant:
-            attribute b when naked or not (sport or sluttydate)
-
-
         group exp auto variant a when a:
             attribute normal default
         group exp auto variant b when b:
@@ -59,7 +53,6 @@ init 1:
         yalign 0.12
         attribute_function Pickers([PositionPicker, PubesPicker,  CollarPicker, OutfitPicker], npc=violaine)
 
-
         attribute naked null
         attribute topless null
         attribute bottomless null
@@ -72,11 +65,6 @@ init 1:
         group tattoo auto
 
         group pubes auto when pubes
-
-
-        group pregnancy auto when pregnant:
-            attribute b when naked or not (sport or sluttydate)
-
 
         group exp auto variant a when a:
             attribute normal default
@@ -95,8 +83,6 @@ init 1:
 
 
         group belly auto variant b when b and not naked
-        always "violaine_close_piercings_b_pregnant_navel" when b and pregnant_navel and not naked and (sport or sluttydate)
-
 
         group top_a auto when a and not (naked or topless)
         group top_b auto when b and not (naked or topless)

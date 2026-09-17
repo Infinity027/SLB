@@ -6,7 +6,7 @@ init -35 python:
     'haircuts': ['nohaircut', 'haircut'],
     'exps': ['normal', 'angry', 'annoyed', 'constipated', 'cry', 'flirt', 'happy', 'hunt', 'mindless', 'sad', 'sadsmile', 'scared', 'stuned', 'surprised', 'talkative', 'tehe', 'vangry', 'whining'],
     'outfits': ['casual', 'sport', 'sleep', 'underwear', 'date', 'sexydate', 'sluttydate', 'swimsuit', 'sexyswimsuit', 'bikini', 'halloween', 'rpg', 'wedding', 'naked'],
-    'others': ['pregnant', 'pubes', 'collar', 'blush', 'bottomless', 'topless', 'norobe'],
+    'others': ['pubes', 'collar', 'blush', 'bottomless', 'topless', 'norobe'],
 }
 
     def minami_anim_filter(attrs, anim_dict=minami_attrs):
@@ -16,9 +16,6 @@ init -35 python:
         
         
         pickers_attrs = Pickers([CollarPicker, PubesPicker, HaircutPicker,  PositionPicker], npc=minami)(set(attrs))
-        if "pregnant_navel" in pickers_attrs:
-            pickers_attrs.remove("pregnant_navel")
-            pickers_attrs.add("navel")
         attrs.extend(pickers_attrs)
         
         
@@ -213,9 +210,5 @@ label test_minami_outfits:
         $ renpy.show(f"minami c wedding{pregnancy}", tag="m3", at_list=[right])
         "wedding"
 
-        $ pregnancy = ' pregnant'
-        $ count += 1
-
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

@@ -1813,35 +1813,19 @@ label aletta_audrey_lavish_shiori_male_ending:
     "Aletta comes first, like she's leading the procession."
     "She has her head held high like a queen."
     "And I can feel my heart beating faster at the mere sight of her."
-    if aletta.pregnant:
-        "I hardly notice the fact that she's pregnant."
-        "The dress she's chosen is so well cut that it's almost hidden."
-        "Almost, but not quite, and I guess that's what makes the difference."
     show audrey wedding at mostright4
     "Audrey somehow manages to walk with the others and yet still stand apart."
     "She has a slightly snarky, ironic smile on her face."
     "But she still looks elegant and beautiful in her dress."
-    if audrey.pregnant:
-        "Audrey holds her bouquet on top of her bump."
-        "Almost like she's trying to show it off to the world."
-        "I should have known that she'd be that bold and unashamed!"
     show lavish wedding at left4
     "Lavish walks towards me with that same quiet confidence she always has."
     "Her dress is understated and so makes her beauty all the more plain to see."
     "I never know how she can say so much without speaking a single word."
-    if lavish.pregnant:
-        "I almost forget that she's pregnant and already showing."
-        "But then I notice the delicate curve of her belly."
-        "And the sight of it reminds me how much I love her."
     show shiori wedding at right4
     "Shiori comes last in the procession, but my eyes linger on her the longest."
     "Of course she looks simply beautiful in her dress."
     "But what really matters to me is the fact that she's smiling."
     "And I feel a surge of happiness knowing that she's happy too."
-    if shiori.pregnant:
-        "Maybe that has something to do with the sight of her belly too?"
-        "At a stroke we're getting married and starting a new family together."
-        "This really is the beginning of a new life for all of us!"
     "I shuffle awkwardly to the side as the girls reach the altar."
     "And one by one they come to stand beside me, all moving here and there."
     "I mean sure, we tried to tackle all of this at the rehearsal the other day."
@@ -2043,27 +2027,15 @@ label audrey_lavish_shiori_male_ending:
     "Audrey somehow manages to walk with the others and yet still stand apart."
     "She has a slightly snarky, ironic smile on her face."
     "But she still looks elegant and beautiful in her dress."
-    if audrey.pregnant:
-        "Audrey holds her bouquet on top of her bump."
-        "Almost like she's trying to show it off to the world."
-        "I should have known that she'd be that bold and unashamed!"
     show lavish wedding at left
     "Lavish walks towards me with that same quiet confidence she always has."
     "Her dress is understated and so makes her beauty all the more plain to see."
     "I never know how she can say so much without speaking a single word."
-    if lavish.pregnant:
-        "I almost forget that she's pregnant and already showing."
-        "But then I notice the delicate curve of her belly."
-        "And the sight of it reminds me how much I love her."
     show shiori wedding
     "Shiori comes last in the procession, but my eyes linger on her the longest."
     "Of course she looks simply beautiful in her dress."
     "But what really matters to me is the fact that she's smiling."
     "And I feel a surge of happiness knowing that she's happy too."
-    if shiori.pregnant:
-        "Maybe that has something to do with the sight of her belly too?"
-        "At a stroke we're getting married and starting a new family together."
-        "This really is the beginning of a new life for all of us!"
     "I shuffle awkwardly to the side as the girls reach the altar."
     "And one by one they come to stand beside me, all moving here and there."
     "I mean sure, we tried to tackle all of this at the rehearsal the other day."
@@ -2234,27 +2206,15 @@ label aletta_lavish_shiori_male_ending:
     "Aletta comes first, like she's leading the procession."
     "She has her head held high like a queen."
     "And I can feel my heart beating faster at the mere sight of her."
-    if aletta.pregnant:
-        "I hardly notice the fact that she's pregnant."
-        "The dress she's chosen is so well cut that it's almost hidden."
-        "Almost, but not quite, and I guess that's what makes the difference."
     show lavish wedding at right
     "Lavish walks towards me with that same quiet confidence she always has."
     "Her dress is understated and so makes her beauty all the more plain to see."
     "I never know how she can say so much without speaking a single word."
-    if lavish.pregnant:
-        "I almost forget that she's pregnant and already showing."
-        "But then I notice the delicate curve of her belly."
-        "And the sight of it reminds me how much I love her."
     show shiori wedding
     "Shiori comes last in the procession, but my eyes linger on her the longest."
     "Of course she looks simply beautiful in her dress."
     "But what really matters to me is the fact that she's smiling."
     "And I feel a surge of happiness knowing that she's happy too."
-    if shiori.pregnant:
-        "Maybe that has something to do with the sight of her belly too?"
-        "At a stroke we're getting married and starting a new family together."
-        "This really is the beginning of a new life for all of us!"
     "I shuffle awkwardly to the side as the girls reach the altar."
     "And one by one they come to stand beside me, all moving here and there."
     "I mean sure, we tried to tackle all of this at the rehearsal the other day."
@@ -2427,31 +2387,15 @@ label aletta_audrey_shiori_male_ending:
     "Aletta comes first, like she's leading the procession."
     "She has her head held high like a queen."
     "And I can feel my heart beating faster at the mere sight of her."
-    if aletta.pregnant:
-        "I hardly notice the fact that she's pregnant."
-        "The dress she's chosen is so well cut that it's almost hidden."
-        "Almost, but not quite, and I guess that's what makes the difference."
     show audrey wedding at right
     "Audrey somehow manages to walk with the others and yet still stand apart."
     "She has a slightly snarky, ironic smile on her face."
     "But she still looks elegant and beautiful in her dress."
-    if audrey.pregnant:
-        "Audrey holds her bouquet on top of her bump."
-        "Almost like she's trying to show it off to the world."
-        "I should have known that she'd be that bold and unashamed!"
-    if lavish.pregnant:
-        "I almost forget that she's pregnant and already showing."
-        "But then I notice the delicate curve of her belly."
-        "And the sight of it reminds me how much I love her."
     show shiori wedding
     "Shiori comes last in the procession, but my eyes linger on her the longest."
     "Of course she looks simply beautiful in her dress."
     "But what really matters to me is the fact that she's smiling."
     "And I feel a surge of happiness knowing that she's happy too."
-    if shiori.pregnant:
-        "Maybe that has something to do with the sight of her belly too?"
-        "At a stroke we're getting married and starting a new family together."
-        "This really is the beginning of a new life for all of us!"
     "I shuffle awkwardly to the side as the girls reach the altar."
     "And one by one they come to stand beside me, all moving here and there."
     "I mean sure, we tried to tackle all of this at the rehearsal the other day."
@@ -2624,26 +2568,14 @@ label aletta_audrey_lavish_male_ending:
     "Aletta comes first, like she's leading the procession."
     "She has her head held high like a queen."
     "And I can feel my heart beating faster at the mere sight of her."
-    if aletta.pregnant:
-        "I hardly notice the fact that she's pregnant."
-        "The dress she's chosen is so well cut that it's almost hidden."
-        "Almost, but not quite, and I guess that's what makes the difference."
     show audrey wedding at right
     "Audrey somehow manages to walk with the others and yet still stand apart."
     "She has a slightly snarky, ironic smile on her face."
     "But she still looks elegant and beautiful in her dress."
-    if audrey.pregnant:
-        "Audrey holds her bouquet on top of her bump."
-        "Almost like she's trying to show it off to the world."
-        "I should have known that she'd be that bold and unashamed!"
     show lavish wedding
     "Lavish walks towards me with that same quiet confidence she always has."
     "Her dress is understated and so makes her beauty all the more plain to see."
     "I never know how she can say so much without speaking a single word."
-    if lavish.pregnant:
-        "I almost forget that she's pregnant and already showing."
-        "But then I notice the delicate curve of her belly."
-        "And the sight of it reminds me how much I love her."
     "I shuffle awkwardly to the side as the girls reach the altar."
     "And one by one they come to stand beside me, all moving here and there."
     "I mean sure, we tried to tackle all of this at the rehearsal the other day."
@@ -2816,19 +2748,11 @@ label lavish_shiori_male_ending:
     "Lavish walks towards me with that same quiet confidence she always has."
     "Her dress is understated and so makes her beauty all the more plain to see."
     "I never know how she can say so much without speaking a single word."
-    if lavish.pregnant:
-        "I almost forget that she's pregnant and already showing."
-        "But then I notice the delicate curve of her belly."
-        "And the sight of it reminds me how much I love her."
     show shiori wedding at right
     "Shiori comes last in the procession, but my eyes linger on her the longest."
     "Of course she looks simply beautiful in her dress."
     "But what really matters to me is the fact that she's smiling."
     "And I feel a surge of happiness knowing that she's happy too."
-    if shiori.pregnant:
-        "Maybe that has something to do with the sight of her belly too?"
-        "At a stroke we're getting married and starting a new family together."
-        "This really is the beginning of a new life for all of us!"
     "I shuffle awkwardly to the side as the girls reach the altar."
     "And one by one they come to stand beside me, all moving here and there."
     "I mean sure, we tried to tackle all of this at the rehearsal the other day."
@@ -2970,19 +2894,11 @@ label audrey_shiori_male_ending:
     "Audrey somehow manages to walk with the others and yet still stand apart."
     "She has a slightly snarky, ironic smile on her face."
     "But she still looks elegant and beautiful in her dress."
-    if audrey.pregnant:
-        "Audrey holds her bouquet on top of her bump."
-        "Almost like she's trying to show it off to the world."
-        "I should have known that she'd be that bold and unashamed!"
     show shiori wedding at left
     "Shiori comes last in the procession, but my eyes linger on her the longest."
     "Of course she looks simply beautiful in her dress."
     "But what really matters to me is the fact that she's smiling."
     "And I feel a surge of happiness knowing that she's happy too."
-    if shiori.pregnant:
-        "Maybe that has something to do with the sight of her belly too?"
-        "At a stroke we're getting married and starting a new family together."
-        "This really is the beginning of a new life for all of us!"
     "I shuffle awkwardly to the side as the girls reach the altar."
     "And one by one they come to stand beside me, all moving here and there."
     "I mean sure, we tried to tackle all of this at the rehearsal the other day."
@@ -3124,18 +3040,10 @@ label audrey_lavish_male_ending:
     "Audrey somehow manages to walk with the others and yet still stand apart."
     "She has a slightly snarky, ironic smile on her face."
     "But she still looks elegant and beautiful in her dress."
-    if audrey.pregnant:
-        "Audrey holds her bouquet on top of her bump."
-        "Almost like she's trying to show it off to the world."
-        "I should have known that she'd be that bold and unashamed!"
     show lavish wedding at left
     "Lavish walks towards me with that same quiet confidence she always has."
     "Her dress is understated and so makes her beauty all the more plain to see."
     "I never know how she can say so much without speaking a single word."
-    if lavish.pregnant:
-        "I almost forget that she's pregnant and already showing."
-        "But then I notice the delicate curve of her belly."
-        "And the sight of it reminds me how much I love her."
     "I shuffle awkwardly to the side as the girls reach the altar."
     "And one by one they come to stand beside me, all moving here and there."
     "I mean sure, we tried to tackle all of this at the rehearsal the other day."
@@ -3276,19 +3184,11 @@ label aletta_shiori_male_ending:
     "Aletta comes first, like she's leading the procession."
     "She has her head held high like a queen."
     "And I can feel my heart beating faster at the mere sight of her."
-    if aletta.pregnant:
-        "I hardly notice the fact that she's pregnant."
-        "The dress she's chosen is so well cut that it's almost hidden."
-        "Almost, but not quite, and I guess that's what makes the difference."
     show shiori wedding at right
     "Shiori comes last in the procession, but my eyes linger on her the longest."
     "Of course she looks simply beautiful in her dress."
     "But what really matters to me is the fact that she's smiling."
     "And I feel a surge of happiness knowing that she's happy too."
-    if shiori.pregnant:
-        "Maybe that has something to do with the sight of her belly too?"
-        "At a stroke we're getting married and starting a new family together."
-        "This really is the beginning of a new life for all of us!"
     "I shuffle awkwardly to the side as the girls reach the altar."
     "And one by one they come to stand beside me, all moving here and there."
     "I mean sure, we tried to tackle all of this at the rehearsal the other day."
@@ -3432,18 +3332,10 @@ label aletta_lavish_male_ending:
     "Aletta comes first, like she's leading the procession."
     "She has her head held high like a queen."
     "And I can feel my heart beating faster at the mere sight of her."
-    if aletta.pregnant:
-        "I hardly notice the fact that she's pregnant."
-        "The dress she's chosen is so well cut that it's almost hidden."
-        "Almost, but not quite, and I guess that's what makes the difference."
     show lavish wedding at right
     "Lavish walks towards me with that same quiet confidence she always has."
     "Her dress is understated and so makes her beauty all the more plain to see."
     "I never know how she can say so much without speaking a single word."
-    if lavish.pregnant:
-        "I almost forget that she's pregnant and already showing."
-        "But then I notice the delicate curve of her belly."
-        "And the sight of it reminds me how much I love her."
     "I shuffle awkwardly to the side as the girls reach the altar."
     "And one by one they come to stand beside me, all moving here and there."
     "I mean sure, we tried to tackle all of this at the rehearsal the other day."
@@ -3586,18 +3478,10 @@ label aletta_audrey_male_ending:
     "Aletta comes first, like she's leading the procession."
     "She has her head held high like a queen."
     "And I can feel my heart beating faster at the mere sight of her."
-    if aletta.pregnant:
-        "I hardly notice the fact that she's pregnant."
-        "The dress she's chosen is so well cut that it's almost hidden."
-        "Almost, but not quite, and I guess that's what makes the difference."
     show audrey wedding at right
     "Audrey somehow manages to walk with the others and yet still stand apart."
     "She has a slightly snarky, ironic smile on her face."
     "But she still looks elegant and beautiful in her dress."
-    if audrey.pregnant:
-        "Audrey holds her bouquet on top of her bump."
-        "Almost like she's trying to show it off to the world."
-        "I should have known that she'd be that bold and unashamed!"
     "I shuffle awkwardly to the side as the girls reach the altar."
     "And one by one they come to stand beside me, all moving here and there."
     "I mean sure, we tried to tackle all of this at the rehearsal the other day."

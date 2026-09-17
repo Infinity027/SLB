@@ -44,27 +44,17 @@ init 1:
 
         group pubes auto
 
-
-        group pregnancy auto
-        group pregnancy auto variant "pose02" if_all ["breemc"] if_not ["halloween"]
-
-
         group boobjob:
             attribute sasha_boobjob null
             attribute sasha_noboobjob null
 
         group underwear auto
         group underdress auto
-        group underdress_pregnant auto if_any ["pregnant"]
 
 
         group outfit auto
-        group outfit_pregnant auto if_any ["pregnant"]
-
 
         group outfit auto variant "pose01" if_all ["mikemc"]
-        group outfit_pregnant auto variant "pose01" if_all ["mikemc", "pregnant", "sasha"]
-        group outfit_pregnant auto variant "pose02" if_all ["breemc", "pregnant", "sasha"]
 
         group outfit_boobjob auto variant "pose01" if_all ["sasha_boobjob", "mikemc"]
 
@@ -76,25 +66,17 @@ init 1:
         group multiple auto variant outfit_pose01 when mikemc and minami_date
         
         group outfit auto variant "pose02" if_all ["mikemc", "minami"] if_not "minami_date"
-        group outfit_pregnant auto variant "pose02" if_all ["mikemc", "pregnant", "minami"] if_not ["minami_date"]
-
+  
 
         group outfit auto variant "pose01" if_all ["breemc"] if_any ["minami_date"]
-        group outfit_pregnant auto variant "pose01" if_all ["breemc", "pregnant"] if_any ["minami_date"]
 
         group outfit auto variant "pose02" if_all ["breemc"] if_not "minami_date"
-        group outfit_pregnant auto variant "pose02" if_all ["breemc", "pregnant"] if_not ["minami_date"]
-
 
         group outfit auto variant "pose01" if_all ["breemc", "halloween"]
-        group outfit_pregnant auto variant "pose01" if_all ["breemc", "pregnant", "halloween"]
-
 
         group outfit auto variant "pose02" if_all ["breemc"] if_not ["halloween"]
-        group outfit_pregnant auto variant "pose02" if_all ["breemc", "pregnant"] if_not ["halloween"]
 
         group jacket auto
-
 
         group collars auto if_not ["morgan_halloween", "shiori_sexydate", "shiori_sexywork"]
         group collars auto variant "bree_sexydate" if_any ["bree_sexydate"]
@@ -119,36 +101,27 @@ init 1:
 
         group exp auto variant "breemc" if_any "breemc"
 
-        group acc auto if_not ["angela_pregnant"]
-        group acc_pregnant auto if_any ["angela_pregnant"]
         group glasses auto
 
 
         group armsoutfit auto variant "breemc_pose02" if_all ["breemc", "mike"]
 
-        group forearms auto variant "mikemc" if_all "mikemc" if_not ["minami_pregnant"]
-        group forearms auto variant "mikemc_pregnant" if_all ["mikemc", "minami_pregnant"]
-
-        group forearms auto variant "breemc" if_all "breemc" if_not ["harmony_pregnant"]
-        group forearms auto variant "breemc_pregnant" if_all ["breemc", "harmony_pregnant"]
+        group forearms auto variant "mikemc" if_all "mikemc"
+ 
+        group forearms auto variant "breemc" if_all "breemc"
         group forearms auto variant "breemc_pose01" if_all ["breemc", "halloween"]
-
 
         group mc auto variant "pose02" if_all ["breemc"] if_not ["halloween"]
         group mc_outfit auto variant "breemc_pose02" if_all ["breemc"] if_not ["halloween"]:
             attribute mcdate default
         group forearms auto variant "breemc_pose02" if_all ["breemc"] if_not ["halloween"]
 
-
         group mc auto variant "pose02" if_all ["breemc"] if_any ["danny", "dwayne", "jack", "master", "mike", "ryan", "sasha", "scottie", "shawn",  "victor"]
         group mc_outfit auto variant "breemc_pose02" if_all "breemc" if_any ["danny", "dwayne", "jack", "master", "mike", "ryan", "sasha", "scottie", "shawn",  "victor"]:
             attribute mcdate default
         group forearms auto variant "breemc_pose02" if_all "breemc" if_any ["danny", "dwayne", "jack", "master", "mike", "ryan", "sasha", "scottie", "shawn",  "victor"]
 
-
         group npcsarms auto if_all "mikemc"
         group outfit_boobjob auto if_all ["sasha_boobjob", "sasha_sluttydate", "mikemc"]
 
-
         group mc_acc auto variant "breemc_pose02" if_all "breemc" if_any ["danny", "dwayne", "jack", "master", "mike", "ryan", "sasha", "scottie", "shawn",  "victor"]
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

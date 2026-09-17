@@ -43,8 +43,6 @@ init 6:
 
         attribute cherie
         attribute cherie_collar when cherie
-        group cherie_bot auto variant preg when cherie and cherie_pregnant
-        group cherie_bot auto variant nopreg when cherie and not cherie_pregnant
-        group cherie_top auto variant preg when cherie and cherie_pregnant
-        group cherie_top auto variant nopreg when cherie and not cherie_pregnant
+        group cherie_bot auto variant nopreg when cherie
+        group cherie_top auto variant nopreg when cherie
         group cherie_hair auto when cherie

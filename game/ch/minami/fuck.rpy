@@ -627,20 +627,6 @@ label minami_fuck_date_doggy(sexperience_min):
                 "I don't know which of us is holding the other up as we cum in the same second."
                 with hpunch
                 "But as soon as we're both spent, Minami sinks onto the bed and I fall on top of her."
-            elif _return == "vaginal_inside_pregnant":
-                minami.say "I'm already pregnant, remember?"
-                minami.say "So you'd better not pull out yet!"
-                "Minami's reminder comes as a great relief."
-                "I have my cock so far inside of her right now it's almost impossible to pull out."
-                "And I don't think she'd be inclined to let me do that, even if I wanted to!"
-                "So instead I don't stop for a moment, pushing into Minami until it happens."
-                $ minami.love += 2
-                with hpunch
-                "She cries out as I shoot my load into her, surrendering to her own orgasm too."
-                with hpunch
-                "I don't know which of us is holding the other up as we cum in the same second."
-                with hpunch
-                "But as soon as we're both spent, Minami sinks onto the bed and I fall on top of her."
             elif _return == "vaginal_inside_mad":
                 minami.say "Big bro..."
                 minami.say "You have to pull out - NOW!"
@@ -1014,12 +1000,6 @@ label minami_fuck_date_missionary(sexperience_min):
                 "Minami whispers those words into my ear a mere second before I lose myself inside of her."
                 "She rides my cock on delight as I do so, enjoying every last moment before it's all over."
                 "Afterwards, she slides happily off of my cock, the cum already starting to leak out of her."
-            elif _return == "vaginal_inside_pregnant":
-                "Minami laughs and smiles up at me as she cradles her growing belly."
-                "And I return her smile, safe in the knowledge that we both want the same thing."
-                $ minami.love += 2
-                "She rides my cock on delight as I do so, enjoying every last moment before it's all over."
-                "Afterwards, she slides happily off of my cock, the cum already starting to leak out of her."
             elif _return == "vaginal_inside_mad":
                 minami.say "Wait..."
                 minami.say "You can't..."
@@ -1233,17 +1213,6 @@ label minami_fuck_date_cowgirl(sexperience_min):
                 "Her breath comes in ragged gasps, and then she sags in my arms, like a puppet with severed strings."
                 with vpunch
                 "As the last moments of my orgasm finally pass, I lay her on the bed as gently as I can manage."
-            elif _return == "vaginal_inside_pregnant":
-                "I have the constant reminder of Minami's rounded belly to let me know there's no need to pull out."
-                "But the sight of it does mean that I try to cradle and support her that little bit more."
-                $ minami.love += 2
-                show minami cowgirl creampie ahegao with vpunch
-                "Still she shudders and moans as I cum inside of her, making sounds that could never be mistaken for words."
-                with vpunch
-                "I keep a hold of her as the last throes of our orgasms pass away, almost reluctant to let her go once they have."
-                with vpunch
-                "Only when I'm sure that it's all over do I carefully lay Minami down on her side."
-                "I watch her then, as she lays there, arms clutching her belly, unconsciously protecting what's growing inside."
             elif _return == "vaginal_inside_mad":
                 minami.say "Ah, big bro..."
                 minami.say "We didn't..."

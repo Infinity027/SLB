@@ -49,23 +49,16 @@ init 6:
 
         always "gymmachine"
 
-
         attribute camila
-        attribute camila_pregnant when camila
         attribute camila_collar when camila
 
-        group camila_bot auto variant nopreg when camila and not camila_pregnant
-        group camila_bot auto variant preg when camila and camila_pregnant
-        group camila_top auto variant nopreg when camila and not camila_pregnant
-        group camila_top auto variant preg when camila and camila_pregnant
+        group camila_bot auto variant nopreg when camila
+        group camila_top auto variant nopreg when camila
         group camila_hair auto when camila
 
         attribute aletta
-        attribute aletta_pregnant when aletta
         attribute aletta_collar when aletta
-        group aletta_bot auto variant nopreg when aletta and not aletta_pregnant
-        group aletta_bot auto variant preg when aletta and aletta_pregnant
-        group aletta_top auto variant nopreg when aletta and not aletta_pregnant
-        group aletta_top auto variant preg when aletta and aletta_pregnant
+        group aletta_bot auto variant nopreg when aletta
+        group aletta_top auto variant nopreg when aletta
         group aletta_hair auto when aletta
 

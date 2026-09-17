@@ -18,9 +18,9 @@ init -35 python:
         
         
         add_pickers_attrs = Pickers([ CollarPicker, PubesPicker, HaircutPicker, PositionPicker], npc=shiori)(set(attrs))
-        if "pregnant_navel" in add_pickers_attrs:
-            add_pickers_attrs.remove("pregnant_navel")
-            add_pickers_attrs.add("navel")
+        # if "pregnant_navel" in add_pickers_attrs:
+        #     add_pickers_attrs.remove("pregnant_navel")
+        #     add_pickers_attrs.add("navel")
         attrs.extend(add_pickers_attrs)
         
         
@@ -233,9 +233,5 @@ label test_shiori_outfits:
         $ renpy.hide("s3")
         $ renpy.hide("s4")
 
-        $ pregnancy = ' pregnant'
-        $ count += 1
-
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

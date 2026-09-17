@@ -1993,28 +1993,6 @@ label emma_event_10_bree:
         hide emma
         return
 
-    if bree.pregnant:
-        bree.say "...is the father!"
-        show emma annoyed
-        emma.say "Oh. Oh wow. I didn't...that's um. Oh my gosh I may have made a huge mistake!"
-        bree.say "What do you mean?"
-        emma.say "I just...there were these dreams with me and [hero.name] and I thought maybe there was something, but..."
-        emma.say "He's going to be a father! With you!"
-        emma.say "I can't get in the way of that!"
-        if bree.lesbian >= 9:
-            bree.say "What makes you say you'd get in the way?"
-            show emma blush
-            emma.say "Wha! Hmph I just I um."
-            bree.say "Promise me you'd never do anything to hurt me."
-            emma.say "I pr--what, but why?"
-            bree.say "Because you I'd trust."
-            emma.say "I promise I'd never do anything to hurt you."
-            $ emma.flags.lovepoints += 1
-            $ emma.flags.breeok = True
-            bree.say "Great! See, that was easy!"
-            "Emma continues to blush furiously as she walks away from [bree.name]."
-            return
-
     if 'bree_event_04' in DONE:
         if bree.flags.debt:
             bree.say "...and when I had money trouble, he helped me out with the rent."

@@ -516,13 +516,13 @@ steps:
       condition: harmony.flags.engagedmike
       next: None
 
-  preg:
-    name: Get Harmony pregnant
-    optional: True
-    condition: True
-    outcome:
-      condition: harmony.flags.pregnancies_number > 0
-      next: None
+  # preg:
+  #   name: Get Harmony pregnant
+  #   optional: True
+  #   condition: True
+  #   outcome:
+  #     condition: harmony.flags.pregnancies_number > 0
+  #     next: None
 
   slave:
     name: Make Harmony my sex slave

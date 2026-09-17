@@ -127,7 +127,7 @@ label command_girl:
                     $ hero.cancel_activity()
         "About birth control" if active_girl.is_female:
             menu:
-                "You should start taking the pill" if active_girl.is_female and not active_girl.id == "palla" and not active_girl.flags.pill and active_girl.counters.pregnant == 0 and (active_girl.sub >= 50 or active_girl.love >= 100) and active_girl.sexperience >= 1:
+                "You should start taking the pill" if active_girl.is_female and not active_girl.id == "palla" and not active_girl.flags.pill and (active_girl.sub >= 50 or active_girl.love >= 100) and active_girl.sexperience >= 1:
                     $ active_girl.flags.pill = True
                     $ active_girl.flags.unpilled = False
                 "You should stop taking the pill" if active_girl.is_female and not active_girl.id == "palla" and active_girl.flags.pill and (active_girl.sub >= 50 or active_girl.love >= 150) and active_girl.sexperience >= 1:
@@ -135,7 +135,7 @@ label command_girl:
 
                 "You should stop taking the pill" if active_girl.id == "palla" and palla.flags.pill and (palla.sub >= 50 and palla.love >= 150) and palla.sexperience and not palla.flags.babyok:
                     call palla_pill_talk from _call_palla_pill_talk
-                "You should start taking the pill" if active_girl.id == "palla" and palla.flags.babyok and not palla.flags.pill and active_girl.counters.pregnant == 0 and (palla.sub >= 50 and palla.love >= 100) and palla.sexperience:
+                "You should start taking the pill" if active_girl.id == "palla" and palla.flags.babyok and not palla.flags.pill and (palla.sub >= 50 and palla.love >= 100) and palla.sexperience:
                     $ palla.flags.pill = True
                 "You should stop taking the pill" if active_girl.id == "palla" and palla.flags.babyok and palla.flags.pill and (palla.sub >= 50 and palla.love >= 150) and palla.sexperience:
                     $ palla.flags.pill = False

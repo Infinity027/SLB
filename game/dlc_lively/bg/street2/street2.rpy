@@ -54,21 +54,17 @@ init 6:
         attribute kleio_tongue null
         attribute reona_tongue null
 
-
         group season auto variant "day" if_any "day"
         group season auto variant "night" if_any "night"
         always:
             "snow"
 
-
         attribute kiara
         
         attribute kiara_collar when kiara
         group kiara_hair auto when kiara
-        group kiara_bot auto variant preg when kiara and kiara_pregnant
-        group kiara_bot auto variant nopreg when kiara and not kiara_pregnant
-        group kiara_top auto variant preg when kiara and kiara_pregnant
-        group kiara_top auto variant nopreg when kiara and not kiara_pregnant
+        group kiara_bot auto variant nopreg when kiara
+        group kiara_top auto variant nopreg when kiara
 
 
         attribute reona
@@ -76,19 +72,15 @@ init 6:
         attribute reona_collar when reona
         attribute reona_pureglasses when reona
         group reona_hair auto when reona
-        group reona_bot auto variant preg when reona and reona_pregnant
-        group reona_bot auto variant nopreg when reona and not reona_pregnant
-        group reona_top auto variant preg when reona and reona_pregnant
-        group reona_top auto variant nopreg when reona and not reona_pregnant
+        group reona_bot auto variant nopreg when reona
+        group reona_top auto variant nopreg when reona
 
 
         attribute cherie
         
         attribute cherie_collar when cherie
-        group cherie_bot auto variant preg when cherie and cherie_pregnant
-        group cherie_bot auto variant nopreg when cherie and not cherie_pregnant
-        group cherie_top auto variant preg when cherie and cherie_pregnant
-        group cherie_top auto variant nopreg when cherie and not cherie_pregnant
+        group cherie_bot auto variant nopreg when cherie
+        group cherie_top auto variant nopreg when cherie
         group cherie_hair auto when cherie
 
 
@@ -97,16 +89,12 @@ init 6:
         attribute aletta_collar when aletta
         group aletta_hair auto when aletta
         attribute aletta_glasses when aletta
-        group aletta_bot auto variant preg when aletta and aletta_pregnant
-        group aletta_bot auto variant nopreg when aletta and not aletta_pregnant
-        group aletta_top auto variant preg when aletta and aletta_pregnant
-        group aletta_top auto variant nopreg when aletta and not aletta_pregnant
+        group aletta_bot auto variant nopreg when aletta
+        group aletta_top auto variant nopreg when aletta
 
 
         attribute kleio
         attribute kleio_collar when kleio
         group kleio_hair auto when kleio
-        group kleio_bot auto variant preg when kleio and kleio_pregnant
-        group kleio_bot auto variant nopreg when kleio and not kleio_pregnant
-        group kleio_top auto variant preg when kleio and kleio_pregnant
-        group kleio_top auto variant nopreg when kleio and not kleio_pregnant
+        group kleio_bot auto variant nopreg when kleio
+        group kleio_top auto variant nopreg when kleio

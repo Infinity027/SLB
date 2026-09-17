@@ -1199,20 +1199,6 @@ label emma_fuck_date_missionary(sexperience_min):
                     emma.say "You did it..."
                     emma.say "You came...in my pussy..."
                     emma.say "It was amazing!"
-                elif _return == "vaginal_inside_pregnant":
-                    emma.say "You already came inside of me once, remember?"
-                    emma.say "That's how I ended up with this massive belly!"
-                    show emma missionary creampie with vpunch
-                    $ emma.love += 3
-                    "I almost laugh as I shoot my load into Emma."
-                    with vpunch
-                    "She gasps and wriggles the whole time, giggling too."
-                    with vpunch
-                    "Emma falls silent as I feel my orgasm come to an end."
-                    "But then I hear her, speaking softly."
-                    "And I strain to listen..."
-                    emma.say "You did it again."
-                    emma.say "It was amazing!"
                 elif _return == "vaginal_inside_mad":
                     show emma missionary normal
                     emma.say "Oh no..."
@@ -1574,20 +1560,6 @@ label emma_fuck_date_cowgirl(sexperience_min):
                     with vpunch
                     emma.say "You did it..."
                     emma.say "You came...in my pussy..."
-                    emma.say "It was amazing!"
-                elif _return == "vaginal_inside_pregnant":
-                    emma.say "You already came in me, remember?"
-                    emma.say "That's how I got this big!"
-                    with vpunch
-                    "I almost laugh as I lose it."
-                    with vpunch
-                    "And she laughs too as it happens."
-                    show emma cowgirl eyes_ahegao mouth_pleasure tongueout cum -speed with vpunch
-                    $ emma.love += 3
-                    "Emma falls silent as I feel my orgasm come to an end."
-                    show emma cowgirl eyes_close -tongueout
-                    "Then I hear her gasping breathlessly."
-                    emma.say "You did it again."
                     emma.say "It was amazing!"
                 elif _return == "vaginal_inside_happy":
                     show emma cowgirl eyes_ahegao mouth_pleasure tongueout cum -speed with vpunch
@@ -2099,30 +2071,6 @@ label emma_fuck_date_reverse_cowgirl(sexperience_min):
                     emma.say "Mmm..."
                     emma.say "That felt so good..."
                     emma.say "I love it when you cum inside of me like that!"
-                elif _return == "vaginal_inside_pregnant":
-                    emma.say "It's okay..."
-                    emma.say "Do it!"
-                    emma.say "I'm as pregnant as I can get!"
-                    "I smile at the memory of getting Emma pregnant."
-                    show emma reverse up
-                    pause 0.2
-                    show emma reverse fast
-                    pause 0.1
-                    show emma reverse down at startle(0.05,-10)
-                    pause 0.2
-                    show emma reverse up
-                    pause 0.2
-                    show emma reverse fast
-                    pause 0.1
-                    show emma reverse down with vpunch
-                    pause 0.2
-                    show emma reverse up creampie
-                    $ emma.love += 3
-                    "And then I lose it inside of her again."
-                    show emma reverse pleasure with vpunch
-                    emma.say "Mmm..."
-                    emma.say "That felt so good..."
-                    emma.say "I love it when you cum inside of me like that!"
                 elif _return == "vaginal_inside_happy":
                     show emma reverse up
                     pause 0.2
@@ -2445,20 +2393,6 @@ label emma_fuck_date_doggy(sexperience_min):
                     "But Emma's timely reminder means that I don't have to."
                     show emma doggy ahegao cum -speed -bounce saliva with hpunch
                     $ emma.love += 2
-                    "I keep on going as I shoot my load into Emma."
-                    with hpunch
-                    "And she rides my cock the whole time, loving every second."
-                    show emma doggy pleasure limp -saliva with hpunch
-                    "Afterwards, she slides off of me and collapses onto the bed."
-                    "I feel my own legs give out, and I fall onto the mattress beside her."
-                elif _return == "vaginal_inside_pregnant":
-                    emma.say "Don't stop now!"
-                    emma.say "I'm already pregnant, remember?!?"
-                    "As if I could forget something like that!"
-                    "But I am grateful Emma's timely reminder."
-                    "As it means that I don't have to worry about pulling out."
-                    show emma doggy ahegao cum -speed -bounce saliva with hpunch
-                    $ emma.love += 3
                     "I keep on going as I shoot my load into Emma."
                     with hpunch
                     "And she rides my cock the whole time, loving every second."
@@ -3237,35 +3171,6 @@ label emma_fuck_beach:
                     show emma reverse up creampie
                     "The sensation of me cumming inside of her has an instant effect."
                     $ emma.love += 2
-                    with vpunch
-                    "It makes Emma quiver and shake atop me."
-                    with vpunch
-                    "Her muscles squeezing my cock until I'm completely spent."
-                    "And then I feel her go limp in my grasp."
-                    show emma reverse pleasure dickcum -vaginal
-                    "She slides off my cock and onto the towel beside me."
-                elif _return == "vaginal_inside_pregnant":
-                    "I hold onto Emma as best I can as I feel myself losing it."
-                    "And she's already in the throes of her orgasm as I do so."
-                    emma.say "It's...okay..."
-                    emma.say "I'm pregnant...remember?"
-                    emma.say "I'm...already...pregnant!"
-                    "I silently thank Emma for that timely reminder."
-                    show emma reverse up
-                    pause 0.2
-                    show emma reverse fast
-                    pause 0.1
-                    show emma reverse down at startle(0.05,-10)
-                    pause 0.2
-                    show emma reverse up
-                    pause 0.2
-                    show emma reverse fast
-                    pause 0.1
-                    show emma reverse down with vpunch
-                    pause 0.2
-                    show emma reverse up creampie
-                    "The sensation of me cumming inside of her has an instant effect."
-                    $ emma.love += 3
                     with vpunch
                     "It makes Emma quiver and shake atop me."
                     with vpunch

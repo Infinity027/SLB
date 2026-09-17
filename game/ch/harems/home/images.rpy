@@ -803,35 +803,25 @@ init 1:
         group multiple auto variant collars
         always "breesasha_ending_mike"
 
-
         group multiple auto variant kids
 
     layeredimage breesasha kiss:
         attribute_function MultiPickers([OutfitPicker, HaircutPicker, CollarPicker], npcs=[bree, sasha], add_simple_outfit_attribute=True)
 
-
         always "breesasha_kiss_base"
 
         group arms auto if_not ["naked"]
 
-
         group multiple auto variant pregnancy
-
 
         attribute sasha_boobjob
 
-
         group hairs auto
-
-
-        
 
         attribute naked null
         attribute topless null
         group multiple auto variant outfits when not (boobjob or naked or topless)
         group multiple auto variant outfits_boobjob when boobjob and not (naked or topless)
-        group multiple auto variant outfits_pregnant when pregnant and not (boobjob or naked or topless)
-        group multiple auto variant outfits_boobjob_pregnant when boobjob and pregnant and not (naked or topless)
 
         group multiple auto variant collars when not rpg
 
@@ -896,23 +886,19 @@ init 1:
             attribute bree_ears null
             attribute bree_lips null
             attribute bree_navel null
-            attribute bree_pregnant_navel null
             attribute bree_nipples null
             attribute bree_tongue null
             attribute samantha_clit null
             attribute samantha_ears null
             attribute samantha_lips null
             attribute samantha_navel null
-            attribute samantha_pregnant_navel null
             attribute samantha_nipples null
             attribute samantha_tongue null
             attribute sasha_clit null
             attribute sasha_lips null
             attribute sasha_navel null
-            attribute sasha_pregnant_navel null
             attribute sasha_nipples null
             attribute sasha_tongue null
-
 
         always:
             "cumshot_breesamsasha_dick"
@@ -922,50 +908,38 @@ init 1:
     layeredimage cumshot breesasha:
         attribute_function MultiPickers([CollarPicker, HaircutPicker], npcs=[bree, sasha])
 
-
         always:
             "cumshot_breesasha_bg"
 
-
         attribute sasha
-
 
         attribute bree
 
-
         group pregnancy auto
 
-
         group collars auto
-
 
         group exp_bree auto:
             attribute breehappy default
             attribute breesurprised
             attribute breepleasure
 
-
         always:
             "cumshot_breesasha_bree_righthand"
-
 
         group poses auto:
             attribute normal default null
             attribute blow null
             attribute lick null
 
-
         group nohaircut auto if_any ["nohaircut", "sasha_nohaircut"]
         group haircut auto if_any ["haircut", "sasha_haircut"]
 
-
         group boobjob auto if_any ["boobjob", "sasha_boobjob"]
-
 
         group collars auto variant "normal" if_any ["normal"]
         group collars auto variant "blow" if_any ["blow"]
         group collars auto variant "lick" if_any ["lick"]
-
 
         group exp_sasha auto variant "normal" if_any ["normal"]:
             attribute sashahappy default
@@ -974,14 +948,11 @@ init 1:
             attribute swallow default
             attribute tongueout
 
-
         group eyes_sasha auto variant "blow" if_any ["blow"]:
             attribute opened default
             attribute closed
 
-
         group sasha_mouth auto variant "noblowjob" if_not ["blowjob"]
-
 
         attribute cum null
         group multiple auto variant cum_sasha_normal when cum and normal 
@@ -989,50 +960,38 @@ init 1:
         group multiple auto variant cum_sasha_bree when cum 
         group multiple auto variant cum_sasha_lick when cum and lick 
 
-
         always:
             if_not ["lick"]
             "cumshot_breesasha_bree_tit"
 
-
         group multiple auto variant cum_bree when cum 
-
 
         group dick auto:
             attribute hard default
             attribute limp
 
-
         attribute dickcum null
         group dickcum auto if_any ["dickcum"]
-
 
         attribute cumshoot null
         group cumshoot auto if_any ["cumshoot"]
 
-
         attribute blowjob null
         group sasha_mouth auto variant "blowjob" if_any ["blowjob"]
-
 
         attribute creampie null
         group creampie auto if_all ["creampie", "hard"]
 
-
         attribute handjob null
         group handjob auto if_any ["handjob"]
 
-
         group mikehand auto
 
-
         group leash_sasha auto if_all ["leash", "sasha_collar"]
-
 
         always:
             if_all ["leash", "bree_collar"]
             "cumshot_breesasha_leash_bree"
-
 
         group handle auto
 
@@ -1049,7 +1008,6 @@ init 1:
 
         group fx auto
         attribute sasha_boobjob
-
 
         group multiple auto variant collars
         group multiple auto variant haircuts
@@ -1102,10 +1060,8 @@ init 1:
         attribute sasha_noboobjob null
         attribute sasha_boobjob null
 
-        group boobjobs auto variant "pregnant" if_all ["sasha_boobjob", "sasha_pregnant"]
-        group boobjobs auto variant "nopregnant" if_any "sasha_boobjob" if_not "sasha_pregnant"
-
-                group multiple:
+        group boobjobs auto variant "nopregnant" if_any "sasha_boobjob"
+        group multiple:
             attribute bree_ears null
             attribute bree_clit null
             attribute bree_lips null
@@ -1151,12 +1107,11 @@ init 1:
 
         group multiple auto variant pregnancy
 
-                group multiple:
+        group multiple:
             attribute bree_clit null
             attribute bree_ears null
             attribute bree_lips null
             attribute bree_navel null
-            attribute bree_pregnant_navel null
             attribute bree_nipples null
             attribute bree_tongue null
             attribute samantha_ears null
@@ -1304,19 +1259,16 @@ init 1:
         attribute lexi_collar if_any ["lexi"]
 
         group multiple auto variant pregnancies
-        attribute lexi_pregnant if_any ["lexi"]
 
-                group multiple:
+        group multiple:
             attribute bree_clit null
             attribute bree_ears null
             attribute bree_lips null
             attribute bree_navel null
-            attribute bree_pregnant_navel null
             attribute bree_tongue null
             attribute lexi_clit null
             attribute lexi_ears null
             attribute lexi_navel null
-            attribute lexi_pregnant_navel null
             attribute lexi_nipples null
             attribute lexi_tongue null
             attribute minami_clit null
@@ -1328,7 +1280,6 @@ init 1:
             attribute sasha_clit null
             attribute sasha_lips null
             attribute sasha_navel null
-            attribute sasha_pregnant_navel null
             attribute sasha_nipples null
             attribute sasha_tongue null
 
@@ -1359,40 +1310,27 @@ init 1:
 
 
         attribute samantha
-        attribute samantha_pregnant
-        group multiple auto variant cum_samantha when cum and (samantha or samantha_pregnant)
-
+        group multiple auto variant cum_samantha when cum and samantha
 
         attribute samantha_collar
 
-
         always:
             "home_ending_mike"
-
 
         always:
             if_any ["samantha", "samantha_pregnant"]
             "home_ending_hand_samantha"
 
-
         attribute bree
-        attribute bree_pregnant
-
 
         attribute sasha
-        attribute sasha_pregnant
         attribute sasha_nohaircut
-
 
         attribute minami
 
-
         group dick auto
 
-
         attribute lexi
-        attribute lexi_pregnant
-
 
         group multiple auto variant exp
 
@@ -1402,22 +1340,13 @@ init 1:
 
         group cumdick auto if_any ["cum"]
 
-
-        group multiple auto variant cum_bree when cum and (bree or bree_pregnant)
-        group multiple auto variant cum_lexi when cum and (lexi or lexi_pregnant)
-        group multiple auto variant cum_minami when cum and (minami or minami_pregnant)
-        group multiple auto variant cum_sasha when cum and (sasha or sasha_pregnant)
-
-
         attribute glasses
-
 
         always:
             "home_ending_fg"
 
     layeredimage lesbian sex breesam:
         attribute_function MultiPickers([CollarPicker,  HaircutPicker], npcs=[bree, samantha])
-
 
         always "lesbian_sex_breesam_bg"
         always "lesbian_sex_breesam_bodies"
@@ -1427,10 +1356,7 @@ init 1:
         attribute strapon
 
         group multiple auto variant pregnancy
-
-
         
-
         group exp auto:
             attribute pleasure default
 
@@ -1440,19 +1366,15 @@ init 1:
     layeredimage lesbian sex minsam:
         attribute_function MultiPickers([PubesPicker,  CollarPicker, HaircutPicker], npcs=[minami, samantha])
 
-
         always "lesbian_sex_minsam_bg"
         always "lesbian_sex_minsam_bodies"
-
 
         group pubic auto
         group pregnancy auto
                 group collars auto
         group hair auto
 
-
         attribute vibrator
-
 
         always "lesbian_sex_minsam_light"
 
@@ -1473,74 +1395,56 @@ init 1:
         group pubic auto
         group pregnancy auto
         group collars auto
-        
 
         always "lesbian_sex_samlexi_light"
-
 
         attribute squirt
 
     layeredimage lesbian sex samsasha:
         attribute_function MultiPickers([CollarPicker,  HaircutPicker], npcs=[samantha, sasha])
 
-
         always "lesbian_sex_samsasha_bg"
         always "lesbian_sex_samsasha_bodies"
 
-
         group collars auto
-
 
         attribute sasha_clit
         attribute strapon
         attribute samantha_clit
 
-
         attribute cum
 
-
         group pregnancy auto
-
 
         attribute sasha_boobjob
 
         group exp auto:
             attribute normal default
 
-
         group hair auto
 
-
         attribute sasha_ears
-
 
         always "lesbian_sex_samsasha_fg"
 
     layeredimage sandwich breeminami:
         attribute_function MultiPickers([PubesPicker,  HaircutPicker, DickPicker], npcs=[bree, minami])
 
-
         always:
             "sandwich_breeminami_bg"
-
 
         always:
             "sandwich_breeminami_bodies"
 
-
         attribute cumbody
 
-
         group multiple auto variant pubic
-
-
 
         group exp_bree auto:
             attribute breenormal default
 
         group exp_minami auto:
             attribute minaminormal default
-
 
         attribute minami_nohaircut
         attribute minami_haircut
@@ -1549,13 +1453,10 @@ init 1:
 
         attribute dripcum
 
-
         attribute cumshare
-
 
         always if_any ["mike"] if_not ["onface", "lick"]:
             "sandwich_breeminami_mikehand"
-
 
         group dildo:
             attribute dildodouble if_any ["outside", "onface", "lick"]
@@ -1564,12 +1465,10 @@ init 1:
             attribute dildobree if_not ["breefuck", "beadsbree"]
             attribute dildominami if_not ["minamifuck", "beadsminami"]
 
-
         attribute beadsbree if_any ["outside", "onface", "lick", "minamifuck"]
         attribute beadsbree if_all ["breefuck", "vaginal"]
         attribute beadsminami if_any ["outside", "onface", "lick", "breefuck"]
         attribute beadsminami if_all ["minamifuck", "vaginal"]
-
 
         attribute onface if_any ["mike"] if_not ["outside", "breefuck", "minamifuck", "lick"]
         group fuck if_any ["mike"]:
@@ -1578,7 +1477,6 @@ init 1:
             attribute minamifuck null
             attribute onface null
             attribute lick null
-
 
         attribute creampie null
         group minamifuck auto if_all ["mike", "minamifuck"]:
@@ -1761,7 +1659,6 @@ init 1:
             "shower_bj_breesasha_mike_leg"
 
         attribute sasha
-        attribute sasha_pregnant
         attribute sasha_noboobjob null
         attribute sasha_boobjob
         attribute sasha_nohaircut
@@ -1783,7 +1680,6 @@ init 1:
 
         attribute bree
         attribute bree_nohaircut null
-        attribute bree_pregnant
 
         attribute bodycum:
             if_any "bree"
@@ -1809,12 +1705,9 @@ init 1:
             "shower_breesasha_bg"
 
         attribute bree
-
-        attribute bree_pregnant
         attribute bree_collar
 
         attribute sasha
-        attribute sasha_pregnant
         attribute sasha_boobjob
         group haircuts auto
 
@@ -1952,16 +1845,12 @@ init 1:
 
         attribute lexi
         attribute lexi_collar if_any ["lexi"]
-        attribute lexi_pregnant if_any ["lexi"]
         group multiple:
             attribute lexi_clit null
             attribute lexi_navel null
-            attribute lexi_pregnant_navel null
             attribute lexi_tongue null
-        group bot auto variant "lexi" if_any ["lexi"] if_not ["lexi_pregnant", "bottomless", "naked"]
-        group top auto variant "lexi" if_any ["lexi"] if_not ["lexi_pregnant", "topless", "naked"]
-        group bot auto variant "lexi_pregnant" if_all ["lexi", "lexi_pregnant"] if_not ["bottomless", "naked"]
-        group top auto variant "lexi_pregnant" if_all ["lexi", "lexi_pregnant"] if_not ["topless", "naked"]
+        group bot auto variant "lexi" if_any ["lexi"] if_not ["bottomless", "naked"]
+        group top auto variant "lexi" if_any ["lexi"] if_not ["topless", "naked"]
 
         group lexi_eyes:
             attribute lexiopen default null
@@ -1974,21 +1863,14 @@ init 1:
         attribute breemc
         attribute mc_pubes if_any ["breemc"]
         attribute mc_collar if_any ["breemc"]
-        attribute mc_pregnant if_any ["breemc"]
-        group bot auto variant "breemc" if_any ["breemc"] if_not ["mc_pregnant", "bottomless", "naked"]
-        group top auto variant "breemc" if_any ["breemc"] if_not ["mc_pregnant", "topless", "naked"]
-        group bot auto variant "breemc_pregnant" if_all ["breemc", "mc_pregnant"] if_not ["bottomless", "naked"]
-        group top auto variant "breemc_pregnant" if_all ["breemc", "mc_pregnant"] if_not ["topless", "naked"]
-
+        group bot auto variant "breemc" if_any ["breemc"] if_not ["bottomless", "naked"]
+        group top auto variant "breemc" if_any ["breemc"] if_not ["topless", "naked"]
 
         attribute bree
         attribute bree_pubes if_any ["bree"]
         attribute bree_collar if_any ["bree"]
-        attribute bree_pregnant if_any ["bree"]
-        group bot auto variant "bree" if_any ["bree"] if_not ["bree_pregnant", "bottomless", "naked"]
-        group top auto variant "bree" if_any ["bree"] if_not ["bree_pregnant", "topless", "naked"]
-        group bot auto variant "bree_pregnant" if_all ["bree", "bree_pregnant"] if_not ["bottomless", "naked"]
-        group top auto variant "bree_pregnant" if_all ["bree", "bree_pregnant"] if_not ["topless", "naked"]
+        group bot auto variant "bree" if_any ["bree"] if_not ["bottomless", "naked"]
+        group top auto variant "bree" if_any ["bree"] if_not ["topless", "naked"]
         group exp_bree auto if_any ["bree", "breemc"]:
             attribute breenormal default
 
@@ -2020,7 +1902,6 @@ init 1:
             attribute bree_tongue null
             attribute lexi_clit null
             attribute lexi_navel null
-            attribute lexi_pregnant_navel null
             attribute lexi_nipples null
             attribute lexi_tongue null
 
@@ -2317,22 +2198,15 @@ init 1:
     layeredimage threesome minamisasha :
         attribute_function MultiPickers([ HaircutPicker, DickPicker], npcs=[minami], append_npc_from_attributes=True)
 
-
         always:
             "threesome_minamisasha_bg"
-
 
         attribute minami
 
         group exp_minami auto:
             attribute minaminormal default
 
-
         group minamihair auto
-
-
-        attribute minami_pregnant
-
 
         attribute mike null
         group mike if_all ["mike"]:
@@ -2447,12 +2321,7 @@ init 1:
         group mikemc_exp auto if_any ["mikemc"]:
             attribute mikemc_yummy default
 
-
         attribute bree
-
-
-        attribute bree_pregnant if_any ["bree"]
-
 
         group bree_exp auto if_any ["bree"]:
             attribute bree_yummy default
@@ -2461,48 +2330,31 @@ init 1:
             attribute bree_clit null
             attribute bree_tongue null
 
-
         group bree_outfits:
             attribute bree_casual default null
             attribute bree_naked null
         group bree_outfit auto if_any ["bree"]
-        group bree_outfit auto variant "pregnant" if_all ["bree", "bree_pregnant"]
-
 
         attribute bree_collar if_any ["bree"]
-
 
         attribute breemc
 
         attribute mc_haircut if_any ["breemc"]
         attribute mc_nohaircut null if_any ["breemc"]
 
-
-        attribute mc_pregnant if_any ["breemc"]
-
-
         group breemc_exp auto if_any ["breemc"]:
             attribute breemc_yummy default
 
         group breemc_outfit auto if_any ["breemc"] if_not ["mc_naked"]
-        group breemc_outfit auto variant "pregnant" if_all ["breemc", "mc_pregnant"] if_not ["mc_naked"]
-
 
         attribute mc_collar if_any ["breemc"]
 
-
-
         attribute sasha
-
-
-        attribute sasha_pregnant if_any ["sasha"]
-
 
         attribute sasha_boobjob null
         attribute sasha_noboobjob null
         group sasha_boobjob if_all ["sasha", "sasha_boobjob"]:
             attribute sasha_naked
-
 
         group sasha_exp auto if_any ["sasha"]:
             attribute sasha_yummy default
@@ -2516,15 +2368,11 @@ init 1:
             attribute sasha_casual default null
             attribute sasha_naked null
         group sasha_outfit auto if_any ["sasha"]
-        group sasha_outfit auto variant "pregnant" if_all ["sasha", "sasha_pregnant"]
-
 
         group sasha_boobjob if_all ["sasha", "sasha_boobjob"]:
             attribute sasha_casual
 
-
         attribute sasha_collar if_any ["sasha"]
-
 
         attribute sasha_haircut if_any ["sasha"]
         attribute sasha_nohaircut if_any ["sasha"]
@@ -2547,23 +2395,13 @@ init 1:
             attribute samantha_naked null
         group samantha_outfit auto if_any ["samantha"]
 
-
         always "xmas_diner_samantha_arms" if_any ["samantha"]
 
-
-        group samantha_outfit auto variant "pregnant" if_all ["samantha", "samantha_pregnant"]
-
-
         attribute samantha_collar if_any ["samantha"]
-
 
         attribute lexi
 
         attribute lexi_nohaircut null
-
-
-        attribute lexi_pregnant if_any ["lexi"]
-
 
         group lexi_exp auto if_any ["lexi"]:
             attribute lexi_yummy default
@@ -2572,27 +2410,16 @@ init 1:
             attribute lexi_clit null
             attribute lexi_tongue null
 
-
         group lexi_outfits:
             attribute lexi_casual default null
             attribute lexi_naked null
         group lexi_outfit auto if_any ["lexi"]
 
-
         always "xmas_diner_lexi_arms" if_any ["lexi"]
-
-
-        group lexi_outfit auto variant "pregnant" if_all ["lexi", "lexi_pregnant"]
-
 
         attribute lexi_collar if_any ["lexi"]
 
-
         attribute minami
-
-
-        attribute minami_pregnant if_any ["minami"]
-
 
         group minami_exp auto if_any ["minami"]:
             attribute minami_yummy default
@@ -2601,31 +2428,21 @@ init 1:
             attribute minami_nose null
             attribute minami_ears null
 
-
         group minami_outfits:
             attribute minami_casual default null
             attribute minami_naked null
         group minami_outfit auto if_any ["minami"]
 
-
         always "xmas_diner_minami_arms" if_any ["minami"]
-
 
         group minami_outfit_arm auto if_any ["minami"]
 
-
-        group minami_outfit auto variant "pregnant" if_all ["minami", "minami_pregnant"]
-
-
         attribute minami_collar if_any ["minami"]
-
 
         attribute minami_haircut if_any ["minami"]
         attribute minami_nohaircut if_any ["minami"]
 
-
         always "xmas_diner_table"
-
 
         group multiple auto variant eat
 
@@ -2633,10 +2450,8 @@ init 1:
             attribute goodmeal default null
             attribute badmeal null
 
-
         group multiple auto variant goodmeal when goodmeal
         group multiple auto variant badmeal when badmeal
-
 
         always "xmas_diner_mashed_potato"
         always "xmas_diner_turkey_plate"
@@ -2660,7 +2475,6 @@ init 1:
 
         attribute bree
 
-        attribute bree_pregnant null
         group bree_outfit:
             attribute bree_casual default null
             attribute bree_naked null
@@ -2676,15 +2490,12 @@ init 1:
         group multiple:
             attribute bree_clit null
             attribute bree_navel null
-            attribute bree_pregnant_navel null
             attribute bree_nipples null
             attribute bree_tongue null
 
         group bree_outfit_arm auto variant "bree_annoyed" if_all ["bree", "bree_annoyed"]
 
         attribute breemc if_not ["singbreemc"]
-
-        attribute mc_pregnant null if_not ["singbreemc"]
 
         group breemc_outfit auto if_any ["breemc"] if_not ["singbreemc"]
 
@@ -2700,8 +2511,6 @@ init 1:
 
         attribute lexi_nohaircut null
 
-        attribute lexi_pregnant if_any ["lexi"]
-
         group multiple:
             attribute lexi_tongue null
 
@@ -2709,8 +2518,6 @@ init 1:
             attribute lexi_casual default null
             attribute lexi_naked null
         group lexi_outfit auto if_any ["lexi"]
-        group lexi_outfit auto variant "pregnant" if_all ["lexi", "lexi_pregnant"]
-
 
         group lexi_exp auto if_any ["lexi"]:
             attribute lexi_happy default
@@ -2720,8 +2527,6 @@ init 1:
         attribute samantha
 
         attribute samantha_nohaircut null
-
-        attribute samantha_pregnant if_any ["samantha"]
 
         group multiple:
             attribute samantha_ears null
@@ -2733,7 +2538,6 @@ init 1:
             attribute samantha_naked null
 
         group samantha_outfit auto if_any ["samantha"]
-        group samantha_outfit auto variant "pregnant" if_all ["samantha", "samantha_pregnant"]
 
         group samantha_exp auto if_any ["samantha"]:
             attribute samantha_happy default
@@ -2752,8 +2556,6 @@ init 1:
         group multiple:
             attribute sasha_lips null
 
-        group sasha_outfit auto variant "pregnant" if_all ["sasha", "sasha_pregnant"]
-
         group sasha_exp auto if_any ["sasha"]:
             attribute sasha_happy default
 
@@ -2769,8 +2571,6 @@ init 1:
 
         attribute minami if_not ["singminami"]
 
-        attribute minami_pregnant if_any ["minami"] if_not ["singminami"]
-
         group multiple:
             attribute minami_ears null
 
@@ -2782,8 +2582,6 @@ init 1:
         attribute minami_collar if_any ["minami"] if_not ["singminami"]
 
         group minami_haircuts auto if_any ["minami"] if_not ["singminami"]
-
-        group minami_outfit auto variant "pregnant" if_all ["minami", "minami_pregnant"] if_not ["singminami"]
 
         group minami_exp auto if_any ["minami"] if_not ["singminami"]:
             attribute minami_happy default
@@ -2831,7 +2629,6 @@ init 1:
         always "xmas_singing_singminami_pregnant" if_all ["singminami", "minami_pregnant"]
 
         group singminami_outfit auto if_any ["singminami"]
-        group singminami_outfit auto variant "pregnant" if_all ["singminami", "minami_pregnant"]
 
         group singminami_collar auto if_any ["singminami"]
 
@@ -2850,7 +2647,6 @@ init 1:
         always "xmas_singing_singbreemc_mc_pregnant" if_all ["singbreemc", "mc_pregnant"]
 
         group singbreemc_outfit auto if_any ["singbreemc"]
-        group singbreemc_outfit auto variant "pregnant" if_all ["singbreemc", "mc_pregnant"]
 
         group singbreemc_collar auto if_any ["singbreemc"]
 
@@ -2901,8 +2697,6 @@ init 1:
 
         attribute minami
 
-        attribute minami_pregnant if_all ["minami", "minami_naked"]
-
         group minami_exp auto if_any ["minami"]:
             attribute minami_yummy default
 
@@ -2913,7 +2707,6 @@ init 1:
         attribute minami_naked null
         attribute minami_casual default null
         group minami_outfit auto if_any ["minami"] if_not ["minami_naked"]
-        group minami_outfit auto variant "pregnant" if_all ["minami", "minami_pregnant"] if_not ["minami_naked"]
 
         attribute minami_collar if_any ["minami"]
 
@@ -2921,8 +2714,6 @@ init 1:
         attribute minami_nohaircut if_any ["minami"]
 
         attribute sasha
-
-        attribute sasha_pregnant if_all ["sasha", "sasha_naked"]
 
         attribute sasha_boobjob if_all ["sasha", "sasha_naked"]
         attribute sasha_noboobjob null
@@ -2938,7 +2729,6 @@ init 1:
         attribute sasha_naked null
         attribute sasha_casual default null
         group sasha_outfit auto if_any ["sasha"] if_not ["sasha_naked"]
-        group sasha_outfit auto variant "pregnant" if_all ["sasha", "sasha_pregnant"] if_not ["sasha_naked"]
         group sasha_outfit auto variant "boobjob" if_all ["sasha", "sasha_boobjob"] if_not ["sasha_naked"]
 
         attribute sasha_collar if_any ["sasha"]
@@ -2951,8 +2741,6 @@ init 1:
         attribute samantha_haircut null
         attribute samantha_nohaircut null
 
-        attribute samantha_pregnant if_all ["samantha", "samantha_naked"]
-
         group samantha_exp auto if_any ["samantha"]:
             attribute samantha_yummy default
 
@@ -2964,7 +2752,6 @@ init 1:
         attribute samantha_naked null
         attribute samantha_casual default null
         group samantha_outfit auto if_any ["samantha"] if_not ["samantha_naked"]
-        group samantha_outfit auto variant "pregnant" if_all ["samantha", "samantha_pregnant"] if_not ["samantha_naked"]
 
         attribute samantha_collar if_any ["samantha"]
 
@@ -2972,8 +2759,6 @@ init 1:
 
         attribute lexi_haircut null
         attribute lexi_nohaircut null
-
-        attribute lexi_pregnant if_all ["lexi", "lexi_naked"]
 
         group lexi_exp auto if_any ["lexi"]:
             attribute lexi_yummy default
@@ -2985,7 +2770,6 @@ init 1:
         attribute lexi_naked null
         attribute lexi_casual default null
         group lexi_outfit auto if_any ["lexi"] if_not ["lexi_naked"]
-        group lexi_outfit auto variant "pregnant" if_all ["lexi", "lexi_pregnant"] if_not ["lexi_naked"]
 
         attribute lexi_collar
 
@@ -2993,8 +2777,6 @@ init 1:
 
         attribute bree_haircut null
         attribute bree_nohaircut null
-
-        attribute bree_pregnant if_all ["bree", "bree_naked"]
 
         group bree_exp auto if_any ["bree"]:
             attribute bree_yummy default
@@ -3008,7 +2790,6 @@ init 1:
         attribute bree_naked null
         attribute bree_casual default null
         group bree_outfit auto if_any ["bree"] if_not ["bree_naked"]
-        group bree_outfit auto variant "pregnant" if_all ["bree", "bree_pregnant"] if_not ["bree_naked"]
 
         attribute bree_collar if_any ["bree"]
 
@@ -3017,29 +2798,21 @@ init 1:
         attribute mc_haircut if_any ["breemc"]
         attribute mc_nohaircut null if_any ["breemc"]
 
-        attribute mc_pregnant if_all ["breemc", "mc_naked"]
-
         group breemc_exp auto if_any ["breemc"]:
             attribute breemc_yummy default
 
         group multiple:
             attribute mc_ears null
 
-
         group breemc_outfit auto if_any ["breemc"] if_not ["mc_naked"]
-        group breemc_outfit auto variant "pregnant" if_all ["breemc", "mc_pregnant"] if_not ["mc_naked"]
-
 
         attribute mc_collar if_any ["breemc"]
-
 
         always "xmas_snacks_table"
         always "xmas_snacks_armcouch"
 
-
         group food auto:
             attribute homemade default
-
 
     layeredimage threesome samsasha samfuck:
         attribute_function MultiPickers([ HaircutPicker, OutfitPicker, CollarPicker, RoomPicker], append_npc_from_attributes=True)
@@ -3059,7 +2832,6 @@ init 1:
             attribute left default
 
         attribute samantha default
-        attribute samantha_pregnant
 
         group mikemc_hands auto if_not "nomc"
 
@@ -3068,14 +2840,12 @@ init 1:
             attribute samantha_ears null
             attribute samantha_lips null
             attribute samantha_navel null
-            attribute samantha_pregnant_navel null
             attribute samantha_tongue null
 
         group outfits_samantha_back auto if_not "samantha_naked"
 
         attribute sasha
 
-        attribute sasha_pregnant
         attribute sasha_boobjob if_any "sasha"
         attribute sasha_nohaircut if_any "sasha"
         attribute sasha_haircut null
@@ -3085,7 +2855,6 @@ init 1:
             attribute sasha_nose null
             attribute sasha_lips null
             attribute sasha_navel null
-            attribute sasha_pregnant_navel null
             attribute sasha_tongue null
 
         group outfits_samantha_front auto if_not "samantha_naked"
@@ -3123,7 +2892,6 @@ init 1:
         attribute sasha default null
 
         attribute samantha null
-        attribute samantha_pregnant null
         attribute samantha_pubes null
 
         always:
@@ -3144,9 +2912,6 @@ init 1:
 
         group outfits_sasha auto variant "boobjob" if_any "sasha_boobjob"
         group outfits_sasha auto variant "noboobjob" if_any "sasha_noboobjob"
-
-        attribute sasha_pregnant null
-        group sasha_pregnant auto if_any "sasha_pregnant"
 
         group multiple:
             attribute sasha_lips null
@@ -3182,7 +2947,6 @@ init 1:
         group multiple:
             attribute samantha_clit null
             attribute samantha_navel null
-            attribute samantha_pregnant_navel null
             attribute samantha_lips null
             attribute samantha_nipples null
             attribute samantha_tongue null
@@ -3215,7 +2979,6 @@ init 1:
         attribute squirt null
         group squirt auto if_all ["samantha", "squirt"]
 
-
         group fg auto
 
     layeredimage sunscreen bree sasha:
@@ -3231,7 +2994,6 @@ init 1:
             attribute bree_collar null
             attribute bree_ears null
             attribute bree_navel null
-            attribute bree_pregnant_navel null
             attribute bree_tongue null
             attribute sasha_lips null
             attribute sasha_tongue null
@@ -3240,12 +3002,9 @@ init 1:
 
         attribute nosasha null
         attribute sasha when not nosasha
-        attribute sasha_pregnant when not nosasha
         attribute sasha_boobjob when not nosasha
         group haircuts auto when not nosasha
 
-        group sasha_bot auto when not (naked or nosasha or sasha_pregnant)
-        group sasha_bot auto variant pregnant when sasha_pregnant and not (naked or nosasha)
         group sasha_top auto variant noboobjob when not sasha_boobjob and not (naked or topless or sasha_topless or nosasha)
         group sasha_top auto variant boobjob when sasha_boobjob and not (naked or topless or sasha_topless or nosasha)
 
@@ -3254,7 +3013,6 @@ init 1:
         attribute bree
         attribute bree_haircut
         attribute bree_nohaircut null
-        attribute bree_pregnant null
 
         group bree_bot auto when not (naked)
         group bree_top auto when not (naked or topless or bree_topless)

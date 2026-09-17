@@ -387,13 +387,13 @@ steps:
       condition: hanna.flags.engagedmike
       next: None
 
-  preg:
-    name: Get Hanna pregnant
-    optional: True
-    condition: True
-    outcome:
-      condition: hanna.flags.pregnancies_number > 0
-      next: None
+  # preg:
+  #   name: Get Hanna pregnant
+  #   optional: True
+  #   condition: True
+  #   outcome:
+  #     condition: hanna.flags.pregnancies_number > 0
+  #     next: None
 
   slave:
     name: Make Hanna my sex slave

@@ -851,20 +851,6 @@ label cherie_fuck_date_doggy(sexperience_min):
                 with vpunch
                 "She seems to appreciate that foresight too, wriggling and writhing under me as she cums."
 
-
-
-
-
-            elif _return == "vaginal_inside_pregnant":
-                cherie.say "Don't...stop..."
-                cherie.say "Remember...I am...pregnant!"
-                "One final push is all it takes for me to reach my climax."
-                "And as I do so, I silently thank Cherie for that timely reminder."
-                $ cherie.love += 3
-                show cherie doggy cum pleasure with vpunch
-                "Because it means that I can just let go and explode inside of her."
-                with vpunch
-                "She seems to appreciate that foresight too, wriggling and writhing under me as she cums."
             elif _return == "vaginal_inside_pill":
                 cherie.say "Don't...stop..."
                 cherie.say "Remember...I am...on the pill!"
@@ -1276,20 +1262,6 @@ label cherie_fuck_date_cowgirl(sexperience_min):
                 with vpunch
                 "She seems to appreciate that foresight too, wriggling and writhing under me as she cums."
 
-
-
-
-
-            elif _return == "vaginal_inside_pregnant":
-                cherie.say "Don't...stop..."
-                cherie.say "Remember...I am...pregnant!"
-                "One final push is all it takes for me to reach my climax."
-                "And as I do so, I silently thank Cherie for that timely reminder."
-                $ cherie.love += 3
-                show cherie cowgirl cum pleasure with vpunch
-                "Because it means that I can just let go and explode inside of her."
-                with vpunch
-                "She seems to appreciate that foresight too, wriggling and writhing under me as she cums."
             elif _return == "vaginal_inside_pill":
                 cherie.say "Don't...stop..."
                 cherie.say "Remember...I am...on the pill!"
@@ -1656,20 +1628,6 @@ label cherie_fuck_date_standing(sexperience_min):
                 with vpunch
                 "She seems to appreciate that foresight too, wriggling and writhing under me as she cums."
 
-
-
-
-
-            elif _return == "vaginal_inside_pregnant":
-                cherie.say "Don't...stop..."
-                cherie.say "Remember...I am...pregnant!"
-                "One final push is all it takes for me to reach my climax."
-                "And as I do so, I silently thank Cherie for that timely reminder."
-                $ cherie.love += 3
-                show cherie standing cum pleasure with vpunch
-                "Because it means that I can just let go and explode inside of her."
-                with vpunch
-                "She seems to appreciate that foresight too, pushing all of her weight against me as she cums."
             elif _return == "vaginal_inside_pill":
                 cherie.say "Don't...stop..."
                 cherie.say "Remember...I am...on the pill!"
@@ -2051,20 +2009,6 @@ label cherie_fuck_date_reverse(sexperience_min):
                 with vpunch
                 "She seems to appreciate that foresight too, wriggling and writhing under me as she cums."
 
-
-
-
-
-            elif _return == "vaginal_inside_pregnant":
-                cherie.say "Don't...stop..."
-                cherie.say "Remember...I am...pregnant!"
-                "One final push is all it takes for me to reach my climax."
-                "And as I do so, I silently thank Cherie for that timely reminder."
-                $ cherie.love += 3
-                show cherie reverse cum pleasure with vpunch
-                "Because it means that I can just let go and explode inside of her."
-                with vpunch
-                "She seems to appreciate that foresight too, wriggling and writhing under me as she cums."
             elif _return == "vaginal_inside_pill":
                 cherie.say "Don't...stop..."
                 cherie.say "Remember...I am...on the pill!"

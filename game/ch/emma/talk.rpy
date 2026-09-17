@@ -73,10 +73,6 @@ label emma_talk_sex_male:
         emma.say "Don't ask me about that."
         hide emma
         return
-    elif not emma.flags.pregnant:
-        show emma happy
-        emma.say "I love it when I'm next to you at night."
-        emma.say "The orgasm is good, but the closeness is better."
     else:
         show emma happy
         "Emma puts a hand on her belly."
@@ -95,12 +91,9 @@ label emma_talk_politics_male:
 
 label emma_talk_food_male:
     show emma
-    if not emma.pregnant:
-        emma.say "I know I need to eat better, but I can never quite manage to do it. It just takes too much time away from other stuff I want to do."
-    else:
-        emma.say "It's like everything I want to eat has changed now that I'm pregnant. Suddenly I love sour things and hate chocolate."
-        emma.say "It's just not fair that I hate chocolate now."
-        emma.say "But for this, I guess I can get over that!"
+    emma.say "It's like everything I want to eat. Suddenly I love sour things and hate chocolate."
+    emma.say "It's just not fair that I hate chocolate now."
+    emma.say "But for this, I guess I can get over that!"
     hide emma
     return
 
@@ -138,8 +131,6 @@ label emma_talk_fashion_male:
     if emma.love < 80:
         show emma annoyed
         emma.say "I'm not really into fashion that much."
-    elif not emma.pregnant:
-        emma.say "I like to say I'm not really into fashion, but I can't help picking out clothes that make me feel closer to the people and things I love."
     else:
         emma.say "I'm not into fashion, and maternity shopping is seriously the worst. It's all so...bleh."
     return

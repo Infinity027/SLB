@@ -43,8 +43,7 @@ init 1:
 
         group hand auto variant d when d
         group sleeves_d auto variant notpressed when d and notpressed and not (naked or topless)
-        group sleeves_d auto variant pressed when d and pressed and not (pregnant or naked or topless)
-        group sleeves_d auto variant pressed_pregnant when d and pressed and pregnant and not (naked or topless)
+        group sleeves_d auto variant pressed when d and pressed and not (naked or topless)
 
         attribute collar variant d when d
 
@@ -123,8 +122,7 @@ init 1:
 
         group hand auto variant d when d
         group sleeves_d auto variant notpressed when d and notpressed and not (naked or topless)
-        group sleeves_d auto variant pressed when d and pressed and not (pregnant or naked or topless)
-        group sleeves_d auto variant pressed_pregnant when d and pressed and pregnant and not (naked or topless)
+        group sleeves_d auto variant pressed when d and pressed and not (naked or topless)
 
         attribute collar variant d when d
 
@@ -252,8 +250,6 @@ init 1:
 
     layeredimage shiori ending:
         attribute_function Pickers([ CollarPicker, OutfitPicker, EndingKidPicker], npc=shiori)
-        attribute pregnant null
-
         always:
             "shiori_ending_bg"
 

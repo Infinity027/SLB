@@ -67,7 +67,6 @@ init 6:
     layeredimage bg bathroom:
         attribute_function MultiPickers([DayNightPicker,  CollarPicker, HaircutPicker, OutfitPicker, BathroomPicker], append_npc_from_attributes=True)
 
-
         attribute empty null            
         attribute force_display null        
         attribute topless null
@@ -77,14 +76,12 @@ init 6:
         attribute bree_clit null
         attribute bree_lips null
         attribute bree_navel null
-        attribute bree_pregnant_navel null
         attribute bree_tongue null
         attribute lexi_naked null
         attribute lexi_clit null
         attribute lexi_navel null
         attribute lexi_nohaircut null
         attribute lexi_nose null
-        attribute lexi_pregnant_navel null
         attribute lexi_tongue null
         attribute minami_naked null
         attribute minami_ears null
@@ -93,7 +90,6 @@ init 6:
         attribute samantha_lips null
         attribute samantha_navel null
         attribute samantha_nohaircut null
-        attribute samantha_pregnant_navel null
         attribute samantha_tongue null
         attribute sasha_naked null
         attribute sasha_lips null
@@ -108,26 +104,8 @@ init 6:
         attribute day "bathroom_day"
         attribute night "bathroom_night"
 
-
-        attribute lexi null
-        group lexi auto
-
-        attribute lexi_collar variant lexi_pee when lexi and lexi_pee
-        attribute lexi_collar variant lexi_shower when lexi and lexi_shower
-
-        attribute lexi_pregnant variant lexi_shower when lexi and lexi_shower
-
-        always "bg_bathroom_lexi_pee_lexi_hair" when lexi and lexi_pee
-        always "bg_bathroom_lexi_shower_lexi_hair" when lexi and lexi_shower
-
-        group lexi_top auto variant lexi_pee when lexi and lexi_pee and not (lexi_topless or lexi_naked)
-        group lexi_bot auto variant lexi_pee when lexi and lexi_pee and not (lexi_bottomless or lexi_naked)
-
         attribute samantha null
         group samantha auto
-
-        attribute samantha_pregnant variant samantha_bath when samantha and samantha_bath
-        attribute samantha_pregnant variant samantha_brush when samantha and samantha_brush
 
         attribute samantha_collar variant samantha_bath when samantha and samantha_bath
         attribute samantha_collar variant samantha_brush when samantha and samantha_brush
@@ -138,16 +116,8 @@ init 6:
         always "bg_bathroom_samantha_bath_samantha_hair" when samantha and samantha_bath
         always "bg_bathroom_samantha_brush_samantha_hair" when samantha and samantha_brush
 
-        group samantha_water auto variant nopreg when samantha and not samantha_pregnant
-        group samantha_water auto variant preg when samantha and samantha_pregnant
-
-
         attribute bree null
         group bree auto
-
-        attribute bree_pregnant variant bree_bath when bree and bree_bath
-        attribute bree_pregnant variant bree_pee when bree and bree_pee
-        attribute bree_pregnant variant bree_brush when bree and bree_brush
 
         attribute bree_collar variant bree_bath when bree and bree_bath
         attribute bree_collar variant bree_pee when bree and bree_pee
@@ -155,8 +125,8 @@ init 6:
 
         group bree_top auto variant bree_pee when bree and bree_pee and not (bree_topless or bree_naked)
         group bree_bot auto variant bree_pee when bree and bree_pee and not (bree_bottomless or bree_naked)
-        group bree_top auto variant nopreg_bree_brush when bree and bree_brush and not (bree_pregnant or bree_topless or bree_naked)
-        group bree_top auto variant preg_bree_brush when bree and bree_brush and bree_pregnant and not (bree_topless or bree_naked)
+        group bree_top auto variant nopreg_bree_brush when bree and bree_brush and not (bree_topless or bree_naked)
+        group bree_top auto variant preg_bree_brush when bree and bree_brush and not (bree_topless or bree_naked)
 
         attribute bree_nohaircut variant bree_bath when bree and bree_bath
         attribute bree_nohaircut variant bree_pee when bree and bree_pee
@@ -165,15 +135,8 @@ init 6:
         attribute bree_haircut variant bree_pee when bree and bree_pee
         attribute bree_haircut variant bree_brush when bree and bree_brush
 
-        group bree_water auto variant nopreg when bree and not bree_pregnant
-        group bree_water auto variant preg when bree and bree_pregnant
-
-
         attribute minami null
         group minami auto
-
-        attribute minami_pregnant variant minami_shower when minami and minami_shower
-        attribute minami_pregnant variant minami_brush when minami and minami_brush
 
         attribute minami_collar variant minami_shower when minami and minami_shower
         attribute minami_collar variant minami_brush when minami and minami_brush
@@ -186,13 +149,8 @@ init 6:
         attribute minami_haircut variant minami_shower when minami and minami_shower
         attribute minami_haircut variant minami_brush when minami and minami_brush
 
-
         attribute sasha null
         group sasha auto
-
-        attribute sasha_pregnant variant sasha_shower when sasha and sasha_shower
-        attribute sasha_pregnant variant sasha_pee when sasha and sasha_pee
-        attribute sasha_pregnant variant sasha_brush when sasha and sasha_brush
 
         attribute sasha_collar variant sasha_shower when sasha and sasha_shower
         attribute sasha_collar variant sasha_pee when sasha and sasha_pee
@@ -210,12 +168,12 @@ init 6:
         group sasha_top auto variant bb_sasha_pee when sasha and sasha_pee and sasha_boobjob and not (sasha_topless or sasha_naked)
         group sasha_top auto variant nobb_sasha_pee when sasha and sasha_pee and sasha_noboobjob and not (sasha_topless or sasha_naked)
         group sasha_bot auto variant sasha_pee when sasha and sasha_pee and not (sasha_bottomless or sasha_naked)
-        group sasha_top auto variant nopreg_sasha_brush when sasha and sasha_brush and not (sasha_pregnant or sasha_topless or sasha_naked)
-        group sasha_top auto variant preg_sasha_brush when sasha and sasha_brush and sasha_pregnant and not (sasha_topless or sasha_naked)
-        group sasha_top auto variant nobb_nopreg_sasha_brush when sasha and sasha_brush and sasha_noboobjob and not (sasha_pregnant or sasha_topless or sasha_naked)
-        group sasha_top auto variant nobb_preg_sasha_brush when sasha and sasha_brush and sasha_noboobjob and sasha_pregnant and not (sasha_topless or sasha_naked)
-        group sasha_top auto variant bb_nopreg_sasha_brush when sasha and sasha_brush and sasha_boobjob and not (sasha_pregnant or sasha_topless or sasha_naked)
-        group sasha_top auto variant bb_preg_sasha_brush when sasha and sasha_brush and sasha_boobjob and sasha_pregnant and not (sasha_topless or sasha_naked)
+        group sasha_top auto variant nopreg_sasha_brush when sasha and sasha_brush and not (sasha_topless or sasha_naked)
+        group sasha_top auto variant preg_sasha_brush when sasha and sasha_brush and not (sasha_topless or sasha_naked)
+        group sasha_top auto variant nobb_nopreg_sasha_brush when sasha and sasha_brush and sasha_noboobjob and not (sasha_topless or sasha_naked)
+        group sasha_top auto variant nobb_preg_sasha_brush when sasha and sasha_brush and sasha_noboobjob and not (sasha_topless or sasha_naked)
+        group sasha_top auto variant bb_nopreg_sasha_brush when sasha and sasha_brush and sasha_boobjob and not (sasha_topless or sasha_naked)
+        group sasha_top auto variant bb_preg_sasha_brush when sasha and sasha_brush and sasha_boobjob and not (sasha_topless or sasha_naked)
 
         attribute sasha_nohaircut variant sasha_pee when sasha and sasha_pee
         attribute sasha_nohaircut variant sasha_brush when sasha and sasha_brush

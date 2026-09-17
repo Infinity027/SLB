@@ -692,14 +692,6 @@ steps:
       condition: aletta.flags.engagedmike
       next: None
 
-  preg:
-    name: Get Aletta pregnant
-    optional: True
-    condition: True
-    outcome:
-      condition: aletta.flags.pregnancies_number > 0
-      next: None
-
   slave:
     name: Make Aletta my sex slave
     optional: True

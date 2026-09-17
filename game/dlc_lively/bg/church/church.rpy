@@ -35,19 +35,16 @@ init 6:
     layeredimage bg church:
         attribute_function MultiPickers([ CollarPicker, HaircutPicker, OutfitPicker, ChurchPicker], append_npc_from_attributes=True)
 
-
         attribute empty null            
         attribute force_display null        
         attribute claire_clit null
         attribute claire_navel null
         attribute claire_nipples null
         attribute claire_nose null
-        attribute claire_pregnant_navel null
         attribute harmony_clit null
         attribute harmony_navel null
         attribute harmony_nipples null
         attribute harmony_nose null
-        attribute harmony_pregnant_navel null
         attribute harmony_tongue null
 
         always "church"

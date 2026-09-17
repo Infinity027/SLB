@@ -6,15 +6,12 @@ init 1:
         always:
             "nightclub_foursome_aletta_lexi_bg"
         group multiple auto variant body
-        attribute lexi_pregnant
-        attribute aletta_pregnant
         group alettaexp auto:
             attribute alettalewd default
         group lexiexp auto:
             attribute lexilewd default
         group lexioutfit auto if_not ["naked"]
         group alettaoutfit auto if_not ["naked"]
-        group alettaoutfit auto variant "pregnant" if_any "aletta_pregnant" if_not ["naked"]
 
         attribute aletta_collar
         group dick auto:
@@ -57,8 +54,6 @@ init 1:
         always:
             "nightclub_bj_aletta_lexi_bg"
         group multiple auto variant body
-        attribute lexi_pregnant
-        attribute aletta_pregnant
         group alettaexp auto:
             attribute alettanormal default
         group lexiexp auto:
@@ -91,12 +86,8 @@ init 1:
         group girls auto variant "nohaircut" if_any ["aletta_nohaircut"]
 
         group outfits auto if_not ["naked"]
-        group pregnancy auto if_all "pregnant" if_any ["aletta_sexywork", "lavish_sexywork"]
-        group outfits_pregnant auto if_any "pregnant" if_not ["naked"]
-
         group collars auto
 
         group hairs auto
 
         group glasses auto
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

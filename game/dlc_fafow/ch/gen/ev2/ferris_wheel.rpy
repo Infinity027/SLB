@@ -31,8 +31,6 @@ init 1:
 
 
         group outfits auto variant "collarcover" if_any "morgan"
-        group outfits auto variant "collarcover_pregnant" if_any "morgan_pregnant"
-
         attribute breemc
         group mc_haircuts auto variant "breemc" if_any "breemc":
             attribute mc_nohaircut null

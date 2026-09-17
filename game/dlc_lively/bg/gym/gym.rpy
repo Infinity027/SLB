@@ -41,7 +41,6 @@ init 6:
     layeredimage bg gym:
         attribute_function MultiPickers([ CollarPicker, OutfitPicker, HaircutPicker, GymPicker], append_npc_from_attributes=True)
 
-
         attribute empty null            
         attribute force_display null        
         attribute audrey_clit null
@@ -56,44 +55,29 @@ init 6:
         always "gym"
 
         attribute hanna
-        attribute hanna_pregnant when hanna
         attribute hanna_collar when hanna
         attribute hanna_nohaircut when hanna
-        group hanna_bot auto variant preg when hanna and hanna_pregnant
-        group hanna_bot auto variant nopreg when hanna and not hanna_pregnant
-        group hanna_top auto variant preg when hanna and hanna_pregnant
-        group hanna_top auto variant nopreg when hanna and not hanna_pregnant
-
+        group hanna_bot auto variant nopreg when hanna
+        group hanna_top auto variant nopreg when hanna
 
         attribute cherie
-        attribute cherie_pregnant when cherie
         attribute cherie_collar when cherie
         group cherie_hair auto when cherie
-        group cherie_bot auto variant preg when cherie and cherie_pregnant
-        group cherie_bot auto variant nopreg when cherie and not cherie_pregnant
-        group cherie_top auto variant preg when cherie and cherie_pregnant
-        group cherie_top auto variant nopreg when cherie and not cherie_pregnant
+        group cherie_bot auto variant nopreg when cherie
+        group cherie_top auto variant nopreg when cherie
 
 
         attribute palla
-        attribute palla_pregnant when palla
         attribute palla_collar when palla
         attribute palla_nohaircut when palla
-        group palla_bot auto variant preg when palla and palla_pregnant
-        group palla_bot auto variant nopreg when palla and not palla_pregnant
-        group palla_top auto variant preg when palla and palla_pregnant
-        group palla_top auto variant nopreg when palla and not palla_pregnant
-
+        group palla_bot auto variant nopreg when palla
+        group palla_top auto variant nopreg when palla
 
         attribute kiara
-        attribute kiara_pregnant when kiara
         attribute kiara_collar when kiara
         group kiara_hair auto when kiara
-        group kiara_bot auto variant preg when kiara and kiara_pregnant
-        group kiara_bot auto variant nopreg when kiara and not kiara_pregnant
-        group kiara_top auto variant preg when kiara and kiara_pregnant
-        group kiara_top auto variant nopreg when kiara and not kiara_pregnant
-
+        group kiara_bot auto variant nopreg when kiara
+        group kiara_top auto variant nopreg when kiara
 
         attribute audrey
         attribute audrey_collar when audrey

@@ -70,14 +70,12 @@ init 1:
             attribute emma_clit null
             attribute emma_lips null
             attribute emma_navel null
-            attribute emma_pregnant_navel null
             attribute emma_nipples null
             attribute emma_tongue null
             attribute samantha_clit null
             attribute samantha_ears null
             attribute samantha_lips null
             attribute samantha_navel null
-            attribute samantha_pregnant_navel null
             attribute samantha_tongue null
 
         group multiple auto variant collars

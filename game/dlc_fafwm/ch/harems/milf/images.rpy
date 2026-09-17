@@ -2,7 +2,6 @@ init 1:
     layeredimage milf 4some blowjob:
         attribute_function MultiPickers([CollarPicker,  HaircutPicker, MCCGPicker], npcs=[cherie, claire, kiara])
 
-
         attribute mikemc null
         attribute cherie null
         attribute claire null
@@ -11,19 +10,15 @@ init 1:
         attribute cherie_ears null
         attribute cherie_navel null
         attribute cherie_nipples null
-        attribute cherie_pregnant_navel null
         attribute claire_clit null
         attribute claire_navel null
         attribute claire_nipples null
-        attribute claire_pregnant_navel null
         attribute kiara_clit null
         attribute kiara_ears null
         attribute kiara_navel null
         attribute kiara_nipples null
-        attribute kiara_pregnant_navel null
         attribute claire_collar null
         attribute kiara_collar null
-
 
         group bg auto:
             attribute bedroom default
@@ -83,11 +78,9 @@ init 1:
         attribute cherie_ears null
         attribute cherie_navel null
         attribute cherie_nose null
-        attribute cherie_pregnant_navel null
         attribute claire_clit null
         attribute claire_navel null
         attribute claire_nipples null
-        attribute claire_pregnant_navel null
         attribute claire_pubes null
         attribute kiara_ears null
         attribute kiara_pubes null
@@ -103,30 +96,20 @@ init 1:
         attribute kiara_bottomless null
         attribute cum null
 
-
         group bg auto:
             attribute bedroom default
 
         always "milf_4some_fuckcherie_bodies"
 
-
         group multiple auto variant pregnancies
-
-
        
-
         group multiple auto variant collars
-
 
         group top auto variant cherie when not cherie_topless:
             attribute cherie_naked null
         group top auto variant claire when not claire_topless:
             attribute claire_naked null
         group top auto variant kiara when not kiara_topless:
-            attribute kiara_naked null
-        group top_preg auto variant kiara when kiara_pregnant and not kiara_topless:
-            attribute kiara_naked null
-        group top_nopreg auto variant kiara when not kiara_pregnant and not kiara_topless:
             attribute kiara_naked null
         group bot auto variant cherie when not cherie_bottomless:
             attribute cherie_naked null
@@ -162,7 +145,6 @@ init 1:
     layeredimage milf 4some fuckclaire:
         attribute_function MultiPickers([ CollarPicker, OutfitPicker, HaircutPicker, MCCGPicker], npcs=[cherie, claire, kiara])
 
-
         attribute mikemc null
         attribute cherie null
         attribute claire null
@@ -172,50 +154,30 @@ init 1:
         attribute claire_clit null
         attribute claire_navel null
         attribute claire_nose null
-        attribute claire_pregnant_navel null
         attribute kiara_clit null
         attribute kiara_ears null
         attribute kiara_navel null
         attribute kiara_nipples null
         attribute kiara_nose null
-        attribute kiara_pregnant_navel null
         attribute cum null
-
 
         group bg auto:
             attribute bedroom default
 
-
         always "milf_4some_fuckclaire_bodies"
-
 
         group claire_exp auto:
             attribute claire_normal default
 
-
         group multiple auto variant pregnancies
-
-
        
-
         group multiple auto variant collars
 
-
-        group kiara_outfits auto variant nopreg when not kiara_pregnant:
-            attribute kiara_naked null
-        group kiara_outfits auto variant preg when kiara_pregnant:
-            attribute kiara_naked null
-        group cherie_outfits auto variant nopreg when not cherie_pregnant:
-            attribute cherie_naked null
-        group cherie_outfits auto variant preg when cherie_pregnant:
-            attribute cherie_naked null
         group cherie_chains auto
         group claire_outfits auto:
             attribute claire_naked null
 
-
         group multiple auto variant haircuts
-
 
         group dickpos:
             attribute out null default
@@ -246,7 +208,6 @@ init 1:
     layeredimage milf 4some fuckkiara:
         attribute_function MultiPickers([ CollarPicker, PubesPicker, OutfitPicker, HaircutPicker, MCCGPicker], npcs=[cherie, claire, kiara])
 
-
         attribute mikemc null
         attribute cherie null
         attribute claire null
@@ -254,8 +215,6 @@ init 1:
         attribute cherie_collar null
         attribute cherie_ears null
         attribute cherie_navel null
-        attribute cherie_pregnant_navel null
-
 
         group bg auto:
             attribute bedroom default
@@ -273,11 +232,6 @@ init 1:
         attribute kiara_clit when not vaginal
 
         group multiple auto variant outfits
-        group multiple auto variant outfits_top when not cherie_pregnant
-        group multiple auto variant outfits_top_preg when cherie_pregnant
-        group multiple auto variant outfits_bot when not claire_pregnant
-        group multiple auto variant outfits_bot_preg when claire_pregnant
-
 
         group kiara_exp auto:
             attribute kiara_normal default

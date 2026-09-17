@@ -8,7 +8,6 @@ init 1:
         always "kat_body"
         group shoulders auto
         attribute pubes
-        attribute pregnant
         attribute collar
         group necklace auto if_not ["collar"]
 

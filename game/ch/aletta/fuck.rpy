@@ -707,20 +707,6 @@ label aletta_fuck_date_missionary(sexperience_min):
                 with hpunch
                 "And she rides my cock until the very last moment possible."
                 $ aletta.love += 2
-            elif _return == "vaginal_inside_pregnant":
-                "I don't need to be told that it's safe to cum inside of Aletta."
-                "The warm, welcoming curve of her belly beneath me is more than enough of a reminder."
-                "It keeps me from leaning in closer as I lose myself in her."
-                show aletta missionary ahegao creampie inserts with hpunch
-                "But I can tell from the look on her face as she begins to return to her senses that I've done enough."
-                with hpunch
-                "As I slow down, becoming more gentle with my motions, I do all I can to make her cum too."
-                with hpunch
-                "And when she finally does, the moment between us is tender and gentle."
-                "Quite the contrast to what came before it."
-                "Maybe a glimpse at what the future holds for us."
-                "And the life growing inside of her too..."
-                $ aletta.love += 2
             elif _return == "vaginal_inside_mad":
                 "I'm so caught up in the moment that I can't think of anything else."
                 show aletta missionary ahegao creampie inserts with hpunch
@@ -1176,17 +1162,6 @@ label aletta_fuck_date_doggy(sexperience_min):
                 "Her words are washed away in a flood of panting and moaning at the sensation."
                 with hpunch
                 "I ride Aletta to the very end, enjoying every moment she's taking it."
-            elif _return == "vaginal_inside_pregnant":
-                "The sight of Aletta's swollen belly and massive breasts is all the reminder I need."
-                "Pulling out would be pointless right now, as she's already as pregnant as I can hope to make her!"
-                show aletta doggy creampie vaginal mike hand squirt with hpunch
-                $ aletta.love += 3
-                "This means that I can enjoy every last moment before I cum."
-                with hpunch
-                "And then savour the sensation of shooting my load, deep inside of her too."
-                with hpunch
-                "But I'm not alone in taking pleasure from this, as Aletta moans at the same time."
-                "In fact, her lowing and the size of her almost reminds me of an animal giving birth!"
             elif _return == "vaginal_inside_mad":
                 aletta.say "Wait...a...minute..."
                 aletta.say "Did...you..."
@@ -2292,20 +2267,6 @@ label aletta_fuck_office_cowgirl(sexperience_min):
                 show aletta cowgirl -vaginal dickcum
                 "And then she flops backwards, barely able to hold herself up."
                 $ aletta.love += 2
-            elif _return == "vaginal_inside_pregnant":
-                aletta.say "Cum in me...please?"
-                aletta.say "I...I'm already pregnant!"
-                "I feel like Aletta's squeezing me too, draining me dry."
-                "So when I lose it, I feel like I've suddenly been released."
-                "But there's no danger of an accident, as she just reminded me."
-                "My cock is as deep inside of Aletta as it can possibly go."
-                show aletta cowgirl raised creampie cum with vpunch
-                "So she takes all I have to give, with nothing held back."
-                with vpunch
-                "Aletta groans as she cums too, grinding herself down onto me."
-                show aletta cowgirl -vaginal dickcum with vpunch
-                "And then she flops backwards, barely able to hold herself up."
-                $ aletta.love += 3
             elif _return == "vaginal_inside_mad":
                 aletta.say "You have to pull out!"
                 aletta.say "You can't cum inside me!"
@@ -2512,20 +2473,6 @@ label aletta_fuck_office_doggy(sexperience_min):
                 "Aletta groans as she cums too, pushing her ass against me."
                 "And then she flops forwards, barely able to hold herself up."
                 $ aletta.love += 2
-            elif _return == "vaginal_inside_pregnant":
-                aletta.say "Cum in me...please?"
-                aletta.say "I...I'm already pregnant!"
-                "I feel like Aletta's squeezing me too, draining me dry."
-                with hpunch
-                "So when I lose it, I feel like I've suddenly been released."
-                with hpunch
-                "But there's no danger of an accident, as she just reminded me."
-                show aletta doggy creampie vaginal mike hand squirt with hpunch
-                "My cock is as deep inside of Aletta as it can possibly go."
-                "So she takes all I have to give, with nothing held back."
-                "Aletta groans as she cums too, pushing herself against me."
-                "And then she flops forwards, barely able to hold herself up."
-                $ aletta.love += 3
             elif _return == "vaginal_inside_mad":
                 aletta.say "You have to pull out!"
                 aletta.say "You can't cum inside me!"

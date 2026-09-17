@@ -5,7 +5,7 @@ init -35 python:
     'piercings': ['clit', 'navel', 'nipples', 'ears', 'lips', 'nose'],
     'exps': ['normal', 'angry', 'annoyed', 'cry', 'flirt', 'gloomy', 'happy', 'mindless', 'sad', 'sadsmile', 'stuned', 'surprised', 'talkative', 'upset', 'wink'],
     'outfits': ['casual', 'sport', 'date', 'sexydate', 'sluttydate', 'swimsuit', 'sexyswimsuit', 'underwear', 'halloween', 'wedding', 'naked'],
-    'others': ['pregnant', 'pubes', 'collar', 'blush', 'cum', 'bottomless', 'topless'],
+    'others': ['pubes', 'collar', 'blush', 'cum', 'bottomless', 'topless'],
     'accessories': ['ring'],
 }
 
@@ -16,9 +16,6 @@ init -35 python:
         
         
         pickers_attrs = Pickers([CollarPicker, PubesPicker,  PositionPicker], npc=samantha)(set(attrs))
-        if "pregnant_navel" in pickers_attrs:
-            pickers_attrs.remove("pregnant_navel")
-            pickers_attrs.add("navel")
         attrs.extend(pickers_attrs)
         
         
@@ -27,7 +24,6 @@ init -35 python:
         {k: [[], anim_dict[k]] for k in ['motions', 'piercings', 'accessories', 'others']},
         prv_def_vals=['outfits']
     )
-        
         
         sgl_attrs['outfits'][0] = (Pickers([OutfitPicker], npc=samantha)(set(attrs) if not sgl_attrs['outfits'][0] else {sgl_attrs['outfits'][0]}) & set(anim_dict['outfits']) or {"casual"}).pop()
         

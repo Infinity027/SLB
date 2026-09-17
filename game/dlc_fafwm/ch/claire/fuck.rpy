@@ -1006,18 +1006,6 @@ label claire_fuck_date_missionary(sexperience_min):
                 "And then I get to just let go, feeling myself explode, deep inside of Claire."
                 with hpunch
                 "Watching as the look of sheer ecstasy passes over her face."
-            elif _return == "vaginal_inside_pregnant":
-                show claire missionary pleasure happy
-                claire.say "Do it, [hero.name]…"
-                claire.say "I'm pregnant...remember?!?"
-                "I silently thank Claire for the timely reminder that she just delivered."
-                "Because it means that I can enjoy these last few moments and the sensations they bring."
-                $ claire.love += 3
-                play sexsfx1 final_thrust
-                show claire missionary pleasure ahegao cum with hpunch
-                "And then I get to just let go, feeling myself explode, deep inside of Claire."
-                with hpunch
-                "Watching as the look of sheer ecstasy passes over her face."
         "Fuck her ass" if hero.sexperience >= (sexperience_min + 5):
             "Claire looks up at me as I get into position, a smile on her face."
             "And as I push her legs apart, she begins to nod her head at my efforts."
@@ -1331,18 +1319,6 @@ label claire_fuck_date_doggy(sexperience_min):
                 show claire doggy pleasure ahegao drool cum with vpunch
                 "And then I get to just let go, feeling myself explode, deep inside of Claire."
                 "Watching as the look of sheer ecstasy passes over her face."
-            elif _return == "vaginal_inside_pregnant":
-                claire.say "Do it, [hero.name]…"
-                claire.say "I'm pregnant...remember?!?"
-                "I silently thank Claire for the timely reminder that she just delivered."
-                with vpunch
-                "Because it means that I can enjoy these last few moments and the sensations they bring."
-                $ claire.love += 3
-                play sexsfx1 final_thrust
-                show claire doggy pleasure ahegao drool cum with vpunch
-                "And then I get to just let go, feeling myself explode, deep inside of Claire."
-                with vpunch
-                "Watching as the look of sheer ecstasy passes over her face."
         "Fuck her ass" if hero.sexperience >= (sexperience_min + 5):
             "She turns her head back around to face the front."
             "And at the same time leans forwards and down."
@@ -1637,18 +1613,6 @@ label claire_fuck_date_fullnelson(sexperience_min):
                 play sexsfx1 final_thrust
                 show claire fullnelson pleasure ahegao cum with vpunch
                 "And then I get to just let go, feeling myself explode, deep inside of Claire."
-                "Watching as the look of sheer ecstasy passes over her face."
-            elif _return == "vaginal_inside_pregnant":
-                claire.say "Do it, [hero.name]…"
-                claire.say "I'm pregnant...remember?!?"
-                "I silently thank Claire for the timely reminder that she just delivered."
-                with vpunch
-                "Because it means that I can enjoy these last few moments and the sensations they bring."
-                $ claire.love += 3
-                play sexsfx1 final_thrust
-                show claire fullnelson pleasure ahegao cum with vpunch
-                "And then I get to just let go, feeling myself explode, deep inside of Claire."
-                with vpunch
                 "Watching as the look of sheer ecstasy passes over her face."
         "Fuck her ass" if hero.sexperience >= (sexperience_min + 5):
             "But the moment that I'm in position, I make my move."

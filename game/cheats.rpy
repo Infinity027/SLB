@@ -133,36 +133,6 @@ screen cheats_attr_change(owner):
             text f"Location: {room}" style "cheats_display_text" yalign 0
             null height 10
             textbutton "Learn All Traits" action [Function(cheat_traits, tgt)] sensitive cheat_has_traits(tgt) style "cheats_button" yalign 0
-            if tgt_type == "hero":
-                if tgt.is_male:
-                    if game.flags.nopreg:
-                        textbutton "MC: Infertile" action [Function(cheat_nopreg, False)] style "cheats_button"
-                    else:
-                        textbutton "MC: Fertile" action [Function(cheat_nopreg, True)] style "cheats_button"
-
-                if tgt.is_female:
-                    if tgt.pregnant:
-                        textbutton "Stop MC pregnancy" action [Function(cheat_pregnancy, tgt, False)] selected tgt.pregnant style "cheats_button"
-                    else:
-                        textbutton "Make MC pregnant" action [Function(cheat_pregnancy, tgt, True)] style "cheats_button"
-
-                    if tgt.is_collared:
-                        textbutton "Remove MC collar" action [SetVariable("hero.flags.collared", False)] selected tgt.is_collared style "cheats_button"
-                    else:
-                        textbutton "Add MC collar" action [SetVariable("hero.flags.collared", True)] style "cheats_button"
-
-                    if tgt.flags.pubes:
-                        textbutton "Remove MC pubes" action [SetVariable("hero.flags.pubes", False)] selected tgt.flags.pubes style "cheats_button" yalign 0
-                    else:
-                        textbutton "Add MC pubes" action [SetVariable("hero.flags.pubes", True)] style "cheats_button" yalign 0
-
-                    textbutton "Switch MC haircut" action [ToggleVariable("hero.flags.haircut", True, False)] style "cheats_button" yalign 0
-            else:
-                if tgt.is_female:
-                    if tgt.pregnant:
-                        textbutton "Stop her pregnancy" action [Function(cheat_pregnancy, tgt, False)] style "cheats_button" yalign 0
-                    else:
-                        textbutton "Make her pregnant" action [Function(cheat_pregnancy, tgt, True)] style "cheats_button" yalign 0
             if tgt.id == "sasha":
                 if tgt.flags.boobjob:
                     textbutton "Switch to small breasts" action [SetVariable(f"{tgt.id}.flags.boobjob", False)] style "cheats_button" yalign 0

@@ -121,7 +121,6 @@ init 1:
     layeredimage samantha ending:
         attribute_function Pickers([OutfitPicker, EndingKidPicker], npc=samantha)
 
-        attribute pregnant null
         attribute kid
 
         always:
@@ -152,7 +151,6 @@ init 1:
             attribute tongue null
             attribute ears null
             attribute navel null
-            attribute pregnant_navel null
 
         attribute collar
         attribute cum

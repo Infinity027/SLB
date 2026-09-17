@@ -157,7 +157,7 @@ init python:
 
 
 label aletta_bye(bye_outfit=None):
-    # call npc_bye_outfit (npc=aletta, bye_outfit=bye_outfit) from _call_npc_bye_outfit
+    call npc_bye_outfit (npc=aletta, bye_outfit=bye_outfit) from _call_npc_bye_outfit
     $ (day, h, activity, bye_outfit) = _return
     if not activity == aletta.activity:
         if day != game.week_day:
@@ -203,12 +203,10 @@ label aletta_cheated(action, cheat_npc=None):
         $ aletta.flags.kiss += 1
     elif aletta.sub >= 75:
         show aletta flirt
-        show fx heart
         $ aletta.sub += 1
         "I see Aletta looking at me [action] someone else with envy and lust in her eyes."
     else:
         show aletta angry
-        show fx anger
         $ loss = 5
         if aletta.flags.girlfriend or aletta.flags.fiance:
             $ loss += 5
@@ -262,14 +260,10 @@ label aletta_kiss:
     if aletta.love < 25 and not aletta.is_girlfriend and not game.active_date.score >= 75:
         show aletta
         "It can be hard to get a handle on just how a girl as strong-willed and forceful as Aletta is feeling from one moment to the next."
-        "And it's harder still to be sure of what she wants me to do as a man when we're together."
         "With a less intimidating girl, I probably wouldn't think twice about taking a chance on being wrong."
-        "But there's always that sense of fear with Aletta, worrying that doing the wrong thing at the wrong time could result in disaster."
-        "All of which is made so much worse by the fact that she's already got me so desperate to take things to the next level with her."
-        "This all comes to a head when I feel the insatiable urge to lean forward and try to give Aletta what I hope will be our first kiss."
+        "I feel the insatiable urge to lean forward and try to give Aletta what I hope will be our first kiss."
         "I feel like the moment is right, everything feels right - at least from my point of view."
         "The first indication I get to tell me that I'm very wrong is the feeling of something firm and hard thumping me in the middle of the chest."
-        "My mouth still stupidly poised to kiss Aletta, I look down in surprise to see her hand placed in the centre of my ribcage."
         "A moment later, the other hand is pushed into my face, turning my head away from her and puckering my lips at the same time."
         "And there I have perhaps the most neat evidence of my miss-reading Aletta, as well as the consequences for doing so."
         $ aletta.love -= 5
@@ -283,14 +277,7 @@ label aletta_kiss:
         show aletta kiss
         "I don't want to find that I've mistimed this, picked the wrong moment and misread the cues that I think Aletta's been sending me just now."
         "But I just can't keep sitting on the feelings that she inspires in me any longer, and so to hell with the consequences."
-        "At some point in my life, I need to actually stand up and make an effort to grab what I want, even if it might mean missing when I do so."
-        "Normally I'd try to gently lean in to kiss a girl, with subtlety and a light touch being required."
-        "But while I know that Aletta's certainly not made of steel and stone, she's also wilful and stubborn as well."
-        "So this is why I choose to make the bold (and possibly also disastrous) move of cupping her cheeks in my hands."
-        "Even as I do this, I can already see the look of surprise and then sudden indignation spreading across Aletta's face."
-        "Well, it's now or never!"
         "I pull her closer and kiss her, full on the lips and with no attempt to be gentle."
-        "I feel her twist and her muscles tense instinctively, but I choose to ignore these physical cues and press on."
         "For a moment I fear that I've totally misjudged the situation."
         "But then I almost literally feel Aletta melt in my arms."
         "It's not that the fight goes out of her, rather that the same strength and passion is suddenly channelled into our embrace instead."
@@ -298,15 +285,10 @@ label aletta_kiss:
         hide aletta kiss
         $ aletta.flags.kiss += 1
     else:
-        hide aletta
         $ aletta.love += 2
         show aletta kiss
         "If I was under the impression that breaking the ice with Aletta and having our first kiss together was going to be like bursting a damn, then I was proven wrong pretty quickly."
         "The ice queen of the office didn't seem about to melt quite that easily, and she was keen on the idea of rationing kisses even after that."
-        "But then there is something to be said for keeping things a little special, and Aletta was a revelation when she did give into her urges."
-        "We quickly got into the habit of ducking into doorways and behind obstacles that would hide us sight, and then she would all but pounce on me."
-        "Aletta was no prude, just careful to preserve the image that she had spent so long cultivating, that of being an iron bitch."
-        "It was well hidden, but her insides were metal too - only they were liquid metal, hot, glowing and able to burn you up in a second."
         "If I wasn't forceful enough when we kissed, Aletta would become the one to make the demands and push until she got what she wanted."
         "She would claw, slap and even bite at me if I were not giving her what she wanted, quickly enough or in sufficient amounts to satisfy her."
         "But you can get used to cuts and bruises around the mouth, and you can always deal with the pain."
@@ -317,21 +299,13 @@ label aletta_kiss:
 
 label aletta_propose_male:
     show aletta
-    "Back when we first met, I could only have thought of being nervous around Aletta for a bad reason."
-    "She's a pretty intimidating woman, good at her job and not the kind to suffer fools gladly."
-    "I've come to know the other side of her, the one that's a lot more loving and passionate."
-    "But she still has the ability to make me quake in my boots when I need to ask her for something."
-    "And today, I've resolved to ask her for something very special indeed."
-    "I'm going to ask for her hand in marriage!"
     "I've picked out the ring."
     "I've planned what I'm going to say to her."
-    "I've chosen the day for it all to go down on too."
     "All I have to do now is pluck up the courage to go through with it!"
     "The weight of it's starting to get to me though."
     "And I can see that Aletta's starting to get suspicious."
     aletta.say "[hero.name]..."
     aletta.say "Is there something wrong?"
-    "Oh shit - she's going to rumble me!"
     "It's now or never!"
     "Hastily getting down on one knee, I fumble for the ring."
     "Aletta's eyes go wide as I hold it up for her to see."
@@ -340,14 +314,12 @@ label aletta_propose_male:
     show aletta surprised
     "For a moment at least, Aletta seems genuinely surprised and lost for words."
     "But then she shakes it off and regains her usual level of composure again."
-    "Which is good, because I know it means she's about to give me her answer!"
     if aletta.love < 195:
         show aletta sad
         aletta.say "Oh, [hero.name]."
         aletta.say "Silly, romantic, [hero.name]."
         aletta.say "You know that I can't marry you!"
         "I stare blankly at Aletta for an extended moment."
-        "All the while I'm trying to fathom what she means."
         mike.say "I...I do?"
         "Aletta gives me an almost condescending smile as she nods."
         show aletta happy
@@ -369,12 +341,10 @@ label aletta_propose_male:
         $ aletta.love -= 25
         $ aletta.sub -= 25
     else:
-        show aletta normal
+        show aletta talk
         aletta.say "Oh, [hero.name]."
         aletta.say "Silly, romantic, [hero.name]."
         aletta.say "Of course I will!"
-        "I stare blankly at Aletta for an extended moment."
-        "All the while I'm trying to fathom what she means."
         mike.say "Y...you will?"
         "Aletta gives me an almost condescending smile as she nods."
         aletta.say "Yes, [hero.name], I will!"
@@ -411,4 +381,3 @@ label aletta_work_with:
         "I help out Aletta with her work."
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

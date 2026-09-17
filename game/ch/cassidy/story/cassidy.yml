@@ -337,13 +337,13 @@ steps:
       condition: cassidy.flags.engagedmike
       next: None
 
-  preg:
-    name: Get Cassidy pregnant
-    optional: True
-    condition: True
-    outcome:
-      condition: cassidy.flags.pregnancies_number > 0
-      next: None
+  # preg:
+  #   name: Get Cassidy pregnant
+  #   optional: True
+  #   condition: True
+  #   outcome:
+  #     condition: cassidy.flags.pregnancies_number > 0
+  #     next: None
 
   slave:
     name: Make Cassidy my pet or my sex slave

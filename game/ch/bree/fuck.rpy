@@ -1739,29 +1739,6 @@ label bree_fuck_date_doggy(sexperience_min):
         mike.say "I promise that next time, I'll lick that pot clean!"
         show bree happy
         "[bree.name] laughs as we collapse onto the bed together in a tangle of sweaty limbs."
-    elif _return == "vaginal_inside_pregnant":
-        $ bree.sub += 1
-        "I'm too far gone to even think about pulling out of [bree.name] by now, and so I press on regardless."
-        "She must realise what's going on, as I feel her begin to wriggle almost desperately."
-        "But she's given up too much of her leverage in lowering herself down to allow me further in, and she can't hope to free herself in time."
-        with hpunch
-        pause 0.25
-        with hpunch
-        "As I cum into her, I press down with all of my weight, making sure that she stays put until I'm utterly spent."
-        show bree doggy vaginal cuminpussy with hpunch
-        "I can hear [bree.name] whimpering and moaning at the feelings of ecstasy she's experiencing and the knowledge of what I've done to her."
-        "But I'm too exhausted to either feel triumphant or else let the implications of it all sink in."
-        "So I lie down on the bed and leave [bree.name] to deal with it on her own for a while."
-        scene expression f"bg {game.room}"
-        show bree naked blush
-        $ bree.love += 1
-        "[bree.name] looks around at me eagerly, even as my cum is starting to drip out and run down the inside of her thighs."
-        bree.say "Mmm...I feel so good when you fill me up to the brim [hero.name]!"
-        bree.say "All warm and melty inside, like you've turned my pussy into a jar of warm honey..."
-        "I can't help laying myself atop her as she says this, covering her body with mine."
-        mike.say "I promise that next time, I'll lick that pot clean!"
-        show bree happy
-        "[bree.name] laughs as we collapse onto the bed together in a tangle of sweaty limbs."
     elif _return == "vaginal_inside_mad":
         "I'm too far gone to even think about pulling out of [bree.name] by now, and so I press on regardless."
         "She must realise what's going on, as I feel her begin to wriggle almost desperately."
@@ -1918,19 +1895,6 @@ label bree_fuck_date_doggy_rough(sexperience_min):
                 "I silently thank [bree.name] for the permission to keep on going."
                 show bree rough doggy ahegao cum -boobs with hpunch
                 $ bree.love += 2
-                "And within mere seconds I'm shooting my load into her."
-                with hpunch
-                "[bree.name] starts to cum almost a second after I do."
-                with hpunch
-                "And she keeps on going even after I'm done."
-                "So I keep her supported the whole time, then guide her down onto the bed."
-            elif _return == "vaginal_inside_pregnant":
-                bree.say "Please..."
-                bree.say "Cum...in...me..."
-                bree.say "I'm already...pregnant!"
-                "I silently thank [bree.name] for the permission to keep on going."
-                show bree rough doggy ahegao cum -boobs with hpunch
-                $ bree.love += 3
                 "And within mere seconds I'm shooting my load into her."
                 with hpunch
                 "[bree.name] starts to cum almost a second after I do."
@@ -2264,20 +2228,6 @@ label bree_fuck_date_cowgirl(sexperience_min):
                 show pussy_insert bree zorder 1 at zoomAt(0.75, (820, 200))
                 with vpunch
                 "But afterwards she collapses atop me, panting and spent."
-            elif _return == "vaginal_inside_pregnant":
-                "The weight of [bree.name]'s swelling belly has been there the whole time."
-                "And now it reminds me of the fact that I don't have to think of pulling out in time."
-                "I keep on going, and [bree.name] rides me until the very last moment."
-                show bree cowgirl creampie up with vpunch
-                $ bree.love += 3
-                "It hits her hard, even through she's already worked into a lather."
-                with vpunch
-                "She gasps as her eyes pop open, looking almost overwhelmed."
-                with vpunch
-                "But all the same she pushes herself down, wanting every moment of it."
-                show bree cowgirl -creampie down smile resting dickcum cum onpussy
-                show pussy_insert bree zorder 1 at zoomAt(0.75, (820, 200))
-                "Afterwards she looks down at me happily, hands cradling her round belly."
             elif _return == "vaginal_inside_mad":
                 bree.say "Oh no..."
                 bree.say "We have to..."
@@ -2572,21 +2522,6 @@ label bree_fuck_date_reverse_cowgirl(sexperience_min):
                 "She looks just like she's riding one of the mechanical bulls she described."
                 show bree reverse cowgirl creampie with vpunch
                 "But the thrill's coming from me filling her pussy as I shoot my load!"
-            elif _return == "vaginal_inside_pregnant":
-                bree.say "I'm...already...pregnant!"
-                bree.say "So...don't...stop!"
-                "There's no time to do anything but hold on tight to [bree.name] as it happens."
-                "Luckily for me there's no danger involved in shooting my load in her."
-                "As if I needed reminding that she's pregnant!"
-                "And even better, doing that seems to be just what [bree.name] wants right now."
-                "At least that's what she reaction leads me to believe."
-                show bree reverse cowgirl ahegao with vpunch
-                $ bree.love += 3
-                "[bree.name] throws her head back, hands gripping my thighs."
-                with vpunch
-                "She looks just like she's riding one of the mechanical bulls she described."
-                show bree reverse cowgirl creampie with vpunch
-                "But the thrill's coming from me filling her pussy as I shoot my load!"
             elif _return == "vaginal_inside_happy":
                 bree.say "Please...keep going..."
                 bree.say "Don't...stop!"
@@ -2714,25 +2649,6 @@ label bree_fuck_date_missionary(sexperience_min):
         "But I'm guessing a degree of the delight that I can see in her eyes is on account of me not cumming inside her unprotected."
         "Still slippery and wet from everything that's been showered over her, she snakes into my arms and nestles there happily."
     elif _return == "vaginal_inside_pill":
-        $ bree.sub += 1
-        show bree missionary arm pleasure with hpunch
-        "There's nothing I can do to stop myself from cumming, long and hard."
-        show bree missionary arm ahegao creampie with hpunch
-        bree.say "Ah...ah...[hero.name]!"
-        with hpunch
-        "[bree.name] begins to quiver and shake, her own orgasm taking hold of her."
-        "I feel the muscles inside of her pussy clamp down on me, holding me inside of her."
-        "It's hard to reconcile what she's doing with the look on her face right now."
-        "Which is showing the strangest combination of ecstasy and concern."
-        show bree missionary -vaginal
-        show pussy_insert bree zorder 1 at zoomAt(0.75, (20, 200))
-        with fade
-        "Once she finally releases me, [bree.name] pulls herself up on her elbows and a little away from where I'm lying."
-        "The look on her face reminds me of one of those classical oil paintings, in which someone's been mortally wounded and lies dying."
-        "It's only when I follow her gaze down and see the sheer amount of glistening cum that's oozing out of her that I finally understand."
-        bree.say "That's quite something..."
-        $ bree.love += 1
-    elif _return == "vaginal_inside_pregnant":
         $ bree.sub += 1
         show bree missionary arm pleasure with hpunch
         "There's nothing I can do to stop myself from cumming, long and hard."
@@ -2912,15 +2828,6 @@ label bree_fuck_date_spoon(sexperience_min):
                 "[bree.name] pushes herself back into me as I lose it."
                 show bree spoon cum mouth_ahegao with hpunch
                 $ bree.love += 2
-                "Which means I can feel how much she enjoys the sensation."
-                with hpunch
-                "Then I get to experience the pleasure of her orgasm too."
-            elif _return == 'vaginal_inside_pregnant':
-                "[bree.name] guides my hand to her swelling belly as a reminder that she's already pregnant."
-                with hpunch
-                "Then she pushes herself back into me as I lose it."
-                show bree spoon cum mouth_ahegao with hpunch
-                $ bree.love += 3
                 "Which means I can feel how much she enjoys the sensation."
                 with hpunch
                 "Then I get to experience the pleasure of her orgasm too."
@@ -3336,20 +3243,6 @@ label bree_fuck_sasha_bedroom(sexperience_min=10):
                 bree.say "Do it..."
                 bree.say "I'm on...the pill!"
                 "It's now that I'm thankful [bree.name] started taking that thing."
-                "Because it means there's no need to bother thinking it out."
-                "I can just keep right on going until the very end."
-                show bree doggy cuminpussy ahegao with hpunch
-                "And that's just what I do, enjoying every second of my orgasm."
-                $ bree.love += 2
-                with hpunch
-                "Moments later I get a second helping of pleasure as [bree.name] cums too."
-                with hpunch
-                "The muscles inside her body squeezing my cock as she shudders from head to toe."
-            elif _return == "vaginal_inside_pregnant":
-                bree.say "Go ahead..."
-                bree.say "Do it..."
-                bree.say "I'm pregnant...remember?!?"
-                "It's now that I'm thankful I already got [bree.name] pregnant."
                 "Because it means there's no need to bother thinking it out."
                 "I can just keep right on going until the very end."
                 show bree doggy cuminpussy ahegao with hpunch
@@ -3801,19 +3694,6 @@ label bree_zbox_penalty(sexperience_min=0):
                 show bree doggy cuminpussy ahegao with hpunch
                 "This seems to have an instant effect, making her begin to cum too."
                 with hpunch
-                "[bree.name] bucks and twists on the end of my cock."
-                $ bree.love += 2
-                "And once it's all over, she slides off me and collapses onto the ground."
-            elif _return == "vaginal_inside_pregnant":
-                bree.say "Don't stop..."
-                bree.say "I'm already pregnant!"
-                "I silently thank [bree.name] for the timely reminder."
-                "I'm at the end of one of those huge thrusts when it happens."
-                with hpunch
-                "So I shoot my load as deep into [bree.name] as possible."
-                with hpunch
-                "This seems to have an instant effect, making her begin to cum too."
-                show bree doggy cuminpussy ahegao with hpunch
                 "[bree.name] bucks and twists on the end of my cock."
                 $ bree.love += 2
                 "And once it's all over, she slides off me and collapses onto the ground."

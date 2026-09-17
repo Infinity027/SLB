@@ -78,7 +78,6 @@ init 1:
 
         always "petite_4some_foreplay_bodies"
         attribute anna null
-        attribute anna_pregnant
         attribute anna_nose
         attribute anna_clit null
         attribute anna_ears null
@@ -90,7 +89,6 @@ init 1:
 
         attribute emmahand if_any ["emma"]
         attribute emma "petite_4some_foreplay_emma1"
-        attribute emma_pregnant if_any ["emma"]
         attribute emma_collar if_any ["emma"]
         attribute emma_nose if_any ["emma"]
         attribute emma_nipples if_any ["emma"]
@@ -100,9 +98,7 @@ init 1:
         attribute emma_navel if_any ["emma"]
         attribute emma "petite_4some_foreplay_emma2"
 
-
         attribute kat "petite_4some_foreplay_kat1"
-        attribute kat_pregnant if_any ["kat"]
         attribute kat_collar if_any ["kat"]
         attribute kat_nipples if_any ["kat"]
         attribute kat_clit null
@@ -118,9 +114,7 @@ init 1:
         group bg auto:
             attribute bedroom default
 
-
         attribute anna
-        attribute anna_pregnant if_any ["anna"]
         attribute anna_nose if_any ["anna"]
         attribute anna_clit null
         attribute anna_ears null
@@ -133,9 +127,7 @@ init 1:
             attribute anna_eyes_open default
         attribute bodycum_anna if_any ["anna"]
 
-
         attribute emma
-        attribute emma_pregnant if_any ["emma"]
         attribute emma_nose if_any ["emma"]
         attribute emma_clit null
         attribute emma_lips null
@@ -152,7 +144,6 @@ init 1:
         attribute kat
         attribute kat_haircut if_any ["kat"]
         always "petite_4some_fuckall_kat_nohaircut" if_any ["kat"] if_not ["kat_haircut"]
-        attribute kat_pregnant if_any ["kat"]
         attribute kat_nose if_any ["kat"]
         attribute kat_clit null
         attribute kat_ears null
@@ -165,26 +156,21 @@ init 1:
             attribute kat_eyes_open default
         attribute bodycum_kat if_any ["kat"]
 
-
         attribute dickonly null
         group dick auto if_any ["mike"]
         group dick_vaginal auto if_all ["vaginal"] if_any ["mike", "dickonly"]
         group dick_anal auto if_all ["anal"] if_any ["mike", "dickonly"]
 
-
         attribute condom null
         group condom_vaginal auto if_all ["condom", "vaginal"] if_any ["mike", "dickonly"]
-
 
         attribute cum null
         group cum auto if_all ["mike", "cum"]
         group cum_vaginal auto if_all ["cum", "vaginal"] if_any ["mike", "dickonly"] if_not ["condom"]
         group cum_anal auto if_all ["cum", "anal"] if_any ["mike", "dickonly"]
 
-
         attribute hand null
         group hand auto if_all ["mike", "hand"]
-
 
         attribute mike null
         group mike if_any ["mike"]:
@@ -201,7 +187,6 @@ init 1:
 
     layeredimage petite 4some fuckanna:
         attribute_function MultiPickers([PubesPicker,  CollarPicker, DickPicker], npcs=[anna,emma,kat])
-
 
         attribute anna null
         attribute anna_clit null
@@ -309,7 +294,6 @@ init 1:
         attribute anna_collar
         always "petite_4some_fuckemma_annaface"
 
-
         always "petite_4some_fuckemma_kat"
         attribute kat_nipples
         attribute kat_collar
@@ -317,19 +301,9 @@ init 1:
         always "petite_4some_fuckemma_kat_nohaircut"if_not ["kat_haircut"]
         always "petite_4some_fuckemma_katface"
 
-
-        attribute anna_pregnant
-        attribute anna_pregnant_navel
-        attribute kat_pregnant
-        attribute emma_pregnant
-        attribute emma_pregnant_navel
-
-
         attribute bodycum
 
-
         attribute mike
-
 
         group dick auto if_any ["mike"]:
             attribute out null default
@@ -338,7 +312,6 @@ init 1:
         attribute condom null
         group condom auto if_all ["mike", "condom"]
 
-
         always "petite_4some_fuckemma_annahand"
         attribute openpussy if_not ["vaginal"]
         attribute vaginaldrip if_any ["openpussy"] if_not ["vaginal"]
@@ -346,14 +319,12 @@ init 1:
         always "petite_4some_fuckemma_kathand"
         always "petite_4some_fuckemma_emmahand"
 
-
         group dick auto variant "out" if_all ["mike", "out"]
         group cum auto variant "out" if_all ["mike", "out", "cum"] if_not ["condom"]
         group condom auto variant "out" if_all ["mike", "out", "condom"]
 
     layeredimage petite 4some fuckkat:
         attribute_function MultiPickers([PubesPicker,  CollarPicker], npcs=[kat], append_npc_from_attributes=True)
-
 
         attribute anna_clit null
         attribute anna_ears null
@@ -369,18 +340,13 @@ init 1:
         attribute kat_ears null
         attribute kat_tongue null
 
-
         group bg auto:
             attribute bedroom default
 
-
         always "petite_4some_fuckkat_emmahand" if_any ["emma"]
-
 
         always "petite_4some_fuckkat_kat"
         attribute kat_pubes
-        attribute kat_pregnant
-        attribute kat_pregnant_navel
         attribute kat_navel
         attribute kat_nose
         attribute kat_clit
@@ -392,22 +358,17 @@ init 1:
         attribute kat_haircut
         always "petite_4some_fuckkat_kat_nohaircut" if_not ["kat_haircut"]
 
-
         attribute emma
-        attribute emma_pregnant if_any ["emma"]
         attribute emma_nose if_any ["emma"]
         attribute emma_nipples if_any ["emma"]
         always "petite_4some_fuckkat_emmaface" if_any ["emma"]
         attribute emma_collar if_any ["emma"]
 
-
         attribute anna
         attribute anna_collar if_any ["anna"]
         attribute anna_nipples if_any ["anna"]
         attribute anna_pubes if_any ["anna"]
-        attribute anna_pregnant if_any ["anna"]
         always "petite_4some_fuckkat_annaface" if_any ["anna"]
-
 
         group dick auto:
             attribute out default
@@ -415,7 +376,6 @@ init 1:
         group cum auto if_any ["cum"] if_not ["condom"]
         attribute condom null
         group condom auto if_any ["condom"]
-
 
         group fg auto
 
@@ -431,4 +391,3 @@ init 1:
         always "petite_ending_emma"
         attribute emma_kid
         always "petite_ending_fg"
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

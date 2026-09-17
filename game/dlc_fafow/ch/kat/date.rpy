@@ -8,32 +8,19 @@ label kat_date_buy_drink:
     kat.say "I...I think I'm going to do it."
     kat.say "I'm going to go to the bar and buy a drink for myself this time."
     kat.say "Do you want one too, [hero.name]?"
-    if kat.pregnant:
-        mike.say "Ah, Kat..."
-        mike.say "I don't think that's a good idea!"
-        "Kat follows my gaze down to her swollen belly."
-        "And her cheeks flush red with embarrassment."
-        kat.say "Oh, no...of course not!"
-    elif hero.pregnant:
-        bree.say "I don't think that's a good idea, Kat!"
-        bree.say "Not in my current condition."
-        "Kat follows my gaze down to my swollen belly."
-        "And her cheeks flush red with embarrassment."
-        kat.say "Oh, no...of course not!"
+    "I nod eagerly, pleased to see Kat taking the initiative for once."
+    if hero.is_female:
+        bree.say "That's a great idea, Kat."
+        bree.say "I'll have the same again."
     else:
-        "I nod eagerly, pleased to see Kat taking the initiative for once."
-        if hero.is_female:
-            bree.say "That's a great idea, Kat."
-            bree.say "I'll have the same again."
-        else:
-            mike.say "That's a great idea, Kat."
-            mike.say "I'll have the same again."
-        "Kat nods and sets off for the bar."
-        "And I'm pleased to see the look of confidence on her face as she does so."
+        mike.say "That's a great idea, Kat."
+        mike.say "I'll have the same again."
+    "Kat nods and sets off for the bar."
+    "And I'm pleased to see the look of confidence on her face as she does so."
+    $ game.active_date.score += 5
+    if "rebel" in kat.traits:
         $ game.active_date.score += 5
-        if "rebel" in kat.traits:
-            $ game.active_date.score += 5
-        $ kat.set_flag("drinks", 1, "day", mod="+")
+    $ kat.set_flag("drinks", 1, "day", mod="+")
     return
 
 label kat_date_play_darts:
@@ -64,34 +51,19 @@ label kat_date_buy_a_round:
     kat.say "I...I think I'm going to do it."
     kat.say "I'm going to go to the bar and buy a round for everyone myself this time."
     kat.say "Are you in, [hero.name]?"
-    if kat.pregnant:
-        mike.say "Ah, Kat..."
-        mike.say "I don't think that's a good idea!"
-        "Kat follows my gaze down to her swollen belly."
-        "And her cheeks flush red with embarrassment."
-        kat.say "Oh, no...of course not!"
-        $ hero.cancel_activity()
-    elif hero.pregnant:
-        bree.say "I don't think that's a good idea, Kat!"
-        bree.say "Not in my current condition."
-        "Kat follows my gaze down to my swollen belly."
-        "And her cheeks flush red with embarrassment."
-        kat.say "Oh, no...of course not!"
-        $ hero.cancel_activity()
+    "I nod eagerly, pleased to see Kat taking the initiative for once."
+    if hero.is_female:
+        bree.say "That's a great idea, Kat."
+        bree.say "I'll have the same again."
     else:
-        "I nod eagerly, pleased to see Kat taking the initiative for once."
-        if hero.is_female:
-            bree.say "That's a great idea, Kat."
-            bree.say "I'll have the same again."
-        else:
-            mike.say "That's a great idea, Kat."
-            mike.say "I'll have the same again."
-        "Kat nods and sets off for the bar."
-        "And I'm pleased to see the look of confidence on her face as she does so."
+        mike.say "That's a great idea, Kat."
+        mike.say "I'll have the same again."
+    "Kat nods and sets off for the bar."
+    "And I'm pleased to see the look of confidence on her face as she does so."
+    $ game.active_date.score += 5
+    if "rebel" in kat.traits:
         $ game.active_date.score += 5
-        if "rebel" in kat.traits:
-            $ game.active_date.score += 5
-        $ kat.set_flag("drinks", 1, "day", mod="+")
+    $ kat.set_flag("drinks", 1, "day", mod="+")
     return
 
 label kat_dance_with:

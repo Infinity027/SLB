@@ -501,10 +501,6 @@ init 1:
         group multiple auto variant outfits when not naked
         group outfits auto variant "boobjob" if_any "sasha_boobjob" if_not "naked"
 
-        group outfits auto variant "anna_pregnant" if_any "anna_pregnant" if_not "naked"
-        group outfits auto variant "kleio_pregnant" if_any "kleio_pregnant" if_not "naked"
-        group outfits auto variant "sasha_pregnant" if_any "sasha_pregnant" if_not "naked"
-
         attribute sasha_haircut null
         attribute sasha_nohaircut null
 
@@ -593,23 +589,11 @@ init 1:
         group boobjob auto variant naked when boobjob and naked
         group nipples auto variant boobjob when nipples and boobjob and sasha and naked
 
-
         attribute haircut null
         attribute nohaircut null
         group haircut auto when haircut
         group nohaircut auto when nohaircut
         group mikehair auto when mike
-
-
-        attribute pregnant null
-        group pregnancies auto when pregnant
-
-        group pregnant auto variant casual when pregnant and casual and not naked
-        group pregnant auto variant date when pregnant and date and not naked
-        group pregnant auto variant sexydate when pregnant and sexydate and not naked
-        group pregnant auto variant sluttydate when pregnant and sluttydate and not naked
-
-
 
         attribute tongue null
         group tongue auto when tongue
@@ -621,22 +605,16 @@ init 1:
         group ears auto when ears
 
         attribute navel null
-        attribute pregnant_navel null
         group navel auto when navel
         group navel auto variant sexydate when navel and sexydate
-        group pregnant_navel auto when pregnant_navel
-
+ 
         attribute lips null
-
-
 
         attribute collar null
         group collar auto when collar
 
-
         group instrument auto when not boobjob
         group instrument auto variant boobjob when boobjob
-
 
         attribute nobg null
         group light auto variant pub when pub and not nobg
@@ -651,13 +629,10 @@ init 1:
         attribute nosasha null
         attribute nobree null
 
-
         group bg auto:
             attribute livingroom default
 
-
         always "rpg_jack" if_any ["livingroom"] if_not ["nojack", "mikealone"]
-
 
         attribute minami if_not ["mikealone"]
         group exp_minami auto if_any ["minami"] if_not ["mikealone"]:
@@ -668,12 +643,9 @@ init 1:
         group minamioutfits auto if_any ["minami"] if_not ["minami_naked", "mikealone"]
         group minamioutfits auto variant "haircut" if_all ["minami", "minami_haircut"] if_not ["minami_naked", "mikealone"]
         group minamioutfits auto variant "nohaircut" if_all ["minami", "minami_nohaircut"] if_not ["minami_naked", "mikealone"]
-        attribute minami_pregnant if_all ["minami", "minami_naked"] if_not ["mikealone"]
-        group minami_pregnant auto if_all ["minami", "minami_pregnant"] if_not ["minami_naked", "mikealone"]
         group minami_collar auto if_all ["minami", "minami_collar"] if_not ["mikealone"]
 
         group mike auto if_not ["nomc"]
-
 
         always "rpg_sasha" if_not ["mikealone", "nosasha"]
         attribute sasha_haircut if_not ["mikealone", "nosasha"]
@@ -683,8 +655,6 @@ init 1:
             attribute sashanormal default null
         attribute sasha_naked null
         group sashaoutfits auto if_not ["sasha_naked", "mikealone", "nosasha"]
-        attribute sasha_pregnant if_any ["sasha_naked"] if_not ["mikealone"]
-        group sasha_pregnant auto if_any ["sasha_pregnant"] if_not ["sasha_naked", "mikealone", "nosasha"]
         attribute sasha_boobjob if_any ["sasha_naked"] if_not ["mikealone", "nosasha"]
         group sasha_boobjob auto if_any ["sasha_boobjob"] if_not ["sasha_naked", "mikealone", "nosasha"]
         attribute sasha_collar if_not ["mikealone", "nosasha"]
@@ -694,8 +664,6 @@ init 1:
             attribute breenormal default null
         attribute bree_naked null
         group breeoutfits auto if_not ["bree_naked", "mikealone", "nobree"]
-        attribute bree_pregnant if_any ["bree_naked"] if_not ["mikealone", "nobree"]
-        group bree_pregnant auto if_any ["bree_pregnant"] if_not ["bree_naked", "mikealone", "nobree"]
         attribute bree_collar if_not ["mikealone"]
 
         group table auto
@@ -703,8 +671,6 @@ init 1:
         always "rpg_cup_bree" if_any ["tavern"] if_not ["mikealone", "nobree"]
         always "rpg_cup_minami" if_all ["tavern", "minami"] if_not ["mikealone"]
         always "rpg_minami_figure" if_all ["minami", "livingroom"] if_not ["mikealone"]
-
-
 
     layeredimage petplay:
         attribute_function MultiPickers([CollarPicker, PubesPicker, HaircutPicker,  DickPicker], append_npc_from_attributes=True)
@@ -714,15 +680,12 @@ init 1:
         attribute hanna null
         attribute sasha null
 
-
         group arms auto:
             attribute nohold null default
             attribute hold null
 
-
         always:
             "petplay_bg"
-
 
         group bj auto:
             attribute breebj null
@@ -730,51 +693,41 @@ init 1:
             attribute cassidybj null
             attribute hannabj null
 
-
         group mike auto if_not ["breebj", "sashabj", "cassidybj", "hannabj"]:
             attribute walk default
             attribute stand
 
-
         group mike auto variant "leftbj" if_any ["breebj", "hannabj"]
         group mike auto variant "rightbj" if_any ["sashabj", "cassidybj"]
-
 
         group breearm auto variant "nohold" if_all ["nohold", "bree", "stand"]
         group sashaarm auto variant "nohold" if_all ["nohold", "sasha", "stand"]
         group cassidyarm auto variant "nohold" if_all ["nohold", "cassidy", "stand"]
         group hannaarm auto variant "nohold" if_all ["nohold", "hanna", "stand"]
 
-
         group position auto variant "bree" if_any "bree":
             attribute walk
             attribute stand
-
 
         group position auto variant "sasha" if_any "sasha":
             attribute walk
             attribute stand
 
-
         group position auto variant "cassidy" if_any "cassidy":
             attribute walk
             attribute stand
 
-
         group position auto variant "hanna" if_any "hanna":
             attribute walk
             attribute stand
-
 
         attribute breepee if_any ["stand"]
         attribute sashapee if_any ["stand"]
         attribute cassidypee if_any ["stand"]
         attribute hannapee if_any ["stand"]
 
-
         group multiple auto variant pubic_walk when walk
         group multiple auto variant pubic_stand when stand
-
 
         group haircuts auto variant "walk" if_any ["walk"]
         group haircuts auto variant "stand" if_any ["stand"]
@@ -826,10 +779,8 @@ init 1:
         group multiple auto variant collars_walk when walk
         group multiple auto variant collars_stand when stand
 
-
         attribute cum null
         group multiple auto variant cum when cum 
-
 
         attribute leash default null
         group breeleash auto if_all ["bree_collar", "leash", "bree"] if_not ["breebj"]:
@@ -846,7 +797,6 @@ init 1:
             attribute stand
 
         group breeleash auto variant "breebj" if_all ["breebj", "bree_collar", "leash", "bree"]
-
 
         group mikedick auto:
             attribute inside null
@@ -877,7 +827,6 @@ init 1:
         group dick_outside_small auto variant "cassidybj" if_all ["outside", "cassidybj", "small"]
         group dick_outside_small auto variant "hannabj" if_all ["outside", "hannabj", "small"]
 
-
         attribute dickcum null
         group dickcum_outside_big auto variant "breebj" if_all ["dickcum", "outside", "breebj", "big"]
         group dickcum_outside_big auto variant "sashabj" if_all ["dickcum", "outside", "sashabj", "big"]
@@ -893,7 +842,6 @@ init 1:
         group dickcum_outside_small auto variant "sashabj" if_all ["dickcum", "outside", "sashabj", "small"]
         group dickcum_outside_small auto variant "cassidybj" if_all ["dickcum", "outside", "cassidybj", "small"]
         group dickcum_outside_small auto variant "hannabj" if_all ["dickcum", "outside", "hannabj", "small"]
-
 
         attribute cumshot null
         group cumshot_inside auto variant "breebj" if_all ["cumshot", "inside", "breebj"]
@@ -926,7 +874,6 @@ init 1:
 
         always:
             "petplay_light"
-
 
     layeredimage new petplay:
         attribute_function MultiPickers([CollarPicker, PubesPicker], append_npc_from_attributes=True)
@@ -967,15 +914,12 @@ init 1:
         attribute leash_cassidy "new_petplay_leash_cassidy_back" if_all ["back", "cassidy", "cassidy_collar"]
         attribute leash_hanna "new_petplay_leash_hanna_back" if_all ["back", "hanna", "hanna_collar"]
 
-
         always "new_petplay_mike_back" if_any ["back"]
 
     layeredimage ryan natalie blowjob:
 
-
         always:
             "ryan_natalie_blowjob_ryan"
-
 
         group dick auto:
             attribute licking default
@@ -983,22 +927,16 @@ init 1:
         attribute cumshot null
         group cumshot auto if_any "cumshot"
 
-
         group nat auto:
             attribute licking default
-
 
         group exp auto:
             if_any "licking"
             attribute normal default
 
-
         attribute cumtongue
-
 
         attribute facecum
 
-
         always:
             "ryan_natalie_blowjob_ryanoutfit"
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

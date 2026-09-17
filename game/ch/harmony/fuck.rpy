@@ -1156,17 +1156,6 @@ label harmony_fuck_missionary(sexperience_min):
                     "She smiles up at me, enjoying the sensation for as long as it lasts."
                     $ harmony.love += 2
                     $ harmony.purity -= 1
-                elif _return == 'vaginal_inside_pregnant':
-                    "Harmony might be the size of a cow right now, and making similar sounds."
-                    "But I like to think that's where the comparison ends!"
-                    "For one thing, no cow ever looked that good with a big, swollen belly."
-                    show harmony missionary creampie normal with hpunch
-                    "And that belly also means that I can take my time and finish inside of her."
-                    show harmony missionary blush with hpunch
-                    "Harmony moans as I do so, making me smile once more at the bovine comparison."
-                    with hpunch
-                    "Which is something I think I'll keep to myself..."
-                    $ harmony.love += 3
                 elif _return == 'vaginal_inside_happy':
                     "This is it - I need to pull out now, before it's too late!"
                     "But then I feel Harmony, clinging to me and making that all but impossible."
@@ -1272,16 +1261,6 @@ label harmony_fuck_missionary(sexperience_min):
             "And I see her smiling up at me, clearly delighted with what just happened to her."
             $ harmony.love += 2
             $ harmony.purity -= 1
-        elif _return == 'vaginal_inside_pregnant':
-            "Harmony's moans become even louder as I feel myself losing it, deep inside of her."
-            "Her belly's a constant reminder of the fact that we're fast becoming more than just a couple."
-            show harmony missionary -speed creampie ahegao with hpunch
-            "Unconsciously she cradles her swollen belly as she begins to feel the start of her own climax."
-            with hpunch
-            "And I enjoy the last few seconds of my own as I watch this show of maternal protection."
-            with hpunch
-            "All I can think at that moment is how she couldn't be more perfect."
-            $ harmony.love += 3
         elif _return == 'vaginal_inside_happy':
             "If I don't pull out now, then I'm never going to!"
             "But before I can do a thing about it, I feel Harmony clinging onto me."
@@ -1383,16 +1362,6 @@ label harmony_fuck_missionary(sexperience_min):
             "And I see her smiling up at me, clearly delighted with what just happened to her."
             $ harmony.love += 2
             $ harmony.purity -= 1
-        elif _return == 'vaginal_inside_pregnant':
-            show harmony missionary -speed creampie ahegao with hpunch
-            "Harmony smiles up at me as I feel myself losing it, deep inside of her."
-            with hpunch
-            "There's no way that either of us can fail to be reminded of the life we've created together at this moment."
-            with hpunch
-            "She cradles her swollen belly as she begins to feel the start of her own climax."
-            "And I enjoy the last few seconds of my own as I watch her do so."
-            "My only thought as our intimacy comes to an end is of how perfectly beautiful she looks."
-            $ harmony.love += 3
         elif _return == 'vaginal_inside_happy':
             "I don't want to do it, but I have to pull out right now."
             "But the moment that I make to do so, Harmony grabs my arms and holds me tight."
@@ -1647,26 +1616,6 @@ label harmony_fuck_doggy(sexperience_min):
                 with hpunch
                 "She shudders as I let go, her entire body shaking at the sensation."
                 with hpunch
-                if harmony.purity <= VLP:
-                    harmony.say "Oh fucking hell...fucking hell..."
-                elif harmony.purity <= LP:
-                    harmony.say "Oh Christ...oh Christ..."
-                else:
-                    harmony.say "Oh god...oh god..."
-                "As soon as I'm spent, Harmony's muscles turn to water."
-                show harmony doggy vaginaltip
-                "She collapses forwards, sliding off my cock."
-                "And then she lays there, exhausted and bathed in sweat."
-                "Cum seeping out of her pussy and down the inside of her thighs."
-            elif _return == 'vaginal_inside_pregnant':
-                "Harmony has such a tight hold on me that I'm not going anywhere."
-                show harmony doggy pov ahegao creampie -bounce with hpunch
-                $ harmony.love += 3
-                "So all I can do is hold on to the end, losing it deep inside of her."
-                with hpunch
-                "But we don't have to worry, thanks to the curve of her pregnant belly."
-                with hpunch
-                "She shudders as I let go, her entire body shaking at the sensation."
                 if harmony.purity <= VLP:
                     harmony.say "Oh fucking hell...fucking hell..."
                 elif harmony.purity <= LP:

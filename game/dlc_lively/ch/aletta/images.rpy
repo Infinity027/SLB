@@ -6,7 +6,7 @@ init -35 python:
     'haircuts': ['nohaircut', 'haircut'],
     'exps': ['normal', 'angry', 'annoyed', 'dreamy', 'embarrassed', 'flirt', 'happy', 'mindless', 'normal', 'pain', 'pleasure', 'sad', 'sadsmile', 'scared', 'stuned', 'surprised', 'talkative', 'upset', 'whining', 'wink'],
     'outfits': ['casual', 'sport', 'work', 'sexywork', 'date', 'sexydate', 'sluttydate', 'swimsuit', 'sexyswimsuit', 'suit', 'halloween', 'cosplay', 'wedding', 'underwear', 'naked'],
-    'others': ['pregnant', 'pubes', 'collar', 'leash', 'blush', 'bottomless', 'topless', 'noglasses', 'nopatsies'],
+    'others': ['pubes', 'collar', 'leash', 'blush', 'bottomless', 'topless', 'noglasses', 'nopatsies'],
     'accessories': ['glasses', 'helmet', 'remote', 'shake', 'panties'],
 }
 
@@ -15,21 +15,16 @@ init -35 python:
         if not isinstance(attrs, list):
             attrs = list(attrs)
         
-        
         add_pickers_attrs = Pickers([ CollarPicker, HaircutPicker, PubesPicker, PositionPicker], npc=aletta)(set(attrs))
-        if "pregnant_navel" in add_pickers_attrs:
-            add_pickers_attrs.remove("pregnant_navel")
-            add_pickers_attrs.add("navel")
         attrs.extend(add_pickers_attrs)
         
-        
+    
         sgl_attrs, mult_attrs = anim_attrs_filter(attrs,
         {k: [None, anim_dict[k]] for k in ['positions', 'haircuts', 'exps', 'outfits']},
         {k: [[], anim_dict[k]] for k in ['motions', 'others', 'piercings', 'accessories']},
         prv_def_vals=['outfits']
     )
-        
-        
+         
         sgl_attrs['outfits'][0] = (Pickers([OutfitPicker], npc=aletta)(set(attrs) if not sgl_attrs['outfits'][0] else {sgl_attrs['outfits'][0]}) & set(anim_dict['outfits']) or {"casual"}).pop()
         
         if not game.flags.disable_clothing_policy and Room.has_tag(game.room, "work"):
@@ -225,9 +220,5 @@ label test_aletta_outfits:
         $ renpy.show(f"aletta b work{pregnancy}", tag="a2", at_list=[right])
         "work"
 
-        $ pregnancy = ' pregnant'
-        $ count += 1
-
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

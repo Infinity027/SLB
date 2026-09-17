@@ -33,7 +33,6 @@ init 6:
     layeredimage bg bedroom3:
         attribute_function Pickers([DayNightPicker,  CollarPicker, HaircutPicker, OutfitPicker, Bedroom3Picker], npc=sasha)
 
-
         attribute empty null            
         attribute force_display null        
         attribute naked null
@@ -43,22 +42,17 @@ init 6:
         attribute lips null
         attribute navel null
         attribute noboobjob null
-        attribute pregnant_navel null
         attribute tongue null
-
 
         attribute day "bedroom3_day"
         attribute night "bedroom3_night"
 
-
         attribute sasha
-        attribute pregnant when sasha and not boobjob
-        attribute pregnant variant boobjob when sasha and boobjob
         attribute boobjob when sasha
         group bot auto when sasha and not (naked or bottomless)
-        group top auto variant bb_preg when sasha and boobjob and pregnant and not (naked or bottomless)
-        group top auto variant bb_nopreg when sasha and boobjob and not (pregnant or naked or bottomless)
-        group top auto variant nobb_preg when sasha and pregnant and not (boobjob or naked or bottomless)
-        group top auto variant nobb_nopreg when sasha and not (boobjob or pregnant or naked or bottomless)
+        group top auto variant bb_preg when sasha and boobjob and not (naked or bottomless)
+        group top auto variant bb_nopreg when sasha and boobjob and not (naked or bottomless)
+        group top auto variant nobb_preg when sasha and not (boobjob or naked or bottomless)
+        group top auto variant nobb_nopreg when sasha and not (boobjob or naked or bottomless)
         group hair auto when sasha
         attribute collar when sasha

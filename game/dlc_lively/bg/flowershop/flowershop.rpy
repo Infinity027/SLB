@@ -35,7 +35,6 @@ init 6:
     layeredimage bg flowershop:
         attribute_function MultiPickers([ CollarPicker, HaircutPicker, OutfitPicker, FlowerShopPicker], append_npc_from_attributes=True)
 
-
         attribute empty null            
         attribute force_display null        
         attribute claire_navel null
@@ -45,20 +44,14 @@ init 6:
         always "flowershop"
 
         attribute claire
-        attribute claire_pregnant when claire
         attribute claire_collar when claire
-        group claire_bot auto variant preg when claire and claire_pregnant
-        group claire_bot auto variant nopreg when claire and not claire_pregnant
-        group claire_top auto variant preg when claire and claire_pregnant
-        group claire_top auto variant nopreg when claire and not claire_pregnant
+        group claire_bot auto variant nopreg when claire
+        group claire_top auto variant nopreg when claire
         group claire_hair auto when claire
 
         attribute reona
-        attribute reona_pregnant when reona
         attribute reona_collar when reona
-        group reona_bot auto variant preg when reona and reona_pregnant
-        group reona_bot auto variant nopreg when reona and not reona_pregnant
-        group reona_top auto variant preg when reona and reona_pregnant
-        group reona_top auto variant nopreg when reona and not reona_pregnant
+        group reona_bot auto variant nopreg when reona
+        group reona_top auto variant nopreg when reona
         attribute reona_pureglasses when reona
         group reona_hair auto when reona

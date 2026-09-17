@@ -34,7 +34,6 @@ init 6:
     layeredimage bg waterpark2:
         attribute_function MultiPickers([ CollarPicker, HaircutPicker, OutfitPicker, Waterpark2Picker], append_npc_from_attributes=True)
 
-
         attribute empty null            
         attribute force_display null        
         attribute reona_clit null
@@ -48,12 +47,9 @@ init 6:
 
         attribute samantha
         attribute samantha_collar when samantha
-        group samantha_bot auto variant preg when samantha and samantha_pregnant
-        group samantha_bot auto variant nopreg when samantha and not samantha_pregnant
-        group samantha_top auto variant preg when samantha and samantha_pregnant
-        group samantha_top auto variant nopreg when samantha and not samantha_pregnant
+        group samantha_bot auto variant nopreg when samantha
+        group samantha_top auto variant nopreg when samantha
         attribute samantha_nohaircut when samantha
-
 
         attribute reona
         

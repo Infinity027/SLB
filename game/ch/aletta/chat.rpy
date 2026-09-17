@@ -346,4 +346,3 @@ label aletta_bad_sweet_talk_male:
     hide aletta
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

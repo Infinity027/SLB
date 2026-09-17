@@ -10,8 +10,6 @@ init 1:
             attribute mc_medium null
             attribute mc_big null
 
-        attribute mc_pregnant null
-
         attribute mc_haircut null
         attribute mc_nohaircut null
 
@@ -22,7 +20,6 @@ init 1:
             attribute mc_ears null
             attribute mc_lips null
             attribute mc_navel null
-            attribute mc_pregnant_navel null
             attribute mc_nipples null
             attribute mc_nose null
             attribute mc_tongue null
@@ -46,15 +43,12 @@ init 1:
         group dicks_below auto variant medium when mc_medium
         group dicks_below auto variant big when mc_big
 
-        group mcpregnant_below auto when breemc and mc_pregnant
-
         group npc auto variant mikemc when mikemc
         group npc auto variant breemc when breemc
 
         group npc_dicks auto
 
         group breemc auto when breemc
-        group mcpregnant auto when breemc and mc_pregnant
         group mchaircuts auto variant haircut when breemc and mc_haircut
         group mchaircuts auto variant nohaircut when breemc and mc_nohaircut
 
@@ -75,13 +69,10 @@ init 1:
 
         attribute dressed null
 
-        group outfits auto when (dressed or not summer) and not pregnant
-        group pregnant_outfits auto when (dressed or not summer) and pregnant
+        group outfits auto when (dressed or not summer)
 
         group mikemc_above auto when mikemc
         group breemc_above auto when breemc
-
-        group mcpregnant_above auto when breemc and mc_pregnant
 
         group mchaircuts_above auto variant haircut when breemc and mc_haircut
         group mchaircuts_above auto variant nohaircut when breemc and mc_nohaircut

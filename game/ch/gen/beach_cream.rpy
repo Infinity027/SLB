@@ -80,28 +80,15 @@ init 1:
         group bot auto variant breemc when breemc and not naked
 
 
-        attribute pregnant null
         group pregnancies auto when not (cassidy_sexyswimsuit or lavish_swimsuit)
         group pregnancies auto variant mikemc when mikemc
-        group pregnancies auto variant breemc when breemc
 
         group top auto when morgan and not (naked or topless)
         group bot auto when morgan and not naked
 
-        group top auto variant pregnant when pregnant and not (naked or topless)
-        group bot auto variant pregnant when pregnant and not naked
-
-        group top auto variant pregnant_mikemc when mikemc and pregnant and not (naked or topless)
-        group bot auto variant pregnant_mikemc when mikemc and pregnant and not naked
-
-        group top auto variant pregnant_breemc when breemc and pregnant and not (naked or topless)
-        group bot auto variant pregnant_breemc when breemc and pregnant and not naked
-
-
         group haircuts auto
         group haircuts auto variant mikemc when mikemc
         group haircuts auto variant breemc when breemc
-
 
         group breemc auto when breemc and not nomc
         group mchaircuts auto variant 01 when breemc and 01 and not nomc:
@@ -120,28 +107,19 @@ init 1:
         group top auto variant breemc_right when breemc and right and not (naked or topless)
         group bot auto variant breemc_right when breemc and right and not naked
 
-        group top auto variant pregnant_breemc_right when breemc and pregnant and right and not (naked or topless)
-        group bot auto variant pregnant_breemc_right when breemc and pregnant and right and not naked
-
         group haircuts auto variant breemc_right when breemc and right
-
 
         group hands auto
         group hands auto variant breemc when breemc
         group mchands auto when mikemc and not nomc
         group mchands auto variant right when mikemc and right and not nomc
 
-
         group bottle auto
-
 
         group glasses auto
 
-
         attribute morgan_makeup
-
 
         attribute right null
         group mikemcarm auto when mikemc and right and 01 and not nomc
         group mikemc auto variant right when mikemc and right and not nomc
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

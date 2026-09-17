@@ -9,14 +9,10 @@ init 1:
         attribute reona null
         attribute reona_tongue null
         attribute reona_ears null
-        attribute reona_pregnant_navel null
-        attribute harmony_pregnant_navel null
-
 
         always "purity_foreplay_bg_bedroom"
 
         always "purity_foreplay_bodies"
-
 
         group multiple auto variant pregnancies
 
@@ -24,29 +20,18 @@ init 1:
         group harmony_eyes auto:
             attribute lookreona default
 
-        group outfits_harmony auto when not harmony_pregnant
-        group outfits_harmony auto variant pregnant when harmony_pregnant
-        group outfits_reona auto when not reona_pregnant
-        group outfits_reona auto variant pregnant when reona_pregnant
-
-
         attribute reona_collar
         attribute harmony_collar
 
-
         group dick auto
-
 
         attribute cumshot null
         group cumshot auto when cumshot
 
-
         group hand auto:
             attribute back default
 
-
         group multiple auto variant haircuts
-
 
         attribute cunni null
         always "purity_foreplay_zoom_cunni" when cunni
@@ -66,12 +51,9 @@ init 1:
         attribute harmony_tongue null
         attribute reona_clit null
         attribute reona_ears null
-        attribute reona_pregnant_navel null
         attribute reona_tongue null
 
-
         always "purity_threesome_reona_bg_bedroom"
-
 
         always "purity_threesome_reona_bodies"
         attribute bulge
@@ -125,12 +107,9 @@ init 1:
         attribute harmony_pubes null
         attribute harmony_tongue null
         attribute reona_ears null
-        attribute reona_pregnant_navel null
         attribute reona_tongue null
 
-
         always "purity_threesome_harmony_bg_bedroom"
-
 
         always "purity_threesome_harmony_bodies"
         always "purity_threesome_harmony_reona_tattoo_belly"

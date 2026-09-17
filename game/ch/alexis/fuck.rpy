@@ -902,17 +902,6 @@ label alexis_fuck_date_reverse(sexperience_min):
                 "We both cum a moment later, making Alexis throw her head back and squeeze me with her thighs."
                 with vpunch
                 "Once she's spent, she slides off, flopping onto the mattress beside me."
-            elif _return == "vaginal_inside_pregnant":
-                "There's no need to stop what's happening, Alexis and I both know it."
-                "She's already visibly pregnant, so no harm can come from me cumming inside her."
-                "I keep right on going, thrusting into her until I lose it."
-                $ alexis.love += 3
-                show alexis reverse mouth_ahegao cum with vpunch
-                "She cums a moment later too, pushed over the edge by the sensation."
-                with vpunch
-                "Alexis almost howls as she squeezes me with her thighs."
-                "And then, all at once, she goes limp."
-                "She slides off and flops onto the mattress beside me."
             elif _return == "vaginal_inside_happy":
                 alexis.say "No..."
                 alexis.say "No...don't..."
@@ -1047,18 +1036,6 @@ label alexis_fuck_date_doggy(sexperience_min):
                 "Breathing a sigh of relief that soon turns into a gasp of release, I finally let myself go."
                 with vpunch
                 "I cum inside of Alexis, enjoying the sensation of doing so with nothing at all between us."
-            elif _return == "vaginal_inside_pregnant":
-                "I pause for a moment, not sure of whether I should go on or pull out before it's too late."
-                "Sensing my hesitation, she looks back over her shoulder at me."
-                alexis.say "Don't stop...not now!"
-                alexis.say "You can't...get me...more pregnant!"
-                show alexis doggy pleasure ahegao cum with vpunch
-                "I shake my head, realising that she's one hundred percent right."
-                with vpunch
-                "Pushing on, I feel the weight of Alexis's belly beneath her as I finally cum."
-                with vpunch
-                "She takes all of it, everything that I have."
-                "And then finally collapses, hugging her stomach in a protective embrace."
             elif _return == "vaginal_inside_mad":
                 "I can feel myself about to cum, but I try to hide the signs as best I can."
                 "But the fact that I'm currently balls deep inside of Alexis means that she's in a unique position to sense what's happening."
@@ -1285,22 +1262,6 @@ label alexis_fuck_date_cowgirl(sexperience_min):
                 "As the exhaustion takes her, she flops forwards."
                 "And I end up with her laid atop me, panting for breath."
                 $ alexis.love += 2
-            elif _return == "vaginal_inside_pregnant":
-                alexis.say "Cum in me..."
-                alexis.say "Please?!?"
-                "I do as Alexis says, but only because she's pregnant."
-                show alexis cowgirl ahegao creampie with vpunch
-                "I cum a second later, shooting my load into Alexis."
-                with vpunch
-                "She cries out at the sensation, her eyes glazing over."
-                with vpunch
-                "But she still manages to stay atop me as she cums too."
-                show alexis cowgirl pleasure -vaginal drip
-                show pussy_insert alexis cum zorder 1 at zoomAt(0.75, (40, 200))
-                "It's only when she's spent that Alexis finally collapses."
-                "As the exhaustion takes her, she flops forwards."
-                "And I end up with her laid atop me, panting for breath."
-                $ alexis.love += 3
             elif _return == "vaginal_inside_mad":
                 alexis.say "Pull out..."
                 alexis.say "Pull out now!"
@@ -1504,20 +1465,6 @@ label alexis_fuck_date_missionary(sexperience_min):
                 with vpunch
                 "Alexis smiles up at me as it starts to seep out of her around my cock."
                 $ alexis.love += 2
-            elif _return == "vaginal_inside_pregnant":
-                alexis.say "Don't stop now..."
-                "I'm thankful for Alexis reminding me that I don't need to pull out."
-                "After all, her rounded belly is proof that she couldn't get any more pregnant than she already is!"
-                "Even better, it means that I can keep right on going!"
-                show alexis missionary ahegao with vpunch
-                "I make one final thrust into her, causing Alexis to moan in satisfaction."
-                show alexis missionary creampie with vpunch
-                "She practically beams as I cum inside of her."
-                show alexis missionary -creampie -vaginal cum dripping
-                show pussy_insert alexis cum zorder 1 at zoomAt(0.75, (820, 200))
-                with vpunch
-                "And she's still smiling as it begins to seep out of her around my cock."
-                $ alexis.love += 3
             elif _return == "vaginal_inside_mad":
                 alexis.say "Ah..."
                 alexis.say "[hero.name]..."

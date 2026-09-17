@@ -2085,16 +2085,6 @@ label camila_lexi_threesome_fuck:
                         show criminal harem threesome camilafuck creampie with vpunch
                         "The both of us climaxing at the same time and with dramatic effect too."
                         $ camila.love += 1
-                    elif _return == "vaginal_inside_pregnant":
-                        "Luckily for me, Camila's already pregnant."
-                        show criminal harem threesome camilafuck down
-                        "So there's no problem when she begins to make me cum too."
-                        "All I need to do is hold on a little tighter and let it happen."
-                        with vpunch
-                        "Camila breaks off her kiss with Lexi as I lose it inside of her."
-                        show criminal harem threesome camilafuck creampie with vpunch
-                        "The both of us climaxing at the same time and with dramatic effect too."
-                        $ camila.love += 1
                     elif _return == "vaginal_inside_mad":
                         lexi.say "[hero.name]!"
                         show criminal harem threesome camilafuck down
@@ -2300,18 +2290,6 @@ label camila_lexi_threesome_fuck:
                             "Camila breaks away from the kiss for a moment."
                             camila.say "What are you waiting for?"
                             camila.say "She's on the pill!"
-                            "Camila's right, I can keep on going without having to worry about the consequences."
-                            with vpunch
-                            "And that's just what I do, enjoying the sensation of what they're both doing to me."
-                            show criminal harem threesome lexifuck creampie with vpunch
-                            "From the sounds that she's making, my guess is that Lexi's cumming too."
-                            with vpunch
-                            "But my senses are filled with the sounds of Camila as she moans with pleasure."
-                            $ lexi.love += 1
-                        elif _return == "vaginal_inside_pregnant":
-                            "Camila breaks away from the kiss for a moment."
-                            camila.say "What are you waiting for?"
-                            camila.say "You already got her pregnant!"
                             "Camila's right, I can keep on going without having to worry about the consequences."
                             with vpunch
                             "And that's just what I do, enjoying the sensation of what they're both doing to me."

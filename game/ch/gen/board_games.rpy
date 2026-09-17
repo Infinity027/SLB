@@ -41,15 +41,11 @@ init 1:
 
         group couch_behind_outfits auto when not naked
         group couch_behind_outfits auto variant boobjob when sasha_boobjob and not naked
-        group couch_behind_outfits auto variant pregnant when pregnant and not naked
 
         group couch_behind_acc auto when not naked
 
-
         group couch_behind_bot auto when not naked
-        group couch_behind_bot auto variant pregnant when pregnant and not naked
         group couch_behind_top auto when not naked
-        group couch_behind_top auto variant pregnant when pregnant and not naked
         group couch_behind_makeup auto
 
         group mc auto variant 01 when 01
@@ -78,21 +74,17 @@ init 1:
 
 
         group couch_ahead_npc auto
-        group couch_ahead_pregnancies auto when pregnant and naked
         group couch_ahead_collars auto when collar
         group couch_ahead_haircuts auto
 
         group couch_ahead_outfits auto when not naked
-        group couch_ahead_outfits auto variant pregnant when pregnant and not naked
         group table_npc auto
         group table_pubes auto when pubes and naked
         group table_armpits auto when armpits
-        group table_pregnancies auto when pregnant and naked
         group table_collars auto when collar
         group table_haircuts auto
 
         group table_outfits auto when not naked
-        group table_outfits auto variant pregnant when pregnant and not naked
 
         group table auto
 

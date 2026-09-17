@@ -49,27 +49,21 @@ init 6:
         attribute palla_clit null
         attribute palla_glasses null
         attribute palla_navel null
-        attribute palla_pregnant_navel null
         attribute palla_tongue null
         attribute sasha_clit null
         attribute sasha_lips null
         attribute sasha_navel null
-        attribute sasha_pregnant_navel null
         attribute sasha_tongue null
         attribute sasha_noboobjob null
 
         always "waterpark"
 
-
         attribute claire
         
         attribute claire_collar when claire
         group claire_hair auto when claire
-        group claire_bot auto variant preg when claire and claire_pregnant
-        group claire_bot auto variant nopreg when claire and not claire_pregnant
-        group claire_top auto variant preg when claire and claire_pregnant
-        group claire_top auto variant nopreg when claire and not claire_pregnant
-
+        group claire_bot auto variant nopreg when claire
+        group claire_top auto variant nopreg when claire
 
         attribute sasha
         
@@ -84,18 +78,13 @@ init 6:
         
         attribute audrey_collar when audrey
         attribute audrey_nohaircut when audrey
-        group audrey_bot auto variant preg when audrey and audrey_pregnant
-        group audrey_bot auto variant nopreg when audrey and not audrey_pregnant
-        group audrey_top auto variant preg when audrey and audrey_pregnant
-        group audrey_top auto variant nopreg when audrey and not audrey_pregnant
-
+        group audrey_bot auto variant nopreg when audrey
+        group audrey_top auto variant nopreg when audrey
 
         attribute palla
         attribute palla_collar when palla
         attribute palla_nohaircut when palla
-        group palla_bot auto variant preg when palla and palla_pregnant
-        group palla_bot auto variant nopreg when palla and not palla_pregnant
-        group palla_top auto variant preg when palla and palla_pregnant
-        group palla_top auto variant nopreg when palla and not palla_pregnant
+        group palla_bot auto variant nopreg when palla
+        group palla_top auto variant nopreg when palla
 
         group multiple auto variant water

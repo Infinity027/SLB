@@ -58,4 +58,3 @@ label go_on_date:
     $ game.pass_time(0)
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

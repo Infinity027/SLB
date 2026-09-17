@@ -49,7 +49,6 @@ init 6:
     layeredimage bg cinema:
         attribute_function MultiPickers([DayNightPicker, SeasonPicker,  CollarPicker, OutfitPicker, HaircutPicker, CinemaPicker], append_npc_from_attributes=True)
 
-
         attribute empty null            
         attribute force_display null        
         attribute aletta_clit null
@@ -58,7 +57,6 @@ init 6:
         attribute aletta_navel null
         attribute aletta_nipples null
         attribute aletta_nose null
-        attribute aletta_pregnant_navel null
         attribute aletta_tongue null
         attribute amy_nipples null
         attribute camila_ears null
@@ -69,7 +67,6 @@ init 6:
         attribute claire_navel null
         attribute claire_nipples null
         attribute claire_nose null
-        attribute claire_pregnant_navel null
         attribute kat_clit null
         attribute kat_ears null
         attribute kat_tongue null
@@ -84,109 +81,68 @@ init 6:
         attribute reona_clit null
         attribute reona_navel null
         attribute reona_nose null
-        attribute reona_pregnant_navel null
         attribute reona_tongue null
-
 
         group season auto variant "day" if_any "day"
         group season auto variant "night" if_any "night"
         always "snow"
 
-
         attribute morgan
-        attribute morgan_pregnant when morgan
         attribute morgan_collar when morgan
-        group morgan_bot auto variant preg when morgan and morgan_pregnant
-        group morgan_bot auto variant nopreg when morgan and not morgan_pregnant
-        group morgan_top auto variant preg when morgan and morgan_pregnant
-        group morgan_top auto variant nopreg when morgan and not morgan_pregnant
+        group morgan_bot auto variant nopreg when morgan
+        group morgan_top auto variant nopreg when morgan
         group morgan_hair auto when morgan
 
-
         attribute reona
-        attribute reona_pregnant when reona
         attribute reona_collar when reona
-        group reona_top variant preg when reona and reona_pregnant:
-            attribute reona_casual
-        group reona_top variant nopreg when reona and not reona_pregnant:
-            attribute reona_casual
-        group reona_bot auto variant preg when reona and reona_pregnant
-        group reona_bot auto variant nopreg when reona and not reona_pregnant
-        group reona_top variant preg when reona and reona_pregnant:
-            attribute reona_purecasual
-        group reona_top variant nopreg when reona and not reona_pregnant:
-            attribute reona_purecasual
+        group reona_bot auto variant nopreg when reona
         attribute reona_pureglasses when reona
         group reona_hair auto when reona
 
-
         attribute minami
-        attribute minami_pregnant when minami
         attribute minami_collar when minami
-        group minami_bot auto variant preg when minami and minami_pregnant
-        group minami_bot auto variant nopreg when minami and not minami_pregnant
-        group minami_top auto variant preg when minami and minami_pregnant
-        group minami_top auto variant nopreg when minami and not minami_pregnant
+        group minami_bot auto variant nopreg when minami
+        group minami_top auto variant nopreg when minami
         group minami_hair auto when minami
 
-
         attribute camila
-        attribute camila_pregnant when camila
         attribute camila_collar when camila
-        group camila_bot auto variant preg when camila and camila_pregnant
-        group camila_bot auto variant nopreg when camila and not camila_pregnant
-        group camila_top auto variant preg when camila and camila_pregnant
-        group camila_top auto variant nopreg when camila and not camila_pregnant
+        group camila_bot auto variant nopreg when camila
+        group camila_top auto variant nopreg when camila
         group camila_hair auto when camila
 
 
         attribute amy
-        attribute amy_pregnant when amy
         attribute amy_collar when amy
-        group amy_bot auto variant preg when amy and amy_pregnant
-        group amy_bot auto variant nopreg when amy and not amy_pregnant
-        group amy_top auto variant preg when amy and amy_pregnant
-        group amy_top auto variant nopreg when amy and not amy_pregnant
+        group amy_bot auto variant nopreg when amy
+        group amy_top auto variant nopreg when amy
         attribute amy_nohaircut when amy
 
 
         attribute kat
-        attribute kat_pregnant when kat
         attribute kat_collar when kat
-        group kat_bot auto variant preg when kat and kat_pregnant
-        group kat_bot auto variant nopreg when kat and not kat_pregnant
-        group kat_top auto variant preg when kat and kat_pregnant
-        group kat_top auto variant nopreg when kat and not kat_pregnant
+        group kat_bot auto variant nopreg when kat
+        group kat_top auto variant nopreg when kat
         attribute kat_nohaircut when kat
 
 
         attribute lavish
-        attribute lavish_pregnant when lavish
         attribute lavish_collar when lavish
-        group lavish_bot auto variant preg when lavish and lavish_pregnant
-        group lavish_bot auto variant nopreg when lavish and not lavish_pregnant
-        group lavish_top auto variant preg when lavish and lavish_pregnant
-        group lavish_top auto variant nopreg when lavish and not lavish_pregnant
+        group lavish_bot auto variant nopreg when lavish
+        group lavish_top auto variant nopreg when lavish
         attribute lavish_nohaircut when lavish
 
 
         attribute claire
-        attribute claire_pregnant when claire
         attribute claire_collar when claire
-        group claire_bot auto variant preg when claire and claire_pregnant
-        group claire_bot auto variant nopreg when claire and not claire_pregnant
-        group claire_top auto variant preg when claire and claire_pregnant
-        group claire_top auto variant nopreg when claire and not claire_pregnant
+        group claire_bot auto variant nopreg when claire
+        group claire_top auto variant nopreg when claire
         group claire_hair auto when claire
 
 
         attribute aletta
-        attribute aletta_pregnant when aletta
         attribute aletta_collar when aletta
-        group aletta_bot auto variant preg when aletta and aletta_pregnant
-        group aletta_bot auto variant nopreg when aletta and not aletta_pregnant
-        group aletta_top auto variant preg when aletta and aletta_pregnant
-        group aletta_top auto variant nopreg when aletta and not aletta_pregnant
+        group aletta_bot auto variant nopreg when aletta
+        group aletta_top auto variant nopreg when aletta
         attribute aletta_glasses when aletta
         group aletta_hair auto when aletta
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

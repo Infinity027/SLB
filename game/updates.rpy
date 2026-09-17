@@ -914,9 +914,6 @@ init -999 python:
 
 
     def update_23_6_1c():
-        for p in Person.all_people(ignore_hidden=False):
-            if p.pregnant:
-                p.flags.pregnancies_number += 1
         
         if not game.flags.cheat:
             
@@ -1207,7 +1204,6 @@ init -999 python:
         if (
         "samantha_wedding_baby" in DONE
         and samantha.flags.post_wedding_baby_talk_delay
-        and samantha.counters.pregnant < 50
         and not samantha.flags.reset_post_wedding_baby_talk_delay
     ):
             DONE.pop("samantha_wedding_baby", None)

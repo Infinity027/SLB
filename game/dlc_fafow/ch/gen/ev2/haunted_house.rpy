@@ -35,11 +35,8 @@ init 1:
         group mikemc_outfits auto variant "02" if_all ["mikemc", "02"]
         group mikemc_outfits auto variant "03" if_all ["mikemc", "03"]
 
-
         group breemc_outfits auto variant "01" if_all ["breemc", "01"]
 
-        attribute mc_pregnant null
-        group breemc_pregnant_outfits auto variant "01" if_all ["mc_pregnant", "breemc", "01"]
         group mc_haircuts auto variant "01" if_all ["breemc", "01"]
 
         attribute mc_nohaircut null
@@ -50,7 +47,6 @@ init 1:
         group glasses auto
 
         group outfits auto
-        group outfits auto variant "pregnant" if_any ["morgan_pregnant", "reona_pregnant"]
 
         attribute sasha_boobjob if_any "sasha"
 
@@ -66,18 +62,12 @@ init 1:
         group collars auto
 
         group outfits auto variant "collarcover" if_any "morgan"
-        group outfits auto variant "collarcover_pregnant" if_any "morgan_pregnant"
-
-
 
         group mcbody auto variant "02" if_all ["breemc", "02"]
         group mcbody auto variant "03" if_all ["breemc", "03"]
         group breemc_outfits auto variant "02" if_all ["breemc", "02"]
         group breemc_outfits auto variant "03" if_all ["breemc", "03"]
-        group breemc_pregnant_outfits auto variant "02" if_all ["mc_pregnant", "breemc", "02"]
-        group breemc_pregnant_outfits auto variant "03" if_all ["mc_pregnant", "breemc", "03"]
         group mc_haircuts auto variant "02" if_all ["breemc", "02"]
         group mc_haircuts auto variant "03" if_all ["breemc", "03"]
 
         group fx auto
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

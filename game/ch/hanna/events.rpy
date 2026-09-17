@@ -1289,21 +1289,6 @@ label hanna_event_10:
                 show hanna doggy ahegao squirt with hpunch
                 "And I don't stop until I'm spent, panting and gasping for breath."
                 $ hanna.love += 1
-            elif _return == "vaginal_inside_pregnant":
-                hanna.say "Don't stop..."
-                hanna.say "You already..."
-                hanna.say "Knocked me up!"
-                "Hanna's still almost kissing the floor as I lose it."
-                "And her ass is stuck up in the air, legs braced firmly in place."
-                "With me pushing downwards, the logical thing seems to keep on going."
-                "And her desperate words remind me there's no danger in that."
-                show hanna doggy creampie with hpunch
-                "So that's just what I do, giving one last thrust as I shoot my load."
-                with hpunch
-                "Hanna lets out a deep, satisfied moan as I fill her pussy."
-                show hanna doggy ahegao squirt with hpunch
-                "And I don't stop until I'm spent, panting and gasping for breath."
-                $ hanna.love += 1
             elif _return == "vaginal_inside_mad":
                 hanna.say "No, no, no!"
                 hanna.say "You have to stop now!"

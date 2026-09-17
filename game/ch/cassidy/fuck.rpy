@@ -880,19 +880,6 @@ label cassidy_doggy(sexperience_min):
                 "And I only relent once I know that we're both done."
                 "Releasing her from my grasp, I lower her onto the bed."
                 "And the only sound I can hear is us both panting hard."
-            elif _return == "vaginal_inside_pregnant":
-                "Carefully cradling her swollen belly, I let go."
-                show cassidy doggy creampie ahegao with hpunch
-                $ cassidy.love += 3
-                "Cassidy wails as I shoot my load deep inside her pussy."
-                with hpunch
-                "But there's nowhere she can go and no chance of escape."
-                with hpunch
-                "She twitches and writhes in my grasp, cumming too."
-                show cassidy doggy pleasure
-                "And I only relent once I know that we're both done."
-                "Releasing her from my grasp, I lower her onto the bed."
-                "And the only sound I can hear is us both panting hard."
             elif _return == "vaginal_inside_mad":
                 cassidy.say "Don't..."
                 cassidy.say "Stop..."
@@ -1094,20 +1081,6 @@ label cassidy_cowgirl(sexperience_min):
                 "I let go a second later, cumming deep inside of her pussy."
                 with vpunch
                 "Instantly her face shows that she feels it, and she keens helplessly."
-                "I can feel the muscles of her pussy, twitching and flexing around my cock."
-                "And then Cassidy slumps forwards, overtaken by the sensations she's feeling."
-            elif _return == "vaginal_inside_pregnant":
-                cassidy.say "Do it...."
-                cassidy.say "Cum in me..."
-                cassidy.say "I'm pregnant!"
-                "Like I needed to be reminded of that!"
-                "But I am thankful for the excuse not to have to pull out."
-                show cassidy cowgirl ahegao creampie with vpunch
-                $ cassidy.love += 3
-                "I let go a second later, cumming deep inside of her pussy."
-                with vpunch
-                "Instantly her face shows that she feels it, and she keens helplessly."
-                with vpunch
                 "I can feel the muscles of her pussy, twitching and flexing around my cock."
                 "And then Cassidy slumps forwards, overtaken by the sensations she's feeling."
             elif _return == "vaginal_inside_mad":
@@ -1341,22 +1314,6 @@ label cassidy_reverse_cowgirl(sexperience_min):
                 "As her muscles begin to quiver and shake, she sets me off too."
                 show cassidy reverse cowgirl ahegao creampie with vpunch
                 $ cassidy.love += 2
-                "I shoot my load while I'm as deep in her pussy as I can get."
-                with vpunch
-                "And it only seems to make her orgasm that much more intense."
-                with vpunch
-                "Cassidy rides my cock until the very last moment, gasping and panting."
-                show cassidy reverse cowgirl pleasure flacid dickcum vaginaldrip -creampie
-                "Then she keels over, tumbling off of me and onto the bed."
-            elif _return == "vaginal_inside_pregnant":
-                cassidy.say "You already got me pregnant..."
-                cassidy.say "So you can let it happen...okay?!?"
-                "I don't think I could get out from under Cassidy if I tried."
-                "Which makes me all the more thankful for that timely reminder."
-                "And so I just lie back and let nature take its course."
-                "As her muscles begin to quiver and shake, she sets me off too."
-                show cassidy reverse cowgirl ahegao creampie with vpunch
-                $ cassidy.love += 3
                 "I shoot my load while I'm as deep in her pussy as I can get."
                 with vpunch
                 "And it only seems to make her orgasm that much more intense."
@@ -1964,18 +1921,6 @@ label cassidy_fuck_office_reverse_cowgirl(sexperience_min):
                     cassidy.say "Don't tell Daddy..."
                 cassidy.say "But I'm on the pill!"
                 "I smile and silently thank Cassidy for the information."
-                "That means I can keep a strong hold on Cassidy as I lose it inside of her."
-                show cassidy reverse cowgirl ahegao creampie with vpunch
-                "She bucks and twists as I shoot my load, but stays firmly in place."
-                with vpunch
-                "I can feel that she's cumming too, and see it from the way she arches her back."
-                $ cassidy.love += 2
-                with vpunch
-                "And once done, she visibly sags, the last of her energy spent."
-            elif _return == "vaginal_inside_pregnant":
-                cassidy.say "Cum in me..."
-                cassidy.say "I want you to!"
-                "I smile and shake my head, knowing full well that I already got Cassidy pregnant."
                 "That means I can keep a strong hold on Cassidy as I lose it inside of her."
                 show cassidy reverse cowgirl ahegao creampie with vpunch
                 "She bucks and twists as I shoot my load, but stays firmly in place."

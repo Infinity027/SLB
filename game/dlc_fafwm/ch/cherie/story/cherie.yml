@@ -337,13 +337,13 @@ steps:
       condition: cherie.flags.engagedmike
       next: None
 
-  preg:
-    name: Get Cherie pregnant
-    optional: True
-    condition: True
-    outcome:
-      condition: cherie.flags.pregnancies_number > 0
-      next: None
+  # preg:
+  #   name: Get Cherie pregnant
+  #   optional: True
+  #   condition: True
+  #   outcome:
+  #     condition: cherie.flags.pregnancies_number > 0
+  #     next: None
 
   slave:
     name: Make Cherie my sex slave

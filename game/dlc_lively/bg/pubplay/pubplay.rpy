@@ -39,13 +39,11 @@ init 6:
     layeredimage bg pubplay:
         attribute_function MultiPickers([ CollarPicker, OutfitPicker, HaircutPicker, PubPlayPicker], append_npc_from_attributes=True)
 
-
         attribute empty null            
         attribute force_display null        
         attribute bree_clit null
         attribute bree_lips null
         attribute bree_navel null
-        attribute bree_pregnant_navel null
         attribute bree_tongue null
         attribute lavish_clit null
         attribute lavish_tongue null
@@ -54,52 +52,37 @@ init 6:
         attribute minami_navel null
         attribute minami_nipples null
         attribute minami_nose null
-        attribute minami_pregnant_navel null
         attribute palla_clit null
         attribute palla_glasses null
         attribute palla_navel null
-        attribute palla_pregnant_navel null
         attribute palla_tongue null
 
-
         always "pubplay"
-
 
         attribute bree
         
         attribute bree_collar when bree
-        group bree_bot auto variant nopreg when bree and not bree_pregnant
-        group bree_bot auto variant preg when bree and bree_pregnant
-        group bree_top auto variant nopreg when bree and not bree_pregnant
-        group bree_top auto variant preg when bree and bree_pregnant
+        group bree_bot auto variant nopreg when bree
+        group bree_top auto variant nopreg when bree
         attribute bree_nohaircut when bree
-
 
         attribute palla
         
         attribute palla_collar when palla
-        group palla_bot auto variant nopreg when palla and not palla_pregnant
-        group palla_bot auto variant preg when palla and palla_pregnant
-        group palla_top auto variant nopreg when palla and not palla_pregnant
-        group palla_top auto variant preg when palla and palla_pregnant
+        group palla_bot auto variant nopreg when palla
+        group palla_top auto variant nopreg when palla
         attribute palla_nohaircut when palla
-
 
         attribute minami
         
         attribute minami_collar when minami
-        group minami_bot auto variant nopreg when minami and not minami_pregnant
-        group minami_bot auto variant preg when minami and minami_pregnant
-        group minami_top auto variant nopreg when minami and not minami_pregnant
-        group minami_top auto variant preg when minami and minami_pregnant
+        group minami_bot auto variant nopreg when minami
+        group minami_top auto variant nopreg when minami
         group minami_hair auto when minami
-
 
         attribute lavish
         
         attribute lavish_collar when lavish
-        group lavish_bot auto variant nopreg when lavish and not lavish_pregnant
-        group lavish_bot auto variant preg when lavish and lavish_pregnant
-        group lavish_top auto variant nopreg when lavish and not lavish_pregnant
-        group lavish_top auto variant preg when lavish and lavish_pregnant
+        group lavish_bot auto variant nopreg when lavish
+        group lavish_top auto variant nopreg when lavish
         attribute lavish_nohaircut when lavish

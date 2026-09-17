@@ -44,10 +44,7 @@ init 6:
         always "bg_garage_bg" when kleio
 
         attribute kleio
-        attribute pregnant when kleio
-        attribute collar when kleio
-        group bot auto variant nopreg when kleio and not (pregnant or naked)
-        group bot auto variant preg when kleio and pregnant and not naked
-        group top auto variant nopreg when kleio and not (pregnant or naked)
-        group top auto variant preg when kleio and pregnant and not naked
+        attribute kleio_collar when kleio
+        group bot auto variant nopreg when kleio and not naked
+        group top auto variant nopreg when kleio and not naked
         group hair auto when kleio

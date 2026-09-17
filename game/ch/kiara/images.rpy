@@ -29,8 +29,7 @@ init 1:
         group acc_arm auto variant low_d when d and not (topless or naked)
         group acc_arm auto variant a when a and not (topless or naked)
         group acc_arm auto variant b when b and not (topless or naked)
-        group acc_arm auto variant c when c and not (topless or naked) and not (pregnant and sluttydate)
-        group acc_arm auto variant c_pregnant when c and pregnant and sluttydate and not (topless or naked)
+        group acc_arm auto variant c when c and not (topless or naked) and not sluttydate
 
         group acc_up auto variant a when a and not (topless or naked)
         group acc_up auto variant b when b and not (topless or naked)
@@ -115,8 +114,7 @@ init 1:
         group acc_arm auto variant low_d when d and not (topless or naked)
         group acc_arm auto variant a when a and not (topless or naked)
         group acc_arm auto variant b when b and not (topless or naked)
-        group acc_arm auto variant c when c and not (topless or naked) and not (pregnant and sluttydate)
-        group acc_arm auto variant c_pregnant when c and pregnant and sluttydate and not (topless or naked)
+        group acc_arm auto variant c when c and not (topless or naked) and sluttydate
 
         group acc_up auto variant a when a and not (topless or naked)
         group acc_up auto variant b when b and not (topless or naked)

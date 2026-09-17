@@ -6,7 +6,7 @@ init -35 python:
     'haircuts': ['nohaircut', 'haircut'],
     'exps': ['normal', 'angry', 'annoyed', 'blank', 'cry', 'flirt', 'grumpy', 'happy', 'joke', 'mindless', 'sad', 'sadsmile', 'shy', 'stuned', 'submissive', 'surprised', 'talkative', 'vangry', 'vulnerable', 'whining', 'wink'],
     'outfits': ['casual', 'sport', 'date', 'sexydate', 'sluttydate', 'swimsuit', 'sexyswimsuit', 'halloween', 'wedding', 'underwear', 'naked'],
-    'others': ['pregnant', 'collar', 'pubes', 'blush', 'facecum', 'bottomless', 'topless', 'noacc'],
+    'others': ['collar', 'pubes', 'blush', 'facecum', 'bottomless', 'topless', 'noacc'],
     'accessories': ['gag', 'wallet', 'glasses'],
 }
 
@@ -14,18 +14,12 @@ init -35 python:
         
         if not isinstance(attrs, list):
             attrs = list(attrs)
-        
-        
+         
         add_pickers_attrs = Pickers([CollarPicker, PubesPicker], npc=palla)(set(attrs))
-        if "pregnant_navel" in add_pickers_attrs:
-            add_pickers_attrs.remove("pregnant_navel")
-            add_pickers_attrs.add("navel")
         attrs.extend(add_pickers_attrs)
-        
-        
+    
         pwet_pickers_attrs = Pickers([PositionPicker], npc=palla)(set(attrs))
         attrs.extend(pwet_pickers_attrs)
-        
         
         sgl_attrs, mult_attrs = anim_attrs_filter(attrs,
         {k: [None, anim_dict[k]] for k in ['positions', 'haircuts', 'exps', 'outfits']},
@@ -38,10 +32,6 @@ init -35 python:
         
         
         attr_collar = "collar_" + sgl_attrs['positions'][0] if 'collar' in mult_attrs['others'][0] else None
-        
-        
-        attr_pregnancy = "pregnant_" + sgl_attrs['positions'][0] if 'pregnant' in mult_attrs['others'][0] else None
-        
         
         if sgl_attrs['outfits'][0] in ['halloween']:
             attr_haircut = "haircut_" + sgl_attrs['positions'][0]
@@ -67,9 +57,8 @@ init -35 python:
         
         sgl_attrs = [attr[0] for attr in sgl_attrs.values()]
         mult_attrs = [attrs for attr_type in mult_attrs for attrs in mult_attrs[attr_type][0]]
-        return filtered_attrs(mult_attrs, sgl_attrs, attr_collar, attr_pregnancy, attr_haircut, attr_outfit, attr_acc_head)
+        return filtered_attrs(mult_attrs, sgl_attrs, attr_collar, None, attr_haircut, attr_outfit, attr_acc_head)
 
 
     def palla_close_anim_filter(attrs, anim_dict=palla_attrs):
         return palla_anim_filter(attrs, anim_dict)
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

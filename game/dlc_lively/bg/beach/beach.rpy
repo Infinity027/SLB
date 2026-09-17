@@ -63,60 +63,38 @@ init 6:
         attribute reona_naked null
         attribute reona_tongue null
 
-
         attribute day "beach_day"
         attribute night "beach_night"
 
-
         attribute reona
-        attribute reona_pregnant when reona
         group reona_hair auto when reona
         attribute reona_pureglasses when reona
-        group reona_bot auto variant nopreg when reona and not reona_pregnant and not reona_naked
-        group reona_bot auto variant preg when reona and reona_pregnant and not reona_naked
         group reona_top auto when reona and not reona_naked
         attribute reona_collar when reona
 
 
         attribute lavish
         attribute lavish_nohaircut when lavish
-        attribute lavish_pregnant when lavish
-        group lavish_top auto variant nopreg when lavish and not lavish_pregnant and not lavish_naked
-        group lavish_top auto variant preg when lavish and lavish_pregnant and not lavish_naked
         attribute lavish_collar when lavish
-
 
         attribute aletta
         attribute aletta_collar when aletta
-        attribute aletta_pregnant when aletta
-        group aletta_bot auto variant nopreg when aletta and not aletta_pregnant and not aletta_naked
-        group aletta_bot auto variant preg when aletta and aletta_pregnant and not aletta_naked
-        group aletta_top auto variant nopreg when aletta and not aletta_pregnant and not aletta_naked
-        group aletta_top auto variant preg when aletta and aletta_pregnant and not aletta_naked
+        group aletta_bot auto variant nopreg when aletta and not aletta_naked
+        group aletta_top auto variant nopreg when aletta and not aletta_naked
         group aletta_hair auto when aletta
         attribute aletta_glasses when aletta
 
-
         attribute alexis
-        attribute alexis_pregnant when alexis
         attribute alexis_nohaircut when alexis
-        group alexis_bot auto variant nopreg when alexis and not alexis_pregnant and not alexis_naked
-        group alexis_bot auto variant preg when alexis and alexis_pregnant and not alexis_naked
+        group alexis_bot auto variant nopreg when alexis and not alexis_naked
         group alexis_top auto when alexis and not alexis_naked
-        group alexis_top auto variant nopreg when alexis and not alexis_pregnant and not alexis_naked
-        group alexis_top auto variant preg when alexis and alexis_pregnant and not alexis_naked
+        group alexis_top auto variant nopreg when alexis and not alexis_naked
         attribute alexis_collar when alexis
-
 
         attribute cassidy
         attribute cassidy_collar when cassidy
         attribute cassidy_nohaircut when cassidy
-        attribute cassidy_pregnant when cassidy
-        group cassidy_bot auto variant nopreg when cassidy and not cassidy_pregnant and not cassidy_gold and not cassidy_naked
-        group cassidy_bot auto variant preg when cassidy and cassidy_pregnant and not cassidy_gold and not cassidy_naked
-        group cassidy_bot auto variant nopreg_gold when cassidy and not cassidy_pregnant and cassidy_gold and not cassidy_naked
-        group cassidy_bot auto variant preg_gold when cassidy and cassidy_pregnant and cassidy_gold and not cassidy_naked
-        group cassidy_top auto variant nopreg when cassidy and not cassidy_pregnant and not cassidy_gold and not cassidy_naked
-        group cassidy_top auto variant preg when cassidy and cassidy_pregnant and not cassidy_gold and not cassidy_naked
-        group cassidy_top auto variant nopreg_gold when cassidy and not cassidy_pregnant and cassidy_gold and not cassidy_naked
-        group cassidy_top auto variant preg_gold when cassidy and cassidy_pregnant and cassidy_gold and not cassidy_naked
+        group cassidy_bot auto variant nopreg when cassidy and not cassidy_gold and not cassidy_naked
+        group cassidy_bot auto variant nopreg_gold when cassidy and cassidy_gold and not cassidy_naked
+        group cassidy_top auto variant nopreg when cassidy and not cassidy_gold and not cassidy_naked
+        group cassidy_top auto variant nopreg_gold when cassidy and cassidy_gold and not cassidy_naked

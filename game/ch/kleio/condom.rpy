@@ -20,10 +20,6 @@ label kleio_use_condom:
         "And then we're good to go!"
     return
 
-label kleio_pregnant_condom:
-    kleio.say "Quit stalling - there is no risk, I can't be double knocked up!"
-    return
-
 label kleio_pill_condom:
     kleio.say "Quit stalling - there is no risk, I'm on the pill!"
     return

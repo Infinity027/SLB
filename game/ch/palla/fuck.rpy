@@ -1389,12 +1389,6 @@ label palla_fuck_date_cowgirl(sexperience_min):
                 show palla cowgirl cum with vpunch
                 "The sheer power of her orgasm triggers me, and I unload spurt after spurt of hot semen right into her. It feels like it goes on for several minutes."
                 $ palla.love += 2
-            elif _return == "vaginal_inside_pregnant":
-                with vpunch
-                "...before Palla's orgasm explodes. She screeches in sheer pleasure, and at the same time her pussy grips my cock so hard it almost feels like she's going to rip it off."
-                show palla cowgirl cum with vpunch
-                "The sheer power of her orgasm triggers me, and I unload spurt after spurt of hot semen right into her. It feels like it goes on for several minutes."
-                $ palla.love += 2
             else:
                 with vpunch
                 "...before Palla's orgasm explodes. She screeches in sheer pleasure, and at the same time her pussy grips my cock so hard it almost feels like she's going to rip it off."
@@ -1516,10 +1510,6 @@ label palla_fuck_date_missionary(sexperience_min):
                 "The sheer power of her orgasm triggers me, and I unload spurt after spurt of hot semen right into the latex that covers my cock."
                 $ palla.sub += 1
             elif _return == "vaginal_inside_pill":
-                show palla missionary cumshot ahegao with vpunch
-                "The sheer power of her orgasm triggers me, and I unload spurt after spurt of hot semen right into her. It feels like it goes on for several minutes."
-                $ palla.love += 2
-            elif _return == "vaginal_inside_pregnant":
                 show palla missionary cumshot ahegao with vpunch
                 "The sheer power of her orgasm triggers me, and I unload spurt after spurt of hot semen right into her. It feels like it goes on for several minutes."
                 $ palla.love += 2
@@ -1645,16 +1635,6 @@ label palla_fuck_date_doggy(sexperience_min):
                 "But my firm grip and her submissive position mean that she can only endure it, even when her own orgasm overtakes her too."
                 $ palla.sub += 1
             elif _return == "vaginal_inside_pill":
-                "After managing to humble Palla like that, the last thing I'm about to do is keep from cumming inside of her."
-                "I tighten my grip on her hair and the intensified pain of this goes some way to keeping the tell-tale signs of my muscles twitching from her notice."
-                with hpunch
-                "This means that when I finally lose myself inside of her, Palla is taken almost completely by surprise."
-                show palla doggy ahegao with hpunch
-                "She writhes and groans as my climax goes off entirely within one of the most sensitive parts of her body."
-                with hpunch
-                "But my firm grip and her submissive position mean that she can only endure it, even when her own orgasm overtakes her too."
-                $ palla.love += 2
-            elif _return == "vaginal_inside_pregnant":
                 "After managing to humble Palla like that, the last thing I'm about to do is keep from cumming inside of her."
                 "I tighten my grip on her hair and the intensified pain of this goes some way to keeping the tell-tale signs of my muscles twitching from her notice."
                 with hpunch
@@ -1797,17 +1777,6 @@ label palla_fuck_date_standing(sexperience_min):
                 "But I'm afraid that I'd just end up collapsing beside her."
                 $ palla.sub += 1
             elif _return == "vaginal_inside_pill":
-                with hpunch
-                "I lose it all at once, shooting my load into Palla."
-                show palla stand ahegao cum with hpunch
-                "She lets out a scream of pure release, her muscles turning to water."
-                "Palla leans against the tiled wall and slides slowly downwards."
-                "She slips off of my cock and collapses onto the bedroom floor."
-                "All I can do is stand there, panting and leaning against the wall."
-                "I know that I should help her up, at least check she's okay."
-                "But I'm afraid that I'd just end up collapsing beside her."
-                $ palla.love += 2
-            elif _return == "vaginal_inside_pregnant":
                 with hpunch
                 "I lose it all at once, shooting my load into Palla."
                 show palla stand ahegao cum with hpunch

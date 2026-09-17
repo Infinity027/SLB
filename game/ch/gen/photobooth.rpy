@@ -2,10 +2,8 @@ init 1:
     layeredimage photobooth:
         attribute_function MultiPickers([MCCGPicker, HaircutPicker, CollarPicker,  OutfitPicker], add_simple_pregnant_attribute=True, append_npc_from_attributes=True)
 
-
         always:
             "photobooth_bg"
-
 
         group npc auto variant "mikemc" if_any ["mikemc"]
         group npc auto variant "breemc" if_any ["breemc"]

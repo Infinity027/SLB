@@ -30,7 +30,6 @@ init 1:
     layeredimage eat snacks:
         attribute_function MultiPickers([ HaircutPicker, CollarPicker, OutfitPicker, MCCGPicker, CG_EatSnacks_Picker], add_simple_pregnant_attribute=True, append_npc_from_attributes=True)
 
-        attribute pregnant null
         attribute mikemc null
         attribute breemc null
 

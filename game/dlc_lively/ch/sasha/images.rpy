@@ -7,7 +7,7 @@ init -35 python:
     'boobs': ['noboobjob', 'boobjob'],
     'exps': ['normal', 'angry', 'annoyed', 'cry', 'dazed', 'embarrassed', 'flirt', 'happy', 'joke', 'mindless', 'pain', 'sad', 'sadsmile', 'shocked', 'shout', 'shy', 'stuned', 'surprised', 'talkative', 'upset', 'vangry', 'whining', 'wink', 'wtf'],
     'outfits': ['casual', 'casual2', 'sport', 'date', 'sexydate', 'sluttydate', 'halloween', 'rpg', 'swimsuit', 'sexyswimsuit', 'towel', 'underwear', 'sleep', 'rope', 'strapon', 'wedding', 'naked'],
-    'others': ['pregnant', 'pubes', 'collar', 'leash', 'blush', 'cumface', 'cummouth', 'topless', 'bottomless', 'noacc'],
+    'others': ['pubes', 'collar', 'leash', 'blush', 'cumface', 'cummouth', 'topless', 'bottomless', 'noacc'],
 }
 
     def sasha_anim_filter(attrs, anim_dict=sasha_attrs):
@@ -15,12 +15,8 @@ init -35 python:
         if not isinstance(attrs, list):
             attrs = list(attrs)
         
-        
         pickers_attrs = Pickers([CollarPicker, PubesPicker, HaircutPicker,  PositionPicker], npc=sasha)(set(attrs))
         
-        if "pregnant_navel" in pickers_attrs:
-            pickers_attrs.remove("pregnant_navel")
-            pickers_attrs.add("navel")
         attrs.extend(pickers_attrs)
         
         

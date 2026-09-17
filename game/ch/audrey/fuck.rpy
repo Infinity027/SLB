@@ -1212,17 +1212,6 @@ label audrey_fuck_date_doggy(sexperience_min):
                 "Audrey lets out a final moan of pleasure, and then I feel her legs and arms begin to tremble."
                 with hpunch
                 "I let go of her, my cock slides out, leaving her helpless on the bed in a state of utter exhaustion."
-            elif _return == "vaginal_inside_pregnant":
-                "There's no danger of cumming inside of Audrey, not when she's already pregnant."
-                "In fact, I'm pretty sure that her belly's all that's holding her up right now!"
-                show audrey doggy ahegao with hpunch
-                play sexsfx1 final_thrust
-                play sound [audrey_moans_happy_orgasm_1, audrey_moans_breathing_fast, audrey_moans_breathing_slow]
-                "Thrusting deep into her, I savour every last second before I finally cum."
-                $ audrey.love += 3
-                with hpunch
-                "And Audrey moans beneath me, letting me know that she's more than satisfied too."
-                "Afterwards, she rolls onto her side, arms hugging her ever-growing belly in a protective gesture."
             elif _return == "vaginal_inside_mad":
                 stop sound
                 audrey.say "Wait..."
@@ -1444,19 +1433,6 @@ label audrey_fuck_date_cowgirl(sexperience_min):
                 $ audrey.love += 2
                 with vpunch
                 "Audrey moans as she writhes atop me, feeling the whole thing."
-                show audrey cowgirl -vaginal
-                show pussy_insert audrey cum zorder 1 at zoomAt(0.75, (40, 200))
-                with vpunch
-                "And then she slides off, collapsing onto the bed at my side."
-            elif _return == "vaginal_inside_pregnant":
-                "Audrey holds her belly in a protective gesture the as I begin to cum."
-                $ audrey.love += 3
-                play sexsfx1 pull_out
-                play sound [audrey_generic_oh_4, audrey_moans_happy_orgasm_1, audrey_moans_breathing_fast, audrey_moans_breathing_slow]
-                show audrey cowgirl ahegao creampie with vpunch
-                "She moans and wriggles atop me, taking everything that I have to give."
-                with vpunch
-                "But the whole time she cradles her belly to make sure that it's safe."
                 show audrey cowgirl -vaginal
                 show pussy_insert audrey cum zorder 1 at zoomAt(0.75, (40, 200))
                 with vpunch
@@ -1748,22 +1724,6 @@ label audrey_fuck_date_reverse_cowgirl(sexperience_min):
                 with vpunch
                 "Even after I'm done cumming, Audrey doesn't regain her senses."
                 "Instead she remains clutched in my arms, almost insensible."
-            elif _return == "vaginal_inside_pregnant":
-                "I silently smile and feel smug that Audrey's pregnant."
-                "It means that we didn't need to bother with a condom."
-                "And it also means that I can just relax and enjoy what happens next."
-                with vpunch
-                "And that's the sensation of shooting my load into Audrey."
-                show audrey reverse cowgirl creampie with vpunch
-                play sexsfx1 final_thrust
-                play sound [audrey_moans_happy_orgasm_1, audrey_moans_breathing_fast, audrey_moans_breathing_slow]
-                $ audrey.love += 3
-                "I'm shaking, loving every moment of the feeling."
-                with vpunch
-                "And it seems to renew what she's feeling too."
-                with vpunch
-                "Even after I'm done cumming, Audrey doesn't regain her senses."
-                "Instead she remains clutched in my arms, almost insensible."
             elif _return == "vaginal_inside_mad":
                 "At the last moment I remember that I need to pull out."
                 "We didn't use a condom and I can't cum inside of Audrey."
@@ -1923,24 +1883,6 @@ label audrey_fuck_date_stand(sexperience_min):
                 pause 0.2
                 with vpunch
                 "And then she moans more quietly as I shoot my load over her back and buttocks."
-                "And she all but collapses against the wall, held up by it and me alike."
-            elif _return == "vaginal_inside_pregnant":
-                stop sound
-                audrey.say "Don't stop now!"
-                audrey.say "Cum...in...me!"
-                play sound audrey_moans_happy_high loop
-                "Luckily for Audrey, the fact that she's pregnant means I can do just that."
-                "Taking care to support her swollen belly, I give her exactly what she wants."
-                "All I have to do is stand back and enjoy what follows soon afterwards."
-                play sexsfx1 final_thrust
-                play sound [audrey_moans_happy_orgasm_1, audrey_moans_breathing_fast, audrey_moans_breathing_slow]
-                $ audrey.love += 3
-                show audrey standing cum ahegao -blush with vpunch
-                "Which is the amazing sensation of losing it inside of Audrey."
-                with vpunch
-                "I keep on thrusting, using the last of my energy as I do so."
-                show pussy_insert audrey cum zorder 1 at zoomAt(0.75, (820, 200))
-                with vpunch
                 "And she all but collapses against the wall, held up by it and me alike."
             elif _return == "vaginal_inside_pill":
                 stop sound
@@ -2573,23 +2515,6 @@ label audrey_fuck_office_missionary(sexperience_min):
                 with vpunch
                 "But feeling mine inside of her seems to set her off again."
                 $ audrey.love += 2
-                "And she moans the whole time that I'm cumming."
-            elif _return == "vaginal_inside_pregnant":
-                audrey.say "What are you waiting for?"
-                audrey.say "You can't knock me up twice!"
-                "All of my efforts are going into pushing forwards."
-                "And all of Audrey's weight is pushing down on me too."
-                "So naturally the best solution is just to keep right on going."
-                "And, as she's so delicately reminded me, there's nothing to stop me doing just that!"
-                show audrey missionary creampie ahegao with vpunch
-                play sexsfx1 final_thrust
-                play sound [audrey_moans_happy_orgasm_1, audrey_moans_breathing_fast, audrey_moans_breathing_slow]
-                "With one last thrust, I let go and shoot my load."
-                with vpunch
-                "Audrey's already shaking from her own orgasm."
-                with vpunch
-                "But feeling mine inside of her seems to set her off again."
-                $ audrey.love += 3
                 "And she moans the whole time that I'm cumming."
             elif _return == "vaginal_inside_happy":
                 audrey.say "Oh no...no way!"

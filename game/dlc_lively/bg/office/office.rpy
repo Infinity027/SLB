@@ -59,7 +59,6 @@ init 6:
         attribute audrey_navel null
         attribute audrey_nipples null
         attribute audrey_nose null
-        attribute audrey_pregnant_navel null
         attribute audrey_tongue null
         attribute lavish_clit null
         attribute lavish_ears null
@@ -68,15 +67,12 @@ init 6:
         attribute lavish_nipples null
         attribute lavish_nohaircut null
         attribute lavish_nose null
-        attribute lavish_pregnant null
-        attribute lavish_pregnant_navel null
         attribute lavish_tongue null
         attribute shiori_clit null
         attribute shiori_ears null
         attribute shiori_lips null
         attribute shiori_navel null
         attribute shiori_nose null
-        attribute shiori_pregnant_navel null
         attribute shiori_tongue null
 
         attribute day "office_day"
@@ -90,18 +86,16 @@ init 6:
 
 
         attribute audrey
-        attribute audrey_pregnant when audrey
-        group bot_audrey auto variant nopreg when audrey and not (audrey_pregnant or audrey_bottomless or audrey_naked)
-        group bot_audrey auto variant preg when audrey and audrey_pregnant and not (audrey_bottomless or audrey_naked)
-        group top_audrey auto variant nopreg when audrey and not (audrey_pregnant or audrey_topless or audrey_naked)
-        group top_audrey auto variant preg when audrey and audrey_pregnant and not (audrey_topless or audrey_naked)
+        group bot_audrey auto variant nopreg when audrey and not (audrey_bottomless or audrey_naked)
+        group bot_audrey auto variant preg when audrey and not (audrey_bottomless or audrey_naked)
+        group top_audrey auto variant nopreg when audrey and not (audrey_topless or audrey_naked)
+        group top_audrey auto variant preg when audrey and not (audrey_topless or audrey_naked)
         attribute audrey_nohaircut when audrey
 
         attribute shiori
-        attribute shiori_pregnant when shiori
-        group bot_shiori auto variant nopreg when shiori and not (shiori_pregnant or shiori_bottomless or shiori_naked)
-        group bot_shiori auto variant preg when shiori and shiori_pregnant and not (shiori_bottomless or shiori_naked)
-        group top_shiori auto variant nopreg when shiori and not (shiori_pregnant or shiori_topless or shiori_naked)
-        group top_shiori auto variant preg when shiori and shiori_pregnant and not (shiori_topless or shiori_naked)
+        group bot_shiori auto variant nopreg when shiori and not (shiori_bottomless or shiori_naked)
+        group bot_shiori auto variant preg when shiori and not (shiori_bottomless or shiori_naked)
+        group top_shiori auto variant nopreg when shiori and not (shiori_topless or shiori_naked)
+        group top_shiori auto variant preg when shiori and not (shiori_topless or shiori_naked)
         attribute shiori_collar when shiori
         attribute shiori_nohaircut when shiori

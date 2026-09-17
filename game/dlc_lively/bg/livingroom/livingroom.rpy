@@ -97,38 +97,34 @@ init 6:
 
         group multiple:
             attribute bree_clit null
-            attribute bree_pregnant_navel null
             attribute bree_navel null
             attribute bree_tongue null
             attribute lexi_tongue null
             attribute minami_clit null
             attribute minami_ears null
-            attribute minami_pregnant_navel null
             attribute minami_navel null
             attribute minami_nipples null
             attribute samantha_clit null
             attribute samantha_ears null
-            attribute samantha_pregnant_navel null
             attribute samantha_navel null
             attribute samantha_tongue null
             attribute sasha_lips null
             attribute sasha_nose null
             attribute sasha_tongue null
 
-        group outfit auto variant "bree" if_not "bree_pregnant"
-        group outfit auto variant "lexi" if_not "lexi_pregnant"
-        group outfit auto variant "minami" if_not "minami_pregnant"
-        group outfit auto variant "sam" if_not "samantha_pregnant"
-        group outfit auto variant "bb" if_any "sasha_boobjob" if_not "sasha_pregnant"
-        group outfit auto variant "nobb" if_not ["sasha_boobjob", "sasha_pregnant"]
-        group outfit auto variant "breepreg" if_any "bree_pregnant"
-        group outfit auto variant "lexipreg" if_any "lexi_pregnant"
-        group outfit auto variant "minamipreg" if_any "minami_pregnant"
-        group outfit auto variant "sampreg" if_any "samantha_pregnant"
-        group outfit auto variant "sashapreg_nobb" if_any "sasha_pregnant" if_not "sasha_boobjob"
-        group outfit auto variant "sashapreg_bb" if_all ["sasha_pregnant", "sasha_boobjob"]
+        group outfit auto variant "bree"
+        group outfit auto variant "lexi"
+        group outfit auto variant "minami"
+        group outfit auto variant "sam"
+        group outfit auto variant "bb" if_any "sasha_boobjob"
+        group outfit auto variant "nobb" if_not "sasha_boobjob"
+        group outfit auto variant "breepreg"
+        group outfit auto variant "lexipreg"
+        group outfit auto variant "minamipreg" 
+        group outfit auto variant "sampreg"
+        group outfit auto variant "sashapreg_nobb" 
+        group outfit auto variant "sashapreg_bb" if_all ["sasha_boobjob"]
 
         group haircuts auto:
             attribute lexi_nohaircut null
             attribute samantha_nohaircut null
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

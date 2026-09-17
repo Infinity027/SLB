@@ -53,11 +53,6 @@ init 1:
         attribute pubes null
         group pubes auto if_all ["pubes"]
 
-
-        attribute pregnant null
-        group pregnant auto if_all ["pregnant"]
-
-
         attribute makeup null
         group makeup auto if_any ["makeup"]
 
@@ -68,8 +63,6 @@ init 1:
 
         attribute collar null
         group collar auto if_any ["collar"]
-
-
 
         attribute lips null
         group lips auto if_any ["lips"]
@@ -91,40 +84,25 @@ init 1:
         group clit auto if_any ["clit"]
 
         attribute navel null
-        attribute pregnant_navel null
         group navel auto if_any ["navel"]
-        group pregnant_navel auto if_any ["pregnant_navel"]
 
         attribute eyebrow null
         group eyebrow auto if_any ["eyebrow"]
 
-
         attribute swimsuit null
         attribute sexyswimsuit null
-        group swimsuit auto if_all ["swimsuit"] if_not ["pregnant", "naked", "boobjob"]
-        group swimsuit auto variant "pregnant" if_all ["swimsuit", "pregnant"] if_not ["naked", "boobjob"]
-        group swimsuit auto variant "bb" if_all ["swimsuit", "boobjob"] if_not ["pregnant", "naked"]
-        group swimsuit auto variant "bb_pregnant" if_all ["swimsuit", "boobjob", "pregnant"] if_not ["naked"]
-        group sexyswimsuit auto if_all ["sexyswimsuit"] if_not ["pregnant", "naked", "boobjob"]
-        group sexyswimsuit auto variant "pregnant" if_all ["sexyswimsuit", "pregnant"] if_not ["naked", "boobjob"]
-        group sexyswimsuit auto variant "bb" if_all ["sexyswimsuit", "boobjob"] if_not ["pregnant", "naked"]
-        group sexyswimsuit auto variant "bb_pregnant" if_all ["sexyswimsuit", "boobjob", "pregnant"] if_not ["naked"]
-
-
-        group outfit auto if_not ["pregnant"]
-        group outfit auto variant "pregnant" if_all ["pregnant"]
-
+        group swimsuit auto if_all ["swimsuit"] if_not ["naked", "boobjob"]
+        group swimsuit auto variant "bb" if_all ["swimsuit", "boobjob"] if_not ["naked"]
+        group sexyswimsuit auto if_all ["sexyswimsuit"] if_not ["naked", "boobjob"]
+        group sexyswimsuit auto variant "bb" if_all ["sexyswimsuit", "boobjob"] if_not ["naked"]
 
         attribute haircut null
         attribute nohaircut null
         group haircut auto if_all ["haircut"] if_not ["02"]
         group nohaircut auto if_all ["nohaircut"] if_not ["02"]
 
-
         group water auto
         group water_fg auto
 
-
         group haircut auto if_all ["haircut", "02"]
         group nohaircut auto if_all ["nohaircut", "02"]
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

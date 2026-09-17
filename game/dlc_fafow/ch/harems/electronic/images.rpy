@@ -60,52 +60,39 @@ init 1:
     layeredimage electronic 3some mikeamydoggy:
         attribute_function Pickers([ CollarPicker, PubesPicker, DickPicker], npc=amy)
 
-
         always "electronic_3some_mikeamydoggy_bg_house"
-
 
         always "electronic_3some_mikeamydoggy_amy_body"
 
-
         attribute pubes
-        attribute pregnant
         attribute collar
 
         attribute butplug
 
-
         attribute speedfx
-
 
         group amyeyes auto:
             attribute eyes_open default
 
-
         group amymouth auto if_not ["blowjob"]:
             attribute mouth_kiss default
 
-
         always "electronic_3some_mikeamydoggy_mike_body"
-
 
         group multiple auto variant spank
         attribute mikehandspank
 
-
         attribute cumbody
         attribute cumface
-
 
         group mikedick auto:
             attribute mikeout null default
         group mikedick auto variant "mikeout" if_all ["mikeout"]
 
-
         attribute condom null
 
         group condom auto variant "mikeout" if_all ["condom", "mikeout"] if_not ["mikecum", "mikedickcum"]
         group condomcum auto if_all ["condom", "mikeout"] if_any ["mikecum", "mikedickcum"]
-
 
         attribute mikedickcum null
         group mikedickcum auto if_any ["mikedickcum"] if_not ["condom"]
@@ -134,17 +121,12 @@ init 1:
     layeredimage electronic 3some shawnamyspoon:
         attribute_function Pickers([ PubesPicker, DickPicker], npc=amy)
 
-
         always "electronic_3some_shawnamyspoon_bg"
         always "electronic_3some_shawnamyspoon_bodies"
 
-
         attribute pubes
-        attribute pregnant
-
 
         always "electronic_3some_shawnamyspoon_hairnormal" if_not ["hairpulled"]
-
 
         group mouth auto if_not ["blowjob"]:
             attribute mouth_pleasure default
@@ -187,17 +169,10 @@ init 1:
         always "electronic_4some_fuckamy_bg"
         always "electronic_4some_fuckamy_base"
 
-
         attribute cum
-
 
         group poses auto:
             attribute pose2 default
-
-
-        attribute amy_pregnant if_any ["pose2"]
-        attribute palla_pregnant if_any ["pose1"]
-
 
         group collars auto variant "pose1" if_any ["pose1"]
         group collars auto variant "pose2" if_any ["pose2"]
@@ -205,16 +180,12 @@ init 1:
     layeredimage electronic 4some fuckpalla:
         attribute_function MultiPickers([CollarPicker,  DickPicker], npcs=[amy, palla])
 
-
         always "electronic_4some_fuckpalla_bg"
-
 
         attribute shawn
 
-
         always "electronic_4some_fuckpalla_pallapulledhair" if_all ["normal", "mike"]
         attribute mike
-
 
         group palla auto:
             attribute normal default
@@ -222,14 +193,11 @@ init 1:
             attribute normal default
         always "electronic_4some_fuckpalla_mikehand_normal" if_all ["normal", "mike"]
 
-
         group collars auto variant "normal" if_any ["normal"]
         group collars auto variant "dildo" if_any ["dildo"]
 
-
         group pubes auto variant "normal" if_any ["normal"]
         group pubes auto variant "dildo" if_any ["dildo"]
-
 
         attribute shawnholdamy if_all ["normal", "shawn"]
         always "electronic_4some_fuckpalla_amyhand_normal" if_any ["normal"] if_not ["shawn"]
@@ -237,14 +205,10 @@ init 1:
         always "electronic_4some_fuckpalla_shawnhand_normal" if_all ["normal", "shawn"] if_not ["shawnholdamy"]
         always "electronic_4some_fuckpalla_pallahand_normal" if_any ["normal"]
 
-
         always "electronic_4some_fuckpalla_pallahair" if_any ["normal"] if_not ["mike"]
         always "electronic_4some_fuckpalla_amyhair" if_any ["normal"]
 
-
         attribute dildo
-
-
 
         group shawndick auto if_any ["shawn"] if_not ["dildo"]:
             attribute shawnout default
@@ -337,8 +301,6 @@ init 1:
         always "electronic_4some_bj_amymouth" if_all ["amy", "mike"] if_not ["amyblowjob"]
 
         attribute amy_pubes if_any ["amy"]
-
-        attribute amy_pregnant if_any ["amy"]
 
         attribute amy_collar if_any ["amy"]
 

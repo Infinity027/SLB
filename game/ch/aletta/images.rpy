@@ -113,13 +113,9 @@ init 1:
 
         attribute nopanties null
         group panties auto variant "a" if_any ["a"] if_not ["nopanties", "naked"]
-        group panties auto variant "b" if_any ["b"] if_not ["pregnant", "nopanties", "naked"]
-        group panties auto variant "b_pregnant" if_all ["b", "pregnant"] if_not ["nopanties", "naked"]
 
         attribute bottomless null
         group bot auto variant "a" if_any ["a"] if_not ["bottomless", "naked"]
-        group bot auto variant "b" if_any ["b"] if_not ["pregnant", "bottomless", "naked"]
-        group bot auto variant "b_pregnant" if_all ["b", "pregnant"] if_not ["bottomless", "naked"]
 
         attribute topless null
         group top auto variant "a" if_any ["a"] if_not ["topless", "naked"]

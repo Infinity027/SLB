@@ -56,13 +56,11 @@ init 6:
         attribute harmony_navel null
         attribute harmony_nipples null
         attribute harmony_nose null
-        attribute harmony_pregnant_navel null
         attribute harmony_tongue null
         attribute kat_clit null
         attribute kat_ears null
         attribute kat_nose null
         attribute kat_tongue null
-
 
         attribute day null
         attribute night null
@@ -75,43 +73,33 @@ init 6:
         
         attribute claire_collar when claire
         group claire_hair auto when claire
-        group claire_bot auto variant preg when claire and claire_pregnant
-        group claire_bot auto variant nopreg when claire and not claire_pregnant
-        group claire_top auto variant preg when claire and claire_pregnant
-        group claire_top auto variant nopreg when claire and not claire_pregnant
+        group claire_bot auto variant nopreg when claire
+        group claire_top auto variant nopreg when claire
 
 
         attribute harmony
         
         attribute harmony_collar when harmony
-        group harmony_bot auto variant preg when harmony and harmony_pregnant
-        group harmony_bot auto variant nopreg when harmony and not harmony_pregnant
-        group harmony_top auto variant preg when harmony and harmony_pregnant
-        group harmony_top auto variant nopreg when harmony and not harmony_pregnant
+        group harmony_bot auto variant nopreg when harmony
+        group harmony_top auto variant nopreg when harmony
         always "bg_street_harmony_nohaircut" when harmony
 
 
         attribute camila
         
         attribute camila_collar when camila
-        group camila_bot auto variant preg when camila and camila_pregnant
-        group camila_bot auto variant nopreg when camila and not camila_pregnant
-        group camila_top auto variant preg when camila and camila_pregnant
-        group camila_top auto variant nopreg when camila and not camila_pregnant
+        group camila_bot auto variant nopreg when camila
+        group camila_top auto variant nopreg when camila
         group camila_hair auto when camila
 
 
         attribute anna
-        group anna_bot auto variant preg when anna and anna_pregnant
-        group anna_bot auto variant nopreg when anna and not anna_pregnant
-        group anna_top auto variant preg when anna and anna_pregnant
-        group anna_top auto variant nopreg when anna and not anna_pregnant
+        group anna_bot auto variant nopreg when anna
+        group anna_top auto variant nopreg when anna
         attribute anna_nohaircut when anna
 
         attribute kat
         attribute kat_collar when kat
-        group kat_bot auto variant preg when kat and kat_pregnant
-        group kat_bot auto variant nopreg when kat and not kat_pregnant
-        group kat_top auto variant preg when kat and kat_pregnant
-        group kat_top auto variant nopreg when kat and not kat_pregnant
+        group kat_bot auto variant nopreg when kat
+        group kat_top auto variant nopreg when kat
         attribute kat_nohaircut when kat

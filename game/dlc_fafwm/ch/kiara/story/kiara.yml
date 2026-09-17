@@ -336,13 +336,13 @@ steps:
       condition: kiara.flags.engagedmike
       next: None
 
-  preg:
-    name: Get Kiara pregnant
-    optional: True
-    condition: True
-    outcome:
-      condition: kiara.flags.pregnancies_number > 0
-      next: None
+  # preg:
+  #   name: Get Kiara pregnant
+  #   optional: True
+  #   condition: True
+  #   outcome:
+  #     condition: kiara.flags.pregnancies_number > 0
+  #     next: None
 
   slave:
     name: Make Kiara my sex slave

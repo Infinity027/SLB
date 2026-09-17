@@ -46,17 +46,13 @@ init 6:
         always "maidcafe"
 
         attribute kiara
-        attribute kiara_pregnant when kiara
         attribute kiara_collar when kiara
-        group kiara_bot auto variant preg when kiara and kiara_pregnant
-        group kiara_bot auto variant nopreg when kiara and not kiara_pregnant
-        group kiara_top auto variant preg when kiara and kiara_pregnant
-        group kiara_top auto variant nopreg when kiara and not kiara_pregnant
+        group kiara_bot auto variant nopreg when kiara 
+        group kiara_top auto variant nopreg when kiara
         group kiara_hair auto when kiara
 
 
         attribute bree
-        attribute bree_pregnant when bree
         attribute bree_collar when bree
         attribute bree_nohaircut when bree
         group bree_bot auto when bree

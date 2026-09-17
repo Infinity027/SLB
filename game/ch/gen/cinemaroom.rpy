@@ -94,30 +94,12 @@ init 1:
 
         group outfit auto
 
-
-        group bot auto variant pregnant when mikemc and not finger and morgan_pregnant
-        group bot auto variant fingout_pregnant when mikemc and finger and outside and morgan_pregnant
-
-        group top auto when mikemc and morgan and not (grab and inside) and not morgan_pregnant
+        group top auto when mikemc and morgan and not (grab and inside)
         group top auto variant insidefinger when mikemc and morgan and finger and inside
-
-        group top auto variant pregnant when mikemc and morgan_pregnant and not (grab and inside)
-        group top auto variant insidefinger_pregnant when mikemc and morgan_pregnant and inside and finger
-
 
         group popcorn_piece auto
 
-
-        attribute pregnant null
-        group pregnancies auto
-        group pregnancies auto variant casual when reona_casual
-        group pregnancies auto variant purecasual when reona_purecasual
-        group pregnancies auto variant insidefinger when inside and finger 
-        group pregnancies auto variant noinsidefinger when not (inside or finger) 
-
-
         group collars auto
-
 
         group posexp:
             attribute happy null default
@@ -143,50 +125,40 @@ init 1:
             attribute outside null default
             attribute inside null
 
-
         group grab auto variant "inside" if_all ["grab", "inside", "mikemc"]
-        group grab auto variant "inside_preg" if_all ["grab", "inside", "mikemc", "pregnant"]
-        group grab auto variant "inside_nopreg" if_all ["grab", "inside", "mikemc"] if_not ["pregnant"]
+        group grab auto variant "inside_preg" if_all ["grab", "inside", "mikemc"]
+        group grab auto variant "inside_nopreg" if_all ["grab", "inside", "mikemc"]
         group grab auto variant "inside_bb" if_all ["grab", "inside", "sasha_boobjob", "mikemc"]
         group grab auto variant "inside_nobb" if_all ["grab", "inside", "mikemc"] if_not ["sasha_boobjob"]
         group grab auto variant "outside" if_all ["grab", "outside", "mikemc"]
-        group grab auto variant "outside_preg" if_all ["grab", "outside", "mikemc", "pregnant"]
-        group grab auto variant "outside_nopreg" if_all ["grab", "outside", "mikemc"] if_not ["pregnant"]
+        group grab auto variant "outside_preg" if_all ["grab", "outside", "mikemc"]
+        group grab auto variant "outside_nopreg" if_all ["grab", "outside", "mikemc"]   
 
         group grab auto variant "inside_reona" if_all ["grab", "inside", "mikemc", "reona"]
         group grab auto variant "outside_reona" if_all ["grab", "outside", "mikemc", "reona"]
 
-
         group finger auto variant "inside" if_all ["finger", "inside", "mikemc"]
-        group finger auto variant "inside_preg" if_all ["finger", "inside", "mikemc", "pregnant"]
-        group finger auto variant "inside_nopreg" if_all ["finger", "inside", "mikemc"] if_not ["pregnant"]
+        group finger auto variant "inside_preg" if_all ["finger", "inside", "mikemc" ]
+        group finger auto variant "inside_nopreg" if_all ["finger", "inside", "mikemc"]
         group finger auto variant "outside" if_all ["finger", "outside", "mikemc"]
-        group finger auto variant "outside_preg" if_all ["finger", "outside", "mikemc", "pregnant"]
-        group finger auto variant "outside_nopreg" if_all ["finger", "outside", "mikemc"] if_not ["pregnant"]
+        group finger auto variant "outside_preg" if_all ["finger", "outside", "mikemc" ]
+        group finger auto variant "outside_nopreg" if_all ["finger", "outside", "mikemc"]
 
-        group finger auto variant "inside_preg_reona" if_all ["finger", "inside", "mikemc", "pregnant", "reona"]
-        group finger auto variant "inside_nopreg_reona" if_all ["finger", "inside", "mikemc", "reona"] if_not ["pregnant"]
+        group finger auto variant "inside_preg_reona" if_all ["finger", "inside", "mikemc", "reona"]
+        group finger auto variant "inside_nopreg_reona" if_all ["finger", "inside", "mikemc", "reona"]
 
-        group top auto variant insidefinger when morgan and inside and finger and morgan_bluesweater and not pregnant
-        group top auto variant insidefinger_pregnant when morgan and inside and finger and morgan_bluesweater and pregnant
-
+        group top auto variant insidefinger when morgan and inside and finger and morgan_bluesweater
 
         group glasses auto
 
-
         group haircuts auto
-
 
         group fg auto variant "03"
 
-
         group mikemc_arm auto variant "leg" if_all ["mikemc", "leg"]
-
 
         group breemc_arm auto variant "handjob" if_all ["breemc", "handjob"] if_not ["blowjob"]
         group breemc auto variant "blowjob" if_all ["breemc", "blowjob"]
         group breemc_haircut auto variant "blowjob" if_all ["breemc", "blowjob", "mc_haircut"]
 
-
         group fg auto
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

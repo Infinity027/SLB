@@ -87,9 +87,6 @@ init 1:
         always "hanna_stand_outfit_mike" if_not ["naked"]
         always "hanna_stand_outfit_hanna" if_not ["naked"]
 
-        attribute pregnant if_all ["pregnant", "naked"]
-        always "hanna_stand_pregnant_outfit" if_any ["pregnant"] if_not ["naked"]
-
         group fg auto
 
     layeredimage hanna lapdance:
@@ -141,8 +138,6 @@ init 1:
         always:
             "hanna_gym_ending_mike"
 
-        attribute pregnant null
-
         attribute kid
 
         always:
@@ -163,8 +158,6 @@ init 1:
 
         always:
             "hanna_house_ending_mike"
-
-        attribute pregnant null
 
         always:
             "hanna_house_ending_hanna"

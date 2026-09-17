@@ -48,10 +48,6 @@ init 1:
             attribute normal default null
 
         always:
-            if_any "pregnant"
-            "office_lavish_foursome_pregnant"
-
-        always:
             if_any "collar"
             "office_lavish_foursome_collar"
 
@@ -124,7 +120,6 @@ init 1:
         always:
             "office_threesome_shiorifuck_audrey_bodies"
 
-        attribute shiori_pregnant
         attribute shiori_pubes
         group shiori_exp auto:
             attribute surprised default
@@ -294,10 +289,6 @@ init 1:
         attribute outside null
         group outside auto if_any "outside" if_not "vaginal"
         group outside_condom auto if_all ["outside", "condom"] if_not ["vaginal", "cum"]
-
-        attribute lavish_pregnant
-        attribute shiori_pregnant
-
 
         attribute lavish_pubes
         attribute shiori_pubes
@@ -478,10 +469,6 @@ init 1:
         attribute lavish_collar
         attribute shiori_collar
 
-        attribute lavish_pregnant if_any "lavish_pregnant" if_not "shiori_pregnant"
-        attribute shiori_pregnant if_any "shiori_pregnant" if_not "lavish_pregnant"
-        attribute lavish_shiori_pregnant default if_all ["lavish_pregnant", "shiori_pregnant"]
-
         attribute blowjob null
         group blowjob auto if_any "blowjob" if_not "outside":
             attribute lavishbj
@@ -558,7 +545,6 @@ init 1:
             "office_foursome_cumshare_audrey_lavish_shiori_bodies"
 
         attribute audrey_collar
-        attribute audrey_pregnant
         attribute shiori_collar
 
         attribute cum
@@ -588,8 +574,6 @@ init 1:
         group multiple auto variant pubes_outside when not vaginal
         group multiple auto variant pubes_vaginal when vaginal
         group multiple auto variant collars
-
-        attribute shiori_pregnant
 
         group exp_lavish auto:
             attribute pleasure default
@@ -642,10 +626,7 @@ init 1:
             "office_foursome_shiorifuck_audrey_lavish_fx"
 
         attribute audrey_collar
-        attribute audrey_pregnant
         attribute lavish_collar
-        attribute lavish_pregnant
-
         attribute asscum
         attribute cumshot
 
@@ -681,10 +662,6 @@ init 1:
         attribute lavish_collar
         attribute shiori_collar
 
-        attribute audrey_pregnant
-        attribute lavish_pregnant
-        attribute shiori_pregnant
-
         group exp_audrey auto:
             attribute pleasure default
 
@@ -692,12 +669,10 @@ init 1:
             attribute audrey_ears null
             attribute lavish_clit null
             attribute lavish_navel null
-            attribute lavish_pregnant_navel null
             attribute lavish_tongue null
             attribute shiori_clit null
             attribute shiori_ears null
             attribute shiori_navel null
-            attribute shiori_pregnant_navel null
             attribute shiori_tongue null
 
         group dicks auto:
@@ -733,8 +708,6 @@ init 1:
             "office_fivesome_alettafuck_audrey_lavish_shiori_bodies"
 
         group multiple auto variant collars
-        group multiple auto variant pregnant
-
         attribute aletta_haircut
         group exp auto:
             attribute normal default
@@ -788,12 +761,6 @@ init 1:
         always:
             "office_fivesome_lavishfuck_aletta_audrey_shiori_bodies"
 
-
-        attribute aletta_pregnant
-        attribute lavish_pregnant
-        attribute shiori_pregnant
-
-
         attribute cum null
         group cum auto if_any "cum"
 
@@ -829,7 +796,6 @@ init 1:
             attribute audrey_clit null
             attribute audrey_ears null
             attribute audrey_navel null
-            attribute audrey_pregnant_navel null
             attribute audrey_nipples null
             attribute audrey_nose null
             attribute audrey_tongue null
@@ -894,8 +860,6 @@ init 1:
         attribute aletta_haircut
         attribute glasses default
 
-        attribute shiori_pregnant
-
         group dick auto
         group dick auto variant "outside" if_not ["vaginal", "anal"]
 
@@ -954,12 +918,10 @@ init 1:
             attribute aletta_clit null
             attribute aletta_ears null
             attribute aletta_navel null
-            attribute aletta_pregnant_navel null
             attribute aletta_nipples null
             attribute audrey_clit null
             attribute audrey_ears null
             attribute audrey_navel null
-            attribute audrey_pregnant_navel null
             attribute audrey_nipples null
             attribute lavish_clit null
             attribute lavish_navel null
@@ -967,10 +929,7 @@ init 1:
             attribute shiori_clit null
             attribute shiori_ears null
             attribute shiori_navel null
-            attribute shiori_pregnant_navel null
             attribute shiori_nipples null
-
-
 
         attribute dick null
         group dick auto if_any ["dick"]

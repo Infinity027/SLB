@@ -288,13 +288,13 @@ steps:
       condition: morgan.flags.engagedmike
       next: None
 
-  preg:
-    name: Get Morgan pregnant
-    optional: True
-    condition: True
-    outcome:
-      condition: morgan.flags.pregnancies_number > 0
-      next: None
+  # preg:
+  #   name: Get Morgan pregnant
+  #   optional: True
+  #   condition: True
+  #   outcome:
+  #     condition: morgan.flags.pregnancies_number > 0
+  #     next: None
 
   slave:
     name: Make Morgan my sex slave

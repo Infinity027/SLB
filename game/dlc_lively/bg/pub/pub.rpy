@@ -39,7 +39,6 @@ init 6:
     layeredimage bg pub:
         attribute_function MultiPickers([ CollarPicker, OutfitPicker, HaircutPicker, PubPicker], append_npc_from_attributes=True)
 
-
         attribute empty null            
         attribute force_display null        
         attribute alexis_navel null
@@ -48,7 +47,6 @@ init 6:
         attribute samantha_lips null
         attribute samantha_navel null
         attribute samantha_nose null
-        attribute samantha_pregnant_navel null
         attribute samantha_tongue null
         attribute sasha_clit null
         attribute sasha_lips null
@@ -56,45 +54,31 @@ init 6:
         attribute sasha_nose null
         attribute sasha_tongue null
 
-
         always "pub"
-
 
         attribute sasha
         attribute sasha_boobjob when sasha
-        attribute sasha_pregnant variant bb when sasha and sasha_boobjob
-        attribute sasha_pregnant variant nobb when sasha and not sasha_boobjob
         attribute sasha_collar when sasha
-        group sasha_bot auto variant preg when sasha and sasha_pregnant
-        group sasha_bot auto variant nopreg when sasha and not sasha_pregnant
-        group sasha_top auto variant preg_bb when sasha and sasha_pregnant and sasha_boobjob
-        group sasha_top auto variant preg_nobb when sasha and sasha_pregnant and not sasha_boobjob
-        group sasha_top auto variant nopreg_bb when sasha and not sasha_pregnant and sasha_boobjob
-        group sasha_top auto variant nopreg_nobb when sasha and not sasha_pregnant and not sasha_boobjob
+        group sasha_bot auto variant nopreg when sasha
+        group sasha_top auto variant nopreg_bb when sasha and sasha_boobjob
+        group sasha_top auto variant nopreg_nobb when sasha and not sasha_boobjob
         group sasha_hair auto when sasha
 
         attribute amy
         attribute amy_collar when amy
-        group amy_bot auto variant preg when amy and amy_pregnant
-        group amy_bot auto variant nopreg when amy and not amy_pregnant
-        group amy_top auto variant preg when amy and amy_pregnant
-        group amy_top auto variant nopreg when amy and not amy_pregnant
+        group amy_bot auto variant nopreg when amy
+        group amy_top auto variant nopreg when amy
         attribute amy_nohaircut when amy
 
         attribute alexis
         attribute alexis_collar when alexis
-        group alexis_bot auto variant preg when alexis and alexis_pregnant
-        group alexis_bot auto variant nopreg when alexis and not alexis_pregnant
-        group alexis_top auto variant preg when alexis and alexis_pregnant
-        group alexis_top auto variant nopreg when alexis and not alexis_pregnant
+        group alexis_bot auto variant nopreg when alexis
+        group alexis_top auto variant preg when alexis
+        group alexis_top auto variant nopreg when alexis
         attribute alexis_nohaircut when alexis
-
 
         attribute samantha
         attribute samantha_collar when samantha
-        group samantha_bot auto variant preg when samantha and samantha_pregnant
-        group samantha_bot auto variant nopreg when samantha and not samantha_pregnant
-        group samantha_top auto variant preg when samantha and samantha_pregnant
-        group samantha_top auto variant nopreg when samantha and not samantha_pregnant
+        group samantha_bot auto variant nopreg when samantha
+        group samantha_top auto variant nopreg when samantha
         attribute samantha_nohaircut when samantha
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

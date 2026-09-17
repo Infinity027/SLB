@@ -71,18 +71,14 @@ init 6:
         attribute pressed null
         attribute notpressed null
 
-
         attribute day "personal_day"
         attribute night "personal_night"
-
 
         attribute audrey
         
         attribute audrey_collar when audrey
-        group audrey_bot auto variant preg when audrey and audrey_pregnant and not (audrey_bottomless or audrey_naked)
-        group audrey_bot auto variant nopreg when audrey and not audrey_pregnant and not (audrey_bottomless or audrey_naked)
-        group audrey_top auto variant preg when audrey and audrey_pregnant and not (audrey_topless or audrey_naked)
-        group audrey_top auto variant nopreg when audrey and not audrey_pregnant and not (audrey_topless or audrey_naked)
+        group audrey_bot auto variant nopreg when audrey and not (audrey_bottomless or audrey_naked)
+        group audrey_top auto variant nopreg when audrey and not (audrey_topless or audrey_naked)
         always "bg_personal_audrey_nohaircut" when audrey
 
 
@@ -90,27 +86,21 @@ init 6:
         
         attribute lavish_collar when lavish
         always "bg_personal_lavish_nohaircut" when lavish
-        group lavish_bot auto variant preg when lavish and lavish_pregnant and not (lavish_bottomless or lavish_naked)
-        group lavish_bot auto variant nopreg when lavish and not lavish_pregnant and not (lavish_bottomless or lavish_naked)
-        group lavish_top auto variant preg when lavish and lavish_pregnant and not (lavish_topless or lavish_naked)
-        group lavish_top auto variant nopreg when lavish and not lavish_pregnant and not (lavish_topless or lavish_naked)
+        group lavish_bot auto variant nopreg when lavish and not (lavish_bottomless or lavish_naked)
+        group lavish_top auto variant nopreg when lavish and not (lavish_topless or lavish_naked)
 
 
         attribute shiori
         
         attribute shiori_collar when shiori
         always "bg_personal_shiori_nohaircut" when shiori
-        group shiori_bot auto variant preg when shiori and shiori_pregnant and not (shiori_bottomless or shiori_naked)
-        group shiori_bot auto variant nopreg when shiori and not shiori_pregnant and not (shiori_bottomless or shiori_naked)
-        group shiori_top auto variant preg when shiori and shiori_pregnant and not (shiori_topless or shiori_naked)
-        group shiori_top auto variant nopreg when shiori and not shiori_pregnant and not (shiori_topless or shiori_naked)
+        group shiori_bot auto variant nopreg when shiori and not (shiori_bottomless or shiori_naked)
+        group shiori_top auto variant nopreg when shiori and not (shiori_topless or shiori_naked)
 
 
         attribute cassidy
         
         attribute cassidy_collar when cassidy
-        group cassidy_bot auto variant preg when cassidy and cassidy_pregnant and not (cassidy_bottomless or cassidy_naked)
-        group cassidy_bot auto variant nopreg when cassidy and not cassidy_pregnant and not (cassidy_bottomless or cassidy_naked)
-        group cassidy_top auto variant preg when cassidy and cassidy_pregnant and not (cassidy_topless or cassidy_naked)
-        group cassidy_top auto variant nopreg when cassidy and not cassidy_pregnant and not (cassidy_topless or cassidy_naked)
+        group cassidy_bot auto variant nopreg when cassidy and not (cassidy_bottomless or cassidy_naked)
+        group cassidy_top auto variant nopreg when cassidy and not (cassidy_topless or cassidy_naked)
         always "bg_personal_cassidy_nohaircut" when cassidy

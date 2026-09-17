@@ -428,13 +428,13 @@ steps:
       condition: kleio.flags.engagedmike
       next: None
 
-  preg:
-    name: Get Kleio pregnant
-    optional: True
-    condition: True
-    outcome:
-      condition: kleio.flags.pregnancies_number > 0
-      next: None
+  # preg:
+  #   name: Get Kleio pregnant
+  #   optional: True
+  #   condition: True
+  #   outcome:
+  #     condition: kleio.flags.pregnancies_number > 0
+  #     next: None
 
   slave:
     name: Make Kleio my sex slave

@@ -4,7 +4,6 @@ init 1:
         attribute idle null
         group position auto
         attribute pubes null
-        group pregnant auto if_any ["pregnant"]
         group multiple auto variant fx
 
         group exp auto:
@@ -19,23 +18,17 @@ init 1:
         group stockings auto variant "b" if_any ["b"] if_not ["naked", "bottomless"]
 
         attribute bottomless null
-        group bot auto variant "a" if_any ["a"] if_not ["pregnant", "bottomless", "naked"]
-        group bot auto variant "b" if_any ["b"] if_not ["pregnant", "bottomless", "naked"]
-        group bot auto variant "a_pregnant" if_all ["a", "pregnant"] if_not ["bottomless", "naked"]
-        group bot auto variant "b_pregnant" if_all ["b", "pregnant"] if_not ["bottomless", "naked"]
+        group bot auto variant "a" if_any ["a"] if_not [ "bottomless", "naked"]
+        group bot auto variant "b" if_any ["b"] if_not ["bottomless", "naked"]
 
         group sleeves auto variant "a" if_any ["a"] if_not ["topless", "naked"]
         group sleeves auto variant "b" if_any ["b"] if_not ["topless", "naked"]
 
         attribute topless null
-        group top auto variant "a" if_any ["a"] if_not ["pregnant", "topless", "naked"]
-        group top auto variant "b" if_any ["b"] if_not ["pregnant", "topless", "naked"]
-        group top auto variant "a_pregnant" if_all ["a", "pregnant"] if_not ["topless", "naked"]
-        group top auto variant "b_pregnant" if_all ["b", "pregnant"] if_not ["topless", "naked"]
-        group bot auto variant "a" if_all ["a", "strapon"] if_not ["pregnant"]
-        group bot auto variant "a_pregnant" if_all ["a", "pregnant", "strapon"] if_not ["bottomless"]
-        group bot auto variant "b" if_all ["b", "strapon"] if_not ["pregnant"]
-        group bot auto variant "b_pregnant" if_all ["b", "pregnant", "strapon"] if_not ["bottomless"]
+        group top auto variant "a" if_any ["a"] if_not ["topless", "naked"]
+        group top auto variant "b" if_any ["b"] if_not ["topless", "naked"]
+        group bot auto variant "a" if_all ["a", "strapon"]
+        group bot auto variant "b" if_all ["b", "strapon"]
 
         attribute collar
 
@@ -53,7 +46,6 @@ init 1:
         group position auto
 
         attribute pubes null
-        group pregnant auto if_any ["pregnant"]
         group multiple auto variant fx
         group exp auto:
             attribute normal default
@@ -274,10 +266,6 @@ init 1:
             attribute normal default
         group exp auto variant "b" if_any ["b"]:
             attribute normal default
-        group top auto if_not ["pregnant"]:
-            attribute a default
-        group top auto variant "pregnant" if_any ["pregnant"]:
-            attribute a default
         group stockings auto
         group dick auto
         group vaginal auto if_any ["vaginal"]
@@ -322,10 +310,8 @@ init 1:
         attribute facecum if_any ["watching"]
         attribute naked null
 
-        group audrey_outfit auto variant "watching" if_any ["watching"] if_not ["pregnant", "naked"]
-        group audrey_outfit auto variant "watching_pregnant" if_all ["watching", "pregnant"] if_not ["naked"]
-        group audrey_outfit auto variant "blowjob" if_any ["blowjob"] if_not ["pregnant", "naked"]
-        group audrey_outfit auto variant "blowjob_pregnant" if_all ["blowjob", "pregnant"] if_not ["naked"]
+        group audrey_outfit auto variant "watching" if_any ["watching"] if_not ["naked"]
+        group audrey_outfit auto variant "blowjob" if_any ["blowjob"] if_not ["naked"]
 
         attribute cumshot if_any ["blowjob"]
         attribute popcorn if_not ["blowjob"]
@@ -351,7 +337,7 @@ init 1:
         group exp auto:
             attribute normal default
 
-                group top auto if_not ["pregnant", "naked"]
+        group top auto if_not "naked"
         group bot auto if_not "naked"
 
         attribute hand

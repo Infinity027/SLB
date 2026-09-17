@@ -189,16 +189,6 @@ init 1:
         group shoes auto variant "lexireonaback" if_any "lexireonaback" if_not "naked"
         group shoes auto variant "lexireonafront" if_any "lexireonafront" if_not "naked"
 
-        attribute shiori_pregnant null
-        attribute hanna_pregnant null
-        attribute harmony_pregnant null
-        attribute bree_pregnant null
-        attribute lexi_pregnant null
-        attribute reona_pregnant null
-
-        group multiple auto variant pregnant_outfits_reonafront when reona_pregnant and reonafront and not (naked or lexireona)
-        group multiple auto variant pregnant_outfits_reonaback when reona_pregnant and reonaback and not (naked or lexireona)
-
         attribute shiori_collar null
         attribute hanna_collar null
         attribute harmony_collar null

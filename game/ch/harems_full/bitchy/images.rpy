@@ -91,13 +91,11 @@ init 1:
 
         attribute cassidy
         attribute cassidy_collar if_any ["cassidy"]
-        attribute cassidy_pregnant if_any ["cassidy"]
         always:
             if_all ["cassidy", "out", "dickcum"] if_not ["condom"]
             "bitchy_foursome_audreyfuck_cassidyhand_dickcum"
 
         attribute palla
-        attribute palla_pregnant if_any ["palla"]
         group pallabody auto if_any ["palla"]
         attribute palla_collar if_any ["palla"]
 
@@ -225,13 +223,11 @@ init 1:
 
 
         attribute audrey
-        attribute audrey_pregnant if_any ["audrey"]
         attribute audrey_collar if_any ["audrey"]
         attribute audrey_pubes if_any ["audrey"]
 
         attribute cassidy
         attribute cassidydrip if_any ["cassidy"]
-        attribute cassidy_pregnant if_any ["cassidy"]
         attribute cassidy_pubes if_any ["cassidy"]
 
     layeredimage bitchy foursome cumshare:
@@ -294,10 +290,6 @@ init 1:
 
         attribute cassidy_collar if_all ["cassidy"]
         attribute audrey_collar if_all ["audrey"]
-
-        attribute cassidy_pregnant if_all ["cassidy"]
-        attribute audrey_pregnant if_all ["audrey"]
-
 
         group fg auto
 

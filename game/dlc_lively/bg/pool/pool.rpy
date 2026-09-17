@@ -55,7 +55,6 @@ init 6:
         attribute lexi_navel null
         attribute lexi_nipples null
         attribute lexi_nose null
-        attribute lexi_pregnant_navel null
         attribute lexi_tongue null
         attribute minami_topless null
         attribute minami_collar null
@@ -66,21 +65,17 @@ init 6:
         attribute samantha_lips null
         attribute samantha_tongue null
         attribute sasha_topless null
-        attribute sasha_pregnant null
         attribute sasha_clit null
         attribute sasha_ears null
         attribute sasha_lips null
         attribute sasha_navel null
-        attribute sasha_pregnant_navel null
         attribute sasha_nipples null
         attribute sasha_noboobjob null
         attribute sasha_nose null
         attribute sasha_tongue null
 
-
         group season auto variant "day" if_any "day"
         group season auto variant "night" if_any "night"
-
 
         attribute sasha
         attribute sasha_boobjob when sasha
@@ -101,8 +96,8 @@ init 6:
         attribute samantha_collar when samantha
         group samantha_bot auto when samantha and not (samantha_naked or samantha_bottomless)
         group samantha_top auto when samantha and not (samantha_naked or samantha_topless)
-        group samantha_top auto variant preg when samantha and samantha_pregnant and not (samantha_naked or samantha_topless)
-        group samantha_top auto variant nopreg when samantha and not (samantha_pregnant or samantha_naked or samantha_topless)
+        group samantha_top auto variant preg when samantha and not (samantha_naked or samantha_topless)
+        group samantha_top auto variant nopreg when samantha and not (samantha_naked or samantha_topless)
         attribute samantha_nohaircut when samantha
 
 
@@ -110,14 +105,14 @@ init 6:
         group minami_hair auto when minami
         group minami_bot auto when minami and not (minami_naked or minami_bottomless)
         group minami_top auto when minami and not (minami_naked or minami_topless)
-        group minami_top auto variant preg when minami and minami_pregnant and not (minami_naked or minami_topless)
-        group minami_top auto variant nopreg when minami and not (minami_pregnant or minami_naked or minami_topless)
+        group minami_top auto variant preg when minami and not (minami_naked or minami_topless)
+        group minami_top auto variant nopreg when minami and not (minami_naked or minami_topless)
 
 
         attribute bree
         group bree_hair auto when bree
         attribute bree_collar when bree
         group bree_bot auto when bree and not (bree_naked or bree_bottomless)
-        group bree_bot auto variant preg when bree and bree_pregnant and not (bree_naked or bree_bottomless)
-        group bree_bot auto variant nopreg when bree and not (bree_pregnant or bree_naked or bree_bottomless)
+        group bree_bot auto variant preg when bree and not (bree_naked or bree_bottomless)
+        group bree_bot auto variant nopreg when bree and not (bree_naked or bree_bottomless)
         group bree_top auto when bree and not (bree_naked or bree_topless)

@@ -626,14 +626,6 @@ steps:
       condition: alexis.flags.engagedmike
       next: None
 
-  preg:
-    name: Get Alexis pregnant
-    optional: True
-    condition: True
-    outcome:
-      condition: alexis.flags.pregnancies_number > 0
-      next: None
-
   slave:
     name: Make Alexis my sex slave
     optional: True

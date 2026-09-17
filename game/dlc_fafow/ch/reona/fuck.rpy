@@ -1024,24 +1024,6 @@ label reona_fuck_date_missionary(sexperience_min):
                 $ reona.love += 3
                 "This means that when I shoot my load, she takes it all, with nothing held back."
                 "And I might be flattering myself here, but it does seem to make her cum all over again!"
-            elif _return == "vaginal_inside_pregnant":
-                "I'm not going to forget that Reona's pregnant, and that it means there's nothing to worry about."
-                "So I can simply go with the flow, letting the urge to cum sweep me along with it."
-                "At the same time I make one last effort to push as deep into Reona as possible."
-                show reona missionary back
-                pause 0.3
-                show reona missionary forth eyes_close mouth_hurt with hpunch
-                pause 0.3
-                show reona missionary back
-                pause 0.4
-                show reona missionary forth with hpunch
-                pause 0.4
-                show reona missionary back
-                pause 0.6
-                show reona missionary forth mouth_ahegao cum with hpunch
-                $ reona.love += 3
-                "This means that when I shoot my load, she takes it all, with nothing held back."
-                "And I might be flattering myself here, but it does seem to make her cum all over again!"
             elif _return == "vaginal_inside_happy":
                 "We might have chosen not to use protection, but that doesn't mean I'm not being careful."
                 "So I make to pull out of Reona before it's too late."
@@ -1331,17 +1313,6 @@ label reona_fuck_date_cowgirl(sexperience_min):
                 $ reona.love += 3
                 "And she rides out the last moments of pleasure as I shoot my load into her."
                 "Then she topples sideways onto the bed."
-            elif _return == "vaginal_inside_pregnant":
-                "Right now the fact that Reona's pregnant really pays off."
-                "Because all I have to do is lie back and watch the fireworks!"
-                with vpunch
-                "As Reona succumbs to her orgasm, she pulls me along with her."
-                with vpunch
-                "While I'm as deep inside of her as possible, I lose it."
-                show reona cowgirl eyes_ahegao mouth_ahegao cum with vpunch
-                $ reona.love += 3
-                "And she rides out the last moments of pleasure as I shoot my load into her."
-                "Then she topples sideways onto the bed."
             elif _return == "vaginal_inside_happy":
                 "The fact we chose not to use a condom means that I only have one choice."
                 "And I make to pull out of Reona before it's too late."
@@ -1590,17 +1561,6 @@ label reona_fuck_date_reverse_cowgirl(sexperience_min):
                 reona.say "I'm...on the...pill!"
                 "I silently thank Reona for the timely reminder of that fact."
                 "And secure in that same knowledge, I push right on without stopping."
-                "All I need to do is make sure that I have a tight hold on Reona."
-                show reona reverse cowgirl eyes_ahegao cum with vpunch
-                $ reona.love += 3
-                "Then I just let go, shooting my load into her without holding a thing back."
-                with vpunch
-                "This redoubles her own orgasm, sending her almost into a frenzy of pleasure."
-                with vpunch
-                "One that I'm more than happy to ride out with her."
-            elif _return == "vaginal_inside_pregnant":
-                "It's impossible to forget the fact that Reona's pregnant."
-                "And secure in that knowledge, I push right on without stopping."
                 "All I need to do is make sure that I have a tight hold on Reona."
                 show reona reverse cowgirl eyes_ahegao cum with vpunch
                 $ reona.love += 3
@@ -1954,31 +1914,6 @@ label reona_fuck_date_doggy(sexperience_min):
                 "By now I'm almost holding Reona up, pressing her against the wall."
                 show reona doggy eyes_closed -smash -pulled
                 $ reona.love += 5
-                "But when I lose it inside of her, she finally flops forwards."
-                "And I have to catch her before she falls."
-            elif _return == "vaginal_inside_pregnant":
-                "The fact that Reona's pregnant does have some fringe benefits."
-                "Like right now, it means that I don't have to worry about a thing."
-                "I can keep right on going, enjoying the feeling of Reona's orgasm."
-                "And when mine comes close on its heels, I just go with it."
-                show reona doggy -smash
-                pause 0.15
-                show reona doggy smash with hpunch
-                pause 0.1
-                show reona doggy bounce
-                pause 0.15
-                show reona doggy rest
-                pause 0.15
-                show reona doggy -smash
-                pause 0.15
-                show reona doggy smash mouth_ahegao with hpunch
-                pause 0.1
-                show reona doggy bounce
-                pause 0.15
-                show reona doggy rest
-                "By now I'm almost holding Reona up, pressing her against the wall."
-                show reona doggy eyes_closed -smash -pulled
-                $ reona.love += 3
                 "But when I lose it inside of her, she finally flops forwards."
                 "And I have to catch her before she falls."
             elif _return == "vaginal_inside_happy":

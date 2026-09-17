@@ -28,47 +28,32 @@ init 1:
     layeredimage game arcade:
         attribute_function MultiPickers([GameArcadePositionPicker, HaircutPicker, CollarPicker,  OutfitPicker], add_simple_pregnant_attribute=True, append_npc_from_attributes=True)
 
-
         group bg auto
-
 
         attribute mikeMC null
         group mikemc auto if_any ["mikeMC"]
         attribute breeMC null
         group breemc auto if_any ["breeMC"]
 
-
         group girl auto
-
 
         attribute morgan_makeup
 
-
         group collars auto
-
 
         group pregnancy auto
 
-
         group bb auto
 
-
-
         group outfit_bot auto
-        group outfit_bot auto variant "pregnant" if_any ["pregnant"]
 
         group outfit_top auto
-        group outfit_top auto variant "pregnant" if_any ["pregnant"]
-
 
         group outfits auto
-        group outfits auto variant "pregnant" if_any ["pregnant"]
-
 
         group haircuts auto
 
         group acc
-
 
         group fg auto
 

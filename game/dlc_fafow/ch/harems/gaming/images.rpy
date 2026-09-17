@@ -15,7 +15,6 @@ init 1:
         attribute kat_nipples null
         attribute kat_nohaircut null
         attribute kat_nose null
-        attribute kat_pregnant_navel null
         attribute kat_tongue null
 
 
@@ -84,7 +83,6 @@ init 1:
         attribute bree_ears null
         attribute bree_lips null
         attribute bree_navel null
-        attribute bree_pregnant_navel null
         attribute bree_nipples null
         attribute bree_nose null
         attribute bree_tongue null
@@ -92,18 +90,14 @@ init 1:
         attribute kat_ears null
         attribute kat_nipples null
         attribute kat_navel null
-        attribute kat_pregnant_navel null
         attribute kat_tongue null
-
 
         group bg auto:
             attribute bedroom default
 
         attribute closeup
 
-
         always "bree_cunnilingus_kat_bodies"
-
 
         attribute bree_haircut
 

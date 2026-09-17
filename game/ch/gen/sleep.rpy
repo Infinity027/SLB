@@ -23,8 +23,6 @@ init 1:
         group nohaircut auto if_not "haircut"
         group line auto
 
-        attribute pregnant null
-
         attribute boobjob null
 
         group nipples auto if_any "nipples" if_not "boobjob"
@@ -38,8 +36,6 @@ init 1:
 
         group outfit auto if_not "summer"
         group outfit_bb auto if_any "boobjob" if_not "summer"
-        group outfit_preg auto if_any "pregnant" if_not "summer"
-
         group dick auto if_any ["summer"]
 
         group cover auto if_any "fall"
@@ -59,7 +55,6 @@ init 1:
         always:
             "multisleep_sashasam_bg"
 
-
         always:
             if_any "sasha"
             "multisleep_sashasam_sasha"
@@ -70,7 +65,7 @@ init 1:
             "multisleep_sashasam_outfit_sasha_underwear"
 
         always:
-            if_all ["sasha", "sasha_pregnant", "sasha_underwear"]
+            if_all ["sasha", "sasha_underwear"]
             if_not "summer"
             "multisleep_sashasam_pregnant_outfit_sasha_pregnant_sasha_underwear"
 
@@ -120,11 +115,8 @@ init 1:
             if_any "bree"
             "multisleep_breesam_bree"
 
-        attribute bree_pregnant
-
         always:
             "multisleep_breesam_samantha"
-        attribute samantha_pregnant
 
         group multiple auto variant collars
         group multiple:
@@ -136,8 +128,6 @@ init 1:
             attribute samantha_ears null
             attribute samantha_tongue null
         group multiple auto variant outfit when not summer
-        group multiple auto variant pregnant_outfit_bree_pregnant when bree_pregnant and not summer
-        group multiple auto variant pregnant_outfit_samantha_pregnant when samantha_pregnant and not summer
 
         always:
             if_any "fall"
@@ -163,7 +153,6 @@ init 1:
         always:
             if_any "minami"
             "multisleep_minamisam_minami"
-        attribute minami_pregnant
         attribute minami_haircut
         attribute minami_nohaircut
 
@@ -173,8 +162,6 @@ init 1:
         group multiple auto variant collars
 
         group multiple auto variant outfit when not summer
-        group multiple auto variant pregnant_outfit_minami_pregnant when minami_pregnant and not summer
-        group multiple auto variant pregnant_outfit_samantha_pregnant when samantha_pregnant and not summer
 
         always:
             if_any "fall"
@@ -211,20 +198,16 @@ init 1:
             if_not "nomc"
             "multisleep_homeharem_mike_arm"
 
-
         always:
             if_any ["lexi", "lexi_pregnant"]
             "multisleep_homeharem_lexi"
-        attribute lexi_pregnant
         attribute lexi_casual null
         attribute lexi_collar null
         attribute lexi_nohaircut null
 
-
         always:
             if_any ["bree", "bree_pregnant"]
             "multisleep_homeharem_bree_shade"
-
 
         always:
             if_any ["bree", "bree_pregnant"]
@@ -237,23 +220,18 @@ init 1:
             if_not "nomc"
             "multisleep_homeharem_mike_boxer"
 
-
         always:
             if_any ["bree", "bree_pregnant"]
             "multisleep_homeharem_bree"
-        attribute bree_pregnant
-
 
         always:
             if_any ["sasha", "sasha_pregnant"]
             "multisleep_homeharem_sasha"
-        attribute sasha_pregnant
         attribute sasha_boobjob
         attribute sasha_haircut
         attribute sasha_nohaircut
         attribute sasha_casual null
         attribute sasha_collar null
-
 
         attribute samantha_nohaircut null
         always:
@@ -261,17 +239,13 @@ init 1:
             "multisleep_homeharem_samantha"
         attribute samantha_collar
 
-
         always:
             if_any ["minami", "minami_pregnant"]
             "multisleep_homeharem_minami"
-        attribute minami_pregnant
         attribute minami_haircut
         attribute minami_nohaircut
 
         group multiple auto variant outfit when not (summer or naked)
-        group multiple auto variant outfit_bree_pregnant when bree_pregnant and not (summer or naked)
-        group multiple auto variant outfit_sasha_pregnant when sasha_pregnant and not (summer or naked)
         group multiple auto variant outfit_sasha_boobjob when sasha_boobjob and not (summer or naked)
 
         group collars multiple

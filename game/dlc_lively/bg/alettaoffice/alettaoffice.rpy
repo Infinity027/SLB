@@ -48,9 +48,8 @@ init 6:
         attribute night "alettaoffice_night"
 
         attribute aletta
-        attribute pregnant when aletta
         attribute collar when aletta
         attribute glasses when aletta
-        group outfit auto variant nopreg when aletta and not (pregnant or naked or topless)
-        group outfit auto variant preg when aletta and pregnant and not (naked or topless)
+        group outfit auto variant nopreg when aletta and not (naked or topless)
+        group outfit auto variant preg when aletta and not (naked or topless)
         group hair auto when aletta

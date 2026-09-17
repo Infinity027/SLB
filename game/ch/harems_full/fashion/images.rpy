@@ -62,18 +62,11 @@ init 1:
         always:
             "fashion_doggy_bodies"
 
-
         group strapon auto:
             attribute single default
             attribute double
 
-
-        attribute palla_pregnant
-        attribute sasha_pregnant
-
-
         attribute sasha_boobjob
-
 
         always:
             if_all ["leash", "palla_collar"]
@@ -102,16 +95,12 @@ init 1:
         attribute sasha_clit null
         attribute sasha_lips null
         attribute sasha_navel null
-        attribute sasha_pregnant_navel null
         attribute sasha_tongue null
-
 
         group dick auto if_not ["bj"] if_all ["mike"]
 
-
         attribute cumshot null
         group cumshot auto if_any ["cumshot"] if_not ["mouth", "bj"]
-
 
         attribute cum null
         group cum auto if_any ["cum"] if_not ["bj"]
@@ -172,13 +161,7 @@ init 1:
             attribute sasha_nohaircut
             attribute sasha_haircut
 
-
         attribute mike
-
-
-        attribute sasha_pregnant
-        attribute palla_pregnant null
-
 
         always:
             if_not ["sasha_boobjob","mike"]
@@ -188,9 +171,7 @@ init 1:
             if_any ["sasha_boobjob"]
             "fashion_licking_sasha_boobjob"
 
-
         group multiple auto variant kiss when mike
-
 
         group exp_sasha auto if_not ["mike"]:
             attribute neutral default
@@ -201,7 +182,6 @@ init 1:
         attribute palla_lips null
         attribute palla_tongue null
         attribute palla_navel null
-        attribute palla_pregnant_navel null
         attribute sasha_lips null
         attribute sasha_tongue null
 

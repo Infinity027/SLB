@@ -475,16 +475,6 @@ label camila_date_fuck_cowgirl(sexperience_min):
                 with vpunch
                 "And then she collapses atop me, panting and gasping for breath."
                 $ camila.love += 1
-            elif _return == "vaginal_inside_pregnant":
-                camila.say "Do your worst..."
-                camila.say "You already knocked me up!"
-                with vpunch
-                "Camila grins as I let myself go inside of her, filling her pussy with all I have to give."
-                show camila cowgirl cumshot with vpunch
-                "She rides out the last moments, grinding on my cock for all she's worth."
-                with vpunch
-                "And then she collapses atop me, panting and gasping for breath."
-                $ camila.love += 1
             elif _return == "vaginal_inside_mad":
                 camila.say "[hero.name]..."
                 camila.say "You have to..."
@@ -630,16 +620,6 @@ label camila_date_fuck_doggy(sexperience_min):
             elif _return == "vaginal_inside_pill":
                 "Camila's way too far gone to remember that she's on the pill."
                 "But I keep it in mind, as it means that I can have my wicked way with her!"
-                "She makes a sound that's almost feral in nature as I cum."
-                show camila doggy ahegao with hpunch
-                "Raising her head and giving voice to the sensation."
-                with hpunch
-                "I don't stop until she's utterly spent."
-                "Then I carefully lower Camila's limp form onto the bed before me."
-                $ camila.love += 1
-            elif _return == "vaginal_inside_pregnant":
-                "I've been feeling the weight of Camila's swollen belly this whole time."
-                "And I can't help grinning, as it means that I can have my wicked way with her!"
                 "She makes a sound that's almost feral in nature as I cum."
                 show camila doggy ahegao with hpunch
                 "Raising her head and giving voice to the sensation."
@@ -906,31 +886,6 @@ label camila_date_fuck_stand(sexperience_min):
                 show camila stand pose2
                 pause 0.15
                 show camila stand pose1 pleasure with vpunch
-                "And she clings onto me for dear life as I lose it deep inside of her."
-                with vpunch
-                "Finally I feel my legs starting to give way, and I stagger towards the bed."
-                "Luckily for the both of us, I manage to make it and we collapse onto the mattress."
-            elif _return == "vaginal_inside_pregnant":
-                "I've been cradling the weight of Camila's belly this whole time."
-                "But I'm grateful for it being there as we come to the end."
-                "Because it means that there's nothing to do but enjoy the moment."
-                "Camila comes down on me one last time, sparking the start of my orgasm."
-                show camila stand pose2
-                pause 0.15
-                show camila stand pose3
-                pause 0.15
-                show camila stand pose2
-                pause 0.15
-                show camila stand pose1 at startle(0.05,-10)
-                pause 0.15
-                show camila stand pose2
-                pause 0.15
-                show camila stand pose3
-                pause 0.15
-                show camila stand pose2
-                pause 0.15
-                show camila stand pose1 creampie with vpunch
-                $ camila.love += 2
                 "And she clings onto me for dear life as I lose it deep inside of her."
                 with vpunch
                 "Finally I feel my legs starting to give way, and I stagger towards the bed."

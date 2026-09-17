@@ -14,25 +14,19 @@ init 1:
             attribute clit null
             attribute ears null
             attribute navel null
-            attribute pregnant_navel null
             attribute tongue null
 
         attribute naked null
         attribute topless null
         group outfit auto when not (naked or topless)
 
-
         attribute haircut
-
 
         attribute collar
 
     layeredimage streaming:
 
-
         group capture auto
-
-
 
         group body auto if_not ["sex"]:
             attribute stream default
@@ -278,11 +272,6 @@ init 1:
         group kathand_down_outfit if_any ["down"] if_not ["naked"]:
             attribute casual
 
-        group kat_outfit if_not ["pregnant", "naked"]:
-            attribute halloween
-        group kat_outfit_pregnant if_any ["pregnant"] if_not ["naked"]:
-            attribute halloween
-
         always "kat_doggy_mikehand_halloween_left" if_all ["mike", "halloween"] if_not ["up", "naked"]
 
         group kathand_down_outfit if_any ["down"] if_not ["naked"]:
@@ -300,10 +289,7 @@ init 1:
 
         attribute tongueout if_any ["mouth_open"]
 
-
         attribute haircut
-
-
 
     layeredimage kat blowjob:
         attribute_function Pickers([ CollarPicker, DickPicker, OutfitPicker], npc=kat)
@@ -402,17 +388,12 @@ init 1:
         group mouth auto:
             attribute mouth_open default
 
-
         attribute naked null
-        group outfit auto when not (naked or pregnant)
-        group outfit auto variant pregnant when pregnant and not naked
         attribute collar when sexydate
-
 
         group leftarm:
             attribute normal default
         group sleeve_leftarm auto variant normal when normal and not naked
-
 
         attribute mike null
         group tongue auto when mike:
@@ -420,25 +401,20 @@ init 1:
         attribute mikemc when mike
         group mikeoutfit auto when mike and not naked
 
-
         group tableleg auto when no_table
-
 
         group leftarm when mike:
             attribute hold
         group sleeve_leftarm auto variant hold when hold and mike and not naked
-
 
         attribute spoon when restaurant and not no_table
         always "kat_cunnilingus_rightarm"
         group sleeve_rightarm auto variant spoon when spoon and not naked
         group sleeve_rightarm auto variant nospoon when not (spoon or naked)
 
-
         attribute vibrator null
         group vibrator auto when vibrator:
             attribute turnoff default
-
 
         attribute no_table null
         always "kat_cunnilingus_table" when restaurant and not no_table
@@ -783,16 +759,9 @@ init 1:
         attribute jackcum null
         group jackcum auto if_all ["jack", "jackcum"]
 
-
         attribute jack
 
-
         attribute mike
-
-
-        
-        attribute pregnant_navel
-
 
         group mikedick:
             attribute out null default
@@ -800,14 +769,11 @@ init 1:
             attribute anal null
         group mikedick auto variant "out" if_all ["mike", "out"]
 
-
         attribute mikecondom null
         group mikecondom auto variant "out" if_all ["mike", "out", "mikecondom"]
 
-
         attribute mikecum null
         group mikecum auto variant "out" if_all ["mike", "out", "mikecum"] if_not ["mikecondom"]
-
 
         attribute xray if_all ["mike", "vaginal"]
         always "katjack_mikefuck_xray_mikecum" if_all ["mike", "vaginal", "xray", "mikecum"]
@@ -815,7 +781,6 @@ init 1:
     layeredimage kat ending:
         attribute_function Pickers([EndingKidPicker], npc=kat)
         attribute kid null
-        always "kat_ending_pregnant" when kid
         always "kat_ending_base" when not kid
 
     layeredimage katjack ending:
@@ -837,7 +802,7 @@ init -35 python:
     'haircuts': ['nohaircut', 'haircut'],
     'exps': ['normal', 'afraid', 'angry', 'annoyed', 'busted', 'confused', 'crazy', 'defiant', 'enthusiastic', 'happy', 'mindless', 'normal', 'offended', 'sad', 'sadclosed', 'sadsmile', 'shocked', 'shy', 'smile', 'smileclosed', 'stuned', 'surprised', 'talkative', 'timid', 'upset', 'whinge', 'whining', 'yawn'],
     'outfits': ['casual', 'sport', 'date', 'sexydate', 'sluttydate', 'swimsuit', 'sexyswimsuit', 'halloween', 'wedding', 'underwear', 'naked'],
-    'others': ['pregnant', 'pubes', 'collar', 'blush', 'bottomless', 'topless', 'noacc', 'headphones'],
+    'others': ['pubes', 'collar', 'blush', 'bottomless', 'topless', 'noacc', 'headphones'],
 }
 
     def kat_anim_filter(attrs, anim_dict=kat_attrs):
@@ -845,13 +810,8 @@ init -35 python:
         if not isinstance(attrs, list):
             attrs = list(attrs)
         
-        
         add_pickers_attrs = Pickers([PubesPicker,  CollarPicker, PositionPicker], npc=kat)(set(attrs))
-        if "pregnant_navel" in add_pickers_attrs:
-            add_pickers_attrs.remove("pregnant_navel")
-            add_pickers_attrs.add("navel")
         attrs.extend(add_pickers_attrs)
-        
         
         sgl_attrs, mult_attrs = anim_attrs_filter(attrs,
         {k: [None, anim_dict[k]] for k in ['positions', 'exps', 'outfits', 'haircuts']},
@@ -1081,9 +1041,5 @@ label test_kat_outfits:
         $ renpy.show(f"kat d wedding{pregnancy}", tag="k4", at_list=[mostright4])
         "wedding"
 
-        $ pregnancy = ' pregnant'
-        $ count += 1
-
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

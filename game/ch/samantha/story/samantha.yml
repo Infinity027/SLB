@@ -69,12 +69,12 @@ steps:
     outcome:
       condition: samantha.flags.engagedmike
 
-  preg:
-    name: "Get Samantha pregnant"
-    optional: True
-    condition: True
-    outcome:
-      condition: samantha.flags.pregnancies_number > 0
+  # preg:
+  #   name: "Get Samantha pregnant"
+  #   optional: True
+  #   condition: True
+  #   outcome:
+  #     condition: samantha.flags.pregnancies_number > 0
 
   slave:
     name: "Make Samantha my sex slave"

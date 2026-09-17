@@ -34,20 +34,16 @@ init 1:
             attribute lexi_clit null
             attribute lexi_ears null
             attribute lexi_navel null
-            attribute lexi_pregnant_navel null
             attribute reona_clit null
             attribute reona_navel null
-            attribute reona_pregnant_navel null
             attribute reona_nipples null
             attribute reona_tongue null
-
 
         group collar auto
         group collar auto variant "haircut" if_any "reona_haircut" if_not "lying"
         group collar auto variant "nohaircut" if_any "reona_nohaircut" if_not "lying"
 
         attribute reona_pureglasses if_not "lying"
-
 
         group dick auto if_not ["anal", "vaginal"]
 
@@ -72,10 +68,6 @@ init 1:
         attribute condom null
         group condom auto if_any "condom":
             attribute medium default
-
-
-        attribute lexi_pregnant
-
 
         attribute fx_shadow
 
@@ -150,38 +142,29 @@ init 1:
             attribute lexi_clit null
             attribute lexi_ears null
             attribute lexi_navel null
-            attribute lexi_pregnant_navel null
             attribute lexi_tongue null
             attribute reona_clit null
             attribute reona_ears null
             attribute reona_navel null
-            attribute reona_pregnant_navel null
             attribute reona_nipples null
             attribute reona_tongue null
-
 
         attribute reona_collar if_any ["blowjob"]
         attribute lexi_collar null
 
-
         group blowjob_eyes auto if_any ["blowjob"]:
             attribute opened default
-
 
         attribute cumshot null
         group cumshot auto if_any ["cumshot"]
 
-
         group dick_lick auto if_any ["lick"]
         group dick auto if_any ["blowjob"]
-
 
         attribute cum null
         group cum auto if_any ["cum"]
 
-
         attribute handjob
-
 
         group fg auto
 
@@ -221,10 +204,6 @@ init 1:
 
         attribute naked null
 
-        group bot auto variant "reona_nopregnant" if_not ["reona_pregnant", "naked"]
-        group bot auto variant "reona_pregnant" if_any "reona_pregnant" if_not "naked"
-        group bot auto variant "lexi_nopregnant" if_not ["lexi_pregnant", "naked"]
-        group bot auto variant "lexi_pregnant" if_any "lexi_pregnant" if_not "naked"
         group multiple auto variant top when not naked:
             attribute swimsuit null default
 
@@ -267,7 +246,6 @@ init 1:
             attribute lexi_clit null
             attribute lexi_ears null
             attribute lexi_navel null
-            attribute lexi_pregnant_navel null
             attribute lexi_tongue null
             attribute reona_clit null
             attribute reona_tongue null
@@ -324,8 +302,6 @@ init 1:
         attribute mikemc null
         attribute lexi null
         attribute reona null
-        attribute lexi_pregnant null
-        attribute reona_pregnant null
 
         group bg auto:
             attribute beach default
@@ -336,13 +312,11 @@ init 1:
             attribute lexi_clit null
             attribute lexi_ears null
             attribute lexi_navel null
-            attribute lexi_pregnant_navel null
             attribute lexi_nose null
             attribute lexi_tongue null
             attribute reona_clit null
             attribute reona_ears null
             attribute reona_navel null
-            attribute reona_pregnant_navel null
             attribute reona_tongue null
 
         group reonahead auto:

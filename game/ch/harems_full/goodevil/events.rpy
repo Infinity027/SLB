@@ -1544,16 +1544,6 @@ label goodevil_church_threesome_fuck_harmony:
                 "And when it does, Harmony literally collapses onto the altar."
                 "I thrust myself into her one last time, just for good measure."
                 "Holding her in place so that she doesn't fall to the floor."
-            elif _return == "vaginal_inside_pregnant":
-                harmony.say "Do it..."
-                harmony.say "Cum in me!"
-                "Luckily for us, Harmony's already pregnant."
-                "So there's no danger in me granting her request."
-                "I can just keep on going until the inevitable happens."
-                show goodevil threesome harmonyfuck creampie with hpunch
-                "And when it does, Harmony literally collapses onto the altar."
-                "I thrust myself into her one last time, just for good measure."
-                "Holding her in place so that she doesn't fall to the floor."
             else:
                 harmony.say "Do it..."
                 harmony.say "Cum in me!"
@@ -1750,22 +1740,6 @@ label goodevil_church_threesome_fuck_lexi:
             "I can feel the muscles of her pussy clenching my cock."
             "And in no time at all, she's not the only one cuming!"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             call cum_reaction (lexi, 'vaginal') from _call_cum_reaction_261
             if _return == "vaginal_outside":
 
@@ -1791,15 +1765,6 @@ label goodevil_church_threesome_fuck_lexi:
                     "Then she falls backwards onto the altar."
                     "I stagger backwards, totally exhausted."
                     "And I leave holding her up to Harmony."
-            elif _return == "vaginal_inside_pregnant":
-                lexi.say "Do it already..."
-                lexi.say "It's not like you didn't already knock me up!"
-                "I silently thank Lexi for the timely reminder that she's pregnant."
-                "And I can just keep right on going until the very end."
-                show goodevil threesome lexifuck cum vaginal
-                "When I'm done, Lexi falls backwards onto the altar."
-                "I let her motion pull me out of her."
-                "And I leave holding her up to Harmony."
             elif _return == "vaginal_inside_pill":
                 lexi.say "Fucking do it!"
                 lexi.say "I'm still on the pill!"

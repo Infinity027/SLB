@@ -1054,17 +1054,6 @@ label kiara_fuck_date_cowgirl(sexperience_min):
                 "This means that I shoot my load while I'm as deep inside of her as it's possible to be."
                 with vpunch
                 "Making one last thrust as I let go and fill her completely, cum seeping out around me."
-            elif _return == "vaginal_inside_pregnant":
-                kiara.say "It's okay..."
-                kiara.say "I'm pregnant - remember?"
-                "I'm thankful for the reminder from Kiara, but the size of her belly means I hardly needed it!"
-                with vpunch
-                "Putting all of my energies into one last effort to please Kiara as I cum myself."
-                play sexsfx1 final_thrust
-                show kiara cowgirl pleasure ahegao cum with vpunch
-                "This means that I shoot my load while I'm as deep inside of her as it's possible to be."
-                with vpunch
-                "Making one last thrust as I let go and fill her completely, cum seeping out around me."
             elif _return == "vaginal_inside_pill":
                 kiara.say "It's okay..."
                 kiara.say "I'm on the Pill - remember?"
@@ -1393,17 +1382,6 @@ label kiara_fuck_date_missionary(sexperience_min):
                 with vpunch
                 "Putting all of my energies into one last effort to please Kiara as I cum myself."
                 $ kiara.impregnate()
-                play sexsfx1 final_thrust
-                show kiara missionary pleasure ahegao cum with vpunch
-                "This means that I shoot my load while I'm as deep inside of her as it's possible to be."
-                with vpunch
-                "Making one last thrust as I let go and fill her completely, cum seeping out around me."
-            elif _return == "vaginal_inside_pregnant":
-                kiara.say "It's okay..."
-                kiara.say "I'm pregnant - remember?"
-                "I'm thankful for the reminder from Kiara, but the size of her belly means I hardly needed it!"
-                with vpunch
-                "Putting all of my energies into one last effort to please Kiara as I cum myself."
                 play sexsfx1 final_thrust
                 show kiara missionary pleasure ahegao cum with vpunch
                 "This means that I shoot my load while I'm as deep inside of her as it's possible to be."
@@ -1743,18 +1721,6 @@ label kiara_fuck_date_standing(sexperience_min):
                 else:
                     $ claire.love -= 5
                 $ kiara.impregnate()
-                play sexsfx1 final_thrust
-                show kiara stand pleasure ahegao cum with vpunch
-                "This means that I shoot my load while I'm as deep inside of her as it's possible to be."
-                with vpunch
-                "Making one last thrust as I let go and fill her completely, cum seeping out around me."
-            elif _return == "vaginal_inside_pregnant":
-                kiara.say "It's okay..."
-                kiara.say "I'm pregnant - remember?"
-                "I'm thankful for the reminder from Kiara, but the size of her belly means I hardly needed it!"
-                with vpunch
-                "Putting all of my energies into one last effort to please Kiara as I cum myself."
-                $ kiara.love += 3
                 play sexsfx1 final_thrust
                 show kiara stand pleasure ahegao cum with vpunch
                 "This means that I shoot my load while I'm as deep inside of her as it's possible to be."

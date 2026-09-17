@@ -1490,20 +1490,6 @@ label samantha_fuck_date_doggy(sexperience_min):
                 "She's mine now, and she smiles, her cheek against the bed, drooling."
                 "I pull out, her hole filled with my creamy goodness as I look over my conquest with a satisfied grin."
                 show expression f"samantha doggy nomike {FACIAL} {BEADS} {BLINDFOLD}"
-            elif _return == "vaginal_inside_pregnant":
-                "With a few more thrusts, I soon find myself slamming up into her."
-                if samantha.flags.nickname == "cupcake":
-                    mike.say "I'm going to cum now, Cupcake."
-                else:
-                    mike.say "I'm going to cum now, Samantha."
-                samantha.say "Oh, [hero.name], please!"
-                show expression f"samantha doggy cumshot {FACIAL} {BEADS} {BLINDFOLD}"
-                "With a gasp, I soon find myself releasing, spurting out into her as I hold her down."
-                if samantha.flags.NPCpregnancy == "ryan" and randint(0, 1):
-                    "She breathes, 'steady,' and I keep her hips cradled until the tremor fades."
-                "She's mine now, and she smiles, her cheek against the bed, drooling."
-                "I pull out, her hole filled with my creamy goodness as I look over my conquest with a satisfied grin."
-                show expression f"samantha doggy nomike {FACIAL} {BEADS} {BLINDFOLD}"
             elif _return == "vaginal_inside_mad":
                 "With a few more thrusts, I soon find myself slamming up into her."
                 if samantha.flags.nickname == "cupcake":
@@ -1802,25 +1788,6 @@ label samantha_fuck_date_reverse_cowgirl(sexperience_min):
                 show samantha reverse vaginal ahegao with vpunch
                 if samantha.piercings.nipples.worn and randint(0, 1):
                     "Her nipple piercing stand tight when the climax hits."
-                "From the sounds that she's making, I know that she's enjoying it."
-                "Maybe even as much as I am!"
-                $ samantha.love += 2
-            elif _return == "vaginal_inside_pregnant":
-                samantha.say "Keep going..."
-                samantha.say "I'm...pregnant..."
-                samantha.say "Remember?"
-                "I shake my head, wondering how Sam could imagine I'd forget."
-                show samantha reverse vaginal up
-                pause 0.3
-                show samantha reverse vaginal down creampie with vpunch
-                "And I keep a firm hold on her as I shoot my load."
-                show samantha reverse vaginal creampie with vpunch
-                "And she arches her back as I do so."
-                show samantha reverse vaginal ahegao with vpunch
-                if samantha.flags.toldpreg and randint(0, 1):
-                    "I brush her belly with my fingertips for a heartbeat; ours."
-                elif samantha.flags.NPCpregnancy == "ryan" and randint(0, 1):
-                    "She whispers 'steady' and I keep her hips cradled until her breathing slows."
                 "From the sounds that she's making, I know that she's enjoying it."
                 "Maybe even as much as I am!"
                 $ samantha.love += 2
@@ -2307,29 +2274,6 @@ label samantha_fuck_date_cowgirl(sexperience_min):
                 with vpunch
                 "Then she collapses atop me, panting and spent."
                 $ samantha.love += 2
-            elif _return == "vaginal_inside_pregnant":
-                samantha.say "Don't stop!"
-                show samantha cowgirl orgasm
-                samantha.say "I'm pregnant, remember!"
-                "I silently thank Sam for the timely reminder."
-                "Now all I have to do is hold on and ride it out."
-                show samantha cowgirl up speed
-                pause 0.2
-                show samantha cowgirl down at startle(0.05,-10)
-                pause 0.3
-                show samantha cowgirl up
-                pause 0.2
-                show samantha cowgirl down at startle(0.05,-10)
-                pause 0.3
-                show samantha cowgirl up
-                pause 0.2
-                show samantha cowgirl down creampie -speed with vpunch
-                if randint(0, 1):
-                    "I brush her belly with my fingertips for a heartbeat and she smiles through a gasp."
-                "She moans and twitches as she rides me until the end."
-                with vpunch
-                "Then she collapses atop me, panting and spent."
-                $ samantha.love += 2
             elif _return == "vaginal_inside_mad":
                 samantha.say "Stop!"
                 show samantha cowgirl normal
@@ -2646,19 +2590,6 @@ label samantha_fuck_date_missionary(sexperience_min):
                     "But once it's over, both of us seem to flop at the exact same moment."
                     "Collapsing into a helpless pile of sweaty limbs, chests heaving and hearts pounding."
                     $ samantha.love += 1
-                elif _return == "vaginal_inside_pregnant":
-                    samantha.say "It's okay..."
-                    samantha.say "I'm pregnant...remember?"
-                    "I get the urge to ask how in the hell I could ever forget!"
-                    with vpunch
-                    "But a second later, my orgasm hits like a tidal wave!"
-                    with vpunch
-                    "My whole body stiffens and I make one final thrust into Sam, shooting my load as I do so."
-                    show samantha missionary cumeyes ahegao inside with vpunch
-                    "The sensation seems to be more than enough to make her cum too, clinging onto me tighter than before."
-                    show samantha missionary closedeyes
-                    "But once it's over, both of us seem to flop at the exact same moment."
-                    "Collapsing into a helpless pile of sweaty limbs, chests heaving and hearts pounding."
                 elif _return == "vaginal_inside_pill":
                     samantha.say "It's okay..."
                     samantha.say "I'm on the Pill...remember?"
@@ -3084,20 +3015,6 @@ label samantha_fuck_flat_doggy(sexperience_min):
                     "I feel her squeezing me tightly as I let go inside of her."
                     if samantha.flags.engaged and randint(0, 1):
                         "Her wedding ring digs into the sheet when she clutches it through the tremors."
-                    with hpunch
-                    "Luckily we're both laid down on the bed."
-                    "So we can easily collapse into a heap afterwards."
-                    $ samantha.love += 2
-                elif _return == "vaginal_inside_pregnant":
-                    "I don't need to worry about letting go inside of Sam."
-                    "Because her belly keeps on reminding me she's already pregnant."
-                    "So all I have to do is let nature take it's course."
-                    show samantha flat doggy ahegao with hpunch
-                    "Sam and I cum almost at the same moment, each affecting the other."
-                    show samantha flat doggy cum with hpunch
-                    "I feel her squeezing me tightly as I let go inside of her."
-                    if randint(0, 1):
-                        "I stroke the curve of her belly for a heartbeat; she smiles into the pillow."
                     with hpunch
                     "Luckily we're both laid down on the bed."
                     "So we can easily collapse into a heap afterwards."

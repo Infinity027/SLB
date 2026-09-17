@@ -2,7 +2,6 @@ init 1:
     layeredimage tattooparlor:
         attribute_function MultiPickers([HaircutPicker, CollarPicker,  OutfitPicker, PubesPicker], add_simple_pregnant_attribute=True, append_npc_from_attributes=True)
 
-        attribute pregnant null
         attribute collar null
 
         attribute notop null
@@ -41,12 +40,10 @@ init 1:
 
         group top_opened auto if_any ["topless"] if_not ["notop"]
         group top_opened auto variant "boobjob" if_all ["topless", "sasha_boobjob"] if_not ["notop"]
-        group top_opened auto variant "pregnant" if_all ["topless", "pregnant"] if_not ["notop"]
 
         group top_closed auto if_not ["topless", "notop"]
         group top_closed auto variant "boobjob" if_not ["topless", "notop"] if_all ["sasha_boobjob"]
-        group top_closed auto variant "pregnant" if_not ["topless", "notop"] if_any ["pregnant"]
-
+  
         attribute sasha_boobjob if_all "sasha_boobjob" if_any ["topless", "notop"]
 
         group haircuts auto
@@ -109,23 +106,15 @@ init 1:
 
         group npc auto
 
-
         group bot auto variant "breemc" if_any "breemc" if_not ["bottomless"]
 
-        group pregnancy auto variant "breemc" if_all ["mc_pregnant", "breemc"]
-
-        group bot_opened variant "pregnant_breemc" auto if_all ["mc_pregnant", "bottomless", "breemc"]
-        group bot_closed variant "pregnant_breemc" auto if_all ["mc_pregnant", "breemc"] if_not ["bottomless"]
+        group pregnancy auto variant "breemc" if "breemc"
 
         group top auto
 
         group top_opened auto variant "breemc" if_all ["topless", "breemc"] if_not ["notop"]
-        group top_opened auto variant "pregnant_breemc" if_all ["topless", "mc_pregnant", "breemc"] if_not ["notop"]
 
         group top_closed auto variant "breemc" if_any "breemc" if_not ["topless", "notop"]
-        group top_closed auto variant "pregnant_breemc" if_not ["topless", "notop"] if_all ["mc_pregnant", "breemc"]
-
-        group top auto variant "pregnant" if_any ["pregnant"] if_not ["notop"]
 
         group focused auto variant "head" if_all ["focused", "head"]
         group add_piercing auto if_all ["focused", "head"]
@@ -149,4 +138,3 @@ init 1:
 
         always:
             "tattooparlormc_fg"
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

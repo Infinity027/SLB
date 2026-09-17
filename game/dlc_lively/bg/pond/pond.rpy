@@ -62,7 +62,6 @@ init 6:
         attribute samantha_navel null
         attribute samantha_nipples null
         attribute samantha_nose null
-        attribute samantha_pregnant_navel null
         attribute samantha_tongue null
 
 
@@ -71,51 +70,38 @@ init 6:
         always:
             "snow"
 
-
         attribute reona
         attribute reona_collar when reona
-        group reona_bot auto variant nopreg when reona and not reona_pregnant
-        group reona_bot auto variant preg when reona and reona_pregnant
-        group reona_top auto variant nopreg when reona and not reona_pregnant
-        group reona_top auto variant preg when reona and reona_pregnant
+        group reona_bot auto variant nopreg when reona
+        group reona_top auto variant nopreg when reona
         group reona_hair auto when reona
-
 
         attribute morgan
         
         attribute morgan_makeup when morgan
         attribute morgan_collar when morgan
 
-        group morgan_bot auto variant nopreg when morgan and not morgan_pregnant
-        group morgan_bot auto variant preg when morgan and morgan_pregnant
-        group morgan_top auto variant nopreg when morgan and not morgan_pregnant
-        group morgan_top auto variant preg when morgan and morgan_pregnant
+        group morgan_bot auto variant nopreg when morgan
+        group morgan_top auto variant nopreg when morgan
         group morgan_hair auto when morgan
 
         attribute anna
         attribute anna_collar when anna
         
-        group anna_bot auto variant nopreg when anna and not anna_pregnant
-        group anna_bot auto variant preg when anna and anna_pregnant
-        group anna_top auto variant nopreg when anna and not anna_pregnant
-        group anna_top auto variant preg when anna and anna_pregnant
+        group anna_bot auto variant nopreg when anna
+        group anna_top auto variant nopreg when anna
         attribute anna_nohaircut when anna
 
 
         attribute hanna
         attribute hanna_collar when hanna
-        group hanna_bot auto variant nopreg when hanna and not hanna_pregnant
-        group hanna_bot auto variant preg when hanna and hanna_pregnant
-        group hanna_top auto variant nopreg when hanna and not hanna_pregnant
-        group hanna_top auto variant preg when hanna and hanna_pregnant
+        group hanna_bot auto variant nopreg when hanna
+        group hanna_top auto variant nopreg when hanna
         attribute hanna_nohaircut when hanna
-
 
         attribute samantha
         
         attribute samantha_collar when samantha
-        group samantha_bot auto variant nopreg when samantha and not samantha_pregnant
-        group samantha_bot auto variant preg when samantha and samantha_pregnant
-        group samantha_top auto variant nopreg when samantha and not samantha_pregnant
-        group samantha_top auto variant preg when samantha and samantha_pregnant
+        group samantha_bot auto variant nopreg when samantha
+        group samantha_top auto variant nopreg when samantha
         attribute samantha_nohaircut when samantha

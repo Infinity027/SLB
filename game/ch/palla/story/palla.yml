@@ -452,13 +452,13 @@ steps:
       condition: palla.flags.engagedmike
       next: None
 
-  preg:
-    name: Get Palla pregnant
-    optional: True
-    condition: True
-    outcome:
-      condition: palla.flags.pregnancies_number > 0
-      next: None
+  # preg:
+  #   name: Get Palla pregnant
+  #   optional: True
+  #   condition: True
+  #   outcome:
+  #     condition: palla.flags.pregnancies_number > 0
+  #     next: None
 
   slave:
     name: Make Palla my sex slave

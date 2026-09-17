@@ -371,13 +371,13 @@ steps:
       condition: camila.flags.engagedmike
       next: None
 
-  preg:
-    name: Get Camila pregnant
-    optional: True
-    condition: True
-    outcome:
-      condition: camila.flags.pregnancies_number > 0
-      next: None
+  # preg:
+  #   name: Get Camila pregnant
+  #   optional: True
+  #   condition: True
+  #   outcome:
+  #     condition: camila.flags.pregnancies_number > 0
+  #     next: None
 
   slave:
     name: Make Camila my sex slave

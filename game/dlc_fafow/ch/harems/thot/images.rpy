@@ -10,16 +10,10 @@ init 1:
         group bg auto:
             attribute bedroom default
 
-
-
         attribute mikemc
-
 
         group alexis_body auto:
             attribute alicknipple default
-
-        attribute alexis_pregnant null
-        group alexis_pregnant auto if_any "alexis_pregnant"
 
         group alexis_exp auto if_any "ablowjob":
             attribute normal default
@@ -32,11 +26,6 @@ init 1:
         attribute reona_nohaircut null
         group reona_haircut auto if_any "reona_haircut"
         group reona_nohaircut auto if_any "reona_nohaircut"
-
-        attribute reona_pregnant null
-        group reona_pregnant auto if_any "reona_pregnant"
-
-
 
         attribute alexis_collar null
         group alexis_collar auto if_any "alexis_collar"
@@ -221,9 +210,7 @@ init 1:
             attribute alexis_lips null
             attribute reona_clit null
             attribute reona_navel null
-            attribute reona_pregnant_navel null
             attribute reona_tongue null
-
 
         group dick_positions auto:
             attribute out null default
@@ -337,27 +324,21 @@ init 1:
         group bg auto:
             attribute bedroom default
 
-
         always "thot_4some_foreplay_mikeleg"
         always "thot_4some_foreplay_mike"
-
 
         attribute audrey
         attribute bodycum if_any ["audrey"]
         attribute audrey_collar if_any ["audrey"]
-        attribute audrey_pregnant if_any ["audrey"]
         group audrey_exp auto if_any ["audrey"]:
             attribute audrey_normal default
         always "thot_4some_foreplay_audreyhair" if_any ["audrey"]
         attribute facecum if_any ["audrey"]
 
-
         always "thot_4some_foreplay_mikedick"
-
 
         group audreyhand auto if_any ["audrey"]:
             attribute audreyhand_down default
-
 
         attribute alexis
         attribute alexishand if_any ["alexis"]
@@ -367,7 +348,6 @@ init 1:
         always "thot_4some_foreplay_alexishair" if_any ["alexis"]
 
         attribute reona
-        attribute reona_pregnant if_any ["reona"]
         attribute reona_collar if_any ["reona"]
         group reona_exp auto if_any ["reona"]:
             attribute reona_aroused default
@@ -377,9 +357,7 @@ init 1:
 
         always "thot_4some_foreplay_mikehead"
 
-
         attribute handcum if_any ["audrey"]
-
 
         attribute cum
 
@@ -393,32 +371,26 @@ init 1:
 
         always "thot_4some_fuckalexis_bodies"
         attribute alexis_pubes
-        attribute alexis_pregnant
         attribute bodycum
         attribute alexis_collar
         attribute reona_collar
-        attribute reona_pregnant
         group eyes auto:
             attribute open default
         always "thot_4some_fuckalexis_alexishead"
         attribute reona_haircut
         attribute reona_nohaircut
 
-
         group dick auto:
             attribute out null default
         group dick auto variant "out" if_any ["out"]
-
 
         attribute condom null
         group condom auto if_any ["condom"]
         group condom auto variant "out" if_all ["out", "condom"]
 
-
         attribute cum null
         group cum auto if_any ["cum"] if_not ["condom"]
         group cum auto variant "out" if_all ["out", "cum"] if_not ["condom"]
-
 
         attribute audrey_breath if_any ["audrey"]
         attribute audrey
@@ -429,14 +401,10 @@ init 1:
 
     layeredimage thot 4some fuckaudrey:
         attribute_function MultiPickers([ CollarPicker, DickPicker], npcs=[audrey], append_npc_from_attributes=True)
-
-
         group bg auto:
             attribute bedroom default
 
-
         always "thot_4some_fuckaudrey_mike"
-
 
         attribute reona
         attribute reona_collar if_any ["reona"]
@@ -463,7 +431,6 @@ init 1:
             attribute audrey_clit null
             attribute audrey_ears null
             attribute audrey_navel null
-            attribute audrey_pregnant_navel null
             attribute audrey_nipples null
             attribute audrey_tongue null
         attribute audrey_collar if_any ["lookback"]
@@ -523,26 +490,21 @@ init 1:
         group condom auto if_all ["mike", "condom"]
         group condom auto variant "out" if_all ["mike", "out", "condom"]
 
-
         attribute cum null
         group cum auto if_all ["mike", "cum"] if_not ["condom"]
         group cum auto variant "out" if_all ["mike", "out", "cum"] if_not ["condom"]
 
         attribute audrey
         attribute audrey_pubes if_any ["audrey"]
-        attribute audrey_pregnant if_any ["audrey"]
         group audrey_mouth auto if_any ["audrey"]:
             attribute audrey_mouth_normal default
 
-
         attribute alexis
-        attribute alexis_pregnant if_any ["alexis"]
         attribute alexis_pubes if_any ["alexis"]
         attribute alexis_collar if_any ["alexis"]
         group alexis_mouth auto if_any ["alexis"]:
             attribute alexis_mouth_normal default
         always "thot_4some_fuckreona_alexishair" if_any ["alexis"]
-
 
         always "thot_4some_fuckreona_lefthand_lefthand_hold" if_any ["mike"] if_not ["audrey"]
         always "thot_4some_fuckreona_righthand_righthand_hold" if_any ["mike"] if_not ["alexis"]
@@ -551,7 +513,5 @@ init 1:
         group righthand auto if_all ["mike", "alexis"]:
             attribute righthand_hold default
 
-
         attribute squirt_audrey if_any ["audrey"]
         attribute squirt_alexis if_any ["alexis"]
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

@@ -418,26 +418,6 @@ init python:
     })
 
     Event(**{
-    "name": "kleio_say_preg",
-    "label": "kleio_say_preg",
-    "conditions": [
-        HeroTarget(
-            
-            Not(OnDate()),
-            IsRoom("map"),
-            ),
-        PersonTarget(kleio,
-            IsFlag("toldpreg", False),
-            MinCounter("pregnant", 6),
-            ),
-        ],
-    "music": "music/roa_music/horizon.ogg",
-    "once_day": True,
-    "do_once": False,
-    "quit": False,
-    })
-
-    Event(**{
     "name": "kleio_kiss_me",
     "label": "kleio_kiss_me",
     "max_girls": 1,

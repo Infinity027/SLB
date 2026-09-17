@@ -202,9 +202,6 @@ init 1:
         attribute kleio
 
         attribute kleio_clit
-
-        attribute kleio_pregnant
-
         attribute kleio_ears
 
         group kleio_hairs auto
@@ -318,22 +315,12 @@ init 1:
 
         attribute kleio
 
-        attribute kleio_pregnant null
-        always:
-            if_any "kleio_pregnant"
-            "pixie_blowjob_pregnancy_kleio_pregnant"
-
         group tattoos auto
 
         always:
             "pixie_blowjob_mike"
 
         attribute morgan
-
-        attribute morgan_pregnant null
-        always:
-            if_any "morgan_pregnant"
-            "pixie_blowjob_pregnancy_morgan_pregnant"
 
         group multiple auto variant collars
 

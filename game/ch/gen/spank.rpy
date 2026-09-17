@@ -2,14 +2,9 @@ init 1:
     layeredimage spank:
         attribute_function Pickers([OutfitPicker, CollarPicker], clear_npc=True)
 
-        attribute pregnant
         attribute clit null
         attribute naked null
         attribute collar null
-
-
-
-
 
         group bg auto variant "aletta" if_any "aletta":
             attribute personal default
@@ -45,8 +40,6 @@ init 1:
 
         group girl auto
 
-        group pregnant auto if_any "pregnant"
-
         group exp auto variant "audrey" if_any "audrey":
             attribute normal default
         group exp auto variant "aletta" if_any "aletta":
@@ -63,27 +56,17 @@ init 1:
 
         group multiple auto variant outfit_aletta when aletta and not naked
 
-        group multiple auto variant outfit_aletta_pregnant when aletta and pregnant and not naked
-
         group multiple auto variant outfit_audrey when audrey and not naked
 
-        group multiple auto variant outfit_audrey_pregnant when audrey and pregnant and not naked
-
         group top auto variant "audrey" if_any "audrey" if_not "naked"
-        group top auto variant "audrey_pregnant" if_all ["audrey","pregnant"] if_not "naked"
 
         attribute pulled null
         group bot auto variant "audrey" if_any "audrey" if_not ["naked", "pulled"]
         group bot auto variant "audrey_pulled" if_all ["audrey", "pulled"] if_not "naked"
 
-
         group multiple auto variant outfit_lavish when lavish and not naked
 
-        group multiple auto variant outfit_lavish_pregnant when lavish and pregnant and not naked
-
         group multiple auto variant outfit_shiori when shiori and not naked
-
-        group multiple auto variant outfit_shiori_pregnant when shiori and pregnant and not naked
 
         group collar auto if_any "collar"
 

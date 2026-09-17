@@ -992,21 +992,6 @@ label kat_fuck_date_missionary(sexperience_min):
                 "A moment of almost perfect unity between us."
                 show kat missionary eyes_normal mouth_pleasure out cum with hpunch
                 "Made all the more precious by the very fact that it's so fleeting."
-            elif _return == "vaginal_inside_pregnant":
-                kat.say "Don't stop..."
-                show kat missionary eyes_normal
-                kat.say "It's...okay..."
-                "I feel a great sense of relief as Kat reminds me that she's already pregnant."
-                "As it means that I can simply keep on going until the inevitable happens."
-                "And when it does, I can feel Kat being swept along with me."
-                $ kat.love += 2
-                show kat missionary eyes_ahegao mouth_normal tongueout cum -speed with hpunch
-                "I freeze as we cum within seconds of each other, unable to move."
-                "But the sensation is more than worth the sacrifice."
-                with hpunch
-                "A moment of almost perfect unity between us."
-                show kat missionary eyes_normal mouth_pleasure out vaginaldrip -cum with hpunch
-                "Made all the more precious by the very fact that it's so fleeting."
             elif _return == "vaginal_inside_pill":
                 kat.say "Don't stop..."
                 show kat missionary eyes_normal
@@ -1501,20 +1486,6 @@ label kat_fuck_date_cowgirl(sexperience_min):
                 "Kat lets out an almost animal moan, tossing back her head and arching her back."
                 "Every muscle in our bodies seems to be tight and clenched."
                 show kat cowgirl eyes_open mouth_pleasure out
-                "Then as one, everything goes limp and Kat slumps down on top of me."
-            elif _return == "vaginal_inside_pregnant":
-                "I've been protecting Kat's pregnant belly this whole time."
-                "So losing it inside of her is the least of my worries."
-                "And sure enough, I feel myself stiffening and holding Kat as still as possible."
-                $ kat.love += 2
-                show kat cowgirl mouth_open tongueout cum with vpunch
-                "Then I shoot my load while I'm as deep inside of her as I can get."
-                with vpunch
-                "Almost as soon as it happens, I can feel her orgasm hit too."
-                with vpunch
-                "Kat lets out an almost animal moan, tossing back her head and arching her back."
-                "Every muscle in our bodies seems to be tight and clenched."
-                show kat cowgirl eyes_close mouth_pleasure dickcum_pussy out -cum
                 "Then as one, everything goes limp and Kat slumps down on top of me."
             elif _return == "vaginal_inside_pill":
                 "I'm still with it enough to remember that Kat's on the pill."

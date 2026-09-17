@@ -108,27 +108,19 @@ init 1:
             attribute sasha_noboobjob null
 
         group outfits auto
-        group outfits auto variant "pregnant" if_any "pregnant"
-
 
         group haircuts auto when not kiara_casual
         group haircuts auto variant casual when kiara_casual
 
         group outfits_boobjob auto if_any "sasha_boobjob"
 
-
         group bot auto if_not ["naked"] if_all ["morgan"]
-        group bot auto variant "pregnant" if_all ["pregnant", "morgan"] if_not ["naked"]
-
 
         group top auto if_not ["naked"] if_all ["morgan"]
-        group top auto variant "pregnant" if_all ["pregnant", "morgan"] if_not ["naked"]
-
 
         group collars auto
 
         group acc auto
-
 
         group fg auto variant "livingroom" if_any ["livingroom"]
         group fg auto variant pub when pub or pubplay or pubseat

@@ -76,7 +76,6 @@ init 6:
         attribute cassidy_navel null
         attribute cassidy_nipples null
         attribute cassidy_nose null
-        attribute cassidy_pregnant_navel null
         attribute cassidy_tongue null
         attribute cherie null
         attribute cherie_naked null
@@ -105,65 +104,54 @@ init 6:
         always "ceo"
 
         attribute shiori
-        attribute shiori_pregnant when shiori
         always "bg_ceo_shiori_nohaircut" when shiori
-        group shiori_bot auto variant preg when shiori and shiori_pregnant and not (shiori_bottomless or shiori_naked)
-        group shiori_bot auto variant nopreg when shiori and not shiori_pregnant and not (shiori_bottomless or shiori_naked)
-        group shiori_top auto variant preg when shiori and shiori_pregnant and not (shiori_topless or shiori_naked)
-        group shiori_top auto variant nopreg when shiori and not shiori_pregnant and not (shiori_topless or shiori_naked)
+        group shiori_bot auto variant preg when shiori and not (shiori_bottomless or shiori_naked)
+        group shiori_bot auto variant nopreg when shiori and not (shiori_bottomless or shiori_naked)
+        group shiori_top auto variant preg when shiori and not (shiori_topless or shiori_naked)
+        group shiori_top auto variant nopreg when shiori and not (shiori_topless or shiori_naked)
         attribute shiori_collar when shiori
 
 
         attribute audrey
-        attribute audrey_pregnant when audrey
         attribute audrey_collar when audrey
-        group audrey_bot auto variant preg when audrey and audrey_pregnant and not (audrey_bottomless or audrey_naked)
-        group audrey_bot auto variant nopreg when audrey and not audrey_pregnant and not (audrey_bottomless or audrey_naked)
-        group audrey_top auto variant preg when audrey and audrey_pregnant and not (audrey_topless or audrey_naked)
-        group audrey_top auto variant nopreg when audrey and not audrey_pregnant and not (audrey_topless or audrey_naked)
+        group audrey_bot auto variant preg when audrey and not (audrey_bottomless or audrey_naked)
+        group audrey_bot auto variant nopreg when audrey and not (audrey_bottomless or audrey_naked)
+        group audrey_top auto variant preg when audrey and not (audrey_topless or audrey_naked)
+        group audrey_top auto variant nopreg when audrey and not (audrey_topless or audrey_naked)
         attribute audrey_nohaircut when audrey
 
-
         attribute aletta
-        attribute aletta_pregnant when aletta
         attribute aletta_collar when aletta
         attribute aletta_glasses when aletta
-        group aletta_bot auto variant preg when aletta and aletta_pregnant and not (aletta_bottomless or aletta_naked)
-        group aletta_bot auto variant nopreg when aletta and not aletta_pregnant and not (aletta_bottomless or aletta_naked)
-        group aletta_top auto variant preg when aletta and aletta_pregnant and not (aletta_topless or aletta_naked)
-        group aletta_top auto variant nopreg when aletta and not aletta_pregnant and not (aletta_topless or aletta_naked)
+        group aletta_bot auto variant preg when aletta and not (aletta_bottomless or aletta_naked)
+        group aletta_bot auto variant nopreg when aletta and not (aletta_bottomless or aletta_naked)
+        group aletta_top auto variant preg when aletta and not (aletta_topless or aletta_naked)
+        group aletta_top auto variant nopreg when aletta and not (aletta_topless or aletta_naked)
         group aletta_hair auto when aletta
-
 
         group cherie auto when cherie
 
-        attribute cherie_pregnant variant desk when cherie and desk
         attribute cherie_collar variant desk when cherie and desk
-        group cherie_top_preg auto variant desk when cherie and desk and cherie_pregnant and not (cherie_topless or cherie_naked)
-        group cherie_top_nopreg auto variant desk when cherie and desk and not cherie_pregnant and not (cherie_topless or cherie_naked)
+        group cherie_top_preg auto variant desk when cherie and desk and not (cherie_topless or cherie_naked)
+        group cherie_top_nopreg auto variant desk when cherie and desk and not (cherie_topless or cherie_naked)
         group cherie_hair auto variant desk when cherie and desk
 
         attribute cherie_collar variant couch when cherie and couch
         group cherie_top auto variant couch when cherie and couch and not (cherie_topless or cherie_naked)
         group cherie_hair auto variant couch when cherie and couch
 
-
         attribute lavish
-        attribute lavish_pregnant when lavish
         attribute lavish_collar when lavish
         attribute lavish_nohaircut when lavish
-        group lavish_bot auto variant preg when lavish and lavish_pregnant and not (lavish_bottomless or lavish_naked)
-        group lavish_bot auto variant nopreg when lavish and not lavish_pregnant and not (lavish_bottomless or lavish_naked)
-        group lavish_top auto variant preg when lavish and lavish_pregnant and not (lavish_topless or lavish_naked)
-        group lavish_top auto variant nopreg when lavish and not lavish_pregnant and not (lavish_topless or lavish_naked)
-
+        group lavish_bot auto variant preg when lavish and not (lavish_bottomless or lavish_naked)
+        group lavish_bot auto variant nopreg when lavish and not (lavish_bottomless or lavish_naked)
+        group lavish_top auto variant preg when lavish and not (lavish_topless or lavish_naked)
+        group lavish_top auto variant nopreg when lavish and not (lavish_topless or lavish_naked)
 
         attribute cassidy
-        attribute cassidy_pregnant when cassidy
         attribute cassidy_collar when cassidy
-        group cassidy_bot auto variant preg when cassidy and cassidy_pregnant and not (cassidy_bottomless or cassidy_naked)
-        group cassidy_bot auto variant nopreg when cassidy and not cassidy_pregnant and not (cassidy_bottomless or cassidy_naked)
-        group cassidy_top auto variant preg when cassidy and cassidy_pregnant and not (cassidy_topless or cassidy_naked)
-        group cassidy_top auto variant nopreg when cassidy and not cassidy_pregnant and not (cassidy_topless or cassidy_naked)
+        group cassidy_bot auto variant preg when cassidy and not (cassidy_bottomless or cassidy_naked)
+        group cassidy_bot auto variant nopreg when cassidy and not (cassidy_bottomless or cassidy_naked)
+        group cassidy_top auto variant preg when cassidy and not (cassidy_topless or cassidy_naked)
+        group cassidy_top auto variant nopreg when cassidy and not (cassidy_topless or cassidy_naked)
         attribute cassidy_nohaircut when cassidy
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

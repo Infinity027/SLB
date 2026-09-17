@@ -486,13 +486,13 @@ steps:
       condition: kat.flags.engagedmike
       next: None
 
-  preg:
-    name: Get Kat pregnant
-    optional: True
-    condition: True
-    outcome:
-      condition: kat.flags.pregnancies_number > 0
-      next: None
+  # preg:
+  #   name: Get Kat pregnant
+  #   optional: True
+  #   condition: True
+  #   outcome:
+  #     condition: kat.flags.pregnancies_number > 0
+  #     next: None
 
   slave:
     name: Make Kat my sex slave

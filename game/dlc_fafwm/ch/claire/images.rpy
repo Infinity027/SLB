@@ -24,25 +24,16 @@ init 1:
         group outfit auto if_not["naked", "topless"]:
             attribute santa "claire_kiss_outfit_date"
             attribute rpg "claire_kiss_outfit_date"
-        group outfit auto variant "pregnant" if_any ["pregnant"] if_not ["naked", "topless"]:
-            attribute santa "claire_kiss_outfit_pregnant_date"
-            attribute rpg "claire_kiss_outfit_pregnant_date"
-
 
         group haircuts auto
 
-
         group acc auto
-
 
         always "claire_kiss_hairmike"
 
-
         always "claire_kiss_shadow"
 
-
         always "claire_kiss_armmike" if_not ["halloween"]
-
 
         group outfitmike_sleeve auto if_not ["naked", "swimsuit", "sexyswimsuit", "sluttyswimsuit"]:
             attribute casual default
@@ -88,7 +79,6 @@ init 1:
         attribute lips null
         attribute navel null
         attribute nipples null
-        attribute pregnant_navel null
 
         always "claire_bj_hairshadow"
         group haircuts auto:
@@ -172,7 +162,6 @@ init 1:
             attribute casual null
             attribute clit null
             attribute navel null
-            attribute pregnant_navel null
             attribute nipples null
 
         group bg auto
@@ -233,7 +222,6 @@ init 1:
         attribute nose
         attribute clit null
         attribute navel null
-        attribute pregnant_navel null
         attribute nipples null
 
         group mouth auto:
@@ -348,30 +336,20 @@ init 1:
         group mouth auto:
             attribute happy default
 
-
         attribute lips null
        
-
         attribute naked null
         attribute casual null
         group outfit auto if_not "naked"
-        group outfit auto variant "pregnant" if_any ["pregnant"] if_not "naked"
-
-
         always "claire_missionary_mike"
-
 
         always "claire_missionary_mike_eyes"
 
-
         attribute collar
-
 
         attribute buttplug
 
-
         always "claire_missionary_mikeoutfit_underwear" if_any ["underwear"] if_not ["naked"]
-
 
         group dickpos:
             attribute anal null
@@ -428,7 +406,7 @@ init -35 python:
     'haircuts': ['nohaircut', 'haircut'],
     'exps': ['normal', 'angry', 'annoyed', 'bored', 'bothered', 'careless', 'conceited', 'cry', 'dazed', 'disappointed', 'eating', 'embarrassed', 'evil', 'furious', 'guilty', 'happy', 'mad', 'mindless', 'pained', 'pissed', 'pleased', 'pout', 'sad', 'sadsmile', 'shy', 'startle', 'stuned', 'surprised', 'talkative', 'upset', 'whining', 'wink'],
     'outfits': ['casual', 'sport', 'date', 'sexydate', 'sluttydate', 'swimsuit', 'sexyswimsuit', 'halloween', 'wedding', 'underwear', 'naked'],
-    'others': ['pregnant', 'pubes', 'collar', 'blush', 'bottomless', 'topless', 'noacc'],
+    'others': ['pubes', 'collar', 'blush', 'bottomless', 'topless', 'noacc'],
 }
 
     def claire_anim_filter(attrs, anim_dict=claire_attrs):
@@ -436,20 +414,14 @@ init -35 python:
         if not isinstance(attrs, list):
             attrs = list(attrs)
         
-        
         add_pickers_attrs = Pickers([ CollarPicker, PubesPicker, HaircutPicker, PositionPicker], npc=claire)(set(attrs))
-        if "pregnant_navel" in add_pickers_attrs:
-            add_pickers_attrs.remove("pregnant_navel")
-            add_pickers_attrs.add("navel")
         attrs.extend(add_pickers_attrs)
-        
         
         sgl_attrs, mult_attrs = anim_attrs_filter(attrs,
         {k: [None, anim_dict[k]] for k in ['positions', 'exps', 'outfits', 'haircuts']},
         {k: [[], anim_dict[k]] for k in ['motions', 'piercings', 'others']},
         prv_def_vals=['outfits']
     )
-        
         
         sgl_attrs['outfits'][0] = (Pickers([OutfitPicker], npc=claire)(set(attrs) if not sgl_attrs['outfits'][0] else {sgl_attrs['outfits'][0]}) & set(anim_dict['outfits']) or {"casual"}).pop()
         

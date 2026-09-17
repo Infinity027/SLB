@@ -2241,24 +2241,6 @@ label sasha_fuck_date_cowgirl(sexperience_min):
                 "When I do, she seems to instantly lose the power of speech."
                 with vpunch
                 "And instead, she almost babbles as I push her into an orgasm of her own."
-            elif _return == "vaginal_inside_pregnant":
-                $ sasha.love += 3
-                if sasha.sub < 25:
-                    "Sasha smiles at me over the curve of her bump, as if to remind me it's okay to cum inside of her."
-                elif sasha.is_sex_slave:
-                    sasha.say "Please cum inside of me, [hero.name]."
-                    sasha.say "I am already carrying your child."
-                else:
-                    sasha.say "You can cum inside of me, [hero.name]."
-                    sasha.say "Because you can't make me MORE pregnant!"
-                "That reminder of how much I love and desire her is all that I need."
-                $ renpy.sound.play("sd/moans/sasha/sasha_moans_light_orgasm.ogg", loop=True)
-                show sasha cowgirl cum ahegao with vpunch
-                "And I cum a moment later, deep inside of Sasha's pussy."
-                with vpunch
-                "When I do, she seems to instantly lose the power of speech."
-                with vpunch
-                "And instead, she almost babbles as I push her into an orgasm of her own."
             elif _return == "vaginal_inside_sub":
                 show sasha cowgirl cum ahegao with vpunch
                 "I can feel myself cumming inside of Sasha, and it feels incredible."
@@ -2605,19 +2587,6 @@ label sasha_fuck_date_missionary(sexperience_min):
                     play sound "sd/moans/sasha/sasha_moans_light_orgasm.ogg"
                     queue sound "sd/moans/sasha/sasha_panting.ogg" loop
                     "Making her moan and whimper as I explode inside of her pussy."
-                elif _return == "vaginal_inside_pregnant":
-                    show sasha missionary sashanormal
-                    sasha.say "Fill me up..."
-                    sasha.say "It's okay...I'm pregnant!"
-                    "I'm not sure how I could have forgotten that particular fact."
-                    show sasha missionary sashapain with vpunch
-                    "But there's no way that I can hold back now, not even if I wanted too."
-                    "All I can do is keep on going, right until the very last moment."
-                    show sasha missionary sashacum creampie -speed with vpunch
-                    "Pushing as deep into Sasha as possible as I shoot my load."
-                    play sound "sd/moans/sasha/sasha_moans_light_orgasm.ogg"
-                    queue sound "sd/moans/sasha/sasha_panting.ogg" loop
-                    "Making her moan and whimper as I explode inside of her pussy."
                 elif _return == "vaginal_inside_mad":
                     show sasha missionary sashanormal
                     sasha.say "Pull out, [hero.name]…"
@@ -2912,8 +2881,6 @@ label sasha_fuck_date_standing(sexperience_min):
             with hpunch
             pause 0.25
             with hpunch
-            if _return not in ["vaginal_inside_pill", "vaginal_inside_pregnant"]:
-                $ sasha.impregnate()
         "As my climax ends and hers dies down to shudders, we both fall on the bed."
         "Several moments of silence stretch as we both struggle to catch our breath."
     else:
@@ -3149,19 +3116,6 @@ label sasha_fuck_date_standing(sexperience_min):
                     sasha.say "Fill me up..."
                     sasha.say "It's okay...I'm on the pill!"
                     "I silently thank Sasha for the timely reminder."
-                    "But there's no way that I can hold back now, not even if I wanted too."
-                    "All I can do is keep on going, right until the very last moment."
-                    show sasha stand creampie
-                    "Pushing as deep into Sasha as possible as I shoot my load."
-                    with vpunch
-                    "Making her moan and whimper as I explode inside of her pussy."
-                elif _return == "vaginal_inside_pregnant":
-                    if sasha_ballgag:
-                        show sasha stand -gag
-                        "Just in time, Sasha manages to spit out the gag."
-                    sasha.say "Fill me up..."
-                    sasha.say "It's okay...I'm pregnant!"
-                    "I'm not sure how I could have forgotten that particular fact."
                     "But there's no way that I can hold back now, not even if I wanted too."
                     "All I can do is keep on going, right until the very last moment."
                     show sasha stand creampie
@@ -3492,8 +3446,6 @@ label sasha_fuck_date_doggy(sexperience_min):
                     "I thrust forward, holding her hard against me as my cock twitches deep inside her."
                     $ renpy.sound.play("sd/moans/sasha/sasha_moans_hard_orgasm.ogg", loop=True)
                     show sasha doggy mike vaginal cum scream with hpunch
-                    if _return not in ["vaginal_inside_pill", "vaginal_inside_pregnant"]:
-                        $ sasha.impregnate()
                     pause 0.25
                     with hpunch
                     pause 0.25
@@ -3616,8 +3568,6 @@ label sasha_fuck_date_doggy(sexperience_min):
             "I thrust forward, holding her hard against me as my cock twitches deep inside her."
             $ renpy.sound.play("sd/moans/sasha/sasha_moans_hard_orgasm.ogg", loop=True)
             show sasha doggy mike vaginal cum scream with hpunch
-            if _return not in ["vaginal_inside_pill", "vaginal_inside_pregnant"]:
-                $ sasha.impregnate()
             pause 0.25
             with hpunch
             pause 0.25
@@ -3794,8 +3744,6 @@ label sasha_bondage_sex_second_round:
                     "I might have normally pulled out at that moment, but something about the bondage aspect makes me want to dominate Sasha still further."
                     show sasha missionary creampie
                     "Holding her down more forcefully than ever, I make her ride out every second of my orgasm, revelling in her twitches and cries as I do so."
-                if _return not in ["vaginal_inside_pill", "vaginal_inside_pregnant"]:
-                    $ sasha.impregnate()
         "Standing" if hero.sexperience >= 15:
             scene sasha stand
             show sasha stand rope
@@ -3870,8 +3818,7 @@ label sasha_bondage_sex_second_round:
                     pause 0.25
                     with hpunch
                     "Holding her down more forcefully than ever, I make her ride out every second of my orgasm, revelling in her twitches and cries as I do so."
-                if _return not in ["vaginal_inside_pill", "vaginal_inside_pregnant"]:
-                    $ sasha.impregnate()
+
         "Doggy style" if hero.sexperience >= 20:
             scene sasha doggy
             show sasha doggy rope
@@ -3951,8 +3898,6 @@ label sasha_bondage_sex_second_round:
                     pause 0.25
                     with hpunch
                     "Holding her down more forcefully than ever, I make her ride out every second of my orgasm, revelling in her twitches and cries as I do so."
-                if _return not in ["vaginal_inside_pill", "vaginal_inside_pregnant"]:
-                    $ sasha.impregnate()
     $ renpy.sound.play("sd/moans/sasha/sasha_panting.ogg", loop=True)
     "No one speaks as we lie there, drenched in each other's sweat and utterly exhausted."
     "I survived my first experience of bondage, and I can't say that I didn't like the vast majority of it."

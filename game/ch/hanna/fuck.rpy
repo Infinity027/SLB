@@ -665,17 +665,6 @@ label hanna_fuck_date_doggy(sexperience_min):
                 "Afterwards, she almost collapses onto the bedroom floor as I release her."
                 "I fall over in the opposite direction, panting and exhausted."
                 $ hanna.love += 1
-            elif _return == "vaginal_inside_pregnant":
-                "I don't need to be reminded of the fact that Hanna's pregnant."
-                "The weight of her swollen belly has been present from the first moment we came together."
-                "But it does mean that I'm instinctively more gentle as I prepare to lose myself inside of her."
-                show hanna doggy creampie with hpunch
-                "Hanna's moans and cries are that much softer and more sensual on account of this."
-                show hanna doggy ahegao squirt with hpunch
-                "And she feels every movement that I make, filling her with all that I have."
-                "Afterwards, she almost collapses onto the bedroom floor as I release her."
-                "I fall over in the opposite direction, panting and exhausted."
-                $ hanna.love += 1
             elif _return == "vaginal_inside_mad":
                 hanna.say "Oh fuck, [hero.name]..."
                 hanna.say "That feels SO good..."
@@ -686,7 +675,6 @@ label hanna_fuck_date_doggy(sexperience_min):
                 "I fill Hanna with all that I have, hearing her groan in apparent dread."
                 with hpunch
                 "And my own climax is also tainted, as I realise just what we've done..."
-                # $ hanna.impregnate()
                 $ hanna.love -= 10
                 $ hanna.sub += 5
             elif _return == "vaginal_inside_happy":
@@ -861,18 +849,6 @@ label hanna_fuck_date_missionary(sexperience_min):
                     with vpunch
                     "And all I can do is lay beside her, doing the exact same thing."
                     $ hanna.love += 1
-                elif _return == "vaginal_inside_pregnant":
-                    hanna.say "Oh...oh..."
-                    hanna.say "Preg...pregnant!"
-                    "I can't actually believe that Hanna thinks I need to be reminded of that particular fact!"
-                    show hanna missionary cum with vpunch
-                    "But the reminder is more than welcome, meaning I can just go right on and finish inside of her."
-                    with vpunch
-                    "Hanna seems to pass out as I do just that, her head buried in the pillows."
-                    show hanna missionary ahegao with vpunch
-                    "Afterwards she takes a long while to recover, filling her lungs with each and every breath."
-                    "And all I can do is lay beside her, doing the exact same thing."
-                    $ hanna.love += 1
                 elif _return == "vaginal_inside_mad":
                     "I'm totally absorbed in the moment, and Hanna seems to be on another planet."
                     "So the end result is that no one realises that I'm about to cum inside of her until it's too late!"
@@ -1032,15 +1008,6 @@ label hanna_fuck_date_missionary(sexperience_min):
                     "She takes everything that I have to give, hungrily clinging onto me until the very last."
                     with vpunch
                     "Afterwards, all I can hear is the both of us, panting and utterly exhausted."
-                    $ hanna.love += 1
-                elif _return == "vaginal_inside_pregnant":
-                    "I've been comforted by the soft, rounded presence of Hanna's pregnant belly from the very start."
-                    "And now it reminds me that there's no need to cut things short, and I can go in until the very end."
-                    "Hanna too seems to appreciate those extra few moments of intimacy, holding onto me with renewed vigour."
-                    show hanna missionary cum with vpunch
-                    "She cums a few moments after I've filled her with all that I have to give."
-                    show hanna missionary ahegao with vpunch
-                    "And all that remains now is for us to lie together, enjoying the afterglow."
                     $ hanna.love += 1
                 elif _return == "vaginal_inside_mad":
                     hanna.say "[hero.name]..."

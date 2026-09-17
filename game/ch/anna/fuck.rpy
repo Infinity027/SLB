@@ -838,17 +838,6 @@ label anna_fuck_date_missionary(sexperience_min):
                 "Anna takes all that I have to give and can only moan from that point on."
                 with hpunch
                 "As soon as I'm done, I crawl off of Anna and collapse at her side."
-            elif _return == "vaginal_inside_pregnant":
-                "I hardly need reminding of the fact that there's no danger to shooting my load inside of Anna right now."
-                "After all, I am practically leaning on the curve of her rather pregnant belly."
-                "If she in any way resembles a beached whale right now, then it's a particularly sexy species of aquatic mammal!"
-                show anna missionary creampie with hpunch
-                $ anna.love += 2
-                "Anna makes no visible sign of objection as I lose myself inside of her."
-                with hpunch
-                "Instead she remains where she is, panting and moaning softly."
-                with hpunch
-                "As soon as I'm done, I crawl off of Anna and collapse at her side."
             elif _return == "vaginal_inside_sub":
                 "I should really drag my cock out of Anna, before I cum inside of her."
                 "But what would she actually do if I just chose to keep on going and not bother to warn her?"
@@ -1044,16 +1033,6 @@ label anna_fuck_date_doggy(sexperience_min):
                 show anna doggy mouth_pleasure with hpunch
                 "By the time I'm done, the only things keeping Anna upright are the pillows her face is buried in."
                 "Well, that and the fact that my cock is still holding her ass in the air too!"
-            elif _return == "vaginal_inside_pregnant":
-                "It'd be hard not to notice the size of Anna's swollen belly, or feel its weight as I go at her."
-                "Along with her heavy breasts, it brushes the bedclothes as she kneels on all fours in front of me."
-                "But what it means right now is that I don't have to worry about being inside of her when I cum."
-                show anna doggy mouth_hurt eyes_ahegao cum with hpunch
-                $ anna.love += 2
-                "I just keep right on going until the very moment that I lose it inside of her."
-                show anna doggy mouth_pleasure with hpunch
-                "By the time I'm done, the only things keeping Anna upright are the pillows her face is buried in."
-                "Well, that and the fact that my cock is still holding her ass in the air too!"
             elif _return == "vaginal_inside_sub":
                 "I should really drag my cock out of Anna, before I cum inside of her."
                 "But what would she actually do if I just chose to keep on going and not bother to warn her?"
@@ -1193,16 +1172,6 @@ label anna_fuck_date_cowgirl(sexperience_min):
                 anna.say "On the...pill...remember!"
                 "I've never been so glad to hear those words as I am right now."
                 "I'd kiss Anna - if I wasn't already balls deep inside of her!"
-                show anna cowgirl cum vaginal with vpunch
-                "I just keep right on going until the very moment that I lose it inside of her."
-                $ anna.love += 2
-                with vpunch
-                "By the time I'm done, the only things keeping Anna upright are my hand squeezing her tits."
-                "Well, that and the fact that my cock is still holding her ass in the air too!"
-            elif _return == "vaginal_inside_pregnant":
-                "It'd be hard not to notice the size of Anna's swollen belly, or feel its weight as I go at her."
-                "Along with her heavy breasts, it jumps up and down as she bounce on my cock."
-                "But what it means right now is that I don't have to worry about being inside of her when I cum."
                 show anna cowgirl cum vaginal with vpunch
                 "I just keep right on going until the very moment that I lose it inside of her."
                 $ anna.love += 2

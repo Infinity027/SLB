@@ -146,7 +146,6 @@ init 1:
             attribute pull null
 
         attribute collar
-        attribute pregnant
 
         group hair auto
 

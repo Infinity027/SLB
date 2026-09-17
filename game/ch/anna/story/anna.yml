@@ -364,14 +364,6 @@ steps:
       condition: anna.flags.engagedmike
       next: None
 
-  preg:
-    name: Get Anna pregnant
-    optional: True
-    condition: True
-    outcome:
-      condition: anna.flags.pregnancies_number > 0
-      next: None
-
   slave:
     name: Make Anna my sex slave
     optional: True

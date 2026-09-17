@@ -382,11 +382,6 @@ init -30 python:
                         renpy.image(mc_image, img_path)
         elif "st2" in split_path or "st" in split_path:
             
-            
-            
-            
-            
-            
             size = (0, 0)
             if img_path.endswith(".webp") or img_path.endswith(".png"):
                 try:
@@ -509,21 +504,15 @@ init 5 python:
         )
         return ImageDissolve(img, _time, ramplen=_ramplen, reverse=_reverse)
     
-    
-    
     timelaps = ImageDissolve("gui/transition/timelaps.png", 0.75, ramplen=8)
     rtimelaps = ImageDissolve("gui/transition/timelaps.png", 0.75, ramplen=8, reverse=True)
-    
     
     def Timelaps(_time, _ramplen=8, _reverse=False):
         return ImageDissolve(
             "gui/transition/timelaps.png", _time, ramplen=_ramplen, reverse=_reverse
         )
     
-    
-    
     screenshot = Fade(0.05, 0.05, 0.05, color="#fff")
-    
     
     def Screenshot(_dissolve=0.05, _pause=0.05):
         return Fade(_dissolve, _pause, _dissolve, color="#fff")
@@ -535,7 +524,6 @@ init 5 python:
         """
         if text_length == 0:
             return initial_font_size
-        
         
         char_width_estimate = initial_font_size * 0.63 
         
