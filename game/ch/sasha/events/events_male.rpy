@@ -2581,10 +2581,10 @@ label sasha_practice_02:
     show kleio normal
     anna.say "Aw, you look so cute!"
     show anna b evil
-    show kleio talkative
+    show kleio talk
     kleio.say "Check out the ass on that!"
     show kleio seductive
-    show sasha talkative
+    show sasha talk
     sasha.say "That's really your colour, [hero.name]!"
     show sasha joke
     "I cross my arms over my chest and shake my head at them."
@@ -2598,7 +2598,7 @@ label sasha_practice_02:
     show kleio normal
     show anna b normal
     "She looks to Anna and then to Kleio, who both nod in turn."
-    show sasha talkative
+    show sasha talk
     sasha.say "That was the deal, [hero.name]."
     sasha.say "And you kept your side."
     sasha.say "As far as I'm concerned, you're in."
@@ -2606,7 +2606,7 @@ label sasha_practice_02:
     show anna b happy
     anna.say "Same here - so long as I can do your hair!"
     show anna normal
-    show kleio talkative
+    show kleio talk
     kleio.say "I say you're in, but it's provisional."
     kleio.say "And you're not a full band member until you play a gig like that!"
     show kleio happy at startle
@@ -2624,26 +2624,26 @@ label sasha_practice_02:
     mike.say "The important thing is that I'm in the band, full stop!"
     "Getting no protests at this, I take it that the matter is closed."
     if anna.sexperience > 0 and kleio.sexperience > 0 and sasha.sexperience > 0:
-        show sasha talkative
+        show sasha talk
         sasha.say "Seriously though, [hero.name], this took some guts."
         show sasha normal
-        show anna b talkative
+        show anna b talk
         anna.say "Yeah, most guys I know would have never done this."
         show anna b normal
-        show kleio talkative
+        show kleio talk
         kleio.say "They're right, Loverboy, you've got balls!"
         show kleio normal
         "Hearing the girls talking like this after all the teasing catches me off guard."
         "And I find myself shrugging, even blushing a little as they compliment me."
         mike.say "Well...I...I wanted in on the band."
         mike.say "It really does mean that much to me, guys!"
-        show sasha talkative
+        show sasha talk
         sasha.say "I had no idea you were this passionate."
         show sasha normal
-        show anna b talkative
+        show anna b talk
         anna.say "Or this adventurous, [hero.name]!"
         show anna b normal
-        show kleio talkative
+        show kleio talk
         kleio.say "Yeah, it kinda makes a girl wonder, you know?"
         kleio.say "Wonder just how adventurous you can be!"
         show kleio normal
@@ -2653,10 +2653,10 @@ label sasha_practice_02:
         show kleio at center, traveling(1.5, 0.3, (440, 1050))
         "Once Sasha has gone off to do whatever, Anna and Kleio corner me."
         "They press in close, making sure that they can't be overheard."
-        show kleio talkative
+        show kleio talk
         kleio.say "I...I didn't think you'd do it, Loverboy."
         show kleio normal
-        show anna b talkative
+        show anna b talk
         anna.say "Yeah, [hero.name], you've got such big balls!"
         show anna b normal
         "I had no idea that wearing a dress can impress them both so much."
@@ -2667,7 +2667,7 @@ label sasha_practice_02:
         "Is...is Kleio actually blushing a little?!?"
         show anna wink
         "And I can see that Anna has a certain twinkle in her eye all of a sudden."
-        show kleio talkative
+        show kleio talk
         kleio.say "You wanna try us on for size later?"
         show kleio seductive
         show anna happy
@@ -2680,7 +2680,7 @@ label sasha_practice_02:
         show sasha at center, traveling(1.5, 0.3, (640, 1050))
         "Once the others have gone off to do whatever, Sasha corners me."
         "She leans in close so that we can't be overheard."
-        show sasha talkative
+        show sasha talk
         sasha.say "I didn't think you'd do it."
         sasha.say "But you sure showed me, [hero.name]!"
         show sasha normal
@@ -2689,7 +2689,7 @@ label sasha_practice_02:
         mike.say "That and being in it with you."
         mike.say "That's why I did it."
         "Sasha smiles at this, nodding her head."
-        show sasha talkative blush
+        show sasha talk blush
         sasha.say "Well, remind me to thank you later."
         show sasha b flirt -blush
         sasha.say "You know - when we're alone?"
@@ -2701,7 +2701,7 @@ label sasha_practice_02:
         show kleio at center, traveling(1.5, 0.3, (640, 1050))
         "Once the others have gone off to do whatever, Kleio corners me."
         "She leans in close so that we can't be overheard."
-        show kleio talkative
+        show kleio talk
         kleio.say "I...I didn't think you'd do it, Loverboy."
         kleio.say "But you sure showed me!"
         show kleio normal

@@ -113,4 +113,3 @@ screen mallmap(locations):
                             (7, 7), f"gui/action_icons/button_{p}.png"
                             ):
                             at Position(anchor=(0.5, 0.5))
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

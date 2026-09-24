@@ -12,4 +12,3 @@ init python:
     "outfit": "sport",
     "tags": ["gym"],
     })
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

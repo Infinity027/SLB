@@ -356,7 +356,7 @@ label gaming_harem_event_04:
     "[bree.name] looks stressed and more than a little frazzled right how."
     "And I guess I'd see the same thing on my own face if I looked in the mirror."
     "But she still manages to nod her head in response to the question."
-    show bree talkative
+    show bree talk
     bree.say "I think so..."
     bree.say "At least I can't remember anything else."
     bree.say "But then my brain feels like tofu right now!"
@@ -366,7 +366,7 @@ label gaming_harem_event_04:
     "But then there's the sound of a knock at the door."
     "As one, we turn to look in the direction of the noise."
     mike.say "That has to be her, right?"
-    show bree talkative
+    show bree talk
     bree.say "Well it can't be Sasha, because she has keys."
     show bree normal
     mike.say "Then it's got to be Kat!"
@@ -427,7 +427,7 @@ label gaming_harem_event_04:
     mike.say "Don't be silly, Kat..."
     mike.say "We take gaming nights seriously in this house."
     mike.say "So you'd better get used to this."
-    show bree talkative
+    show bree talk
     bree.say "Oh, and we don't hold back just because you're new either."
     bree.say "So I hope you brought your best game along tonight, Kat?"
     show bree normal
@@ -455,7 +455,7 @@ label gaming_harem_event_04:
     show kat normal
     show bree happy
     "[bree.name] and I exchange a glance, a shrug and a nod."
-    show bree talkative
+    show bree talk
     bree.say "Okay, Kat..."
     bree.say "That'd make things more interesting for sure."
     show bree normal
@@ -464,7 +464,7 @@ label gaming_harem_event_04:
     show kat smile
     "Kat's smile gets wider still, like a Kat creeping up on its prey."
     "And I can't help getting the feeling she has us right where she wants us right now."
-    show kat talkative
+    show kat talk
     kat.say "Just this..."
     kat.say "We keep score tonight, okay?"
     show kat whinge
@@ -473,7 +473,7 @@ label gaming_harem_event_04:
     show kat normal
     "I'm about to ask [bree.name] what she thinks of the terms Kat's offering."
     "But even as I turn my head, she's already started speaking."
-    show bree talkative
+    show bree talk
     bree.say "Okay, Kat..."
     bree.say "You're on - but I want to add a stipulation."
     bree.say "We're playing the games with our hands, right?"
@@ -481,7 +481,7 @@ label gaming_harem_event_04:
     show bree normal
     show kat smile
     "My head snaps back to Kat, who nods eagerly."
-    show kat talkative
+    show kat talk
     kat.say "Agreed!"
     kat.say "What about you, [hero.name]?"
     kat.say "I take it you're in?"
@@ -602,7 +602,7 @@ label gaming_harem_kat_blowjob:
     mike.say "And you're okay with that?"
     "By now Kat's made it all the way to me."
     "And she's propping herself up on my knees."
-    show kat talkative
+    show kat talk
     kat.say "I was the one that suggested the bet, wasn't I?"
     kat.say "So it'd be pretty shitty of me to welch on it..."
     show kat shy
@@ -675,7 +675,7 @@ label gaming_harem_bree_blowjob:
     mike.say "And you're okay with that?"
     "By now [bree.name]'s made it all the way to me."
     "And she's propping herself up on my knees."
-    show bree talkative
+    show bree talk
     bree.say "I agreed to the bet too, didn't I?"
     bree.say "So it'd be pretty shitty of me to welch on it..."
     show bree normal
@@ -717,7 +717,7 @@ label gaming_harem_bree_cunnilingus:
     mike.say "Erm..."
     mike.say "I gotta say..."
     mike.say "That did not turn out how I'd hoped!"
-    show bree talkative
+    show bree talk
     bree.say "A bet's a bet, [hero.name]..."
     bree.say "You're not going to try to get out of it, are you?"
     show bree normal
@@ -827,7 +827,7 @@ label gaming_harem_kat_cunnilingus_bree:
     mike.say "And Kat coming in last!"
     show kat sadsmile
     "Kat nods her head, as I say all of this."
-    show kat talkative blush
+    show kat talk blush
     kat.say "Okay, okay..."
     kat.say "I know where I finished."
     kat.say "And I know what it means too!"
@@ -877,7 +877,7 @@ label gaming_harem_kat_cunnilingus:
     mike.say "Erm..."
     mike.say "I gotta say..."
     mike.say "That did not turn out how I'd hoped!"
-    show kat talkative blush
+    show kat talk blush
     kat.say "A bet's a bet, [hero.name]..."
     kat.say "You're not going to try to get out of it, are you?"
     show kat shy
@@ -940,7 +940,7 @@ label gaming_harem_bree_cunnilingus_kat:
     mike.say "And [bree.name] coming in last!"
     show bree sadsmile blush
     "[bree.name] nods her head, as I say all of this."
-    show bree talkative
+    show bree talk
     bree.say "Okay, okay..."
     bree.say "I know where I finished."
     bree.say "And I know what it means too!"
@@ -998,16 +998,16 @@ label bree_kat_propose_male:
     show kat shy
     "And they exchange a look that seems to mean they're both thinking the same thing."
     "But I have no hope of telling what that is myself."
-    show bree talkative
+    show bree talk
     bree.say "Oh really?"
     bree.say "Something you wanted to ask us?"
     show bree normal
-    show kat talkative
+    show kat talk
     kat.say "The both of us?"
     kat.say "Hmm..."
     kat.say "I wonder what that could be?"
     show kat normal
-    show bree talkative
+    show bree talk
     bree.say "I couldn't even begin to guess!"
     show kat happy
     show bree happy
@@ -1101,7 +1101,7 @@ label bree_kat_propose_male:
         "But I never actually thought of what would happen if they disagreed!"
         "So all I can think to do is get to my feet."
         "And then to put a ring on [bree.name]'s finger."
-        show bree talkative
+        show bree talk
         bree.say "Wait a second, Kat..."
         bree.say "Why wouldn't you want to marry us?"
         bree.say "Are you saying we're not good enough for you or something?!?"
@@ -1147,7 +1147,7 @@ label bree_kat_propose_male:
         show kat normal
         show bree surprised
         bree.say "What?"
-        show bree talkative
+        show bree talk
         bree.say "No, of course not!"
         bree.say "I just don't want to get married, not to either of you or anyone else."
         show bree gloomy

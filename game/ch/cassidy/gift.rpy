@@ -104,7 +104,7 @@ label cassidy_gift_slutty_dress_male:
     "But the moment she lays eyes on me, it's like she's got some kind of sixth sense."
     "Well, at least when it comes to presents being brought into her immediate vicinity."
     "And she's on me like a bloodhound with a scent to follow!"
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Hey, [hero.name]..."
     cassidy.say "What's that you got there?"
     show cassidy normal
@@ -116,7 +116,7 @@ label cassidy_gift_slutty_dress_male:
     mike.say "What the..."
     mike.say "Cassidy..."
     mike.say "Will you stop it?!?"
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Hard to say, under the circumstances."
     cassidy.say "I don't normally quit until I get what I want."
     cassidy.say "So that means there's always the option to just give it to me!"
@@ -144,7 +144,7 @@ label cassidy_gift_slutty_dress_male:
         "And the next thing I know, she's holding the dress up against herself."
         "Smoothing the slinky fabric over the equally slinky curves of her body."
         "And watching her doing that is certainly making the purchase feel worthwhile."
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "Oh, [hero.name]..."
         cassidy.say "I must have, like, a million dresses in my wardrobe."
         cassidy.say "But I never had one as daring as this before."

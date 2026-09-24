@@ -225,7 +225,7 @@ label male_intro:
     "I've been staring at this computer screen for what feels like an eternity by now, mindlessly tapping away at my keyboard."
     "Words fill the screen in front of me, more than I needed, or was expected to write."
     "In my mindless trance I barely comprehend the sound of footsteps behind me, approaching with haste."
-    show aletta talkative with easeinleft
+    show aletta talk with easeinleft
     show fx exclamation
     aletta.say "Your shift's over, what are you still doing here?"
     show aletta normal
@@ -251,7 +251,7 @@ label male_intro:
     $ active_girl.object = audrey
     scene bg office with fade
     pause 0.3
-    show audrey talkative at right with easeinright
+    show audrey talk at right with easeinright
     audrey.say "Wait! Take me with you!"
     show audrey normal at center with ease
     "I'm stopped in my tracks by my coworker, Audrey, leaping in front of me, clasping onto my shirt with a pleading look in her eyes."
@@ -377,12 +377,12 @@ label male_intro:
     mike.say "Move in?"
     mike.say "I've known you for less than a minute!"
     mike.say "Shouldn't we like, ask questions and get to know each other first?"
-    show bree talkative
+    show bree talk
     bree.say "Oh, OK!"
     bree.say "In that case, tell me about yourself!"
     show bree normal
     mike.say "Well, that's kinda vague..."
-    show bree talkative
+    show bree talk
     show fx question zorder 2
     bree.say "Then... Do you like sports?"
     show bree normal
@@ -410,7 +410,7 @@ label male_intro:
                 $ hero.charm += 4
                 $ hero.fitness += 6
                 show fx question zorder 2
-                show bree talkative
+                show bree talk
                 bree.say "Really? You don't seem like a golfer."
                 show bree normal
                 mike.say "What, not a middle aged businessman in a suit?"
@@ -422,7 +422,7 @@ label male_intro:
                 mike.say "I am fucking sneaky."
                 $ hero.gain_skill("sneaky")
                 $ hero.charm += 10
-                show bree talkative
+                show bree talk
                 show fx question zorder 2
                 bree.say "Really? You don't look like a ninja to me."
                 show bree normal
@@ -436,7 +436,7 @@ label male_intro:
                 $ hero.gain_skill("cooking")
                 $ hero.charm += 3
                 $ hero.knowledge += 2
-                show bree talkative
+                show bree talk
                 bree.say "Cooking? Well, it's not really a sport..."
                 show bree happy
                 bree.say "But I'll forget about that if you make me something good!"
@@ -475,7 +475,7 @@ label male_intro:
     mike.say "That was one question!"
     show bree happy
     bree.say "Yeah, and now we know each other better! Great!"
-    show bree talkative
+    show bree talk
     bree.say "Which room is mine?"
     show bree normal
     play sound door_bell
@@ -494,7 +494,7 @@ label male_intro:
     "I step away from the door, waiting for the stranger to enter as [bree.name] seems to grow curious."
     $ game.room = "livingroom"
     scene bg livingroom
-    show bree talkative at right
+    show bree talk at right
     with fade
     show fx question zorder 2 at right
     bree.say "Is that our new roommate?"
@@ -515,7 +515,7 @@ label male_intro:
     mike.say "Yeah, nice to meet you."
     show bree happy
     bree.say "And I'm [bree.name]!"
-    show bree talkative
+    show bree talk
     bree.say "Are you going to be moving in too?"
     show bree normal
     show sasha shout
@@ -556,12 +556,12 @@ label male_intro:
     show bree normal
     mike.say "Yeah, likewise."
     "'Nice' was an overstatement, but being rude would be dangerous with a girl like that."
-    show bree talkative
+    show bree talk
     bree.say "Alright, anything else you need from me?"
     show bree normal
     "There's so many questions, I don't know where to begin, so I simply start with what seems obvious."
     mike.say "I'll need your current job for the leasing contract."
-    show bree talkative
+    show bree talk
     bree.say "I'm a student full time."
     show bree normal
     "That gives me slight pause, but I make a mental note of it anyway."
@@ -573,7 +573,7 @@ label male_intro:
     "The staff would be pretentious and all have names like 'Winter'."
     "Everything would be expensive to make up for the fact that nobody but goths cares about it, so sales are low."
     "But hey, I don't care how she makes her money as long as I don't have to cover her ass with rent."
-    show bree talkative
+    show bree talk
     bree.say "What do you do?"
     show bree normal
     mike.say "I work as a code monkey in a local company."
@@ -582,7 +582,7 @@ label male_intro:
     sasha.say "That doesn't sound like the most inspiring job."
     show sasha normal
     mike.say "That's because it isn't."
-    show bree talkative
+    show bree talk
     bree.say "Then, how do you unwind?"
     bree.say "You gotta have a hobby or two to relax with."
     show bree normal
@@ -634,19 +634,19 @@ label male_intro:
             $ p = True
             mike.say "I am a bit of a party animal."
             $ hero.charm += 20
-            show bree talkative
+            show bree talk
             bree.say "You mean, clubs and stuff?"
             show bree normal
             show sasha happy
             sasha.say "Yeah, that's what he said."
             show sasha normal
-            show bree talkative
+            show bree talk
             bree.say "I never liked clubs, too loud."
             show bree sadsmile
             mike.say "I love a good night out."
             "Was... Was that a smile? On Sasha?"
             "It only lasted for a moment, but I could have sworn I saw one..."
-            show bree talkative
+            show bree talk
             bree.say "What about you, Sasha? You do anything fun?"
             show bree normal
         "Working" if not start_plus or not (hero.has_skill("work") or (hero.skills["work"].value and hero.skills["work"].value > 0) ):
@@ -654,7 +654,7 @@ label male_intro:
             $ hero.gain_skill("work")
             $ hero.charm += 5
             show fx drop zorder 2 at right
-            show bree talkative
+            show bree talk
             bree.say "That's a bit boring..."
             show bree sadsmile
             mike.say "What about you then, Sasha?"
@@ -703,7 +703,7 @@ label male_intro:
             sasha.say "That's not much of an answer."
             show sasha normal
             show fx drop zorder 2 at right
-            show bree talkative
+            show bree talk
             bree.say "Yeah..."
             show bree normal
             "Quickly, I move to deflect attention before they start prying."
@@ -722,13 +722,13 @@ label male_intro:
     show sasha normal
     mike.say "You said you're a student, right [bree.name]? What do you study?"
     show fx exclamation zorder 2 at right
-    show bree talkative
+    show bree talk
     bree.say "Oh, I'm studying to be a doctor."
     show bree normal
     mike.say "Really? Friend of mine just graduated medical school."
     "Wait, maybe telling her that was a bad idea."
     "I don't want Ryan stealing away another hot roommate."
-    show bree talkative
+    show bree talk
     bree.say "Oh wow, tell him I said congrats! It's tough."
     show bree normal
     "Fortunately for me, [bree.name] doesn't seem all that interested in meeting him, letting the conversation move on without another hiccup."
@@ -740,7 +740,7 @@ label male_intro:
     menu:
         "No, nothing...":
             mike.say "Must be one of those rare perfect ones..."
-            show bree talkative
+            show bree talk
             bree.say "You are no fun..."
             show bree normal
             show sasha shout
@@ -801,7 +801,7 @@ label male_intro:
                 "In unison, the pair turned to face me."
                 show fx exclamation zorder 2 at right
                 show fx exclamation as fx2 zorder 2 at left
-                show bree talkative
+                show bree talk
                 bree_sasha "She started it!"
                 show bree normal
                 "What am I going to do with these two...?"
@@ -837,7 +837,7 @@ label male_intro:
                 show sasha normal
                 "Sasha acts as though she isn't impressed, but I think I can see through her facade this time. [bree.name] clearly doesn't."
                 show fx exclamation zorder 2 at right
-                show bree talkative
+                show bree talk
                 bree.say "Hey, he's a hard worker! Don't take that away from him."
                 show bree sadsmile
                 show sasha shout
@@ -871,7 +871,7 @@ label male_intro:
                 "The pair visibly cringed at my comment, each reeling backwards in disgust."
                 "I just wore a dumb smile."
                 "It was true, I was larger than most and an animal in the sack, it's one of my best features in fact."
-                show bree talkative
+                show bree talk
                 bree.say "Can we just... Forget you ever said that and move on?"
                 show bree blank
                 show sasha angry
@@ -891,7 +891,7 @@ label male_intro:
                 "The pair visibly cringed at my comment, each reeling backwards in disgust."
                 "I just wore a dumb smile."
                 "It was true, I was more enduring than most and an animal in the sack, it's one of my best features in fact."
-                show bree talkative
+                show bree talk
                 bree.say "Can we just... Forget you ever said that and move on?"
                 show bree blank
                 show sasha angry

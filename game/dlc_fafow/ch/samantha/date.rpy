@@ -18,7 +18,7 @@ label samantha_date_amusement_park_male:
     mike.say "Huh?"
     mike.say "Doing what, Sam?"
     "Of course, Sam isn't fooled for a second."
-    show samantha talkative
+    show samantha talk
     samantha.say "Don't act all dumb!"
     samantha.say "Why are you grinning at me like a fool?"
     samantha.say "Is there a problem with my makeup?"
@@ -33,7 +33,7 @@ label samantha_date_amusement_park_male:
     "I can see that's not the answer Sam was expecting."
     show samantha happy blush
     "And it looks like she's even blushing a little."
-    show samantha talkative
+    show samantha talk
     samantha.say "Oh..."
     samantha.say "No, [hero.name]…"
     samantha.say "If that's the reason, then you can keep on smiling at me all you like!"

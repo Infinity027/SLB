@@ -68,4 +68,3 @@ label electronic_shop:
     $ Room.find("electronic").shop(clerk, discount=Room.find("electronic").flags.discount)
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

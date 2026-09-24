@@ -81,14 +81,14 @@ label cherie_ask_birthday_male:
             show cherie happy
             cherie.say "Oh, I am such a forgetful mess!"
             cherie.say "Of course you shall have the date."
-            show cherie talkative
+            show cherie talk
             cherie.say "But please do not think that obliges you to mark the occasion in any way."
         else:
             show cherie surprised
             cherie.say "Oh no..."
             cherie.say "No, no, no..."
             cherie.say "That will not do at all!"
-            show cherie talkative
+            show cherie talk
             cherie.say "You must know the exact date, {i}mon ami{/i}..."
             show cherie happy
             cherie.say "Otherwise how will we be able to celebrate together?"
@@ -103,7 +103,7 @@ label cherie_ask_birthday_male:
         "Cherie looks up with a scandalised expression on her face."
         "And I can see that she's already shaking her head."
         if cherie.sub >= 66:
-            show cherie talkative
+            show cherie talk
             cherie.say "Oh, [hero.name], I would give you literally anything else right now."
             cherie.say "But you must forgive me, for this I cannot do, not yet!"
         else:
@@ -240,7 +240,7 @@ label cherie_breakup_male:
         mike.say "I'm sorry, but I think we should end it."
         show cherie a closed
         "Cherie takes in a deep breath, filling her lungs."
-        show cherie a talkative
+        show cherie a talk
         "And then she lets it out slowly."
         show cherie a normal
         "I watch as a strange transformation takes place."
@@ -251,7 +251,7 @@ label cherie_breakup_male:
         "For all I know this could be just for show."
         "But it's more than enough to affect me."
         "And I feel like Cherie just turned the tables on this whole thing."
-        show cherie a talkative
+        show cherie a talk
         cherie.say "Well, if that's really the way you feel, [hero.name]."
         cherie.say "Then I can't say I want to keep it going either."
         cherie.say "I don't have time for a man that isn't devoted to me!"
@@ -262,7 +262,7 @@ label cherie_breakup_male:
         "And I can feel it hit me like a genuine slap to the face!"
         "I open my mouth to say something in return."
         "But Cherie holds up a hand to silence me."
-        show cherie a talkative
+        show cherie a talk
         cherie.say "If we're over, then so is this conversation, [hero.name]."
         cherie.say "And I'd really rather not see you again!"
         show cherie a normal
@@ -313,7 +313,7 @@ label cherie_go_steady_no_male:
     show cherie sad
     mike.say "But why not, Cherie?"
     mike.say "Don't you want to be with me?"
-    show cherie talkative
+    show cherie talk
     cherie.say "Of course I do, {i}mon ami{/i}!"
     if cherie.sub >= 66:
         cherie.say "But I am not ready for such a commitment."
@@ -375,7 +375,7 @@ label cherie_pet_annoyed_male:
     if cherie.sub >= 66:
         show cherie annoyed
         "Cherie lowers her head, as if upset and yet afraid to speak up about it."
-        show cherie talkative
+        show cherie talk
         cherie.say "Oh..."
         cherie.say "Oh, I see."
         cherie.say "Then I suppose that is fine..."
@@ -427,7 +427,7 @@ label cherie_massage_refuse_male:
     show cherie sad
     "Cherie shakes her head, still wincing from the pain she's experiencing."
     "Hell, she even takes a couple of steps backwards while waving me away with one hand."
-    show cherie talkative
+    show cherie talk
     cherie.say "Thank you for the offer, [hero.name]..."
     if cherie.sub >= 66:
         cherie.say "But you are not a medical professional."

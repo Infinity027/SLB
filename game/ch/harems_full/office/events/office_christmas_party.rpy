@@ -605,7 +605,7 @@ label office_christmas_dancing:
         cherie.say "Hello there!"
         show cherie normal
         "She shakes her head and gestures around the room."
-        show cherie talkative
+        show cherie talk
         cherie.say "I always had a standing invitation to these kind of things."
         cherie.say "I just never felt like coming along to any of them before now."
         show cherie happy
@@ -1240,7 +1240,7 @@ label office_christmas_mistletoe_kiss:
         mike.say "You know the tradition, right?"
         show cherie amused
         "Cherie pulls a mock frown and cocks her head on one side."
-        show cherie talkative
+        show cherie talk
         cherie.say "Wait a minute..."
         cherie.say "Are you asking me for a kiss?"
         show cherie amused
@@ -2331,7 +2331,7 @@ label office_christmas_sex:
                 play sound door_open
                 scene bg personal with fade
                 pause 0.3
-                show cherie talkative at center, zoomAt(1.0, (640, 720))
+                show cherie talk at center, zoomAt(1.0, (640, 720))
                 cherie.say "Oh..."
                 cherie.say "There you are, [hero.name]..."
                 cherie.say "I wanted to talk to you!"

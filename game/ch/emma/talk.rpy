@@ -263,7 +263,7 @@ label submissive_interact_emma_male:
     mike.say "I was thinking more like something to do with how we met."
     mike.say "Like how I saw you in a dream, and I'm a dream come true?"
     if emma.sub >= 70 or emma.is_sex_slave:
-        show emma talkative
+        show emma talk
         emma.say "It...sounds a little weird, [hero.name]."
         emma.say "But if that's what you really want."
         emma.say "Then I'll do my best."

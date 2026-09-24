@@ -72,7 +72,7 @@ label kiara_hottub_sex_male:
     mike.say "Erm..."
     mike.say "The hot-tub is on the back porch, Kiara..."
     mike.say "So if you want to follow me?"
-    show kiara a talkative
+    show kiara a talk
     kiara.say "But of course I do."
     kiara.say "Otherwise I might get lost!"
     show kiara normal
@@ -338,7 +338,7 @@ label kiara_fuck_date_intro_male(location="hero"):
         "Kiara raises a single eyebrow as she regards me, a languid smile on her face."
         "And part of me is sure that she's more than able to see through my bullshit."
         "But the hope is that she's finding it amusing, maybe even endearing, rather than tedious and annoying."
-        show kiara talkative
+        show kiara talk
         if kiara.sub >= 25:
             kiara.say "I'm sure that it's a very fine house, [hero.name]…"
             kiara.say "But I'd know for sure if you were to invite me inside."
@@ -380,7 +380,7 @@ label kiara_fuck_date_intro_male(location="hero"):
         mike.say "I guess it's kind of a single-guy thing, you know?"
         show kiara flirt at center, zoomAt(1.25, (640, 880)) with ease
         "Kiara turns slowly to regard me, the same languid smile still on her face as she does so."
-        show kiara talkative
+        show kiara talk
         if kiara.sub >= 25:
             kiara.say "This is your home, [hero.name]…"
             kiara.say "You must know that I would never judge your taste!"
@@ -396,7 +396,7 @@ label kiara_fuck_date_intro_male(location="hero"):
         show kiara smile at startle
         "Kiara gives me another one of those irresistible little chuckles of hers."
         "The kind that are more like sexual signals than expressions of actual amusement."
-        show kiara talkative
+        show kiara talk
         if kiara.sub >= 25:
             kiara.say "In fact, I find all of this very inspiring."
             kiara.say "It tells me you are a man of great imagination."
@@ -420,7 +420,7 @@ label kiara_fuck_date_intro_male(location="hero"):
         mike.say "Whoa..."
         mike.say "What the hell?"
         mike.say "How did you do that?!?"
-        show kiara talkative
+        show kiara talk
         if kiara.sub >= 25:
             kiara.say "Just a little trick I picked up along the way."
             kiara.say "But there are more pressing matters at hand."
@@ -462,7 +462,7 @@ label kiara_fuck_date_intro_male(location="hero"):
         "And the playful, almost mischievous version of Kiara that pops out as soon as I close the door to my room..."
         "Well that's what really makes the whole thing extra-special!"
         "Already peeling my clothes off me as I make sure the door's closed, Kiara seems as impatient as usual."
-        show kiara talkative
+        show kiara talk
         if kiara.sub >= 25:
             kiara.say "May we get started, [hero.name]?"
             kiara.say "I feel like I've waited forever for you to hold me!"
@@ -476,7 +476,7 @@ label kiara_fuck_date_intro_male(location="hero"):
         show kiara normal
         mike.say "Okay, Kiara, okay..."
         mike.say "I'm coming as fast as I can!"
-        show kiara talkative
+        show kiara talk
         if kiara.sub >= 25:
             kiara.say "But, [hero.name]…"
             kiara.say "It is my job to make you cum!"
@@ -499,7 +499,7 @@ label kiara_fuck_date_foreplay_male:
     "As soon as the last item of clothing comes off and is tossed away, I see Kiara eyeing me hungrily."
     "At times like this, she always reminds me of a female big-cat that's about to pounce on its prey."
     "And so the sensations that the looks stirs in me are a strange mix of fear and arousal."
-    show kiara talkative
+    show kiara talk
     if kiara.sub >= 25:
         kiara.say "I await your command, [hero.name]…"
         kiara.say "What is it that you desire of me?"
@@ -515,7 +515,7 @@ label kiara_fuck_date_foreplay_male:
     show kiara mischievous
     "Kiara nods slowly as she looks me up and down."
     "All the time looking like she's choosing which part of me she wants to devour first."
-    show kiara talkative
+    show kiara talk
     if kiara.sub >= 25:
         kiara.say "Of course!"
         kiara.say "Your pleasure is my pleasure."
@@ -554,7 +554,7 @@ label kiara_fuck_date_choices_male:
 label kiara_fuck_date_sleep(location="hero"):
     scene bg bedroom1
     if game.hour > 19 or game.hour < 6:
-        show kiara naked talkative at center, zoomAt(1.25, (640, 880))
+        show kiara naked talk at center, zoomAt(1.25, (640, 880))
         if kiara.is_sex_slave:
             kiara.say "May I share your bed tonight, Master?"
         else:
@@ -705,7 +705,7 @@ label kiara_fuck_date_sixty_nine:
     show kiara mischievous
     "Before I said that I could see desire in Kiara's eyes."
     "But now they seem to burst with what can only be described as naked lust!"
-    show kiara talkative
+    show kiara talk
     if kiara.sub >= 25:
         kiara.say "Are you sure that's what you want?"
         kiara.say "Because that sounds like the best of both worlds!"
@@ -829,7 +829,7 @@ label kiara_fuck_date_cunnilingus:
     mike.say "You know, if it's not too much trouble?"
     "Before I said that I could see desire in Kiara's eyes."
     "But now they seem to burst with what can only be described as naked lust!"
-    show kiara talkative
+    show kiara talk
     if kiara.sub >= 25:
         kiara.say "Are you sure that's what you want?"
         kiara.say "Because if you are, then I am all yours!"
@@ -1586,7 +1586,7 @@ label kiara_fuck_date_standing(sexperience_min):
     "And from the smile on her face right now, she knows just what I'm thinking."
     "Kiara reaches up with one hand, placing it upon my chest."
     "The other she uses to stroke her breasts and perfectly flat stomach."
-    show kiara talkative
+    show kiara talk
     if kiara.sub >= 25:
         kiara.say "So, [hero.name], now you've got me…"
         kiara.say "Where would you like to put it?"

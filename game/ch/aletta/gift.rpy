@@ -106,7 +106,7 @@ label aletta_gift_slutty_dress_male:
     mike.say "How's it hanging?"
     "The moment the words are out of my mouth, I feel myself wincing."
     "Even more so when Aletta looks up, raising a single eyebrow."
-    show aletta talkative
+    show aletta talk
     aletta.say "Hmm..."
     aletta.say "Aren't you supposed to ask that when someone has a thing that hangs?"
     show aletta annoyed
@@ -119,7 +119,7 @@ label aletta_gift_slutty_dress_male:
     "Then I all but shove it straight into Aletta's face."
     "She blinks and takes a step backwards."
     "And she takes it from my hands before I can use it to push her over backwards."
-    show aletta talkative
+    show aletta talk
     aletta.say "Oh..."
     aletta.say "A gift for me?"
     aletta.say "And given with such enthusiasm too."
@@ -151,7 +151,7 @@ label aletta_gift_slutty_dress_male:
         "Aletta's nodding away as I say all of this."
         "But she looks more than a little distracted right now."
         "So I can't be sure if she's actually hearing me or not."
-        show aletta talkative
+        show aletta talk
         aletta.say "Yes, yes...of course."
         aletta.say "I have to wear this the first chance I get."
         aletta.say "Even if it's just to reward you for being so insightful, [hero.name]."

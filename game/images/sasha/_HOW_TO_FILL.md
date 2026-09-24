@@ -12,7 +12,7 @@ images/sasha/<dress>/<expression>.png
 `sexyswimsuit`, `sport`, `underwear`, `towel`, `sleep`, `naked`, `topless`, `bottomless`
 
 ## Expression files needed in each dress folder
-Start with the **core**: `normal.png`, `talkative.png`, `happy.png`, `smile.png`,
+Start with the **core**: `normal.png`, `talk.png`, `happy.png`, `smile.png`,
 `sad.png`, `angry.png`, `annoyed.png`, `surprised.png`, `blush.png`, `flirt.png`
 
 Then add: `sadsmile, vangry, upset, shy, embarrassed, wink, cry, shout, joke,

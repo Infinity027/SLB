@@ -282,7 +282,7 @@ label command_nickname_samantha:
 
 label submissive_interact_samantha_male:
     mike.say "Ah, Sam..."
-    show samantha talkative
+    show samantha talk
     samantha.say "Oh-oh - I know that tone of voice!"
     samantha.say "What do you want, [hero.name]?"
     show samantha normal

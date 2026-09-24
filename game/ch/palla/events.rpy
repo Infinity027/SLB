@@ -4616,7 +4616,7 @@ label palla_give_address:
         show palla normal
     else:
 
-        show palla talkative
+        show palla talk
         palla.say "What are you babbling about now, [hero.name]?"
         palla.say "Well never mind that..."
         palla.say "Because I have something for you."
@@ -4635,7 +4635,7 @@ label palla_give_address:
 
         show palla happy at startle(0.05,-10)
         palla.say "It's my address, you silly boy!"
-        show palla talkative
+        show palla talk
         palla.say "Since we're dating now, you should really have it written down."
         show palla normal
     "I can't help smiling as I fold it up and slip the address into my pocket."
@@ -4868,7 +4868,7 @@ label palla_apartment_sex:
         "Palla listens to me patiently, waiting until I've said my piece."
         show palla stuned
         "And then I see one of her eyebrows rise higher still."
-        show palla talkative at startle(0.1, 5)
+        show palla talk at startle(0.1, 5)
         palla.say "Oh, I think I know what you mean!"
         palla.say "And you are such a lucky boy, [hero.name]."
         palla.say "Because right now, I'm in the exact same kind of mood!"
@@ -4879,7 +4879,7 @@ label palla_apartment_sex:
         show bg pallalivingroom at center
         show palla flirt at center, zoomAt(1.4, (640, 920))
         "Palla stands up and extends her hand towards me."
-        show palla talkative at startle(0.1, 5)
+        show palla talk at startle(0.1, 5)
         palla.say "Come on, [hero.name]…"
         palla.say "We're already somewhere private."
         palla.say "So let's go somewhere a little more comfortable."
@@ -4887,7 +4887,7 @@ label palla_apartment_sex:
         "It's not like Palla has to haul me to my feet to get me to follow her."
         "In fact I almost leap up the moment that she gives my arm the slightest tug."
         "And I hurry after her as she leads me into the hallway of her apartment."
-        show palla talkative at startle(0.1, 5)
+        show palla talk at startle(0.1, 5)
         palla.say "Okay, here's a fun idea..."
         palla.say "Either we can play it safe and use my room."
         palla.say "Or we can play with nerdy fire, and do it in Shawn's room instead!"
@@ -4911,7 +4911,7 @@ label palla_apartment_sex:
                 show palla at stepback(0.1,-5,0)
                 pause 0.1
                 "But then she shrugs her shoulders and shakes her head."
-                show palla talkative
+                show palla talk
                 palla.say "Whatever, [hero.name]…"
                 palla.say "My room it is then."
                 play sound door_open
@@ -4937,7 +4937,7 @@ label palla_apartment_sex:
                 "As I do so, she doesn't say a word to encourage me, or to dampen my ardor for her either."
                 "She just watches my progress, waiting for me to get into a position where I can act on it."
                 "And when I'm finally there, Palla lets out a sigh."
-                show palla talkative at startle(0.1, 5)
+                show palla talk at startle(0.1, 5)
                 palla.say "Mmm..."
                 palla.say "Well here we are, [hero.name]."
                 palla.say "You've got me at your mercy."
@@ -5322,7 +5322,7 @@ label palla_apartment_sex:
                 "As I do so, she doesn't say a word to encourage me, or to dampen my ardor for her either."
                 "She just watches my progress, waiting for me to get into a position where I can act on it."
                 "And when I'm finally there, Palla lets out a sigh."
-                show palla talkative at startle(0.1, 5)
+                show palla talk at startle(0.1, 5)
                 palla.say "Mmm..."
                 palla.say "Well here we are, [hero.name]."
                 palla.say "You've got me at your mercy."
@@ -5689,9 +5689,9 @@ label palla_apartment_sex:
         "Palla listens to me patiently, waiting until I've said my piece."
         show palla stuned
         "And then I see one of her eyebrows rise higher still."
-        show palla talkative at startle(0.1, 5)
+        show palla talk at startle(0.1, 5)
         palla.say "You are?!?"
-        show palla talkative
+        show palla talk
         palla.say "In that case, you only have to ask, [hero.name]."
         palla.say "I'm always happy to oblige!"
         show palla flirt at center, traveling(1.4, 0.7, (640, 920))
@@ -5710,7 +5710,7 @@ label palla_apartment_sex:
         "Already more than eager to take her up on the offer that she's making."
         "Of course this seems to please Palla immensely."
         "And she wastes no time in leading me into the hallway."
-        show palla talkative at startle(0.1, 5)
+        show palla talk at startle(0.1, 5)
         palla.say "The safest place for us to go would probably be my bedroom."
         palla.say "Or, if you're feeling a bit adventurous..."
         palla.say "We could always go out on the balcony?"

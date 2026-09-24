@@ -187,17 +187,8 @@ steps:
       - not amy.flags.amydelay
     outcome:
       hide: True
-      next: amy_event_07_date
-      condition: '"amy_event_07" in DONE'
-
-  amy_event_07_date:
-    name: Go to your date with Amy at the cemetery
-    toggle: True
-    conditions:
-      - "'amy_event_07' in DONE"
-    outcome:
       next: love160
-      condition: '"amy_event_07_date" in DONE'
+      condition: '"amy_event_07" in DONE'
 
   love160:
     name: Get to know Amy better

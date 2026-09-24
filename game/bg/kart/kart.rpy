@@ -36,4 +36,3 @@ label karting_solo:
     "I have a lot of fun racing around!"
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

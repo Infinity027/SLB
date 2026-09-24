@@ -208,7 +208,7 @@ label cherie_bye(bye_outfit=None):
         else:
             $ cherie.flags[f"activity-{day}-{h}"] = TemporaryFlag(activity, "day")
         $ renpy.show(f"cherie {bye_outfit}")
-        show cherie talkative
+        show cherie talk
         if activity["activity"] == "sleep":
             cherie.say "I should probably go to bed."
         elif activity["activity"] in ["shower", "bath", "brush", "pee", "wash"]:
@@ -419,7 +419,7 @@ label cherie_propose_male:
         cherie.say "No, [hero.name]..."
         $ cherie.love -= 25
         $ cherie.sub -= 25
-        show cherie talkative
+        show cherie talk
         cherie.say "I'm sorry, but the answer is no."
         show cherie sad
         "Suddenly I feel like the biggest idiot on the face of the earth."
@@ -432,11 +432,11 @@ label cherie_propose_male:
         "Cherie reaches out, taking hold of my hand."
         show cherie whining
         cherie.say "No, [hero.name], please don't say that!"
-        show cherie talkative
+        show cherie talk
         cherie.say "It's nothing at all to do with you."
         show cherie whining
         cherie.say "It's because I don't have a lot of success when it comes to being married."
-        show cherie talkative
+        show cherie talk
         cherie.say "Things between Dwayne and me did not work out, you know?"
         show cherie whining
         cherie.say "So with you, I want it to be different."

@@ -288,7 +288,7 @@ label bree_event_05:
         $ bree.love.max = 100
     show bree
     "[bree.name]'s holding a flyer in her hand, crinkled at the edges."
-    show bree talkative
+    show bree talk
     bree.say "You won't believe what I found!"
     show bree normal
     "I raise an eyebrow."
@@ -351,7 +351,7 @@ label bree_event_05:
         "No Way":
             $ bree.love -= 1
             mike.say "No- no way. I just got home from work."
-            show bree talkative blush
+            show bree talk blush
             bree.say "Please! You gotta help me, [hero.name]."
             show bree flirt -blush
             mike.say "Sorry. I need my sleep."
@@ -384,7 +384,7 @@ label bree_event_05:
     "Girl" "Until I'm done."
     "Thank god we picked up coffee."
     "I can already tell where this is going."
-    show bree talkative
+    show bree talk
     show fx question at right4
     bree.say "What does that mean? Done with the round?"
     show bree sadsmile
@@ -420,7 +420,7 @@ label bree_event_05:
                 bree.say "C'mon, [hero.name]. We can come back tomorrow or something."
                 show bree sadsmile
                 mike.say "But-"
-                show bree talkative at right with ease
+                show bree talk at right with ease
                 bree.say "Let's go."
                 show bree sadsmile
                 mike.say "..."
@@ -455,7 +455,7 @@ label bree_event_05:
                 mike.say "No problem."
                 mike.say "Something wrong?"
                 "[bree.name] looks pale, now that I'm looking at her."
-                show bree talkative
+                show bree talk
                 bree.say "No. I just... think you should be nice about it next time."
                 show bree sadsmile
                 mike.say "Uh, sure. Sorry."
@@ -811,7 +811,7 @@ label bree_event_07:
     bree.say "EAT SHIT AND DIE, MOTHERFUCKER!!!"
     show bree surprised
     bree.say "What...oh, not you, [hero.name]!"
-    show bree talkative
+    show bree talk
     bree.say "Yeah, I guess I've been playing this game a lot."
     bree.say "I can almost play it with my eyes closed now."
     bree.say "And it's getting kinda boring."
@@ -820,7 +820,7 @@ label bree_event_07:
     "Even though [bree.name]'s not asked for one, I still feel compelled to help out any way I can."
     mike.say "Well..."
     mike.say "You could try giving yourself a handicap?"
-    show bree talkative
+    show bree talk
     bree.say "I dunno, [hero.name]."
     bree.say "I'm already on the highest difficulty setting as it is!"
     show bree sadsmile
@@ -935,7 +935,7 @@ label bree_event_08:
     "And when it's actually time to go, I run out of the front door hyped and ready for anything."
     show bg street with fade
     "All of which means I'm already in the zone when I meet [bree.name] outside the venue."
-    show bree casual talkative with dissolve
+    show bree casual talk with dissolve
     bree.say "Oh, [hero.name], are you okay?"
     show bree normal
     mike.say "Wh...what's that, [bree.name]?"
@@ -1072,13 +1072,13 @@ label bree_event_08:
     bree.say "Maybe not..."
     show bree normal
     mike.say "What do you mean, [bree.name]?"
-    show bree talkative
+    show bree talk
     bree.say "Well, I've been watching that Colin guy play."
     show bree normal
     "I raise an eyebrow at her using his real name, rather than his gaming handle."
     show bree vangry
     bree.say "[hero.name] - I'm not calling him BlackDevilDog!"
-    show bree talkative
+    show bree talk
     bree.say "Anyway..."
     bree.say "I'm almost one hundred percent sure he's using a cheat of some kind."
     bree.say "And I think we should tell the judges too!"
@@ -1116,11 +1116,11 @@ label bree_event_08:
             mike.say "Are you SURE about this, [bree.name]?"
             mike.say "Because if they don't find anything..."
             mike.say "Well, it's going to look like sour grapes on out part!"
-            show bree talkative
+            show bree talk
             bree.say "It WAS more of a hunch than anything else..."
             show bree sadsmile
             mike.say "Look, [bree.name], I think we can beat these guys anyway - cheaters or not!"
-            show bree talkative
+            show bree talk
             bree.say "Okay, [hero.name] - let's do it!"
             hide bree
             show bree normal casual
@@ -1228,7 +1228,7 @@ label bree_event_09:
     "[bree.name] looks suitably startled by my response."
     show bree normal
     "But she shakes it off pretty quickly, recovering her focus to as I suggested."
-    show bree talkative
+    show bree talk
     bree.say "Oh...okay..."
     show bree hesitating
     bree.say "Is there something...different about you today?"
@@ -1251,12 +1251,12 @@ label bree_event_09:
     show bree surprised
     show fx question
     bree.say "Huh?!?"
-    show bree talkative
+    show bree talk
     bree.say "It looks the same as always."
     show bree stuned
     mike.say "It doesn't, [bree.name] - it needs cutting."
     mike.say "But when I went to get it done, my barber's was closed!"
-    show bree talkative
+    show bree talk
     bree.say "You go to Seville's, don't you?"
     bree.say "That hipster place where they all have beards and wear flat-caps?"
     show bree normal
@@ -1375,7 +1375,7 @@ label bree_event_09:
             "But the last thing I want is [bree.name] doing an enthusiastic but amateurish job of it instead!"
             mike.say "No, [bree.name], no."
             mike.say "I couldn't let you do that."
-            show bree talkative
+            show bree talk
             bree.say "It's no trouble, [hero.name], really."
             show bree smile
             bree.say "I used to give all of my dolls haircuts when I was little!"
@@ -1413,7 +1413,7 @@ label bree_event_10:
     bree.say "You're playing Demons and Demigods, yeah?"
     show bree normal
     mike.say "That's right."
-    show bree talkative
+    show bree talk
     bree.say "[hero.name] - who's the hot babe you were just chatting to, huh?"
     show bree normal
     mike.say "What hot babe, [bree.name]?"
@@ -1436,7 +1436,7 @@ label bree_event_10:
     show bree at center, traveling(1.25, 0.3, (640, 880))
     "[bree.name] shakes her head and leans in a little closer, pointing at the screen."
     "She taps an icon that both my character and Thyra have next to their names."
-    show bree talkative
+    show bree talk
     bree.say "I do happen to play this game too, [hero.name]."
     bree.say "And I know that icon means a couple of PCs are married."
     show bree evil
@@ -1481,7 +1481,7 @@ label bree_event_10:
             mike.say "If you come along we can make it clear that we're together."
             mike.say "That way no one has to come right out and say they're spoken for."
             bree.say "Hmm..."
-            show bree talkative
+            show bree talk
             bree.say "I suppose that does kind of make sense."
             show bree normal
             mike.say "So if I arrange to meet with them, you'll come too?"
@@ -1514,11 +1514,11 @@ label bree_event_10:
             mike.say "But I don't want to get it on with them in real life!"
             show bree annoyed blush
             "[bree.name] looks down at the ground, clearly embarrassed at her outburst."
-            show bree talkative
+            show bree talk
             bree.say "Oh...okay."
             show bree annoyed
             mike.say "Look, [bree.name] - if it's really bugging you, I can break it off in the game too."
-            show bree talkative
+            show bree talk
             bree.say "No...no, [hero.name]."
             bree.say "Don't do that."
             bree.say "I was just being silly, that's all."
@@ -1592,7 +1592,7 @@ label bree_event_11:
     bree.say "Aww, spoilsport - why not?"
     show bree annoyed
     mike.say "Because Thyra's player told me they'd be wearing headphones, and he's not."
-    show bree talkative
+    show bree talk
     bree.say "Well, not right now - but maybe he has some in his bag?"
     show bree normal
     mike.say "Give it up, [bree.name]."
@@ -1760,14 +1760,14 @@ label bree_event_12:
     "Almost up to the very moment the guy's supposed to be walking through the door!"
     play sound door_knock
     "It's only when she hears a knock at the front door that she finally breaks her silence."
-    show bree talkative
+    show bree talk
     bree.say "Okay, [hero.name] - he's here."
     show bree at right5 with ease
     bree.say "Just leave most of the talking to me, okay?"
     show bree normal
     mike.say "Erm...okay, [bree.name]."
     mike.say "If you say so!"
-    show bree talkative at right with ease
+    show bree talk at right with ease
     bree.say "And remember, my Dad's a little old-fashioned."
     bree.say "He's got a pretty quirky sense of humour too."
     hide bree with easeoutright
@@ -1811,7 +1811,7 @@ label bree_event_12:
     breesdad "Harumph..."
     breesdad "Last I heard, you were living with some Satanist chick and a doofus millennial!"
     show fx exclamation at left
-    show bree talkative
+    show bree talk
     bree.say "Sasha's not a Satanist, Daddy!"
     bree.say "She just likes to dress in black and listen to music about the devil, that's all!"
     show bree normal
@@ -1846,7 +1846,7 @@ label bree_event_12:
     show breedad zorder 1 at left5
     with fade
     "By the time we're done, I can see the sheer effort it's taking her to keep on smiling."
-    show bree talkative
+    show bree talk
     show fx question at right5
     bree.say "Well, Daddy - what do you think?"
     show bree normal
@@ -1893,7 +1893,7 @@ label bree_event_12:
             "[bree.name]'s dad makes to say something."
             "Maybe trying to explain himself or make an excuse."
             "But she's on a roll now, and there's no stopping her!"
-            show bree talkative
+            show bree talk
             bree.say "It's pretty funny that you don't like it here."
             bree.say "Because I chose to go to a uni this far from home to get away from that place."
             show bree vangry
@@ -1958,7 +1958,7 @@ label bree_event_12:
             show fx drop
             bree.say "I know, I know..."
             bree.say "I guess I just thought it might be different this time."
-            show bree talkative
+            show bree talk
             bree.say "You know, with the two of us being here?"
             show bree normal
             "All I can offer is a shrug and a shake of the head."
@@ -2118,7 +2118,7 @@ label bree_event_14:
     "So when I see her approaching, I make to wrap up what I'm doing and flee the room."
     show bree a normal at right4 with ease
     "But it looks like I've left it a moment too late, as I feel her gaze settle on me."
-    show bree talkative
+    show bree talk
     bree.say "There you are, [hero.name]."
     bree.say "I've been looking for you!"
     show bree normal
@@ -2143,7 +2143,7 @@ label bree_event_14:
     "[bree.name] smiles at this, letting me know that I've said just the right thing."
     show bree at center, traveling(1.5, 0.3, (640, 1040))
     "She leans in a bit closer, reminding me suddenly of an angler reeling in their catch."
-    show bree talkative
+    show bree talk
     bree.say "The thing is, [hero.name], it's REALLY been a grind."
     bree.say "But I'm almost, nearly, just about there."
     bree.say "One more push and I think it'll be done."
@@ -2156,7 +2156,7 @@ label bree_event_14:
     show bree happy
     "[bree.name]'s smile becomes wider still, and she cocks her head on one side."
     "Now I feel like the fish on the end of a hook, about to be yanked out of the water!"
-    show bree talkative
+    show bree talk
     bree.say "That's what I wanted to ask, [hero.name]."
     bree.say "You've done one of these before."
     bree.say "So could you maybe...check it over for me?"
@@ -2188,7 +2188,7 @@ label bree_event_14:
     mike.say "[bree.name], I thought you said you wanted me to check it over?"
     mike.say "This sounds more like you want me to write the entire thing for you!"
     "Now it's [bree.name]'s turn to shake her head."
-    show bree talkative
+    show bree talk
     bree.say "No, no, no..."
     bree.say "I just want your advice on what should go where, [hero.name]."
     bree.say "You know - what I should say, what I shouldn't say and why."
@@ -2219,7 +2219,7 @@ label bree_event_14:
             show bree normal
             mike.say "It's nothing, [bree.name]."
             mike.say "Just do me a favour, okay?"
-            show bree talkative
+            show bree talk
             show fx question
             bree.say "What's that?"
             show bree normal
@@ -2244,7 +2244,7 @@ label bree_event_14:
             "She lets out a weary sigh and turns to leave."
             show bree sad at center, traveling(1.25, 0.3, (740, 880))
             bree.say "I shouldn't get lazy, not this close to finishing my course."
-            show bree talkative
+            show bree talk
             bree.say "Just do me a favour and brew some strong coffee, okay?"
             bree.say "I think I'm gonna be pulling an all-nighter on this one!"
     $ bree.flags.breedelay = TemporaryFlag(True, 1)
@@ -2275,7 +2275,7 @@ label bree_event_15:
     bree.say "Oh, [hero.name]!"
     show fx question
     bree.say "What...this?"
-    show bree talkative
+    show bree talk
     bree.say "Nothing really, just some old junk from school."
     bree.say "I decided it was time I went through it all, you know?"
     bree.say "Decided what was worth keeping and what I should dump in the trash!"
@@ -2311,7 +2311,7 @@ label bree_event_15:
     "I see that [bree.name]'s cheeks have turned red."
     "Which means she's fully aware of just how crazy her outburst was."
     "But she's clutching the year-book to her chest all the same."
-    show bree talkative
+    show bree talk
     bree.say "I...I'm just..."
     bree.say "Protective of this book...okay?"
     bree.say "It's the only copy of the picture..."
@@ -2328,7 +2328,7 @@ label bree_event_15:
     show bree annoyed
     mike.say "[bree.name], you HAVE to let me see it now."
     mike.say "If you don't, I'll end up stealing it to sneak a look!"
-    show bree talkative
+    show bree talk
     bree.say "Fine, [hero.name], I'll let you see."
     show bree vangry
     bree.say "But you have to promise not to be unkind, okay?"
@@ -2458,7 +2458,7 @@ label bree_event_16:
     "I nod at this, as I was thinking the exact same thing."
     mike.say "Well, what are we waiting for?"
     mike.say "Let's go grab one!"
-    show bree talkative
+    show bree talk
     bree.say "Wait a minute, [hero.name]."
     bree.say "Even at the sale price, it's still really expensive!"
     show bree annoyed
@@ -2470,7 +2470,7 @@ label bree_event_16:
     mike.say "I can even raid my savings if I have to!"
     show bree blank
     "[bree.name] looks at me a little awkwardly."
-    show bree talkative
+    show bree talk
     bree.say "I wasn't trying to get you to pay for it, [hero.name]."
     bree.say "I was thinking that we could go halves, you know?"
     bree.say "Since we both use the console a lot and, well..."
@@ -2519,7 +2519,7 @@ label bree_event_16:
             "[bree.name] looks more than a little annoyed at my reasoning."
             show bree a
             "She crosses her arms over her chest and gives me a huffy look."
-            show bree talkative
+            show bree talk
             bree.say "I don't get it, [hero.name]."
             bree.say "We shared the old Zbox the whole time we had it!"
             bree.say "What's wrong with us buying something together?"

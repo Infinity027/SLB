@@ -331,7 +331,7 @@ label aletta_belly_kiss_male:
     show aletta normal
     "Aletta lets out a sigh."
     "But then she shakes her head."
-    show aletta talkative
+    show aletta talk
     aletta.say "If it'll get you over the obsession..."
     aletta.say "Then one kiss - but just one!"
     show aletta normal at center, traveling(2.0, 0.5, (640, 980))
@@ -350,7 +350,7 @@ label aletta_belly_caress_male:
     "But it does kind of make Aletta look even hotter than normal too!"
     "I'm just worried that she won't want me to draw attention to it."
     "You know, as she's so serious and focussed on the important things in life?"
-    show aletta talkative
+    show aletta talk
     aletta.say "[hero.name]…"
     aletta.say "Are you staring at my stomach right now?"
     aletta.say "Looking at it like you want to touch it?"
@@ -383,7 +383,7 @@ label aletta_belly_caress_male:
     return
 
 label aletta_belly_listen_male:
-    show aletta talkative at center, zoomAt(1.25, (640, 880))
+    show aletta talk at center, zoomAt(1.25, (640, 880))
     aletta.say "[hero.name]..."
     aletta.say "I want you to do something for me."
     show aletta normal
@@ -395,7 +395,7 @@ label aletta_belly_listen_male:
     mike.say "What do you need me to do?"
     "Aletta holds my eye, but then she begins to look down."
     "Compelled to follow, I do so until her gaze comes to rest on her belly."
-    show aletta talkative
+    show aletta talk
     aletta.say "I can feel the baby when it moves, obviously."
     aletta.say "But the thing is that I can't hear it."
     show aletta embarrassed

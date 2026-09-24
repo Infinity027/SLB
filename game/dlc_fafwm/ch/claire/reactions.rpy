@@ -86,10 +86,10 @@ label claire_ask_birthday_male:
         "Then she shakes her head, like she disapproves somehow."
         show claire surprised
         claire.say "Don't you know that you should never ask a woman that?"
-        show claire talkative
+        show claire talk
         mike.say "Erm..."
         mike.say "I thought you were never supposed to ask her age?"
-        show claire talkative
+        show claire talk
         claire.say "Yes, but if you know the date of her birth..."
         claire.say "Then you can use that to work out her age!"
         show claire sad
@@ -316,7 +316,7 @@ label claire_massage_refuse_male:
     show claire sad
     "Still clutching at the offending muscle, Claire shakes her head."
     "But doing so only seems to make the matter that much worse."
-    show claire talkative
+    show claire talk
     claire.say "No, thank you..."
     claire.say "AARGH!"
     claire.say "Damn it - I really need to see a professional!"

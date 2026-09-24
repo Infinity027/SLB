@@ -54,4 +54,3 @@ label nightclub_party:
         $ hero.morality -= 1
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

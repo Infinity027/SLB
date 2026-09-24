@@ -40,4 +40,3 @@ label jewelrystore_shop:
     $ Room.find("jewelrystore").shop("valentina teaser")
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

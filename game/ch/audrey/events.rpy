@@ -3691,7 +3691,7 @@ label audrey_male_ending:
     with fade
     "And it's so weird to me that it all seems to pass by in a blur."
     "Before I know it, Audrey and I are on the floor for the first dance."
-    show audrey talkative
+    show audrey talk
     audrey.say "Hey, [hero.name]!"
     audrey.say "Are you feeling okay?"
     show audrey sadsmile
@@ -4501,7 +4501,7 @@ label audrey_give_address:
     "Audrey nods at this, more like she wants to move the conversation on than because she actually agrees with me."
 
     if audrey.sub >= 80:
-        show audrey talkative with dissolve
+        show audrey talk with dissolve
         audrey.say "Of course, [hero.name], of course..."
         audrey.say "I just wondered if you might..."
         show audrey happy at startle(0.05,-10)
@@ -4509,7 +4509,7 @@ label audrey_give_address:
         show audrey normal
     else:
 
-        show audrey talkative
+        show audrey talk
         audrey.say "Yeah, yeah, whatever..."
         audrey.say "The important thing is that I wanted to give you my address."
         show audrey happy at startle(0.05,-10)
@@ -4551,7 +4551,7 @@ label audrey_apartment_first_visit:
     if audrey.sub >= 80:
         show audrey happy
         audrey.say "[hero.name]!"
-        show audrey talkative
+        show audrey talk
         audrey.say "You made it!"
         audrey.say "I'm so glad you came."
         show audrey shy
@@ -4562,13 +4562,13 @@ label audrey_apartment_first_visit:
         mike.say "And I did say that I'd come!"
         show audrey normal blush
         "Audrey looks embarrassed as she nods and gestures for me to come inside."
-        show audrey talkative
+        show audrey talk
         audrey.say "Of course I did!"
         show audrey shy
         audrey.say "So come on inside already."
     else:
 
-        show audrey talkative
+        show audrey talk
         audrey.say "So, you managed to find your way here without getting lost?"
         show audrey mock
         audrey.say "Maybe you're not as dumb as you look, [hero.name]!"

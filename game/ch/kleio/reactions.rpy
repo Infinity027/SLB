@@ -255,7 +255,7 @@ label kleio_belly_kiss_male:
     show kleio normal
     "At the sound of my voice, Kleio looks up."
     "Her expression letting me know that I've piqued her interest."
-    show kleio talkative
+    show kleio talk
     kleio.say "Huh?"
     kleio.say "What did you forget?"
     show kleio normal
@@ -267,7 +267,7 @@ label kleio_belly_kiss_male:
     show kleio upset
     "By now, Kleio's eyes are focussed on me like a pair of laser-beams."
     "She's nodding her head, visibly willing me to say more."
-    show kleio talkative
+    show kleio talk
     kleio.say "Yeah..."
     kleio.say "And that person would be?"
     kleio.say "Would be who, exactly?"
@@ -310,7 +310,7 @@ label kleio_belly_caress_male:
     "Still wearing cropped tops that allow it to stick out in front of her."
     "But rather than seeing it as an affront, Kleio seems to revel in it."
     "And she takes every opportunity she can to shove it in my face, like just now."
-    show kleio b talkative
+    show kleio b talk
     kleio.say "Ah, lighten up already!"
     kleio.say "We're gonna be up to our armpits in shitty nappies soon enough."
     kleio.say "You should have fun while you still got the chance."
@@ -336,7 +336,7 @@ label kleio_belly_caress_male:
     return
 
 label kleio_belly_listen_male:
-    show kleio talkative at center, zoomAt(1.25, (640, 880))
+    show kleio talk at center, zoomAt(1.25, (640, 880))
     kleio.say "Hey, Loverboy..."
     kleio.say "Get over here and help me with your kid!"
     show kleio normal
@@ -351,7 +351,7 @@ label kleio_belly_listen_male:
     "And she shakes her head, like I'm some kind of moron."
     show kleio surprised
     kleio.say "What?"
-    show kleio talkative
+    show kleio talk
     kleio.say "No, you dumbass!"
     kleio.say "I want you to listen to what they're doing in there."
     show kleio happy
@@ -364,7 +364,7 @@ label kleio_belly_listen_male:
     show kleio annoyed
     kleio.say "Do I look like a doctor?"
     kleio.say "How the fuck would I know?!?"
-    show kleio talkative
+    show kleio talk
     kleio.say "I just keep feeling something going on in there."
     kleio.say "And it feels like farting in the bath!"
     kleio.say "Like underwater!"
@@ -380,7 +380,7 @@ label kleio_belly_listen_male:
     show kleio b annoyed
     kleio.say "Huh..."
     kleio.say "I thought it might have been the spicy stuff I ate last night?"
-    show kleio b talkative
+    show kleio b talk
     kleio.say "Like, maybe the baby didn't like it or something?"
     show kleio b normal
     "I stand up and shake my head."

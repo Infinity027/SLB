@@ -4439,7 +4439,7 @@ label kleio_sub_event_1:
     mike.say "Kleio..."
     mike.say "Grab your shit!"
     mike.say "We're going for a drive, okay?"
-    show kleio talkative
+    show kleio talk
     kleio.say "Oh fuck..."
     kleio.say "Wait for me!"
     kleio.say "I'm coming, I'm coming - don't go without me!"

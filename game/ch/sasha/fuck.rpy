@@ -3938,7 +3938,7 @@ label sasha_dom_cunnilingus_male:
     with fade
     sasha.say "[hero.name], baby...I'm feeling really tense tonight."
     "She has a sulky, slightly hurt expression and tone as she says this, using her voice to reel me in yet further."
-    show sasha a talkative
+    show sasha a talk
     sasha.say "Give me a massage and make it all better?"
     show sasha a normal
     "I nod eagerly, thinking that she could have asked me to do something way more demanding has she wanted."
@@ -3951,7 +3951,7 @@ label sasha_dom_cunnilingus_male:
     "She places her hands over her groin and makes a pouting face as if feeling discomfort even as she showed me the exact spot."
     show sasha b whining
     sasha.say "Right here's where it hurts."
-    show sasha b talkative
+    show sasha b talk
     sasha.say "Oh, [hero.name] - you're an actual saint!"
     show sasha b normal
     "Well, maybe I should have seen that one coming."

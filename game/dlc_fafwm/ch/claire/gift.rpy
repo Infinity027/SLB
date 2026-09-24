@@ -37,7 +37,7 @@ label claire_gift_swimsuit_male:
         "Claire smiles as she holds the swimsuit up to herself."
         "And I feel a surge of relief as she seems to be accepting the gift."
         "Plus she'd nodding the whole time too, which has to be a good sign."
-        show claire talkative
+        show claire talk
         claire.say "This is so nice, [hero.name]..."
         claire.say "I never bought myself a swimsuit like this."
         claire.say "I don't think I'd ever have the courage to."
@@ -46,7 +46,7 @@ label claire_gift_swimsuit_male:
         mike.say "That's great, Claire - you're going to look stunning in it."
         show claire wink
         "Claire gives me a cheeky little wink."
-        show claire talkative
+        show claire talk
         claire.say "Don't worry, you'll be the first person to see me in it!"
         show claire normal
         $ claire.flags.sexyswimsuit = True
@@ -62,7 +62,7 @@ label claire_gift_swimsuit_male:
         show claire sad
         "I nod as Claire hands the swimsuit back to me, trying to hide my disappointment."
         mike.say "Sorry, Claire - I'll try harder to pick the right gift next time."
-        show claire talkative
+        show claire talk
         claire.say "It was a nice gesture."
         claire.say "But I'm just not that kind of a girl!"
         show claire sadsmile
@@ -89,7 +89,7 @@ label claire_gift_collar_male:
         show claire happy
         "Claire looks up at me, amazement written all over her face."
         "She blinks and shakes her head, as if she can't believe what she's seeing."
-        show claire talkative
+        show claire talk
         claire.say "But how..."
         claire.say "How did you know?"
         show claire happy
@@ -155,7 +155,7 @@ label claire_gift_slutty_dress_male:
         "Claire smiles as she holds the dress up to herself."
         "And I feel a surge of relief as she seems to be accepting the gift."
         "Plus she'd nodding the whole time too, which has to be a good sign."
-        show claire talkative
+        show claire talk
         claire.say "This is so nice, [hero.name]..."
         claire.say "I never bought myself a dress like this."
         claire.say "I don't think I'd ever have the courage to."
@@ -164,7 +164,7 @@ label claire_gift_slutty_dress_male:
         mike.say "That's great, Claire - you're going to look stunning in it."
         show claire wink
         "Claire gives me a cheeky little wink."
-        show claire talkative
+        show claire talk
         claire.say "Don't worry, you'll be the first person to see me in it!"
         show claire normal
         $ claire.flags.sluttydate = True
@@ -181,7 +181,7 @@ label claire_gift_slutty_dress_male:
         show claire sad
         "I nod as Claire hands the dress back to me, trying to hide my disappointment."
         mike.say "Sorry, Claire - I'll try harder to pick the right gift next time."
-        show claire talkative
+        show claire talk
         claire.say "It was a nice gesture."
         claire.say "But I'm just not that kind of a girl!"
         show claire sadsmile
@@ -209,7 +209,7 @@ label claire_gift_sexy_dress_male:
         "Claire smiles as she holds the dress up to herself."
         "And I feel a surge of relief as she seems to be accepting the gift."
         "Plus she'd nodding the whole time too, which has to be a good sign."
-        show claire talkative
+        show claire talk
         claire.say "This is so nice, [hero.name]..."
         claire.say "I never bought myself a swimsuit like this."
         claire.say "I don't think I'd ever have the courage to."
@@ -218,7 +218,7 @@ label claire_gift_sexy_dress_male:
         mike.say "That's great, Claire - you're going to look stunning in it."
         show claire wink
         "Claire gives me a cheeky little wink."
-        show claire talkative
+        show claire talk
         claire.say "Don't worry, you'll be the first person to see me in it!"
         $ claire.flags.sluttydate = False
         $ claire.flags.sexydate = True
@@ -234,7 +234,7 @@ label claire_gift_sexy_dress_male:
         show claire sad
         "I nod as Claire hands the dress back to me, trying to hide my disappointment."
         mike.say "Sorry, Claire - I'll try harder to pick the right gift next time."
-        show claire talkative
+        show claire talk
         claire.say "It was a nice gesture."
         claire.say "But I'm just not that kind of a girl!"
         show claire sadsmile

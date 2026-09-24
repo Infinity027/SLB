@@ -360,7 +360,7 @@ label anna_belly_kiss_male:
     "And my assumption is confirmed as she now goes all starry-eyed."
     show anna b surprised
     anna.say "You do?"
-    show anna b talkative
+    show anna b talk
     anna.say "Then why aren't you kissing it?"
     show anna b happy
     anna.say "In fact, why aren't you kissing it right now?!?"
@@ -423,7 +423,7 @@ label anna_belly_listen_male:
     show anna normal
     "But before I can say another word, she has hold of me."
     "And then she's pulling my head downwards."
-    show anna b talkative
+    show anna b talk
     anna.say "You have to check this out..."
     anna.say "Trust me, you're gonna love it!"
     show anna b normal

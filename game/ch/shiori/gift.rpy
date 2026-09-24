@@ -172,7 +172,7 @@ label shiori_gift_slutty_dress_male:
     "Which is why I decided to buy the dress that I'm currently hiding in a box behind my back."
     "Gambling on the notion that Shiori's conservative style of dress is on account of her shyness."
     "And that what she really needs is a gentle push towards wearing things with a little more...visual impact."
-    show shiori talkative
+    show shiori talk
     shiori.say "Oh..."
     shiori.say "Hello, [hero.name]…"
     shiori.say "It's so nice to see you!"
@@ -185,7 +185,7 @@ label shiori_gift_slutty_dress_male:
     "Shiori keeps on smiling and holds my eye."
     "But at the same time she leans over to the side, drawing my gaze downwards."
     "And she keeps on doing that until we're both looking straight at the gift-wrapped box."
-    show shiori talkative
+    show shiori talk
     shiori.say "Looks like some lucky person's in for a surprise!"
     show shiori smile
     mike.say "Oh..."

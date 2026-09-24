@@ -398,7 +398,7 @@ label morgan_belly_kiss_male:
     show morgan normal
     "Morgan looks at me with renewed interest."
     "And she crosses her arms over her bump too."
-    show morgan talkative
+    show morgan talk
     morgan.say "Is that so?"
     morgan.say "Too afraid to want to know the actual answer?"
     show morgan normal
@@ -409,7 +409,7 @@ label morgan_belly_kiss_male:
     "Morgan raises an eyebrow at this."
     show morgan happy
     "And her smile is slow to spread across her face."
-    show morgan talkative
+    show morgan talk
     if morgan.male >= 66:
         morgan.say "Heh..."
         morgan.say "That's less weird than having a foot fetish!"
@@ -452,7 +452,7 @@ label morgan_belly_caress_male:
     "The moment that I make the admission, Morgan's face lights up."
     show morgan at center, traveling(1.5, 0.3, (640, 1040))
     "And she reaches out, grabbing hold of my wrist."
-    show morgan talkative
+    show morgan talk
     if morgan.male >= 66:
         morgan.say "Here you go, [hero.name]…"
         morgan.say "It's weird, but in a cool kind of way!"
@@ -468,7 +468,7 @@ label morgan_belly_caress_male:
     "And straight away I feel a sense of joy rising inside of me."
     "I look up and straight into Morgan's eyes, and it's there too."
     "The exact same feeling is beaming out of her."
-    show morgan talkative
+    show morgan talk
     morgan.say "You see what I mean?"
     show morgan happy
     morgan.say "Pretty cool, huh?"
@@ -494,12 +494,12 @@ label morgan_belly_listen_male:
     show morgan normal
     "Morgan shakes her head at this."
     "As I guess she's already used to me being overly protective."
-    show morgan talkative
+    show morgan talk
     morgan.say "Everything's fine, [hero.name]…"
     morgan.say "It's just..."
     show morgan surprised
     morgan.say "Whoa!"
-    show morgan talkative
+    show morgan talk
     morgan.say "It's just weird, you know?"
     morgan.say "Having a tiny person moving around inside of you?"
     show morgan normal

@@ -115,7 +115,7 @@ label hanna_gift_slutty_dress_male:
     mike.say "Have you been working out even harder than usual?"
     "To Hanna, compliments on her appearance are like a drug that she's long been addicted to."
     "And so it comes as no surprise that she instantly smiles and begins to unconsciously pose."
-    show hanna talkative
+    show hanna talk
     hanna.say "Nope!"
     hanna.say "You're just looking at the long-term benefits of a holistic fitness regimen."
     hanna.say "Believe me, when you run a gym, you have to look this good."
@@ -149,14 +149,14 @@ label hanna_gift_slutty_dress_male:
     "Hanna's attention seems to be totally occupied by the dress in her hands."
     "But at the sound of my voice, she looks up and straight into my eyes."
     if hanna.sub >= 70:
-        show hanna talkative blush
+        show hanna talk blush
         hanna.say "[hero.name], I'm amazed..."
         hanna.say "No guy ever bought me a dress like this before!"
         show hanna normal -blush
         mike.say "I...I know it's a bit daring."
         mike.say "But I just thought that..."
         "Hanna's hand shoots out, a finger pressing against my lips."
-        show hanna talkative
+        show hanna talk
         hanna.say "Shhh!"
         hanna.say "Don't ruin the moment by apologising."
         show hanna normal

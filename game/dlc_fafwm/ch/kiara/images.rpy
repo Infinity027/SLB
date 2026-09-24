@@ -34,7 +34,7 @@ init -35 python:
     'positions': ['a', 'b', 'c', 'd'],
     'piercings': ['clit', 'ears', 'navel', 'nipples', 'nose'],
     'haircuts': ['nohaircut', 'haircut'],
-    'exps': ['normal', 'angry', 'annoyed', 'blank', 'bothered', 'childish', 'confident', 'cringe', 'delicious', 'disappointed', 'disgusted', 'dreaming', 'evil', 'fantasize', 'flirt', 'guilty', 'hurt', 'irritated', 'mindless', 'mischievous', 'pleading', 'pout', 'preying', 'remorse', 'sad', 'sadsmile', 'scream', 'serious', 'shock', 'shout', 'smile', 'stare', 'stuned', 'surprised', 'talkative', 'tantrum', 'tasty', 'unhappy', 'uninterested', 'upset', 'warning', 'whining'],
+    'exps': ['normal', 'angry', 'annoyed', 'blank', 'bothered', 'childish', 'confident', 'cringe', 'delicious', 'disappointed', 'disgusted', 'dreaming', 'evil', 'fantasize', 'flirt', 'guilty', 'hurt', 'irritated', 'mindless', 'mischievous', 'pleading', 'pout', 'preying', 'remorse', 'sad', 'sadsmile', 'scream', 'serious', 'shock', 'shout', 'smile', 'stare', 'stuned', 'surprised', 'talk', 'tantrum', 'tasty', 'unhappy', 'uninterested', 'upset', 'warning', 'whining'],
     'outfits': ['casual', 'work', 'sport', 'date', 'sexydate', 'sluttydate', 'swimsuit', 'sexyswimsuit', 'halloween', 'wedding', 'underwear', 'naked'],
     'others': ['pubes', 'collar', 'bottomless', 'topless'],
     'accessories': ['cap'],
@@ -242,9 +242,9 @@ label test_kiara_exps:
     show expression f"kiara {pose} surprised" as k2 at left
     "surprised"
 
-    $ renpy.show(f"kiara {pose} talkative")
-    show expression f"kiara {pose} talkative" as k2 at left
-    "talkative"
+    $ renpy.show(f"kiara {pose} talk")
+    show expression f"kiara {pose} talk" as k2 at left
+    "talk"
 
     $ renpy.show(f"kiara {pose} tantrum")
     show expression f"kiara {pose} tantrum" as k2 at left

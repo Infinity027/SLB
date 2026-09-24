@@ -349,7 +349,7 @@ label harmony_belly_caress_male:
     "Not only have her curves become curvier, but it's like she's glowing the whole time."
     "I mean, is there something sexy pregnant women give off?"
     "Kind of like sexy radiation or something?"
-    show harmony talkative
+    show harmony talk
     if harmony.purity >= HP:
         harmony.say "Oh, [hero.name]…"
         harmony.say "You're looking at me in that way again!"

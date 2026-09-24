@@ -1011,7 +1011,7 @@ init -35 python:
     'righthands': ['rightnormal', 'rightpeace', 'rightok', 'rightopen', 'righthold'],
     'piercings': ['clit', 'navel', 'nipples', 'nose'],
     'haircuts': ['nohaircut', 'haircut'],
-    'exps': ['normal', 'angry', 'annoyed', 'devious', 'embarrassed', 'flirt', 'guilty', 'happy', 'interested', 'lying', 'mindless', 'pensive', 'sad', 'sadangry', 'sadfrustrated', 'sadshock', 'sadsmile', 'shock', 'shout', 'shy', 'stuned', 'surprised', 'talkative', 'upset', 'whining'],
+    'exps': ['normal', 'angry', 'annoyed', 'devious', 'embarrassed', 'flirt', 'guilty', 'happy', 'interested', 'lying', 'mindless', 'pensive', 'sad', 'sadangry', 'sadfrustrated', 'sadshock', 'sadsmile', 'shock', 'shout', 'shy', 'stuned', 'surprised', 'talk', 'upset', 'whining'],
     'outfits': ['casual', 'purecasual', 'sport', 'date', 'puredate', 'sexydate', 'sluttydate', 'swimsuit', 'sexyswimsuit', 'rpg', 'halloween', 'wedding', 'underwear', 'sexyunderwear'],
     'others': ['pubes', 'collar', 'blush', 'bottomless', 'topless', 'naked', 'noacc', 'saliva'],
     'accessories': ['glasses', 'pureglasses', 'dildo', 'mask', 'wallet'],
@@ -1210,9 +1210,9 @@ label test_reona_exps:
     show expression f"reona {pose} surprised" as l2 at left
     "surprised"
 
-    $ renpy.show(f"reona {pose} talkative")
-    show expression f"reona {pose} talkative" as l2 at left
-    "talkative"
+    $ renpy.show(f"reona {pose} talk")
+    show expression f"reona {pose} talk" as l2 at left
+    "talk"
 
     $ renpy.show(f"reona {pose} upset")
     show expression f"reona {pose} upset" as l2 at left

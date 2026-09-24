@@ -246,7 +246,7 @@ label submissive_interact_shiori_male:
     mike.say "I loved milking you so much the other day."
     mike.say "I want you to ask me to do it again whenever you say hi to me!"
     if shiori.sub >= 70 or shiori.is_sex_slave:
-        show shiori talkative blush
+        show shiori talk
         shiori.say "I...I liked it too - a lot!"
         shiori.say "Just the thought of it makes me feel...horny!"
         shiori.say "Of course I'll do it."

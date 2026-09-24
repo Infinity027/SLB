@@ -1528,8 +1528,11 @@ init -999 python:
                     DONE.pop('hanna_gym_profits_pay')
 
     def update_24_10_0():
-        if 'amy_event_07' in DONE and 'amy_event_07_date' not in DONE and not hero.calendar.find(label="amy_event_07_date"):
-            DONE.pop('amy_event_07')
+        # === CEMETERY EVENT REMOVED ===  the cemetery date (amy_event_07_date)
+        # no longer exists, so this migration must NOT un-mark the bridged
+        # amy_event_07 (that would force the player to redo it). Disabled:
+        # if 'amy_event_07' in DONE and 'amy_event_07_date' not in DONE and not hero.calendar.find(label="amy_event_07_date"):
+        #     DONE.pop('amy_event_07')
         if 'alexis_event_10' in DONE and 'alexis_event_11' not in DONE and not hero.calendar.find(label="alexis_event_11"):
             DONE.pop('alexis_event_10')
         if "angela_female_event_12a" in DONE:
@@ -1586,10 +1589,6 @@ init -999 python:
                 achievement.grant("electronic_harem_1")
             if "electronic_harem_event_09" in DONE and (renpy.seen_image("electronic 4some fuckamy") or renpy.seen_image("electronic 4some fuckpalla")):
                 achievement.grant("electronic_harem_2")
-            if "goth_harem_event_01" in DONE and (renpy.seen_image("goth 3some violainefuck") or renpy.seen_image("goth 3some amyfuck mike")):
-                achievement.grant("goth_harem_1")
-            if "goth_harem_event_03" in DONE and renpy.seen_image("goth 4some bj amy violaine"):
-                achievement.grant("goth_harem_3")
             if "petite_harem_event_04_sex" in DONE:
                 achievement.grant("petite_harem_2")
             if "thot_harem_event_04" in DONE and renpy.seen_image("thot 3some handjob"):

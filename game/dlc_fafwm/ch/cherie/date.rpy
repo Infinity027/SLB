@@ -165,7 +165,7 @@ label cherie_date_intro_valentine_male:
     "Much to my surprise, Cherie blushes and looks away."
     "Not what I was expecting from a mature, dignified woman."
     mike.say "Cherie, are you okay?"
-    show cherie b talkative
+    show cherie b talk
     cherie.say "Oh, I'm sorry, [hero.name]."
     show cherie b whining
     cherie.say "It's been so long since someone called me their valentine."
@@ -185,7 +185,7 @@ label cherie_date_intro_halloween_male:
     show cherie a amused
     mike.say "Well, Cherie, you're only as young as you feel."
     mike.say "And it might be fun..."
-    show cherie a talkative
+    show cherie a talk
     cherie.say "Seriously though, let's drop the idea."
     show cherie a smile
     cherie.say "Unless you want to spend the evening trick or treating on your own..."
@@ -211,7 +211,7 @@ label cherie_date_intro_birthday_male:
     mike.say "So I hope you'll enjoy it all."
     show cherie b happy blush
     cherie.say "Oh, [hero.name] - you're so thoughtful!"
-    show cherie b talkative
+    show cherie b talk
     cherie.say "And so discreet too."
     show cherie b wink
     cherie.say "A less sensitive man might have mentioned my actual age..."
@@ -225,7 +225,7 @@ label cherie_date_intro_mc_birthday_male:
     show cherie a normal
     mike.say "Oh...thanks, Cherie."
     mike.say "I'm really flattered that you remembered."
-    show cherie a talkative
+    show cherie a talk
     cherie.say "Well, Dwayne was never one for keeping track of the finer details."
     cherie.say "So it kind of became a habit of mine to do all of that."
     show cherie a happy

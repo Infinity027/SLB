@@ -397,7 +397,7 @@ label office_event_01:
     "I'm doing the best I can to sound simply surprised to see her in my office."
     "But we both know that there's far more going on under the surface."
     "Why else would the former CEO's wife come calling on someone of my pay-grade?"
-    show cherie talkative
+    show cherie talk
     cherie.say "I was just passing, [hero.name], that's all."
     cherie.say "And it's more what I can do for you..."
     show cherie normal at center, zoomAt(1.0, (300, 720)) with ease
@@ -408,7 +408,7 @@ label office_event_01:
     "But a woman like her never just walks anywhere."
     "In reality, Cherie sashays over to my desk."
     "And every step shows off the goods she has on show as they jostle beneath her clothes."
-    show cherie talkative
+    show cherie talk
     cherie.say "I won't lie to you, [hero.name]."
     cherie.say "And I won't beat about the bush either."
     show cherie smile
@@ -418,7 +418,7 @@ label office_event_01:
     show cherie at center, traveling(1.75, 0.3, (640, 1140))
     "And then she leans in close enough for me to smell the scent of her."
     "Close enough to see her chest rise and fall as I glance down her dress too!"
-    show cherie talkative
+    show cherie talk
     cherie.say "No, I want us to be totally candid with one another."
     cherie.say "At a time like this, it's important that we're of one mind."
     cherie.say "And one body too..."
@@ -454,7 +454,7 @@ label office_event_01:
             "I can feel the warmth of her breath on my face."
             "It's like she's teasing me, using herself to show what's on offer."
             "And all I have to do is reach out and take it!"
-            show cherie talkative
+            show cherie talk
             cherie.say "Well, not exactly like Dwayne."
             cherie.say "For one thing, I'll be taking a far more hands on role."
             cherie.say "So I'll be there for you, whenever you need me."
@@ -465,7 +465,7 @@ label office_event_01:
             "It takes me a short while to realise that Cherie's stopped talking."
             "As well as that she's now waiting for my response."
             "I seem to have been staring at her chest the whole time."
-            show cherie talkative
+            show cherie talk
             cherie.say "Well, [hero.name] - do you want the job?"
             show cherie normal
             mike.say "Of course I do, Cherie."
@@ -508,7 +508,7 @@ label office_event_01:
             "She's so close right now that she's almost touching me."
             "Almost but not quite - like she's showing me what's just within reach."
             "If only I have the courage to reach out and take it..."
-            show cherie talkative
+            show cherie talk
             cherie.say "It's not like that, [hero.name]."
             cherie.say "I'd be there every step of the way."
             cherie.say "Available for your every need."

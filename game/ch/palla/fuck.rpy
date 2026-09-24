@@ -1270,7 +1270,7 @@ label palla_fuck_date_intro_male(location="hero"):
         if palla.sub <= 80:
             show palla b
             "Palla has her arms crossed, looking from one piece of sci-fi memorabilia to the next."
-            show palla talkative at startle(0.1, 5)
+            show palla talk at startle(0.1, 5)
             palla.say "Wow..."
             palla.say "And here I was thinking that Shawn was the king of the nerds!"
             show palla normal
@@ -1279,7 +1279,7 @@ label palla_fuck_date_intro_male(location="hero"):
 
             show palla stuned
             "Palla's got her hands behind her back as she gazes at the contents of my bedroom."
-            show palla talkative at startle(0.1, 5)
+            show palla talk at startle(0.1, 5)
             palla.say "My goodness..."
             palla.say "I always thought that Shawn had a lot of toys in his bedroom."
             palla.say "But you seem to have a lot more, [hero.name]!"
@@ -2049,7 +2049,7 @@ label palla_fuck_date_blowjob:
         "But the move also has the symbolic gesture of putting my hands well out of the way."
         "Which kind of means that I'm surrendering myself to Palla's intention."
         "Effectively letting her know that she's free to do whatever she has in mind."
-        show palla talkative at traveling(1.5, 0.5, (640, 1000))
+        show palla talk at traveling(1.5, 0.5, (640, 1000))
         palla.say "Okay, [hero.name]…"
         palla.say "Just sit back and leave everything to me."
         show palla flirt

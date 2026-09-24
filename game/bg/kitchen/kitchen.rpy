@@ -125,7 +125,6 @@ label generic_meal:
     if 'sasha' in present_people and sasha.flags.cheated:
         $ present_people.remove("sasha")
 
-
     if not present_people:
         show chibi eat
         $ narrator(randchoice(meal_say[3]))
@@ -134,8 +133,6 @@ label generic_meal:
         $ meal_label = "_".join(["meal"] + present_people)
         $ hero.flags[meal_label] = True
         $ hero.fun += fun_bonus
-
-
         $ renpy.random.shuffle(present_people)
         $ i = 0
         while i < len(present_people):
@@ -218,4 +215,3 @@ label do_the_dishes:
     stop sound
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

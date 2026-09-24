@@ -954,13 +954,13 @@ label morgan_kleio_event_04:
     "I watch them become a desperate tangle of limbs as they kiss with ever mounting passion."
     "The sight of their naked bodies intertwined is more than enough to keep me totally entranced."
     "It takes them both stopping and looking me straight in the eye to bring me back to reality."
-    show kleio talkative
+    show kleio talk
     kleio.say "Check out Loverboy here."
     kleio.say "He'd trip over his tongue if he could move an inch!"
     show kleio normal
     show morgan happy
     "Morgan giggles at Kleio's words, but beckons to me all the same."
-    show morgan talkative
+    show morgan talk
     morgan.say "What are you waiting for, [hero.name]?"
     morgan.say "You're not just gonna watch, are you?"
     show morgan normal
@@ -1712,10 +1712,10 @@ label pixie_second_threesome:
         show kleio seductive
         kleio.say "It's not like that, Loverboy."
         show kleio normal
-        show morgan talkative
+        show morgan talk
         morgan.say "This is still new for us too."
         show morgan normal
-        show kleio talkative
+        show kleio talk
         kleio.say "For one thing..."
         show kleio wink
         kleio.say "We didn't have one of these to play with before!"
@@ -1724,7 +1724,7 @@ label pixie_second_threesome:
         "I gasp at the sensation, feeling my heart start to beat faster."
         mike.say "B...but what about dildos?"
         mike.say "And...and stuff like that?"
-        show kleio talkative
+        show kleio talk
         kleio.say "Oh sure, they're great."
         kleio.say "But I still like the feel of a hard dick inside of me!"
         show morgan normal

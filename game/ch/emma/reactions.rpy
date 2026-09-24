@@ -324,7 +324,7 @@ label emma_belly_kiss_male:
     mike.say "You know how you're kind of okay with me touching your bump?"
     "Emma's eyebrows rise as she hears the tone of my voice."
     "Which means that she's taking great care to analyse what I'm saying."
-    show emma talkative
+    show emma talk
     emma.say "Yeah, [hero.name], I do."
     emma.say "And I seem to recall a part of that was based on you not making things weird."
     emma.say "Which I'm pretty sure you're about to test to it's limits, yeah?"
@@ -339,7 +339,7 @@ label emma_belly_kiss_male:
     show emma surprised
     emma.say "Oh, [hero.name]…"
     emma.say "Just tell me already, yeah?"
-    show emma talkative
+    show emma talk
     emma.say "What are you wanting to do?"
     show emma normal
     "I shrug as I decide that I'm going to have to come clean."
@@ -352,7 +352,7 @@ label emma_belly_kiss_male:
     emma.say "You just want to kiss my belly?"
     show emma stuned
     mike.say "Yeah, Emma."
-    show emma talkative
+    show emma talk
     emma.say "Well that sounds okay."
     show emma normal
     "Emma's already lifting her top as she says this."
@@ -413,7 +413,7 @@ label emma_belly_listen_male:
     "I have no idea if this is going to work, or if I'm just going to look like a fool."
     "But of there's the slightest chance of hearing my unborn child moving in there..."
     "Well then I don't really care in the slightest what I look like when I hear it!"
-    show emma talkative
+    show emma talk
     emma.say "Well?"
     emma.say "How's it going down there?"
     emma.say "Can you hear anything at all?"

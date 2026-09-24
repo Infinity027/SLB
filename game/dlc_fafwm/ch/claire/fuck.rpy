@@ -379,7 +379,7 @@ label claire_fuck_date_intro_male(location="hero"):
             claire.say "That I might embarrass you in front of them?"
         else:
             claire.say "But I already saw inside of your house, [hero.name]."
-            show claire talkative
+            show claire talk
             claire.say "And yes, it did seem to be a little on the messy side..."
             claire.say "Which isn't something you need to be ashamed of."
         show claire normal
@@ -394,7 +394,7 @@ label claire_fuck_date_intro_male(location="hero"):
         mike.say "Because I...I didn't tell them I'm dating an older woman yet."
         show claire happy
         "Claire smiles and shakes her head."
-        show claire talkative
+        show claire talk
         if claire.sub >= 25:
             claire.say "That's okay, [hero.name]…"
             claire.say "I quite like the idea of being your little secret!"
@@ -419,7 +419,7 @@ label claire_fuck_date_intro_male(location="hero"):
         mike.say "This is where the magic happens!"
         mike.say "Hey..."
         mike.say "What's so funny?"
-        show claire talkative
+        show claire talk
         if claire.sub >= 25:
             claire.say "Oh, nothing at all."
             claire.say "I bet you've pulled all kinds of magic tricks in this room!"
@@ -433,7 +433,7 @@ label claire_fuck_date_intro_male(location="hero"):
         "Which is precisely when I remember just how nerdy the décor in here must look."
         mike.say "Okay..."
         mike.say "So most of what you're seeing are collectibles..."
-        show claire talkative
+        show claire talk
         claire.say "It's okay, [hero.name]…"
         claire.say "I kind of like that your room reminds me of a teenage boy's."
         claire.say "It makes me feel young and adventurous all over again!"
@@ -447,7 +447,7 @@ label claire_fuck_date_intro_male(location="hero"):
         "Claire nods as she continues to strip-off in front of me, tossing her clothes aside."
         "And once she's done, I get the same treatment, being quickly stripped to my birthday suit!"
         claire.say "Mmm…"
-        show claire talkative
+        show claire talk
         claire.say "Less talk, more action!"
         return
     else:
@@ -497,7 +497,7 @@ label claire_fuck_date_choices_male:
 label claire_fuck_date_sleep(location="hero"):
     scene bg bedroom1
     if game.hour > 19 or game.hour < 6:
-        show claire naked talkative at center, zoomAt(1.25, (640, 880))
+        show claire naked talk at center, zoomAt(1.25, (640, 880))
         if claire.is_sex_slave:
             claire.say "May I share your bed tonight, Master?"
         else:
@@ -531,7 +531,7 @@ label claire_fuck_date_blowjob:
     "And that, combined with my desire for her, is really starting to turn me on."
     "So much so that my cock is already getting hard and beginning to rise."
     "Claire's eyebrows rise too as she notices what's happening down there."
-    show claire talkative
+    show claire talk
     if claire.sub >= 25:
         claire.say "Oh, hello!"
         claire.say "Aren't you a big boy?"
@@ -639,7 +639,7 @@ label claire_fuck_date_cunnilingus:
     "And that, combined with my desire for her, is really starting to turn me on."
     "So much so that my cock is already getting hard and beginning to rise."
     "Claire's eyebrows rise too as she notices what's happening down there."
-    show claire talkative
+    show claire talk
     if claire.sub >= 25:
         claire.say "Oh, hello!"
         claire.say "Aren't you a big boy?"
@@ -701,7 +701,7 @@ label claire_fuck_date_reverse_sixty_nine:
     "And that, combined with my desire for her, is really starting to turn me on."
     "So much so that my cock is already getting hard and beginning to rise."
     "Claire's eyebrows rise too as she notices what's happening down there."
-    show claire talkative
+    show claire talk
     if claire.sub >= 25:
         claire.say "Oh, hello!"
         claire.say "Aren't you a big boy?"
@@ -716,12 +716,12 @@ label claire_fuck_date_reverse_sixty_nine:
     mike.say "The thing is, Claire..."
     mike.say "I always kind of had a fantasy about you..."
     mike.say "That involved my mouth...and your pussy!"
-    show claire talkative
+    show claire talk
     claire.say "Well, I'm sure we can make that little dream of yours come true!"
     show claire normal
     mike.say "Ah..."
     mike.say "But it also involves you doing the same thing to me...at the same time."
-    show claire talkative
+    show claire talk
     claire.say "Ooh..."
     claire.say "You want to do a sixty-nine?"
     show claire normal
@@ -807,7 +807,7 @@ label claire_fuck_date_missionary(sexperience_min):
     "I know full well that her husband is an asshole that doesn't appreciate just how lucky he is."
     "So maybe I'm flattering myself here, but it must be a thrill for Claire to have me in awe of her."
     "Because the honest truth is that I can't help just looking her up and down in total amazement."
-    show claire talkative
+    show claire talk
     if claire.sub >= 25:
         claire.say "[hero.name], why are you looking at me like that?"
         claire.say "I'm going to start blushing if you keep it up!"
@@ -823,7 +823,7 @@ label claire_fuck_date_missionary(sexperience_min):
     "And I'm proved right when she lays herself out on the bed in front of me."
     "Because now I can see that there's a genuine hunger in Claire's eyes."
     "One that's making her spread herself out before me, as if she's issuing a challenge."
-    show claire talkative
+    show claire talk
     if claire.sub >= 25:
         claire.say "You're so charming, [hero.name]…"
         claire.say "So charming that I can't refuse you anything!"
@@ -1135,7 +1135,7 @@ label claire_fuck_date_doggy(sexperience_min):
     "I know full well that her husband is an asshole that doesn't appreciate just how lucky he is."
     "So maybe I'm flattering myself here, but it must be a thrill for Claire to have me in awe of her."
     "Because the honest truth is that I can't help just looking her up and down in total amazement."
-    show claire talkative
+    show claire talk
     if claire.sub >= 25:
         claire.say "[hero.name], why are you looking at me like that?"
         claire.say "I'm going to start blushing if you keep it up!"
@@ -1151,7 +1151,7 @@ label claire_fuck_date_doggy(sexperience_min):
     "And I'm proved right when she lays herself out on the bed in front of me."
     "Because now I can see that there's a genuine hunger in Claire's eyes."
     "One that's making her spread herself out before me, as if she's issuing a challenge."
-    show claire talkative
+    show claire talk
     if claire.sub >= 25:
         claire.say "You're so charming, [hero.name]…"
         claire.say "So charming that I can't refuse you anything!"
@@ -1428,7 +1428,7 @@ label claire_fuck_date_fullnelson(sexperience_min):
     "I know full well that her husband is an asshole that doesn't appreciate just how lucky he is."
     "So maybe I'm flattering myself here, but it must be a thrill for Claire to have me in awe of her."
     "Because the honest truth is that I can't help just looking her up and down in total amazement."
-    show claire talkative
+    show claire talk
     if claire.sub >= 25:
         claire.say "[hero.name], why are you looking at me like that?"
         claire.say "I'm going to start blushing if you keep it up!"
@@ -1444,7 +1444,7 @@ label claire_fuck_date_fullnelson(sexperience_min):
     "And I'm proved right when she lays herself out on the bed in front of me."
     "Because now I can see that there's a genuine hunger in Claire's eyes."
     "One that's making her spread herself out before me, as if she's issuing a challenge."
-    show claire talkative
+    show claire talk
     if claire.sub >= 25:
         claire.say "You're so charming, [hero.name]…"
         claire.say "So charming that I can't refuse you anything!"

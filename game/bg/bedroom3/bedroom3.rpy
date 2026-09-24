@@ -12,4 +12,3 @@ init python:
     "outfit": "casual",
     "tags": ["home"],
     })
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

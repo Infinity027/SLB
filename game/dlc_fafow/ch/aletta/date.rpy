@@ -21,7 +21,7 @@ label aletta_date_amusement_park_male:
     mike.say "But you like riding fast motorbikes, Aletta."
     mike.say "And shooting stuff too."
     mike.say "I thought you'd love the thrill of the rides here?"
-    show aletta talkative
+    show aletta talk
     aletta.say "Those are real things, [hero.name]."
     aletta.say "With real danger involved too."
     aletta.say "So the thrill with them is real."

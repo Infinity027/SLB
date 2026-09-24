@@ -3067,7 +3067,7 @@ label kleio_concert_naked:
         "Kleio throws back her head and laughs at the suggestion."
         "Then she looks me in the eye and makes a point of laughing in my face too."
         kleio.say "Ha!"
-        show kleio talkative
+        show kleio talk
         kleio.say "You're gonna have to do better than that, Loverboy."
         show kleio normal
         "I shake my head, trying to look confused by her answer."
@@ -3076,7 +3076,7 @@ label kleio_concert_naked:
         show kleio annoyed
         "Kleio rolls her eyes."
         "Apparently seeing through the act."
-        show kleio talkative
+        show kleio talk
         kleio.say "You think I haven't been worked on like that before?"
         kleio.say "Tell me the others are more likely to get your pitch..."
         show kleio normal
@@ -3277,7 +3277,7 @@ label naked_gig(gig_location="pub"):
     "Kleio, going through her usual vocal exercises, even though I can see how they make her chest jiggle."
     if Harem.find("amy", name="band"):
         "And last of all Amy, freshly reinstated and just as bare-assed as the rest of us."
-    show anna talkative
+    show anna talk
     anna.say "Are yah ready, [hero.name]?"
     show anna happy
     anna.say "Because I sure am!"
@@ -3292,7 +3292,7 @@ label naked_gig(gig_location="pub"):
     mike.say "I'm ready to go out there and knock them dead!"
     "Kleio chooses that exact moment to jump into the conversation."
     "Chuckling to herself and raising an eyebrow as she does so."
-    show kleio talkative
+    show kleio talk
     kleio.say "You'd better be, Loverboy..."
     show kleio annoyed
     kleio.say "This was your idea, remember?"
@@ -3304,7 +3304,7 @@ label naked_gig(gig_location="pub"):
     show sasha joke
     sasha.say "Do you remember that, Kleio?"
     show sasha normal
-    show kleio talkative
+    show kleio talk
     "Kleio's about to say something back to Sasha."
     show kleio normal
     if Harem.find("amy", name="band"):
@@ -3316,7 +3316,7 @@ label naked_gig(gig_location="pub"):
         show amy normal
     else:
         "But then Anna cuts her off before she can speak"
-        show anna talkative
+        show anna talk
         anna.say "No time for that, guys..."
         anna.say "That's our cue!"
         show anna normal
@@ -3752,7 +3752,7 @@ label kleio_anna_cheating_confrontation:
     mike.say "But the least you can do is listen to my side of the story as well."
     show kleio annoyed
     "Kleio's lips twist into the beginnings of a cynical sneer."
-    show anna talkative
+    show anna talk
     "But before she can say another word, Anna puts a hand on her friend's arm, forcing her to stop."
     anna.say "He's right, Kleio."
     anna.say "We've only heard this from Sasha, and she was really mad when she told us about it."
@@ -3762,7 +3762,7 @@ label kleio_anna_cheating_confrontation:
     mike.say "And I know you're not the kind of person to judge a guy like that - not without hearing his side."
     mike.say "I mean, that'd be the kind of thing a typical man would do to a woman in the same circumstances, wouldn't it?"
     "Kleio looks annoyed, but as the truth of my words sinks in, she begins to soften a little and then nods sadly."
-    show kleio talkative
+    show kleio talk
     kleio.say "Yeah, you got me, you prick..."
     kleio.say "So go on, spill your guts before I lose my patience and do it for you!"
     show kleio normal
@@ -3800,12 +3800,12 @@ label kleio_anna_cheating_confrontation:
                 mike.say "Hey, Kleio - you understand where I'm coming from, right?"
                 mike.say "Yeah, I screwed up, but I'm only human and I'm sorry."
                 "Kleio cocks her head on one side, regarding me with a renewed interest."
-                show kleio talkative
+                show kleio talk
                 kleio.say "And I'd do that how, exactly?"
                 show kleio normal
                 mike.say "Talk to her - convince her that it's okay to forgive me too."
                 "At this, a slow smile creeps across Kleio's face."
-                show kleio b talkative
+                show kleio b talk
                 kleio.say "Okay, [hero.name] - I'll make sure you get just what you deserve..."
                 show kleio a angry
                 play sound punch_hard
@@ -3838,11 +3838,11 @@ label kleio_anna_cheating_confrontation:
                 show kleio annoyed
                 "Kleio rolls her eyes at my words, but I can see that Anna's actually considering them."
                 "She's made some pretty dumb mistakes of her own in the past, and I know that she's got a compassionate heart too."
-                show anna talkative
+                show anna talk
                 anna.say "Oh, [hero.name]...I DO want to give you another chance!"
                 show anna normal
                 mike.say "Thank you, Anna - you won't regret it, I promise you that."
-                show kleio talkative
+                show kleio talk
                 kleio.say "Jesus, Anna - pass the bucket so I can puke!"
                 show kleio annoyed
                 show anna surprised
@@ -3850,13 +3850,13 @@ label kleio_anna_cheating_confrontation:
                 show anna angry
                 "But then her expression darkens, and then she's the one poking a finger into the other girl's surprised face."
                 show kleio surprised
-                show anna talkative
+                show anna talk
                 anna.say "Like you're perfect, Kleio!"
                 anna.say "I could tell some pretty juicy stories about you having your fun and thinking fuck the consequences!"
                 anna.say "How many times have Sasha and I forgiven you, huh?"
                 show anna annoyed
                 "At the mention of her own past indiscretions, Kleio's cheeks redden, and she almost tries to cover Anna's mouth with both hands."
-                show kleio talkative
+                show kleio talk
                 kleio.say "Alright, Anna - maybe you have a point after all!"
                 kleio.say "I suppose we can give him another chance - ONE more chance, that is..."
                 show kleio normal
@@ -3918,7 +3918,7 @@ label kleio_anna_cheating_confrontation:
                 "Kleio looks at me for a moment, as though she's about to say something about sisterhood and how all men are jerks."
                 "But then she shakes her head and rolls her eyes, before turning to face Anna with a no-nonsense look on her face."
                 show kleio angry
-                show kleio talkative
+                show kleio talk
                 kleio.say "For fuck's sake, Anna, what's the matter with you now?"
                 kleio.say "[hero.name] just swore to us that he wasn't cheating on us - isn't that what we wanted to hear?"
                 show kleio annoyed
@@ -3930,7 +3930,7 @@ label kleio_anna_cheating_confrontation:
                 mike.say "But, Anna...it was ages ago!"
                 "I find myself standing there, completely stumped as to what I should say or do next."
                 "But luckily for me, it seems that Kleio's not suffering from the same problem."
-                show kleio talkative
+                show kleio talk
                 kleio.say "Jesus, Anna - that's the most stupid thing you've ever said in front of me."
                 kleio.say "And you really have said some stupid shit before now!"
                 show kleio annoyed
@@ -3938,14 +3938,14 @@ label kleio_anna_cheating_confrontation:
                 "The intensity of Kleio's tirade is enough to stop Anna's blubbering completely."
                 "She stares at her friend with those massive watery eyes, shocked by the way she's being spoken to."
                 show anna sad
-                show kleio talkative
+                show kleio talk
                 kleio.say "We've all fucked people in our past, and we might end up fucking new people in the future too."
                 kleio.say "Stop turning [hero.name] into some kind of fairy tale prince - because he sure as hell isn't one!"
                 show kleio normal
                 mike.say "Erm, thanks, Kleio...I think..."
                 "Kleio wraps an arm around her friend's shoulder and begins to lead her away."
                 "As I watch them go, Kleio looks back and gives me a weak smile."
-                show kleio talkative
+                show kleio talk
                 kleio.say "Don't worry, [hero.name] - I'll take care of her."
                 kleio.say "We all need to sit down and have this out between us."
                 kleio.say "But I somehow, I think we'll be okay!"

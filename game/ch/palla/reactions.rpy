@@ -374,7 +374,7 @@ label palla_belly_caress_male:
     "And whether she seems to notice it or not, this does appear to improve her mood."
     show palla happy
     "Because she begins to smile and put her hands atop mine."
-    show palla talkative
+    show palla talk
     palla.say "You know, you might be onto something there..."
     palla.say "Pregnant could be a radical new look for this season..."
     palla.say "I have to look through my wardrobe."

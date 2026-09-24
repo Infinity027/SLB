@@ -316,7 +316,7 @@ label command_nickname_morgan:
 label submissive_interact_morgan_male:
     mike.say "Hey, Morgan..."
     mike.say "It's a pretty crazy story, isn't it - how we got here?"
-    show morgan talkative
+    show morgan talk
     morgan.say "You can say that again, [hero.name]!"
     show morgan normal
     mike.say "I was thinking - maybe we should keep that crazy alive?"

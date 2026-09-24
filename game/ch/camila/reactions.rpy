@@ -245,7 +245,7 @@ label camila_movie_liked_reaction_male:
     return
 
 label camila_belly_kiss_male:
-    show camila talkative at center, zoomAt(1.25, (640, 880))
+    show camila talk at center, zoomAt(1.25, (640, 880))
     camila.say "[hero.name]…"
     camila.say "You know that I can see you, right?"
     camila.say "And that I know exactly what you're thinking too?"
@@ -260,7 +260,7 @@ label camila_belly_kiss_male:
     "Camila fixes me with one of her hardest stares."
     "The kind that are almost guaranteed to make me start sweating on the spot."
     "And at the same time she points to her bump."
-    show camila talkative
+    show camila talk
     camila.say "You were looking at this, weren't you?"
     camila.say "Staring at my belly with one thing in mind."
     camila.say "Just wanting to bend down and kiss it, aren't you?"
@@ -278,7 +278,7 @@ label camila_belly_kiss_male:
     "And then she does something that I wasn't expecting at all."
     show camila at center, traveling(2.0, 0.5, (640, 980))
     "She pulls up her shirt, and thrusts her belly towards me."
-    show camila talkative
+    show camila talk
     camila.say "Okay then..."
     show camila happy
     camila.say "Get on with it already."
@@ -370,7 +370,7 @@ label camila_belly_listen_male:
     "As soon as I make it over to Camila, she gets right down to business."
     "Which seems to involve pulling up her top and thrusting out her belly."
     "In fact she thrusts it right into the palms of my outstretched hands."
-    show camila talkative
+    show camila talk
     camila.say "Get in real close and have a listen, yeah?"
     camila.say "I want to know what's going on in there!"
     show camila normal
@@ -378,7 +378,7 @@ label camila_belly_listen_male:
     "Something that I know isn't going to go down well."
     "But I feel like the request is so weird that I have to be honest."
     mike.say "You want me to do what?"
-    show camila talkative
+    show camila talk
     camila.say "To listen to my belly, then tell me what you hear."
     show camila angry
     camila.say "Geez, [hero.name]…"

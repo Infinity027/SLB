@@ -5255,7 +5255,7 @@ label kat_jack_07:
     jack.say "I'm normally running late."
     jack.say "But not today!"
     show jack normal
-    show kat talkative
+    show kat talk
     kat.say "Me too."
     kat.say "And luckily we bumped into each other just down the street."
     kat.say "Because one of us turning up on our own would have been pretty awkward!"
@@ -5277,7 +5277,7 @@ label kat_jack_07:
     jack.say "Me neither!"
     jack.say "How about you, Kat?"
     show jack normal
-    show kat talkative
+    show kat talk
     kat.say "I know a little bit, I guess?"
     kat.say "I mean, I've watched a couple of videos!"
     show kat normal
@@ -5285,7 +5285,7 @@ label kat_jack_07:
     "Almost like she's going to describe how to do this thing."
     "To break it down into simple, easy steps for us."
     "But then she shakes her head."
-    show kat talkative
+    show kat talk
     kat.say "I suppose the first thing would be for us all to get naked?"
     show kat normal
     show jack smile
@@ -6454,7 +6454,7 @@ label jack_kat_special:
             jack.say "Don't worry, man..."
             jack.say "It'll be great!"
             show jack normal
-            show kat talkative
+            show kat talk
             kat.say "We'll make sure it is, okay?"
             show kat smile
             "I can't help treating myself to a smile as my plan works out."
@@ -6477,7 +6477,7 @@ label jack_kat_special:
             jack.say "Aww..."
             jack.say "Did we hurt your feelings?"
             show jack normal
-            show kat talkative
+            show kat talk
             kat.say "That's too bad, [hero.name]…"
             kat.say "Because now we're gonna be even meaner!"
             show kat defiant
@@ -6509,7 +6509,7 @@ label jack_kat_special:
     "At the same moment I hear the grumbling sound again."
     mike.say "Wow..."
     mike.say "Mystery solved!"
-    show kat talkative
+    show kat talk
     kat.say "Is that really you, Jack?"
     show kat smile
     "Jack looks around, keen to make sure nobody else is listening."
@@ -6546,7 +6546,7 @@ label jack_kat_special:
             show jack normal
             show kat happy at startle
             "Kat giggles and pokes a finger into Jack's belly."
-            show kat talkative
+            show kat talk
             kat.say "Okay, Jack..."
             kat.say "But you're going to have to catch us up, okay?"
             show kat sad
@@ -6639,7 +6639,7 @@ label jack_kat_special:
     "Instead we just kind of drift into the place without as much as a word exchanged between us."
     "And once we're inside, we find ourselves surrounded by flashing lights and familiar sound effects."
     "But Kat's the first to announce what she wants to do next."
-    show kat talkative
+    show kat talk
     kat.say "Okay, okay..."
     kat.say "I want to go play one of those classic shooters..."
     kat.say "Maybe 'S-Type', as I haven't played it in ages."
@@ -6659,7 +6659,7 @@ label jack_kat_special:
     show jack embarrassed
     show kat annoyed
     "As one, Kat and Jack shake their heads at me."
-    show kat talkative
+    show kat talk
     kat.say "Forget that [hero.name]…"
     kat.say "Come play with me instead."
     show kat smile
@@ -6677,7 +6677,7 @@ label jack_kat_special:
             mike.say "Then we can meet back here when we're done."
             mike.say "How does that sound?"
             "Jack and Kat both nod."
-            show kat talkative
+            show kat talk
             kat.say "Okay, [hero.name]."
             show kat smile
             show jack smile
@@ -6738,7 +6738,7 @@ label jack_kat_special:
             "And I can see that the moment I do, Kat and Jack can't help staring in the same direction."
             show kat happy
             kat.say "Geez..."
-            show kat talkative
+            show kat talk
             kat.say "I haven't played that since I was a kid!"
             show kat smile
             show jack smile
@@ -6752,7 +6752,7 @@ label jack_kat_special:
             show jack surprised
             jack.say "Lies, all lies!"
             show jack normal
-            show kat talkative
+            show kat talk
             kat.say "If that's so, then prove it..."
             kat.say "Put your money where your mouth is!"
             show kat defiant
@@ -6778,7 +6778,7 @@ label jack_kat_special:
     jack.say "The tickets!"
     show jack normal
     "As soon as she sees them, Kat seems to understand their significance."
-    show kat talkative
+    show kat talk
     kat.say "I get it now..."
     kat.say "We trade those in for prizes, right?"
     show kat smile
@@ -6798,7 +6798,7 @@ label jack_kat_special:
     jack.say "I'm liking that plushie there..."
     jack.say "The one that looks like it's a dugong?"
     show jack normal
-    show kat talkative
+    show kat talk
     kat.say "I want a plushie too..."
     kat.say "But I like the octopus!"
     show kat smile
@@ -6876,7 +6876,7 @@ label jack_kat_special:
                 mike.say "Because I know how much you love octopi!"
                 show kat blush
                 "Kat blushes a little and waves away my comments."
-                show kat talkative
+                show kat talk
                 kat.say "Ah, they're just so slippery and slimy..."
                 kat.say "I love to imagine them crushing people with their mighty tentacles!"
                 show kat smile
@@ -6901,7 +6901,7 @@ label jack_kat_special:
                 mike.say "I think we can afford one of those bigger plushies!"
                 "Kat and Jack follow my pointing finger."
                 "And it doesn't take long for them to see I'm right."
-                show kat talkative
+                show kat talk
                 kat.say "He's right..."
                 kat.say "We could totally get that big, vicious dog!"
                 show kat smile
@@ -7182,7 +7182,7 @@ label jack_kat_special_sex:
     mike.say "Here's the drill..."
     mike.say "I open the door, and then we run straight to my bedroom, okay?"
     "This earns me a couple of wry stares from the others."
-    show kat talkative
+    show kat talk
     kat.say "What's the rush, [hero.name]?"
     kat.say "Are you that desperate for some action?"
     show kat smile
@@ -7193,7 +7193,7 @@ label jack_kat_special_sex:
     jack.say "She's right, dude..."
     jack.say "Are you worried Bree and Sasha are gonna see us?"
     show jack normal
-    show kat talkative
+    show kat talk
     kat.say "You mean his housemates?"
     show kat smile
     show jack smile
@@ -7249,7 +7249,7 @@ label jack_kat_special_sex:
     "For a moment Kat has her back to us as we watch her."
     "But then she seems to sense our eyes wandering all over her body."
     "Because she turns around, already waving for us to join her."
-    show kat talkative
+    show kat talk
     kat.say "Hey..."
     kat.say "This isn't a one-woman strip show!"
     kat.say "Get over here and get naked, before I change my mind!"
@@ -8094,7 +8094,7 @@ label jack_kat_male_ending:
     with easeinleft
     "Kat strides confidently up to the altar, Jack and I stepping aside to let her pass."
     "And then she looks to either side of her, giving each of us a nod."
-    show kat talkative
+    show kat talk
     kat.say "Okay, guys..."
     kat.say "Are you ready to do this thing?"
     show kat smile

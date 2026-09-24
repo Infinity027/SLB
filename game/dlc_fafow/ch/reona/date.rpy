@@ -439,7 +439,7 @@ label reona_halloween_invitation:
         "But then she nods her head and confirms them."
         show reona shout
         reona.say "You know what..."
-        show reona talkative
+        show reona talk
         reona.say "That sounds like it could be fun."
         reona.say "In a kind of ironic, cheesy way, yeah?"
         show reona normal
@@ -458,7 +458,7 @@ label reona_halloween_invitation:
         "Like ideas are already springing into her head."
         show reona shout
         reona.say "Oh, don't worry about the costume."
-        show reona talkative
+        show reona talk
         reona.say "There's one I've been wanting to do for ages."
         reona.say "Just wait until you see me in it, [hero.name]..."
         reona.say "I guarantee it'll blow your mind!"
@@ -471,7 +471,7 @@ label reona_halloween_invitation:
         mike.say "I'd be more than happy to help?"
         show reona happy
         "Reona chuckles and shakes her head."
-        show reona talkative
+        show reona talk
         reona.say "Oh no..."
         reona.say "I think we'll keep it a surprise."
         reona.say "Trust me, you'll like it better that way!"
@@ -496,7 +496,7 @@ label reona_halloween_invitation:
         "Reona does me the favour of smiling and nodding."
         "In fact she keeps it up all the time I'm talking."
         "But once I've stopped, the nods turn into a shake of the head."
-        show reona talkative
+        show reona talk
         reona.say "That sounds great, [hero.name]..."
         show reona shout
         reona.say "But it's not my kind of thing."
@@ -532,7 +532,7 @@ label reona_halloween_arrival:
     "And the perspective is helped by the fact their owner has taken one step backwards too."
     show reona annoyed
     reona.say "Well, I have to say..."
-    show reona talkative
+    show reona talk
     reona.say "Nobody ever said that to me before!"
     reona.say "What's the matter, [hero.name]?"
     reona.say "Don't you like my costume?"
@@ -544,7 +544,7 @@ label reona_halloween_arrival:
     "Reona's wearing a black top with sleeves and a white collar."
     "But it barely covers her breasts, which are thrust straight out in front of her."
     "Apart from that she's only wearing a pair of black panties, a rubber tail and a pair of bat-wings."
-    show reona talkative at center, traveling(1.5, 0.3, (640, 1040))
+    show reona talk at center, traveling(1.5, 0.3, (640, 1040))
     reona.say "So..."
     reona.say "What do you think?"
     reona.say "Pretty hot, huh?"
@@ -590,7 +590,7 @@ label reona_halloween_arrival:
             "And I know that she's grinning at me in a suggestive manner."
             mike.say "Did I say 'amazing'?"
             $ reona.love += 1
-            show reona talkative
+            show reona talk
             mike.say "I obviously meant super sexy!"
             hide reona
             show reona kiss halloween
@@ -603,7 +603,7 @@ label reona_halloween_arrival:
             "But it also means that I have to hold Reona against me as I do so, revealing her true intentions."
             "She smiles as she plants a kiss on my unprepared lips, then chuckles."
             hide reona
-            show reona halloween talkative at center, zoomAt(1.5, (640, 1040))
+            show reona halloween talk at center, zoomAt(1.5, (640, 1040))
             with fade
             reona.say "Ha..."
             reona.say "I knew if anyone would appreciate this costume it'd be you, [hero.name]!"
@@ -746,7 +746,7 @@ label reona_halloween_party:
             "And the truth is that I don't really care to find out."
             "Even less so when I feel Reona wrap herself around my arm."
             $ reona.love += 4
-            show reona talkative
+            show reona talk
             reona.say "Thanks for that, [hero.name]…"
             reona.say "You really told him!"
             show reona happy
@@ -825,7 +825,7 @@ label reona_halloween_dance:
     "Then she gestures to her ears."
     show reona shout
     reona.say "Are you deaf or something?"
-    show reona talkative
+    show reona talk
     reona.say "The music just got good..."
     reona.say "So we need to dance!"
     show reona normal leftback rightnormal
@@ -941,7 +941,7 @@ label reona_halloween_sex:
     "Which is that Reona throws the door open and literally leaps out onto me!"
     show reona halloween shout at center, zoomAt (1.25, (800, 880)) with hpunch
     reona.say "[hero.name]..."
-    show reona talkative
+    show reona talk
     reona.say "Think quickly!"
     show reona happy
     mike.say "What the..."
@@ -956,7 +956,7 @@ label reona_halloween_sex:
     mike.say "What are you doing?"
     show reona flirt
     "Reona's clinging to me so tightly that she pretty much answers straight into my ear."
-    show reona talkative
+    show reona talk
     reona.say "What does it look like?"
     reona.say "I was waiting in here to surprise you, silly..."
     reona.say "And now that I've surprised you, we're supposed to fuck!"

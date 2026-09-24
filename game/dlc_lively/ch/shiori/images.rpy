@@ -6,7 +6,7 @@ init -35 python:
     'arms_d': ['notpressed', 'pressed'],
     'piercings': ['clit', 'lips', 'navel', 'nipples', 'nose', 'tongue'],
     'haircuts': ['nohaircut', 'haircut'],
-    'exps': ['normal', 'angry', 'annoyed', 'bruised', 'embarrassed', 'flirt', 'happy', 'joke', 'mindless', 'sad', 'sadsmile', 'smile', 'stuned', 'surprised', 'talkative', 'upset', 'whining'],
+    'exps': ['normal', 'angry', 'annoyed', 'bruised', 'embarrassed', 'flirt', 'happy', 'joke', 'mindless', 'sad', 'sadsmile', 'smile', 'stuned', 'surprised', 'talk', 'upset', 'whining'],
     'outfits': ['casual', 'sport', 'work', 'sexywork', 'stripper', 'date', 'sexydate', 'sluttydate', 'swimsuit', 'sexyswimsuit', 'cowkini', 'miko', 'cosplay', 'halloween', 'wedding', 'naked'],
     'others': ['pregnant', 'pubes', 'collar', 'blush', 'bottomless', 'topless'],
 }
@@ -141,9 +141,9 @@ label test_shiori_exps:
     show expression f"shiori {pose} surprised" as s2 at left
     "surprised"
 
-    $ renpy.show(f"shiori {pose} talkative")
-    show expression f"shiori {pose} talkative" as s2 at left
-    "talkative"
+    $ renpy.show(f"shiori {pose} talk")
+    show expression f"shiori {pose} talk" as s2 at left
+    "talk"
 
     $ renpy.show(f"shiori {pose} upset")
     show expression f"shiori {pose} upset" as s2 at left

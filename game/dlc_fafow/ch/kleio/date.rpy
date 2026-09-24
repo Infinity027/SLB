@@ -18,7 +18,7 @@ label kleio_date_amusement_park_male:
     "And it's more than enough to call my bluff."
     mike.say "Okay, okay..."
     mike.say "I'm just worried that this isn't going to be your kind of place, Kleio."
-    show kleio talkative
+    show kleio talk
     kleio.say "What's that supposed to mean?"
     kleio.say "I'm not the kind of person that likes to have fun?!?"
     show kleio annoyed

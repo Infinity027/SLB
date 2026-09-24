@@ -15,7 +15,7 @@ label anna_date_amusement_park_male:
     "Even though her legs are a lot shorter than mine!"
     mike.say "I'm going as fast as I can, Anna..."
     mike.say "And the rides aren't going anywhere!"
-    show anna talkative
+    show anna talk
     anna.say "Then we need to get in there before the place closes!"
     show anna normal
     mike.say "What are you talking about?"

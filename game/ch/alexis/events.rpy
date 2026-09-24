@@ -506,7 +506,7 @@ label alexis_event_02:
     show alexis smile at center, traveling(1.5, 0.3, (640, 1040))
     "She walks over to the table, and I can hear the clacking of her high heels on the tiled floor."
     "I try to keep a sensible head on my shoulders, but she looks like something out of a damn movie right now."
-    show alexis talkative
+    show alexis talk
     alexis.say "Hello, [hero.name], so good to see you again."
     show alexis smile
     mike.say "Y-yeah...great to see you too, Alexis."
@@ -1202,13 +1202,13 @@ label alexis_event_05:
         "I sit down beside her, trying to decide who's bothering me more."
         "Is it the dozens of guys that are currently checking out my date?"
         "Or Alexis herself, who seems to be loving every moment of it?"
-        show alexis talkative
+        show alexis talk
         alexis.say "[hero.name], would you be a darling?"
         show alexis normal
         mike.say "Huh...what was that?"
         "If Alexis is aware of just what's making me so distracted and edgy, she chooses to ignore it completely."
         "Instead, she extends the hand holding the sun-cream, giving me a cheeky smile as she does so."
-        show alexis talkative
+        show alexis talk
         alexis.say "Would you mind doing the honours?"
         show alexis normal
         mike.say "Oh...yeah, sure thing, Alexis!"
@@ -1253,14 +1253,14 @@ label alexis_event_05:
         "All around us, I can see people either trying to get out of the sun or else frying themselves under its relentless heat."
         mike.say "Erm, Alexis...you don't think it's too hot to be out here, do you?"
         "Alexis responds to this by raising her eyebrows and shaking her head in disbelief."
-        show alexis talkative
+        show alexis talk
         alexis.say "Really, [hero.name]?!?"
         alexis.say "Isn't that what sun-screen is for?"
         show alexis annoyed
         mike.say "I know, but..."
         show alexis whining
         alexis.say "Oh, don't be such a stick-in-the-mud about it."
-        show alexis talkative
+        show alexis talk
         alexis.say "If you burst into flames, just go jump in the sea!"
         show alexis normal
         "And with that, she puts on her sunglasses and lies down to take advantage of the sun's rays."
@@ -1280,7 +1280,7 @@ label alexis_event_05:
         alexis.say "You must have fallen asleep almost as soon as you shut your eyes."
         "I grab my phone, checking the time and finding that she's not pulling my leg."
         hide beach cream
-        show alexis swimsuit talkative
+        show alexis swimsuit talk
         with fade
         alexis.say "Anyway, I'm thirsty."
         alexis.say "So I'm going to grab some water from the kiosk over by the dunes."
@@ -1450,7 +1450,7 @@ label alexis_event_05:
                             "When she finally does come back, she's done a remarkable job of cleaning herself up."
                             "And from the expression on her face, I could almost believe nothing out of the ordinary took place while she was gone."
                             "If, that is, I hadn't seen it with my own eyes..."
-                            show alexis talkative
+                            show alexis talk
                             alexis.say "You wouldn't believe the time I've had!"
                             show alexis normal
                             mike.say "Oh, really?"
@@ -1547,7 +1547,7 @@ label alexis_event_05:
             "When she finally does come back, she's done a remarkable job of cleaning herself up."
             "And from the expression on her face, I could almost believe nothing out of the ordinary took place while she was gone."
             "If, that is, I hadn't seen it with my own eyes..."
-            show alexis talkative
+            show alexis talk
             alexis.say "You wouldn't believe the time I've had!"
             show alexis normal
             mike.say "Oh, really?"
@@ -1593,7 +1593,7 @@ label alexis_nice_car:
     show alexis a normal
     "Alexis seems to snap out of it a little when she hears the question."
     "Like she didn't realise she was doing anything and now she's trying to cover her tracks."
-    show alexis a talkative
+    show alexis a talk
     alexis.say "Huh?"
     alexis.say "What do you mean, [hero.name]?"
     alexis.say "I'm okay..."
@@ -1604,7 +1604,7 @@ label alexis_nice_car:
     "But it just sounds so hasty and forced that I can't help questioning it."
     mike.say "Are you sure, Alexis?"
     mike.say "Because you seem a little distracted?"
-    show alexis a talkative
+    show alexis a talk
     show fx question
     alexis.say "I do?"
     alexis.say "Oh...well..."
@@ -1654,7 +1654,7 @@ label alexis_nice_car:
     show alexis normal blush
     "Alexis looks up and pulls her hand away like the bodywork is red hot."
     "She shakes her head instinctively at first, but then begins to nod."
-    show alexis talkative
+    show alexis talk
     alexis.say "Okay, okay...you got me!"
     alexis.say "I know that girls aren't supposed to like cars."
     alexis.say "We're supposed to be above all that materialistic crap."
@@ -1699,7 +1699,7 @@ label alexis_crap_car:
     "And I can see from her expression that she's far from happy right now."
     show alexis a whining
     alexis.say "What?"
-    show alexis a talkative
+    show alexis a talk
     alexis.say "No...there's nothing wrong."
     alexis.say "I...I just feel like I forgot something, that's all."
     show alexis a annoyed
@@ -4491,7 +4491,7 @@ label alexis_event_ntr_05_restaurant:
     "After all, this is the first time I've been out in public with her since we discussed her...needs."
     "I'm trying as hard as I can to act normal, not to stare at every other guy in the place."
     "But what else am I supposed to do, especially when I know that Alexis is going to do it with one of them?"
-    show alexis talkative at center, zoomAt (1.5, (640, 1140)) with dissolve
+    show alexis talk at center, zoomAt (1.5, (640, 1140)) with dissolve
     alexis.say "How are you doing, [hero.name]?"
     alexis.say "Are you still up for this?"
     alexis.say "If not we can always..."
@@ -4523,7 +4523,7 @@ label alexis_event_ntr_05_restaurant:
     "I hear Alexis giggle, and it snaps me back to reality."
     mike.say "Fucking hell, Alexis!"
     mike.say "They can't take their eyes off of you!"
-    show alexis talkative
+    show alexis talk
     alexis.say "I know, I know!"
     alexis.say "It's such a rush - knowing that they all want me!"
     show alexis wink

@@ -79,4 +79,3 @@ label coffee_break:
     hide bg
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

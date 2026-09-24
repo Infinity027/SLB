@@ -326,7 +326,7 @@ label command_nickname_anna:
 
 label submissive_interact_anna_male:
     mike.say "Hey, Anna..."
-    show anna talkative
+    show anna talk
     anna.say "Yeah, [hero.name]?"
     show anna normal
     mike.say "You like it both ways, right?"

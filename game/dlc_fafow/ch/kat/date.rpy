@@ -179,7 +179,7 @@ label kat_dick_reactions:
 
 label kat_date_amusement_park_male:
     scene bg amusement
-    show kat talkative
+    show kat talk
     with fade
     kat.say "Come on, [hero.name]…"
     kat.say "What's the problem back there?"
@@ -196,7 +196,7 @@ label kat_date_amusement_park_male:
     mike.say "Don't do that to me, Kat!"
     mike.say "I thought I was going to lose you in the crush."
     "Kat waves a hand in the air, dismissing my concerns."
-    show kat talkative
+    show kat talk
     kat.say "Ah, don't be dramatic."
     show kat happy
     kat.say "I'd have found you at the place where they take the lost kids!"
@@ -407,7 +407,7 @@ label kat_halloween_invitation:
     "What if she's totally past dressing up on Halloween?"
     "Argh...now my mind's going into over-drive!"
     "I'm going to have to come at it from another angle..."
-    show kat talkative at center, zoomAt(1.5, (640, 1040)) with vpunch
+    show kat talk at center, zoomAt(1.5, (640, 1040)) with vpunch
     kat.say "Are you feeling okay?"
     show kat smile
     "The sound of Kat's voice snaps me out of my mental spiral."
@@ -427,11 +427,11 @@ label kat_halloween_invitation:
     show kat confused
     "Kat greets the question with a nonchalant shrug."
     "And she screws up her lips as she thinks about her response."
-    show kat talkative
+    show kat talk
     kat.say "Well..."
     kat.say "I had thought about livestreaming on the actual night."
     kat.say "Do some classic survival horror stuff, you know?"
-    show kat talkative
+    show kat talk
     kat.say "But I haven't decided yet."
     kat.say "Are you doing something for it?"
     show kat smile
@@ -444,7 +444,7 @@ label kat_halloween_invitation:
         "Kat seems to be thinking about it."
         "Perhaps a little longer and deeper than I'd have liked."
         "But then she puts me out of my misery by nodding her head."
-        show kat talkative
+        show kat talk
         kat.say "I don't normally go in for that kind of thing."
         kat.say "But as it's you, [hero.name]…"
         kat.say "I think I could make an exception."
@@ -457,7 +457,7 @@ label kat_halloween_invitation:
         mike.say "Yeah...that's great news, Kat!"
         "I go silent for a moment, by brain seeming to cut out."
         "Because I'm sure there's something else that I needed to say."
-        show kat talkative
+        show kat talk
         kat.say "And this party is happening when, exactly?"
         kat.say "I'm guessing Halloween night?"
         show kat smile
@@ -468,7 +468,7 @@ label kat_halloween_invitation:
         mike.say "Or scary - scary is good too..."
         mike.say "Scary and sexy?"
         "Kat chuckles at my babbling."
-        show kat talkative
+        show kat talk
         kat.say "Okay, okay..."
         kat.say "I think I get it."
         kat.say "See you on Halloween."
@@ -505,7 +505,7 @@ label kat_halloween_invitation:
         mike.say "Maybe?"
         "Kat shakes her head a second time."
         "But now I get the feeling it's with more finality."
-        show kat talkative
+        show kat talk
         kat.say "I think I'll stick to the original plan."
         kat.say "But don't let that stop you enjoying yourself, okay?"
         show kat smile
@@ -845,7 +845,7 @@ label kat_halloween_dance:
             kat.say "Mmm..."
             show kat happy
             kat.say "That was really nice."
-            show kat talkative a
+            show kat talk a
             kat.say "You know, almost romantic?"
             show kat smile a
             mike.say "Almost romantic, but not quite?"
@@ -956,7 +956,7 @@ label kat_halloween_sex:
     show kat halloween defiant blush at center, zoomAt(1.5, (640, 1220)), swing(1.0, 1.0, 1.0, -3.0, 2.0)
     "Then I see her, walking towards me now the door is firmly closed."
     "And for the first time I can see that she's a little unstable on her feet."
-    show kat talkative
+    show kat talk
     kat.say "Oh great..."
     kat.say "You found the bed!"
     show kat smile
@@ -1046,7 +1046,7 @@ label kat_halloween_sex:
     "Kat chuckles at this, almost as if she thinks I'm joking."
     show kat at center, traveling(1.75, 0.2, (640, 1200))
     "Then she leans forwards, tugging on it even harder than before."
-    show kat talkative
+    show kat talk
     kat.say "Come on, [hero.name]..."
     kat.say "Cut the crap!"
     kat.say "We both know this is a dream come true for you, right?"
@@ -1066,7 +1066,7 @@ label kat_halloween_sex:
     show kat happy
     "A knowing smile spreads slowly across Kat's face."
     "And she nods her head with visible satisfaction."
-    show kat talkative
+    show kat talk
     kat.say "That's better!"
     kat.say "Now let's get things started..."
     show kat smile

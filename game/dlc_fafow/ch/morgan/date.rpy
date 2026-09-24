@@ -16,7 +16,7 @@ label morgan_date_amusement_park_male:
     mike.say "What's so funny, Morgan?"
     "Morgan shakes her head and gives me a sweet smile."
     "Letting me know that it's affectionate amusement she's feeling."
-    show morgan talkative
+    show morgan talk
     if morgan.male >= 66:
         morgan.say "I'm laughing at you, ya big dope!"
         morgan.say "You look like the biggest kid in the world right now."

@@ -399,7 +399,7 @@ label bree_sasha_showdown:
         show sasha sadsmile
         show bree blank
         "Now it's [bree.name]'s turn to look down at her own collar in a thoughtful manner."
-        show bree talkative
+        show bree talk
         bree.say "I...guess so..."
         show bree sadsmile
         show sasha shout
@@ -408,7 +408,7 @@ label bree_sasha_showdown:
         show sasha normal
         show bree normal
         "[bree.name] nods slowly as the logic of Sasha's argument begins to dawn on her."
-        show bree talkative
+        show bree talk
         bree.say "You're right, Sasha."
         bree.say "We shouldn't be getting mad at [hero.name]."
         show bree smile
@@ -672,7 +672,7 @@ label bree_sasha_showdown:
         show sasha shout
         sasha.say "Why not? Apparently we've already been doing so, and we've been happy enough."
         show sasha normal
-        show bree talkative
+        show bree talk
         bree.say "Well, like, sure, but it's a little weird?"
         show bree sadsmile
         show sasha shout
@@ -706,7 +706,7 @@ label bree_sasha_showdown:
         sasha.say "We'll think of something."
         sasha.say "In fact, we'll do that right now. [bree.name], come on."
         hide sasha with easeoutright
-        show bree talkative
+        show bree talk
         bree.say "Now? Well like, sure I guess!"
         show bree at center, zoomAt (1.25, (640, 840)) with ease
         bree.say "Um, I'm glad we're going to work this out, [hero.name]."
@@ -887,17 +887,17 @@ label bree_sasha_showdown:
         mike.say "You were?"
         show bree sad
         bree.say "Yeah I um."
-        show bree talkative
+        show bree talk
         bree.say "You remember when I told you that trust was important to me, right?"
         show bree gloomy
         mike.say "Of course I remember."
-        show bree talkative
+        show bree talk
         bree.say "I was so upset when I figured it out, it was like my worst fears had come true, but."
         bree.say "I think I'll stay."
         show bree sadsmile
         "She hardly seemed convinced in her own words, but they were enough to send relief coursing through my veins."
         mike.say "Really?"
-        show bree talkative
+        show bree talk
         bree.say "Um, yeah But like, you can't do this ever again."
         show bree sad
         bree.say "Please, please don't do this again."
@@ -909,7 +909,7 @@ label bree_sasha_showdown:
         mike.say "If there's anything I can do to try and get things back to normal, I will."
         show bree sad
         bree.say "I don't know if things can ever really go back to normal anymore, [hero.name]."
-        show bree talkative
+        show bree talk
         bree.say "But um, we can try at least."
         show bree sadsmile
         "I nod, thankful that [bree.name]'s at least trying to be so understanding. My arms wrap around her on their own, holding her close."
@@ -1083,7 +1083,7 @@ label bree_sasha_showdown_2:
     show sasha annoyed at center, traveling(1.25, 0.3, (880, 1000))
     show bree at center, zoomAt(1.25, (400, 1000)) with ease
     "Sasha makes a harrumphing sound and sits down on the opposite side of me to [bree.name]."
-    show bree talkative
+    show bree talk
     bree.say "What's the matter, Sasha - wouldn't your own man give you a massage?"
     show bree normal
     show sasha upset
@@ -2334,7 +2334,7 @@ label bree_sasha_alternative_creation:
     sasha.say "What are you talking about?"
     sasha.say "Didn't I just say we had Mexican food last night?"
     show sasha annoyed
-    show bree talkative
+    show bree talk
     bree.say "Yeah, and we eat together all the time, don't we?"
     show bree blank
     "I wave a hand in the air, dismissing their questions."
@@ -2346,7 +2346,7 @@ label bree_sasha_alternative_creation:
     "[bree.name] looks like my words are causing her a little bit of concern."
     show sasha normal
     "But Sasha seems to be more unimpressed than concerned."
-    show bree talkative
+    show bree talk
     bree.say "Yeah, [hero.name]..."
     bree.say "But I'm just not that good when it comes to cooking."
     show bree sadsmile
@@ -2376,7 +2376,7 @@ label bree_sasha_alternative_creation:
     show sasha joke
     sasha.say "Better not be warmed-up leftovers!"
     show sasha normal
-    show bree talkative
+    show bree talk
     bree.say "Sasha, be nice!"
     show bree smile
     bree.say "It's really kind of [hero.name] to cook for us."
@@ -3519,7 +3519,7 @@ label home_harem_pegging_bree_sasha:
     mike.say "I... I don't know about this..."
     show sasha at center, traveling(1.25, 0.3, (840, 850))
     show bree at center, traveling(1.4, 0.3, (440, 925))
-    show bree talkative
+    show bree talk
     bree.say "Don't worry, it only hurts a little when it first goes in."
     bree.say "After that, well...it still hurts, but then it's kind of pleasurable pain!"
     hide sasha
@@ -3537,7 +3537,7 @@ label home_harem_pegging_bree_sasha:
     "She has a palm full of lube as she says this, and begins to rub it up and down the length of the dildo as she walks slowly towards the bed."
     "For all that [bree.name]'s trying to be sweet and reassuring, I get the distinct impression that Sasha is actually enjoying my discomfort."
     show sasha at center, traveling(1.4, 0.3, (840, 920))
-    show bree talkative naked at center, zoomAt(1.4, (440, 930)) with easeinleft
+    show bree talk naked at center, zoomAt(1.4, (440, 930)) with easeinleft
     bree.say "Don't worry, [hero.name] - I won't let her hurt you, I promise."
     bree.say "And I'll do something really nice to take your mind off of it too!"
     show bree flirt at center, traveling(1.4, 0.3, (340, 930))

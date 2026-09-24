@@ -69,7 +69,7 @@ label palla_gift_slutty_dress_male:
     "And on top of that, I also had to choose to buy something that's more than a little controversial too."
     "So by the time I get to see Palla, I'm already anxious and beginning to sweat."
     "All of which she spots almost the second that she sets eyes on me."
-    show palla talkative
+    show palla talk
     palla.say "Hello..."
     palla.say "Somebody's looking extra shifty today!"
     palla.say "What are you up to, [hero.name]?"

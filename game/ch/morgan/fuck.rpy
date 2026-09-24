@@ -460,7 +460,7 @@ label morgan_fuck_date_intro_male(location="hero"):
         "And on top of that the fact she'd always held a torch for me, even after so many years."
         "The thing that tops it all off is how I now get to date her and do all the other great stuff that comes along with it!"
         "All of which means I can't stop staring at Morgan with a big, dumb smile on my face."
-        show morgan talkative
+        show morgan talk
         if morgan.male >= 75:
             morgan.say "Whoa..."
             morgan.say "What the fuck's up?"
@@ -475,7 +475,7 @@ label morgan_fuck_date_intro_male(location="hero"):
         "And she kind of catches me by surprise, leaving me speechless for a moment."
         mike.say "Wha..."
         mike.say "What do you mean?"
-        show morgan talkative
+        show morgan talk
         if morgan.male >= 75:
             morgan.say "You've got a dumb look on your face."
             morgan.say "That's what I'm talking about!"

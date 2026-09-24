@@ -332,7 +332,7 @@ label kiara_event_02:
     show kiara normal
     "As soon as our eyes meet, one corner of her mouth twists into a grin, and raises an eyebrow too."
     "And with the other hand, she crooks her index-finger, beckoning for me to follow."
-    show kiara talkative a
+    show kiara talk a
     kiara.say "[hero.name]…"
     kiara.say "I want to talk to you about Bree."
     kiara.say "But I want to do so in private."
@@ -358,7 +358,7 @@ label kiara_event_02:
     "Because somehow her whole demeanour seems to change as she does so."
     "Gone is the happy-go-lucky lady that I'm used to seeing running the café."
     "And in her place is what I can only describe as a woman that asserts her dominance with a mere glance."
-    show kiara talkative
+    show kiara talk
     kiara.say "Oh, there's no issue with Bree, [hero.name], none at all."
     kiara.say "That was just a ruse, a little play to get you alone."
     show kiara normal
@@ -375,7 +375,7 @@ label kiara_event_02:
     "Kiara narrows her eyes as I begin to talk, in danger of it turning into helpless babbling."
     "She inclines her head, like she's considering what I'm saying with genuine interest."
     "But I note that she neither shakes nor nods her head, keeping me in the dark."
-    show kiara talkative
+    show kiara talk
     kiara.say "This isn't about anything like that, [hero.name]."
     kiara.say "No, it's about my own curiosity."
     kiara.say "My insatiable curiosity to know you better."
@@ -400,7 +400,7 @@ label kiara_event_02:
             "I can tell that Kiara's doing all she can to maintain her cool, calculating demeanour."
             show kiara normal
             "But even she can't prevent her eyebrows from rising as I make my subtle little riposte."
-            show kiara talkative
+            show kiara talk
             kiara.say "Oh, is that so?"
             kiara.say "Or are you just admitting that you've been checking me out?"
             kiara.say "Because that's something that almost every guy who comes in here does."
@@ -420,7 +420,7 @@ label kiara_event_02:
             "And now she's looking me straight in the eye."
             "Almost like she's in the presence of an equal."
             kiara.say "Hmm..."
-            show kiara talkative
+            show kiara talk
             kiara.say "You almost took the words out of my mouth, [hero.name]."
             kiara.say "Because I think that's what I would like too."
             show kiara normal
@@ -439,7 +439,7 @@ label kiara_event_02:
             "No doubt a preprepared one, as I'm starting to think she's done this before."
             "Hell, she's probably stunned a long line of guys into submission with this act."
             "But my throwing it back in her face seems to have screwed-up her equilibrium."
-            show kiara talkative
+            show kiara talk
             kiara.say "I..."
             kiara.say "I don't know what you mean by that!"
             kiara.say "This is a private matter - between you and me, [hero.name]."
@@ -456,7 +456,7 @@ label kiara_event_02:
             mike.say "Well, we're going to be going on a journey of mutual discovery, aren't we?"
             "Kiara's still looking me in the eye as I say all of this."
             "And it comes as a relief when she finally nods."
-            show kiara talkative
+            show kiara talk
             kiara.say "Yes, [hero.name]…"
             kiara.say "I believe that is what's happening here."
             show kiara normal
@@ -475,7 +475,7 @@ label kiara_event_02:
             "But my distinct lack of confidence doesn't seem to bother Kiara in the slightest."
             show kiara mischievous at zoomAt(1.25, (640, 880)) with ease
             "In fact, I feel my heart almost leap as she smiles at my stumbling tone."
-            show kiara talkative
+            show kiara talk
             kiara.say "Aww..."
             kiara.say "You are so sweetly innocent, [hero.name]!"
             kiara.say "I see how you look at me when we are out there."
@@ -487,7 +487,7 @@ label kiara_event_02:
             show kiara normal
             "And she must be picking up on it too, because she instantly begins to back off."
             "She takes a step backwards and changes her tone, becoming more friendly than flirty."
-            show kiara talkative
+            show kiara talk
             kiara.say "But I am getting ahead of myself, as I sometimes do."
             kiara.say "What I mean to say is that I want to get to know you, [hero.name]."
             kiara.say "That I want us to become friends - good friends."
@@ -504,7 +504,7 @@ label kiara_event_02:
     "Then she pours a measure into two glasses and offers one to me."
     "I take it as she lifts her own glass, as if proposing a toast."
     "And not knowing what else to do, I mirror the gesture."
-    show kiara talkative
+    show kiara talk
     kiara.say "So be it, [hero.name]…"
     kiara.say "From this moment on, we are more than mere acquaintances."
     kiara.say "Now we are friends, and our voyage of mutual discovery begins."
@@ -552,7 +552,7 @@ label kiara_event_03:
     "It doesn't take long for my surprise to become mingled with embarrassment too."
     "Because I find myself looking a the owner of the Maid Cafe where my housemate works."
     "And so there's a very real possibility of Bree discovering that I come here on a regular basis!"
-    show kiara talkative
+    show kiara talk
     kiara.say "Oh, hello, [hero.name]..."
     kiara.say "I was not expecting to see you here!"
     show kiara normal
@@ -567,7 +567,7 @@ label kiara_event_03:
     "Kiara holds my eye as I rabbit on trying to explain myself without also incriminating myself."
     "And all the time she keeps a warms smile on her face as she nods silently."
     "Only once I'm done talking does she offer a response."
-    show kiara talkative
+    show kiara talk
     kiara.say "Well we can't have you not getting your desired refreshment, now can we?"
     show kiara normal
     "Without turning her head in the direction of the bar-tender, Kiara snaps her fingers."
@@ -578,7 +578,7 @@ label kiara_event_03:
     "Bartender" "Yes, Madam..."
     "Bartender" "What can I get for you?"
     "Without missing a beat, Kiara gestures to me."
-    show kiara talkative
+    show kiara talk
     kiara.say "Whatever my friend here would like to drink."
     kiara.say "And don't worry, [hero.name] - it's on the house."
     show kiara normal
@@ -595,7 +595,7 @@ label kiara_event_03:
     pause 0.2
     show kiara bothered
     "Kiara seems oddly amused by the question, as she lets out a peal of laughter."
-    show kiara talkative
+    show kiara talk
     kiara.say "HA!"
     kiara.say "I suppose you could say that, [hero.name]."
     kiara.say "But it would be more honest to just say that I own the club."
@@ -607,7 +607,7 @@ label kiara_event_03:
     mike.say "You own this place?!?"
     mike.say "I thought you just ran the Maid Cafe near the mall?"
     "Kiara shrugs."
-    show kiara talkative
+    show kiara talk
     kiara.say "The truth is that I own a diverse range of legitimate businesses."
     kiara.say "But I see no need to inform everyone I meet about each an every one of them."
     show kiara normal
@@ -621,7 +621,7 @@ label kiara_event_03:
     "That's it, the most sensible and intelligent thing I can think to say."
     "But luckily for me, it seems to both satisfy and amuse Kiara."
     "Because she greets it with a nod and a smile."
-    show kiara talkative
+    show kiara talk
     kiara.say "I should have known that you would understand, [hero.name]."
     kiara.say "A truly modern man like you isn't intimidated by a woman with legitimate business interests."
     kiara.say "Older, less evolved men can never seem to cope with the idea of such a thing."
@@ -638,12 +638,12 @@ label kiara_event_03:
     "Kiara cocks her head on one side as she listens to me flatter her."
     show kiara flirt
     kiara.say "Hmm..."
-    show kiara talkative
+    show kiara talk
     kiara.say "It sounds to me like you'd be comfortable working under a woman like me."
     kiara.say "Wouldn't you, [hero.name]?"
     show kiara evil
     mike.say "Under...beside...on top of...or anywhere else you want me, Kiara!"
-    show kiara talkative
+    show kiara talk
     kiara.say "Is that so?"
     kiara.say "Well, how about I give you a little job to do for me?"
     kiara.say "A simple task to prove that you can take orders from a woman?"
@@ -658,7 +658,7 @@ label kiara_event_03:
     "Kiara's smile becomes a little more knowing as I agree to her task."
     show kiara work normal at center, traveling(2.0, 0.5, (740, 1220))
     "But as soon as she leans in closer to explain it to me, I lose all interest in why that might be."
-    show kiara talkative
+    show kiara talk
     kiara.say "Okay, [hero.name]..."
     kiara.say "You see that man?"
     show danny at blacker, center, zoomAt(1, (-180, 720))
@@ -673,7 +673,7 @@ label kiara_event_03:
     "I turn my gaze in the direction that Kiara's pointing, and I can hardly miss the guy."
     mike.say "You mean the really mean-looking guy with the tattoos?"
     mike.say "It's kind of hard to miss him!"
-    show kiara talkative
+    show kiara talk
     kiara.say "Yes, that's the one I'm talking about - the man is called Donnie."
     kiara.say "Would it surprise you to know that he's in my debt?"
     kiara.say "That he owes me money and is supposed to be here to hand it over?"
@@ -688,7 +688,7 @@ label kiara_event_03:
     mike.say "You want me to go over there and persuade him to cough up, yeah?"
     show kiara mischievous
     "Kiara's smile is slow and subtle, creeping over her face as she regards me."
-    show kiara talkative
+    show kiara talk
     kiara.say "I see that you catch on fast, [hero.name]."
     kiara.say "That is a very desirable quality in a man."
     kiara.say "So, will you do this little thing for me?"
@@ -712,7 +712,7 @@ label kiara_event_03:
                     mike.say "I mean, he's here to pay the debt, right?"
                     mike.say "So it's not like he doesn't know he's going to be asked for the money."
                     "Kiara nods as I try to justify the idea to myself."
-                    show kiara talkative
+                    show kiara talk
                     kiara.say "Exactly so, [hero.name]..."
                     kiara.say "This is no different from me asking any of my employees to complete the task."
                     kiara.say "So it should be a simple matter of reminding Donnie of his obligation to me."
@@ -773,7 +773,7 @@ label kiara_event_03:
                     with fade
                     "And when it's over, Kiara regards me with what I think is a newfound respect."
                     hide kiara kiss
-                    show kiara work talkative at center, zoomAt(1.8, (740, 1120))
+                    show kiara work talk at center, zoomAt(1.8, (740, 1120))
                     with dissolve
                     kiara.say "That was well handled, [hero.name]..."
                     kiara.say "You have my thanks for that."
@@ -790,7 +790,7 @@ label kiara_event_03:
                     mike.say "That guy looks like just another cheap punk to me."
                     mike.say "The type you just need to stand up to for them to choke."
                     "Kiara nods as I try to justify the idea to myself."
-                    show kiara talkative
+                    show kiara talk
                     kiara.say "I admire your confidence, [hero.name]..."
                     kiara.say "But do not make the mistake of underestimating Donnie."
                     kiara.say "Yes, he is scum - but scum that can be unpredictable."
@@ -841,7 +841,7 @@ label kiara_event_03:
                     "Kiara cuts me off by placing a hand on my cheek and caressing it tenderly."
                     "Then I watch as she runs it down my neck and over my chest."
                     "All the time looking like the very feel of my body is thrilling her."
-                    show kiara talkative
+                    show kiara talk
                     kiara.say "Oh, [hero.name]...that was so...forceful!"
                     kiara.say "You have my thanks for that."
                     kiara.say "And for the rest of the night, your drinks are on me."
@@ -858,7 +858,7 @@ label kiara_event_03:
                     mike.say "If you think so too?"
                     mike.say "And you trust me to get the money for you?"
                     "Kiara nods as I try to justify the idea to myself."
-                    show kiara talkative
+                    show kiara talk
                     kiara.say "I believe in you, [hero.name]..."
                     kiara.say "This is just a little test, remember?"
                     kiara.say "The smallest of tasks to prove that you will do as I ask."
@@ -911,7 +911,7 @@ label kiara_event_03:
                     "Kiara cuts me off by grabbing my chin and cupping it in her hand."
                     "Then she looks deep into my eyes, as if studying me with great interest."
                     "And all I can do is just stand there, as still as a statue."
-                    show kiara talkative
+                    show kiara talk
                     kiara.say "That was well handled, [hero.name]..."
                     kiara.say "You have my thanks for that."
                     kiara.say "And for the rest of the night, your drinks are on me."
@@ -935,7 +935,7 @@ label kiara_event_03:
             pause 0.4
             show kiara blank with dissolve
             "And when I'm done talking, she just nods."
-            show kiara talkative
+            show kiara talk
             kiara.say "I understand, [hero.name]..."
             kiara.say "And I am making a request, not issuing an order."
             kiara.say "There are plenty of other's in my employ that can handle the task."
@@ -944,12 +944,12 @@ label kiara_event_03:
             "But instead she takes me by surprise when she gets up from her stool."
             show kiara at startle(0.2, 10)
             "And then she gives me a little bow and a nod of the head."
-            show kiara talkative
+            show kiara talk
             kiara.say "Very well..."
             kiara.say "I have business that must be attended to."
             show kiara guilty with dissolve
             kiara.say "And you have a need to relax and entertain yourself."
-            show kiara talkative
+            show kiara talk
             kiara.say "So I will bid you farewell, my friend."
             show kiara normal
             "I'm about to say something in response, to protest at Kiara leaving me alone."
@@ -1051,20 +1051,20 @@ label kiara_event_04:
                     show kiara at center, traveling(1.5, 1.0, (640, 1060))
                     "It's a long time before Kiara has the chance to come over and speak to me."
                     "But when she does, it's with a look of genuine interest in her eyes."
-                    show kiara talkative
+                    show kiara talk
                     kiara.say "Ah..."
                     kiara.say "Finally we can speak!"
                     show kiara normal
                     mike.say "Phew..."
                     mike.say "I know what you mean, Kiara - this is insane!"
                     "Kiara nods."
-                    show kiara talkative
+                    show kiara talk
                     kiara.say "Indeed it is, but I think we are starting to get things under control."
                     kiara.say "And I keep hearing from my people about how much you have helped them too."
                     show kiara normal
                     mike.say "Oh, I don't know about that..."
                     mike.say "I just kind of turned up and got stuck in, that's all."
-                    show kiara talkative
+                    show kiara talk
                     kiara.say "Exactly, [hero.name] - you helped without needing to be told what to do."
                     kiara.say "And that is a quality that I admire."
                     show kiara normal
@@ -1096,7 +1096,7 @@ label kiara_event_04:
                     "Much to my relief, Kiara doesn't seem in the least bit annoyed with me."
                     show kiara mischievous
                     "Instead she's actually looking at me with what might be respect in her eyes."
-                    show kiara talkative
+                    show kiara talk
                     kiara.say "No need to apologise, [hero.name]."
                     kiara.say "After all, that's what I called you here to do - to take charge."
                     kiara.say "You seem to be doing that, and with great effectiveness too."
@@ -1159,7 +1159,7 @@ label kiara_event_04:
             show kiara date smile at center, zoomAt(2.5, (640, 1660))
             with fade
             "And once it's over, Kiara leans her forehead against mine, as if we're holding each other up."
-            show kiara talkative
+            show kiara talk
             kiara.say "Much better, [hero.name]…"
             kiara.say "Much better for you being here with me!"
         "Refuse to come to Kiara's aid":
@@ -1220,7 +1220,7 @@ label kiara_event_05:
     "Kiara's standing there, commanding the room."
     "And she's wearing a dress that makes her look like a total goddess."
     "I'd be babbling and stumbling over my words if I even tried to hide the effect she's having on me right now."
-    show kiara a talkative
+    show kiara a talk
     kiara.say "Well, thank you, [hero.name]…"
     kiara.say "I have been given perhaps more sophisticated compliments tonight."
     kiara.say "But none of them have been anywhere near as genuine in nature."
@@ -1238,7 +1238,7 @@ label kiara_event_05:
     show kiara smile at center, zoomAt(1.8, (640, 1270))
     "Kiara smiles and extends her hand towards me, twining her fingers in mine."
     "And then she begins to lead me away from the main crowd in the lounge."
-    show kiara b talkative
+    show kiara b talk
     kiara.say "Oh, [hero.name]..."
     kiara.say "You have nothing at all to be ashamed of, I assure you."
     kiara.say "None of the people you see here tonight would be here without my express invitation."
@@ -1302,7 +1302,7 @@ label kiara_event_05:
             "I was hoping that once we had some time alone, I might see Kiara's mask slip."
             "But from the way that she's looking at me, it seems she's still playing her part."
             "That she's almost being the same mysterious and unknowable woman she is for the sake of her guests."
-            show kiara talkative
+            show kiara talk
             kiara.say "You know that you're very lucky to get this chance to be alone with me, [hero.name]?"
             kiara.say "I have so many important people here tonight, my time is at a premium!"
             kiara.say "So if there's anything you need to say to me..."
@@ -1359,7 +1359,7 @@ label kiara_event_05:
             "I was hoping that once we had some time alone, I might see Kiara's mask slip."
             "But from the way that she's looking at me, it seems she's still playing her part."
             "That she's almost being the same mysterious and unknowable woman she is for the sake of her guests."
-            show kiara talkative
+            show kiara talk
             kiara.say "You know that you're very lucky to get this chance to be alone with me, [hero.name]?"
             kiara.say "I have so many important people here tonight, my time is at a premium!"
             kiara.say "So if there's anything you need to say to me..."
@@ -1380,7 +1380,7 @@ label kiara_event_05:
             "Only now it's a lot more like I'm squeezing it out of devotion."
             "And I'm looking up at her with a genuine intensity in my eyes."
             "So much so that it seems she can't help but be impressed with my passion."
-            show kiara talkative
+            show kiara talk
             kiara.say "Oh, [hero.name]..."
             kiara.say "There's no need to literally bend the knee!"
             kiara.say "So get up now, as you've shown your devotion to me."
@@ -1504,7 +1504,7 @@ label kiara_event_06:
             show kiara with easeinright
             "So when Kiara finally walks in, the place is just like it always seems."
             "Calm, relaxed and with everyone doing what they should be doing."
-            show kiara talkative
+            show kiara talk
             kiara.say "Ah, [hero.name]…"
             kiara.say "I knew that I could trust you."
             kiara.say "The place looks just the same as when I left it."
@@ -1535,7 +1535,7 @@ label kiara_event_06:
             with timelaps
             show kiara with easeinright
             "So much so that, when she finally walks in, Kiara seems to pick up on it herself."
-            show kiara talkative
+            show kiara talk
             kiara.say "Ah, [hero.name]…"
             kiara.say "I knew that I could trust you."
             kiara.say "And this place seems to be working better than ever!"
@@ -1568,7 +1568,7 @@ label kiara_event_06:
             with timelaps
             show kiara stuned with easeinright
             "Which is what Kiara walks into when she finally arrives at the club."
-            show kiara talkative
+            show kiara talk
             kiara.say "Ah, [hero.name]…"
             kiara.say "I see things are getting a little hectic in here."
             kiara.say "And I'm guessing that I have you to thank for it?"
@@ -1589,7 +1589,7 @@ label kiara_event_06:
     mike.say "This wasn't some kind of test, was it?"
     show kiara evil
     "Kiara smiles and raises one eyebrow in a quizzical manner."
-    show kiara talkative
+    show kiara talk
     kiara.say "It might have been."
     kiara.say "But then again, it might not."
     kiara.say "What is important is that it has taught me a lot about you!"
@@ -1619,13 +1619,13 @@ label kiara_event_07:
     "I'm struggling to keep up with Kiara as I ask the question, ducking and weaving through the human throng."
     "But even when she turns her head to look in my direction, Kiara doesn't seem to be having any such problems."
     "In fact it's almost as if the crowds are instinctively parting in order to let her pass with ease."
-    show kiara talkative
+    show kiara talk
     kiara.say "Clue you in?"
     kiara.say "But, [hero.name], whatever can you mean?"
     show kiara normal
     mike.say "Oh come on!"
     mike.say "I just want to know why we're here, that's all."
-    show kiara talkative
+    show kiara talk
     kiara.say "We are at the mall, are we not?"
     kiara.say "What else would we be here for but to shop?"
     show kiara normal
@@ -1633,7 +1633,7 @@ label kiara_event_07:
     "To try to find out exactly what it is that we're supposed to be shopping for."
     "But before I can so that, she stops and grabs me by the shoulders."
     "Turning me so that I'm looking straight at the shop in front of me."
-    show kiara talkative
+    show kiara talk
     kiara.say "Aha!"
     kiara.say "Here we are, [hero.name]…"
     kiara.say "The place where all of your questions will be answered!"
@@ -1647,7 +1647,7 @@ label kiara_event_07:
     mike.say "And they'll be able to work out that I don't have enough money in my bank account!"
     "Kiara raises an eyebrows and cocks her head to one side."
     "Regarding me with a mixture of interest and amusement."
-    show kiara talkative
+    show kiara talk
     kiara.say "Maybe it was like that before..."
     kiara.say "But today, you are here with me."
     kiara.say "And I buy almost all of my clothes here."
@@ -1666,7 +1666,7 @@ label kiara_event_07:
     "And when I say he appears, I mean it - it's like he just materialises out of nowhere!"
     show ryan at blacker, center, zoomAt(1.0, (940, 740)), startle
     "Salesman" "Greeting, madam...and to the gentleman too."
-    show kiara talkative
+    show kiara talk
     kiara.say "Yes, yes..."
     kiara.say "I'm here to check on the items you're preparing for me."
     kiara.say "And for my companion here - to see about upgrading his wardrobe."
@@ -1680,7 +1680,7 @@ label kiara_event_07:
     mike.say "What?"
     mike.say "Wait a minute..."
     mike.say "You didn't mention anything about me getting new clothes!"
-    show kiara talkative
+    show kiara talk
     kiara.say "But of course, [hero.name]."
     kiara.say "If you are going to be a part of my operation, you will need to look the part."
     kiara.say "So just let the man do his job, and I will take care of the rest."
@@ -1713,7 +1713,7 @@ label kiara_event_07:
             mike.say "I don't think you need to measure that!"
             "Kiara stands a little way off as all of this is going on."
             "Chuckling softly at my apparent discomfort."
-            show kiara talkative
+            show kiara talk
             kiara.say "You must stand still, [hero.name]…"
             kiara.say "We would not want the cut of your pants to be too tight."
             kiara.say "The flow of blood to the extremities is so important!"
@@ -1742,7 +1742,7 @@ label kiara_event_07:
             mike.say "I don't think you need to measure that!"
             "Kiara stands a little way off as all of this is going on."
             "Chuckling softly at my apparent discomfort."
-            show kiara talkative
+            show kiara talk
             kiara.say "You must stand still, [hero.name]…"
             kiara.say "We would not want the cut of your pants to be too tight."
             kiara.say "The flow of blood to the extremities is so important!"
@@ -1753,7 +1753,7 @@ label kiara_event_07:
     "And by the time the salesman returns with stuff for me to try on, she's laughing out loud."
     mike.say "Okay, I have to go into the fitting cubicle to try these on."
     mike.say "I guess you'll still be laughing when I come out, huh?"
-    show kiara talkative
+    show kiara talk
     kiara.say "Oh, no, no, no!"
     kiara.say "You cannot do that alone."
     kiara.say "I must be there to help you."
@@ -1819,7 +1819,7 @@ label kiara_event_07:
         "Only to see that Kiara's already dropped the clothes and is looking straight at me."
         "She points to a spot on the floor in front of her with one hand."
         "The other adjusting the waistband of her skirt."
-        show kiara talkative
+        show kiara talk
         kiara.say "Now, [hero.name]..."
         kiara.say "Get down on your knees, right here."
         show kiara normal
@@ -1827,7 +1827,7 @@ label kiara_event_07:
         "But that doesn't mean I'm not going to ask what she has in mind."
         mike.say "But the clothes?"
         mike.say "How can I try them on down here?"
-        show kiara talkative
+        show kiara talk
         kiara.say "Trust me, [hero.name]…"
         kiara.say "They will fit you just fine."
         kiara.say "What I want you to do now is pay me for them!"
@@ -1905,7 +1905,7 @@ label kiara_event_08:
     show kiara at center, zoomAt(1.5, (640, 1080))
     with dissolve
     "But as I make to follow Kiara into the inner sanctum of her office, she puts a gentle hand on my chest to stop me."
-    show kiara talkative
+    show kiara talk
     kiara.say "I have some private business that I need to take care of, okay?"
     kiara.say "So I want you to stay out here and give me some privacy."
     show kiara normal
@@ -1918,14 +1918,14 @@ label kiara_event_08:
     show kiara evil
     "Kiara smiles and lets out a peal of laughter that, to me at least, sounds like the tinkling of exquisite little bells."
     kiara.say "Ha, ha..."
-    show kiara talkative
+    show kiara talk
     kiara.say "Oh, [hero.name], you can be so funny sometimes!"
     kiara.say "Of course you will be in charge while I am otherwise engaged."
     show kiara normal
     "I nod for a moment, but then the reality of what Kiara just said hits me."
     mike.say "You..."
     mike.say "You want to leave me in charge of the club - again?!?"
-    show kiara talkative
+    show kiara talk
     kiara.say "Well the first time I did so went well, did it not?"
     kiara.say "The place is still standing and we are all alive and well."
     kiara.say "So yes, I think you will do well being in charge for a second time."
@@ -2012,14 +2012,14 @@ label kiara_event_08:
             show layer master at lparty
             with fade
             "And it's not until he's safely in the VIP area that I start to hyperventilate."
-            show kiara talkative at center, zoomAt(1.0, (990, 760))
+            show kiara talk at center, zoomAt(1.0, (990, 760))
             kiara.say "My, my..."
             kiara.say "You realise that was a hitman?"
             show kiara normal at center, traveling(1.5, 0.5, (640, 1080))
             "Kiara's walked up behind me, just like everyone seems to be doing tonight."
             "But by now, I'm too exhausted to jump or be freaked out."
             mike.say "Yeah...I guessed he might be."
-            show kiara talkative
+            show kiara talk
             kiara.say "I'm impressed, you handled that well."
             kiara.say "Maybe you were always meant to do something like this?"
             show kiara normal
@@ -2038,7 +2038,7 @@ label kiara_event_08:
             show victor normal
             "I shake my head as the guy produces a photo."
             "Too racked with anxiety to even be able to focus on it."
-            show kiara talkative at center, zoomAt(1.25, (900, 900)) with easeinright
+            show kiara talk at center, zoomAt(1.25, (900, 900)) with easeinright
             kiara.say "You're looking for 'Francois the Frenchman'?"
             kiara.say "Well, you're in luck..."
             kiara.say "Because he's here tonight."
@@ -2049,7 +2049,7 @@ label kiara_event_08:
             victor.say "Ah..."
             victor.say "What are you doing?"
             show victor normal
-            show kiara talkative
+            show kiara talk
             kiara.say "Pardon me, but I can see the bulge under your jacket."
             kiara.say "And I know that Francois is a man with a lot of enemies."
             kiara.say "But I can't let you...handle him in the club."
@@ -2060,7 +2060,7 @@ label kiara_event_08:
             show victor angry
             victor.say "Well what if I don't agree to that?"
             show victor upset
-            show kiara talkative
+            show kiara talk
             kiara.say "Then things are going to get messy, aren't they?"
             kiara.say "Look, how about this..."
             kiara.say "I have you escorted to the VIP section and give you a drink on the house."
@@ -2074,12 +2074,12 @@ label kiara_event_08:
             play sound "<from 1.4 to 2.6>sd/SFX/humans/finger_snap.ogg"
             "She clicks her fingers and summons someone over to take care of him."
             hide victor
-            show kiara talkative at center, zoomAt(1.25, (640, 900))
+            show kiara talk at center, zoomAt(1.25, (640, 900))
             with fade
             "And it's not until he's safely in the VIP area that I start to hyperventilate."
             mike.say "You...you..."
             mike.say "You realise that was a hitman?!?"
-            show kiara talkative
+            show kiara talk
             kiara.say "Yeah...I guessed he might be."
             kiara.say "Did you happen to take note of how I handled him?"
             kiara.say "Because it seems like you need lessons on that kind of thing."
@@ -2143,7 +2143,7 @@ label kiara_event_09:
     mike.say "Are we expecting special guests tonight?"
     mike.say "Because I didn't see anything on the schedule."
     "Kiara raises an eyebrow at the question, setting the bottle down on the table as she does so."
-    show kiara talkative
+    show kiara talk
     kiara.say "Oh yes, [hero.name]…"
     kiara.say "This table will be hosting the most special guests of all."
     kiara.say "Tonight you and I will be enjoying a meal while sitting at it."
@@ -2156,7 +2156,7 @@ label kiara_event_09:
     mike.say "But what's the occasion?"
     if kiara.sub <= 50:
         "Kiara looks me straight in the eye and gestures around her."
-        show kiara talkative
+        show kiara talk
         kiara.say "I thought that it was time we celebrated."
         kiara.say "Marked the occasion of you becoming a part of my...business empire."
         kiara.say "An intimate meal, to symbolise how intimately we are now entwined."
@@ -2170,7 +2170,7 @@ label kiara_event_09:
     else:
         "Kiara shrugs and shakes her head, trying to look as casual as she possibly can."
         "Which, knowing her as well as I do, instantly makes me think she's anything but."
-        show kiara talkative
+        show kiara talk
         kiara.say "No particular reason..."
         kiara.say "Does there need to be a reason?"
         kiara.say "Apart from how hard we've both been working recently?"
@@ -2181,12 +2181,12 @@ label kiara_event_09:
         show kiara smile
         "Kiara smiles and nods, eager to agree with me."
         "And I sense that's what she wanted to hear the whole time."
-        show kiara talkative
+        show kiara talk
         kiara.say "Exactly that!"
         show kiara normal
     "It's only now that I realise I can catch the scent of something pretty amazing on the air."
     "And as I inhale, the smell already beginning to make me feel hungry, Kiara puts her hand on the back of a chair."
-    show kiara talkative
+    show kiara talk
     kiara.say "I hope you are hungry, [hero.name]…"
     kiara.say "Because I have gone to the trouble of putting together the menu myself."
     kiara.say "And everything is traditional, recipes from the old country."
@@ -2203,7 +2203,7 @@ label kiara_event_09:
     "The sound is so loud that I can't help jumping a little."
     "And almost the second after it fades, the club staff start appearing with the food."
     "Hell, one of them even pops up to uncork and pour the wine!"
-    show kiara talkative
+    show kiara talk
     kiara.say "It is important to me that you become steeped in my people's ways."
     kiara.say "That you become one of the family, bound to me by blood."
     show kiara normal
@@ -2235,7 +2235,7 @@ label kiara_event_09:
     show kiara normal
     "Oddly, the sound of me speaking with my mouth full seems to have affected Kiara on an emotional level."
     "Because she now looks like she's come to a decision on some important matter, setting her jaw and nodding her head."
-    show kiara talkative
+    show kiara talk
     kiara.say "Yes..."
     kiara.say "I believe this is a sign."
     kiara.say "A sign that you are destined to be joined to my family in blood!"
@@ -2248,7 +2248,7 @@ label kiara_event_09:
     if kiara.sub <= 50:
         "I'm still pondering the problem when Kiara reaches over the table."
         "And then she takes a firm hold of my hands, looking me straight in the eye."
-        show kiara talkative
+        show kiara talk
         kiara.say "I have taken the time to nurture you, [hero.name]…"
         kiara.say "I have tended and watered you, like a flower."
         kiara.say "And now, you must bloom!"
@@ -2256,7 +2256,7 @@ label kiara_event_09:
         mike.say "Erm..."
         mike.say "I'm not very good with horticultural references, Kiara."
         mike.say "Would you mind putting that in simpler terms?"
-        show kiara talkative
+        show kiara talk
         kiara.say "[hero.name], you must agree to marry me!"
         show kiara normal
         "The words finally seem to start making sense to me."
@@ -2303,7 +2303,7 @@ label kiara_event_09:
 
             "Kiara's eyes blaze with intense emotion as soon as she hears my words."
             "And her head is soon nodding, letting me know that we're on the same wavelength."
-            show kiara talkative
+            show kiara talk
             kiara.say "Oh, [hero.name]…"
             kiara.say "It is like you have read my mind!"
             kiara.say "Yes, of course I will marry you - then you really will be part of the family!"
@@ -2318,7 +2318,7 @@ label kiara_event_09:
 
             "Kiara frowns as she listens to my proposal, brows furrowing more with each passing second."
             "And her head is soon shaking, letting me know that we're miles apart on this one."
-            show kiara talkative
+            show kiara talk
             kiara.say "No, [hero.name]…"
             kiara.say "I will not marry you."
             kiara.say "And I think that I have also lost my appetite."
@@ -2363,7 +2363,7 @@ label kiara_male_ending:
         "All of those heads turn to follow Kiara as she makes it to the end of the aisle."
         "Even the guys with the bulges in their jackets watching as she reaches the altar."
         "And I notice that she has a knowing smile on her face as she comes to stand beside me."
-        show kiara talkative at center, zoomAt(1.5, (640, 1040))
+        show kiara talk at center, zoomAt(1.5, (640, 1040))
         kiara.say "Oh, [hero.name]…"
         kiara.say "If only my father could see us now."
         kiara.say "He would be all like 'you come to me on my daughter's wedding day'!"
@@ -2511,14 +2511,14 @@ label kiara_event_07b:
     "As soon as she hears the sound of my voice, Kiara looks around, searching for me."
     show kiara normal
     "And the moment that she sets eyes on me, her face seems to genuinely light up."
-    show kiara talkative at center, traveling(1.25, 0.5, (640, 900))
+    show kiara talk at center, traveling(1.25, 0.5, (640, 900))
     kiara.say "Oh..."
     kiara.say "Hi there, [hero.name]…"
     kiara.say "Hope I'm not running late or spoiling your vibe?"
     show bg street2 at center, traveling(1.25, 1.0, (640, 880))
     show kiara normal at center, traveling(1.5, 1.0, (640, 1080))
     "I can't help frowning as I walk the short distance over to where Kiara's standing."
-    show kiara talkative
+    show kiara talk
     kiara.say "What's up, friend?"
     kiara.say "Why are you shooting me that look?"
     show kiara normal
@@ -2536,14 +2536,14 @@ label kiara_event_07b:
     kiara.say "Hmm..."
     show kiara irritated
     kiara.say "Well that's annoying."
-    show kiara talkative
+    show kiara talk
     kiara.say "I wanted to be able to fit in with all of the other people at the shopping mall."
     kiara.say "So you're going to have to teach me how to do it."
     show kiara normal
     "My brain's starting to tie itself in knots by now."
     mike.say "Wait a minute..."
     mike.say "You want me to teach you to fit in at the mall?"
-    show kiara talkative
+    show kiara talk
     kiara.say "Not just at the mall, [hero.name]…"
     kiara.say "I want you to help me become average and normal - just like you!"
     show kiara normal
@@ -2558,12 +2558,12 @@ label kiara_event_07b:
     show kiara normal casual at center, zoomAt(1.5, (640, 1080))
     with fade
     "Kiara wraps her arm in mine, and then she proceeds to begin walking me into the mall."
-    show kiara talkative
+    show kiara talk
     kiara.say "You might think that my life is all fun and excitement, [hero.name]."
     show kiara whining
     kiara.say "But the truth is that, beneath a thin veneer of style, it is empty."
     kiara.say "There is nothing real, nothing that will last - and no love!"
-    show kiara talkative
+    show kiara talk
     kiara.say "I so desperately want what you have, a life that is real."
     show kiara sadsmile
     "I have to admit that Kiara's kind of blowing my mind right now."
@@ -2575,7 +2575,7 @@ label kiara_event_07b:
     mike.say "Okay, Kiara..."
     mike.say "I'll do my best."
     mike.say "So, first things first - why do we come to the mall?"
-    show kiara talkative
+    show kiara talk
     kiara.say "Because we desire to purchase something."
     kiara.say "And one of the stores here sells the thing."
     show kiara stuned
@@ -2599,7 +2599,7 @@ label kiara_event_07b:
     show kiara casual stare at center, zoomAt(1.5, (640, 1080)) with easeinright
     "Kiara looks around as I lead her inside the arcade."
     "Her eyes wide as she takes in all the flashing lights."
-    show kiara talkative
+    show kiara talk
     kiara.say "I understand games like poker and roulette."
     show kiara whining
     kiara.say "But surely these are games for children?"
@@ -2680,7 +2680,7 @@ label kiara_event_07b:
     show kiara casual at center, zoomAt(1.5, (640, 1080))
     with fade
     "And so we head out of the arcade and back into the thronging crowds."
-    show kiara talkative
+    show kiara talk
     kiara.say "So you don't actually come here to buy anything?"
     kiara.say "Just to play frivolous games?"
     show kiara normal
@@ -2697,7 +2697,7 @@ label kiara_event_07b:
     "And I can already see Shawn standing behind the counter, looking as harassed as ever."
     show kiara pout
     kiara.say "Hmm..."
-    show kiara talkative
+    show kiara talk
     kiara.say "But isn't your friend supposed to be working?"
     kiara.say "You would be getting him in trouble with his boss, would you not?"
     show kiara normal
@@ -2717,10 +2717,10 @@ label kiara_event_07b:
     "Loving the fact that he's bowled over by her beauty."
     mike.say "Shawn, this is Kiara..."
     mike.say "Kiara, this is Shawn."
-    show kiara talkative
+    show kiara talk
     kiara.say "Charmed to meet you, Shawn."
     show kiara normal
-    show shawn talkative
+    show shawn talk
     shawn.say "Y...yeah..."
     shawn.say "Likewise!"
     shawn.say "Is there, like...anything I can do for you guys?"
@@ -2735,7 +2735,7 @@ label kiara_event_07b:
     "But that doesn't mean Shawn's going to be cowed into submission quite so easily."
     show shawn sadsmile
     "Because I can already see him doing all that he can to recover his composure."
-    show shawn talkative
+    show shawn talk
     shawn.say "Well in that case, it makes perfect sense to come in here."
     shawn.say "We sell only the very finest in modern, electrical consumer goods."
     shawn.say "Everything you see before you is top of the line and very exclusive."
@@ -2744,20 +2744,20 @@ label kiara_event_07b:
     "And I've got to admit, the place does look very shiny and impressive."
     show kiara pout
     "But I see that Kiara's frowning a little, like she doesn't agree."
-    show kiara talkative
+    show kiara talk
     kiara.say "No, I think that you are mistaken."
     show kiara sadsmile
     show shawn embarrassed
     shawn.say "I...I don't know what you mean."
     show shawn sadsmile
-    show kiara talkative
+    show kiara talk
     kiara.say "Many of the products on your shelves are not genuine."
     kiara.say "They are imitations, made cheaply and passed off as the real thing."
     show kiara normal
     show shawn embarrassed
     shawn.say "What are you even talking about?"
     show shawn sadsmile
-    show kiara talkative
+    show kiara talk
     kiara.say "Fakes, packed into shipping containers and smuggled past customs."
     kiara.say "I would recognise them anywhere."
     show kiara normal
@@ -2817,7 +2817,7 @@ label kiara_event_07b:
             "Leaving Shawn having kittens behind us and staring at his precious stock."
             show kiara pout
             kiara.say "Hmm..."
-            show kiara talkative
+            show kiara talk
             kiara.say "So I am thinking that was not such a good idea?"
             kiara.say "And that I should not be talking about such things in future?"
             show kiara normal
@@ -2840,7 +2840,7 @@ label kiara_event_07b:
     "Kiara looks like she's going to deny it for a second."
     show kiara normal
     "But then she nods her head."
-    show kiara talkative
+    show kiara talk
     kiara.say "Not everyone that's a part of the underworld hides themselves away."
     kiara.say "Many of them are all around us, going about their daily lives."
     show kiara guilty
@@ -2873,7 +2873,7 @@ label kiara_event_08b:
     "This means that when I see her walking towards me, she has a look of intrigue on her face and a twinkle in her eye."
     show kiara at center, traveling(1.25, 1.0, (640, 900))
     "And when I wave to let her know that I've seen her, Kiara waves back and quickens her pace, making it to me in the blink of an eye."
-    show kiara talkative
+    show kiara talk
     kiara.say "[hero.name]…"
     kiara.say "I hope that I am not late?"
     show kiara normal
@@ -2881,7 +2881,7 @@ label kiara_event_08b:
     "I don't even need to pull out my phone before I shake my head, dismissing Kiara's fears."
     "Because the truth is that I really don't care if Kiara's on time or running pretty late."
     "She looks so good and I'm so excited to be spending some time with her today, that nothing else seems to matter."
-    show kiara talkative
+    show kiara talk
     kiara.say "I must say that I am intrigued to know what we are here for."
     kiara.say "The mystery has kept me guessing ever since you invited me along."
     show kiara normal
@@ -2890,7 +2890,7 @@ label kiara_event_08b:
     mike.say "We're going to be having a picnic!"
     "Kiara's face lights up at the sight of the hamper, and she claps her hands together too."
     "All of which serves to make me feel pretty smug, like I've made the perfect choice."
-    show kiara talkative
+    show kiara talk
     kiara.say "Oh, [hero.name]…"
     kiara.say "I have always seen such things, in movies and on the television."
     kiara.say "But I have never been invited to go along on one before now."
@@ -2975,7 +2975,7 @@ label kiara_event_08b:
     with fade
     "And that's when I remember that I brought a bottle of something special along."
     "So I reach into the hamper and pull it out, already tearing the foil from around the cork."
-    show kiara talkative
+    show kiara talk
     kiara.say "Oh my..."
     kiara.say "What is this?"
     kiara.say "Champagne?"
@@ -3199,7 +3199,7 @@ label kiara_event_09b:
     mike.say "Kiara..."
     mike.say "I was so worried!"
     mike.say "I thought that..."
-    show kiara talkative
+    show kiara talk
     kiara.say "No, [hero.name]…"
     kiara.say "I am safe, as you can see."
     show kiara dreaming at center, traveling(1.5, 0.5, (640, 1040))
@@ -3215,7 +3215,7 @@ label kiara_event_09b:
     mike.say "You know, like a gas leak or something?"
     show kiara pout
     "Kiara lets out a grim chuckle and shakes her head."
-    show kiara talkative
+    show kiara talk
     kiara.say "Ha!"
     kiara.say "Most likely that's what it will have been made to look like."
     kiara.say "And so that is what the official cause will be recorded as."
@@ -3256,7 +3256,7 @@ label kiara_event_09b:
             show kiara sadsmile
             "Kiara nods her head, as if she's accepting the logic of what I'm saying."
             "Even though it's maybe not as sympathetic as I could have made it."
-            show kiara talkative
+            show kiara talk
             kiara.say "You are right to say these things."
             kiara.say "And the guilt that I feel is a heavy weight to bear."
             kiara.say "But it is still preferable to dying in that fire!"
@@ -3268,7 +3268,7 @@ label kiara_event_09b:
     "Channelling the last reserves of her energy to be able to do so as well."
     mike.say "Huh?"
     mike.say "What's that, Kiara?"
-    show kiara talkative
+    show kiara talk
     kiara.say "I cannot interpret this as anything but a sign that my old life is truly over."
     kiara.say "And so now I am totally committed to the new one that we have been making together."
     kiara.say "Which means that I must ask - [hero.name], will you make me your wife?"
@@ -3289,7 +3289,7 @@ label kiara_event_09b:
             mike.say "I know that we don't have a ring or anything like that."
             mike.say "So I can't make a traditional proposal..."
             mike.say "But we'll get one as soon as we can."
-            show kiara talkative
+            show kiara talk
             kiara.say "Oh, [hero.name]…"
             kiara.say "None of that matters."
             kiara.say "All that really matters is that you said yes!"
@@ -3311,7 +3311,7 @@ label kiara_event_09b:
             mike.say "Then we can make the decision with clearer heads."
             "Kiara looks disappointed with my answer, which is understandable."
             "But she seems to get the logic of what I'm saying, as she nods."
-            show kiara talkative
+            show kiara talk
             kiara.say "Ah..."
             kiara.say "You see things more clearly than I."
             kiara.say "And perhaps you are right."
@@ -3369,7 +3369,7 @@ label kiara_male_ending_b:
     "Priest" "Take this man..."
     "Priest" "To be your lawful, wedded husband?"
     "Kiara answers without missing a beat."
-    show kiara talkative
+    show kiara talk
     kiara.say "I do."
     show kiara normal
     "Priest" "And do you, [hero.name]…"
@@ -3475,7 +3475,7 @@ label kiara_sub_event_01:
     "But at least she doesn't seem to be annoyed with me anymore."
     show kiara surprised
     kiara.say "That is such a strange way of putting it!"
-    show kiara talkative
+    show kiara talk
     kiara.say "Maybe next time you should just ask to know what I am thinking?"
     show kiara normal
     "I can't help nodding, as that would make things simpler for everyone involved."
@@ -3521,12 +3521,12 @@ label kiara_sub_event_01:
     "Not for any particular reason, it was just something that didn't come up in conversation."
     show kiara normal
     "But I can see that the comparison strikes a chord with her, as she nods eagerly."
-    show kiara talkative
+    show kiara talk
     kiara.say "Yes, very much so."
     kiara.say "But you are not a priest, [hero.name]."
     show kiara normal
     mike.say "Does that really matter?"
-    show kiara talkative
+    show kiara talk
     kiara.say "What do you mean?"
     show kiara normal
     mike.say "Maybe you should still confess to me, Kiara..."
@@ -3535,7 +3535,7 @@ label kiara_sub_event_01:
     show kiara normal
     "The recognition in Kiara's eyes is slowly turning into something else entirely."
     "Building in intensity until it reminds me of a flame burning within her."
-    show kiara talkative
+    show kiara talk
     kiara.say "You would do that for me?"
     kiara.say "You would let me put myself in your hands?"
     show kiara sadsmile
@@ -3543,7 +3543,7 @@ label kiara_sub_event_01:
     show kiara confident at center, traveling( 1.25, 0.7, (640, 1080))
     "But then she surprises me by bowing her head and kneeling down."
     "And yeah, I really mean that - she gets down on her knees in front of me!"
-    show kiara talkative
+    show kiara talk
     kiara.say "I am ready to confess, [hero.name]…"
     kiara.say "So may we begin?"
     show kiara normal
@@ -3554,7 +3554,7 @@ label kiara_sub_event_01:
     mike.say "So confess to me, Kiara - put yourself in my hands."
     show kiara confident at startle(0.3, 15)
     "Kiara lowers her head, nodding at the same time."
-    show kiara talkative
+    show kiara talk
     kiara.say "I confess that I have always needed to appear strong and resilient."
     kiara.say "That the path I have walked required me to seem like I had a heart of stone."
     kiara.say "But the truth is that I have withered and died inside because of this."
@@ -3565,11 +3565,11 @@ label kiara_sub_event_01:
     "Kiara raises her hands, fingers intertwined, almost like she's praying."
     mike.say "If that's what you really want, Kiara..."
     mike.say "All you have to do is say the words."
-    show kiara talkative
+    show kiara talk
     kiara.say "It is, [hero.name], it is!"
     show kiara normal
     mike.say "Then say it!"
-    show kiara talkative
+    show kiara talk
     kiara.say "Ah..."
     kiara.say "The strain is too much for me - I must do as you command..."
     kiara.say "I...I put all of my burdens in your hands!"
@@ -3595,7 +3595,7 @@ label kiara_sub_event_02:
     mike.say "Because it isn't that long since your last...confession."
     "Kiara stares up at me, her eyes already letting me know that she's on the verge of pleading."
     "That there's something desperate inside of her that's already straining to get out."
-    show kiara talkative
+    show kiara talk
     kiara.say "I...I know that, [hero.name]…"
     kiara.say "It's just that confessing to you..."
     kiara.say "Well, it made me feel so liberated, so freed from my burdens."
@@ -3604,7 +3604,7 @@ label kiara_sub_event_02:
     mike.say "Talking openly about your problems will do that."
     "As soon as I start referring to what we did like it was a therapy session, Kiara's mood changes."
     "She shakes her head and reaches out with both hands, grabbing hold of mine and refusing to let go."
-    show kiara talkative
+    show kiara talk
     kiara.say "No, no, no..."
     kiara.say "It was not like that, [hero.name]…"
     kiara.say "What I felt was deeper, more powerful - almost spiritual!"
@@ -3616,7 +3616,7 @@ label kiara_sub_event_02:
     mike.say "So what are you telling me?"
     mike.say "That you want to confess to me whenever things get too heavy for you?"
     "Kiara shakes her head, now yanking on my hands as she starts to plead with me."
-    show kiara talkative
+    show kiara talk
     kiara.say "No, [hero.name]…"
     kiara.say "I only wish that it were enough to satisfy me!"
     kiara.say "I know that it's wicked and wanton of me to even be asking this..."
@@ -3631,7 +3631,7 @@ label kiara_sub_event_02:
     mike.say "The greater the indulgence on my part, the greater the submission on yours."
     "Kiara's eyes are wide by now, looking at me with a desperate need to be saved."
     "And she doesn't hesitate to nod her head, agreeing to my terms."
-    show kiara talkative
+    show kiara talk
     kiara.say "Yes, of course..."
     kiara.say "I will do whatever you ask of me."
     kiara.say "I...have only confessed the least of my burdens to you so far."
@@ -3644,7 +3644,7 @@ label kiara_sub_event_02:
     "And the act of voicing it is physically exhausting, leaving her drained."
     mike.say "Believe that I can help you, Kiara."
     mike.say "But I will need two things from you in return."
-    show kiara talkative
+    show kiara talk
     kiara.say "Just name them, [hero.name]…"
     kiara.say "Tell me what they are and I will do them!"
     show kiara normal
@@ -3703,13 +3703,13 @@ label kiara_sub_event_02:
     mike.say "Unburden yourself, Kiara..."
     mike.say "Dig down deep into your soul..."
     mike.say "And release what's been trapped down there all these years."
-    show kiara talkative
+    show kiara talk
     kiara.say "Y...yes..."
     kiara.say "I will...obey!"
     show kiara normal
     "I move my hands over Kiara's shoulders, tracing their lines to her arms."
     "Then describe the curve below them, sweeping around to the front of her chest."
-    show kiara talkative
+    show kiara talk
     kiara.say "I have never done anything with the best of intentions."
     kiara.say "Always choosing the path that I thought looked like the best..."
     kiara.say "But secretly suspected would result in failure!"
@@ -3720,7 +3720,7 @@ label kiara_sub_event_02:
     "I reward Kiara's confession by cupping her breasts in my hands."
     "Using my fingers and thumbs to pinch and squeeze her nipples."
     "Which respond by instantly stiffening at my attentions."
-    show kiara talkative
+    show kiara talk
     kiara.say "I...I chose my henchmen in the same way..."
     kiara.say "Favouring the headstrong and overconfident."
     kiara.say "Always hoping they would prove to be unworthy!"
@@ -3738,7 +3738,7 @@ label kiara_sub_event_02:
     "And in the next instant, my fingers begin to caress the lips of her pussy."
     show kiara tasty
     kiara.say "Ungh…"
-    show kiara talkative
+    show kiara talk
     kiara.say "I...I made sure my operations were seen by the police."
     kiara.say "That eventually they would see through any and all cover."
     kiara.say "Because I...I wanted to be caught!"
@@ -3758,7 +3758,7 @@ label kiara_sub_event_02:
     "Releasing Kiara from the bonds that hold her in place I watch as she slither out of the chair."
     show kiara flirt
     "Ending up a helpless heap of limbs at my feet, still gasping from the effects of her orgasm."
-    show kiara talkative
+    show kiara talk
     kiara.say "Th...thank you..."
     kiara.say "Thank you so much!"
     scene bg black with dissolve
@@ -3830,7 +3830,7 @@ label kiara_sub_event_03:
     mike.say "You'll call me 'Master' and obey my every command."
     show kiara normal
     "Kiara nods eagerly at this."
-    show kiara talkative
+    show kiara talk
     kiara.say "Yes..."
     kiara.say "Yes, Master!"
     show kiara normal

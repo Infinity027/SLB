@@ -68,4 +68,3 @@ label gym_need_membership:
     $ game.room = "gymreception"
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

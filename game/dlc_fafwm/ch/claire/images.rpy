@@ -403,7 +403,7 @@ init -35 python:
     'positions': ['a', 'b', 'c'],
     'piercings': ['clit', 'navel', 'nipples', 'nose'],
     'haircuts': ['nohaircut', 'haircut'],
-    'exps': ['normal', 'angry', 'annoyed', 'bored', 'bothered', 'careless', 'conceited', 'cry', 'dazed', 'disappointed', 'eating', 'embarrassed', 'evil', 'furious', 'guilty', 'happy', 'mad', 'mindless', 'pained', 'pissed', 'pleased', 'pout', 'sad', 'sadsmile', 'shy', 'startle', 'stuned', 'surprised', 'talkative', 'upset', 'whining', 'wink'],
+    'exps': ['normal', 'angry', 'annoyed', 'bored', 'bothered', 'careless', 'conceited', 'cry', 'dazed', 'disappointed', 'eating', 'embarrassed', 'evil', 'furious', 'guilty', 'happy', 'mad', 'mindless', 'pained', 'pissed', 'pleased', 'pout', 'sad', 'sadsmile', 'shy', 'startle', 'stuned', 'surprised', 'talk', 'upset', 'whining', 'wink'],
     'outfits': ['casual', 'sport', 'date', 'sexydate', 'sluttydate', 'swimsuit', 'sexyswimsuit', 'halloween', 'wedding', 'underwear', 'naked'],
     'others': ['pubes', 'collar', 'blush', 'bottomless', 'topless', 'noacc'],
 }
@@ -568,9 +568,9 @@ label test_claire_exps:
     show expression f"claire {pose} surprised" as c2 at left
     "surprised"
 
-    $ renpy.show(f"claire {pose} talkative")
-    show expression f"claire {pose} talkative" as c2 at left
-    "talkative"
+    $ renpy.show(f"claire {pose} talk")
+    show expression f"claire {pose} talk" as c2 at left
+    "talk"
 
     $ renpy.show(f"claire {pose} upset")
     show expression f"claire {pose} upset" as c2 at left

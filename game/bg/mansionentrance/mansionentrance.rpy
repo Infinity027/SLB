@@ -40,4 +40,3 @@ init python:
     "outfit": "casual",
     "tags": ["mansion"],
     })
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

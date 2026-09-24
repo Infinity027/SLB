@@ -25,7 +25,6 @@ init python:
     Gift("slutty_dress", price=400, tooltip="A daring dress to {b}amplify allure{/b}", tags=["clothes"], label="slutty_dress", sub_bonus=10, once=True, bonus_traits=["not_innocent", "flirty", "slutty", "submissive"])
     Gift("cute_top", price=100, tooltip="A sweet charming top", tags=["clothes"], love_bonus=2, bonus_traits=["flirty", "innocent"])
     Gift("nice_scarf", price=50, tooltip="A stylish scarf with a touch of flirtiness", tags=["clothes"], love_bonus=1, bonus_traits=["flirty", "artsy"])
-    Gift("sexy_swimsuit", price=100, tooltip="A revealing swimsuit to {b}enhance allure{/b}", tags=["swimsuit"], label="swimsuit", sub_bonus=5, once=True, bonus_traits=["flirty", "slutty"])
     Gift("cute_swimsuit", price=200, tooltip="A lovely swimsuit", tags=["swimsuit"], love_bonus=4, bonus_traits=["not_slutty"])
     Gift("purse", price=200, tooltip="A fashionable purse with appeal", tags=["purse"], love_bonus=4, bonus_traits=["flirty"])
     Gift("fancy_purse", price=400, tooltip="A luxurious purse fit for a princess", tags=["purse"], love_bonus=6, bonus_traits=["princess", "flirty", "slutty"])
@@ -34,8 +33,6 @@ init python:
 
 
 
-
-    Gift("sexy_underwear", price=150, tooltip="Seductive underwear for men", tags=["underwear"], love_bonus=3),
     Gift("tuxedo", price=200, tooltip="A classy tuxedo to impress", tags=["clothes"], love_bonus=4),
     Gift("tshirt", display_name="T-shirt", price=100, tooltip="A casual t-shirt", tags=["clothes"], love_bonus=2),
     Gift("leather_shoes", price=50, tooltip="Stylish leather shoes", tags=["clothes"], love_bonus=1),

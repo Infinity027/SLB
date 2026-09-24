@@ -21,7 +21,7 @@ label kiara_ask_phone_male:
         if 'fafwm' in DLCS:
             $ hero.smartphone_contacts.append("kiara")
         show kiara smile
-        show kiara talkative
+        show kiara talk
         kiara.say "Of course you may have it, [hero.name]."
         kiara.say "I am surprised that I did not give it to you already."
         show kiara smile
@@ -31,7 +31,7 @@ label kiara_ask_phone_male:
     else:
         show kiara sad
         kiara.say "Hmm..."
-        show kiara talkative
+        show kiara talk
         kiara.say "If you do not have it, that can only mean one thing."
         kiara.say "And that is that I did not want you to have it yet."
         kiara.say "Ask me again in a little while, and maybe that will have changed."
@@ -47,12 +47,12 @@ label kiara_ask_birthday_male:
     show kiara normal
     "Kiara gives me a thoughtful look as I ask the question."
     "Which is kind of annoying, as I was hoping for a straight answer."
-    show kiara talkative
+    show kiara talk
     kiara.say "The date of my birthday, you say?"
     if hero.charm >= 40 - kiara.love:
         show kiara smile
         $ kiara.flags.birthdayknown = True
-        show kiara talkative
+        show kiara talk
         kiara.say "I suppose that there is no harm in telling you."
         kiara.say "My birthday is on the [active_girl.birthday[1]] of [active_girl.birthday[0]]."
         kiara.say "But I will not tell you the year I was born."
@@ -137,7 +137,7 @@ label kiara_breakup_male:
     mike.say "So I'm just going to come out with it."
     mike.say "I think that we should end things, that we should break up."
     "Kiara looks at me, shaking her head in disbelief."
-    show kiara talkative
+    show kiara talk
     kiara.say "You cannot be serious, [hero.name]!"
     kiara.say "I thought that things were going well between us?"
     show kiara annoyed
@@ -152,7 +152,7 @@ label kiara_breakup_male:
     "Kiara looks like she wants to keep on arguing with me."
     "But I think she can see from the look in my eyes that I'm serious."
     "And I watch as all of the fight seems to drain out of her."
-    show kiara talkative
+    show kiara talk
     kiara.say "Ah...this is so hard!"
     kiara.say "But if it is what you want, then so be it."
     kiara.say "I would not want to hold you against your will."
@@ -167,7 +167,7 @@ label kiara_go_steady_intro_male:
     mike.say "Kiara..."
     mike.say "We've been hanging-out together a lot recently, haven't we?"
     "Kiara shakes her head at me and lets out a chuckle."
-    show kiara talkative
+    show kiara talk
     kiara.say "Hanging-out!"
     kiara.say "You make us sound like silly little teenagers."
     kiara.say "But yes, we have been spending a great deal of time together."
@@ -175,7 +175,7 @@ label kiara_go_steady_intro_male:
     "I nod, eager to go further down that same line of discussion."
     mike.say "Yeah, and it got me thinking - maybe it's time we went steady?"
     "Kiara frowns and wrinkles her brow."
-    show kiara talkative
+    show kiara talk
     kiara.say "You want us to walk more slowly, more carefully?"
     show kiara evil
     mike.say "No, no, no - it means to officially start dating someone."
@@ -184,7 +184,7 @@ label kiara_go_steady_intro_male:
 
 label kiara_go_steady_yes_male:
     "Kiara chuckles again, but much to my relief, she does so while smiling."
-    show kiara talkative
+    show kiara talk
     kiara.say "Of course I would, [hero.name]."
     kiara.say "The way you ask me these things..."
     kiara.say "It makes me feel like I am a teenager again myself!"
@@ -197,7 +197,7 @@ label kiara_go_steady_no_male:
     "Kiara chuckles again, but this time i not that she's also shaking her head."
     show kiara guilty
     kiara.say "I am flattered, but I must say no."
-    show kiara talkative
+    show kiara talk
     kiara.say "I do not think that our relationship has matured to that degree."
     kiara.say "So let us wait until that time comes."
     show kiara annoyed
@@ -223,7 +223,7 @@ label kiara_pet_intro_male:
 
 label kiara_pet_happy_male:
     "Kiara shrugs and smiles, shaking her head."
-    show kiara talkative
+    show kiara talk
     kiara.say "Well maybe give me some warning next time?"
     show kiara cringe
     kiara.say "That way I won't be so surprised when it happens."
@@ -257,7 +257,7 @@ label kiara_massage_intro_male:
     return
 
 label kiara_massage_accept_male:
-    show kiara talkative
+    show kiara talk
     kiara.say "Well, that does sound appealing."
     kiara.say "And if there's any chance that it could help..."
     kiara.say "Very well, [hero.name], I accept your offer."
@@ -267,7 +267,7 @@ label kiara_massage_accept_male:
     return
 
 label kiara_massage_refuse_male:
-    show kiara talkative
+    show kiara talk
     kiara.say "That is a kind offer, [hero.name]..."
     kiara.say "But I am afraid that I cannot accept."
     kiara.say "Were something to go wrong, I would not be able to work at the cafe."

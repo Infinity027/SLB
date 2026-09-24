@@ -180,7 +180,7 @@ label petite_harem_event_01:
     "Kat blushes a little."
     "And for a moment I think she's going to deny it."
     "But then she nods her head and lets out a cute chuckle."
-    show kat talkative
+    show kat talk
     kat.say "Okay, okay..."
     kat.say "That's exactly what I did!"
     show kat surprised
@@ -236,7 +236,7 @@ label petite_harem_event_01:
     "But it seems to have the desired effect."
     show anna happy
     "Within mere seconds, Anna's smiling again."
-    show anna talkative
+    show anna talk
     anna.say "Okay, [hero.name]..."
     anna.say "You're forgiven!"
     show anna normal
@@ -288,7 +288,7 @@ label petite_harem_event_01:
     "And so they have no choice but to let the matter drop."
     "But that doesn't mean the danger is passed."
     "Not by a long measure."
-    show anna talkative
+    show anna talk
     show kat normal
     anna.say "So, Kat..."
     anna.say "You just met, [hero.name], yeah?"
@@ -912,11 +912,11 @@ label petite_harem_event_04(appointment=None):
     "In fact, she's almost half buried in there."
     show anna a at center, zoomAt(1.0, (1280, 880)), startle
     "Her ass wiggling in the air as she tries to pull something out."
-    show kat talkative
+    show kat talk
     kat.say "Come on, [hero.name]…"
     kat.say "What's with the hold-up?"
     show kat normal
-    show emma talkative
+    show emma talk
     emma.say "Yeah..."
     emma.say "Are you coming or what?"
     hide kat
@@ -982,10 +982,10 @@ label petite_harem_event_04(appointment=None):
             show anna b swimsuit at right with easeinright
             "By the time we catch up to them, Emma and Kat have picked out a spot."
             "And they're already spreading out towels on the warm sand."
-            show emma talkative
+            show emma talk
             emma.say "You guys took your time!"
             show emma normal
-            show kat talkative
+            show kat talk
             kat.say "We were starting to wonder what you were up to!"
             show kat normal
             "Anna ignores the implications of the last comment."
@@ -1102,7 +1102,7 @@ label petite_harem_event_04(appointment=None):
     show emma normal
     show anna swimsuit normal at right with easeinright
     "Everyone gets to their feet, and we start setting up the net."
-    show kat talkative
+    show kat talk
     kat.say "Anna and Emma against me and [hero.name], okay?"
     show kat normal
     show anna happy
@@ -1199,19 +1199,19 @@ label petite_harem_event_04(appointment=None):
     "The waves are breaking out there, creating beautiful white surf."
     mike.say "You want to go have some fun in the sea, Anna?"
     "The question seems to be exactly what Anna wanted to hear."
-    show anna a talkative
+    show anna a talk
     anna.say "You want to do that, [hero.name]?"
     anna.say "Because I'd love to!"
     show anna b normal
     "Anna turns to Kat and Emma, waving for their attention."
-    show anna b talkative
+    show anna b talk
     anna.say "You guys want to come play around in the water too?"
     hide anna
     show kat swimsuit at left
     show emma swimsuit at right
     with fade
     "Kat begins to nod almost instantly, eager to get in on the act."
-    show kat talkative
+    show kat talk
     kat.say "You know I do!"
     show kat normal
     "But Emma looks a little flustered by the notion."
@@ -1228,11 +1228,11 @@ label petite_harem_event_04(appointment=None):
     show kat swimsuit at right with easeinright
     "Anna and Kat don't seem to have much sympathy for Emma's predicament."
     "Because they both leap up and begin heading for the water."
-    show anna talkative
+    show anna talk
     anna.say "Whatever, Emma..."
     anna.say "You can catch us up."
     show anna normal
-    show kat talkative
+    show kat talk
     kat.say "See you in there, Emma..."
     kat.say "You coming, [hero.name]?"
     show kat normal
@@ -1560,18 +1560,18 @@ label petite_harem_event_04(appointment=None):
             "I take one last look over at Anna and Emma."
             "Which earns me rolling eyes and disapproving shakes of the head."
             "But by then, Kat's totally leaning into me and demanding my attention."
-            show kat talkative
+            show kat talk
             kat.say "It's a dating game, see?"
             show kat normal
             mike.say "A dating game?!?"
-            show kat talkative
+            show kat talk
             kat.say "Yeah, but it's a really good one."
             kat.say "Look, I'm dating this guy, Micky."
             kat.say "The one with the crazy, spiky hair."
             show kat normal
             mike.say "Huh..."
             mike.say "He kind of looks like a geek."
-            show kat talkative
+            show kat talk
             kat.say "Well, yeah..."
             show kat happy
             kat.say "But he's cute and romantic, in a clumsy kind of way!"
@@ -1607,14 +1607,14 @@ label petite_harem_event_04(appointment=None):
     "I look for confirmation from the girls."
     "Scanning each of their faces for agreement."
     if all(score >= 2 for score in (anna_score, emma_score, kat_score)):
-        show anna talkative
+        show anna talk
         anna.say "Wait..."
         anna.say "It's not time to go home yet, is it?"
         show anna normal
-        show emma talkative
+        show emma talk
         emma.say "I feel like I could stay here a lot longer."
         show emma normal
-        show kat talkative
+        show kat talk
         kat.say "I'm not ready to call it a day yet."
         kat.say "Unless everyone else is?"
         show kat normal
@@ -1644,11 +1644,11 @@ label petite_harem_event_04(appointment=None):
         $ kat.love += 1
         call petite_harem_event_04_sex_intro from _call_petite_harem_event_04_sex_intro
     elif all(score >= 2 for score in (anna_score, emma_score)):
-        show anna talkative
+        show anna talk
         anna.say "Wait..."
         anna.say "It's not time to go home yet, is it?"
         show anna normal
-        show emma talkative
+        show emma talk
         emma.say "I feel like I could stay here a lot longer."
         show emma normal
         show kat whining
@@ -1682,10 +1682,10 @@ label petite_harem_event_04(appointment=None):
         $ emma.love += 1
         $ kat.love -= 1
     elif all(score >= 2 for score in (emma_score, kat_score)):
-        show emma talkative
+        show emma talk
         emma.say "I feel like I could stay here a lot longer."
         show emma normal
-        show kat talkative
+        show kat talk
         kat.say "I'm not ready to call it a day yet."
         kat.say "Unless everyone else is?"
         show kat normal
@@ -1720,11 +1720,11 @@ label petite_harem_event_04(appointment=None):
         $ emma.love += 1
         $ kat.love += 1
     elif all(score >= 2 for score in (anna_score, kat_score)):
-        show anna talkative
+        show anna talk
         anna.say "Wait..."
         anna.say "It's not time to go home yet, is it?"
         show anna normal
-        show kat talkative
+        show kat talk
         kat.say "I'm not ready to call it a day yet."
         kat.say "Unless everyone else is?"
         show kat normal
@@ -1761,7 +1761,7 @@ label petite_harem_event_04(appointment=None):
         $ emma.love -= 1
         $ kat.love += 1
     elif anna_score >= 2:
-        show anna talkative
+        show anna talk
         anna.say "Wait..."
         anna.say "It's not time to go home yet, is it?"
         show anna normal
@@ -1796,7 +1796,7 @@ label petite_harem_event_04(appointment=None):
         $ emma.love -= 1
         $ kat.love -= 1
     elif emma_score >= 2:
-        show emma talkative
+        show emma talk
         emma.say "I feel like I could stay here a lot longer."
         show emma normal
         show anna worried
@@ -1824,7 +1824,7 @@ label petite_harem_event_04(appointment=None):
         $ emma.love += 1
         $ kat.love -= 1
     elif kat_score >= 2:
-        show kat talkative
+        show kat talk
         kat.say "I'm not ready to call it a day yet."
         kat.say "Unless everyone else is?"
         show kat normal
@@ -1947,15 +1947,15 @@ label petite_harem_event_04_sex_intro:
     mike.say "So..."
     mike.say "I'm going to guess that you guys don't do this kind of thing very often?"
     "The girls exchange glances, shaking their head at the question."
-    show anna b talkative
+    show anna b talk
     anna.say "I've always been a city girl, you know?"
     anna.say "Never got to hang out at the beach much."
     show anna b normal
-    show emma talkative
+    show emma talk
     emma.say "It's the same with me really..."
     emma.say "My folks didn't live anywhere near the coast when I was growing up."
     show emma normal
-    show kat talkative
+    show kat talk
     kat.say "Not me, I lived right by the beach."
     show kat normal
     "My eyebrows rise as Kat seems to buck the trend."
@@ -1963,7 +1963,7 @@ label petite_harem_event_04_sex_intro:
     mike.say "So you must have been on the sand all the time, right?"
     show kat happy at startle
     "Kat shakes her head and chuckles."
-    show kat talkative
+    show kat talk
     kat.say "Nope - allergies!"
     kat.say "Why'd you think I ended up inside playing videogames all the time?"
     kat.say "It was only when I was in my teens I got medication to handle it."
@@ -1998,7 +1998,7 @@ label petite_harem_event_04_sex_intro:
     show emma happy
     emma.say "But exciting too!"
     show emma
-    show kat talkative
+    show kat talk
     kat.say "You know what..."
     kat.say "I can't see anyone else around here right now."
     show kat naked with dissolve
@@ -2557,7 +2557,7 @@ label anna_emma_kat_propose_male:
     show emma whining
     emma.say "It's just such a turn-off for me, you know?"
     show emma upset
-    show anna talkative
+    show anna talk
     anna.say "What is?"
     show anna normal
     show emma angry
@@ -2577,7 +2577,7 @@ label anna_emma_kat_propose_male:
     show emma whining
     emma.say "What's that?"
     show emma normal
-    show anna talkative
+    show anna talk
     anna.say "I dunno, Kat..."
     anna.say "What is it?"
     show anna annoyed
@@ -2629,7 +2629,7 @@ label anna_emma_kat_propose_male:
     anna.say "WEDDING RINGS!!!"
     anna.say "Oh my god...oh my fucking god!"
     anna.say "Who are those for?"
-    show anna talkative
+    show anna talk
     anna.say "Who's getting married?!?"
     show anna normal
     show kat shocked
@@ -2651,7 +2651,7 @@ label anna_emma_kat_propose_male:
         "I watch, my eyes wide with hope, as the three of the exchange glances."
         "But it's just when I feel my hope beginning to fade that something happens."
         "Anna seems to come suddenly to life, shoving first Kat and then Emma on the shoulder."
-        show anna talkative
+        show anna talk
         anna.say "What in the hell are you two waiting for?"
         anna.say "You want him to start begging or something?!?"
         show anna normal
@@ -2683,7 +2683,7 @@ label anna_emma_kat_propose_male:
         show emma happy
         emma.say "I don't know what came over me!"
         show emma sad
-        show anna talkative
+        show anna talk
         anna.say "Aah..."
         anna.say "Don't be such moping bitches!"
         show anna happy
@@ -2703,7 +2703,7 @@ label anna_emma_kat_propose_male:
         "I watch, my eyes wide with hope, as the three of the exchange glances."
         "But it's just when I feel my hope beginning to fade that something happens."
         "Anna seems to come suddenly to life, shoving first Kat and then Emma on the shoulder."
-        show anna talkative
+        show anna talk
         anna.say "What in the hell are you two waiting for?"
         anna.say "You want him to start begging or something?!?"
         show anna normal
@@ -2730,7 +2730,7 @@ label anna_emma_kat_propose_male:
         kat.say "Maybe if there was just two or three of us in this relationship, [hero.name]."
         kat.say "Then it would be that much more simple to say yes."
         show kat sad
-        show anna talkative
+        show anna talk
         anna.say "Ah, forget about her, [hero.name]..."
         show anna happy
         anna.say "We're getting married!"
@@ -2751,7 +2751,7 @@ label anna_emma_kat_propose_male:
         "I watch, my eyes wide with hope, as the three of the exchange glances."
         "But it's just when I feel my hope beginning to fade that something happens."
         "Anna seems to come suddenly to life, shoving first Kat and then Emma on the shoulder."
-        show anna talkative
+        show anna talk
         anna.say "What in the hell are you two waiting for?"
         anna.say "You want him to start begging or something?!?"
         show anna normal
@@ -2794,11 +2794,11 @@ label anna_emma_kat_propose_male:
         "I watch, my eyes wide with hope, as the three of the exchange glances."
         "But it's just when I feel my hope beginning to fade that something happens."
         "Anna seems to come suddenly to life, shoving first Kat and then Emma on the shoulder."
-        show anna talkative
+        show anna talk
         anna.say "What in the hell are you two waiting for?"
         anna.say "You want him to start begging or something?!?"
         "Anna shakes her head as she turns to face me."
-        show anna talkative
+        show anna talk
         show anna happy
         anna.say "I'll marry you, [hero.name]!"
         anna.say "Even if these guys are too dumb to say yes!"
@@ -2828,7 +2828,7 @@ label anna_emma_kat_propose_male:
         "I nod my head."
         "Beginning to tune into their way of thinking."
         "But before I can say a single word, Anna cuts into the conversation."
-        show anna talkative
+        show anna talk
         anna.say "Ah, forget about them, [hero.name]..."
         anna.say "We're getting married!"
         show anna normal
@@ -2895,7 +2895,7 @@ label anna_emma_kat_propose_male:
         "I watch, my eyes wide with hope, as the three of the exchange glances."
         "But it's just when I feel my hope beginning to fade that something happens."
         "Emma seems to come suddenly to life, shoving first Kat and then Anna on the shoulder."
-        show emma talkative
+        show emma talk
         emma.say "What in the hell are you two waiting for?"
         emma.say "You want him to start begging or something?!?"
         show emma annoyed
@@ -2908,7 +2908,7 @@ label anna_emma_kat_propose_male:
         "And then she shoves it onto her finger."
         "This seems to be enough to shake Anna and Kat into action."
         "As one they take a step backwards, shaking their heads."
-        show anna talkative
+        show anna talk
         show kat annoyed
         anna.say "Oh, [hero.name]..."
         anna.say "That's very romantic of you."
@@ -2950,7 +2950,7 @@ label anna_emma_kat_propose_male:
         "I watch, my eyes wide with hope, as the three of the exchange glances."
         "But it's just when I feel my hope beginning to fade that something happens."
         "Kat seems to come suddenly to life, shoving first Anna and then Emma on the shoulder."
-        show kat talkative
+        show kat talk
         kat.say "What in the hell are you two waiting for?"
         kat.say "You want him to start begging or something?!?"
         show kat annoyed
@@ -2964,7 +2964,7 @@ label anna_emma_kat_propose_male:
         "This seems to be enough to shake Emma and Anna into action."
         "As one they take a step backwards, shaking their heads."
         show anna annoyed
-        show emma talkative
+        show emma talk
         emma.say "Oh, [hero.name]..."
         emma.say "That's very romantic of you."
         show emma whining
@@ -3006,7 +3006,7 @@ label anna_emma_kat_propose_male:
         "But I can feel that same hope beginning to fade as I read their expressions."
         "Well, at least the ones on Emma and Kat's faces."
         "Anna still seems to be as shell-shocked as before."
-        show emma talkative
+        show emma talk
         emma.say "Oh, [hero.name]..."
         emma.say "That's very romantic of you."
         show emma whining
@@ -3051,7 +3051,7 @@ label anna_emma_kat_propose_male:
         show emma whining
         emma.say "It wouldn't take much to make it, for sure."
         show emma sad
-        show anna talkative
+        show anna talk
         anna.say "For the record, I thought we were nailing it!"
         anna.say "But I gotta go with the majority here."
         show anna sadsmile
@@ -3089,7 +3089,7 @@ label anna_emma_propose_male:
     with easeinright
     emma.say "It's just such a turn-off for me, you know?"
     show emma upset
-    show anna talkative
+    show anna talk
     anna.say "What is?"
     show emma upset
     show anna embarrassed
@@ -3124,7 +3124,7 @@ label anna_emma_propose_male:
     with hpunch
     "Anna doesn't seem the least bit impressed with my warning."
     "Instead she stands there, arms crossed and staring at me."
-    show anna a talkative
+    show anna a talk
     anna.say "Nice try, [hero.name]..."
     anna.say "But we caught you in the act just now."
     anna.say "You were snooping on our conversation."
@@ -3152,7 +3152,7 @@ label anna_emma_propose_male:
     anna.say "WEDDING RINGS!!!"
     anna.say "Oh my god...oh my fucking god!"
     anna.say "Who are those for?"
-    show anna talkative
+    show anna talk
     anna.say "Who's getting married?!?"
     show emma annoyed
     emma.say "Who do you think, dumb-ass?"
@@ -3169,7 +3169,7 @@ label anna_emma_propose_male:
     if anna.love >= 195 and emma.love >= 195:
         "Anna's the first to react, leaping into the air and waving her arms."
         "And the next thing I know, she's snatched one of the rings out of my hand."
-        show anna talkative
+        show anna talk
         anna.say "Oh yeah..."
         show anna happy
         anna.say "You'd better believe that I will!"
@@ -3188,7 +3188,7 @@ label anna_emma_propose_male:
     elif anna.love >= 195:
         "Anna's the first to react, leaping into the air and waving her arms."
         "And the next thing I know, she's snatched one of the rings out of my hand."
-        show anna talkative
+        show anna talk
         anna.say "Oh yeah..."
         show anna happy
         anna.say "You'd better believe that I will!"
@@ -3207,7 +3207,7 @@ label anna_emma_propose_male:
         "I feel like I've been slapped in the face."
         "And all I can do is try to find out the reason for the refusal."
         "But before I can say another word, Anna cuts me off."
-        show anna talkative
+        show anna talk
         anna.say "Ah, forget about her, [hero.name]..."
         show anna happy
         anna.say "We're going to get married!"
@@ -3234,13 +3234,13 @@ label anna_emma_propose_male:
         show emma normal
         "I give Anna another look, hoping for an explanation."
         "And she shrugs, a helpless look on her face."
-        show anna talkative
+        show anna talk
         anna.say "Maybe if there was just two of us in this relationship, [hero.name]."
         show anna embarrassed
         anna.say "Then it would be that much more simple to say yes."
         show anna normal
         "But before I can say another word, Emma cuts me off."
-        show emma talkative
+        show emma talk
         emma.say "Does it really matter why she said no, [hero.name]?"
         show emma happy
         emma.say "We're going to get married!"
@@ -3251,7 +3251,7 @@ label anna_emma_propose_male:
         $ anna.love -= 25
         $ anna.sub -= 25
     elif anna.love < 195 and emma.love < 195:
-        show emma talkative
+        show emma talk
         emma.say "Oh, [hero.name]..."
         emma.say "That's very romantic of you."
         show emma whining
@@ -3282,11 +3282,11 @@ label anna_emma_propose_male:
         mike.say "And you don't think we're there yet?"
         mike.say "We're not one hundred percent perfect?"
         anna.say "No..."
-        show anna talkative
+        show anna talk
         anna.say "But we're almost there!"
         anna.say "It wouldn't take much to make it, for sure."
         show anna normal
-        show emma talkative
+        show emma talk
         emma.say "For the record, I thought we were nailing it!"
         show emma normal
         "I raise myself to a standing position as I take all of this in."
@@ -3321,7 +3321,7 @@ label anna_kat_propose_male:
     show kat whining
     kat.say "It's just such a turn-off for me, you know?"
     show kat sad
-    show anna talkative
+    show anna talk
     anna.say "What is?"
     show anna normal
     show kat angry
@@ -3381,7 +3381,7 @@ label anna_kat_propose_male:
     show anna surprised
     anna.say "WEDDING RINGS!!!"
     anna.say "Oh my god...oh my fucking god!"
-    show anna talkative
+    show anna talk
     anna.say "Who are those for?"
     anna.say "Who's getting married?!?"
     show anna normal
@@ -3398,14 +3398,14 @@ label anna_kat_propose_male:
     if anna.love >= 195 and kat.love >= 195:
         "Anna's the first to react, leaping into the air and waving her arms."
         "And the next thing I know, she's snatched one of the rings out of my hand."
-        show anna talkative
+        show anna talk
         anna.say "Oh yeah..."
         show anna happy
         anna.say "You'd better believe that I will!"
         show anna normal
         "At first Kat seems more than a little overwhelmed."
         "But eventually she shakes it off as Anna does a victory-lap around us both."
-        show kat talkative
+        show kat talk
         kat.say "Oh..."
         show kat happy
         kat.say "I...I will too, [hero.name]!"
@@ -3417,7 +3417,7 @@ label anna_kat_propose_male:
     elif anna.love >= 195:
         "Anna's the first to react, leaping into the air and waving her arms."
         "And the next thing I know, she's snatched one of the rings out of my hand."
-        show anna talkative
+        show anna talk
         anna.say "Oh yeah..."
         show anna happy
         anna.say "You'd better believe that I will!"
@@ -3426,7 +3426,7 @@ label anna_kat_propose_male:
         "But eventually she shakes it off as Anna does a victory-lap around us both."
         show kat shocked
         kat.say "Oh, [hero.name]..."
-        show kat talkative
+        show kat talk
         kat.say "That's very romantic of you."
         kat.say "But..."
         show kat sadsmile
@@ -3436,7 +3436,7 @@ label anna_kat_propose_male:
         "I feel like I've been slapped in the face."
         "And all I can do is try to find out the reason for the refusal."
         "But before I can say another word, Anna cuts me off."
-        show anna talkative
+        show anna talk
         anna.say "Ah, forget about her, [hero.name]..."
         show anna happy
         anna.say "We're going to get married!"
@@ -3468,7 +3468,7 @@ label anna_kat_propose_male:
         anna.say "Then it would be that much more simple to say yes."
         show anna embarrassed
         "But before I can say another word, Kat cuts me off."
-        show kat talkative
+        show kat talk
         kat.say "Does it really matter why she said no, [hero.name]?"
         show kat happy
         kat.say "We're going to get married!"
@@ -3479,7 +3479,7 @@ label anna_kat_propose_male:
         $ anna.love -= 25
         $ anna.sub -= 25
     elif anna.love < 195 and kat.love < 195:
-        show kat talkative
+        show kat talk
         kat.say "Oh, [hero.name]..."
         kat.say "That's very romantic of you."
         show kat sadsmile
@@ -3511,11 +3511,11 @@ label anna_kat_propose_male:
         mike.say "We're not one hundred percent perfect?"
         show anna worried
         anna.say "No..."
-        show anna talkative
+        show anna talk
         anna.say "But we're almost there!"
         anna.say "It wouldn't take much to make it, for sure."
         show anna normal
-        show kat talkative
+        show kat talk
         kat.say "For the record, I thought we were nailing it!"
         show kat normal
         "I raise myself to a standing position as I take all of this in."
@@ -3551,7 +3551,7 @@ label emma_kat_propose_male:
     show emma whining
     emma.say "It's just such a turn-off for me, you know?"
     show emma upset
-    show kat talkative
+    show kat talk
     kat.say "What is?"
     show kat normal
     show emma whining
@@ -3636,7 +3636,7 @@ label emma_kat_propose_male:
         show kat smile
         "At first Emma seems more than a little overwhelmed."
         "But eventually she shakes it off as Kat does a victory-lap around us both."
-        show emma talkative
+        show emma talk
         emma.say "Oh..."
         show emma happy
         emma.say "I...I will too, [hero.name]!"
@@ -3656,7 +3656,7 @@ label emma_kat_propose_male:
         "And they seem to have an instant effect on Emma too."
         "As she steps forwards and picks up one of the rings."
         "Then I watch as she slips it onto her finger."
-        show emma talkative
+        show emma talk
         emma.say "I can speak for myself, Kat."
         show emma happy
         emma.say "I...I will, [hero.name]!"
@@ -3668,7 +3668,7 @@ label emma_kat_propose_male:
         kat.say "Then it would be that much more simple to say yes."
         show kat sad
         "But before I can say another word, Emma cuts me off."
-        show emma talkative
+        show emma talk
         emma.say "Does it really matter why she said no, [hero.name]?"
         show emma happy
         emma.say "We're going to get married!"
@@ -3681,14 +3681,14 @@ label emma_kat_propose_male:
     elif kat.love >= 195:
         "Kat's the first to react, leaping into the air and waving her arms."
         "And the next thing I know, she's snatched one of the rings out of my hand."
-        show kat talkative
+        show kat talk
         kat.say "Oh yeah..."
         show kat happy
         kat.say "You'd better believe that I will!"
         show kat smile
         "At first Emma seems more than a little overwhelmed."
         "But eventually she shakes it off as Kat does a victory-lap around us both."
-        show emma talkative
+        show emma talk
         emma.say "Oh, [hero.name]..."
         emma.say "That's very romantic of you."
         show emma whining
@@ -3699,7 +3699,7 @@ label emma_kat_propose_male:
         "I feel like I've been slapped in the face."
         "And all I can do is try to find out the reason for the refusal."
         "But before I can say another word, Kat cuts me off."
-        show kat talkative
+        show kat talk
         kat.say "Ah, forget about her, [hero.name]..."
         show kat happy
         kat.say "We're going to get married!"
@@ -3710,7 +3710,7 @@ label emma_kat_propose_male:
         $ emma.love -= 25
         $ emma.sub -= 25
     elif emma.love < 195 and kat.love < 195:
-        show kat talkative
+        show kat talk
         kat.say "Oh, [hero.name]..."
         kat.say "That's very romantic of you."
         show kat sadsmile
@@ -3731,7 +3731,7 @@ label emma_kat_propose_male:
         kat.say "Maybe if there was just two of us in this relationship, [hero.name]."
         kat.say "Then it would be that much more simple to say yes."
         show kat sadsmile
-        show emma talkative
+        show emma talk
         emma.say "But with three different people in the mix..."
         show emma whining
         emma.say "It's so much more complicated than that!"
@@ -3746,7 +3746,7 @@ label emma_kat_propose_male:
         kat.say "But we're almost there!"
         kat.say "It wouldn't take much to make it, for sure."
         show kat smile
-        show emma talkative
+        show emma talk
         emma.say "For the record, I thought we were nailing it!"
         show emma normal
         "I raise myself to a standing position as I take all of this in."
@@ -3821,7 +3821,7 @@ label anna_emma_kat_male_ending:
     emma.say "Oh my god..."
     emma.say "We're actually doing this!"
     show emma blush
-    show kat talkative
+    show kat talk
     kat.say "Yeah..."
     kat.say "Shit suddenly got real!"
     show kat smile

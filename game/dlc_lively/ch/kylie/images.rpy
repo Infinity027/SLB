@@ -3,7 +3,7 @@ init -35 python:
     'motions': ['idle'],
     'positions': ['a', 'b', 'y'],
     'piercings': ['clit', 'ears', 'lips', 'navel', 'nipples', 'nose', 'tongue'],
-    'exps': ['normal', 'angry', 'annoyed', 'blush', 'crazyhappy', 'crazysad', 'happy', 'impressed', 'mindless', 'sad', 'sadhappy', 'shy', 'shout', 'smile', 'stuned', 'surprised', 'talkative', 'vangry', 'whining', 'yandere'],
+    'exps': ['normal', 'angry', 'annoyed', 'blush', 'crazyhappy', 'crazysad', 'happy', 'impressed', 'mindless', 'sad', 'sadhappy', 'shy', 'shout', 'smile', 'stuned', 'surprised', 'talk', 'vangry', 'whining', 'yandere'],
     'outfits': ['casual', 'sport', 'date', 'sexydate', 'sluttydate', 'swimsuit', 'sexyswimsuit', 'halloween', 'christmas', 'jail', 'wedding', 'sleep', 'underwear', 'naked'],
     'hoods': ['hooddown', 'hoodup'],
     'others': ['pubes', 'collar', 'bloodyface', 'bottomless', 'topless'],
@@ -120,9 +120,9 @@ label test_kylie_exps:
     show expression f"kylie {pose} surprised" as k2 at left
     "surprised"
 
-    $ renpy.show(f"kylie {pose} talkative")
-    show expression f"kylie {pose} talkative" as k2 at left
-    "talkative"
+    $ renpy.show(f"kylie {pose} talk")
+    show expression f"kylie {pose} talk" as k2 at left
+    "talk"
 
     $ renpy.show(f"kylie {pose} vangry")
     show expression f"kylie {pose} vangry" as k2 at left

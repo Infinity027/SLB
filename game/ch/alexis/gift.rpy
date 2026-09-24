@@ -107,7 +107,7 @@ label alexis_gift_slutty_dress_male:
     mike.say "Look, Alexis..."
     mike.say "I got you a surprise!"
     "Alexis blinks as she stares at me capering in front of her."
-    show alexis talkative
+    show alexis talk
     alexis.say "Yeah, [hero.name], I can see that."
     alexis.say "I thought I was supposed to be one getting excited right now."
     alexis.say "But it looks like you're about to burst a blood-vessel!"
@@ -134,7 +134,7 @@ label alexis_gift_slutty_dress_male:
         show alexis happy
         "And when I see Alexis holding it up against herself, I feel a surge of relief."
         "Not to mention some serious excitement as she smooths it over her thighs too!"
-        show alexis talkative
+        show alexis talk
         alexis.say "Wow..."
         alexis.say "This is pretty daring, [hero.name]."
         alexis.say "I don't know if I'd have had the guts to buy it myself."

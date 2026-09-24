@@ -329,7 +329,7 @@ label bree_belly_kiss_male:
     "But she does the best that she can to hide her disappointment."
     show bree smile
     "And instead she treats me to a pleasant smile."
-    show bree talkative
+    show bree talk
     bree.say "Oh, it's nothing too taxing..."
     bree.say "I just wanted you to come over here and give me a kiss."
     show bree happy
@@ -340,7 +340,7 @@ label bree_belly_kiss_male:
     show bree at center, traveling(1.5, 0.5, (640, 1040))
     "So I walk straight over there, already puckering my lips."
     "But when I lean in for the kiss, [bree.name] puts a finger to my mouth."
-    show bree talkative
+    show bree talk
     bree.say "Oh no..."
     bree.say "I meant that I wanted you to kiss my belly!"
     show bree normal
@@ -349,7 +349,7 @@ label bree_belly_kiss_male:
     mike.say "Are you serious?"
     show bree gloomy
     "[bree.name] looks a little hurt at the question."
-    show bree talkative
+    show bree talk
     bree.say "Well, yeah..."
     bree.say "It's just something my dad used to do for my mom."
     bree.say "They always told me it was to keep me safe when I was in her belly!"
@@ -373,7 +373,7 @@ label bree_belly_caress_male:
     show bree vangry at center, zoomAt(1.25, (640, 880))
     bree.say "Urgh..."
     bree.say "Phew..."
-    show bree talkative
+    show bree talk
     bree.say "[hero.name]..."
     bree.say "Could you..."
     show bree sad
@@ -403,7 +403,7 @@ label bree_belly_caress_male:
     mike.say "You know I hate to see you suffering like this, right?"
     show bree normal
     "[bree.name] nods, letting me know that she's on the same wavelength."
-    show bree talkative
+    show bree talk
     bree.say "Sure would be nice to be able to share the burden with you."
     bree.say "I mean, it's not all bad, you know?"
     bree.say "That way you wouldn't miss out on feeling them move inside of you."

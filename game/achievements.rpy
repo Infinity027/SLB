@@ -2781,18 +2781,12 @@ define reona_achievement_4 = Achievement(
 
 
 
-define goth_harem_achievement_1 = Achievement(
-    id="goth_harem_1",
-    name="Ghouls 'n Goths",
-    description="Have fun with Amy and Violaine")
 
 
 
 
-define goth_harem_achievement_3 = Achievement(
-    id="goth_harem_3",
-    name="Ghouls 'n Goths 'n Goblins",
-    description="Have fun with Amy, Violaine and Vincent")
+
+
 
 
 
@@ -3077,15 +3071,11 @@ label electronic_harem_achievement_2:
     return
 
 
-label goth_harem_achievement_1:
-    $ goth_harem_achievement_1.grant()
-    return
 
 
 
-label goth_harem_achievement_3:
-    $ goth_harem_achievement_3.grant()
-    return
+
+
 
 
 init python:

@@ -800,7 +800,7 @@ init -35 python:
     'positions': ['a', 'b', 'c', 'd'],
     'piercings': ['clit', 'navel', 'nipples', 'nose'],
     'haircuts': ['nohaircut', 'haircut'],
-    'exps': ['normal', 'afraid', 'angry', 'annoyed', 'busted', 'confused', 'crazy', 'defiant', 'enthusiastic', 'happy', 'mindless', 'normal', 'offended', 'sad', 'sadclosed', 'sadsmile', 'shocked', 'shy', 'smile', 'smileclosed', 'stuned', 'surprised', 'talkative', 'timid', 'upset', 'whinge', 'whining', 'yawn'],
+    'exps': ['normal', 'afraid', 'angry', 'annoyed', 'busted', 'confused', 'crazy', 'defiant', 'enthusiastic', 'happy', 'mindless', 'normal', 'offended', 'sad', 'sadclosed', 'sadsmile', 'shocked', 'shy', 'smile', 'smileclosed', 'stuned', 'surprised', 'talk', 'timid', 'upset', 'whinge', 'whining', 'yawn'],
     'outfits': ['casual', 'sport', 'date', 'sexydate', 'sluttydate', 'swimsuit', 'sexyswimsuit', 'halloween', 'wedding', 'underwear', 'naked'],
     'others': ['pubes', 'collar', 'blush', 'bottomless', 'topless', 'noacc', 'headphones'],
 }
@@ -948,9 +948,9 @@ label test_kat_exps:
     show expression f"kat {pose} surprised" as k2 at left
     "surprised"
 
-    $ renpy.show(f"kat {pose} talkative")
-    show expression f"kat {pose} talkative" as k2 at left
-    "talkative"
+    $ renpy.show(f"kat {pose} talk")
+    show expression f"kat {pose} talk" as k2 at left
+    "talk"
 
     $ renpy.show(f"kat {pose} timid")
     show expression f"kat {pose} timid" as k2 at left

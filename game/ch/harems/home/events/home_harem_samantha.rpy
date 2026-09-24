@@ -2712,7 +2712,7 @@ label samantha_sharing_bed:
     "But as soon as I open the door and look into the corridor, my mood changes."
     show samantha happy
     samantha.say "Hi, [hero.name]..."
-    show samantha talkative
+    show samantha talk
     samantha.say "Hope I didn't get you out of bed!"
     show samantha normal
     "I blink as I stare at Sam, standing there with a smile on her face."
@@ -2726,7 +2726,7 @@ label samantha_sharing_bed:
     show samantha happy
     samantha.say "Oh, that's good."
     samantha.say "I thought I might have to wake you up!"
-    show samantha talkative
+    show samantha talk
     samantha.say "Well, are you going to let me in or what?"
     show samantha normal at center, zoomAt(1.5, (640, 1040))
     "Sam makes to push her way past me."
@@ -2764,7 +2764,7 @@ label samantha_sharing_bed:
     show samantha surprised
     "Sam shakes her head at this, looking a little confused."
     samantha.say "Why not, [hero.name]?"
-    show samantha talkative
+    show samantha talk
     samantha.say "We're friends, aren't we?"
     samantha.say "And I've known you longer than anyone else living here, haven't I?"
     show samantha happy
@@ -2805,7 +2805,7 @@ label samantha_sharing_bed:
             mike.say "It's kinda like that."
             show samantha sad at center, zoomAt(0.8, (740, 840)) with ease
             "She nods again and takes a step back from the door."
-            show samantha talkative
+            show samantha talk
             samantha.say "Maybe I'll go knock on some other doors."
             samantha.say "Find somewhere quiet to think about what you just said."
             show samantha sadsmile
@@ -2833,7 +2833,7 @@ label samantha_sharing_bed:
             "I study the look on Sam's face as she reacts to my ultimatum."
             "She looks surprised and maybe even a little disappointed."
             "But she nods all the same, agreeing to my terms."
-            show samantha talkative
+            show samantha talk
             samantha.say "Sure, [hero.name]..."
             samantha.say "If that's what you want."
             show samantha sadsmile
@@ -2859,7 +2859,7 @@ label samantha_sharing_bed:
                 mike.say "No, Sam..."
             mike.say "There's nothing wrong."
             mike.say "I'm just tired, that's all!"
-            show samantha talkative
+            show samantha talk
             samantha.say "Okay."
             samantha.say "Good night then!"
             hide samantha

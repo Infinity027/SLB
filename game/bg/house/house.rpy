@@ -127,4 +127,3 @@ label shovel_snow:
     "I shovel the snow."
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

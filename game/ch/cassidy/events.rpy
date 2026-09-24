@@ -582,19 +582,19 @@ label cassidy_humiliated_01:
             cassidy.say "And don't make me walk around with cum on my face. That gets nasty and gross really fast."
             show cassidy sad
             mike.say "You'd rather swallow?"
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Oh God, yes I would."
             show cassidy normal
             mike.say "Fine."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "You promise?"
             show cassidy normal
             mike.say "I promise."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Okay. I'm trusting you, [hero.name]."
             show cassidy normal
             mike.say "You still have to call me Master, though."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Fine, I'm trusting you, Master."
             $ cassidy.love += 1
             $ cassidy.sub += 1
@@ -666,7 +666,7 @@ label cassidy_birthday_date_male:
                 show cassidy date with dissolve
                 "A short while later, Cassidy appears and lets herself out."
                 $ game.active_date.score += 15
-                show cassidy talkative
+                show cassidy talk
                 cassidy.say "Sorry about that, [hero.name]."
                 cassidy.say "My dad was breathing down my neck the whole time."
                 cassidy.say "I think he was looking for an excuse to chew you out!"
@@ -708,7 +708,7 @@ label cassidy_birthday_date_male:
     "Now that I've actually been able to pick up my date, we can actually get going."
     "And Cassidy seems more than a little interested in where we're headed."
     scene bg street
-    show cassidy date talkative
+    show cassidy date talk
     with fade
     cassidy.say "I still don't understand why you won't tell me where we're going!"
     cassidy.say "Like, did you really plan something?"
@@ -735,7 +735,7 @@ label cassidy_birthday_date_male:
         mike.say "The ones where the girl starts out thinking everything sucks?"
         mike.say "But then she realises that it's really a lot of fun?"
         "Cassidy thinks about it for a moment."
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "Like the one where the lady falls off the boat and loses her memory?"
         cassidy.say "But she falls for the poor guy because he's hot and makes her laugh?"
         show cassidy normal
@@ -743,7 +743,7 @@ label cassidy_birthday_date_male:
         mike.say "Kinda like you can have fun without splashing the cash."
         mike.say "And it's rebelling a little too."
         if not game.flags.dwaynedead:
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Well..."
             cassidy.say "Daddy would be pretty mad if he caught me hanging out at the mall."
             cassidy.say "He's always saying that I need to act like a sophisticated young lady."
@@ -797,7 +797,7 @@ label cassidy_birthday_date_male:
     else:
         cassidy.say "Daddy didn't like me eating junk-food."
         cassidy.say "So I didn't get to eat hot-dogs much."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "And I really love them!"
     show cassidy normal
     menu:
@@ -855,13 +855,13 @@ label cassidy_birthday_date_male:
             show cassidy normal
             "I can't help sniggering at Cassidy as she says this."
             "And she looks up at me in surprise."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Hey!"
             cassidy.say "What's so funny?"
             show cassidy normal
             mike.say "Just you eating a huge sausage, Cassidy."
             mike.say "It's quite a memorable image!"
-            show cassidy talkative a
+            show cassidy talk a
             cassidy.say "Oh, I see!"
             cassidy.say "Yeah, if my Daddy could see me with this..."
             show cassidy wink b
@@ -885,7 +885,7 @@ label cassidy_birthday_date_male:
         mike.say "It's one of those dancing games, Cassidy."
         mike.say "You copy the moves on the screen."
         mike.say "And you hit the panels under your feet."
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "It looks like fun, [hero.name]."
         cassidy.say "Let's have a game!"
         show cassidy normal
@@ -900,7 +900,7 @@ label cassidy_birthday_date_male:
         "The screen comes to life in front of us."
         "Two pixelated dancers appearing and showing off the moves."
         "Then the music hits and Cassidy launches herself into the routine."
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "Come on, [hero.name]!"
         cassidy.say "Try to keep up."
         cassidy.say "This is pretty basic stuff!"
@@ -919,7 +919,7 @@ label cassidy_birthday_date_male:
             show cassidy surprised
             cassidy.say "Wow!"
             $ game.active_date.score += 15
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "You've really got some moves, [hero.name]."
             cassidy.say "I was struggling to keep up at the end!"
             show cassidy normal
@@ -988,7 +988,7 @@ label cassidy_birthday_date_male:
             mike.say "And it's not like I'm a professional or anything."
             "My being humble doesn't seem to do anything to put Cassidy off."
             "And she persists in talking about my skills with a club."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Seriously though..."
             $ game.active_date.score += 15
             cassidy.say "You should come play at the golf club with me some time soon."
@@ -1015,13 +1015,13 @@ label cassidy_birthday_date_male:
             show cassidy normal
             "Cassidy finishes the course long before me."
             "And so I have to accept limping home in second place."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Did you finally finish?"
             show cassidy normal
             mike.say "Yes, Cassidy..."
             mike.say "I finally finished."
             $ game.active_date.score -= 10
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "You really are bad at this, huh?"
             show cassidy normal
             mike.say "Yes, Cassidy..."
@@ -1040,7 +1040,7 @@ label cassidy_birthday_date_male:
     show cassidy normal
     "I stop too, puzzled by what's going on."
     mike.say "What's up, Cassidy?"
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "I just had THE best idea."
     cassidy.say "Something really spontaneous and crazy."
     show cassidy happy
@@ -1059,7 +1059,7 @@ label cassidy_birthday_date_male:
                 "That she's not his property."
             mike.say "Wow..."
             mike.say "That is a pretty crazy idea, Cassidy!"
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "But is that crazy good, or crazy bad?"
             show cassidy normal
             mike.say "Crazy good, obviously!"
@@ -1068,7 +1068,7 @@ label cassidy_birthday_date_male:
             "Cassidy smiles as she walks into the tattoo parlour."
             scene bg tattooshop with fade
             pause 0.1
-            show cassidy date talkative at center with easeinright
+            show cassidy date talk at center with easeinright
             cassidy.say "Hi..."
             cassidy.say "I'd like that pink heart please."
             cassidy.say "And I want you to put it right here..."
@@ -1264,7 +1264,7 @@ label cassidy_birthday_date_male:
                 "But Cassidy makes a sniffing sound."
                 cassidy.say "So..."
                 cassidy.say "You have to work with your hands?"
-                show cassidy talkative
+                show cassidy talk
                 cassidy.say "I guess that means you're pretty poor, yes?"
                 show cassidy normal
                 show bree angry
@@ -1292,7 +1292,7 @@ label cassidy_birthday_date_male:
     mike.say "Or do you want to go somewhere else?"
     if game.active_date.score >= 80 and cassidy.sexperience >= 1:
         "Cassidy nods her head."
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "I had a great time."
         cassidy.say "And I'm not ready to go home yet!"
         show cassidy normal
@@ -1313,7 +1313,7 @@ label cassidy_birthday_date_male:
         call cassidy_birthday_sex from _call_cassidy_birthday_sex
     else:
         "Cassidy shakes her head."
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "I had a good time too."
         show cassidy whining
         cassidy.say "But I need to get home soon."
@@ -1397,7 +1397,7 @@ label cassidy_birthday_sex:
     show cassidy topless with dissolve
     "Then I notice that she's also beginning to take off her clothes."
     "Slowly and almost unconsciously, as if she can't help herself."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "You know..."
     cassidy.say "I bet you're just as handy in the bedroom, yeah?"
     cassidy.say "I bet you know all kinds of tricks and techniques."
@@ -1514,7 +1514,7 @@ label cassidy_start:
     cassidy.say "You, what's-your-name, my valet is sick and I need a replacement."
     show cassidy normal
     mike.say "What do you -- I'm sorry, what?"
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Well you're obviously not that bright. Should I use smaller words?"
     show cassidy normal
     "The conversation is definitely getting weirder, but I have to get it together and say something intelligible or this is going to go from weird to embarrassing."
@@ -1537,15 +1537,15 @@ label cassidy_start:
     mike.say "No, it's you that doesn't understand. I'm not your valet. I don't work for you."
     show cassidy normal
     "Cassidy points one long finger at me, and then my desk."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "You work at this company, right?"
     show cassidy normal
     mike.say "Yes, this is my desk and my office."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Right. And Dwayne runs this company, right?"
     show cassidy normal
     mike.say "Yes, he's the CEO."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Good, then you work for Dwayne which means you work for me. Now get moving!"
     show cassidy normal
     menu:
@@ -1677,7 +1677,7 @@ label cassidy_start_investigation:
         aletta.say "For numbers this big, you could go to jail, [hero.name]."
         show aletta sad
         mike.say "Jail? I didn't do anything! I certainly didn't steal three million dollars!"
-        show aletta talkative
+        show aletta talk
         aletta.say "I know, and I'll tell them that, but I don't think that will be enough. You're going to have to figure out what happened."
         show aletta normal
         "I sigh."
@@ -1692,7 +1692,7 @@ label cassidy_start_investigation:
         mike.say "Thanks, I guess. I suppose if I get fired, I won't care much about that, will I?"
         show aletta normal
         "Aletta chuckles ruefully."
-        show aletta talkative
+        show aletta talk
         aletta.say "No, I suppose not."
         hide aletta with moveoutleft
         "After Aletta leaves, I look through the folder she gave me. At least having the list of accounts and the numbers they're investigating will be a start."
@@ -1729,7 +1729,7 @@ label cassidy_start_investigation:
         aletta.say "For numbers this big, you could go to jail, [hero.name]."
         show aletta sad
         mike.say "Jail? I didn't do anything! I certainly didn't steal three million dollars!"
-        show aletta talkative
+        show aletta talk
         aletta.say "I'd like to believe you didn't, [hero.name], but I don't know. You're going to have to figure out what happened."
         show aletta normal
         "I sigh."
@@ -1743,7 +1743,7 @@ label cassidy_start_investigation:
         mike.say "Thanks, I guess. I suppose if I get fired, I won't care much about that, will I?"
         show aletta sadsmile
         "Aletta chuckles ruefully."
-        show aletta talkative
+        show aletta talk
         aletta.say "No, I suppose not."
         aletta.say "Well, good luck with it. I'm rooting for you."
         hide aletta with moveoutleft
@@ -1817,16 +1817,16 @@ label cassidy_hold_meeting(appointment=None):
     if game.flags.cassidycameraplaced:
         "Knowing that this is being recorded, I try to keep my expression neutral. I throw in a touch of fear, but that's not hard. I really am afraid."
         $ game.flags.cassidyrecorded = True
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Oh, you came, Sweetie! I was worried you weren't going to take my offer seriously."
     show cassidy normal
     "Once again, her voice turns sultry."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "And it would be so unfortunate if you decided not to take me...seriously."
     show cassidy normal
     "Was that an innuendo?"
     mike.say "Yes, Cassidy. I'm taking you seriously. What do you want?"
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Before we get to that, don't you want to know what I can...do to you? Or for you?"
     show cassidy normal
     mike.say "Uh, let's start with...what can you do for me?"
@@ -1838,19 +1838,19 @@ label cassidy_hold_meeting(appointment=None):
     "She snaps her fingers."
     "Just so."
     mike.say "Okay, ah. And what's the catch?"
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "The catch, of course, is that we change your job description around just a leeetle bit. In addition to your normal work, you'll become my personal valet."
     show cassidy normal
     "Sigh. She's still on that valet thing."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "...and my personal sex toy."
     show cassidy normal
     mike.say "Say what now?"
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "You know. My toy. My cabana boy. My personal massager. You'll make that big dick of yours available to me, when I want, how I want, where I want."
     show cassidy normal
     mike.say "I don't think--"
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "No, thinking is definitely not part of your job, Sweetie."
     show cassidy normal
     mike.say "No I mean that doesn't seem like--"
@@ -1863,7 +1863,7 @@ label cassidy_hold_meeting(appointment=None):
         "Also did I just say nail her? Because despite being terrified, this is also kind of turning me on."
         call cassidy_meeting_loop from _call_cassidy_meeting_loop
         return
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Now you've got two choices, Sweetie."
     cassidy.say "One, don't believe me, walk out of here, and prepare your ass for jail."
     cassidy.say "Or two, get down on your knees, kiss my feet, call my Mistress, and beg me to make this all go away for you."
@@ -1891,7 +1891,7 @@ label cassidy_meeting_loop(done_items=[]):
     menu:
         "Why should I believe you?" if "why" not in done_items:
             mike.say "Look, why should I believe you?"
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "I don't see that you have a choice. But for what it's worth, I'm a girl of my word, as long as you're a boy who will do as he is told."
             show cassidy normal
             $ done_items.append("why")
@@ -1899,15 +1899,15 @@ label cassidy_meeting_loop(done_items=[]):
                 call cassidy_meeting_loop (done_items) from _call_cassidy_meeting_loop_1
                 return
         "What do you know about the investigation?" if "what" not in done_items:
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "I know that you're in a whole lot of trouble."
             show cassidy normal
             mike.say "Oh come on, you know more than that."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "I do."
             show cassidy normal
             mike.say "Well, if you want this, tell me what you know. Because right now, I don't believe you can stop this, and I'll just get fucked for nothing."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Fine. You want to know? I set this all up."
             show cassidy normal
             mike.say "Why?"
@@ -1915,11 +1915,11 @@ label cassidy_meeting_loop(done_items=[]):
             cassidy.say "Because you need to be on your knees."
             show cassidy normal
             mike.say "What the hell for?"
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Nobody says no to me. Nobody. Especially not someone like you."
             show cassidy normal
             mike.say "Damn, you're one fucked up bitch."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "I'm going to put that one on your tab. You'll pay for it. Later."
             show cassidy normal
             $ done_items.append("what")
@@ -1928,7 +1928,7 @@ label cassidy_meeting_loop(done_items=[]):
                 return
         "Does your daddy know?" if "what" in done_items and "daddyknows" not in done_items:
             mike.say "Does your Daddy know what your hobbies are? Ski trips to Switzerland and coercing young men into doing sexual favors for you?"
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Oh, well. Maybe not the sexual favors part. I don't think he wants to know about that."
             cassidy.say "But other than that, Daddy gives me whatever I want."
             show cassidy happy
@@ -1940,7 +1940,7 @@ label cassidy_meeting_loop(done_items=[]):
                 return
         "You didn't just ask daddy" if "what" in done_items and "daddy" not in done_items:
             mike.say "You didn't just ask your daddy to do all this for you. Are you trying to tell me you set all this up yourself?"
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Oh, well. I have had a bit little help. Here and there. A girl like does have to have a few minions, after all."
             show cassidy normal
             "She leans toward me and uses the sultry, sexy voice again."
@@ -1951,22 +1951,22 @@ label cassidy_meeting_loop(done_items=[]):
                 return
         "Who are you working with?" if "what" in done_items and "who" not in done_items:
             if "daddy" not in done_items:
-                show cassidy talkative
+                show cassidy talk
                 cassidy.say "What makes you think I'm working with anyone?"
                 show cassidy normal
                 mike.say "Because I don't think you know enough about the business to pull this off yourself. Sure you're the CEO's daughter."
                 mike.say "You have a lot of money and power, but I don't see you here every day, really in the system. No you have to have someone on the inside."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Why should I tell you?"
             show cassidy normal
             mike.say "Because you'd rather get what you want than have me walk out of here and get fired, and it doesn't cost you anything."
             "As soon as the words are out of my mouth, I can't imagine there's any way she'll buy that. But..."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Fine, Jeff, the accountant doing the investigation. He's married, you know. And he doesn't want his wife to know about...us."
             show cassidy normal
             mike.say "So, you're banging an accountant? Is that as boring as it sounds?"
             "She shrugs."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Well, he certainly isn't you, that's for sure. I mean to look at."
             show cassidy happy
             cassidy.say "He's one hell of a lot smarter than you, though."
@@ -1984,20 +1984,20 @@ label cassidy_meeting_loop(done_items=[]):
                 return
         "Where is the money?" if "what" in done_items and "where" not in done_items:
             mike.say "So where's the money? I didn't steal it. Did you steal 3 million dollars and set me up just to put me in my place?"
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "No! I didn't steal anything!"
             show cassidy normal
             mike.say "Where is it, then?"
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "How should I know?"
             show cassidy normal
             mike.say "What? You set all this up, that money is missing. Are you telling me you set me up and you don't even know who really took the money?"
             mike.say "It seems like that's a great recipe to get fucked."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "It doesn't matter, okay? That money was already gone, and they promised me it would be handled, and that I don't want to know about it."
             show cassidy normal
             mike.say "They, huh? So you're not the mastermind here. You're just the patsy!"
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "No, Sweetie. You're the patsy here. Unless you do exactly what I tell you."
             show cassidy normal
             call investigation_points (10) from _call_investigation_points_5
@@ -2007,7 +2007,7 @@ label cassidy_meeting_loop(done_items=[]):
                 return
     show cassidy angry
     cassidy.say "Enough of your questions! I'm the one in charge here!"
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Now you've got two choices, Sweetie."
     cassidy.say "One, don't believe me, walk out of here, and prepare your ass for jail."
     cassidy.say "Or two, get down on your knees, kiss my feet, call me Mistress, and beg me to make this all go away for you."
@@ -2040,7 +2040,7 @@ label cassidy_first_dom:
     "Finally my underwear."
     show cassidy normal
     "Cassidy looks me up and down, approvingly."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Oh, I do like a man who's well hung. Now, get down on your knees."
     show cassidy normal
     "I stand there for a moment."
@@ -2049,11 +2049,11 @@ label cassidy_first_dom:
     show cassidy normal
     "Fuck, this is actually starting to turn me on."
     "I get down on my knees, as asked. But I take my time about it."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "And? What else did I tell you to do?"
     show cassidy normal
     mike.say "Call you Mistress."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Well?"
     show cassidy normal
     mike.say "Yes, Mistress."
@@ -2061,7 +2061,7 @@ label cassidy_first_dom:
     cassidy.say "Good. Now I want you to jerk yourself off for me."
     show cassidy normal
     mike.say "Wh--"
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "If you persist in that behavior, I'm going to have to really punish you. Do as you're told, bitch."
     show cassidy normal
     "I sigh, and put my hand on my cock. It's only half erect, so it comes up fairly slowly."
@@ -2070,7 +2070,7 @@ label cassidy_first_dom:
     cassidy.say "Fuck that, I'm in charge here, you don't get to ask me for a handy."
     show cassidy upset
     mike.say "I meant, maybe...give me something to look at? To help get its attention?"
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "I see. Well. Are you being a good boy?"
     show cassidy normal
     mike.say "Yes, Mistress, I'm being a good boy!"
@@ -2078,7 +2078,7 @@ label cassidy_first_dom:
     "Cassidy removes her top and casually casts it aside. Will this do?"
     "My cock immediately stiffens in my hand."
     mike.say "Yes, Mistress."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Sweetie, do better than that."
     show cassidy normal
     mike.say "Yes, Mistress, thank you, Mistress. I love seeing your boobs, Mistress."
@@ -2087,7 +2087,7 @@ label cassidy_first_dom:
     "And while I work my now fully erect cock, she watches with no small amount of lust. After a few moments of this, her hand goes under her skirt."
     "She starts to finger herself where I can't see."
     mike.say "Can I watch, Mistress?"
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "No. You have enough to go on."
     show cassidy normal
     mike.say "Yes, Mistress. Thank you, Mistress."
@@ -2097,12 +2097,12 @@ label cassidy_first_dom:
     "Cassidy bends over, touches the glop of goo on the floor with her finger and touches it to her mouth."
     show cassidy casual topless wet with dissolve
     "And where she pulled her hand out from under her skirt is quite wet."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Mmm. That's what I'm talking about."
     cassidy.say "You may go."
     show cassidy normal
     mike.say "That's it?"
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Go. Now. Don't worry we'll talk again later."
     show cassidy normal
     "I want to argue, but think better of it. Like it or not, she has my balls in her hands now. Literally and figuratively."
@@ -2123,7 +2123,7 @@ label cassidy_investigation_complete:
     show bg personal with fade
     show cassidy casual happy
     cassidy.say "Good morning, Sweetie!"
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "I just wanted to give you one last chance, before you meet with Daddy. Are you going to play nice? Are you going to be my sweet, delicious boy?"
     show cassidy normal
     if game.flags.workinvestigation > 99:
@@ -2189,16 +2189,16 @@ label cassidy_investigation_good_ending:
     cassidy.say "Nothing painful. No blood. I wouldn't have done anything to hurt you, I ask...I just ask the same."
     show cassidy sad
     mike.say "Done."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "So...I guess. I guess I'll go see Daddy now and..."
     show cassidy sadsmile
     mike.say "I wouldn't tell him too much about what you're doing. He doesn't need to know you're saving his ass. Just make it clear I keep my job, or he goes to jail."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Fine, yes."
     show cassidy sadsmile
     mike.say "You mean, 'Yes, Master'. You should get used to calling me Master right now."
     "Cassidy winces and looks like she's going to say something rude, but thinks better of it."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Yes...Master."
     show cassidy sadsmile
     if cassidy.sub.max < 100:
@@ -2250,7 +2250,7 @@ label cassidy_investigation_successful:
     mike.say "Funny, I was actually going to say the same thing to you."
     show cassidy normal
     "Her expression drops."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Whatever do you mean, Sweetie?"
     show cassidy normal
     mike.say "You see, it turns out I know two things, and I can prove them all."
@@ -2294,7 +2294,7 @@ label cassidy_investigation_successful:
     aletta.say "You'd better go deal with this, Dwayne."
     show aletta normal
     hide dwayne with moveoutright
-    show aletta talkative
+    show aletta talk
     aletta.say "Oh, and [hero.name], you can ignore what he said about you being fired. I'm taking charge of this investigation, as of now."
     aletta.say "If this turns out to be true, you're going to get a nice promotion."
     show aletta normal
@@ -2330,25 +2330,25 @@ label cassidy_investigation_blackmail:
     cassidy.say "Huh. You want me to be your personal valet?"
     show cassidy stuned
     mike.say "Let's call it assistant. You can...assist me."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Hm. Yeah, let's see. You can release that and the fallout will blow over inside a year. I'll be fine, and a few people will know how ruthless I am and appreciate that."
     show cassidy normal
     mike.say "Really? That easy?"
     "Cassidy shrugs, carefully keeping her expression neutral. I do my best to judge if she's bluffing or not."
     mike.say "I'm pretty sure this will put you in jail."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Nah, I didn't steal anything."
     show cassidy normal
     mike.say "Fine, but your pet accountant will take the fall. Then you won't have him to entertain you anymore."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Fuck him."
     show cassidy normal
     mike.say "I see. Well, I guess that's that, then, because I'm not getting fired for you."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Well, wait a second now. I'm sure there's...some other arrangement we could come to."
     show cassidy sadsmile
     "I take a moment to think about that. I can think of all kinds of things I wouldn't mind doing to this gorgeous woman, but I'm not sure how willing I am to negotiate."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Give me the video and I'll get the investigation called off. You'll get your job back."
     show cassidy normal
     mike.say "After all this, that's it? Status quo? This week has been hell. Thank you, but no, I'd rather see you pay for this."
@@ -2366,17 +2366,17 @@ label cassidy_investigation_blackmail:
     cassidy.say "And how do I know you won't keep extorting me for more?"
     show cassidy upset
     mike.say "I guess we're at an impasse, then."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Come on, Sweetie. Be reasonable."
     show cassidy sadsmile
     mike.say "Fuck reasonable. You did this. I don't see any reason to be reasonable."
     "Cassidy stares at me intently for a few moments. I swear if she had superpowers, my head would burst into flames."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Fine, you can keep your video. But if you release that even after I've given you what you asked for, I will spend the rest of my life destroying you."
     cassidy.say "And I have the money and power to do a lot worse to you than just cost you your job."
     show cassidy normal
     mike.say "Great, it sounds like we have a deal then."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "I'll go get your meeting fixed up. You wait here."
     hide cassidy with moveoutleft
     "Cassidy walks out. After a few moments, I'm called in to Aletta's office."
@@ -2405,16 +2405,16 @@ label cassidy_investigation_blackmail:
     $ game.flags.suspended = False
     "I thank Aletta, but I admit I'm in a bit of a hurry to get back to my office, and see if Cassidy is really going to pay up."
     scene bg personal
-    show cassidy casual talkative
+    show cassidy casual talk
     with fade
     cassidy.say "Well, hello again, Sweetie."
     show cassidy normal
     mike.say "Hello yourself, sexy. I believe we had a deal. Get down on your knees."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Of course. Why don't you sit down in your chair here?"
     show cassidy normal
     call cassidy_tittyfuck from _cassidy_investigation_blackmail
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "And now, Sweetie, I think we're even. Good luck with the job."
     show cassidy normal
     "And without another word, and without even cleaning herself up, she marches out of my office."
@@ -2427,11 +2427,11 @@ label cassidy_investigation_bad_ending:
     menu:
         "I can always get another job":
             mike.say "No, Cassidy, you can go fuck yourself. I don't need this job badly enough to be your bitch."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Are you sure? How about if I promise it won't be painful. No blood, no pain, just you getting on your knees."
             show cassidy normal
             "She leans forward and her voice turns husky."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "I promise I'll take good care of you, Sweetie, as long as you take good care of my needs."
             cassidy.say "So. Last chance!"
             show cassidy normal
@@ -2517,12 +2517,12 @@ label cassidy_dom_path:
     "Ugh."
     mike.say "Yes, Mistress, it will be fun."
     "Clearly I didn't sound terribly into it."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Try that again, with more enthusiasm, slave."
     show cassidy normal
     "That one makes me scowl."
     mike.say "I'm not your slave. I'll be your valet but I'm not your slave."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Would you rather be my bitch?"
     show cassidy normal
     menu:
@@ -2532,7 +2532,7 @@ label cassidy_dom_path:
         "Slave":
             mike.say "Fine, slave is better than bitch."
             $ cassidy.flags.mikeNickname = "Slave"
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Now that we've got that cleared up, try that with more enthusiasm, {b}[hero.name]{/b}"
     show cassidy normal
     "I work up all the enthusiasm I can."
@@ -2559,7 +2559,7 @@ label cassidy_dom_path:
     show dwayne normal
     mike.say "Ah, of course. Thank you."
     hide dwayne with moveoutright
-    show aletta talkative
+    show aletta talk
     aletta.say "Well, [hero.name], I don't know how you pulled that off. And I don't want you to tell me, whatever happened it's best I don't know anything."
     show aletta happy
     aletta.say "But I'm happy to have you back, [hero.name]. Seriously!"
@@ -2572,7 +2572,7 @@ label cassidy_dom_path:
     "I thank Aletta, and head back to my office."
     $ game.room = "personal"
     scene bg personal
-    show cassidy casual talkative
+    show cassidy casual talk
     with fade
     cassidy.say "Well, hello again, Sweetie."
     show cassidy normal
@@ -2581,22 +2581,22 @@ label cassidy_dom_path:
     cassidy.say "Oh very good, you caught yourself! I hope that means you'll be a quick learner."
     show cassidy normal
     "I shrug."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "So, how good are you with your tongue?"
     show cassidy normal
     mike.say "What do you mean?"
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "You look like a dude who's licked a few pussies in your life. Are you any good at it?"
     show cassidy normal
     menu:
         "I'm great at it":
             mike.say "Oh yeah, I'm great at it. I love eating a girl out! They always squirm with delight!"
             $ cassidy.love -= 2
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Oh yeah? Let's see if you can live up to your big words."
             show cassidy normal
         "I need more practice":
-            show cassidy talkative
+            show cassidy talk
             mike.say "If I'm being strictly honest, I probably could use more practice."
             $ cassidy.love += 2
             cassidy.say "Well then, let's do it."
@@ -2605,7 +2605,7 @@ label cassidy_dom_path:
     return
 
 label cassidy_dom_oral:
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Get over here and get down on your knees, [hero.name]!"
     show cassidy normal
     menu:
@@ -2616,15 +2616,15 @@ label cassidy_dom_oral:
             "I look up at her, expectantly."
         "Resist, playfully":
             "I smile, just slightly, but don't move."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Now, [hero.name], or do I have to punish you?"
             show cassidy normal
             mike.say "Oooh, punishment? What're you going to do to me if I don't play nice?"
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Are you looking for a spanking, Sweetie?"
             show cassidy normal
             mike.say "Oh, you going to spank me?"
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Would you rather get fired?"
             show cassidy normal
             "I grin, and I figure I've pushed that one as far as I dare to. So I walk up to her--slowly--and put my hands on her hips."
@@ -2633,11 +2633,11 @@ label cassidy_dom_oral:
             "Then I sink down to my knees and look up at her."
         "Resist, impudently":
             "I stand where I am. Maybe if I make this hard for her, she won't have any fun and will give up."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Now, [hero.name], or do I have to punish you?"
             show cassidy normal
             mike.say "Really? You're going to punish me?"
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Do you want to keep your job?"
             mike.say "Yes."
             show cassidy angry
@@ -2711,7 +2711,7 @@ label cassidy_dom_oral:
     show cassidy wink wet bottomless
     with fade
     "I stand up and work on cleaning her love juices off my face."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Oh that was so good. I can't wait to do that again!"
     show cassidy normal
     return
@@ -2722,7 +2722,7 @@ label cassidy_new_assistant:
     $ cassidy.flags.birthdayknown = True
     if cassidy.love.max < 80:
         $ cassidy.love.max = 80
-    show aletta talkative at left
+    show aletta talk at left
     if cassidy.status == 'pet':
         show cassidy casual normal at right
     else:
@@ -2732,19 +2732,19 @@ label cassidy_new_assistant:
     aletta.say "So as of today, Cassidy is your new personal assistant. You're going to be showing her the ropes, and training her on everything there is to know about the company."
     show aletta normal
     if cassidy.status == 'mistress':
-        show cassidy talkative
+        show cassidy talk
         aletta.say "And if she does a good job, she will eventually be our new boss."
         aletta.say "She'll also be keeping a bit of an eye on you, to make sure nothing funny happens with your accounts again."
         show cassidy happy
         "Cassidy gives me a big smile. She already knows who the boss is."
     else:
-        show aletta talkative
+        show aletta talk
         aletta.say "And if she does a good job, there may be a permanent place for her at the company."
         show aletta normal
     mike.say "Wow, Aletta, that was quick!"
     "I turn to Cassidy."
     mike.say "I guess we'll have to see what you can do, right?"
-    show aletta talkative
+    show aletta talk
     aletta.say "Right, I'll let you get to it."
     show aletta normal
     "As Aletta heads past me out the door, she puts her hand on my arm and leans close to whisper."
@@ -2756,7 +2756,7 @@ label cassidy_new_assistant:
     hide aletta with easeoutleft
     show cassidy at center, zoomAt(1.0, (640, 720)) with ease
     if cassidy.status == 'mistress':
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "Oh yes, [hero.name]. You're definitely going to have your work cut out for you for the next few months."
         cassidy.say "I look forward to your training."
         show cassidy normal
@@ -2765,7 +2765,7 @@ label cassidy_new_assistant:
                 mike.say "Aletta just said I'm the one doing the training."
                 $ cassidy.love -= 1
                 $ cassidy.sub += 1
-                show cassidy talkative
+                show cassidy talk
                 cassidy.say "I think I already know all I need to know about business. It's you that needs to learn. You don't know your place yet."
                 cassidy.say "But you will. If you know what's good for you."
                 show cassidy happy
@@ -2774,18 +2774,18 @@ label cassidy_new_assistant:
                 $ cassidy.sub -= 1
                 $ cassidy.love += 1
                 mike.say "Yes, Mistress. I look forward to the training too."
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "Now, lesson one. Who is your mistress?"
         show cassidy normal
         mike.say "You are."
         show cassidy happy
         cassidy.say "Excellent. Are you going to be an obedient boy?"
         mike.say "Yes."
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "Yes, what?"
         show cassidy normal
         mike.say "Yes...Mistress."
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "Very good. Keep this up and I'll reward you."
         show cassidy normal
         mike.say "What kind of reward?"
@@ -2798,7 +2798,7 @@ label cassidy_new_assistant:
         show cassidy sad
         mike.say "Are you okay? You look upset."
         "With visible effort, the slightly sad look she had disappears."
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "Yeah, I'm fine. I just...I was going to go to Paris today."
         show cassidy normal
         mike.say "Ah. Yes, I expect with this new job, your schedule is going to be very different."
@@ -2806,18 +2806,18 @@ label cassidy_new_assistant:
         menu:
             "It'll be okay.":
                 mike.say "Hey, it'll be okay. This job will be good for you. You've never had to work a day in your life, have you?"
-                show cassidy talkative
+                show cassidy talk
                 cassidy.say "What do you know about my work? Keeping up appearances to all of Daddy's social friends is a full time job!"
                 show cassidy sadsmile
                 mike.say "Ah, I guess it is."
-                show cassidy talkative
+                show cassidy talk
                 cassidy.say "I have no idea how I'll manage that."
                 show cassidy sadsmile
                 mike.say "You're doing exactly what your Daddy needs you to do, right now. So forget about all that for now."
                 mike.say "Just stick around here, learn the job, and do what I ask. I promise I won't hurt you."
                 $ cassidy.love += 1
                 $ cassidy.sub += 1
-                show cassidy talkative
+                show cassidy talk
                 cassidy.say "Okay, I guess."
                 show cassidy normal
             "Suck it up, Buttercup":
@@ -2835,7 +2835,7 @@ label cassidy_new_assistant:
                 cassidy.say "Yeah, but do you have to be such an asshole about it?"
                 show cassidy upset
                 mike.say "Learn to behave and maybe I'll be nicer."
-                show cassidy talkative
+                show cassidy talk
                 cassidy.say "Fine."
                 show cassidy sadsmile
         mike.say "Now, how about a kiss?"
@@ -2851,24 +2851,24 @@ label cassidy_new_assistant:
         show cassidy casual normal at center, zoomAt (1.5, (650, 1050))
         with fade
         mike.say "Mm, that's excellent. We'll definitely be wanting more of that in the future."
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "Of course, Master."
         show cassidy sadsmile
     return
 
 label cassidy_dom_boredom:
     $ cassidy.set_counter("boredom", None)
-    show cassidy casual talkative
+    show cassidy casual talk
     cassidy.say "You know, [hero.name], I may not have told you this, but I only ever intended our little arrangement here to be temporary."
     cassidy.say "I usually get bored with a guy after a couple of months."
     show cassidy normal
     mike.say "You never mentioned that."
     if cassidy.love < 160:
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "And I'm going to be honest, you've been kind of fun but I think I'm pretty much done with you."
         show cassidy normal
         mike.say "What are you saying, Mistress?"
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "You don't have to call me that any more. You're free. I'm quitting this \"job\"."
         show cassidy normal
         menu:
@@ -2877,7 +2877,7 @@ label cassidy_dom_boredom:
 
                 $ cassidy.love += 10
                 if cassidy.love > 160 and cassidy.sub < -80:
-                    show cassidy talkative
+                    show cassidy talk
                     cassidy.say "Well, you have been fun. And you have been a good boy."
                     cassidy.say "You really want me to keep you?"
                     show cassidy normal
@@ -2886,13 +2886,13 @@ label cassidy_dom_boredom:
                     $ cassidy.flags.kiss += 1
                     "Cassidy wraps her arms around me and pulls me in close for a kiss, which I am happy to oblige."
                     hide cassidy
-                    show cassidy casual talkative at center, zoomAt (1.5, (650, 1050))
+                    show cassidy casual talk at center, zoomAt (1.5, (650, 1050))
                     with fade
                     cassidy.say "Ok, [hero.name], you've earned yourself another few weeks."
                     show cassidy normal
                     mike.say "Thank you, Mistress! You won't regret it!"
                     return
-                show cassidy talkative
+                show cassidy talk
                 cassidy.say "That's sweet, [hero.name], but I'm just losing interest in you. It's me, not you. You know what, fuck that, I suck at the breakup speech. We're done, you need to move on."
                 hide cassidy with easeoutleft
                 "She walks out the door, leaving me absolutely speechless. What did I do wrong? Would she have stayed if I had been done a better job? I guess I'll never know."
@@ -2909,7 +2909,7 @@ label cassidy_dom_boredom:
                 "She steps up to me and wraps her arms around my neck, pulling me in for a kiss. It is deep and long, one of the most passionate she's ever given me, and in that moment, I'm actually just a little bit said."
                 "Whatever was going on, she is always fantastic in bed."
                 hide cassidy
-                show cassidy casual talkative
+                show cassidy casual talk
                 with fade
                 cassidy.say "I guess this is goodbye. Thanks for everything, [hero.name]. And good luck with the job."
                 hide cassidy with moveoutleft
@@ -2917,7 +2917,7 @@ label cassidy_dom_boredom:
         $ cassidy.set_gone_forever()
         $ cassidy.flags.schedule = None
     else:
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "But you know what? Something's different with you. I've never been with anyone that I've actually come to care about."
         cassidy.say "So I've decided I'm going to keep you. That is...if you want me to."
         show cassidy normal
@@ -2928,14 +2928,14 @@ label cassidy_dom_boredom_keep(bg=True):
     menu:
         "Yes!":
             mike.say "Yes, my Mistress, I want that. I want to be yours. I didn't at first, but my time with you...I cherish this."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Tell me you love me."
             show cassidy normal
             "I answer without hesitation."
             mike.say "I love you, Mistress. With all my heart and my soul."
             show cassidy casual at center, zoomAt (1.5, (650, 1050)) with hpunch
             "She practically throws herself at me, wrapping her arms around my neck and hugging me so tightly it's hard to breathe."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "I love you too, [hero.name]!"
             cassidy.say "And you'll always, always be mine."
             show cassidy normal
@@ -2959,23 +2959,23 @@ label cassidy_dom_boredom_keep(bg=True):
             $ cassidy.flags.schedule = None
         "Boyfriend/girlfriend instead?":
             mike.say "How about we do this as boyfriend/girlfriend instead of this master/slave thing?"
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "I don't think I'm interested in just being one of your girlfriends. I want to keep you, but only if you want that."
             show cassidy normal
             call cassidy_dom_boredom_keep (False) from _call_cassidy_dom_boredom_keep_1
     return
 
 label cassidy_bad_day:
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "[hero.name], what do you know about Aletta?"
     show cassidy normal
     mike.say "Aletta, as in our boss?"
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Yeah, her."
     show cassidy normal
     mike.say "Why do you want to know?"
     "Cassidy shrugs and waves her hands. She's being evasive."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Just...it's not important, I guess. I want to know more about the company?"
     show cassidy normal
     "That's probably the worst lie I've ever heard her tell, but it doesn't seem a big deal to humor her."
@@ -2983,42 +2983,42 @@ label cassidy_bad_day:
         "She's my sex slave" if aletta.flags.collared and aletta.sub > 50:
             mike.say "Well, she's kind of my sex slave."
             if cassidy.status == 'mistress':
-                show cassidy talkative
+                show cassidy talk
                 cassidy.say "So wait, if you're my sex slave, and she's your sex slave, does that make her my sex slave?"
                 show cassidy normal
                 mike.say "I...don't think she'll see it that way."
-                show cassidy talkative
+                show cassidy talk
                 cassidy.say "Huh. Maybe I should find out."
                 show cassidy normal
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Are you the only one she's banging?"
             show cassidy normal
             mike.say "I better be!"
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "But you don't know for sure?"
             show cassidy normal
             mike.say "I guess I'm not with her every minute. Why?"
         "She's someone I care about very much" if aletta.love > 160:
             mike.say "Well, she's someone I care about very much. It's weird to say that about your boss, but..."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Are you sleeping with her?"
             show cassidy normal
             mike.say "None of your business!"
             if cassidy.status == 'mistress':
-                show cassidy talkative
+                show cassidy talk
                 cassidy.say "Oh yes, where your dick goes is very much my business, [hero.name]!"
                 show cassidy normal
                 if aletta.sexperience:
                     mike.say "Fine, yes, I've fucked her. Happy?"
                 else:
                     mike.say "No, I'm not sleeping with her."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Do you know if she's sleeping with anyone else?"
             show cassidy normal
             mike.say "No, I don't think so. At least, I hope not!"
         "She's a total bitch":
             mike.say "She's an overbearing, mean-spirited bitch of a boss."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Huh. Do you know if she has a boyfriend?"
             show cassidy normal
             mike.say "Why, are you looking for a girl?"
@@ -3028,23 +3028,23 @@ label cassidy_bad_day:
             mike.say "Honestly, I have no idea."
         "She's a great boss":
             mike.say "She's a great boss. She's hard, sure, but she keeps the department running well, she doesn't let people slide by on nothing, and she rewards those who do good work."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Huh. Do you know if she has a boyfriend?"
             show cassidy normal
             mike.say "Why, are you looking for a girl?"
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Haha, fuck off. Seriously, is she seeing anyone?"
             show cassidy normal
             mike.say "Honestly, I have no idea."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "But you don't know for sure?"
     show cassidy normal
     mike.say "I guess I'm not with her every minute. Why?"
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "It's just...it's something I overheard. It's probably nothing."
     show cassidy normal
     mike.say "Tell me."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Let me find out if it's real first, okay?"
     show cassidy normal
     $ cassidy.flags.dwaynefightDelay = TemporaryFlag(True, 1)
@@ -3134,12 +3134,12 @@ label cassidy_dwayne_fight_fallout:
             mike.say "You should do that."
             show cassidy sadsmile
             "Cassidy nods, slowly, then wipes the tears off her cheeks."
-            show cassidy talkative
+            show cassidy talk
             $ cassidy.love += 5
             cassidy.say "I guess. Yeah, maybe I'll do that. Thanks, [hero.name]."
             show cassidy sadsmile
             mike.say "Let me know what happens."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Sure."
             show cassidy sadsmile
     return
@@ -3275,7 +3275,7 @@ label cassidy_aletta_fight:
     "Cassidy glares at Aletta for a few long, seconds. She doesn't speak, and the tension starts to get really uncomfortable."
     "Then she turns and stomps out of Aletta's office."
     hide cassidy with easeoutright
-    show aletta talkative at center with ease
+    show aletta talk at center with ease
     aletta.say "You'd better go talk to her, [hero.name]. She might do something...not very smart."
     show aletta sadsmile
     mike.say "Yeah."
@@ -3396,12 +3396,12 @@ label cassidy_needs_comfort:
             "Cassidy turns her face up and gives me a long, passionate kiss. This one isn't our usual dom-sub thing, but it's almost like we're equals, maybe even loving partners."
             "Maybe it's just because she's so distraught right now, but this is seriously the closest to her I've ever felt."
             hide cassidy
-            show cassidy talkative at center, zoomAt (1.25, (650, 850))
+            show cassidy talk at center, zoomAt (1.25, (650, 850))
             with fade
             cassidy.say "I'm going to go check on some things. I'll see you at the office?"
             show cassidy normal
             mike.say "So you're coming back?"
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Yeah. I'm coming back."
             show cassidy happy
             if cassidy.love.max < 160:
@@ -3475,7 +3475,7 @@ label cassidy_aletta_make_nice:
             aletta.say "We might have to have words about that too."
             show aletta upset
     mike.say "Okay, Aletta. What's your plan?"
-    show aletta talkative
+    show aletta talk
     aletta.say "It's pretty simple. I go to the board of directors with everything you and Cassidy both have."
     show aletta normal
     show cassidy annoyed
@@ -3489,7 +3489,7 @@ label cassidy_aletta_make_nice:
     show cassidy sad
     show aletta sadsmile
     mike.say "We might have enough for that."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Maybe, but it's a big risk. But I think I know how to get what we need. He has a safe in his office, and he keeps a lot of dirty secrets in that safe."
     cassidy.say "I'm not sure what's really in there, but he's said he can blackmail a lot of people with it."
     show cassidy normal
@@ -3497,29 +3497,29 @@ label cassidy_aletta_make_nice:
     show aletta whining
     aletta.say "That's out of my wheelhouse. I don't know anything about breaking into safes."
     show aletta sadsmile
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Cherie can get into it."
     show cassidy normal
     mike.say "Your step-mom."
     show cassidy whining
     cassidy.say "Yeah. But I don't think she'll do it for me. She doesn't trust me."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "You'll have to talk her into it, [hero.name]."
     show cassidy normal
     mike.say "I don't even know her!"
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "We can set something up. You can use your charms. You do have charms, right?"
     if hero.charm < 75:
-        show aletta talkative
+        show aletta talk
         aletta.say "He might have to work on that."
         show aletta normal
         "I ignore Aletta."
     mike.say "Okay, so let me get all this right. I need to meet Cherie, charm her, and get her to get me into Dwayne's private safe, so I can look at his secrets and see if there's enough to bring him down?"
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "That's about it."
     show cassidy normal
     mike.say "I'm not sure I should be doing this..."
-    show aletta talkative
+    show aletta talk
     aletta.say "[hero.name], God help me, you're going to do this or I'll shoot you myself."
     show aletta normal
     mike.say "Your argument is compelling."
@@ -3531,11 +3531,11 @@ label cassidy_aletta_make_nice:
     aletta.say "Status quo, sadly. Until we can take him down completely, I'm still his bitch."
     show aletta sad
     if cassidy.status == 'mistress':
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "And you're still mine."
         show cassidy normal
     else:
-        show aletta talkative
+        show aletta talk
         aletta.say "And she's still yours."
         show aletta normal
     mike.say "Okay then."
@@ -3544,20 +3544,20 @@ label cassidy_aletta_make_nice:
     return
 
 label cassidy_arrange_party:
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Hey [hero.name], I got a way to get you to Cherie. There's a small event at the house and I got you an invitation. Daddy might be there, though, so you may have to deal with him, but I'll distract him."
     show cassidy normal
     if cassidy.status == 'pet':
         mike.say "Distract him, how?"
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "I'm a hot girl, you figure it out."
         show cassidy normal
         mike.say "But you're his daughter?"
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "Trust me, that doesn't make a difference."
         show cassidy normal
         mike.say "Ew!"
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "Oh, it's not that bad!"
         show cassidy normal
         "This conversation is making me uncomfortable. Time to change the subject."
@@ -3566,7 +3566,7 @@ label cassidy_arrange_party:
         cassidy.say "Aw, is he being protective of his little girl?"
         show cassidy normal
         mike.say "Oh yes. I told him what would happen if he tried anything, though."
-        show cassidy talkative
+        show cassidy talk
         if cassidy.love < 120:
             cassidy.say "Well, that means you should treat me better."
             show cassidy normal
@@ -3579,11 +3579,11 @@ label cassidy_arrange_party:
                     $ cassidy.love -= 3
                     $ cassidy.sub -= 3
         else:
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Typical. He doesn't care what I want, only what he wants."
             show cassidy normal
             mike.say "So you like being my pet?"
-            show cassidy talkative
+            show cassidy talk
             if cassidy.love < 80:
                 cassidy.say "No."
             elif cassidy.love < 180:
@@ -3593,11 +3593,11 @@ label cassidy_arrange_party:
             show cassidy normal
     else:
         mike.say "You'll have to keep him distracted for quite awhile. It is going to take some time to convince Cherie to trust me, I imagine."
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "I can be very distracting."
         show cassidy normal
         mike.say "Sure, to a guy like me, but he's your father."
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "Yeah, and as it happens, he's a guy like you."
         show cassidy normal
         mike.say "Whoa, hold up. You're going to flirt with your own father to distract him?"
@@ -3609,15 +3609,15 @@ label cassidy_arrange_party:
         cassidy.say "Don't worry about me, Sweetie. Do your job, I'll do mine, and we'll nail his ass."
         show cassidy normal
         mike.say "Yeah, just don't let him nail your ass."
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "What's the matter, [hero.name], you turned on by the idea?"
         show cassidy normal
         mike.say "Whoa, look, you may have me by the balls but I don't think it's going to work like that with Dwayne the CEO."
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "So you don't think it'd be fun to have a threesome?"
         show cassidy normal
         mike.say "With your father?!?!"
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "What, you'd rather have Aletta?"
         show cassidy normal
         mike.say "Hey hey hey now, let's stay on plan. You're getting delusional."
@@ -3627,7 +3627,7 @@ label cassidy_arrange_party:
         mike.say "Ugh."
 
     mike.say "Okay, so when's the party?"
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Next Saturday night. It's not very big, but these days Cherie will find the quietest corner she can, after she holds court."
     cassidy.say "She can't leave until all the guests are gone. So once most everyone has settled in, and she's given everyone a few minutes of face time, that's when you need to grab her."
     cassidy.say "Be charming, but not overbearing."
@@ -3662,7 +3662,7 @@ label cassidy_arrange_party:
     mike.say "Yes you did!"
     show cassidy normal
     "Cassidy crosses her arms across her chest."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "So what if I did? I was fourteen, okay? I'd just started figuring out about sex, and Daddy still fucked her like twice a day when he was home. Yeah, it was hot, okay?"
     show cassidy stuned
     mike.say "Did you masturbate?"
@@ -3675,7 +3675,7 @@ label cassidy_arrange_party:
     cassidy.say "I was fourteen!"
     show cassidy upset
     mike.say "You're looking forward to this aren't you?"
-    show cassidy talkative
+    show cassidy talk
     if cassidy.love > 180:
         cassidy.say "No, you're the one I want, now."
     else:
@@ -3685,44 +3685,44 @@ label cassidy_arrange_party:
             "Please don't do that":
                 mike.say "Seriously, Cassidy, that's messed up. I get you having a crush on him when you were fourteen, but you're past that now. You're hot, you can have any guy you want. You already have me. Please don't do that."
                 $ cassidy.love += 5
-                show cassidy talkative
+                show cassidy talk
                 cassidy.say "I'll think about it."
             "That's hot! I want pictures":
                 mike.say "If you do that, I want pictures. If you get him to tie you up we can claim he raped you. Plus it's hot."
                 $ cassidy.sub += 5
-                show cassidy talkative
+                show cassidy talk
                 cassidy.say "I had no idea you were turned on by the idea of me fucking other guys."
                 show cassidy normal
                 mike.say "Just him."
             "No, you belong to me" if cassidy.status == 'pet':
                 mike.say "No way, you're mine. Nobody else touches you."
-                show cassidy talkative
+                show cassidy talk
                 cassidy.say "Not even a little revenge porn?"
                 show cassidy normal
                 mike.say "Not even that."
                 if cassidy.love > 180:
-                    show cassidy talkative
+                    show cassidy talk
                     cassidy.say "As you wish, Master."
                 else:
                     "Cassidy folds her arms in front of her and looks at me crossly."
-                    show cassidy talkative
+                    show cassidy talk
                     cassidy.say "Don't be possessive. Look, I know we have this arrangement, but I'm going to do what's necessary. Besides, if this succeeds you won't have anything to hold over me anyway."
                     show cassidy normal
                     menu:
                         "I care about you":
                             mike.say "Cassidy, this isn't me being possessive. I care about you, and I don't want to see you hurt."
                             $ cassidy.love += 5
-                            show cassidy talkative
+                            show cassidy talk
                             cassidy.say "You need to do a better job showing me you care, then."
                         "Until then, you're my property":
                             mike.say "And until that happens, you're my property and you'll remember that your body belongs to me. And I won't have {b}Dwayne{/b} touching your pussy. It's mine."
                             $ cassidy.sub += 5
-                            show cassidy talkative
+                            show cassidy talk
                             cassidy.say "What if it was both of you?"
                             show cassidy normal
                             mike.say "I might be up for a threesome with you but not with him."
                             if cassidy.sub > 80:
-                                show cassidy talkative
+                                show cassidy talk
                                 cassidy.say "No? I'd make a good love slave. I could suck you while he fucks me, or fuck you while I take his cock down my throat. Or would you rather his cock in my ass while you take my pussy?"
                                 show cassidy normal
                                 menu:
@@ -3731,7 +3731,7 @@ label cassidy_arrange_party:
                                         $ cassidy.love += 5
                                     "Okay, that's hot":
                                         mike.say "Okay, that {b}is{/b} hot, but...just not so sure I'm thrilled with your daddy's dick in your cunt."
-                                        show cassidy talkative
+                                        show cassidy talk
                                         cassidy.say "Well it's sure turned me on."
                                         show cassidy normal
                                         mike.say "If that's something you want, we'll discuss it, okay?"
@@ -3739,17 +3739,17 @@ label cassidy_arrange_party:
                 mike.say "As you wish, my mistress, but...if this is just you needing more dick in your life, that's my job, right?"
                 $ cassidy.love += 5
                 $ cassidy.sub -= 5
-                show cassidy talkative
+                show cassidy talk
                 cassidy.say "And I do like your dick."
                 show cassidy normal
                 mike.say "Then please take mine instead of his?"
-                show cassidy talkative
+                show cassidy talk
                 cassidy.say "How about both?"
                 show cassidy normal
                 menu:
                     "Gross!":
                         mike.say "But he's your {b}father{/b}!"
-                        show cassidy talkative
+                        show cassidy talk
                         cassidy.say "So it'd be okay with someone else?"
                         show cassidy normal
                         mike.say "I guess?"
@@ -3757,11 +3757,11 @@ label cassidy_arrange_party:
                         mike.say "If that's what you want, I'm here to serve."
                         $ cassidy.love += 5
                         $ cassidy.sub -= 5
-                        show cassidy talkative
+                        show cassidy talk
                         cassidy.say "Oh,well, I'll have to see what I can arrange then!"
                         show cassidy normal
                         mike.say "Someone else, though? He's...not really going to be good for us, you know?"
-                        show cassidy talkative
+                        show cassidy talk
                         cassidy.say "But it's so...no, you're right."
     show cassidy normal
     mike.say "Okay, so anyway, Saturday night. I'll get ready."
@@ -3769,24 +3769,24 @@ label cassidy_arrange_party:
     return
 
 label cassidy_cherie_next_steps:
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "How did your meeting with Cherie go? She had...an interesting look on her face when she left."
     show cassidy normal
     mike.say "It could have gone better."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Did you get anything?"
     show cassidy normal
     mike.say "Just something about destroyed souls. Seems like your Daddy is pretty hard on people who flirt with his wife."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Oh yeah, a few years back she had an affair with the pool guy. I know, that sounds like something out of a bad porno. With that accent he looked and sounded like something out of a porno, too."
     cassidy.say "Anyway after I told him about it, we never saw the pool guy again. Cherie didn't talk to me for like 3 months after that."
     show cassidy normal
     mike.say "Holy shit, what did Dwayne do to the guy?"
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "I don't know for sure but I think he got deported."
     show cassidy normal
     mike.say "That seems overly cruel."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Seemed right at the time. She was cheating on him!"
     show cassidy normal
     mike.say "Cheating seems to be a family trait."
@@ -3802,31 +3802,31 @@ label cassidy_cherie_next_steps:
         $ cassidy.love += 2
     else:
         if cassidy.status == 'pet':
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "I guess the way you've treated me, I'm kind of surprised, myself, I haven't."
             show cassidy normal
         else:
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "I guess I haven't quite gotten bored of you yet. But you're not making it easy."
             show cassidy normal
     mike.say "Anyway, what next?"
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "I guess you've got to try again. I saw the way she looked at you. You should call her."
     show cassidy normal
     mike.say "I don't have her number."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Hmm. You could drop by. Just make sure to do it when Daddy is out."
     show cassidy normal
     mike.say "Simple as that? Drop by that giant mansion, unannounced?"
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Got any better ideas?"
     show cassidy normal
     mike.say "No."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "I'd say do it in the early afternoon on a weekday. He'll always be out. She'll probably not be too drunk yet."
     show cassidy normal
     mike.say "Yet?"
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Unless there's some event she has to be presentable for, she'll get started pretty early and be slobberingly drunk before dinner time."
     show cassidy normal
     mike.say "Yikes."
@@ -3908,59 +3908,59 @@ label cassidy_cherie_no_help:
     return
 
 label cassidy_chat_about_cherie:
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "So, you went to see her?"
     show cassidy normal
     mike.say "I did."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "And?"
     show cassidy normal
     "I shrug. I want to say it went well, but truthfully, I don't know if it did go well. Plus I'm flirting with Cherie pretty heavily, and Cassidy isn't going to want to hear that."
     mike.say "It went okay, I guess."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Okay? You guess? That's it?"
     show cassidy normal
     mike.say "Yeah. That's it."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Okay, spill. Give me the details. All the details."
     show cassidy normal
     mike.say "Uh. I don't think I should...that you want to--"
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "[hero.name], don't make me do something you'll regret."
     show cassidy normal
     "I sigh."
     mike.say "Look, you told me not to tell you about it, before. So which is it?"
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "You seduced her!!"
     show cassidy normal
     mike.say "No! Well, I flirted with her a lot. I tried. She's...pretty terrified of your father, though. I don't know how successful I was."
     "Now it's Cassidy's turn to sigh."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Look, what exactly did she say?"
     show cassidy normal
     mike.say "We had lunch. The butler eavesdropped on the entire conversation. But she called it a {i}not date{/i} at least twice, and when I asked when I would see her again, she said she'd call me."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "She said that? That she'd call you?"
     show cassidy normal
     mike.say "When she is ready."
     "Cassidy nibbles on her lip and looks thoughtful."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "That's good."
     show cassidy normal
     mike.say "And what if I have to fuck her to get her to get me into Dwayne's vault?"
     "Cassidy shrugs."
-    show cassidy talkative
+    show cassidy talk
     if cassidy.status == "mistress":
         cassidy.say "Then you'll be doing what I tell you to do, like our arrangement has always been."
     else:
         cassidy.say "Then you'll have yet another beautiful woman writhing in pleasure beneath you. I don't see what the problem is?"
     show cassidy normal
     mike.say "I don't understand you. You didn't want to think about me and her?"
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Yeah, well. And then I told you about my teenage fantasies and I got to thinking."
     show cassidy normal
     mike.say "Thinking what?"
-    show cassidy talkative
+    show cassidy talk
     if cassidy.love >= 180:
         cassidy.say "That I love you, and I trust you. And you'll do what's right."
     elif cassidy.love >= 120:
@@ -3979,16 +3979,16 @@ label cassidy_chat_about_cherie:
     cassidy.say "Look, she's got a long list of people she's hurt. Maybe she doesn't {b}deserve{/b} to get hurt for this, but she's no more innocent than I am."
     show cassidy upset
     mike.say "Okay."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "So we're agreed, then? You're not getting cold feet on me?"
     mike.say "No."
     if cassidy.status == "mistress":
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "Good. Look, if this works out, I'll think about letting you keep her, when this is all done. If she's amenable, that is."
         cassidy.say "I...kind of like the idea of taking Daddy's trophy from him."
         show cassidy normal
         mike.say "And making her my trophy?"
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "No, you idiot. {b}My{/b} trophy! You'd fuck her at my pleasure. Get it? Your pleasure for my pleasure."
         cassidy.say "Besides, I know where Dwayne keeps the sex toys."
         cassidy.say "Let's just say in the right drawer there's a collar that says Cherie on it, with two little hearts, and a leash."
@@ -3999,20 +3999,20 @@ label cassidy_chat_about_cherie:
         cassidy.say "Maybe both?"
         show cassidy normal
         mike.say "Oh fuck no. I'm not going anywhere near Dwayne's cock."
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "Oh stop, you're turning me on now!"
         show cassidy normal
         mike.say "Ugh!"
     elif cassidy.sub >= 80 and cassidy.love >= 120 and cassidy.lesbian >= 5:
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "Good. Hey, if this works out, who knows. Maybe you'll have both of us?"
         show cassidy normal
         mike.say "I ... what?!"
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "I guess I don't have any idea for sure but, I did peek on them a few times. Daddy liked to do kinky things to her, and she definitely liked it."
         show cassidy normal
         mike.say "Like what?"
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "Let's just say in the right drawer there's a collar that says Cherie on it, with two little hearts, and a leash."
         show cassidy normal
         mike.say "Holy shit. No wonder she doesn't just leave him."
@@ -4021,16 +4021,16 @@ label cassidy_chat_about_cherie:
         show cassidy normal
         "I'm momentarily dumbfounded while I imagine it. Sure, Cherie's a bit older, but she's still smokin' hot."
         mike.say "I, uh."
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "Do you need a moment? Or maybe, should I...help you out down there?"
         show cassidy normal
         mike.say "I, uh."
         "Yeah. I'm at a loss for words."
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "Well, you know, all you have to do is ask, right?"
         show cassidy normal
     else:
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "Good. Do what you have to do, and let's get this all over with, okay?"
     mike.say "So anyway, the other thing is that the butler was eavesdropping. So your dad is going to know I'm up to something."
     show cassidy annoyed
@@ -4045,18 +4045,18 @@ label cassidy_chat_about_cherie:
     cassidy.say "Good luck with that, he's got arms made of iron."
     show cassidy sadsmile
     mike.say "Yeah."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "I don't think he'll do that. He's more likely to hire someone to do that."
     show cassidy sadsmile
     mike.say "That does {b}not{/b} make me feel better."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "It'll be fine, Sweetie. Take a breath."
     show cassidy normal
     "Great, now I have to watch my back all the time, not just at work."
     return
 
 label cassidy_chat_about_cherie2:
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Hello, [hero.name]!"
     show cassidy normal
     if cassidy.flags.mikeNickname in nickname_master or cassidy.status == "mistress":
@@ -4065,7 +4065,7 @@ label cassidy_chat_about_cherie2:
         mike.say "Hello, Mistress!"
     else:
         mike.say "Hello to you too!"
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "You seem awfully chipper."
     show cassidy normal
     mike.say "Well, I might have received that call from Cherie, finally. And...I think she's intrigued."
@@ -4073,45 +4073,45 @@ label cassidy_chat_about_cherie2:
     cassidy.say "Oh! I was starting to worry that this whole plan was going to go straight to nowhere!"
     show cassidy normal
     mike.say "Well, it still could. Once again I'm waiting for her call, but...she was definitely flirting. And...I heard something in her voice."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Oh? Something good?"
     show cassidy normal
     menu:
         "I'm worried this is going to hurt her":
             mike.say "She's been living a hollow shell of a life for a lot of years. She likes having someone pay attention to her."
             mike.say "But...I don't know if that will work out the way she wants."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "I understand, but remember, even if it hurts, getting out from under his thumb will be good for her."
             show cassidy normal
             mike.say "She won't see it that way."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Maybe she won't, but if her life is better, even if she hates you, that's still a win for her, right?"
             show cassidy normal
             mike.say "Maybe."
         "She wants me and I want her":
             mike.say "She's sweet, and sexy, and...she pretty clearly wants me. And I kind of want her."
-            show cassidy talkative
+            show cassidy talk
             if cassidy.love < 100:
                 cassidy.say "Good for her, I guess?"
             else:
                 cassidy.say "But what about me?"
                 mike.say "Yes, what about you? What do you want?"
                 if cassidy.love > 160:
-                    show cassidy talkative
+                    show cassidy talk
                     cassidy.say "I think...I think I'm in love with you."
                     show cassidy normal
                     mike.say "Wow."
-                    show cassidy talkative
+                    show cassidy talk
                     cassidy.say "You know I want you to do whatever it takes, but...I don't want to lose you."
                     show cassidy normal
                     mike.say "I see. So you want me to hurt her?"
-                    show cassidy talkative
+                    show cassidy talk
                     if cassidy.lesbian >= 5:
                         cassidy.say "Not really. I just. I don't know what to think, okay? This whole situation is more than I know how to deal with."
                     else:
                         cassidy.say "If you have to. I don't want to see her hurt, but...if it's that or lose you?"
                         mike.say "Can it be both?"
-                        show cassidy talkative
+                        show cassidy talk
                         cassidy.say "I don't know. I can't really think about that right now."
                     show cassidy normal
                 cassidy.say "I don't...I don't really know."
@@ -4121,7 +4121,7 @@ label cassidy_chat_about_cherie2:
             mike.say "So she said something on the phone, and I couldn't stop imagining her, in passion."
             mike.say "And you said you knew about some of their sex toys. And I started thinking about you at the same time."
             mike.say "And...that's fucking hot."
-            show cassidy talkative
+            show cassidy talk
             if cassidy.status == "mistress":
                 cassidy.say "So you're thinking I could have both of you? That {b}is{/b} kind of sexy, Sweetie, I have to admit."
             else:
@@ -4129,61 +4129,61 @@ label cassidy_chat_about_cherie2:
             show cassidy normal
             mike.say "Yeah."
             "Cassidy shrugs, though her expression shows she's at least interested."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "We will see where this goes."
     cassidy.say "But none of this matters if she doesn't get you into that vault."
     show cassidy normal
     mike.say "I know."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "So do what you have to do. For my sake, for your sake. For Aletta and Cherie's sakes too. There's a lot of people you're saving with this."
     show cassidy normal
     mike.say "Yeah. Assuming he doesn't straight up murder me, first."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "He wouldn't go that far."
     show cassidy normal
     mike.say "I wouldn't be so sure. He came here a couple days ago and I thought he was going to pound me into the floor."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Well, he is possessive, it's true. But actually kill someone?"
     show cassidy normal
     mike.say "If he figures out what I'm after, yeah. He might."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "If he comes after you, he'll have to come through me."
     show cassidy normal
     mike.say "You can't be there twenty-four/seven and not to be mean, but he'd brush you aside like a piece of cardboard."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "He wouldn't dare lay a finger on his little girl!"
     show cassidy normal
     "I can only shrug at that."
     mike.say "Let's hope we don't have to find out."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "I think I'm going to buy a gun, just in case."
     show cassidy normal
     mike.say "Do you know how to use one of those things?"
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Aletta offered to teach me."
     show cassidy normal
     menu:
         "Good idea":
             mike.say "That's a good idea. It might come down to violence."
             $ cassidy.love += 2
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Then I'm doing it."
         "Bad idea":
             mike.say "That's a bad idea. If you end up shooting him, you'll be the one in jail, not him."
             $ cassidy.sub += 2
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "I'll...think about that before I do anything."
     show cassidy normal
     if cassidy.status in ["pet", "sex slave"]:
         mike.say "And now, more waiting. At least you're here. Maybe we can have some fun to relieve the tension."
-        show cassidy talkative
+        show cassidy talk
         if cassidy.love >= 120:
             cassidy.say "I'm all yours!"
         else:
             cassidy.say "I guess? Maybe if you got me more flowers, first..."
         show cassidy normal
     else:
-        show cassidy talkative
+        show cassidy talk
         cassidy.say "And now you should get to work."
         show cassidy normal
         mike.say "Yes, Mistress!"
@@ -4349,7 +4349,7 @@ label cassidy_dwayne_denouement:
             if cassidy.love >= 150:
                 show cassidy whining
             else:
-                show cassidy talkative
+                show cassidy talk
             cassidy.say "I see. I guess that's...for the best."
             $ cassidy.breakup()
             cassidy.say "Good luck with...everything, I guess."
@@ -4372,7 +4372,7 @@ label cassidy_dwayne_denouement:
             cassidy.say "I...you want this to be permanent? No blackmail, just me...serving you?"
             show cassidy sadsmile
             mike.say "Yes."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "I guess...I guess I don't hate it. And I do love you."
             cassidy.say "So okay. If that's what you really want. As long as...do you love me?"
             show cassidy normal
@@ -4391,7 +4391,7 @@ label cassidy_dwayne_denouement:
                 $ cassidy.status = "friend"
                 jump cassidy_dwayne_denouement_menu
             else:
-                show cassidy talkative
+                show cassidy talk
                 cassidy.say "Good. I like our relationship. I'm glad you do too."
                 cassidy.say "And I'll make sure to take good care of you, my love."
                 cassidy.say "Now tell me you love me!"
@@ -4399,15 +4399,15 @@ label cassidy_dwayne_denouement:
                 show cassidy normal
         "You should be my girlfriend" if cassidy.status != "girlfriend":
             mike.say "We don't need this master/slave, business. But I want to stay with you. Be my girlfriend."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Your girlfriend, hmm?"
             show cassidy normal
             "Cassidy puts one hand on my chest."
             if cassidy.love >= 150:
-                show cassidy talkative
+                show cassidy talk
                 cassidy.say "I love you. Of course I'll be your girlfriend!"
             elif cassidy.love > 120:
-                show cassidy talkative
+                show cassidy talk
                 cassidy.say "It has been quite a ride. Maybe without being your plaything, I'll see you differently."
             else:
                 show cassidy whining
@@ -4429,14 +4429,14 @@ label cassidy_dwayne_denouement:
     cassidy.say "So that just leaves one question."
     show cassidy normal
     mike.say "What's that?"
-    show cassidy talkative
+    show cassidy talk
     if aletta.love > 120 or aletta.sexperience > 1:
         cassidy.say "What about you and Aletta? And you and Cherie for that matter?"
     else:
         cassidy.say "What about you and Cherie?"
     show cassidy normal
     mike.say "What about her?"
-    show cassidy talkative
+    show cassidy talk
     if cassidy.status == "mistress":
         cassidy.say "Well, if I'm going to be your Mistress..."
     elif cassidy.status in ["pet", "sex slave"]:
@@ -4448,16 +4448,16 @@ label cassidy_dwayne_denouement:
     menu:
         "I won't leave Cherie all alone":
             mike.say "And leave Cherie all alone? You and she both lost someone today. She's going to need support."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Yeah, but...support from your dick?"
             show cassidy normal
             mike.say "Maybe."
             if cassidy.lesbian >= 9 or cassidy.sub == 100:
-                show cassidy talkative
+                show cassidy talk
                 cassidy.say "Well. You're not wrong, she's had a pretty rough go of it. But why you?"
                 show cassidy normal
                 mike.say "It's our fault, Cassidy."
-                show cassidy talkative
+                show cassidy talk
                 cassidy.say "So?"
                 show cassidy normal
                 mike.say "She deserves better than what she's gotten."
@@ -4474,7 +4474,7 @@ label cassidy_dwayne_denouement:
                 show cassidy sad
                 mike.say "Now you have a chance to do better."
                 $ cassidy.flags.cherieok = True
-                show cassidy talkative
+                show cassidy talk
                 cassidy.say "Fine. But...just promise you won't hurt me. Or her. Or either of us."
                 show cassidy normal
                 mike.say "You have my word."
@@ -4491,21 +4491,21 @@ label cassidy_dwayne_denouement:
                 cassidy.say "Which is it, then?"
                 show cassidy upset
                 mike.say "You, of course."
-                show cassidy talkative
+                show cassidy talk
                 cassidy.say "It better be!"
         "But Aletta is special" if aletta.love > 120 or aletta.sexperience > 1:
             mike.say "Aletta is...something special, though. Look at what your father did to her."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "I think she got her revenge."
             show cassidy normal
             mike.say "Sure, revenge, but she shot him, Cassidy. To save my life. She's going to need my support."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Fine. Your support. But does she need your {b}dick{/b}?"
             show cassidy normal
             mike.say "Maybe."
             show cassidy normal
             "Cassidy sighs."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "But what if I don't want to share?"
             show cassidy normal
             if cassidy.lesbian >= 9 or cassidy.sub == 100:
@@ -4514,7 +4514,7 @@ label cassidy_dwayne_denouement:
                 else:
                     mike.say "I know, it's complicated, but. A lot has happened. To all of us."
                 $ cassidy.flags.alettaok = True
-                show cassidy talkative
+                show cassidy talk
                 cassidy.say "Fine. But...just promise you won't hurt me. Or her. Or either of us."
                 show cassidy normal
                 mike.say "You have my word."
@@ -4531,17 +4531,17 @@ label cassidy_dwayne_denouement:
                 cassidy.say "Which is it, then?"
                 show cassidy upset
                 mike.say "You, of course."
-                show cassidy talkative
+                show cassidy talk
                 cassidy.say "It better be!"
         "They both need me too" if aletta.love > 120 or aletta.sexperience > 1:
             mike.say "They both have been through so much. Cherie lost her husband. Aletta shot him, and saved my life."
             mike.say "They're going to need my support."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Yeah, but...support from your dick?"
             show cassidy normal
             mike.say "Maybe."
             "Cassidy sighs."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "But what if I don't want to share?"
             show cassidy normal
             if cassidy.lesbian >= 9 or cassidy.sub == 100:
@@ -4551,7 +4551,7 @@ label cassidy_dwayne_denouement:
                     mike.say "I know, it's complicated, but. A lot has happened. To all of us."
                 $ cassidy.flags.cherieok = True
                 $ cassidy.flags.alettaok = True
-                show cassidy talkative
+                show cassidy talk
                 cassidy.say "Fine. But...just promise you won't hurt me. Or her. Or either of us."
                 show cassidy normal
                 mike.say "You have my word."
@@ -4568,15 +4568,15 @@ label cassidy_dwayne_denouement:
                 cassidy.say "Which is it, then?"
                 show cassidy upset
                 mike.say "You, of course."
-                show cassidy talkative
+                show cassidy talk
                 cassidy.say "It better be!"
         "Of course, my love":
             mike.say "Of course. It's just you and me."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "I love you so much!"
     show cassidy normal
     mike.say "I think...I think I need to sleep now."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Yeah. You took a pretty sound beating."
     show cassidy normal
     "She squeezes my hand and stands up. I'm asleep before she even gets to the door."
@@ -5510,7 +5510,7 @@ label cassidy_male_ending:
     "I can't help grinning like a fool as Cassidy reaches the altar."
     show cassidy happy at startle
     "And that earns me a giggle and a shake of the head in return."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Stop grinning, you big dope!"
     cassidy.say "This is supposed to be serious!"
     show cassidy normal
@@ -5519,7 +5519,7 @@ label cassidy_male_ending:
     show cassidy happy at startle
     "Cassidy giggles again."
     "And now she's grinning too."
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Well...you kind of are!"
     cassidy.say "So you go ahead and smile, [hero.name]!"
     show cassidy normal
@@ -5537,7 +5537,7 @@ label cassidy_male_ending:
     "Priest" "Erm...okay?"
     show cassidy happy
     cassidy.say "Good!"
-    show cassidy talkative
+    show cassidy talk
     cassidy.say "Now we're finished!"
     show cassidy normal
     show wedding cassidy with fade

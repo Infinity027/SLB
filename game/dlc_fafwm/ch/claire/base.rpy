@@ -397,7 +397,7 @@ label claire_propose_male:
         "And for a few terrible seconds I think that she's going to say no."
         show claire happy
         "But then I see that she's nodding her head, and I feel a flood of relief wash over me."
-        show claire talkative
+        show claire talk
         claire.say "YES!"
         claire.say "Yes, I will."
         claire.say "Of course I'll marry you!"
@@ -413,14 +413,14 @@ label claire_propose_male:
         "Claire looks up from the ring and her eyes meet mine."
         "And in that moment I can feel myself blushing from the look she's giving me."
         "Because it's one of genuine surprise and disbelief."
-        show claire talkative
+        show claire talk
         claire.say "Whatever gave you that idea?"
         show claire normal
         mike.say "Well...you have been down this road before."
         mike.say "And it didn't really end all that well - did it?"
         show claire happy
         "The smile that spreads over Claire's face almost makes me catch my breath."
-        show claire talkative
+        show claire talk
         claire.say "[hero.name], you're not Hector."
         claire.say "In fact, you're about as far from him as it's possible to be!"
         claire.say "And our marriage is going to be very different too."

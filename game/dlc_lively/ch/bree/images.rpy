@@ -4,7 +4,7 @@ init -35 python:
     'positions': ['a', 'b', 'd', 'z'],
     'piercings': ['clit', 'navel', 'nipples', 'ears', 'lips', 'nose', 'tongue'],
     'haircuts': ['nohaircut', 'haircut'],
-    'exps': ['normal', 'angry', 'annoyed', 'blank', 'cry', 'dazed', 'evil', 'flirt', 'gloomy', 'happy', 'hesitating', 'lose', 'mindless', 'mouthful', 'sad', 'sadsmile', 'sleepy', 'smile', 'stuned', 'surprised', 'talkative', 'thumb', 'vangry', 'wink'],
+    'exps': ['normal', 'angry', 'annoyed', 'blank', 'cry', 'dazed', 'evil', 'flirt', 'gloomy', 'happy', 'hesitating', 'lose', 'mindless', 'mouthful', 'sad', 'sadsmile', 'sleepy', 'smile', 'stuned', 'surprised', 'talk', 'thumb', 'vangry', 'wink'],
     'outfits': ['casual', 'innocentcasual', 'work', 'sport', 'date', 'puredate', 'innocentdate', 'sexydate', 'sluttydate', 'swimsuit', 'innocentswimsuit', 'sexyswimsuit', 'towel', 'underwear', 'daddy', 'rpg', 'bowsette', 'karate', 'halloween', 'invisible', 'chinese', 'dominatrix', 'apron', 'maid', 'pinkmaid', 'sleep', 'wedding', 'naked'],
     'others': ['pubes', 'collar', 'leash', 'blush', 'cum_mouthful', 'cum_face', 'bottomless', 'topless'],
 }
@@ -141,9 +141,9 @@ label test_bree_exps:
     show expression f"bree {pose} surprised" as b2 at left
     "surprised"
 
-    $ renpy.show(f"bree {pose} talkative")
-    show expression f"bree {pose} talkative" as b2 at left
-    "talkative"
+    $ renpy.show(f"bree {pose} talk")
+    show expression f"bree {pose} talk" as b2 at left
+    "talk"
 
     $ renpy.show(f"bree {pose} thumb")
     show expression f"bree {pose} thumb" as b2 at left

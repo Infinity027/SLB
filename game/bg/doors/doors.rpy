@@ -29,9 +29,7 @@ init 1:
 
         attribute fancy
 
-
         attribute hallway
-
 
         attribute mansion
 

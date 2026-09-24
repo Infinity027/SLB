@@ -390,7 +390,7 @@ label cherie_police_interview_male:
         "Michaels" "But don't worry, you're not in any kind of trouble."
         "Michaels" "We'd just like to talk to you about Mister Jackson."
     "This time it feels like I've actually been punched in the gut."
-    show mike talkative at center, zoomAt(1.5, (640, 1040)) with vpunch
+    show mike talk at center, zoomAt(1.5, (640, 1040)) with vpunch
     mike.say "About Dwayne?"
     mike.say "Listen, I don't know anything about what happened to him!"
     show mike normal
@@ -408,7 +408,7 @@ label cherie_police_interview_male:
         "Agree to go to the station":
             "I realise that the detective has me bang to rights."
             "If I don't do as he asks, then it's just going to look like I have something to hide."
-            show mike talkative at center, zoomAt(1.5, (640, 1040))
+            show mike talk at center, zoomAt(1.5, (640, 1040))
             mike.say "Okay, okay..."
             mike.say "I'll be right there."
             show mike normal
@@ -421,7 +421,7 @@ label cherie_police_interview_male:
             show mike angry at center, zoomAt(1.5, (640, 1040))
             mike.say "Look, I already told you..."
             mike.say "I don't know anything about what's happened to Dwayne."
-            show mike talkative
+            show mike talk
             mike.say "And I know my rights too - you can't make me come down there."
             mike.say "Not unless you arrest me for a real crime, right?"
             show mike upset
@@ -438,7 +438,7 @@ label cherie_police_interview_male:
             "Michaels" "I'd hate to think what the neighbours would make of all that..."
             show mike annoyed
             "Never mind the goddamn neighbours - what would Bree and Sasha make of it?!?"
-            show mike talkative at center, traveling(1.25, 0.3, (640, 880))
+            show mike talk at center, traveling(1.25, 0.3, (640, 880))
             mike.say "Erm..."
             mike.say "You know what, detective..."
             mike.say "I'll be right there."
@@ -470,7 +470,7 @@ label cherie_police_interview_male:
         mike.say "Y...yeah..."
         mike.say "That's me."
         "She nods once, then motions with her hand."
-        show camila talkative
+        show camila talk
         "Sgt Foglio" "I'm Sergeant Foglio, assigned to the Jackson case."
         "Sgt Foglio" "This way please."
     elif camila.id in hero.smartphone_contacts and camila.status not in ["girlfriend", "fiance"]:
@@ -482,11 +482,11 @@ label cherie_police_interview_male:
         mike.say "I'm here to see a guy called Michaels?"
         show camila at center, traveling(1.5, 0.5, (640, 1040))
         "Camila nods as she takes hold of my arm."
-        show camila talkative
+        show camila talk
         camila.say "I know - they assigned me to the case as well."
         show camila happy
         camila.say "But don't worry, this is all just routine."
-        show camila talkative
+        show camila talk
         camila.say "Let's get you to the interview room."
     else:
         camila.say "[hero.name]!"
@@ -499,7 +499,7 @@ label cherie_police_interview_male:
         show camila at right, traveling(1.5, 0.5, (640, 1040))
         "Camila almost leans in to kiss me, but then she stops herself."
         mike.say "I...I need to keep this professional, as they assigned me to the Jackson case."
-        show camila talkative
+        show camila talk
         camila.say "I know - they assigned me to the case as well."
         show camila happy
         camila.say "But don't worry, this is all just routine."
@@ -716,7 +716,7 @@ label cherie_event_02:
     "She's dressed all in black, and of course, she looks both sombre and stunning at the same time."
     "As does her daughter Cassidy, holding onto her mother's arm as they shed tears by the side of Dwayne's casket."
     "Unfortunately, I'm too far away to be able to hear the ceremony when the priest gets started talking."
-    show cherie talkative
+    show cherie talk
     "And so all I can do is watch, even when the time comes for Cherie to deliver the eulogy."
     "Part of me wants to be there to comfort her, as I can see the emotional strain on her face."
     "But obviously that would be the dumbest thing possible right now."
@@ -809,7 +809,7 @@ label cherie_event_02:
     mike.say "Ahem..."
     show cherie stuned at startle(0.05, -5)
     "Cherie looks around, noticing me standing beside her."
-    show cherie talkative
+    show cherie talk
     cherie.say "Oh, [hero.name]..."
     cherie.say "I am so glad to see that you have come."
     cherie.say "When I could not find you in the crowd, I thought that you had abandoned me!"
@@ -839,7 +839,7 @@ label cherie_event_02:
             mike.say "That and to give yourself permission to grieve in your own way."
             "Cherie nods her head as she listens to what I have to say."
             "And when I'm done, she seems genuinely comforted by it too."
-            show cherie talkative
+            show cherie talk
             cherie.say "I should have known that you would be a help, [hero.name]."
             cherie.say "And I feel that I am going to need friends like you very soon."
             cherie.say "So don't be surprised if I call on you in the near future."
@@ -855,7 +855,7 @@ label cherie_event_02:
             mike.say "So you should do your best to keep your guard up."
             "At first Cherie looks shocked to hear me lecturing her at a time like this,"
             "But slowly she begins to nod as the truth of my words sinks in."
-            show cherie talkative
+            show cherie talk
             cherie.say "Ah, I am afraid that you are right, [hero.name]."
             cherie.say "My husband was never without a plan and a escape route!"
             cherie.say "I sense that I will have further need of your advice in the days to come!"
@@ -870,7 +870,7 @@ label cherie_event_02:
             mike.say "And so you should never let your guard down, not totally."
             "At first Cherie looks shocked to hear me lecturing her at a time like this,"
             "But slowly she begins to nod, as if she's taking the measure of me."
-            show cherie talkative
+            show cherie talk
             cherie.say "What an interesting and insightful piece of advice, [hero.name]."
             cherie.say "One that I will be sure to ponder in the days to come."
             cherie.say "Until we next meet, I wish you the best."
@@ -989,7 +989,7 @@ label cherie_event_03:
     aletta.say "Urgh..."
     show aletta at hshake
     aletta.say "What am I saying?"
-    show aletta talkative
+    show aletta talk
     aletta.say "Bugging us?"
     show aletta b happy
     aletta.say "If I keep on like this, it'll be spying on us with space-lasers next!"
@@ -1001,7 +1001,7 @@ label cherie_event_03:
     mike.say "That the police poking around is starting to get to you?"
     show aletta at startle(0.1, 5)
     "Aletta nods eagerly."
-    show aletta talkative
+    show aletta talk
     aletta.say "That's it exactly, [hero.name]."
     aletta.say "I...I used to think that I was pretty unflappable, you know?"
     aletta.say "But they just keep on asking questions...so many questions."
@@ -1009,7 +1009,7 @@ label cherie_event_03:
     aletta.say "And that I might have given them a different answer."
     show aletta normal
     mike.say "Yeah, they've done that to me too."
-    show aletta talkative
+    show aletta talk
     aletta.say "But that's not the worst of it, [hero.name]..."
     show aletta at hshake
     if hero.flags.dwayne_corpse == hero.flags.aletta_gun:
@@ -1097,14 +1097,14 @@ label cherie_event_03:
             "And I'm expecting her to do the same in return."
             "Which is why it takes me completely by surprise when she throws her arms around me instead!"
             "Luckily I manage to shake off my surprise and gently put my arms around her in response a moment later."
-            show aletta talkative
+            show aletta talk
             aletta.say "Oh god..."
             aletta.say "Thank you so much, [hero.name]..."
             show aletta happy
             aletta.say "I can't tell you how much I needed to hear you say that!"
             "The hug goes on for a short while longer, with me gently patting Aletta on the back."
             "And when it's finally over, she seems to have recovered a little of her normal reserve."
-            show aletta talkative at startle(0.1, 5)
+            show aletta talk at startle(0.1, 5)
             aletta.say "Erm..."
             aletta.say "Thanks again, [hero.name]..."
             aletta.say "But I don't think there's any need to tell Cherie about all of this."
@@ -1140,7 +1140,7 @@ label cherie_event_03:
             mike.say "Did you ever think what they'll do to me?!?"
             "Aletta's still shaking her head at all of this."
             "But now she's looking around, like she's worried someone might overhear us."
-            show aletta talkative
+            show aletta talk
             aletta.say "Okay, okay..."
             aletta.say "I get it now, [hero.name]..."
             aletta.say "You're worried too."
@@ -1184,7 +1184,7 @@ label cherie_event_04:
     "Well, let's just say that I'm feeling the weight of it all pressing down on me."
     "But then it's not like any of this was my idea."
     "I would never have..."
-    show cherie sexydate talkative zorder 9 at dark, center, zoomAt(1.6, (640, 1020)), blur(8) with easeinleft
+    show cherie sexydate talk zorder 9 at dark, center, zoomAt(1.6, (640, 1020)), blur(8) with easeinleft
     cherie.say "[hero.name]…"
     stop sound fadeout 2
     cherie.say "Did I not already tell you to turn that frown the other way up?"
@@ -1219,7 +1219,7 @@ label cherie_event_04:
     mike.say "You know, because it rhymes?"
     show cherie annoyed
     "Cherie rolls her eyes and makes a point of grabbing me by the arm."
-    show cherie talkative at startle(0.1, 5)
+    show cherie talk at startle(0.1, 5)
     cherie.say "There is no time for that now, {i}mon ami{/i}."
     cherie.say "We must get out there and mingle."
     cherie.say "We must show all of these people that everything is good."
@@ -1258,7 +1258,7 @@ label cherie_event_04:
             "By which I mean that she visibly jumps on the spot, almost spilling the drink in her hand."
             show aletta normal
             "But being Aletta, she somehow manages to recover more quickly and pull herself together more completely."
-            show aletta talkative
+            show aletta talk
             if aletta.sub >= 25:
                 aletta.say "Oh, [hero.name]…"
                 aletta.say "Am I glad to see you!"
@@ -1294,7 +1294,7 @@ label cherie_event_04:
                 audrey.say "Over here!"
                 audrey.say "Won't you come and pay me some attention?"
             else:
-                show audrey talkative at startle(0.1, 5)
+                show audrey talk at startle(0.1, 5)
                 audrey.say "There you are, [hero.name]!"
                 audrey.say "I was starting to think that you'd forgotten all about little old me."
                 audrey.say "And I was about to make a scene to get your attention!"
@@ -1354,7 +1354,7 @@ label cherie_event_04:
             pause 0.5
             show lavish normal with dissolve
             "Lavish nods eagerly as she takes another sip from her drink."
-            show lavish talkative at startle(0.1, 5)
+            show lavish talk at startle(0.1, 5)
             lavish.say "And what makes it even worse is that I recognise lots of these people too."
             lavish.say "They are some really influential types here, very important individuals."
             lavish.say "I kind of want to talk to some of them, maybe network a little..."
@@ -1424,7 +1424,7 @@ label cherie_event_04:
             mike.say "Then you can come and see me in the office tomorrow morning."
             show shiori sadsmile
             mike.say "And we can talk all about it, if you'd like?"
-            show shiori talkative
+            show shiori talk
             if shiori.sub >= 25:
                 shiori.say "You'd...you'd do that for me?"
                 shiori.say "I think I can be strong, now that I know that."
@@ -1507,7 +1507,7 @@ label cherie_event_04:
             show cassidy surprised at center, traveling(1.2, 0.1, (840, 830))
             "Cassidy's jaw literally drops open as I make a point of putting her in her place."
             "But before she can mount a counter-offensive, Cherie steps into the fray as well."
-            show cherie talkative at startle(0.1, 5)
+            show cherie talk at startle(0.1, 5)
             cherie.say "[hero.name] is right."
             cherie.say "We will discuss this another time."
             cherie.say "And when we do, it will be in private."
@@ -1593,7 +1593,7 @@ label cherie_event_04:
     "So it comes as a genuine surprise to find Cherie standing before me."
     "From the look on her face, she seems to have used the intervening time to calm herself down again."
     "And she's holding two glasses of champagne, one of which she offers to me."
-    show cherie talkative at startle(0.1, 5)
+    show cherie talk at startle(0.1, 5)
     cherie.say "I must apologise for earlier, mon ami."
     cherie.say "Cassidy and I have always clashed at times like this."
     cherie.say "And so it is only natural that she would behave in such a way."
@@ -1606,7 +1606,7 @@ label cherie_event_04:
     mike.say "You've both been through the roughest of times."
     show cherie at startle(0.2, 10)
     "Cherie nods at this, but I notice that she has a thoughtful look on her face."
-    show cherie talkative at startle(0.1, 5)
+    show cherie talk at startle(0.1, 5)
     cherie.say "That may be so, {i}mon ami{/i}..."
     cherie.say "But it is also important that we make new alliances for the sake of the future."
     cherie.say "And I for one know who I can rely upon to be my ally."
@@ -1615,7 +1615,7 @@ label cherie_event_04:
     show cherie normal
     "Cherie holds up her glass, gesturing for me to do the same."
     "And once I've done as she asks, she taps her own against mine."
-    show cherie talkative
+    show cherie talk
     cherie.say "I propose a toast..."
     show cherie happy at startle(0.1, 5)
     cherie.say "To new beginnings."
@@ -1636,7 +1636,7 @@ label cherie_event_04:
     "But as fate would have it, another girl entirely is the one that cuts off my exit."
     show bg rpgfeast at center, traveling(2, 3, (440, 1120))
     pause 2.7
-    show cassidy date talkative at center, zoomAt(1.8, (640, 1120)) with easeinright
+    show cassidy date talk at center, zoomAt(1.8, (640, 1120)) with easeinright
     show bg rpgfeast at center, zoomAt(2, (440, 1120)) with hpunch
     cassidy.say "And just where do you think you're going?"
     show cassidy normal
@@ -1646,15 +1646,15 @@ label cherie_event_04:
     if cassidy.is_girlfriend:
         if cassidy.sub >= 25:
             cassidy.say "I just wanted to say how sorry I am about that run in with my mother, [hero.name]."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "And to say that if there's anything I can do to make it up to you - just ask."
         elif cassidy.sub <= -25:
             cassidy.say "You're not leaving without saying goodbye to me, are you, [hero.name]?"
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "Shouldn't you be asking my permission to be dismissed?"
         else:
             cassidy.say "Sorry again for you getting dragged into that little family squabble, [hero.name]."
-            show cassidy talkative
+            show cassidy talk
             cassidy.say "But I'm sure we can find a way to make it up to each other, right?"
         show cassidy normal
         "As tired and mentally drained as I'm feeling, I stop as soon as I see Cassidy."
@@ -1666,7 +1666,7 @@ label cherie_event_04:
         "Cassidy nods, leaning in closer than before."
         show cassidy b whining at startle(0.1, 5)
         cassidy.say "I know how that feels, trust me!"
-        show cassidy b talkative
+        show cassidy b talk
         cassidy.say "But I also know the perfect thing to fix it too!"
         cassidy.say "Call me later tonight and we'll get together, okay?"
         show cassidy b normal
@@ -1681,7 +1681,7 @@ label cherie_event_04:
         mike.say "I know things can't be easy for either of you right now."
         "To my surprise, Cassidy shakes her head and waves away my words."
         "Dismissing my attempt to make peace with her as if she's simply not interested."
-        show cassidy talkative at startle(0.1, 5)
+        show cassidy talk at startle(0.1, 5)
         cassidy.say "Yeah, yeah, yeah..."
         cassidy.say "I know what you're trying to do, [hero.name]..."
         cassidy.say "But I don't work for my Dad and I'm not my mother either."
@@ -1694,7 +1694,7 @@ label cherie_event_04:
         "Cassidy chuckles as she moves in closer still."
         show cassidy normal at center, zoomAt(2.2, (640, 1320))
         "Not stopping until she's more than close enough to touch me."
-        show cassidy talkative at startle(0.1, 5)
+        show cassidy talk at startle(0.1, 5)
         cassidy.say "What I mean is that I want you on my side, [hero.name]."
         cassidy.say "I want you fighting for me the way you did for my father!"
         show cassidy normal
@@ -1705,7 +1705,7 @@ label cherie_event_04:
         mike.say "That's what I thought you meant."
         show cassidy happy at startle(0.1, 5)
         "Cassidy chuckles again, and this time it's an irresistibly seductive sound."
-        show cassidy talkative b at startle(0.1, 5)
+        show cassidy talk b at startle(0.1, 5)
         cassidy.say "Oh no, [hero.name]..."
         cassidy.say "I want to fuck you too!" with hpunch
         cassidy.say "You see, I'm used to having my cake and eating it."
@@ -1737,7 +1737,7 @@ label cherie_event_05:
     "But almost as soon as she realises that it's me standing in front of her, it visibly lightens."
     show cherie normal at center, traveling(1.25, 0.5, (940, 880))
     "And I'd swear that she's doing all she can to remain serious, rather than breaking into a smile."
-    show cherie talkative
+    show cherie talk
     cherie.say "Oh, I hate it when you do that to me, {i}mon ami{/i}!"
     cherie.say "Here I am, trying to be professional and get things done..."
     cherie.say "But then I see that smile on your face and..."
@@ -1770,7 +1770,7 @@ label cherie_event_05:
     show aletta upset
     "I watch as Cherie remains amazingly calm, even with Aletta almost bearing down on her."
     "And I can't help being impressed when all she does is raise a single eyebrow in response."
-    show cherie talkative
+    show cherie talk
     cherie.say "And just what would that be, Aletta?"
     cherie.say "What exactly is it that you have to say to me?"
     show cherie normal
@@ -1785,7 +1785,7 @@ label cherie_event_05:
     "She holds it in for a few seconds, and then lets it out as a sigh."
     show cherie normal with dissolve
     cherie.say "Hmm..."
-    show cherie talkative
+    show cherie talk
     cherie.say "That's a very serious accusation, Aletta..."
     cherie.say "Wouldn't you agree, [hero.name]?"
     show cherie annoyed
@@ -1803,7 +1803,7 @@ label cherie_event_05:
     if aletta.is_girlfriend:
         "It only takes a couple of seconds for Aletta's surprise to fade."
         "And then she seems to realise that she has a potential ally in the room."
-        show aletta talkative
+        show aletta talk
         if aletta.sub >= 25:
             aletta.say "You know more about this than either of us, [hero.name]…"
             aletta.say "So you could make her see sense, couldn't you?"
@@ -1817,7 +1817,7 @@ label cherie_event_05:
         "It doesn't take Aletta long to get over her initial surprise at seeing me."
         "And as she regains her mental equilibrium, her attitude to me seems to change."
         "Where before she seemed to see me as a threat, now she sees a potential ally."
-        show aletta talkative
+        show aletta talk
         aletta.say "You're as deep into this thing as either of us, [hero.name]…"
         aletta.say "So you have to make her see sense, right?"
         aletta.say "You have to make her admit what she's trying to do!"
@@ -1865,7 +1865,7 @@ label cherie_event_05:
             "Cherie doesn't say anything at first, just sits back in her chair, looking stunned."
             "But a quick glance in Aletta's direction is enough to let me know that she's reacting in a totally different manner."
             "Where before she seemed to be almost frantic with worry, now Aletta's regained some of her former confidence."
-            show aletta talkative
+            show aletta talk
             aletta.say "Thank you, [hero.name]…"
             aletta.say "At least one person is on my side!"
             show aletta normal
@@ -1893,7 +1893,7 @@ label cherie_event_05:
             show aletta stuned
             "But the effect on Cherie is quite the opposite of that on Aletta."
             "She's looking more empowered and sure of herself by the second."
-            show cherie talkative
+            show cherie talk
             cherie.say "Oh, but I think he does mean it, Aletta."
             cherie.say "And I see that your list of allies grows thin!"
             show cherie normal
@@ -1906,7 +1906,7 @@ label cherie_event_05:
             mike.say "But the truth is that you have to stop accusing everyone else first."
             "Cherie nods slowly as I keep on delivering more verbal blows to Aletta."
             "And every one of them seems to stagger her just a little more than before."
-            show cherie talkative
+            show cherie talk
             cherie.say "So you see, Aletta..."
             cherie.say "This isn't a fight you're going to win!"
             show cherie normal
@@ -1936,7 +1936,7 @@ label cherie_event_05:
             cherie.say "Then just what are you doing, {i}mon ami{/i}?"
             cherie.say "Because your intentions are not at all clear."
             show cherie sadsmile
-            show aletta talkative
+            show aletta talk
             aletta.say "Just who's side are you on, [hero.name]?"
             aletta.say "Hers or mine?"
             show aletta sadsmile
@@ -1949,7 +1949,7 @@ label cherie_event_05:
             "I don't need to be told that my little rant hasn't gone down too well."
             "Cherie is leaning back in her chair, arms crossed over her chest."
             "And Aletta seems to be making sure there's nothing between her and the door."
-            show cherie talkative
+            show cherie talk
             cherie.say "It is all well and good saying that we should be allies, {i}mon ami{/i}…"
             cherie.say "But for that to work, there must also be trust between us."
             show cherie normal
@@ -1971,7 +1971,7 @@ label cherie_event_05:
     "In fact she sags in her chair with such drama that I think there could be something seriously wrong."
     mike.say "Cherie..."
     mike.say "Are you feeling okay?"
-    show cherie talkative
+    show cherie talk
     cherie.say "Ah..."
     cherie.say "I cannot recall ever feeling this tired before, {i}mon ami{/i}."
     cherie.say "I thought that Dwayne's passing would be the answer to all of my problems."
@@ -1980,7 +1980,7 @@ label cherie_event_05:
     mike.say "Don't give in to that kind of thinking, Cherie."
     mike.say "I'm sure that we're almost there, almost through this thing."
     mike.say "All we need to do is hold on a little longer, to keep each other strong."
-    show cherie talkative
+    show cherie talk
     cherie.say "Oh, [hero.name]…"
     cherie.say "I wish that I had your strength, your optimism."
     show cherie normal
@@ -2080,7 +2080,7 @@ label cherie_event_06:
     play sound door_close
     "Cherie frowns a little as she closes the door behind me."
     "And I notice that she's careful to secure all of the locks too."
-    show cherie casual talkative at center, zoomAt(1.25, (640, 880)) with easeinright
+    show cherie casual talk at center, zoomAt(1.25, (640, 880)) with easeinright
     cherie.say "Why do you say that, {i}mon ami{/i}?"
     cherie.say "Have we not spent a great deal of time together already?"
     cherie.say "Do we not know each other very well by now?"
@@ -2096,7 +2096,7 @@ label cherie_event_06:
     "And she doesn't even have to beckon for me to follow her as she goes either."
     "I just find myself instinctively trailing after her."
     "As if I'm hanging on her every word, desperate to hear what she has to say."
-    show cherie talkative
+    show cherie talk
     cherie.say "Oh come on, [hero.name]..."
     cherie.say "You don't have to play the innocent with me."
     cherie.say "I think that we are way past that now, don't you?"
@@ -2134,13 +2134,13 @@ label cherie_event_06:
     "And in that moment I feel like she's casting some kind of spell over me."
     "Because I can never recall finding her so much at ease in my company."
     "Or thinking that she ever looked as beautiful as she does right now."
-    show cherie talkative
+    show cherie talk
     cherie.say "Well...no...and yet, also yes."
     cherie.say "You see, this is a wine from the region where I was born."
     cherie.say "I grew up with it and I know it so well that it almost feels a part of me."
     show cherie whining
     cherie.say "Now Dwayne, he could never appreciate it, never come to love it."
-    show cherie talkative
+    show cherie talk
     cherie.say "But you..."
     show cherie sadsmile
     "By now Cherie's looking me straight in the eye."
@@ -2182,7 +2182,7 @@ label cherie_event_06:
     "Cherie gives me a shrug and a slight shake of the head."
     show cherie whining
     cherie.say "The former, maybe..."
-    show cherie talkative
+    show cherie talk
     cherie.say "The latter, definitely not!"
     cherie.say "It is strange, {i}mon ami{/i}..."
     cherie.say "I always thought that the guilt would be worse than the loneliness."
@@ -2195,7 +2195,7 @@ label cherie_event_06:
     mike.say "You have your daughter, and..."
     show cherie normal
     "As soon as I hint at someone else Cherie can call upon, she looks me straight in the eye."
-    show cherie talkative
+    show cherie talk
     cherie.say "Go on, {i}mon ami{/i}..."
     cherie.say "I have my daughter and you were about to name another whom I can call upon?"
     show cherie normal
@@ -2382,7 +2382,7 @@ label cherie_event_07_1:
     mike.say "We can't be sure that someone isn't snooping around in there."
     show cherie at startle(0.5, 10)
     "Cherie nods, letting me know that we're both on the same page."
-    show cherie talkative
+    show cherie talk
     cherie.say "Of course, {i}mon ami{/i}…"
     cherie.say "But then this is something serious?"
     cherie.say "Something that we must discuss with all haste?"
@@ -2400,7 +2400,7 @@ label cherie_event_07_1:
     "I watch as she listens to, closing her eyes while taking a long sip of her coffee."
     "Even when she's done that, Cherie still keeps her eyes closed for a few seconds."
     "And I can almost sense her doing all she can to gather the reserves of her strength."
-    show cherie c talkative
+    show cherie c talk
     cherie.say "Hmm..."
     cherie.say "I would like to say that I am surprised, {i}mon ami{/i}…"
     show cherie upset
@@ -2441,7 +2441,7 @@ label cherie_event_07_1:
     "But as soon as she seems to recover some of her poise, she looks down at her blouse."
     "Needless to say, the one she has on right now looks both elegant and expensive in nature."
     "But the fact coffee's dribbled down the front of it does kind of spoil the effect."
-    show cherie talkative
+    show cherie talk
     cherie.say "That is a relief to hear, {i}mon ami{/i}."
     show cherie whining
     cherie.say "But look at the state of me now!"
@@ -2658,7 +2658,7 @@ label cherie_event_07_1:
     "Once I'm done explaining the plan, Cherie goes quiet."
     "And I can see that she's pondering every aspect of it."
     "But then she nods her head, a look of finality settling upon her face."
-    show cherie a talkative
+    show cherie a talk
     cherie.say "Very well, {i}mon ami{/i}…"
     cherie.say "We will do as you say."
     cherie.say "I just hope that your plan is the right one."
@@ -2677,7 +2677,7 @@ label cherie_event_07_2:
     "And so when she walks in and looks me straight in the eye, I'm more than ready to launch into it."
     show aletta normal at center, traveling(1.5, 1.0, (640, 1040))
     "Which is why I'm caught off-guard when she's the one that immediately starts talking."
-    show aletta talkative
+    show aletta talk
     aletta.say "I'm glad that we got the chance to talk, [hero.name]…"
     aletta.say "Because I think it's vital that we get our stories straight."
     aletta.say "The police are going to want to interview us, of course..."
@@ -2692,7 +2692,7 @@ label cherie_event_07_2:
     "As soon as I announce that I've got a plan, hope seems to flare in Aletta's eyes."
     "But then her usual, business-like demeanour asserts itself, and she just nods."
     "Like she's relieved that I'm going to tell her my plan, but afraid of showing weakness."
-    show aletta talkative
+    show aletta talk
     aletta.say "Come on then..."
     aletta.say "Let's hear it."
     show aletta normal
@@ -2776,7 +2776,7 @@ label cherie_event_07_2:
             "I can already see that Aletta's frowning as she listens to what I have to say."
             "Like she's taking it all in, but the information isn't sitting well with her."
             "And so I'm not surprised when she begins questioning me as soon as I'm done."
-            show aletta talkative
+            show aletta talk
             aletta.say "But what about the affair I had with him?"
             show aletta whining
             aletta.say "Dwayne forced me to do so many...awful things."
@@ -2790,7 +2790,7 @@ label cherie_event_07_2:
             mike.say "Hell, Aletta, there's not even any evidence you were there that night."
             mike.say "So just answer all of their other questions honestly."
             mike.say "That way they'll have to drop it eventually."
-            show aletta talkative
+            show aletta talk
             aletta.say "You think that'll work?"
             show aletta normal
             "I nod my head, trying to convince Aletta that I'm right."
@@ -2830,7 +2830,7 @@ label cherie_event_07_2:
             mike.say "Hell, Aletta, there's not even any evidence you touched a damn thing that night."
             mike.say "So just answer all of their other questions in line with the story we've agreed."
             mike.say "That way they'll have to drop it eventually."
-            show aletta talkative
+            show aletta talk
             aletta.say "You think that'll work?"
             show aletta normal
             "I nod my head, trying to convince Aletta that I'm right."
@@ -2870,7 +2870,7 @@ label cherie_event_07_2:
             mike.say "Hell, Aletta, there's not even any evidence you touched a damn thing that night."
             mike.say "So just answer all of their other questions in line with the story we've agreed."
             mike.say "That way they'll have to drop it eventually."
-            show aletta talkative
+            show aletta talk
             aletta.say "You think that'll work?"
             show aletta normal
             "I nod my head, trying to convince Aletta that I'm right."
@@ -2880,7 +2880,7 @@ label cherie_event_07_2:
     "I can see that Aletta's still not totally convinced that all of this is going to work."
     "But she must realise that it's the best hope she's got of keeping her arse out of jail."
     "Because she puts on a brave face and nods."
-    show aletta talkative
+    show aletta talk
     aletta.say "Got it, [hero.name]…"
     aletta.say "I'll do my best, I promise."
     show aletta normal
@@ -3352,7 +3352,7 @@ label cherie_event_08_2:
             show cherie angry
             cherie.say "Now, now, [hero.name]…"
             cherie.say "Leave the good detective alone."
-            show cherie talkative
+            show cherie talk
             cherie.say "He is here to execute his duty, after all."
             show cherie normal
             "Michaels ruffles himself up as Cherie says all of this."
@@ -3400,7 +3400,7 @@ label cherie_event_08_2:
             "The gesture is more than enough to kill the words in my throat."
             "And I can't help feeling totally humiliated as I'm forced to back off."
             $ hero.flags.police_trust -= 2
-    show cherie talkative
+    show cherie talk
     cherie.say "So, Detective..."
     cherie.say "If you don't mind, a quieter room should be more appropirate to persue our conversation."
     show cherie normal
@@ -3413,7 +3413,7 @@ label cherie_event_08_2:
         show bg personal
     with fade
     "Once the three of us are in my office, Cherie goes directly to the point."
-    show cherie talkative
+    show cherie talk
     cherie.say "I am thinking that you have questions for me?"
     show cherie normal
     show inspector at startle(0.1, -5)
@@ -3476,7 +3476,7 @@ label cherie_event_08_2:
             cherie.say "It is the only way things will ever be settled."
             show cherie sad
         "I have to bite my lip as Cherie continues to explain herself to Michaels."
-        show cherie talkative
+        show cherie talk
         cherie.say "It happened at my home, while my husband was supposed to be away on business."
         cherie.say "[hero.name] and I were taking a ledger from his safe that would prove fraud within the company."
         show cherie normal
@@ -3486,7 +3486,7 @@ label cherie_event_08_2:
         show inspector at startle(0.1, -5)
         "Michaels" "So you suspected financial jiggery-pokery?"
         "Michaels" "That would explain a lot!"
-        show cherie talkative
+        show cherie talk
         cherie.say "Yes, but then Dwayne walked in on us."
         show cherie sad
         show inspector at startle(0.1, -5)
@@ -3501,7 +3501,7 @@ label cherie_event_08_2:
         "Michaels" "If one of you hadn't killed him first?"
         "Cherie shakes her head at this."
         "And that's when I know she's going to drag someone else into it too."
-        show cherie talkative
+        show cherie talk
         cherie.say "No, Detective..."
         cherie.say "It was Aletta, another of his employees, who did that."
         cherie.say "She shot him, and the wound proved to be fatal."
@@ -3510,7 +3510,7 @@ label cherie_event_08_2:
         "Michaels" "So this Aletta, she was there too..."
         "Michaels" "And she shot Mister Jackson in order to protect the two of you?"
         "Cherie shakes her head again, then shrugs."
-        show cherie talkative
+        show cherie talk
         cherie.say "Perhaps..."
         cherie.say "Perhaps not..."
         cherie.say "My husband had many affairs, Detective."
@@ -3551,7 +3551,7 @@ label cherie_event_08_2:
             cherie.say "It is the only way things will ever be settled."
             show cherie sad
         "I have to bite my lip as Cherie continues to explain herself to Michaels."
-        show cherie talkative
+        show cherie talk
         cherie.say "It happened at my home, while my husband was supposed to be away on business."
         show cherie normal
         "By now Michaels's eyes are almost bulging as Cherie unburdens herself."
@@ -3635,7 +3635,7 @@ label cherie_event_08_2:
         "Once he's gone, Cherie picks up the phone on the desk and speaks to the secretary on the other end."
         "I'm not sure what she's doing until someone comes bustling through the door a moment later."
         "And I see that they're carrying a tray of sandwiches and a pot of fresh coffee."
-        show cherie talkative
+        show cherie talk
         cherie.say "After that little interrogation, I thought we could use some refreshments."
         show cherie normal
         "I can feel myself relaxing as I pick up one of the sandwiches and Cherie pours the coffee."
@@ -3678,7 +3678,7 @@ label cherie_event_08_2:
             cherie.say "It is the only way things will ever be settled."
             show cherie sad
         "I have to bite my lip as Cherie continues to explain herself to Michaels."
-        show cherie talkative
+        show cherie talk
         cherie.say "It happened at my home, while my husband was supposed to be away on business."
         cherie.say "[hero.name] and I were taking a ledger from his safe that would prove fraud within the company."
         show cherie normal
@@ -3688,7 +3688,7 @@ label cherie_event_08_2:
         show inspector at startle(0.1, -5)
         "Michaels" "So you suspected financial jiggery-pokery?"
         "Michaels" "That would explain a lot!"
-        show cherie talkative
+        show cherie talk
         cherie.say "Yes, but then Dwayne walked in on us."
         show cherie sad
         show inspector at startle(0.1, -5)
@@ -3733,7 +3733,7 @@ label cherie_event_08_2:
             cherie.say "It is the only way things will ever be settled."
             show cherie sad
         "I have to bite my lip as Cherie continues to explain herself to Michaels."
-        show cherie talkative
+        show cherie talk
         cherie.say "It happened at my home, while my husband was supposed to be away on business."
         cherie.say "[hero.name] and I were taking a ledger from his safe that would prove fraud within the company."
         show cherie normal
@@ -3766,7 +3766,7 @@ label cherie_event_08_2:
             mike.say "Cherie..."
             mike.say "What the hell?!?"
         "All of a sudden Michaels is looking at me in a whole different way."
-        show cherie talkative
+        show cherie talk
         cherie.say "I am sorry, [hero.name]…"
         cherie.say "But I have to tell them the truth!"
         show cherie sad
@@ -3774,7 +3774,7 @@ label cherie_event_08_2:
             "I'm shaking my head as I feel like the ground is giving way under me."
             mike.say "But that's not how it happened..."
             mike.say "You have to tell them the truth!"
-            show cherie talkative
+            show cherie talk
             cherie.say "No, mon ami…"
             cherie.say "I cannot tell them any more lies!"
         show cherie sadsmile
@@ -3847,7 +3847,7 @@ label cherie_event_09:
         show camila at center, traveling(1.25, 0.3, (340, 880))
         show cherie normal at center, zoomAt(1.25, (940, 900)) with easeinright
         "Because Cherie comes sweeping out, looking every bit like a queen holding court."
-        show cherie talkative
+        show cherie talk
         cherie.say "What is all this?"
         cherie.say "Do you two have an appointment?"
         show camila annoyed
@@ -3873,7 +3873,7 @@ label cherie_event_09:
         show cherie amused
         "Or if she'd tough it out and keep on playing the dignified widow."
         "But it's not long before I get my answer, as she simply raises an eyebrow."
-        show cherie talkative
+        show cherie talk
         cherie.say "Is that so, Detective?"
         cherie.say "Then I will consent to come with you to the police station."
         show camila angry
@@ -3887,7 +3887,7 @@ label cherie_event_09:
         show camila upset
         show cherie normal
         "Cherie turns her gaze on Camila, staring the younger woman down."
-        show cherie talkative
+        show cherie talk
         cherie.say "And you do not seem to understand basic manners, Detective."
         cherie.say "If you would have let me finish, I would have added - until my lawyer is present."
         show inspector at startle(0.1, -5)
@@ -3910,7 +3910,7 @@ label cherie_event_09:
         aletta.say "Wha…"
         aletta.say "What the..."
         show aletta stuned
-        show camila talkative
+        show camila talk
         camila.say "Miss Applebaum..."
         camila.say "You are also under arrest on suspicion of being an accessory to the murder of Dwayne Jackson."
         camila.say "And all the good stuff my colleague already said to your colleagues applies to you too!"
@@ -3977,7 +3977,7 @@ label cherie_event_09:
         show camila at center, traveling(1.25, 0.3, (340, 880))
         show aletta normal at center, zoomAt(1.25, (940, 880)) with easeinright
         "Because Aletta comes sweeping out, oozing confidence as she glares down at him."
-        show aletta talkative
+        show aletta talk
         aletta.say "Can I help you two?"
         aletta.say "I thought that I already answered all of your questions?"
         show camila annoyed
@@ -4015,7 +4015,7 @@ label cherie_event_09:
         show camila upset
         show aletta normal
         "Aletta turns her gaze on Camila, staring the tough cop down."
-        show aletta talkative
+        show aletta talk
         aletta.say "You really do need to learn to keep a lid on that temper of yours, Detective."
         aletta.say "I was about to add - until I am provided with legal representation."
         show inspector at startle(0.1, -5)
@@ -4089,7 +4089,7 @@ label cherie_event_09:
             "Camila and I exchange a subtle nod."
             "And then we go back to pretending to be on opposite sides."
         elif cherie.flags.dwaynedeath_mikeselfdefense:
-            show camila talkative
+            show camila talk
             camila.say "There's still time to change your story, [hero.name]."
             camila.say "I don't know why you're doing this, I really don't..."
             camila.say "You could be in jail for the rest of your life!"
@@ -4164,7 +4164,7 @@ label cherie_event_09:
         "And I fall in beside her, making sure to catch her eye before the detectives reach their destination."
         mike.say "Okay, Aletta..."
         mike.say "Just stick to the plan, okay?"
-        show aletta talkative
+        show aletta talk
         aletta.say "Yeah, yeah..."
         aletta.say "I'm not going to do anything to blow it, [hero.name]."
         hide aletta
@@ -4178,7 +4178,7 @@ label cherie_event_09:
         show inspector zorder 3 at center, traveling(1.25, 0.5, (640, 900))
         show camila at center, traveling(1.25, 0.5, (340, 880))
         "Because Cherie comes sweeping out, looking every bit like a queen holding court."
-        show cherie talkative
+        show cherie talk
         cherie.say "What is all this?"
         cherie.say "Do you two have an appointment?"
         show camila annoyed
@@ -4202,7 +4202,7 @@ label cherie_event_09:
         "Whether she would finally collapse once she was finally arrested."
         "Or if she'd tough it out and keep on playing the dignified widow."
         "But it's not long before I get my answer, as she simply raises an eyebrow."
-        show cherie talkative
+        show cherie talk
         cherie.say "Is that so, Detective?"
         cherie.say "Then I will consent to come with you to the police station."
         cherie.say "But I must inform you that I will not be answering any questions..."
@@ -4216,7 +4216,7 @@ label cherie_event_09:
         show camila upset
         show cherie normal
         "Cherie turns her gaze on Camila, staring the younger woman down."
-        show cherie talkative
+        show cherie talk
         cherie.say "And you do not seem to understand basic manners, Detective."
         cherie.say "If you would have let me finish, I would have added - until my lawyer is present."
         show inspector at startle(0.1, -5)
@@ -4233,7 +4233,7 @@ label cherie_event_09:
         hide camila
         hide inspector
         with dissolve
-        show aletta talkative at center, zoomAt(1.25, (940, 880)) with easeinright
+        show aletta talk at center, zoomAt(1.25, (940, 880)) with easeinright
         aletta.say "[hero.name]…"
         aletta.say "What did she mean by that?"
         show aletta surprised
@@ -4312,7 +4312,7 @@ label cherie_event_09:
         "The craziness seems to drain away, and she lets out a groan as she shake her head."
         show aletta angry
         aletta.say "Urgh..."
-        show aletta talkative
+        show aletta talk
         aletta.say "What am I saying?"
         aletta.say "Bugging us?"
         aletta.say "If I keep on like this, it'll be spying on us with space-lasers next!"
@@ -4401,7 +4401,7 @@ label cherie_event_09:
                 "Aletta's mood seems to lighten almost as soon as I ask the question."
                 show aletta sadsmile
                 "And I think that I can see the first glimmers of hope in her eyes."
-                show aletta talkative
+                show aletta talk
                 aletta.say "You..."
                 aletta.say "You mean..."
                 show aletta normal
@@ -4415,7 +4415,7 @@ label cherie_event_09:
                 show aletta happy at center, traveling(1.75, 0.2, (640, 1200))
                 "Which is why it takes me completely by surprise when she throws her arms around me instead!"
                 "Luckily I manage to shake off my surprise and gently put my arms around her in response a moment later."
-                show aletta talkative
+                show aletta talk
                 aletta.say "Oh god..."
                 aletta.say "Thank you so much, [hero.name]..."
                 aletta.say "I can't tell you how much I needed to hear you say that!"
@@ -4423,7 +4423,7 @@ label cherie_event_09:
                 "The hug goes on for a short while longer, with me gently patttig Aletta on the back."
                 show aletta normal at center, traveling(1.5, 0.5, (640, 1040))
                 "And when it's finally over, she seems to have recovered a little of her normal reserve."
-                show aletta talkative
+                show aletta talk
                 aletta.say "Erm..."
                 aletta.say "Thanks again, [hero.name]..."
                 aletta.say "But I don't think there's any need to tell Cherie about all of this."
@@ -4503,7 +4503,7 @@ label cherie_event_09:
         "So I fall in beside her, making sure to catch her eye before the detectives reach their destination."
         mike.say "Okay, Aletta..."
         mike.say "Just stick to the plan, okay?"
-        show aletta talkative
+        show aletta talk
         aletta.say "Yeah, yeah..."
         aletta.say "I'm not going to do anything to blow it, [hero.name]."
         hide aletta
@@ -4513,7 +4513,7 @@ label cherie_event_09:
         "But before he can do so, the doors swing open and he's forced to take a step backwards."
         show cherie normal at right with easeinright
         "Because Cherie comes sweeping out, looking every bit like a queen holding court."
-        show cherie talkative
+        show cherie talk
         cherie.say "What is all this?"
         cherie.say "Do you two have an appointment?"
         "I can't help wincing, like I'm bracing myself for the ugly scene that's about to unfold."
@@ -4528,7 +4528,7 @@ label cherie_event_09:
             "Michaels" "I hope we're not disturbing you?"
         show cherie surprised
         "Cherie looks from Michaels to Camila and back again, as if she can't quite process what he just said."
-        show cherie talkative
+        show cherie talk
         cherie.say "No, no..."
         cherie.say "Of course not, Detective."
         cherie.say "But I must ask - what are you doing here?"
@@ -4537,12 +4537,12 @@ label cherie_event_09:
         "Though I'd have thought even he could put that aside in a serious situation like this."
         show camila annoyed
         "Luckily for everyone involved, Camila isn't as easily distracted by a pretty face."
-        show camila talkative
+        show camila talk
         camila.say "This is just a brief visit, Madame..."
         camila.say "A courtesy call to inform you of a development in your husband's case."
         "At once I feel a surge of mixed emotions as Camila starts to explain their visit."
         "Anxiety at the mere mention of Dwayne, and hope at the tone of their voices."
-        show cherie talkative
+        show cherie talk
         cherie.say "Is that so?"
         cherie.say "Then you must tell me - what has developed?"
         "By now Michaels seems to have recovered some of his faculties."
@@ -4551,7 +4551,7 @@ label cherie_event_09:
         "Michaels" "Oh yeah, that's it..."
         "Michaels" "We've looked into it from every angle possible."
         "Michaels" "Left no stone unturned, if you know what I mean?"
-        show camila talkative
+        show camila talk
         camila.say "And we've had to conclude that there's no evidence that Mister Jackson is dead."
         camila.say "But there's no evidence to suggest that he's alive either."
         camila.say "So the official line is that he's...missing."
@@ -4575,7 +4575,7 @@ label cherie_event_09:
         "As well as that the next time we meet in private, it's going to be...interesting."
         "Michaels" "Well, I wouldn't necessarily put it like that myself..."
         "Michaels" "But unless new evidence turns up, we're not pursuing this any further."
-        show camila talkative
+        show camila talk
         camila.say "So yeah, [hero.name]…"
         camila.say "You, Miss Applebaum and Missus Jackson are off the hook - for now."
         "The detectives hang around the office a little longer after that."
@@ -4598,7 +4598,7 @@ label aletta_judiciary:
     "Aletta walks toward me."
     show aletta at center, traveling(1.5, 0.5, (640, 1040))
     "Last time I saw her was when the investigation about Dwayne's murder seems to target her."
-    show aletta talkative
+    show aletta talk
     aletta.say "[hero.name], I've excellent news. All charges against me were dropped. Thanks to my amazing lawyer."
     show aletta happy
     aletta.say "Or should I say thanks to you. I am really free now."
@@ -4667,7 +4667,7 @@ label cherie_event_10:
     "And so it comes as a genuine relief when she smiles and nods her head."
     show cherie happy
     cherie.say "It has been so long since I came to a place like this."
-    show cherie talkative
+    show cherie talk
     cherie.say "When I was younger, we were always at the beach, you know?"
     show cherie whining
     cherie.say "But Dwayne...well, he did not have time for this kind of thing."
@@ -4692,7 +4692,7 @@ label cherie_event_10:
     show cherie happy
     cherie.say "Oh, mon ami…"
     cherie.say "Forgive me for laughing, I did not mean to offend you."
-    show cherie talkative
+    show cherie talk
     cherie.say "But you are so different to Dwayne, I cannot help it."
     show cherie normal
     "And I can't help frowning a little at the mention of Dwayne's name."
@@ -4703,7 +4703,7 @@ label cherie_event_10:
     "Cherie nods as I try to explain myself."
     show cherie happy
     cherie.say "I mean precisely that, mon ami…"
-    show cherie talkative
+    show cherie talk
     cherie.say "Dwayne would never have brought me here and done all of this himself."
     cherie.say "He would have thrown his money around, buying everything and swaggering."
     cherie.say "He was not thoughtful and caring like you are."
@@ -4728,7 +4728,7 @@ label cherie_event_10:
     show cherie normal casual at center with dissolve
     mike.say "So..."
     mike.say "I guess Dwayne never put on a spread like this?"
-    show cherie talkative
+    show cherie talk
     cherie.say "Oh no, mon ami…"
     cherie.say "He would have burnt down the house trying to pour a bowl of cereal!"
     show cherie happy
@@ -4741,7 +4741,7 @@ label cherie_event_10:
     "So it comes as a relief when she nods her head and goes back for a second helping."
     show cherie amused
     cherie.say "Mmm…"
-    show cherie talkative
+    show cherie talk
     cherie.say "Sometimes what one really needs are the simpler things in life."
     cherie.say "Wouldn't you agree?"
     show cherie normal
@@ -4762,11 +4762,11 @@ label cherie_event_10:
     show cherie closed at center, traveling(1.5, 0.3, (640, 1040))
     "Cherie leans in close and plants a kiss on my cheek."
     "And once she's done that, she doesn't pull away as much as a fraction of an inch."
-    show cherie talkative
+    show cherie talk
     cherie.say "You know that I never knew how I truly felt about Dwayne?"
     show cherie whining
     cherie.say "I always assumed that what I felt for him was love."
-    show cherie talkative
+    show cherie talk
     cherie.say "But as soon as I met you, became unsure."
     show cherie normal
     "I can feel my heart starting to beat faster as Cherie broaches the subject of love."
@@ -4774,12 +4774,12 @@ label cherie_event_10:
     "But another part of me wants to play it cool and let her get to the point naturally."
     mike.say "Why..."
     mike.say "Why is that?"
-    show cherie talkative
+    show cherie talk
     cherie.say "Because the first time chose to protect me, [hero.name]…"
     cherie.say "The first time you did that and proved that you would never simply use me..."
     show cherie happy
     cherie.say "When that happened, my heart almost burst with an emotion for you."
-    show cherie talkative
+    show cherie talk
     cherie.say "And I soon realised it was love, that it was very different to what I felt for Dwayne."
     show cherie normal
     mike.say "Oh wow..."
@@ -5005,7 +5005,7 @@ label cherie_sub_event_01:
     mike.say "And if there's not enough space..."
     mike.say "I dunno, maybe drop them on the floor?"
     cherie.say "Just what do you mean by that, mon ami?"
-    show cherie work talkative at center, zoomAt(1.0, (340, 730)) with vpunch
+    show cherie work talk at center, zoomAt(1.0, (340, 730)) with vpunch
     cherie.say "What exactly are you expecting me to drop?"
     cherie.say "My very expensive, French designer panties, perhaps?"
     show cherie normal
@@ -5025,7 +5025,7 @@ label cherie_sub_event_01:
     mike.say "And I know that you're probably shouldering more of the burden than me..."
     show cherie amused
     "Cherie waves a hand vaguely in my direction, cutting me off."
-    show cherie talkative
+    show cherie talk
     cherie.say "There is no need to talk to me like that, [hero.name]…"
     cherie.say "To flatter me and tell me how well I am doing."
     cherie.say "You and me, we are far beyond that."
@@ -5037,7 +5037,7 @@ label cherie_sub_event_01:
     show cherie at center, traveling(1.25, 1.0, (440, 880))
     "Cherie nods and closes the door behind her."
     "Which pretty much confirms that what she's about to say is for my ears only."
-    show cherie talkative
+    show cherie talk
     cherie.say "Oh, mon ami…"
     cherie.say "I was so sure that I knew what taking the reins would require of me."
     cherie.say "That I had learned enough from watching Dwayne to be able to take his place."
@@ -5055,7 +5055,7 @@ label cherie_sub_event_01:
     show cherie annoyed
     "I see Cherie's brows furrow as she listens to what I have to say."
     "As if the idea isn't one that she's considered before now."
-    show cherie talkative
+    show cherie talk
     cherie.say "What are you trying to say, mon ami?"
     cherie.say "That I really want to be controlled by another?"
     show cherie normal
@@ -5077,7 +5077,7 @@ label cherie_sub_event_01:
     "Cherie turns back to face me, then walks slowly to the spot I indicated."
     show cherie at center, traveling(1.5, 1.0, (640, 1220))
     "And I watch as she gets down and kneels in front of me, looking up."
-    show cherie talkative
+    show cherie talk
     cherie.say "Okay, mon ami…"
     cherie.say "What would you have me do next?"
     show cherie normal
@@ -5097,7 +5097,7 @@ label cherie_sub_event_01:
     "I make sure to nod my head, encouraging Cherie to say more."
     "But at the same time I make sure to keep quiet myself."
     "Not wanting to influence what she's about to tell me."
-    show cherie talkative
+    show cherie talk
     cherie.say "That is why I married dwayne - not for love, or even for his money..."
     cherie.say "Because I thought that he could protect me and give me purpose."
     show cherie whining
@@ -5114,7 +5114,7 @@ label cherie_sub_event_01:
     "Cherie looks at me with an innocence and helplessness I've never seen in her before."
     "As if all the layers of her commanding persona have been stripped away."
     "And what I'm seeing is the vulnerable core of her being beneath."
-    show cherie talkative
+    show cherie talk
     cherie.say "Please, [hero.name]..."
     cherie.say "That is what I want!"
     cherie.say "Please, show me how to let go?"
@@ -5154,7 +5154,7 @@ label cherie_sub_event_02:
     mike.say "And when I woke up, it was today!"
     show cherie smile
     "Cherie chuckles and shakes her head, gesturing for me to follow her."
-    show cherie talkative
+    show cherie talk
     cherie.say "Oh dear!"
     cherie.say "This simply will not do."
     cherie.say "Come, let me find something to reinvigorate you."
@@ -5171,7 +5171,7 @@ label cherie_sub_event_02:
     mike.say "Do you need me to get you some help?"
     show cherie normal at center, traveling (1.25, 0.5, (440, 880))
     "Cherie waves away my concerns, shaking her head as she collects herself."
-    show cherie talkative
+    show cherie talk
     cherie.say "No, no, no..."
     cherie.say "I am grateful for your attention, mon ami…"
     cherie.say "But it is just the strain of everything, you know?"
@@ -5189,7 +5189,7 @@ label cherie_sub_event_02:
     show cherie normal
     "Cherie's taking a sip of her drink as I ask the question."
     "And I see her eyebrows rise as it stirs her memory of the event."
-    show cherie talkative
+    show cherie talk
     cherie.say "Oh, mon ami…"
     cherie.say "How could I ever forget?"
     show cherie normal
@@ -5277,7 +5277,7 @@ label cherie_sub_event_02:
     "Focussed on her nipples and watching as they get ever harder."
     "She has her thighs pressed tightly together at the same time."
     "And I can only imagine what must be happening to her pussy right now."
-    show cherie talkative
+    show cherie talk
     cherie.say "I..."
     cherie.say "I feel free..."
     cherie.say "Freed from all of my burdens!"
@@ -5297,7 +5297,7 @@ label cherie_sub_event_02:
     "Which I take as an appropriate cue to untie the knots at her wrists."
     "Before I can do anything about it, Cherie slumps out of the chair."
     "And then she slides onto the floor, ending up on all fours."
-    show cherie talkative
+    show cherie talk
     cherie.say "Thank you, mon ami…"
     cherie.say "Your commanding me..."
     cherie.say "It...it unburdens my soul!"

@@ -297,7 +297,7 @@ label bree_gift_sexy_dress_male:
     return
 
 label bree_gift_slutty_dress_male:
-    show bree talkative
+    show bree talk
     bree.say "Hey, [hero.name]..."
     bree.say "What's that you got there, huh?"
     show bree normal
@@ -308,7 +308,7 @@ label bree_gift_slutty_dress_male:
     mike.say "What the..."
     "[bree.name] makes to dart behind me, and I only just manage to keep up with her."
     "Dancing around in an awkward circle and feeling like a harassed crab."
-    show bree talkative
+    show bree talk
     bree.say "Oh come on, [hero.name]..."
     bree.say "I can see it's got wrapping paper and a bow on it."
     bree.say "So it's got to be a present."
@@ -354,7 +354,7 @@ label bree_gift_slutty_dress_male:
         mike.say "That's what inspired me to take a leap of faith."
         "[bree.name] fixes me with a stare that's almost smouldering."
         "And now I can see that she's got an almost hungry smile on her face too."
-        show bree talkative
+        show bree talk
         bree.say "We need an excuse for me to wear this thing, [hero.name]..."
         bree.say "And we need it fast!"
         show bree flirt

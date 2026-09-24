@@ -5,7 +5,7 @@ init -35 python:
     'piercings': ['clit', 'ears', 'navel', 'nipples', 'nose'],
     'haircuts': ['nohaircut', 'haircut'],
     'boobs': ['noboobjob', 'boobjob'],
-    'exps': ['normal', 'angry', 'annoyed', 'cry', 'dazed', 'embarrassed', 'flirt', 'happy', 'joke', 'mindless', 'pain', 'sad', 'sadsmile', 'shocked', 'shout', 'shy', 'stuned', 'surprised', 'talkative', 'upset', 'vangry', 'whining', 'wink', 'wtf'],
+    'exps': ['normal', 'angry', 'annoyed', 'cry', 'dazed', 'embarrassed', 'flirt', 'happy', 'joke', 'mindless', 'pain', 'sad', 'shocked', 'shout', 'shy', 'stuned', 'surprised', 'talk', 'upset', 'whining', 'wink', 'wtf'],
     'outfits': ['casual', 'casual2', 'sport', 'date', 'sexydate', 'sluttydate', 'halloween', 'rpg', 'swimsuit', 'sexyswimsuit', 'towel', 'underwear', 'sleep', 'rope', 'strapon', 'wedding', 'naked'],
     'others': ['pubes', 'collar', 'leash', 'blush', 'cumface', 'cummouth', 'topless', 'bottomless', 'noacc'],
 }
@@ -18,7 +18,6 @@ init -35 python:
         pickers_attrs = Pickers([CollarPicker, PubesPicker, HaircutPicker,  PositionPicker], npc=sasha)(set(attrs))
         
         attrs.extend(pickers_attrs)
-        
         
         sgl_attrs, mult_attrs = anim_attrs_filter(attrs,
         {k: [None, anim_dict[k]] for k in ['positions', 'haircuts', 'boobs', 'exps', 'outfits']},

@@ -117,13 +117,13 @@ label kleio_gift_slutty_dress_male:
     "Yet pushing that fear aside every time I imagine the possibility of it going the other way instead."
     mike.say "Erm..."
     mike.say "Kleio?"
-    show kleio talkative
+    show kleio talk
     kleio.say "Yeah, Loverboy?"
     show kleio normal
     mike.say "I..."
     mike.say "I've got to tell you something."
     "Kleio raises a single eyebrow."
-    show kleio talkative
+    show kleio talk
     kleio.say "Let me guess..."
     kleio.say "Does it have something to do with that box?"
     kleio.say "The one you're failing to hide behind your back?"
@@ -135,7 +135,7 @@ label kleio_gift_slutty_dress_male:
     mike.say "Not that there would be - I'm sure you don't attract flies!"
     "Kleio looks at me with her usual withering frown."
     "But she takes the box from me all the same."
-    show kleio talkative
+    show kleio talk
     kleio.say "Okay..."
     kleio.say "So I take it this is...what, a gift?"
     kleio.say "You know most people explain that kind of thing when they hand it over?"
@@ -166,7 +166,7 @@ label kleio_gift_slutty_dress_male:
         "Kleio laughs out loud, throwing her head back as she does so."
         "And she tosses the dress over her shoulder, holding it there like a jacket."
         "A move that instantly reminds me of how much the damn thing cost!"
-        show kleio talkative
+        show kleio talk
         kleio.say "Tell you what, Loverboy..."
         kleio.say "I'll take this thing home with me."
         kleio.say "And I'll promise to wear it some time soon."

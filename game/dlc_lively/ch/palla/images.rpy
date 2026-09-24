@@ -4,7 +4,7 @@ init -35 python:
     'positions': ['a', 'b'],
     'piercings': ['clit', 'ears', 'lips', 'navel', 'nipples', 'nose'],
     'haircuts': ['nohaircut', 'haircut'],
-    'exps': ['normal', 'angry', 'annoyed', 'blank', 'cry', 'flirt', 'grumpy', 'happy', 'joke', 'mindless', 'sad', 'sadsmile', 'shy', 'stuned', 'submissive', 'surprised', 'talkative', 'vangry', 'vulnerable', 'whining', 'wink'],
+    'exps': ['normal', 'angry', 'annoyed', 'blank', 'cry', 'flirt', 'grumpy', 'happy', 'joke', 'mindless', 'sad', 'sadsmile', 'shy', 'stuned', 'submissive', 'surprised', 'talk', 'vangry', 'vulnerable', 'whining', 'wink'],
     'outfits': ['casual', 'sport', 'date', 'sexydate', 'sluttydate', 'swimsuit', 'sexyswimsuit', 'halloween', 'wedding', 'underwear', 'naked'],
     'others': ['collar', 'pubes', 'blush', 'facecum', 'bottomless', 'topless', 'noacc'],
     'accessories': ['gag', 'wallet', 'glasses'],

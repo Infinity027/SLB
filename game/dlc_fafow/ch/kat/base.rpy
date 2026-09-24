@@ -671,7 +671,7 @@ label kat_jack_propose_male:
         show jack normal
         show kat happy
         "Kat chuckles and shakes her head."
-        show kat talkative
+        show kat talk
         kat.say "Ah, it's not that crazy of me."
         kat.say "I've had more fun with you both these past few weeks than I have in years."
         kat.say "And sure, it's kind of spur of the moment..."
@@ -806,7 +806,7 @@ label kat_jack_propose_male:
         show jack surprised
         kat.say "Will you two shut the hell up?"
         kat.say "What I mean is that I don't want to marry either of you."
-        show kat talkative
+        show kat talk
         kat.say "We have something really fun going on right now."
         kat.say "But I don't know if that's how I want to spend the rest of my life."
         show kat sad

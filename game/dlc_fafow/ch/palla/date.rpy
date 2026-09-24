@@ -24,7 +24,7 @@ label palla_date_amusement_park_male:
     mike.say "You make it sound like you don't want to be here!"
     show palla wink
     "Palla gives me a tiny smile the really doesn't tell me anything at all."
-    show palla talkative
+    show palla talk
     palla.say "Oh, if I didn't want to be here, then I wouldn't."
     palla.say "You can be sure of that, [hero.name]."
     palla.say "But you are going to have to try extra hard to impress me."

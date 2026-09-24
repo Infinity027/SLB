@@ -332,7 +332,7 @@ label hanna_belly_caress_male:
     return
 
 label hanna_belly_listen_male:
-    show hanna talkative at center, zoomAt(1.25, (640, 880))
+    show hanna talk at center, zoomAt(1.25, (640, 880))
     pause 0.2
     show hanna at center, traveling(2.0, 1.0, (640, 980))
     hanna.say "Well..."

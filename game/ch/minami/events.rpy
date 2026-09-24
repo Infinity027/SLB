@@ -1095,7 +1095,7 @@ label angela_visit:
     show angela happy
     angela.say "Ha, ha!"
     angela.say "Oh, I've missed how much you make me laugh, [hero.name]."
-    show angela talkative
+    show angela talk
     angela.say "And you, Minami - the house is so quiet without you!"
     show angela normal
     "I guess I should take a moment to address the elephant in the room."
@@ -1114,7 +1114,7 @@ label angela_visit:
     show minami casual normal at right5
     with fade
     mike.say "You must be tired from the drive over here, Mom?"
-    show minami talkative
+    show minami talk
     minami.say "Yeah, Mom - you should go in and sit down on the sofa."
     show minami happy
     minami.say "[hero.name] can get your bags from the car for you."
@@ -1126,11 +1126,11 @@ label angela_visit:
     "Mom chuckles at the sight and sound of us suddenly squabbling in front of her."
     angela.say "Ah, now that reminds me of home!"
     angela.say "It's good to know that you two have been getting on so well."
-    show angela talkative
+    show angela talk
     angela.say "[hero.name], it would be a great help if you could get my bags."
     angela.say "But I want you to help out too, Minami - okay?"
     show angela normal
-    show minami a talkative
+    show minami a talk
     "Together" "OKAY MOM!"
     scene bg house with fade
     "And just like that we both snap to attention, each eager to look good in our Mom's eyes."
@@ -1145,7 +1145,7 @@ label angela_visit:
     mike.say "Thanks for the help, Min..."
     show minami c annoyed
     minami.say "Shh!"
-    show minami c talkative
+    show minami c talk
     minami.say "Just shut up and listen!"
     show bg door entrance at center, traveling(1.35, 0.3, (640, 940))
     show minami c annoyed at center, traveling(1.25, 0.3, (840, 880))
@@ -1155,7 +1155,7 @@ label angela_visit:
     with blinds
     "Immediately I see that Mom's standing in the middle of the sitting room, rather than sitting down."
     "She has her mobile to her ear, and it appears that we've walked in half way through a call."
-    show angela talkative a pinch
+    show angela talk a pinch
     angela.say "No, no - everything's fine, dear."
     show angela normal a pinch
     "Realising that she must be talking to Dad, I make to ask Minami what's up with her listening in."
@@ -1170,7 +1170,7 @@ label angela_visit:
     show minami c annoyed
     "Minami hisses the word, making me do as I'm told."
     scene bg livingroom
-    show angela casual talkative a pinch
+    show angela casual talk a pinch
     with blinds
     angela.say "Of course they're behaving like they did back home."
     angela.say "But the bickering and fighting like kids is just for show, trust me."
@@ -1180,7 +1180,7 @@ label angela_visit:
     show angela protest a pinch
     angela.say "No, I'm not going to ask them about it just yet."
     angela.say "It could be too early, and that'd blow the whole thing."
-    show angela talkative a pinch
+    show angela talk a pinch
     angela.say "We've waited decades for this to happen, dear."
     angela.say "So a couple of days isn't going to matter."
     angela.say "Just trust me - I was the one that picked Minami out in the first place."

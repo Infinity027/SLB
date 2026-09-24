@@ -279,12 +279,12 @@ label command_nickname_harmony:
 label submissive_interact_harmony_male:
     mike.say "Hey, Harmony..."
     mike.say "I had a great idea."
-    show harmony talkative
+    show harmony talk
     harmony.say "Ooh, tell me all about it, [hero.name]!"
     show harmony normal
     mike.say "Well, I know how you're keen on Jesus."
     mike.say "And I know that you like a certain part of my anatomy..."
-    show harmony talkative
+    show harmony talk
     harmony.say "Ah...I think I can guess where this is going!"
     show harmony normal
     mike.say "So how about you telling me that you want to worship my cock?"

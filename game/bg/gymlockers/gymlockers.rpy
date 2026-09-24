@@ -41,4 +41,3 @@ label take_a_shower_gym:
     stop sound
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

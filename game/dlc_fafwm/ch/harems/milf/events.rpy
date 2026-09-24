@@ -162,7 +162,7 @@ label milf_harem_event_01:
     show mikemc happy
     mike.say "Oh..."
     mike.say "Okay, Claire..."
-    show mikemc talkative
+    show mikemc talk
     mike.say "When should I expect to..."
     mike.say "Huh?"
     hide screen smartphone_calling
@@ -177,7 +177,7 @@ label milf_harem_event_01:
     scene bg house
     show claire happy casual
     with dissolve
-    show claire talkative
+    show claire talk
     claire.say "Phew..."
     claire.say "Here I am!"
     claire.say "I came as fast as I could."
@@ -194,7 +194,7 @@ label milf_harem_event_01:
     mike.say "But I don't like the thought of you stuck at home on your own."
     show claire happy
     "Claire pleaseds and waves a hand vaguely in the air, dismissing my concerns."
-    show claire talkative
+    show claire talk
     claire.say "Oh, don't be silly!"
     claire.say "It's my pleasure, really."
     claire.say "And anyway, this place could use a woman's touch."
@@ -222,7 +222,7 @@ label milf_harem_event_01:
     show claire happy
     "Claire pulls her head out of the cupboard long enough to shake her head at me."
     "And then she proceeds to dive straight into the next one."
-    show claire talkative
+    show claire talk
     claire.say "You're being silly again, [hero.name]!"
     claire.say "It would be my pleasure to cook for you."
     show claire startle
@@ -243,7 +243,7 @@ label milf_harem_event_01:
     "Because it doesn't take her long to root out the ingredients she needs and toss it all together."
     "The collection of mismatched stuff bubbling away on the stove and starting to smell damn good too."
     "So good that I can't keep myself from leaning in closer and inhaling deeply, much to Claire's delight."
-    show claire talkative
+    show claire talk
     claire.say "You see, [hero.name]?"
     claire.say "I'm a magician in the kitchen!"
     show claire happy
@@ -267,7 +267,7 @@ label milf_harem_event_01:
     show kiara smile casual at center, zoomAt(1, (640, 720))
     with dissolve
     "But when I open the door, I almost freak out at the sight that awaits me."
-    show kiara talkative
+    show kiara talk
     kiara.say "Good evening, [hero.name]."
     kiara.say "Apologies for coming over unannounced."
     show kiara flirt at center, traveling(1.6, 1, (640, 1070))
@@ -309,7 +309,7 @@ label milf_harem_event_01:
     mike.say "Just knocking up a little something for myself, you know?"
     mike.say "Nothing special, just a bunch of leftovers, that's all."
     "Kiara nods as she takes a step into the hallway, despite my efforts to block her path."
-    show kiara talkative
+    show kiara talk
     kiara.say "That reminds me of the cooking from the old country!"
     kiara.say "And I haven't yet eaten tonight..."
     kiara.say "Surely you can spare a little for me?"
@@ -328,12 +328,12 @@ label milf_harem_event_01:
     show kiara stuned casual at center, zoomAt(1, (320, 720))
     with pushleft
     "Arriving on her heels as Claire looks up from what she's doing."
-    show claire b talkative at startle(0.1, 5)
+    show claire b talk at startle(0.1, 5)
     claire.say "Oh..."
     claire.say "Hello there - are you one of [hero.name]'s housemates?"
     show kiara annoyed at hshake
     pause 0.7
-    show kiara talkative with dissolve
+    show kiara talk with dissolve
     kiara.say "I most certainly am not!"
     kiara.say "Who are you?"
     show kiara whining
@@ -645,7 +645,7 @@ label milf_harem_event_02:
     "Cherie pauses long enough to look back over her shoulder at me."
     show cherie a happy
     cherie.say "Oh, nothing serious, mon ami…"
-    show cherie a talkative
+    show cherie a talk
     cherie.say "Just a little...strategy meeting!"
     show cherie a wink
     "Cherie's slight pause there is more than enough to set my mind racing."
@@ -666,7 +666,7 @@ label milf_harem_event_02:
     show cherie a work annoyed zorder 4 at center, zoomAt(1.25, (440, 900)) with fade
     "But when Cherie turns to face me, I can see she looks totally serious."
     "Dropping an armful of files onto the desk in front of her."
-    show cherie a talkative
+    show cherie a talk
     cherie.say "Oh, [hero.name]…"
     cherie.say "Your double entendres are so cute!"
     cherie.say "But I am afraid that I am being quite serious this time."
@@ -679,7 +679,7 @@ label milf_harem_event_02:
     show cherie a smile at center, traveling(1.5, 1.0, (640, 1040))
     "But it doesn't seem like my efforts have worked, as Cherie smiles and walks over to me."
     "And once she's close enough, I feel her jab me playfully in the ribs with her elbow."
-    show cherie a talkative
+    show cherie a talk
     cherie.say "But do not worry, mon ami…"
     cherie.say "We will schedule a...comfort break afterwards, no?"
     show cherie a happy
@@ -696,7 +696,7 @@ label milf_harem_event_02:
     "As one, Cherie and I turn to glance in the direction of the noise."
     show claire casual zorder 3 at center, zoomAt(1.25, (340, 880)) with easeinleft
     "Which means that we're in time to see the door swing open and someone bustle through it."
-    show claire talkative
+    show claire talk
     claire.say "[hero.name]…"
     claire.say "Oh, [hero.name]?"
     claire.say "Where are you, you cheeky little thing?"
@@ -708,7 +708,7 @@ label milf_harem_event_02:
     "And a second later also caught off-guard by Cherie hopping away from me."
     "As I realise that she was in the middle of putting a hand on the curve of my butt!"
     show claire disappointed
-    show cherie a talkative
+    show cherie a talk
     cherie.say "So, [hero.name]…"
     cherie.say "Aren't you going to introduce me to your visitor?"
     show cherie a normal
@@ -718,7 +718,7 @@ label milf_harem_event_02:
     show claire sadsmile blush
     "I can see that Claire's already starting to flush from the embarrassment."
     "And for want of knowing what else to do, she thrusts the basket she's holding towards me."
-    show claire talkative
+    show claire talk
     claire.say "I..."
     claire.say "I just made you a wholesome packed lunch, that's all!"
     claire.say "And the girl at the reception desk told me I could bring it to you."
@@ -747,7 +747,7 @@ label milf_harem_event_02:
     show claire conceited
     "And she keeps on glaring at Cherie like a jealous feline eyeing a rival that's strutted onto its turf."
     "Cherie, on the other hand, seems to find the whole situation increasingly amusing."
-    show cherie a talkative
+    show cherie a talk
     cherie.say "And who is your little friend here, [hero.name]?"
     cherie.say "So sweet and just as wholesome as her home-cooking..."
     cherie.say "That she comes to bring you whilst you are at work!"
@@ -757,7 +757,7 @@ label milf_harem_event_02:
     mike.say "We've known each other for years."
     show cherie a amused
     "Cherie raises her eyebrows in a show of exaggerated interest."
-    show cherie a talkative at center, zoomAt(1.25, (800, 880)) with ease
+    show cherie a talk at center, zoomAt(1.25, (800, 880)) with ease
     cherie.say "The adoptive mother of a friend you had when you were a boy?"
     cherie.say "And yet here she is, being motherly to you now that you are a man!"
     show cherie a amused
@@ -806,7 +806,7 @@ label milf_harem_event_02:
         "I'm kind of flinching on the inside, expecting an explosion any moment."
         show cherie a amused
         "So it comes as a genuine surprise when Cherie sidles towards Claire."
-        show cherie a talkative
+        show cherie a talk
         cherie.say "So, you desire for [hero.name] to save you, no?"
         cherie.say "You wish for him to be your knight in the shining armour?"
         show cherie a normal
@@ -819,7 +819,7 @@ label milf_harem_event_02:
         show claire disappointed
         show cherie a amused
         "Cherie raises her eyebrows in genuine amusement as Claire fires back at her."
-        show cherie a talkative
+        show cherie a talk
         cherie.say "There is really nothing to he ashamed of here, Claire..."
         cherie.say "We both know how hard it is to be dominated by a brute of a man."
         cherie.say "And it is only natural that you would want to exchange that for being dominated by a good, loving one instead."
@@ -893,14 +893,14 @@ label milf_harem_event_02:
             "And at first I can see that Claire and Cherie are both glaring at me."
             show claire normal
             "But the former is the first to break, a little smile creeping onto her face."
-            show claire talkative
+            show claire talk
             claire.say "Oh, [hero.name]…"
             claire.say "You're the devil himself!"
             show claire normal
             "For a moment I think that Cherie's going to object to what Claire's saying."
             show cherie a normal
             "But then she shakes her head and lets out a sigh."
-            show cherie a talkative
+            show cherie a talk
             cherie.say "Ah, she is right, mon ami..."
             cherie.say "You do have a little of the demonic about you!"
             show cherie a normal
@@ -934,7 +934,7 @@ label milf_harem_event_02:
         "Without saying a word, Cherie places her lips against mine."
         "Then Claire does the same, so that all three of us are united in the kiss."
         "And only once it's over do they answer my question."
-        show claire talkative
+        show claire talk
         claire.say "I'm not sure what it means yet, [hero.name]…"
         claire.say "But I think we're going to have a lot of fun finding out!"
         show claire happy
@@ -969,7 +969,7 @@ label milf_harem_event_02:
         show claire whining at center, traveling(1.25, 0.5, (640, 880))
         claire.say "Oh my goodness me!"
         claire.say "These foreign types, they can be so dramatic, can't they?"
-        show claire talkative
+        show claire talk
         claire.say "You don't need that kind of stress in your life."
         claire.say "No, what you need is someone that's sensible and reliable."
         show claire normal
@@ -1004,7 +1004,7 @@ label milf_harem_event_02:
         show cherie a whining at center, traveling(1.25, 0.5, (640, 880))
         cherie.say "Oh dear, mon ami..."
         cherie.say "We seem to have offended the little housewife!"
-        show cherie a talkative
+        show cherie a talk
         cherie.say "But do not worry, I am far harder to upset."
         cherie.say "And look, she has kindly left us with lunch!"
         show cherie a smile
@@ -1179,16 +1179,16 @@ label milf_harem_event_03:
     "Claire is the first to take up her glass, sipping and looking quite mollified."
     play sound glass_wine
     "But soon enough the others are taking a drink too."
-    show claire talkative
+    show claire talk
     claire.say "Thank you, [hero.name], the wine is very nice."
     show claire furious
     claire.say "But you're still a big, lying bastard!"
     show claire upset
-    show cherie a talkative
+    show cherie a talk
     cherie.say "Yes, mon ami…"
     cherie.say "I hope to never have to negotiate a contract with you."
     show cherie a annoyed
-    show kiara talkative
+    show kiara talk
     kiara.say "Makes me wonder if you play poker, you know?"
     kiara.say "How good are you at bluffing?"
     show kiara mischievous
@@ -1215,10 +1215,10 @@ label milf_harem_event_03:
         claire.say "Huh?"
         claire.say "Aren't we supposed to be mad at him for dating us all at once?"
         show claire stuned
-        show cherie a talkative
+        show cherie a talk
         cherie.say "Not if he can actually pull it off."
         show cherie a annoyed
-        show kiara talkative
+        show kiara talk
         kiara.say "If he can deliver, then I might be interested in the offer."
         show kiara mischievous
         mike.say "Well, if that's what you guys want..."
@@ -1581,7 +1581,7 @@ label milf_harem_event_04:
     "But when I walk into the club and the very well dressed goons on the door wave me through to the lounge, I realise that I must be early."
     "As Kiara's the only one already there, looking as stunning as ever and beckoning me over to join her."
     scene nightclubbar
-    show kiara date talkative at center
+    show kiara date talk at center
     show layer master at lparty
     with dissolve
     kiara.say "[hero.name], welcome!"
@@ -1595,7 +1595,7 @@ label milf_harem_event_04:
     pause 0.7
     show kiara smile at startle(0.1, 5)
     "Kiara throws her head back and lets out a peal of laughter."
-    show kiara talkative
+    show kiara talk
     kiara.say "A beer?"
     kiara.say "How quaint!"
     kiara.say "But no, no beer for you."
@@ -1607,7 +1607,7 @@ label milf_harem_event_04:
     "I watch as Kiara clicks her fingers and the bartender instantly leaps into action."
     "Glasses clatter and bottles clink as they deftly mix up a complex cocktails right in front of me."
     "And when it's done, Kiara picks up the glass and hands it to me, nodding eagerly."
-    show kiara talkative
+    show kiara talk
     kiara.say "Try it, [hero.name]…"
     kiara.say "This is a creation of my own."
     kiara.say "I call it an 'Ice-Pick'!"
@@ -1628,7 +1628,7 @@ label milf_harem_event_04:
     "A sudden pain blossoms inside of my skull, and then just as quickly fades again."
     "Reminding me of the effects that come along with an ice-cream headache."
     "But Kiara doesn't seem to be in the least bit concerned by my cry of pain."
-    show kiara talkative
+    show kiara talk
     kiara.say "You see now where the name comes from?"
     kiara.say "Drinking it is like the ice-pick to the skull, no?"
     kiara.say "Like a good old-fashioned way of whacking your enemies!"
@@ -1660,7 +1660,7 @@ label milf_harem_event_04:
     show claire a date haircut conceited at left with easeinleft
     "As soon as she sees us, Claire looks relieved and hurries over."
     "Glancing around the place as she closes the short distance between us."
-    show claire talkative
+    show claire talk
     claire.say "If this is humble, Kiara..."
     claire.say "I'd have to see what you call fancy!"
     show claire happy
@@ -1669,7 +1669,7 @@ label milf_harem_event_04:
     "Kiara just laughs at the comment and clicks her fingers again."
     "Which soon results in another cocktail appearing on the bar."
     "The sight of which does seem to improve Claire's mood somewhat."
-    show claire talkative
+    show claire talk
     claire.say "Oh my!"
     claire.say "That's pretty fancy too."
     show claire normal
@@ -1679,7 +1679,7 @@ label milf_harem_event_04:
     mike.say "These things are bloody strong."
     mike.say "You don't want to get plastered, do you?"
     "Claire lets out a gasp and wipes her mouth on the back of her hand."
-    show claire talkative
+    show claire talk
     claire.say "Urgh..."
     claire.say "Don't I?"
     claire.say "If you'd had the kind of day I have, you wouldn't be saying that!"
@@ -1709,7 +1709,7 @@ label milf_harem_event_04:
     "Indeed I can tell from the look on her face that she's impressed with Kiara's club."
     "And she seems to fit in perfectly too, dressed for the décor and confident of her right to be here."
     mike.say "Hi, Cherie."
-    show claire talkative
+    show claire talk
     claire.say "Oh, hello, Cherie!"
     show claire normal
     show kiara remorse at startle(0.1, -5)
@@ -1747,7 +1747,7 @@ label milf_harem_event_04:
     "Suddenly Cherie seems to realise that Claire and I are staring at her in amazement."
     "Kiara, in contrast, is smiling and looking on with genuine interest."
     show claire sadsmile
-    show cherie talkative
+    show cherie talk
     cherie.say "Of course I am a tumult of emotions at the moment."
     cherie.say "And I am not saying that my husband is dead, you understand?"
     cherie.say "He is merely missing - a fact which the police do not seem to appreciate!"
@@ -1763,14 +1763,14 @@ label milf_harem_event_04:
     "And when she lets it out again and opens her eyes, it's with renewed focus and control."
     show cherie amused at startle(0.1, -5)
     cherie.say "Hmm..."
-    show cherie talkative
+    show cherie talk
     cherie.say "Yes, {i}mon ami…{/i}"
     cherie.say "This detective they have put on the case..."
     cherie.say "He is like a Blood Hound with a scent - he will not give up!"
     show cherie annoyed
     "I can't help frowning as I nod along to what Cherie's saying."
     "Claire doing the same as she sips on her own cocktail."
-    show kiara talkative at startle(0.1, -5)
+    show kiara talk at startle(0.1, -5)
     kiara.say "Ah..."
     kiara.say "What problems we endure, my friends!"
     kiara.say "If only there were something that we could do about it."
@@ -1784,7 +1784,7 @@ label milf_harem_event_04:
     pause 0.5
     show kiara dreaming
     "As we do so, she smiles and looks around at the room we're standing in."
-    show kiara talkative
+    show kiara talk
     kiara.say "Oh, how forgetful of me - one of us is all of those things!"
     show kiara smile
     show cherie normal
@@ -1793,14 +1793,14 @@ label milf_harem_event_04:
     mike.say "We can use her underworld connections to stick it to those assholes!"
     show kiara pout at startle(0.1, 5)
     kiara.say "Hmm..."
-    show kiara talkative
+    show kiara talk
     kiara.say "I prefer to use the term 'legitimate business associates'."
     show kiara normal
     show claire whining
     claire.say "Oh no..."
     claire.say "Nobody's going to get hurt, are they?"
     show claire sad
-    show cherie talkative
+    show cherie talk
     cherie.say "What exactly do you have in mind?"
     cherie.say "Remember that I have the law breathing down my neck already!"
     show cherie annoyed
@@ -1818,13 +1818,13 @@ label milf_harem_event_04:
         show kiara upset
         "By now all four of us are huddled together."
         "Listening closely as Kiara details her plan."
-        show kiara talkative
+        show kiara talk
         kiara.say "First they will warn."
         kiara.say "If that does not work, they will offer a small bribe."
         kiara.say "And finally, they will administer physical incentives."
         show kiara mischievous
         mike.say "I can help organise the goon squads!"
-        show cherie talkative
+        show cherie talk
         cherie.say "I can maximise your utilisation of resources."
         show cherie normal
         show claire startle
@@ -1855,7 +1855,7 @@ label milf_harem_event_04:
                 mike.say "So then we resort to the stick instead."
                 show kiara normal
                 "Kiara nods, showing her approval."
-                show kiara talkative
+                show kiara talk
                 kiara.say "Sounds like a plan to me."
                 kiara.say "Come on, let's get the ball rolling."
                 show kiara normal
@@ -1869,7 +1869,7 @@ label milf_harem_event_04:
                 show kiara dreaming
                 "But the authority with which I'm speaking seems to cow her into submission."
                 "Because she nods, making a point of not looking me in the eye."
-                show kiara talkative
+                show kiara talk
                 kiara.say "Yes, [hero.name]…"
                 kiara.say "I know just the men for the job."
                 kiara.say "And I will personally guarantee their success."
@@ -1921,7 +1921,7 @@ label milf_harem_event_05:
     show claire pained
     claire.say "But you said that the last time!"
     show claire sad
-    show cherie a talkative
+    show cherie a talk
     cherie.say "She is right, mon ami, you did."
     show cherie a annoyed
     show kiara angry
@@ -1942,14 +1942,14 @@ label milf_harem_event_05:
     "As they begin to gasp and coo at the sight of the place where we're going to be spending some time."
     "But then I suppose that I should see it as a blessing in disguise, as all the complaining stops in an instant."
     "And they all grab their bags, making a bee-line for the cute little cabana that overlooks the sand."
-    show claire talkative
+    show claire talk
     claire.say "Ooh..."
     claire.say "Have you ever seen anything so great as that?"
     show claire normal
     show cherie a happy
     cherie.say "Not since I was sunning myself on the sands back home!"
     show cherie a smile
-    show kiara talkative
+    show kiara talk
     kiara.say "And we've got it all to ourselves!"
     show kiara normal
     "I watch with a growing feeling of pride as the girls hurry into the cabana and get settled in."
@@ -1970,14 +1970,14 @@ label milf_harem_event_05:
     "Which, as I'm totally unprepared, bounces off the side of my head."
     hide beach_volleyball_ball_front_03 with easeoutbottom
     mike.say "OUCH!"
-    show claire talkative
+    show claire talk
     claire.say "Come on, [hero.name]…"
     claire.say "You can be on my team!"
     show claire normal
     show cherie a happy
     cherie.say "You may have him, Claire."
     show cherie a smile
-    show kiara talkative
+    show kiara talk
     kiara.say "That way it will be easier for us to win!"
     show kiara smile
     if kiara.sub <= -50:
@@ -2080,7 +2080,7 @@ label milf_harem_event_05:
     show cherie whining at startle(0.1, -5)
     cherie.say "Me too!"
     show cherie sadsmile
-    show kiara talkative at startle(0.1, -5)
+    show kiara talk at startle(0.1, -5)
     kiara.say "How could we forget?"
     show kiara sadsmile
     "I get the pleasure of watching the show as the girls all begin squeezing out sun-screen."
@@ -2105,13 +2105,13 @@ label milf_harem_event_05:
     "So what else is a guy supposed to do?"
     if cherie.sub <= -25 and kiara.sub <= -25:
 
-        show cherie talkative at startle(0.1, -5)
+        show cherie talk at startle(0.1, -5)
         cherie.say "I will take this spot here."
         cherie.say "Kiara the one to my side."
         cherie.say "Claire, you will go here."
         show cherie normal
         show claire normal
-        show kiara talkative at startle(0.1, -5)
+        show kiara talk at startle(0.1, -5)
         kiara.say "[hero.name], you will work in this precise order."
         kiara.say "And you will not move on to the next part until we are satisfied!"
         show kiara normal
@@ -2231,7 +2231,7 @@ label milf_harem_event_05:
     show kiara naked smile at center, zoomAt(1.5, (940, 1080)) with easeinbottom
     "But when I look down, one of the straps of Kiara's swimming costume has fallen down."
     "It's hooked around my fingers, leaving one of her breasts exposed for everyone to see."
-    show kiara talkative
+    show kiara talk
     kiara.say "[hero.name]…"
     kiara.say "You wicked beast of a man..."
     kiara.say "Look at what you've gone and done!"
@@ -2249,13 +2249,13 @@ label milf_harem_event_05:
     "My head snaps around again, this time to look at Claire."
     "And I see her drop her swimming costume onto the sand."
     "As she lies there totally naked, yet trying to look completely innocent at the same time."
-    show kiara talkative
+    show kiara talk
     kiara.say "We should have our revenge on him, shouldn't we?"
     show kiara flirt
     show cherie happy
     cherie.say "Give him a taste of his own medicine, perhaps?"
     show cherie normal
-    show claire talkative
+    show claire talk
     claire.say "Yeah, let's get him!"
     show claire happy
     "As one, the three of them pounce on me."
@@ -2272,14 +2272,14 @@ label milf_harem_event_05:
     "And ways that can involve more than one pair of hands too."
     "So sitting up on the sand, I nod my head downwards."
     mike.say "You guys fancy a challenge?"
-    show claire talkative
+    show claire talk
     claire.say "Oh..."
     claire.say "What do you mean by that?"
     show claire normal
-    show cherie talkative
+    show cherie talk
     cherie.say "Whatever it is, I think it involves his manhood!"
     show cherie normal
-    show kiara talkative
+    show kiara talk
     kiara.say "I know that we are equal to anything involving that!"
     show kiara normal
     mike.say "Is that so, Kiara?"
@@ -2979,7 +2979,7 @@ label milf_after_beach_sex:
     mike.say "The sound of the sea, the stars overhead - and the three most beautiful women in the world."
     "I know that's a pretty cheesy line, and it earns me a round of groans and more than one shove on the shoulder."
     "But I can see that the girls are feeling a warmth that's coming from somewhere aside from the fire too."
-    show claire talkative blush
+    show claire talk blush
     claire.say "Oh, [hero.name]…"
     claire.say "You really have freed my heart, you know?"
     show claire happy
@@ -3046,13 +3046,13 @@ label cherie_claire_kiara_male_ending:
     mike.say "Oh man..."
     mike.say "You guys look SO beautiful."
     mike.say "I can't believe this is actually happening!"
-    show claire talkative
+    show claire talk
     claire.say "I know, I know!"
     show claire happy
-    show cherie talkative
+    show cherie talk
     cherie.say "It is like a waking dream, mon ami!"
     show cherie smile
-    show kiara talkative
+    show kiara talk
     kiara.say "I keep having to pinch myself!"
     show kiara smile
     "Priest" "Ahem..."
@@ -3070,7 +3070,7 @@ label cherie_claire_kiara_male_ending:
     "Not until we make it to the actual vows that are going to be exchanged."
     "Priest" "Do you, Claire..."
     "Priest" "Take these three to be your partners?"
-    show claire talkative at startle (0.05, -10)
+    show claire talk at startle (0.05, -10)
     claire.say "I do."
     show claire normal
     "Priest" "Do you, Cherie..."
@@ -3080,7 +3080,7 @@ label cherie_claire_kiara_male_ending:
     show cherie smile
     "Priest" "Do you, Kiara..."
     "Priest" "Take these three to be your partners?"
-    show kiara talkative at startle (0.05, -10)
+    show kiara talk at startle (0.05, -10)
     kiara.say "I do."
     show kiara smile
     "Priest" "And what about you, [hero.name]?"
@@ -3088,9 +3088,9 @@ label cherie_claire_kiara_male_ending:
     mike.say "You bet I do!"
     "The priest nods."
     "Priest" "And what about the three of you?"
-    show claire talkative
-    show cherie talkative
-    show kiara talkative
+    show claire talk
+    show cherie talk
+    show kiara talk
     "Claire, Cherie & Kiara" "We share him, and he shares us!"
     show claire normal
     show cherie normal

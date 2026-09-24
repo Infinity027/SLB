@@ -278,7 +278,7 @@ label lavish_belly_kiss_male:
     mike.say "Lavish..."
     "As if she can sense my emotions from the tone of my voice, Lavish begins to chuckle."
     "And she looks at me with those beguiling eyes of hers, amused to hear what I have to say."
-    show lavish talkative
+    show lavish talk
     lavish.say "Yes, [hero.name]…"
     lavish.say "Was there something you wanted to ask me?"
     show lavish normal
@@ -378,13 +378,13 @@ label lavish_belly_listen_male:
     "But then I guess that Lavish sees me putting an ear to her belly."
     "And that must be enough to pique her interest."
     "As she stops pulling away and lets me get on with it."
-    show lavish a talkative
+    show lavish a talk
     lavish.say "Ah..."
     lavish.say "You mind if I ask something, [hero.name]?"
     show lavish a normal
     mike.say "No, Lavish..."
     mike.say "Ask away..."
-    show lavish a talkative
+    show lavish a talk
     lavish.say "Okay, here goes..."
     lavish.say "You mind telling me what in the hell you're doing?"
     show lavish a embarrassed
@@ -392,7 +392,7 @@ label lavish_belly_listen_male:
     "But as I want to be able to keep on going, I decide to humour her."
     mike.say "I'm listening to the baby, of course."
     mike.say "What else would I be doing down here?"
-    show lavish a talkative
+    show lavish a talk
     lavish.say "Oh, of course..."
     lavish.say "How silly of me not to get that!"
     lavish.say "So..."
@@ -401,7 +401,7 @@ label lavish_belly_listen_male:
     mike.say "It's pretty wild, Lavish..."
     mike.say "Like listening to one of those chill-out tracks."
     mike.say "You know, the one's with the whale sounds in them?"
-    show lavish a talkative
+    show lavish a talk
     lavish.say "Hey, you should know better than that!"
     show lavish a wink
     lavish.say "Don't go mentioning whales around me..."

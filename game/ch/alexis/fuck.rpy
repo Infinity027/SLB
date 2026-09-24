@@ -248,13 +248,13 @@ label alexis_repeatable_beach_event:
         "I sit down beside her, trying to decide who's bothering me more."
         "Is it the dozens of guys that are currently checking out my date?"
         "Or Alexis herself, who seems to be loving every moment of it?"
-        show alexis talkative
+        show alexis talk
         alexis.say "[hero.name], would you be a darling?"
         show alexis normal
         mike.say "Huh...what was that?"
         "If Alexis is aware of just what's making me so distracted and edgy, she chooses to ignore it completely."
         "Instead, she extends the hand holding the sun-cream, giving me a cheeky smile as she does so."
-        show alexis talkative
+        show alexis talk
         alexis.say "Would you mind doing the honours?"
         show alexis normal
         mike.say "Oh...yeah, sure thing, Alexis!"
@@ -296,14 +296,14 @@ label alexis_repeatable_beach_event:
         "All around us, I can see people either trying to get out of the sun or else frying themselves under its relentless heat."
         mike.say "Erm, Alexis...you don't think it's too hot to be out here, do you?"
         "Alexis responds to this by raising her eyebrows and shaking her head in disbelief."
-        show alexis talkative
+        show alexis talk
         alexis.say "Really, [hero.name]?!?"
         alexis.say "Isn't that what sun-screen is for?"
         show alexis annoyed
         mike.say "I know, but..."
         show alexis whining
         alexis.say "Oh, don't be such a stick-in-the-mud about it."
-        show alexis talkative
+        show alexis talk
         alexis.say "If you burst into flames, just go jump in the sea!"
         show alexis normal
         "And with that, she puts on her sunglasses and lies down to take advantage of the sun's rays."
@@ -323,7 +323,7 @@ label alexis_repeatable_beach_event:
         alexis.say "You must have fallen asleep almost as soon as you shut your eyes."
         "I grab my phone, checking the time and finding that she's not pulling my leg."
         hide beach cream
-        show alexis swimsuit talkative
+        show alexis swimsuit talk
         with fade
         alexis.say "Anyway, I'm thirsty."
         alexis.say "So I'm going to grab some water from the kiosk over by the dunes."
@@ -436,7 +436,7 @@ label alexis_repeatable_beach_event:
                         "When she finally does come back, she's done a remarkable job of cleaning herself up."
                         "And from the expression on her face, I could almost believe nothing out of the ordinary took place while she was gone."
                         "If, that is, I hadn't seen it with my own eyes..."
-                        show alexis talkative
+                        show alexis talk
                         alexis.say "You wouldn't believe the time I've had!"
                         show alexis normal
                         mike.say "Oh, really?"

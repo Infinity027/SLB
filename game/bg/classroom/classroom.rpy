@@ -57,4 +57,3 @@ label study_classroom:
     hide chibi
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

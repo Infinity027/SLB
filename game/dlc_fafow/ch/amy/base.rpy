@@ -412,18 +412,9 @@ label amy_propose_male:
     return
 
 label amy_ask_date_male:
-    if Harem.find(amy) and "goth_harem_event_01" in DONE:
-        menu:
-            "Ask Amy on a date":
-                call amy_ask_date_alone_male from _call_amy_ask_date_alone_male
-            "Meet Amy and Violaine for a 'hot coffee'" if Harem.find_by_name("goth") and "goth_harem_event_01" in DONE:
-                call amy_ask_date_violaine from _call_amy_ask_date_violaine
-            "Meet Amy and Vincent for a 'hot coffee'" if Harem.find_by_name("goth") and "goth_harem_event_02" in DONE:
-                call amy_ask_date_vincent from _call_amy_ask_date_vincent
-            "Meet Amy, Vincent and Violaine for a 'hot coffee'" if Harem.find_by_name("goth") and "goth_harem_event_03" in DONE:
-                call amy_ask_date_vincent_violaine from _call_amy_ask_date_vincent_violaine
-    else:
-        call amy_ask_date_alone_male from _call_amy_ask_date_alone_male_1
+    # === GOTH HAREM REMOVED ===  group-date options (Violaine/Vincent) deleted;
+    # asking Amy on a date now always goes to the normal solo date.
+    call amy_ask_date_alone_male from _call_amy_ask_date_alone_male_1
     return _return
 
 label amy_ask_date_alone_male:
@@ -435,49 +426,5 @@ label amy_ask_date_alone_male:
         amy.say "Sure, it might be fun, when do you want us to go?"
         return True
 
-label amy_ask_date_violaine:
-    mike.say "Do you want to get together with Violaine and have some fun?"
-    amy.say "Fine, but you'll join us home."
-    mike.say "I can do that."
-    call select_date_time (fixed_hour=20) from _call_select_date_time_31
-    $ (day, hour, say_string) = _return
-    if day == "cancel":
-        return
-    $ mike.say(say_string)
-    if day == "now":
-        call goth_harem_threesome_violaine_intro from _call_goth_harem_threesome_violaine_intro
-    else:
-        $ hero.calendar.add(day, HaremAppointment(hour, "goth", ["amy"], "goth_harem_threesome_violaine_intro"))
-    return
-
-label amy_ask_date_vincent:
-    mike.say "Do you want to get together with Vincent and have some fun?"
-    amy.say "Fine, but you'll join us home."
-    mike.say "I can do that."
-    call select_date_time from _call_select_date_time_32
-    $ (day, hour, say_string) = _return
-    if day == "cancel":
-        return
-    $ mike.say(say_string)
-    if day == "now":
-        call goth_harem_threesome_vincent_intro from _call_goth_harem_threesome_vincent_intro
-    else:
-        $ hero.calendar.add(day, HaremAppointment(hour, "goth", ["amy"], "goth_harem_threesome_vincent_intro"))
-    return
-
-label amy_ask_date_vincent_violaine:
-    mike.say "Do you want to get together with Vincent and Violaine and have some fun?"
-    amy.say "Fine, but you'll join us home."
-    mike.say "I can do that."
-    call select_date_time from _call_select_date_time_33
-    $ (day, hour, say_string) = _return
-    if day == "cancel":
-        return
-    $ mike.say(say_string)
-    if day == "now":
-        call goth_harem_foursome_vincent_violaine_intro from _call_goth_harem_foursome_vincent_violaine_intro
-    else:
-        $ hero.calendar.add(day, HaremAppointment(hour, "goth", ["amy"], "goth_harem_foursome_vincent_violaine_intro"))
-    return
 return
 # Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

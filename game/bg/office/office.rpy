@@ -143,7 +143,7 @@ label work_promoted:
     show aletta happy
     aletta.say "[hero.name], management has decided to give you a promotion."
     mike.say "Thanks, I'm very grateful."
-    show aletta talkative
+    show aletta talk
     aletta.say "Don't be, it comes with greater responsibilities and higher expectations."
     aletta.say "Welcome to management, you will have your own office from now on."
     show aletta normal
@@ -172,7 +172,7 @@ label work_random_events:
     if r == 1 and Person.is_not_hidden("aletta") and not game.flags.isceo:
         show aletta work normal at left with moveinleft
         "Aletta walks toward me."
-        show aletta talkative at center with move
+        show aletta talk at center with move
         aletta.say "[hero.name], we have to finish this by tomorrow, I'd like you to stay for a couple more hours."
         aletta.say "Of course, you'll receive a bonus."
         show aletta normal
@@ -196,7 +196,7 @@ label work_random_events:
         "Aletta walks toward my desk."
         show aletta angry at center with move
         aletta.say "[hero.name], we have an emergency! We need to fix this bug as soon as possible."
-        show aletta talkative
+        show aletta talk
         aletta.say "I'd like you to stay until you solve it."
         aletta.say "Of course, you'll receive a bonus."
         show aletta normal
@@ -250,7 +250,6 @@ label work_random_events:
         hide audrey with easeoutright
     elif r <= 4:
         "My attention's focused on my computer screen as the phone on the desk rings."
-        "I fumble for it and try to hold it to my ear with my shoulder as continue to type."
         mike.say "Hello, [hero.name] here?"
         "Shady guy" "Yeah, this is the IT department - we've got reports that someone's been downloading porn on the desktop in your office."
         "Oh shit, I can already feel my arsehole puckering up in fear!"
@@ -273,26 +272,21 @@ label work_random_events:
                 $ game.flags.worksatisfaction -= 2
         mike.say "Yeah...sure."
         "I put the phone down slowly, vowing to myself that I'll never look at porn in the office again."
-        "Or at least until I can figure out a means of getting away with it..."
     elif r == 5:
         "It's getting pretty close to lunchtime, and I can already hear my stomach growling in anticipation."
-        "But the only problem is that I'm way too busy to leave my desk and go out to grab something to eat."
-        "Even worse, I can't see anyone else around right now that'd nip out and pick me up some lunch either."
-        "Desperate to find something edible, I hurry over to the break room and start rooting around in the fridge."
+        "But the only problem is that I'm way too busy to leave my desk."
+        "I hurry over to the break room and start rooting around in the fridge."
         "It's then that I see a pretty nice-looking sandwich jammed in there alongside the milk."
         "Home-made and stuffed with the kind of fillings that I'd never even have in at my house, I'm instantly tempted..."
         menu:
             "Eat the sandwich":
-                "There might have been a note pinned to the cellophane the sandwich is wrapped in declaring it someone's property."
-                "But I can't see one anywhere on it, or even on the shelf that it's sitting on."
-                "Trying to ignore the guilt I'm feeling right now, I grab the sandwich and skulk back to my desk."
+                "I grab the sandwich and skulk back to my desk."
                 "I eat the whole thing as fast as I can, almost giving myself indigestion in the process."
                 $ hero.hunger += 10
                 $ game.flags.worksatisfaction -= 1
             "Don't eat the sandwich":
                 "I want to eat the thing, really I do."
                 "But what happens when its true owner finds out and goes on the hunt for his missing sandwich?"
-                "Who's going to look more suspicious than the guy who was ravenous five minutes ago, but swears he's fine right now?"
                 "I walk back to my desk, resigning myself as I do so to an afternoon of hunger pangs and a grumbling stomach."
     elif r == 6:
         "I swear that I had no idea that it was about to happen, even as I was waiting for the lift and then stepping into it."
@@ -305,7 +299,6 @@ label work_random_events:
         "People are covering their noses now, muttering and mumbling in disgust."
         menu:
             "Admit it":
-                "I don't know why I feel compelled to confess to being the one that dealt it."
                 "I just feel like any moment someone will finger me as the culprit anyway."
                 mike.say "I...I'm sorry..."
                 "I get a round of harsh stares and hard looks as people get out at the next floor."
@@ -317,7 +310,6 @@ label work_random_events:
             "Keep quiet":
                 "It's only a couple of floors until I get out of the lift - I just need to keep quiet."
                 "All around me, people are still complaining, some even choking and making retching sounds."
-                "I find myself joining in, perhaps with a little too much enthusiasm, in the hope of looking innocent."
                 "As soon as the lift reaches my floor, I pile out and take a deep, exquisite breath of pure air."
                 $ hero.fun -= 5
     elif r == 7:
@@ -344,7 +336,6 @@ label work_random_events:
     elif r == 8:
         "While I'm not sitting on the board of directors at work, I'm not exactly the bottom of the heap either."
         "That means I'm not usually the person in the office that ends up doing the really shitty jobs, like photocopying and shredding."
-        "Unless, that is, almost everyone happens to be on annual leave, off sick or for whatever reason just isn't around when it needs doing."
         "And right now, I'm all alone here, looking like I've tried to make a fort out of the stacks of paper on my desk that should already have been shredded."
         "There's no point putting it off any longer, so I grab as much as I can carry and make for the shredder."
         "I shove the first load in and start the machine."
@@ -444,13 +435,10 @@ label work_random_events:
         menu:
             "Bear with it":
                 "I step into the lift, trying to ignore the laughter around me and focus on the day ahead."
-
-
                 $ hero.fun -= 5
             "Removes your shoes":
                 "I make an immediate dash for the nearest bathroom, running into a cubicle and pulling off my odd shoes."
                 "The rest of the day I spend walking here and there in nothing but my socks."
-                "Which attracts some odd looks too, but is infinitely preferable to the ones I was getting beforehand."
     return
 
 label work:
@@ -541,4 +529,3 @@ label workhard:
     $ game.flags.hasworked = TemporaryFlag(True, "day")
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

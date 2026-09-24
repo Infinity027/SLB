@@ -864,7 +864,7 @@ label thot_harem_event_05(appointment=None):
     "Because they're both wearing outfits that leave nothing to the imagination."
     "And somehow they seem to have managed to coordinate them as well."
     "So they also complement each other almost perfectly too."
-    show alexis talkative
+    show alexis talk
     alexis.say "What's gotten into you, [hero.name]?"
     show alexis normal
     show reona shout
@@ -885,7 +885,7 @@ label thot_harem_event_05(appointment=None):
             reona.say "Did you hear that?"
             reona.say "Sounds like we got the seal of approval for our outfits!"
             show reona normal
-            show alexis talkative
+            show alexis talk
             alexis.say "Well, I can't say that I blame him, Reona..."
             alexis.say "We are looking totally stunning tonight."
             show alexis normal
@@ -904,7 +904,7 @@ label thot_harem_event_05(appointment=None):
             show alexis annoyed
             "Alexis lets out a snort and shakes her head."
             alexis.say "Hmpf..."
-            show alexis talkative
+            show alexis talk
             alexis.say "Of course they are, Reona..."
             alexis.say "We already established that we look crazily hot!"
             show alexis normal
@@ -1033,7 +1033,7 @@ label thot_harem_event_05(appointment=None):
     show reona shout
     reona.say "I'd kinda like to get a drink."
     show reona normal
-    show alexis talkative
+    show alexis talk
     alexis.say "Huh..."
     alexis.say "I wanted to dance first!"
     show alexis normal
@@ -1080,14 +1080,14 @@ label thot_harem_event_05(appointment=None):
     mike.say "She works under a lot of other people too!"
     "This explanation doesn't seem to help much, as they only laugh even louder."
     "Plus now Audrey's joining in too, which makes matters that much worse."
-    show alexis talkative
+    show alexis talk
     alexis.say "I know just what you mean, Audrey!"
     show alexis smile
     show reona shout
     reona.say "Me too, me too..."
     reona.say "You should come have a dance with us."
     show reona devious
-    show alexis talkative
+    show alexis talk
     alexis.say "And tell us more about what [hero.name] gets up to at work!"
     show alexis smile
     "By now all three of them are looking straight at me."
@@ -1122,7 +1122,7 @@ label thot_harem_event_05(appointment=None):
     "But I get the feeling that wouldn't make me very popular."
     "So it looks like she's sticking with us."
     "At least for the time being."
-    show audrey talkative
+    show audrey talk
     audrey.say "Anyway..."
     audrey.say "We have some dancing to do, don't we, girls?"
     audrey.say "And you'd better see to getting those drinks!"
@@ -1153,13 +1153,13 @@ label thot_harem_event_05(appointment=None):
             show audrey sexydate zorder 3 at center, zoomAt(1.15, (640, 800))
             with easeinright
             "And when one of them spots me, they hurry over."
-            show alexis talkative
+            show alexis talk
             alexis.say "Oh, thanks, [hero.name]."
             show alexis normal
             show reona shout
             reona.say "You remembered my order!"
             show reona normal
-            show audrey talkative
+            show audrey talk
             audrey.say "Bottoms up!"
             show audrey normal
             mike.say "So..."
@@ -1172,10 +1172,10 @@ label thot_harem_event_05(appointment=None):
             reona.say "Audrey is so mean!"
             reona.say "Funny with it, but mean."
             show reona normal
-            show alexis talkative
+            show alexis talk
             alexis.say "She already told us some great stories about you!"
             show alexis normal
-            show audrey talkative
+            show audrey talk
             audrey.say "Hey..."
             show audrey mock
             audrey.say "Every word was the truth!"
@@ -1304,14 +1304,14 @@ label thot_harem_event_05(appointment=None):
         show audrey whining
         audrey.say "Oops..."
         audrey.say "I got to go use the little girl's room!"
-        show audrey talkative
+        show audrey talk
         audrey.say "Be right back."
         show alexis normal zorder 1 at center, zoomAt(1.15, (840, 800))
         show reona normal zorder 2 at center, zoomAt(1.15, (440, 800))
         hide audrey
         with easeoutleft
         "Almost as soon as Audrey's out of earshot, Alexis and Reona turn to me."
-        show alexis talkative
+        show alexis talk
         alexis.say "Okay, [hero.name]..."
         alexis.say "Make with the dirt on Audrey!"
         show alexis normal
@@ -1343,11 +1343,11 @@ label thot_harem_event_05(appointment=None):
                 show reona normal zorder 3 at center, traveling(1.15, 0.3, (340, 800))
                 show audrey sexydate zorder 1 at center, zoomAt(1.15, (640, 800)) with easeinleft
                 "All of which stops the moment Audrey arrives back from the bathroom."
-                show audrey talkative
+                show audrey talk
                 audrey.say "Okay..."
                 audrey.say "What did I miss?"
                 show audrey normal
-                show alexis talkative
+                show alexis talk
                 alexis.say "Oh, nothing!"
                 show alexis normal
                 show reona shout
@@ -1363,7 +1363,7 @@ label thot_harem_event_05(appointment=None):
                 mike.say "You want me to feed you sensitive facts info on Audrey?"
                 mike.say "Like, tell you all of her hidden weaknesses?!?"
                 mike.say "I thought you guys were getting on great!"
-                show alexis talkative
+                show alexis talk
                 alexis.say "It's not like that, [hero.name]!"
                 show alexis normal
                 show reona shout
@@ -1388,11 +1388,11 @@ label thot_harem_event_05(appointment=None):
                 show reona normal zorder 3 at center, traveling(1.15, 0.3, (340, 800))
                 show audrey sexydate zorder 1 at center, zoomAt(1.15, (640, 800)) with easeinleft
                 "Which is just as well, because that's the moment Audrey arrives back from the bathroom."
-                show audrey talkative
+                show audrey talk
                 audrey.say "Okay..."
                 audrey.say "What did I miss?"
                 show audrey normal
-                show alexis talkative
+                show alexis talk
                 alexis.say "Oh, nothing!"
                 show alexis normal
                 show reona shout
@@ -1410,10 +1410,10 @@ label thot_harem_event_05(appointment=None):
     mike.say "You know, to round out the night?"
     "This seems to be just what the girls were wanting to hear."
     "And soon enough I find myself being dragged out onto the dance-floor."
-    show audrey talkative
+    show audrey talk
     audrey.say "Great idea!"
     show audrey normal
-    show alexis talkative
+    show alexis talk
     alexis.say "Count me in!"
     show alexis normal
     show reona shout
@@ -1432,13 +1432,13 @@ label thot_harem_event_05(appointment=None):
             "Which I pull off so well that all of their eyes are on me."
             show alexis surprised
             alexis.say "WOW..."
-            show alexis talkative
+            show alexis talk
             alexis.say "Nice moves!"
             show alexis normal
             show reona shout
             reona.say "Way to go, [hero.name]!"
             show reona normal
-            show audrey talkative
+            show audrey talk
             audrey.say "Damn it..."
             audrey.say "Where did you learn to do that?!?"
             show audrey normal
@@ -1503,7 +1503,7 @@ label thot_harem_event_05(appointment=None):
             show audrey joke
             audrey.say "There was some prime manhood on show back there!"
             show audrey normal
-            show alexis talkative
+            show alexis talk
             alexis.say "Yeah, but someone kept them all at bay."
             show alexis normal
             show reona shout
@@ -1532,7 +1532,7 @@ label thot_harem_event_05(appointment=None):
             show audrey joke
             audrey.say "There was some prime manhood on show back there!"
             show audrey normal
-            show alexis talkative
+            show alexis talk
             alexis.say "I guess those guys were pretty cute."
             show alexis normal
             show reona shout
@@ -1557,10 +1557,10 @@ label thot_harem_event_05(appointment=None):
     "Which means that I have to wait until they're done huddling."
     "Then stand there with baited breath to hear what they have to say."
     if all(score >= 2 for score in (alexis_score, audrey_score, reona_score)):
-        show audrey talkative
+        show audrey talk
         audrey.say "Make it one taxi, [hero.name]!"
         show audrey normal
-        show alexis talkative
+        show alexis talk
         alexis.say "Yeah, we're having a great time with you!"
         show alexis normal
         show reona shout
@@ -1630,11 +1630,11 @@ label thot_harem_event_06:
     with hpunch
     "Before I know what's happening, three pairs of hands have a firm hold on me."
     "And there's nothing I can do to keep from being dragged towards the bed."
-    show audrey talkative
+    show audrey talk
     audrey.say "That's right..."
     audrey.say "Toss him on the bed!"
     show audrey normal
-    show alexis talkative
+    show alexis talk
     alexis.say "I'll take his shirt..."
     alexis.say "Reona, you handle his pants!"
     show alexis normal

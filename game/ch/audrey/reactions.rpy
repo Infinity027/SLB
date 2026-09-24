@@ -257,7 +257,7 @@ label audrey_movie_liked_reaction_male:
     return
 
 label audrey_belly_kiss_male:
-    show audrey talkative at center, zoomAt(1.25, (640, 880))
+    show audrey talk at center, zoomAt(1.25, (640, 880))
     audrey.say "[hero.name]…"
     audrey.say "Get over here!"
     show audrey yawn
@@ -352,7 +352,7 @@ label audrey_belly_caress_male:
     return
 
 label audrey_belly_listen_male:
-    show audrey talkative at center, zoomAt(1.25, (640, 880))
+    show audrey talk at center, zoomAt(1.25, (640, 880))
     audrey.say "[hero.name]…"
     audrey.say "Come and listen to my belly!"
     show audrey normal
@@ -365,7 +365,7 @@ label audrey_belly_listen_male:
     mike.say "There's nothing wrong with the baby, is there?"
     "Audrey shakes her head as she looks up at me."
     "Which is an instant source of relief."
-    show audrey talkative
+    show audrey talk
     audrey.say "No, nothing like that."
     audrey.say "The little bugger's just moving around like crazy in there."
     audrey.say "I want you to have a listen, see what you can make of it."
@@ -374,7 +374,7 @@ label audrey_belly_listen_male:
     mike.say "I'm not sure what I can make out."
     mike.say "But if that's what you want..."
     "Audrey nods eagerly."
-    show audrey talkative
+    show audrey talk
     audrey.say "It is, it is..."
     audrey.say "So get on with it already!"
     show audrey happy
@@ -417,11 +417,11 @@ label audrey_ask_hot_coffee_male:
             mike.say "That sounds messy."
             audrey.say "Guess you’ll have to find out, huh?"
         else:
-            show audrey talkative
+            show audrey talk
             audrey.say "You know, I live just a few blocks from here."
             show audrey shy
             mike.say "Is that an invitation or a warning?"
-            show audrey talkative
+            show audrey talk
             audrey.say "Depends. You could come by… hang out a bit. I’ve got wine, bad movies, and zero self-control."
             show audrey normal
             mike.say "Sounds dangerous."

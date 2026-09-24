@@ -71,7 +71,7 @@ label cherie_hottub_sex_male:
     "Cherie still has one hand on her chest as she steps forwards again."
     "And I make a point of stepping to one side, then gesturing for her to come in."
     "Much to my relief she takes the hint, walking into the hallway so I can close the door behind her."
-    show cherie talkative
+    show cherie talk
     cherie.say "What were you doing, mon ami…"
     cherie.say "Waiting behind the door for me to arrive?"
     show cherie normal
@@ -80,7 +80,7 @@ label cherie_hottub_sex_male:
     mike.say "But I have been kind of listening out for you."
     "Cherie seems to have recovered from the shock of a few moments before."
     "As she cracks a smile, realising that I've been anticipating her arrival."
-    show cherie talkative
+    show cherie talk
     cherie.say "I suppose that I should be flattered."
     cherie.say "It is nice to know that someone looks forward to my company so."
     show bg livingroom with dissolve
@@ -91,7 +91,7 @@ label cherie_hottub_sex_male:
     mike.say "Sorry about the mess, Cherie..."
     mike.say "My housemates are pretty messy!"
     "As we reach the patio doors, I see that Cherie's shaking her head."
-    show cherie talkative
+    show cherie talk
     cherie.say "Ah yes - Cassidy is just the same."
     cherie.say "I keep telling you, mon ami…"
     cherie.say "You do not need to apologise for your home."
@@ -102,7 +102,7 @@ label cherie_hottub_sex_male:
     scene bg pool at center, zoomAt(1.2, (640, 820)) with dissolve
     mike.say "Cherie, you live in one of the biggest houses I've ever seen!"
     mike.say "What could you possibly want with a place like this?"
-    show cherie a talkative with easeinleft
+    show cherie a talk with easeinleft
     cherie.say "It can be lonely, living in such a huge, empty space."
     cherie.say "And as they say...size isn't everything."
     cherie.say "Well, at least in the case of houses!"
@@ -114,7 +114,7 @@ label cherie_hottub_sex_male:
     mike.say "I tried to make the place look nice!"
     "Unable to think of anything else to break the pregnant silence, I gesture around the hot-tub."
     "Pointing out the candles and the bottle of wine that surround it as the water bubbles away."
-    show cherie talkative
+    show cherie talk
     cherie.say "Oh, very nice, {i}mon ami…{/i}"
     cherie.say "You are really spoiling me!"
     show cherie happy
@@ -355,7 +355,7 @@ label cherie_fuck_date_intro_male(location="hero"):
         "And it's plain to see from the look on her face that she finds all of this very amusing."
         show cherie happy
         cherie.say "Of course, mon ami…"
-        show cherie talkative
+        show cherie talk
         cherie.say "I am not so shallow as to judge a man by the size of his house."
         cherie.say "Not when it is really the size of certain other things that really matters!"
         show cherie smile at center, traveling(1.35, 0.3, (640, 960))
@@ -458,7 +458,7 @@ label cherie_fuck_date_choices_male:
 label cherie_fuck_date_sleep(location="hero"):
     scene bg bedroom1
     if game.hour > 19 or game.hour < 6:
-        show cherie naked talkative at center, zoomAt(1.25, (640, 880))
+        show cherie naked talk at center, zoomAt(1.25, (640, 880))
         if cherie.is_sex_slave:
             cherie.say "May I share your bed tonight, Master?"
         else:

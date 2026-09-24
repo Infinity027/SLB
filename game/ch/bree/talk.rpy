@@ -423,7 +423,7 @@ label submissive_interact_bree_male:
         bree.say "I'll make it clever and funny too, I promise!"
         $ bree.flags.submissive_interact = True
     else:
-        show bree talkative
+        show bree talk
         bree.say "What are you even talking about, [hero.name]?"
         bree.say "That sounds SO cheesy it's unreal!"
         show bree annoyed
@@ -432,4 +432,3 @@ label submissive_interact_bree_male:
         $ bree.love -= 4
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

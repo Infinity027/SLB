@@ -148,7 +148,7 @@ label sasha_gift_slutty_dress_male:
     "Now I have the dress in a gift-wrapped box that's hidden behind my back."
     "And I need to figure out how to convince Sasha that wearing it is a good idea."
     "That it's not just me being some kind of massive perv as well."
-    show sasha talkative
+    show sasha talk
     sasha.say "Hey, [hero.name]…"
     sasha.say "Watcha got there?"
     show sasha normal
@@ -160,7 +160,7 @@ label sasha_gift_slutty_dress_male:
     "Sasha doesn't seem to be the least bit interested in my attempts a small-talk."
     "Instead she instantly tries to sneak a look behind my back."
     "Which results in me doing a weird, sideways kind of crab walk to hide it."
-    show sasha talkative
+    show sasha talk
     sasha.say "What are you talking about?"
     sasha.say "Of course I'm fine!"
     sasha.say "You're the one that's being weird in that sweaty kind of way."

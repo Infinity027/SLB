@@ -12,4 +12,3 @@ init python:
     "valid": False,
     "outfit": "casual",
     })
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

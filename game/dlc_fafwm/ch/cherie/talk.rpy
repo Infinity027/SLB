@@ -1,6 +1,6 @@
 label cherie_talk_love_male:
     show cherie normal
-    show cherie talkative
+    show cherie talk
     cherie.say "When you come from the country that I do, {i}mon ami{/i}, everyone expects you to be an expert on the subject of love."
     cherie.say "But the truth is that we are the same as anyone else the world over when it comes to affairs of the heart."
     show cherie happy
@@ -30,7 +30,7 @@ label cherie_talk_love_male:
     return
 
 label cherie_talk_sex_male:
-    show cherie talkative
+    show cherie talk
     cherie.say "Ah, I have seen so many lovers come and go, {i}mon ami{/i}."
     show cherie happy
     cherie.say "And it is good to be like this, is it not?"
@@ -61,7 +61,7 @@ label cherie_talk_sex_male:
 label cherie_talk_politics_male:
     show cherie whining
     cherie.say "Politicians bore me so much, {i}mon ami{/i} - they are all the same, I think."
-    show cherie talkative
+    show cherie talk
     cherie.say "And no matter what they say or the things they promise to do, nothing changes."
     cherie.say "I wonder if, were they all to suddenly disappear, would we not just get on without them?"
     show cherie annoyed
@@ -88,11 +88,11 @@ label cherie_talk_politics_male:
     return
 
 label cherie_talk_food_male:
-    show cherie talkative
+    show cherie talk
     cherie.say "You must think that it's such a stereotype for me to lecture you on food, coming from my country."
     show cherie whining
     cherie.say "But it is the truth, {i}mon ami{/i} - you eat such bland and unhealthy garbage here yet still call it food!"
-    show cherie talkative
+    show cherie talk
     cherie.say "They say that you are what you eat, so what are you when you fill yourself with such rubbish every day?"
     show cherie sadsmile
     menu:
@@ -118,11 +118,11 @@ label cherie_talk_food_male:
     return
 
 label cherie_talk_travels_male:
-    show cherie talkative
+    show cherie talk
     cherie.say "One of the things that I will never regret about being with a man like Dwayne is the freedom to travel."
     show cherie happy
     cherie.say "Oh my, the places I have been, the things I have seen and done in my lifetime!"
-    show cherie talkative
+    show cherie talk
     cherie.say "It is something that I would almost thank that awful man for allowing me to experience."
     show cherie sadsmile
     menu:
@@ -149,11 +149,11 @@ label cherie_talk_travels_male:
     return
 
 label cherie_talk_tv_male:
-    show cherie talkative
+    show cherie talk
     cherie.say "I have never really been interested in television, {i}mon ami{/i}."
     show cherie happy
     cherie.say "The cinema was always the place to be entertained for me."
-    show cherie talkative
+    show cherie talk
     cherie.say "In comparison, television always seemed so small, so limited."
     show cherie sadsmile
     menu:
@@ -179,11 +179,11 @@ label cherie_talk_tv_male:
     return
 
 label cherie_talk_sports_male:
-    show cherie talkative
+    show cherie talk
     cherie.say "Ah...I'm never sure that I understand the appeal of sports, you know?"
     show cherie happy
     cherie.say "But I wonder if there is some essential truth buried beneath the act of playing the game."
-    show cherie talkative
+    show cherie talk
     cherie.say "Maybe what speaks to us is not the mundane things going on with the players, but the universal truths their struggles represent?"
     show cherie normal
     menu:
@@ -209,7 +209,7 @@ label cherie_talk_sports_male:
     return
 
 label cherie_talk_fashion_male:
-    show cherie talkative
+    show cherie talk
     cherie.say "Fashion is not the same in my home country as it is over here, {i}mon ami{/i}."
     show cherie whining
     cherie.say "Here you treat it like something that must be studied, or worse, a talent that you must be born with."
@@ -242,7 +242,7 @@ label cherie_talk_books_male:
     cherie.say "Ah, when I was younger, I would read all the time, always devouring books."
     show cherie whining
     cherie.say "But now I find that I do not have enough time to devote to my passion of reading."
-    show cherie talkative
+    show cherie talk
     cherie.say "Maybe some day I will find the time again, as I do miss it so!"
     show cherie normal
     menu:
@@ -268,7 +268,7 @@ label cherie_talk_books_male:
     return
 
 label cherie_talk_people_male:
-    show cherie talkative
+    show cherie talk
     cherie.say "I know that I should not say such things, {i}mon ami{/i}..."
     cherie.say "That they say there is good in the hearts of all human beings."
     show cherie whining
@@ -299,7 +299,7 @@ label cherie_talk_people_male:
 label cherie_talk_computers_male:
     show cherie whining
     cherie.say "This is going to make me sound so old - but computers baffle me so!"
-    show cherie talkative
+    show cherie talk
     cherie.say "I can use them to do the most basic of things, you know?"
     show cherie whining
     cherie.say "But I have no idea how they actually work, none at all."
@@ -330,7 +330,7 @@ label cherie_talk_music_male:
     show cherie whining
     cherie.say "I feel so old when I say this, but I do not understand modern music, {i}mon ami{/i}."
     cherie.say "Maybe I am not supposed to appreciate it, maybe it is only for the very young."
-    show cherie talkative
+    show cherie talk
     cherie.say "But it does so very much sound like a cat being minced while it is still alive and conscious."
     show cherie sadsmile
     menu:

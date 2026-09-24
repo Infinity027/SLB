@@ -342,7 +342,7 @@ label shiori_teaser:
     "A knock at my office door brings my wallowing in self-pity to an abrupt end."
     "I groan wearily and scrub the palms of my hands over my face."
     mike.say "Yeah - come on in!"
-    show shiori work _a talkative at center, zoomAt(1, (440, 720)) with easeinleft
+    show shiori work _a talk at center, zoomAt(1, (440, 720)) with easeinleft
     "Shiori" "Is...is this the right place?"
     "Shiori" "I'm here about the secretary position?"
     show shiori normal _a
@@ -363,7 +363,7 @@ label shiori_teaser:
     "She bows at the waist, just a little."
     show shiori _a happy
     "Shiori" "My name is Shiori."
-    show shiori _a talkative
+    show shiori _a talk
     shiori.say "And you must be Mister [hero.family_name]."
     show shiori _a normal
     "I realize that, as she bowed, I couldn't help staring down her top."
@@ -379,21 +379,21 @@ label shiori_teaser:
     "No, must focus - be professional!"
     "It's then that I notice she's blushing a little."
     "Something that only seems to make her that much more adorable..."
-    show shiori _a talkative
+    show shiori _a talk
     shiori.say "I...I have to be honest, Mister [hero.family_name]."
     shiori.say "I don't have the greatest CV in the world."
     shiori.say "But if I'm under the right man - then you wouldn't believe what I can do..."
     show shiori _a normal
     "I feel myself tugging at my collar."
     mike.say "Is...is that right, Shiori?"
-    show shiori _a talkative
+    show shiori _a talk
     shiori.say "Oh yes, Mister [hero.family_name]."
     shiori.say "You can put me in almost any position you like."
     shiori.say "I'm told that I'm very flexible."
     show shiori _a normal
     "It's all I can do to keep from chuckling to myself."
     "Almost everything out of her mouth sounds like an innuendo."
-    show shiori _a talkative
+    show shiori _a talk
     shiori.say "Ah, is something wrong, Mister [hero.family_name]?"
     shiori.say "Did I make a mistake?"
     show shiori _a normal
@@ -419,12 +419,12 @@ label shiori_teaser:
         "I like it when you call me sir.":
             mike.say "It's nothing, Shiori."
             mike.say "I...I just kind of like it when you call me 'Mister [hero.family_name]', that's all."
-            show shiori _a talkative
+            show shiori _a talk
             shiori.say "Oh...I...I had no idea!"
             show shiori _a normal blush
             "She blushes and looks away in a disarmingly demure fashion."
             "And I feel it almost like a physical blow."
-            show shiori _a talkative
+            show shiori _a talk
             shiori.say "I'd get to do it all the time - if you hired me, Mister [hero.family_name]!"
             show shiori _a normal
             "Is she...is she flirting with me?!?"
@@ -432,7 +432,7 @@ label shiori_teaser:
             mike.say "Y...you better get used to being at my beck and call, Shiori."
             mike.say "Because I think you'd be perfect for the job."
             "Shiori stares at me, her huge eyes wide with surprise."
-            show shiori _a talkative
+            show shiori _a talk
             shiori.say "R...really?!?"
             shiori.say "That was a VERY short interview, Mister [hero.family_name]!"
             show shiori _a normal
@@ -441,7 +441,7 @@ label shiori_teaser:
             mike.say "I can see this working out well - with me on top of you..."
             mike.say "I...I mean with you under me...working under me, that is!"
             "For all of my blustering, Shiori seems not to notice the sexual tension I'm feeling."
-            show shiori _a talkative
+            show shiori _a talk
             shiori.say "Me too, Mister [hero.family_name] - I really can't wait for you to put me to work!"
             shiori.say "When do I start?"
             show shiori _a normal
@@ -451,7 +451,7 @@ label shiori_teaser:
             show shiori _a smile
             "Shiori jumps up like a Jack-in-the-box."
             "And the effect on her chest is quite something."
-            show shiori _a talkative
+            show shiori _a talk
             shiori.say "Then I'll see you in the morning, Mister [hero.family_name] - bright and early!"
             show shiori _a at center, traveling(1.5, 0.3, (640, 1040))
             "I watch Shiori as she makes her way out of my office."

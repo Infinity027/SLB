@@ -361,18 +361,18 @@ label command_nickname_hanna:
 
 label submissive_interact_hanna_male:
     mike.say "Ah, Hanna..."
-    show hanna talkative
+    show hanna talk
     hanna.say "Yeah, [hero.name]?"
     show hanna normal
     mike.say "You know when you say hi to me?"
     mike.say "I was wondering if you could say something else instead?"
-    show hanna talkative
+    show hanna talk
     hanna.say "Like what, exactly?"
     show hanna normal
     mike.say "I was thinking something like how much you like to show off."
     mike.say "Maybe like you want me to show you off in public?"
     if hanna.sub >= 70 or hanna.is_sex_slave:
-        show hanna talkative blush
+        show hanna talk blush
         hanna.say "I...I do kinda like people to have their eyes on me."
         hanna.say "That sounds a pretty good idea."
         show hanna happy

@@ -141,4 +141,3 @@ label heart_attack:
     $ renpy.full_restart()
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

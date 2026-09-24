@@ -2927,7 +2927,7 @@ label aletta_event_01:
             "She flips ashes out the window."
             show aletta angry
             aletta.say "I've also been here long enough to not give a damn about the rules or if they fire me."
-            show aletta talkative
+            show aletta talk
             aletta.say "Besides, I got friends in cooperate. They'd help me get back on or a new job if I wanted."
             $ aletta.love -= 1
         "Tell her it's unhealthy":
@@ -2935,17 +2935,17 @@ label aletta_event_01:
             mike.say "Do you know how unhealthy smoking is for you?"
             show aletta sadsmile
             "Aletta turns a tired look on me, like she had heard this line more than she likes."
-            show aletta talkative
+            show aletta talk
             aletta.say "I don't do it for my health, I do it to relax."
             show aletta normal
             "She takes a puff and then blows the smoke out the window."
-            show aletta talkative
+            show aletta talk
             aletta.say "Stress can kill you just as fast as cigarettes. And working here?"
             show aletta happy
             aletta.say "Maybe faster."
             show aletta normal
             "She flips her ashes out the window."
-            show aletta talkative
+            show aletta talk
             aletta.say "So don't lecture me about what's good for me. I'll be the judge of that."
             show aletta normal
             "I did see a way to argue that so I just shrug."
@@ -2957,7 +2957,7 @@ label aletta_event_01:
             "She looks at me first in surprise and then with a smirk."
             show aletta normal
             "Placing her cigarette in her mouth she shakes another loose for me and holds it out."
-            show aletta talkative
+            show aletta talk
             aletta.say "Need a light?"
             show aletta normal
             "I nod and she hands me her lighter as well."
@@ -2968,11 +2968,11 @@ label aletta_event_01:
             "I decide it is best to say nothing, but Aletta sees me before I can make my way to the fridge and leave."
             show aletta normal
             "Blowing out smoke in annoyance she turns toward me."
-            show aletta talkative
+            show aletta talk
             aletta.say "I suppose this is awkward."
             show aletta normal
             "I shrug, still not believing I am seeing my tight knit boss breaking one of the company rules."
-            show aletta talkative
+            show aletta talk
             aletta.say "Relax, rules get broken every day and the world still spins."
             show aletta normal
             "She did have a point."
@@ -2996,7 +2996,7 @@ label aletta_event_01:
     mike.say "Rough morning?"
     show aletta happy at startle
     "She gives a laugh but it doesn't sound like any humor is in it."
-    show aletta talkative
+    show aletta talk
     aletta.say "You don't know the half of it."
     show aletta whining
     aletta.say "Three people late, two sick, deadlines that are now impossible to make and corporate is riding my ass like it's somehow my fault?"
@@ -3020,7 +3020,7 @@ label aletta_event_01:
     mike.say "You know, maybe if a few people got fired for 'not calling in' you could get a few new employees in."
     show aletta sadsmile
     "Aletta seems confused but then what I am saying seems to dawn on her."
-    show aletta talkative
+    show aletta talk
     aletta.say "Very true, [hero.name] I'll have to go check the call logs after my break. Thanks for the reminder."
     show aletta normal
     mike.say "Anytime Boss."
@@ -3073,14 +3073,14 @@ label aletta_event_02:
             "I just shake my head."
             "He didn't even give me a chance to respond."
             "Everyone starts to go back to work and I see Aletta looking at me with thankful eyes."
-            show aletta talkative at center, traveling(1.25, 0.3, (640, 880))
+            show aletta talk at center, traveling(1.25, 0.3, (640, 880))
             aletta.say "That was nice of you to step in."
             show aletta normal
             "I shrug."
             mike.say "It was nothing. I was just trying to do the right thing."
             show aletta happy at startle
             "She gives a bitter laugh."
-            show aletta talkative
+            show aletta talk
             aletta.say "No one else was going to. You'd think as much as they all come to me with their problems they would be a little more grateful."
             $ aletta.sub += 1
             $ aletta.love += 1
@@ -3104,7 +3104,7 @@ label aletta_event_02:
             mike.say "Are you okay?"
             show aletta stuned
             "She looks to me slightly surprised."
-            show aletta talkative
+            show aletta talk
             aletta.say "All in a days work."
     aletta.say "I need a smoke now after all of that. Care to join me?"
     scene bg breakroom with fade
@@ -3144,11 +3144,11 @@ label aletta_event_02:
             mike.say "Maybe you should treat yourself to a massage at a spa?"
             show aletta sadsmile
             "She looks to me and I think I catch a hint of disappointment in her eye before it is gone."
-            show aletta talkative
+            show aletta talk
             aletta.say "Oh."
             show aletta a normal
             "She drops her hand."
-            show aletta talkative
+            show aletta talk
             aletta.say "Maybe. I'll look into that."
             show aletta dreamy
             "She goes back to looking out the window and smoking her cigarette."
@@ -3157,7 +3157,7 @@ label aletta_event_02:
     with fade
     "I don't know what it is about Aletta that changed, but I feel myself getting closer to her when she is like this."
     "I feel the need to say something when suddenly the door to the break room opens and Aletta's almost finished cigarette goes out the window."
-    show aletta talkative
+    show aletta talk
     aletta.say "That's correct [hero.name], so if you continue at the pace you are going you should have no trouble finishing your work by the deadlines this week."
     aletta.say "Good job on getting that assignment for yesterday finished, I understand it was a difficult one."
     show aletta normal
@@ -3166,7 +3166,7 @@ label aletta_event_02:
     "Make sure of what I didn't know. I glance to the other worker that came in as they get a drink out of the fridge and leave not having noticed Aletta was smoking."
     show aletta happy
     "After the door shuts Aletta smiles to me."
-    show aletta talkative
+    show aletta talk
     aletta.say "Guess our break times over."
     aletta.say "Better get back to work before someone more observant comes in."
     show aletta normal
@@ -3196,7 +3196,7 @@ label aletta_event_03:
     "A grip... hmm maybe that isn't such a bad idea."
     "Maybe that's just my problem, I need to get off."
     "I could go to the bathroom real quick and jerk off and she would never know."
-    show aletta talkative
+    show aletta talk
     aletta.say "[hero.name]..."
     aletta.say "[hero.name] are you listening to me?"
     show aletta normal
@@ -3204,7 +3204,7 @@ label aletta_event_03:
     mike.say "Uh, what? Sorry. I kind of zoned out."
     show aletta annoyed
     "I try to laugh it off but she doesn't look happy with me."
-    show aletta talkative
+    show aletta talk
     aletta.say "I'll go over it again, but pay attention this time."
     show aletta normal
     "In no time I am zoned out again just watching her lips move and barely catching what she is saying."
@@ -3221,7 +3221,7 @@ label aletta_event_03:
             "I lean on my right arm to keep from moving any closer to her."
             "At first she keeps talking but then glances my direction and there is a flicker of disappointment before she continues with what she is telling me."
             "Is it just my imagination?"
-    show aletta talkative
+    show aletta talk
     aletta.say "So do you understand what I am saying?"
     show aletta normal
     mike.say "Uh, yeah. I-I mean, yes, Aletta. I should be able to get it done no problem."
@@ -3240,7 +3240,7 @@ label aletta_event_03:
     "That's it, I need to go take care of this."
     show aletta normal
     mike.say "Don't worry about it Aletta, I'll have it done before I leave here. I'm just going to go to the bathroom real quick."
-    show aletta talkative
+    show aletta talk
     aletta.say "No problem, [hero.name], it really is a great help."
     show aletta normal
     "She suddenly drops some of her papers as she turns in her chair to get up."
@@ -3271,7 +3271,7 @@ label aletta_event_03:
             mike.say "I-I... don't know what you mean."
     show aletta normal
     "Not being able to look her in the eyes I quickly hand the papers to her, which she takes with a smirk."
-    show aletta talkative
+    show aletta talk
     aletta.say "Let me know if you need anything, [hero.name]."
     show aletta normal
     "Now I definitely need to go to the bathroom, I think as I watch her walk away."
@@ -3462,7 +3462,7 @@ label aletta_event_05:
     "What is this, Aletta's newest hire?"
     "He looks like an ex-underwear-model thinly veiled as an employee."
     "I bet she's gonna keep him under her desk."
-    show aletta talkative
+    show aletta talk
     aletta.say "I wanted to introduce you, since I don't think you've ever met."
     show aletta normal
     "Aletta holds a hand up to the guy, who seems to be waiting for something."
@@ -3477,7 +3477,7 @@ label aletta_event_05:
             "I'm not stupid enough to potentially piss off someone important, anyway."
             "I roll back my seat from my desk and get to my feet, turning to offer my hand to the dude."
             "His hand seems to be twice the size of mine when he reaches out and gives it a firm shake."
-            show aletta talkative
+            show aletta talk
             aletta.say "This is Mr. --"
             show aletta normal
             show dwayne shout
@@ -3491,13 +3491,13 @@ label aletta_event_05:
             "I don't mind."
             "They're definitely better than the uptight stiffs who expect you to address them like royalty."
             mike.say "Nice to meet you."
-            show aletta talkative
+            show aletta talk
             aletta.say "Dwayne, he's been working with us for a while now. He's..."
             show aletta normal
             "She stops to think for a second, staring at me, like she's evaluating what she wants to say."
             if game.flags.worksatisfaction > 50 or game.flags.promoted >= 10:
                 $ aletta.love += 10
-                show aletta talkative
+                show aletta talk
                 aletta.say "... efficient, and talented. I'm happy to have him as an employee."
                 show aletta normal
                 "Aw, Aletta, you shouldn't have. I could almost blush."
@@ -3510,7 +3510,7 @@ label aletta_event_05:
                 show dwayne smile
                 mike.say "Likewise."
             else:
-                show aletta talkative
+                show aletta talk
                 aletta.say "...he's been getting the job done."
                 show aletta normal
                 show dwayne smile at center, traveling(1.1, 0.3, (340, 780))
@@ -3521,13 +3521,13 @@ label aletta_event_05:
                 mike.say "Good to be here."
                 "Having a job is kind of a necessity, anyway."
             "I get the feeling this isn't her new hire."
-            show aletta talkative
+            show aletta talk
             aletta.say "You might not recognize him by first name. Dwayne is the CEO of the company."
             show aletta normal
             "Recognition floods me all at once, and suddenly I'm looking at this mammoth of a man with new eyes."
             "That's right, his name was Dwayne, wasn't it?"
             "It's hard to remember, since the guy's never really around in the office."
-            show aletta talkative
+            show aletta talk
             aletta.say "Well, we've got more stops to make, so."
             show aletta normal
             mike.say "Ah, yeah. I'll get back to work."
@@ -3559,11 +3559,11 @@ label aletta_event_05:
             "She pauses, maybe trying to think of some way to talk me up, even if she thinks I'm being a bit rude."
             if game.flags.worksatisfaction > 50 or game.flags.promoted >= 10:
                 $ aletta.love += 10
-                show aletta talkative
+                show aletta talk
                 aletta.say "...surprisingly competent."
                 show aletta normal
                 "She continued though it seemed to pain her a little bit."
-                show aletta talkative
+                show aletta talk
                 aletta.say "Usually not like this."
                 show aletta sadsmile
                 "Aw, Aletta, you shouldn't have. I could almost blush."
@@ -3572,7 +3572,7 @@ label aletta_event_05:
                 show dwayne smile
                 "He seems less bothered by my snub than Aletta is."
             else:
-                show aletta talkative
+                show aletta talk
                 aletta.say "...he's been getting the job done."
                 show aletta sadsmile
                 "I guess that's all she can manage, right now."
@@ -3582,7 +3582,7 @@ label aletta_event_05:
             "I'm starting to get the impression that this guy's not just her new hire."
             show aletta normal
             "Aletta clears her throat and glances back to me."
-            show aletta talkative
+            show aletta talk
             aletta.say "This is Mr.--"
             show aletta normal
             "She still sounds a bit strained while she addresses me."
@@ -3593,7 +3593,7 @@ label aletta_event_05:
             show dwayne happy
             dwayne.say "Dwayne's fine."
             show dwayne normal
-            show aletta talkative
+            show aletta talk
             aletta.say "...He's the CEO of our company."
             show aletta normal
             "Oh, shit."
@@ -3959,7 +3959,7 @@ label aletta_event_06:
             "And I don't want to get passed around in prison like a chew-toy!"
             "So I keep on staring straight at Aletta, not daring to blink."
             "It comes as a relief a moment later when she looks away and nods."
-            show aletta talkative
+            show aletta talk
             aletta.say "O...okay, [hero.name]."
             aletta.say "I'll try my best."
             show aletta sadsmile
@@ -4350,7 +4350,7 @@ label aletta_event_09:
     "Aletta doesn't answer me straight away."
     "Instead she looks around, making sure she can't be overheard."
     "Only when she's satisfied that we're alone does she start to speak."
-    show aletta talkative
+    show aletta talk
     aletta.say "Drop the act, [hero.name]."
     aletta.say "There's no need for it anymore."
     show aletta normal
@@ -4365,7 +4365,7 @@ label aletta_event_09:
     "It's only now that I can see she's really trying to keep a handle on her emotions."
     "What I thought was just an upbeat mood seems more like mania this close up."
     "It scares me a little, as I'm so used to Aletta keeping her feelings under control."
-    show aletta talkative
+    show aletta talk
     aletta.say "It's over, [hero.name]."
     aletta.say "All of this horrible business with Dwayne."
     aletta.say "It's all finished with!"
@@ -4380,7 +4380,7 @@ label aletta_event_09:
     mike.say "How can it be?"
     mike.say "For god's sake - the police were here just the other day!"
     "Aletta shakes her head at my objections, as if they're meaningless."
-    show aletta talkative at center, traveling(1.5, 0.5, (640, 1040))
+    show aletta talk at center, traveling(1.5, 0.5, (640, 1040))
     aletta.say "The police just made an announcement, [hero.name]."
     aletta.say "They're ending their investigation into Dwayne."
     if "dwayne_corpse_discovery" in DONE:
@@ -4402,21 +4402,21 @@ label aletta_event_09:
             "Aletta winces a little at my admittedly poor choice of words."
             "But it's nothing more than a minor blip that she soon gets over."
             "And that's because my mood is now reflecting her own."
-            show aletta talkative
+            show aletta talk
             aletta.say "Maybe we should call it manslaughter in self-defence?"
             aletta.say "But you're right, [hero.name]."
             aletta.say "We should be celebrating the fact that he's dead!"
             show aletta normal
             "Again I see Aletta glance around."
             "It's as if she's worried someone might have sneaked up on us without being noticed."
-            show aletta talkative
+            show aletta talk
             aletta.say "But not here, okay?"
             aletta.say "Here we still need to be professional."
             show aletta normal
             "I nod eagerly, trying to let Aletta know I'm with her."
             "And my immediate rewards is feeling her hand below my waist."
             "I gasp as Aletta strokes my cock through my pants."
-            show aletta talkative
+            show aletta talk
             aletta.say "Don't judge me, [hero.name]."
             aletta.say "But getting away with murder..."
             show aletta flirt
@@ -4494,7 +4494,7 @@ label aletta_event_10:
     mike.say "It's...weird, Aletta."
     mike.say "Being in here without Dwayne..."
     mike.say "Knowing that he's not coming back."
-    show aletta talkative
+    show aletta talk
     aletta.say "You can say it, [hero.name]."
     aletta.say "You can actually come out and say that he's dead."
     aletta.say "There's only the two of us here to hear it."
@@ -4509,7 +4509,7 @@ label aletta_event_10:
     mike.say "What difference does it make, Aletta?"
     mike.say "We both know what happened to Dwayne."
     mike.say "Why do you need to hear me say it?"
-    show aletta talkative
+    show aletta talk
     aletta.say "Because I don't think it's real to you."
     aletta.say "I don't think it will be until you actually say it."
     show aletta normal
@@ -4521,7 +4521,7 @@ label aletta_event_10:
     "Aletta's smile is slow and languid as it spreads across her face."
     "She doesn't seem in the least bit troubled by hearing it said out loud."
     "In fact, if anything, it seems to make her confidence grow as I look at her!"
-    show aletta talkative
+    show aletta talk
     aletta.say "That's right, [hero.name]."
     show aletta angry
     aletta.say "I killed Dwayne in revenge for what he put me through."
@@ -4535,7 +4535,7 @@ label aletta_event_10:
     mike.say "He deserved to be punished for what he did to you, Aletta."
     show aletta normal
     "Aletta nods, struggling with the emotions that she must be feeling."
-    show aletta talkative
+    show aletta talk
     aletta.say "And you did the opposite of that, [hero.name]."
     aletta.say "You were always there for me when I needed you."
     aletta.say "So you deserve the opposite of what Dwayne got."
@@ -4557,7 +4557,7 @@ label aletta_event_10:
     "Once she's naked, Aletta turns her attention to me."
     show aletta normal at center, traveling(1.5, 1.0, (640, 1040))
     "She leans in close as she undresses me, talking the whole time."
-    show aletta talkative
+    show aletta talk
     aletta.say "I want you to feel what it was like to be him, [hero.name]."
     aletta.say "Sitting up here in his ivory tower, thinking he was king of the world."
     aletta.say "Because I know that you'll appreciate it like he never did."

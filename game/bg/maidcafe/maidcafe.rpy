@@ -149,7 +149,7 @@ label maidcafe_order:
 label kiara_special_coffee:
     scene bg maidcafe with fade
     "Here I am, lost in my thoughts, wondering what I'm going to order today."
-    show kiara talkative at center, zoomAt(1.25, (940, 880)) with easeinright
+    show kiara talk at center, zoomAt(1.25, (940, 880)) with easeinright
     kiara.say "Ah, [hero.name]."
     kiara.say "It's such a pleasure to see you again."
     show kiara smile
@@ -159,16 +159,14 @@ label kiara_special_coffee:
     mike.say "Y...yeah..."
     mike.say "It's a pleasure to see me - I mean you..."
     mike.say "I mean, hi!"
-    show kiara tantrum at startle
-    "Kiara tosses her head back and lets out a deep, genuine laugh at my tongue-tied answer."
-    show kiara talkative at center, zoomAt(1.25, (640, 880)) with ease
+    show kiara talk at center, zoomAt(1.25, (640, 880)) with ease
     kiara.say "Have you already ordered?"
     show kiara normal
     mike.say "Not yet. I like everything here."
     mike.say "To choose is to renounce, as it's said."
     show kiara stare
     "A glimmer lights up in Kiara's eyes."
-    show kiara talkative at center, traveling(1.0, 0.3, (940, 720))
+    show kiara talk at center, traveling(1.0, 0.3, (940, 720))
     kiara.say "I know exactly what you need. Follow me in the back-room."
     show kiara normal
     menu:
@@ -178,7 +176,7 @@ label kiara_special_coffee:
             "I can see a look of disappointment in Kiara's eyes."
             show kiara whining
             kiara.say "Too bad. Enjoy your coffee then."
-            show kiara talkative
+            show kiara talk
             kiara.say "Maybe I'll see you around some time."
             hide kiara with easeoutright
             "And then she's gone."
@@ -196,7 +194,7 @@ label kiara_special_coffee:
     show kiara at center, zoomAt(1.5, (640, 1280)) with ease
     "The door is barely closed, Kiara already kneeling down in front of me reaching for my flies."
     kiara.say "Mmm..."
-    show kiara talkative
+    show kiara talk
     kiara.say "These pants are SO tight."
     kiara.say "I can see every little detail, [hero.name]."
     kiara.say "It's like you've been teasing me the whole time you've been here!"
@@ -204,7 +202,7 @@ label kiara_special_coffee:
     play sound pants_unzip
     "She has my flies open by now."
     "And her fingers are reaching inside..."
-    show kiara talkative
+    show kiara talk
     kiara.say "But I knew I wanted some of this the moment that I saw it."
     kiara.say "Getting it between my lips - that's all I've been able to think about!"
     scene kiara maidcafe blowjob with fade
@@ -238,7 +236,7 @@ label kiara_special_coffee:
     "I watch as she stands up casually, stuffing my cock back into my pants."
     stop sexsfx1
     scene bg maidcafe
-    show kiara talkative at center, zoomAt(1.25, (640, 880))
+    show kiara talk at center, zoomAt(1.25, (640, 880))
     with fade
     kiara.say "I hope you enjoyed this special treat."
     show kiara smile

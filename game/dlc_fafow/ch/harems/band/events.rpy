@@ -357,7 +357,7 @@ label band_harem_amy_event_01:
     "That's how brilliant the ideas we keep on coming up with sound to me."
     "But I have to admit that there is a small voice in the back of my head that's not so sure."
     "A voice that keeps on trying to remind me of just how much we've both had to drink."
-    show kleio talkative
+    show kleio talk
     kleio.say "Yeah, yeah, yeah..."
     kleio.say "That's exactly what we need to do..."
     kleio.say "We could like, save the human race!"
@@ -368,7 +368,7 @@ label band_harem_amy_event_01:
     mike.say "We should...we should...write it all down!"
     "I start rummaging through my pockets, looking for a pen and something to write on."
     "And Kleio seems to be totally onboard with my efforts, as she does all she can to help."
-    show kleio talkative
+    show kleio talk
     kleio.say "Hey..."
     kleio.say "Hey, Loverboy..."
     kleio.say "You could write it on the back of this beer mat!"
@@ -450,13 +450,13 @@ label band_harem_amy_event_01:
         amy.say "We used to be in a band together."
         amy.say "And, as you might have guessed, it didn't work out!"
         show amy sad
-        show kleio talkative
+        show kleio talk
         kleio.say "Yeah, and who's fault was that?!?"
         show kleio upset
         mike.say "I get it, Kleio, I get it!"
         mike.say "But isn't it time to let go of what happened in the past?"
         mike.say "To forgive and move on?"
-    show kleio talkative
+    show kleio talk
     kleio.say "No way!"
     kleio.say "It's time I gave her the beating she deserves!"
     show kleio upset
@@ -526,7 +526,7 @@ label band_harem_amy_event_01:
     mike.say "I just didn't want you to do something you'd regret in the morning."
     "Kleio leans herself against me as we start to walk off down the street."
     "And I feel that she's silently accepting my explanation for the sake of making peace."
-    show kleio talkative
+    show kleio talk
     kleio.say "But, Loverboy..."
     kleio.say "I never regretted kicking anyone's ass!"
     $ game.room = "map"
@@ -1470,14 +1470,14 @@ label band_harem_amy_event_04:
     show anna b happy swimsuit at center, zoomAt (1.25, (640, 900)) with ease
     anna.say "Phew..."
     anna.say "Sorry to take so long getting changed, [hero.name]."
-    show anna b talkative
+    show anna b talk
     anna.say "But here I am, all ready to have some soggy fun!"
     show anna b unpleased
     "As soon as the words are out of her mouth, Anna frowns."
     show anna b worried
     anna.say "Oh no..."
     anna.say "That just doesn't sound right, does it?"
-    show anna b talkative
+    show anna b talk
     anna.say "Damp fun?"
     anna.say "Moist fun?"
     anna.say "Dripping fun?"
@@ -1607,13 +1607,13 @@ label band_harem_amy_event_04:
     "She's gazing up at the top slide, eyes wide with trepidation."
     show anna annoyed
     anna.say "Erm..."
-    show anna talkative
+    show anna talk
     anna.say "Speed isn't everything, Amy."
     anna.say "The bottom slide is longer, and it has more loops in it too."
     show anna normal
     "It's pretty clear that neither one of the girls is going to convince the other."
     "So obviously the next thing they do is turn to me."
-    show anna talkative at startle
+    show anna talk at startle
     anna.say "Tell her, [hero.name]…"
     anna.say "We should go on the bottom slide."
     show anna annoyed
@@ -3906,7 +3906,7 @@ label band_harem_amy_event_11:
     "Kleio lets out a derisive snort of laughter."
     show kleio normal
     "And she looks me up and down, like she's seeing me for the first time."
-    show kleio talkative
+    show kleio talk
     kleio.say "What's the matter, Loverboy?"
     kleio.say "Since when were you a member of the anti-fun police?"
     show kleio normal
@@ -3971,11 +3971,11 @@ label band_harem_amy_event_11:
     sasha.say "Is that a new amp and guitar?"
     sasha.say "You gotta show how they sound?"
     show sasha normal
-    show kleio talkative at startle
+    show kleio talk at startle
     kleio.say "That shit looks heavy..."
     kleio.say "Let me help you find a place for it."
     show kleio normal
-    show anna talkative at startle
+    show anna talk at startle
     anna.say "You look thirsty, Amy!"
     anna.say "I'll go get you something to drink..."
     show anna normal
@@ -4006,7 +4006,7 @@ label band_harem_amy_event_11:
     mike.say "Ahem..."
     mike.say "I'd like to take this opportunity to welcome Amy back into the fold."
     mike.say "And I think I speak for us all..."
-    show kleio talkative at center, zoomAt(1.5, (340, 1040)) with easeinleft
+    show kleio talk at center, zoomAt(1.5, (340, 1040)) with easeinleft
     kleio.say "Speak for yourself, Loverboy!"
     show kleio normal
     mike.say "I said, I think I speak for us all when I say..."
@@ -4741,7 +4741,7 @@ label amy_kleio_park_threesome:
     mike.say "Well...somewhere we can..."
     show kleio annoyed
     "Kleio rolls her eyes, like I'm being totally unreasonable."
-    show kleio talkative
+    show kleio talk
     kleio.say "Don't be such a drama-queen!"
     kleio.say "The park's right over there, you know?"
     show kleio normal
@@ -4792,7 +4792,7 @@ label amy_kleio_park_threesome:
     mike.say "Argh..."
     "It doesn't take me long to realise that it's actually Kleio and Amy manhandling me."
     "And that all they're really doing is eagerly trying to get me down onto the ground."
-    show kleio talkative
+    show kleio talk
     kleio.say "Geez, Loverboy..."
     kleio.say "Weren't you the one that wanted to keep from being discovered?"
     show kleio normal

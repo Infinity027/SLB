@@ -12,4 +12,3 @@ init python:
     "outfit": "casual",
     "tags": ["mall_southside", "mall_northside"],
     })
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

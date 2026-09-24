@@ -34,4 +34,3 @@ label bathroom_broken:
                 pass
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

@@ -278,7 +278,7 @@ label lavish_gift_sexy_dress_male:
         "And she waves a hand, dismissing my concerns."
         show lavish happy
         lavish.say "Well don't you worry about any of that."
-        show lavish talkative
+        show lavish talk
         lavish.say "This dress looks pretty good to me."
         lavish.say "And I can't wait to see what it looks like on me."
         lavish.say "That and to see the look on your face when I have it on!"
@@ -319,7 +319,7 @@ label lavish_gift_sexy_dress_male:
         "Lavish's expression softens as I make my apology."
         show lavish sadsmile
         "And she gives me a pained smile."
-        show lavish talkative
+        show lavish talk
         lavish.say "That's the problem, [hero.name] - most people don't!"
         lavish.say "But what matters is that you said sorry."
         lavish.say "And I know you well enough to know you mean it too."
@@ -336,7 +336,7 @@ label lavish_gift_slutty_dress_male:
     "One that I was so sure would suit her down to the ground that I had no choice but to buy it on the spot."
     "And now it's in a gift-wrapped box that's hidden behind my back."
     "A box that Lavish seems to have spotted almost as soon as she saw me."
-    show lavish talkative
+    show lavish talk
     lavish.say "Hi, [hero.name]..."
     lavish.say "What have you got there?"
     show lavish normal
@@ -348,7 +348,7 @@ label lavish_gift_slutty_dress_male:
     mike.say "And even if I did, what would it have to do with you?"
     "I keep my tone light and playful as I evade Lavish's attempts to look behind me."
     "Enjoying the look of pleasant frustration on her face and the thrill of teasing her gently."
-    show lavish talkative
+    show lavish talk
     lavish.say "Oh come on!"
     lavish.say "You turn up to meet me with a gift-wrapped box behind your back?"
     lavish.say "Who else am I supposed to think that it's for?"
@@ -386,7 +386,7 @@ label lavish_gift_slutty_dress_male:
         mike.say "But I just thought that..."
         "Lavish looks up and waves a hand at me."
         "Cutting off what I was about to say before I can finish."
-        show lavish talkative
+        show lavish talk
         lavish.say "No, no, no..."
         lavish.say "I mean that in a good way, [hero.name]!"
         show lavish flirt

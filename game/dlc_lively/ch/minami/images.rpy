@@ -4,7 +4,7 @@ init -35 python:
     'positions': ['a', 'b', 'c'],
     'piercings': ['clit', 'navel', 'nipples', 'nose'],
     'haircuts': ['nohaircut', 'haircut'],
-    'exps': ['normal', 'angry', 'annoyed', 'constipated', 'cry', 'flirt', 'happy', 'hunt', 'mindless', 'sad', 'sadsmile', 'scared', 'stuned', 'surprised', 'talkative', 'tehe', 'vangry', 'whining'],
+    'exps': ['normal', 'angry', 'annoyed', 'constipated', 'cry', 'flirt', 'happy', 'hunt', 'mindless', 'sad', 'sadsmile', 'scared', 'stuned', 'surprised', 'talk', 'tehe', 'vangry', 'whining'],
     'outfits': ['casual', 'sport', 'sleep', 'underwear', 'date', 'sexydate', 'sluttydate', 'swimsuit', 'sexyswimsuit', 'bikini', 'halloween', 'rpg', 'wedding', 'naked'],
     'others': ['pubes', 'collar', 'blush', 'bottomless', 'topless', 'norobe'],
 }
@@ -120,9 +120,9 @@ label test_minami_exps:
     show expression f"minami {pose} surprised" as m2 at left
     "surprised"
 
-    $ renpy.show(f"minami {pose} talkative")
-    show expression f"minami {pose} talkative" as m2 at left
-    "talkative"
+    $ renpy.show(f"minami {pose} talk")
+    show expression f"minami {pose} talk" as m2 at left
+    "talk"
 
     $ renpy.show(f"minami {pose} tehe")
     show expression f"minami {pose} tehe" as m2 at left

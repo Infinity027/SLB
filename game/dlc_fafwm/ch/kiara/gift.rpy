@@ -202,7 +202,7 @@ label kiara_gift_sexy_dress_male:
     kiara.say "Especially if it made you think of me."
     "A moment later, Kiara pulls the thing out of it's wrapping."
     "Then she gasps as it unfolds in her hands."
-    show kiara talkative
+    show kiara talk
     kiara.say "It is a dress..."
     kiara.say "And a very sexy dress it is too!"
     show kiara normal

@@ -3,7 +3,7 @@ init -35 python:
     'motions': ['idle'],
     'positions': ['a', 'b'],
     'piercings': ['clit', 'ears', 'lips', 'navel', 'nipples', 'nose'],
-    'exps': ['normal', 'angry', 'annoyed', 'confused', 'cry', 'flirt', 'happy', 'mean', 'mindless', 'sad', 'sadsmile', 'smile', 'stuned', 'surprised', 'talkative', 'upset', 'whining', 'wink'],
+    'exps': ['normal', 'angry', 'annoyed', 'confused', 'cry', 'flirt', 'happy', 'mean', 'mindless', 'sad', 'sadsmile', 'smile', 'stuned', 'surprised', 'talk', 'upset', 'whining', 'wink'],
     'outfits': ['casual', 'sport', 'date', 'sexydate', 'sluttydate', 'swimsuit', 'sexyswimsuit', 'halloween', 'wedding', 'naked'],
     'others': ['pubes', 'collar', 'collar2', 'blush', 'cum', 'bottomless', 'topless', 'nopatsies'],
 }
@@ -122,9 +122,9 @@ label test_alexis_exps:
     show expression f"alexis {pose} surprised" as a2 at left
     "surprised"
 
-    $ renpy.show(f"alexis {pose} talkative")
-    show expression f"alexis {pose} talkative" as a2 at left
-    "talkative"
+    $ renpy.show(f"alexis {pose} talk")
+    show expression f"alexis {pose} talk" as a2 at left
+    "talk"
 
     $ renpy.show(f"alexis {pose} upset")
     show expression f"alexis {pose} upset" as a2 at left

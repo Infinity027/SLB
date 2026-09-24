@@ -199,7 +199,7 @@ label command_nickname_lavish:
 label submissive_interact_lavish_male:
     mike.say "Hey, Lavish..."
     mike.say "I wanted to ask you something."
-    show lavish talkative
+    show lavish talk
     lavish.say "Oh, okay - what was it?"
     show lavish normal
     mike.say "Well, I was wondering if, when you say hi to me..."

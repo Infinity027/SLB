@@ -246,7 +246,7 @@ label purity_harem_event_01:
     mike.say "I mean, apart from asking to get slapped in the face!"
     $ renpy.show(f"bg {game.room}", at_list=[center, traveling(1.5 , 0.3, (640, 1020))])
     show harmony at center, traveling(1.5, 0.3, (320, 1020))
-    show reona talkative at center, traveling(1.5, 0.3, (960, 1020))
+    show reona talk at center, traveling(1.5, 0.3, (960, 1020))
     pause 0.3
     reona.say "Look, guys - I know this looks totally fucking dumb on my part."
     show reona guilty
@@ -287,7 +287,7 @@ label purity_harem_event_01:
     harmony.say "But you'd better make this good!"
     show harmony annoyed
     "Reona nods eagerly, and then launches into her explanation."
-    show reona talkative
+    show reona talk
     reona.say "First thing you need to know is that I didn't want to do this."
     reona.say "I tried so hard to keep it bottled up inside for so long."
     reona.say "But that's all part of this mess - [hero.name] taught me to be honest with myself and others!"
@@ -306,7 +306,7 @@ label purity_harem_event_01:
     harmony.say "You won't be happy until you steal him away from her!"
     show harmony annoyed
     "Now it's Reona's turn to shake her head."
-    show reona talkative
+    show reona talk
     reona.say "I'm not going to stand here and argue with you, Harmony."
     reona.say "I'm not going to claim that I've become some kind of saint either."
     reona.say "Maybe I can't convince you that I mean what I'm saying."
@@ -328,7 +328,7 @@ label purity_harem_event_01:
     "And it's like staring down the barrel of a gun!"
     $ renpy.show(f"bg {game.room}", at_list=[center, traveling(1 , 0.3, (640, 720))])
     show harmony a at center, traveling(1, 0.3, (320, 720))
-    show reona talkative at center, traveling(1, 0.3, (960, 720))
+    show reona talk at center, traveling(1, 0.3, (960, 720))
     pause 0.3
     reona.say "I do love you, [hero.name]..."
     reona.say "It started from the way you believed in me when nobody else did."
@@ -345,7 +345,7 @@ label purity_harem_event_01:
     pause 0.2
     show reona sadsmile
     "Reona nods at this."
-    show reona talkative
+    show reona talk
     reona.say "I know, [hero.name], I know..."
     reona.say "And it's okay if you don't feel the same way about me."
     reona.say "Like I said, I'm not trying to steal anyone from anyone!"
@@ -397,13 +397,13 @@ label purity_harem_event_02a:
     "I'm patting the seat beside me as I say all of this."
     "And at the same time doing the best I can to look at ease."
     "Harmony turns to regard me, and I can already see that she's in denial."
-    show harmony talkative at center, traveling(1.5, 0.3, (640, 1050))
+    show harmony talk at center, traveling(1.5, 0.3, (640, 1050))
     harmony.say "Sure thing, [hero.name]…"
     harmony.say "But I don't know why you need to make it sound so ominous!"
     harmony.say "We can sit and chat about anything you want anytime we like."
     show harmony normal at center, traveling(1.5, 0.3, (640, 1150))
     "Harmony says this as she hurries over and sits down beside me."
-    show harmony talkative
+    show harmony talk
     harmony.say "So..."
     harmony.say "What would you like to talk about, huh?"
     harmony.say "The weather's been very pleasant the past few days."
@@ -508,7 +508,7 @@ label purity_harem_event_02a:
     "But I can see from the look in her eye that she's listening closely, taking it all in."
     show harmony sadsmile
     "And when she gives me a small nod, I know that I've truly reached her."
-    show harmony talkative
+    show harmony talk
     harmony.say "Okay, [hero.name]…"
     harmony.say "I'll do the best I can to help."
     harmony.say "But I just hope that you're right about her."
@@ -552,19 +552,19 @@ label purity_harem_event_02b:
     show reona leftback at center, zoomAt(1.25, (640, 880)) with easeinright
     "And even though it doesn't take Reona all that long to turn up too, I have enough time to start doubting myself."
     "All of which means that I look every bit as edgy as she does once we're exchanging awkward waves."
-    show reona talkative rightopen at center, traveling(1.5, 0.5, (640, 1050))
+    show reona talk rightopen at center, traveling(1.5, 0.5, (640, 1050))
     reona.say "Ah..."
     reona.say "Hey, [hero.name]…"
     show reona normal rightnormal
     mike.say "Hey, Reona - thanks for agreeing to meet me."
     "Reona nods at this, but she takes a deep breath before saying anything more."
     "And it's clear that this isn't going to be a light-hearted little chat."
-    show reona talkative
+    show reona talk
     reona.say "I...I don't really know how to do this!"
     reona.say "Hell, I wasn't even sure that you'd want to see me again after..."
     show reona normal
     mike.say "After what happened in the park?"
-    show reona talkative
+    show reona talk
     reona.say "Yeah, obviously that..."
     reona.say "I mean...are you sure that you don't want to chew me out over that?"
     reona.say "Because I'd totally understand it if you did."
@@ -667,7 +667,7 @@ label purity_harem_event_03:
     show harmony happy
     harmony.say "Don't panic, [hero.name] - it's okay!"
     show harmony normal
-    show reona talkative rightopen
+    show reona talk rightopen
     reona.say "Yeah, [hero.name]…"
     reona.say "We're not trying to gang up on you, I promise!"
     show reona normal rightnormal
@@ -684,24 +684,24 @@ label purity_harem_event_03:
     "There's a couple of nods thrown in there too, making me think that they've rehearsed for this moment."
     "But when it comes to the actual talking, Reona seems to take a conscious step backwards."
     "Clearing the way for Harmony to take the lead, which she does a moment later."
-    show harmony talkative
+    show harmony talk
     harmony.say "First things first, [hero.name]…"
     harmony.say "Obviously Reona and I have been talking to one another."
     harmony.say "And while we might not have told you about it, we weren't trying to be underhanded."
     show harmony normal
     "Reona nods, backing up Harmony's sentiment."
-    show reona talkative
+    show reona talk
     reona.say "We just felt like it was time the two of us talked in an open and honest manner."
     reona.say "That we began to share our feelings and see where that lead us."
     show reona normal
     "All of this sounds encouraging, so I make sure to listen without interrupting."
-    show harmony talkative
+    show harmony talk
     harmony.say "It didn't take us long to realise that fighting was a dumb thing to do."
     harmony.say "Especially when the dominant emotion we're all feeling is love."
     harmony.say "And after all, isn't love a sacred thing?"
     harmony.say "Something that's spiritual, that we should be thankful for?"
     show harmony normal
-    show reona talkative
+    show reona talk
     reona.say "That's something you showed us, [hero.name]…"
     reona.say "That love shouldn't be a selfish thing."
     reona.say "It shouldn't make us want to possess another person and keep them to ourselves."
@@ -728,16 +728,16 @@ label purity_harem_event_03:
     "And this time I'm sure that there's even more weight behind it than the first."
     "All of which makes me suspect that I'm about to get another rehearsed answer."
     "One that Harmony's going to take the lead in delivering."
-    show harmony talkative
+    show harmony talk
     harmony.say "That's another thing we've been discussing."
     harmony.say "In fact, it's something we've talked about more than anything else."
     harmony.say "We think that there's nothing wrong with all of the love between us."
     show harmony normal
-    show reona talkative
+    show reona talk
     reona.say "In fact, we think that it's a special kind of love."
     reona.say "A sacred love, even!"
     show reona normal
-    show harmony talkative
+    show harmony talk
     harmony.say "And that's why we want to do something to celebrate it."
     show harmony normal
     "I'm nodding along through all of this, though I don't really know where it's going."
@@ -746,19 +746,19 @@ label purity_harem_event_03:
     "Oh god, I seriously hope that they're not wanting to start some kind of cult!"
     mike.say "Is that so?"
     mike.say "And just what did you have in mind, exactly?"
-    show harmony talkative
+    show harmony talk
     harmony.say "We're suggesting that we stop denying what's so obvious, [hero.name]…"
     harmony.say "That we accept the three of us are supposed to be able to express our love for each other."
     show harmony normal
-    show reona talkative
+    show reona talk
     reona.say "We want to marry you, [hero.name]!"
     show reona normal
-    show harmony talkative
+    show harmony talk
     harmony.say "Well, that's the legally binding form the union would take, certainly."
     harmony.say "But I tend to see it primarily as a spiritual union."
     harmony.say "An unconventional one, but a genuine one nonetheless."
     show harmony normal
-    show reona talkative
+    show reona talk
     reona.say "So what do you say?"
     reona.say "Will you marry us?"
     show reona interested
@@ -775,11 +775,11 @@ label purity_harem_event_03:
     show harmony happy
     show reona happy
     "Harmony and Reona surprise me by responding to my stumbling question with smiles and laughter."
-    show harmony talkative
+    show harmony talk
     harmony.say "Oh, [hero.name]…"
     harmony.say "You're so humble and sweet!"
     show harmony normal
-    show reona talkative
+    show reona talk
     reona.say "We already worked all of that out between us."
     reona.say "And we decided that if our love is sacred, then expressing it is too!"
     show reona normal
@@ -804,18 +804,18 @@ label purity_harem_event_03:
     "Tears are streaming down my face right now, and yet I feel like laughing."
     mike.say "This is crazy - I feel so happy right now..."
     mike.say "So why am I crying?"
-    show harmony talkative
+    show harmony talk
     show reona happy
     harmony.say "I think you're just overwhelmed, that's all."
     show harmony happy
-    show reona talkative
+    show reona talk
     reona.say "Yeah - it's a lot to take in."
     show reona happy
-    show harmony talkative
+    show harmony talk
     harmony.say "But enjoy the chance to be a mess while you still can."
     harmony.say "Because there's going to be a lot of stuff to plan!"
     show harmony normal
-    show reona talkative
+    show reona talk
     reona.say "We're going to have to work out all the details of the wedding."
     reona.say "Where it's going to happen and who we're going to invite - all that stuff."
     show reona normal
@@ -921,26 +921,26 @@ label harmony_reona_male_ending:
     mike.say "Why so serious, guys?"
     mike.say "Isn't this part of the wedding festivities supposed to be fun?"
     "Reona and Harmony nod as soon as I ask the question, but they don't look any less intent."
-    show harmony talkative
+    show harmony talk
     harmony.say "Of course this is going to be fun, [hero.name]."
     harmony.say "We've all been perfectly chaste and faithful to one another."
     harmony.say "And this is where that sacrifice is rewarded."
     show harmony normal
     "I see Reona flush a little as Harmony describes the chaste nature of our relationship."
     "Because not all of us have been on that particular band-wagon from the very start."
-    show reona talkative
+    show reona talk
     reona.say "You..."
     reona.say "You mean the relationship between all three of us, right?"
     reona.say "That's the one that really matters, yeah?"
     show reona normal
-    show harmony talkative
+    show harmony talk
     harmony.say "Of course I do, Reona!"
     show harmony normal
     show reona shy
     reona.say "Okay, okay - just checking."
     show reona normal
     "Harmony does the best she can to sound serious again."
-    show harmony talkative
+    show harmony talk
     harmony.say "Now it's your duty to demonstrate your manliness, [hero.name]."
     harmony.say "It's time to make your wives heavy with child!"
     show harmony normal
@@ -1067,7 +1067,7 @@ label harmony_reona_male_ending:
             "That now she's finally in this position, everything is going to click for her."
             "But as she gets ever closer, I can see that it's not playing out in the way I'd hoped."
             "And the pressure seems to be proving too much for Harmony to handle."
-            show reona talkative
+            show reona talk
             reona.say "Oops..."
             reona.say "We just need to change angles here a little bit."
             reona.say "Like this..."

@@ -73,7 +73,7 @@ label emma_gift_slutty_dress_male:
     "Well...she can be a little more shy and retiring that the average girl."
     "But one thing that she's most certainly not is unaware of her surroundings."
     "As she seems to spot what I'm up to the moment she lays eyes on me!"
-    show emma talkative
+    show emma talk
     emma.say "[hero.name]..."
     emma.say "Call me nosy if you like..."
     emma.say "But I can't help wondering - what's that behind your back?"
@@ -106,7 +106,7 @@ label emma_gift_slutty_dress_male:
     if emma.sub >= 70:
         "Emma's eyes are still wide as she turns to look at me."
         "Filled with disbelief and not a little intrigue too."
-        show emma talkative
+        show emma talk
         emma.say "You're serious, [hero.name]?"
         emma.say "You really think I could pull something like this off?"
         show emma normal
@@ -115,7 +115,7 @@ label emma_gift_slutty_dress_male:
         mike.say "I wouldn't have bought it for you if I didn't believe that."
         "Emma's slowly starting to nod too."
         "As if my confidence is infectious."
-        show emma talkative
+        show emma talk
         emma.say "I mean, I always wanted to try it..."
         emma.say "But I was never confident enough."
         emma.say "Though, if you believe I can do it..."

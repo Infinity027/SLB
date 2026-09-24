@@ -307,7 +307,7 @@ label claire_event_01:
     show claire surprised at hshake
     claire.say "Oops!"
     claire.say "Sorry about that, [hero.name]."
-    show claire talkative
+    show claire talk
     claire.say "I suppose I've been getting a little carried away."
     claire.say "Seeing so many of Adam's old friends..."
     claire.say "Well, it's making me all nostalgic."
@@ -324,7 +324,7 @@ label claire_event_01:
             mike.say "Yeah, I know what you mean, Claire..."
             mike.say "As soon as I walked up to your place, I was just the same."
             mike.say "And now I'm starting to wonder why I left it so long to come back."
-            show claire talkative
+            show claire talk
             claire.say "Oh, that's so sweet of you!"
             show claire normal
             "I'm doing the best I can to keep my comments neutral and polite."
@@ -332,7 +332,7 @@ label claire_event_01:
             mike.say "I don't know about that, Claire..."
             mike.say "My memory must be failing me."
             mike.say "Because I don't remember you being this beautiful!"
-            show claire talkative
+            show claire talk
             claire.say "Oh, my goodness - you actually think so?"
             show claire normal
             "Okay, so maybe that was a little on the nose."
@@ -534,7 +534,7 @@ label claire_event_01:
     "Adam nods happily, looking from me and to Lily, then back again."
     show adam teaser happy at startle(0.1, -5)
     "Adam" "You bet it has, buddy!"
-    show adam teaser talkative
+    show adam teaser talk
     "Adam" "But I should have known that I'd find you talking to Lily here."
     "Adam" "I had a feeling that you two would hit it off the moment you met."
     show adam teaser normal
@@ -565,7 +565,7 @@ label claire_event_01:
     show adam teaser happy at startle(0.1, -5)
     "Adam" "Oh..."
     "Adam" "Oh yeah..."
-    show adam teaser talkative
+    show adam teaser talk
     "Adam" "Something like that - but let's change the subject, okay?"
     show adam teaser normal
     "Even I can sense when someone's dropping a hint that heavily."
@@ -636,7 +636,7 @@ label claire_event_01:
     play sfx1 glass_wine
     "And almost as one, everyone looks around to see Claire, tapping a knife against her glass."
     scene bg clairehouse kitchen
-    show claire a talkative
+    show claire a talk
     with dissolve
     play sfx1 glass_wine
     claire.say "Ahem..."
@@ -658,7 +658,7 @@ label claire_event_01:
     "But I can see that his insensitive words have really affected Claire."
     show claire sad at center, traveling(1, 0.5, (840, 720))
     "Because her voice now sounds weak and faltering."
-    show claire talkative at startle(0.1, -5)
+    show claire talk at startle(0.1, -5)
     claire.say "Th...thank you, dear..."
     claire.say "I won't take up too much of your time."
     claire.say "I just wanted to propose a toast..."
@@ -702,7 +702,7 @@ label claire_event_01:
             "The look of eagerness on Claire's face as she hears what I'm saying is plain to see."
             show claire embarrassed
             "And she nods her head quickly, almost like she's afraid someone else might notice."
-            show claire a talkative at center, traveling(2, 0.5, (640, 1220))
+            show claire a talk at center, traveling(2, 0.5, (640, 1220))
             claire.say "I'd like that, [hero.name]..."
             claire.say "I'd like it a lot!"
             $ claire.love += 5
@@ -746,7 +746,7 @@ label claire_event_02:
     show claire shy at center, zoomAt(1, (640, 720))
     with fade
     "But when I open the front-door, I find myself genuinely taken aback to see a familiar face smiling at me."
-    show claire talkative at startle(0.1, -5)
+    show claire talk at startle(0.1, -5)
     claire.say "Hi, [hero.name]…"
     claire.say "I'm so glad I managed to catch you in!"
     show claire normal
@@ -764,7 +764,7 @@ label claire_event_02:
     "And before she answers that question, Claire produces what looks like a book from behind her back."
     show claire at startle(0.1, -5)
     claire.say "Well..."
-    show claire talkative at center, traveling(2, 0.5, (640, 1220))
+    show claire talk at center, traveling(2, 0.5, (640, 1220))
     claire.say "I was just passing when I remembered that you left this at our house."
     claire.say "So I thought that I'd stop and see if you were in, you know?"
     claire.say "So that I could return it to you?"
@@ -778,7 +778,7 @@ label claire_event_02:
     "Or to be more precise, it's a volume of collected comics, one I used to read as a kid."
     "It's old too, and I don't really recognise it at first."
     "At least not as something that I've been reading recently."
-    show claire talkative at startle(0.1, -5)
+    show claire talk at startle(0.1, -5)
     claire.say "That's because you didn't..."
     claire.say "Bring it to the engagement party, that is..."
     claire.say "No, you left that at our house the last time you came over before you left for college."
@@ -795,7 +795,7 @@ label claire_event_02:
     "Because it's all starting to sound pretty weird from where I'm standing."
     mike.say "So let me get this straight..."
     mike.say "You just happened to be passing?"
-    show claire talkative at startle(0.1, -5)
+    show claire talk at startle(0.1, -5)
     claire.say "Yes."
     show claire normal
     mike.say "And you also just happened to have a comic-book from when I was a teenager on you too?"
@@ -820,7 +820,7 @@ label claire_event_02:
     "I step aside and gesture for Claire to step into the hallway."
     "And she does so eagerly, a genuine look of delight on her face."
     "Which, of course, is something that only serves to make her look even prettier than usual."
-    show claire talkative at startle(0.1, -5)
+    show claire talk at startle(0.1, -5)
     claire.say "That's so kind of you, [hero.name]."
     claire.say "I can't stay for too long, as I have some other errands to run."
     claire.say "But a cup of coffee would certainly go down a treat!"
@@ -850,7 +850,7 @@ label claire_event_02:
     mike.say "There you go, Claire."
     mike.say "There's milk and sugar on the counter, if you want any."
     "Claire takes the cup from me and inhales deeply."
-    show claire talkative at startle(0.1, -5)
+    show claire talk at startle(0.1, -5)
     claire.say "Mmm…"
     claire.say "That's some good joe!"
     claire.say "I should have known a cool dude like you would have a hippy coffee machine."
@@ -900,7 +900,7 @@ label claire_event_02:
     "Claire makes a point of nodding, as if she's just taking it all in."
     "But for some reason I can see that she's not too keen on that last detail."
     "And if I were a more egotistical kind of guy, I might even think she was a little jealous."
-    show claire talkative at startle(0.1, -5)
+    show claire talk at startle(0.1, -5)
     claire.say "That's nice, [hero.name]…"
     show claire at center, traveling(1.2, 1, (640, 820))
     claire.say "I bet they really like having a big, handsome man around the place."
@@ -917,7 +917,7 @@ label claire_event_02:
     show claire happy
     "Claire seems to be enjoying the sudden change in our relative positions."
     "Because her smile is back, and it's more warm and beautiful than ever."
-    show claire talkative at startle(0.1, -5)
+    show claire talk at startle(0.1, -5)
     claire.say "Oh, now don't be so silly, [hero.name]!"
     claire.say "I've known you since you were a little boy."
     claire.say "And you've grown into a fine, handsome young man."
@@ -957,7 +957,7 @@ label claire_event_02:
     mike.say "I feel like we're friends too, yeah?"
     show claire shy at startle(0.2, -10)
     "Claire nods and gives my hand a reassuring squeeze."
-    show claire talkative at startle(0.1, -5)
+    show claire talk at startle(0.1, -5)
     claire.say "Of course we are!"
     claire.say "And you've been around Hector for a long time, haven't you?"
     claire.say "So you know exactly what he can be like, don't you?"
@@ -1125,7 +1125,7 @@ label claire_event_03:
     with fade
 
 
-    show claire b date talkative at center, zoomAt(1.4, (640, 920))
+    show claire b date talk at center, zoomAt(1.4, (640, 920))
     claire.say "There you are, [hero.name]!"
     show bg door double at center, traveling(1.8, 1, (640, 820))
     show claire a at center, traveling(1.4, 1, (640, 720))
@@ -1148,7 +1148,7 @@ label claire_event_03:
     "Like she knew all too well the effect that her choice of outfit was going to have."
     show claire surprised at startle(0.1, -5)
     claire.say "What?"
-    show claire a talkative
+    show claire a talk
     claire.say "This old thing?"
     show claire b happy
     claire.say "It's just something that I threw on at the last minute!"
@@ -1177,7 +1177,7 @@ label claire_event_03:
     claire.say "Oh, didn't I already say?"
     claire.say "Hector's out on business, and he won't be back either."
     claire.say "So tonight it's just going to be you and me - a quiet little dinner for two friends."
-    show claire talkative
+    show claire talk
     claire.say "I do hope you're okay with that?"
     show claire happy
     "I know that my head should be filled with alarm bells right now."
@@ -1190,7 +1190,7 @@ label claire_event_03:
     "Claire's smile is more than enough to make me forget about all of my misgivings."
     "I offer no resistance as she guides me into one of the seats at the table."
     "And the food on the plates smells so good that Hector might as well not exist at all."
-    show claire talkative at startle(0.1, -5)
+    show claire talk at startle(0.1, -5)
     claire.say "I know that I wasn't totally honest with you about tonight, [hero.name]…"
     claire.say "And maybe I should have told you that Hector wasn't going to be here..."
     claire.say "But the truth is that I so desperately needed your company, and I was afraid you might not come."
@@ -1240,7 +1240,7 @@ label claire_event_03:
             show claire startle at startle(0.1, -5)
             claire.say "Oh, I see that now..."
             claire.say "How silly of me..."
-            show claire talkative
+            show claire talk
             claire.say "And how lucky you were here to put me right!"
             show claire normal
             "I see that there are more bottles on a side table, and so I fetch an appropriate vintage."
@@ -1249,7 +1249,7 @@ label claire_event_03:
             mike.say "Shall we have a toast?"
             show claire b happy at startle(0.3, 10)
             "Claire nods as she hurries to pick up her glass too."
-            show claire talkative at startle(0.1, -5)
+            show claire talk at startle(0.1, -5)
             claire.say "Ooh..."
             claire.say "What shall we drink to?"
             show claire normal
@@ -1314,7 +1314,7 @@ label claire_event_03:
             "Claire starts to giggle like a girl half her age."
             show claire at center, traveling(1.8, 1.5, (320, 1120))
             "And she waves a hand in the air as she leans in closer."
-            show claire talkative
+            show claire talk
             claire.say "Of course not!"
             claire.say "And here's a confession, the wine loosening my tongue..."
             claire.say "But I kind of hope you see me in THAT way!"
@@ -1342,11 +1342,11 @@ label claire_event_03:
     claire.say "That was just thunder and lightning, right?"
     show claire normal at dark
     mike.say "Sounded like it to me."
-    show claire talkative at dark
+    show claire talk at dark
     claire.say "So I shouldn't be scared, should I?"
     show claire normal at dark
     mike.say "Probably not."
-    show claire talkative at dark
+    show claire talk at dark
     claire.say "Damn it..."
     claire.say "That means you're going to have to stop holding me too, doesn't it?"
     show claire normal at dark
@@ -1532,7 +1532,7 @@ label claire_event_05:
     show screen expression "smartphone_calling" pass ("claire")
     show mike at center, zoomAt(2.6, (740, 1820))
     with fade
-    show mike talkative
+    show mike talk
     mike.say "Hi, Claire..."
     mike.say "How are you doing?"
     show mike normal
@@ -1543,7 +1543,7 @@ label claire_event_05:
     claire.say "I wasn't sure that you'd want to talk to me!"
     claire.say "You know, after what happened at the mall?"
     "Even though we're speaking in the phone, I can't help shaking my head."
-    show mike talkative
+    show mike talk
     mike.say "No way, Claire!"
     mike.say "If I'm honest, I've been pretty worried about you."
     mike.say "So it's a relief to hear your voice."
@@ -1560,7 +1560,7 @@ label claire_event_05:
     "Oh man, there are times when Claire makes me feel like we're a couple of teenage kids."
     "You know, trying to dress-up inviting each other places with totally innocent motives?"
     "But that doesn't mean that I'm not a total sucker for any invitation that she sends my way."
-    show mike talkative
+    show mike talk
     mike.say "Well, I'm definitely free to come over there."
     mike.say "So long as 'you know who' isn't home?"
     show mike normal
@@ -1570,7 +1570,7 @@ label claire_event_05:
     claire.say "Don't worry about Hector..."
     claire.say "He's out of town, supposedly on business."
     claire.say "And he won't be back for a LONG time."
-    show mike talkative
+    show mike talk
     mike.say "Then how can I say no?"
     mike.say "I'll be there as soon as I can."
     hide screen smartphone_calling
@@ -1600,7 +1600,7 @@ label claire_event_05:
     mike.say "I guess I'm just a little on edge, that's all."
     "Claire nods, letting me know that she understands."
     "At the same time she stands to one side and gestures for me to come in."
-    show claire talkative at startle(0.1, -5)
+    show claire talk at startle(0.1, -5)
     claire.say "It's okay, [hero.name]…"
     claire.say "Hector really is working away."
     claire.say "And he won't be coming back for ages, I promise."
@@ -1612,7 +1612,7 @@ label claire_event_05:
     mike.say "I know it's stupid of me to be worried."
     mike.say "But I'm not really fond of confrontations, you know?"
     mike.say "Normally I go out of my way to avoid them!"
-    show claire talkative at startle(0.1, -5)
+    show claire talk at startle(0.1, -5)
     claire.say "And yet when you heard that I was in trouble..."
     claire.say "You came running to save me!"
     show claire pleased
@@ -1631,7 +1631,7 @@ label claire_event_05:
     "And she doesn't hesitate to fill them without asking if I want one or not."
     "Though I take it and sip from the glass just as silently when Claire offers it to me."
     "Once she's taken a long sip, Claire lets out a sigh and shakes her head."
-    show claire talkative at startle(0.1, -5)
+    show claire talk at startle(0.1, -5)
     claire.say "Urgh..."
     claire.say "You know I used to think this house was like a castle, a sanctuary from the outside world."
     claire.say "But over time I came to realise that it's more like a prison."
@@ -1674,7 +1674,7 @@ label claire_event_05:
     mike.say "I don't see you as a wife or a mother."
     mike.say "I'd like to think I look at you and see a friend."
     "Claire nods as I try to explain how I feel about her."
-    show claire talkative at startle(0.1, -5)
+    show claire talk at startle(0.1, -5)
     claire.say "Oh, I know that, I really do!"
     claire.say "In fact, you're the reason I'm saying all of this out loud for the first time."
     claire.say "It's only since you and I started to get close that I realised I was trapped."
@@ -1697,7 +1697,7 @@ label claire_event_05:
             mike.say "And I think you feel the same way about me too."
             "Claire now looks like she's hanging on my every word."
             "Nodding eagerly as I try to express myself to her."
-            show claire talkative
+            show claire talk
             claire.say "Oh, [hero.name]…"
             claire.say "I've been waiting so long to hear you say that!"
             claire.say "And I do...I do feel the same way!"
@@ -1714,7 +1714,7 @@ label claire_event_05:
             mike.say "To admit that you want me to take control."
             "Claire's eyes slowly turn until they're looking in my direction."
             "And I can see that her pupils are massive circles of black."
-            show claire talkative
+            show claire talk
             claire.say "I..."
             claire.say "I can't deny it, not any longer."
             claire.say "I want to be yours, [hero.name]…"
@@ -1823,7 +1823,7 @@ label claire_event_06:
     "That last question seems to be the one that finally does it."
     "The one that makes Adam realise how crazy this whole situation actually is."
     "Because he takes a step backwards and holds his hands up in a 'time-out' gesture."
-    show adam teaser talkative
+    show adam teaser talk
     "Adam" "Okay, look..."
     "Adam" "Texting you from over there and then jumping out on you..."
     "Adam" "I admit that was kind of a mad thing do to."
@@ -1857,7 +1857,7 @@ label claire_event_06:
             show adam teaser upset
             "For a moment, Adam looks like he's about to explode."
             "But then, much to my relief, all the anger seems to drain out of him."
-            show adam teaser talkative
+            show adam teaser talk
             "Adam" "You don't know how long I've been expecting to hear that about Claire."
             "Adam" "I just never expected to be hearing it from you!"
             show adam teaser sadsmile
@@ -1866,14 +1866,14 @@ label claire_event_06:
             mike.say "I wasn't trying to wreck their marriage or anything."
             mike.say "She needed a shoulder to lean on, and then we realised there was more to it."
             "Adam shakes his head."
-            show adam teaser talkative
+            show adam teaser talk
             "Adam" "Nah, I get it."
             "Adam" "She's a great person, and super-hot too!"
             "Adam" "In a way I'm glad that it's you, and not some total stranger."
             show adam teaser normal
             "I nod and smile, relieved to have everything out in the open."
             mike.say "You want to go grab a coffee and talk about it?"
-            show adam teaser talkative
+            show adam teaser talk
             "Adam" "No, no..."
             "Adam" "I think I just need some space to think."
             "Adam" "You know, some time to myself?"
@@ -1912,7 +1912,7 @@ label claire_event_06:
             mike.say "If that's too much in your book, then I'm sorry!"
             show adam teaser sadsmile
             "Adam's head sags as he lets out a sigh."
-            show adam teaser talkative
+            show adam teaser talk
             "Adam" "I'm sorry, dude..."
             "Adam" "I guess I was just paranoid, you know?"
             show adam teaser normal
@@ -1956,13 +1956,13 @@ label claire_event_07:
     mike.say "Because I'm not paranoid, but everyone in here is looking at you right now!"
     show master_glasses zorder 6 at center, traveling(4.6, 0.7, (870, 2940))
     "Claire pulls down her sunglasses so that she can look at me over the top of them."
-    show claire talkative
+    show claire talk
     claire.say "What are you talking about, [hero.name]?"
     show claire pissed
     claire.say "Can't you see that I've come in disguise?"
     show claire wink
     pause 0.2
-    show claire talkative with dissolve
+    show claire talk with dissolve
     claire.say "It's really important that I'm not recognised!"
     show claire normal
     show master_glasses zorder 6 at center, traveling(4.6, 0.7, (870, 2880))
@@ -2049,7 +2049,7 @@ label claire_event_07:
             mike.say "I'm not worried about what Hector might think or do, Claire."
             mike.say "Because I know that we have something he doesn't."
             mike.say "We have each other, right?"
-            show claire talkative
+            show claire talk
             claire.say "Oh, [hero.name]…"
             claire.say "Of course we do!"
             show claire happy with dissolve
@@ -2060,7 +2060,7 @@ label claire_event_07:
             mike.say "I just know that he'll be no match for us!"
             "Claire's nodding too by now."
             "Holding my hand as if her life depends on it."
-            show claire talkative
+            show claire talk
             claire.say "You got it!"
             show claire normal
             $ claire.love += 6
@@ -2081,7 +2081,7 @@ label claire_event_07:
             mike.say "Like I already said, just leave it all to me."
             "By now Claire's eyes have kind of glazed over."
             "And she's staring at me with undisguised admiration."
-            show claire talkative
+            show claire talk
             claire.say "If you say so, [hero.name]."
             show claire normal
             $ claire.sub += 3
@@ -2451,7 +2451,7 @@ label claire_event_09:
     mike.say "You know, that you'd been too hasty about the whole divorce thing?"
     mike.say "I mean, isn't Hector going to need to come back here from the hospital?"
     "Claire shakes her head at this."
-    show claire talkative
+    show claire talk
     claire.say "No, [hero.name]…"
     claire.say "If anything, all of this has made me realise that I need it to happen faster."
     show claire at center, traveling(2, 5, (640, 1320))
@@ -2840,7 +2840,7 @@ label claire_sub_event_01:
     "And when the kiss ends, I'm left breathless and, my heart racing."
     stop sound
     hide claire kiss
-    show claire idle talkative at center, zoomAt(2.6, (640, 1620))
+    show claire idle talk at center, zoomAt(2.6, (640, 1620))
     claire.say "Ah..."
     claire.say "Oh..."
     claire.say "Please, [hero.name]…"
@@ -2895,7 +2895,7 @@ label claire_sub_event_02:
     mike.say "Not just stuff like choosing what to have for lunch?"
     "My questions must sound pretty dumb, because Claire begins to smile."
     "And she shakes her head, dismissing my concerns."
-    show claire talkative
+    show claire talk
     claire.say "Of course I mean like the last time!"
     claire.say "The truth is that I haven't been able to stop thinking about it."
     claire.say "I felt so liberated, so free..."
@@ -2910,7 +2910,7 @@ label claire_sub_event_02:
     show claire at center, traveling(2, 2, (640, 1270))
     "And she moves as close to me as she can possibly get."
     "An intensity beginning to show in her eyes as she does so."
-    show claire talkative
+    show claire talk
     claire.say "You do?"
     claire.say "That's marvellous news!"
     claire.say "But when, [hero.name]?"
@@ -2928,7 +2928,7 @@ label claire_sub_event_02:
     show claire at center, traveling(2, 2, (640, 1220))
     "And just like before, she slides down onto her knees."
     "Looking up at me from below, eyes burning with an obvious need."
-    show claire talkative
+    show claire talk
     claire.say "Please, [hero.name]…"
     claire.say "I'm ready to do whatever you desire of me."
     claire.say "Just say the word, and it'll be done!"
@@ -2943,7 +2943,7 @@ label claire_sub_event_02:
     "But it's still enough to make Claire gasp and clap her hands together."
     show claire startle at startle(0.1, 5)
     claire.say "Ooh..."
-    show claire talkative
+    show claire talk
     claire.say "Are you going to tie me up with those?!?"
     show claire evil
     "I hold up a hand and give Claire a little shake of the head."
@@ -2952,7 +2952,7 @@ label claire_sub_event_02:
     "And it seems to work, as she looks down and nods her own head."
     show claire startle
     claire.say "Sorry...master..."
-    show claire talkative
+    show claire talk
     claire.say "I'm ready to be told what to do now."
     show claire normal
     mike.say "That's more like it, Claire."
@@ -3020,7 +3020,7 @@ label claire_sub_event_02:
     "Claire slowly collects herself, sitting up and beginning to put her clothes back on."
     show claire a casual with dissolve
     "And once she's done, she comes to sit at my side, still more than a little subdued."
-    show claire talkative at center, traveling(2, 2, (640, 1270))
+    show claire talk at center, traveling(2, 2, (640, 1270))
     claire.say "Thank you, [hero.name]."
     claire.say "Being yours like this..."
     claire.say "It...makes me feel free."
@@ -3077,7 +3077,7 @@ label claire_sub_event_03:
     mike.say "Not while you're with me."
     mike.say "I'll make sure that piece of shit husband of yours can't hurt you."
     "Claire nods gratefully, taking a half a step back to continue pulling herself together."
-    show claire talkative
+    show claire talk
     claire.say "I...I know that now, [hero.name]…"
     claire.say "Or should I call you 'Master'?"
     show claire b
@@ -3087,7 +3087,7 @@ label claire_sub_event_03:
     "And yet I still can't deny the thrill that I feel when she calls me something like that."
     "The strange mixture of total power and endless affection it stirs up inside of me."
     "Knowing that she's putting herself completely in my hands, totally submitting to me."
-    show claire a talkative
+    show claire a talk
     claire.say "If only there were some way, Master..."
     claire.say "Some way to mark me out as yours."
     show claire shy
@@ -3104,7 +3104,7 @@ label claire_sub_event_03:
     "Sure, it's not the most exquisite piece of jewellery either of us have ever seen."
     "But it's not trash either, and it's just appeared out of nowhere, as far as she's concerned."
     "So the effect is a pretty impressive one, all things considered."
-    show claire talkative
+    show claire talk
     claire.say "For me, Master?"
     claire.say "To show that I'm yours?"
     show claire normal
@@ -3227,7 +3227,7 @@ label claire_sub_event_03:
     "From there, Claire crawls slowly around and towards me, reaching out until I embrace her."
     "Then she burrows herself into my arms, clinging onto me as if her life depended on my touch."
     scene expression f"bg {game.room}"
-    show claire a talkative
+    show claire a talk
     with fade
     claire.say "Now you really are my master..."
     claire.say "And I need you to guide me always."

@@ -4,7 +4,7 @@ init -35 python:
     'positions': ['a', 'b'],
     'piercings': ['clit', 'ears', 'navel', 'nipples', 'nose', 'date_ears', 'sexydate_ears'],
     'haircuts': ['nohaircut', 'haircut'],
-    'exps': ['normal', 'angry', 'annoyed','blush', 'bored', 'flirt', 'happy', 'mindless', 'sad', 'sadsmile', 'stuned', 'surprised', 'talkative', 'upset', 'weird', 'whining', 'wink'],
+    'exps': ['normal', 'angry', 'annoyed','blush', 'bored', 'flirt', 'happy', 'mindless', 'sad', 'sadsmile', 'stuned', 'surprised', 'talk', 'upset', 'weird', 'whining', 'wink'],
     'outfits': ['casual', 'work', 'sport', 'date', 'sexydate', 'sluttydate', 'swimsuit', 'sexyswimsuit', 'halloween', 'wedding', 'naked'],
     'others': ['pubes', 'collar', 'bottomless', 'topless', 'nojacket'],
     'accessories': ['bullet', 'card', 'handcuff', 'mug', 'donut', 'wine', 'smoke'],
@@ -118,9 +118,9 @@ label test_camila_exps:
     show expression f"camila {pose} surprised" as c2 at left
     "surprised"
 
-    $ renpy.show(f"camila {pose} talkative")
-    show expression f"camila {pose} talkative" as c2 at left
-    "talkative"
+    $ renpy.show(f"camila {pose} talk")
+    show expression f"camila {pose} talk" as c2 at left
+    "talk"
 
     $ renpy.show(f"camila {pose} upset")
     show expression f"camila {pose} upset" as c2 at left

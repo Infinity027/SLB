@@ -6,14 +6,14 @@ label cherie_birthday_gift_male:
     show cherie happy
     cherie.say "Oh my goodness, how thoughtful of you, [hero.name]!"
     if cherie.flags.birthdayknown:
-        show cherie talkative
+        show cherie talk
         cherie.say "I remember that I told you the date of my birthday."
         cherie.say "But I did not think that you would remember it."
         show cherie smile blush
         cherie.say "You must think a lot more of me than I realised!"
         show cherie normal -blush
     else:
-        show cherie talkative
+        show cherie talk
         cherie.say "And you will not believe this, really you will not."
         show cherie surprised
         cherie.say "But today just so happens to be my birthday!"
@@ -33,7 +33,7 @@ label cherie_gift_swimsuit_male:
     cherie.say "A gift, when it is not my birthday?"
     show cherie happy
     cherie.say "And so thoughtfully wrapped too!"
-    show cherie talkative
+    show cherie talk
     cherie.say "Whatever can it be?"
     show cherie smile
     mike.say "Well there's one way to find out, Cherie..."
@@ -106,14 +106,14 @@ label cherie_gift_collar_male:
     "And that's because I know that the stakes are perilously high on this one."
     "I'm pinning all of my hopes on it being a success."
     "As well as facing a complete and utter disaster if it isn't."
-    show cherie talkative
+    show cherie talk
     cherie.say "But what is this?"
     cherie.say "Is it a choker of some kind?"
     show cherie normal
     "Cherie turns the leather collar over in her hands."
     show cherie stuned
     "But when she finds the medallion with her name on it, she stops and stares at me."
-    show cherie talkative
+    show cherie talk
     cherie.say "But this..."
     cherie.say "This is a collar for..."
     show cherie surprised
@@ -122,7 +122,7 @@ label cherie_gift_collar_male:
         show cherie normal
         "Before I can say a word to explain myself, Cherie closes her eyes and takes a deep breath."
         "And then she holds the collar up to her face, almost like she's savouring the aroma of it."
-        show cherie talkative
+        show cherie talk
         cherie.say "Oh, {i}mon ami{/i}..."
         cherie.say "If only you could know..."
         show cherie happy blush
@@ -130,7 +130,7 @@ label cherie_gift_collar_male:
         $ cherie.sub += 5
         cherie.say "If only you could know how long I have wanted something like this!"
         cherie.say "But I have been too afraid to ask for it myself."
-        show cherie talkative
+        show cherie talk
         cherie.say "Would you..."
         show cherie normal
         "Cherie holds out the collar for me, waiting for me to take it."
@@ -149,7 +149,7 @@ label cherie_gift_collar_male:
         show cherie annoyed
         "Before I can say a word to explain myself, Cherie shoves the collar back into my hands."
         "In fact she shoves it so hard that it slams into my chest and I'm forced back a step."
-        show cherie talkative
+        show cherie talk
         cherie.say "Is this what you think of me?"
         show cherie angry
         cherie.say "That I am some kind of..."
@@ -202,7 +202,7 @@ label cherie_gift_slutty_dress_male:
         mike.say "No, Cherie - that's all of it, I promise you!"
         show cherie amused
         "Cherie raises an eyebrow at this, and I can feel her sizing me up at the same time."
-        show cherie talkative
+        show cherie talk
         cherie.say "But you must know that I am joking with you, {i}mon ami{/i}?"
         show cherie happy
         cherie.say "And that I am delighted that you would give me such a dress."
@@ -215,7 +215,7 @@ label cherie_gift_slutty_dress_male:
         "Cherie gives me a little wink to underline her point."
         "And I can't help nodding like crazy."
         mike.say "And I can't wait to see you in it either!"
-        show cherie talkative
+        show cherie talk
         cherie.say "Patience, patience..."
         show cherie happy
         cherie.say "This you will see soon enough, I promise you."
@@ -228,7 +228,7 @@ label cherie_gift_slutty_dress_male:
         show cherie annoyed
         "Cherie raises an eyebrow at this, and I can feel her sizing me up at the same time."
         "Then she deftly folds the dress up again, wrapping it in the paper once more."
-        show cherie talkative
+        show cherie talk
         cherie.say "No, no, no..."
         cherie.say "I think that I know a little more about women's fashion than you."
         show cherie angry
@@ -264,7 +264,7 @@ label cherie_gift_sexy_dress_male:
     show cherie surprised
     "Cherie lets out a gasp as she sees what's inside."
     "And then she pulls it out, letting it fall to its full length."
-    show cherie talkative
+    show cherie talk
     cherie.say "It is a dress..."
     show cherie happy
     cherie.say "A most elegant and flattering dress too!"
@@ -286,7 +286,7 @@ label cherie_gift_sexy_dress_male:
         mike.say "Oh man, I can't wait to see you try it on!"
         show cherie smile
         "Cherie greets this with a smile and a coy nod of the head."
-        show cherie talkative
+        show cherie talk
         cherie.say "But of course, {i}mon ami{/i}."
         show cherie happy
         cherie.say "And you will - when the time is right."
@@ -308,7 +308,7 @@ label cherie_gift_sexy_dress_male:
         show cherie sad
         mike.say "But...but...but..."
         mike.say "What do you mean?"
-        show cherie talkative
+        show cherie talk
         cherie.say "Me in such a dress?"
         cherie.say "That is not for you, {i}mon ami{/i}."
         show cherie wink

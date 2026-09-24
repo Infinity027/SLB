@@ -99,7 +99,7 @@ label audrey_hottub_sex_male:
     "But all I can manage is a nervous chuckle."
     mike.say "Ah, yeah, Audrey."
     mike.say "Real funny..."
-    show audrey talkative at startle(0.1, -5)
+    show audrey talk at startle(0.1, -5)
     audrey.say "But seriously though, [hero.name]."
     audrey.say "You rent this place, right?"
     hide audrey
@@ -2961,7 +2961,7 @@ label audrey_fuck_audreyhome:
     if audrey.sub >= 80:
         "Audrey looks instantly concerned as she walks over to me."
         "Looking like she's more than keen to reassure me."
-        show audrey talkative
+        show audrey talk
         audrey.say "Well, I'd hope not!"
         audrey.say "I'll certainly do my best to make sure you don't want to do that!"
     else:
@@ -3004,7 +3004,7 @@ label audrey_fuck_audreyhome:
         audrey.say "What do you want me to do next?"
     else:
 
-        show audrey talkative
+        show audrey talk
         audrey.say "Okay, big man..."
         audrey.say "Where do we go from here?"
     show audrey normal
@@ -3130,7 +3130,7 @@ label audrey_fuck_audreybedroom_blowjob:
             show audrey bj dickcum -cumshot normal with vpunch
     stop sexsfx1
     hide audrey
-    show audrey talkative blush naked at center, zoomAt(1.5, (640, 1040))
+    show audrey talk blush naked at center, zoomAt(1.5, (640, 1040))
     audrey.say "So..."
     audrey.say "What's next?"
     show audrey normal
@@ -3147,7 +3147,7 @@ label audrey_fuck_audreybedroom_fuck(sexperience_min=10):
         mike.say "Whatever happens to pop into my head, no matter how crazy."
         "None of what I'm saying seems to come as a surprise to Audrey."
         "In fact she nods her head eagerly, as if keen to satisfy my desires."
-        show audrey talkative
+        show audrey talk
         audrey.say "Y...yes, master!"
         audrey.say "I'm yours to do with as you please."
         audrey.say "Just tell me what it is that you desire."
@@ -3472,7 +3472,7 @@ label audrey_fuck_audreybedroom_fuck(sexperience_min=10):
         "And as soon as she's standing in front of me, I understand the question was rhetorical in nature."
         "Because she knows exactly what she wants, taking hold of my hand and pulling me to my feet too."
         "As soon as I'm looking her in the eye, I feel Audrey take a firm hold of my cock too."
-        show audrey talkative
+        show audrey talk
         audrey.say "Come on, [hero.name]..."
         audrey.say "Do I always need to have hold of a part of you?"
         audrey.say "To lead you where I want us to go?"

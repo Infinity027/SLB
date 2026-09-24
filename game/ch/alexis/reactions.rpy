@@ -263,7 +263,7 @@ label alexis_belly_kiss_male:
     "Alexis looks at me helplessly."
     "And for a moment I think that she's actually about to burst into tears."
     "Which would make sense, as her hormones must be going crazy right now."
-    show alexis talkative
+    show alexis talk
     alexis.say "Oh, [hero.name]..."
     alexis.say "I'm so glad I didn't look like this when we first met!"
     show alexis sadsmile
@@ -364,7 +364,7 @@ label alexis_belly_listen_male:
     mike.say "What are you..."
     show alexis wink
     alexis.say "SSSHHH!"
-    show alexis talkative
+    show alexis talk
     alexis.say "Shut up and listen..."
     alexis.say "The baby's moving!"
     show alexis smile

@@ -32,4 +32,3 @@ label flowershop_shop:
     $ Room.find("flowershop").shop("jessica teaser")
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

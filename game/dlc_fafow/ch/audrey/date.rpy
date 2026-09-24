@@ -11,7 +11,7 @@ label audrey_date_amusement_park_male:
     show audrey annoyed
     mike.say "It's fun, Audrey."
     mike.say "Don't you have great memories of places like this?"
-    show audrey talkative
+    show audrey talk
     audrey.say "Of course I do."
     show audrey joke
     audrey.say "But they're all from back when I was a kid."
@@ -25,7 +25,7 @@ label audrey_date_amusement_park_male:
     show audrey normal
     "Audrey fixes me with a singularly unimpressed look."
     "But then she shakes her head and rolls her eyes."
-    show audrey talkative
+    show audrey talk
     audrey.say "Okay, okay..."
     audrey.say "I'll do the best I can."
     show audrey joke

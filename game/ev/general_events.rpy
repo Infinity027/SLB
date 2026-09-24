@@ -608,27 +608,27 @@ label palla_event_01:
     mike.say "Hola."
     show palla blank
     "The redhead glances over at me, her eyes judgmental."
-    show palla talkative
+    show palla talk
     palla.say "Hi..."
     show palla blank
-    show audrey talkative
+    show audrey talk
     audrey.say "This is Palla. We've been friends for, like, forever!"
     show audrey normal
-    show palla talkative
+    show palla talk
     palla.say "It's... nice... to meet you, [hero.name]. Audrey can't seem to stop talking about you."
     show palla blank
-    show audrey talkative
+    show audrey talk
     audrey.say "Hey, I talk about more than him, you know!"
     show audrey normal
-    show palla talkative
+    show palla talk
     palla.say "Certainly hyping him up, though. If you like him, you like him. I can't account for your... tastes."
     show palla blank
-    show audrey talkative
+    show audrey talk
     audrey.say "Look, we gotta go. See you at work."
     hide audrey with easeoutleft
     show palla at center with ease
     "After Audrey leaves, Palla smirks."
-    show palla talkative
+    show palla talk
     palla.say "Yes... hope to see you real soon."
     hide palla with easeoutleft
     "I'm left wondering just what the heck is going on with this Palla girl."
@@ -1386,12 +1386,12 @@ label samantha_event_01:
     menu:
         "It's alright, I understand.":
             mike.say "If I know Ryan, he probably popped the question on you out of nowhere. I get it."
-            show samantha talkative
+            show samantha talk
             samantha.say "Thanks. You always know what to say, don't you?"
             $ samantha.love += 1
         "You should really tell me before you run off next time.":
             mike.say "You really had me panicking there for a minute. I wish you would have talked to me first."
-            show samantha talkative
+            show samantha talk
             samantha.say "... I'm sorry. You're right."
     samantha.say "Anyway~"
     if game.hour < 12:
@@ -1404,7 +1404,7 @@ label samantha_event_01:
         show samantha normal
         mike.say "Just looking for something to do I guess- it was lucky I ran into you!"
     mike.say "So, how's that whole thing going? Did you guys find a nice apartment?"
-    show samantha talkative
+    show samantha talk
     samantha.say "Oh yeah! It's a lot smaller than the house, but really cozy. Ryan can be so romantic sometimes."
     show samantha normal
     "I could see the hearts rise in Samantha's eyes. Pushing down the urge to roll my eyes at their fluffy relationship, I couldn't help but admire her passion and commitment."
@@ -1419,11 +1419,11 @@ label samantha_event_01:
     show samantha normal
     "I groan."
     mike.say "Don't say that! They're just there to help me pay for rent."
-    show samantha talkative
+    show samantha talk
     samantha.say "Aw, don't deny it! I know there's love hiding somewhere in that heart of yours."
     show samantha normal
     "The eye roll finally comes. Even though I knew she was teasing me, I couldn't help but feel a little irritated. Samantha suddenly elbows me."
-    show samantha talkative
+    show samantha talk
     samantha.say "C'mon, you know I'm just kidding. Even though it wouldn't hurt to get out there."
     show samantha happy
     "Samantha giggles, but I choose to ignore that last part. Finally, the conversation dies down a little."
@@ -1431,17 +1431,17 @@ label samantha_event_01:
     menu:
         "Ask about university":
             mike.say "How's uni going for you?"
-            show samantha talkative
+            show samantha talk
             samantha.say "It's alright. I should really find a tutor for some of it though."
             show samantha normal
             mike.say "I can always help you with some of that."
-            show samantha talkative
+            show samantha talk
             samantha.say "Oh, that's okay. Ryan said he would study with me soon!"
             show samantha normal
             mike.say "..."
             mike.say "That's good."
             "Samantha smiles and squints at me with warm eyes."
-            show samantha talkative
+            show samantha talk
             samantha.say "You remember my major, right?"
             show samantha normal
             mike.say "Um..."
@@ -1454,21 +1454,21 @@ label samantha_event_01:
                     $ samantha.love += 1
                 "Nursing":
                     "I could tell by the look on her face that I was wrong."
-                    show samantha talkative
+                    show samantha talk
                     samantha.say "Nope! You know I've always wanted to write children's books. English literature!"
                     show samantha normal
                     mike.say "Oops..."
                 "Education":
-                    show samantha talkative
+                    show samantha talk
                     samantha.say "Haha! I love kids, but not that much. I'd rather make stories for them- English literature!"
                     show samantha normal
         "Ask about work":
             mike.say "Is the bakery far from your new apartment?"
-            show samantha talkative
+            show samantha talk
             samantha.say "It's not too bad. I can still walk there!"
             show samantha normal
             mike.say "That's good, at least."
-            show samantha talkative
+            show samantha talk
             samantha.say "I could be across town and still get there! Anything is worth those tasty discounts."
             show samantha normal
             "Ever since Samantha told me about her job at the bakery, I knew the only reason she went there was for the never ending sweets."
@@ -1477,41 +1477,41 @@ label samantha_event_01:
             samantha.say "Ryan!"
             show samantha normal
             "Her face lit up when I mentioned her boyfriend's name. She clasped her hands together in adoration."
-            show samantha talkative
+            show samantha talk
             samantha.say "I still can't believe we're living alone now. It's like all my dreams are coming true so fast!"
             show samantha normal
             mike.say "At least you're happy."
-            show samantha talkative
+            show samantha talk
             samantha.say "Aw, thanks. You should find happiness too, you know! When you find a sweet girl of your own and settle down, maybe we can trade some stories and advice!"
             show samantha normal
             mike.say "Trade stories? It feels like I already know everything about your boyfriend just from talking to you all the time."
-            show samantha talkative
+            show samantha talk
             samantha.say "Well, we can do something else then. You know I can't help it!"
             show samantha normal
     play sound msg_receive
     show samantha stuned
     "Samantha abruptly perks up and I hear her cell phone ring. She took it out from her back pocket and keenly put it to her ear."
-    show samantha talkative at center, traveling(1.25, 0.5, (940, 880))
+    show samantha talk at center, traveling(1.25, 0.5, (940, 880))
     samantha.say "Hey, Ryan!"
     show samantha normal
     "I hold back a groan. Everything would be about Ryan now- not that it wasn't before, but it seemed to be weighing down on me even more than usual in this moment."
-    show samantha talkative
+    show samantha talk
     samantha.say "Yeah, of course I did!"
     samantha.say "I'll be over as soon as I can!"
     samantha.say "Alright, love you too. See you in a bit!"
     show samantha normal at center, traveling(1.5, 0.5, (640, 1040))
     "She pressed one of the bright buttons on her phone screen and waved it around with excitement."
-    show samantha talkative
+    show samantha talk
     samantha.say "I'm sorry! I have to go; Ryan's taking me out!"
     show samantha normal
     "I chuckle with no real emotion behind my tone."
     mike.say "Ryan always takes you out."
-    show samantha talkative
+    show samantha talk
     samantha.say "I know! Isn't he a sweetheart?"
     show samantha normal
     menu:
         "Have fun.":
-            show samantha talkative
+            show samantha talk
             samantha.say "Thanks! We definitely will. Make sure you find something to do today! I don't wanna come back and find you still wandering around!"
             show samantha normal
             mike.say "I'm not wandering!"
@@ -1519,11 +1519,11 @@ label samantha_event_01:
             "I give a single wave back and watch as she skips away to get ready for her date."
             $ samantha.love += 1
         "Make sure you come to pick up your stuff.":
-            show samantha talkative
+            show samantha talk
             samantha.say "I will, I will! Stop worrying about it, I promise I'll get to it by the end of the week."
             show samantha normal
             "Before I can say anything else, she's already checking her phone as it buzzes with life."
-            show samantha talkative
+            show samantha talk
             samantha.say "Sorry, but I've really gotta go! I don't want to miss anything! See you later!"
             show samantha normal
             "With that, she turned and sped her way back to her new house to meet her boyfriend."
@@ -1559,7 +1559,7 @@ label bree_sasha_pet_request:
     "[bree.name] and Sasha look at each other for a moment."
     "And it seems each one is urging the other to speak first."
     "In the end, [bree.name] breaks the silence, blurting out her words."
-    show bree talkative
+    show bree talk
     bree.say "We were thinking..."
     bree.say "This is a pretty big house, right?"
     show bree normal
@@ -1773,7 +1773,7 @@ label choose_dog:
             "[bree.name] looks surprised for a moment, but then she nods."
             show bree smile
             bree.say "You're right, [hero.name]."
-            show bree talkative
+            show bree talk
             bree.say "Be serious now."
             show bree smile
             bree.say "And then, when we get them home, spoil the dog rotten!"
@@ -1789,7 +1789,7 @@ label choose_dog:
             show bree annoyed
             "[bree.name] looks more than a little hurt."
             "But she seems to take the warning to heart."
-            show bree talkative
+            show bree talk
             bree.say "O...okay, [hero.name]."
             bree.say "But you don't have to be so mean to me!"
             show bree normal
@@ -1850,7 +1850,7 @@ label choose_dog:
             show bree stuned
             "Instantly I can feel everyone staring at me."
             "It's like I said the worst thing possible."
-            show bree talkative
+            show bree talk
             bree.say "Erm...no."
             bree.say "I think we'll take the retriever."
             bree.say "We're getting a pet to be a companion."
@@ -1918,7 +1918,7 @@ label name_dog:
     "[bree.name] looks instantly shocked by this, her eyes going wide."
     "She kneels down and starts to cuddle the dog."
     "Who obviously loves all the sudden and unexpected attention."
-    show bree talkative
+    show bree talk
     bree.say "Oh, my poor little baby!"
     bree.say "How did we ever forget!"
     show bree sad
@@ -1933,7 +1933,7 @@ label name_dog:
     show sasha shout
     sasha.say "He looks like a Bruce to me!"
     show sasha normal
-    show bree talkative
+    show bree talk
     bree.say "Oh no!"
     bree.say "He is SO not a Bruce!"
     show bree smile
@@ -2184,7 +2184,7 @@ label name_cat:
     mike.say "Sasha was just telling me that we forgot to name the cat!"
     "I do the best I can to sound serious as I answer the question."
     "But [bree.name] still rolls her eyes and shakes her head."
-    show bree talkative
+    show bree talk
     bree.say "Oh, that!"
     bree.say "I was thinking..."
     show bree smile

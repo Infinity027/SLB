@@ -15,7 +15,6 @@ init python:
     Consumable("sexperience_book", price=100, label="sexperience_book", uses=10, tooltip="A book to learn how to fuck like a god", conditions=[HeroTarget(MinStat("energy", 2), MinStat("hunger", 2), MinStat("grooming", 2), MinStat("fun", 2))], one_only=True)
     Consumable("skill_book_shibari", display_name="Skill book: shibari", price=200, label="shibari_skill_book", uses=20, tooltip="A book to learn how to play with ropes", conditions=[HeroTarget(MinStat("energy", 2), MinStat("hunger", 2), MinStat("grooming", 2), MinStat("fun", 2))], one_only=True)
     Consumable("skill_book_sm", display_name="Skill book: SM", price=200, label="sm_skill_book", uses=20, tooltip="A book to learn SM techniques", conditions=[HeroTarget(MinStat("energy", 2), MinStat("hunger", 2), MinStat("grooming", 2), MinStat("fun", 2))], one_only=True)
-    Consumable("skill_book_fertility", display_name="Skill book: fertility", price=200, label="fertility_skill_book", uses=10, tooltip="A book to learn how to know if a girl is fertile", conditions=[HeroTarget(MinStat("energy", 2), MinStat("hunger", 2), MinStat("grooming", 2), MinStat("fun", 2))], one_only=True)
     Consumable("skill_book_investigation", display_name="How to get away with murder", price=400, label="investigation_skill_book", uses=4, tooltip="A rare compilation of archived police files talking about murder and the methods used to solve them", conditions=[HeroTarget(MinStat("energy", 2), MinStat("hunger", 2), MinStat("grooming", 2), MinStat("fun", 2))], one_only=True)
     Gift("fantasy_book_signed", display_name="Fantasy book (signed)", price=50, tags=["books"], label="signed_fantasy_book", love_bonus=0)
     Item("shark_training", display_name="How to train your shark", price=1000, tooltip="A book about shark training... Might be a parody of a well known movie.")
@@ -192,12 +191,7 @@ label investigation_skill_book:
             "{i}\"There was this one guy who was a suspect, like the others...\"{/i}"
             "{i}\"But he offered so much help through the investigation that we unwittingly stop being suspicious of him.\"{/i}"
             "{i}\"Fortunately, this psychopath was always wandering around with a backpack containing a jar of his victims' big toes.\"{/i}"
-            "{i}\"The smell betrayed him the day he didn't close it properly.\"{/i}"
-            "Who the fuck carry such thing!?"
-            "Wait... I remember this affair!"
-            "It was some old filmmaker that always had a thing for feet!"
-            "I think he's the one that made Zest Fiction."
-            "We really live in a sick world..."
+
     return
 
 label guitar_skill_book:
@@ -252,4 +246,3 @@ label sm_skill_book:
         "I learn S&M. ([skill]%%)"
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

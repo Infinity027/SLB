@@ -3196,7 +3196,7 @@ label camila_male_ending:
     show camila flirt
     "I must be grinning like a fool by the time Camila makes it to the altar."
     "Because she gives me a lop-sided grin and shakes her head."
-    show camila talkative
+    show camila talk
     camila.say "Nice to see you too, [hero.name]!"
     camila.say "Looks like we both scrub up pretty nice, huh?"
     show camila normal
@@ -4345,7 +4345,7 @@ label camila_event_01_alt:
         "Damned. How could they now about Dwayne?"
     if game.flags.ryandead:
         "Have they found a link between me and Ryan's little accident?"
-    show camila talkative -card
+    show camila talk
     camila.say "We've been looking for your for while now, knew you'd pass this way."
     show camila annoyed
     if game.flags.dannydead:
@@ -4353,7 +4353,7 @@ label camila_event_01_alt:
     with fade
     "She reads me my rights like a script. This all unfolding in a rush."
     "She calls it in on her radio."
-    show camila talkative
+    show camila talk
     camila.say "I have Luca Costella. The Paperboy, in custody and under arrest."
     show camila normal
     if game.flags.dwaynedead or game.flags.dannydead or game.flags.ryandead:
@@ -4365,7 +4365,7 @@ label camila_event_01_alt:
     camila.say "Tell that to the judge. I can see it's you, I studied your numerous mug shots. You've shaven and cut your hair but it's you."
     show camila upset
     "She doesn't waste time. She's back on the radio and calls for a patrol car. The alley feels colder. I watch her, trying to read her face. There's no doubt in it."
-    show camila talkative
+    show camila talk
     camila.say "Patrol to alley three. One in custody. Send transport for pickup and processing for arrest to jail."
     show camila annoyed
     "The sound of the radio is a small, final thing. I realize I'm being taken in. I don't know why, or who this Luca guy is. I don't know what I did. The city hums around us and I feel very small."
@@ -4418,7 +4418,7 @@ label camila_event_01_alt:
     "At the station the paperwork is a slow, bureaucratic thing. An officer takes my statement while Camila watches, fingers steepled in deep thought."
     show camila blush at center, zoomAt(1.25, (640, 880)) with easeinright
     "The woman who cuffed me looks embarrassed in a way that makes her human."
-    show camila talkative
+    show camila talk
     camila.say "I'm Detective Foglio, I'm sorry. I thought you were him. I don't like being wrong."
     show camila normal
     "She slides a paper cup of coffee across the table. It's black and too hot. The gesture is small and oddly intimate after the alley."
@@ -4446,11 +4446,11 @@ label camila_event_01_alt:
             show camila happy
             $ camila.love += 4
             camila.say "Good. We'll make you look the part. Wig, fake beard, brown contacts. You're in good hands."
-            show camila talkative
+            show camila talk
             camila.say "Keep your head down. You follow my lead and you don't open the package. If anything goes wrong, just hit dial on the burner and we move in."
             show camila normal
             mike.say "I don't know how to do this, but... okay."
-            show camila talkative
+            show camila talk
             camila.say "You don't need to be an expert. You need to be convincing for a few minutes."
             camila.say "Come back to the station tomorrow, everything will be ready."
             show camila normal
@@ -4467,7 +4467,7 @@ label camila_event_01_alt:
             camila.say "I understand. You were arrested unfairly. If you walk away now, I'll file you as a witness and the case will proceed without you."
             show camila normal
             mike.say "I can't do it. I can't be dragged into this."
-            show camila talkative
+            show camila talk
             camila.say "Then go home. No one knows you were part of this, you'll be fine. I'll have a patrol car drop you off at your home."
             show camila normal
             "I nod, the coffee cooling between my hands."
@@ -4492,7 +4492,7 @@ label camila_event_02_alt:
     show camila upset
     menu:
         "Who are we expecting to be at the meeting?":
-            show camila talkative
+            show camila talk
             camila.say "Good question [hero.name], it should be a small meet: you, most likely one of the family's Captains who's hand you the package."
             show camila angry
             camila.say "And most likely a goon or two, just muscle."
@@ -4521,17 +4521,17 @@ label camila_event_02_alt:
             camila.say "Glad you're feeling confident [hero.name] but take it seriously too please. This could really help us and be a big step to bringing down the crime family in the city."
             show camila upset
     "With that she escorts me to a room to start preparing for the meet."
-    show camila talkative
+    show camila talk
     camila.say "[hero.name] this is Violaine, she is a civilian who helps when needed, she will help you apply the wig and beard properly."
     show violaine zorder 1 at blacker, center, zoomAt(1, (1100, 720))
     mike.say "Hello there Violaine, thanks for the help."
     "She simply looks at me, and offers a half smile."
-    show camila talkative
+    show camila talk
     camila.say "I'll leave you to it then."
     hide camila with easeoutright
     "With that she leaves."
     show violaine zorder 1 at blacker, center, traveling(1.25, 0.5, (640, 880))
-    "Violaine isn't the talkative type but she seems to know what she is doing at least."
+    "Violaine isn't the talk type but she seems to know what she is doing at least."
     "She has me take a seat and then starts to attach the beard."
     "Trimming and making some adjustments so it looks exactly like the photos they just took of The Paperboy who is now in custody."
     "She moves onto the wig next, using tiny hairpins so it sits snug, with no chance of coming off."
@@ -4578,7 +4578,7 @@ label camila_event_02_alt:
     else:
         show camila normal with easeinright
     "Detective Foglio returns, pausing to look me over."
-    show camila talkative
+    show camila talk
     camila.say "Looking great, no wonder I had the two of you confused."
     show camila normal
     "She pauses, taking a moment before speaking."
@@ -4611,7 +4611,7 @@ label camila_event_02_alt:
             show bg livingroom at blur(0)
             "I go home, lock the door, and try understand all that just happened."
             return
-    show camila talkative
+    show camila talk
     camila.say "One more thing. Don't try and be a hero here [hero.name]. Get the package, get out, simple."
     show camila flirt
     camila.say "Don't get injured, I don't want to fill out the mountain of paperwork."
@@ -4893,7 +4893,7 @@ label camila_event_03_alt:
     camila.say "And the rest?"
     show camila upset
     mike.say "Two muscle large guys. No fuss. She said to meet at Warehouse 7, down on 8th Avenue, ten o'clock tomorrow night."
-    show camila talkative
+    show camila talk
     camila.say "Warehouse 7. 8th. Ten. Good. That gives us a window."
     show camila upset at center, traveling (1.5, 0.3, (640, 1040))
     "Camila reaches for the zipper with the same careful, clinical motion she uses on evidence. The streetlight catches the metal teeth as she parts them."
@@ -4936,7 +4936,7 @@ label camila_event_03_alt:
     camila.say "No. You didn't. You kept your head. That's rare."
     show camila upset
     "She glances at the courier bag again, then back at me. The streetlight catches the faintest tension in her jaw."
-    show camila talkative
+    show camila talk
     camila.say "Come to the station tomorrow. Four o'clock. We need to go over everything before the next move."
     show camila normal
     mike.say "4pm. Got it."
@@ -4957,7 +4957,7 @@ label camila_event_03_alt:
     show camila wink
     camila.say "Almost doesn't count. You improvised. You survived. That's what matters."
     "Her eyes linger on me for a moment, longer than they should. Then she straightens, the detective mask sliding back into place."
-    show camila talkative
+    show camila talk
     camila.say "Warehouse 7, 8th Avenue. Ten p.m. tomorrow. We'll brief at the station first."
     menu:
         "I'll be there Detective.":
@@ -4997,7 +4997,7 @@ label camila_event_04_alt:
     "I check in at the front desk, they direct me to head down the hall."
     show camila normal at center, zoomAt(1.0, (1040, 720)) with dissolve
     "Camila is waiting outside the briefing room, arms folded, posture sharp. But her eyes soften, just a fraction, when she sees me."
-    show camila talkative at center, traveling(1.5, 1.0, (640, 1040))
+    show camila talk at center, traveling(1.5, 1.0, (640, 1040))
     camila.say "Right on time."
     show camila normal
     mike.say "Wouldn't miss it."
@@ -5023,7 +5023,7 @@ label camila_event_04_alt:
     "The shooting range smells like cordite and old rubber."
     show camila annoyed at center, zoomAt(1.25, (340, 880)) with easeinleft
     "Camila hands me ear protection and steps close, too close, for someone who claims she doesn't do 'personal.'"
-    show camila talkative
+    show camila talk
     camila.say "Alright. Basics first."
     show camila normal
     if hero.has_skill("shooting"):
@@ -5035,7 +5035,7 @@ label camila_event_04_alt:
         camila.say "Good. Saves me time."
     else:
         "She steps behind me, adjusting my hands with slow, precise movements. Her fingers brush my wrist, professional, but warm."
-        show camila talkative
+        show camila talk
         camila.say "Relax your shoulders. You're too tense."
         show camila normal
         mike.say "Hard not to be."
@@ -5043,7 +5043,7 @@ label camila_event_04_alt:
         camila.say "Get used to it. Undercover work is ninety percent tension."
     show camila normal
     "She steps back as I raise the gun. The target hangs twenty feet away, a blank silhouette waiting to judge me."
-    show camila talkative
+    show camila talk
     camila.say "Whenever you're ready."
     play sound gun
     "I fire. The shot cracks through the room."
@@ -5054,7 +5054,7 @@ label camila_event_04_alt:
         $ camila.love += 1
     else:
         "The bullet hits low and left. Camila doesn't flinch, but she steps beside me again."
-        show camila talkative
+        show camila talk
         camila.say "You're pulling. Slow down. Breathe."
         "She guides my stance again, closer this time. I can feel her breath near my ear."
     with screenshot
@@ -5072,7 +5072,7 @@ label camila_event_04_alt:
     show camila normal
     camila.say "Alright. That's enough for now."
     "She unloads the pistol with practised ease, sets it on the bench, and looks at me with that sharp, assessing gaze she uses on suspects and crime scenes. Except this time... it lingers."
-    show camila talkative
+    show camila talk
     camila.say "We should go over the plan for tonight. No point sending you in blind."
     mike.say "I'm listening."
     $ camila.love += 1
@@ -5083,12 +5083,12 @@ label camila_event_04_alt:
     camila.say "Here's what we know. The family uses Warehouse 7 for mid-level exchanges. Not the big stuff, but not small either. Enough space so things can get ugly."
     show camila upset
     mike.say "And I'm walking in as Luca again."
-    show camila talkative
+    show camila talk
     camila.say "Yes. But this time you're not alone. We'll be close. Last night was a rush on short notice, this time will be a full tactical team supporting you."
     camila.say "We'll also have full comms this time, so I'll be with you all the way."
     show camila normal
     "She steps beside me, pointing at the map. Her hand is inches from mine. Too close. Not close enough."
-    show camila talkative
+    show camila talk
     camila.say "You'll enter through the south gate. They'll expect you. We'll be staged here, northwest corner. If anything feels wrong, you signal."
     show camila normal
     mike.say "Dial on the burner."
@@ -5106,15 +5106,15 @@ label camila_event_04_alt:
     camila.say "I trust your instincts. And your... adaptability."
     show camila normal
     "Her eyes flick to mine, then away. She's careful, but not careful enough to hide the tension threading between us."
-    show camila talkative
+    show camila talk
     camila.say "We'll prep gear, run comms checks, and go over your cover story again. We've got time."
     show camila normal
     mike.say "So we're staying here until the meet?"
-    show camila talkative
+    show camila talk
     camila.say "Yeah. You and me. We prep together."
     show camila normal
     "Something in her tone makes the room feel smaller. Warmer. Charged."
-    show camila talkative
+    show camila talk
     camila.say "Let's get to work."
     scene bg black
     $ game.pass_time(6)
@@ -5409,28 +5409,28 @@ label camila_event_04_alt:
     show camila normal
     mike.say "And yet... effective."
     "She exhales, half frustration, half relief. The floodlights catch the faintest warmth in her eyes."
-    show camila talkative
+    show camila talk
     camila.say "Come on. Let's get you back to the station before you start thinking you're invincible."
     scene bg policestation
     show camila normal at center, zoomAt(1.5, (640, 1040))
     with fade
     "The precinct hums with late-night energy, phones ringing, officers typing, evidence bags being logged. Camila leads me into an interview room, shuts the door, and leans against the table."
-    show camila talkative
+    show camila talk
     camila.say "Alright. Here's the full picture, some of this just came back."
     show camila normal
     "She pulls up a file on the tablet, photos, reports, ballistic diagrams."
-    show camila talkative
+    show camila talk
     camila.say "The gun you delivered, the real one, just came back from the lab. Fingerprints, DNA, ballistic scoring... all of it matches the son of a sitting politician."
     mike.say "So this was all about him."
-    show camila talkative
+    show camila talk
     camila.say "Looks that way, well him and his Father."
     show camila normal
     mike.say "And those men tonight?"
-    show camila talkative
+    show camila talk
     camila.say "They were hired to blackmail his father."
     show camila normal
     "She taps the screen, showing a chain of encrypted messages, from their just captured phones."
-    show camila talkative
+    show camila talk
     camila.say "They were going to use the murder weapon as leverage. 'Do what we want, or your son goes to prison.'"
     show camila normal
     mike.say "And the crime boss?"
@@ -5438,7 +5438,7 @@ label camila_event_04_alt:
     camila.say "She never gave us her name. But she stood to gain political favours, zoning, protection, influence. Not money. Power."
     show camila annoyed
     "Camila closes the tablet, the weight of the case settling between us."
-    show camila talkative
+    show camila talk
     camila.say "Tonight exposed the whole operation. The gun, the blackmail, the political angle. We'll be untangling this mess for months."
     show camila normal
     mike.say "But it's over."
@@ -5509,7 +5509,7 @@ label camila_collar_request:
     "Camila responds by screwing up her face into an expression that says 'get a load of this guy!'."
     show camila happy with hpunch
     "And then she gives me a pretty hard, but still pretty playful, shove on the shoulder."
-    show camila talkative
+    show camila talk
     camila.say "Didn't I already tell you I was off-duty?"
     camila.say "So quit busting my balls about it, okay?"
     show camila normal
@@ -5530,7 +5530,7 @@ label camila_collar_request:
     "Because the whole of the mall is air-conditioned, which means the air is cool and crisp."
     mike.say "Oh, I think you are!"
     mike.say "Come on, Camila - what's eating you?"
-    show camila talkative
+    show camila talk
     camila.say "Okay, okay..."
     camila.say "But you have to promise not to make a big deal out of it."
     show camila sadsmile

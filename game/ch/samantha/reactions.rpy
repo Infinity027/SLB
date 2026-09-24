@@ -292,7 +292,7 @@ label samantha_belly_kiss_male:
     show samantha stuned
     "Sam looks around, suddenly seeing what I'm trying to do."
     "And it doesn't take her long to spot what the problem is either."
-    show samantha talkative
+    show samantha talk
     samantha.say "Erm..."
     samantha.say "[hero.name]..."
     show samantha sadsmile
@@ -302,7 +302,7 @@ label samantha_belly_kiss_male:
     mike.say "Oh right!"
     show samantha happy at startle
     "Sam chuckles to herself as she takes hold of my hands."
-    show samantha talkative
+    show samantha talk
     samantha.say "Maybe just let me know next time you'd like a kiss?"
     samantha.say "Otherwise this little one's going to come between us!"
     hide samantha
@@ -360,7 +360,7 @@ label samantha_belly_caress_male:
     mike.say "This is going to sound crazy, but I was checking everything's real!"
     show samantha happy at startle
     "Sam puts a hand over her mouth as she chuckles to herself."
-    show samantha talkative
+    show samantha talk
     samantha.say "Oh, [hero.name]..."
     samantha.say "That's the silliest thing I've ever heard!"
     show samantha happy
@@ -375,7 +375,7 @@ label samantha_belly_caress_male:
     return
 
 label samantha_belly_listen_male:
-    show samantha talkative at center, zoomAt(1.25, (640, 880))
+    show samantha talk at center, zoomAt(1.25, (640, 880))
     samantha.say "[hero.name]..."
     samantha.say "Would you come over here for a minute?"
     show samantha normal
@@ -386,7 +386,7 @@ label samantha_belly_listen_male:
     show samantha at center, traveling(1.5, 0.3, (640, 1040))
     "Sam's already hiking up the front of her top as I make it over to her."
     "And she doesn't hesitate to thrust her belly towards me a second later."
-    show samantha talkative
+    show samantha talk
     samantha.say "Here you go..."
     samantha.say "Get a good hold of my bump!"
     show samantha normal
@@ -396,13 +396,13 @@ label samantha_belly_listen_male:
     mike.say "What exactly are we doing here, Sam?"
     mike.say "I mean, if you just want me to stroke your belly..."
     mike.say "That's totally fine by me..."
-    show samantha talkative
+    show samantha talk
     samantha.say "That's not it at all, [hero.name]."
     samantha.say "I want you to listen to the baby."
     samantha.say "To put your ear right here..."
     show samantha normal
     "Sam puts her hand on her belly to show me where she means."
-    show samantha talkative
+    show samantha talk
     samantha.say "And listen really closely, okay?"
     samantha.say "So you can tell me what they're doing."
     show samantha normal

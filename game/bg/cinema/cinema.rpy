@@ -37,4 +37,3 @@ label watch_movie:
     "I watch a movie."
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

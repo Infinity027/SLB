@@ -106,4 +106,3 @@ label hotdog:
     "I eat a snack."
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

@@ -291,7 +291,7 @@ label harmony_gift_slutty_dress_male:
     "Especially when I've seen something as amazing as what's in the box behind my back."
     "The only problem is that it's way too large to stay hidden back there."
     "And so Harmony's already spotted it and is trying to sneak a better look."
-    show harmony talkative
+    show harmony talk
     harmony.say "What's that you have there, [hero.name]?"
     show harmony normal
     mike.say "Huh?"
@@ -310,7 +310,7 @@ label harmony_gift_slutty_dress_male:
     mike.say "This is for you."
     "I bring the box out from behind my back and hold it out."
     "Waiting until Harmony takes it from me, a smile on her face."
-    show harmony talkative
+    show harmony talk
     harmony.say "Ooh..."
     harmony.say "You really shouldn't have."
     harmony.say "But that doesn't mean I don't want it!"
@@ -348,7 +348,7 @@ label harmony_gift_slutty_dress_male:
         mike.say "You could say that!"
         "Harmony gives me a wink as she deftly folds the dress up again."
         "And she adds a nod as she slips it neatly back into the box."
-        show harmony talkative
+        show harmony talk
         harmony.say "Don't worry, [hero.name]…"
         harmony.say "You'll get to see me in it soon enough."
         show harmony blush

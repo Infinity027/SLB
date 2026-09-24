@@ -68,7 +68,7 @@ label aletta_talk_politics_male:
     return
 
 label aletta_talk_food_male:
-    show aletta talkative
+    show aletta talk
     aletta.say "Let's say I like to get my food directly from the source."
     hide aletta
     return
@@ -87,31 +87,31 @@ label aletta_talk_tv_male:
     return
 
 label aletta_talk_sports_male:
-    show aletta talkative
+    show aletta talk
     aletta.say "Speaking about sports, maybe you should work out a little more."
     hide aletta
     return
 
 label aletta_talk_fashion_male:
-    show aletta talkative
+    show aletta talk
     aletta.say "I could spend my whole life trying clothes on."
     hide aletta
     return
 
 label aletta_talk_books_male:
-    show aletta talkative
+    show aletta talk
     aletta.say "I don't read that much - print is a dead medium."
     hide aletta
     return
 
 label aletta_talk_people_male:
-    show aletta talkative
+    show aletta talk
     aletta.say "Don't you have something interesting to say?"
     hide aletta
     return
 
 label aletta_talk_computers_male:
-    show aletta talkative
+    show aletta talk
     aletta.say "Not interested."
     hide aletta
     return
@@ -228,13 +228,13 @@ label submissive_interact_aletta_male:
     mike.say "Ah, Aletta..."
     mike.say "I know that you're into your guns, ammo and all that."
     aletta.say "Hmm?"
-    show aletta talkative
+    show aletta talk
     aletta.say "Oh, yes - I suppose that I am."
     show aletta normal
     mike.say "Well, I was thinking that you could ask me to use you for target practice."
     mike.say "You know - when I shoot my load at you?"
     if aletta.sub >= 70 or aletta.is_sex_slave:
-        show aletta talkative
+        show aletta talk
         aletta.say "Oh, I see what you did there, [hero.name]."
         aletta.say "How clever of you!"
         show aletta happy

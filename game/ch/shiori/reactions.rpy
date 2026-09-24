@@ -366,7 +366,7 @@ label shiori_belly_caress_male:
     show shiori happy
     "Shiori lets out a laugh, despite her former mood."
     "And I feel it lift my heart, on account of the delight I hear in it."
-    show shiori talkative
+    show shiori talk
     shiori.say "Did you see that, [hero.name]?"
     shiori.say "I think the baby recognises your voice!"
     shiori.say "Keep talking to them!"

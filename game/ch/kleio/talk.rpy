@@ -533,7 +533,7 @@ label submissive_interact_kleio_male:
     mike.say "Ah, Kleio..."
     mike.say "I got a pretty crazy idea."
     mike.say "So just hear me out, okay?"
-    show kleio talkative
+    show kleio talk
     kleio.say "I'm all ears, Loverboy!"
     show kleio normal
     mike.say "How about you spice things up when you say hi to me?"
@@ -541,7 +541,7 @@ label submissive_interact_kleio_male:
     if kleio.sub >= 70 or kleio.is_sex_slave:
         show kleio annoyed
         kleio.say "Urgh..."
-        show kleio talkative
+        show kleio talk
         kleio.say "I can't believe you've reduced me to this."
         show kleio seductive
         kleio.say "But you're right - I do want you that badly!"

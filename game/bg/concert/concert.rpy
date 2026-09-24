@@ -4,4 +4,3 @@ init 1:
             attribute full default
         group band auto:
             attribute deathless default
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

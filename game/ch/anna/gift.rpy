@@ -217,7 +217,7 @@ label anna_gift_slutty_dress_male:
     mike.say "Erm..."
     mike.say "Anna?"
     "Anna answers me promptly, but without bothering to look up."
-    show anna talkative
+    show anna talk
     anna.say "Yeah, [hero.name]?"
     anna.say "Wassup?"
     show anna normal
@@ -251,7 +251,7 @@ label anna_gift_slutty_dress_male:
         mike.say "So..."
         mike.say "I'm guessing that you...like it?"
         "Anna can't keep from nodding as she beams at me."
-        show anna talkative
+        show anna talk
         anna.say "Of course I do, silly!"
         anna.say "What girl wouldn't want a dress as sexy as this?"
         anna.say "And it's going to look so good once I'm in it too!"

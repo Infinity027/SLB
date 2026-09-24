@@ -3,7 +3,7 @@ init -35 python:
     'motions': ['idle'],
     'positions': ['a', 'b'],
     'piercings': ['clit', 'ears', 'lips', 'navel', 'nipples', 'nose'],
-    'exps': ['normal', 'angry', 'annoyed', 'blush', 'curious', 'flirt', 'happy', 'joke', 'mindless', 'sad', 'sadsmile', 'stuned', 'surprised', 'talkative', 'upset', 'whining'],
+    'exps': ['normal', 'angry', 'annoyed', 'blush', 'curious', 'flirt', 'happy', 'joke', 'mindless', 'sad', 'sadsmile', 'stuned', 'surprised', 'talk', 'upset', 'whining'],
     'outfits': ['casual', 'sport', 'work', 'sexywork', 'fight', 'halloween', 'wedding', 'date', 'sexydate', 'sluttydate', 'swimsuit', 'sexyswimsuit', 'naked'],
     'others': ['pubes', 'collar', 'bottomless', 'topless'],
 }

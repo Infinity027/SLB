@@ -562,11 +562,11 @@ label jealous_threesome(appointment=None):
     mike.say "Where in the hell is she?"
     show sasha normal
     "Sasha glances up from her phone, a quizzical look on her face."
-    show sasha talkative
+    show sasha talk
     sasha.say "Sorry, do you want me to actually answer that question?"
     show sasha normal
     "I look at her for a second, my puzzlement apparently all too clear to see."
-    show sasha talkative
+    show sasha talk
     sasha.say "I mean - are you really asking me if I know when she's going to get here?"
     sasha.say "Or was that just one of those rhetorical questions?"
     sasha.say "You know, the kind that's just for the sake of making a noise?"
@@ -584,7 +584,7 @@ label jealous_threesome(appointment=None):
     show bg house
     show audrey normal
     with wiperight
-    show audrey talkative
+    show audrey talk
     audrey.say "Hey, [hero.name]."
     audrey.say "Sorry I'm a little later than we agreed."
     audrey.say "But some things are worth waiting for - I hope!"
@@ -608,11 +608,11 @@ label jealous_threesome(appointment=None):
     show sasha blush
     "And then their gazes fall on me, like I'm a particularly intriguing morsel."
     "One that's giving them an appetite and making their stomachs grumble in anticipation..."
-    show sasha talkative
+    show sasha talk
     sasha.say "Where are your manners, [hero.name]?"
     show sasha normal
     mike.say "Huh?!?"
-    show sasha talkative
+    show sasha talk
     sasha.say "Are you just going to leave our guest on the doorstep or what?"
     hide audrey
     hide sasha
@@ -622,7 +622,7 @@ label jealous_threesome(appointment=None):
     show audrey at right4
     show sasha at left4
     with fade
-    show audrey talkative
+    show audrey talk
     audrey.say "Typical guy, wouldn't you say?"
     audrey.say "Needs a woman to show him how it's done!"
     audrey.say "Speaking of which..."

@@ -283,7 +283,7 @@ label morgan_gift_slutty_dress_male:
     "And so maybe that's one of the reasons that I felt compelled to buy her what's in the box."
     "The one that I'm currently doing the best I can to hide behind my back and keep her from seeing."
     "Not that my efforts seem to be all that successful, as she's already trying to sneak a peak at it."
-    show morgan talkative
+    show morgan talk
     if morgan.male >= 75:
         morgan.say "What'ya got there, huh?"
     elif morgan.male >= 25:
@@ -321,13 +321,13 @@ label morgan_gift_slutty_dress_male:
         "Her eyes travelling up and down the length of the dress the whole time."
         "And when she finally looks up at me, I can't help wincing in anticipation of what she's about to say."
         if morgan.male >= 75:
-            show morgan talkative
+            show morgan talk
             morgan.say "There's no way that I'm going to wear this in public!"
             morgan.say "But that doesn't mean that I want you to return it."
             show morgan flirt
             morgan.say "Because I'm going to wear it for you, in private!"
         elif morgan.male >= 25:
-            show morgan talkative
+            show morgan talk
             morgan.say "You know, I used to be totally against this kind of thing?"
             morgan.say "But since we got together, I've really learned to loosen up."
             show morgan flirt

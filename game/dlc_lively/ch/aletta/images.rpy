@@ -4,7 +4,7 @@ init -35 python:
     'positions': ['a', 'b'],
     'piercings': ['chain', 'clit', 'ears', 'navel', 'nipples', 'nose'],
     'haircuts': ['nohaircut', 'haircut'],
-    'exps': ['normal', 'angry', 'annoyed', 'dreamy', 'embarrassed', 'flirt', 'happy', 'mindless', 'normal', 'pain', 'pleasure', 'sad', 'sadsmile', 'scared', 'stuned', 'surprised', 'talkative', 'upset', 'whining', 'wink'],
+    'exps': ['normal', 'angry', 'annoyed', 'dreamy', 'embarrassed', 'flirt', 'happy', 'mindless', 'normal', 'pain', 'pleasure', 'sad', 'sadsmile', 'scared', 'stuned', 'surprised', 'talk', 'upset', 'whining', 'wink'],
     'outfits': ['casual', 'sport', 'work', 'sexywork', 'date', 'sexydate', 'sluttydate', 'swimsuit', 'sexyswimsuit', 'suit', 'halloween', 'cosplay', 'wedding', 'underwear', 'naked'],
     'others': ['pubes', 'collar', 'leash', 'blush', 'bottomless', 'topless', 'noglasses', 'nopatsies'],
     'accessories': ['glasses', 'helmet', 'remote', 'shake', 'panties'],
@@ -139,9 +139,9 @@ label test_aletta_exps:
     show expression f"aletta {pose} surprised" as a2 at left
     "surprised"
 
-    $ renpy.show(f"aletta {pose} talkative")
-    show expression f"aletta {pose} talkative" as a2 at left
-    "talkative"
+    $ renpy.show(f"aletta {pose} talk")
+    show expression f"aletta {pose} talk" as a2 at left
+    "talk"
 
     $ renpy.show(f"aletta {pose} upset")
     show expression f"aletta {pose} upset" as a2 at left

@@ -360,7 +360,7 @@ label reona_belly_caress_male:
     "But now that she's really starting to show, it's gotten ten times worse."
     "I can't keep my eyes off of her, as she's really starting to glow."
     "And she's not the kind of girl that would fail to notice a thing like that."
-    show reona talkative
+    show reona talk
     reona.say "[hero.name]…"
     reona.say "I was just wondering..."
     show reona devious
@@ -401,7 +401,7 @@ label reona_belly_listen_male:
     mike.say "What's the matter, Reona?"
     mike.say "Did you change your mind?"
     "Reona shakes her head for a second time."
-    show reona talkative
+    show reona talk
     reona.say "Oh no, [hero.name]…"
     reona.say "I just want you to do something a little different this time."
     show reona devious
@@ -419,7 +419,7 @@ label reona_belly_listen_male:
     mike.say "And I'll just be using my plain old human ear!"
     show reona embarrassed blush
     "Reona flushes a little, looking embarrassed."
-    show reona talkative
+    show reona talk
     reona.say "I know that!"
     reona.say "I just want to know what you can hear - even if it's just impressions."
     reona.say "Somehow knowing that you can hear the baby..."

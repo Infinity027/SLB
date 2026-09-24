@@ -384,7 +384,7 @@ init -35 python:
     'positions': ['a', 'b', 'c'],
     'piercings': ['clit', 'ears', 'navel', 'nipples', 'nose'],
     'haircuts': ['nohaircut', 'haircut'],
-    'exps': ['normal', 'amused', 'angry', 'annoyed', 'closed', 'cry', 'flirt', 'happy', 'mindless', 'sad', 'sadsmile', 'smile', 'stuned', 'surprised', 'talkative', 'upset', 'whining', 'wink'],
+    'exps': ['normal', 'amused', 'angry', 'annoyed', 'closed', 'cry', 'flirt', 'happy', 'mindless', 'sad', 'sadsmile', 'smile', 'stuned', 'surprised', 'talk', 'upset', 'whining', 'wink'],
     'outfits': ['casual', 'work', 'sport', 'date', 'sexydate', 'sluttydate', 'swimsuit', 'sexyswimsuit', 'halloween', 'funeral', 'wedding', 'underwear', 'naked'],
     'others': ['pubes', 'collar', 'blush', 'bottomless', 'topless', 'chainless', 'noglasses'],
 }
@@ -511,9 +511,9 @@ label test_cherie_exps:
     show expression f"cherie {pose} surprised" as c2 at left
     "surprised"
 
-    $ renpy.show(f"cherie {pose} talkative")
-    show expression f"cherie {pose} talkative" as c2 at left
-    "talkative"
+    $ renpy.show(f"cherie {pose} talk")
+    show expression f"cherie {pose} talk" as c2 at left
+    "talk"
 
     $ renpy.show(f"cherie {pose} upset")
     show expression f"cherie {pose} upset" as c2 at left

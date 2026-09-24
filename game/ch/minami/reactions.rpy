@@ -409,20 +409,20 @@ label minami_belly_listen_male:
     show minami normal
     "Then she nods her head."
     "And at the same time she pulls up her top too."
-    show minami talkative
+    show minami talk
     minami.say "Okay..."
     minami.say "That's not TOO weird, I guess."
     show minami at center, traveling(2.0, 1.0, (640, 980))
     "I shake my head as I lean in and put my ear against her belly."
     mike.say "It's not weird at all, Minami!"
     mike.say "The doctors at the hospital are always doing this."
-    show minami talkative
+    show minami talk
     minami.say "Yeah, but they're doctors..."
     minami.say "You know, professionals?"
     show minami annoyed
     "I wave away Minami's concerns as I begin to hear something."
     mike.say "Oh wow..."
-    show minami talkative
+    show minami talk
     minami.say "What is it, big bro?"
     minami.say "What can you hear?"
     show minami normal

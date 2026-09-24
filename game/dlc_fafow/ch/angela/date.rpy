@@ -10,7 +10,7 @@ label angela_date_amusement_park_female:
     "No, it's more like I can't help wondering if she brought [mike.name] here as a kid."
     "I don't know if they lived around here back then, or moved here when he was older."
     "Whatever the case, it's a strange image."
-    show angela talkative
+    show angela talk
     angela.say "[hero.name]..."
     angela.say "Are you okay?"
     show angela normal
@@ -19,7 +19,7 @@ label angela_date_amusement_park_female:
     bree.say "What?"
     bree.say "Oh...oh no!"
     bree.say "I'm fine, Angela."
-    show angela talkative
+    show angela talk
     angela.say "Are you sure?"
     angela.say "It looked like you were miles away just now."
     show angela normal
@@ -28,7 +28,7 @@ label angela_date_amusement_park_female:
     bree.say "It's been a while since I last came here, that's all."
     show angela smile
     "Angela nods at this."
-    show angela talkative
+    show angela talk
     angela.say "I know that feeling!"
     show angela happy
     angela.say "I used to bring [mike.name] and Minami to places like this all the time."

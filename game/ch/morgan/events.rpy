@@ -2000,7 +2000,7 @@ label morgan_event_01:
             show anna sadsmile
             mike.say "Every time I mention Morgan or something about the guy, you look at me like I have steaming turds hanging out of my mouth!"
             mike.say "Plus you never explained the whole 'friend of a friend' thing either!"
-            show anna talkative
+            show anna talk
             anna.say "Look, it's just pretty complicated, that's all."
             show anna normal
             "I shrug my shoulders and shake my head, not knowing what she means."
@@ -2108,7 +2108,7 @@ label morgan_event_01:
             show kleio at center, zoomAt(1.25, (640, 880)) with easeinleft
             "By now we're in the cinema and looking for our seats."
             "Kleio shrugs as we sit down and get comfortable."
-            show kleio talkative
+            show kleio talk
             kleio.say "I know what you mean."
             kleio.say "It's a small, weird world, right?"
             show bg cinemaroom at dark

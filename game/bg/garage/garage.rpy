@@ -34,4 +34,3 @@ label garage_shop:
     $ Room.find("garage").shop("kleio" if Person.is_not_hidden("kleio") and kleio.present else None)
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

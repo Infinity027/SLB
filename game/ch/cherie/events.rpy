@@ -301,22 +301,22 @@ label cherie_first_meeting_appointment(appointment=None):
     mike.say "Excuse me, but did you say you're Dwayne's wife?"
     show cherie sadsmile
     "Her expression falls at the mention of his name. That can only be her."
-    show cherie talkative
+    show cherie talk
     cherie.say "I did not say that, no."
     show cherie normal
     "She speaks with a mild French accent. It's just a little shift in the vowels that gives away her origins."
     mike.say "Sorry. I work for Dwayne, and he mentioned you."
     show cherie smile
     "Her expression perks up just a little."
-    show cherie talkative
+    show cherie talk
     cherie.say "He actually spoke of me?"
     show cherie normal
     mike.say "A little bit, yeah. Doesn't everyone talk about their wife?"
-    show cherie talkative
+    show cherie talk
     cherie.say "Dwayne does not usually tell people about me. He says I embarrass him."
     show cherie normal
     mike.say "That seems like a terrible thing to say!"
-    show cherie talkative
+    show cherie talk
     cherie.say "Yes, it does, but that is the life."
     show cherie normal
     if hero.charm > 80:
@@ -324,59 +324,59 @@ label cherie_first_meeting_appointment(appointment=None):
         if Person.find("cherie"):
             $ cherie.love += 2
         "She looks around, almost as though looking to see if she thinks I'm being honest or just flattering her."
-        show cherie talkative
+        show cherie talk
         cherie.say "You flatter me, but no, my days of being the most beautiful woman in the room are behind me now."
         show cherie normal
         mike.say "Hardly. You can't be a day over twenty nine!"
         show cherie smile
         "Cherie laughs; it's a gentle, lilting sound. It doesn't quite have the full weight of humor behind it, but instead is a polite laugh to humor me."
-        show cherie talkative
+        show cherie talk
         cherie.say "Please, sir, now you are making a fool of yourself."
         show cherie normal
         mike.say "If you think that, you're the one fooling yourself. But if you'd rather not hear how lovely you are, I'll keep it to myself and simply admire your beauty in quiet."
         "Her laugh disappears and turns into a genuine-seeming smile."
-        show cherie talkative
+        show cherie talk
         cherie.say "Oh, sir, it is too much. But who am I to tell such a bold young man to stay quiet? You are, after all, the guest in my home. You may say what you like."
     mike.say "Why do you stay with someone who would say such things about you?"
     "She shrugs and casually waves."
-    show cherie talkative
+    show cherie talk
     cherie.say "Where else would I go? My home is here. At least this way I have something. Without him I have nothing."
     show cherie normal
     mike.say "I'm sure a woman such as yourself could choose any man and charm him until the end of time."
-    show cherie talkative
+    show cherie talk
     cherie.say "Ah yes, but alas, the charms wear off by midnight. Like Cinderella, only the prince is a tyrant. Oh, dear, I should not say such things."
     show cherie normal
     mike.say "It is your home, I believe you can say what you like."
-    show cherie talkative
+    show cherie talk
     cherie.say "Ah, but it is his home as well, and I should not speak ill of a man in his own home."
     show cherie normal
     mike.say "Perhaps we should go elsewhere?"
-    show cherie talkative
+    show cherie talk
     cherie.say "Oh, so that I may speak ill of my husband freely?"
     show cherie normal
     mike.say "So that you can speak of anything you like."
-    show cherie talkative
+    show cherie talk
     cherie.say "I do not think that would be good for you. The only time Dwayne pays attention to me is when another man is also paying attention to me. He is powerful and quick to anger."
     show cherie normal
     mike.say "I'm not afraid of Dwayne."
-    show cherie talkative
+    show cherie talk
     cherie.say "No? Then you are brave, and a fool."
     show cherie normal
     mike.say "For beauty such as yours, I will happily play the fool."
     "Cherie swirls the drink in her glass and looks at me as though it's the first time she has really seen me tonight."
-    show cherie talkative
+    show cherie talk
     cherie.say "I appreciate the flattery, sir, but you play a dangerous game. Dwayne does not pull punches."
     show cherie normal
     mike.say "Like I said, I'm not afraid of Dwayne."
-    show cherie talkative
+    show cherie talk
     cherie.say "Then it is best that I retire for the evening, before I am the cause of your downfall. I would hate to have another destroyed soul upon my conscience."
     show cherie normal
     "She tosses back the rest of her drink and turns away from me. She takes one step before looking back at me over her shoulder."
-    show cherie talkative
+    show cherie talk
     cherie.say "May I have your name?"
     show cherie normal
     mike.say "[heroname]. [heroname] [hero.family_name]."
-    show cherie talkative
+    show cherie talk
     cherie.say "[hero.name]. That is a good name. I hope your life treats you well."
     hide cherie with easeoutright
     "She turns and disappears, quickly going up the stairs and into the private parts of the house, ignoring my protestations that I wasn't done speaking with her."
@@ -408,65 +408,65 @@ label cherie_cold_call:
     with fade
     "At the party, Cherie was immaculate; her clothing and makeup were all perfect. Seeing her here, though, she is less perfect. She must have put makeup on in haste."
     "It's not badly done, but it's not the consummate perfection it was the last time I saw her."
-    show cherie talkative
+    show cherie talk
     cherie.say "Why, [heroname] [hero.family_name], this is a most unexpected surprise."
     show cherie normal
     mike.say "A pleasant surprise, I hope!"
-    show cherie talkative
+    show cherie talk
     cherie.say "That remains to be seen, I imagine."
     show cherie normal
     "I do my best to pour on the charm and I offer her a slight bow as I speak."
     mike.say "Then my mission is clear: to ensure this surprise is as pleasant as possible."
-    show cherie talkative
+    show cherie talk
     cherie.say "So what can I do for you, [hero.family_name]?"
     show cherie normal
     mike.say "I came by to see if you'd like to go out to lunch with me."
-    show cherie talkative
+    show cherie talk
     cherie.say "Are you asking me on a date?"
     show cherie normal
     mike.say "Certainly not! This is just a lunch with a gentleman and a beautiful woman."
-    show cherie talkative
+    show cherie talk
     cherie.say "Strange, that sounds very much like a date."
     show cherie normal
     mike.say "I would never have the audacity to ask a married woman on a date."
-    show cherie talkative
+    show cherie talk
     cherie.say "Needless to say, I cannot go with you."
     show cherie normal
     mike.say "That is very disappointing. I was really looking forward to lunch with you."
-    show cherie talkative
+    show cherie talk
     cherie.say "It's not that I won't have lunch with you, it's that lunch is about to be served here. I can have Manfred set another place. If that won't ruin your plan too much?"
     show cherie normal
     mike.say "I think that will do nicely."
     "Cherie claps her hands together and smiles."
-    show cherie talkative
+    show cherie talk
     cherie.say "Magnificent! Remain here for a moment."
     show cherie normal
     "Cherie disappears for several moments, and then reappears."
     "She leads me through several of the incredibly impressive rooms of the house, and then into a cozy little solarium where I guess Manfred has already set the table for two."
     "Manfred, who is already there waiting, asks me to sit down."
     "Once seated, Cherie sits across from me and offers a smile that is both sad and intrigued."
-    show cherie talkative
+    show cherie talk
     cherie.say "So, what should we talk about on our {i}not date?{/i}"
     show cherie normal
     mike.say "You could tell me how someone as lovely as you could end up ignored by someone as clearly horny as Dwayne."
-    show cherie talkative
+    show cherie talk
     cherie.say "Now why would you say that about him?"
     show cherie normal
     mike.say "Let's just say the office gossip has a lot to say on the topic."
     "Cherie chuckles."
-    show cherie talkative
+    show cherie talk
     cherie.say "Yes, I am certain word of his exploits travels far and wide. Still, I would not speak ill of the man in his own home."
     show cherie normal
     mike.say "Then don't speak ill of him, simply tell the truth."
-    show cherie talkative
+    show cherie talk
     cherie.say "They are one and the same, my friend."
     show cherie sad
     mike.say "If the truth speaks ill of him, then it is his own fault, not yours. You cannot wrong him with honesty any more than he could wrong you by being a loving husband."
-    show cherie talkative
+    show cherie talk
     cherie.say "Well..."
     show cherie sad
     "Cherie picks up a glass in front of her and takes a sip. Judging by the olive, I think it's a martini, and judging by her eyes it may not be her first one today."
-    show cherie talkative
+    show cherie talk
     cherie.say "I suppose. Once upon a time...what feels a lifetime ago, I was the light of Dwayne's life, the apple of his eye. Second only to that brat he spawned."
     cherie.say "But for family, I was content to be second, because it was a very good second."
     cherie.say "But I suppose I should have known. Dwayne does not have as long an attention span as I had hoped."
@@ -478,67 +478,67 @@ label cherie_cold_call:
     "It appears to be some kind of fancy seafood, with 3 or 4 lumps of something that may be scallop and a piece of lobster?"
     "As he sets down the plate, Cherie tosses back the rest of her martini. Manfred takes the empty glass without a word and disappears. We eat while we speak."
     mike.say "It seems criminal that you are left without attention."
-    show cherie talkative
+    show cherie talk
     cherie.say "Oh, there is attention, but anyone who offers it becomes an enemy to my husband. And he always wins."
     cherie.say "But enough about me, surely you did not come here to be depressed by my circumstances. And truly, what have I to be sad about? Look at this place."
     cherie.say "I have the best of everything. The best food, the best drink, clothing, jewelry, fashion."
     cherie.say "What more could a woman like me ask for?"
     show cherie normal
     mike.say "A little love would not hurt."
-    show cherie talkative
+    show cherie talk
     cherie.say "I suppose. So tell me, [heroname] [hero.family_name], what of you? Here I have shared my deepest regrets and all I know about you is that you work for the man I am speaking ill of."
     cherie.say "Perhaps you are here to punish me?"
     show cherie normal
     mike.say "Hardly! I work for Dwayne, but I've no love for the man."
-    show cherie talkative
+    show cherie talk
     cherie.say "No loyalty?"
     show cherie normal
     mike.say "I'm loyal to my people and my family. I manage a small team, and they are the ones I am concerned for."
-    show cherie talkative
+    show cherie talk
     cherie.say "Then you are especially vulnerable to him."
     show cherie normal
     "Manfred returns and sets another martini in front of her, and one in front of me. I hadn't asked for it and he hadn't asked me. I have a feeling he doesn't really want me here."
-    show cherie talkative
+    show cherie talk
     cherie.say "Thank you, Manfred. You may go."
     show cherie normal
     "The butler departs without a word."
-    show cherie talkative
+    show cherie talk
     cherie.say "You should leave now. He is going to tell Dwayne about this, and then Dwayne will probably fire you."
     show cherie normal
     mike.say "Dwayne can't fire me, at least not right now."
-    show cherie talkative
+    show cherie talk
     cherie.say "No? Why is that, then?"
     show cherie normal
     mike.say "Let's just say I have some leverage over him."
-    show cherie talkative
+    show cherie talk
     cherie.say "Ah. I hope it is a great deal of leverage, then."
     show cherie normal
     mike.say "It is."
     "Cherie's face tightens a little, and she narrows her eyes just a little."
-    show cherie talkative
+    show cherie talk
     cherie.say "What do you want from me, [hero.name]? Why are you here?"
     show cherie normal
     mike.say "Is it not enough to seek the company of a beautiful, dangerous woman?"
-    show cherie talkative
+    show cherie talk
     cherie.say "Perhaps it should be, but it is not, not when I learn you have leverage over my husband."
     show cherie normal
     mike.say "That is all I have to offer, I'm afraid."
     "She looks at me dubiously, and takes another drink. She sure can put down the martinis."
-    show cherie talkative
+    show cherie talk
     cherie.say "Are you the reason that Cassidy has been out of the house? She said something about having a job, and that seemed particularly odd."
     if cassidy.status == 'pet':
         cherie.say "And Dwayne said something about her new boss taking advantage of her."
         show cherie normal
         mike.say "Yes, she works for me."
-        show cherie talkative
+        show cherie talk
         cherie.say "And just how have you been taking advantage of her then?"
         show cherie normal
         mike.say "I've been training her to be...a better person. She treated people pretty terribly when we first met, and I've been...showing her what that's like."
-        show cherie talkative
+        show cherie talk
         cherie.say "Oh, my. That sounds positively salacious."
         show cherie normal
         mike.say "It...might be."
-        show cherie talkative
+        show cherie talk
         cherie.say "Well, I am happy if anyone can put that brat in her place."
         show cherie normal
         if Person.find("cherie"):
@@ -547,46 +547,46 @@ label cherie_cold_call:
         cherie.say "And Dwayne said something about her having a new pet."
         show cherie normal
         mike.say "Well, we do have a bit of an arrangement, but that's evolving over time. She is finally learning how the world actually works."
-        show cherie talkative
+        show cherie talk
         cherie.say "How is that working out for you?"
         show cherie normal
         mike.say "It's actually quite pleasant, and she has occasionally found kindness for others. It's a start."
-        show cherie talkative
+        show cherie talk
         cherie.say "It sounds as though you have a long way to go."
         show cherie normal
         mike.say "Yes, that is true."
-    show cherie talkative
+    show cherie talk
     cherie.say "You are very curious, [heroname] [hero.family_name]."
     show cherie normal
     mike.say "I hope that is a good thing."
     "She shrugs, but there is a small smile on her lips as she does so."
-    show cherie talkative
+    show cherie talk
     cherie.say "It is a thing."
     cherie.say "And now our lunch is over, my friend, and I must go. I have...things to do."
     show cherie normal
     mike.say "I see."
-    show cherie talkative
+    show cherie talk
     cherie.say "Manfred will show you out."
     show cherie normal
     mike.say "I hope that I may see you again?"
-    show cherie talkative
+    show cherie talk
     cherie.say "Ah, so you think we had a good {i}not date{/i}?"
     show cherie normal
     mike.say "Perhaps I just feel that is criminal that your loveliness lacks attention, and I'm not afraid of Dwayne."
-    show cherie talkative
+    show cherie talk
     cherie.say "Indeed, I think you take joy in poking the bear."
     show cherie normal
     mike.say "Perhaps I do."
-    show cherie talkative
+    show cherie talk
     cherie.say "Very well. But please, do not show up unannounced here again."
     show cherie normal
     mike.say "Then how shall I reach you?"
 
-    show cherie talkative
+    show cherie talk
     cherie.say "I will contact you when I am ready."
     show cherie normal
     mike.say "Soon, I hope?"
-    show cherie talkative
+    show cherie talk
     cherie.say "Patience is a virtue."
     show cherie normal
     "I have to laugh at that."
@@ -766,133 +766,133 @@ label cherie_second_meeting:
     show cherie
     with fade
     "When I see her, this is the happiest she's been in any of our various meetings. That alone pleases me."
-    show cherie talkative
+    show cherie talk
     cherie.say "Hello again, {b}mon ami{/b}!"
     show cherie normal
     "Seeing her, I don't quite know the proper way to greet her. And my hesitation means she takes the lead."
     "She steps forward and touches her left cheek to mine, making a kissing noise, and then repeats it on the other cheek."
     mike.say "Oh, what is that?"
-    show cherie talkative
+    show cherie talk
     cherie.say "That is how we say hello where I grew up!"
     show cherie normal
     mike.say "Oh! Do you do that with everyone then?"
-    show cherie talkative
+    show cherie talk
     cherie.say "Not as much as I once did, no, but you have me feeling a little nostalgic."
     show cherie normal
     "I offer her a broad smile."
     mike.say "I shall take that as a compliment."
-    show cherie talkative
+    show cherie talk
     cherie.say "And indeed you should!"
     cherie.say "Now then, you must tell me all of your intrigues before Manfred returns."
     show cherie normal
     mike.say "I don't think I have time to tell you about all my intrigues, but--"
-    show cherie talkative
+    show cherie talk
     cherie.say "Oh, you have so many? Perhaps I am mistakenly getting acquainted with James Bond?"
     show cherie smile
     "I laugh aloud at that!"
     mike.say "Heavens no, but...there is a lot going on."
-    show cherie talkative
+    show cherie talk
     cherie.say "Very well. What do you have time to tell me?"
     show cherie normal
     mike.say "I have a plan that will put Dwayne in jail for the rest of his life. You'll be free of him. Free to pursue a life."
-    show cherie talkative
+    show cherie talk
     cherie.say "Ah, you wish to frame him?"
     show cherie normal
     mike.say "Absolutely not. He is one hundred percent guilty of the crimes he'll go to jail for."
-    show cherie talkative
+    show cherie talk
     cherie.say "I see."
     show cherie normal
     "There is a brief pause while she thinks about this."
-    show cherie talkative
+    show cherie talk
     cherie.say "The question remains, then, why are you speaking with me about it?"
     cherie.say "It seems to me that if you can put my husband in jail, and he is truly guilty and deserves to be there, this should already be done, no?"
     show cherie normal
     mike.say "There's the rub."
-    show cherie talkative
+    show cherie talk
     cherie.say "Ah, the other shoe. It is about to drop."
     show cherie normal
     mike.say "Well, I have almost everything I need, but there's one thing I do not have."
     "Her eyes narrow, and suspicion and mistrust cloud her face."
-    show cherie talkative
+    show cherie talk
     cherie.say "That would be?"
     show cherie normal
     mike.say "He keeps a second set of accounting ledgers that he needs to properly manage his wide array of illegal operations and embezzlement."
     "Cherie's expression falls. I can see in her face she knows where this is going."
-    show cherie talkative
+    show cherie talk
     cherie.say "And you want me to acquire this for you?"
     show cherie normal
     mike.say "No, but you can get me access to where it's kept."
-    show cherie talkative
+    show cherie talk
     cherie.say "Why do you think I would be able to do that?"
     show cherie normal
     mike.say "Because it's in his private vault in his office, and you have the combination."
     "Her eyebrows go up."
-    show cherie talkative
+    show cherie talk
     cherie.say "What would make you believe that I have that?"
     show cherie normal
     mike.say "Cassidy knows."
-    show cherie talkative
+    show cherie talk
     cherie.say "Ahh, so you are working with the brat as well? That is curious. Why would she work with you against her own father? She worships him."
     show cherie normal
     mike.say "There is no hate quite so strong as that of one who feels betrayed."
-    show cherie talkative
+    show cherie talk
     cherie.say "Oh, and what did my husband do to the delight of his eye? I think she is the only person in the world he truly cares about."
     show cherie normal
     mike.say "He lied to her about her mother."
-    show cherie talkative
+    show cherie talk
     cherie.say "So?"
     show cherie normal
     mike.say "He paid her to leave and never speak to Cassidy again. She is furious."
-    show cherie talkative
+    show cherie talk
     cherie.say "So let me get this straight."
     cherie.say "The brat with whom I've had to compete for his affection for the entirety of my marriage--and mind you, I've lost that competition every time--"
     cherie.say "She sent you to to charm me into betraying my husband, her father, to get secret information that could destroy him and lead to financial ruin."
     cherie.say "And I am expected to throw myself at your feet, grateful for the charming, smiling Mister [heroname] [hero.family_name] for saving me from my own loneliness?"
     show cherie normal
     mike.say "That's not it at all."
-    show cherie talkative
+    show cherie talk
     cherie.say "Oh, please, {b}mon ami{/b}, set me straight. I cannot wait to hear this."
     show cherie normal
     "The tone in her voice has turned bitter and dangerous. I can feel this spinning out of control."
     mike.say "She didn't send me, I came for myself. She did make it possible for me to come. And she is not the only one whose interests I'm working for here."
     mike.say "Your husband has forced my boss into a sexual relationship she doesn't want, and will destroy her life if she doesn't perform for him."
-    show cherie talkative
+    show cherie talk
     cherie.say "Hah! That's just like him, too."
     show cherie normal
     mike.say "And the company I work for? He's taking millions away from it every year that should be going toward the company."
     mike.say "And finally, he tried to set {b}me{/b} up as his patsy."
-    show cherie talkative
+    show cherie talk
     cherie.say "Ah, so it is revenge too?"
     show cherie sadsmile
     "She sighs."
-    show cherie talkative
+    show cherie talk
     cherie.say "I was foolish to think that your charms, so expertly aimed at me, were real."
     show cherie sadsmile
     menu:
         "Ma Cherie, They are real!":
             mike.say "Ma Cherie, They are real! Nothing I've said to you is untrue."
             "She scowls and points at me."
-            show cherie talkative
+            show cherie talk
             cherie.say "Do not call me that, not now."
             show cherie normal
             mike.say "I am sorry, but..."
-            show cherie talkative
+            show cherie talk
             cherie.say "Yes, you should be sorry. I should be sorry too, for daring to feel."
             show cherie normal
             mike.say "Cherie..."
         "Look, it's complicated":
             mike.say "Look, it's complicated. There's a lot going on. But I've been completely honest with you."
-            show cherie talkative
+            show cherie talk
             cherie.say "Honest? I don't know."
             show cherie normal
             mike.say "Tell me anything I've said that is wrong and I will correct the record immediately."
-            show cherie talkative
+            show cherie talk
             cherie.say "Perhaps...perhaps I've just been too eager to see something. You saw that I am lonely, and, yes, a little attention and I ate it up."
             show cherie normal
             mike.say "I could hardly ask you, straight away, for the combination to his secret vault."
             $ score += 1
     "She turns away from me and takes a step toward one of the hallways."
-    show cherie talkative
+    show cherie talk
     cherie.say "I need a drink."
     show cherie normal
     menu:
@@ -905,13 +905,13 @@ label cherie_second_meeting:
             "Still holding her wrist, I step up until I'm mere inches from her face, looking just a little down at her."
             mike.say "If you leave now, you'll be stuck in this emptiness forever. If you work with me, there is an escape."
             "Her nostrils flare. She's angry, but I believe she's aroused as well."
-            show cherie talkative
+            show cherie talk
             cherie.say "Alone with him and alone without him are very much the same, only one does not have my every need attended to."
             show cherie normal
             mike.say "Every need except the most important. And..."
             "I slip my hand from her wrist down, taking her hand in mine."
             mike.say "I do not think you'll be alone without him."
-            show cherie talkative
+            show cherie talk
             cherie.say "Do not make promises, {i}mon ami{/i}."
             show cherie sad
             menu:
@@ -926,57 +926,57 @@ label cherie_second_meeting:
                     mike.say "A woman as ravishingly beautiful as you won't be alone."
         "Ask her to wait":
             mike.say "Wait, Cherie. Please don't go yet."
-            show cherie talkative
+            show cherie talk
             cherie.say "Oh? Have you more lines to sell me?"
             show cherie normal
             mike.say "No, I don't want you to walk away from the rest of your life."
-            show cherie talkative
+            show cherie talk
             cherie.say "What rest of my life?"
             show cherie normal
             mike.say "The one that you're missing out on, {b}right now{/b}."
             "She closes her eyes, but she does pause."
-            show cherie talkative
+            show cherie talk
             cherie.say "You ask me to betray him for a small hope of freedom."
             show cherie normal
             mike.say "Not a small hope. A very large hope."
-            show cherie talkative
+            show cherie talk
             cherie.say "I am not a betrayer."
             show cherie normal
             mike.say "He has done nothing but betray you. Why should he deserve your loyalty?"
-            show cherie talkative
+            show cherie talk
             cherie.say "It's not about what is deserved."
             show cherie normal
             mike.say "He takes another woman against their will while you pine for even an acknowledgement."
             mike.say "What he deserves is not loyalty. He deserves prison."
-            show cherie talkative
+            show cherie talk
             cherie.say "And you're the man to put him there?"
             show cherie normal
             mike.say "With your help."
     "She looks up at me and all sorts of emotions flitter through her eyes. Fear, anger for sure. Perhaps desire. And a lot of weariness."
-    show cherie talkative
+    show cherie talk
     cherie.say "You should go now."
     show cherie normal
     mike.say "But..."
-    show cherie talkative
+    show cherie talk
     cherie.say "No buts. Go."
     show cherie normal
     mike.say "I need that--"
-    show cherie talkative
+    show cherie talk
     cherie.say "Shut up right this second. I might call you."
     show cherie normal
     mike.say "I--"
-    show cherie talkative
+    show cherie talk
     cherie.say "But only if you go. Right. Now."
     show cherie normal
     "Fuck, I don't know how to take that ultimatum."
     mike.say "Fine."
     "I turn and walk toward the door. Moving very slowly, giving myself time to think if there's one more thing I can say."
-    show cherie talkative
+    show cherie talk
     cherie.say "{i}Mon ami{/i}..."
     show cherie normal
     "I answer without turning back, just slightly hopeful."
     mike.say "Yes?"
-    show cherie talkative
+    show cherie talk
     cherie.say "If I ask you to take me to my bedroom and make passionate love to me, right now, will you?"
     show cherie normal
     menu:
@@ -984,11 +984,11 @@ label cherie_second_meeting:
             $ game.flags.cherie_promisedsex = True
             "Without even thinking about it, I answer."
             mike.say "Yes."
-            show cherie talkative
+            show cherie talk
             cherie.say "Why?"
             show cherie normal
             mike.say "Because you are charming, and beautiful, and making love with you is a memory I would cherish forever."
-            show cherie talkative
+            show cherie talk
             cherie.say "I see."
             show cherie normal
         "Hesitate. Yes":
@@ -996,50 +996,50 @@ label cherie_second_meeting:
             $ score += 1
             "I think about my answer for a few seconds."
             mike.say "Yes, yes I will."
-            show cherie talkative
+            show cherie talk
             cherie.say "Why did you hesitate?"
             show cherie normal
             mike.say "Truly? I wasn't sure if you wanted me to say yes or not."
-            show cherie talkative
+            show cherie talk
             cherie.say "Oh, so you were thinking about what it is I want?"
             show cherie normal
             mike.say "Well, I know what I want."
             cherie.say "Mmm."
         "No":
             mike.say "No, I will not."
-            show cherie talkative
+            show cherie talk
             cherie.say "Why not?"
             show cherie normal
             mike.say "Because there is no time. Manfred will be back soon, and I would not want such an opportunity to be over so swiftly."
-            show cherie talkative
+            show cherie talk
             cherie.say "Ah. And if we have the time? Perhaps Manfred will not be back so soon as I led you to believe."
             show cherie normal
             mike.say "Is that what you want?"
-            show cherie talkative
+            show cherie talk
             cherie.say "What I want is for you to answer."
             show cherie normal
             menu:
                 "Yes":
                     $ game.flags.cherie_promisedsex = True
                     mike.say "If there is time, then I am yours for the taking."
-                    show cherie talkative
+                    show cherie talk
                     cherie.say "How very thoughtful of you."
                     show cherie normal
                 "No":
                     $ score += 1
                     mike.say "I'm afraid the answer is still no."
-                    show cherie talkative
+                    show cherie talk
                     cherie.say "Why not?"
                     show cherie normal
                     mike.say "Because if and when I do make love to you, I want it to be after your husband is no longer your husband."
                     mike.say "I want it to be after you are free to choose whomever you are with."
                     mike.say "Then--and only then--when you've freely chosen that you want to be with me, then I might say yes."
-                    show cherie talkative
+                    show cherie talk
                     cherie.say "Oh. Oh my."
                     show cherie normal
     if score >= 2:
         $ game.flags.cherie_helping = True
-        show cherie talkative
+        show cherie talk
         cherie.say "Very well, {i}mon ami{/i}. I will call you. I will give you what it is you want. Everything."
         hide cherie with easeoutright
         "And with that, she quickly exits the room."
@@ -1047,7 +1047,7 @@ label cherie_second_meeting:
         pause
         hide screen message with dissolve
     else:
-        show cherie talkative
+        show cherie talk
         cherie.say "Good-bye, [heroname] [hero.family_name]. Manfred will be here in about five minutes. Be certain that you are not here when he arrives."
         hide cherie with easeoutright
         "And with that, she quickly exits the room. I'm left with a sinking feeling in my gut. I have failed here, and I don't know what to do next. Cassidy won't be pleased."
@@ -1099,7 +1099,7 @@ label cherie_vault:
     with fade
     "And it seems that Cherie's just as eager as I am."
     "Because when I arrive, she's already waiting to meet me."
-    show cherie talkative
+    show cherie talk
     cherie.say "Good, {i}mon ami{/i}, you came quickly."
     show cherie normal
     "I shrug, doing the best I can to make it look like nothing."
@@ -1107,7 +1107,7 @@ label cherie_vault:
     mike.say "That was the deal, right?"
     "Cherie looks me up and down, almost like she's seeing me in a new light."
     cherie.say "Mmm..."
-    show cherie talkative
+    show cherie talk
     cherie.say "Yes...yes it was."
     cherie.say "And a good deal for me, I think."
     show cherie normal
@@ -1118,7 +1118,7 @@ label cherie_vault:
     "Cherie raises one eyebrow and gives me a shake of the head."
     "One of those expressions that only a French woman seems to be able to pull off."
     "One that at once says everything and nothing at all."
-    show cherie talkative
+    show cherie talk
     cherie.say "What can I say?"
     cherie.say "The excitement of this...what would you call it?"
     cherie.say "This caper?"
@@ -1128,18 +1128,18 @@ label cherie_vault:
     "But I'm not about to argue semantics with Cherie right now."
     mike.say "Sure, mon Cherie..."
     mike.say "I guess you could call it that."
-    show cherie talkative
+    show cherie talk
     cherie.say "So..."
     show cherie normal
     "Cherie holds up a heavy, official-looking ledger."
     "One that's held closed by a pair of thick, decorative bands."
     "And I instantly know it's the kind of thing Dwayne would use to record everything."
     "All of his business dealings and dirty little secrets, all hidden in those pages."
-    show cherie talkative
+    show cherie talk
     cherie.say "I believe this is what you are looking for?"
     show cherie normal
     "My eyes are growing wider by the second as I stare at the ledger."
-    show cherie talkative
+    show cherie talk
     cherie.say "I..."
     cherie.say "I am still not certain I should be giving this to you!"
     cherie.say "Maybe I need a little more...convincing?"
@@ -1150,13 +1150,13 @@ label cherie_vault:
     mike.say "Is that all there was in the vault?"
     "Cherie shrugs off the question."
     "Almost as if she's eager to avoid the issue."
-    show cherie talkative
+    show cherie talk
     cherie.say "It is everything that is relevant, everything that you need."
     cherie.say "There were...other things, of course."
     cherie.say "But are not a matter of concern for you."
     show cherie normal
     mike.say "I see..."
-    show cherie talkative
+    show cherie talk
     cherie.say "So..."
     cherie.say "What exactly do I get for this?"
     show cherie normal
@@ -1167,7 +1167,7 @@ label cherie_vault:
     mike.say "That at the very least."
     "Cherie cocks her head on one side."
     "Clearly she's not satisfied with my answer."
-    show cherie talkative
+    show cherie talk
     cherie.say "Yes, yes..."
     cherie.say "But what about you?"
     cherie.say "What do {b}I{/b} get from {b}you{/b}?"
@@ -1180,7 +1180,7 @@ label cherie_vault:
     "Cherie regards me for a time."
     "Almost like she's trying to look deeper than the surface."
     "Trying to see into my head, so she can understand what makes me tick."
-    show cherie talkative
+    show cherie talk
     cherie.say "What I would {b}like{/b}, {i}mon ami{/i}..."
     cherie.say "Is for you to take me to Dwayne's bed and fuck me like he does."
     cherie.say "Fuck me long, deep and hard!"
@@ -1195,7 +1195,7 @@ label cherie_vault:
             "Much to my disappointment, Cherie simply shakes her head."
             "And she gives me one of those enigmatic looks she's so good at."
             cherie.say "Hmm.."
-            show cherie talkative
+            show cherie talk
             cherie.say "I am delighted by your enthusiasm, {i}mon ami{/i}..."
             cherie.say "But that, I think, is not in the cards for tonight."
             show cherie normal
@@ -1203,7 +1203,7 @@ label cherie_vault:
             mike.say "So what, Cherie?"
             mike.say "You were just teasing me?"
             "Now Cherie gives me a nod and an amused smile."
-            show cherie talkative
+            show cherie talk
             cherie.say "But of course, {i}mon ami{/i}..."
             cherie.say "Just like the way you tease me, every time I see you!"
             show cherie normal
@@ -1217,7 +1217,7 @@ label cherie_vault:
             mike.say "But I don't think that's how you want it to be, not really."
             "I was expecting that to be an end to it."
             "But Cherie instead responds by raising her eyebrows."
-            show cherie talkative
+            show cherie talk
             cherie.say "Oh, is that so?"
             cherie.say "I don't really want you to make me feel like a wanted woman again?"
             cherie.say "Then tell me, [hero.name] - what do I really want?"
@@ -1228,7 +1228,7 @@ label cherie_vault:
             mike.say "I think you want me to make long, passionate, earth-moving love to you."
             mike.say "But I don't think the time for that is right now."
             "For the first time since the subject came up, Cherie looks disappointed."
-            show cherie talkative
+            show cherie talk
             cherie.say "Why not?"
             cherie.say "I have not been able to think of anything but your handsome, smiling face for days!"
             show cherie normal
@@ -1239,7 +1239,7 @@ label cherie_vault:
             mike.say "And sure, you'd really like the sex too."
             mike.say "But what good is one fantastic night if I'm gone the next morning?"
             "Now Cherie really looks worried."
-            show cherie talkative
+            show cherie talk
             cherie.say "Are you..."
             cherie.say "Are you saying that you would make love to me and then leave?"
             show cherie normal
@@ -1250,12 +1250,12 @@ label cherie_vault:
             mike.say "Without your {b}husband{/b} in the equation at all."
             "Cherie stares deep into my eyes as I explain myself."
             "And soon enough, she's nodding with enthusiasm."
-            show cherie talkative
+            show cherie talk
             cherie.say "I have to admit, {i}mon ami{/i}..."
             cherie.say "That does sound...very pleasant, very pleasant indeed."
             show cherie normal
     "Cherie's hand reaches out, offering the ledger to me."
-    show cherie talkative
+    show cherie talk
     cherie.say "I think it is time for you to take this and go."
     cherie.say "To do what you must with it, and set me free."
     show cherie normal
@@ -1280,7 +1280,7 @@ label cherie_vault:
     show cherie sad
     "Cherie looks down at the ledger, still clutched in her hands."
     "Almost as if she's surprised to see it there."
-    show cherie talkative
+    show cherie talk
     cherie.say "Oh, this?"
     cherie.say "I...uh..."
     cherie.say "This is..."
@@ -1427,7 +1427,7 @@ label cherie_vault:
     "But I'm alive, which is probably more than can be said for Dwayne!"
     mike.say "I'll live, Aletta..."
     mike.say "At least I think I will!"
-    show aletta talkative
+    show aletta talk
     aletta.say "You'd better, because you need to get on your feet."
     aletta.say "And we've got to get out of here!"
     show aletta normal
@@ -1446,7 +1446,7 @@ label cherie_vault:
     show cherie sad at center, zoomAt(1.5, (640, 1040)) with fade
     "Cherie slowly opens her eyes and looks up at me."
     "But the look in them is distant and her expression is disoriented."
-    show cherie talkative
+    show cherie talk
     cherie.say "What..."
     cherie.say "What happened?"
     show cherie sad
@@ -1455,14 +1455,14 @@ label cherie_vault:
     mike.say "Are you okay?"
     "Cherie puts an experimental hand to her bruised temple."
     "And she winces the moment that her fingers touch the purple skin."
-    show cherie talkative
+    show cherie talk
     cherie.say "Ah..."
     cherie.say "That...that really hurts."
     cherie.say "But I do not think anything is broken."
     show cherie sad
     "For the first time, Cherie's eyes seem to focus on my face."
     "And I can see a look of concern in them a moment later."
-    show cherie talkative
+    show cherie talk
     cherie.say "You don't look so good yourself, {i}mon ami{/i}!"
     cherie.say "What happened to you?"
     show cherie sad
@@ -1470,7 +1470,7 @@ label cherie_vault:
     "That and to dismiss Cherie's concerns for me."
     mike.say "I...I'll live."
     "Cherie nods, but then a look of concern spreads over her face."
-    show cherie talkative
+    show cherie talk
     cherie.say "But..."
     cherie.say "But what about Dwayne?"
     show cherie sad
@@ -1487,7 +1487,7 @@ label cherie_vault:
     "She sits up and crawls towards the quicky cooling body."
     "Cherie reaches out for a moment, probably out of years of instinct."
     "But then she pulls her hand back, realising that it's far too late to help."
-    show cherie talkative
+    show cherie talk
     cherie.say "What?"
     cherie.say "How?"
     cherie.say "Where did you get a..."
@@ -1505,7 +1505,7 @@ label cherie_vault:
     mike.say "He was gonna kill me!"
     "By now Cherie is kneeling by Dwayne's body."
     "Her hands are clutched to her chest, and she's shaking her head."
-    show cherie talkative
+    show cherie talk
     cherie.say "Oh..."
     cherie.say "Oh Dwayne..."
     cherie.say "I did not want this - I did not want you dead!"
@@ -1517,7 +1517,7 @@ label cherie_vault:
     mike.say "That makes two of us, Cherie..."
     mike.say "This was never part of the plan."
     mike.say "I...I still don't get what he was doing here!"
-    show cherie talkative
+    show cherie talk
     cherie.say "Your guess is as good as mine, {i}mon ami{/i}!..."
     cherie.say "He told me he was flying to New York, on business."
     cherie.say "Perhaps he was suspicious of me?"
@@ -1537,7 +1537,7 @@ label cherie_vault:
             aletta.say "Have you lost your mind?"
             aletta.say "That'll put your prints all over the thing!"
             show aletta sad
-            show cherie talkative
+            show cherie talk
             cherie.say "She's right, {i}mon ami{/i}!"
             show cherie sad
             "I nod my head, still holding out my hand to Aletta."
@@ -1553,7 +1553,7 @@ label cherie_vault:
             mike.say "I'm trying to start cleaning up this mess."
             "Cherie and Aletta exchange a look."
             "And then they're on me as a pair."
-            show cherie talkative
+            show cherie talk
             cherie.say "But it should be me that cleans things up!"
             cherie.say "Besides, I can claim that it was self defence."
             show cherie sad
@@ -1563,7 +1563,7 @@ label cherie_vault:
             show aletta upset
             "Cherie looks at Aletta with a coldness in her eyes that I've never seen before."
             "And I can't believe how calmly she's discussing the subject of Dwayne's death."
-            show cherie talkative
+            show cherie talk
             cherie.say "He thought I was dead."
             cherie.say "He was leaving to find the means to dispose of my body."
             cherie.say "But he was mistaken, and I shot him before he could finish the job."
@@ -1614,7 +1614,7 @@ label cherie_vault:
             aletta.say "N...no...not a chance!"
             show aletta upset
             "But all this gets her in return is a steely stare from Cherie."
-            show cherie talkative
+            show cherie talk
             cherie.say "Do not be stupid!"
             cherie.say "Do you want to go to jail for killing Dwayne?"
             show cherie sad
@@ -1625,7 +1625,7 @@ label cherie_vault:
             aletta.say "No..."
             aletta.say "But..."
             show aletta embarrassed
-            show cherie talkative
+            show cherie talk
             cherie.say "Then give me the gun - now!"
             show cherie sad
             "Aletta's still shaking her head."
@@ -1634,7 +1634,7 @@ label cherie_vault:
             aletta.say "Why?"
             aletta.say "What difference will it make?"
             show aletta sad
-            show cherie talkative
+            show cherie talk
             cherie.say "Because I will tell the police that I shot him."
             cherie.say "Dwayne was my husband, after all."
             cherie.say "He got angry, hit me, and I shot him."
@@ -1646,7 +1646,7 @@ label cherie_vault:
             show aletta upset
             "Cherie looks at Aletta with a coldness in her eyes that I've never seen before."
             "And I can't believe how calmly she's discussing the subject of Dwayne's death."
-            show cherie talkative
+            show cherie talk
             cherie.say "He thought I was dead."
             cherie.say "He was leaving to find the means to dispose of my body."
             cherie.say "But he was mistaken, and I shot him before he could finish the job."
@@ -1656,7 +1656,7 @@ label cherie_vault:
             mike.say "I don't know, Cherie..."
             mike.say "Maybe you need help to..."
             "Cherie cuts me off before I can even finish what I was about to say."
-            show cherie talkative
+            show cherie talk
             cherie.say "Believe me, this is the best way."
             cherie.say "We must pretend that the two of you were never here."
             show cherie sad
@@ -1669,7 +1669,7 @@ label cherie_vault:
             "Suddenly Cherie seems to snap under the pressure."
             "She thrusts out her hand again."
             "And her eyes are as intense as before."
-            show cherie talkative
+            show cherie talk
             cherie.say "Just give me the damn gun!"
             cherie.say "Give it to me and get out of here, before it's too late!"
             show cherie sad
@@ -1704,7 +1704,7 @@ label cherie_vault:
             show aletta sadsmile
             "But then she pulls the gun back out of her purse."
             "And she thrusts it into Cherie's open hand."
-            show cherie talkative
+            show cherie talk
             cherie.say "Thank you."
             cherie.say "Now, both of you..."
             cherie.say "Go and get cleaned up."
@@ -1717,7 +1717,7 @@ label cherie_vault:
             aletta.say "But this had better not go..."
             show aletta sad
             "Cherie snaps out a response, cutting Aletta off."
-            show cherie talkative
+            show cherie talk
             cherie.say "It's my life on the line now!"
             show cherie sad
             "This seems to be enough to shut Aletta up."

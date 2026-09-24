@@ -9,7 +9,7 @@ label bree_date_amusement_park_male:
     "But sometimes you have to deal with someone that gets all grumpy and resentful."
     show bree happy
     "Though on a very rare occasion, I meet my match in terms of excitement."
-    show bree talkative
+    show bree talk
     bree.say "Come on, [hero.name]…"
     bree.say "What are you waiting for?!?"
     show bree smile
@@ -23,7 +23,7 @@ label bree_date_amusement_park_male:
     mike.say "Whoa..."
     mike.say "Calm down, [bree.name]!"
     mike.say "I'm coming as fast as I can - I swear it!"
-    show bree talkative
+    show bree talk
     bree.say "Well your fastest just isn't fast enough!"
     bree.say "You'd better move your ass!"
     return

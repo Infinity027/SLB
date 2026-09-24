@@ -139,7 +139,7 @@ label samantha_gift_slutty_dress_male:
     mike.say "Hi, Sam!"
     "At the sound of my voice, Sam looks up at me, a smile on her face."
     "And instantly I'm entranced by the sweetness of her smile and the warmth of her eyes."
-    show samantha talkative
+    show samantha talk
     samantha.say "Hello, [hero.name]!"
     samantha.say "Ooh..."
     samantha.say "What's that you've got there?"
@@ -174,7 +174,7 @@ label samantha_gift_slutty_dress_male:
     if samantha.sub >= 70:
         "Sam looks up at me, her eyes wide with what I hope is amazement."
         "And then she slowly begins to shake her head."
-        show samantha talkative
+        show samantha talk
         samantha.say "This is pretty out there, [hero.name]…"
         samantha.say "But I think I like it."
         show samantha happy

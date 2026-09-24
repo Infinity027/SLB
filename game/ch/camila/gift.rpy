@@ -178,7 +178,7 @@ label camila_gift_slutty_dress_male:
     "I'm pretty sure she'd never actually pull out a gun and fill me full of lead."
     "But that's one of those things in life it's never really worth taking a chance with."
     "And anyway, she always seems to sniff it out anyway, no matter how hard I try to hide it."
-    show camila talkative
+    show camila talk
     camila.say "Okay, [hero.name], the game's up..."
     camila.say "Hand it over nice and quietly."
     camila.say "That way nobody gets hurt."
@@ -199,7 +199,7 @@ label camila_gift_slutty_dress_male:
     "I produce the gift-wrapped box from behind my back."
     "And then I hold it out in front of me, urging Camila to take it."
     "Which she does, but not without narrowing her eyes at me."
-    show camila talkative
+    show camila talk
     camila.say "Hey..."
     camila.say "You'd better not be accusing me of police brutality!"
     show camila normal
@@ -213,7 +213,7 @@ label camila_gift_slutty_dress_male:
         "At the same time she kind of wiggles her hips and moves her thighs."
         "It should really be nothing more than a few simple motions of her body."
         "But somehow the sight of it is enough to make me start sweating."
-        show camila talkative
+        show camila talk
         camila.say "You know what, [hero.name]..."
         camila.say "I must have busted a hundred hookers in my time on the force."
         camila.say "And every last one of them was wearing something like this."
@@ -222,7 +222,7 @@ label camila_gift_slutty_dress_male:
         mike.say "Oh, I'm sorry, Camila..."
         mike.say "I had no idea!"
         "Camila shakes her head, dismissing my apology as hastily as it was made."
-        show camila talkative
+        show camila talk
         camila.say "Nah, it's okay."
         camila.say "That's not what I was getting at anyway."
         camila.say "What I really meant to say was that I always..."
@@ -243,7 +243,7 @@ label camila_gift_slutty_dress_male:
         "And it looks to me almost like she's searching in vain for something."
         mike.say "What's wrong, Camila?"
         mike.say "What are you looking for?"
-        show camila talkative
+        show camila talk
         camila.say "The rest of the damn dress, [hero.name]..."
         camila.say "That's what I'm looking for!"
         show camila normal

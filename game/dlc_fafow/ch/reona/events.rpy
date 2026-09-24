@@ -4534,7 +4534,7 @@ label reona_redemption_02:
     mike.say "And for a while, everything seems to be fine for them."
     show reona interested
     "Reona nods."
-    show reona talkative
+    show reona talk
     reona.say "That sounds great, [hero.name]…"
     reona.say "Like they're following their hearts."
     reona.say "Isn't love supposed to be like that?"
@@ -4603,7 +4603,7 @@ label reona_redemption_03:
     mike.say "But it doesn't look like that's going to happen now."
     show reona surprised at hshake
     "Reona wrinkles her nose at me."
-    show reona talkative
+    show reona talk
     reona.say "But this is a coffee shop, [hero.name]…"
     reona.say "Can't we just get a couple to go?"
     show reona normal
@@ -4688,7 +4688,7 @@ label reona_redemption_03:
                     show reona blush with dissolve
                     "Reona blushes as Mrs Chen compliments her."
                     "Mrs. Chen" "I can't recall ever having seen you in here before, my dear."
-                    show reona talkative
+                    show reona talk
                     reona.say "Oh, I've never gotten coffee here before now."
                     reona.say "[hero.name] raves about this place, so he brought me."
                     show reona normal -blush
@@ -4728,7 +4728,7 @@ label reona_redemption_03:
                     show reona pensive
                     reona.say "Wow..."
                     reona.say "Sounds like you two were really in love."
-                    show reona talkative
+                    show reona talk
                     reona.say "Was it like, a whirlwind romance?"
                     reona.say "Did you meet one day and elope the next?"
                     show reona normal
@@ -4752,7 +4752,7 @@ label reona_redemption_03:
                     "Outside the coffee shop, I can see that Reona's looking thoughtful."
                     mike.say "Hey, Reona..."
                     mike.say "Penny for your thoughts?"
-                    show reona talkative
+                    show reona talk
                     reona.say "Oh..."
                     reona.say "Oh yeah..."
                     reona.say "You didn't set that up, did you?"
@@ -4762,12 +4762,12 @@ label reona_redemption_03:
                     mike.say "No, of course not - I never spoke that woman before in my life!"
                     show reona devious
                     pause 0.1
-                    show reona talkative
+                    show reona talk
                     reona.say "Well it just seems so convenient, what with your lectures on commitment and taking it slow."
                     reona.say "But I have to admit that she really made me think about it."
                     show reona normal
                     pause 1
-                    show reona talkative
+                    show reona talk
                     reona.say "Like, her husband's dead and she's on her own, you know?"
                     reona.say "On paper, that's so sad - but she's happy just to remember the dude!"
                     show reona pensive
@@ -4796,18 +4796,18 @@ label reona_redemption_03:
                     show reona happy
                     with fade
                     pause 0.1
-                    show reona talkative
+                    show reona talk
                     reona.say "Oh wow..."
                     show reona normal at center, traveling(1.75, 1.5, (640, 1120))
                     pause 1.5
-                    show reona talkative
+                    show reona talk
                     reona.say "The look on your face!"
                     show reona normal
                     mike.say "Alright, Reona - laugh it up if you like."
                     mike.say "But I was just trying to be nice to a sweet old lady, that's all!"
                     show reona flirt
                     pause 1
-                    show reona talkative
+                    show reona talk
                     reona.say "Lighten up, [hero.name]…"
                     reona.say "I wasn't trying to be mean either."
                     reona.say "That was really nice, seeing you two being polite to each other."
@@ -4858,7 +4858,7 @@ label reona_redemption_04:
     show reona at startle(0.05, 5)
     "Reona nods at this, but I note that she still looks awkward."
     reona.say "Yeah, well..."
-    show reona talkative
+    show reona talk
     reona.say "When someone asks you to come to a mysterious rendezvous, you know?"
     reona.say "How are you going to be able to say no!"
     show reona normal
@@ -4884,7 +4884,7 @@ label reona_redemption_04:
     mike.say "A place where people can come for help."
     show reona interested at startle(0.05, 5)
     "Reona nods, looking more solemn and attentive than I've seen her in a long time."
-    show reona talkative
+    show reona talk
     reona.say "So they do what, exactly?"
     reona.say "Do they hand out money and stuff here?"
     show reona normal
@@ -4970,7 +4970,7 @@ label reona_redemption_04:
     "So the best I can do is tackle as many as I can so the counsellors can do the real work."
     show reona normal at center, zoomAt(1, (720, 720)) with easeinright
     "It's while I'm changing the toner cartridge on the photocopier that Reona reappears."
-    show reona talkative
+    show reona talk
     reona.say "Hey, [hero.name]!"
     show reona normal
     mike.say "Oh..."
@@ -4994,7 +4994,7 @@ label reona_redemption_04:
     show reona happy
     mike.say "Yeah..."
     mike.say "There are some real messy cases that come here."
-    show reona talkative
+    show reona talk
     reona.say "But I think I get why you brought me here now."
     reona.say "I can see myself in some of those girls."
     reona.say "And I realise that it's only luck that's kept me from being one of them."
@@ -5003,7 +5003,7 @@ label reona_redemption_04:
     "This is pretty much what I hoped she'd take from the experience."
     "But it's important that she makes up her own mind on the subject."
     "Because that'll be far more impactful than me just lecturing her."
-    show reona talkative
+    show reona talk
     reona.say "But it's more than that, [hero.name]..."
     show reona pensive
     reona.say "It makes me look at the things I've done in the past."
@@ -5064,7 +5064,7 @@ label reona_redemption_05:
     $ renpy.show(f"bg {game.room}", at_list=[center, zoomAt(1, (640, 720))])
     show reona at center, zoomAt(1, (640, 720))
     $ renpy.show(f"bg {game.room}", at_list=[center, traveling(1.75 , 0.8, (640, 1160))])
-    show reona talkative at center, traveling(1.75 , 0.8, (640, 1160))
+    show reona talk at center, traveling(1.75 , 0.8, (640, 1160))
     pause 0.8
     reona.say "Okay, so I bumped into an ex earlier today."
     reona.say "And yeah, that's not such a rare thing for me."
@@ -5080,7 +5080,7 @@ label reona_redemption_05:
     "I hold up a hand to stop Reona's quoting the guy."
     show reona pensive
     mike.say "Yeah, Reona - I get the picture."
-    show reona talkative
+    show reona talk
     reona.say "Well the thing is that once I'd have been totally fine with that."
     reona.say "In fact, I'd have been doing the same damn thing too."
     show reona upset
@@ -5141,7 +5141,7 @@ label reona_redemption_05:
             mike.say "But that's on him, not you."
             show reona sadsmile
     "Reona lets out a sigh."
-    show reona talkative
+    show reona talk
     reona.say "You always do that, [hero.name]..."
     reona.say "You always ask me what I'm thinking and how I feel."
     reona.say "Like it matters to you as much as everything else does."
@@ -5170,7 +5170,7 @@ label reona_redemption_05:
 label reona_date_forest_male:
     if reona.purity.max < 100:
         $ reona.purity.max = 100
-    show reona talkative
+    show reona talk
     reona.say "Come on, [hero.name]…"
     reona.say "What are you slowing down for now?"
     reona.say "We're never going to make it back before dark at this rate!"
@@ -5181,7 +5181,7 @@ label reona_date_forest_male:
     "I'm panting and gasping as I do the best I can to make it to the top of the hill."
     "And little by little, more of Reona comes into view as I battle towards the summit."
     "But no matter how much effort I put into it, nothing seems to impress my companion on the hike."
-    show reona talkative
+    show reona talk
     reona.say "Man, you are so out of shape!"
     reona.say "I suppose we could take a quick break."
     reona.say "I don't want you collapsing on me or anything."
@@ -5204,7 +5204,7 @@ label reona_date_forest_male:
     "Reona frowns a little, shaking her head."
     show reona annoyed
     reona.say "Is that really what you think?"
-    show reona talkative
+    show reona talk
     reona.say "That I'm only here to impress you?"
     show reona normal
     "Now I feel like I'm the one that's been caught on the back-foot."
@@ -5218,7 +5218,7 @@ label reona_date_forest_male:
     "Though I get the impression that last comment might have saved my ass."
     show reona normal
     reona.say "Okay, [hero.name], I'll give you that one."
-    show reona talkative
+    show reona talk
     reona.say "But I feel like it kind of always was my thing."
     reona.say "The problem was that back then, I just didn't know it."
     show reona pensive
@@ -5239,7 +5239,7 @@ label reona_date_forest_male:
             show reona interested
             "Reona nods eagerly at this, like I've hit the nail on the head."
             reona.say "It's like you read my mind, [hero.name]."
-            show reona talkative
+            show reona talk
             reona.say "And you've been helping me discover myself too."
             reona.say "Showing me that there's different way to be."
             reona.say "Encouraging me to try new things, to think in new ways."
@@ -5259,7 +5259,7 @@ label reona_date_forest_male:
             show reona interested
             "Reona nods at this."
             "But I get the feeling that she wanted me to say more."
-            show reona talkative
+            show reona talk
             reona.say "That's kind of it, [hero.name]."
             reona.say "I'm going somewhere without a map to help me."
             show reona interested
@@ -5276,7 +5276,7 @@ label reona_date_forest_male:
             show reona interested
             "Reona nods at this."
             "But I get the feeling that she wanted me to say more."
-            show reona talkative
+            show reona talk
             reona.say "That's kind of it, [hero.name]."
             reona.say "But I'm not sure I've found out for sure."
             reona.say "At least not yet."
@@ -5287,7 +5287,7 @@ label reona_date_forest_male:
     "Because she leaps up from her rock, grabbing my hand and pulling me up with her."
     show reona happy
     pause 0.5
-    show reona talkative
+    show reona talk
     reona.say "Come on, [hero.name]…"
     reona.say "Move your lazy ass!"
     show reona happy
@@ -5399,7 +5399,7 @@ label reona_redemption_07:
     "Wow...she really has changed a lot since we first met."
     "The old Reona would have just taken such a compliment in her stride."
     "Hell, she'd probably have flirted right back - raised the stakes too."
-    show reona talkative
+    show reona talk
     reona.say "I get it, [hero.name], I do."
     reona.say "And I feel the same way about you."
     show reona flirt
@@ -5409,7 +5409,7 @@ label reona_redemption_07:
     "But the reality is that it just makes me want to be ravished by the old Reona!"
     mike.say "But the new Reona?"
     mike.say "I'm guessing she's a different girl altogether?"
-    show reona talkative
+    show reona talk
     reona.say "You could say that."
     show reona pensive
     reona.say "It's hard for me to put this stuff into words, you know?"
@@ -5419,7 +5419,7 @@ label reona_redemption_07:
     "There's no need for Reona to use the actual word."
     "Because what else could she be talking about but sex?"
     "And even though it makes me feel like I've been punched in the gut, I nod."
-    show reona talkative
+    show reona talk
     reona.say "I hope you can understand, [hero.name]?"
     show reona whining
     reona.say "I've had to change so much and those old habits are so hard to break."
@@ -5428,7 +5428,7 @@ label reona_redemption_07:
     show reona sadsmile
     reona.say "So I guess what I'm saying is that I want to wait."
     reona.say "To hold off on being intimate until we make some kind of real commitment to each other."
-    show reona talkative
+    show reona talk
     reona.say "How does that sound to you, [hero.name]?"
     reona.say "Do you think that's something you could handle?"
     show reona normal
@@ -5733,7 +5733,7 @@ label reona_jack_01a:
         show minami zorder 1 at center, zoomAt(1.0, (1240, 720))
         with easeinright
         "And as if sensing the potential drama, Minami is close on their heels."
-    show bree talkative
+    show bree talk
     bree.say "Aww..."
     bree.say "You're so innocent sometimes, Jack..."
     bree.say "It's kinda cute!"
@@ -5749,7 +5749,7 @@ label reona_jack_01a:
     sasha.say "But you're too naive to read the room."
     show sasha normal
     if Harem.find(minami, name='home'):
-        show minami talkative
+        show minami talk
         minami.say "Yeah, Jack..."
         minami.say "[hero.name] thinks you're cock-blocking him!"
         show minami normal
@@ -5843,7 +5843,7 @@ label reona_jack_01a:
     show reona at center, zoomAt(1.25, (640, 880))
     with wiperight
     "Opening the door, I'm greeted by the sight of her standing on the porch."
-    show reona talkative
+    show reona talk
     reona.say "Hey, [hero.name]..."
     reona.say "I know that you kind of said this was okay on the phone."
     reona.say "But then your buddy was being so loud and talking over you."
@@ -5903,21 +5903,21 @@ label reona_jack_01a:
     if Harem.find(minami, name='home'):
         jack.say "And this is Minami, [hero.name]'s kid sister."
         show jack normal
-        show minami talkative
+        show minami talk
         minami.say "Hey - who are you calling a kid?!?"
         show minami normal
     show jack normal
     show reona rightopen happy
     "Reona gives Jack a wave and a smile as she walks over to look at the Demons and Demigods books."
     "And at the same time I can see the other girls looking at her, sizing her up like all women do to each other."
-    show bree talkative
+    show bree talk
     bree.say "So that's why Jack was so eager to get her over here!"
     show bree normal
     show sasha shout
     sasha.say "Yeah, you nerdy guys are so fucking transparent."
     show sasha normal
     if Harem.find(minami, name='home'):
-        show minami talkative
+        show minami talk
         minami.say "Hey, you two - don't be so mean!"
         minami.say "Like you never had a crush on someone special."
         show minami normal
@@ -5929,7 +5929,7 @@ label reona_jack_01a:
     mike.say "So she probably won't want to involved in rolling up characters and all that."
     "But once I make it to the table, I see that Reona's already sat down."
     "And that Jack's placed a blank character sheet in front of her."
-    show reona talkative
+    show reona talk
     reona.say "You're really not kidding me, Jack?"
     reona.say "All we need to play is a pencil and some paper?!?"
     reona.say "Don't you need like, VR headsets and all that stuff to play games these days?"
@@ -5954,7 +5954,7 @@ label reona_jack_01a:
     mike.say "Demons and Demigods is a game where everyone plays a character, Reona."
     mike.say "And one person is the Gamesmaster, who runs everything else."
     "Reona looks thoughtful for a moment, then nods."
-    show reona talkative
+    show reona talk
     reona.say "So it's like a play, yeah?"
     reona.say "We're the actors and this...this Gamesmaster is the director?"
     show reona normal
@@ -5963,11 +5963,11 @@ label reona_jack_01a:
     mike.say "Only there's no script, so we're all improvising."
     "Reona's nodding as she looks up from the book in front of her."
     "Then she gestures to everyone else in the room."
-    show reona talkative
+    show reona talk
     reona.say "And you all play this game?"
     reona.say "Like, the girls as well as the guys?"
     show reona normal
-    show bree talkative
+    show bree talk
     bree.say "Oh yeah, totally, Reona."
     bree.say "Like, it used to be a guy nerd thing."
     show bree normal
@@ -5986,7 +5986,7 @@ label reona_jack_01a:
     mike.say "You sound pretty interested in the game, Reona."
     mike.say "I don't suppose that...well, you'd want to get involved?"
     "Reona surprises me by nodding without a moment's hesitation."
-    show reona talkative
+    show reona talk
     reona.say "You know what, [hero.name] - I think I'd like to try it out."
     reona.say "I don't know if I totally get it yet."
     reona.say "But I know you and Jack, and your friends seem cool too."
@@ -6008,14 +6008,14 @@ label reona_jack_01a:
     mike.say "No, no, no..."
     mike.say "Class is just a word for what your character does in the game."
     mike.say "Like their job, yeah?"
-    show reona talkative
+    show reona talk
     reona.say "Oh, I see!"
     reona.say "But you don't have to like, work in a cafe, right?"
     reona.say "Because that's be pretty dumb, wouldn't it?"
     show reona normal
     mike.say "Of course not, Reona..."
     mike.say "You play as a hero in the game."
-    show bree talkative
+    show bree talk
     bree.say "This time I want to be an elf priestess or a ranger!"
     show bree normal
     show sasha shout
@@ -6023,13 +6023,13 @@ label reona_jack_01a:
     sasha.say "You guys promised me I could the next one we played!"
     show sasha normal
     if Harem.find(minami, name='home'):
-        show minami talkative
+        show minami talk
         minami.say "Can I be a rogue?"
         minami.say "But like, not a ninja - because that's SO obvious!"
         show minami normal
     "Reona seems to become thoughtful for a moment."
     "Like she's trying to remember something."
-    show reona talkative
+    show reona talk
     reona.say "Hmm..."
     reona.say "I always liked those stories with the princesses and the knights when I was a little girl."
     reona.say "So maybe I could be something like that?"
@@ -6049,7 +6049,7 @@ label reona_jack_01a:
     reona.say "I wanted to play a knight!"
     show reona normal
     "Reona turns to me as she says this, as if looking for reassurance."
-    show reona talkative
+    show reona talk
     reona.say "I can do that, right?"
     reona.say "A girl can be a knight?"
     show reona normal
@@ -6143,7 +6143,7 @@ label reona_jack_02a:
     "But as usual, he's too busy mooning at Reona to even notice the disapproval on my face."
     show reona happy
     pause 0.2
-    show reona talkative
+    show reona talk
     reona.say "Thank you, Jack..."
     show reona leftpeace
     reona.say "At least someone appreciates the effort I'm putting in!"
@@ -6241,7 +6241,7 @@ label reona_jack_02a:
     show jack smile
     jack.say "You remember this, Reona?"
     show jack blank
-    show reona talkative
+    show reona talk
     reona.say "Sure I do."
     reona.say "But I thought we were done making my character."
     reona.say "Didn't we roll a bunch of those weird-looking dice?"
@@ -6256,7 +6256,7 @@ label reona_jack_02a:
     mike.say "Working out who she is and where she comes from."
     show reona pensive
     "Reona looks thoughtful."
-    show reona talkative
+    show reona talk
     reona.say "Is that important?"
     reona.say "Like, it's not going to help me killing stuff, is it?"
     show reona normal
@@ -6264,13 +6264,13 @@ label reona_jack_02a:
     mike.say "Imagine if a character in one of those didn't have a back-story."
     show reona interested
     "Reona nods as she absorbs what I'm saying."
-    show reona talkative
+    show reona talk
     reona.say "I see..."
     reona.say "Like, the hero's not as cool if he's just a dummy with a sword?"
     reona.say "Hmm..."
     show reona normal
     pause 0.3
-    show reona talkative
+    show reona talk
     reona.say "So why would my character want to be a paladin?"
     show reona normal
     "Jack chimes up, doing the best he can to help."
@@ -6285,7 +6285,7 @@ label reona_jack_02a:
     "But to my surprise, Reona beats me to it."
     show reona pensive
     reona.say "Hmm..."
-    show reona talkative
+    show reona talk
     reona.say "I don't think my character was always good and pure."
     reona.say "Because if she was, why'd she ever become a paladin?"
     show jack annoyed
@@ -6376,7 +6376,7 @@ label reona_jack_03a:
     scene bg house with wiperight
     show reona casual surprised righthold
     reona.say "Oh..."
-    show reona talkative rightpeace leftback
+    show reona talk rightpeace leftback
     reona.say "Hi, [hero.name]…"
     reona.say "I hope I'm not late?"
     show reona normal -rightpeace
@@ -6395,7 +6395,7 @@ label reona_jack_03a:
     scene bg livingroom with fade
     play sound door_close
     queue sound door_lock
-    show reona casual talkative
+    show reona casual talk
     reona.say "Are the others already here?"
     reona.say "It'd be hard for them to be late."
     reona.say "You know, because they live here too?"
@@ -6406,7 +6406,7 @@ label reona_jack_03a:
     mike.say "Before we throw you in with the rest of the group, yeah?"
     show reona normal at startle(0.2, 5)
     "Reona's listening to every word I'm saying and nodding along."
-    show reona talkative
+    show reona talk
     reona.say "So who's the experienced player?"
     show reona normal
     mike.say "Me, of course!"
@@ -6415,7 +6415,7 @@ label reona_jack_03a:
     "And I suddenly remember that this is her first time playing the game."
     "So maybe I should be assuming less and explaining more."
     mike.say "Don't worry, Reona - you're in good hands."
-    show reona talkative
+    show reona talk
     reona.say "Okay, okay..."
     reona.say "Just go easy on me!"
     show reona flirt
@@ -6433,11 +6433,11 @@ label reona_jack_03a:
     mike.say "Just say yes, Reona..."
     show reona normal
     mike.say "Trust me, it's quicker that way."
-    show reona talkative
+    show reona talk
     reona.say "If you say so..."
     show reona guilty
     "She turns her attention back to Jack, who's still capering in front of us."
-    show reona talkative
+    show reona talk
     reona.say "Yeah, I guess so."
     show reona normal
     show jack smile
@@ -6486,7 +6486,7 @@ label reona_jack_03a:
     "And he uses all of those skills to immerse Reona in the scene that we're creating."
     "Plus his willingness to play the fool means she's soon put at ease."
     jack.say "You look up to see the serving wench placing another round of foaming ales on your table."
-    show reona talkative
+    show reona talk
     reona.say "What's she doing that for?"
     reona.say "Did we already pay for them?"
     jack.say "The wench frowns and shakes her head."
@@ -6503,7 +6503,7 @@ label reona_jack_03a:
     "Reona blinks in surprise, but she nods all the same."
     scene
     show rpg_bg_tavern
-    show reona rpg talkative at right5
+    show reona rpg talk at right5
     show mike rpg at left5
     with fade
     reona.say "Erm..."
@@ -6517,11 +6517,11 @@ label reona_jack_03a:
     jack.say "'They are from the man at the table yonder' says the wench as she gestures to the man inn question."
     jack.say "Following her hand, you see a small, meek-looking man at a table on the other side of the taproom."
     jack.say "He's fingering the brim of his hat and getting up to walk over, but he looks very nervous as he does so."
-    show reona talkative
+    show reona talk
     reona.say "Wait a minute..."
     reona.say "I've had this happen to me in bars, like, a million times!"
     show reona normal
-    show mike talkative
+    show mike talk
     mike.say "I don't think he's trying to hit on you, Reona!"
     mike.say "Maybe wait until he's said his piece to decide what's behind all of this?"
     "Reona nods and we both turn back to Jack."
@@ -6595,7 +6595,7 @@ label reona_jack_03a:
     "But it seems to be striking a chord with her all the same."
     "Pretty soon we're signed up to go to the haunted forest in search of the bandits."
     "And of course there's the complication of the daughter and her outlaw lover."
-    show reona talkative
+    show reona talk
     reona.say "We should try to sneak in there and talk to them both, yeah?"
     reona.say "Like, they should have the chance to tell us their side of the story."
     mike.say "Is that your opinion, Reona?"
@@ -6739,7 +6739,7 @@ label reona_jack_04a:
     mike.say "We've got nothing else to do."
     mike.say "And it just might get Jack off his mom's shit-list."
     "Reona shrugs."
-    show reona talkative
+    show reona talk
     reona.say "What the hell - count me in."
     show reona normal
     show jack surprised
@@ -7061,7 +7061,7 @@ label reona_jack_05a:
     show reona sad
     "Jack crosses his arms over his chest, like he's made his point."
     "And Bree uses this as her cue to speak up for the others."
-    show bree talkative at startle(0.05,-10)
+    show bree talk at startle(0.05,-10)
     bree.say "It's not like this is our fault, [hero.name]."
     bree.say "All the other big tables are already taken."
     show bree gloomy
@@ -10055,7 +10055,7 @@ label reona_redemption_ending:
     "I'm sure there will be plenty of time for the more carnal side of things later tonight."
     "Right now I need to focus on remembering the words to the ceremony and my part in it."
     "Though when Reona finally makes it to the altar, she seems almost as excited as me."
-    show reona talkative
+    show reona talk
     reona.say "[hero.name]…"
     show reona happy
     reona.say "You'd better pinch me, yeah?"

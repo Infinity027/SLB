@@ -38,4 +38,3 @@ init python:
     "outfit": "work",
     "tags": ["work", "mcoffice"],
     })
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

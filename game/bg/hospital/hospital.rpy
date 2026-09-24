@@ -66,4 +66,3 @@ init python:
     "icon": "heal",
     "do_once": False,
     })
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

@@ -326,7 +326,7 @@ label submissive_interact_alexis_male:
     mike.say "Say how much you want it inside of you?"
     mike.say "Whenever you greet me?"
     if alexis.sub >= 70 or alexis.is_sex_slave:
-        show alexis talkative blush
+        show alexis talk
         alexis.say "If...if that's what you'd like, [hero.name]."
         show alexis smile
         alexis.say "Of course I could."

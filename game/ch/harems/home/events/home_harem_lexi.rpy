@@ -1441,7 +1441,7 @@ label lexi_sasha_threesome_intro(from_event=True):
         lexi.say "You're gonna be cumming real soon."
         lexi.say "And in one of us too!"
         show lexi smile
-        show sasha talkative
+        show sasha talk
         sasha.say "Surprise, [hero.name]!"
         sasha.say "We're the penis inspection squad!"
         sasha.say "And this is a surprise inspection!"

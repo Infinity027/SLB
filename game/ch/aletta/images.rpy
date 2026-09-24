@@ -46,7 +46,7 @@ init 1:
 
     # # --- Halloween special outfit ---
     # image aletta halloween           = "ch/images/aletta/special_event/halloween.webp"
-    # image aletta halloween talkative = "ch/images/aletta/special_event/halloween_talkative.webp"
+    # image aletta halloween talk = "ch/images/aletta/special_event/halloween_talkative.webp"
     # image aletta halloween flirt     = "ch/images/aletta/special_event/halloween_flirt.webp"
 
     # # ── ALETTA CLOSE-UP ─────────────────────────────────────────────────────────

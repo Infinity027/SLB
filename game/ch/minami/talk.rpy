@@ -184,7 +184,7 @@ label submissive_interact_minami_male:
     mike.say "Like maybe you could say hi to me in a really sexy way?"
     mike.say "Edgy too - we should make it really edgy!"
     if minami.sub >= 70 or minami.is_sex_slave:
-        show minami talkative
+        show minami talk
         minami.say "That's such a wild idea, big bro!"
         minami.say "We just HAVE to do it."
         show minami happy
