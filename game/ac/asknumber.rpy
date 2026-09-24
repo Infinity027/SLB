@@ -15,7 +15,8 @@ init python:
 
 label ask_number:
     call expression f"{active_girl.id}_greet" from _call_expression_17
-    $ renpy.show(active_girl.id)
+    # $ renpy.show(active_girl.id)
+    $ renpy.show(f"{interact_girl.id} normal")
     if renpy.has_label(f"{active_girl.id}_ask_phone_male"):
         call expression f"{active_girl.id}_ask_phone_male" from _call_expression_43
     else:
@@ -25,6 +26,6 @@ label ask_number:
         else:
             $ hero.smartphone_contacts.append(active_girl.id)
             active_girl.say "Sure."
-    $ renpy.hide(active_girl.id)
+    $ renpy.hide(f"{interact_girl.id} normal")
     return
 return

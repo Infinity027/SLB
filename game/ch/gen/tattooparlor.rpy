@@ -108,7 +108,6 @@ init 1:
 
         group bot auto variant "breemc" if_any "breemc" if_not ["bottomless"]
 
-        group pregnancy auto variant "breemc" if "breemc"
 
         group top auto
 

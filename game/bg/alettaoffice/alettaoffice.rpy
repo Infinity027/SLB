@@ -39,7 +39,7 @@ init python:
     })
 
 label hack_computer:
-    show chibi computer
+    scene bg alettaoffice hack
     $ cassidy.set_flag("hackattempts", 1, mod="+")
     call investigation_points (max(hero.knowledge // 7, 5)) from _call_investigation_points_1
 
@@ -71,4 +71,3 @@ label hack_computer:
         "But I can't tell who, and the only proof of this is my recollection of them. Nobody's going to buy that."
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

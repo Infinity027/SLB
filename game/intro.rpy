@@ -957,11 +957,11 @@ label male_intro:
     "She had a point, what would [bree.name] have done if they didn't get the room?"
     hide fx
     show fx exclamation zorder 2
-    show bree talkative
+    show bree talk
     bree.say "Hey?"
     show bree normal
     mike.say "Yes...?"
-    show bree talkative
+    show bree talk
     bree.say "Why're you just staring at the door?"
     show bree normal
     mike.say "Just... Thinking."
@@ -982,4 +982,3 @@ label male_intro:
     $ IN_EVENT_WITH = None
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

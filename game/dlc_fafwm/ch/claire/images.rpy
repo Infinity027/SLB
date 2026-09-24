@@ -139,7 +139,7 @@ init 1:
 
         group pussy auto
 
-               attribute nose null
+        attribute nose null
 
         attribute cum null
         group cum auto when cum
@@ -267,7 +267,7 @@ init 1:
 
         always "claire_fullnelson_novaginal" when not vaginal
 
-                attribute buttplug
+        attribute buttplug
 
         group eyes auto:
             attribute wide default
@@ -275,7 +275,6 @@ init 1:
         group mouth auto:
             attribute happy default
 
-               attribute pubes
 
         attribute naked null
         attribute casual null

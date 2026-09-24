@@ -2987,7 +2987,7 @@ label milf_after_beach_sex:
     cherie.say "You've helped us all to build a future together too."
     cherie.say "One more secure than any business could ever be."
     show cherie smile
-    show kiara talkative
+    show kiara talk
     kiara.say "I used to think that my underworld empire was all I needed."
     kiara.say "But you...you're my forever empire!"
     show kiara normal

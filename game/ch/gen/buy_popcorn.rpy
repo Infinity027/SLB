@@ -81,9 +81,6 @@ init 1:
         attribute clit null
         group clit auto if_any ["clit"] if_not ["nogirl"]
 
-        attribute navel null
-        group navel auto if_any ["navel"] if_not ["nogirl", "purecasual"]
-
         attribute eyebrow null
         group eyebrow auto if_any ["eyebrow"] if_not ["nogirl"]
 

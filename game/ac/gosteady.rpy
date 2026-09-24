@@ -17,7 +17,7 @@ init python:
 
 label go_steady:
     call expression f"{active_girl.id}_greet" from _call_expression_60
-    $ renpy.show(active_girl.id)
+    $ renpy.show(f"{interact_girl.id} normal")
     if renpy.has_label(f"{active_girl.id}_go_steady_intro_male"):
         call expression f"{active_girl.id}_go_steady_intro_male" from _call_expression_75
     else:
@@ -41,7 +41,6 @@ label go_steady:
         else:
             active_girl.say "No thank you..."
         $ active_girl.love -= 10
-    $ renpy.hide(active_girl.id)
+    $ renpy.hide(f"{interact_girl.id} normal")
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

@@ -23,7 +23,7 @@ init python:
 
 label sweet_talk:
     call expression f"{active_girl.id}_greet" from _call_expression_24
-    $ renpy.show(active_girl.id)
+    $ renpy.show(f"{interact_girl.id} normal")
     $ res = randint(1, 100)
     if res <= 50 + hero.charm:
         if renpy.has_label(f"{active_girl.id}_good_sweet_talk_male"):
@@ -47,6 +47,7 @@ label sweet_talk:
     elif res <= 80 + hero.charm:
         call expression f"sweet_talk_dialogues_1_male" from _call_expression_180
     else:
+        # attention
         if renpy.has_label(f"{active_girl.id}_bad_sweet_talk_male"):
             call expression f"{active_girl.id}_bad_sweet_talk_male" from _call_expression_181
         else:
@@ -68,4 +69,3 @@ label sweet_talk:
     $ renpy.hide(active_girl.id)
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

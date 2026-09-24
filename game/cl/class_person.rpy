@@ -863,10 +863,6 @@ init -16 python:
         def __getattr__(self, attr):
             """Provide proxy access to attributes of wrapped object."""
             
-            
-            
-            
-            
             if attr.startswith("_"):
                 raise AttributeError(attr)
             return getattr(self.object, attr)
@@ -914,10 +910,6 @@ init -16 python:
 
 
     def get_person_id(person):
-        
-        
-        
-        
         if isinstance(person, basestring):
             if any(
             sub_cls.find(person) is not None
@@ -938,8 +930,6 @@ init -16 python:
 
 
 init 1 python:
-
-
 
     def hide_people():
         if renpy.showing("roomleft", "master"):

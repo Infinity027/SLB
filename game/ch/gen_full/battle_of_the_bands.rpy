@@ -1540,16 +1540,16 @@ label first_gig:
     sasha.say "Whatever to all that, we need to get our shit downstairs and into the van - RIGHT NOW!"
     "For a moment, at least the nerves and recriminations are forgotten as we scurry around gathering up instruments and gear."
     "In less than fifteen minutes, we're packed, panting and sweating into the van with everything we need to play the gig."
-    show sasha at top_mostright
-    show anna at right4
+    show sasha talk at top_mostright
+    show anna talk at right4
     with move
     anna.say "Oh, Sasha - you didn't say where we're going."
-    show sasha at right with move
+    show sasha talk at right with move
     sasha.say "The Leadmill - some guy on my course knows the manager, and he was desperate for a band to fill in at short notice."
     show kleio annoyed
     kleio.say "Wow, tough crowd...I heard one band got their singer pulled off stage and roughed up by the crowd 'cos they thought he sucked."
     mike.say "WHAT?!?"
-    show sasha
+    show sasha talk
     sasha.say "Don't have a cow, [hero.name]...that's just an urban legend."
     if game.flags.bandcrossdress:
         mike.say "So you say, Sasha...but if they do that kind of thing to people that suck, what are they gonna do when they realise I'm a dude in pantyhose and a stuffed bra?"

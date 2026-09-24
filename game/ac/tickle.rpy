@@ -18,7 +18,7 @@ init python:
 
 label tickle:
     call expression f"{active_girl.id}_greet" from _call_expression_156
-    $ renpy.show(active_girl.id)
+    $ renpy.show(f"{interact_girl.id} normal")
     if renpy.has_label(f"{active_girl.id}_tickle_activity"):
         call expression f"{active_girl.id}_tickle_activity" from _call_expression_157
     else:
@@ -38,4 +38,3 @@ label tickle:
     $ renpy.hide(active_girl.id)
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

@@ -69,4 +69,3 @@ label bakery_shop:
     $ Room.find("bakery").shop("samantha" if samantha.present or hero.is_female else None)
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

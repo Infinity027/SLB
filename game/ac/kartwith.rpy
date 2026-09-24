@@ -21,7 +21,7 @@ init python:
 label kart_with:
     $ active_girl.set_flag("interact", 1, 1, "+")
     call expression f"{active_girl.id}_greet" from _call_expression_170
-    $ renpy.show(active_girl.id)
+    $ renpy.show(f"{interact_girl.id} normal")
     if renpy.has_label(f"{active_girl.id}_kart_with_male"):
         call expression f"{active_girl.id}_kart_with_male" from _call_expression_171
     else:

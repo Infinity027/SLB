@@ -53,8 +53,6 @@ label dopushups:
             "1, 2, 3, 4...",
             "10, 11, 12, 13, 14...",
             "100, 101, 102, 103, 104...",
-            "1000, 1001, 1002, 1003, 1004...",
-            "10000, 10001, 10002, 10003, 10004...",
             ]))
     return
 
@@ -70,4 +68,3 @@ label clean_my_bedroom:
     stop sound
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

@@ -361,14 +361,13 @@ label sasha_good_sweet_talk_male:
     return
 
 label sasha_bad_sweet_talk_male:
-    show sasha
+    show sasha normal
     mike.say "You might wear black and mope about, Sasha."
     mike.say "But you're actually a lot of fun underneath it all!"
     show sasha angry
     sasha.say "It's not moping around, you jerk!"
     sasha.say "It's called being deep and in touch with your inner self!"
     mike.say "Erm...okay, Sasha..."
-    hide sasha
+    hide sasha normal
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

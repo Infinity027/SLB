@@ -28,7 +28,7 @@ init python:
 label train_with:
     $ active_girl.set_flag("interact", 1, 1, "+")
     call expression f"{active_girl.id}_greet" from _call_expression_149
-    $ renpy.show(active_girl.id)
+    $ renpy.show(f"{interact_girl.id} normal")
     if renpy.has_label(f"{active_girl.id}_train_with_replace_male"):
         call expression f"{active_girl.id}_train_with_replace_male" from _call_expression_150
     else:
@@ -36,6 +36,8 @@ label train_with:
         if hero.fitness * 2 >= 40 - active_girl.love:
             $ hero.flags.dirty = TemporaryFlag(True, "day")
             active_girl.say "Why not."
+            $ renpy.hide(active_girl.id)
+            $ renpy.show(f"{interact_girl.id} workout")
             if renpy.has_label(f"{active_girl.id}_train_with_male"):
                 call expression f"{active_girl.id}_train_with_male" from _call_expression_151
             else:
@@ -58,4 +60,3 @@ label train_with:
     $ renpy.hide(active_girl.id)
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

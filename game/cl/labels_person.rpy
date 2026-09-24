@@ -36,9 +36,9 @@ label girl_interact(ig):
             $ bye_outfit = interact_girl.get_clothes()
             scene expression f"bg {game.room}"
             if persistent.new_ui:
-                $ renpy.show(interact_girl.id, at_list=[npc_info_npc])
+                $ renpy.show(f"{interact_girl.id} normal", at_list=[npc_info_npc])
             else:
-                $ renpy.show(interact_girl.id)
+                $ renpy.show(f"{interact_girl.id} normal")
             call screen interact(interact_girl)
 
             if isinstance(_return, BaseActivity):

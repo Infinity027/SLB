@@ -34,7 +34,7 @@ init python:
     #     hanna_blow_07
     # ]
 
-    $ hanna_hottub = [
+    hanna_hottub = [
         "ev2/hanna/hottub03.jpg",
         "ev2/hanna/hottub04.jpg"
     ]

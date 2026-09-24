@@ -64,4 +64,3 @@ init 1:
         attribute fire
         group po auto if_any["po"]:
             attribute base default
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

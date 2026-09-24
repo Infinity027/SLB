@@ -20,4 +20,3 @@ label cancel:
     $ do_activity.flags.end_event = True
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

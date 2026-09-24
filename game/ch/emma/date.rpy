@@ -608,4 +608,3 @@ label emma_halloween_sex:
         $ game.pass_time(1)
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

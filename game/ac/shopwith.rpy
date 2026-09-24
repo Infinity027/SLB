@@ -22,7 +22,7 @@ init python:
 label shop_with:
     $ active_girl.set_flag("interact", 1, 1, "+")
     call expression f"{active_girl.id}_greet" from _call_expression_146
-    $ renpy.show(active_girl.id)
+    $ renpy.show(f"{interact_girl.id} normal")
     if renpy.has_label(f"{active_girl.id}_shop_with_replace_male"):
         call expression f"{active_girl.id}_shop_with_replace_male" from _call_expression_147
     else:
@@ -43,7 +43,6 @@ label shop_with:
         else:
             active_girl.say "Sorry, I don't feel like it."
             $ hero.cancel_activity()
-    $ renpy.hide(active_girl.id)
+    $ renpy.hide(f"{interact_girl.id} normal")
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

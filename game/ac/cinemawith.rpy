@@ -21,7 +21,8 @@ init python:
 label cinema_with:
     $ active_girl.set_flag("interact", 1, 1, "+")
     call expression f"{active_girl.id}_greet" from _call_expression_35
-    $ renpy.show(active_girl.id)
+    # $ renpy.show(active_girl.id)
+    $ renpy.show(f"{interact_girl.id} normal")
     call expression f"cinema_with_dialogues_1_male" from _call_expression_53
     if hero.charm >= 40 - active_girl.love:
         active_girl.say "Sure, why not?"
@@ -31,6 +32,6 @@ label cinema_with:
     else:
         active_girl.say "Sorry, I don't feel like it."
         $ hero.cancel_activity()
-    $ renpy.hide(active_girl.id)
+    $ renpy.hide(f"{interact_girl.id} normal")
     return
 return

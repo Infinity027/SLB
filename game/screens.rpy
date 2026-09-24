@@ -469,9 +469,6 @@ screen main_menu():
     tag menu
     use expression main_menu_configuration
 
-    if renpy.has_screen("advertising"):
-        use advertising('vertical', box_offset=(25, 0), button_bg_border_size=12, button_bg_idle=Frame("gui/confirm_frame.png"), button_bg_hover="#ea6383", arrow_idle_color="#52b2e6", arrow_hover_color="#ea6383", zoom=0.85)
-
 
 
 
@@ -2516,18 +2513,6 @@ style disclaimer_text is text:
 init -25 python:
     from renpy.display.video import Movie as PlayMovie
 
-screen promo():
-    add PlayMovie(channel="movie_dp", play="gui/promo/MDR_trailer.webm", size=(1280, 720))
-    hbox:
-        ypos 600
-        xpos 130
-        imagebutton at promo_pulse:
-            if build_platform in ['steam', 'itchio', 'patreon']:
-                auto f"gui/promo/button_{build_platform}_%s.png"
-                action OpenURL(platforms_games_links.get(build_platform).get('mydemonicromance'))
-            else:
-                auto "gui/promo/button_patreon_%s.png"
-                action OpenURL("https://www.patreon.com/mydemonicromance")
 
 transform promo_pulse:
     xanchor 0.5

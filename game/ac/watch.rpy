@@ -8,7 +8,7 @@ label watch_tv_with(*people):
 
     scene bg livingroom
     if len(people) == 1:
-        $ renpy.show(people[0].id)
+        $ renpy.show(f"{people[0].id} tv")
     else:
         $ renpy.show(people[0].id, at_list=[left])
         $ renpy.show(people[1].id, at_list=[right])
@@ -117,9 +117,8 @@ label watch_tv_with(*people):
         call apply_porn_extra_gains (subgenre, *people) from _call_apply_porn_extra_gains
 
 
-    if hero.is_male and genre == "porn" and bree in people and sasha in people and bree.love >= 150 and sasha.love >= 150 and Harem.together(*people, name="home"):
-
-
+    if genre == "porn" and bree in people and sasha in people and bree.love >= 150 and sasha.love >= 150 and Harem.together(*people, name="home"):
+        #attention: watch tv
         hide tv
         call bj3_porn from _call_bj3_porn
     elif hero.is_male and genre == "porn" and len(people) == 1 and bree in people and bree.love >= 150 and bree.sexperience:
@@ -138,8 +137,6 @@ label watch_tv_with(*people):
 
 label apply_movie_gain(genre, *people):
     python:
-
-
         results = ([], [], [])
 
         movie = Movie.find(genre)
@@ -161,14 +158,12 @@ label apply_movie_gain(genre, *people):
                     if trait in movie:
                         gain += symbol * movie[trait]
             
-            
             try:
                 personal_likes = person.movies
             except AttributeError:
                 personal_likes = {}
             if genre in personal_likes:
                 gain += personal_likes[genre]
-            
             
             if game.active_date is None or isinstance(game.active_date, (NoDateEvent, ScavengerHuntAppointment)):
                 person.love += gain
@@ -196,7 +191,6 @@ label apply_movie_gain(genre, *people):
                         else:
                             gain -= 1
                 game.active_date.score += 5 * gain
-            
             
             if gain > 0:
                 results[0].append(person)
@@ -327,4 +321,3 @@ label movie_reactions(genre, liked, indifferent, disliked):
             "[who] seem completely bored."
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

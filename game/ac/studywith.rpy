@@ -21,16 +21,17 @@ init python:
 label study_with:
     $ active_girl.set_flag("interact", 1, 1, "+")
     call expression f"{active_girl.id}_greet" from _call_expression_85
-    $ renpy.show(active_girl.id)
+    $ renpy.show(f"{interact_girl.id} normal")
     call expression f"study_with_dialogues_1_male" from _call_expression_164
     if hero.knowledge * 2 >= 40 - active_girl.love:
         if renpy.has_label(f"{active_girl.id}_study_with_intro_male"):
-            show expression f"studywith {active_girl.id}"
+            $ renpy.hide(active_girl.id)
+            show expression f"{active_girl.id} study"
             call expression f"{active_girl.id}_study_with_intro_male" from _call_expression_95
         else:
             active_girl.say "In fact, yes!"
             $ renpy.hide(active_girl.id)
-            show expression f"studywith {active_girl.id}"
+            show expression f"{active_girl.id} study"
             "I help out [active_girl.name] with her studies."
         $ bonus = 1
         $ hero.knowledge += 1
@@ -47,11 +48,10 @@ label study_with:
                 $ active_girl.sub -= 1
         elif renpy.has_label(f"{active_girl.id}_study_with_failure_male"):
             call expression f"{active_girl.id}_study_with_failure_male" from _call_expression_166
-        hide expression f"studywith {active_girl.id}"
+        hide expression f"{active_girl.id} study"
     else:
         active_girl.say "I'm fine."
         $ hero.cancel_activity()
     $ renpy.hide(active_girl.id)
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

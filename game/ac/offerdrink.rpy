@@ -28,21 +28,21 @@ init python:
 
 label offer_a_drink:
     call expression f"{active_girl.id}_greet" from _call_expression_37
-    $ renpy.show(active_girl.id)
+    $ renpy.show(f"{interact_girl.id} normal")
     if renpy.has_label(f"{active_girl.id}_offer_a_drink_male"):
         call expression f"{active_girl.id}_offer_a_drink_male" from _call_expression_38
     else:
         call expression f"offer_a_drink_dialogues_1_male" from _call_expression_124
         if (hero.charm >= 60 - active_girl.love and active_girl.flags.drinks < 2) or date_girl == active_girl:
             active_girl.say "Sure!"
-            $ renpy.hide(active_girl.id)
-            show expression f"drink {active_girl.id}"
+            $ renpy.hide(f"{interact_girl.id} normal")
+            show expression f"{active_girl.id} drink"
             call expression active_girl.get_chat from _call_expression_39
             if active_girl.love <= 25:
                 $ active_girl.love += 1
             elif date_girl == active_girl and game.active_date:
                 $ game.active_date.score += 5
-            hide expression f"drink {active_girl.id}"
+            hide expression f"{active_girl.id} drink"
             $ active_girl.set_flag("drinks", 1, "day", mod="+")
             if hero.is_female and hero.morality >= -25:
                 $ hero.morality -= 1
@@ -50,7 +50,6 @@ label offer_a_drink:
             active_girl.say "Sorry, I don't feel like drinking."
             $ hero.cancel_activity()
     $ active_girl.set_flag("interact", 1, 1, "+")
-    $ renpy.hide(active_girl.id)
+    $ renpy.hide(f"{interact_girl.id} normal")
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

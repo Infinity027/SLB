@@ -79,4 +79,3 @@ label quit_a_job_night:
     $ game.flags.job_night = False
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

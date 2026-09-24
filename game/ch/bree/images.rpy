@@ -1,5 +1,8 @@
 init 1:
-    layeredimage bree:
+    # The normal Bree sprite is supplied by images_new.rpy's flat-sprite system.
+    # Keep this legacy definition under a different name so it cannot also
+    # register "bree normal" and make `show bree` ambiguous.
+    layeredimage bree legacy:
         attribute_function Pickers([PositionPicker,  CollarPicker, PubesPicker, OutfitPicker, HaircutPicker], npc=bree)
 
         attribute idle null

@@ -121,4 +121,3 @@ label common_cancel_propose(from_girl=None):
         $ from_girl.cancel_fiance()
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

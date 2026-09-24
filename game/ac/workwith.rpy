@@ -26,13 +26,15 @@ init python:
 label work_with:
     $ active_girl.set_flag("interact", 1, 1, "+")
     call expression f"{active_girl.id}_greet" from _call_expression_100
-    $ renpy.show(active_girl.id)
+    $ renpy.show(f"{interact_girl.id} normal")
     if renpy.has_label(f"{active_girl.id}_work_with_replace"):
         call expression f"{active_girl.id}_work_with_replace" from _call_expression_112
     else:
         mike.say "[active_girl.name], do you want some help?"
         if hero.knowledge >= 40 - active_girl.love:
             active_girl.say "Sure, why not?"
+            $ renpy.hide(active_girl.id)
+            $ renpy.show(f"{interact_girl.id} work")
             if renpy.has_label(f"{active_girl.id}_work_with"):
                 call expression f"{active_girl.id}_work_with" from _call_expression_117
             else:

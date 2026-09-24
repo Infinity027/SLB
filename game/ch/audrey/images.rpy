@@ -139,7 +139,7 @@ init 1:
         group audrey auto if_not ["alone"]:
             attribute eating default
 
-                group multiple:
+        group multiple:
             attribute ears null
             attribute tongue null
 
@@ -243,7 +243,7 @@ init 1:
 
         always "audrey_ending_bj_bg"
 
-                group eyes auto:
+        group eyes auto:
             attribute open default
         group mouth auto:
             attribute smile default

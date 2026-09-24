@@ -105,7 +105,7 @@ label play_with_bree:
                 mike.say "I was defeated."
                 bree.say "Don't worry, you'll get me next time!"
         "Refuse":
-            show bree cry
+            show bree sad
             mike.say "No, sorry."
             bree.say "Another time then."
     hide bree
@@ -137,4 +137,3 @@ label arcade_competition:
         "I don't have money to participate."
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

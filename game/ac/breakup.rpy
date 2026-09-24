@@ -84,7 +84,8 @@ init python:
 
 label break_up:
     call expression f"{active_girl.id}_greet" from _call_expression_58
-    $ renpy.show(active_girl.id)
+    # $ renpy.show(active_girl.id)
+    $ renpy.show(f"{interact_girl.id} normal")
     if renpy.has_label(f"{active_girl.id}_breakup_male"):
         call expression f"{active_girl.id}_breakup_male" from _call_expression_59
         if _return == "denied":
@@ -104,12 +105,12 @@ label break_up:
     $ active_girl.collared = False
     $ active_girl.status = YAML[active_girl.id]["status"]
     $ active_girl.flags.giftslave_collar = False
-    $ renpy.hide(active_girl.id)
+    $ renpy.hide(f"{interact_girl.id} normal")
     return
 
 label friendzone:
     call expression f"{active_girl.id}_greet" from _call_expression_168
-    $ renpy.show(active_girl.id)
+    $ renpy.show(f"{interact_girl.id} normal")
     if active_girl.love >= 100:
         call expression f"friendzone_dialogues_1_male" from _call_expression_49
     else:
@@ -119,7 +120,6 @@ label friendzone:
     $ active_girl.collared = False
     $ active_girl.status = YAML[active_girl.id]["status"]
     $ active_girl.flags.giftslave_collar = False
-    $ renpy.hide(active_girl.id)
+    $ renpy.hide(f"{interact_girl.id} normal")
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

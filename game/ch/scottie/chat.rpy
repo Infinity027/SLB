@@ -59,4 +59,3 @@ label scottie_love_5_male:
     $ scottie.love += 1
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

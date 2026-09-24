@@ -13,7 +13,7 @@ init python:
 
 label massage:
     call expression f"{active_girl.id}_greet" from _call_expression_154
-    $ renpy.show(active_girl.id)
+    $ renpy.show(f"{interact_girl.id} normal")
     if renpy.has_label(f"{active_girl.id}_massage_activity_male"):
         call expression f"{active_girl.id}_massage_activity_male" from _call_expression_118
     else:
@@ -37,7 +37,6 @@ label massage:
                 call expression f"{active_girl.id}_massage_refuse_male" from _call_expression_123
         if active_girl.sub >= 50 or active_girl.sub < 0:
             $ active_girl.sub -= 1
-    $ renpy.hide(active_girl.id)
+    $ renpy.hide(f"{interact_girl.id} normal")
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

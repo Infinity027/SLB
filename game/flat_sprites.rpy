@@ -34,14 +34,24 @@ init -5 python:
     def _flat_sprite(st, at, char=None, dress=None, expr="normal"):
         p = Person.find(char)
         d = dress or (p.get_clothes() if p else "casual")
-        for path in (
-            "images/%s/%s/%s.png"     % (char, d, expr),       # exact dress + expression
-            "images/%s/%s/normal.png" % (char, d),             # same dress, neutral face
-            "images/%s/casual/%s.png" % (char, expr),          # casual dress, requested face
-            "images/%s/casual/normal.png" % (char,),           # last resort
-        ):
-            if renpy.loadable(path):
-                return Image(path), None
+
+        # Old scripts use variants such as "casual2", while the flat art uses
+        # the "casual" folder. Try the exact folder first, then its base name.
+        dresses = [d]
+        if d and d[-1:].isdigit():
+            dresses.append(d.rstrip("0123456789"))
+        dresses.append("casual")
+
+        # Imported sprites in this project are not consistently PNG files.
+        # Support the common image formats rather than returning a blank sprite.
+        for current_dress in dresses:
+            for current_expr in (expr, "normal"):
+                for extension in (".png", ".jpg", ".jpeg", ".webp"):
+                    path = "images/%s/%s/%s%s" % (
+                        char, current_dress, current_expr, extension
+                    )
+                    if renpy.loadable(path):
+                        return Image(path), None
         return Null(), None     # nothing on disk yet -> blank, never an error
 
     def _flat_pose(st, at, char=None, pose=None, face="normal"):

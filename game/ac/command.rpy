@@ -890,4 +890,3 @@ style appearance_submenu_items_button_text is appearance_items_button_text:
     selected_color "#ffffff"
     xpos 0.1
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

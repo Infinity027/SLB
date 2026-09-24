@@ -32,7 +32,7 @@ label grope:
         else:
             "I grope [active_girl.name]'s boobs."
         if (active_girl.traits and {"innocent", "dominant"} & active_girl.traits) or active_girl.love < 25 or active_girl.sub < 25:
-            show expression f"{active_girl.id} close annoyed"
+            show expression f"{active_girl.id} annoyed"
             $ active_girl.love -= 2
             if renpy.has_label(f"{active_girl.id}_grope_annoyed_male"):
                 call expression f"{active_girl.id}_grope_annoyed_male" from _call_expression_102
@@ -55,4 +55,3 @@ label grope:
     call check_cheated ("groping") from _grope_check_cheat
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

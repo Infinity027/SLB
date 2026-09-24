@@ -53,7 +53,6 @@ init 1:
     layeredimage chibi:
         attribute_function Pickers([MCGenderPicker])
         attribute mikemc null
-        attribute breemc null
 
         always:
             "chibi_bg"
@@ -81,15 +80,9 @@ init 1:
         group multiple auto variant haircuts
         attribute sasha_boobjob if_any["sasha"]
         always:
-            if_all ["bree", "bree_pregnant"]
-            "3dance_hand_bree_pregnant"
-        always:
             if_all ["bree"]
             if_not ["bree_pregnant"]
             "3dance_hand_bree"
-        always:
-            if_all ["lexi", "lexi_pregnant"]
-            "3dance_hand_lexi_pregnant"
         always:
             if_all ["lexi"]
             if_not ["lexi_pregnant"]
@@ -375,13 +368,13 @@ init 1:
                 linear 0 rotate 0
                 repeat
 
-    transform impregnate_display(x, y):
-        xalign x
-        yalign y
-        alpha 0.0
-        linear 1.0 alpha 1.0
-        2.5
-        linear 1.0 alpha 0.0
+    # transform impregnate_display(x, y):
+    #     xalign x
+    #     yalign y
+    #     alpha 0.0
+    #     linear 1.0 alpha 1.0
+    #     2.5
+    #     linear 1.0 alpha 0.0
 
     layeredimage arenabree:
         always:

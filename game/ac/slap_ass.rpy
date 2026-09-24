@@ -23,13 +23,13 @@ init python:
 label slap:
     call expression f"{active_girl.id}_greet" from _call_expression_131
     $ renpy.hide(active_girl.id)
-    $ renpy.show(f"slap {active_girl.id} happy waiting")
+    # $ renpy.show(f"slap {active_girl.id} happy waiting")
     if renpy.has_label(f"{active_girl.id}_slap_ass_intro_male"):
         call expression f"{active_girl.id}_slap_ass_intro_male" from _call_expression_133
     else:
         "I slap [active_girl.name] on the ass."
     if active_girl.sub >= 10 - active_girl.flags.slapassmod:
-        $ renpy.show(f"slap {active_girl.id} slapping")
+        $ renpy.show(f"{active_girl.id} slap")
         if active_girl.sub < 15 + active_girl.flags.slapassmod:
             $ active_girl.sub += 1
         elif active_girl.sub < 25 + active_girl.flags.slapassmod:
@@ -46,7 +46,7 @@ label slap:
 
             "She smiles and blushes..."
     else:
-        $ renpy.show(f"slap {active_girl.id} angry slapping")
+        $ renpy.show(f"{active_girl.id} angry")
         $ active_girl.love -= 1
         $ active_girl.sub -= 1
         if renpy.has_label(f"{active_girl.id}_slap_ass_angry_male"):
@@ -55,8 +55,6 @@ label slap:
             active_girl.say "What are you doing?"
     if hero.is_female and hero.morality >= 25:
         $ hero.morality -= 1
-    hide slap
-    $ renpy.show(active_girl.id)
+    $ renpy.show(f"{interact_girl.id} normal")
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

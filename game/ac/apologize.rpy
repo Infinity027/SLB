@@ -32,7 +32,8 @@ init python:
 
 label apologize:
     call expression f"{active_girl.id}_greet" from _call_expression_82
-    $ renpy.show(active_girl.id)
+    # $ renpy.show(active_girl.id)
+    $ renpy.show(f"{interact_girl.id} normal")
     call apologize_dialogues_1_male from _call_expression_20
     active_girl.say "Alright, but don't ever do this again."
     $ active_girl.flags.breakup = False
@@ -40,7 +41,7 @@ label apologize:
     $ active_girl.status = "friend"
     if hero.is_female and hero.morality <= -25:
         $ hero.morality += 1
-    $ renpy.hide(active_girl.id)
+    $ renpy.hide(f"{interact_girl.id} normal")
     python:
         for harem in Harem.find(active_girl, is_active=False):
             harem.apologize(active_girl)

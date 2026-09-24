@@ -437,4 +437,3 @@ label meet:
     $ game.room = "map"
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

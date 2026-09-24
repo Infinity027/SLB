@@ -7,8 +7,7 @@ init python:
     "icon": "date",
     "duration": 0,
     "conditions": [
-        HeroTarget(IsGender("male"),
-            Not(OnDate())),
+        HeroTarget(Not(OnDate())),
         "hero.calendar.has_date()",
         ],
     })
@@ -21,7 +20,7 @@ init python:
     "icon": "appointment",
     "duration": 0,
     "conditions": [
-        HeroTarget(IsGender("male"), Not(OnDate())),
+        HeroTarget(Not(OnDate())),
         "hero.calendar.has_appointment()",
         ],
     })

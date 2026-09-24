@@ -13,4 +13,3 @@ init python:
     "music": "music/roa_music/esperanza.ogg",
     "tags": ["audreyhome"],
     })
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

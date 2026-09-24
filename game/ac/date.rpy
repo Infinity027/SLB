@@ -70,9 +70,9 @@ label end_date:
 label cancel_date:
     $ active_girl.set_flag("interact", 1, 1, "+")
     call expression f"{active_girl.id}_greet" from _call_expression_87
-    $ renpy.show(active_girl.id)
+    $ renpy.show(f"{interact_girl.id} normal")
     call cancel_date_internal from _cancel_date
-    $ renpy.hide(active_girl.id)
+    $ renpy.hide(f"{interact_girl.id} normal")
     return
 
 label cancel_date_internal:
@@ -96,11 +96,11 @@ label cancel_date_internal:
 label date_her:
     $ active_girl.set_flag("interact", 1, 1, "+")
     call expression f"{active_girl.id}_greet" from _call_expression_29
-    $ renpy.show(active_girl.id)
+    $ renpy.show(f"{interact_girl.id} normal")
     call date_her_internal (False) from _date_her
 
     if active_girl:
-        $ renpy.hide(active_girl.id)
+        $ renpy.hide(f"{interact_girl.id} normal")
     return
 
 label date_her_internal(smartphone):
@@ -256,4 +256,3 @@ init 10 python:
                 return lbl
         return None
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

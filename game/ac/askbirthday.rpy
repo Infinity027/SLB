@@ -16,7 +16,8 @@ init python:
 
 label ask_birthday:
     call expression f"{active_girl.id}_greet" from _call_expression_28
-    $ renpy.show(active_girl.id)
+    # $ renpy.show(active_girl.id)
+    $ renpy.show(f"{interact_girl.id} normal")
     if renpy.has_label(f"{active_girl.id}_ask_birthday_male"):
         call expression f"{active_girl.id}_ask_birthday_male" from _call_expression_23
     else:
@@ -29,6 +30,6 @@ label ask_birthday:
             call ask_birthday_dialogues_2_male from _call_expression_42
             $ active_girl.flags.birthdayknown = True
             $ active_girl.love += 1
-    $ renpy.hide(active_girl.id)
+    $ renpy.hide(f"{interact_girl.id} normal")
     return
 return

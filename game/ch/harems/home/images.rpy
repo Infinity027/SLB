@@ -881,7 +881,7 @@ init 1:
         attribute sasha_nohaircut
         attribute sasha_haircut null
         group multiple auto variant collars
-                group multiple:
+        group multiple:
             attribute bree_clit null
             attribute bree_ears null
             attribute bree_lips null
@@ -1371,7 +1371,7 @@ init 1:
 
         group pubic auto
         group pregnancy auto
-                group collars auto
+        group collars auto
         group hair auto
 
         attribute vibrator
@@ -1729,7 +1729,7 @@ init 1:
 
 
         group multiple auto variant collars
-                group multiple:
+        group multiple:
             attribute bree_ears null
             attribute sasha_ears null
 

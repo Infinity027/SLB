@@ -1,51 +1,51 @@
 init python:
-    Consumable("skill_book_hypnosis", display_name="Skill book: Hypnosis", price=500, label="hypnosis_skill_book", uses=20, tooltip="A book to learn hypnosis", conditions=[HeroTarget(MinStat("energy", 2), MinStat("hunger", 2), MinStat("grooming", 2), MinStat("fun", 2))])
+    # Consumable("skill_book_hypnosis", display_name="Skill book: Hypnosis", price=500, label="hypnosis_skill_book", uses=20, tooltip="A book to learn hypnosis", conditions=[HeroTarget(MinStat("energy", 2), MinStat("hunger", 2), MinStat("grooming", 2), MinStat("fun", 2))])
 
-    InteractActivity(**{
-    "name": "hypnosis",
-    "display_name": "Use hypnosis",
-    "duration": 1,
-    "icon": "hypnosis",
-    "conditions": [
-        HasSkill("hypnosis"),
-        ActiveTarget(
-            Not(IsActivity("sleep")),
-            IsGender("female"),
-            ),
-        ],
-    "label": "hypnosis_action",
-    "once_day": "ACTIVE",
-    })
+    # InteractActivity(**{
+    # "name": "hypnosis",
+    # "display_name": "Use hypnosis",
+    # "duration": 1,
+    # "icon": "hypnosis",
+    # "conditions": [
+    #     HasSkill("hypnosis"),
+    #     ActiveTarget(
+    #         Not(IsActivity("sleep")),
+    #         IsGender("female"),
+    #         ),
+    #     ],
+    # "label": "hypnosis_action",
+    # "once_day": "ACTIVE",
+    # })
 
-    SpecificTalkSubject(**{
-    "name": "ask_about_hypnosis",
-    "display_name": "Ask her consent for hypnosis",
-    "label": "hypnosis_talk",
-    "duration": 0,
-    "icon": "button_hypnosis",
-    "conditions": [
-        HasSkill("hypnosis"),
-        ActiveTarget(
-            IsGender("female"),
-            IsFlag("hypnosisConsent", False),
-            ),
-        ],
-    "do_once": "ACTIVE",
-    })
+    # SpecificTalkSubject(**{
+    # "name": "ask_about_hypnosis",
+    # "display_name": "Ask her consent for hypnosis",
+    # "label": "hypnosis_talk",
+    # "duration": 0,
+    # "icon": "button_hypnosis",
+    # "conditions": [
+    #     HasSkill("hypnosis"),
+    #     ActiveTarget(
+    #         IsGender("female"),
+    #         IsFlag("hypnosisConsent", False),
+    #         ),
+    #     ],
+    # "do_once": "ACTIVE",
+    # })
 
-    Event(**{
-    "name": "hypnosis_arrested",
-    "label": "hypnosis_arrested",
-    "duration": 1,
-    "priority": 500,
-    "conditions": [
-        HeroTarget(
-            IsRoom("map")
-            ),
-        "randint(1, 100) <= hero.flags.hypnosisFailure"
-        ],
-    "do_once": True
-    })
+    # Event(**{
+    # "name": "hypnosis_arrested",
+    # "label": "hypnosis_arrested",
+    # "duration": 1,
+    # "priority": 500,
+    # "conditions": [
+    #     HeroTarget(
+    #         IsRoom("map")
+    #         ),
+    #     "randint(1, 100) <= hero.flags.hypnosisFailure"
+    #     ],
+    # "do_once": True
+    # })
 
     Event(**{
     "name": "hypnosis_package",

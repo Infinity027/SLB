@@ -35,4 +35,3 @@ label wait:
     pause 0.1
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

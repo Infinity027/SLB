@@ -57,9 +57,6 @@ init 1:
         group haircuts auto if_not ["alonemc"]:
             attribute emma_nohaircut null
 
-        group pregnancies auto if "naked" if_not ["alonemc"]
-
-
         group boobjobs auto if_not ["alonemc"]:
             attribute sasha_noboobjob null
 

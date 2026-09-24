@@ -32,10 +32,10 @@ label give_a_gift(from_birthday_date=False):
         $ active_girl.set_flag("interact", 1, 1, "+")
         call expression f"{active_girl.id}_greet" from _call_expression_18
 
-    $ renpy.show(active_girl.id, at_list=[reset, default])
-    $ renpy.show(active_girl.id, at_list=[left4])
+    $ renpy.show(f"{interact_girl.id} normal", at_list=[reset, default])
+    $ renpy.show(f"{active_girl.id} normal", at_list=[left4])
     $ result = renpy.call_screen("choose_gift")
-    $ renpy.show(active_girl.id, at_list=[center])
+    $ renpy.show(f"{active_girl.id} normal", at_list=[center])
 
     if result != "None" and result != "exit":
         if any([game.calendar.is_today(*active_girl.birthday), game.calendar.is_today("valentine"), game.calendar.is_today("christmas")]):
@@ -45,7 +45,7 @@ label give_a_gift(from_birthday_date=False):
                 active_girl.say "I already have one of those."
                 active_girl.say "What would I need a second one for?"
                 if from_birthday_date:
-                    $ renpy.show(active_girl.id, at_list=[reset, default])
+                    $ renpy.show(f"{active_girl.id} normal", at_list=[reset, default])
                     return "done"
                 $ hero.cancel_activity()
             if (hero.activity and not hero.activity.flags.canceled) or not hero.activity:
@@ -59,7 +59,7 @@ label give_a_gift(from_birthday_date=False):
                 if isinstance(result.label, tuple) and renpy.has_label(f"{active_girl.id}_gift_{result.label[0]}_male"):
                     call expression f"{active_girl.id}_gift_{result.label[0]}_male" pass (*result.label[1:]) from _call_expression_159
                     if from_birthday_date:
-                        $ renpy.show(active_girl.id, at_list=[reset, default])
+                        $ renpy.show(f"{active_girl.id} normal", at_list=[reset, default])
                         return "done"
                 elif isinstance(result.label, basestring) and renpy.has_label(f"{active_girl.id}_gift_{result.label}_male"):
                     call expression f"{active_girl.id}_gift_{result.label}_male" from _call_expression_160
@@ -73,25 +73,25 @@ label give_a_gift(from_birthday_date=False):
                         return False
 
                     $ hero.cancel_activity()
-                    $ renpy.hide(active_girl.id)
+                    $ renpy.hide(f"{interact_girl.id} normal")
                     return
                 if from_birthday_date:
-                    $ renpy.show(active_girl.id, at_list=[reset, default])
+                    $ renpy.show(f"{active_girl.id} normal", at_list=[reset, default])
                     $ gift_reaction = result.use(active_girl)
                     return gift_reaction
                 if hero.activity and not hero.activity.flags.canceled:
                     $ gift_reaction = result.use(active_girl)
                     call give_a_gift_reaction (active_girl, gift_reaction) from _call_give_a_gift_reaction
         else:
-            $ renpy.show(active_girl.id)
+            $ renpy.show(f"{interact_girl.id} normal")
             $ hero.cancel_activity()
             active_girl.say "No thanks."
     else:
         if from_birthday_date:
-            $ renpy.show(active_girl.id, at_list=[reset, default])
+            $ renpy.show(f"{active_girl.id} normal", at_list=[reset, default])
             return result
         $ hero.cancel_activity()
-    $ renpy.hide(active_girl.id)
+    $ renpy.hide(f"{interact_girl.id} normal")
     return
 
 label give_a_gift_reaction(active_npc, reaction_result):
@@ -118,7 +118,7 @@ label give_a_gift_reaction(active_npc, reaction_result):
     return
 
 label npc_give_a_gift:
-    $ renpy.show(active_girl.id)
+    $ renpy.show(f"{interact_girl.id} normal")
     $ active_girl.set_flag("interact", 1, 1, "+")
 
     if game.calendar.is_today(*hero.birthday) and active_girl.love >= 40 and renpy.has_label(f"{active_girl.id}_give_birthday_male"):
@@ -128,7 +128,6 @@ label npc_give_a_gift:
     elif game.calendar.is_today("christmas") and active_girl.love >= 50 and renpy.has_label(f"{active_girl.id}_give_christmas_male"):
         call expression f"{active_girl.id}_give_christmas_male" from _call_expression_73
 
-    $ renpy.hide(active_girl.id)
+    $ renpy.hide(f"{interact_girl.id} normal")
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

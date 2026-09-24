@@ -1,20 +1,39 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/ch/kiara/images_new.rpy", line 14, in script
-    init python:
-  File "game/ch/kiara/images_new.rpy", line 26, in <module>
-    kiara_blow_03,
-    ^^^^^^^^^^^^^ 
-NameError: name 'kiara_blow_03' is not defined
+  File "game/start.rpy", line 203, in script
+    init -10 python:
+  File "game/start.rpy", line 207, in <module>
+        for id, person in load_yamls(
+                          ~~~~~~~~~~^
+        lambda f: f.endswith(".yml") and "ch" in f and "person/" in f, Girl
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^ 
+  File "game/cl/class_util.rpy", line 162, in load_yamls
+    obj = construct_obj(c, [id, data], {})
+          ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "game/cl/class_util.rpy", line 136, in construct_obj
+    return clazz(*args, **kwargs)
+           ~~~~~^^^^^^^^^^^^^^^^^
+  File "game/cl/class_npc.rpy", line 9, in __init__
+    super(Girl, self).__init__(id, yaml)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "game/cl/class_registry.rpy", line 23, in __init__
+    super(Registry, self).__init__(id, *args, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "game/cl/class_person.rpy", line 82, in __init__
+    self.__dict__[attrname] = globals()[classname](self, **keys)
+                              ~~~~~~~~~^^^^^^^^^^^              
+KeyError: 'Navel'
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "game/ch/kiara/images_new.rpy", line 14, in script
-    init python:
-  File "game/ch/kiara/images_new.rpy", line 14, in script
-    init python:
+  File "game/start.rpy", line 203, in script
+    init -10 python:
+  File "game/start.rpy", line 203, in script
+    init -10 python:
   File "game/cl/labels_ui.rpy", line 101, in prepare_screen
     screen smartphone(char=None, selected_screen="home"):
   File "game/cl/labels_ui.rpy", line 101, in prepare
@@ -45,18 +64,37 @@ AttributeError: 'StoreModule' object has no attribute 'DATA_HERO'
 -- Full Traceback ------------------------------------------------------------
 
 Traceback (most recent call last):
-  File "game/ch/kiara/images_new.rpy", line 14, in script
-    init python:
+  File "game/start.rpy", line 203, in script
+    init -10 python:
   File "renpy/ast.py", line 1187, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "renpy/python.py", line 1273, in py_exec_bytecode
     exec(bytecode, globals, locals)
     ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "game/ch/kiara/images_new.rpy", line 26, in <module>
-    kiara_blow_03,
-    ^^^^^^^^^^^^^ 
-NameError: name 'kiara_blow_03' is not defined
+  File "game/start.rpy", line 207, in <module>
+        for id, person in load_yamls(
+                          ~~~~~~~~~~^
+        lambda f: f.endswith(".yml") and "ch" in f and "person/" in f, Girl
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^ 
+  File "game/cl/class_util.rpy", line 162, in load_yamls
+    obj = construct_obj(c, [id, data], {})
+          ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "game/cl/class_util.rpy", line 136, in construct_obj
+    return clazz(*args, **kwargs)
+           ~~~~~^^^^^^^^^^^^^^^^^
+  File "game/cl/class_npc.rpy", line 9, in __init__
+    super(Girl, self).__init__(id, yaml)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "game/cl/class_registry.rpy", line 23, in __init__
+    super(Registry, self).__init__(id, *args, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "game/cl/class_person.rpy", line 82, in __init__
+    self.__dict__[attrname] = globals()[classname](self, **keys)
+                              ~~~~~~~~~^^^^^^^^^^^              
+KeyError: 'Navel'
 
 During handling of the above exception, another exception occurred:
 
@@ -70,10 +108,10 @@ Traceback (most recent call last):
   File "renpy/ast.py", line 1071, in execute_init
     renpy.game.context().run(self.block[0])
     ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
-  File "game/ch/kiara/images_new.rpy", line 14, in script
-    init python:
-  File "game/ch/kiara/images_new.rpy", line 14, in script
-    init python:
+  File "game/start.rpy", line 203, in script
+    init -10 python:
+  File "game/start.rpy", line 203, in script
+    init -10 python:
   File "renpy/display/error.py", line 135, in report_exception
     renpy.game.invoke_in_new_context(
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
@@ -142,4 +180,4 @@ AttributeError: 'StoreModule' object has no attribute 'DATA_HERO'
 Linux-7.0.0-31-generic-x86_64-with-glibc2.39 x86_64
 Ren'Py 8.5.2.26010301
 Love & Sex : Second Base -  26.4.0c
-Mon Sep 14 23:42:41 2026
+Fri Sep 18 14:09:28 2026

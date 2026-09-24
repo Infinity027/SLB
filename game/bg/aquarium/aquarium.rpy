@@ -10,4 +10,3 @@ init python:
     "music": "music/roa_music/blue.ogg",
     "outfit": "casual",
     })
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

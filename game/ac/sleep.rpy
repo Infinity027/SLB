@@ -109,7 +109,6 @@ label sleep(sleep_girl=None, sleep_room=hero.bedroom):
         if "luxury_bed" in hero.inventory:
             energy_recovery += 0.25
 
-
         wake_up_event = None
         alarm_triggered = False
         is_hungry = False
@@ -188,4 +187,3 @@ label sleep(sleep_girl=None, sleep_room=hero.bedroom):
             "I'm feeling fully rested."
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

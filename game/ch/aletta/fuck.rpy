@@ -157,30 +157,21 @@ label aletta_fuck_date_intro_male(location="hero"):
             with fade
             "As soon as we walk in through the front door, Aletta takes hold of my hand."
             "She already knows where my room is, and starts to lead me there."
-            show aletta normal b underwear with dissolve
+            show aletta underwear normal with dissolve
             "But as she makes her way through the house, she starts to strip off her clothes."
             "Along the way, she peels off one thing after another, tossing them aside as she goes."
-            show aletta b naked with dissolve
-            "By the time we reach the stairs, she's already naked to the waist."
-            "And when we get to the foot of them, only her underwear remains."
-            "Aletta pauses by the door to my bedroom, bending over to pull off her panties."
-            "These she tosses over her shoulder before slipping through the door."
             $ game.room = "bedroom1"
             scene bg bedroom1
-            show aletta b naked
+            show aletta naked normal
             with fade
             "She beckons for me to follow, and I hurry to do as I'm told."
             "I close the door and lean against it, my heart pounding in my chest."
             "For a moment I can't pull myself away from it."
-            "Almost as if I'm afraid of someone bursting in and forcing us to stop before we've started."
-            "For her part, Aletta seems amused by my ruffled state."
         else:
             $ game.room = "bedroom1"
             "It can be hard to read Aletta sometimes, as she almost always has a superior look on her face."
             "And she often smiles or laughs in a condescending manner that's similar to when she's being sincere."
             "So I find myself waiting to see how she acts before I know what she's actually feeling."
-            "And this is one of those occasions, when we've just got back to my place after a date."
-            "I mean, I thought that it went pretty well, that we both had a good time."
             scene bg bedroom1
             show aletta date happy
             with fade
@@ -191,16 +182,14 @@ label aletta_fuck_date_intro_male(location="hero"):
             aletta.say "Actually, the best time I've had in a long while!"
             mike.say "R...really?"
             mike.say "That's great to hear, Aletta!"
-            "I should also mention that knowing Aletta's in a good mood puts me in one too."
-            "And knowing that she's in such a good mood while we're alone in my room..."
-            "Well, that's enough to make me more than a little hot under the collar!"
+            show aletta talk
             aletta.say "Of course it is, [hero.name]!"
             aletta.say "In fact..."
             aletta.say "You showed me such a good time that you deserve a reward."
             mike.say "I...I do?"
             aletta.say "Sure you do."
             aletta.say "How about these?"
-            show aletta b flirt
+            show aletta flirt
             "Aletta thrusts her chest towards me."
             "At the same time she squeezes her breasts together."
             aletta.say "You've been staring at them all night, haven't you?"
@@ -210,7 +199,7 @@ label aletta_fuck_date_intro_male(location="hero"):
             "And the mere sight of those huge, heavy breasts has kept me hard as a rock!"
             aletta.say "Well, you hurry up and get undressed."
             aletta.say "And I'll see what I can do about that, okay?"
-            show aletta b naked with dissolve
+            show aletta naked normal with dissolve
     elif aletta.sub <= 50:
         $ game.room = "bedroom1"
         scene bg bedroom1 with fade

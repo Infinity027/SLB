@@ -1151,9 +1151,6 @@ label splashscreen:
             persistent.set_mute_alarm_clock = True
             persistent.mute_alarm_clock = False
     hide screen disclaimer with fade
-    show screen promo with fade
-    pause
-    hide screen promo
     scene bg white
     with dissolve
     return

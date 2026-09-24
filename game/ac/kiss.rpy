@@ -26,14 +26,14 @@ label kiss_her:
         call expression f"{active_girl.id}_kiss" from _call_expression_32
         call check_cheated ("kissing") from _kiss_her
     elif active_girl.love + hero.charm < 120 and not active_girl.is_girlfriend or active_girl.flags.nokiss or not game.active_date.score >= 75:
-        $ renpy.show(active_girl.id)
+        $ renpy.show(f"{interact_girl.id} normal")
         "[active_girl.name] pushes me away."
         active_girl.say "Don't ever do that again."
         $ active_girl.love -= 2
         $ hero.cancel_activity()
         $ renpy.hide(active_girl.id)
     elif active_girl.love + hero.charm < 140 or game.active_date.score >= 75:
-        show expression f"{active_girl.id} kiss"
+        $ renpy.show(f"{interact_girl.id} kiss")
         if not active_girl.flags.kiss:
             "When our lips come into contact with each other, it sends shivers down my back..."
             "The intoxicating smell of flowers and the taste of blueberry give a different vibe to that first kiss..."
@@ -42,10 +42,10 @@ label kiss_her:
             "[active_girl.name] kisses me softly."
         $ active_girl.flags.kiss += 1
         $ active_girl.love += 1
-        hide expression f"{active_girl.id} kiss"
+        $ renpy.hide(f"{interact_girl.id} kiss")
         call check_cheated ("kissing") from _kiss_her_2
     else:
-        show expression f"{active_girl.id} kiss"
+        $ renpy.show(f"{interact_girl.id} kiss")
         if not active_girl.flags.kiss:
             "[active_girl.name] grips my neck and sticks her wet tongue in my mouth."
             "After what feels like an eternity, we part, breathless..."
@@ -55,7 +55,7 @@ label kiss_her:
             "[active_girl.name] kisses me passionately."
         $ active_girl.flags.kiss += 1
         $ active_girl.love += 2
-        hide expression f"{active_girl.id} kiss"
+        $ renpy.hide(f"{interact_girl.id} kiss")
         call check_cheated ("kissing") from _kiss_her_3
     return
 
@@ -79,4 +79,3 @@ label check_cheated(action, cheat_npc=None):
                 return True
     return False
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

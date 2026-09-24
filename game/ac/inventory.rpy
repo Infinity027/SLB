@@ -28,4 +28,3 @@ label inventory:
             $ result.use()
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

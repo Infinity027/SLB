@@ -95,9 +95,7 @@ init python:
     "duration": 0,
     "icon": "fashion_talk",
     "conditions": [
-       ActiveTarget(
-            Not(IsActivity("sleep"))
-            ),
+       ActiveTarget(Not(IsActivity("sleep"))),
         ],
     "do_once": False,
     "once_day": "ACTIVE",
@@ -216,12 +214,12 @@ label talk:
     if (hero.charm + (active_girl.love // 2)) // 2 >= daily * 10 or date_girl == active_girl:
         $ subjects = active_girl.get_talk_subjects()
         if subjects:
-            $ renpy.show(active_girl.id)
+            $ renpy.show(f"{interact_girl.id} normal")
             $ chosen_subject = renpy.call_screen("choose_talk", subjects)
             $ renpy.hide(active_girl.id)
             if chosen_subject.id != "cancel":
                 $ active_girl.set_flag("daily_interact", 1, 1, "+")
-                $ renpy.show(active_girl.id)
+                $ renpy.show(f"{interact_girl.id} normal")
                 if renpy.has_label(chosen_subject.label):
                     call expression chosen_subject.label from _call_expression_185
                     $ chosen_subject.apply_changes()
@@ -237,11 +235,10 @@ label talk:
             "We have nothing to talk about."
             $ hero.cancel_activity()
     else:
-        $ renpy.show(active_girl.id)
+        $ renpy.show(f"{interact_girl.id} talk")
         $ active_girl.say("Sorry, I don't have time right now.")
         $ hero.cancel_activity()
         $ renpy.hide(active_girl.id)
     $ active_girl.set_flag("interact", 1, 1, "+")
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc
