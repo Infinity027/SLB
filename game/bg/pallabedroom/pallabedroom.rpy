@@ -13,4 +13,3 @@ init python:
     "music": "music/roa_music/juice.ogg",
     "tags": ["pallahome"],
     })
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

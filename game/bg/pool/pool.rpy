@@ -215,10 +215,10 @@ label pool_tan:
     return
 
 label apply_sunscreen:
-    show expression f"beach cream {active_girl.id}"
+    show expression f"{active_girl.id} sunscream"
     "I put sunscreen lotion on [active_girl.name]."
     call expression Person.find(active_girl.id).get_chat from _call_expression_52
-    hide expression f"beach cream {active_girl.id}"
+    hide expression f"{active_girl.id} sunscream"
     $ active_girl.love += 2
     return
 
@@ -320,4 +320,3 @@ label swim:
         $ renpy.say("", randchoice(swim_say))
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

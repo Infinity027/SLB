@@ -14,4 +14,3 @@ init python:
     "random_music": True,
     "tags": ["park"],
     })
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

@@ -34,4 +34,3 @@ label about_photostudio:
     "A photo studio has opened in town. Maybe I can find a job here."
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

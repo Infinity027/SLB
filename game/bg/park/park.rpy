@@ -261,4 +261,3 @@ label park_thug_attack:
     hide danny
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

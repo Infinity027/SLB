@@ -59,4 +59,3 @@ init python:
     "outfit": "casual",
     "tags": ["policestation"],
     })
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc
