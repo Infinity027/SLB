@@ -260,12 +260,10 @@ label aletta_kiss:
     if aletta.love < 25 and not aletta.is_girlfriend and not game.active_date.score >= 75:
         show aletta
         "It can be hard to get a handle on just how a girl as strong-willed and forceful as Aletta is feeling from one moment to the next."
-        "With a less intimidating girl, I probably wouldn't think twice about taking a chance on being wrong."
+        "With a less intimidating girl, I would take a chance on being wrong."
         "I feel the insatiable urge to lean forward and try to give Aletta what I hope will be our first kiss."
         "I feel like the moment is right, everything feels right - at least from my point of view."
         "The first indication I get to tell me that I'm very wrong is the feeling of something firm and hard thumping me in the middle of the chest."
-        "A moment later, the other hand is pushed into my face, turning my head away from her and puckering my lips at the same time."
-        "And there I have perhaps the most neat evidence of my miss-reading Aletta, as well as the consequences for doing so."
         $ aletta.love -= 5
         $ aletta.sub -= 5
         hide aletta
@@ -276,12 +274,10 @@ label aletta_kiss:
             $ aletta.lesbian -= 1
         show aletta kiss
         "I don't want to find that I've mistimed this, picked the wrong moment and misread the cues that I think Aletta's been sending me just now."
-        "But I just can't keep sitting on the feelings that she inspires in me any longer, and so to hell with the consequences."
+        "I can't keep my feelings for her bottled up anymore, so I'm diving in, consequences be damned."
         "I pull her closer and kiss her, full on the lips and with no attempt to be gentle."
         "For a moment I fear that I've totally misjudged the situation."
         "But then I almost literally feel Aletta melt in my arms."
-        "It's not that the fight goes out of her, rather that the same strength and passion is suddenly channelled into our embrace instead."
-        "Now her arms are wrapping around me and she's returning the kiss with a passion that almost overwhelms me!"
         hide aletta kiss
         $ aletta.flags.kiss += 1
     else:
@@ -290,7 +286,7 @@ label aletta_kiss:
         "If I was under the impression that breaking the ice with Aletta and having our first kiss together was going to be like bursting a damn, then I was proven wrong pretty quickly."
         "The ice queen of the office didn't seem about to melt quite that easily, and she was keen on the idea of rationing kisses even after that."
         "If I wasn't forceful enough when we kissed, Aletta would become the one to make the demands and push until she got what she wanted."
-        "She would claw, slap and even bite at me if I were not giving her what she wanted, quickly enough or in sufficient amounts to satisfy her."
+        "She would claw, slap, or bite if I didn't give her what she wanted fast enough."
         "But you can get used to cuts and bruises around the mouth, and you can always deal with the pain."
         "Especially when it's being inflicted right along with the kind of kisses that Aletta gives to me."
         hide aletta kiss
@@ -337,7 +333,6 @@ label aletta_propose_male:
         aletta.say "A sweet, well-meaning, but impossible gesture."
         "I nod slowly, withdrawing the ring and getting back to my feet."
         "Aletta nods too, and with that the whole matter seems to be settled."
-        "Although I can't help feeling that I don't really understand what just happened..."
         $ aletta.love -= 25
         $ aletta.sub -= 25
     else:
