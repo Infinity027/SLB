@@ -13,4 +13,3 @@ init python:
     "exits": ["pallalivingroom"],
     "music": house_music(),
     })
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

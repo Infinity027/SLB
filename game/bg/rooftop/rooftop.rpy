@@ -14,4 +14,3 @@ init python:
     "exits": ["map"],
     "outfit":"casual",
     })
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

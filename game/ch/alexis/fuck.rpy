@@ -565,101 +565,57 @@ label alexis_fuck_date_blowjob:
     mike.say "Alexis - what are you..."
     alexis.say "What does it look like, [hero.name]?"
     alexis.say "I've been wanting this all night!"
+    scene alexis_bj01
     "I open my mouth again, meaning to say protest."
     "But then I stop myself before I begin to form the words."
-    "What in the hell am I doing?"
-    "Why would I stop Alexis from having her way with me?!?"
-    "I make to sit up, but Alexis shoves me back down the moment I do so."
     mike.say "Wha..."
     alexis.say "Just lie down and shut up."
     alexis.say "I'll take it from here!"
     "I stare at Alexis in stunned silence for a moment."
-    "And then I do exactly as I'm told."
-    "When a girl wants you this bad, why fight it?"
     "Now that she's the one in charge, Alexis doesn't waste another moment."
-    show alexis bj with fade
-    "She spreads my legs and lowers herself between them."
-    "Soon she's laid on her belly, eyes level with my own."
-    show alexis bj chub
-    "And once there, she takes a hold of my already stiff cock."
-    "All I can do is lie back and watch, panting at the feel of it."
+    scene alexis_bj02
     "Alexis stares at my cock hungrily, already stroking the shaft."
-    show alexis bj pinch at startle(0.05,-10)
     "With her other hand she reaches out and tweaks one of my nipples."
-    mike.say "Ouch..."
-    mike.say "Hey, what was that for?!?"
-    "Alexis let's out a wicked giggle."
-    alexis.say "Oh, just checking you're awake!"
     "And with that, she gives my cock a hard squeeze."
     "But before I can object to such rough treatment, Alexis kicks it up a notch."
-    show alexis bj speed at startle(0.05,-10)
+    scene alexis_bj03
     "Her hand begins to stroke the shaft up and down."
     "And at the same moment she licks the tip, tickling it with her tongue."
-    "The protest dies in my throat, replaced with a moan."
     "I see Alexis smile at this, noting the reaction she's getting."
-    show alexis bj blowjob
+    scene expression make_anim(alexis_blowjob_bed, 0.4, loop=True)
     "A reaction which only becomes more intense as she parts her lips."
     "I watch my cock disappear into Alexis's mouth."
     "Then I feel the sensation of her tongue as it goes to work."
-    "Alexis still has the shaft in her hand, working it the whole time."
-    "And the firm grip contrasts wildly with the softness at the other end."
-    "Most of the time I can't actually tell what's caressing the tip."
     "Lips, teeth and tongue all seem to work together in perfect harmony."
-    show alexis bj close
+    scene expression make_anim(alexis_blowjob_wide, [0.4, 0.2, 0.6], loop=True)
     "And as Alexis bobs her head up and down, I struggle to hold mine up."
     "I'm almost gasping for breath by now, heart pounding in my chest."
     "But Alexis shows no sign of tiring, nor slowing down."
-    "My cock is going so deep with each downward motion."
     "It must be reaching all the way into her throat!"
     "Just as I begin to wonder how deep it can go, Alexis changes gear again."
-    "I feel her cup my balls in the palm of her free hand."
-    "Then she squeezes them tightly and without a hint of mercy."
-    "I hear myself cry out, rather than know I'm doing it."
-    "And my whole body seems to react to the sensation all at once."
     "But the only thing I can be sure of in that moment is that I'm about to cum!"
     menu:
         "Cum on her face":
             "With no more than a second to spare, I reach down between my thighs."
             "One hand on each side of Alexis's head, I pull her upwards."
             "Luckily for me she seems to have the same idea, and doesn't resist."
-            show alexis bj hard
+            scene alexis_bj_cum_face with vpunch
             "My cock pops out of her mouth with mere fractions of a second to spare."
-            show alexis bj cumshot with vpunch
             "And Alexis gasps as she takes it straight in the face."
-            show alexis bj cum onface with vpunch
-            "Cum hits her between the eyes, making her blink."
-            show alexis bj -speed -cumshot with vpunch
-            "Some spreads up her forehead, but most travels south."
-            "It dribbles down her nose and cheeks, cling to her hair too."
-            "But none of this seems to dampen Alexis's spirits in the slightest."
-            show alexis bj open
             "Instead she smiles up at me, still panting from her efforts."
             "And when the cum reaches her lips, she laps at it with her tongue."
             "The look of satisfaction on her face telling that's what she was hungry for all along."
         "Cum in her mouth":
-            show mouth_insert alexis zorder 1 at zoomAt(1, (20, 180))
             "I know just how hungry Alexis seems to be right now."
             "And so I make no effort to move a muscle."
             "Instead I just lie back and let nature take it's course."
-            show mouth_insert alexis cum
-            show alexis bj -speed cum inmouth
-            with vpunch
+            scene alexis_bj_cum_mouth with vpunch
             "A moment later, I shoot my load straight into her mouth."
             with vpunch
             "Just as I thought, Alexis doesn't miss a beat."
-            with vpunch
-            "Instead she hungrily begins to swallow as fast as she can."
-            "Alexis never even stops to gasp for breath as she does so."
-            "And she never spills as much as a drop either."
-            show mouth_insert alexis -cum
-            show alexis bj -cum -inmouth hard open
-            "Only when I'm totally spent does she release my cock."
-            "And then she finally lets out a sigh of sheer exhaustion."
-            "But I can see from the look in her eyes that she's finally sated."
             "Alexis smiles up at me, exhausted by her efforts."
             "It's plain to read the emotions on her face."
             "And they tell me that she got what she was hungry for all along."
-            hide mouth_insert alexis
     return
 
 label alexis_fuck_date_cunnilingus:

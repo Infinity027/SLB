@@ -278,7 +278,7 @@ label shiori_teaser:
     play sound door_knock
     "A knock at my office door brings my wallowing in self-pity to an abrupt end."
     mike.say "Yeah - come on in!"
-    show shiori work talk at center, zoomAt(1, (440, 720)) with easeinleft
+    show shiori talk at center, zoomAt(1, (440, 720)) with easeinleft
     "Shiori" "Is...is this the right place?"
     "Shiori" "I'm here about the secretary position?"
     show shiori normal
@@ -289,15 +289,13 @@ label shiori_teaser:
     "She's a petite girl, Asian by descent, with large eyes and black hair."
     show shiori surprised
     "Shiori" "Oh...oh dear..."
-    show shiori stuned
     mike.say "Ah...f...forget what I just said."
     mike.say "I must have gotten the times mixed up, that's all!"
     show shiori smile at center, zoomAt(1, (640, 720)) with ease
     "She smiles, but with real emotion."
     "She bows at the waist, just a little."
-    show shiori happy
-    "Shiori" "My name is Shiori."
     show shiori talk
+    "Shiori" "My name is Shiori."
     shiori.say "And you must be Mister [hero.family_name]."
     show shiori normal
     "I realize that, as she bowed, I couldn't help staring down her top."
@@ -311,7 +309,7 @@ label shiori_teaser:
     show shiori smile
     "And the smile she gives me at hearing it..."
     "No, must focus - be professional!"
-    show shiori _a talk
+    show shiori talk
     shiori.say "I...I have to be honest, Mister [hero.family_name]."
     shiori.say "I don't have the greatest CV in the world."
     shiori.say "But if I'm under the right man - then you wouldn't believe what I can do..."
@@ -351,14 +349,14 @@ label shiori_teaser:
             mike.say "I...I just kind of like it when you call me 'Mister [hero.family_name]', that's all."
             show shiori talk
             shiori.say "Oh...I...I had no idea!"
-            show shiori normal blush
+            show shiori blush
             "She blushes and looks away in a disarmingly demure fashion."
             "And I feel it almost like a physical blow."
             show shiori talk
             shiori.say "I'd get to do it all the time - if you hired me, Mister [hero.family_name]!"
             show shiori normal
             "Is she...is she flirting with me?!?"
-            "I...I have to keep a level head here, be professional!"
+            "I have to keep a level head here, be professional!"
             mike.say "Y...you better get used to being at my beck and call, Shiori."
             mike.say "Because I think you'd be perfect for the job."
             "Shiori stares at me, her huge eyes wide with surprise."

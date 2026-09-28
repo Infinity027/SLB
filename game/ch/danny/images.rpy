@@ -1,3 +1,22 @@
+# =============================================================================
+#  danny — flat image system  (replaces the old split layeredimage)
+#
+#  Talking sprites resolve to:   game/images/danny/<dress>/<expression>.png
+#  The dress is chosen automatically from danny.get_clothes() (her activity),
+#  so every `show danny <expression>` line keeps working unchanged.
+#
+#  Engine + expression list live in  game/flat_sprites.rpy
+#  Drop your PNGs into the folders under game/images/danny/ (see _HOW_TO_FILL.md).
+#
+#  To revert to the old layered art, restore this file from git.
+# =============================================================================
+
+init python:
+    register_flat_character("danny", [
+        "casual",        # default outfit (REQUIRED — fallback for every other dress)
+        "halloween",
+    ])
+
 init 1:
     layeredimage danny:
         attribute_function Pickers([OutfitPicker], npc=danny)
@@ -36,26 +55,6 @@ init 1:
 
     layeredimage danny smartphone:
         always "danny_smartphone"
-
-    layeredimage danny fight:
-
-        attribute lexi if_any "win":
-            "danny_fight_lexi_happy"
-
-        attribute lexi if_any "lose":
-            "danny_fight_lexi_sad"
-
-        attribute alone:
-            "danny_fight_danny_win"
-
-        attribute win:
-            "danny_fight_danny_win"
-
-        attribute win:
-            "danny_fight_hero_lose"
-
-        attribute lose:
-            "danny_fight_hero_win"
 
     layeredimage danny fight2:
         group lexi auto

@@ -250,10 +250,7 @@ label hot_tub:
         if girl_id == 'pass':
             $ hero.cancel_activity()
             return
-    if Person.find(girl_id).sub >= 25 and Person.find(girl_id).sexperience >= 1:
-        $ renpy.show("hottub " + girl_id + " naked")
-    else:
-        $ renpy.show("hottub " + girl_id)
+    $ renpy.show(girl_id + " hottub")
     if renpy.has_label(girl_id + "_hottub"):
         call expression girl_id + "_hottub" from _call_expression_116
     else:

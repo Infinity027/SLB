@@ -47,13 +47,11 @@ label reona_teaser:
     "Now I'm the bad guy."
     show reona
     "I turn back to apologize to the petite girl I almost knocked over and pause, struck immediately by the sight of her."
-    "Her skirt is so short it barely even begins to cover the curve of her hips, and my eyes linger for a moment on the hem of it, where I know her panties must only be hidden from me by a single fiber of the material."
     "My eyes trail up the bare, flawless, tanned skin of her midriff to her cleavage, full and generously present in what must be the highest grade push-up bra, practically smacking me in the face."
     "That must have been the plush, soft, blissful feeling of flesh I'd felt when I'd run into her."
-    "The knowledge even in hindsight makes something in me stir."
     "She's stunning, though she looks like a caricature of that trend I've heard about...ganguro or gyaru?"
     "She's got flashy, admittedly tacky accessories and heavily bleached hair and thick, dark makeup painting her pretty features."
-    "She's shamelessly, openly sucking on a lollipop shaped like a cock as she looks up at me with her big doe eyes."
+    show reona talk
     "Girl" "Hey."
     mike.say "I-I'm sorry."
     "I clear my throat to control my stammer before speaking on."
@@ -64,9 +62,7 @@ label reona_teaser:
     mike.say "Watching me?"
     "Why would she have been? Was I doing something stupid? Is there something in my teeth?"
     "She pops out her hip, exposing another half inch of her thighs on that side, and my eyes drop back down to the bare skin helplessly."
-    "The girl brings the free hand not holding her lollipop up to the top button of her shirt, struggling to hold her bursting breasts inside, and she toys with it, slowly and intentionally, tugging it down a bit to give me a bit more of a view down into her shirt."
     "Girl" "Mhmm. You look like the kinda guy who can give a girl a good time."
-    "A coy little smile curled at one corner of her lips, and she slipped the head of the lollipop back between them, trailing her tongue down along the shaft for a moment before continuing her thought."
     "Girl" "I can smell them from a mile away."
     "I'm stunned to silence for a moment by her brashness, shifting my weight and slipping my hands into my pockets, knowing I'll probably need to make some adjustments."
     menu:
@@ -102,11 +98,9 @@ label reona_teaser:
     "I look down at the paper in my hand, unfolding it curiously. I can smell the perfume she used on it from here."
     "It says REONA, with a little heart and star doodled next to it, and then a phone number."
     "At the bottom corner there's a little dick doodled, cumming all over a tongue emoji."
-    "Not subtle, maybe, but she's made damn sure I won't forget who Reona is when I read this again."
     show bree annoyed
     bree.say "Hey!"
     "I'm shocked out of my dreamy state, smiling down at her phone number as I daydream, by the sound of [bree.name]'s voice."
-    "She sounds a little bit upset."
     "I turn back to see her jogging down the hall toward me, her brows knit."
     mike.say "[bree.name]? What's wrong?"
     bree.say "I saw you talking to that girl..."
@@ -115,10 +109,9 @@ label reona_teaser:
     "Still, [bree.name] seems genuinely concerned about it, and I can see it swimming in her big brown eyes."
     bree.say "Stay away from that one, alright? Everyone around here knows about her."
     "I'm not completely sure whether or not I want to stay away from her."
-    "Something about her bold, blatant desire for my dick, the look in her eyes that told me she'd rather get on her knees and suck me off right there in the hall than be limited to her candy... was almost hypnotizing."
-    "I don't think I've ever seen a girl that I knew wanted me that badly, for no reason at all except for the pleasure of it, and something about the idea is driving me crazy."
+    "Something about her bold, blatant desire for my dick."
     mike.say "I'll keep it in mind."
-    show bree cry
+    show bree sad
     "[bree.name] pouts a little bit, but seems to accept it for what it is."
     bree.say "I'm just looking out for you."
     "I give her a smile that's a little more reassuring, and she seems to relax entirely, smiling slightly back, though her brows remain slightly furrowed."
@@ -127,4 +120,3 @@ label reona_teaser:
     "I wave her off as she turns and jogs off, and exhale a sigh in the middle of the hallway where I'm left alone by both girls, processing my thoughts for a minute before I move on."
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

@@ -33,4 +33,3 @@ init python:
     "display_name": "Swim",
     "icon": "swim",
     })
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

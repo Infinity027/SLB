@@ -1,9 +1,0 @@
-# GOTH HAREM REMOVED — inert stub (mount forbids deleting the file).
-# Minimal valid story with an always-false condition so it never activates.
-name: Goth Harem (removed)
-type: harem
-participants: []
-conditions:
-  - "False"
-steps: {}
-outcomes: {}

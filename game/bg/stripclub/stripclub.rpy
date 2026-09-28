@@ -132,37 +132,27 @@ label harmony_poledance:
     "Raucous music plays as Harmony strides out into the middle of the stage."
     "She hold herself like she owns the place, like a queen holding court."
     "Instantly the crowd pick up on something about the way she's smiling."
-    "It's like they just know this is going to be something special."
+    show harmony_poledance01 with fade
     "And from the moment she starts to move, Harmony doesn't disappoint."
-    show harmony poledance sexynun with fade
-    "I was amazed at how little she was wearing when we met up earlier in the night."
-    "But now somehow she manages to turn taking it all off into an entire act!"
-    "Harmony twists and turns her body, inching her dress off of her shoulders."
-    "Little by little, more of her naked flesh is exposed to the watching audience."
-    "The weird thing is that I'm every bit as entranced as everyone else."
-    "I mean, I've seen Harmony naked more than a few times by now."
-    "But somehow seeing her on stage like this makes it all seem new."
+    "I was amazed at how little she was wearing..."
     "I'm straining to see all that I can, just like everyone else."
-    "And the more I see, the more I crave to see the rest of her."
     "I don't know if Harmony practised this routine beforehand."
     "Maybe the whole thing of dragging me in here was a set-up."
     "Then again, it could all be spontaneous, something she has a natural gift for."
+    show harmony_poledance02 with fade
     "Either way she's killing it up there, and I'm getting harder by the second."
-    "Harmony's down to her bra and panties by now."
     "And she's wrapping herself around the pole on the stage."
     "I can't believe how easily she's teasing the audience in here."
     "They're following her every move, almost begging for more!"
     "When she finally turns her back and unhooks her bra, the place goes wild."
     "Harmony covers her breasts with both hands, then turns back around."
     "For a moment I think she's going to leave it at that."
-    show harmony poledance naked with dissolve
+    show harmony_poledance03 with dissolve
     "But then she reaches out for the pole with her hands."
     "This allows her heavy, round breasts to fall free."
     "Harmony starts to move again, making them sway back and forth."
     "The motion is hypnotic, impossible to ignore."
-    "I don't know if I'm being reminded of breast-feeding as a child."
-    "Or just seduced by the most perfect pair of breasts imaginable!"
-    hide harmony poledance with fade
+    hide harmony_poledance03 with fade
     return
 
 
@@ -215,4 +205,3 @@ label drink_poledance:
         "I enjoy my special show."
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

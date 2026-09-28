@@ -302,71 +302,48 @@ label aletta_sleep_date_fuck(location="hero"):
 
 label aletta_fuck_date_assplay:
     "She walks slowly over to the bed and sits down on the edge."
-    "Crossing her legs, she leans back, resting her hands on the mattress."
-    "I hear myself gulp as this spreads her breasts, which rise and fall with each breath."
     aletta.say "I take it you like what you see, [hero.name]?"
     "Aletta raises a quizzical eyebrow as she asks the question."
     "I can only nod, my head bobbing up and down crazily."
     aletta.say "Well, how about you return the favour?"
     "Still nodding like a fool, I scramble to start pulling off my own clothes."
-    "But my efforts are nothing like Aletta's casual striptease on the way to my room."
-    "I almost tear off what I'm wearing, unable to keep my eyes off of her as I do so."
-    "Aletta smiles at my efforts, I hope because she's impressed with what she sees."
-    "Or at least that she thinks the enthusiasm makes up for my lack of grace."
-    aletta.say "Hmm..."
-    aletta.say "I think I'd like a closer look!"
-    "It's all that I can do to make myself walk the short distance to where Aletta's sitting."
-    "My instinct is to cover the distance almost at a dash and pounce on her."
-    "But I clamp down on that urge, afraid of looking utterly desperate and needy."
+    "I clamp down on that urge, afraid of looking utterly desperate and needy."
     "Which is exactly how she's making me feel inside right now!"
     aletta.say "That's right - come on over here."
     "As I draw close to her, Aletta uncrosses her legs and rises from the bed."
     "She still has that same approving smile on her face as she reaches out for me."
     "I close my eyes as she leans in for a kiss."
-    show aletta kiss naked with fade
+    #attention kiss
+    show aletta naked kiss with fade
     $ aletta.flags.kiss += 1
     "But all the same I can feel the thrill passing through me as our naked bodies touch."
     "Aletta's breasts press against my chest, her flat stomach against mine."
     "Our legs twine themselves together, and I can feel the warmth between her thighs."
-    "Suddenly, I feel Aletta's hand taking hold of mine once more."
-    "The difference is that this time she's not leading me after her."
-    "Instead she guides it slowly between her legs, silently letting me know just what she wants."
-    "At first I stroke the sensitive skin around the lips of her pussy."
-    "Enjoying the feel of the soft hair and even softer skin, I hear Aletta moan at my touch."
-    "She's getting ever more wet with each moment that passes."
-    "And the heat I thought I felt before now seems to be melting her too."
-    show aletta blush b naked with fade
     "Without warning, Aletta breaks off the kiss."
     "Which leaves me standing there, literally open-mouthed."
     if aletta.flags.buttplug:
-        show aletta doggy plug with fade
-    else:
-        show aletta doggy with fade
-    "But then I see how she's bending over and beginning to kneel on the bed."
-    "I watch as she spreads her buttocks, as if inviting me to take full advantage."
-    "And it's not an invitation that I'm about to turn down either."
-    "I lean in close, the fingers of one hand quickly finding their way back to Aletta's pussy."
-    "This time, the way that she's spread her legs makes it that much easier."
-    "My thumb and middle finger part her lips still further, while the index finger slips inside of her."
-    "The sound that this makes is almost as good as the way it feels."
-    "But what's better than both is the way Aletta begins to moan."
-    "She looks back over her shoulder, almost panting at my efforts."
-    "It's then that I remember how close I am to her ass too."
-    "And it only takes a moment to pull her buttocks apart."
-    if aletta.flags.buttplug:
-        "At first, I'm more than a little surprised to discover something blocking my progress."
-        "But then I remember that the rubbery object clenched in Aletta's ass is actually a butt plug."
-        "Or to be more specific, the butt plug that I bought her myself!"
+        scene aletta doggy_butplug with fade
+        "At first, I'm more than a little surprised to discover the butt plug which I bought her myself!"
         "Smiling to myself at the thought it's been up there all evening, I reach out for it."
         $ aletta.sub += 1
+        scene aletta_butt_plug_remove with fade
         "And I give it a little tap and wiggle before moving on to where I really want to be."
         "Aletta groans in pleasure at even such a small manipulation of the toy."
-        "The plug refuses to budge at first, as Aletta's muscles contract around it."
-        "But with some determined pulling and twisting, it finally begins to work its way out."
         "The whole time this is happening, Aletta groans in pleasure at my efforts."
         "A sound that's only drowned out by the almost comical sound the plug makes when pops out of there."
-    hide aletta
-    show aletta rimming hand finger with fade
+    else:
+        scene aletta doggy with fade
+        "But then I see how she's bending over and beginning to kneel on the bed."
+        "I watch as she spreads her buttocks, as if inviting me to take full advantage."
+        "I lean in close, the fingers of one hand quickly finding their way back to Aletta's pussy."
+        # attention: insert finger
+        "My thumb and middle finger part her lips still further, while the index finger slips inside of her."
+        aletta.say "Oh, [hero.name]..."
+        "The sound that this makes is almost as good as the way it feels."
+        "But what's better than both is the way Aletta begins to moan."
+        "She looks back over her shoulder, almost panting at my efforts."
+        
+    scene 
     "Then I let my tongue do the rest..."
     "At this, Aletta's moans become almost pained, and yet also desperate for more."
     "As my tongue licks and probes around her ass, I feel her hand grasping the back of my head."
@@ -1418,16 +1395,6 @@ label aletta_fuck_office_bj:
     "Gasping for breath, I hold onto the arms for dear life."
     "It feels like I can't hold on for a moment longer."
     "I'm going to cum!"
-
-
-
-
-
-
-
-
-
-
     "I just lie back and let Aletta finish the job all on her own."
     "And it doesn't take long for her to do it either."
     show mouth_insert aletta cum
@@ -2618,17 +2585,6 @@ label aletta_restaurant_blowjob:
     "She's swallowed me so deep by now that I'm amazed she can breath at all!"
     "And from the way I'm feeling, that's going to get even harder."
     "Because I'm about to cum!"
-
-
-
-
-
-
-
-
-
-
-
 
     "There's no time for me to warn Aletta before it happens."
     "But luckily for me, she seems to be well prepared."

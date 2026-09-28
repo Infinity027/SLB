@@ -191,8 +191,6 @@ label vacuum_bree_sleep_male:
     "I see that my name's down on the rota for vacuuming the house this week."
     "And don't get me wrong, I hate housework as much as the next same human being."
     "But I also want to keep the others sweet and look like I'm doing my bit."
-    "So I grab the vacuum-cleaner and begin the arduous task that's been assigned to me."
-    "I mean sure, I'm doing it last thing at night before I turn in."
     "But the important thing is that it's getting done at all - right?"
     "Well, apparently someone seems to think differently..."
     scene secondfloor
@@ -200,8 +198,6 @@ label vacuum_bree_sleep_male:
     bree.say "[hero.name]!"
     bree.say "What are you doing?!?"
     "I feel someone patting me on the back."
-    "And so I spin round to see [bree.name] standing in the corridor behind me."
-    "She's in her pyjamas, she her hair's a crazy mess too."
     stop sound
     "I turn off the vacuum in order to better hear what she's saying."
     mike.say "Oh...hi, [bree.name]."
@@ -219,16 +215,12 @@ label vacuum_bree_sleep_male:
     "I honestly think I can see the veins starting to stand out on [bree.name]'s forehead."
     "That and her eye start to twitch as she tries to hold onto her temper."
     "But it's not a struggle she can keep up for too long."
+    show bree talk
     bree.say "Ooh, [hero.name]!"
     bree.say "You selfish twerp!"
     bree.say "Couldn't you have done this BEFORE I went to bed?!?"
     menu:
         "Apologise":
-            "I play the events of the past few hours back in my head."
-            "I'm thinking that I can find proof to throw back at [bree.name]."
-            "Something that will show her just why I have to be doing this now."
-            "But all I can recall is that I spent hours on the Zbox."
-            "Which is obviously my own dumb fault!"
             mike.say "Ah, yeah, [bree.name]."
             mike.say "I should have done that."
             mike.say "But I was on the Zbox instead."
@@ -237,7 +229,7 @@ label vacuum_bree_sleep_male:
             mike.say "And sorry for being an irresponsible jerk too."
             "I see the look on [bree.name]'s face soften at this."
             "She smiles weakly as she rolls her eyes."
-            show bree normal
+            show bree smile
             bree.say "Apology accepted, [hero.name]."
             bree.say "I guess I was playing too."
             bree.say "And I remember asking you to stay when you wanted to quit as well!"
@@ -250,14 +242,11 @@ label vacuum_bree_sleep_male:
             "Which leaves me alone in the corridor, still clutching the vacuum-nozzle."
             $ bree.love += 1
         "Tell off":
-            "Hey, wait a minute - where does [bree.name] get off saying all of that?"
-            "She and Sasha are always lecturing me about doing my fair share around here."
-            "And here I am, trying to do just that, and getting hassle for it!"
             mike.say "I couldn't have done it earlier, [bree.name]."
             mike.say "It would've cut into my gaming time!"
             "[bree.name]'s eyes go wide at this and her mouth hangs open."
             "Somehow I don't think the explanation is what she wanted to hear."
-            show bree lose
+            show bree annoyed
             bree.say "That is the single lamest excuse I've ever heard!"
             bree.say "Nobody made you play on the Zbox all night."
             mike.say "Oh no?"

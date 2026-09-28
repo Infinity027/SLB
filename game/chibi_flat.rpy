@@ -38,17 +38,17 @@ init 0 python:
     # ---- resolver: images/chibi/<activity>.png at render time, blank if absent
     def _flat_chibi(st, at, activity=None):
         for path in (
-            "images/chibi/%s.png" % activity,   # the drawn pose
-            "images/chibi/idle.png",            # optional generic fallback pose
+            "images/chibi/%s.jpg" % activity,   # the drawn pose
+            "images/chibi/idle.jpg",            # optional generic fallback pose
         ):
             if renpy.loadable(path):
                 return Image(path), None
         return Null(), None                     # not drawn yet -> blank, never an error
 
-    # ---- optional shared backdrop behind every pose (images/chibi/bg.png) ----
+    # ---- optional shared backdrop behind every pose (images/chibi/bg.jpg) ----
     def _flat_chibi_bg(st, at):
-        if renpy.loadable("images/chibi/bg.png"):
-            return Image("images/chibi/bg.png"), None
+        if renpy.loadable("images/chibi/bg.jpg"):
+            return Image("images/chibi/bg.jpg"), None
         return Null(), None                     # no bg file -> nothing drawn
 
     # register the names the layeredimage expects

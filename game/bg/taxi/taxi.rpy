@@ -14,4 +14,3 @@ init 1:
         group car_state:
             attribute open null
             attribute closed null default
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

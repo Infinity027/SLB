@@ -5,4 +5,3 @@ init 1:
             attribute closed default
 
         attribute crates
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

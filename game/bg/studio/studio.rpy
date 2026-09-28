@@ -184,7 +184,7 @@ label gig:
                 $ gig_mult += 0.25
                 $ game.flags.naked_gig = True
 
-
+    #attention: gig play
     stop music
     scene bg black
     show expression f"bg {gig_location}"
@@ -207,16 +207,12 @@ label gig:
                 renpy.with_statement(dissolve)
                 renpy.pause(1)
     scene bg studio with Fade(0.75, 1, 0.75)
-
-
     $ band_love = sum([g.love for g in band_members])
     $ money_produced = int((100 * (game.flags.bandpractice // 10) + band_love) * gig_mult)
     "We earned [money_produced]{image=gui/icons/icon_money.png} with our gig!"
     $ hero_share = int(money_produced * (1 / (len(band_members)+1)))
     $ hero.money += hero_share
     "I take my share, which is about [hero_share]{image=gui/icons/icon_money.png}."
-
-
     if game.flags.band_reputation < 100:
         $ reputation_gained = int(max(1, (game.flags.bandpractice * gig_mult // 10) // 1.5))
         $ game.flags.band_reputation = min(game.flags.band_reputation + reputation_gained, 100)

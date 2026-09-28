@@ -1428,43 +1428,6 @@ label kleio_event_05:
     "Her hands wander down my back, occasionally latching in when I place a small bite."
     "Eventually, they make their way down to my waistband, and she gazes up at me, making perfect eye contact as she begins to unbutton them."
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     show kleio naked kiss with dissolve
     $ kleio.flags.kiss += 1
     "Quick in my move against her, I match her, pace for pace, my hands moving to her own waistband to undo it."

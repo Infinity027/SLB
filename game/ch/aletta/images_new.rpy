@@ -1,0 +1,24 @@
+
+# =============================================================================
+#  aletta — flat image system  (replaces the old split layeredimage)
+#
+#  Talking sprites resolve to:   game/images/aletta/<dress>/<expression>.png
+#  The dress is chosen automatically from aletta.get_clothes() (her activity),
+#  so every `show aletta <expression>` line keeps working unchanged.
+#
+#  Engine + expression list live in  game/flat_sprites.rpy
+#  Drop your PNGs into the folders under game/images/aletta/ (see _HOW_TO_FILL.md).
+#
+#  To revert to the old layered art, restore this file from git.
+# =============================================================================
+
+init python:
+    register_flat_character("aletta", [
+        "casual",        # default outfit (REQUIRED — fallback for every other dress)
+        "date",
+        "sexydate",
+        "swimsuit",
+        "sport",
+        "underwear",
+        "naked",
+    ])

@@ -231,7 +231,7 @@ label park_thug_attack:
             if hero.fitness >= d:
                 play sound punch_hard
                 pause 0.2
-                show danny fight lose at center, hshake
+                show danny lose at center, hshake
                 pause 0.2
                 with hpunch
                 "I kick his ass, badly."
@@ -241,7 +241,7 @@ label park_thug_attack:
             else:
                 play sound punch_hard
                 pause 0.2
-                show danny fight win at center, hshake
+                show danny win at center, hshake
                 pause 0.2
                 with hpunch
                 "The thug kicks my ass, takes my money and leaves me lying on the ground."

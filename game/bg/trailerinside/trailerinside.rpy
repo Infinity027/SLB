@@ -7,4 +7,3 @@ init python:
     "outfit": "casual",
     "tags": ["trailer"],
     })
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

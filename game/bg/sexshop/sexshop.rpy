@@ -77,4 +77,3 @@ label sexshop_shop:
     $ Room.find("sexshop").shop("reona casual" if reona.present else None)
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

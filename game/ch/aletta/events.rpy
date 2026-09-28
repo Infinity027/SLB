@@ -1748,15 +1748,6 @@ label aletta_kink_06:
     "It feels like I can't hold on for a moment longer."
     "I'm going to cum!"
 
-
-
-
-
-
-
-
-
-
     "I just lie back and let Aletta finish the job all on her own."
     "And it doesn't take long for her to do it either."
     show mouth_insert aletta cum zorder 1
@@ -4346,7 +4337,7 @@ label aletta_event_09:
     show aletta at center, traveling(1.25, 1.0, (640, 880))
     mike.say "Hey, Aletta."
     mike.say "Was there something you needed?"
-    show aletta embarrassed
+    show aletta blush
     "Aletta doesn't answer me straight away."
     "Instead she looks around, making sure she can't be overheard."
     "Only when she's satisfied that we're alone does she start to speak."

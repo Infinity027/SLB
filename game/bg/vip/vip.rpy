@@ -11,4 +11,3 @@ init python:
     "outfit": "date",
     "tags": ["club"],
     })
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

@@ -32,8 +32,7 @@ label shiori_flirty_texts:
         shiori_nvl "You make me feel so bad...because I want you to touch me - down there!"
     else:
         shiori_nvl "You...you really like my breasts - don't you?"
-        shiori_nvl "Would you like me to...to touch them for you?"
-        shiori_nvl "I can tell you what it feels like, if you'd like?"
+        shiori_nvl "{phone_image=phone/shiori/breasts.webp}"
     return
 
 label shiori_dirty_texts:
@@ -267,4 +266,3 @@ label shiori_dirty_texts_male:
         $ hero.fun += 0.2
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

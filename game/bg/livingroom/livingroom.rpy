@@ -277,23 +277,10 @@ label watch_tv:
     return
 
 label livingroom_masturbate_male:
-    show couch fun masturbate
-    pause 0.2
-    show couch fun down
-    pause 0.2
-    show couch fun up
-    pause 0.2
-    show couch fun down
-    pause 0.2
-    show couch fun up
+    scene mc_must1
     "I decide to have a little fun by myself."
-    show couch fun down
-    pause 0.1
-    show couch fun up
-    pause 0.1
-    show couch fun down
-    pause 0.1
-    show couch fun masturbate cumshot with vpunch
+    scene expression make_anim(mc_must, 0.15, loop=True)
+    scene mc_must2 with vpunch
     "Mmmmmh, that feels good."
     return
 
