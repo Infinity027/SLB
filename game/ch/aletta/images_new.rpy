@@ -22,3 +22,30 @@ init python:
         "underwear",
         "naked",
     ])
+
+    aletta_ofc_bj = [
+    "ev2/aletta/office_bj03.jpg",
+    "ev2/aletta/office_bj04.jpg",
+    "ev2/aletta/office_bj05.jpg",
+    "ev2/aletta/office_bj06.jpg",
+    "ev2/aletta/office_bj07.jpg",
+    ]
+
+    aletta_ceo_fuck = [
+    "ev2/aletta/ceo_fuck4.jpg",
+    "ev2/aletta/ceo_fuck5.jpg",
+    "ev2/aletta/ceo_fuck6.jpg",
+    "ev2/aletta/ceo_fuck5.jpg",
+    ]
+
+    aletta_spank1 = [
+    "ev2/aletta/spank3.jpg",
+    "ev2/aletta/spank4.jpg",
+    "ev2/aletta/spank5.jpg",
+    ]
+
+    aletta_ofc_titjob = [
+    "ev2/aletta/titjob3.jpg",
+    "ev2/aletta/titjob4.jpg",
+    "ev2/aletta/titjob5.jpg",
+    ]

@@ -1375,55 +1375,39 @@ label aletta_fuck_office_bj:
     show aletta flirt
     "Instead it seems to actually be an eagerness to please!"
     "Aletta hurries to do as she's told, getting onto her knees and leaning in close."
-    "She has my flies open in a matter of seconds and my cock out as quickly."
-    scene aletta blowjob
-    show aletta blowjob ceo
-    with fade
+    scene aletta_office_bj01
     "I'm already getting hard from the sight of Aletta kneeling before me."
     "And the moment that her fingers are wrapped around the shaft, it's a done deal."
     "In any other circumstances, Aletta might have been more subtle."
     "And if not, I might have told her to take her time about it."
     "But she's acting on instinct, and I'm caught up in the moment too."
-    show mouth_insert aletta zorder 1 at zoomAt(1, (860, 140))
+    scene aletta_office_bj02
     "This means that Aletta all but shoves my cock into her mouth."
     "She wastes no time in swallowing in as deep as she possibly can."
-    show aletta blowjob pleasure
+    scene expression make_anim(aletta_ofc_bj, time=0.2, loop=True)
     "And then she begins to work away at it, head bobbing up and down."
     "I try my best to remain aloof, sipping my coffee the whole time."
     "But Aletta's putting so much sheer effort into it that I can't keep it up."
-    "I drop the cup of coffee onto the floor and collapse backwards in my chair."
-    "Gasping for breath, I hold onto the arms for dear life."
     "It feels like I can't hold on for a moment longer."
     "I'm going to cum!"
     "I just lie back and let Aletta finish the job all on her own."
-    "And it doesn't take long for her to do it either."
-    show mouth_insert aletta cum
-    show aletta blowjob cum
+    scene aletta_office_bj02
     with vpunch
     "I shoot my load when my cock is as deep as it'll go."
     with vpunch
     "But for all her eagerness, Aletta's not ready for it."
-    show aletta blowjob ahegao with vpunch
     "She coughs and gags as the cum hits the back of her throat."
     "Yet somehow she still manages to keep from spitting anything out."
-    show mouth_insert aletta -cum
-    show aletta blowjob -cum
-    "And I watch as Aletta dutifully swallows every last drop."
     $ aletta.love += 1
     $ aletta.sub += 1
-    hide mouth_insert
     return
 
 label aletta_fuck_office_ceofuck:
     "I take a firm hold of Aletta."
-    scene aletta ceofuck
-    show aletta ceofuck vaginal
-    with fade
+    scene aletta_ceo_fuck1
     "And then I stand up, turning Aletta around and pushing her backwards onto the desk."
-    "She cries out in surprise, but then realises what I'm doing."
     "Aletta braces her hands on the desktop, nodding eagerly."
-    "And then I'm pounding her like my life depends on it."
-    "Aletta keeps on nodding the whole time, urging me on."
+    scene aletta_ceo_fuck2
     aletta.say "Oh yes..."
     if not aletta.is_sex_slave:
         aletta.say "Please, [hero.name]..."
@@ -1433,15 +1417,12 @@ label aletta_fuck_office_ceofuck:
     aletta.say "Don't stop until you make me cum!"
     if aletta.flags.submissive_interact:
         aletta.say "Use me as your target practice!"
-    show aletta ceofuck pleasure
-    "Aletta's words are a turn-on for sure."
-    "But it's not like I need the encouragement!"
-    "It's like I can feel all the guilt draining out of me as I fuck her."
+    scene expression make_anim(aletta_ceo_fuck, time=0.35, loop=True)
+    "And then I'm pounding her like my life depends on it."
+    "Aletta keeps on nodding the whole time, urging me on."
     "Every thrust and the moans it elicits from Aletta purge me of it."
-    "She's right - Dwayne was an asshole that deserved everything he got."
-    "And I deserve to be screwing Aletta in his office right now!"
     "All of my energy goes into one last thrust as I start to cum."
-    show aletta ceofuck creampie with hpunch
+    scene aletta_ceo_cum with hpunch
     "Aletta moans as I shoot my load into her, wriggling her ass as she takes it."
     with hpunch
     "I keep my cock inside of her as she cums too, feeling every moment as she does so."
@@ -1557,8 +1538,6 @@ label aletta_fuck_office_spank:
 
 label aletta_fuck_surprise_office_spank:
     "The door to my office bursts open and Aletta strides in like a warrior queen."
-    "I don't even have to look up from my work to know it's her."
-    "I can sense it even before she opens her mouth to speak."
     mike.say "Hey, Aletta..."
     mike.say "What can I do for you?"
     aletta.say "H...how did you know?"
@@ -1566,7 +1545,6 @@ label aletta_fuck_surprise_office_spank:
     aletta.say "How did you know it was me?"
     "I can't help smiling as I look Aletta in the eye."
     "The confidence in my voice takes her by complete surprise."
-    "And I can see that it's left her off-balance and unsure."
     mike.say "Well, you are pretty predictable, Aletta!"
     mike.say "That means I can catch you off-guard whenever I want."
     aletta.say "Th...that's not true!"
@@ -1574,62 +1552,48 @@ label aletta_fuck_surprise_office_spank:
     aletta.say "I'm the one in charge here, [hero.name]!"
     "My smile becomes wider as I hear the hesitation in her voice."
     mike.say "Okay, Aletta - let's test that theory, shall we?"
-    "I push my chair back from the desk and pat my thigh."
-    mike.say "Come over here and lay across my lap."
-    mike.say "Right now, please!"
+    "I stand up and beckoning her with my hand."
     show aletta surprised
     "Aletta's eyes go wide with amazement."
     "And she makes a snorting sound like an angry horse."
     "But I note that she takes an unconscious step towards me."
-    "I nod and pat my thigh again, beckoning with the other hand."
-    "Aletta takes a look over her shoulder, then glances back at me."
-    "It's like she's having an internal debate, weighing her options."
     "Then it seems something inside of her snaps."
     "And she scurries around the desk as fast as she can."
-    show aletta normal
+    show aletta talk with fade
     aletta.say "Alright, alright, [hero.name]."
     aletta.say "But this isn't you telling me what to do, okay?"
     aletta.say "I'm just curious!"
-    "I nod at this, already guiding Aletta down onto my lap."
-    "I wait for her to be looking the other way to roll my eyes."
-    hide aletta
-    show spank aletta
-    "And then I pull up her skirt."
+    "I nod at this, already guiding Aletta down onto the desk."
+    scene aletta_spank1
+    "And then I touching her ass..."
     aletta.say "Wh...what are you..."
     "I slap Aletta's bared buttocks before she can finish speaking."
-    show spank aletta spank
+    scene expression make_anim(aletta_spank1, time=0.5)
     play sound spank
-    with hpunch
+    scene aletta_spank2
     aletta.say "Oh...oh my!"
-    show spank aletta surprised
+    scene aletta_spank6
     aletta.say "Please, [hero.name]...may I have another?"
     "I shake my head and let out an amused chuckle."
     "But I don't hesitate to give Aletta what she wants."
-    show spank aletta up
-    pause 0.3
-    show spank aletta spank
+    show expression make_anim(aletta_spank1, time=0.5)
     play sound spank
-    with hpunch
-    "Each blow that lands makes her buttocks redder."
-    show spank aletta up
-    pause 0.3
-    show spank aletta spank
-    play sound spank
-    with hpunch
-    "And it makes her cheeks flush red too."
+    pause
+    show expression make_anim(aletta_spank1, time=0.5)
+    "It makes her cheeks flush red too."
     "Aletta gasps and moans as I spank her for the sheer delight of it."
-    show spank aletta ready pleasure
+    scene aletta_spank7 with fade
     "She nods, urging me on and I oblige her with as much force as I dare."
     "Soon enough my hand is getting numb and Aletta's panting desperately."
-    show spank aletta up
+    scene aletta_spank8
     pause 0.3
-    show spank aletta spank marks
+    scene aletta_spank9
     play sound spank
     with hpunch
     "I ease off, letting her know that the spanking is coming to an end."
     "Aletta stands up, pulling down her skirt and trying to regain her dignity."
     scene expression f"bg {game.room}"
-    show aletta pleasure blush
+    show aletta blush
     aletta.say "Ahem..."
     aletta.say "I think that covers everything, [hero.name]."
     aletta.say "I have to be going now."
@@ -1645,45 +1609,33 @@ label aletta_fuck_surprise_office_spank:
     return
 
 label aletta_fuck_office_titjob:
-    show aletta -close
-    "Aletta pulls a mock frown and shakes her head."
-    "At the same time she begins to unbutton her top."
+    show aletta talk
     aletta.say "We can't have that now, can we?"
     aletta.say "Stress causes a loss of productivity in the workplace!"
     aletta.say "So I think you should take off your clothes and let me handle it."
     show aletta topless with dissolve
     "As if to punctuate her suggestion, Aletta undoes the last button a moment later."
     "This means that her breasts spill out of her top, bouncing as they're freed."
-    "They swing and sway as they submit to gravity, almost hypnotising me."
     "I nod eagerly, already tugging and pulling at my clothes."
     "And by the time I make it over to the couch, I'm almost completely naked."
     "Aletta follows me at a more leisurely pace, chuckling at my enthusiasm."
-    "Just as I get the last of my clothes off, she shoves me backwards."
     hide aletta
-    show aletta titjob office with fade
-    "I land with a thump on the sofa, staring up at her."
-    "Which means I get a magnificent view of her chest from below."
-    "They're so big that I can't even see Aletta's face at first!"
+    show aletta_titjob1 with fade
+    "I get a magnificent view of her chest from below."
     "I only make eye-contact with her again when she's almost on her knees."
     "By now my cock is hard as a rock and standing to attention."
-    "It bobs right in front of Aletta's face, making it hard to see her expression."
-    "But then she leans to one side and catches my eye."
-    show aletta titjob droll
+    show aletta_titjob2
     "And with a smile, she flicks the head of my cock."
     "This makes it sway from side to side, but also hurts a little."
     "So I can't help yelping in pain."
     mike.say "Ow!"
     aletta.say "Ah..."
     aletta.say "So much stiffness and tension!"
-    show aletta titjob normal
+    scene expression make_anim(aletta_ofc_titjob, time=0.4, loop=True)
     if not aletta.is_sex_slave:
         aletta.say "You need a massage, [hero.name]..."
     else:
         aletta.say "You need a massage, Master..."
-    "Aletta takes hold of the shaft with one hand, stroking gently up and down."
-    "Then she leans forward, guiding the head between her heavy breasts."
-    "All I can do is nod and keep on yelping."
-    "But this time it's from anticipation, rather than pain."
     "I feel the weight of Aletta's breasts as my cock pushes between them."
     "She takes it slowly, letting me savour the sensation for as long as possible."
     "Slowly the head inches higher and more of the shaft disappears into her cleavage."
