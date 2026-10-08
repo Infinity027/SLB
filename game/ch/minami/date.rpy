@@ -447,12 +447,13 @@ label minami_halloween_arrival:
     scene bg livingroom with fade
     "Geez, I must have scrambled my brain putting so much effort into the party."
     show minami halloween with dissolve
+    "She's wearing a small white sailor hat with navy-blue trim perched on her head."
+    "The skirt is short and flared, with several white and navy stripes running along the hem."
     "But the same can't be said for Minami, as she looks at me expectantly."
     minami.say "Well, big bro?"
     minami.say "What do you think?"
     "Ah, I get it now."
     "This is where I'm supposed to gush over her costume."
-    "You know - tell her that she looks amazing?"
     menu:
         "Compliment":
             mike.say "Ah, Minami..."

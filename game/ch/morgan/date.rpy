@@ -362,64 +362,59 @@ label morgan_halloween_arrival:
     scene bg house with wiperight
     "I open the door with my head still somewhere else."
     "The stress of organising the party occupying my mind."
-    "But I snap out of it at the sight of a furry, brown tail."
-    "A tail which belongs to an equally furry figure with its back to me."
+    "But I snap out of it at the sight of a figure in red standing at the door, her back to me."
+    "She's holding something in her hand — and it takes me a second to realise it's a gun."
     mike.say "Morgan?"
     mike.say "Is that you?"
-    "The figure jumps a little at the sound of my voice."
+    "The figure turns slowly, and I immediately regret not being more cautious."
     show morgan halloween with dissolve
-    "But then it turns around to reveal that my suspicions were correct."
-    "Morgan's wearing a onesie made of brown fur."
-    "And the ears atop the hood make it clear she's supposed to be a bear."
+    "But it's just Morgan — and the gun is a prop, thank God."
+    "Morgan's wearing a deep burgundy satin cheongsam-style dress, decorated with ornate gold floral and butterfly-like patterns."
+    "It has a fitted silhouette and a high side slit, revealing a strapped thigh holster on one leg."
     morgan.say "Hey, [hero.name]."
     morgan.say "How do you like my costume?"
     if morgan.male > 75:
-        mike.say "You're a teddy bear?!?"
-        show morgan angry
-        "Morgan bristles at the mere mention of the term."
-        show morgan a
-        "She crosses her arms over her chest in a show of defiance."
-        morgan.say "Who said anything about me being a teddy bear?"
-        morgan.say "Why does everyone keep saying that?!?"
-        morgan.say "I'm just a bear, dammit!"
+        mike.say "Ada Wong?"
+        show morgan normal
+        "Morgan raises an eyebrow, clearly impressed I got it in one."
+        "She tilts the prop gun slightly, leaning into the pose."
+        morgan.say "Took you long enough to notice."
+        morgan.say "I've been standing here for ten seconds."
     elif morgan.male < 40:
         show morgan happy
-        morgan.say "I'm a teddy bear!"
-        morgan.say "And I'm here for cuddles!"
+        morgan.say "Ada Wong, at your service!"
+        morgan.say "Don't I look the part?"
     menu:
         "Agree" if morgan.male > 75:
-            "I hold my hands up in a gesture of surrender."
-            "At times like this, it's best to just go with it!"
-            mike.say "Okay, Morgan, okay."
-            mike.say "You're a big, tough bear."
-            mike.say "And I'm really scared of you!"
-            "For a moment it looks like Morgan is going to protest again."
+            "I lean against the doorframe and give her a slow once-over."
+            mike.say "Okay, Morgan."
+            mike.say "The dress, the holster, the gun..."
+            mike.say "I hate to admit it, but you've nailed it."
             show morgan normal
-            "But then I see the annoyance drain out of her expression."
+            "For a moment I think she's going to stay in character and say nothing."
             show morgan happy
-            "She laughs and shakes her head."
-            morgan.say "Maybe asked for it, dressing up like this."
+            "But then a grin breaks through."
+            morgan.say "Damn right I nailed it."
             show morgan normal
-            morgan.say "Next time I guess I should put more effort in."
-            mike.say "I don't know, Morgan."
-            mike.say "Being a bear kind of suits you."
-            mike.say "And you look really cute with a fluffy tail!"
+            morgan.say "Ada Wong doesn't do things halfway."
+            mike.say "No, she really doesn't."
+            mike.say "You even have the attitude to match."
             $ morgan.love += 1
             show morgan happy
             "Morgan aims a punch at my arm for my troubles."
-            "But she laughs again and then pushes her way into the house."
+            "But she laughs and then pushes her way into the house."
         "Disagree" if morgan.male > 75:
             "I cradle my chin in the palm of my hand."
             "And then I stand back to study Morgan more closely."
             mike.say "Hmm..."
-            mike.say "You're short, furry and oh so adorable."
-            mike.say "All the signs say that you're a cute little teddy bear!"
+            mike.say "I mean, it's good."
+            mike.say "But I'm not sure you're quite dangerous enough to be Ada Wong."
             "Morgan is positively quaking with rage by now."
             "She plants her hands on her hips and squares up to me."
             $ morgan.love -= 2
             show morgan angry at center, vshake
             show fx exclamation
-            morgan.say "I AM NOT A TEDDY BEAR!!!"
+            morgan.say "I AM dangerous!!!"
             "It's no good trying to hold it in any longer."
             "And I burst out laughing a moment later."
             "For a second Morgan looks like she's about to explode."
@@ -427,32 +422,28 @@ label morgan_halloween_arrival:
             "But then I see the annoyance drain out of her expression."
             show morgan happy
             "She laughs and shakes her head."
-            morgan.say "Maybe asked for it, dressing up like this."
-            morgan.say "Next time I guess I should put more effort in."
-            mike.say "I don't know, Morgan."
-            mike.say "Being a bear kind of suits you."
-            mike.say "And you look really cute with a fluffy tail!"
+            morgan.say "Fine, maybe I need to work on the death stare."
+            morgan.say "But the dress is perfect and you know it."
+            mike.say "Alright, I'll give you that."
+            mike.say "The dress is absolutely perfect."
             "Morgan aims a punch at my arm for my troubles."
             "But she laughs again and then pushes her way into the house."
         "Compliment" if morgan.male <= 75:
             "I can't help smiling at the sight of Morgan in the costume."
-            "She looks so cute and adorable, not to mention sexy!"
-            "And the way she blushes as I'm checking her out."
-            "She's suddenly all I can think about!"
+            "She looks elegant and deadly, not to mention gorgeous!"
             mike.say "You look amazing, Morgan."
-            mike.say "You're the cutest bear I ever saw!"
+            mike.say "You're the most stunning Ada Wong I ever saw!"
             if morgan.male < 40:
                 $ morgan.love += 2
                 show morgan normal
                 "Morgan smiles like she's lighting up."
                 "She clasps her hands under her chin."
-                "And for a moment I think she's going to explode with joy."
                 show morgan blush
                 morgan.say "Y...you really mean that?"
                 show morgan blushhappy
                 morgan.say "Aw, you made me so happy!"
-                morgan.say "I want to be your teddy bear, [hero.name]."
-                morgan.say "You can cuddle me all night!"
+                morgan.say "I dressed up as Ada Wong just for you, [hero.name]."
+                morgan.say "You better make it worth my while tonight!"
                 "I smile and usher Morgan into the house."
                 "All the time trying to hide just how hard I am right now!"
             else:
@@ -464,10 +455,10 @@ label morgan_halloween_arrival:
                 "But I know her well enough not to be fooled."
                 "Deep down she loves the compliments."
                 morgan.say "Ah, shut up!"
-                morgan.say "This is no big deal."
-                morgan.say "Just something I threw on at the last minute."
+                morgan.say "It's just a dress."
+                morgan.say "Don't read too much into it."
                 mike.say "Whatever you say, Morgan."
-                mike.say "So long as you're my teddy bear tonight!"
+                mike.say "You're still my Ada Wong tonight."
                 show morgan blushhappy
                 "Morgan's cheeks flush red at this."
                 "But she clings to me all the same."
@@ -479,12 +470,12 @@ label morgan_halloween_arrival:
             "And she frowns, cocking her head on one side."
             morgan.say "What's that supposed to mean?"
             "I shrug and shake my head."
-            mike.say "I guess I just don't see you as a teddy bear."
-            mike.say "It's cute and all that."
+            mike.say "I guess I just don't see you as Ada Wong."
+            mike.say "It's a great costume and all."
             if morgan.male < 40:
-                mike.say "But I'm not into soft and fluffy!"
+                mike.say "But I'm not sure you pull off the cold and deadly thing!"
             else:
-                mike.say "But I never thought of you as soft and fluffy!"
+                mike.say "But Ada Wong is supposed to be mysterious. You're too easy to read."
             $ morgan.love -= 4
             "Morgan plants her hands on her hips."
             "Then she lets out a huff of frustration."
@@ -494,18 +485,17 @@ label morgan_halloween_arrival:
                 morgan.say "And you can't even pretend to like it!"
             else:
                 $ morgan.male += 1
-                morgan.say "Who said that I was supposed to be a teddy bear, huh?"
-                morgan.say "For all you know, I could be a damn grizzly!"
+                morgan.say "Easy to read? Me?"
+                morgan.say "I could be pulling a dozen schemes right now and you'd never know."
             "I can't help chuckling at Morgan's show of defiance."
             "Which of course does nothing to soften her mood."
             if morgan.male < 40:
                 mike.say "Okay, okay - I'm sorry, Morgan."
                 mike.say "Come on in and who knows."
-                mike.say "Maybe it'll start to grow on me."
+                mike.say "Maybe it'll grow on me."
             else:
-                mike.say "Okay, okay - I get it!"
-                mike.say "You're just going to have to prove it to me."
-                mike.say "Show me how much of a grizzly you really are!"
+                mike.say "Okay, okay - I believe you."
+                mike.say "You're going to have to prove just how mysterious you are tonight."
     scene bg black with dissolve
     pause 1
     return

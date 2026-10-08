@@ -664,129 +664,69 @@ label lexi_halloween_invitation:
     return
 
 label lexi_halloween_arrival:
-    scene bg house
-    if Harem.together(bree, sasha, lexi, name='home'):
-        "I stare at the door for a moment longer, and then I strike myself on the forehead."
-        "Of course, Lexi lives here too."
-        "So my date's already in the house!"
-        "Geez, I must have scrambled my brain putting so much effort into the party."
-        scene bg livingroom
-        show lexi a halloween nophone
-        with fade
-        "But the same can't be said for Lexi, as she looks at me expectantly."
-        lexi.say "Well, [hero.name], I'm waiting."
-        lexi.say "What do you think of my costume?"
-        "I look Lexi up and down one last time."
-        "And then I take a deep breath."
-        "All in preparation to tell her exactly what I think."
-        menu:
-            "Compliment":
-                mike.say "Wow, Lexi...just, wow!"
-                mike.say "I didn't want to say this in front of the others."
-                mike.say "But you look SO hot!"
-                $ lexi.love += 1
-                $ lexi.sub += 1
-                show lexi happy
-                "Lexi almost purrs at the compliment."
-                "And I can see that was the answer she wanted to hear."
-                lexi.say "Yeah, I thought it'd pop you."
-                lexi.say "You being a massive game-geek and all that!"
-                mike.say "I know we've got to be good hosts tonight."
-                mike.say "But I really want to spend some time alone."
-                mike.say "If you know what I mean?"
-                show lexi wink
-                "Lexi lets out the dirtiest chuckle I've ever heard."
-                "But she nods her head in a conspiratorial manner too."
-                lexi.say "Oh, don't you worry, [hero.name]."
-                lexi.say "My skirts real short and my panties are real high."
-                lexi.say "You could slip it into me without anyone noticing!"
-                "With that, she turns and walks away."
-                "Leaving me to follow, awkwardly trying to hide my sudden erection."
-            "Criticize":
-                mike.say "Ah..."
-                mike.say "It's great, Lexi."
-                mike.say "Really nice costume."
-                show lexi sad
-                "Lexi squints at me, almost sneering."
-                "It's clear that wasn't the answer she wanted."
-                lexi.say "Huh?"
-                lexi.say "It's nice - is that all?"
-                lexi.say "I thought you were a game-geek?!?"
-                mike.say "I...I am, Lexi."
-                mike.say "It's just that...that game's getting old now!"
-                $ lexi.love -= 2
-                show lexi angry
-                "Lexi's eyes go wide and her mouth drops open."
-                "Then she plants her balled fists on her hips."
-                lexi.say "Is that so?"
-                lexi.say "Well, you know what never gets old, [hero.name]?"
-                lexi.say "Tits and ass - that's what!"
-                lexi.say "Let's see what the other guys at the party think of my costume!"
-                hide lexi with dissolve
-                "Lexi storms past me in a huff."
-                "And I hurry after her, cursing myself the whole time."
-    else:
-        "Opening the door, I guess I should have been more cautious."
-        "Especially after the incidents with Jack's sword and Scottie's trident."
-        "But this time it's an actual chainsaw that sends me reeling backwards."
-        show lexi a halloween happy nophone with hpunch
-        lexi.say "HAPPY HALLOWEEN!"
-        "It's only now I see that Lexi's the one holding the chainsaw."
-        "She's dressed in what looks like a crazy cheerleader's uniform."
-        "And then I recognise it."
-        mike.say "Lollipop Chainsaw!"
-        lexi.say "Got it!"
-        show lexi normal
-        lexi.say "Well, [hero.name], I'm waiting."
-        lexi.say "What do you think of my costume?"
-        "I look Lexi up and down."
-        "And then I take a deep breath."
-        "All in preparation to tell her exactly what I think."
-        menu:
-            "Compliment":
-                mike.say "Wow, Lexi...just, wow!"
-                mike.say "You look SO hot!"
-                $ lexi.love += 1
-                $ lexi.sub += 1
-                show lexi happy
-                "Lexi almost purrs at the compliment."
-                "And I can see that was the answer she wanted to hear."
-                lexi.say "Yeah, I thought it'd pop you."
-                lexi.say "You being a massive game-geek and all that!"
-                mike.say "I've got to be good host tonight."
-                mike.say "But I really want to spend some time alone."
-                mike.say "If you know what I mean?"
-                show lexi wink
-                "Lexi lets out the dirtiest chuckle I've ever heard."
-                "But she nods her head in a conspiratorial manner too."
-                lexi.say "Oh, don't you worry, [hero.name]."
-                lexi.say "My skirts real short and my panties are real high."
-                lexi.say "You could slip it into me without anyone noticing!"
-                "With that, she turns and walks away."
-                "Leaving me to follow, awkwardly trying to hide my sudden erection."
-            "Criticize":
-                mike.say "Ah..."
-                mike.say "It's great, Lexi."
-                mike.say "Really nice costume."
-                show lexi sad
-                "Lexi squints at me, almost sneering."
-                "It's clear that wasn't the answer she wanted."
-                lexi.say "Huh?"
-                lexi.say "It's nice - is that all?"
-                lexi.say "I thought you were a game-geek?!?"
-                mike.say "I...I am, Lexi."
-                mike.say "It's just that...that game's getting old now!"
-                $ lexi.love -= 2
-                show lexi angry
-                "Lexi's eyes go wide and her mouth drops open."
-                "Then she plants her balled fists on her hips."
-                lexi.say "Is that so?"
-                lexi.say "Well, you know what never gets old, [hero.name]?"
-                lexi.say "Tits and ass - that's what!"
-                lexi.say "Let's see what the other guys at the party think of my costume!"
-                hide lexi with dissolve
-                "Lexi storms past me in a huff."
-                "And I hurry after her, cursing myself the whole time."
+    "Opening the door, I guess I should have been more cautious."
+    "Especially after the incidents with Jack's sword and Scottie's trident."
+    "But this time it's an actual chainsaw that sends me reeling backwards."
+    show lexi a halloween happy nophone with hpunch
+    lexi.say "HAPPY HALLOWEEN!"
+    "It's only now I see that Lexi's the one holding a revolver ."
+    "She's wearing a brown cowboy hat with decorative stitching and a chin cord."
+    "Her outfit consists of a tan long-sleeved cropped top with a tied front, featuring blue star-shaped shoulder accents."
+    "Long fringe hangs from the sleeves, and she wears high-waisted brown shorts with a wide western-style belt and a large decorative silver buckle."
+    "And then I recognise it."
+    mike.say "Cowgirl!"
+    lexi.say "Got it!"
+    show lexi normal
+    lexi.say "Well, [hero.name], I'm waiting."
+    lexi.say "What do you think of my costume?"
+    "I look Lexi up and down."
+    "And then I take a deep breath."
+    "All in preparation to tell her exactly what I think."
+    menu:
+        "Compliment":
+            mike.say "Wow, Lexi...just, wow!"
+            mike.say "You look SO hot!"
+            $ lexi.love += 1
+            $ lexi.sub += 1
+            show lexi happy
+            "Lexi almost purrs at the compliment."
+            "And I can see that was the answer she wanted to hear."
+            lexi.say "Yeah, I thought it'd pop you."
+            lexi.say "You being a massive game-geek and all that!"
+            mike.say "I've got to be good host tonight."
+            mike.say "But I really want to spend some time alone."
+            mike.say "If you know what I mean?"
+            show lexi wink
+            "Lexi lets out the dirtiest chuckle I've ever heard."
+            "But she nods her head in a conspiratorial manner too."
+            lexi.say "Oh, don't you worry, [hero.name]."
+            lexi.say "My skirts real short and my panties are real high."
+            lexi.say "You could slip it into me without anyone noticing!"
+            "With that, she turns and walks away."
+            "Leaving me to follow, awkwardly trying to hide my sudden erection."
+        "Criticize":
+            mike.say "Ah..."
+            mike.say "It's great, Lexi."
+            mike.say "Really nice costume."
+            show lexi sad
+            "Lexi squints at me, almost sneering."
+            "It's clear that wasn't the answer she wanted."
+            lexi.say "Huh?"
+            lexi.say "It's nice - is that all?"
+            lexi.say "I thought you were a game-geek?!?"
+            mike.say "I...I am, Lexi."
+            mike.say "It's just that...that game's getting old now!"
+            $ lexi.love -= 2
+            show lexi angry
+            "Lexi's eyes go wide and her mouth drops open."
+            "Then she plants her balled fists on her hips."
+            lexi.say "Is that so?"
+            lexi.say "Well, you know what never gets old, [hero.name]?"
+            lexi.say "Tits and ass - that's what!"
+            lexi.say "Let's see what the other guys at the party think of my costume!"
+            hide lexi with dissolve
+            "Lexi storms past me in a huff."
+            "And I hurry after her, cursing myself the whole time."
     scene bg black with dissolve
     pause 1
     return

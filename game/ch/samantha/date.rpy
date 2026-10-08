@@ -549,8 +549,10 @@ label samantha_halloween_arrival:
         samantha.say "Well, [hero.name], I'm waiting."
         samantha.say "What do you think of my costume?"
         "I look Samantha up and down one last time."
-        "And then I take a deep breath."
-        "All in preparation to tell her exactly what I think."
+        "Her blonde hair is styled in an elegant updo, decorated with a gold leaf-style headband."
+        "She wears a flowing white dress with gold Greek-key trim around the neckline and hem."
+        "The bodice has a deep V-shaped neckline and is wrapped around the waist with several gold bands and cords."
+        "She looks like a Greek goddess brought to life."
         menu:
             "Compliment":
                 if samantha.flags.nickname == "cupcake":

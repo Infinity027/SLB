@@ -355,8 +355,6 @@ label audrey_halloween_arrival:
     "But I get caught out again, finding something sharp an inch from my eye."
     "It's a dagger - I'm staring down the blade of a damn dagger!"
     mike.say "Aargh!"
-    "I stumble backwards, tripping over the doorstep."
-    "And then I fall, landing painfully on my ass."
     show audrey halloween surprised
     audrey.say "Geez, [hero.name]."
     show audrey normal
@@ -364,7 +362,8 @@ label audrey_halloween_arrival:
     "I look up to see Audrey standing over me."
     "She has an identical dagger in each hand."
     "And now I see that they're actually Japanese Sai."
-    "That and the fact she's wearing a tight outfit all in red."
+    "She's wearing a sleeveless red mini dress with black piping outlining the edges."
+    "It has a distinctive high halter-style neckline with red trim and a teardrop-shaped cutout across the upper chest."
     mike.say "Ah..."
     if audrey.flags.nickname == "toy":
         mike.say "Nice Alektra costume, little Toy."
@@ -375,9 +374,7 @@ label audrey_halloween_arrival:
     audrey.say "You like it?"
     menu:
         "Compliment" if hero.charm >= 25:
-            "I'm still rubbing my sore ass when she asks me this."
-            "And if it were anyone else, I'd be mad as hell right now."
-            "But Audrey just looks so good in that costume."
+            "Audrey just looks so good in that costume."
             "Any thought of telling her off just fades away."
             if audrey.flags.nickname == "toy":
                 mike.say "Yeah, Toy - you bet I do!"
@@ -389,7 +386,6 @@ label audrey_halloween_arrival:
             "Audrey grins like a Cheshire Cat at this."
             "Clearly she's getting the kind of reaction she wanted."
             "She does a quick turn on the spot to show off."
-            "Which only serves to make my eyes almost pop out of my head."
             audrey.say "I went to a lot of effort with all this."
             audrey.say "But it was worth it to get a reaction like that!"
             show audrey flirt

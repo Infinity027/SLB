@@ -6431,4 +6431,3 @@ label alexis_birthday_sex:
     $ game.room = "bedroom1"
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc
