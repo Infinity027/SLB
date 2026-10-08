@@ -1687,10 +1687,6 @@ label claire_fuck_date_fullnelson(sexperience_min):
             "Because now I can tell that Claire's muscles are starting to tense and squeeze."
             "Massaging my cock as she's beginning to succumb to her inevitable orgasm."
 
-
-
-
-
             play sexsfx1 fuck_sprint loop
             show claire fullnelson at startle(0.05, 10)
             pause 0.15

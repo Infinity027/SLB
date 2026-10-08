@@ -2091,9 +2091,6 @@ label audrey_fuck_office_desk:
     show audrey desk pulled open
     "I pull her up by her hair just so that I can reach around and grasp the front of her blouse."
 
-
-
-
     play sound audrey_moans_happy_low loop
     play sexsfx1 slide_out
     show audrey desk back lookback

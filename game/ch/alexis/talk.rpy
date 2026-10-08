@@ -341,4 +341,3 @@ label submissive_interact_alexis_male:
         $ alexis.love -= 4
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

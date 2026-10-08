@@ -714,15 +714,11 @@ label aletta_fuck_date_missionary(sexperience_min):
 
 label aletta_fuck_date_cowgirl(sexperience_min):
     "She shoves me backwards so that I collapse onto the bed, and then follows me down onto it."
-    "I seem to fall back with Aletta atop me the whole time, rather than having her land upon me."
-    "And she's clambering over me the whole time, trying to keep a hold."
+    scene aletta_cowgirl
     if aletta.sexperience == 0:
         "I can't recall how many times I've daydreamed about fucking Aletta in the past."
-        "While watching her bending over the photocopier or crossing her legs in the middle of a boring meeting."
         "Pressing her up against the glass of my office window and making her scream for mercy."
         "But nothing could have prepared me for the experience of having her climb atop me, naked and intent upon having her way with me."
-        "I can't help but run my hands up and down her pale-skinned body, tracing her curves."
-        "Likewise I keep trying to kiss and nibble at her erect nipples as her breasts sway invitingly above me."
         if not aletta.is_sex_slave:
             aletta.say "[hero.name] - I want you to fuck me now."
             aletta.say "And I want you to fuck me hard."
@@ -732,13 +728,12 @@ label aletta_fuck_date_cowgirl(sexperience_min):
             aletta.say "Could you fuck your slave really hard?"
         "What can I possibly do, other than nod frantically and try to do as I'm told?"
     elif aletta.is_sex_slave:
-        "I reach out instinctively and grab hold of the lead dangling from Aletta's collar."
+        #attention: choke
+        "I reach out instinctively and grab her neck."
         "She instantly feels the first yank that I give it, stopping her efforts to take the upper hand."
         "Instead, she sits up on her haunches, straddling me just below the waist and awaits further instructions."
         mike.say "That's a good girl, Aletta."
         mike.say "Enthusiasm's all well and good, but you need to wait for my orders first."
-        "Aletta looks a little downcast, though she nods her head in submission."
-        show aletta blush
         aletta.say "Yes, Master...I'm sorry, Master."
         mike.say "Apology accepted, Aletta."
         mike.say "I'm going to fuck you now, Aletta - would you like that?"
@@ -754,225 +749,84 @@ label aletta_fuck_date_cowgirl(sexperience_min):
     menu:
         "Fuck her pussy":
             scene bg black
-            show aletta cowgirl with fade
-            "It'd be just as easy to slip my dick into Aletta's ass, she's already so well lubricated with sweat."
-            "But her pussy just seems to be calling out to me right now, and it's not something that I'm going to ignore."
+            scene aletta_cowgirl01 with fade
+            "It'd be just as easy to slip my dick into Aletta's pussy, she's already so well lubricated with sweat."
             "All it takes is one or two subtle moves on her part, and she has me just where she wants me."
-            "I suppose it's a happy coincidence that's right where I want to be right now too."
-            show aletta cowgirl vaginal
-            "With a little twist of her waist that's translated into a movement of her buttocks, Aletta sinks down onto my cock."
-            "Don't take this the wrong way, but Aletta's pussy is a lot like the girl herself."
-            "It's impressive and more than a little intimidating at first."
-            "But once you get into it, you discover a sensuality that's just as intense hiding beneath."
-            show aletta cowgirl pleasure down
+            scene aletta_cowgirl02
             "Aletta lowers herself slowly onto me, moaning a little more with each successive inch that enters her body."
             "She's tight, gripping me like a fist at times, but that just makes the sensation all the more intense and enjoyable."
-            show aletta cowgirl raised
+            scene expression make_anim(aletta_cowgirl_pussy, time=0.3, loop=True)
             "Once she's taken me as deep into her as possible, she leans forwards, so that my cock is almost horizontal."
-            show aletta cowgirl down
-            pause 0.35
-            show aletta cowgirl raised
-            pause 0.35
-            show aletta cowgirl down
             "Then she begins to move back and forth, slowly at first, but with increasing speed as she uses me to get herself off."
-            show aletta cowgirl raised
-            pause 0.25
-            show aletta cowgirl down at startle(0.05, -10)
-            pause 0.25
-            show aletta cowgirl raised
-            pause 0.25
-            show aletta cowgirl down at startle(0.05, -10)
+            scene expression make_anim(aletta_cowgirl_pussy, time=0.2, loop=True)
             "Aletta's heavy breasts are being dragged up and down my chest the whole time, their nipples stroking my skin as they go."
-            show aletta cowgirl raised cum
-            pause 0.25
-            show aletta cowgirl down bounce at startle(0.05, -10)
-            pause 0.25
-            show aletta cowgirl raised
-            pause 0.25
-            show aletta cowgirl down at startle(0.05, -10)
-            pause 0.1
-            show aletta cowgirl -bounce
+            scene aletta_cowgirl02
             "I hardly have to move a muscle, as Aletta's doing enough to make me pant from the sheer pleasure on her own."
-            show aletta cowgirl raised bounce ahegao
-            pause 0.15
-            show aletta cowgirl down at startle(0.05, -10)
-            pause 0.15
-            show aletta cowgirl raised
-            pause 0.15
-            show aletta cowgirl down at startle(0.05, -10)
-            pause 0.15
-            show aletta cowgirl raised
-            pause 0.15
-            show aletta cowgirl down at startle(0.05, -10)
-            pause 0.1
-            show aletta cowgirl -bounce
             "So I keep my hands occupied by stroking her thighs and squeezing her firm buttocks as she works herself towards her climax atop me."
             if aletta.flags.submissive_interact:
                 aletta.say "[hero.name]! Use me as a target practice!"
-            if CONDOM:
-                "With nothing to hold me back, I feel myself let go inside of Aletta."
-                "She makes the moment that much more intense by cumming a second later herself."
-                "It's almost too hard to hold onto one another, with us bathed in each other's sweat."
-                "But somehow we manage to cling together and ride it out with our faces pressed together, side by side."
-            show aletta cowgirl smile
-            "I bite my lip and try to remember where I am and what I'm doing."
-            show aletta cowgirl raised bounce
-            pause 0.15
-            show aletta cowgirl down at startle(0.05, -10)
-            pause 0.15
-            show aletta cowgirl raised
-            pause 0.15
-            show aletta cowgirl down at startle(0.05, -10)
-            pause 0.15
-            show aletta cowgirl raised
-            pause 0.15
-            show aletta cowgirl down at startle(0.05, -10)
-            pause 0.1
-            show aletta cowgirl -bounce
             "But all I can feel is the approaching climax."
             menu:
                 "Cum inside":
                     "I'm no more than seconds away from cumming when I realise that Aletta seems to be struggling with me."
-                    "With no way to tell if she's reaching her own peak or trying to separate herself from me, I choose to hold onto her."
-                    show aletta cowgirl raised
+                    scene aletta_cowgirl_inside
                     pause 0.15
-                    show aletta cowgirl raised creampie cum with vpunch
                     "I cum no more than a heartbeat later, feeling myself burst inside of Aletta and not moving until it's all over."
                     with vpunch
-                    if CONDOM:
-                        if not aletta.is_sex_slave:
-                            aletta.say "[hero.name]...you...you came inside me!"
-                        else:
-                            aletta.say "Master...you...you came inside me!"
-                            aletta.say "Thank you so much!"
+                    if not aletta.is_sex_slave:
+                        aletta.say "[hero.name]...you...you came inside me - without a rubber!"
                     else:
-                        if not aletta.is_sex_slave:
-                            aletta.say "[hero.name]...you...you came inside me - without a rubber!"
-                        else:
-                            aletta.say "Master...you...you came inside me - without a rubber!"
+                        aletta.say "Master...you...you came inside me - without a rubber!"
 
-                            aletta.say "Thank you so much!"
-                    "I'm somehow more worried about the tone of her voice than the reality of what I just did."
-                    "As I honestly can't remember hearing even a hint of fear in Aletta's voice before this moment."
+                        aletta.say "Thank you so much!"
                 "Pull out" if hero.sexperience >= (sexperience_min + 10):
                     "Somehow I still have the presence of mind to pull out before I cum inside of her."
-                    "But she's not going to make it easy for me, as Aletta is effectively pinning me down with her entire body."
-                    "I wrestle with her for a few seconds, all the time expecting to cum at any second."
-                    "Mistaking my efforts for some kind of final embrace, Aletta playfully grapples with me, frustrating my efforts."
-                    show aletta cowgirl raised -vaginal cumshot with vpunch
+                    scene aletta_cowgirl_outside with vpunch
                     "In the end I'm forced to twist sideways, casting her off me as I slip out of her and cum at the same instant."
-                    show aletta cowgirl -cumshot dickcum with vpunch
+
         "Fuck her ass" if hero.sexperience >= (sexperience_min + 5) and aletta.sub >= 50:
-            scene bg black
-            show aletta cowgirl with fade
-            "Maybe it's the devil in me, but as soon as I get the notion of taking Aletta up the ass, I can't think of anything else."
-            "I just have to see what the expression on that haughty, arrogant face of hers will look like."
-            "So as she reaches down to line my cock up with her pussy, I reach out and grab hold of her wrist."
-            "She tries to fight me, but I'm just that bit too strong for her, and I manage to force her hand backwards by the exact amount needed."
-            show aletta cowgirl anal pleasure down
-            "And then I thrust with the entirety of my weight behind the effort."
-            "I know that I've hit the target more from the expression that explodes onto Aletta's face than actually feeling my cock go up her ass."
-            "At first it's shock at the sensation, then comes indignation, followed by a wave of embarrassment."
-            show aletta cowgirl raised
-            "But then, finally, her face melts into an almost delirious expression of pleasure."
+            "I reach for her hips, already lining myself up with her pussy."
+            "She's slick, open, and one thrust would bury me where I meant to go."
+            scene aletta_cowgirl11
+            "Aletta's hand gets there first."
+            "She wraps her fingers around me, shifts her weight, and angles me lower than I expected."
+            scene aletta_cowgirl12
+            "Before I can correct her, she drops her hips and takes me herself."
+            "The head pushes past a tighter ring than her pussy, and the look that explodes onto her face tells me exactly where she's put me."
+            scene expression make_anim(aletta_cowgirl_ass, time=0.1, loop=True)
+            "Then her face melts into an almost delirious expression of pleasure."
             if not aletta.is_sex_slave:
                 aletta.say "Oh...oh...[hero.name]..."
             else:
                 aletta.say "Oh...oh...Master..."
             aletta.say "You're in my ass!"
-            show aletta cowgirl down
             "I can feel the muscles clenching in protest, squeezing my cock in a way that only makes me want to push still further in."
             mike.say "Tell me how it feels, Aletta?"
-            show aletta cowgirl raised
-            pause 0.25
-            show aletta cowgirl down
-            pause 0.25
-            show aletta cowgirl raised
-            pause 0.25
-            show aletta cowgirl down
             "I've begun to thrust in and out of her now, meaning that Aletta can't help but writhe as I fuck her ass."
-            show aletta cowgirl ahegao down
+            scene aletta_cowgirl18
             aletta.say "It...it feels...incredible!"
-            show aletta cowgirl raised
             mike.say "Do you like it, Aletta?"
             mike.say "Do you like having my cock up your ass?"
-            show aletta cowgirl raised
-            pause 0.25
-            show aletta cowgirl down at startle(0.05, -10)
+            scene expression make_anim(aletta_cowgirl_ass, time=0.07, loop=True)
             "She moans again, as I push harder."
-            show aletta cowgirl raised
-            pause 0.25
-            show aletta cowgirl down at startle(0.05, -10)
-            aletta.say "Yes...yes..."
-            show aletta cowgirl raised
-            pause 0.25
-            show aletta cowgirl down at startle(0.05, -10)
-            pause 0.25
-            show aletta cowgirl raised
-            pause 0.25
-            show aletta cowgirl down at startle(0.05, -10)
             mike.say "Tell me what you like, Aletta."
             aletta.say "I...I like having your cock up my ass..."
-            show aletta cowgirl raised
-            pause 0.25
-            show aletta cowgirl down at startle(0.05, -10)
-            pause 0.25
-            show aletta cowgirl raised
-            pause 0.25
-            show aletta cowgirl down at startle(0.05, -10)
             aletta.say "Please...don't stop...fuck my ass harder!"
             if aletta.flags.submissive_interact:
                 aletta.say "Please... use my ass as a target practice!"
-            show aletta cowgirl raised cum
-            pause 0.25
-            show aletta cowgirl down bounce at startle(0.05, -10)
-            pause 0.25
-            show aletta cowgirl raised
-            pause 0.25
-            show aletta cowgirl down at startle(0.05, -10)
-            pause 0.1
-            show aletta cowgirl -bounce
             "The combination of being inside of her and hearing those words from her is almost too much for me."
-            show aletta cowgirl raised bounce ahegao
-            pause 0.15
-            show aletta cowgirl down at startle(0.05, -10)
-            pause 0.15
-            show aletta cowgirl raised
-            pause 0.15
-            show aletta cowgirl down at startle(0.05, -10)
-            pause 0.15
-            show aletta cowgirl raised
-            pause 0.15
-            show aletta cowgirl down at startle(0.05, -10)
-            pause 0.1
-            show aletta cowgirl -bounce
+            scene aletta_cowgirl12
             "I can feel myself cumming a few moments later."
-            show aletta cowgirl smile
             "I bite my lip and try to remember where I am and what I'm doing."
-            show aletta cowgirl raised bounce
-            pause 0.15
-            show aletta cowgirl down at startle(0.05, -10)
-            pause 0.15
-            show aletta cowgirl raised
-            pause 0.15
-            show aletta cowgirl down at startle(0.05, -10)
-            pause 0.15
-            show aletta cowgirl raised
-            pause 0.15
-            show aletta cowgirl down at startle(0.05, -10)
-            pause 0.1
-            show aletta cowgirl -bounce
+            scene aletta_cowgirl17
             "But all I can feel is the approaching climax."
-            show aletta cowgirl raised
-            pause 0.15
-            show aletta cowgirl raised creampie cum with vpunch
+            with vpunch
             "Still burning with shame and arousal, Aletta casts her head back as I cum deep inside of her ass."
             with vpunch
             "I can't see her face, but the evidence is clear that she's almost overwhelmed by the sensation."
-            with vpunch
-            "One hand kneads and massages her breasts as if to release some of the pent up energy."
-            "The other slides down to her pussy and begins to stroke away in earnest for much the same reason."
             $ aletta.flags.anal += 1
+
+    #attention: after climax
     show aletta cowgirl pleasure
     "Aletta collapses into a panting heap, falling half across me as she does so."
     "I don't have the energy to turn her over, and so I do my best to turn our mess of slippery limbs into an embrace."
@@ -1620,11 +1474,11 @@ label aletta_fuck_office_titjob:
     "And by the time I make it over to the couch, I'm almost completely naked."
     "Aletta follows me at a more leisurely pace, chuckling at my enthusiasm."
     hide aletta
-    show aletta_titjob1 with fade
+    scene aletta_titjob1 with fade
     "I get a magnificent view of her chest from below."
     "I only make eye-contact with her again when she's almost on her knees."
     "By now my cock is hard as a rock and standing to attention."
-    show aletta_titjob2
+    scene aletta_titjob2
     "And with a smile, she flicks the head of my cock."
     "This makes it sway from side to side, but also hurts a little."
     "So I can't help yelping in pain."
@@ -1638,86 +1492,44 @@ label aletta_fuck_office_titjob:
         aletta.say "You need a massage, Master..."
     "I feel the weight of Aletta's breasts as my cock pushes between them."
     "She takes it slowly, letting me savour the sensation for as long as possible."
-    "Slowly the head inches higher and more of the shaft disappears into her cleavage."
-    "And only when it's almost completely swallowed does she begin to move."
-    "Aletta rocks gently back and forth."
     "And at the same time she presses her breasts together."
     "The effect is immediate and almost breath-taking."
     "I feel like my cock is being massaged by soft, warm pillows."
     "But the view I have right now makes the feeling that much more intense."
-    show aletta titjob droll
-    "I can see Aletta's breasts as they heave and squeeze together."
-    "And the look of mounting desire on her face is plain to see."
-    "Aletta's lips are parted, and she's already panting heavily."
-    "Her eyes dart between my expression and her own chest."
-    "All of which makes me wonder if this was about relieving my tension at all."
-    "Because Aletta is starting to look like she's going to blow her own top!"
-    "A moment later, the head of my cock pops up from between her breasts."
-    "And Aletta greets this with a cry that sounds like she just came!"
-    "Her eyes focus on the tip with a renewed intensity."
+    show aletta_titjob3
     if aletta.flags.submissive_interact:
         aletta.say "[hero.name] don't miss the bullseye of your personal shooting target!"
     "And she begins working away at me like never before."
     "It's not just Aletta that's feeling it either."
+    scene expression make_anim(aletta_ofc_titjob, time=0.3, loop=True)
     "I can feel my heart pounding in my chest right now."
     "My breath is coming in ragged gasps."
     "And I know I can't hold on much longer."
     "The only question is what's going to happen when I lose it?"
     menu:
         "Cum on her tits":
-            show chest_insert aletta zorder 1 at zoomAt(1, (20, 220))
-            "I've been staring at Aletta's breasts this whole time."
-            "Hell, I've been all but hypnotised by those things!"
-            "So where else am I going to want it to go?"
-            "I pull myself downwards, just at the right moment."
-            show chest_insert aletta cum
-            show aletta titjob surprised cumshot
+            show aletta_titjob2
             with vpunch
-            "Which means that when I cum, it spurts all over Aletta's chest."
+            "I cum, it spurts all over Aletta's chest."
             with vpunch
             "She lets out breathless gasps as I paint white stripes across her breasts."
             show aletta titjob -cumshot dickcum normal with vpunch
             $ aletta.love += 4
             "And then moans as she massages in into her skin."
-        "Cum on her face":
-            "Aletta keeps right on staring at the head of my cock."
-            "Which means that she's looking down the barrel of a gun!"
-            show aletta titjob cumshot surprised with vpunch
-            "As soon as I shoot my load, she takes it straight in the face."
-            with vpunch
-            "Aletta cries out in surprise as it hits her."
-            show aletta titjob -cumshot normal cum face with vpunch
-            $ aletta.sub += 2
-            "Warm stripes of sticky, white cum paint her cheeks."
-            "Some spatters her lips, landing in her open mouth."
-            "And then it begins to run downwards, dripping off her chin."
         "Cum in her mouth":
             "At the last moment, Aletta leans down even further."
-            show mouth_insert aletta zorder 1 at zoomAt(1, (860, 140))
+            show aletta_titjob6
             "She takes the head of my cock in her open mouth."
-            show mouth_insert aletta cum
-            show aletta titjob cumshot
             with vpunch
             "And a second later, I shoot my load."
-            with vpunch
-            "Aletta desperately laps at the cum as it spurts out."
-            with vpunch
             "She seems desperate to claim every last drop."
-            show aletta titjob -cumshot cum mouth
             $ aletta.love += 2
             $ aletta.sub += 1
-            "Almost like she's dying of her thirst for it."
-            "I lie back and watch her swallow all that she can."
-            show aletta titjob -cumshot -cum -mouth
-            show mouth_insert aletta -cum
-            "Even licking the last off her lips before she's done!"
-    hide chest_insert
-    hide mouth_insert
-    hide aletta
+            with dissolve
     show aletta work topless with fade
     "While I'm still lying back on the sofa, Aletta stands up."
     "She cleans herself off quickly and efficiently, then straightens her clothes."
-    show aletta work -topless with dissolve
+    show aletta work normal with dissolve
     "Within less than a minute, she looks perfectly presentable."
     "Just as poised and professional as she did the moment she walked into my office."
     aletta.say "Mmm..."
@@ -2418,32 +2230,29 @@ label aletta_fuck_office_doggy(sexperience_min):
 label aletta_fuck_office_cunnilingus:
     "I swear that I can smell the scent of Aletta's pussy right now."
     "It's calling to me from between her thighs, and I have to answer!"
-    "Without pausing to ask permission, I guide her down onto the sofa."
-    "Aletta makes no effort to resist, chuckling to herself as she lies down."
     "But she does let out a gasp of surprise as I part her legs."
-    scene aletta cunnilingus
-    show aletta cunnilingus ceo
+    scene alettaofc_cunnilingus1
     with fade
     "And then lower my head between them, heading straight for her pussy."
     "I start by gently tracing the outline of her lips."
+    scene alettaofc_cunnilingus2
     "Just using the tip of my tongue, I start to tease her."
-    "For all of her haughty demeanour, Aletta's body betrays her."
     "I can tell that she's already wet down here, slick with desire."
     "My tongue tingles as I lick between her folds."
     "And my ears are filled with the sound of Aletta beginning to moan."
+    scene expression make_anim(["ev2/aletta/ofc_cunnilingus2",
+                                "ev2/aletta/ofc_cunnilingus3"], 
+                                time=0.2, loop=True)
     "This spurs me on, and I push my tongue deeper."
     "It slides between Aletta's lips, reaching inside of her."
     "But I want to go deeper still, as far as I can go."
-    "I have my eyes closed, limiting the range of my senses."
-    "And those that remain to me are overwhelmed too."
     "All I can feel, taste and hear is Aletta."
     "The only sensations I can make out the movements of her body."
-    show aletta cunnilingus pleasure
+    scene alettaofc_cunnilingus3
     "But I can clearly hear the noises she's making."
     "As well as the words she manages to utter."
     aletta.say "Oh..."
     aletta.say "Oh god..."
-    show aletta cunnilingus ahegao
     aletta.say "I'm cumming..."
     $ aletta.love += 2
     return

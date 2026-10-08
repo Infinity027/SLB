@@ -49,3 +49,25 @@ init python:
     "ev2/aletta/titjob4.jpg",
     "ev2/aletta/titjob5.jpg",
     ]
+
+    aletta_cowgirl_pussy = [
+    "ev2/aletta/cowgirl03.jpg",
+    "ev2/aletta/cowgirl04.jpg",
+    "ev2/aletta/cowgirl05.jpg",
+    ]
+
+    aletta_cowgirl_pussy = [
+    "ev2/aletta/cowgirl03.jpg",
+    "ev2/aletta/cowgirl04.jpg",
+    "ev2/aletta/cowgirl05.jpg",
+    "ev2/aletta/cowgirl04.jpg",
+    ]
+
+    aletta_cowgirl_pussy = [
+    "ev2/aletta/cowgirl13.jpg",
+    "ev2/aletta/cowgirl14.jpg",
+    "ev2/aletta/cowgirl15.jpg",
+    "ev2/aletta/cowgirl16.jpg",
+    "ev2/aletta/cowgirl15.jpg",
+    "ev2/aletta/cowgirl14.jpg",
+    ]
