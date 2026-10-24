@@ -515,61 +515,35 @@ label aletta_halloween_sex:
     show aletta halloween smile
     with fade
     "Aletta hustles me into the room and closes the door behind us."
-    aletta.say "Now strip!"
-    "I can't help smiling at the situation I find myself in."
-    "I do as I'm told, hurrying to take off my clothes."
-    "I try as best I can to play the part of someone being held at gunpoint."
-    "But in that situation, I doubt most guys would have an erection quite as big as mine."
-    "Aletta can't help notice the effect she's having on me."
-    "And I see a smile spread across her face."
-    show aletta halloween flirt
-    aletta.say "Very good."
-    aletta.say "Now lie on the bed."
-    aletta.say "And keep your hands where I can see them!"
-    "I nod as I hurry over to the bed and do as she says."
-    "From here I have a perfect view of Aletta."
-    show aletta doggy halloween glasses pleasure with fade
-    "She's standing defiantly at the foot of the bed."
-    "And her costume shows off every inch of her body."
-    "Aletta doesn't issue any more orders."
-    "Instead she tosses her pistols aside and puts her hands to better use."
-    show aletta doggy -halloween hairdown
-    "It doesn't take her long to strip off the tight spandex she's wearing."
-    "But all the same, it's a memory that will stay with me for a very long time!"
+    aletta.say "Now what!"
+    aletta.say "Is you need written permision to fuck me, [hero.name]!"
+    aletta.say "Strip off."
+    "I do as I'm told, and Aletta seems to approve of what she sees."
+    "She begin to strip off her own costume, and I can see that she's wearing a black bra and thong underneath."
     "Once she's completely naked, Aletta climbs onto the end of my bed."
-    show aletta doggy mike
-    "She crawls slowly towards me on all fours, taking her time."
-    "Which means that I get to watch her body move, her heavy breasts sway."
-    show aletta doggy hand
-    "Without asking permission, I take hold of her ass."
-    "And then she begins to squeeze my cock, stroking the shaft."
-    "There's no need for either of us to speak at this point."
-    "We're beyond the role playing that got us here."
-    "There's only one thing that we want now."
+    scene aletta naked doggy with fade
+    aletta.say "C'mon, [hero.name]!"
+    aletta.say "Get over here and fuck me!"
+    "She's swaying her hips back and forth, and I can see that she's already wet."
+    scene aletta_h_fuck02 with fade
+    "I nod as I hurry over to the bed and do as she says."
     "Aletta pushes her ass backwards, pressing the head of my cock against her lips."
-    show aletta doggy vaginal normal
     "And then she pushes herself onto me, using her weight to drive it home."
     "I gasp at the sensation, every slow second passing like an age."
+    scene aletta_h_fuck03
     "By the time I'm as deep into Aletta as I can go, I realise I'm holding my breath."
-    show aletta doggy pleasure
-    "I only begin to feel that I can breathe again as she starts to ride my cock."
-    "Aletta goes slowly at first, but soon builds up speed."
-    "And I feel like all I can do is sit back and let her have her way."
-    "The experience is amazing, watching her use me to pleasure herself."
-    "The sensations that she stirs in me building with each second that passes."
-    "Aletta looks back at me over her shoulder."
-    "I don't know if she does this because she wants me to play with her breasts."
-    "But it's not a chance that I'm going to let pass me by."
-    "As soon as I begin to massage those huge, fleshy orbs, Aletta moans with pleasure."
-    "She doesn't say a word, just nods to let me know what she wants more."
-    "I oblige, squeezing her stiff nipples between my fingers and thumbs."
-    show aletta doggy squirt ahegao with hpunch
+    "I go slowly at first, but soon builds up speed."
+    scene expression make_anim(aletta_h_fuck01, time=0.2, loop=True)
+    "Aletta's moans are getting louder and louder, and I can feel her body starting to tense up."
+    aletta.say "Oh, [hero.name]!"
+    aletta.say "fuck me harder!"
+    "How can I refuse her?"
+    scene aletta_h_fuck_ahegeo with hpunch
     "Aletta throws her head back, and I can feel that she's about to cum."
-    show aletta doggy creampie with hpunch
+    scene aletta_h_fuck_inside with hpunch
     "Which makes me lost it too, shooting my load into her."
     with hpunch
     "Aletta collapses onto the bed before me."
-    "And we lie there as she rides out the last moment of her climax."
     "Her pussy twitching around my cock the whole time."
     $ aletta.sexperience += 1
     $ game.pass_time(1)

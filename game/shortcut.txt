@@ -1,4 +1,3 @@
 play sound "vo/mc/bj_load.ogg"
 scene expression make_anim(cassidy_hottub, time=0.4, loop=True)
-
-
+scene expression f"bg {game.room}"
