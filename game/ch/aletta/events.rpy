@@ -2549,8 +2549,8 @@ label aletta_event_02:
     if aletta.love.max < 40:
         $ aletta.love.max = 40
     "I've just finished a difficult assignment. A commotion in the hallway breaks my concentration."
-    show aletta normal at center, zoomAt(1.0, (840, 720))
-    show victor casual at center, zoomAt(1.25, (440, 890))
+    show aletta normal at center
+    show victor casual at center
     with fade
     "A worker is screaming in Aletta's face while everyone watches. She stands there calmly, but I can see the anger behind her composure."
     show fx anger at center, zoomAt(1.0, (840, 720))
@@ -2600,7 +2600,6 @@ label aletta_event_02:
             show aletta sad at center, traveling(1.25, 0.3, (640, 880))
             "Aletta looks exhausted. I walk over to her."
             mike.say "Are you okay?"
-            show aletta stuned
             show aletta talk
             aletta.say "All in a day's work."
     aletta.say "I need a smoke now after all of that. Care to join me?"
@@ -2610,7 +2609,7 @@ label aletta_event_02:
     show aletta work dreamy at center, zoomAt(1.25, (720, 880))
     with fade
     "She lights her cigarette and leans against the window."
-    show aletta b pain
+    show aletta pain
     "She rubs her neck."
     menu:
         "Offer to give her a massage":
@@ -2620,9 +2619,7 @@ label aletta_event_02:
             mike.say "Here, let me help."
             hide aletta
             scene bg breakroom
-            show slap_npc_aletta at center, zoomAt(1.4, (640, 1080))
-            show slap_outfit_aletta_work at center, zoomAt(1.4, (640, 1080))
-            show slap_exp_happy_aletta at center, zoomAt(1.4, (640, 1080))
+            show aletta work masssage
             with fade
             "I stand behind her and start rubbing her shoulders and neck gently."
             "At first she stiffens, then eases into it."
@@ -2637,7 +2634,7 @@ label aletta_event_02:
             aletta.say "Yeah, but when doesn't it?"
             aletta.say "Part of the job description."
             mike.say "Maybe you should treat yourself to a massage at a spa?"
-            show aletta sadsmile
+            show aletta sad
             "She looks at me and I catch a hint of disappointment before it's gone."
             show aletta talk
             aletta.say "Oh."
@@ -2675,11 +2672,10 @@ label aletta_event_03:
     $ aletta.flags.nodate = False
     $ aletta.flags.nokiss = False
     "The deadlines at work this week are ridiculous."
-    "So much so they are pretty much impossible to get done on time without working over. But did anyone volunteer?"
-    "No, of course not."
+    "So much so they are pretty much impossible to get done on time without working over."
     "So that is why Aletta came to me and 'suggested' I stay after when I first got to work this morning."
     "At first I was dreading it, but throughout the day as I imagined being alone with her I started to look forward to it until it was what was getting me through my regular shift."
-    show aletta close work dreamy
+    show aletta work dreamy
     "Now that she is sitting next to me I felt like the temperature in the room has gone up ten degrees."
     "What am I thinking?"
     "She is my boss."
@@ -2688,7 +2684,6 @@ label aletta_event_03:
     show aletta normal
     "Exactly what do I expect to happen tonight? That's right. Nothing. Because she is my boss. I need to get a grip of myself."
     "A grip... hmm maybe that isn't such a bad idea."
-    "Maybe that's just my problem, I need to get off."
     "I could go to the bathroom real quick and jerk off and she would never know."
     show aletta talk
     aletta.say "[hero.name]..."
@@ -2718,12 +2713,9 @@ label aletta_event_03:
     show aletta talk
     aletta.say "So do you understand what I am saying?"
     show aletta normal
-    mike.say "Uh, yeah. I-I mean, yes, Aletta. I should be able to get it done no problem."
-    show aletta b -glasses
-    "She seems to relax into her chair for the first time, taking off her glasses and putting one ear piece to her lips."
-    show aletta happy
+    mike.say "Uh, yeah. I-I mean, yes, Aletta. I should be able to get it done no problem."y
     aletta.say "That's a relief. I was really worried about how to get this assignment done. I really don't need corporate on my ass again."
-    show aletta b pain
+    show aletta pain
     "She sighs and reaches back to rub her tense shoulders."
     show aletta dreamy
     "I want so badly to rub them for her but don't trust myself to be able to stop there."
@@ -2731,32 +2723,29 @@ label aletta_event_03:
     "Wait what? Since when am I someone who falls for their boss?"
     "Am I falling for her? Or am I just horny?"
     "It has to be just horny. And she is an attractive woman. It is understandable."
-    "That's it, I need to go take care of this."
     show aletta normal
     mike.say "Don't worry about it Aletta, I'll have it done before I leave here. I'm just going to go to the bathroom real quick."
     show aletta talk
     aletta.say "No problem, [hero.name], it really is a great help."
     show aletta normal
     "She suddenly drops some of her papers as she turns in her chair to get up."
-    show aletta surprised
+    show aletta surprise
     aletta.say "Oh-."
-    show aletta sadsmile
     mike.say "Don't worry I got them!"
     "I quickly drop to the floor before she can get out of her seat and gather them up. Some slide under the desk and I have to crawl under."
     hide aletta
-    show aletta ropeplay work
+    show aletta panties_expose at center, zoomAt(2.0, (0, -200))
     with fade
     "When I come back up I turn my head and my heart jumps when I realize I can see up her skirt and can't tear my eyes away."
     "At first I think I am imagining that her legs are opening wider to show her panties and I can't believe my luck until she talks."
-    show aletta ropeplay b pleasure
+    show aletta panties_expose at center
     aletta.say "You know, it is quite rude to stare."
-    show aletta ropeplay normal
     play sound "<from 0 to 0.6>sd/SFX/doors/door_banging.ogg"
     pause 0.5
     with vpunch
     "I look up so fast I bang my head on the bottom of the desk and swear."
     hide aletta
-    show aletta close work blush embarrassed
+    show aletta work blush
     menu:
         "Apologize":
             mike.say "I'm so sorry Aletta. I... It just caught me off guard."
@@ -2771,22 +2760,24 @@ label aletta_event_03:
     "Now I definitely need to go to the bathroom, I think as I watch her walk away."
     scene bg publicbathroom with fade
     "Once in the stall I don't waste any time pulling my cock out of my pants."
-    "I set a timer and tell myself I am going to make sure I cum in two minutes."
     "This has to be a quicky because I am not going to get caught with my pants down at work."
     "I wrap my hand around my cock and moan."
-    "Jerking it to a steady tempo I can feel the pleasure flooding my senses and I am glad it is after hours or I know I would get caught."
     "I can't think about anything else right now."
     menu:
         "Think about Aletta's breasts":
+            show aletta work boobs_suck with dissolve
             "I start to image her breasts free of her shirt and me cupping them in my hands before taking one of her nipples into my mouth."
             "I imagine the moans that would pour out of her and start jerking off faster."
             "If only I was actually holding them instead of my dick."
             "I keep thinking of Aletta's breasts in the most lewd ways possible and in no time I am cumming all over my hand and panting heavily."
+            hide aletta work boobs_suck with dissolve
             "I wash my hands and go back to work thinking about how I couldn't wait for a chance to spray her breasts with my cum."
         "Think about Aletta's pussy":
+            show aletta work fingering with dissolve
             "I start to image spreading Aletta's legs wide open and taking those lace panties off."
             "I think about plunging my fingers into her and making her scream."
             "I keep jerking off with my eyes closed pretending my hand is really Aletta's pussy and cum hard all over my hand."
+            hide aletta work fingering with dissolve
             "After I clean up I go back to work with a satisfied smile, hoping I can get a chance at the real thing soon."
         "Think about an office intern":
             "I find myself thinking about an intern in the office instead of Aletta and before I know it my hard on is gone and I'm left disappointed."
@@ -2864,47 +2855,42 @@ label aletta_event_04_sex:
     hide aletta
     show aletta happy
     "Aletta laughs and gets up off the couch."
-    show aletta normal blush
+    show aletta panties_takeoff
     "She gives me a sexy look as she lifts up her skirt just enough to hook her thumbs into her panties and pull them down her legs while making eye contact."
     "I can feel my heart pounding and my cock throbbing as she does so."
-    "I can't take my eyes off of her."
-    show aletta oral noman with fade
+    scene aletta oral with fade
     "With a laugh she tosses them onto the floor and then places her hands on the table next to the couch."
     "Her pussy is just barely covered by the bottom of her skirt and she looks back at me with a lustful look as if temping me."
-    "She spreads her legs more as if in invitation."
     menu:
         "Push her skirt up gently":
+            scene aletta oral_gentle with fade
             "Getting up slowly I rub her bottom before taking the hem of her skirt in my hands and pushing it above her ass."
             "I look at what was before me and it is such a beautiful sight."
-            "Her lips are already wet for me."
             if 'aletta_event_04' in DONE:
                 $ aletta.sub -= 1
             else:
                 $ aletta.sub -= 2
         "Be rough with her":
+            scene aletta oral_rough with fade
             "I yank her skirt up over her ass and give the right side a hard slap making her gasp."
             "She looks back at me in shock but pushes back against me as if she wants more."
             "So I give her another real quick slap before moving on to more fun."
             $ aletta.sub += 2
-    show aletta oral manb
+    scene aletta_ofc_oral with fade
     "I take my fingers and run them along her lips slowly and teasingly until I suddenly thrust them into her center and she lets out a moan, pushing back to further fill herself with them."
     "Only a few minutes of this and her juices are already all over my fingers and threaten to run down her legs."
-    "Needing more leverage, she drops down to her knees on the table."
-    "It is the sexiest sight I have ever seen."
-    "I follow suit, going down to my knees on the floor so my face is level with her pussy."
     "I love the smell of her and have a feeling I am going to enjoy the taste of her as well."
-    show aletta oral mana tongue
+    scene aletta_ofc_oral_tongue
     "I plunge my tongue inside and she lets out a startled but pleasured yell."
     aletta.say "Oh [hero.name]..."
-    "Her moan is so sexy I decide to reward her by rubbing her clit in slow circles and continuing to lick her out at the same time."
     "I hear her start to pant heavily."
     aletta.say "[hero.name]... [hero.name]... I'm... I'm going to..."
     mike.say "It's okay Aletta, just let go and enjoy yourself."
+    scene aletta_ofc_oral_finger
     "I quickly replace my tongue with my fingers to help her along and she lets out a long drawn out moan as she squirts on my face."
     menu:
         "Try to catch it in your mouth":
-            hide aletta
-            show aletta oral mana cum
+            scene aletta_ofc_oral_catch
             "Knowing she was about to do so I had opened my mouth trying to catch as much as I could, licking my lips when she was done."
             mike.say "Mmm, Aletta you taste so good."
             if 'aletta_event_04' in DONE:
@@ -2912,26 +2898,22 @@ label aletta_event_04_sex:
             else:
                 $ aletta.sub -= 2
         "Quickly shut your mouth":
-            hide aletta
-            show aletta oral manb cum
+            scene aletta_ofc_oral_shut
             "Knowing she was about to do that, I quickly try to shut my mouth but didn't turn my head quick enough."
             "I make a face but try not to let her see it."
-    hide aletta
-    show aletta oral mana arm
+    scene aletta_ofc_oral_finger
     "I start to suck on her clit while still thrusting my fingers back and forth in her and she moves to give me more access as more needed, breathy, moans come out of her mouth."
-    show aletta oral mana arm tongue
-    "I lick her from her clit to her taint and back again as she tries to push back on my face."
+    scene aletta_ofc_oral_ahegeo
     "She squirts again and seems to be losing control of herself."
     "I massage the walls of her vagina and nurse her clit at the same time and don't let up as I hear her beside herself in pleasure."
     "She tries to say my name but can hardly speak."
-    show aletta oral mana arm tongue orgasm
+    with hpunch
     aletta.say "[hero.name]!"
     "I suddenly feel a shudder go through her and she lays her head down on her arms as she rides out the rest of her orgasm."
     "Standing up I use a tissue to wipe off my face before stealing her panties and pocketing them."
     "I didn't think she was going to miss them."
     if 'aletta_event_04' in DONE:
         $ aletta.sub -= 1
-    hide aletta
     return
 
 label aletta_event_05:
@@ -2953,9 +2935,6 @@ label aletta_event_05:
     with easeinleft
     "But she steps aside, and another someone steps into the doorway after her."
     "He's big and surprisingly burly in his office formal wear, his muscles visible beneath the fabric of his shirt."
-    "What is this, Aletta's newest hire?"
-    "He looks like an ex-underwear-model thinly veiled as an employee."
-    "I bet she's gonna keep him under her desk."
     show aletta talk
     aletta.say "I wanted to introduce you, since I don't think you've ever met."
     show aletta normal
@@ -2968,19 +2947,16 @@ label aletta_event_05:
             if hero.has_skill("work"):
                 $ game.set_flag("worksatisfaction", 10, mod="+")
             "I guess I'll give the guy some dignity, even if he might be a nobody."
-            "I'm not stupid enough to potentially piss off someone important, anyway."
             "I roll back my seat from my desk and get to my feet, turning to offer my hand to the dude."
-            "His hand seems to be twice the size of mine when he reaches out and gives it a firm shake."
             show aletta talk
             aletta.say "This is Mr. --"
             show aletta normal
-            show dwayne shout
+            show dwayne talk
             dwayne.say "Please."
             show dwayne normal
             "He interrupts her, giving me a formal but pleasant smile as he looks down at me with my hand still clasped in his."
-            show dwayne happy
-            dwayne.say "Dwayne's fine."
             show dwayne smile
+            dwayne.say "Dwayne's fine."
             "Ah. He's the kind of 'I'm a cool coworker' guy."
             "I don't mind."
             "They're definitely better than the uptight stiffs who expect you to address them like royalty."
@@ -2995,13 +2971,12 @@ label aletta_event_05:
                 aletta.say "... efficient, and talented. I'm happy to have him as an employee."
                 show aletta normal
                 "Aw, Aletta, you shouldn't have. I could almost blush."
-                show dwayne happy
+                show dwayne smile
                 dwayne.say "A driving force in the company's success, huh?"
                 show dwayne smile at center, traveling(1.1, 0.3, (340, 780))
                 "Dwayne gives my hand one last firm shake before letting it go and stepping back."
-                show dwayne happy
+                show dwayne talk
                 dwayne.say "Very nice to meet you."
-                show dwayne smile
                 mike.say "Likewise."
             else:
                 show aletta talk
@@ -3009,7 +2984,7 @@ label aletta_event_05:
                 show aletta normal
                 show dwayne smile at center, traveling(1.1, 0.3, (340, 780))
                 "Dwayne chuckled, giving my hand one last small shake before letting it go and stepping back."
-                show dwayne happy
+                show dwayne talk
                 dwayne.say "A workhorse, huh? Always good to have them on board."
                 show dwayne normal
                 mike.say "Good to be here."
@@ -3025,7 +3000,7 @@ label aletta_event_05:
             aletta.say "Well, we've got more stops to make, so."
             show aletta normal
             mike.say "Ah, yeah. I'll get back to work."
-            show dwayne happy
+            show dwayne talk
             dwayne.say "Have a good one."
             show dwayne normal
             mike.say "You, too."
@@ -3034,19 +3009,15 @@ label aletta_event_05:
             with easeoutleft
             "It's a little jarring, still, after the two of them leave."
             "I wish she would have warned me he was coming around today, so I could have dressed a little nicer or something."
-            "Oh well. I think I made a good enough impression."
         "Stay seated":
             $ aletta.sub += 10
             "I lean myself back a little bit in my seat, making myself comfortable."
             "I was almost dozing off a second ago; I'm not gonna expend any precious energy standing up for formalities."
-            "I'm sure he doesn't actually care."
-            show aletta upset
+            show aletta annoyed
             "Aletta seems like she's shooting me daggers from my peripheral, but I don't bother to look over to catch them."
             "I keep my eyes on the new guy."
             "She seems a little flustered by my choice."
-            "I never really thought of first impressions as being as important as people make them out to be."
-            "I need time to grow on people. Formality is fake, anyway."
-            show aletta embarrassed
+            show aletta talk
             aletta.say "Well..."
             "She gestures towards me, and the guy nods his head."
             aletta.say "He's..."
@@ -3059,18 +3030,15 @@ label aletta_event_05:
                 "She continued though it seemed to pain her a little bit."
                 show aletta talk
                 aletta.say "Usually not like this."
-                show aletta sadsmile
                 "Aw, Aletta, you shouldn't have. I could almost blush."
-                show dwayne happy
-                "Shady guy" "A driving force in the company's success, huh?"
                 show dwayne smile
+                "Shady guy" "A driving force in the company's success, huh?"
                 "He seems less bothered by my snub than Aletta is."
             else:
                 show aletta talk
                 aletta.say "...he's been getting the job done."
-                show aletta sadsmile
                 "I guess that's all she can manage, right now."
-                show dwayne happy
+                show dwayne talk
                 "Shady guy" "A workhorse, huh? Always good to have them on board."
                 show dwayne normal
             "I'm starting to get the impression that this guy's not just her new hire."
@@ -3080,11 +3048,11 @@ label aletta_event_05:
             aletta.say "This is Mr.--"
             show aletta normal
             "She still sounds a bit strained while she addresses me."
-            show dwayne shout
+            show dwayne talk
             dwayne.say "Please."
             show dwayne normal
             "He interrupts her, giving me a tight and formal smile as he looks down at me."
-            show dwayne happy
+            show dwayne talk
             dwayne.say "Dwayne's fine."
             show dwayne normal
             show aletta talk
@@ -3093,11 +3061,10 @@ label aletta_event_05:
             "Oh, shit."
             "Well, it's too late to jump to my feet and try to grovel."
             "I hope that it exudes confidence and some kind of alpha-demeanor for me to remain seated, but at this point I don't get the impression that Dwayne's the kind of man to be impressed by feigned dominance."
-            "He could ruin my life in a second. I gulp hard, but try to keep my appearance under control."
-            show dwayne happy
+            show dwayne talk
             dwayne.say "Well, it's been nice to meet you."
             show dwayne normal
-            show aletta upset
+            show aletta annoyed
             "Aletta shoots me a glance that says she doesn't feel the same."
             mike.say "Uh, yeah. Likewise."
             hide dwayne
@@ -3106,275 +3073,263 @@ label aletta_event_05:
             "I feel a little off even after they leave, internally cringing, just a little bit."
             "She could have at least warned me, or something."
             "You can't just barge in with higher-ups and expect me and my office to be spotless and perfectly deferential behavior off the bat."
-            "Oh well. Hopefully I gave a good enough impression to not lose my job."
     return
 
-label aletta_event_05b_sex:
-    if "aletta_event_05b" in DONE:
-        show aletta sport
-        aletta.say "Wasn't expecting company out here... but since you're here and I happen to have my gear with me, let's have another rematch. Same... 'rules' as last time?"
-        show aletta naked
-        "I blush slightly as Aletta strips out of her hiking clothes, never breaking eye contact with me."
-        aletta.say "Oh, I didn't think you'd mind if I slipped into something a bit more appropriate for shooting..."
-        show aletta suit
-        if not hero.has_skill("shooting") or not hero.fitness >= 50:
-            aletta.say "If I remember correctly, you need a bit of practice under duress..."
-        else:
-            aletta.say "Go on, [hero.name], you know what to do..."
-        "She licks her lips while she hands me her gun before kneeling in front of me."
-        "The sound of my zipper deafening against the silence of the forest."
-    if not hero.has_skill("shooting") or not hero.fitness >= 50:
-        "Aletta doesn't find me very aroused when she first pulls my dick out."
-        "But under the circumstances, can you blame me?!?"
-        "Not that it discourages her to any great degree though."
-        show aletta shooting mike forest bj lick
-        "I try to tear my eyes away as she begins to stroke the shaft of my dick with her fingers, occasionally bringing it to her lips and kissing the tip."
-        "I look down the barrel of the gun, amazed to see just how much it's shaking."
-        "The one thing that I know for sure is that I'm not exactly shrinking from the situation - if you understand what I mean?"
-        "Maybe it's the danger of doing something this risque and dangerous out in the open like this."
-        "Maybe I'm having a perverse burst of excitement from handling a powerful gun in such a reckless manner."
-        "Or just maybe Aletta's that damn good with her fingers and lips that I can't help stirring at her attentions."
-        "She certainly looks good as I risk a glance down at her."
-        "I'm semi-erect by now, and well on my way to being fully standing to attention."
-        show aletta shooting mike forest bj suck
-        "Aletta looks up at me as she slips her lips around my cock."
-        "Her big, blue eyes are full of mischief and her lipstick glistens in the afternoon sunlight."
-        with screenshot
-        show aletta shooting mike forest bj suck fire
-        play sound gun
-        pause 0.2
-        show aletta shooting -fire
-        "Without thinking, I squeeze the trigger, sending a shot flying crazily wide of the mark."
-        "While I jerk at the deafening sound, somehow Aletta manages to remain still."
-        hide aletta
-        show aletta shooting mike forest bj suck
-        "Even the exaggerated motion of my dick she takes completely in her stride, widening her eyes in mock surprise as I push deeper into her open mouth."
-        "From there, it's almost impossible for me to pay more attention to shooting straight than to what Aletta's doing to me."
-        "Call me a pussy for not being able to concentrate on the gun if you like."
-        "But I'm not ashamed to say that I was far more interested in the sensational things that I discovered Aletta could pull off with her tongue that afternoon."
-        "I can't recall just how many bullets there were in the magazine."
-        with screenshot
-        show aletta shooting mike forest bj suck fire
-        play sound gun
-        pause 0.2
-        show aletta shooting -fire
-        "Only that I shot most of them randomly into the woods, completely missing the targets."
-        "I might have grazed one of Aletta's cans, and I know I fired at least one shot almost straight up into the air."
-        "Part of me expected that one to hit a passing bird, just to add to the insanity of what was happening to me right there and then."
-        hide aletta
-        show aletta shooting mike forest bj suck mouth
-        "About the only thing that I did manage to shoot on target, was when I finally came into Aletta's mouth."
-        "She smiled as she released me and swallowed without pause of hesitation, knowing full well what she had managed to make me do."
-    else:
-        "It's weird, but there's just something empowering about the thought of Aletta giving me oral while I'm shooting a big, macho handgun."
-        "Maybe it's tapping into the primitive parts of my brain, but I suddenly feel incredibly aroused by what's going on."
-        "The biggest side effect of this is that, by the time Aletta gets my dick out of my pants, I'm already almost fully erect."
-        "She smiles at the sight of it, chuckling to herself."
-        show aletta shooting mike forest bj lick
-        "It doesn't take long for Aletta to have me standing fully to attention, as she strokes and caresses the shaft."
-        "I take aim for the first can almost the same moment that she begins to lick tentatively at the tip of my dick."
-        show aletta shooting mike forest bj suck
-        "Her lips close around the head as I squeeze the trigger."
-        show aletta shooting mike forest bj suck fire
-        play sound gun
-        pause 0.2
-        show aletta shooting -fire
-        "In the confusion of the resulting crack of gunfire, Aletta takes me deeper into her mouth."
-        "Bullseye - the first can is nowhere to be seen, blown clean off of the wall."
-        hide aletta
-        show aletta shooting mike forest bj suck
-        "Aletta's pace quickens now, and I can feel the sensation of her full lips travelling up and down, her tongue working away at me."
-        show aletta shooting mike forest bj suck fire
-        play sound gun
-        pause 0.2
-        show aletta shooting -fire
-        "The second shot comes as if carried on this feeling, as easy as me simply walking up and pushing it over with a finger."
-        hide aletta
-        show aletta shooting mike forest bj suck
-        "Two cans down, one to go."
-        "Aletta's working on me like a machine by now, her head bobbing back and forth."
-        "I look down at her for a moment, and I almost forget about taking my last shot."
-        "She has her eyes closed and an almost peaceful look in them."
-        "The sunlight is coming down, dappled by the leaves and branches overhead."
-        "She looks amazing, mottled in the shadows and shade."
-        "I feel like I could lose myself, right here and now, just looking at her."
-        "But I resolve to take a shot at my last can before she makes me cum."
-        "I have the shot all lined up just as I realise how close she's actually brought me."
-        "Trying to breathe evenly, I begin to squeeze the trigger for one last shot."
-        hide aletta
-        with screenshot
-        show aletta shooting mike forest bj lick fire
-        play sound gun
-        pause 0.2
-        show aletta shooting -fire
-        "And almost at the same moment that the gun fires, Aletta sends me over the edge."
-        show aletta shooting mike forest bj lick fire facial
-        "As I cum, the gun is thrown around in my hand, and it's all I can do to keep from firing off the remaining bullets in the clip."
-        "Aletta makes sure that she finishes the job neatly, licking me clean afterwards."
-        "When she's done, I risk a glance at the wall."
-        "Three shots and three hits."
-        "I wonder if that's more to do with my skills or Aletta's."
-        $ aletta.sub += 5
-    hide aletta
-    show aletta suit
-    "Aletta looks over my shoulder at the wall, smiling like a cat at the evidence of my performance."
-    "She seems inordinately pleased with the effect her attentions seemed to have upon me."
-    aletta.say "My turn!"
-    "She takes the gun from me and replaces the clip, ensuring that she has a full load."
-    show aletta shooting forest
-    "And then she takes up a firing stance, looking at me with raised eyebrows."
-    "It's then that I realise she's waiting for something."
-    "Specifically, she's waiting to see if I'll reciprocate while she's shooting!"
-    menu:
-        "Don't":
-            "What does she think this is, an exhibitionist's stroll in the woods?"
-            "Sure, I'm bowled over that Aletta would give me a blowjob out here."
-            "But it's not like I asked her to do it!"
-            "Plus, it's not like she needs the help to clear her mind or anything."
-            "Aletta's already a great shot!"
-            mike.say "What are you waiting for?"
-            mike.say "Fire away!"
-            if not "aletta_event_05b" in DONE:
-                $ aletta.love -= 5
-            else:
-                $ aletta.love -= 1
-            "Aletta looks puzzled for a moment, and then she realises that I'm not about to give her oral any time soon."
-            "Irritation and annoyance cross her face."
-            "But then she buries those emotions under the veil of pretending not to give a shit."
-            "A part of me thinks that it's high time I took some control back in this relationship."
-            "What with guns, leathers and motorbikes, I sometimes feel like Aletta's the one constantly in the driving seat."
-            with screenshot
-            show aletta shooting forest fire
-            play sound gun
-            pause 0.2
-            show aletta shooting -fire
-            "With a cold efficiency that I suppose has to come mainly from my own actions, she reels off three shots in short order."
-            "One after another, all three of her cans spin off into the trees as she hits them each in turn."
-            hide aletta
-            show aletta shooting forest
-            "I clap and smile as she turns to regard me, more than a little haughtily."
-            "While I might have refused to give her oral just now, my praise genuine."
-            if not "aletta_event_05b" in DONE:
-                $ aletta.sub += 5
-            else:
-                $ aletta.sub += 2
-            "And I think Aletta can sense that, as she raises one eyebrow and returns a sliver of a smile."
-            "If I'm right, and I sincerely hope that I am, I might actually have succeeded in making her respect me."
-            "Maybe just a little."
-        "Do it" if hero.fitness >= 50:
-            "Well, fair's fair, I suppose!"
-            "And really, is it that much of a chore to play with a girl the likes of Aletta?"
-            "There are guys that'd kill for the chance to do just that!"
-            "I nod eagerly, walking round behind her and open her fly."
-            show aletta shooting forest finger open
-            "In a moment, I have her suit open and pull it halfway down her thighs."
+# label aletta_event_05b_sex:
+#     if "aletta_event_05b" in DONE:
+#         show aletta sport
+#         aletta.say "Wasn't expecting company out here... but since you're here and I happen to have my gear with me, let's have another rematch. Same... 'rules' as last time?"
+#         show aletta naked
+#         "I blush slightly as Aletta strips out of her hiking clothes, never breaking eye contact with me."
+#         aletta.say "Oh, I didn't think you'd mind if I slipped into something a bit more appropriate for shooting..."
+#         show aletta suit
+#         if not hero.has_skill("shooting") or not hero.fitness >= 50:
+#             aletta.say "If I remember correctly, you need a bit of practice under duress..."
+#         else:
+#             aletta.say "Go on, [hero.name], you know what to do..."
+#         "She licks her lips while she hands me her gun before kneeling in front of me."
+#         "The sound of my zipper deafening against the silence of the forest."
+#     if not hero.has_skill("shooting") or not hero.fitness >= 50:
+#         "Aletta doesn't find me very aroused when she first pulls my dick out."
+#         "But under the circumstances, can you blame me?!?"
+#         "Not that it discourages her to any great degree though."
+#         show aletta shooting mike forest bj lick
+#         "I try to tear my eyes away as she begins to stroke the shaft of my dick with her fingers, occasionally bringing it to her lips and kissing the tip."
+#         "I look down the barrel of the gun, amazed to see just how much it's shaking."
+#         "The one thing that I know for sure is that I'm not exactly shrinking from the situation - if you understand what I mean?"
+#         "Maybe it's the danger of doing something this risque and dangerous out in the open like this."
+#         "Maybe I'm having a perverse burst of excitement from handling a powerful gun in such a reckless manner."
+#         "Or just maybe Aletta's that damn good with her fingers and lips that I can't help stirring at her attentions."
+#         "She certainly looks good as I risk a glance down at her."
+#         "I'm semi-erect by now, and well on my way to being fully standing to attention."
+#         show aletta shooting mike forest bj suck
+#         "Aletta looks up at me as she slips her lips around my cock."
+#         "Her big, blue eyes are full of mischief and her lipstick glistens in the afternoon sunlight."
+#         with screenshot
+#         show aletta shooting mike forest bj suck fire
+#         play sound gun
+#         pause 0.2
+#         show aletta shooting -fire
+#         "Without thinking, I squeeze the trigger, sending a shot flying crazily wide of the mark."
+#         "While I jerk at the deafening sound, somehow Aletta manages to remain still."
+#         hide aletta
+#         show aletta shooting mike forest bj suck
+#         "Even the exaggerated motion of my dick she takes completely in her stride, widening her eyes in mock surprise as I push deeper into her open mouth."
+#         "From there, it's almost impossible for me to pay more attention to shooting straight than to what Aletta's doing to me."
+#         "Call me a pussy for not being able to concentrate on the gun if you like."
+#         "But I'm not ashamed to say that I was far more interested in the sensational things that I discovered Aletta could pull off with her tongue that afternoon."
+#         "I can't recall just how many bullets there were in the magazine."
+#         with screenshot
+#         show aletta shooting mike forest bj suck fire
+#         play sound gun
+#         pause 0.2
+#         show aletta shooting -fire
+#         "Only that I shot most of them randomly into the woods, completely missing the targets."
+#         "I might have grazed one of Aletta's cans, and I know I fired at least one shot almost straight up into the air."
+#         "Part of me expected that one to hit a passing bird, just to add to the insanity of what was happening to me right there and then."
+#         hide aletta
+#         show aletta shooting mike forest bj suck mouth
+#         "About the only thing that I did manage to shoot on target, was when I finally came into Aletta's mouth."
+#         "She smiled as she released me and swallowed without pause of hesitation, knowing full well what she had managed to make me do."
+#     else:
+#         "It's weird, but there's just something empowering about the thought of Aletta giving me oral while I'm shooting a big, macho handgun."
+#         "Maybe it's tapping into the primitive parts of my brain, but I suddenly feel incredibly aroused by what's going on."
+#         "The biggest side effect of this is that, by the time Aletta gets my dick out of my pants, I'm already almost fully erect."
+#         "She smiles at the sight of it, chuckling to herself."
+#         show aletta shooting mike forest bj lick
+#         "It doesn't take long for Aletta to have me standing fully to attention, as she strokes and caresses the shaft."
+#         "I take aim for the first can almost the same moment that she begins to lick tentatively at the tip of my dick."
+#         show aletta shooting mike forest bj suck
+#         "Her lips close around the head as I squeeze the trigger."
+#         show aletta shooting mike forest bj suck fire
+#         play sound gun
+#         pause 0.2
+#         show aletta shooting -fire
+#         "In the confusion of the resulting crack of gunfire, Aletta takes me deeper into her mouth."
+#         "Bullseye - the first can is nowhere to be seen, blown clean off of the wall."
+#         hide aletta
+#         show aletta shooting mike forest bj suck
+#         "Aletta's pace quickens now, and I can feel the sensation of her full lips travelling up and down, her tongue working away at me."
+#         show aletta shooting mike forest bj suck fire
+#         play sound gun
+#         pause 0.2
+#         show aletta shooting -fire
+#         "The second shot comes as if carried on this feeling, as easy as me simply walking up and pushing it over with a finger."
+#         hide aletta
+#         show aletta shooting mike forest bj suck
+#         "Two cans down, one to go."
+#         "Aletta's working on me like a machine by now, her head bobbing back and forth."
+#         "I look down at her for a moment, and I almost forget about taking my last shot."
+#         "She has her eyes closed and an almost peaceful look in them."
+#         "The sunlight is coming down, dappled by the leaves and branches overhead."
+#         "She looks amazing, mottled in the shadows and shade."
+#         "I feel like I could lose myself, right here and now, just looking at her."
+#         "But I resolve to take a shot at my last can before she makes me cum."
+#         "I have the shot all lined up just as I realise how close she's actually brought me."
+#         "Trying to breathe evenly, I begin to squeeze the trigger for one last shot."
+#         hide aletta
+#         with screenshot
+#         show aletta shooting mike forest bj lick fire
+#         play sound gun
+#         pause 0.2
+#         show aletta shooting -fire
+#         "And almost at the same moment that the gun fires, Aletta sends me over the edge."
+#         show aletta shooting mike forest bj lick fire facial
+#         "As I cum, the gun is thrown around in my hand, and it's all I can do to keep from firing off the remaining bullets in the clip."
+#         "Aletta makes sure that she finishes the job neatly, licking me clean afterwards."
+#         "When she's done, I risk a glance at the wall."
+#         "Three shots and three hits."
+#         "I wonder if that's more to do with my skills or Aletta's."
+#         $ aletta.sub += 5
+#     hide aletta
+#     show aletta suit
+#     "Aletta looks over my shoulder at the wall, smiling like a cat at the evidence of my performance."
+#     "She seems inordinately pleased with the effect her attentions seemed to have upon me."
+#     aletta.say "My turn!"
+#     "She takes the gun from me and replaces the clip, ensuring that she has a full load."
+#     show aletta shooting forest
+#     "And then she takes up a firing stance, looking at me with raised eyebrows."
+#     "It's then that I realise she's waiting for something."
+#     "Specifically, she's waiting to see if I'll reciprocate while she's shooting!"
+#     menu:
+#         "Don't":
+#             "What does she think this is, an exhibitionist's stroll in the woods?"
+#             "Sure, I'm bowled over that Aletta would give me a blowjob out here."
+#             "But it's not like I asked her to do it!"
+#             "Plus, it's not like she needs the help to clear her mind or anything."
+#             "Aletta's already a great shot!"
+#             mike.say "What are you waiting for?"
+#             mike.say "Fire away!"
+#             if not "aletta_event_05b" in DONE:
+#                 $ aletta.love -= 5
+#             else:
+#                 $ aletta.love -= 1
+#             "Aletta looks puzzled for a moment, and then she realises that I'm not about to give her oral any time soon."
+#             "Irritation and annoyance cross her face."
+#             "But then she buries those emotions under the veil of pretending not to give a shit."
+#             "A part of me thinks that it's high time I took some control back in this relationship."
+#             "What with guns, leathers and motorbikes, I sometimes feel like Aletta's the one constantly in the driving seat."
+#             with screenshot
+#             show aletta shooting forest fire
+#             play sound gun
+#             pause 0.2
+#             show aletta shooting -fire
+#             "With a cold efficiency that I suppose has to come mainly from my own actions, she reels off three shots in short order."
+#             "One after another, all three of her cans spin off into the trees as she hits them each in turn."
+#             hide aletta
+#             show aletta shooting forest
+#             "I clap and smile as she turns to regard me, more than a little haughtily."
+#             "While I might have refused to give her oral just now, my praise genuine."
+#             if not "aletta_event_05b" in DONE:
+#                 $ aletta.sub += 5
+#             else:
+#                 $ aletta.sub += 2
+#             "And I think Aletta can sense that, as she raises one eyebrow and returns a sliver of a smile."
+#             "If I'm right, and I sincerely hope that I am, I might actually have succeeded in making her respect me."
+#             "Maybe just a little."
+#         "Do it" if hero.fitness >= 50:
+#             "Well, fair's fair, I suppose!"
+#             "And really, is it that much of a chore to play with a girl the likes of Aletta?"
+#             "There are guys that'd kill for the chance to do just that!"
+#             "I nod eagerly, walking round behind her and open her fly."
+#             show aletta shooting forest finger open
+#             "In a moment, I have her suit open and pull it halfway down her thighs."
 
 
-            "For all of her outward confidence, I can already feel her pussy almost quivering at my touch."
-            with screenshot
-            show aletta shooting forest finger open fire
-            play sound gun
-            pause 0.2
-            show aletta shooting -fire
-            "I probe the length of her pussy with one finger, and then hear the crack of the gun firing."
-            hide aletta
-            show aletta shooting forest finger open
-            "A glance over her shoulder reveals that Aletta never even turned her head as she pulled the trigger, sending the shot way off target."
-            "Realising what she's done, she shakes her head and tries to concentrate on the task at hand."
-            "And now I see that I have a challenge too!"
-            hide aletta
-            show aletta shooting forest finger open juice
-            "Using my fingers to stroke lower between Aletta's lips, I slip my free hand under her top and begin to massage her breasts."
-            with screenshot
-            show aletta shooting forest finger open fire
-            play sound gun
-            pause 0.2
-            show aletta shooting -fire
-            "She actually moans a little at that, but then steels herself and fires off a shot that I hear connect."
-            hide aletta
-            show aletta shooting forest finger open
-            "My only answer is to take hold of one of her nipples and pinch it, beginning to push my fingers deeper still into her pussy."
-            with screenshot
-            show aletta shooting forest finger open juice fire
-            play sound gun
-            pause 0.2
-            show aletta shooting -fire
-            "Aletta tries to get off another shot before the effects take hold."
-            hide aletta
-            show aletta shooting forest finger open juice cum
-            "But all too soon she's almost crying at what I'm doing to her pussy and breasts."
-            "The fingers playing with her breasts are slick from her sweat, and those in her clit are already wrinkling from how wet she's become."
-            with screenshot
-            show aletta shooting forest finger open juice cum fire
-            play sound gun
-            pause 0.2
-            show aletta shooting -fire
-            "I almost forget the sound of the shots that she's firing, not really caring any longer who wins the shooting contest."
-            show aletta shooting forest finger open juice cum
-            "In the end, I vaguely hear the sound of Aletta dropping the gun onto the ground, before clasping her hands around my neck."
-            show aletta shooting forest finger open juice cumhard
-            "I still have my fingers deep in her pussy when she finally cums, and I feel every twitch and flex of her muscles as she does so."
-            "Afterwards, I see one can missing, one on its side and another completely untouched."
-            "A result of which I feel I can be quite proud."
-            if not "aletta_event_05b" in DONE:
-                $ aletta.love += 5
-                $ aletta.sub -= 5
-            else:
-                $ aletta.love += 1
-                $ aletta.sub -= 2
-    hide aletta
-    show aletta suit
-    "Aletta packs the gun away in her bag, and links my arm as we walk back to the house together."
-    "I'm not sure that I'll ever be fully comfortable combining guns and girls like this."
-    "But for her, it was well worth the effort."
-    if not "aletta_event_05b" in DONE:
-        $ game.pass_time(2)
-    return
+#             "For all of her outward confidence, I can already feel her pussy almost quivering at my touch."
+#             with screenshot
+#             show aletta shooting forest finger open fire
+#             play sound gun
+#             pause 0.2
+#             show aletta shooting -fire
+#             "I probe the length of her pussy with one finger, and then hear the crack of the gun firing."
+#             hide aletta
+#             show aletta shooting forest finger open
+#             "A glance over her shoulder reveals that Aletta never even turned her head as she pulled the trigger, sending the shot way off target."
+#             "Realising what she's done, she shakes her head and tries to concentrate on the task at hand."
+#             "And now I see that I have a challenge too!"
+#             hide aletta
+#             show aletta shooting forest finger open juice
+#             "Using my fingers to stroke lower between Aletta's lips, I slip my free hand under her top and begin to massage her breasts."
+#             with screenshot
+#             show aletta shooting forest finger open fire
+#             play sound gun
+#             pause 0.2
+#             show aletta shooting -fire
+#             "She actually moans a little at that, but then steels herself and fires off a shot that I hear connect."
+#             hide aletta
+#             show aletta shooting forest finger open
+#             "My only answer is to take hold of one of her nipples and pinch it, beginning to push my fingers deeper still into her pussy."
+#             with screenshot
+#             show aletta shooting forest finger open juice fire
+#             play sound gun
+#             pause 0.2
+#             show aletta shooting -fire
+#             "Aletta tries to get off another shot before the effects take hold."
+#             hide aletta
+#             show aletta shooting forest finger open juice cum
+#             "But all too soon she's almost crying at what I'm doing to her pussy and breasts."
+#             "The fingers playing with her breasts are slick from her sweat, and those in her clit are already wrinkling from how wet she's become."
+#             with screenshot
+#             show aletta shooting forest finger open juice cum fire
+#             play sound gun
+#             pause 0.2
+#             show aletta shooting -fire
+#             "I almost forget the sound of the shots that she's firing, not really caring any longer who wins the shooting contest."
+#             show aletta shooting forest finger open juice cum
+#             "In the end, I vaguely hear the sound of Aletta dropping the gun onto the ground, before clasping her hands around my neck."
+#             show aletta shooting forest finger open juice cumhard
+#             "I still have my fingers deep in her pussy when she finally cums, and I feel every twitch and flex of her muscles as she does so."
+#             "Afterwards, I see one can missing, one on its side and another completely untouched."
+#             "A result of which I feel I can be quite proud."
+#             if not "aletta_event_05b" in DONE:
+#                 $ aletta.love += 5
+#                 $ aletta.sub -= 5
+#             else:
+#                 $ aletta.love += 1
+#                 $ aletta.sub -= 2
+#     hide aletta
+#     show aletta suit
+#     "Aletta packs the gun away in her bag, and links my arm as we walk back to the house together."
+#     "I'm not sure that I'll ever be fully comfortable combining guns and girls like this."
+#     "But for her, it was well worth the effort."
+#     if not "aletta_event_05b" in DONE:
+#         $ game.pass_time(2)
+#     return
 
 label aletta_event_06:
     if aletta.love.max < 120:
         $ aletta.love.max = 120
-    "I've been forced to keep secrets in the past and deal with all the guilt that comes along with that."
-    "But I never thought that one day I'd end up trying to keep an actual murder under wraps!"
+    "I never thought that one day I'd end up trying to keep an actual murder under wraps!"
     "I mean sure, Dwayne wasn't the nicest of guys to be around and he was a pain to work for."
-    "And on top of that, from what she told me before doing the deed, he made Aletta's life hell."
-    "All of that should be enough for me to justify what she did to him, right?"
-    "But there's still a part of me that can't get over the fact that Aletta shot him!"
-    "It's the part of me that recoils at the idea of killing another human being."
     "No matter what a piece of shit they might have been!"
     "I keep telling myself that this isn't about my own guilt."
     "It's about protecting Aletta from the consequences of her actions."
-    "That and making sure nobody has the chance to do what Dwayne did to her again."
     show aletta annoyed at center, zoomAt(1.0, (640, 720))
     "That's why I look up with a smile on my face when Aletta comes hurrying in to see me."
     show aletta at center, traveling(1.25, 0.3, (640, 880))
     mike.say "Hey, Aletta."
     mike.say "What can I do for you?"
     "Despite my best efforts to put a brave face on things, one look at her face has me worried."
-    "Aletta seems nervous and haunted, glancing this way and that like she's afraid of being watched."
     mike.say "Aletta, did you hear me?"
     mike.say "What's the matter with you?!?"
     "Aletta seems to notice me for the first time as I say this."
     show aletta at center, zoomAt(1.25, (640, 880))
-    show aletta stuned at startle
+    show aletta surprise at startle
     "And she jumps a little, putting her hand to her chest as she does so."
-    show aletta surprised
     aletta.say "Oh, [hero.name]!"
     aletta.say "You scared me out of my skin!"
     show aletta annoyed
     "I can't help frowning at Aletta."
     "How could I have surprised her like that?"
     "Didn't she come in here looking for me?"
-    "And then it dawns on me."
-    "The confusion, the paranoid stare and the fact she's on another planet right now."
-    "The pressure must be getting to her!"
     mike.say "Aletta!"
     mike.say "Hey, Aletta!"
     mike.say "Look at me, Aletta - what's got you so riled-up?"
     show aletta whining
     aletta.say "I thought I could handle it, [hero.name]."
     aletta.say "I thought I'd just be so glad he was dead that it wouldn't matter."
-    show aletta sadsmile
+    show aletta sad
     mike.say "You...you mean Dwayne, right?"
     "At the mention of that name, Aletta seems to become instantly focused again."
     "She grabs hold of me by the wrists, clinging so hard that she's actually hurting me!"
@@ -3384,16 +3339,13 @@ label aletta_event_06:
     aletta.say "Every loud noise sounds like the gunshot!"
     aletta.say "I can't handle it!"
     show aletta sad
-    "This is bad."
     "This is very bad."
     "If Aletta cracks like that in front of anyone else..."
     "Well, the consequences aren't worth dwelling on - save that it'd be bad!"
-    "I have to do something."
     "I have to talk her round..."
     menu:
         "Reassure her":
             "Maybe this is partly my fault?"
-            "Aletta's under so much strain right now."
             "No wonder she's on the verge of cracking up!"
             mike.say "Hey, Aletta..."
             mike.say "It's okay - I'm here for you."
@@ -3415,10 +3367,7 @@ label aletta_event_06:
             "My mouth might be writing cheques that my ass can't cash."
             "But I really do mean what I'm saying to Aletta right now."
             "If I can just offer her the support that she needs."
-            "If I can just make sure that she can hold it together."
             "In fact, I know that I can do it!"
-            "All Aletta needs is to know that she's not alone."
-            "She needs me to be there for her, to be her rock."
             show aletta normal
             mike.say "Don't you worry about a thing, Aletta."
             mike.say "I'll keep you safe."
@@ -3428,10 +3377,9 @@ label aletta_event_06:
             "And she needs to do it now!"
             mike.say "Aletta - snap the fuck out of it!"
             "The tone of my voice and choice of words has an immediate effect."
-            show aletta stuned
+            show aletta surprise
             "Aletta blinks like she's been slapped across the face and falls silent."
-            show aletta upset
-            "And then she looks at me, square in the eye, like she's waiting for me to speak."
+            show aletta sad
             "I guess Aletta's just not used to people talking to her like that."
             "So maybe it was enough to get through to her."
             mike.say "Don't come in here telling me that you can't handle it."
@@ -3449,14 +3397,10 @@ label aletta_event_06:
             "I can see that Aletta's almost shaking by now."
             "And I feel terrible to be laying into her like this."
             "But everything that I said is true."
-            "If she confesses what she did, it's not only her neck on the line."
-            "And I don't want to get passed around in prison like a chew-toy!"
-            "So I keep on staring straight at Aletta, not daring to blink."
-            "It comes as a relief a moment later when she looks away and nods."
             show aletta talk
             aletta.say "O...okay, [hero.name]."
             aletta.say "I'll try my best."
-            show aletta sadsmile
+            show aletta sad
             "I smile the moment that the words are out of Aletta's mouth."
             "Nodding to reassure her, I try to seal the deal."
             mike.say "That's great, Aletta, really great."
@@ -3475,118 +3419,88 @@ label aletta_event_07:
     if aletta.love.max < 140:
         $ aletta.love.max = 140
     "I've been itching to get the chance to eat at this restaurant for ages, ever since I saw the menu online."
-    show aletta normal date at right with easeinright
+    show aletta date normal at right with easeinright
     "But the moment that I lay eyes on Aletta as she walks in door, all thought of what I want to eat just vanishes."
-    show aletta normal date at center with ease
+    show aletta date normal at center with ease
     "The only thing that I can do is stare at my date as she strides confidently over to the table at which I'm sitting."
     "I'm seriously not exaggerating when I say that I can't remember Aletta ever looking as hot as she does right now!"
-    "I don't even need to tear my eyes away from her to know that she's the centre of attention in the restaurant."
     "It's like I can feel the gaze of everyone else in the place following her progress."
-    show aletta at center, zoomAt(1.5, (640, 1040)) with fade
+    show aletta at center, zoomAt(1.25, (640, 1040)) with fade
     pause 0.5
-    show aletta at center, zoomAt(1.5, (640, 1140)) with ease
+    show aletta at center, zoomAt(1.25, (640, 1140)) with ease
     "That and the unspoken feelings of jealousy that are being aimed my way as she sits down across the table from me too!"
-    show aletta embarrassed
+    show aletta blush
     "Aletta looks calm and collected as she gets comfortable in her seat, not meeting my eye at first."
     "But I can tell from the self-satisfied smile on her face that she's more than a little pleased with her entrance."
     mike.say "Ah..."
     mike.say "Hey, Aletta!"
     mike.say "You're looking nice tonight..."
     hide aletta
-    show restaurant meal aletta date nomeals with fade
+    scene aletta dinner_talk with fade
     "At the sound of my faltering words, Aletta finally looks me straight in the eye."
     "She doesn't say anything at first, just makes a quiet chuckling sound."
-    "But it's more than enough to let me know that she's purring like a happy cat on the inside right now!"
     aletta.say "Oh, what?"
     aletta.say "This old thing, really?"
-    show restaurant meal aletta nomeals alettablush
     aletta.say "You're embarrassing me, [hero.name]!"
     aletta.say "All I did was throw on the first thing that came to hand."
-    "I know that she's lying."
-    "And Aletta knows that I know she's lying too."
-    "So I just grin at her like an idiot and wave the waiter over."
-    show restaurant meal aletta nomeals -alettablush waiter with fade
+    scene aletta dinner_menu with fade
     "We order our food while I try to ignore the fact that the waiter's undressing Aletta with his eyes."
-    show restaurant meal aletta -nomeals -waiter with fade
+    scene aletta dinner with fade
     "And it doesn't take long for what we chose to arrive, small-talk filling in all of the gaps as we wait."
     "But the whole time it feels like there's a tension in the air."
     "Like the sexual frustration that Aletta's charms are causing is hanging over us."
     "Eventually it seems to reach a peak."
-    "And someone is compelled to speak up when it does..."
     if aletta.sub <= 30:
-        show restaurant meal aletta alettabored
-        "Aletta puts down her knife and fork, clearing her throat as she does so."
+        scene aletta dinner_bored
         mike.say "What's the matter, Aletta?"
         mike.say "Is there something up with your meal?"
         "Aletta shakes her head, dismissing my questions."
-        "Then she leans her elbows on the table and cradles her chin on the palms of her hands."
         aletta.say "It's not that, [hero.name]."
         aletta.say "More like I haven't got much of an appetite tonight."
-        show restaurant meal aletta -alettabored
+        scene aletta dinner_talk with fade
         aletta.say "But I was thinking that you could help me out with that."
-        "I have no idea where this is going."
-        "But I'm still under the spell of Aletta's stunning outfit."
-        "So I find myself nodding eagerly, almost without thinking."
         mike.say "Sure, Aletta."
         mike.say "Whatever you want!"
-        show restaurant meal aletta alettahappy
         "Aletta smiles at my efforts to please her."
         "And then she leans closer, almost whispering into my ear."
         aletta.say "I want you to get under the table and eat me out, [hero.name]."
-        show restaurant meal aletta alettablush
         aletta.say "Eat me out while we're eating out - that should give me an appetite!"
         "I look around the restaurant, noting all of the other people around us."
-        "A part of me wants to say no on principal."
-        "But that's not the part of me that seems to be in charge at the moment."
-        "And the one that is in charge is thrilled at the danger of what Aletta's asking me to do!"
         mike.say "Okay, Aletta..."
         mike.say "I'm on it..."
         "Trying to look as natural as I can, I toss my napkin onto the floor."
         "And when I bend down to pick it up, I slip under the table."
-        "I have no idea what Aletta's doing above me, and I try to push it out of my mind."
-        "Instead I make straight for her legs, which part almost magically as I get close to them."
+        scene aletta_res_cunnilingus01
         "I'm about to reach for Aletta's panties when I see that there are none to be found."
         "She's been going commando all this time!"
-        "I can imagine the smile spreading slowly across her face as she reveals it to me."
-        "And knowing that she always had something like this in mind is already getting me hard."
         "Putting one hand on each of Aletta's thighs, I lower my head between them."
-        scene aletta cunnilingus
-        show aletta cunnilingus restaurant date noglasses
-        with fade
-        "Normally I'd start out slow and gentle, but this is different."
-        "I can't stay down here forever, and there's a sense of urgency about things."
-        "All of this means that I plunge my tongue straight between Aletta's lips."
+        scene aletta_res_cunnilingus02
+        "I plunge my tongue straight between Aletta's lips."
         "At the same time, I press my own against them, just as if I were kissing her on the mouth."
         "She's already more than a little excited, and this shows as I get a taste of her."
         "And knowing that she's turned on makes her taste almost moreish!"
         "Wasting no time, I push my tongue as deep into her pussy as I can manage."
-        show aletta cunnilingus pleasure
+        scene expression make_anim(aletta_res_cunn, time=0.2, loop=True)
         "I feel Aletta's thighs tremble at my efforts, threatening to squeeze my head."
-        "And I can only imagine what's going on above me too as she feels the effects."
-        "The thought of her trying to suppress the sensations is a massive turn-on."
-        "It's more than enough to make me work my hardest as I probe her pussy for all I'm worth."
         "Soon I can feel Aletta's clit as it rubs against the side of my tongue."
         "She's almost jumping out of her chair by now."
         "Fighting with all her strength to keep from crying out too!"
-        show aletta cunnilingus ahegao
+        scene aletta_res_cunnilingus02 with fade
         "A second later I feel her hand in my hair, shoving my face into her crotch."
         "Aletta cums with my head trapped between her thighs, almost smothering me."
         "But then, just as suddenly, she releases me again."
         "I tumble backwards, scrambling back to my side of the table."
         scene bg restaurant
-        show restaurant meal aletta date alettablush with fade
+        scene aletta dinner with fade
         "And when I haul myself up and into my seat, I'm treated to a rewarding sight."
         "Aletta looks shaken and stirred by what I've done to her."
-        "Hair out of place and glasses askew, she's panting as she feels the aftershocks."
         "Her eyes are glassy and have a far-away look in them."
         "And so I just get back to eating my meal and leave her to recover."
-        "If anyone asks, I'll just tell them that the food blew her mind..."
     else:
         "I put down my knife and fork, wiping my mouth on a napkin as I do so."
         "Aletta looks up at me, clearly wondering why I've stopped eating."
         "The interest on her face reminds me of the way things have been going between us recently."
-        "Specifically the fact that I've been taking a more dominant role, helping relieve Aletta's stress."
-        show restaurant meal aletta alettabored
+        scene aletta dinner_bored
         show fx question at left
         aletta.say "What's the matter, [hero.name]?"
         aletta.say "Is there something wrong with your meal?"
@@ -3597,68 +3511,50 @@ label aletta_event_07:
         mike.say "That and tell you I have something under the table."
         mike.say "Something that you might like the taste of better..."
         "I nod downwards in what I hope is a suggestive manner."
-        show restaurant meal aletta alettablush
+        scene aletta dinner_talk with fade
         "And I see a look of surprise and almost embarrassment appear on Aletta's face."
         "For a moment I think that I might have gone too far, that she'll say no."
-        show restaurant meal aletta alettahappy
         "But then she gives me the briefest of nods and tosses her own napkin onto the floor."
-        hide restaurant meal aletta
+        scene bg restaurant
         show aletta date flirt at center, zoomAt(1.5, (640, 1140))
         with fade
         pause 0.5
         hide aletta with easeoutbottom
         "In the blink of an eye, Aletta's out of her seat and under the table."
-        "I can hear her crawling over towards me."
         "And then I feel her parting my thighs and reaching for my flies."
         "I do the best I can to look casual, like nothing untoward is happening."
         "If anyone asks, my date just went to the bathroom, that's all."
         "Aletta wastes no time in reaching into my pants and pulling my cock out."
-        scene bg black
-        show aletta blowjob restaurant date with fade
-        "The fact that the idea was already in my head to do this means it's already getting hard."
-        "And the mere knowledge that she's making my fantasy a reality does the rest."
-        "Let alone the actual feeling of Aletta playing with me under the table!"
+        scene aletta_res_bj01
         "Aletta begins to work the shaft, squeezing hard as she does so."
         "Normally I might have protested, told her to be more gentle."
         "But here and now it somehow adds to the sense of danger and urgency."
+        scene aletta_res_bj02
         "A moment later, she begins to lick and suck her way up from my balls."
         "And it feels like Aletta's aware of the fact we need to make this quick too."
         "Because she doesn't take it slow either, reaching the head of my cock swiftly."
-        show mouth_insert aletta zorder 1 at zoomAt(1, (880, 200))
+        scene expression make_anim(aletta_res_bj, time=0.2, loop=True)
         "From there, she swallows it eagerly and as deep as she can manage."
-        show aletta blowjob pleasure
         "Aletta shows me just how much of an appetite she has, not holding back."
-        "More than once I find myself grabbing handfuls of the tablecloth as she works on me."
         "It's a battle to keep my face from showing it too."
-        "When I take a sip of my drink or a mouthful of food, I'm fighting to do so."
-        "And that's because Aletta's making me want to cry out thanks to what she's doing down there!"
         "But all of that changes the moment that I shoot my load."
         "It comes faster than it would if we were anywhere else while doing this."
-        show mouth_insert aletta cum
-        show aletta blowjob cum
+        scene aletta_res_inside
         with vpunch
         "And there's no way that I can warn Aletta that it's about to happen."
         with vpunch
         "So as I let go, deep inside of her mouth, she has no time to prepare."
-        show aletta blowjob ahegao with vpunch
-        "I hear her gag, and then the table jerks as her head hits the underside."
-        "My instinct is to check that she's okay."
-        "But I push it down, knowing that to do so will blow our cover."
-        hide mouth_insert aletta
         scene bg restaurant
         with fade
         "And so I just have to sit there and wait while she pulls herself together."
         "Eventually I feel her zipping me back up again."
         show aletta date flirt at center, zoomAt(1.5, (640, 1140)) with easeinbottom
         "A second later Aletta reappears and sits down in her chair like nothing happened."
-        "She looks more than a little dishevelled, and she's wiping something off of her lip."
-        "But her breathing is relaxed and she has a lazy smile on her face."
         mike.say "How was it, Aletta?"
         mike.say "Did it fill you up?"
         show aletta blush
         "Aletta lets out an exhausted little laugh."
         "Her cheeks are flushing just a tad."
-        "And it makes her look even hotter than when she first walked in here."
         aletta.say "It filled me right up - no room to spare."
         aletta.say "In fact, I don't think I could eat another thing!"
     $ game.active_date.score = 85
@@ -3679,13 +3575,10 @@ label aletta_event_08:
     play sound door_knock
     "It only registers as a background noise, like the rest of the chatter in the office."
     "And it takes the person knocking to step into my field of vision for me to finally notice them."
-    "Of course, this means that I also jump out of my skin at the same time..."
     show inspector at left with vpunch
     mike.say "Aargh!"
     mike.say "Oh god..."
     mike.say "You scared me to death!"
-    "The man that I can now see standing in the doorway looks more than a little surprised."
-    "But then why wouldn't he be, after I just jumped at the mere sight of him?"
     "He's an older guy, shabby-looking in shabby clothes that are as creased as his face."
     "His eyebrows are raised in apparent amusement though, rather than shock or offence."
     if "cherie_police_interview_male" in DONE:
@@ -3701,7 +3594,6 @@ label aletta_event_08:
         "Detective" "You know, on account of you still being alive?"
         "It seems like a weird thing to say."
         "But I'm not in the mood to pull him up on it."
-        "Still feeling paranoid, I try to ask what on earth he wants."
         mike.say "Ah...was..."
         mike.say "Was there something I can do for you?"
         mike.say "Are you lost or looking for someone?"
@@ -3715,7 +3607,6 @@ label aletta_event_08:
         "I feel like someone just pulled the ground out from under me."
         "And that I'm staring into a bottomless abyss threatening to swallow me whole!"
         "The man either fails to notice the look of horror on my face."
-        "That or else he deliberately chooses to ignore it."
         "Detective" "I'm Detective Michaels, by the way."
         "Michaels" "Looking into this Dwayne guy's going missing."
     show inspector at center with ease
@@ -3747,7 +3638,6 @@ label aletta_event_08:
         "Michaels" "Because that's not how most folks around here describe him..."
         "All I can do is shrug and shake my head."
         "That and keep right on lying to a badge-carrying officer of the law."
-        "I just tell myself that it's for Aletta and me, so it's a necessary evil."
         mike.say "You know how it is, detective."
         mike.say "Dwayne was a big-shot, a real high-flyer."
         mike.say "People either loved him or they were jealous of his success."
@@ -3765,8 +3655,6 @@ label aletta_event_08:
         mike.say "Aletta and I are colleagues and friends."
         mike.say "Nothing more than that."
         "Michaels shoots me one last glance."
-        "And I can see in his eyes that he doesn't believe me."
-        "But without proof to the contrary, he's facing a dead-end."
         "Michaels" "Okay, thanks for your help - it's been very useful."
         "Michaels" "If you do think of anything in the meantime..."
         "Michaels hands me a crumpled card with his contact details on it."
@@ -3774,7 +3662,6 @@ label aletta_event_08:
         hide inspector with easeoutleft
         "And it's not until he's gone that I let go and sink down into my chair."
         "I'm drenched in sweat and my heart is pounding in my chest."
-        "But all the same, I think I managed to fool him..."
         $ aletta.love += 5
         $ hero.cancel_activity()
         $ game.pass_time(1)
@@ -3784,7 +3671,6 @@ label aletta_event_08:
         "If this guy really is a cop, then he'll know guilt when he sees it!"
         "Shit, he can probably even smell it on a person too!"
         "Maybe all of this stumbling and bumbling he's doing is just an act."
-        "He's just playing with me, toying with my tortured conscience!"
         mike.say "Okay, okay..."
         mike.say "I'll confess, okay?"
         mike.say "Just stop it with the Jeudi mind-tricks already!"
@@ -3814,26 +3700,23 @@ label aletta_event_08:
         "I nod as I stand up and let Michaels lead me out of my office."
         "I have no idea of where this is going or what's in store for me."
         "But it feels so good to have unburdened myself."
-        show aletta surprised at top_mostleft, dark with dissolve
+        show aletta surprise at top_mostleft, dark with dissolve
         "So good that I almost don't notice Aletta, staring at me in horror as I walk out there..."
         $ aletta.set_gone_forever()
         $ hero.cancel_activity()
         $ game.pass_time(4)
     return
 
-
 label aletta_event_09:
     if aletta.love.max < 180:
         $ aletta.love.max = 180
     "In the days after the incident with Dwayne, there's been little else on my mind."
     "Every waking moment seems to have been spent replaying the events of that day."
-    "And whenever I manage to get a break for torturing myself, I'm always looking over my shoulder."
     "Of course the fact that the police came sniffing around the office only made things worse."
     "I can hardly concentrate on my work, and I expect every conversation to be bad news."
     show aletta at center, zoomAt(1.0, (340, 720)) with easeinleft
     "Which is why I find my heart hammering in my chest when Aletta comes striding up to me."
     "Sure, on the outside she looks suitably subdued and solemn."
-    "Just the kind of mood you'd expect with the shadow of Dwayne's supposed disappearance hanging over her."
     "But I know her better than most people in the office ever could."
     "And I can read the emotions that are hidden under that carefully maintained demeanour."
     "That's why I try as best I can to keep my own expression neutral as she stops in front of me."
@@ -3843,7 +3726,6 @@ label aletta_event_09:
     show aletta blush
     "Aletta doesn't answer me straight away."
     "Instead she looks around, making sure she can't be overheard."
-    "Only when she's satisfied that we're alone does she start to speak."
     show aletta talk
     aletta.say "Drop the act, [hero.name]."
     aletta.say "There's no need for it anymore."
@@ -3857,7 +3739,6 @@ label aletta_event_09:
     show aletta normal at center, traveling(2.5, 1.0, (640, 1640))
     "Aletta leans in closer still, as if it'll make a difference."
     "It's only now that I can see she's really trying to keep a handle on her emotions."
-    "What I thought was just an upbeat mood seems more like mania this close up."
     "It scares me a little, as I'm so used to Aletta keeping her feelings under control."
     show aletta talk
     aletta.say "It's over, [hero.name]."
@@ -3866,10 +3747,6 @@ label aletta_event_09:
     show aletta normal
     "I know that this should have cleared up all of my confusion at a stroke."
     "But it's such an unexpected development that it only makes things worse."
-    "I saw Aletta empty a goddamn gun into Dwayne."
-    "I saw the bullets enter his body."
-    "And I'm pretty sure I saw the poor bastard check out too!"
-    "I just don't understand how all of that can disappear so suddenly."
     mike.say "I don't get it, Aletta."
     mike.say "How can it be?"
     mike.say "For god's sake - the police were here just the other day!"
@@ -3895,7 +3772,6 @@ label aletta_event_09:
             mike.say "After all, it's not every day you get away with literal murder!"
             "Aletta winces a little at my admittedly poor choice of words."
             "But it's nothing more than a minor blip that she soon gets over."
-            "And that's because my mood is now reflecting her own."
             show aletta talk
             aletta.say "Maybe we should call it manslaughter in self-defence?"
             aletta.say "But you're right, [hero.name]."
@@ -3928,15 +3804,10 @@ label aletta_event_09:
         "Warn her":
             mike.say "Sure, it looks like we're going to get away with it."
             mike.say "But I still don't think we should be celebrating, Aletta."
-            show aletta stuned
+            show aletta surprise
             "Aletta's expression turns to one of surprise and shock."
-            "She doesn't seem to be able to process why I'm not elated too."
-            show aletta surprised
             aletta.say "What's wrong, [hero.name]?"
             aletta.say "Aren't you happy for me?"
-            show aletta stuned
-            "Shit, this is going to be hard to articulate."
-            "I have to separate my feelings for Aletta from my morals."
             mike.say "I couldn't be happier that you're not going to jail, Aletta."
             mike.say "But I can't forget the fact that we killed a man either."
             show aletta normal at center, traveling(1.25, 0.5, (640, 880))
@@ -3968,22 +3839,17 @@ label aletta_event_10:
     if aletta.love.max < 200:
         $ aletta.love.max = 200
     "Now that the whole business with Dwayne is over, I feel like a great weight has been lifted off of my shoulders."
-    "Sure, it makes me a little guilty to think of it in that way, as it was Aletta that actually pulled the trigger."
-    "But I was standing right there in the room when she did it, so I feel like I shared at least some of the trauma."
     "Though if anything, the fact that the police investigation is over seems to have cured her paranoia to a greater degree."
     "It's like she doesn't just want to draw a line under it all, but actually celebrate the fact that we got away with it."
     "And I guess that's why she's invited me up to Dwayne's office, the literal scene of the crime."
     scene bg ceo with fade
     "As soon as I walk in there, I'm transported back to the moment it happened."
     "The office has been professionally cleaned, and there's not a trace of evidence the thing happened at all."
-    "But still, I can almost hear the gunshot and see what happened in the moments afterwards."
     aletta.say "Hey, [hero.name]."
     aletta.say "How different is this place now?"
     aletta.say "Like a throne room after the king's been beheaded!"
     show aletta happy at center, zoomAt(1.0, (640, 720)) with fade
     "I look over to where Aletta's standing, a triumphant smile on her face."
-    "It takes an effort of will to push all thought of Dwayne out of my head in that moment."
-    "And as I do so, I force what I hope is a convincing smile onto my own face too."
     show aletta normal
     mike.say "It's...weird, Aletta."
     mike.say "Being in here without Dwayne..."
@@ -3999,7 +3865,7 @@ label aletta_event_10:
     show aletta whining
     aletta.say "What's the matter, [hero.name]?"
     aletta.say "Why won't you say it?"
-    show aletta sadsmile
+    show aletta sad
     mike.say "What difference does it make, Aletta?"
     mike.say "We both know what happened to Dwayne."
     mike.say "Why do you need to hear me say it?"
@@ -4021,11 +3887,9 @@ label aletta_event_10:
     aletta.say "I killed Dwayne in revenge for what he put me through."
     aletta.say "For all the things that he forced me to do for him."
     aletta.say "And to him..."
-    show aletta upset
+    show aletta pain
     "At the mention of the treatment she received from Dwayne, she pauses."
     "I can see that none of the wounds he inflicted on her have been healed by his death."
-    "And in that moment, I stop feeling afraid and paranoid for myself."
-    "Instead I feel an almost overwhelming sense of sympathy for Aletta instead."
     mike.say "He deserved to be punished for what he did to you, Aletta."
     show aletta normal
     "Aletta nods, struggling with the emotions that she must be feeling."
@@ -4045,7 +3909,6 @@ label aletta_event_10:
     "All I can do is watch in silence as she begins to strip off her clothes."
     show aletta topless with dissolve
     "Aletta goes slowly, clearly enjoying the way that I'm watching her."
-    show aletta happy
     "And her smile gets wider with each and every item of clothing she drops on the floor."
     show aletta naked with dissolve
     "Once she's naked, Aletta turns her attention to me."
@@ -4060,59 +3923,43 @@ label aletta_event_10:
     "Aletta's been massaging my cock as she says this."
     "And it's no surprise that I'm hard as a rock right now!"
     hide aletta
-    show slap_npc_aletta at center, zoomAt(1.25, (640, 880))
-    show slap_exp_happy_aletta at center, zoomAt(1.25, (640, 880))
+    scene aletta_ofc_cowgirl11
     with fade
-    "She turns her back on me, lowering herself down and onto me."
+    "She is lowering herself down and onto me."
     "I gasp as I feel my cock rubbing against the lips of her pussy."
-    "She's already slick, anticipating what we're about to do."
     "And she doesn't waste any time teasing me with it either."
     "Aletta sits down on me, letting my cock slide all the way in."
-    "All I have to do is lean back and leave it all to her."
-    scene office_cumshare_audrey_shiori_bg
-    show slap_npc_aletta at center, zoomAt(1.25, (640, 880)), ride(0.3, -20)
-    show slap_exp_happy_aletta at center, zoomAt(1.25, (640, 880)), ride(0.3, -20)
+    scene aletta_ofc_cowgirl12
     "She works me from the start, bouncing up and down in my lap."
     "I always thought that where I was when we did it wouldn't make a difference."
     "Being inside of Aletta is already such an incredible feeling, so how could it?"
+    scene expression make_anim(aletta_ofc_cowgirl_pussy, time=0.2, loop=True)
     "But somehow, doing it right here and now, feels so much more intense."
     "Maybe it's knowing that we conspired to kill Dwayne and got away with it."
-    "Or perhaps there really is something about being surrounded by such opulence."
-    "But I think that what might be going on is just what Aletta talked about."
     "She's so stunning, so effortlessly passionate and beautiful."
-    "Being with her here makes me feel like the luckiest guy in the world."
     "And Dwayne had all of this, but it somehow wasn't enough for him."
     "Suddenly I don't feel intimidated or impressed by the memory of him."
     "I just feel sorry for the guy, that he was such an idiot."
     "I won't make the mistake of failing to appreciate Aletta!"
     "Inspired by that thought, I take a firm hold of Aletta."
-    scene bg ceo
-    show aletta naked at center, zoomAt(1.5, (640, 1040))
+    scene aletta_ofc_doggy11
     with vpunch
     "And then I stand up, turning Aletta around and pushing her backwards onto the desk."
-    show aletta haircut surprised with dissolve
     "She cries out in surprise, but then realises what I'm doing."
-    scene bg black
-    show aletta ceofuck vaginal
-    with vpunch
-    "Aletta braces her hands on the desktop, nodding eagerly."
-    "And then I'm pounding her like my life depends on it."
-    "Aletta keeps on nodding the whole time, urging me on."
+    scene expression make_anim(aletta_ofc_doggy_pussy, time=0.25, loop=True)
     aletta.say "Oh yes..."
     aletta.say "Please, [hero.name]..."
     aletta.say "Just like that..."
     aletta.say "Don't stop until you make me cum!"
     if aletta.flags.submissive_interact:
         aletta.say "Use me as your target practice!"
-    show aletta ceofuck pleasure
+    scene aletta_ofc_doggy_ahegeo
     "Aletta's words are a turn-on for sure."
     "But it's not like I need the encouragement!"
     "It's like I can feel all the guilt draining out of me as I fuck her."
     "Every thrust and the moans it elicits from Aletta purge me of it."
-    "She's right - Dwayne was an asshole that deserved everything he got."
-    "And I deserve to be screwing Aletta in his office right now!"
     "All of my energy goes into one last thrust as I start to cum."
-    show aletta ceofuck creampie with hpunch
+    scene aletta_ofc_doggy05 with hpunch
     "Aletta moans as I shoot my load into her, wriggling her ass as she takes it."
     with hpunch
     "I keep my cock inside of her as she cums too, feeling every moment as she does so."
@@ -4121,28 +3968,20 @@ label aletta_event_10:
     aletta.say "I love you so much!"
     menu:
         "I love you too":
-            "For a moment I'm overcome and I can't find the words to reply."
-            "And then it all comes rushing out of me in a mad babble."
             mike.say "You do?!?"
             mike.say "Oh my god!"
             mike.say "I...I love you too, Aletta!"
             mike.say "I love you like crazy!"
             "Aletta positively beams at me as she turns over onto her back."
-            "My cock slides out of her as she does so, but neither of us seems to notice."
-            "All I can do is stare at the look of complete satisfaction on her face."
             "I don't think I've ever seen Aletta look that way before now."
             "There's no mask of professionalism or superiority."
             "She just looks...well, happy!"
-            "Aletta strokes my cheek with her hand."
             scene bg ceo
-            show aletta kiss naked haircut
+            show aletta naked kiss
             with fade
             "And then she leans up to kiss me."
             "It's long and slow, every moment feeling good."
             "And once it's over, we gather up our clothes and begin to get dressed."
-            "Neither of us speaks as we do so, but there's no awkwardness in the silence."
-            "It's more like both of us have said all that we need to say for now."
-            "And we can just be together without speaking a word."
             "Aletta all but confirms this when she takes a hold of my hand as we leave the office."
             "She doesn't look me in the eye, but she squeezes my palm as we walk out of there."
             "Sure, it's a little thing - but it means the world to me."
@@ -4152,24 +3991,23 @@ label aletta_event_10:
             "I can almost feel my cock shrivelling up as Aletta utters those words."
             "Hastily pulling out and beginning to grab my clothes, I turn my back to her."
             scene bg ceo
-            show aletta naked whining haircut at center, zoomAt(1.5, (640, 1040))
+            show aletta naked talk at center, zoomAt(1.5, (640, 1040))
             with fade
             aletta.say "[hero.name]?"
             aletta.say "What's wrong?!?"
-            show aletta sadsmile
+            show aletta sad
             "I shake my head, still reeling from the emotions that I'm feeling."
             mike.say "I...I wasn't expecting that, Aletta."
             mike.say "You kinda took me by surprise!"
-            show aletta embarrassed blush
+            show aletta blush
             "Aletta's covering herself with her hands now."
             "Which is not a good sign after we just fucked like rabbits."
-            show aletta whining
+            show aletta talk
             aletta.say "I'm sorry, [hero.name]."
             aletta.say "I just thought that we were being honest."
             aletta.say "And...I mean it - I do love you!"
             show aletta normal
             "I'm almost dressed by now, pulling on my shirt."
-            "I nod hastily, more to acknowledge what Aletta said than agree with it."
             mike.say "That's great, Aletta."
             mike.say "But I can't wrap my head around that shit right now."
             mike.say "Maybe hold that thought for now, yeah?"
@@ -4179,8 +4017,6 @@ label aletta_event_10:
             "I know that this is a jerk move on my part."
             "But I only just dealt with being an accessory to murder!"
             "I just have to hope that I can make it up to her later."
-            "All of this is going through my head as I hurry out of the office."
-            "And I make a point of not looking back to see Aletta as she gathers up her own clothes."
             $ aletta.love -= 10
     $ hero.cancel_activity()
     $ game.pass_time(1)
@@ -4199,14 +4035,12 @@ label aletta_event_06_alt:
     aletta.say "This isn't the time or the place!"
     "I'm already thinking about going to see what the problem could be."
     "But then I hear the response that Aletta's pleading earns her."
-    "And I know exactly what's going on!"
     dwayne.say "And I already said that's not going to happen, Aletta!"
     dwayne.say "I paid for everything in this building, including your salary."
     dwayne.say "That means I also paid for every last scrap of clothing you have on too."
     dwayne.say "It means that I own YOU, Aletta!"
     dwayne.say "Now do as I say - take off your top!"
     "I could have missed the meaning of every word he said and still known it was Dwayne."
-    "Nobody else in the entire company would be so forward, inappropriate and entitled!"
     "I'm out of the door and headed in their direction in the blink of an eye."
     "And when I get there, the scene is just as I imagined it."
     scene bg alettaoffice
@@ -4216,13 +4050,10 @@ label aletta_event_06_alt:
     "Dwayne's leaning over Aletta."
     "Using his height and build to intimidate her."
     "Aletta must have heard me approaching."
-    "As I can see the relief on her face."
     show aletta normal at left with ease
     aletta.say "Th...there you are, [hero.name]!"
     aletta.say "Just the person I wanted to talk to!"
-
     "Dwayne turns to look in my direction."
-    "And I can see from the expression on his face that he's not pleased to be interrupted."
     dwayne.say "Nothing to see here, [hero.name]."
     dwayne.say "Aletta and I were just discussing a business matter."
     dwayne.say "One that's way above your pay-grade too."
@@ -4236,14 +4067,12 @@ label aletta_event_06_alt:
     aletta.say "Oh yeah, Dwayne - how is Cherie these days?"
     "At the mere mention of his wife's name, Dwayne shoots a mean look at Aletta."
     "But then he turns his attention back to me."
-    "Like he senses that I'm the real potential danger here."
     dwayne.say "[hero.name]..."
     dwayne.say "Did you hear what I just said to you?"
     dwayne.say "Or are you suffering from a loss of hearing?"
     dwayne.say "Because if it's neither of those two things..."
     dwayne.say "Then you're getting pretty damn close to me firing your ass!"
     "I can feel the animosity in what Dwayne's saying to me."
-    "And part of me is sure that he actually means it too."
     "But it's too late for me to think about backing down now."
     mike.say "Oh yeah?"
     mike.say "And exactly what would you be firing me for, Dwayne?"
@@ -4263,13 +4092,10 @@ label aletta_event_06_alt:
     "With that, he turns on his heel and walks briskly away."
     hide dwayne
     "Aletta waits for him to be well and truly gone."
-    "Then she lets out a sigh of relief and turns to face me."
     aletta.say "Thanks for the help, [hero.name]."
-    show aletta embarrassed at center with ease
+    show aletta blush at center with ease
     aletta.say "Usually I can handle Dwayne's advances."
     aletta.say "But today it he was as though he wouldn't take no for an answer!"
-    "I do the best I can to look concerned."
-    "But it's hard, as I love having Aletta so grateful to me."
     mike.say "No worries, Aletta."
     mike.say "I just wish I could have got here sooner."
     mike.say "Are you sure you'll be okay?"
@@ -4301,24 +4127,19 @@ label aletta_event_08_alt:
     "I can barely see over the top of the files that are piled atop my desk."
     "And I'm so lost in the task I'm trying to complete that I've lost track of time."
     "Both of those are reasons that I don't look up when someone knocks on my door."
-    "I just keep on doing what I've been doing for days on end."
     show aletta normal
     aletta.say "Hello, [hero.name]..."
     aletta.say "Have you had some lunch yet?"
     mike.say "Huh..."
     mike.say "What?"
     mike.say "Just put it on the pile, okay?"
-    hide aletta
-    show aletta close a with fade
     "The next thing I know, there's a hand waving in front of my face."
     "Instinctively I jump backwards in surprise and alarm."
     mike.say "What the..."
     mike.say "Oh...hey, Aletta!"
     mike.say "Sorry, but I was miles away."
-    hide aletta close
-    show aletta normal
+    show aletta talk
     with fade
-    "Aletta lets out a sigh as she surveys the organised chaos of my office."
     aletta.say "It certainly looks like it, [hero.name]."
     aletta.say "What did you do to deserve all of this?"
     "I lean back in my chair, rubbing the bridge of my nose."
@@ -4328,7 +4149,7 @@ label aletta_event_08_alt:
     "Aletta looks puzzled for a moment."
     "But then realisation dawns, and she frowns."
     aletta.say "You have to be joking, [hero.name]?"
-    show aletta embarrassed
+    show aletta blush
     aletta.say "Is he really that petty?"
     "All I can do is shrug and gesture to all of the files and papers."
     mike.say "You tell me, Aletta."
@@ -4344,7 +4165,6 @@ label aletta_event_08_alt:
     mike.say "I don't regret that for a second!"
     "I see the reaction this instantly stirs in Aletta."
     "She looks relieved, like a weight's been lifted off her shoulders."
-    "Aletta nods as she takes a few more steps into my office."
     show aletta happy
     aletta.say "That's a relief!"
     aletta.say "Because it'd have made this pretty awkward for me."
@@ -4361,8 +4181,6 @@ label aletta_event_08_alt:
     mike.say "But I really have to keep on working."
     mike.say "If I leave the office, I'm worried I'll never get through all of this!"
     "Aletta nods at this."
-    "But I notice that she doesn't look at all disappointed."
-    "In fact she's actually smiling and nodding."
     aletta.say "I thought that would be the case."
     show aletta wink
     aletta.say "So I called ahead and had them deliver!"
@@ -4403,9 +4221,6 @@ label aletta_event_09_alt:
         $ aletta.love.max = 180
     scene expression f"bg {game.room}"
     "I've managed to get through most of the bullshit work that Dwayne's lumbered me with."
-    "But that doesn't mean that I'm having an easier time of things now."
-    "Because I'm behind on my regular work as a result of all the extra stuff I had to do."
-    "So now I'm having to work twice as hard just to get back up to speed!"
     "All the same, I still drop everything the moment I get a message from Aletta."
     "At first I fear the worst, that Dwayne's been up to his old tricks again."
     "But when I pick up my phone and read the message, I breathe a sigh of relief."
@@ -4414,7 +4229,6 @@ label aletta_event_09_alt:
     mike.say "Aletta..."
     mike.say "It's me!"
     "I rap on the door, just to be sure she hears me."
-    "And the answer comes almost straight away."
     aletta.say "You're here already?"
     aletta.say "That's great, [hero.name]."
     aletta.say "Come right in!"
@@ -4427,7 +4241,6 @@ label aletta_event_09_alt:
     "She's standing right there in front of me."
     "I open my mouth to ask her what's going on."
     "But she pounces on me a moment later."
-    "And I do mean she pounces on me."
     "There's no other way to describe it!"
     "Aletta wraps her arms around me and pulls me close."
     show aletta kiss with fade
@@ -4445,8 +4258,6 @@ label aletta_event_09_alt:
     "And while I'm still more than a little shocked, I'm not resisting in the slightest."
     mike.say "H...happy to..."
     mike.say "Happy to be of help, Aletta!"
-    "Aletta smiles and licks her lips."
-    "A sight which turns me on almost as much as the kiss did."
     aletta.say "You know how it is, [hero.name]."
     aletta.say "Me and you..."
     show aletta flirt
@@ -4468,36 +4279,31 @@ label aletta_event_09_alt:
     "She wastes no time in rubbing it between her legs."
     "I can feel that she's already pretty slick down there."
     "And the thought of her waiting for me with a wet pussy is almost too much."
-    scene bg black
-    show aletta cowgirl naked office
+    scene aletta_ofc_cowgirl11
     with fade
     mike.say "Aletta..."
     mike.say "Oh fuck..."
+    scene aletta_ofc_cowgirl12
     "Aletta smiles down at me as she pushes the head of my cock home."
     "But she can't keep it up as her own body begins to surrender too."
     "Pretty soon her face melts into an expression of sensual delight."
-    show aletta cowgirl vaginal
-    "And at the same time I can feel her sinking down onto me."
+    scene expression make_anim(aletta_ofc_cowgirl_pussy, time=0.2, loop=True)
     aletta.say "Oh, [hero.name]..."
     aletta.say "Forget the kiss..."
     aletta.say "This is what I really need!"
-    show aletta cowgirl pleasure
+    scene aletta_ofc_cowgirl12 with fade
     "All I can do is lie back and let Aletta have her way with me."
     "She forces me down onto the desk, riding me for all she's worth."
     "Before too long, Aletta has me pinned down and totally helpless."
-    "All I should have to do is enjoy the experience of her having her way with me!"
+    show dwayne normal
     dwayne.say "Hey, Aletta..."
     dwayne.say "I just wanted to..."
     dwayne.say "WHAT THE HELL?!?" with vpunch
+    show dwayne angry at mostright5
     "Aletta and I freeze on the spot."
-    show aletta cowgirl normal
     "Then as one we look towards the door."
     "Luckily for us, it closed behind the person that walked in on us."
-    show dwayne angry at mostright5
     "But that's a small mercy, as we're now both staring at Dwayne."
-    "And let's just say that he doesn't look happy."
-    "His eyes are bulging and I can see veins standing out on his bald head!"
-    hide aletta cowgirl
     scene bg alettaoffice
     show dwayne angry at mostright5
     show aletta naked angry
@@ -4506,8 +4312,6 @@ label aletta_event_09_alt:
     aletta.say "You can't just barge in here like this!"
     "Aletta's scrambling off of me as she says this."
     "And I'm trying as best I can to shove my cock back into my pants."
-    "Luckily for me, being told off seems to distract Dwayne for a moment."
-    "Which allows me to get myself straightened up."
     dwayne.say "What am I doing?"
     dwayne.say "I'm the goddamn boss - I go where I like!"
     dwayne.say "You two are the one's fucking on company time!"
@@ -4519,15 +4323,11 @@ label aletta_event_09_alt:
     menu:
         "Confront Dwayne":
             "I have to stand up to Dwayne, just like I did before."
-            "Last time I proved that he's not as tough as he makes out."
-            "So it should be a piece of cake to make him back down."
             mike.say "Oh, come on, Dwayne..."
             mike.say "You already tried to pull the big man act on me once before."
             mike.say "It didn't work then and it won't work now."
-            show aletta surprised
+            show aletta surprise
             "Aletta's eyes go wide as she hears what I say."
-            "But I try to ignore the look on her face and press on."
-            "It's Dwayne I have to convince, not her."
             dwayne.say "Whoa..."
             dwayne.say "Did you just..."
             show dwayne annoyed
@@ -4551,15 +4351,15 @@ label aletta_event_09_alt:
             "They're huge and feel like they're made of something harder than flesh and bone."
             "Instinct alone makes me lash out, trying to hit him somewhere that hurts."
             scene bg alettaoffice at blur(8)
-            show dwayne fight neck at blur(8)
+            show dwayne neck at blur(8)
             with dissolve
             "But it's no use, and he just keep on squeezing ever harder."
             scene bg alettaoffice at blur(8), dark
-            show dwayne fight neck at blur(8), dark
+            show dwayne neck at blur(8), dark
             with dissolve
             "My vision starts to go blurry, and I know I'm passing out."
             scene bg alettaoffice at blur(16), dark
-            show dwayne fight neck at blur(16), dark
+            show dwayne neck at blur(16), dark
             with dissolve
             "All I can hear is the sound of Aletta screaming in the background."
             scene bg alettaoffice at blur(16), dark, dark with dissolve
@@ -4578,18 +4378,15 @@ label aletta_event_09_alt:
             mike.say "I'm going to need you to take a step back."
             mike.say "Step back and take a deep breath while you do that."
             "At the sound of my voice, Dwayne rounds on me."
-            "It's almost like he half forgot I was even here."
             show dwayne annoyed
             dwayne.say "Take a deep breath?"
             dwayne.say "What in the hell are you talking about?!?"
             "Even though he's looming over me, I press on."
             "I have to show Dwayne that he can't intimidate me."
-            "That way we can establish a dialogue and move on."
             mike.say "Look, Dwayne..."
             mike.say "I know you're into the whole alpha male thing."
             mike.say "And Aletta being with me is a challenge to that."
             "Dwayne narrows his eyes and fixes me with a hard stare."
-            "He's honestly looking at me like I have steaming turds hanging out of my mouth right now!"
             show dwayne angry
             dwayne.say "You think the problem here is ME?!?" with vpunch
             dwayne.say "Let's get something straight here."
@@ -4627,7 +4424,6 @@ label aletta_event_10_alt:
     "All it takes is the slightest unexpected noise or someone to sneak up on me unawares."
     "And the result is that I literally jump out of my seat, thinking I'm being attacked again."
     "It doesn't help that I have bruises all over me and it's painful to move my neck."
-    "So I end up wincing from the pain as I jump as well."
     show aletta normal with fade
     aletta.say "Hey, [hero.name]!"
     mike.say "Wha..."
@@ -4641,25 +4437,19 @@ label aletta_event_10_alt:
     aletta.say "Are you okay?"
     aletta.say "I didn't mean to..."
     "I wave away Aletta's concern with one hand."
-    "Still using the other to massage the tortured muscles of my neck."
     mike.say "It's okay, Aletta..."
     mike.say "It really is getting better."
     mike.say "I'll be fine in no time, I promise."
     show aletta normal
     "Aletta nods as she walks over to me."
-    "But all the same, I can see a look of genuine concern in her eyes."
     aletta.say "Erm..."
     aletta.say "Okay, [hero.name]."
     aletta.say "If you say so..."
     "There's an awkward pause as I keep on nursing my neck"
     "And at the same time, Aletta seems to have lost track of what she wanted to say."
-    "I smile and do the best I can to encourage her."
-    "Finally resorting to a vocal prodding."
     mike.say "You were saying?"
     "Aletta starts and nods."
-    "And that lets me know that this must be serious."
-    "Because Aletta's not usually tongue-tied or scatter-brained."
-    "Not in any way, shape or form."
+    show aletta talk
     aletta.say "Yes..."
     aletta.say "Of course..."
     aletta.say "I just wanted to say that you finally did it."
@@ -4674,9 +4464,8 @@ label aletta_event_10_alt:
     mike.say "Part of me is worried that he'll have me shot the next time!"
     show aletta normal
     "Aletta shakes her head at this."
-    "And I can see that she's totally serious."
-    "Which kind of makes me feel bad for cracking jokes in bad taste."
     aletta.say "I mean it, [hero.name]!"
+    show aletta talk
     aletta.say "Dwayne really crossed the line this time."
     aletta.say "People actually saw what he did to you."
     aletta.say "They know what he's capable of now."
@@ -4686,17 +4475,12 @@ label aletta_event_10_alt:
     aletta.say "And if that happens, then he's finished."
     aletta.say "Nobody will want to have anything to do with him."
     "The confidence in Aletta's voice is more than enough to convince me."
-    "And I know that she wouldn't lie about something like this."
-    "Slowly, and for the first time I start to believe what she's saying."
-    "Maybe Dwayne really has gone too far this time."
-    "And if that means he's going to leave Aletta alone..."
     "Well, then it was worth the pain I had to go through to make it happen."
     mike.say "That's great news, Aletta."
     mike.say "What's important is that he's not harassing you anymore."
     mike.say "And thanks for coming to tell me the good news."
     "At this, Aletta's expression changes."
     "Suddenly she looks less sure of herself."
-    "Maybe even a little embarrassed."
     aletta.say "That's not really why I'm here, [hero.name]."
     show aletta flirt
     aletta.say "I mean, yes - I did come to tell you that."
@@ -4704,7 +4488,7 @@ label aletta_event_10_alt:
     mike.say "For what?"
     mike.say "Letting Dwayne throttle me?"
     aletta.say "No..."
-    show aletta flirt blush
+    show aletta blush
     aletta.say "For making me realise that I love you!"
     "It takes a moment for what Aletta just said to really sink in."
     "I have to stare at her and shake my head to understand the words."
@@ -4747,7 +4531,6 @@ label aletta_event_10_alt_fired:
     "It's been a while since Dwayne walked in on Aletta and me in her office."
     "And the sting of being fired by the jerk hasn't faded yet."
     "But I'm doing the best I can to forget about it."
-    "And I guess the task of finding a new job is helping with that too."
     "Taking a break from all that, I make an effort to catch up with Aletta."
     "Only realising when I do so that I don't actually know what happened to her at work."
     show aletta normal
@@ -4755,12 +4538,10 @@ label aletta_event_10_alt_fired:
     mike.say "But what happened to you at the office?"
     mike.say "Did Dwayne back off finally?"
     "Aletta seems to come alive as I ask my questions."
-    "But I also note that she's shaking her head too."
-    show aletta embarrassed
+    show aletta blush
     aletta.say "Oh no, [hero.name]."
     aletta.say "After you stood up to him, he was a bigger asshole than ever!"
     "I can't help frowning at this news."
-    "And I start shaking my head at Aletta."
     mike.say "Why didn't you tell me this before, Aletta?"
     mike.say "You should have reported him to HR."
     mike.say "Maybe even threatened to get the police involved."
@@ -4824,8 +4605,6 @@ label aletta_event_10_alt_fired:
     "Once the kiss is over, Aletta looks me in the eye."
     aletta.say "Thank you..."
     aletta.say "For making me realise that I love you!"
-    "It takes a moment for what Aletta just said to really sink in."
-    "I have to stare at her and shake my head to understand the words."
     mike.say "Y...you're serious, Aletta?"
     mike.say "I mean...that's great!"
     mike.say "It's amazing - because I love you too!"
@@ -4889,6 +4668,7 @@ label aletta_chat_about_cherie2:
     aletta.say "No, more than I can handle."
     mike.say "Yeah. This will be over soon, I promise."
     if aletta.love >= 140 and aletta.sexperience >= 1:
+        show aletta talk
         aletta.say "[hero.name]?"
         mike.say "Yes?"
         aletta.say "Are you going to fuck her?"
@@ -4992,32 +4772,19 @@ label aletta_male_ending:
     scene bg church wedding
     with fade
     "So, here I am, standing around waiting for Aletta to arrive, feeling nervous and on show."
-    "The irony is that this isn't the first time that she's had me in a position like this."
     "Most of the times that I was going into a meeting with her or we had a one-to-one."
     "On those occasions I almost always felt like this too."
     "But back then we were just colleagues - and now we're about to tie the knot!"
-    "I guess I'm never going to totally get over it, no matter how much I love her."
     "Aletta's just one of those girls that has an aura about her."
     "She doesn't suffer fools gladly, and I hope that she's not marrying one today!"
-    "Which is another reason why I need to get a handle on my nerves."
-    "If I keep looking back over my shoulder the whole time, I'm going to look like a crazy man!"
     "I'm actually beginning to think that Aletta's deliberately keeping me waiting."
     "But then I hear the first swellings of the music she chose to come down the aisle to."
-    "I can't help letting out a sigh of relief that's much louder than I intended."
-    "In fact, it's so loud that it causes the priest to cough and attract my attention."
-    "Tearing my eyes away from the doors of the chapel, I look in his direction."
-    "He doesn't say a word, just gives me a reassuring smile."
-    "And oddly it seems to help, making me nod in thanks."
-    "Then it's his turn to glance over my shoulder, and I follow his gaze."
     "There she is, walking down the aisle towards me."
-    show aletta wedding normal noglasses at center, zoomAt( 0.9, (640, 740))
+    show aletta wedding normal
     "Of course Aletta looks stunning - how could she not?"
     "The dress is perfect, but it's only accentuating what's already there."
     "And Aletta sweeps down the aisle with all the dignity of a queen!"
-    "All eyes are on her, and she looks like she know it too."
-    "In fact, she looks like she'd resent anyone failing to look at her right now!"
-    "She clutches the bouquet in her hands like a queens orb and sceptre."
-    show aletta at center, traveling (1.5, 3.0, (640, 1060))
+    show aletta at center, traveling (1.25, 3.0, (640, 1060))
     "But as she comes closer, I can see that her hands are shaking a little."
     "I lean in to whisper to Aletta as she comes to a halt at my side."
     mike.say "Hey, Aletta."
@@ -5030,11 +4797,11 @@ label aletta_male_ending:
     show aletta happy
     aletta.say "Not looking too shabby yourself, [hero.name]."
     aletta.say "I think you'll do for me!"
-    show wedding aletta with fade
+    show aletta wed with fade
     "I can't help grinning like a fool as I see Aletta's mood improve."
     "It means so much to me that I can see beneath the front she projects for everyone else."
     "And it means even more to know that I can touch the real Aletta that lies beneath it too."
-    show wedding aletta priest with dissolve
+    show aletta priest with dissolve
     "Priest" "Ahem..."
     "Priest" "Shall we begin?"
     "Aletta and I turn to face the priest, nodding at the same time."
@@ -5054,15 +4821,11 @@ label aletta_male_ending:
     "Priest" "To speak now, or forever hold their peace!"
     "Aletta and I share a fleeting glance."
     "And then we both look back at the chapel doors."
-    "For a moment I honestly expect to see Dwayne burst in, somehow back from the dead."
-    "Or more likely, Detective Michaels brandishing a warrant for Aletta's arrest."
-    "But as the seconds stretch by, it becomes apparent that nothing of the kind is going to happen."
     "Priest" "Very well - it gives me great pleasure to declare you husband and wife."
     "Priest" "You may kiss the bride!"
-    show wedding aletta -priest with dissolve
+    show aletta wed with dissolve
     "Neither of us needs to be told to do that."
-    scene wedding_bg_04 at center, zoomAt(1.2, (640, 800)), blur(5)
-    show aletta kiss wedding
+    show aletta kiss
     with fade
     $ aletta.flags.kiss += 1
     "Aletta places her lips against mine, and the kiss that follows is glorious."

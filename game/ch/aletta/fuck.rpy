@@ -20,28 +20,28 @@ init python:
     "music": "music/johny_grimes/levity.ogg",
     })
 
-    InteractActivity(**{
-    "name": "aletta_event_05b_sex",
-    "display_name": "Fuck",
-    "label": "aletta_event_05b_sex",
-    "duration": 2,
-    "icon": "fuck",
-    "conditions": [
-        IsDone("aletta_event_05b"),
-        HeroTarget(
+    # InteractActivity(**{
+    # "name": "aletta_event_05b_sex",
+    # "display_name": "Fuck",
+    # "label": "aletta_event_05b_sex",
+    # "duration": 2,
+    # "icon": "fuck",
+    # "conditions": [
+    #     IsDone("aletta_event_05b"),
+    #     HeroTarget(
             
-            IsRoom("forest"),
-            HasStamina(),
-            MinStat("charm", 90),
-            ),
-        PersonTarget(aletta,
-            IsActive(),
-            MinStat("love", 100),
-            ),
-        ],
-    "once_day": True,
-    "music": "music/johny_grimes/levity.ogg",
-    })
+    #         IsRoom("forest"),
+    #         HasStamina(),
+    #         MinStat("charm", 90),
+    #         ),
+    #     PersonTarget(aletta,
+    #         IsActive(),
+    #         MinStat("love", 100),
+    #         ),
+    #     ],
+    # "once_day": True,
+    # "music": "music/johny_grimes/levity.ogg",
+    # })
 
     InteractActivity(**{
     "name": "aletta_fuck_mc_office",
@@ -1639,14 +1639,14 @@ label aletta_fuck_office_doggy(sexperience_min):
             scene aletta_ofc_doggy11
             "And so I waste no more time in getting down to business."
             "All it takes is a quick thrust below the waist."
-            scene expression make_anim(aletta_ofc_doggy_pussy, time=0.2, loop=True)
+            scene expression make_anim(aletta_ofc_doggy_pussy, time=0.25, loop=True)
             aletta.say "Mmm..."
             aletta.say "Your cock feels SO good inside of me..."
             aletta.say "I...want it in me forever!"
             mike.say "Oh shit..."
             mike.say "God, Aletta..."
             mike.say "I'd love that!"
-            scene expression make_anim(aletta_ofc_doggy_pussy, time=0.1, loop=True)
+            scene expression make_anim(aletta_ofc_doggy_pussy, time=0.15, loop=True)
             "I can hear the sound of my thighs slapping against her buttocks."
             "But only just, thanks to the louder noises that she's making herself."
             "Aletta pants and moans as she takes everything I have to give."
