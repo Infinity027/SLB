@@ -442,7 +442,6 @@ label alexis_start:
     return
 
 label alexis_event_02:
-
     $ renpy.play("sd/cell_vibrate.ogg", "sound")
     $ result = renpy.call_screen("smartphone_choice")
     if not result:
@@ -450,148 +449,132 @@ label alexis_event_02:
         return
     if alexis.love.max < 40:
         $ alexis.love.max = 40
-    "I'm pretty much on autopilot when my phone rings, trying to manage two different tasks while remembering a couple of others that I have to take care of as soon as I've got these ones done."
-    "So when I pull out my phone and see that the call is from an unknown number, I instantly make to reject it and get back to what I'm already struggling to get done."
-    "But then, for some reason, I pause and decide to accept the call anyway."
-    "I really can't explain what makes me do it, just one of those quirky feelings you get every so often to do something you'd normally pass over."
+    "I'm on autopilot when my phone rings, juggling two tasks while remembering a couple more I need to take care of."
+    "So when I see the call is from an unknown number, I instantly make to reject it."
+    "But then, for some reason, I pause and accept the call anyway."
     mike.say "Hello?"
-    "There's silence for a couple of seconds, and all that keeps me from hanging up is the sound of someone breathing on the other end."
+    "There's silence for a couple of seconds, and all that keeps me from hanging up is the sound of someone breathing."
     alexis.say "Hey, [hero.name], it's me - Alexis!"
     mike.say "Alexis...wow...erm, I was not expecting to get a call from you today!"
-    "I can hear her make a little sound that could be laughter, or equally be a sly note of satisfaction."
+    "I hear her make a little sound that could be laughter, or equally a sly note of satisfaction."
     alexis.say "Well, surprise!"
-    alexis.say "And I hope it was a good one?"
-    "I'm genuinely too wrong-footed to be able to come up with anything clever to say."
     alexis.say "So, are you ready for our night out?"
-    "I see my last chance to say no and get as far away as possible fading into the distance."
+    "I see my last chance to say no fading into the distance."
     mike.say "Okay, Alexis - I guess that'd be...nice."
     alexis.say "Let's meet tonight, at the restaurant."
     alexis.say "Okay - that's a date!"
     alexis.say "I'll text you the address and see you there, [hero.name]!"
     "And just like that she's back in my life and back taking control of it!"
-    "And yes, I know that I just agreed to meet up with her for dinner, like a complete pussy!"
-    "But it's not a date, I keep telling myself."
-    "It's just two former acquaintances meeting up to compare notes and talk about old times."
-    "And maybe if I keep on telling myself that for long enough, I might actually believe it too!"
+    "And yes, I know I just agreed to dinner like a complete pussy!"
+    "But it's not a date, I keep telling myself - just two former acquaintances comparing notes."
     scene bg black with timelaps
     $ game.pass_time(6)
     scene bg restaurant with fade
-    "If I was nervous to be walking into the restaurant expecting to see Alexis waiting for me, then imagine how much it made me panic to find that she was nowhere to be seen."
-    "I check my watch and glance around in the hope of spotting her, but it's no good, she's not hiding behind any of the potted plants or pillars dotted around the place."
-    "At a loss for what else to do, I wander over to where the maitre d' is standing, trying not to look too awkward and out of my element."
-    "I mean, shit - this place is serious enough to have a damn maitre d' for god's sake!"
-    "After exchanging a few clipped words with the maitre d' and being made to feel suitably moronic thanks to his superior attitude, things begin to make more sense."
-    "Apparently the young lady in who's name the table has been booked called ahead to let them know that she was running late."
-    "She left instructions that the gentleman she's dining with should be shown to the table to await her arrival."
-    "It occurs to me, as I'm ushered into my seat, that it would have been pretty easy for Alexis to let me know she was going to be late too."
+    "If I was nervous walking in expecting to see Alexis, imagine how much it panicked me to find she was nowhere to be seen."
+    "I check my watch and glance around - she's not hiding behind any of the potted plants or pillars."
+    "At a loss, I wander over to the maitre d', trying not to look too out of my element."
+    "I mean, shit - this place is serious enough to have a damn maitre d'!"
+    "Apparently the young lady who booked the table called ahead to say she was running late."
+    "She left instructions that the gentleman should be shown to the table to await her arrival."
+    "It occurs to me that it would have been pretty easy for Alexis to let me know she'd be late too."
     "Already she's managed to wrong-foot me, even before I've laid eyes on her."
-    "I want to believe that it's just an honest mistake, really I do."
+    "I want to believe it's just an honest mistake, really I do."
     "But this smacks so much of the Alexis that I used to know..."
-    "First the phone-call out of the blue, and now this!"
-    "I resolve that when she finally does grace me with her presence, I should say something to get back on level ground with her."
-    "I'm not talking about starting a blazing row or anything quite so dramatic."
-    "Just being firm and laying down some basic rules, as I don't want this reunion to go the same way as our former relationship."
+    "I resolve that when she finally graces me with her presence, I'll lay down some basic rules."
+    "I don't want this reunion going the same way as our former relationship."
     show alexis date at center, zoomAt(1.0, (1040, 720)) with easeinright
-    "But the moment that I look up and see her breezing casually into the restaurant, looking around for me, everything else seems to disappear from my mind."
-    "I might have mentioned, in passing, the fact that Alexis was pretty cute back in the day."
-    "Well, it looks like I remembered that wrongly."
+    "But the moment I look up and see her breezing casually in, everything else disappears from my mind."
+    "I might have mentioned, in passing, that Alexis was pretty cute back in the day."
     "Alexis was stunning...and she still is."
     "If she was a hot teenager when we were together, she's grown into an even hotter woman."
-    "I can remember the tawny blonde hair, the huge eyes and the full lips."
-    "But where she used to have the body of a girl yet to bloom, the red dress she's wearing now hugs the curves of an amazing feminine figure."
-    "For a moment, she clutches her expensive-looking black purse to her chest as she glances around the room."
+    "Where she used to have the body of a girl yet to bloom, the red dress now hugs the curves of an amazing feminine figure."
     show alexis date happy at center, zoomAt(1.0, (840, 720)) with ease
     "Then she spots me, and waves."
     "Before I can stop myself, I'm standing up and waving back, smiling like a fool."
     show alexis smile at center, traveling(1.5, 0.3, (640, 1040))
-    "She walks over to the table, and I can hear the clacking of her high heels on the tiled floor."
-    "I try to keep a sensible head on my shoulders, but she looks like something out of a damn movie right now."
+    "She walks over, and I can hear the clacking of her high heels on the tiled floor."
+    "I try to keep a sensible head on my shoulders, but she looks like something out of a damn movie."
     show alexis talk
     alexis.say "Hello, [hero.name], so good to see you again."
     show alexis smile
     mike.say "Y-yeah...great to see you too, Alexis."
     "I go to sit down, but Alexis gives a slight cough and nods towards her chair."
-    "For a moment I'm puzzled by the gesture, until I realise that she's expecting me to pull her chair out for her."
+    "For a moment I'm puzzled, until I realise she's expecting me to pull her chair out for her."
     menu:
         "Pull out Alexis' chair":
             "I know it's a bit old-fashioned, but we are in a pretty up-market kind of place."
             show alexis at center, zoomAt(1.5, (640, 1140)) with ease
-            "Nodding that I understand her, I hurry round to pull out Alexis' chair and make sure she's seated comfortably."
+            "I hurry round to pull out her chair and make sure she's seated comfortably."
             "She smiles in approval, clearly gratified to have me treat her in such a gentlemanly manner."
             $ alexis.sub -= 5
             $ alexis.love += 1
         "Don't":
             "Jesus wept - I'm meeting an old girlfriend for a meal in the twenty-first century."
             "Not courting a prospective bride on the maiden voyage of the Titanic!"
-            "I pretend not to have understood what Alexis was expecting of me and just sit straight back down."
+            "I pretend not to understand and just sit straight back down."
             show alexis annoyed
-            "I can tell from the expression on her face that she's momentarily put out."
+            "I can tell she's momentarily put out."
             show alexis at center, zoomAt(1.5, (640, 1140)) with ease
-            "But she'd have to call me out on it and look like a bit of a bitch in doing so, and instead she chooses to ignore the whole matter and just sit down herself."
+            "But calling me out on it would make her look like a bit of a bitch, so she just sits down herself."
     hide alexis
     show restaurant meal alexis date nomeals with fade
-    "As the menus arrive and I realise that this place is so much style over substance that I haven't been able to even guess what the cuisine they're serving is, we try to make small-talk."
+    "As the menus arrive - in a place so style over substance I can't even guess the cuisine - we try to make small-talk."
     mike.say "I'm guessing there was a bit of a mix-up with the times tonight?"
     show restaurant meal alexis date nomeals happy
-    "Alexis smiles at me over the top of her menu and lightly waves the comment away."
+    "Alexis smiles over the top of her menu and lightly waves the comment away."
     alexis.say "Oh, [hero.name], that's fine - there's no need to apologise!"
     "What - did she actually just let me off the hook for something that she did?!?"
-    "I open my mouth to object, but find myself interrupted by the arrival of the waiter to take our orders."
-    "Unable to give Alexis a piece of my mind in front of someone else, I simply have to simmer down and pretend not to be annoyed at what she just did."
-    "I'm feeling pretty wound up and distracted by now, and I just pick something almost at random from the menu before handing it back to the hovering waiter."
+    "I open my mouth to object, but the waiter arrives to take our orders."
+    "Unable to give Alexis a piece of my mind in front of someone else, I have to simmer down and pretend not to be annoyed."
     alexis.say "It's so nice of you to agree to this, [hero.name]."
     alexis.say "I know we didn't part on the best of terms..."
     "Now there's quite the understatement."
     show restaurant meal alexis date nomeals -happy
     alexis.say "There were things we both did wrong..."
-    "Both of us - really?"
-    "I'd like to see the list of grievances against my name from back then!"
+    "Both of us - really? I'd like to see the list of grievances against my name from back then!"
     alexis.say "But that was so long ago now."
-    "I can feel teeth almost grinding together as I grit them and reply in a diplomatic manner."
+    "I grit my teeth and reply in a diplomatic manner."
     mike.say "That's all in the past now, Alexis."
     mike.say "I'd like to think that we've grown into different people since then."
-    "That answer seems to be the one that Alexis was looking for, and the mood begins to lighten from that point on."
+    "That seems to be the answer Alexis was looking for, and the mood lightens from that point on."
     show restaurant meal alexis date eat -nomeals with fade
-    "We eat a couple of courses of way too expensive food and drink a bottle of wine that I suppose must be a decent one (it's expensive enough!)."
-    "The talk turns to memories of being at school, with both of us being careful to avoid any sensitive topics."
-    "I've almost forgotten all of the things that Alexis has done to irritate me tonight."
+    "We eat a couple of courses of way too expensive food and drink a bottle of wine that must be decent - it's expensive enough!"
+    "The talk turns to school memories, both of us careful to avoid any sensitive topics."
+    "I've almost forgotten everything Alexis has done to irritate me tonight."
     "That is until I hear a deep, impossibly masculine voice intruding on the moment."
     "Shady guy" "Damn, girl - you're something else!"
     show restaurant meal alexis date -eat with fade
     show restaurant_meal_waiter_pose01 as man zorder 1 at left with easeinleft
-    "I look up to see a guy towering over me that instantly makes me almost jump in my seat."
-    "He's well over six feet tall, built like a professional athlete and shows off rugged good looks as he smiles down at Alexis."
-    "She's already returning his smile, soaking up the adoration of this ebony demi-god that's decided to crash our private dinner."
+    "I look up to see a guy towering over me, well over six feet and built like a professional athlete."
+    "He's showing off rugged good looks as he smiles down at Alexis, who's already returning the smile."
     show restaurant meal alexis date blush
     alexis.say "Aww...that's so kind of you to say!"
     show restaurant meal alexis date -blush
     alexis.say "Tell me, do you work out?"
     alexis.say "I mean, you look like you must play ball or something, right?"
-    "I can't believe that she's actually flirting with this guy, right in front of me!"
+    "I can't believe she's actually flirting with this guy, right in front of me!"
     "I know we kind of, sort of said this wasn't really a date."
     "But we both know that it kind of, sort of actually is!"
     menu:
         "Say something" if hero.fitness >= 25 and hero.charm >= 25:
             show restaurant meal alexis date bored
             mike.say "Hey, do you two mind doing your flirting on your own damn time!"
-            "My angry words shatter the convivial mood that was fast building between Alexis and the other guy."
-            "She looks at me with barely concealed annoyance in her eyes."
-            "But to give him his credit, the guy seems to notice me for the first time."
+            "My angry words shatter the convivial mood between Alexis and the other guy."
+            "She looks at me with barely concealed annoyance."
             "Shady guy" "Hey, chill, bro - it's cool."
             "Shady guy" "I didn't know I was cramping your style...no need to get mad."
             hide restaurant_meal_waiter_pose01 as man with easeoutleft
-            "He holds up a hand to acknowledge that he's backing off and that, as far as he's concerned, the matter's over and done with."
-            "Alexis keeps her mouth shut as the guy walks away, but the rest of the night is irrevocably tainted by the incident."
+            "He backs off, and Alexis keeps her mouth shut as he walks away."
+            "But the rest of the night is irrevocably tainted by the incident."
             show restaurant meal alexis date eat bored
             "We eat the rest of our meal in a cold near silence and then go our separate ways."
             $ alexis.flags.restaurant_outcome = "stop_flirt"
             $ alexis.flags.conversation_event = "restaurant"
             $ alexis.flags.ntr_conversation = "flirt"
             $ game.pass_time(2)
-
             return
         "Say nothing":
-            "I could speak up, but then this is supposed to be something that's not quite a date."
+            "I could speak up, but this is supposed to be something that's not quite a date."
             "I don't really have any right to stop Alexis from talking to whoever she chooses."
             "Shady guy" "That's right, I play quarterback - you're a very perceptive young lady, you know that?"
             alexis.say "Let's just say that I have a lot of experience when it comes to spotting a pedigree athlete!"
@@ -604,13 +587,13 @@ label alexis_event_02:
             hide restaurant_meal_waiter_pose01 as man with easeoutleft
             "With that he walks off and leaves us alone again."
     "We continue eating, but the tone of conversation is more muted now."
-    "I could make an effort to inject new life into it, but the sight of Alexis flirting so openly in front of me makes me wonder what the point would be."
-    "She's practically made it clear to me with that one act that this isn't some desperate attempt on her part to make things right between us."
-    "Maybe the best I can hope for is to come out of this in one piece and with her as a kind of platonic friend, one that I can easily make excuses not to see ever again?"
+    "The sight of Alexis flirting so openly makes me wonder what the point of injecting life into it would be."
+    "She's made it clear that this isn't some desperate attempt to make things right between us."
+    "Maybe the best I can hope for is to come out of this in one piece, with her as a platonic friend I can easily make excuses to never see again?"
     show restaurant meal nonpc with fade
     "Just before we order dessert, Alexis excuses herself to go to the bathroom."
     show restaurant meal nonpc order waiter with fade
-    "I don't notice how long she's been gone until the waiter comes back a second time to ask if we're ready to order yet."
+    "I don't notice how long she's been gone until the waiter comes back a second time to ask if we're ready to order."
     "Telling him to come back in five minutes, I begin to wonder what's keeping Alexis."
     show restaurant meal nonpc -order -waiter with fade
     menu:
@@ -620,86 +603,70 @@ label alexis_event_02:
             $ alexis.flags.conversation_event = "restaurant"
             scene bg restaurant with fade
             "I get up as discreetly as I can and hurry over to the toilets."
-            "It's only then that I realise I have absolutely no idea of how to check on Alexis in the women's bathroom."
-            "I can't start hammering on the door or shouting her name, and walking straight in just isn't an option either."
-            "In the end I settle for going into the men's bathroom instead, hoping that the wall between the two will be thin enough for me to hear what's happening on the other side."
-            "But as soon as I walk in through the door, I disturb one of the waiters, who jumps at the sight of me and quickly scuttles out."
-            "For a moment I can't make sense of it, thinking that restaurants usually have toilets in the back for staff."
-            "It's only when I hear the sounds coming from the last cubicle that I begin to understand what he was actually doing in here."
-            "The groans and moans emanating from behind the locked door can mean only one thing."
-            "And I think that I'd honestly made up my mind what I was going to see, even before I walked into the second-to-last cubicle and stood on the toilet seat to peer over."
+            "It's only then that I realise I have no idea how to check on Alexis in the women's bathroom."
+            "I can't hammer on the door or shout her name, and walking straight in isn't an option either."
+            "In the end I settle for the men's bathroom, hoping the wall between the two will be thin enough to hear through."
+            "But as soon as I walk in, the last thing I expect is what greets me at the sinks."
+            "Alexis is there, bent over the basin with her red dress hiked up around her waist."
+            "And standing behind her, his server's jacket still on, is the smug waiter I'd already handed our order to."
             show alexis reverse ntr publicbathroom vaginal with fade
-            "There's the stranger that stopped at our table not twenty minutes ago."
+            "He's got a handful of her hair and is driving into her from behind with slow, deliberate thrusts."
+            "For a moment neither of them notices me standing frozen in the doorway."
+            "Then Alexis' eyes flutter open in the mirror - and go wide as they lock onto mine."
             show alexis reverse ntr publicbathroom vaginal at startle(0.05,-10)
-            "And there's Alexis, riding him like her life depended on it."
-            menu:
-                "Leave":
-                    "I could have lived with her chatting another guy up, even in my company."
-                    "But shit like this is just too much for me to put up with."
-                    "It's proof positive that Alexis hasn't changed one bit since we were together all those years ago."
-                    "I jump down from the toilet seat and storm out of the men's bathroom, not caring if either of them hears me as I go."
-                    hide alexis with fade
-                    "The waiter sees me grabbing my coat, and hurries over to make sure someone pays the bill."
-                    "I sneer at his fake courtesy and tell him rather bluntly that the lady will be settling the cheque for tonight's meal."
-                    "Alexis, I think, has already made me pay in more ways than one."
-                    $ alexis.flags.restaurant_outcome = "found_leave"
-                    $ alexis.flags.ntr_conversation = "leave"
-                    $ game.pass_time(1)
-                    return
-                "Watch":
-                    "I should walk away from this, or at least have the balls to interrupt them."
-                    show alexis reverse at startle(0.05,-10)
-                    "But instead I find myself compelled to remain silent and watch as they fuck in the next stall."
-                    "I don't get to see everything, as I've evidently walked in on them while they're in the middle of it all."
-                    show alexis reverse at startle(0.05,-10)
-                    "Both of them are stripped naked, the stranger sitting astride the toilet and Alexis straddling his considerable lap."
-                    "Neither of them speaks, and they're trying to keep as quiet as possible, though not really succeeding."
-                    "I suppose it won't surprise you to learn that the guy's cock is simply massive."
-                    "It stands erect and proud, perhaps an inch below Alexis' pussy as he literally holds her above it."
-                    show alexis reverse at startle(0.05,-10)
-                    "Though I can see her naked body without any kind of impediment, I keep finding myself drawn back to the expression on Alexis' face as she's lowered slowly onto the waiting cock."
-                    "It's not one that I can ever recall seeing her show before, desperate, needy and almost, well...almost shameful."
-                    show alexis reverse eyes_closed mouth_hurt at startle(0.05,-10)
-                    "I watch as she bites her lip, almost expecting to see blood flow, in an effort to keep quiet as she slides down onto the huge cock beneath her."
-                    "This isn't a long, drawn out instance of making love."
-                    show alexis reverse mouth_pleasure at startle(0.05,-10)
-                    "It's just two strangers fucking for the thrill of it in a toilet."
-                    "The stranger holds the underside of Alexis' thighs so that he can more easily lift her up and down on his manhood."
-                    "And with every thrust, she gasps more loudly, while her face becomes ever more flushed, her eyes more distant and cold."
-                    show alexis reverse eyes_pleasure mouth_scream cum at startle(0.05,-15)
-                    "It's not long before the guy cums inside of her, filling Alexis to the point where it begins to leak out even before he pulls out of her stretched pussy."
-                    show alexis reverse eyes_surprised mouth_hurt -cum anal at startle(0.05,-15)
-                    "But he's not done yet, I realise, as he lifts Alexis again so that he can thrust his cock straight up her ass."
-                    "By this time, she's almost reeling from the way she's been used."
-                    show alexis reverse eyes_pleasure mouth_ahegao at startle(0.05,-15)
-                    "Her head lolls like that of a puppet with severed strings, and her tongue lolls out of her open mouth."
-                    hide alexis with fade
-                    "Sensing that the end is fast approaching, I hop down from my perch as quietly as I can manage and hurry back to our table."
-                    "When Alexis returns a few minutes later, I try not to notice the signs of dishevelment that she's not been able to hide."
-                    "The conversation is muted from then on, but I decide to play along with her excuse of being tired."
-                    "We see out the end of the meal with this pretence of ignorance still going on."
-                    "But all the time, my mind is racing thanks to what I've seen and the things that it could imply."
-                    $ hero.money -= 500
-                    $ alexis.flags.restaurant_outcome = "found_watch"
-                    $ alexis.flags.ntr_conversation = "cheat"
-                    $ game.pass_time(1)
-                    return
+            "But she doesn't stop."
+            "If anything, the sight of her old acquaintance catching her only makes her arch her back and push her hips harder against him."
+            "I should walk away, or at least have the balls to interrupt them."
+            show alexis reverse at startle(0.05,-10)
+            "But instead I find myself compelled to remain silent and watch as they fuck against the sink."
+            "Neither of them speaks, though their efforts to keep quiet aren't really succeeding."
+            "I suppose it won't surprise you to learn that the waiter's cock is simply massive."
+            "It stands erect and proud, and every thrust rocks Alexis up onto her tiptoes."
+            show alexis reverse at startle(0.05,-10)
+            "Though I can see her naked body without impediment, I keep finding myself drawn to her expression in the mirror."
+            "It's not one I can ever recall seeing her show before - desperate, needy and almost, well...almost shameful."
+            show alexis reverse eyes_closed mouth_hurt at startle(0.05,-10)
+            "She bites her lip in an effort to keep quiet as she pushes back onto the huge cock filling her."
+            "This isn't a long, drawn out instance of making love."
+            show alexis reverse mouth_pleasure at startle(0.05,-10)
+            "It's just two people fucking for the thrill of it in a restaurant bathroom."
+            "The waiter holds her by the hips so he can more easily drive her back onto his manhood."
+            "And with every thrust she gasps more loudly, her face flushed, her eyes distant and cold."
+            show alexis reverse eyes_pleasure mouth_scream cum at startle(0.05,-15)
+            "It's not long before he pulls out of her stretched pussy, and I assume the show is over."
+            show alexis reverse eyes_surprised mouth_hurt -cum anal at startle(0.05,-15)
+            "But he's not done yet, I realise, as he presses his slick cock against her other hole instead."
+            "Alexis' hands scrabble at the sink, and she whimpers as he forces himself inch by inch up her ass."
+            "By this time, she's almost reeling from the way she's being used."
+            show alexis reverse eyes_pleasure mouth_ahegao at startle(0.05,-15)
+            "Her head lolls like a puppet with severed strings, and her tongue hangs out of her open mouth."
+            hide alexis with fade
+            "Sensing that the end is fast approaching, I slip back out as quietly as I can manage and hurry to our table."
+            "When Alexis returns a few minutes later, I try not to notice the signs of dishevelment she's not been able to hide."
+            "The conversation is muted from then on, but I decide to play along with her excuse of being tired."
+            "We see out the end of the meal with this pretence of ignorance still going on."
+            "But all the time, my mind is racing thanks to what I've seen and the things that it could imply."
+            $ hero.money -= 500
+            $ alexis.flags.restaurant_outcome = "found_watch"
+            $ alexis.flags.ntr_conversation = "cheat"
+            $ game.pass_time(1)
+            return
         "Wait":
 
             "It seems to take forever for Alexis to wrap things up in the bathroom and make it back to the table."
             show restaurant meal alexis -nonpc with fade
-            "She looks a little worse for wear when she sits down, but assures me that she's just feeling a little tired and that there's nothing more to worry about."
-            "I try to forget about it and focus on ordering dessert, but a knowing grin on the waiter's face still bugs me all the same."
+            "She looks a little worse for wear when she sits down, but assures me she's just feeling tired."
+            "I try to forget about it and focus on dessert, but a knowing grin on the waiter's face still bugs me all the same."
             $ alexis.flags.restaurant_outcome = "wait"
     "The rest of the meal passes fairly pleasantly and without incident."
     show restaurant meal alexis waiter alexishappy with fade
-    "Only when the bill arrives and Alexis smiles at the waiter do I feel like the old annoyances are creeping back in once more."
+    "Only when the bill arrives and Alexis smiles at the waiter do I feel the old annoyances creeping back in."
     alexis.say "My date will be handling the cheque."
     "My eyes almost pop out of my head, as I've been keeping a rough estimate of the evening's cost in the back of my mind."
-    "Luckily Alexis is still looking at the waiter when this happens, and I manage to pull my face back into something resembling a blithe grin when she does turn back to me."
+    "I manage to pull my face back into something resembling a blithe grin before she turns back to me."
     alexis.say "It's so kind of you to agree to treat me like this!"
     "She flutters her eyelids as I allow the waiter to rob me blind."
-    "I just hope this is a simple case of miscommunication, and that Alexis isn't a gold-digger that's eyeing me up as her latest claim."
+    "I just hope this is a simple case of miscommunication, and that Alexis isn't a gold-digger eyeing me up as her latest claim."
     $ hero.money -= 500
     $ game.pass_time(2)
     return
@@ -863,19 +830,19 @@ label alexis_event_04:
         $ alexis.love.max = 80
     show alexis
     mike.say "Alexis, remind me what you wanted?"
-    "There's no immediate reply, and so I give her a gentle tap on the shoulder."
+    "There's no immediate reply, so I give her a gentle tap on the shoulder."
     alexis.say "Huh...what?"
     mike.say "What do you want to take into the film with you?"
     mike.say "Want to share a popcorn and soft-drink with me?"
     show alexis annoyed
     alexis.say "Oh, right...whatever's fine with me, [hero.name]."
-    "I nod slowly and order the snacks, while trying to see where Alexis' attention was a moment beforehand."
+    "I nod and order the snacks, while trying to see where Alexis' attention was a moment before."
     "Seems she could have been checking out the posters for the upcoming attractions."
-    "Or else maybe she was checking out a bunch of guys on the other side of the lobby..."
+    "Or else maybe checking out a bunch of guys on the other side of the lobby..."
     scene bg cinemaroom
     show alexis
     with fade
-    "But as we make our way into the theatre and sit down, waiting for the film to start, I chide myself for being petty."
+    "But as we sit down waiting for the film to start, I chide myself for being petty."
     "Of course guys are going to check Alexis out, she's gorgeous."
     "And if she chooses to glance back, then she's only human too."
     show alexis blush
@@ -887,41 +854,33 @@ label alexis_event_04:
     pause 0.5
     show alexis normal at center, zoomAt(1.5, (640, 1140)) with ease
     "Finding our seats, I can't help noting that the place is almost full."
-    "I guess we weren't the only people who chose to see this movie and maybe thought it'd be a quiet time to do so."
 
     if alexis.flags.story == 2:
         show alexis happy at center, zoomAt(1.5, (640, 1140)), startle
         "Just as the house lights are going down, I hear Alexis chuckling to herself."
-        "Intrigued by this, I lean in and whisper close to her ear."
+        "Intrigued, I lean in and whisper close to her ear."
         mike.say "What's so funny all of a sudden?"
         show alexis at center, zoomAt(1.5, (640, 1140)), startle
         "Alexis chuckles again, and then whispers back her answer."
         show alexis normal
         alexis.say "See that guy in the front row, the one with the badass haircut?"
-        mike.say "Erm...yeah, I think so."
-        mike.say "What about him?"
+        mike.say "Erm...yeah, I think so. What about him?"
         alexis.say "He's been checking me out since we walked in."
         alexis.say "But his girlfriend just caught him doing it a couple of minutes ago."
-        "I can now see the guy that Alexis must be talking about, sitting in the front row and looking decidedly uncomfortable."
-        "She seems to be right, as the girl in the seat next to him is hissing something and jabbing a finger at him."
-        "As the opening credits of the film roll, she gets up, empties a large drink into his lap and storms out."
-        "He makes an alarmed sound and hurries after her, to the accompaniment of laughter from half the crowd and shushing from the other."
+        "I can now see the guy Alexis must mean, sitting in the front row and looking decidedly uncomfortable."
+        "The girl next to him is hissing something and jabbing a finger at him."
+        "As the opening credits roll, she gets up, empties a large drink into his lap and storms out."
+        "He hurries after her, to the accompaniment of laughter from half the crowd and shushing from the other."
         "I look at Alexis, noting that she's one of those laughing."
-        "And as I do so, it occurs to me that she must have been watching that guy at least as much as he was her."
-        "How else could she have known what was going on?"
-        "But then I shake my head, realising what a paranoid jerk I sound like."
-        "We're sitting facing forwards, so of course she could see all of what just happened."
-        "That letching moron just put on an impromptu pre-film show for the rest of us, that's all."
-        "I shake my head at the thought of the hapless buffoon, and settle down to watch the film."
         scene bg cinemaroom at dark with dissolve
-        "The next couple of hours pass in the pleasant alternate reality of the silver screen, and I forget all of my problems for almost the whole while."
-        "All that manages to snap me out of it for a couple of seconds is the feeling of someone touching me in the darkness."
-        "But then I realise it's just Alexis, taking my hand in hers and leaning her head on my shoulder."
+        "The next couple of hours pass in the pleasant alternate reality of the silver screen."
+        "All that snaps me out of it for a couple of seconds is the feeling of someone touching me in the darkness."
+        "But then I realise it's just Alexis, taking my hand and leaning her head on my shoulder."
         "After this, it doesn't take me long to lose myself in the film once more."
         scene bg cinemaroom
         show alexis blush at center, zoomAt(1.5, (640, 1040))
         with dissolve
-        "On the way out of the room, Alexis is still hanging off of my arm, leaning into me with a smile on her face."
+        "On the way out, Alexis is still hanging off of my arm, leaning into me with a smile on her face."
         alexis.say "This was fun, [hero.name]."
         alexis.say "I can't remember when I last went to see a film on a date."
         alexis.say "Well...maybe when I did and had such a great time!"
@@ -934,14 +893,13 @@ label alexis_event_04:
     else:
 
         scene bg cinemaroom at dark with dissolve
-        "By the time we're sitting in our seats, watching the trailers, I can already feel my eyes starting to close."
+        "By the time we're sitting in our seats watching the trailers, I can already feel my eyes starting to close."
         "The dark theatre, plush seats and the way a film takes you out of reality all conspire to send me off to sleep."
         if alexis.flags.story == 0 and (hero.energy >= 5 or alexis.sub >= 50):
             "But that doesn't mean I have to just sit back and let it happen."
-            "I've had a tough week, with no chance to relax or unwind the whole time."
-            "There's going to be plenty of time to sleep once I'm home and in bed."
+            "I've had a tough week, and there's going to be plenty of time to sleep once I'm home and in bed."
             "And I'm not going to miss out on the chance to spend some quality time with Alexis either!"
-            "I find my head drooping onto my shoulder, manage to jerk myself awake with a slight grunt of confusion."
+            "I find my head drooping, and manage to jerk myself awake with a slight grunt of confusion."
             mike.say "Huh...wha..."
             show alexis surprised at center, zoomAt(1.5, (640, 1140)), vshake
             "The noise seems to make Alexis jump, as if she wasn't expecting it."
@@ -951,10 +909,10 @@ label alexis_event_04:
             alexis.say "You almost scared the life out of me."
             show alexis normal
             "I can't help getting the odd feeling that she was in the act of doing something or other."
-            "Though as I'm still a little groggy from almost nodding off, I just write it off as my being confused."
-            "In the end, I manage to keep from actually falling fully asleep before the end credits roll."
-            "Hell, I even get to see the little scene they put in afterwards too, which is a bonus."
-            "I still need to have Alexis fill me in on some of the major plot details."
+            "Though as I'm still groggy, I just write it off as my being confused."
+            "In the end, I manage to keep from falling fully asleep before the end credits roll."
+            "Hell, I even get to see the little scene they put in afterwards too."
+            "I still need Alexis to fill me in on some of the major plot details."
             "But for some reason she's quite vague, as though she was distracted too."
             "Who knows - maybe she's just as tired as me, just better at hiding it?"
             $ alexis.flags.cinema_outcome = "wait"
@@ -962,42 +920,36 @@ label alexis_event_04:
             $ alexis.flags.caughtCheating = True
             $ alexis.flags.conversation_event = "cinema"
             "All too soon I feel myself sinking into that weird place between sleep and waking."
-            "That place where nothing seems to make sense and thoughts stretch into strange shapes without any effort whatsoever."
-            "I don't know how long I'm actually asleep, but I don't get an elbow in the ribs, and so must not have been snoring."
+            "I don't know how long I'm actually asleep, but I don't get an elbow in the ribs, so I can't have been snoring."
             scene bg cinemaroom at dark with wipeup
-            "And so when I finally wake up, I have literally no idea where I am for a good few minutes."
-            "But slowly it starts to come back to me that I'm sitting in the cinema, with Alexis by my side."
-            "Suddenly realising that I probably need to make an urgent apology to my date, I turn to look in her direction."
-            "At first I think that she must have got up and slipped out to the bathroom or to refill her drink."
-            "As when I gaze over, I can't see her in the seat at all."
-            "But then I see something moving in the seat, and realise that she is one row further down the room."
-            "The reason that I couldn't see her at first was because she's hunched over for some unknown reason."
-            "There's an odd sound coming from down there too."
-            "And at first I think she must be in the act of retching or actually throwing up, head between her knees."
-            "Concerned for her well-being, I lean over a little to see what's going on."
+            "When I finally wake up, I have no idea where I am for a good few minutes."
+            "But slowly it comes back to me that I'm sitting in the cinema, with Alexis by my side."
+            "Realising I probably need to make an urgent apology to my date, I turn to look in her direction."
+            "At first I think she must have slipped out to the bathroom, as I can't see her in the seat at all."
+            "But then I see something moving in the seat, and realise she's one row further down."
+            "The reason I couldn't see her at first was because she's hunched over for some unknown reason."
+            "There's an odd sound coming from down there too, and at first I think she must be retching."
+            "Concerned, I lean over a little to see what's going on."
             show alexis movie bj with fade
             "It's then that I see the guy sitting on the other side of her has his flies undone."
             "And worse, Alexis' head isn't between her knees at all."
-            "It's actually buried in the lap of a complete stranger."
-            "I can't believe what I'm seeing - she's giving him a blowjob while sitting right beside me!"
+            "It's actually buried in the lap of a complete stranger!"
+            "I can't believe it - she's giving him a blowjob while sitting right beside me!"
 
             if alexis.flags.story == 0:
                 menu:
                     "Leave":
                         "I know that I should stop her, or at least say something."
-                        "But the truth is that the shock I'm feeling seems to put me into a kind of autopilot."
+                        "But the shock I'm feeling seems to put me into a kind of autopilot."
                         "Without uttering a single word, I get up from my seat and walk out of the theatre."
-                        "I don't know if Alexis even notices that I'm gone."
-                        "As she waited for me to fall asleep before making a move on some other guy, I doubt it."
-                        "And whether or not she'll be surprised to find me gone, I have no idea."
-                        "The truth is that I thought Alexis had changed since we were last together."
-                        "But it seems that I was one hundred percent wrong."
+                        "As she waited for me to fall asleep before making a move on some other guy, I doubt she even notices I'm gone."
+                        "I thought Alexis had changed since we were last together."
+                        "But it seems I was one hundred percent wrong."
                         "And she's still just waiting to make a fool out of me at the first available opportunity."
                         scene bg cinema with fade
-                        "As I leave the cinema, all I'm thinking about is how I'm going to get home."
-                        "What I'll say to Alexis if she bothers to call me is something that I just can't seem to process."
-                        "Maybe I'll see if she confesses or not."
-                        "Maybe I'll confront her with the fact that I know and judge her by how she reacts."
+                        "As I leave, all I'm thinking about is how I'm going to get home."
+                        "What I'll say to Alexis if she bothers to call me is something I just can't process."
+                        "Maybe I'll see if she confesses, or confront her with the fact that I know and judge her by how she reacts."
                         "Or maybe I won't answer her call when it comes."
                         "All I know right now is that I want to be far away from here before Alexis realises I'm gone."
                         $ alexis.love -= 5
@@ -1006,36 +958,34 @@ label alexis_event_04:
                         $ game.active_date.stay = False
                         $ hero.cancel_activity()
                     "Watch":
-                        "All it'd take is for me to say something that one or both of them could hear."
-                        "Or a simple tap on the shoulder would break the spell for good."
+                        "All it'd take is for me to say something, or a simple tap on the shoulder to break the spell for good."
                         "Though I have no idea what would happen in the seconds that followed..."
                         "But for some reason, I do neither and simply continue to watch."
-                        "After the way in which Alexis betrayed me when we were dating as kids, I should be outraged."
+                        "After the way Alexis betrayed me when we were dating as kids, I should be outraged."
                         "And yet I keep on staring at the undeniable evidence that she hasn't changed one bit."
                         "Maybe it's because, before this moment, I'd never seen the evidence with my own eyes?"
                         show alexis movie bj up
                         "But whatever the reason, I can't stop watching in rapt disgust as her head bobs up and down in the guy's lap."
-                        "I make sure not to turn my head in their direction, trying to keep from being seen."
-                        "Still I can make out the fact that the stranger has his head leaned back, clearly enjoying the treatment."
+                        "I make sure not to turn my head, trying to keep from being seen."
+                        "Still I can make out that the stranger has his head leaned back, clearly enjoying the treatment."
                         "Why am I watching this?!?"
                         "She's making a fool out of me in public, and I can't tear my eyes away from the very act that's doing it!"
                         show alexis movie bj down
                         "I can feel my breathing becoming heavier as the blowjob becomes more intense."
-                        "My heart's pounding in my chest and the blood's pounding in my ears."
+                        "My heart's pounding and the blood's pounding in my ears."
                         "Oh god - am I actually getting off on this?"
-                        "Is the real reason that I was so destroyed by Alexis' cheating the first time around not because of the infidelity?"
+                        "Is the real reason I was so destroyed by Alexis' cheating the first time not the infidelity itself?"
                         "Was it really because of the fact that I couldn't watch as she did so?"
-                        "By now, the guy on the other side of Alexis is starting to make a desperately suppressed sound."
-                        "At the same time, his hands are clutching at the arms of his seat."
+                        "By now, the guy is starting to make a desperately suppressed sound, his hands clutching at the arms of his seat."
                         show alexis movie bj cum
                         "No doubt he's moments away from cumming, and doing it right inside of her mouth too!"
-                        "Before I have time to form another thought, he stiffens and Alexis makes a muffled gagging sound of her own."
-                        "I watch out of the corner of my eye and with rapt fascination as she swallows every last drop of his cum."
+                        "Before I have time to form another thought, he stiffens and Alexis makes a muffled gagging sound."
+                        "I watch with rapt fascination as she swallows every last drop of his cum."
                         "And then, without a single word passing between them, it's all over."
                         hide alexis
                         show alexis at center, zoomAt(1.5, (640, 1140)) with fade
-                        "Alexis sits up and come back to her seat while the guy begins to fasten up his flies."
-                        "I hastily put my head back on my shoulder and close my eyes, feigning sleep."
+                        "Alexis sits up and comes back to her seat while the guy begins to fasten up his flies."
+                        "I hastily put my head back and close my eyes, feigning sleep."
                         alexis.say "Hey, sleepy-head!"
                         mike.say "Huh...what the hell..."
                         show alexis happy at center, zoomAt(1.0, (640, 1140)), startle
@@ -1046,10 +996,9 @@ label alexis_event_04:
                         show alexis kiss
                         with fade
                         $ alexis.flags.kiss += 1
-                        "Still distracted by my own thoughts, I'm taken by surprise when Alexis kisses me without warning."
-                        "I return the gesture, almost completely as a reflex action and with no hesitation, despite what I've seen her do."
+                        "Still distracted, I'm taken by surprise when Alexis kisses me without warning."
+                        "I return the gesture almost as a reflex action, despite what I've seen her do."
                         "But then she goes further, sliding her tongue into my mouth and stepping into the kiss with more passion."
-                        "At first I barely notice the hints of it still on her tongue even now."
                         "It only becomes apparent to me just what that odd, elusive taste is a couple of moments later."
                         "His cum...that's what it is."
                         "I can taste the last remnants of it on Alexis' tongue as she kisses me!"
@@ -1058,7 +1007,7 @@ label alexis_event_04:
                         "Alexis jokes about my nodding off as we get up and leave the theatre."
                         "But she never once mentions what she was doing while I was supposedly asleep."
                         "I see her exchange a furtive glance with the guy himself as we pass in the lobby."
-                        "But she seems happy to think that she's gotten clean away with it."
+                        "She seems happy to think that she's gotten clean away with it."
                         "And if I'm honest, that's not even what's troubling me the most right now."
                         "I'm more concerned by the fact that I just sat there and watched!"
                         $ alexis.flags.cinema_outcome = "found_watch"
@@ -1067,75 +1016,67 @@ label alexis_event_04:
                     "Confront her":
                         scene bg cinemaroom at dark with fade
                         mike.say "Alexis - what the fuck are you doing?!?"
-                        "I honestly have no idea how loud my voice is when I stand up and shout this out."
-                        "But I know that I'm shouting, and that it comes at a particularly quiet point in the film too."
-                        "This means that everyone in the place sees my silhouette appear on the screen and hears what I said with perfect clarity."
-                        "I only know this because of the numerous voices I can hear, raised in either surprise or objection."
-                        "My own eyes are not looking around though, as they're solely focused on Alexis and the object of her most intimate attentions."
-                        "The guy is already making a clumsy effort to force her head out of his lap, as if this will make a difference of some kind."
-                        "Who knows, maybe he's hoping that he can convince me he just looked down and realised what was going on for the first time?"
-                        "His haste to shove her off of his exposed cock means that Alexis is sent sprawling onto the floor between the rows of seats."
+                        "I have no idea how loud my voice is, but I know that I'm shouting - and that it comes at a particularly quiet point in the film."
+                        "Everyone in the place sees my silhouette appear on the screen and hears what I said with perfect clarity."
+                        "I only know this because of the numerous voices raised in either surprise or objection."
+                        "My own eyes are solely focused on Alexis and the object of her most intimate attentions."
+                        "The guy is already making a clumsy effort to force her head out of his lap, as if that will make any difference."
+                        "Who knows, maybe he's hoping to convince me he only just realised what was going on?"
+                        "His haste to shove her off means Alexis is sent sprawling onto the floor between the rows of seats."
                         show alexis surprised at center, zoomAt(1.5, (640, 1140)), vshake
                         "She lands in an undignified heap, coughing and choking from having his dick unceremoniously yanked out of her mouth."
-                        "The guy starts to mutter something that might either be an apology or a half-arsed attempt at an explanation of some kind."
+                        "The guy starts muttering something that might be an apology or a half-arsed explanation."
                         "But I ignore him, only interested in what Alexis has to say for herself."
                         mike.say "Jesus, Alexis - are you that hungry for cock?"
                         mike.say "I guess I should be grateful that you at least waited until you thought I was asleep!"
                         show alexis sad
                         alexis.say "[hero.name]...I...I can..."
-                        "By now the house lights have come up and other patrons are yelling in annoyance at the disturbance we've caused between us."
-                        "Still others are openly laughing and pointing, amused at Alexis and the other guy being caught in the act."
+                        "By now the house lights have come up, and other patrons are yelling in annoyance or laughing and pointing."
                         "Out of the corner of my eye, I can see cinema employees starting to come down the aisle."
-                        "Looks like this might be a good time to think about leaving."
+                        "Looks like a good time to think about leaving."
                         mike.say "Ah, shut up, Alexis."
                         mike.say "Whatever bullshit you've got to say, I don't want to hear it."
-                        mike.say "You were always better at using you mouth to suck cock anyway..."
+                        mike.say "You were always better at using your mouth to suck cock anyway..."
                         scene bg cinema with fade
                         "And with that, I turn my back on her and storm out of the theatre."
                         "I don't stop until I'm out of the cinema and standing on the street."
                         "Without a thought for Alexis, I hail a cab and jump in."
-                        "Maybe she can convince the guy who's dick she was just sucking to give her a ride home."
-                        "Whatever he asks for in way of payment, I'm sure she'll willingly oblige."
+                        "Maybe she can convince the guy whose dick she was just sucking to give her a ride home."
+                        "Whatever he asks in way of payment, I'm sure she'll willingly oblige."
                         $ alexis.flags.cinema_outcome = "found_confront"
                         $ alexis.set_gone_forever()
             else:
 
-                "All it'd take is for me to say something that one or both of them could hear."
-                "Or a simple tap on the shoulder would break the spell for good."
-                "Though I have no idea what would happen in the seconds that followed..."
+                "All it'd take is for me to say something, or a simple tap on the shoulder to break the spell for good."
                 "But for some reason, I do neither and simply continue to watch."
-                "After the way in which Alexis betrayed me when we were dating as kids, I should be outraged."
+                "After the way Alexis betrayed me when we were dating as kids, I should be outraged."
                 "And yet I keep on staring at the undeniable evidence that she hasn't changed one bit."
-
-
-
 
                 show alexis movie bj up
                 "But whatever the reason, I can't stop watching in rapt excitement as her head bobs up and down in the guy's lap."
-                "I make sure not to turn my head in their direction, trying to keep from being seen."
-                "Still I can make out the fact that the stranger has his head leaned back, clearly enjoying the treatment."
+                "I make sure not to turn my head, trying to keep from being seen."
+                "Still I can make out that the stranger has his head leaned back, clearly enjoying the treatment."
 
                 "I can understand that Alexis needs this. But why am I so compliant?"
                 "Why am I watching this?!?"
                 "She's making a fool out of me in public, and I can't tear my eyes away from the very act that's doing it!"
                 show alexis movie bj down
                 "I can feel my breathing becoming heavier as the blowjob becomes more intense."
-                "My heart's pounding in my chest and the blood's pounding in my ears."
+                "My heart's pounding and the blood's pounding in my ears."
                 "Oh god - am I actually getting off on this?"
-                "Is the real reason that I was so destroyed by Alexis' cheating the first time around not because of the infidelity?"
+                "Is the real reason I was so destroyed by Alexis' cheating the first time not the infidelity itself?"
                 "Was it really because of the fact that I couldn't watch as she did so?"
-                "By now, the guy on the other side of Alexis is starting to make a desperately suppressed sound."
-                "At the same time, his hands are clutching at the arms of his seat."
+                "By now, the guy is starting to make a desperately suppressed sound, his hands clutching at the arms of his seat."
                 show alexis movie bj cum
                 "No doubt he's moments away from cumming, and doing it right inside of her mouth too!"
-                "Before I have time to form another thought, he stiffens and Alexis makes a muffled gagging sound of her own."
-                "I watch out of the corner of my eye and with rapt fascination as she swallows every last drop of his cum."
+                "Before I have time to form another thought, he stiffens and Alexis makes a muffled gagging sound."
+                "I watch with rapt fascination as she swallows every last drop of his cum."
                 "And then, without a single word passing between them, it's all over."
                 scene bg cinemaroom
                 show alexis blush at center, zoomAt(1.5, (640, 1140))
                 with fade
-                "Alexis sits up and come back to her seat while the guy begins to fasten up his flies."
-                "I hastily put my head back on my shoulder and close my eyes, feigning sleep."
+                "Alexis sits up and comes back to her seat while the guy begins to fasten up his flies."
+                "I hastily put my head back and close my eyes, feigning sleep."
                 alexis.say "Hey, sleepy-head!"
                 mike.say "Huh...what the hell..."
                 show alexis happy at center, zoomAt(1.0, (640, 1140)), startle
@@ -1145,10 +1086,9 @@ label alexis_event_04:
                 hide alexis
                 show alexis kiss with fade
                 $ alexis.flags.kiss += 1
-                "Still distracted by my own thoughts, I'm taken by surprise when Alexis kisses me without warning."
-                "I return the gesture, almost completely as a reflex action and with no hesitation, despite what I've seen her do."
+                "Still distracted, I'm taken by surprise when Alexis kisses me without warning."
+                "I return the gesture almost as a reflex action, despite what I've seen her do."
                 "But then she goes further, sliding her tongue into my mouth and stepping into the kiss with more passion."
-                "At first I barely notice the hints of it still on her tongue even now."
                 "It only becomes apparent to me just what that odd, elusive taste is a couple of moments later."
                 "His cum...that's what it is."
                 "I can taste the last remnants of it on Alexis' tongue as she kisses me!"
@@ -1158,7 +1098,7 @@ label alexis_event_04:
                 "Alexis jokes about my nodding off as we get up and leave the theatre."
                 "But she never once mentions what she was doing while I was supposedly asleep."
                 "I see her exchange a furtive glance with the guy himself as we pass in the lobby."
-                "But she seems happy to think that she's gotten clean away with it."
+                "She seems happy to think that she's gotten clean away with it."
                 "And if I'm honest, that's not even what's troubling me the most right now."
                 "I'm more concerned by the fact that I just sat there and watched!"
                 $ alexis.flags.cinema_outcome = "agree_ntr"
@@ -1166,15 +1106,6 @@ label alexis_event_04:
     return
 
 label alexis_event_05:
-
-
-
-
-
-
-
-
-
 
     if "sports_car" in hero.inventory:
         call alexis_nice_car from _call_alexis_nice_car
@@ -1581,18 +1512,12 @@ label alexis_nice_car:
     show car_inside_sit at center, zoomAt(1.5, (940, 1080))
     show alexis a casual happy at flip, center, zoomAt(2.0, (640, 1340))
     with fade
-    "Right from the moment I pull up and Alexis hops into the passenger seat of the car, I'm getting good vibes off of her."
-    "We're driving to the beach so that we can make the most of the decent weather before it turns crappy."
-    "And we already agreed that it'd be best for me to drive there and back, but whatever the reason soon slips my mind."
-    "That's mainly because I keep catching the way that Alexis is stealing glances in my direction."
-    "I mean, it's not like she never does that to me."
-    "But right now she's positively beaming at me whenever I catch her in the act."
-    "And it's actually starting to distract me from the task of driving the car."
+    "We're driving to the beach — and the moment Alexis hops in, she starts beaming at me."
+    "Every time I glance over, she's watching me with this big grin."
+    "It's flattering, but it's starting to mess with my concentration."
     mike.say "Alexis..."
     mike.say "Are you feeling okay?"
     show alexis a normal
-    "Alexis seems to snap out of it a little when she hears the question."
-    "Like she didn't realise she was doing anything and now she's trying to cover her tracks."
     show alexis a talk
     alexis.say "Huh?"
     alexis.say "What do you mean, [hero.name]?"
@@ -1600,8 +1525,6 @@ label alexis_nice_car:
     show alexis a happy
     alexis.say "I'm fine...everything's fine!"
     show alexis a smile
-    "I turn my gaze back to the road, trying to take the answer at face value."
-    "But it just sounds so hasty and forced that I can't help questioning it."
     mike.say "Are you sure, Alexis?"
     mike.say "Because you seem a little distracted?"
     show alexis a talk
@@ -1613,47 +1536,31 @@ label alexis_nice_car:
     alexis.say "That must be because I'm looking forward to the beach!"
     alexis.say "I can't wait to hit that golden sand and soak up some rays!"
     show alexis a smile
-    "I raise my eyebrows and give Alexis a nod."
-    "That certainly sounds like it makes sense."
-    "Maybe I'm just reading too much into things today."
-    "I do the best I can to put it out of my mind and just drive."
-    "But Alexis keeps doing subtle little things that make that impossible."
-    "She seems to be checking her reflection in the window a lot."
-    "That and smiling at anyone and everyone who happens to be passing on the sidewalk."
-    "And when we pull up at the lights, she's practically beaming at the car next to us."
+    "Fair enough. I let it go and focus on driving."
+    "But she keeps checking her reflection in the window and smiling at everyone on the sidewalk."
+    "When we pull up at the lights, she's practically beaming at the car next to us."
     mike.say "Alexis!"
     mike.say "Are you trying to flirt with everyone out there or what?"
     show alexis a stuned
-    "Alexis almost jumps in her seat at the sound of my voice."
-    "Her head shoots around and then she starts to shake it in denial."
     show alexis a surprised
     alexis.say "No way, [hero.name]!"
     show alexis a happy
     alexis.say "Anyway..."
     alexis.say "I don't think it's me they're looking at!"
     show alexis a smile
-    "I frown at this, not understanding what Alexis means."
     mike.say "Well I'm pretty sure it's not me they're looking at, Alexis!"
     mike.say "Most guys don't try so hard to check me out!"
-    "Alexis falls silent at this, and I take it that I've called her out."
-    "Satisfied that she's thinking about what she's done, I let the matter drop."
-    "But oddly that doesn't seem to stop Alexis from shooting me those same looks."
-    "Maybe she's trying to win her way back into my good books."
-    "And I guess she knows exactly how to go about it too."
-    "Because as we pull into the car park at the beach, I'm feeling good again."
+    "Alexis goes quiet and I drop the subject."
     scene bg beach
     show alexis casual happy at right
     with fade
-    "I find a convenient space and hop out of the car."
-    "Slinging my bag over my shoulder, I turn to see Alexis still lingering by the car."
-    "Then I see that she's actually running a hand over the bodywork."
-    "It hits me on that moment what's been going on."
-    "And I feel dumb as a post for not noticing it before now."
+    "We pull into the beach car park. I hop out — and notice Alexis is still by the car, running a hand slowly along the bodywork."
+    "That's when it clicks."
     mike.say "Alexis..."
     mike.say "Do you have the hots for my car?!?"
     show alexis normal blush
-    "Alexis looks up and pulls her hand away like the bodywork is red hot."
-    "She shakes her head instinctively at first, but then begins to nod."
+    "She yanks her hand back like the paint is scalding."
+    "Then she slowly starts to nod."
     show alexis talk
     alexis.say "Okay, okay...you got me!"
     alexis.say "I know that girls aren't supposed to like cars."
@@ -1661,20 +1568,14 @@ label alexis_nice_car:
     show alexis -blush
     alexis.say "But this is one fine-looking vehicle you've got here!"
     show alexis smile
-    "I nod and smile as it all starts to make sense."
-    "Alexis wasn't trying to flirt with everyone on the way here."
-    "She was getting off on the amount of attention my car was getting."
-    "With a shake of the head I motion in the direction of the beach."
+    "She wasn't flirting with people on the road — she was soaking up all the looks my car was getting."
     mike.say "Don't worry, Alexis."
     mike.say "The security system is pretty sweet too."
     mike.say "So it'll still be here when we're done with the beach!"
     "Alexis shoots me a withering look."
     show alexis at center with ease
-    "But then she shrugs and starts walking towards the beach."
+    "Then she shrugs and heads for the beach."
     hide alexis with dissolve
-    "I follow, but take the time to steal one last glance back at the car."
-    "I guess it was worth the money that it cost me after all."
-    "Because if it can impress a girl like Alexis, the it can impress anyone!"
     $ game.active_date.score += 30
     return
 
@@ -1790,51 +1691,40 @@ label alexis_crap_car:
 label alexis_event_06:
     if alexis.love.max < 120:
         $ alexis.love.max = 120
-    "One thing that's changed since the last time that Alexis and I were together is the amount of time that we spend just talking."
-    "I guess it's a symptom of us being older now, that we'd probably have been doing something physical instead in our younger days."
-    "Not that we don't do that kind of thing any more, you understand?"
-    "It's that the more life experience you accumulate, the more you have to talk about."
-    "But for all of that, there are still some things that have remained a kind of unspoken taboo between us."
-    "The most obvious of these is, of course, the unpleasant subject of how our relationship came to an end the first time round."
-    "Though we don't mention it, it's always there, hanging over us - the elephant in the room."
-    "That's why it catches me completely off guard when Alexis simply comes out and mentions it as we're chatting about something else entirely..."
+    "We talk more now than we ever used to — but there's one thing we've never touched."
+    "The way our relationship ended the first time round."
+    "It hangs over us whenever we're together, unspoken."
+    "So it catches me completely off guard when Alexis just comes out with it mid-conversation."
     show alexis sad
     alexis.say "[hero.name], I know you're not going to want to hear this."
     alexis.say "But I think that, if we're seriously going to make this work between us a second time - we need to talk about it..."
-    "I don't reply straight away, instead nodding slowly in order to buy myself just a little more time."
-    "She doesn't need to come right out and name what she's talking about, of course."
-    "But I think we've both been putting this off for as long as possible, each waiting for the other to broach the subject."
+    "I nod slowly. We both know what she means without naming it."
     mike.say "Okay, Alexis - if you think it's time?"
-    "There's doubt in her expression, but still she shakes her head and presses on."
+    "She looks uncertain, but pushes on."
     alexis.say "I...I don't know about that."
     alexis.say "I don't know if there is a good time."
     alexis.say "Just that if we don't, it'll always be holding us back!"
-    "Okay, here goes nothing!"
-    "I take a deep breath and begin talking, if only for the sake of getting things started."
     mike.say "I don't know where we begin with this one, Alexis."
     mike.say "But I guess for me it was the pain of what happened, the betrayal."
     mike.say "That was the heart of it."
-    "I look at her with a painful smile on my face, seeing her nod at my words."
-    "Despite all the memories and the old feelings, it does help to know that she acknowledges my pain."
+    "She nods. It helps, a little, that she doesn't try to deny it."
     mike.say "But it's not like I want an apology, or an explanation, Alexis."
     mike.say "It was so long ago that none of that stuff matters to me anymore."
-    "Shrugging my shoulders, I let out a long sigh."
     mike.say "If you're over it, then I suppose I am too."
     menu:
         "Tell her you forgive her":
             mike.say "I forgive you, Alexis."
             mike.say "All I want now is to just be with you."
             show alexis cry
-            "I'm honestly expecting that to be the end of it, me telling her that I forgive her cheating on me."
-            "But almost as soon as I've finished speaking, I see that she's not in the least bit relieved by what I've said."
+            "She doesn't look relieved. If anything, she looks worse."
             mike.say "Alexis, what is it?"
             mike.say "Please, you can tell me anything...anything at all!"
             mike.say "We've all made mistakes in the past, but you can't beat yourself up forever..."
-            "It's only now that I can see the tears beginning to well in the corner of her eyes."
-            "She lets out a desperate sob, wiping at the tears with the back of her hand."
+            "Tears are welling in the corners of her eyes."
+            "She wipes at them with the back of her hand."
             alexis.say "You forgive me, huh?"
             alexis.say "Wow...that makes it all better then!"
-            "The bitterness in her voice is unexpected, catching me off guard."
+            "The bitterness stops me cold."
             mike.say "Huh..."
             alexis.say "I...I didn't cheat on you, [hero.name]!"
             mike.say "What are you saying, Alexis?"
@@ -1844,35 +1734,32 @@ label alexis_event_06:
             alexis.say "He RAPED me, you stupid bastard!"
             alexis.say "I had no choice...because he raped me!"
         "Let her talk" if hero.charm >= 50:
-            "I hold my peace, sensing that Alexis needs to unburden herself."
+            "I stay quiet. She needs to get this out."
             alexis.say "No, [hero.name], I'm not over it."
             alexis.say "And I don't know if I ever will be, either."
-            "I make to say something, but the words won't come to me."
-            "The puzzlement must be plain to see on my face, as Alexis shakes her head at me."
+            "I open my mouth, but nothing comes."
+            "Alexis shakes her head at my expression."
             alexis.say "Maybe you were wrong, [hero.name] - maybe you do need it explained to you."
-            "She smiles, despite the tears already welling in the corner of her eyes."
+            "She manages a small smile, even as tears start forming."
             alexis.say "I couldn't tell you at the time, because it was too raw."
             alexis.say "But I should have done so, and much sooner than this."
-            "I want to say something, ask any number of questions."
-            "But I remain silent, sensing just how much this is costing her to say out loud."
+            "I stay silent, sensing what this is costing her."
             alexis.say "I never cheated on you, [hero.name] back then, not once."
             alexis.say "And I never would have, if I'd been given a choice..."
-            "Alexis leaves the last statement hanging, and my mind racing towards an awful truth."
-            "I look at her in unbelieving amazement, trying to comprehend the implications of what she means."
+            "The last words hang in the air. My mind races toward somewhere I don't want to go."
             show alexis cry
             alexis.say "Yeah, you just got it, didn't you?"
             alexis.say "Technically, I did have sex with another man."
             alexis.say "But not out of choice."
             alexis.say "He raped me, [hero.name] - the bastard raped me!"
     show alexis sad
-    "My head is spinning with the revelation of what Alexis just told me, a fact that potentially changes everything."
-    "All these years I was convinced that she'd thrown our relationship away for the sake of some tawdry pleasure."
-    "And now it turns out that she was actually the victim of a disgusting piece of shit in a position of trust."
-    "If what she says is true, then I've been deluding myself for more than a decade!"
+    "Everything I thought I knew just shifted."
+    "All these years I believed she'd thrown us away for some cheap thrill."
+    "And she was the victim the whole time."
     menu:
         "Don't believe her" if alexis.flags.caughtCheating:
             mike.say "Nice try, Alexis, nice try."
-            "Alexis shakes her head as she hears the ironic amusement in my voice."
+            "She shakes her head at the irony in my voice."
             alexis.say "What...what are you talking about?"
             mike.say "I honestly thought that you'd changed, Alexis."
             mike.say "And you have - but only in as much as you've gotten to be a better liar."
@@ -1884,30 +1771,29 @@ label alexis_event_06:
             mike.say "You ruined what we had the last time by cheating on me."
             mike.say "And now, when I say that I forgive you, what happens?"
             show alexis cry
-            "Alexis shakes her head again."
-            "But whether it's in answer to the question or to disagree altogether, I can't tell."
+            "She shakes her head, but I can't tell if she's answering or just refusing to accept it."
             mike.say "What happens is that you invent a story about it being a rape, that's what!"
             mike.say "You turn the time when you betrayed me into a way to make me feel guilty."
             mike.say "And by magic, something you should be grovelling for becomes something to make me do it instead!"
             alexis.say "No...you've got it all wrong!"
             mike.say "If I have, then I'm really happy to be wrong, Alexis!"
-            "And with that, I turn my back on her and walk away."
+            "I turn my back on her and walk away."
             $ alexis.love -= 50
         "Believe her":
             mike.say "God, Alexis..."
             mike.say "I feel like such a fool."
             mike.say "I should be the one apologising to you!"
-            "Alexis shakes her head, but I can see that she appreciates the sentiment of my words."
+            "She shakes her head, but I can see it means something to her."
             mike.say "All those years you had to carry that secret inside of you..."
             mike.say "Can you forgive me?"
-            "Alexis is crying freely now, barely able to wipe away the tears."
+            "She's crying freely now."
             alexis.say "I don't need to forgive you, [hero.name]."
             alexis.say "Just to know that you believe me."
-            "I nod at this, wrapping my arms gently around her."
+            "I wrap my arms around her."
             mike.say "You don't have to carry it around any longer, Alexis."
             mike.say "I think I understand everything a whole lot better now."
             mike.say "I just wish I'd been the kind of guy that you could let in on this back then."
-            "Alexis lets out a tiny chuckle as she lays her head against my shoulder."
+            "She lets out a small, wet laugh and rests her head on my shoulder."
             alexis.say "Just be that kind of guy now."
             alexis.say "That's all I ask!"
             $ alexis.flags.rapeConfession = True
@@ -2054,203 +1940,147 @@ label alexis_event_07b:
 
 label alexis_event_08a:
     show bg alley
-    "Furnished with all of the information that the private investigator was able to provide me, finding Mr Blank was never going to be a problem."
-    "Rather what causes me an issue as I drive to the place where I know he'll be, is the actual act of physically confronting him."
-    "Up until now, I've not put much coherent thought into what I want to come out of this confrontation with my former gym teacher."
-    "All that's been fuelling me is my anger at learning the truth behind Alexis' supposed cheating and his role in the same."
-    "Why am I actually so determined to look this guy in the face and accuse him of raping her after all these years?"
-    "It's not that I doubt Alexis is telling the truth."
-    "And it's not as if forcing him to admit as much will change anything."
-    "So the only explanation I can come up with is the most simple and least sensible one of all."
-    "I suppose that I want to hurt the guy as much as I possibly can."
-    "That and make myself feel better in the act..."
-    "All of this is still turning over in my mind when I see Blank across the street."
+    "Finding Blank wasn't the problem — the PI gave me everything I needed."
+    "The problem is what I actually want out of this."
+    "I don't need a confession. I don't need closure."
+    "If I'm being honest, I just want to hurt him."
+    "I'm still thinking about that when I spot him across the street."
     show blank
-    "Without thinking, I pull over and jump out of the car, crossing the road to catch up to him."
+    "I pull over and cross the road before I've made any kind of decision."
     mike.say "Hey, you...hey, Blank!"
-    "At the sound of his voice, Blank turn slowly to regard me."
-    "The look on his face is one of mild puzzlement, with no sign whatsoever of anger or irritation."
+    "He turns slowly, face blank with mild puzzlement."
     "Mr Blank" "Yeah, that's me alright."
     "Mr Blank" "And who might you be?"
-    "Jesus Christ - up close and in person he's even uglier than the pictures that the private investigator showed me."
-    "But then maybe my impression of him is being twisted by what I'm about to accuse him of having done to Alexis."
     mike.say "You won't remember me, but I remember you."
     mike.say "You took gym at my high-school."
-    "A look of recognition dawns on his coarse features, and he actually half cracks a smile."
-    "But then why wouldn't he?"
-    "For all he knows, I'm just some random ex-pupil that's recognised him, totally out of the blue."
+    "Something flickers across his face — not quite recognition, but something close."
     "Mr Blank" "Huh...if you say so, son."
     "Mr Blank" "I've been retired so long now that I don't remember much from back then."
     mike.say "Is that so?"
     mike.say "Maybe you remember some of the other kids in my year?"
     mike.say "How about...Alexis...do you remember her?"
-    "Blank blows out his cheeks at the mention of the name, his thick lips rasping unpleasantly as he does so."
+    "He blows out his cheeks. His expression shifts."
     "Mr Blank" "Can't say that I do!"
     mike.say "No, really...try harder with that particular name."
-    "At my sudden insistence, his expression turns a shade darker."
-    "He frowns, as if he senses that something's suddenly changed in the tone of our conversation."
+    "He senses the change in tone. His eyes narrow."
     "Mr Blank" "And what, pray tell, would make me remember her in particular?"
-    "My voice drops to an angry hiss as I spit my answer in his direction."
     mike.say "Because you raped her, you sick sack of shit!"
-    "Blank stares at me for what feels like the longest time, silent and his face unchanging."
-    "I'd expected him to swing for me, or at the very least deny the accusation as soon as it was made."
-    "But this silence is unnerving, and I get the distinct impression that he's sizing things up, coldly and without emotion."
+    "He doesn't swing. He doesn't deny it."
+    "He just stares at me — cold, measuring, unbothered."
     "Mr Blank" "Now those are the faces I DO remember, even after all these years."
     "Mr Blank" "But not that one - I think of the name and there's nothing at all."
     "Mr Blank" "Must mean that she wasn't anything that stuck in there."
-    "He taps the side of his bald skull with one meaty finger."
+    "He taps the side of his skull with one meaty finger."
     "Mr Blank" "Must mean that she was nothing special..."
-    "I don't know which of the admissions that he just made is the one that makes me throw the first punch."
-    "Maybe it's the casual way he just revealed that Alexis wasn't his only victim."
-    "But more likely it's the fact that he dismissed her in the next breath."
-    "Something that's caused her a lifetime of trauma and turned her into a shadow of the person she could have been."
-    "And to him, it's nothing more than another notch on his belt."
+    "He just told me there were others. And then dismissed Alexis in the same breath."
+    "Something that destroyed years of her life, and he can't even place her name."
     mike.say "You BASTARD!!!"
     menu:
         "Use a baseball bat" if "baseball_bat" in hero.inventory:
-            "Sure, I might have lashed out in anger and without thinking it through."
-            "But I've been in enough fights and picked up enough skills to be able to back it up."
             hide blank
             show coach fight baseball
-            "Though my first blow is only enough to graze Blank's jaw and send him staggering backwards, the second hits him right in the face."
-            "I don't give him the space to react, and that rewards me with the sound of something breaking as I hammer the bat into his nose."
-            "I can see that he wants to put a hand to the wound, to inspect the damage."
-            "But he hesitates, aware of the danger in letting down his guard long enough to do so."
-            "Unfortunately for Blank, this pause lets ram the tip of the bat into his gut."
-            "And while he's thick around the middle, it seems that most of it's blubber."
-            "He groans and doubles over from the blow, looking and sounding like he's having a seizure of some kind."
-            "The fat old piece of shit staggers forwards, still bent at the waist and gasping for breath."
+            "The first swing grazes his jaw and sends him staggering. The second lands clean."
+            "I don't let him recover — I drive the bat into his nose and something cracks."
+            "He wants to check the damage but won't drop his guard. That hesitation costs him."
+            "I ram the tip into his gut. He folds."
+            "He staggers forward doubled over, wheezing."
             mike.say "What's up, Blank?"
             mike.say "You lost your tongue, or swallowed it?"
-            "Another blow to the side of his head is enough to make Blank sink to his knees."
+            "Another blow drops him to his knees."
             mike.say "I'd ask how it feels to be the one on your knees for a change."
             mike.say "But the idea of you in that situation makes me want to puke."
             mike.say "How about you?"
-            "I follow this with a nasty kick to his gut, and then another."
+            "I put two kicks into his gut."
             mike.say "How about now, Blank?"
             mike.say "You going to puke yet, huh?"
-            "Blank says nothing, but collapses onto his side, clutching his belly and moaning in pain."
-            "I'm about to swing the bat at him again, this time to the side of his melon head."
-            "But then I stop myself, seeing the genuine fear in his eyes as he begins to cower away from me."
-            "Don't hear that and assume that I'm feeling mercy or sympathy for him."
-            "And I'm not, even for a moment, worried about becoming just like him either."
-            "That's the kind of bullshit they put in movies and soap operas!"
-            "No, all that stops me is the thought that I might actually kill him."
-            "Which would mean that he was not living with the pain off the beating I just gave him."
-            "Or secure in the knowledge of why he was on the receiving end of it."
+            "He collapses onto his side, clutching his belly."
+            "I raise the bat for another swing — and stop."
+            "It's not mercy. It's the thought that I might actually kill him."
+            "A dead man doesn't live with what I just did to him."
             hide coach
-            "With the bat slung over my shoulder, I'm all ready to leave Blank writhing on his belly in the street."
-            "But then the thought occurs to me that I should really take a trophy, something to prove my victory."
-            "Don't worry - I'm not talking about taking his head or scalp, nothing crazy like that!"
-            "In the end I just pull out my phone and snap a couple of pictures showing the mess I made of him."
-            "That should be enough for a memento and proof of the deed having been done."
+            "I pull out my phone and take a couple of pictures. Proof, and a reminder."
             mike.say "If I ever see your face again, or hear that Alexis has too..."
-            "I leave the threat hanging over him, spit in his face, and then walk away."
+            "I leave the threat in the air, spit in his face, and walk away."
             $ alexis.flags.coachVictory = True
             $ alexis.flags.coachBatte = True
         "Fight bare handed":
             if hero.fitness <= 25:
-                "It doesn't take me long to realise that attacking in anger and without a plan is a bad idea."
-                "The first punch lands, as Blank's unprepared and taken by surprise."
-                "But it just grazes his jaw, sending him staggering backwards so that he now has space to react."
-                "He might well be old and far past his prime, but that doesn't mean Blank's got one foot in the grave just yet."
-                "Instinctively he comes out swinging, adopting a habitual boxing stance and advancing on me now."
+                "Anger is no substitute for a plan. The first punch connects — barely."
+                "It grazes his jaw and gives him room to react."
+                "He's old and past his prime, but he's not finished."
+                "He drops into a boxer's stance and comes at me."
                 hide blank
                 show coach fight lose
-                "One heavy fist after another hits home, and it feels like there's nothing I can do to stop them."
-                "Where I'm angry and not thinking straight, he's cold and has not a thing to prove to himself."
-                "He catches me once on the jaw, and I feel my knees almost buckle from the effects of the blow."
-                "Blank must have seen it too, as he doesn't hesitate to hammer another home on the other side of my skull a moment later."
-                "The I really do go down, collapsing to the ground as the world begins to spin around me."
-                "Blank follows up with one vicious kick to my stomach, enough to make sure I have no hope of getting up."
-                "He's saying something as he stands over me, but my senses are too scrambled to have a hope of understanding."
+                "He's cold where I'm furious, and that's the difference."
+                "One heavy shot catches me on the jaw and my legs nearly go."
+                "He follows immediately with another to the other side of my head."
+                "I go down. The world spins."
+                "He puts one kick into my stomach for good measure, then steps back."
+                "He says something standing over me, but I can't make it out."
                 hide coach
-                "I barely realise that he's turned his back on me and walked away a moment later."
-                "And it's quite some time before I can pick myself up and stagger back to my car to lick my wounds."
+                "He walks away. I lie there until I can move again."
+                "It takes a while before I can get back to my car."
             else:
-                "Sure, I might have lashed out in anger and without thinking it through."
-                "But I've been in enough fights and picked up enough skills to be able to back it up."
+                "I lash out in anger — but I've been in enough fights to back it up."
                 hide blank
                 show coach fight win
-                "Though my first punch is only enough to graze Blank's jaw and send him staggering backwards, the second is right behind it."
-                "I don't give him the space to react, and that rewards me with the sound of something breaking as I hammer him square in the nose."
-                "I can see that he wants to put a hand to the wound, to inspect the damage."
-                "But he hesitates, aware of the danger in letting down his guard long enough to do so."
-                "Unfortunately for Blank, this pause lets me punch him in the gut."
-                "And while he's thick around the middle, it seems that most of it's blubber."
-                "He groans and doubles over from the blow, looking and sounding like he's having a seizure of some kind."
-                "The fat old piece of shit staggers forwards, still bent at the waist and gasping for breath."
+                "The first punch grazes his jaw. The second hits clean."
+                "I don't give him space, and something breaks as I hammer his nose."
+                "He wants to check the damage but won't drop his guard. That pause costs him."
+                "I drive a punch into his gut. He folds."
+                "He staggers forward still bent, gasping."
                 mike.say "What's up, Blank?"
                 mike.say "You lost your tongue, or swallowed it?"
-                "Another punch to the side of his head is enough to make Blank sink to his knees."
+                "Another punch drops him to his knees."
                 mike.say "I'd ask how it feels to be the one on your knees for a change."
                 mike.say "But the idea of you in that situation makes me want to puke."
                 mike.say "How about you?"
-                "I follow this with a nasty kick to his gut, and then another."
+                "Two kicks into his gut."
                 mike.say "How about now, Blank?"
                 mike.say "You going to puke yet, huh?"
-                "Blank says nothing, but collapses onto his side, clutching his belly and moaning in pain."
-                "I'm about to lay another kick into him, this time to the side of his melon head."
+                "He goes down on his side, hands clutching his belly."
                 hide coach
-                "But then I stop myself, seeing the genuine fear in his eyes as he begins to cower away from me."
-                "Don't hear that and assume that I'm feeling mercy or sympathy for him."
-                "And I'm not, even for a moment, worried about becoming just like him either."
-                "That's the kind of bullshit they put in movies and soap operas!"
-                "No, all that stops me is the thought that I might actually kill him."
-                "Which would mean that he was not living with the pain of the beating I just gave him."
-                "Or secure in the knowledge of why he was on the receiving end of it."
-                "I'm all ready to leave Blank writhing on his belly in the street."
-                "But then the thought occurs to me that I should really take a trophy, something to prove my victory."
-                "Don't worry - I'm not talking about taking his head or scalp, nothing crazy like that!"
-                "In the end I just pull out my phone and snap a couple of pictures showing the mess I made of him."
-                "That should be enough for a memento and proof of the deed having been done."
+                "I stop before the next blow. Not mercy — I just don't want him dead."
+                "Dead men don't carry the weight of what I just gave him."
+                "I take out my phone and snap a few pictures. Proof."
                 mike.say "If I ever see your face again, or hear that Alexis has too..."
-                "I leave the threat hanging over him, spit in his face, and then walk away."
+                "I spit in his face and walk away."
                 $ alexis.flags.coachVictory = True
     return
 
 label alexis_event_08b:
     if alexis.love.max < 160:
         $ alexis.love.max = 160
-    "A couple of days have passed since I managed to convince Alexis to come with me to the police station."
-    "She was reluctant at first, but once she agreed to report what Coach Blank had done to her, that set the wheels in motion."
-    "But since then, neither of us has as much as brought the subject up in casual conversation."
-    "And the interview left us both feeling like the last thing we wanted was to discuss it at length and in great detail."
-    "So the matter hasn't come up since we left it in the capable hands of detective Michaels."
-    "He also gave his contact details to Alexis, rather than me."
-    "Which means that if he did call her or she chose to contact him, I have absolutely no way of knowing, save for asking outright."
-    "And I just don't feel like that would be the right thing to do, what with the weight of the situation right now."
-    "The first thing I know about how the case against Blank is progressing hits me right between the eyes."
+    "A few days since the police station, and neither of us has brought it up."
+    "The interview left us wrung out, and we've been leaving things with Detective Michaels."
+    "He gave his contact details to Alexis directly — so I have no way of knowing if anything's moved unless she tells me."
+    "I've been fine with that. Until now."
     show bg alley
     show blank
     show tv overlay
-    "As Alexis and I are watching the local news one evening, I see footage of Blank flash up on the screen in front of me."
-    "He's being roughly handled by a pair of uniform police officers, and apparently none too pleased with the fact."
-    "While the footage keeps on running, showing Blank being tackled to the ground, the anchor reels off the story."
+    "Blank's face appears on the evening news — being manhandled by two uniformed officers and very unhappy about it."
     "News anchor" "And in other news, a former high-school gym teacher, who cannot be named for legal reasons, was arrested today."
     "News anchor" "Police were unable to release any specific details, but did comment that this arrest is the result of a long-running investigation."
     show blank at left
     show inspector close behind tv
-    "The image on the screen changes to a close-up of Detective Michaels."
-    "He smiles awkwardly as microphones are thrust in his face and blinks at the flashing of cameras."
+    "The shot cuts to Detective Michaels squinting into a bank of cameras."
     "Inspector" "Ah, all I can say is that we've been after this creep for some considerable time."
     "Inspector" "But we recently had a breakthrough when a new accuser came forward and gave us just what we needed to nail him."
     "Inspector" "Now we're looking at a considerable number of other possible victims as a result of this..."
     scene bg livingroom
     show alexis sad
-    "I look around, surprised to see that his words have been cut off by Alexis turning of the TV."
+    "Alexis turns off the TV."
     mike.say "Don't you want to hear what he has to say?"
     mike.say "I mean, this is good...right?"
     show alexis normal
-    "Alexis sighs, shaking her head as if she honestly doesn't know what to think."
+    "She sighs."
     alexis.say "Yeah, of course it's good."
     alexis.say "But it's not like some kind of magic cure, you know?"
-    "At first I feel a little shocked to hear her say that, and a bit frustrated after all the effort and emotion involved."
-    "But then I remember that this was never supposed to be about me and my anger towards Blank."
-    "It's all about Alexis, doing what I can to help her heal and move on from what that bastard did to her."
+    "My first instinct is frustration — after everything it took to get here."
+    "But this was never about me."
     mike.say "I guess this is bigger for you than just getting the guy banged up?"
     mike.say "So it'll take more than that to help you heal?"
-    "Alexis lets out a rueful little chuckle and shakes her head."
+    "Alexis lets out a small, rueful laugh."
     alexis.say "You'd think that, yeah."
     alexis.say "But I think I was already on the way to healing before you convinced me to go to the cops."
     alexis.say "This is just kind of like the icing on the cake."
@@ -2259,11 +2089,9 @@ label alexis_event_08b:
     alexis.say "If not, I'd never have let you talk me into any of that."
     show alexis kiss casual
     $ alexis.flags.kiss += 1
-    "She gestures at the TV, and then presses herself against me, nestling into my embrace."
-    "I can't help smiling as I put my arms around Alexis and pull her more closely towards me."
-    "It's been a long and very winding road to get here from the two dumb kids we used to be in high-school."
-    "But I'm finally starting to think that we're actually exorcising the demons of the past."
-    "And our future together could be the best thing to happen to us yet."
+    "She leans into me. I put my arms around her."
+    "It's been a long road from the two kids we were in high school."
+    "But for the first time, I think we might actually be on the other side of it."
     return
 
 label alexis_event_09a:
@@ -2436,23 +2264,15 @@ label alexis_event_11(appointment=None):
     if alexis.love.max < 180:
         $ alexis.love.max = 180
     scene bg classroom with fade
-    "Alexis was the one that talked me into the idea of attending our high school reunion."
-    "And as soon as we get there, she shows a level of enthusiasm that I just can't match."
-    "She's off mingling and greeting people that I barely recognise by name."
-    "I'm still kind of reeling from being back at the school and in one of the old classrooms."
-    "As I look around, everything I see seems to jog my memory and cause me to remember something from the past."
-    "And almost none of those memories are the kind that I wanted to dredge up."
-    "Let's just say that high school wasn't the happiest time of my life, okay?"
+    "Alexis talked me into the reunion. She's been mingling since the moment we arrived."
+    "I'm less enthusiastic — being back in this building is stirring up memories I'd rather leave buried."
     jack.say "Hey, [hero.name]!"
     jack.say "How weird does all of this feel, huh?"
     show jack casual happy at left with move
-    "I turn to see Jack hurrying over."
     show jack casual happy at left4 with ease
-    "And the sight of a familiar face is an instant comfort."
     mike.say "Hey, Jack..."
     mike.say "Yeah, I guess it is pretty weird!"
     show jack casual normal at center with ease
-    "Jack shakes his head as he glances around the class room."
     jack.say "I can't believe how small this place looks now."
     jack.say "I always remembered it being huge!"
     mike.say "I'm feeling a bit more freaked out by the people, Jack!"
@@ -2460,40 +2280,31 @@ label alexis_event_11(appointment=None):
     mike.say "Did we actually go to school with them?"
     mike.say "Or are they just here for the buffet and the booze?"
     show jack casual happy
-    "Jack snorts out a laugh at this."
-    "Then he shakes his head."
-    show jack casual normal
     jack.say "Are you kidding, man?!?"
     jack.say "That's Andre Alphonse right there."
     jack.say "Looks like he had a hair transplant or something!"
     mike.say "Whoa..."
     mike.say "It looks like fucking road-kill!"
     show jack casual happy at startle
-    "Jack sniggers at this, just like he used to back in the day."
+    "Jack sniggers."
     show jack casual normal
     jack.say "You think that's bad?"
     jack.say "Look over there - that's Kelly Clerkenwell."
-    "I follow Jack's gaze until I see the person in question."
+    "I look."
     mike.say "No way!"
     mike.say "That girl looks like she ATE Kelly Clerkenwell!"
     jack.say "Nah, man - I'm pretty sure that's her."
     show fx drop
     jack.say "Shit...some people really let themselves go, huh?"
-    "I can't help looking down at Jack's waistline as he says this."
-    "I know he's my buddy - but seriously?"
+    "I glance at Jack's waistline. He's got some nerve."
     hide fx
-    "He's got to be one of the pudgiest people in the room!"
     menu:
         "Ignore him":
-            "I could call Jack out and tell him to lose some damn weight."
-            "But the truth is that I need all the support I can get right now!"
-            "Pissing him off means that I'd probably lose him as back-up."
-            "So I just nod and go along with his critique of Kelly's weight."
+            "I need his moral support more than I need to be right. I let it go."
         "You should buy a mirror":
             mike.say "You know what they say about people who live in glass houses, Jack!"
-            "I give him a sharp prod in the belly to underline my point."
-            "Jack's cheeks flush red and her tries to suck his gut in."
-            "It doesn't make any difference, but it does make me chuckle."
+            "I prod him in the belly."
+            "His cheeks flush and he tries to suck his gut in."
             show fx anger
             jack.say "Hey, man - that is not cool!"
             jack.say "We're supposed to be buddies."
@@ -2502,7 +2313,7 @@ label alexis_event_11(appointment=None):
     show jack at left4
     show alexis casual at right
     with moveinright
-    "Before we can get into it any deeper, Alexis interrupts the conversation."
+    "Alexis cuts across us before we can take it further."
     if alexis.flags.story == 1:
         alexis.say "Wow - it's a genuine nerd's reunion over here!"
         alexis.say "I'd better watch out for you two guys."
@@ -2512,9 +2323,8 @@ label alexis_event_11(appointment=None):
         mike.say "Very funny, Alexis!"
         mike.say "I could really do without you leaving me hanging like that again!"
         show alexis normal
-        "Alexis waves away my complaints with one hand, as if they're nothing."
-        "And I can see that she's paying more attention to Jack than me right now."
-        "Which probably has something to do with the fact his tongue is practically hanging out!"
+        "She waves off my complaint and turns her attention to Jack."
+        "His tongue is practically hanging out."
         show jack at left5
         show alexis flirt at right5
         with ease
@@ -2523,15 +2333,11 @@ label alexis_event_11(appointment=None):
         alexis.say "Haven't you changed since I saw you last!"
         alexis.say "You've grown, kind of bloomed even!"
         show jack casual perv
-        "Jack nods eagerly, soaking up the compliments like a sponge."
-        "I never knew if he had a thing for Alexis back in the day."
-        "But then he's never been able to resist a pretty girl flirting with him either."
+        "Jack soaks it up."
         jack.say "Ah..."
         jack.say "Y...yeah, Alexis!"
         jack.say "I'm growing right now too!"
-        "Wait a minute..."
-        "Did I just hear that right?"
-        "Is Jack actually flirting back, right in front of me?!?"
+        "Is he actually flirting back? Right in front of me?"
         mike.say "Ahem..."
         mike.say "I was just gonna say..."
         show alexis annoyed
@@ -2539,22 +2345,16 @@ label alexis_event_11(appointment=None):
         alexis.say "Save it for later."
         show alexis flirt
         alexis.say "Go grab me a drink while I catch up with Jack here."
-        "I feel more than a little stunned by the way Alexis is treating me right now."
-        "And I almost open my mouth to protest, to tell her exactly what I think of it."
-        "But then I stop myself, because the last thing that I want is to cause a scene."
+        "I'm furious — but I'm not causing a scene here."
         hide jack
         hide alexis
         with dissolve
-        "Instead I stalk off to get that drink as ordered."
-        "Maybe I can use the time to cool down and get my temper under control."
+        "I go get the drink."
         show jack casual perv at left
         show alexis casual happy
         with dissolve
-        "The only problem is that when I get back, things seem to have escalated in my absence!"
-        "Alexis is leaning in close, almost draping herself over Jack."
-        "And she has one hand placed boldly on the front of his pants too."
-        "For his part, Jack looks pretty nervous, even a little embarrassed."
-        "But I note that he's not trying to push Alexis away at all either."
+        "When I get back, Alexis is pressed against Jack with one hand on the front of his pants."
+        "Jack looks nervous but isn't pushing her away."
         mike.say "Erm..."
         mike.say "Guys?"
         mike.say "What's going on?"
@@ -2562,95 +2362,51 @@ label alexis_event_11(appointment=None):
         "Alexis gives me a sly wink."
         alexis.say "I'm just going to give Jack here a little treat."
         alexis.say "He grew up so big and strong I think he deserves it!"
-        "Jack looks at me with a mixture of awkwardness and amazement in his eyes."
-        "And the only explanation he can give me is a shrug of the shoulders too."
-        "Clearly he knows that Alexis is showing me up in front of him by doing this."
-        "But he's not got the strength of will to resist her either!"
-        "So my choice comes down to either calling her out in front of everyone here."
-        "Or else I can do as she says and cover up what she's about to do to Jack."
-        "Alexis doesn't give me the time I'd need to decide."
+        "Jack shrugs at me — helpless or unwilling, I can't tell."
+        "Before I can make up my mind what to do, Alexis is already on her knees."
         show alexis ntr bj school reunion mike with fade
-        "Instead she gets down on her knees and goes to work."
-        "I have to hurry to stand over her as she starts to unzip Jack's flies."
-        "In a mere matter of seconds, she has his cock out of his pants."
-        "Needless to say, Jack's already good and hard."
-        "The thrill of being seduced by Alexis is one thing."
-        "But mix that with the danger of being blown in a public place..."
-        "Well, you have a recipe to make a guy stand to attention right there!"
-        "I keep stealing glances back over my shoulder."
-        "That means I see Alexis's progress in glimpses."
-        "She seems to be moving quickly, as if aware of the danger of being caught."
-        "This means that she works her way speedily up Jack's shaft with her tongue."
-        "Alexis licks her way to the top, and only then does she start to use her lips."
-        "The tip gets a few gentle kisses and caresses, but then it's swallowed whole."
-        "Jack gasps and lets out a weird groaning sound as Alexis goes down on him."
-        "For a moment I think he's going to blow it, to shout out loud."
-        "But somehow he manages to keep it under control, biting his lips hard."
-        "This means that the general hubbub of conversation covers the sounds."
-        "Not that Alexis seems to be in the least bit concerned."
-        "Her head is moving back and forth at an alarming rate."
-        "And part of me is starting to think that she doesn't care about the danger."
-        "That she might actually want to get caught in the act for the sake of the drama!"
-        "She's taking Jack's cock as deep into her mouth as she possibly can."
-        "At the same time she's working his shaft with one hand."
-        "And she's squeezing his balls with the other too!"
-        "It's a rough blowjob, hurried and almost desperate in nature."
-        "But it's having the desired effect on Jack."
-        "Pretty soon he's gasping even more, starting to quiver too."
+        "I move to stand over her, blocking the view as she unzips Jack."
+        "I watch the room, not her — mostly."
+        "Jack bites down hard to keep quiet, but his knuckles are white."
+        "Alexis works fast, like she enjoys the danger of it."
+        "It doesn't take long. Jack shudders, and then it's done."
         $ alexis.love += 3
         $ alexis.sub -= 3
-        "So I'm not surprised when he thrusts his cock forwards a moment later."
-        "Jack must be shooting his load into Alexis's mouth right now!"
-        "And I watch in terrible fascination as she swallows it like a pro."
-        "Not one drop escapes her lips and she doesn't choke once."
-        "Before either Jack or I can say a word, she's already covering her tracks."
-        "Alexis deftly slides Jack's cock back into his pants and zips him up."
+        "Alexis zips him up, stands, and smooths her clothes like nothing happened."
         hide alexis
         show jack casual zorder 1 at right
         show alexis normal casual zorder 2 at right4
         with fade
-        "Then she stands up as casually and quickly."
-        "Anyone watching would think she'd just stooped to pick up something she dropped a moment before."
         alexis.say "There now..."
         alexis.say "Doesn't that feel better, Jack?"
         show jack casual at right, startle
-        "Jack nods eagerly, still too flushed for actual words."
-        "I fix Alexis with a stare that's supposed tell her she's on thin ice."
+        "Jack nods, still too flushed to speak."
+        "I give Alexis a look. She laughs and winks."
         show alexis flirt at startle
-        "But all I get in return is a peal of laughter and a confident wink."
-        "And just like that she seems to think that the matter's over and done with."
-        "Alexis doesn't mention it again the rest of the time we're there."
-        "But it's constantly at the front of my mind."
-        "The images just refuse to budge no matter what I do."
-        "And I can see that the same is true of Jack as well."
-        "He looks thrilled at what just happened, for sure."
-        "But at the same time he's awkward with me, refusing to meet my eye."
-        "It seems like the only one who got all she wanted out of this was Alexis!"
+        "And that's that, as far as she's concerned."
+        "For the rest of the night she acts like it never happened."
+        "Jack can't look me in the eye."
+        "The only one who got exactly what she wanted out of tonight was Alexis."
     else:
         show alexis angry
         alexis.say "Get your coat, [hero.name]."
         alexis.say "I want to leave - right now!"
-        "The force with which Alexis says this is almost enough to stagger me."
-        "It comes out of the blue, taking me completely by surprise."
-        "I shoot a look in Jack's direction, looking for some help."
-        "But he seems every bit as stunned as I am myself."
+        "It hits like a slap — out of nowhere."
+        "I look to Jack. He's just as lost."
         mike.say "Alexis..."
         mike.say "You really want to leave?"
         mike.say "We only just got here!"
         mike.say "And coming here was your idea in the first place, remember?"
         show alexis confused
-        "Alexis frowns at this, like I'm throwing it back in her face."
-        "But then she shakes her head, like she's snapped out of something."
+        "She frowns — then something shifts in her expression."
         show alexis sad
         alexis.say "Urgh..."
         alexis.say "Sorry, [hero.name]..."
-        "It's only now that Alexis seems to notice Jack standing close by."
-        "She shakes her head again, clearly embarrassed at her outburst."
+        "She notices Jack and winces."
         alexis.say "I guess a sorry's in order for you too, Jack."
         show alexis normal
         alexis.say "I was so tied up in myself just now that I didn't see you there!"
         show jack casual happy
-        "Jack smiles awkwardly and waves away Alexis's apology."
         jack.say "Hey, Alexis..."
         jack.say "Don't worry about it, seriously."
         jack.say "It's not like you're the first girl not to notice my existence!"
@@ -2658,44 +2414,34 @@ label alexis_event_11(appointment=None):
         mike.say "What's the matter?"
         show jack casual normal
         show alexis sad
-        "Alexis turns to regard the rest of the room."
-        "She crosses her arms over her chest, a look of irritation on her face."
+        "Alexis looks out at the room and crosses her arms."
         show alexis annoyed
         alexis.say "I know that I can trust you two."
         alexis.say "So I'm just going to come out and say it."
         show alexis sad
         alexis.say "All anyone seems to want to talk about is...what happened to me here..."
         alexis.say "It's like that's all they see when they look at me!"
-        "There's no need for Alexis to be more specific than that."
-        "Both Jack and I know full well what she's talking about."
-        "And that's the time she was sexually assaulted by a member of the teaching staff."
-        "I can't believe that anyone would be crass and insensitive enough to bring it up here."
-        "And from the look in his eyes, Jack feel the exact same way too."
+        "She doesn't need to spell it out. Jack and I both know what she means."
+        "And I can't believe anyone had the nerve to bring it up tonight."
         mike.say "Jesus, Alexis!"
         mike.say "I'm shocked...and mad too!"
         jack.say "Who was it, Alexis?"
         jack.say "You want us to have a word with them?"
-        "I can see that Jack and I rallying to Alexis's aid has an instant effect."
         show alexis normal
-        "She seems reassured by the support and genuinely grateful to be backed up."
-        "But all the same she shakes her head, dismissing our offers to leap to her defence."
+        "The show of support visibly steadies her — but she shakes her head."
         show alexis annoyed
         alexis.say "No, no..."
         alexis.say "It's sweet of you to offer, guys..."
         alexis.say "But you'd be having words with half the people here!"
         alexis.say "Plus it'd just make the whole thing that much worse."
         show alexis sad
-        "Jack and I exchange a worried glance."
-        "But then we nod in agreement."
-        "Alexis is right - we'd only be fuelling the fire if we did that."
+        "Jack and I exchange a look and nod. She's right."
         mike.say "Geez, Alexis..."
         mike.say "I thought I'd be the one pissed off at people dragging up the past!"
         mike.say "But If I'd known this would happen to you..."
         mike.say "Well, I'd have argued twice as hard for us not to come at all!"
         show alexis happy
-        "Alexis chuckles and nods, ruefully agreeing with me for once."
-        "But the look on Jack's face is more thoughtful."
-        "It's like he's turning the whole thing over in his mind."
+        "Alexis laughs ruefully. But Jack's got a different look — he's thinking."
         jack.say "You know what..."
         show alexis normal
         jack.say "This might sound crazy, but hear me out..."
@@ -2704,13 +2450,11 @@ label alexis_event_11(appointment=None):
         mike.say "What are you talking about, Jack?"
         mike.say "How could it possibly be good?"
         show alexis normal
-        "Alexis puts a gentle hand on my arm."
-        "At the same time she nods to Jack."
+        "Alexis touches my arm."
         alexis.say "Let him talk, [hero.name]."
         alexis.say "Jack sounds like he might be onto something here."
         show jack casual happy
-        "Jack smiles and blushes a little."
-        "Clearly he's not used to having the attention of a hot girl the likes of Alexis!"
+        "Jack blushes a little."
         show jack casual normal
         jack.say "Ahem..."
         jack.say "Well...it's no fun being reminded of bad stuff from the past."
@@ -2719,13 +2463,11 @@ label alexis_event_11(appointment=None):
         jack.say "But doesn't it also mean you've moved on and they haven't?"
         jack.say "You came here wanting to show how far you've come."
         jack.say "And yet all they want to do is gossip about stuff from back in the day!"
-        "What Jack's saying makes perfect sense to me."
         mike.say "He's right, Alexis."
         mike.say "All of the people in this room are stuck in the past."
         mike.say "They're making you mad because you're beyond that now."
         mike.say "You just need to see that and then leave them behind again."
-        "It's now that Alexis starts to nod too."
-        "And I can see the tension leaving her body."
+        "Alexis starts to nod. The tension goes out of her shoulders."
         $ alexis.love += 5
         show alexis happy
         alexis.say "Thanks, guys."
@@ -2740,11 +2482,9 @@ label alexis_event_11(appointment=None):
         mike.say "Thanks, Alexis - I think!"
         show jack casual happy
         show alexis happy
-        "For the rest of the reunion, Alexis sticks by Jack and me."
-        "We form a tight little knot, mostly ignoring everyone else."
-        "And by the time it's all over, I'm ready to leave this place behind."
-        "The past is a nice place to visit once in a while."
-        "But I wouldn't want to live there."
+        "Alexis sticks with Jack and me for the rest of the night."
+        "By the time it's over, I'm glad to leave."
+        "The past is fine to visit. I just don't want to live there."
     return
 
 label missed_alexis_event_11:
@@ -2759,47 +2499,31 @@ label alexis_event_12:
         $ alexis.love.max = 200
     if alexis.flags.story == 2:
         show alexis casual sad
-        "Alexis is puzzling me today, making me feel more than a little uncomfortable for some reason."
-        "It's not anything that she's said or done that's starting to put me on edge."
-        "More like it's what she's not saying and doing that are worrying me."
-        "Alexis keeps shooting me these glances, like she's trying to gauge my mood."
-        "And more than once I think she's going to open her mouth and speak to me."
-        "But every time she seems to bite her tongue and let the moment slip by."
-        "Before too long it's becoming too much for me to handle - I swear I'm going crazy!"
+        "Something's off with Alexis today."
+        "She keeps glancing at me like she's about to say something — then doesn't."
+        "It's the not-saying that's driving me crazy."
         mike.say "Alexis..."
         mike.say "What on earth is wrong with you?"
         show alexis surprised
-        "Alexis almost jumps at the sudden question."
-        "A guilty response if I ever saw one!"
+        "She jumps."
         alexis.say "Huh?"
         alexis.say "What do you mean, [hero.name]?"
         show fx drop
         alexis.say "I have no idea what you're even talking about!"
-        "Ah, I think I'm starting to see what's going on here."
         hide fx
-        "I recognise the reaction that my question elicited from Alexis."
-        "And that's because it's one that I've been guilty of myself."
-        "So if Alexis were a guy, what would she be trying to hide?"
-        "Aha - that's it!"
+        "I recognise that reaction. I've done it myself."
         mike.say "Look, Alexis..."
         mike.say "Whatever it is you have to tell me, it's okay."
         mike.say "You can just come right out and say it."
-        "Alexis looks at me like I just pulled off a Jeudi Mind Trick."
+        "She stares at me like I read her mind."
         show alexis normal
-        "She shakes her head in amazement, like she can't believe it."
         alexis.say "B...but..."
         alexis.say "How did you know?"
         alexis.say "I haven't said a word all this time!"
-        "I can only shrug and smile at this."
-        "I'm not about to go sharing all my secrets with Alexis."
-        "Plus I'm enjoying her amazement way too much right now!"
         mike.say "I'm just a natural when it comes to that kind of thing, Alexis!"
         mike.say "Admit it - you're lucky to be with a guy like me, right?"
-        "As soon as I mention her being lucky to have me, something changes in Alexis."
-        "Her cheeks flush and suddenly she won't look me in the eye anymore."
-        "My instant reaction is to assume that I said the wrong thing."
-        "I'm about to open my mouth and start apologising."
-        "But Alexis beats me to it."
+        "Something shifts in her face. Her cheeks flush and she looks away."
+        "I start to apologise — but she beats me to it."
         alexis.say "Th...that's kind of it, [hero.name]..."
         alexis.say "That's what I wanted to talk to you about!"
         mike.say "Y...you're not breaking up with me, are you?"
@@ -2810,22 +2534,18 @@ label alexis_event_12:
         show alexis normal blush
         alexis.say "In fact it's...kind of the opposite..."
         alexis.say "I...I wanted to say that I never want to be without you!"
-        "I stare at Alexis for a moment, not sure what to say."
-        "Of all the things I could have imagined her wanting to tell me..."
-        "That came pretty much out of the blue!"
+        "Of all the things I expected — that wasn't it."
         mike.say "I...I feel the same way about you, Alexis!"
         mike.say "But after what happened when we were together the first time..."
         mike.say "I never knew if I was going to be enough for you!"
         mike.say "You were...well, pretty wild back then!"
         show alexis -blush
-        "Alexis shakes her head at this."
         alexis.say "That was then, [hero.name], it was a long time ago."
         alexis.say "We're both different people now."
         alexis.say "I like to think that I've changed for the better."
         alexis.say "And you...you're a better version of the guy you were back then!"
-        "I can't help smiling as I look Alexis in the eye."
+        "I look her in the eye and smile."
         show alexis blush
-        "And it seems to be having an effect on her too."
         alexis.say "Why are you looking at me like that?"
         alexis.say "You're making me feel nervous!"
         mike.say "I can't help it, Alexis."
@@ -2839,45 +2559,30 @@ label alexis_event_12:
         mike.say "Or longer, if you like!"
     else:
         show alexis casual annoyed
-        "I didn't think that Alexis and I were going to be doing much more than chilling today."
-        "And that's fine by me, as I like any chance I can get to just spend time with her."
-        "But I can tell from the way that Alexis is looking at me that's not going to happen."
-        "She has that serious expression on her face, the one that means business."
-        "So the only choice that I really have is to look her square in the eye and listen."
-        "And sure enough, it doesn't take long for her to broach the subject."
+        "Alexis has that look — the serious one. Something's coming."
         alexis.say "[hero.name]..."
         alexis.say "I think it's time we had a talk about us."
         alexis.say "About where this relationship is going."
-        "I can't help swallowing nervously as I hear all of this."
-        "No guy really wants to be forced to sit down and discuss his relationship with a girl."
-        "But when she comes out with it in such plain language, there's really no way to avoid it."
+        "I brace myself."
         mike.say "If you say so, Alexis."
         mike.say "I think it's going pretty well, all things considered."
         mike.say "Don't you?"
         show alexis normal
-        "Alexis nods and smiles at this."
-        "Which is an instant relief for me."
+        "She nods, and I relax slightly."
         alexis.say "Me too, [hero.name], me too."
         alexis.say "We're doing so much better than we did the first time around."
         alexis.say "And do you know why I think that is?"
-        "I frown and shrug, not sure how to answer that."
-        "My guess is that there's an answer Alexis wants to hear."
-        "But as I have no idea what that is, I'll just have to guess."
         mike.say "Erm..."
         mike.say "Because we're all grown-up now?"
         mike.say "A couple of mature adults?"
         show alexis confused
-        "Alexis looks thoughtful for a moment."
-        "Like the answer's a good enough try."
-        "But not the exact thing she was hoping for."
+        "Close, but not quite the answer she wanted."
         alexis.say "That's part of it, [hero.name]."
         show alexis normal
         alexis.say "But I think it's because we're being honest with each other."
         alexis.say "We could never do that back in high-school."
         alexis.say "And it didn't end well because of that, did it?"
-        "I'm tempted to say that it didn't end well because Alexis cheated on me!"
-        "But that's not going to get me anywhere, now is it?"
-        "So I nod and keep my mouth shut."
+        "I keep my mouth shut. I could say something, but I won't."
         alexis.say "So I'm going to keep on being honest, [hero.name]."
         alexis.say "And I'm going to tell you that I want to be with you."
         alexis.say "But only if you can handle me sleeping with other guys too."
@@ -2887,16 +2592,14 @@ label alexis_event_12:
         alexis.say "And you get to watch."
         show alexis normal
         alexis.say "Do you think you can handle that?"
-        "Just the thought of watching Alexis being fucked is making me hard."
-        "I have no idea where this is coming from, or why I feel it."
-        "But maybe I've grown to love the idea since I first learned Alexis was a cheater?"
-        "All I know is that I want to see more of it, and soon!"
+        "The thought is already making me hard. I don't fully understand why."
+        "But I do know I want it."
         mike.say "Of course I can, Alexis!"
         mike.say "Seeing you with other guys is pretty hot."
         mike.say "And it just makes me want to fuck you all the more."
         mike.say "You know, to remind you that you're mine!"
         show alexis happy
-        "Alexis smiles, an expression full of equal parts amusement and lust."
+        "She smiles — amusement and lust in equal measure."
         alexis.say "Mmm..."
         alexis.say "I LOVE the sound of that, [hero.name]!"
         show alexis flirt
@@ -2904,12 +2607,10 @@ label alexis_event_12:
         alexis.say "But knowing it makes you want me all the more!"
         alexis.say "Oh fuck..."
         alexis.say "I'm getting wet just thinking about it!"
-        "I nod eagerly at this, encouraging Alexis as much as I can."
-        "And that's because I'm getting hard as the same time."
         mike.say "Just promise me one thing, Alexis."
         mike.say "That we do it soon and often!"
         show alexis normal
-        "Alexis's eyes are alight with desire as she nods too."
+        "Her eyes are lit up."
         alexis.say "Oh, you bet we will!"
         show alexis flirt
         alexis.say "I can feel those cocks inside of me right now!"
@@ -3180,347 +2881,141 @@ label alexis_event_ntr_01:
 
 label alexis_event_ntr_02:
     scene bg sexshop with fade
-    "It's been a hard thing to wrap my head around, the fact that Alexis seems to need so much to satisfy her."
-    "But now that I know it's the reason she's been behaving the way she has, I'm determined to deal with it."
-    "I've decided that I need to show Alexis I understand her condition and I'm willing to make allowances for it."
-    "After all, I lost her once, and I don't want to have that happen to me a second time."
     show alexis casual at right with dissolve
-    "That's why I suggest that we take a trip to the local sex shop."
-    "Where better to find a solution the to problem than that?"
-    "So as we walk into the place, I do my best to play it casual."
+    "Alexis and I end up at the local sex shop — her idea as much as mine."
+    "She's been dropping hints for a while now, and I figured this was as good a time as any."
     show alexis annoyed at center with ease
     alexis.say "It still feels a little weird coming here with you, [hero.name]!"
-    mike.say "Huh?!?"
-    mike.say "Why'd you say that, Alexis?"
-    mike.say "I'm a pretty modern guy, aren't I?"
-    mike.say "And I like getting it on as much as the next guy too!"
-    show alexis happy at startle
-    "Alexis chuckles and shakes her head."
-    "Which is something I like to see, as it makes her look innocent and sweet."
-    alexis.say "I didn't mean it like that!"
+    mike.say "Weird how?"
+    mike.say "I'm a pretty open-minded guy."
+    show alexis happy
+    "She laughs — that easy, unguarded laugh she only lets out when she's actually relaxed."
+    alexis.say "I know, I know."
+    alexis.say "We just never did anything like this when we were together before."
     show alexis normal
-    alexis.say "More like it's new to me."
-    alexis.say "We never did stuff like this when we were kids, you know?"
-    "I nod, realising Alexis is right."
-    "A lot has changed since we were together in high-school."
-    "And for the better too, I hope."
-    mike.say "Well..."
-    mike.say "When you put it like that..."
-    alexis.say "Okay, okay..."
-    alexis.say "You're a man of the world now, [hero.name]."
+    mike.say "People change."
     show alexis wink
-    alexis.say "A voyager on the erotic seas of sexiness!"
-    show alexis annoyed
-    show fx question
-    alexis.say "So, what are we here for, huh?"
-    "Here we go."
-    "I guess this is the point where I have to confess."
-    "I just hope Alexis understands what I'm trying to do here!"
-    mike.say "Okay, Alexis..."
-    mike.say "Cards on the table..."
-    mike.say "I've noticed it takes a lot to satisfy you."
-    show alexis surprised
-    "Alexis's eyes go wide at this."
-    "And she looks this way and that like she's afraid of someone hearing."
-    "How can she be so self-conscious?"
-    "Especially after some of the stuff I've caught her doing in the past!"
-    alexis.say "Whoa..."
-    show alexis angry
-    alexis.say "Now wait a minute there, mister!"
-    alexis.say "I know I have a healthy appetite for that kind of thing."
-    alexis.say "But you make it sound like I'm a nymphomaniac or something!"
-    "I hold up a hand, waving away Alexis's protests."
-    "I understand her reaction."
-    "But I'm still determined to make my point."
-    show alexis confused
-    mike.say "It's okay, Alexis - there's no need to deny it."
-    mike.say "I just want to make sure that you get what you need."
-    mike.say "I feel like it's my duty as a good boyfriend, you know?"
-    mike.say "To help out whenever and wherever I can."
-    "Alexis seems less than convinced by my explanation."
-    "But a look of resignation settles over her features a moment later."
-    "She crosses her arms over her chest and shakes her head."
-    show alexis annoyed
-    alexis.say "Alright, [hero.name], you win."
-    alexis.say "I'm willing to admit that I have...an appetite."
-    alexis.say "So what's your genius solution?"
-    menu:
-        "Suggest more dildos":
-            mike.say "Well, I figured that you need more than one cock, right?"
-            mike.say "And rather than having you fuck other guys, how about this..."
-            mike.say "We buy you a whole bunch of dildos, yeah?"
-            mike.say "That way you'll always have one on hand when the mood takes you."
-            show alexis confused
-            "Alexis looks less than convinced."
-            alexis.say "I..."
-            alexis.say "I don't think..."
-            "But I'm already committed to explaining my idea."
-            "And I'm not about to stop now that I've actually said it."
-            mike.say "Wait a minute, Alexis."
-            mike.say "Just hear me out, okay?"
-            mike.say "We can get all different shapes and sizes."
-            mike.say "Some that vibrate too."
-            mike.say "And we can make sure they're right there when you need them!"
-            show alexis angry
-            alexis.say "Will you shut the hell up for a second?!?"
-            "I stop talking, surprised by Alexis's sudden out burst."
-            show alexis normal
-            "She takes a deep breath, holds it for a moment, then lets it out as a sigh."
-            alexis.say "Look, [hero.name]..."
-            alexis.say "It's not that simple, okay?"
-            alexis.say "This isn't about getting as much cock inside me as possible."
-            alexis.say "There's more to it than that."
-            alexis.say "It's about the way that a guy looks at me, you know?"
-            alexis.say "The way that I just know he's lusting after me!"
-            "All I can do is look down at my feet as Alexis explains herself."
-            "I thought I'd cracked it, that I was getting a handle on her."
-            "But it seems I got it completely wrong."
-            mike.say "Erm..."
-            mike.say "Okay, Alexis..."
-            mike.say "Maybe we should just leave?"
-            show alexis sad
-            alexis.say "Yeah..."
-            alexis.say "Maybe we should!"
-            hide alexis with moveoutright
-            "And with that, we hurry out of the place before anyone sees us."
-            $ alexis.love -= 5
-            $ alexis.sub -= 5
-            $ game.room = "alley"
-        "Suggest the glory-hole room":
-            mike.say "Well, I figured that you need more than one cock, right?"
-            mike.say "And I'm also thinking that dildos aren't going to cut it either."
-            mike.say "So we need a way you can get a whole lot of cock all at once."
-            show alexis surprised
-            "As I'm speaking, I see a look of genuine surprise appear on Alexis's face."
-            "It's like I'm saying things that she never thought she'd hear from my lips."
-            show alexis blush
-            "Alexis is nodding too, eagerly hanging on my every word."
-            show alexis normal
-            alexis.say "That's amazing, [hero.name]!"
-            alexis.say "No guy's ever seen it like that before."
-            alexis.say "None of them have ever seen it from my point of view!"
-            alexis.say "But I still don't know what you're going to do about it."
-            mike.say "Ah..."
-            mike.say "That's where this place come in, Alexis."
-            mike.say "They've got one of those booths in the back."
-            mike.say "The kind with glory-holes in the walls, yeah?"
-            mike.say "I figure you spend some time in there."
-            mike.say "That way you can have all the cock you want!"
-            show alexis happy
-            "Alexis is now looking at me in sheer amazement."
-            "She's shaking her head like she can't believe what she's hearing."
-            alexis.say "Y...you're serious?"
-            show alexis normal
-            alexis.say "You'd let me go in there?"
-            alexis.say "Go in there and play with other guys' dicks?!?"
-            mike.say "Of course, Alexis."
-            mike.say "If it'll make you happy, that's all that matters."
-            show alexis happy at center, zoomAt(1.5, (640, 1040))
-            "Alexis nods eagerly as she grabs hold of my hand."
-            "And before I know it, she's dragging me towards the back of the sex shop."
-            hide alexis
-            show alexis ntr glory hole with fade
-            "Luckily for us, the booth is empty when we get there."
-            alexis.say "Here goes nothing, [hero.name]!"
-            alexis.say "Are you coming in there with me?"
-            menu:
-                "Enter the booth with Alexis":
-                    "I think about it for a moment, weighing up the possibilities."
-                    "And I'm almost convinced that I should say no, that it's a bad idea."
-                    "But somehow I hear myself saying the words before even I realise it."
-                    mike.say "Yeah, Alexis!"
-                    mike.say "That sounds wild!"
-                    "All of my nerves seem to vanish with the smile Alexis gives me."
-                    "And she doesn't hesitate to pull me into the booth after her."
-                    show alexis ntr glory hole alexis peace mike with dissolve
-                    "Once we're inside, I just stand there, looking around me."
-                    "I have no idea how this is supposed to work."
-                    "But luckily for me, Alexis doesn't hesitate to take the lead."
-                    show alexis ntr glory hole dickleft
-                    "There are already anonymous cocks appearing through the holes."
-                    show alexis ntr glory hole dickright
-                    "They're of all colours, shapes and sizes imaginable."
-                    "And Alexis turns on the spot, taking them all in."
-                    show alexis ntr glory hole leftman
-                    "Without warning, one of them seems to catch her eye."
-                    show alexis ntr glory hole -peace wantleftcum
-                    "Alexis pounces on it like a cat seizing its prey."
-                    "And what follows is a staggering display of sexual appetite."
-                    show alexis ntr glory hole leftblowjob closed -wantleftcum
-                    "Lips, tongue and fingers all come into play as Alexis gets to work."
-                    "Some cocks she uses her hands to pleasure."
-                    "Rubbing the shafts and tormenting the heads."
-                    "Others she takes into her mouth as well."
-                    "And of these, some are given little more than a playful suck."
-                    show alexis ntr glory hole opened cumdickleft
-                    "But the lucky ones are almost swallowed hole."
-                    "These she goes at as if her life depends on it."
-                    "Part of me was worried that I just wouldn't be able to handle all of this."
-                    "That I'd be overcome with jealousy the moment I saw Alexis touch another guy's cock."
-                    show alexis ntr glory hole stand
-                    "And yet it's the sheer look of delight on her face that truly grabs my attention."
-                    "I don't think I've ever seen Alexis look so alive as she does right now!"
-                    "Maybe I'm starting to understand what it is that she gets out of this."
-                    "Maybe it's not about the dangerous thrill of cheating on someone after all."
-                    show alexis ntr glory hole wantrightcum
-                    "Because whenever she catches my eye, Alexis looks at me the same way too!"
-                    "It's also about now that I realise I'm on show too!"
-                    "All those eyes looking into the booth through the slots."
-                    show alexis ntr glory hole wantleftcum
-                    "They can see me as easily as they can Alexis."
-                    "Perhaps that's why she chooses to leave me until last?"
-                    show alexis ntr glory hole cumshot
-                    "One by one the cocks poking through the holes are spent."
-                    "They either spurt cum onto Alexis's hands."
-                    show alexis ntr glory hole ahegao alexisrightcum -wantleftcum floorcum -cumshot
-                    "Or else they spray the same into her face."
-                    "The whole time this is happening, I can hear the guys attached to those cocks."
-                    "Their moans of pleasure can he heard through the thin walls of the booth."
-                    show alexis ntr glory hole peace -cumshot handcum
-                    "Hell, I can even hear some of them slamming their hands against the walls too!"
-                    "At least I think they're hitting the walls..."
-                    show alexis ntr glory hole -leftman
-                    "Some of them might be scraping their nails down the other side!"
-                    "I have to admit that I never knew Alexis was this good."
-                    "I'm one hell of a lucky guy to be able to get back with her!"
-                    show alexis ntr glory hole futa
-                    "She pleases all of those guys, one after another."
-                    "And she never slows down for a moment, taking it all in the face."
-                    show alexis ntr glory hole -peace -handcum
-                    "So by the time she crawls over to me, Alexis is a sticky mess."
-                    "Despite all the cocks she's already had, Alexis still wants mine!"
-                    show alexis ntr glory hole wantrightcum
-                    "And when she has it in her hands, she gets straight to work."
-                    "Everything that I've watched her do to the other cocks was just practice."
-                    "It was all just a rehearsal for what she's doing to me right now."
-                    "Alexis caresses my cock, first with her hands and then with her tongue."
-                    show alexis ntr glory hole rightblowjob -wantrightcum
-                    "She works from bottom to top, building up the intensity as she goes."
-                    "Now I can begin to feel some of the thrill that Alexis must get from this."
-                    "She's involving me in the show, giving everyone something to watch."
-                    "And far from killing my vibe, it's making me feel hotter than ever!"
-                    show alexis ntr glory hole closed cumdickright
-                    "As I watch Alexis's head bobbing up and down, I know I'm not alone."
-                    "And when I feel myself letting go, we're being watched too."
-                    show alexis ntr glory hole cumshot wallcum facecum with hpunch
-                    "I gasp helplessly as I cum with my cock in Alexis's mouth."
-                    with hpunch
-                    "But she handles it like a pro, swallowing all I have to give."
-                    show alexis ntr glory hole alexisleftcum with hpunch
-                "Watch from outside the booth":
-                    "I think about it for a moment, weighing up the possibilities."
-                    "But then I shake my head, turning down the offer."
-                    mike.say "Nah, I'm good, Alexis."
-                    mike.say "I wouldn't want to cramp your style."
-                    "For a moment I think Alexis is going to protest."
-                    "But then she shrugs and gives me a little wave."
-                    show alexis ntr glory hole alexis peace
-                    "The next moment she slips through the door into the booth."
-                    "I don't waste any time in finding one of the unoccupied slots."
-                    show alexis ntr glory hole watch
-                    "And then I settle down, intending to watch the proceedings in secret."
-                    "Alexis stands in the middle of the booth, looking around her."
-                    show alexis ntr glory hole dickright
-                    "There are already anonymous cocks appearing through the holes."
-                    show alexis ntr glory hole futa
-                    "They're of all colours, shapes and sizes imaginable."
-                    "And Alexis turns on the spot, taking them all in."
-                    show alexis ntr glory hole dickleft
-                    "I wasn't going to add mine to the mix."
-                    "But I see Alexis pause and stare at the empty hole under my viewing slot."
-                    "There's no way she can know who's behind the hole."
-                    "And yet her eyes seem to be looking straight at me."
-                    "It's like she's willing me to put it through the hole!"
-                    show alexis ntr glory hole mike
-                    "So in the end I relent, undoing my flies and getting my cock out."
-                    show alexis ntr glory hole -peace
-                    "Only when I slide it through the hole does Alexis move on."
-                    "Without warning, one of the other cocks seems to catch her eye."
-                    "Alexis pounces on it like a cat seizing its prey."
-                    "And what follows is a staggering display of sexual appetite."
-                    show alexis ntr glory hole wantleftcum
-                    "Lips, tongue and fingers all come into play as Alexis gets to work."
-                    "Some cocks she uses her hands to pleasure."
-                    "Rubbing the shafts and tormenting the heads."
-                    show alexis ntr glory hole leftblowjob -wantleftcum
-                    "Others she takes into her mouth as well."
-                    "And of these, some are given little more than a playful suck."
-                    show alexis ntr glory hole cumdickright
-                    "But the lucky ones are almost swallowed hole."
-                    "These she goes at as if her life depends on it."
-                    show alexis ntr glory hole cumshot closed
-                    "Part of me was worried that I just wouldn't be able to handle all of this."
-                    "That I'd be overcome with jealousy the moment I saw Alexis touch another guy's cock."
-                    show alexis ntr glory hole ahegao stand -cumshot alexisrightcum
-                    "And yet it's the sheer look of delight on her face that truly grabs my attention."
-                    "I don't think I've ever seen Alexis look so alive as she does right now!"
-                    show alexis ntr glory hole peace -futa handcum
-                    "Maybe I'm starting to understand what it is that she gets out of this."
-                    "Maybe it's not about the dangerous thrill of cheating on someone after all."
-                    "Perhaps that's why she chooses to leave me until last?"
-                    show alexis ntr glory hole leftman
-                    "One by one the cocks poking through the holes are spent."
-                    "They either spurt cum onto Alexis's hands."
-                    show alexis ntr glory hole -peace -handcum
-                    "Or else they spray the same into her face."
-                    "The whole time this is happening, I can hear the guys attached to those cocks."
-                    show alexis ntr glory hole leftblowjob
-                    "Their moans of pleasure can he heard through the thin walls of the booth."
-                    "Hell, I can even hear some of them slamming their hands against the walls too!"
-                    show alexis ntr glory hole cumdickleft
-                    "At least I think they're hitting the walls..."
-                    "Some of them might be scraping their nails down the other side!"
-                    show alexis ntr glory hole cumshot opened
-                    "I have to admit that I never knew Alexis was this good."
-                    "I'm one hell of a lucky guy to be able to get back with her!"
-                    show alexis ntr glory hole stand wantleftcum
-                    "She pleases all of those guys, one after another."
-                    "And she never slows down for a moment, taking it all in the face."
-                    show alexis ntr glory hole -cumshot -wantleftcum floorcum
-                    "So by the time she crawls over to me, Alexis is a sticky mess."
-                    "Did she leave me until last by a simple accident?"
-                    "Or did she somehow guess that I was the last to join the party?"
-                    show alexis ntr glory hole wantrightcum
-                    "Despite all the cocks she's already had, Alexis still wants mine!"
-                    "And when she has it in her hands, she gets straight to work."
-                    "Everything that I've watched her do to the other cocks was just practice."
-                    "It was all just a rehearsal for what she's doing to me right now."
-                    "Alexis caresses my cock, first with her hands and then with her tongue."
-                    show alexis ntr glory hole rightblowjob -wantrightcum
-                    "She works from bottom to top, building up the intensity as she goes."
-                    "Now I can begin to feel some of the thrill that Alexis must get from this."
-                    "She's involving me in the show, giving everyone something to watch."
-                    show alexis ntr glory hole closed
-                    "And far from killing my vibe, it's making me feel hotter than ever!"
-                    "As I watch Alexis's head bobbing up and down, I know I'm not alone."
-                    "And when I feel myself letting go, we're being watched too."
-                    show alexis ntr glory hole cumshot wallcum facecum with hpunch
-                    "I gasp helplessly as I cum with my cock in Alexis's mouth."
-                    with hpunch
-                    "But she handles it like a pro, swallowing all I have to give."
-                    show alexis ntr glory hole alexisleftcum with hpunch
-            show alexis ntr glory hole stand peace handcum -cumshot -wantleftcum -wantrightcum -dickleft -dickright
-            "Afterwards, the cocks disappear back into their holes one by one."
-            "And Alexis lets herself out of the booth, still panting from her efforts."
-            show alexis ntr glory hole pleasure -leftman -futa -rightman -mike -watch
-            "She makes an effort to clean herself up and look presentable."
-            "But I can see there's still an almost manic glint in her eyes."
-            hide alexis
-            show alexis casual blush
-            with fade
-            mike.say "Erm, Alexis..."
-            mike.say "Are you feeling okay?"
-            show alexis happy
-            alexis.say "Oh, I feel better than okay, [hero.name]!"
-            alexis.say "In fact, I haven't felt this alive in forever!"
-            show alexis normal
-            alexis.say "Seriously, thanks for letting me do this."
-            alexis.say "And thanks for being so understanding too."
-            show alexis -blush
-            "I smile and nod, allowing Alexis to shower me with praise."
-            "But it's not like I didn't get something out of this myself."
-            "And I'm already wondering if she'll be up for doing it again sometime in the future..."
-            $ alexis.love += 10
+    alexis.say "Yeah they do."
+    "We're browsing the shelves, keeping it light, when something shifts."
+    $ _ntr02_roll = randint(1, 2)
+    if _ntr02_roll == 1:
+        show alexis normal
+        "A couple drifts over — well-dressed, relaxed, somewhere in their mid-thirties."
+        "The woman smiles at Alexis first. The man hangs back a half-step."
+        "Woman" "Sorry to bother you both."
+        "Woman" "We just couldn't help noticing you."
+        show alexis surprised
+        "Alexis blinks."
+        "Man" "We're into swapping. If you're both open to it, we'd love to make an evening of it."
+        "Woman" "No pressure. We just thought we'd ask."
+        "I look at Alexis. She's already looking at me."
+        show alexis flirt
+        "There's something in her eyes — curiosity, heat, a question she's waiting for me to answer."
+        menu:
+            "Refuse":
+                mike.say "Thanks, but we'll pass."
+                "Man" "Completely understand. Enjoy your evening."
+                "They smile and drift away without a second look."
+                show alexis normal
+                "Alexis watches them go, then turns back to me."
+                alexis.say "Was that what I think it was?"
+                mike.say "Yep."
+                show alexis happy
+                alexis.say "And you said no?"
+                mike.say "I said no."
+                "She's quiet for a moment."
+                show alexis blush
+                "Then she loops her arm through mine."
+                alexis.say "Good."
+                $ alexis.love += 5
+            "Accept":
+                mike.say "Sure. Why not."
+                show alexis surprised
+                "Alexis's eyes go wide."
+                alexis.say "[hero.name]..."
+                "But it isn't shock on her face."
+                "It's something closer to excitement she's trying not to show."
+                "Woman" "Wonderful. We know a place nearby."
+                show alexis flirt
+                "Alexis looks at me one more time — then she nods."
+                hide alexis with dissolve
+                "We leave the shop together, the four of us."
+                $ alexis.love += 8
+                $ alexis.sub -= 3
+                $ alexis.sexperience += 2
+    else:
+        show alexis normal
+        "We're near the back of the shop when a large man steps into our path."
+        "Tall, broad, completely at ease."
+        show dwayne as marcus at right, blacker
+        with dissolve
+        "Marcus" "Excuse me."
+        "He looks at Alexis first. Then at me."
+        "Marcus" "I'll be direct — I'm interested in both of you."
+        "Marcus" "A threesome. Tonight."
+        "Marcus" "I think you'd both enjoy it."
+        show alexis surprised
+        "Alexis goes very still."
+        "Marcus" "Take your time."
+        "He steps back and waits, unhurried."
+        hide dwayne with dissolve
+        show alexis flirt
+        "Alexis turns to me slowly."
+        alexis.say "Well?"
+        menu:
+            "Accept":
+                mike.say "...Yeah. Alright."
+                show alexis happy
+                alexis.say "Yeah?"
+                mike.say "Yeah."
+                show dwayne as marcus at right, blacker
+                with dissolve
+                "Alexis waves Marcus back over."
+                "He looks at me — just once — then nods."
+                "Marcus" "Good choice."
+                hide alexis with dissolve
+                hide dwayne with dissolve
+                "The three of us leave together."
+                $ alexis.love += 10
+                $ alexis.sub -= 5
+                $ alexis.sexperience += 3
+            "Refuse":
+                mike.say "No. Not happening."
+                show alexis normal
+                "Alexis drops her eyes to the floor."
+                "She doesn't argue. But she doesn't look at ease either."
+                menu:
+                    "Watch — tell her she can go":
+                        mike.say "But if you want to — I won't stop you."
+                        show alexis surprised
+                        alexis.say "You're serious?"
+                        mike.say "I mean it."
+                        mike.say "If you want to go, go."
+                        "Alexis holds my gaze for a long moment."
+                        show alexis flirt
+                        "Then she turns and crosses the shop toward him."
+                        hide alexis with dissolve
+                        show dwayne as marcus at right, blacker
+                        with dissolve
+                        "I watch from between the shelves."
+                        "Marcus doesn't look surprised when she approaches."
+                        "He looks like he expected it."
+                        "They leave together."
+                        hide dwayne with dissolve
+                        "I stand there a while longer before I follow."
+                        "Something has shifted, and I'm not sure I can name it yet."
+                        $ alexis.love += 8
+                        $ alexis.sub -= 3
+                        $ alexis.sexperience += 2
+                    "Leave — take her out of here":
+                        mike.say "Come on. Let's go."
+                        show alexis normal
+                        "A beat passes."
+                        "Then Alexis nods and follows."
+                        hide alexis with dissolve
+                        "We walk out without looking back."
+                        "Neither of us brings it up on the way home."
+                        $ alexis.love += 5
     return
 
 label ceo_office_spy_camera:
@@ -3529,7 +3024,6 @@ label ceo_office_spy_camera:
     $ game.flags.ceoofficecameraplaced = True
     $ hero.lose_item("spy_camera")
     return
-
 
 label alexis_event_ntr_03:
     scene expression f"bg {game.room}"
@@ -4152,117 +3646,71 @@ label alexis_event_ntr_04:
 
 label alexis_event_ntr_05_intro:
     scene expression f"bg {game.room}" with fade
-    "I know that Alexis and I have been through more than a little drama since we got back together."
-    "Drama that's mainly been caused on account of her...what shall we call it - her problem?"
-    "And maybe I should have been able to wrap my head around it by now, come to terms with it."
-    "I mean, we're older and supposedly wiser now than we were back in high-school."
-    "And she's not exactly trying to hide that side of her personality from me either."
-    "But the problem is that this whole thing feels like a scab I just can't stop picking at."
-    "No matter how I try to rationalise it, no matter how much I love being back with Alexis."
-    "I'm still trying to be okay with her basically cheating on me whenever the whim takes her!"
-    "And maybe that's the real problem."
-    "I'm trying to make sense of this in my own head."
-    "Maybe Alexis can explain this to me more easily?"
-    "Oh shit...this is going to be tough!"
-    "But I have to ask her the question..."
+    "I've been trying to make peace with this thing."
+    "The fact that Alexis needs more than one person can give her."
+    "And most days I manage it."
+    "But there's still a part of me that just can't leave it alone."
+    "So I decide to ask her outright."
     show alexis normal with dissolve
     mike.say "Alexis..."
-    mike.say "I need to talk to you...seriously!"
+    mike.say "I need to ask you something. Seriously."
     show alexis sad
-    "Instantly I see the expression on Alexis's face become concerned."
-    "I guess she has to know what this is going to be about."
-    show alexis annoyed
-    alexis.say "S...sure, [hero.name]."
-    alexis.say "What did you want to say to me?"
-    mike.say "Well...this thing that you like to do..."
-    mike.say "With other guys..."
-    mike.say "Is it because I'm not enough for you?"
-    mike.say "I mean, is it because I could be doing more to please you?"
-    mike.say "Because if it is, just tell me what to do, and I'll do it!"
-    "Alexis shakes her head, looking genuinely upset by what I just said."
-    show alexis at center, zoomAt(1.5, (640, 1040))
-    "She grabs hold of my hand, squeezing it so tight I almost wince."
+    alexis.say "S...sure. What is it?"
+    mike.say "Is it because I'm not enough?"
+    mike.say "Because if I'm doing something wrong, just tell me."
+    mike.say "I'll fix it."
+    "Alexis grabs my hand — grips it hard."
     show alexis angry
-    alexis.say "Oh god, [hero.name]!"
-    alexis.say "Please don't ever think that!"
-    alexis.say "I couldn't wish for a better lover than you."
+    alexis.say "Don't ever think that."
+    alexis.say "You're a better lover than you know."
     show alexis normal
-    alexis.say "And more than that - I'm IN love with you too!"
-    "I nod, trying as best I can to understand."
-    mike.say "But..."
-    mike.say "You still need more?"
-    alexis.say "You have to understand, [hero.name]."
-    alexis.say "What we have is different - special."
-    alexis.say "You could even say it's unique."
-    mike.say "So you're saying those other guys..."
-    mike.say "They don't mean as much to you?"
-    mike.say "They're like...playthings that you use and then throw away?"
+    alexis.say "And I'm in love with you. That's not in question."
+    mike.say "But you still need more."
+    alexis.say "What we have is different. It's real."
+    alexis.say "Those other guys — they're not that."
+    mike.say "So they don't mean anything to you?"
     show alexis confused
-    "Alexis frowns a little, like she doesn't fully agree with me."
-    "But I can see that she doesn't totally disagree either."
-    alexis.say "That might be a bit strong."
-    alexis.say "I don't see them as objects I can use and toss aside."
-    alexis.say "I need to know that they want me, that they desire me."
-    alexis.say "But it's not like I care about them once it's over."
-    alexis.say "So long as they get that, everyone's usually happy."
-    "Alexis pauses and takes a deep breath."
-    "She holds it in for a moment, then lets it out as a sigh."
+    alexis.say "It's not quite that simple."
+    alexis.say "I need to feel desired. That look a guy gets — that's what I'm after."
+    alexis.say "But once it's over, it's over. I don't think about them again."
+    "She pauses and exhales slowly."
     show alexis normal
-    alexis.say "Everyone but you, [hero.name]!"
-    alexis.say "And I really wish I could change that..."
+    alexis.say "I just wish you could be okay with it."
     if alexis.flags.story == 1:
-        "I'm weighing up everything that Alexis has said, all of her reasons."
-        "And somehow they seem to make more sense now that she's been open with me."
-        "Maybe that was all I needed, for her to tell it to me in simple terms."
-        mike.say "That makes sense, Alexis."
-        mike.say "I mean, it's kind of crazy in a kinky way."
-        mike.say "But it all ties up when you put it like that."
+        "When she puts it that way, something clicks."
+        "Not because it's easy — but because I finally understand what she's actually saying."
+        mike.say "Okay. I think I get it."
+        mike.say "It's not cheating if I'm not in the dark."
+        mike.say "And I'm not in the dark."
         show alexis surprised at startle
-        "Alexis stares at me, her eyes wide."
-        "She blinks a couple of times."
-        "It's almost like she can't actually believe it."
-        alexis.say "You...you mean that?"
-        mike.say "Yeah, Alexis, I mean it."
-        mike.say "There's no way I'd want to be a cuc."
-        mike.say "But a guy's got to be in the dark for that to happen, right?"
-        mike.say "If I know what's happening and I'm okay with it, then there's no problem."
-        mike.say "In fact, it shows were a mature, modern couple."
+        "Alexis stares at me."
+        alexis.say "You mean that?"
+        mike.say "Yeah. I mean it."
+        mike.say "We're adults. We can handle this."
         show alexis happy
-        "Alexis lets out what can only be described as a sigh of relief."
-        alexis.say "Oh, wow..."
-        alexis.say "You have NO idea what a relief it is to hear you say that!"
-        alexis.say "And...you're okay with me doing other guys in front of you, right?"
-        alexis.say "Because I could really do with blowing off some steam right about now!"
-        "It's only now that I see Alexis has her phone in her hand."
-        "I'm a little taken aback that she's already wanting to take advantage of my approval."
-        "But I can't say all of that and then get pissy the very moment she takes me up on it."
-        "So I shrug and nod."
-        mike.say "Sure, Alexis, why not."
-        alexis.say "That's great!"
-        alexis.say "I'll just call Marlon, Ray and Tyreese up."
-        alexis.say "They're going to be so thrilled you're cool with this!"
+        "The relief on her face is immediate."
+        alexis.say "You have no idea how much I needed to hear that."
+        alexis.say "You're okay with me doing other guys in front of you?"
+        alexis.say "Because I could really use the release right now."
+        "She already has her phone out."
+        "I shrug."
+        mike.say "Go ahead."
+        alexis.say "I'll call Ray, Marlon and Tyreese."
+        alexis.say "They're going to love this."
         $ alexis.flags.ntr_05 = "home"
     else:
-        "I can kind of see what Alexis is trying to say."
-        "I mean, it makes sense when she explains it."
-        "But then it would, because all of this is happening inside of her head!"
-        mike.say "Maybe you can, Alexis."
-        mike.say "I mean, maybe you can change my mind."
-        "I see hope in Alexis's eyes, and it looks totally genuine."
-        "It's like she's eager for the chance to convince me."
-        "And that has to be a good sign, right?"
+        "I understand what she's saying."
+        "But understanding it and being okay with it are still two different things."
+        mike.say "Maybe you can change my mind."
+        "Hope flickers across her face."
         show alexis normal
-        alexis.say "Sure thing, [hero.name]!"
-        alexis.say "What can I do to prove it to you?"
-        mike.say "Hmm..."
-        mike.say "Maybe if we back up a couple of steps?"
-        mike.say "Like go back to that great restaurant we had a date at."
-        mike.say "We could see if things are different now I know all about your...needs?"
+        alexis.say "Just tell me what to do and I'll do it."
+        mike.say "Let's go back to the restaurant."
+        mike.say "The one we had our first date at."
+        mike.say "Start fresh, now that everything's out in the open."
         show alexis happy
-        alexis.say "That's a great idea!"
-        alexis.say "Let's book a table as soon as we can!"
-        "It might not be the perfect solution, but it's a start."
-        "Maybe now we both have our cards on the table, things will go down differently?"
+        alexis.say "That's perfect."
+        alexis.say "Let's book it."
         $ alexis.flags.ntr_05 = "restaurant"
     return
 
@@ -4935,316 +4383,206 @@ label alexis_conv_flirt:
     return
 
 label alexis_conv_leave:
-    "I'm still feeling humiliated and more than a little stupid for thinking that she might have turned over a new leaf."
-    "The last thing that I want right now is to have to talk to her or even look her in the eye."
-    "But then I wonder if I shouldn't hear what she has to say."
-    "Who knows, maybe she's spent all night stewing in it too."
-    if "alexis_event_05" in DONE:
-        "Maybe she's actually come to the conclusion that screwing guys behind a rock while on a date with another is just a little bit rude."
-    elif "alexis_event_04" in DONE:
-        "Maybe she's actually come to the conclusion that sucking one guy while on a date with another is just a little bit rude."
-    else:
-        "Maybe she's actually come to the conclusion that screwing one guy in the bathroom while on a date with another is just a little bit rude."
-    "That's why I decide to have an open conversation about last time."
-    mike.say "Good morning, Alexis."
-    "My tone is as flat and emotionless as I can make it, under the circumstances."
+    "I'm still raw from walking out last night."
+    "Part of me doesn't want to answer at all."
+    "But I pick up anyway."
+    mike.say "Morning, Alexis."
     show alexis angry at center, vshake
     alexis.say "YOU FUCKING PRICK!"
-    "Well, I guess that answers the question about whether or not she's calling to apologise."
-    alexis.say "Where in the HELL do you think you can get away with skipping out on me like that?!?"
+    alexis.say "Where the hell do you get off leaving me like that?!?"
     if "alexis_event_05" in DONE:
-        alexis.say "I come back from the shack, and you've walked out..."
-        alexis.say "Worse than that, you left me to take a cab home!"
+        alexis.say "I come back from the shack and you're gone — left me to cab it home!"
     elif "alexis_event_04" in DONE:
-        alexis.say "I come back from the bathroom, and you've walked out..."
+        alexis.say "I come back from the bathroom and you've just walked out!"
     else:
-        alexis.say "I come back from the bathroom, and you've walked out..."
-        alexis.say "Worse than that, you left me to pick up the bill!"
-    "I keep quiet, letting her rant away and list her perceived grievances, hoping that she'll eventually run out of steam."
+        alexis.say "I come back from the bathroom and you've gone — left me with the bill!"
+    "I let her go. When she hits her stride, it's faster to just wait."
     show alexis at startle
     alexis.say "I have NEVER been so humiliated..."
-    "But at the use of that word, I just can't keep from jumping in."
+    "And there it is."
     show alexis surprised at startle
-    mike.say "Oh, for the love of god, Alexis - shut up for a second and actually listen to yourself."
-    mike.say "Sure, I walked out on you, I admit it."
+    mike.say "Alexis. Stop. Listen to yourself."
+    mike.say "Yeah, I walked out."
     if "alexis_event_05" in DONE:
-        mike.say "But it was only after I walked in on you while you were having fun behind those rocks."
+        mike.say "Right after I found you behind those rocks."
     elif "alexis_event_04" in DONE:
-        mike.say "But it was only after I woke up while you were sucking that dude."
+        mike.say "Right after I saw what you were doing in that seat."
     else:
-        mike.say "But it was only after I walked in on you while you were in the men's bathroom."
+        mike.say "Right after I walked in on you in the men's bathroom."
     show alexis mindless
-    "Alexis stares at me in a stunned silence."
-    "The kind that usually signifies that the goalposts in the argument are in the process of moving."
-    mike.say "Are you still there, Alexis?"
+    "Dead silence."
+    mike.say "Still there?"
     show alexis surprised at startle
     pause 1.0
     show alexis annoyed
-    alexis.say "Yes...I can...listen, I can explain..."
-    "This should be good."
-    alexis.say "You...you weren't supposed to see that, [hero.name]..."
-    mike.say "Yeah, Alexis - I kinda figured that one out for myself!"
+    alexis.say "I...you weren't supposed to see that, [hero.name]..."
+    mike.say "Yeah, I figured."
     show alexis sad
-    alexis.say "No...that's not what I meant...it's more complicated..."
-    "Complicated, really?"
-    "It looks like I'm going to have to lay down the law on this one."
+    alexis.say "It's more complicated than it looks..."
     menu:
         "I know you cheat on me and that's okay":
-            mike.say "I know that you're a cheater, Alexis."
-            mike.say "In fact, I've always known that you weren't faithful to me."
+            mike.say "I know you cheat, Alexis. I've always known."
             show alexis annoyed
-            alexis.say "W...wait, I..."
-            "I can hear a certain tone in Alexis's voice."
-            "One that lets me know she's trying to explain herself."
+            alexis.say "W...wait—"
             show alexis sad
-            "But I cut her off before she can get started."
-            mike.say "No, Alexis..."
-            mike.say "You need to let me finish, okay?"
-            "I take the silence on the other end of the line as Alexis doing as I asked."
-            "So I take a deep breath and push on."
-            mike.say "Look, Alexis..."
-            mike.say "I've always known that you cheat on me with other guys."
-            mike.say "But what I never told you was that...I'm kind of okay with it!"
+            mike.say "Let me finish."
+            mike.say "I've always known, and here's the thing — I'm kind of okay with it."
             show alexis surprised
-            alexis.say "You...you are?!?"
-            mike.say "I know it sounds weird, Alexis."
-            mike.say "But you seem to get off on fucking guys behind my back, right?"
+            alexis.say "You...are?"
+            mike.say "You get off on it. That's your kink."
+            mike.say "Knowing about it is mine."
+            mike.say "I can't really explain it better than that."
             show alexis confused
-            alexis.say "Well...yeah, I guess."
-            mike.say "You get off on it and that's your kink."
-            mike.say "And knowing that you do it is mine."
-            mike.say "Alexis...I can't really explain it!"
-            show alexis annoyed
-            alexis.say "It's okay, [hero.name]."
-            alexis.say "I think I get what you're saying."
-            alexis.say "So..."
-            show alexis confused
-            alexis.say "You're cool with me doing stuff like that?"
-            alexis.say "You WANT me to cuck you?"
-            mike.say "Yeah, Alexis."
-            mike.say "But don't make it too obvious, okay?"
-            show alexis sad
-            "Alexis goes quiet for a moment."
+            alexis.say "So you want me to...cuck you?"
+            mike.say "Yeah. Just don't rub my face in it."
             show alexis normal at startle
-            "But then I hear her let out a sigh."
-            alexis.say "Okay, okay..."
-            alexis.say "This is going to take some getting my head around!"
-            alexis.say "I never had a guy say he wanted me to cheat on him before!"
-            mike.say "Don't worry, Alexis."
-            mike.say "I'm sure you're up to the challenge!"
-            "I end the conversation Alexis, already wondering if I've done the right thing."
-            "But then I remind myself that this is a far more honest way to handle it."
-            "I'm being honest about what Alexis really is and how that makes me feel."
-            "If our relationship can't work when everything is out in the open, then what hope is there for us?"
+            "A long pause. Then I hear her exhale."
+            alexis.say "I've never had a guy ask for that before."
+            mike.say "Guess you've been hanging out with the wrong guys."
+            "I hang up already second-guessing myself."
+            "But at least it's honest."
             $ alexis.flags.story = 1
             $ alexis.flags.cheatokay = True
         "Don't cheat on me again":
-            mike.say "That was a serious screw-up on your part, Alexis."
+            mike.say "That was a screw-up, Alexis."
             if "alexis_event_05" in DONE or "alexis_event_04" in DONE:
-                mike.say "But...I guess we can chalk it up to a mistake and try again."
+                mike.say "But I'm willing to chalk it up as a mistake if you are."
             else:
-                mike.say "But...I guess that as we weren't officially on an actual date, we can chalk it up to a mistake and try again."
-            alexis.say "You'd be okay with that?"
-            "Alexis sounds as though she was expecting me to go off the deep end and dump her or something."
-            "Which would have been hard, as we're not actually dating yet!"
-            mike.say "I just think that we need to establish some ground rules, Alexis, that's all."
-            mike.say "Maybe the first of which would be that we lay off excusing ourselves to fuck other people while we're together?"
+                mike.say "We weren't even officially on a date, so I'll chalk it up as a mistake."
+            alexis.say "You'd give me that?"
+            mike.say "On one condition — no sneaking off while we're together."
+            mike.say "That's the ground rule. Simple."
             show alexis happy at startle
-            "She had to laugh at the frank nature of my last statement."
+            "She laughs — a real one."
             show alexis wink
-            alexis.say "But what if they're like REALLY hot?"
-            "The sarcasm and amusement in her voice suddenly reminds me of the Alexis that I always wanted to reconnect with."
-            mike.say "I think we need to tackle that on a hottie by hottie basis, Alexis!"
+            alexis.say "What if they're REALLY hot though?"
+            mike.say "We'll deal with that on a case-by-case basis."
             $ alexis.flags.story = 2
         "Apologize and ignore the cheating":
-            "I feel like I should confront Alexis about her behaviour."
-            "Like I should call her out for cheating on me like that."
-            "But then I remember what ended our relationship the last time."
-            "And the fear of losing her for a second time makes me forget all about that option."
-            mike.say "I just wanted to say sorry for getting upset when you were talking to that guy."
-            mike.say "It was way out of order - I have no right to tell you who you can and can't talk to."
-            alexis.say "It's okay, really...don't worry about it."
-            mike.say "No, it's not - I got too possessive and jealous, even when we weren't supposed to be officially on a date."
+            "I know I should call her out."
+            "But the memory of losing her the first time stops me cold."
+            mike.say "Look, I'm sorry I got uptight about that guy."
+            mike.say "I had no right."
+            alexis.say "It's fine. Don't worry about it."
+            mike.say "No, I was too possessive. That's on me."
             show alexis happy at startle
-            "Alexis chuckles to herself, and she shakes her head at me."
-            show alexis normal
-            alexis.say "Like I already said, it's no big deal, [hero.name]."
+            "She laughs softly."
             show alexis wink
-            alexis.say "In fact, it was kind of flattering, the way you wanted me all to yourself!"
-            mike.say "Well...I guess I'd just forgotten how much I liked spending time in your company, that's all."
+            alexis.say "It was a little flattering, if I'm honest."
             show alexis normal
-            alexis.say "What do you say we just put it behind us and move on?"
-            alexis.say "I think I'd like to hear more about just how much time you want to spend on me..."
+            alexis.say "Let's just move on."
             $ alexis.flags.story = 3
         "I know you cheat and I don't want to see you again":
-            mike.say "Look, Alexis - I thought that it'd be great to see you again, that we'd likely both changed."
-            mike.say "But I guess what I saw last night proved that I was only half right."
-            mike.say "I might have changed, but you're still up to the same old shit you were back in the day."
+            mike.say "I thought you'd changed, Alexis."
+            mike.say "I was half right — I changed. You didn't."
             show alexis sad
             alexis.say "[hero.name], please..."
-            mike.say "What are you going to tell me, Alexis?"
-            mike.say "How can you spin the fact that I caught you fucking another guy into a positive thing?"
-            "There's no immediate response to that."
-            "But then I was hardly expecting one."
-            mike.say "Alexis, I think I'd prefer it if we didn't see each other again...period."
-            "It hurts to end things, but I can't honestly see that I have another choice."
+            mike.say "How do you spin what I saw into something okay?"
+            "She doesn't answer."
+            mike.say "I don't want to see you again."
+            "It hurts. But I can't see another way."
             $ alexis.set_gone_forever()
-    "I end the conversation still feeling somewhat emotionally hungover from the night before and its fallout."
-    "But there's a kernel of hope that I can sense, deep down in my gut."
-    "I think that I might have just made the right decision for the both of us."
+    "I hang up still shaken."
+    "But somewhere under that, something feels like it's been settled."
     return
 
 label alexis_conv_cheat:
     show alexis
     if "alexis_event_05" in DONE:
-        "I don't think that I let on what I saw Alexis and those strangers doing at the beach the other night, or gave her a clue I suspected something was up."
+        "I didn't let on what I saw at the beach."
     elif "alexis_event_04" in DONE:
-        "I don't think that I let on what I saw Alexis and the stranger doing in the cinema the other night, or gave her a clue I suspected something was up."
+        "I didn't let on what I saw at the cinema."
     else:
-        "I don't think that I let on what I saw Alexis and the stranger doing in the men's bathroom the other night, or gave her a clue I suspected something was up."
-    "But that means that I'm now left trying to bury that mental image, while all the time pretending that everything's okay and I'm convinced that Alexis is a changed woman."
-    "I'm supposed to just get up and go about my day as though nothing untoward happened and nothing's bugging me."
-    "In the end, I decide that it's better to talk to her and have it out than to just sit here stewing."
-    mike.say "Well, Alexis - I had a pretty great time the other day."
-    mike.say "But..."
+        "I didn't let on what I saw in that bathroom."
+    "But I can't just bury it and pretend everything's fine."
+    "I call her."
+    mike.say "Hey, Alexis. Good time the other day."
+    mike.say "But I need to say something."
     menu:
         "I know you cheat on me and that's okay":
-            mike.say "I know that you're a cheater, Alexis."
-            mike.say "In fact, I've always known that you weren't faithful to me."
+            mike.say "I know you cheat, Alexis. I've always known."
             show alexis annoyed
-            alexis.say "W...wait, I..."
-            "I can hear a certain tone in Alexis's voice."
-            "One that lets me know she's trying to explain herself."
+            alexis.say "W...wait—"
             show alexis sad
-            "But I cut her off before she can get started."
-            mike.say "No, Alexis..."
-            mike.say "You need to let me finish, okay?"
-            "I take the silence on the other end of the line as Alexis doing as I asked."
-            "So I take a deep breath and push on."
-            mike.say "Look, Alexis..."
-            mike.say "I've always known that you cheat on me with other guys."
-            mike.say "But what I never told you was that...I'm kind of okay with it!"
+            mike.say "Let me finish."
+            mike.say "I've always known. And I'm okay with it."
             show alexis surprised
-            alexis.say "You...you are?!?"
-            mike.say "I know it sounds weird, Alexis."
-            mike.say "But you seem to get off on fucking guys behind my back, right?"
+            alexis.say "You...are?"
+            mike.say "You get off on it. That's your kink."
+            mike.say "Knowing about it is mine. I can't explain it better than that."
             show alexis confused
-            alexis.say "Well...yeah, I guess."
-            mike.say "You get off on it and that's your kink."
-            mike.say "And knowing that you do it is mine."
-            mike.say "Alexis...I can't really explain it!"
-            show alexis annoyed
-            alexis.say "It's okay, [hero.name]."
-            alexis.say "I think I get what you're saying."
-            alexis.say "So..."
-            show alexis confused
-            alexis.say "You're cool with me doing stuff like that?"
-            alexis.say "You WANT me to cuck you?"
-            mike.say "Yeah, Alexis."
-            mike.say "But don't make it too obvious, okay?"
-            show alexis sad
-            "Alexis goes quiet for a moment."
+            alexis.say "So you actually want me to cuck you?"
+            mike.say "Yeah. Just don't be obvious about it."
             show alexis normal at startle
-            "But then I hear her let out a sigh."
-            alexis.say "Okay, okay..."
-            alexis.say "This is going to take some getting my head around!"
-            alexis.say "I never had a guy say he wanted me to cheat on him before!"
-            mike.say "Don't worry, Alexis."
-            mike.say "I'm sure you're up to the challenge!"
-            "I end the conversation with Alexis, already wondering if I've done the right thing."
-            "But then I remind myself that this is a far more honest way to handle it."
-            "I'm being honest about what Alexis really is and how that makes me feel."
-            "If our relationship can't work when everything is out in the open, then what hope is there for us?"
+            "A pause. Then a long exhale."
+            alexis.say "I've never had a guy ask for that."
+            mike.say "Guess you've been with the wrong guys."
+            "I hang up wondering if I've lost my mind."
+            "But at least it's honest."
             $ alexis.flags.story = 1
             $ alexis.flags.cheatokay = True
         "Don't cheat on me again":
-            mike.say "I won't agree to see you again if you keep on behaving like that in front of me, Alexis."
-            mike.say "I'm sorry if that makes me sound like a jealous prick of a throwback to a less enlightened time."
-            mike.say "But we're not in high school anymore, and I won't put up with someone flirting in front of me like that."
-            mike.say "I always tolerated it when we were kids because I didn't know any better."
-            mike.say "But I won't take it any more."
-            "Alexis is silent for a while, probably taken aback by the strength of my ultimatum."
+            mike.say "I won't see you again if you keep doing that, Alexis."
+            mike.say "We're not in high school. I won't put up with it."
+            "Silence. Long enough to mean she didn't expect that."
             show alexis confused
-            alexis.say "Okay, [hero.name]...I...I guess I didn't realise how strongly you felt about that kind of thing..."
-            "I let out a frustrated sigh, afraid of sounding like a jealous ogre over what she probably regards as something completely harmless."
-            mike.say "Look, I think we made a mistake by going into this whole idea of us getting to know each other again a bit naively."
-            mike.say "We can't hide the fact that we both have a lot of emotional baggage that we're still carrying from the past."
-            show alexis annoyed
-            alexis.say "I guess so..."
-            mike.say "What I'm saying is that I think we need to establish a few small ground-rules - and that no flirting while we're together is one of them."
-            mike.say "By that I mean no flirting with other people...not each other."
-            mike.say "Not that I'm saying you HAVE to flirt with me - unless you want to, that is!"
+            alexis.say "I...didn't realise you felt that strongly..."
+            mike.say "We've both got baggage from before. Let's not repeat the same mistakes."
+            mike.say "One ground rule — no flirting with other people while we're together."
+            mike.say "Flirting with me, on the other hand — that's encouraged."
             show alexis happy at startle
-            "Alexis laughs, genuinely for the first time during our conversation."
+            "She laughs. A real one."
             show alexis wink
-            alexis.say "Don't worry, I think I get what you mean!"
+            alexis.say "I think I can manage that."
             $ alexis.flags.story = 2
         "Apologize and ignore the cheating":
-            mike.say "...I guess I can't wait to know when I'm gonna get to see you again!"
+            mike.say "...I just can't wait to see you again, honestly."
             show alexis blush
-            "Alexis chuckles sweetly at this, clearly flattered by my neediness."
-            alexis.say "You need to be just a little more patient, [hero.name]!"
+            "She laughs, clearly pleased."
+            alexis.say "A little patience goes a long way, [hero.name]."
             show alexis normal
-            alexis.say "But I promise that you can see more of me real soon..."
-            "From there the conversation turns to the subject of when and where we're going to see each other next."
-            "All the time I feel kind of bad for not confronting Alexis about the fact I caught her cheating on me."
+            alexis.say "But soon. I promise."
+            "We make plans. I say nothing about what I saw."
             if "alexis_event_05" in DONE:
-                "But the more I think about it, the more I realise just how much I got off on watching her being fucked by those guys."
+                "The more I think about it, the more I realise I got off watching those guys with her."
             elif "alexis_event_04" in DONE:
-                "But the more I think about it, the more I realise just how much I got off on watching her sucking another guy."
+                "The more I think about it, the more I realise I got off watching her with that guy."
             else:
-                "But the more I think about it, the more I realise just how much I got off on watching her being fucked by another guy."
-            "I don't know if it was just the voyeurism involved, or that I actually got to watch what she tried to hide from me when we were an item in the past."
-            "Either way, it made me feel as though I was a part of what she was doing somehow."
-            "The fact that I was a secretive watcher turned the act from one of simple cheating into something I could enjoy in a twisted manner."
-            "Unlike when she went behind my back in the past, this time I was already aware of her predilection to cheat."
+                "The more I think about it, the more I realise I got off watching her with that guy."
+            "I was a secret witness. That twisted it into something I could live with — something I wanted."
+            "She thinks she's fooling me. I know she isn't."
             if "alexis_event_05" in DONE:
-                "That put the suspicion in my mind and made me go looking when she lingered behind those rocks."
+                "That suspicion drove me to go looking when she lingered behind the rocks."
             elif "alexis_event_04" in DONE:
-                "That put the suspicion in my mind and made me keep looking."
+                "That suspicion made me keep watching."
             else:
-                "That put the suspicion in my mind and made me go looking when she lingered in the bathroom."
-            "Perhaps that's the crux of it all - now that I'm aware of what she's doing, I feel more like I have a share of the power?"
-            "I could confront Alexis at any time and place, but that's all in my hands."
-            "Or I can choose to keep her in the dark and continue to watch as she fucks whoever she pleases, thinking that she's doing so without the slightest suspicion on my part."
+                "That suspicion drove me to go looking when she lingered in the bathroom."
+            "The power's mine. I can expose her any time I choose."
+            "Or I can keep watching — and let her believe she's getting away with it."
             $ alexis.flags.story = 3
         "I know you cheat and I don't want to see you again":
             if "alexis_event_05" in DONE:
-                mike.say "...I got worried when you were taking so long to get that water at the beach."
-                mike.say "So I went to check on you...and I saw you with those other guys."
+                mike.say "I went to check on you at the beach. I saw you with those guys."
             elif "alexis_event_04" in DONE:
-                mike.say "...I woke up in the middle of the movie during our date at the cinema."
-                mike.say "...and I saw you with that other guy."
+                mike.say "I woke up during the film. I saw you with that guy."
             else:
-                mike.say "...I got worried when you were taking so long in the bathroom the other night."
-                mike.say "So I went to check on you...and I saw you with that other guy."
-            "There's a long, drawn-out silence as the significance of my words sinks in for Alexis."
+                mike.say "I went to check on you in the bathroom. I saw you with that guy."
+            "Silence."
             show alexis confused
-            alexis.say "[hero.name]...that wasn't what it looked like...I..."
-            "Seriously, that's the best excuse she can come up with?"
-            mike.say "What was it supposed to look like, Alexis?"
+            alexis.say "[hero.name]...that wasn't what it looked like..."
+            mike.say "What was it, then?"
             if "alexis_event_05" in DONE:
-                mike.say "Because to me, it looked like you'd snuck off to have a threesome in the middle of our date."
+                mike.say "Because it looked like a threesome in the middle of our date."
             elif "alexis_event_04" in DONE:
-                mike.say "Because to me, it looked like you'd snuck off to suck another guy in the middle of our date."
+                mike.say "Because it looked like you sneaking off to suck another guy."
             else:
-                mike.say "Because to me, it looked like you'd snuck off to fuck another guy in the middle of our date."
-            mike.say "Or was it the angle that I was watching you from?"
-            if "alexis_event_05" in DONE:
-                mike.say "Should I have been looking under the water rather than over the top of the rocks?"
-            elif "alexis_event_04" in DONE:
-                mike.say "Should I have been looking under the seats rather than over them?"
-            else:
-                mike.say "Should I have been looking under the door rather than over the top of the stalls?"
+                mike.say "Because it looked like you sneaking off to fuck someone else."
             show alexis sad
-            alexis.say "[hero.name], you're not letting me explain..."
-            mike.say "What's there to explain, Alexis?"
-            mike.say "Apart from that I thought you might have changed and you proved me wrong?"
+            alexis.say "[hero.name], just let me—"
+            mike.say "I thought you'd changed. You didn't."
+            mike.say "We're done."
             show alexis cry
-            alexis.say "If you'd just..."
-            mike.say "No, Alexis - no more excuses and lies."
-            mike.say "We're done!"
-            "And with that, I cut her off before she can say another word."
+            "I end the call."
             $ alexis.set_gone_forever()
             return
     return
@@ -5647,9 +4985,14 @@ label alexis_male_ending:
 label alexis_birthday_date_male:
     $ DONE["alexis_birthday_date_male"] = game.days_played
     $ game.active_date.clothes = "date"
-    scene bg street with fade
     "It took me a while to think of something that would make Alexis's birthday special."
-    "But in the end I think that I managed to settle on something that fits the bill."
+    "In the end I managed to settle on something — now I just need to pull it off."
+    menu:
+        "Take her to the photo studio":
+            pass
+        "Surprise gangbang party" if alexis.flags.story != 2:
+            jump alexis_birthday_gangbang_party
+    scene bg street with fade
     "Now all I have to do is get Alexis to move her ass and actually get there!"
     "Right now I'm almost having to drag her through the main street."
     show alexis date annoyed at center, zoomAt(1.5, (940, 1040)) with easeinright
@@ -6293,6 +5636,117 @@ label alexis_birthday_date_male:
         scene bg street with fade
         "That way I can put more effort into our next date."
         "Provided there is one..."
+    return
+
+label alexis_birthday_gangbang_party:
+    scene bg livingroom with fade
+    "I've made sure the house is empty and the guys arrived early."
+    "Ray, Marlon, and Tyreese — all prepped and waiting."
+    "Alexis has no idea."
+    "That's the whole point."
+    scene bg black with dissolve
+    pause 0.1
+    scene bg house
+    show alexis date normal
+    with wiperight
+    "Alexis pushes through the door, already looking suspicious."
+    alexis.say "Why are we coming to yours?"
+    alexis.say "You said you had a surprise."
+    mike.say "I do."
+    mike.say "Go on through."
+    "She gives me a look — half wary, half amused — and leads the way."
+    scene bg livingroom
+    show danny as marlon zorder 1 at left4, blacker
+    show dwayne as ray zorder 2 at right5, blacker
+    show dwayne as tyreese zorder 3 at flip, mostright5, blacker
+    with dissolve
+    show alexis date normal zorder 4 at center
+    with easeinleft
+    "The three of them are already there, waiting."
+    "Ray leans back in his chair, completely at ease."
+    "Marlon nods."
+    "Tyreese raises a hand."
+    show alexis date surprised at startle
+    alexis.say "[hero.name]..."
+    alexis.say "What is this?"
+    mike.say "Happy birthday, Alexis."
+    "Ray" "Hey, birthday girl."
+    show alexis date normal
+    "Alexis stares at me for a long moment."
+    "Then she looks at the three of them."
+    "Then back at me."
+    menu:
+        "This is your gift":
+            mike.say "Consider this your present."
+            mike.say "No obligations. Your call entirely."
+            show alexis date flirt
+            "Something shifts in her expression."
+            "The wariness drains out of it and something else takes over."
+            alexis.say "You planned this?"
+            alexis.say "For me?"
+            mike.say "Every bit of it."
+            show alexis date happy
+            alexis.say "God..."
+            alexis.say "You really do know me."
+            "Ray" "So we doing this, or what?"
+            show alexis date flirt
+            "Alexis glances back at me one more time."
+            "I nod."
+            "She turns to face them."
+            alexis.say "Yeah."
+            alexis.say "We're doing this."
+            hide alexis with dissolve
+            show alexis ntr gangbang with fade
+            "And from there she takes the lead — no hesitation, no second-guessing."
+            "Hands, mouths, bodies — the whole room shifts into something urgent and electric."
+            show alexis ntr gangbang vaginal
+            "Alexis is in her element."
+            "I watch from the side, and she knows I'm watching."
+            "Every now and then she catches my eye — and she smiles."
+            show alexis ntr gangbang anal pleasure
+            "A long time passes before it winds down."
+            "When it does, it's slow and satisfied."
+            hide alexis
+            show alexis date normal
+            with fade
+            "Afterwards the guys make themselves scarce."
+            "And it's just the two of us again."
+            show alexis date blush
+            alexis.say "That was..."
+            alexis.say "That was the best birthday present anyone's ever given me."
+            mike.say "Thought you'd like it."
+            show alexis date happy
+            alexis.say "I more than liked it."
+            "She steps close and kisses me — slow and deliberate."
+            show alexis date flirt
+            alexis.say "Now I want my second present."
+            alexis.say "Just you. No audience."
+            $ alexis.love += 10
+            $ alexis.sub -= 5
+            if game.active_date.score >= 30 and alexis.sexperience >= 1:
+                call alexis_birthday_sex from _call_alexis_birthday_sex_gangbang
+        "Actually, let's not do this":
+            mike.say "Hold on."
+            mike.say "I'm not sure about this anymore."
+            "Ray" "For real?"
+            "I nod at Ray, and he shrugs, already pushing himself out of the chair."
+            show dwayne as ray at right5, blacker, startle
+            "Ray" "No sweat, man."
+            "Marlon and Tyreese follow without a word."
+            hide dwayne
+            hide danny
+            with dissolve
+            show alexis date normal
+            "The door closes behind them."
+            "Alexis turns to me with an unreadable expression."
+            alexis.say "What was that about?"
+            mike.say "Changed my mind."
+            mike.say "I want today to just be ours."
+            "A pause."
+            show alexis date blush
+            alexis.say "Okay."
+            alexis.say "I can work with that."
+            $ alexis.love += 5
     return
 
 label alexis_birthday_sex:
