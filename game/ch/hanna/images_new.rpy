@@ -21,6 +21,7 @@ init python:
         "sport",
         "underwear",
         "naked",
+        "halloween"
     ])
 
     # $ hanna_blowjob01 = [

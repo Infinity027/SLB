@@ -197,20 +197,20 @@ label alexis_dick_reactions:
 label alexis_halloween_invitation:
     show alexis
     "The more I think about it, the more sure I am that Alexis is the perfect girl to invite to the Halloween party."
-    "She's fun, up for a good time and she's always wanting to meet new people when we're out together."
     "So this is a great chance to introduce her to my room-mates, as well as my male friends too!"
     "In fact, now that I've thought it through - what could possibly go wrong?"
-    "That's why I don't beat about the bush the next time that I get to see Alexis."
     "I just come straight out and ask her."
     mike.say "Alexis..."
     mike.say "We're having a Halloween party at my place this year."
     mike.say "And I was wondering if you wanted to come along?"
     "Alexis raises her eyebrows at the mention of a party."
     "And I can see that I've piqued her interest."
+    show alexis talk
     alexis.say "Ooo..."
     alexis.say "It's been a while since I went to a Halloween party."
     alexis.say "What's the plan - just a bunch of friends hanging out?"
     "I shake my head."
+    show alexis normal
     mike.say "Oh, no way, Alexis."
     mike.say "We're going to have all sorts of spooky stuff going on."
     mike.say "It's a costume party too, so you should think of something to come as."
@@ -225,15 +225,10 @@ label alexis_halloween_invitation:
         $ alexis.love += 1
         alexis.say "I can make an exception!"
         "I can't keep my face from breaking into an instant smile."
-        "Sure, maybe it makes me look like I was desperate."
-        "But it worked - Alexis is coming to the Halloween party!"
         mike.say "That's great, Alexis!"
         mike.say "At least it will be now you're coming."
         show alexis happy
         "Alexis smiles, like a cat that's got the cream."
-        "Yeah, I know that I'm stroking her ego right now."
-        "But can you blame me?"
-        "I have my date for the party."
         "An she's going to the hottest girl there!"
         show alexis normal
         alexis.say "Oh..."
@@ -304,7 +299,7 @@ label alexis_halloween_arrival:
             mike.say "I don't think you've ever looked more beautiful!"
             "Clutching her harp in one hand, Alexis steps into the hallway."
             "With the other she takes a firm hold of my wrist."
-            show alexis -blush
+            show alexis talk
             alexis.say "Come on, let's get mingling."
             alexis.say "That way you can show me off to all your friends!"
             "I nod as Alexis drags me along in her wake."
@@ -317,7 +312,7 @@ label alexis_halloween_arrival:
             mike.say "Well, it's just...an angel?"
             mike.say "Really, Alexis?"
             mike.say "Is that supposed to be ironic or something?"
-            show alexis confused
+            show alexis annoyed
             alexis.say "What do you mean?"
             mike.say "Come on, Alexis - you're hardly pure and innocent!"
             show alexis angry
@@ -360,7 +355,7 @@ label alexis_halloween_party:
             show fx question
             alexis.say "Ah...why's that?"
             mike.say "Because your date's cuter than the pair of them - right?"
-            show alexis confused
+            show alexis annoyed
             "For a moment Alexis looks confused."
             show alexis happy
             $ alexis.love += 2
@@ -375,13 +370,12 @@ label alexis_halloween_party:
             "After what she did to me back in high-school?!?"
             mike.say "Ah, Alexis..."
             mike.say "That's really not cool, you know?"
-            show alexis confused
+            show alexis annoyed
             "Alexis looks confused."
             alexis.say "What do you mean, [hero.name]?"
             alexis.say "Did I do something wrong?"
             "I can feel my cheeks flushing."
             "But I was the one that brought it up."
-            "So I have no choice but to push on."
             mike.say "I...I don't like you checking out other guys, Alexis."
             mike.say "It makes me feel nervous."
             show alexis angry
@@ -396,6 +390,7 @@ label alexis_halloween_party:
 label alexis_halloween_dance:
     $ game.pass_time(2)
     scene bg livingroom
+    $ flat_dress_overrides["alexis"] = "halloween"
     show alexis halloween
     with dissolve
     alexis.say "Have we actually danced together since high-school?"
@@ -406,7 +401,7 @@ label alexis_halloween_dance:
     "Alexis smiles and lets me take her hand."
     hide alexis with dissolve
     "We hurry over to the makeshift dance-floor."
-    show dance alexis halloween with dissolve
+    show alexis halloween dance with dissolve
     "And soon enough we're moving in time to the music."
     "Well, at least I thought I was moving in time."
     alexis.say "Oh, god - now I remember why we never danced."
@@ -415,8 +410,8 @@ label alexis_halloween_dance:
     alexis.say "Now there's a couple of guys that can dance!"
     menu:
         "React meekly":
-            hide dance
-            show alexis halloween sad with fade
+            hide alexis halloween dance
+            show alexis sad with fade
             mike.say "Hey, Alexis - stop looking at those other guys!"
             alexis.say "I...I was only..."
             mike.say "Never mind that."
@@ -429,20 +424,15 @@ label alexis_halloween_dance:
             alexis.say "Okay, [hero.name], okay."
             alexis.say "Point taken."
             hide alexis
-            show dance alexis halloween
+            show alexis halloween dance
             with fade
             "What follows is a pretty memorable slow dance."
             "Alexis holds herself against me the whole time."
             "And she never takes her eyes away from mine."
-            "Instead she stares deep into them from start to finish."
             "This means that I soon lose all track of time."
-            "Instead all I can do is enjoy the experience."
-            "And when you're dancing with a girl this special..."
-            "Well, can you really blame me for getting a little jealous?"
-            "Because I want her eyes on me every second we're together!"
         "React strongly":
-            hide dance
-            show alexis halloween confused with fade
+            hide alexis halloween dance
+            show alexis annoyed with fade
             mike.say "Oh yeah, Alexis?"
             mike.say "Then why don't you go dance with them, huh?"
             "Alexis takes a step backwards from me."
@@ -460,24 +450,19 @@ label alexis_halloween_dance:
             "But I don't want to answer her."
             "I'm afraid that if I do, everyone at the party will hear me."
     scene bg black with dissolve
+    $ flat_dress_overrides.pop("aletta", None)
     pause 1
     return
 
 label alexis_halloween_sex:
     if alexis.flags.story in [1, 3] and not game.flags.ryandead:
         scene bg livingroom with dissolve
-        "The idea was to spend tonight with my date, but things just seem to keep popping up."
-        "And I have to apologise to Alexis while I hurry off to take care of them as quickly as I can."
-        "Fixing the music, refreshing the snacks and even dealing with trick or treaters."
         "Where are [bree.name] and Sasha while all of this is going on, huh?"
         "It's starting to feel like I'm running this party all on my own!"
         "Finally I get a chance to break off and hurry back to Alexis."
         "But I can't seem to find her anywhere."
         "And so I start to search the house for her in earnest."
         "There's no sign of her until I get to my own bedroom door."
-        "So either she has to be in there or else she's gone home."
-        "I don't even want to think about the latter possibility."
-        "But the former would almost make up for her disappearing on me."
         "Maybe Alexis snuck up here to wait for me?"
         "Maybe she's in there right now, ready to have some fun?"
         "It's only as I put my hand on the door handle that I hear it."
@@ -485,75 +470,71 @@ label alexis_halloween_sex:
         "Well, I say voices - but there are audible words in what I hear."
         "Slowly and with infinite care, I open the door just wide enough."
         "And then I peer inside to see what's going on in my bedroom."
-        show alexis halloween ntr foursome with fade
-        "The sight that greets me is hard to process at first."
-        "All I can make out is a mass of limbs with perhaps four heads."
-        "But it soon resolves itself into four human bodies."
-        "Four human bodies that are intertwined on my bed!"
+        scene alexis_h_peek
         "I recognise Alexis first, naked and in the middle of it all."
         "She's sitting atop a guy that can only be Jack."
-        "And his cock is thrusting in and out of her ass."
-        "Scottie stands over her, his groin between her spread legs."
-        "His cock is deep inside of Alexis's pussy."
+        "And his cock is thrusting in and out of her pussy."
+        "Scottie stands over her, his cock is deep inside of Alexis's ass."
         "Last of all I see Ryan, kneeling on the bed beside her."
         "Alexis is licking at this last cock, taking it into her mouth."
         "For a moment I'm too stunned to even think."
+        scene alexis_h_close with fade
         "All I can do is keep right on staring at the four-way orgy happening right in front of me."
         "But then it dawns on me that I have to do something, that I can't just let it happen."
         menu:
             "Watch":
                 "Somehow I just can't find the courage to do anything other than watch."
-                "And so that's exactly what I do, silently and without moving a muscle."
+                scene expression make_anim(alexis_h_dp_doggy01, time=0.2, loop=True)
                 "I keep on peeping through the gap in the door as they all fuck Alexis."
                 "The sound of their grunting with effort fills my ears."
                 "That and the way in which she moans and groans the whole time."
-                "I don't know why I do it, why I don't burst in and stop it."
                 "I should be mad at what she's doing right now."
                 "With guys that I know, under my roof and on my own bed!"
+                scene expression make_anim(alexis_h_dp_doggy02, time=0.2, loop=True)
                 "But there's a weird fascination that takes hold as well."
                 "I remember when Alexis cheated on me in the past."
                 "And I always wondered what the actual act looked like."
                 "So maybe that's why I can't keep from watching in silence now?"
                 menu:
                     "Masturbate":
+                        scene expression make_anim(alexis_h_dp_reverse, time=0.2, loop=True)
                         "I hardly notice that I've unzipped my pants and pulled out my cock."
                         "It's already rock-hard in my hand, and I start masturbating a second later."
-                        "Now my own heavy breathing is added to the sounds reaching my ears."
-                        "I swallow hard, and then keep on panting as I watch Alexis get fucked."
                         "Am I actually getting off on the way she's humiliating me?"
                         "I don't want to contemplate what that says about me."
-                        "And so I push it out of my mind, concentrating on the here and now."
                         "Alexis is getting close to cumming now, I can see the tell-tale signs."
-                        "Jack, Scottie and Ryan look like they're going to lose it too."
-                        show alexis halloween ntr foursome cum ahegao
-                        "I can't tell who goes off first, but the effect is spectacular."
-                        "Alexis dances on two cocks while a third spatters cum on her face."
-                        "I feel the warmth of my own cum between my fingers a moment later."
-                        "Still panting and trying to shove my cock into my pants, I hurry off."
-                        "The shame of what I just saw and my reaction are already starting to hit home."
+                        scene alexis_h_dp08
+                        "I can’t tell who finishes first, but the result is messy."
+                        scene alexis_h_dp13
+                        "Jack, Scottie and Ryan stand over her. She kneels between them, waiting."
+                        scene alexis_h_dp14 with fade
+                        "Seconds later they cum across her face."
+                        "She licks and swallows everything without hesitation."
                     "Just watch":
+                        scene expression make_anim(alexis_h_dp_reverse, time=0.2, loop=True)
                         "Am I actually getting off on the way she's humiliating me?"
                         "I don't want to contemplate what that says about me."
                         "And so I push it out of my mind, concentrating on the here and now."
                         "Alexis is getting close to cumming now, I can see the tell-tale signs."
+                        scene alexis_h_dp08
                         "Jack, Scottie and Ryan look like they're going to lose it too."
-                        show alexis halloween ntr foursome cum ahegao
                         "I can't tell who goes off first, but the effect is spectacular."
-                        "Alexis dances on two cocks while a third spatters cum on her face."
-                        "I hurry off, the shame of the whole thing starting to dawn on me."
+                        scene alexis_h_dp13
+                        "The three of them look ready to finish too."
+                        "They stand around her. She kneels, waiting."
+                        scene alexis_h_dp14 with fade
+                        "They cum on her face. She drinks it all."
                 $ game.pass_time(1)
             "Interfere":
                 "There's just no way I can sit back and let this happen."
                 "Alexis made a fool of me once before."
                 "But I can't let her do the same thing to me again."
-                "Before I can lose the courage to do what needs to be done, I make my move."
                 scene bg bedroom1 with hpunch
                 "Throwing the door open, I storm straight into my bedroom."
                 mike.say "Alexis!"
                 mike.say "Just what the FUCK are you doing?!?"
                 show alexis naked surprised
                 "Alexis tries to let out a shriek of surprise."
-                "But it's stifled thanks to her having Ryan's cock jammed in her mouth."
                 hide alexis
                 show ryan halloween annoyed at mostleft4
                 "He jumps backwards a second later, solving the problem at a stroke."
@@ -565,7 +546,8 @@ label alexis_halloween_sex:
                 "When he tries to move, the motion sends Alexis tumbling off of him."
                 "She lets out another shriek as she falls onto the mattress."
                 "Then she bounces once before landing noisily on the floor."
-                show alexis naked sad at left4
+                $ flat_dress_overrides["alexis"] = "naked"
+                show alexis sad at left4
                 alexis.say "Ouch!"
                 alexis.say "Jeez, that really hurt!"
                 mike.say "You really expect me to give a shit, Alexis?"
@@ -596,39 +578,34 @@ label alexis_halloween_sex:
                 hide scottie
                 hide jack
                 hide alexis
-                show alexis naked sad
+                show alexis sad
                 with fade
                 "All three of the other guys get dressed and hurry out."
                 "Leaving me staring at Alexis."
                 show alexis normal
                 alexis.say "Aw, come on, [hero.name] - lighten up!"
                 alexis.say "This is supposed to be a party and I was getting bored, that's all."
-                show alexis confused
+                show alexis annoyed
                 mike.say "Yeah, well...you're not the only one that's getting bored, Alexis."
                 mike.say "I'm getting pretty tired of putting up with your shit too!"
                 "And with that, I turn my back on her and walk out of the room."
                 $ alexis.love -= 20
                 $ alexis.flags.story = 2
+                $ flat_dress_overrides.pop("alexis", None)
                 $ DONE["alexis_ntr_conversation"] = game.days_played
     else:
         scene bg livingroom
-        show alexis halloween
+        $ flat_dress_overrides["alexis"] = "halloween"
+        show alexis normal
         with dissolve
         "It's getting pretty close to midnight by now, the party winding down as the night draws on."
         "Almost everyone is either tired, drunk or a mixture of both and wants to chill out."
         "In fact, that's exactly what I think Alexis has in mind when I see her slipping upstairs."
         "She pauses for a moment and beckons for me to follow her, a conspiratorial grin on her face."
         "Of course, I hurry to follow her up the stairs and onto the landing."
-        "I'm not about to pass up the chance to do something fun with Alexis."
-        "Or even better, the chance to make out with her where nobody can see!"
         scene bg secondfloor
-        show alexis halloween
+        show alexis normal
         with fade
-
-
-
-
-
         alexis.say "What are you waiting for, [hero.name]?"
         show alexis flirt
         alexis.say "Get your ass in here with me!"
@@ -643,69 +620,49 @@ label alexis_halloween_sex:
         mike.say "You have to get out of there, Alexis!"
         mike.say "I've got a house full of people..."
         scene bg bedroom2
-        show alexis halloween
+        show alexis normal
         with fade
         "Alexis cuts me off by grabbing me and pulling me into the room."
-        "I really should have known better than to get so close."
         "Alexis is drunk and dead-set on having a good time."
         "What else was she going to do?"
         "I stagger into the bedroom, almost losing my balance."
         "And while I'm regaining it, Alexis is already going to work."
         "She has most of my costume off before I know it."
-        show alexis kiss halloween with fade
+        show alexis kiss with fade
         $ alexis.flags.kiss += 1
         "Her lips are pressed against mine the whole time."
-        "And then I feel her hand grab hold of my cock too."
-        "That's what decides it for me, what changes my mind."
         "We're well and truly doing this thing now."
-        "And if we do get caught, there's only two explanations."
         "One is that I stumbled in with my clothes on and thrashed around like a clown."
         "Or the other is that I agreed to come out here and fuck Alexis in [bree.name]'s bedroom."
         "I don't know about you, but I prefer the latter option!"
-        show alexis cowgirl halloween hard with fade
+        scene alexis_h_fuck01 with fade
         "Without hesitation, I pull Alexis onto the bed atop me."
-
-
-
-
         "It only takes a couple of seconds for me to find what I'm looking for."
-        show alexis cowgirl vaginal
         "And when I do, I push my now hard cock straight into it."
+        scene alexis_h_fuck01
         alexis.say "Oh..."
         alexis.say "Oh yeah..."
         alexis.say "That's what I need!"
         "Alexis sinks slowly down and onto my cock."
-        "Her expression melts into one of sheer pleasure."
-        "And I feel her surrender to me in that moment too."
+        scene expression make_anim(alexis_h_cowgirl01, time=0.25, loop=True)
         "I take it slow, thrusting in and out with care."
-        "All the time I savour the feeling, and the sight of Alexis too."
         "She sits on top of me, almost helpless as I fuck her."
         "Her eyes are half closed and her mouth hangs open."
-        "The motion of my cock is making her breasts sway in sympathy."
-        "And I can't keep from reaching out to caress them."
+        scene alexis_h_fuck_ahegeo
         alexis.say "Mmm..."
         alexis.say "That feels good..."
         alexis.say "Play with me more..."
-        "I do as she asks, squeezing and pinching."
+        scene expression make_anim(alexis_h_cowgirl02, time=0.25, loop=True)
         "Alexis moans as I tease her nipples."
         "And I feel her pussy quiver as I push her breasts together."
-        "By now I'm past caring if someone sees what we're doing."
-        "All I can think about is watching Alexis ride my cock."
         "And she seems to be in another world entirely."
         "In fact, I think I'm the only thing keeping her upright!"
-        show alexis cowgirl creampie ahegao with vpunch
-        "So when I feel myself cumming, I make sure to hold her tight."
-        with vpunch
-        "Alexis's eyes almost roll into her head when it happens."
-        with vpunch
-        "And she suddenly clings to me as I lose it inside of her."
-        show alexis cowgirl -vaginal limp -creampie drip
-        show pussy_insert alexis cum zorder 1 at zoomAt(0.75, (40, 200))
-        "Her head is on my shoulder, and she's panting into my ear."
-        "Tangled into a knot of limbs, we float together on [bree.name]'s bed."
-        hide pussy_insert
+        scene alexis_h_fuck08
+        "As I get close I pull out. She grabs my cock and strokes it."
+        scene alexis_h_fuck09 with vpunch
+        "I cum across her face and into her mouth. She swallows it."
+        $ flat_dress_overrides.pop("alexis", None)
         $ alexis.sexperience += 1
         $ game.pass_time(1)
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

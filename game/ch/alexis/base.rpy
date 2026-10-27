@@ -267,24 +267,12 @@ label alexis_kiss:
     if alexis.love < 25 and not alexis.is_girlfriend and not game.active_date.score >= 75:
         show alexis
         if randint(1, 2) == 1:
-            "Are you supposed to know when the moment's right for something like this, or is it just a matter of trusting to instinct?"
-            "When the time's right, you're supposed to know it, but even that knowledge has to be instinctive!"
-            "Either way, I can't keep from leaning in closer towards Alexis right now, turning so that I'm at just the right angle for our lips to meet."
-            "She's facing slightly away from me as I do this, meaning that she doesn't see me until the moment that she turns in my direction."
-            "All I can see is the fluttering of her blonde hair and the outline of her cheek, and then the shape of her lips."
-            "I wonder if they'll feel familiar to kiss after all this time, or if it'll be possible for me to recall their feel at all."
-            "I close my eyes in anticipation of feeling them press against mine..."
-            "But then all I feel is the curve of her cheek, as Alexis instinctively pulls away from me and pushes me back at the same time."
-            "All I get is the scent of her hair and the instant sense of embarrassment that comes with knowing that my advances have been rejected."
-            "I mumble something vague about being sorry, and turn away to keep Alexis from seeing that my face has coloured from the experience."
-            "And she in turn mutters something equally bland about it not being a big deal, timing and all those other things that don't really help matters."
+            "I lean in, angling for her lips. She turns at the last second. My mouth meets her cheek instead."
+            "She pulls back at once. I catch the scent of her hair and the sharp sting of rejection."
+            "I mumble an apology and look away, face burning. She mutters that it’s fine, timing and all that."
         else:
-            "I'll be honest - it's not like in all the time we were apart, I ever really forgot what it was like to be with Alexis."
-            "Or in this case, what it was like to kiss her."
-            "Maybe that's what leads to me making a mess of it this time around."
-            "Maybe I'm so used to the memory of kissing her that I just assume she'll be okay with it."
-            "Whatever the reason, as soon as I make my move, Alexis recoils like she's been stung."
-            "Of course, she apologises straight after, but I still think it was me that was likely in the wrong..."
+            "I move to kiss her, certain the old memory still holds. She recoils like she’s been stung."
+            "She apologises a heartbeat later, but the damage is done. I was the one who misread the moment."
         hide alexis
         $ alexis.love -= 5
         $ alexis.sub -= 5
@@ -295,63 +283,30 @@ label alexis_kiss:
             $ alexis.lesbian -= 1
         show alexis kiss
         if randint(1, 2) == 1:
-            "Don't ask me how I know - but I know!"
-            "There's just something in the way that Alexis's gaze lingers on me as she turns away for a moment."
-            "It's not visible desire or anything so obvious, more a warmth in her eyes that tells me she wants something more."
-            "I don't say anything, as this isn't a matter of saying the right thing either."
-            "This is about instincts and cues that are far older than words."
-            "When Alexis turns back to me, I lean in and place my lips against hers."
-            "This is one of those moments when the world is no larger than the two of you, and it's perfect while something impermanent lasts."
-            "She returns the kiss immediately, gently at first, and then with a growing sense of confidence as we come together."
-            "I can't remember how we used to kiss when we were teenagers, and truth be told, I don't care to."
-            "The Alexis from back then is gone, and I only care about the one that's here, in my arms right now."
-            "It seems to last for the longest time, but in truth I guess that we could only have been kissing for perhaps a minute at the most."
-            "And in that brief moment, I begin to feel like the years that we were apart were only a brief interlude between then and now."
-            "As though I've been waiting for her to come back to me, and now that she has, I can start living again."
+            "Her gaze lingers a moment longer than necessary. When she turns back I lean in and kiss her."
+            "She answers at once, gentle at first, then surer. The years apart shrink to nothing while our lips stay pressed together."
+            "It feels like a first time all over again."
         else:
-            "I've been wondering about this moment, ever since Alexis came back into my life."
-            "What will it be like to kiss her again, after so much time has passed?"
-            "Will it be just like I remember, back when we were kids?"
-            "Will it be better now that we're both so much more mature and sure of ourselves?"
-            "I've even worried that it might be worse, a disappointment compared to my precious memories..."
-            "But when the time finally does come, it's nothing like what I remembered."
-            "It doesn't feel at all like I recall, but like something completely new."
-            "I can't help but think that's a good sign, like we're starting over, with the chance to get it right this time."
+            "I have wondered how it would feel to kiss her after so long. When it finally happens it is nothing like the old memory."
+            "It is new. That seems like the right way to start."
         hide alexis kiss
+        show alexis
         if alexis.love >= 60:
-            show alexis
             alexis.say "Um, I think we should talk about this later, alright?"
         else:
-            show alexis
             alexis.say "Oh uh... I've got to go..."
-            "Before I can object, Alexis begins in the opposite direction."
-            "She seemed a little uncomfortable, did I do something wrong?"
+            "She slips away before I can answer. She looked uneasy. Did I push too soon?"
         $ alexis.flags.kiss += 1
     else:
         hide alexis
         show alexis kiss
         if randint(1, 2) == 1:
-            "I know now just when Alexis is leaning into me with that very specific angle to her head and the right look in her eye."
-            "I don't hesitate to match her movements so that our lips meet at just the right point for me to feel that spark of excitement."
-            "No matter how many times we kiss like this, it never seems to become boring or routine."
-            "A part of the thrill that I felt the very first time we kissed after Alexis came back into my life seems to always linger on my lips afterward as well."
-            "I seem to be taking every single chance that I can get to kiss her now as well."
-            "Now that we're entwined, I risk gently pushing my tongue between her lips."
-            "My reward is to have her own tongue come to meet it, caressing and exploring as it slips into my mouth."
-            "Our bodies mirror this same movement, as we wrap our arms around each other and pull closer together still."
-            "At times like this I find it hard to remember just where we are, as the world around us just seems to lose all importance."
-            "We could be alone or in the middle of a crowded room, and the only person on my mind would still be Alexis."
-            "I don't know exactly when we became one of those couples that people walk past and tut at for spending all their time kissing."
-            "But the reality of the matter is that, when I'm with her, I hardly care."
+            "I know the angle of her head and the look in her eye. Our lips meet and the spark is still there."
+            "I slip my tongue between her lips. Hers meets it. Arms tighten around each other. The rest of the room fades."
+            "Kissing her never turns routine."
         else:
-            "I honestly think I'm starting to forget what it used to be like kissing Alexis."
-            "At least what it was like to do that back when we were both just teenage kids."
-            "Somehow the feeling of her stealing a kiss from me in the here and now is just so much better than anything I remember."
-            "And she seems to want to do it as many times as she can manage too."
-            "Sometimes it's a peck on the lips and others it's a longer, much more involved affair."
-            "But every single time it's memorable enough to feel like it's pushing one of the older memories out and taking its place."
-            "Which is fine with me, as I can use all the pleasant memories I can get."
-            "So long as they replace the older, more unpleasant ones..."
+            "The old teenage kisses are fading. These new ones are better. Sometimes a quick peck, sometimes longer."
+            "Each one pushes an older memory aside. I don’t mind. The new ones are the ones I want to keep."
         hide alexis
         $ alexis.love += 2
         $ alexis.flags.kiss += 1
@@ -372,10 +327,10 @@ label alexis_sleep_date_fuck(location="hero"):
                 $ alexis.sub += 1
                 call sleep from _call_sleep_23
             "You should sleep here":
-                show cuddle alexis
+                show alexis sleep
                 mike.say "You can stay and sleep here."
                 "I say, my voice a little shaky."
-                show cuddle alexis
+                show alexis sleep
                 "We curl up spooning together in bed, drifting toward sleep."
                 $ alexis.love += 1
                 call sleep ("alexis") from _call_sleep_6
@@ -383,113 +338,68 @@ label alexis_sleep_date_fuck(location="hero"):
     return
 
 label alexis_propose_male:
-    "I was all prepared for this moment, hell knows I've gone over it a thousand - no, a million times in my head!"
-    "In fact, I even thought about how I'd go about doing this when Alexis and I were together in high school."
-    "But now that I've committed myself to popping the question, I've turned into a mess of nerves and cliches!"
-    "I'm sweating bullets, stumbling over my words and constantly worrying that I've managed to lose the damn ring."
-    "And all of this is before I've even chosen the moment to get down on one knee and actually ask her to marry me!"
-    "Alexis keeps looking at me sideways, and I just know that she's starting to get suspicious."
+    "I’ve rehearsed this a thousand times. Now that the moment is here, I’m a mess of nerves."
+    "Sweating, stumbling over words, terrified I’ve lost the ring. Alexis keeps glancing at me."
     show alexis confused with fade
     alexis.say "Ah, [hero.name]..."
-    alexis.say "What's with you today?"
-    alexis.say "You look like a guy waiting bad news!"
-    "Oh great - she's calling me out!"
-    "I do the best I can to recover and look like there's nothing on my mind."
-    "But from the look on Alexis's face, I'm guessing that it's not working."
+    alexis.say "What’s with you today?"
+    alexis.say "You look like a guy waiting for bad news!"
+    "She’s calling me out. I try to play it cool."
     mike.say "What?!?"
-    mike.say "Don't be silly, Alexis!"
-    mike.say "I'm fine, just fine!"
+    mike.say "Don’t be silly, Alexis!"
+    mike.say "I’m fine, just fine!"
     show alexis normal
-    "Okay, this is it - now or never."
-    "Time to go with one of the contingency plans I cooked up."
+    "Now or never."
     mike.say "Oh..."
     mike.say "Ah shoot..."
     mike.say "I think I dropped something around here..."
-    "I make a show of crouching down and pretending to search on the ground."
-    "Alexis steps back a little, either trying to give me room or else humouring me."
-    "And I take this as my chance to move to the next stage of the plan."
-    "So, while taking a deep breath, I pull out the ring."
-    "Then I look up at her, holding it in my hand."
+    "I crouch, pretending to search. She steps back. I pull out the ring and look up."
     mike.say "Alexis..."
-    mike.say "Will...will you marry me?"
+    mike.say "Will... will you marry me?"
     show alexis surprised
-    "The effect on Alexis is instant and more dramatic than I'd expected."
-    "I always thought that she'd be as cool as can be when I asked her to marry me."
-    "But she looks genuinely shocked, as if it was the last thing she expected to hear."
-    "Maybe she is surprised, or maybe she just can't control her reaction to something so important."
-    "Either way, Alexis claps her hands over her mouth, and her eyes go wide in the same moment."
+    "Her hands fly to her mouth. Eyes wide. Genuine shock."
     if alexis.love >= 195:
-        "Without a word of warning, Alexis grabs the hand holding the ring."
-        "And then, with a surprising show of strength, she yanks me to my feet."
-        "Her eyes are still wide, but now I can see that they're also welling with tears too!"
+        "Without a word she grabs my hand and yanks me to my feet. Tears well in her eyes."
         mike.say "Ah..."
         mike.say "Alexis..."
         mike.say "Are you okay?"
-        "Alexis shakes her head and waves her hands in front of her face."
-        "It's like she's trying to overcome the emotions that she's feeling right now."
+        "She waves her hands, fighting the emotion."
         show alexis happy
-        alexis.say "I...I'm okay..."
-        alexis.say "This is...this is just a shock!"
-        alexis.say "I...I never thought that...that you'd want to..."
-        "I keep nodding, trying to follow Alexis as she begins to babble."
-        alexis.say "Oh...of course I will, [hero.name]!"
-        alexis.say "Of course I'll marry you!"
-        "Now it's my turn to be surprised and left at a loss."
-        "It's the answer that I wanted to hear, sure it is."
-        "But suddenly I don't know what I'm supposed to do next."
-        "Luckily for me, Alexis come to my aid a moment later."
-        "She thrusts one hand forwards while using the other to wipe her eyes."
-        "And I jump to attention, pushing the ring onto her finger."
-        "As soon as I do so, I feel a weight lifted off my shoulders."
-        "It's a weight I hadn't realised was there."
-        "It's the weight of the past, of the things that broke us up back in high-school."
-        "None of that seems to matter anymore, in fact, it seems crazy that it ever did."
-        "No, what matter is here and now, that and where we're going in the future."
-        "Or to be more precise, that we're going there together."
-        "Alexis keeps a hold of my hand as she kisses me full on the lips."
-        "And that gesture, as much as the ring on her finger, tells me this is going to work."
-        "It was a long journey getting here, but it was worth the struggles along the way."
+        alexis.say "I... I’m okay..."
+        alexis.say "This is... this is just a shock!"
+        alexis.say "I never thought that you’d want to..."
+        "I nod, following her babble."
+        alexis.say "Oh... of course I will, [hero.name]!"
+        alexis.say "Of course I’ll marry you!"
+        "I’m the one stunned now. She thrusts her hand forward. I slide the ring on."
+        "A weight lifts—the old high-school break-up, all of it. None of it matters anymore."
+        "What matters is now, and that we’re going forward together."
+        "She keeps hold of my hand and kisses me. The ring and the kiss both say the same thing: this will work."
         $ alexis.set_fiance()
     else:
-        "But when Alexis finally gives me some kind of sign, it's not the one I wanted."
-        "At first she doesn't say a word, just shakes her head, slowly at first and then faster."
-        "And I don't need to be told what that means."
-        "I can already feel the sensation of my heart snapping in two."
-        "She's done it to me again - broken my heart twice!"
+        "She shakes her head, slow at first, then faster. My heart snaps."
         show alexis sad
         alexis.say "Oh god..."
-        alexis.say "I'm so sorry, [hero.name]!"
-        alexis.say "But I can't marry you...I just can't."
-        "I'm still on my knees, and I know I should get up."
-        "But I just can't stop myself responding."
-        "Even though I know it makes me look pathetic, like I'm pleading with Alexis."
-        "Well...I guess I really am pleading with her!"
-        "I just don't seem to be able to stop myself."
+        alexis.say "I’m so sorry, [hero.name]!"
+        alexis.say "But I can’t marry you... I just can’t."
+        "I’m still on my knees. I can’t stop myself."
         mike.say "But..."
         mike.say "But why, Alexis?"
-        mike.say "I thought we'd both moved on, put the past behind us?"
-        mike.say "Haven't we been getting on better than we ever did before?"
-        "Alexis shakes her head at this, and I can see she's torn by what I'm saying."
-        "This gives me a faint glimmer of hope."
-        "As it means the problem may not be our relationship."
+        mike.say "I thought we’d both moved on?"
+        mike.say "Haven’t we been getting on better than ever?"
+        "She shakes her head, torn."
         show alexis sadsmile
-        alexis.say "That's exactly why we're working now, [hero.name]!"
-        alexis.say "Don't you see that?"
-        alexis.say "You're not hung up about stuff that doesn't matter anymore."
-        alexis.say "We've kept it cool and casual, and it's working!"
+        alexis.say "That’s exactly why we’re working now, [hero.name]!"
+        alexis.say "Don’t you see?"
+        alexis.say "We’ve kept it cool and casual, and it’s working!"
         alexis.say "Our problem was always too much commitment, not enough!"
-        "It's not what I wanted to hear, not at all."
-        "But as I listen to Alexis explain herself, I find myself nodding in agreement."
-        "She's not wrong when she says we're both different people now, more laid back."
-        "And there's been none of the old bullshit that came between us in the past."
-        "Maybe this isn't the time to be thinking about making it official?"
-        "Slowly getting back to my feet, I let out a sigh of defeat."
+        "It hurts, but she’s not wrong. We’re different people now. No old bullshit."
+        "Maybe this isn’t the time."
+        "I stand, sighing."
         mike.say "Okay, Alexis..."
         mike.say "Point taken."
-        mike.say "I just wish I hadn't gone down on one knee before you said all that!"
-        "Alexis gives me a pained smile and a kiss on the cheek."
-        "It doesn't make everything better, but it does give me hope."
-        "Hope that we still have a future together."
+        mike.say "I just wish I hadn’t gone down on one knee first!"
+        "She gives me a pained smile and a kiss on the cheek. Not enough to fix it, but enough for hope."
         $ alexis.love -= 25
         $ alexis.sub -= 25
     return
@@ -558,4 +468,3 @@ label alexis_ask_date_audrey_reona:
         $ hero.calendar.add(day, HaremAppointment(hour, "thot", ["alexis", "audrey",  "reona"], "thot_harem_foursome_intro"))
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

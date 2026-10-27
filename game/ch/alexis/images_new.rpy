@@ -21,6 +21,7 @@ init python:
         "sport",
         "underwear",
         "naked",
+        "halloween"
     ])
 
     alexis_blowjob_bed = [
@@ -50,4 +51,44 @@ init python:
         "ev2/alexis/hottub10.jpg",
         "ev2/alexis/hottub11.jpg",
         "ev2/alexis/hottub10.jpg"
+    ]
+
+    alexis_h_dp_doggy01 = [
+        "ev2/alexis/h_dp01.jpg",
+        "ev2/alexis/h_dp02.jpg",
+        "ev2/alexis/h_dp03.jpg",
+        "ev2/alexis/h_dp02.jpg",
+        "ev2/alexis/h_dp01.jpg",
+    ]
+
+    alexis_h_dp_doggy02 = [
+        "ev2/alexis/h_dp04.jpg",
+        "ev2/alexis/h_dp05.jpg",
+        "ev2/alexis/h_dp06.jpg",
+        "ev2/alexis/h_dp05.jpg",
+        "ev2/alexis/h_dp04.jpg",
+    ]
+
+    alexis_h_dp_reverse = [
+        "ev2/alexis/h_dp09.jpg",
+        "ev2/alexis/h_dp10.jpg",
+        "ev2/alexis/h_dp11.jpg",
+        "ev2/alexis/h_dp10.jpg",
+        "ev2/alexis/h_dp09.jpg",
+    ]
+
+    alexis_h_cowgirl01 = [
+        "ev2/alexis/h_fuck02.jpg",
+        "ev2/alexis/h_fuck03.jpg",
+        "ev2/alexis/h_fuck04.jpg",
+        "ev2/alexis/h_fuck03.jpg",
+        "ev2/alexis/h_fuck02.jpg",
+    ]
+
+    alexis_h_cowgirl02 = [
+        "ev2/alexis/h_fuck05.jpg",
+        "ev2/alexis/h_fuck06.jpg",
+        "ev2/alexis/h_fuck07.jpg",
+        "ev2/alexis/h_fuck06.jpg",
+        "ev2/alexis/h_fuck05.jpg",
     ]

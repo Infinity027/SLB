@@ -22,6 +22,7 @@ init python:
         "towel",         # after a shower
         "sleep",         # sleepwear
         "naked",
+        "halloween"
     ])
 
     #sasha_mast01 = [

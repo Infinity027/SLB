@@ -438,7 +438,8 @@ label aletta_halloween_party:
 label aletta_halloween_dance:
     $ game.pass_time(2)
     scene bg livingroom
-    show aletta halloween
+    $ flat_dress_overrides["aletta"] = "halloween"
+    show aletta normal
     with dissolve
     "Aletta and I have been standing around chatting for a while now."
     "But the whole time, I've been tapping my foot to the music that's playing."
@@ -469,7 +470,7 @@ label aletta_halloween_dance:
             "And then she seems to give in, following along after me."
             "It's when we're actually out there that she seems to relax."
             "Aletta's normally haughty demeanour changes subtly."
-            show aletta dance with fade
+            show aletta halloween dance with fade
             "What follows is a pretty memorable slow-dance."
             "I get to enjoy the sensation of being close to Aletta."
             "Her almost statuesque body close to mine."
@@ -491,6 +492,7 @@ label aletta_halloween_dance:
             "And we both remain standing right where we are."
     scene bg black with dissolve
     pause 1
+    $ flat_dress_overrides.pop("sasha", None)
     return
 
 label aletta_halloween_sex:

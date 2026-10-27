@@ -20,6 +20,7 @@ init python:
         "sport",
         "underwear",
         "naked",
+        "halloween"
     ])
 
     emma_hottub = [

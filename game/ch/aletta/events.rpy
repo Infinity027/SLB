@@ -2713,7 +2713,7 @@ label aletta_event_03:
     show aletta talk
     aletta.say "So do you understand what I am saying?"
     show aletta normal
-    mike.say "Uh, yeah. I-I mean, yes, Aletta. I should be able to get it done no problem."y
+    mike.say "Uh, yeah. I-I mean, yes, Aletta. I should be able to get it done no problem."
     aletta.say "That's a relief. I was really worried about how to get this assignment done. I really don't need corporate on my ass again."
     show aletta pain
     "She sighs and reaches back to rub her tense shoulders."

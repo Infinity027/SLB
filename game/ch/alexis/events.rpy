@@ -474,24 +474,23 @@ label alexis_event_02:
     "I check my watch and glance around - she's not hiding behind any of the potted plants or pillars."
     "At a loss, I wander over to the maitre d', trying not to look too out of my element."
     "I mean, shit - this place is serious enough to have a damn maitre d'!"
-    "Apparently the young lady who booked the table called ahead to say she was running late."
     "She left instructions that the gentleman should be shown to the table to await her arrival."
     "It occurs to me that it would have been pretty easy for Alexis to let me know she'd be late too."
     "Already she's managed to wrong-foot me, even before I've laid eyes on her."
     "I want to believe it's just an honest mistake, really I do."
     "But this smacks so much of the Alexis that I used to know..."
     "I resolve that when she finally graces me with her presence, I'll lay down some basic rules."
-    "I don't want this reunion going the same way as our former relationship."
-    show alexis date at center, zoomAt(1.0, (1040, 720)) with easeinright
+    $ flat_dress_overrides["alexis"] = "date"
+    show alexis normal at center, zoomAt(1.0, (1040, 720)) with easeinright
     "But the moment I look up and see her breezing casually in, everything else disappears from my mind."
     "I might have mentioned, in passing, that Alexis was pretty cute back in the day."
     "Alexis was stunning...and she still is."
     "If she was a hot teenager when we were together, she's grown into an even hotter woman."
     "Where she used to have the body of a girl yet to bloom, the red dress now hugs the curves of an amazing feminine figure."
-    show alexis date happy at center, zoomAt(1.0, (840, 720)) with ease
+    show alexis happy at center, zoomAt(1.0, (840, 720)) with ease
     "Then she spots me, and waves."
     "Before I can stop myself, I'm standing up and waving back, smiling like a fool."
-    show alexis smile at center, traveling(1.5, 0.3, (640, 1040))
+    show alexis smile at center, traveling(1.15, 0.3, (640, 1040))
     "She walks over, and I can hear the clacking of her high heels on the tiled floor."
     "I try to keep a sensible head on my shoulders, but she looks like something out of a damn movie."
     show alexis talk
@@ -503,7 +502,7 @@ label alexis_event_02:
     menu:
         "Pull out Alexis' chair":
             "I know it's a bit old-fashioned, but we are in a pretty up-market kind of place."
-            show alexis at center, zoomAt(1.5, (640, 1140)) with ease
+            show alexis at center, zoomAt(1.15, (640, 1140)) with ease
             "I hurry round to pull out her chair and make sure she's seated comfortably."
             "She smiles in approval, clearly gratified to have me treat her in such a gentlemanly manner."
             $ alexis.sub -= 5
@@ -514,13 +513,13 @@ label alexis_event_02:
             "I pretend not to understand and just sit straight back down."
             show alexis annoyed
             "I can tell she's momentarily put out."
-            show alexis at center, zoomAt(1.5, (640, 1140)) with ease
+            show alexis at center, zoomAt(1.15, (640, 1140)) with ease
             "But calling me out on it would make her look like a bit of a bitch, so she just sits down herself."
     hide alexis
-    show restaurant meal alexis date nomeals with fade
+    scene alexis dinner with fade
     "As the menus arrive - in a place so style over substance I can't even guess the cuisine - we try to make small-talk."
     mike.say "I'm guessing there was a bit of a mix-up with the times tonight?"
-    show restaurant meal alexis date nomeals happy
+    scene 
     "Alexis smiles over the top of her menu and lightly waves the comment away."
     alexis.say "Oh, [hero.name], that's fine - there's no need to apologise!"
     "What - did she actually just let me off the hook for something that she did?!?"
@@ -667,6 +666,7 @@ label alexis_event_02:
     alexis.say "It's so kind of you to agree to treat me like this!"
     "She flutters her eyelids as I allow the waiter to rob me blind."
     "I just hope this is a simple case of miscommunication, and that Alexis isn't a gold-digger eyeing me up as her latest claim."
+    $ flat_dress_overrides.pop("aletta", None)
     $ hero.money -= 500
     $ game.pass_time(2)
     return

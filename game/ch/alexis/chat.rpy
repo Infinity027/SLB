@@ -197,4 +197,3 @@ label alexis_bad_sweet_talk_male:
     hide alexis
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

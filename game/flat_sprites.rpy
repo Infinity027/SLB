@@ -11,20 +11,13 @@
 #  See ch/sasha/images.rpy for a worked example.
 # =============================================================================
 
+default flat_dress_overrides = {}
+
 init -5 python:
 
     # --- the expression vocabulary the game actually uses (filenames must match) ---
     FLAT_EXPRESSIONS = [
         "normal", "talk", "happy", "smile", "sad", "angry", "annoyed", "surprise", "blush", "flirt", "sleep",
-    ]
-
-    # --- sex-scene poses are a SEPARATE axis: images/<char>/poses/<pose>/<face>.png
-    #     (only used as a safety net for now; full pose art comes later) ---
-    FLAT_POSES = [
-        "doggy", "cowgirl", "missionary", "cunnilingus", "reverse", "bj",
-        "blowjob", "tittyfuck", "titfuck", "titjob", "spoon", "piledriver",
-        "fullnelson", "carsex", "showersex", "lapdance", "threesome", "hj",
-        "handjob", "mast", "stand", "standing", "spank", "spanking", "strap",
     ]
 
     # characters that use the flat system  ->  their dress folders
@@ -33,9 +26,11 @@ init -5 python:
     # ---- the resolver: picks images/<char>/<dress>/<expr>.png at render time ----
     def _flat_sprite(st, at, char=None, dress=None, expr="normal"):
         p = Person.find(char)
-        d = dress or (p.get_clothes() if p else "casual")
+        # An explicitly requested dress always wins. A label can otherwise set
+        # a short-lived override for one character (for example, a costume).
+        override = getattr(renpy.store, "flat_dress_overrides", {}).get(char)
+        d = dress or override or (p.get_clothes() if p else "casual")
 
-        # Old scripts use variants such as "casual2", while the flat art uses
         # the "casual" folder. Try the exact folder first, then its base name.
         dresses = [d]
         if d and d[-1:].isdigit():
@@ -46,22 +41,13 @@ init -5 python:
         # Support the common image formats rather than returning a blank sprite.
         for current_dress in dresses:
             for current_expr in (expr, "normal"):
-                for extension in (".png", ".jpg", ".jpeg", ".webp"):
+                for extension in (".png", ".jpg", ".webp"):
                     path = "images/%s/%s/%s%s" % (
                         char, current_dress, current_expr, extension
                     )
                     if renpy.loadable(path):
                         return Image(path), None
         return Null(), None     # nothing on disk yet -> blank, never an error
-
-    def _flat_pose(st, at, char=None, pose=None, face="normal"):
-        for path in (
-            "images/%s/poses/%s/%s.png" % (char, pose, face),
-            "images/%s/poses/%s/normal.png" % (char, pose),
-        ):
-            if renpy.loadable(path):
-                return Image(path), None
-        return Null(), None
 
     # ---- register all standard talking forms for a character ----
     def register_flat_character(char_id, dresses):
@@ -86,12 +72,19 @@ init -5 python:
             return None                       # not a flat char -> let Ren'Py handle it
         char = name[0]
         attrs = list(name[1:])
-        pose = next((a for a in attrs if a in FLAT_POSES), None)
-        if pose:
-            face = next((a for a in attrs if a in FLAT_EXPRESSIONS), "normal")
-            return DynamicDisplayable(_flat_pose, char=char, pose=pose, face=face)
-        dress = next((a for a in attrs if a in FLAT_CHARS.get(char, [])), None)
-        expr = next((a for a in attrs if a in FLAT_EXPRESSIONS), "normal")
+        dresses = FLAT_CHARS.get(char, [])
+        # Accept old numbered outfit names such as "casual2" as well.
+        dress = next(
+            (a for a in attrs if a in dresses or a.rstrip("0123456789") in dresses),
+            None,
+        )
+        expr = next((a for a in attrs if a in FLAT_EXPRESSIONS), None)
+        if expr is None:
+            # Action images do not need to be pre-registered in
+            # FLAT_EXPRESSIONS. For `show aletta halloween dance`, use
+            # "dance" as the filename and let _flat_sprite fall back to
+            # normal if that image is not available.
+            expr = next((a for a in reversed(attrs) if a != dress), "normal")
         return DynamicDisplayable(_flat_sprite, char=char, dress=dress, expr=expr)
 
     config.missing_image_callback = _flat_missing_image

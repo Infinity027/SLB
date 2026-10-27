@@ -1,5 +1,6 @@
+default room = None
+
 label enter_room(back="street", room_present_girls=[], max_time=0):
-    $ renpy.dynamic("room")
     if game.room and Room.find(game.room):
         $ room = Room.find(game.room)
     else:
@@ -17,7 +18,7 @@ label enter_room(back="street", room_present_girls=[], max_time=0):
     $ room.pay_entrance()
     $ hero.flags.visited_rooms.add(game.room)
     $ room.stop_sounds_on_channels()
-    scene expression room.bg
+    scene expression Room.find(game.room).bg
     while game.room == room.id:
         if date_girl and (not active_girl or active_girl != date_girl):
             $ active_girl.object = date_girl
@@ -44,8 +45,7 @@ label enter_room(back="street", room_present_girls=[], max_time=0):
                 if (date_girl.object and date_girl.object != cache_date_girl) or (active_girl.object and active_girl.object != cache_active_girl) or (smartphone_girl.object and smartphone_girl.object != cache_smartphone_girl) or (event.quit) or game.flags.EventQuit:
                     $ game.flags.EventQuit = False
                     $ valid_events = []
-        scene expression room.bg
-
+        scene expression Room.find(game.room).bg
 
         $ hide_people()
         $ game.flags.room_showing_people = []
