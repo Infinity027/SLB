@@ -603,254 +603,145 @@ label anna_event_02:
     if anna.love.max < 80:
         $ anna.love.max = 80
     scene bg bedroom1
-    "One thing that Anna's been pretty keen on telling me since we started spending time together is just how much she loves horror movies."
-    "If there had been something new and particularly gruesome showing at the local cinema, then I wouldn't have hesitated to take her along to see it."
-    "Even better would have been one of those festivals of horror, where the independent cinema shows obscure, cult classics of the genre."
-    "But as neither of those things are an option, I have to settle for inviting Anna round to my place to watch some films with me there."
-    "Before the appointed hour arrives, I send her a list of the titles in my collection, asking her to choose her pick."
-    "Unfortunately for me, she soon lets me know that she's seen all of them, and on multiple occasions too."
-    "Just then I remember that [bree.name] actually has a couple of horror movies amongst her collection that I've honestly never even heard of before."
+    "Anna never shuts up about how much she loves horror movies."
+    "With nothing new or gruesome showing at the cinema, I settle for inviting her round to watch some films at my place."
+    "I send her my collection to pick from - but she's seen every one of them, several times over."
     scene bg bedroom2 with fade
-    "So I fire off a quick message to Anna, telling her not to worry, and then ask [bree.name]'s permission to rummage through her video nasties."
-    "I soon find that the only problem with this is that, while [bree.name] does indeed have a number of horror movies to choose from, they seem to be from a kind of strange sub-genre."
-    "All of them are filled with high-school kids that turn into werewolves on the basketball court and cheerleaders that slay vampires."
-    "It's like someone mashed together the tropes of horror and teen movies from the eighties, creating a baffling mixture of the two."
-    "All of the vampires are troubled pretty-boys that just need to be understood by the rebellious girls that they inevitably fall in love with."
-    "Well, that is the ones that don't turn out to be once-in-a-generation chosen ones, and drive a stake through their hearts."
-    "In the end, I just grab one that looks like it's about vampires and more recent than the others."
-    "I mean, just how bad can it be?"
+    "Then I remember [bree.name] has a few horror movies I've never even heard of, so I ask to raid her shelf."
+    "The catch: they're all some bizarre sub-genre - high-school kids turning into werewolves on the basketball court, cheerleaders slaying troubled pretty-boy vampires who just need to be understood."
+    "I grab the one that looks most recent and vaguely about vampires. How bad can it be?"
     play sound door_knock
-    "Almost the same moment that I have the DVD in my hand, I hear a knock at the front door."
-    "I hurry out of [bree.name]'s room and down the stairs into the hallway, eager to let Anna in and get the evening started."
+    "Almost the moment I've got the DVD in hand, there's a knock at the door, and I hurry down to let Anna in."
     scene bg black with dissolve
     pause 0.1
     scene bg house
     show anna casual
     with wiperight
-    "But when I open the door, she simply stands there, not making any effort to enter."
+    "She just stands there, not moving to come in."
     anna.say "Well, aren't you going to invite me in?"
-    mike.say "Erm, I thought that was kind of implied by my opening the door with a smile on my face?"
-    "Anna rolls her eyes and chuckles at this."
+    mike.say "I thought that was kind of implied by me opening the door with a smile?"
     show anna happy with dissolve
-    anna.say "Oh, [hero.name] - you're so cute when you're clueless!"
-    anna.say "We're watching horror films, right?"
-    show anna normal
-    mike.say "Yeah...at least that was the plan."
-    anna.say "So, you should invite me in, you know - like a vampire?"
-    mike.say "What, so that you can bite me on the neck and suck my blood?"
+    anna.say "Oh, [hero.name] - you're so cute when you're clueless! We're watching horror, right? So invite me in... like a vampire."
+    mike.say "So you can bite my neck and suck my blood?"
     show anna wink with dissolve
-    "Anna giggles wickedly and winks at this, bearing her teeth a little at the same time."
-    anna.say "Well, that might not be all that I suck..."
-    mike.say "Ah...I suppose you'd better come in then!"
+    anna.say "Well... that might not be all I suck."
+    mike.say "Ah... you'd better come in, then!"
     scene bg livingroom
     show anna casual
     with fade
-    "Anna steps over the threshold and into the house, winking evilly at me as she does so."
-    "Still feeling a little flustered, I hastily show her into the sitting room and gesture to the couch in front of the TV."
-    mike.say "I'm just going to grab some snacks and drinks from the kitchen."
-    mike.say "The movie I chose is in the case on the coffee table, so take a look."
-    "When I return a couple of moments later, burdened with supplies for the evening's viewing, I see Anna's smiling in an ironic manner."
-    mike.say "What's the matter, Anna?"
-    mike.say "You look like I just walked in with my flies undone..."
-    "Anna answers this by holding up the DVD case so that I can see the cover."
+    "I show her to the couch and head off for snacks."
+    mike.say "The movie I picked is in the case on the table - take a look."
+    "When I come back she's smirking, and holds up the DVD case for me to see."
     anna.say "You actually chose this specific film?"
-    mike.say "Yeah, so what?"
-    mike.say "It's about vampires, isn't it?"
+    mike.say "Yeah, so what? It's about vampires, isn't it?"
     anna.say "Sure it is!"
-    "Anna seems reluctant to say any more, and so I'm left to sit down beside her and take the DVD like its going to explode at any given moment."
-    "I could get pissy and demand that she tell me exactly what's up with my choice film."
-    "But I'm worried that could kill the evening off before it's even gotten started."
-    "So I put the disc in and dim the lights, all the time trying to ignore the smirk on Anna's face."
-    "Let's just say that once the titles have scrolled past and we're into the thing, it doesn't take me long to realise what's up."
-    "I manage to watch for perhaps twenty minutes before I simply can't take it any more."
+    "She won't say more, so I put the disc in, dim the lights, and try to ignore her smirk."
+    "It takes about twenty minutes before I can't take it any more."
     show anna surprised at startle
-    "Unable to keep it bottled for another second, I burst out laughing, loud enough to make Anna jump a little."
+    "I burst out laughing, loud enough to make Anna jump."
     show anna happy
-    "And then she instantly joins in, secure in the knowledge that I finally understand what she was hinting at."
-    mike.say "This is like...like...the worst thing I've ever seen!"
     anna.say "I know, tell me about it!"
-    mike.say "What's up with the girl playing the heroine?"
-    mike.say "She's got a face like a slapped arse the whole time!"
+    mike.say "What's up with the heroine? She's got a face like a slapped arse the whole time!"
     show anna normal
-    anna.say "But what about the vampire?"
-    anna.say "What a whining pussy, right?!?"
-    "I shake my head as more of the same nonsense plays out on the screen before us."
-    mike.say "Why's he out in the daytime?"
-    mike.say "Don't vampires turn into dust in direct sunlight?"
+    anna.say "And the vampire - what a whining pussy, right?!?"
+    mike.say "Why's he out in the daytime? Don't vampires turn to dust in sunlight?"
     show anna happy
     anna.say "Oh no, not this special snowflake - he just sparkles, like he's covered in glitter!"
-    "This revelation sets me off laughing again, almost doubling me over when I see it actually happen on the screen."
-    mike.say "I don't think he's really a vampire, Anna."
-    show anna normal
-    anna.say "Huh...why's that?"
-    mike.say "Sure, he put a dent in that van, but so could someone on drugs!"
-    mike.say "He's walking around in the daylight, doing shit like that and sparkling the whole time."
-    mike.say "I think he's just been doing PCP in a gay nightclub before this, that's all!"
+    mike.say "I don't think he's even a real vampire, Anna. Walking around in daylight, sparkling - I reckon he's just been doing PCP in a gay nightclub!"
     show anna happy at vshake
-    "Anna literally spits out the mouthful of snacks that she's chewing on."
-    show anna happy at vshake
-    "She's laughing so much at this point that we're not actually watching the film for its own sake any more."
-    "Having ruined our chances of sitting through the rest of it with a straight face, we just spend the rest of the time pissing all over it instead."
-    "By the end of the night, we've enjoyed that more than we ever could have the act of watching the film itself."
-    mike.say "Oh god...that was bloody awful!"
-    mike.say "I suppose they only made the one and then it died off?"
+    "Anna spits out a mouthful of snacks, laughing so hard we've stopped watching the film altogether."
+    "We spend the rest of the night tearing it apart, and enjoy that far more than the movie itself."
+    mike.say "God, that was awful! I suppose they only made the one?"
     show anna normal
-    anna.say "Oh no, they've made a whole series of them - and they just get worse!"
-    mike.say "You're joking!"
-    "Anna shakes her head, still trying to keep from laughing as she does so."
-    anna.say "I'm not - we could make a regular thing of this, sitting down to slag them off!"
-    "Now it's my turn to shake my head in disbelief and horror."
-    mike.say "I don't think I could take even the thought of that, Anna!"
-    mike.say "Next time, I think you should pick the film..."
+    anna.say "Oh no - there's a whole series, and they just get worse!"
+    anna.say "We could make a regular thing of this, sitting down to slag them off!"
+    mike.say "I couldn't take even the thought of that, Anna! Next time, you pick the film..."
     return
 
 label anna_event_03:
     if anna.love.max < 100:
         $ anna.love.max = 100
     show anna surprised at center, vshake
-    "Anna sees them before I do, and the only reason I know anything's up is the fact that she seems to go a little pale as I'm looking straight at her."
-    "But when I look around, hunting for what the cause of her distress could be, I end up drawing a complete blank."
-    mike.say "Anna, you're pale as fuck!"
-    mike.say "What's the matter?"
+    "Anna spots them before I do - she goes pale while I'm looking right at her."
+    mike.say "Anna, you're pale as fuck! What's the matter?"
     show anna annoyed at left4 with move
-    "Anna's already backing away and trying to duck behind whatever cover she can find when I ask her this."
-    "And she grabs me by the hand, pulling me with her, rather than answering the question."
-    anna.say "Get down and follow me, right now!"
-    anna.say "And whatever you do, don't look behind you..."
-    "But of course, the very moment she says this, my head begins to turn in that very same direction."
-    "I can't help myself - it's as though I have no control as my body does the exact opposite of what Anna told me to."
-    "Even then I'm none the wiser, as all I can see is a couple of guys and a girl that seem to be making their way towards us."
-    "Surely they can't be what's got Anna so worked up, can they?"
-    "They look like nothing more than typical metal-heads, with long hair and band T-shirts, perfectly harmless."
-    "I don't recognise the name printed on their shirts, and so I strain to see what it could be."
-    "Who knows, maybe Anna just has a pathological aversion to that band, their music, and their fanbase too."
+    "Instead of answering she grabs my hand and starts pulling me into cover."
+    anna.say "Get down and follow me, right now! And whatever you do, don't look behind you..."
+    "Naturally, my head turns the instant she says it. All I see is a couple of guys and a girl heading our way - harmless-looking metal-heads in band T-shirts."
     with hpunch
-    "But then I finally manage to make out the words, and I instantly stop letting Anna pull me away."
-    mike.say "Hey, Anna - those guys are all wearing Deathless Harpies T-shirts!"
-    mike.say "That's so cool - I didn't even know we had T-shirts!"
+    "Then I make out the words on the shirts, and I stop dead."
+    mike.say "Hey, Anna - those guys are all wearing Deathless Harpies T-shirts! That's so cool - I didn't know we had merch!"
     show anna angry
     anna.say "That's because we don't!"
     show anna annoyed
-    "My face twists into a confused expression."
-    mike.say "Huh - but then how come they have them?"
-    mike.say "Did someone else steal the name?"
-    "Still battling to pull me after her and having no success thanks to my weight advantage, Anna shakes her head."
-    anna.say "No, they had them printed themselves."
+    mike.say "Then how come they've got them? Did someone steal the name?"
+    anna.say "No. They had them printed themselves."
     mike.say "Wow - they must REALLY like us!"
-    anna.say "Yeah, they do."
     show anna angry
-    anna.say "But that's the problem - they like us TOO much!"
+    anna.say "That's the problem - they like us TOO much!"
     show anna annoyed
-    mike.say "What...I don't get it!"
-    mike.say "How can they like us too much?"
-    anna.say "Don't worry, [hero.name] - you're about to find out for yourself!"
-    "I look round at this, following Anna's gaze and seeing almost instantly that, despite her best efforts, we've been spotted."
-    "One of the guys points at us while slapping the shoulders and arms of his companions."
-    "And a moment later, they're crowding towards us."
-    "Male fan" "Hey, hey, hey - it's like fifty percent of the Deathless Harpies!"
-    "Male fan" "Even better, it's the hottest drummer in all the world of metal!"
-    "Though they looked harmless from a way off, all of them are getting in our personal space, faces mere inches from our own."
+    mike.say "How can anyone like us too much?"
+    anna.say "Don't worry, [hero.name] - you're about to find out."
+    "Despite Anna's best efforts, we've been spotted."
+    "Male fan" "Hey, hey - it's like fifty percent of the Deathless Harpies! And the hottest drummer in all of metal!"
     with hpunch
-    "I can see and feel them begin to touch me without a thought of asking if it's cool to do so."
-    "That makes me want to punch one of them in the face, or at least shove them a good few feet back."
-    "And if that's how it makes me feel, it must be much worse for Anna, thanks to her diminutive stature."
-    with hpunch
-    anna.say "Erm...hey...hey there, guys..."
+    "In a heartbeat they're in our personal space, faces inches from ours, hands starting to touch me without asking. For tiny Anna it must be far worse."
+    anna.say "Erm... hey there, guys..."
     "Female fan" "Hey, who are you calling a guy?!?"
     show anna normal
-    "Anna smiles nervously at the girl's challenge, clearly intimidated by her pushiness."
-    "Female fan" "Don't worry, Anna - I know that most of you girls like us girls in the audience too!"
+    "Female fan" "Don't worry, Anna - I know most of you girls like us girls in the audience too!"
     show anna annoyed
     menu:
         "Step in to save Anna" if hero.charm >= 25:
-            "As the girl reaches out to touch Anna, I can't help but instinctively step into her path."
+            "As the girl reaches for Anna, I step into her path."
             with vpunch
-            "And I don't hesitate to slap away the hand that she's extending towards my bandmate."
+            "And slap away the hand she's extending toward my bandmate."
             "Female fan" "Oww - hey, man!"
-            "Male fan" "Yeah, dude - what in the hell are you doing?!?"
-            "Male fan" "That's not cool - The Deathless Harpies are SO against violence to women!"
-            "Wait a minute - these arseholes are getting in our faces and trying to put their unwelcome hands on Anna."
-            "And yet they're lecturing me on being out of touch with the band's moral stance for stopping them from basically assaulting her?"
-            "Fuck these guys!"
+            "Male fan" "Not cool, dude - the Deathless Harpies are SO against violence to women!"
+            "These arseholes are groping Anna and lecturing ME on the band's morals? Fuck these guys."
             $ anna.sub += 10
-            mike.say "What do you pricks think - that because you had T-shirts printed, you own a piece of us now?"
-            "I hadn't noticed it before now, but I'm quite a bit taller than most of the guys in the group."
-            "This means that they're a little intimidated by me standing over them and taking them to task."
-            "I just hope that they don't realise they're younger than me and outnumber me significantly any time soon!"
-            "Male fan" "What...no...we'd never..."
-            "Female fan" "Hey, stop trying to twist this on us, man!"
-            mike.say "And another fucking thing - when did we get the royalties on those shirts, huh?"
-            "Now they're starting to back off a little, looking at each other in confusion."
-            "Male fan" "What are you talking about?"
-            "Female fan" "We're like serious fans of yours - we had these made to show that!"
-            mike.say "What kind of a fan takes money out of our pockets?"
-            mike.say "Those shirts are stealing our intellectual property."
-            mike.say "You're lucky we don't sue you for theft!"
+            mike.say "What, you had shirts printed so now you think you own a piece of us?"
+            "I hadn't noticed before, but I'm a good bit taller than most of them, and it clearly rattles them."
+            "Male fan" "What... no... we'd never..."
+            mike.say "And when did we see royalties on those shirts? They're stealing our intellectual property - you're lucky we don't sue you for theft!"
             "Male fan" "You wouldn't..."
             mike.say "Try me, asshole!"
-            "I honestly don't know whether I'm actually intimidating them, or just making them confused."
-            "But either way, it seems to have the desired effect, as they start to look worried and back off."
+            "Whether I'm intimidating or just confusing them, it works - they start backing off."
             "Male fan" "Look, we don't want any trouble!"
-            "Female fan" "Yeah...we're just fans, honestly, we are!"
-            "They make a hasty and cringing exit, leaving Anna and I alone and unmolested once more."
+            "Female fan" "Yeah... we're just fans, honestly!"
+            "They make a cringing exit, leaving us alone and unmolested."
             show anna at center
             mike.say "Are you okay, Anna?"
-            "She nods, looking at me a little strangely and causing me to worry that she's suffering from shock."
-            mike.say "I had no idea fans could be like that..."
             show anna happy
-            "Anna shakes her head, dismissing my attempt at an apology."
-            anna.say "You know what it's like when you have a small but dedicated following..."
-            "I nod, not needing to say anything more."
-            anna.say "No, what really sticks in my head is you talking about suing them."
-            anna.say "I've never seen anyone use the threat of legal action to make a bunch of guys back down before!"
-            "All I can do is laugh nervously, thankful that it didn't escalate any further."
-            "After all, it's not like I keep a team of hot-shot lawyers on speed-dial!"
+            anna.say "You know what it's like when you've got a small but dedicated following..."
+            anna.say "What really sticks with me is you threatening to sue them. I've never seen anyone back a group of guys down with the threat of legal action before!"
+            "All I can do is laugh nervously - it's not like I keep hot-shot lawyers on speed-dial."
         "Stand back and watch":
-            "I know that I should be stepping in and standing up for Anna here."
-            "But there's just something so fascinating about the whole scenario."
-            "I can't help watching in silence as the girl's hand reaches out to touch Anna."
+            "I know I should step in. But something about it is just... fascinating, and I watch in silence as the girl's hand reaches out."
             show anna surprised at center, vshake
-            "Or to be more precise - reaches out and grabs a sizeable handful of her left breast!"
+            "Or, more precisely, grabs a sizeable handful of her left breast."
             $ anna.love -= 25
             show anna angry
-            anna.say "HEY THAT'S MY GODDAMN TIT!"
-            "To be fair to all concerned, the female fan instantly jumps away at the sound of Anna's sudden outburst."
-            "He hand couldn't have been on Anna's actual breast for more than a couple of seconds."
-            "But it looks like it was still enough for the damage to be done, emboldening the two guys with her."
-            "Male fan" "Whoa, you got a squeeze of the drummer's tit!"
-            "Male fan" "No fair - The Deathless Harpies are all about sexual equality!"
+            anna.say "HEY, THAT'S MY GODDAMN TIT!"
+            "The girl jumps back at the outburst - but the couple of seconds were enough to embolden the two guys."
+            "Male fan" "Whoa, you got a squeeze of the drummer's tit! No fair - the Harpies are all about equality!"
             show anna dazed
-            "Before Anna can as much as say another word, two more pairs of hands are all over her."
+            "Before Anna can say another word, two more pairs of hands are all over her."
             show anna at vshake
-            "The guys indulge themselves by mashing at her breasts without mercy, laughing in delight the whole time."
-            "Female fan" "Hey - I only got to touch them for like a second!"
-            "And with that, she joins in the action, groping Anna's chest for a second time in mere moments."
+            "They maul her breasts without mercy, laughing, and the girl dives back in for seconds."
             show anna at hshake
-            "The whole time they're manhandling her, Anna wails pitifully and tries in vain to beat them off."
-            "She looks at me in desperation, her eyes pleading with me to save her from their unwanted attentions."
-            anna.say "Ah...ouch!"
-            anna.say "[hero.name]...help me...please!"
-            "The same way I know I shouldn't have let this happen, I also know that it's high time I stepped in now."
-            "But still I find myself hesitating, fascinated and more than a little turned on by the sight of Anna being abused in this way."
-            "Her cheeks are bright red, and I swear I can see the beginnings of tears in her eyes as she tries to defend herself."
-            "Finally I can't delay acting any longer, and reach out to grab one of Anna's hands."
-            "She yelps as I physically drag her out of there, ignoring the protests of the so-called fans as I do so."
-            "Once we're outside and I'm sure they're not following, we stop and both take time to catch our breath."
+            anna.say "Ah... ouch! [hero.name]... help me... please!"
+            "I know it's high time I stepped in - but I hesitate, fascinated and more than a little turned on by the sight of her being used like this."
+            "Finally I grab her hand and drag her out, ignoring the fans' protests."
             show anna cry
-            anna.say "Thanks, [hero.name]."
-            anna.say "If you hadn't pulled me out of there when you did, they might have stripped me naked back there!"
-            "I nod, trying to hide the fact that the mental image that statement just summoned is making me hard right now."
-            mike.say "It's okay, Anna."
+            anna.say "Thanks, [hero.name]. If you hadn't pulled me out, they might have stripped me naked back there!"
+            "I nod, hiding how hard that mental image just made me."
             mike.say "I should have stopped them sooner..."
-            "Anna greets this with an expression of sympathy, which is not at all what I expected my actions to earn from her."
             show anna normal
-            anna.say "Don't worry, [hero.name], it's only natural."
-            anna.say "I froze up like that the very first time I was face-to-face with fans like that."
+            anna.say "Don't worry - it's only natural. I froze up the first time I faced fans like that too."
             show anna happy
             anna.say "You'll get used to it, trust me!"
-            "I nod weakly, relieved to have seemingly gotten away with my failure to step up to the mark."
-            "But the fact that Anna's totally misinterpreted my actions does make me feel kind of guilty..."
-            "Trying to bury the unpleasant feelings this is causing me, I follow Anna as she begins to walk away from the scene of the crime."
+            "I nod weakly, relieved - and a little guilty that she's so badly misread why I hesitated."
     return
 
 label anna_event_04:
@@ -1289,143 +1180,64 @@ label anna_getting_serious_01:
 label anna_event_08:
     show bg street
     show anna
-    "It's weird, you know, the way that you never actually take a step back and realize that something is going well."
-    "I guess that at the time it's happening, you're too wrapped up in the moment to be able to step back."
-    "Only later do you have the chance to think about how much you enjoyed yourself, all the time you spent laughing."
-    "But then the flip side of that is the way you always notice when something seems to be even a little amiss."
-    "And I get that second feeling almost as soon as Anna and I are walking home from our date."
-    "It really is weird, as everything went well tonight, all I remember being fun and laughter."
-    "It's only now that I notice Anna's gone quiet, letting me do most of the talking."
-    "Now that's strange, as she's usually an unstoppable source of chatter."
-    "Instead she seems to be content merely to cling to my arm, staring up at me the whole time."
-    "If she was pissed off with something that I said, then I'd have been able to read it in her mood."
-    "But this is different, more like her whole attitude towards me has undergone a subtle change."
-    mike.say "Anna?"
-    anna.say "Hmm..."
-    mike.say "Anna, are you okay?"
+    "Walking home from our date, I get that odd feeling something's a little off - even though the whole night was nothing but fun and laughter."
+    "Anna's gone quiet, letting me do most of the talking, just clinging to my arm and staring up at me. That's not like her at all."
+    "It's not that she's annoyed. It's more like her whole attitude toward me has subtly changed."
+    mike.say "Anna? Are you okay?"
     show anna surprised at hshake
-    anna.say "Wha...oh, sorry, [hero.name]."
-    anna.say "I was miles away!"
-    mike.say "Yeah, I kind of noticed that."
+    anna.say "Wha... oh, sorry, [hero.name]. I was miles away!"
     show anna blush
-    "Anna blushes a little, her cheeks flushing with color."
-    "She looks away, clearly embarrassed at being called out on her ditziness."
-    "But I can't help smiling at her reaction, as her quirks have never been something that annoyed me."
-    "In fact, they're one of the things about her that I can't help but find endearing."
-    mike.say "You want to tell me what's on your mind, Anna?"
-    mike.say "Maybe that way we can get on the same wavelength!"
-    anna.say "I...well..."
-    mike.say "It's okay, Anna."
-    mike.say "I'm not mad or anything - just curious, that's all."
+    "She blushes and looks away, embarrassed - though her quirks have never been anything but endearing to me."
+    mike.say "You want to tell me what's on your mind? I'm not mad - just curious."
     show anna normal
-    "She nods at this, almost visibly drawing strength from my words."
-    anna.say "Well, [hero.name]..."
-    anna.say "What's on my mind is...you!"
+    anna.say "Well... what's on my mind is you!"
     mike.say "Me?!?"
-    anna.say "Yeah, [hero.name]."
-    anna.say "I was thinking about how much I like spending time with you."
-    anna.say "How much I like us hanging out together."
-    anna.say "How much I like it being just you and me!"
-    "For a moment, her words leave me staring at her in silence."
-    "Because it's at that moment my brain finally wakes up to just what's happening here."
-    "Something just changed between Anna and me."
-    "Something too subtle for my poor brain to notice on its own."
-    "We're not a couple of friends hanging out anymore."
-    "We're not even a couple of friends hanging out as a lame cover for really liking each other."
-    "We just crossed over into being a couple that are actually dating!"
-    "I expect to feel a wave of panic overtake me, that typical fear of commitment."
-    "But it doesn't materialize, and instead I feel a warm sensation rising in my chest."
-    "It's weird, but it makes me want to gaze at Anna in the exact same way she's looking at me..."
-    mike.say "Me too, Anna."
-    mike.say "It's great to do fun stuff with you."
-    mike.say "But the best part is just being with you."
+    anna.say "I was thinking about how much I like spending time with you. How much I like it being just you and me!"
+    "Her words leave me staring at her as my brain finally catches up. Something's changed between us."
+    "We're not just friends hanging out anymore - we've crossed over into actually dating."
+    "I wait for the usual wave of commitment-panic, but it never comes. Instead there's just a warm feeling in my chest."
+    mike.say "Me too, Anna. The fun stuff's great - but the best part is just being with you."
     show anna b happy at center, zoomAt (1.65, (650, 1140))
-    "Anna's face breaks into a delighted smile, and she hugs me tightly."
-    "I can feel every inch of her petite body as she presses herself against me."
+    "Her face breaks into a delighted smile and she hugs me tight, her petite body pressed against mine."
     show anna normal
-    anna.say "Then let's spend lots more time together, [hero.name]!"
-    anna.say "As much time as we can possibly spare!"
-    "I nod happily, already looking forward to taking Anna up on her offer."
+    anna.say "Then let's spend lots more time together, [hero.name] - as much as we can possibly spare!"
+    "I nod happily, already looking forward to it."
     if anna.love.max < 160:
         $ anna.love.max = 160
     return
 
 label anna_confession:
 label anna_event_09:
-    "Normally I'd hardly notice Anna being scatter-brained and ditzy in general."
-    "As that's pretty much how she is most of the time, give or take the occasional moment of clarity."
-    "But just recently she's been even more confused and indecisive than usual."
-    "It's almost as though something's happened to make her brain go on the fritz."
-    "What makes it even more strange is the fact that no one else seems to notice it either."
-    "Sasha never makes as much as a comment about it when the subject of Anna comes up at home."
-    "And beyond the usual verbal sparring between them, Kleio's the exact same story."
-    "You can call me slow if you like, but it takes me a while to realize what the common element is here."
-    "It's me - Anna's acting normal around everyone else and yet tying herself in a knot whenever we're together."
-    "Of course, I react to this in a level-headed and perfectly rational manner."
-    "Weighing up all of the possibilities, I examine each one in terms of merit and practicality."
-    "And only then do I panic and jump to the conclusion that Anna's contemplating how to dump me."
-    "No matter how much I try, I just can't shake the conviction."
+    "Anna being scatter-brained is nothing new - but lately she's been even more confused and indecisive than usual, like something's made her brain go on the fritz."
+    "The strange part is that no one else notices. Sasha never comments on it at home, and beyond the usual sparring, Kleio's the same."
+    "It takes me a while to spot the common element: it's me. Anna acts normal around everyone else, yet ties herself in knots whenever we're together."
+    "I react in a perfectly level-headed way - by panicking and deciding she must be working out how to dump me. No matter what, I can't shake it."
     show anna
-    "Which means that by the next time we meet up, I'm a quaking bag of nerves."
-    "I can't look Anna in the eye without fear of her using that as the chance she's waiting for."
-    "Any moment I expect the words to come out of her mouth that'll end it all between us."
-    "And so, in the end, the only thing I can do is face it head on..."
-    mike.say "Anna..."
-    anna.say "Huh?"
-    mike.say "Is there anything wrong?"
-    mike.say "You know, anything you'd like to talk about?"
-    anna.say "Erm...like what, [hero.name]?"
-    mike.say "Anything about...us?"
-    "The question seems to snap Anna out of her usual state of mild distraction."
+    "So by the next time we meet, I'm a quaking bag of nerves, braced for the words that'll end it all. In the end, the only thing to do is face it head on."
+    mike.say "Anna... is there anything wrong? Anything you'd like to talk about?"
+    anna.say "Erm... like what, [hero.name]?"
+    mike.say "Anything about... us?"
     show anna surprised
-    "I see her eyes go wide and her cheeks flush, which makes me fear the worst."
-    mike.say "Please, Anna - tell me what's up."
-    mike.say "You've been on another planet for days now."
-    mike.say "And I need to know what's bugging you."
+    "The question snaps her out of her usual daze - her eyes go wide, her cheeks flush, and I fear the worst."
+    mike.say "Please, Anna - you've been on another planet for days. I need to know what's bugging you."
     show anna blush
-    "Anna looks away for a moment, and then back again."
-    "Right now she reminds me of a deer in the headlights."
-    "Like she wants to bolt, but is afraid of the consequences."
-    anna.say "I...I want to, [hero.name]."
-    anna.say "But I don't know if I should!"
-    "I take a deep breath, steeling myself for what lies ahead."
-    "Whatever Anna's keeping bottled up, I really need to know."
-    "We just can't go on like this any longer."
-    "If we do, it's sure to kill off what we have simply by hanging over us the whole time."
-    mike.say "Anna, it's okay."
-    mike.say "I won't get mad - I promise you that."
+    anna.say "I... I want to, [hero.name]. But I don't know if I should!"
+    mike.say "It's okay. I won't get mad - I promise."
     show anna normal
-    "I take hold of Anna's hands as I say this, wrapping them in mine."
-    "She glances down as I do this, her eyes still fearful."
-    "And it's only now that I notice that she's actually trembling."
-    anna.say "Okay, if you promise you won't be mad..."
-    anna.say "I think..."
+    "I take her hands in mine. She glances down, still fearful, and only now do I notice she's trembling."
+    anna.say "Okay, if you promise you won't be mad... I think..."
     show anna blush
     anna.say "I think I've fallen in love with you..."
-    "It takes a good couple of seconds for me to actually realize what Anna just said."
-    "I'd been so prepared for a verbal and emotional punch to the gut."
-    "But she just floored me with something entirely different."
-    mike.say "Anna..."
-    mike.say "Are you serious?!?"
-    anna.say "I am...really."
-    anna.say "Oh shit - I knew you'd be mad!"
-    mike.say "No, Anna, no!"
-    mike.say "I thought you were going to dump me!"
+    "It takes a couple of seconds to land. I'd braced for an emotional punch to the gut - and she floored me with something else entirely."
+    mike.say "Anna... are you serious?!?"
+    anna.say "I am... really. Oh shit - I knew you'd be mad!"
+    mike.say "No, Anna, no! I thought you were going to dump me!"
     show anna b at center, zoomAt (1.65, (650, 1140))
     with hpunch
-    "At this, Anna literally throws herself at me."
-    "Wrapping her arms around my waist, she pulls me into a surprisingly fierce embrace."
-    anna.say "No, no, no!"
-    anna.say "[hero.name], how could you even think that?!?"
-    anna.say "I LOVE YOU!"
-    "For the second time in as many minutes, Anna manages to leave me stunned."
-    "All I can do is return her embrace, struggling to comprehend her confession."
-    mike.say "I..."
+    "She throws herself at me, arms around my waist, pulling me into a fierce embrace."
+    anna.say "How could you even think that?!? I LOVE YOU!"
     mike.say "I love you too, Anna."
-    "This time it's Anna's turn to remain silent, simply hugging me as tightly as possible."
-    "I can feel my heart racing in my chest, beating like it's going to explode any second."
-    "But I don't know if it's on account of the adrenaline still coursing through my body."
-    "Or whether it's because I just realized that Anna and I are actually in love with one another..."
+    "She just hugs me as tightly as she can. My heart's racing - whether from the adrenaline or from realizing that Anna and I are actually in love, I honestly can't tell."
     if anna.love.max < 170:
         $ anna.love.max = 170
     return
@@ -1695,148 +1507,83 @@ label anna_event_12:
     show anna
     if anna.love.max < 200:
         $ anna.love.max = 200
-    "It feels like a hell of a long time since I've been in the crowd at a really decent gig."
+    "It's been a long time since I was in the crowd at a really decent gig."
     if game.flags.band >= 2:
-        "Sure, I've been on the stage with Anna and the rest of the Deathless Harpies a lot recently."
-        "But that's not the same as being one of the fans in the crowd."
-    "And there's nothing like being out there, soaking up the atmosphere!"
-    "Apart maybe from doing all of that with Anna by my side."
-    "She's been squeezing my hand and beaming up at me since we walked in through the doors!"
+        "Sure, I've been up on stage with Anna and the rest of the Deathless Harpies lately - but that's not the same as being a fan down in the crowd."
+    "And there's nothing like being out here soaking up the atmosphere - except maybe doing it with Anna at my side, squeezing my hand and beaming up at me."
     show anna close happy with dissolve
-    anna.say "Oh...my...fucking...god, [hero.name]."
-    anna.say "I still can't believe you managed to score Metallikea tickets!"
-    anna.say "They always sell out super-quick."
-    "I try to keep a tight hold of Anna as we start to weave through the crowd."
-    "We've been inside the venue for what feels like less than ten minutes by now."
-    "But it's already getting so busy we're having to elbow a path between the bodies."
-    mike.say "I guess it was just plain, dumb luck, Anna."
-    mike.say "Must have been that I got in there before everyone else!"
-    "I'm not about to admit the countless hours I spent on hold calling the ticket-line."
-    "Or the fleecing that I had to endure from a scalper when the first plan failed."
-    "All that matters is the look of sheer delight on Anna's face right now."
+    anna.say "Oh my fucking god, [hero.name]. I still can't believe you scored Metallikea tickets - they always sell out super-quick!"
+    mike.say "Just plain dumb luck, Anna. Guess I got in before everyone else!"
+    "I'm not about to admit the hours I spent on hold, or the fleecing I took from a scalper. All that matters is the look on her face."
     show anna blush
-    "Well, that and the way she's looking at me too."
-    "Like I'm the one thing she loves almost as much as the band we're here to see."
-    "In my state of bliss at Anna's obvious delight, I'm not paying attention to just where we're going."
-    "And before I know it, she's burrowed her way through most of the crowd."
-    "Anna keeps on elbowing and squeezing forwards until we reach the barriers at the very front."
-    "It's no problem for me, as I can easily see over the heads or shoulders of the people before me."
-    "Anna, on the other hand, is already struggling to glimpse anything at all from here."
-    "She tries standing on her tip-toes, then jumping up and down on the spot."
-    "But it's no good, she can't hope to see the stage without a box to stand on or stilts!"
-    mike.say "Erm, Anna..."
-    mike.say "Maybe we'd have a better view from the back?"
-
+    "That, and the way she's looking at me - like I'm the one thing she loves almost as much as the band."
+    "Lost in her delight, I don't notice she's elbowed us all the way to the barriers at the very front."
+    "I can see fine over everyone's heads. Anna, though, can't glimpse a thing, even on tip-toes."
+    mike.say "Maybe we'd get a better view from the back?"
     show anna surprised
     show fx exclamation
-    anna.say "Are you mad?!?"
-    anna.say "This is a Metallikea gig, [hero.name]."
-    anna.say "Who wants to miss out on being as close as possible?!?"
+    anna.say "Are you mad?!? This is a Metallikea gig - who wants to miss being as close as possible?!?"
     hide fx
     show layer master at lparty
-    "Just then the lights go up and the crowd roars in anticipation."
-    "Even worse, they rush forwards in the hope of getting the best view possible too."
+    "Just then the lights go up and the crowd roars - and surges forward for the best view."
     play music "music/TeknoAXE/simple_metal.ogg" loop fadeout .5 fadein .5
     with vpunch
-    "Anna and I are almost swept off our feet, even before the start of the first song!"
-    "I struggle to stay on my feet and hold her up at the same time."
-    "But things only get worse once the opening chords thunder through the PA system."
-    "Holding onto Anna for dear life, I recognise the song that they're opening up with."
-    "It's a super-heavy number that almost always whips the crowd up into a frenzy."
-    "And that means only one thing - MOSH PIT!!!"
+    "We're almost swept off our feet before the first song even starts. Then the opening chords thunder out - a super-heavy number - and that means one thing: MOSH PIT!"
     with vpunch
-    "The first body slams into me from behind a second later."
+    "The first body slams into me from behind."
     show anna dazed at hshake
-    "I hear Anna let out a scream that could be of terror or delight."
-    "Only just managing to keep upright, I know now that I'm the only thing that can save her!"
+    "Anna screams - terror or delight, I can't tell - and I know I'm the only thing that can save her."
     if hero.fitness >= 50:
-        "It's a damn good job that I'm a mosh-pit veteran with the scars to prove it!"
-        "Even before second body hits me, I'm already moving and taking Anna with me."
-        "I roll with the blows as they start to come from all sides."
+        "Good thing I'm a mosh-pit veteran with the scars to prove it. I'm already moving, taking Anna with me, rolling with the blows."
         with hpunch
-        "But at the same time, I'm trying to use them to my advantage, bouncing here and there."
         show anna at hshake
-        anna.say "[hero.name]!"
-        anna.say "Help me!"
-        "I could stop and ask Anna what the hell she thinks I'm trying to do right now!"
-        "But I doubt that she'd hear a word of it if I did so."
-        "Instead I keep us moving, making sure that I take any blow that looks like it might hit her."
-        "The fact that I'm actively looking for Anna means that I can't defend myself too."
+        anna.say "[hero.name]! Help me!"
+        "I keep us moving, taking any hit that looks like it might land on her - which means I can't defend myself."
         with hpunch
-        "Heads butt against mine, elbows slam into my ribs and more than one knee connects with my groin."
-        "At one point, I even bite down on my tongue and taste blood."
-        "And then, just when I think I might be on the verge of passing out, it's all over."
-        "Battered and bruised, I finally stagger out of the crowd when the song ends."
-        "I honestly think I'd have collapsed, were it not for Anna holding me up."
+        "Heads butt mine, elbows slam my ribs, a knee or two finds my groin. I bite my tongue and taste blood."
+        "And then, just when I think I'll pass out, the song ends. I stagger out, battered - I'd have collapsed if Anna wasn't holding me up."
         show anna close normal with dissolve
         anna.say "[hero.name] - are you okay?"
-        "There's genuine concern in her voice as she looks up at me."
-        "I shake my head, trying to dismiss her worries."
-        mike.say "Don't worry about me, Anna..."
-        "The impression is kind of ruined as I break off in pain for a second."
-        mike.say "Seriously - how are you?"
+        mike.say "Don't worry about me, Anna... seriously, how are you?"
         show anna happy
-        anna.say "I'm fine, [hero.name] - thanks to you."
+        anna.say "I'm fine - thanks to you."
         show anna blush
         anna.say "You saved me from getting trampled back there!"
         hide anna
         show anna kiss with fade
         $ anna.flags.kiss += 1
-        "She pulls me down to her level, planting a kiss on my lips."
-        "It's full-on, genuine and filled with passion."
+        "She pulls me down and kisses me - full-on, genuine, passionate."
         hide anna
         show anna close blush
         with fade
-        "But Anna breaks it off when I wince and cry out in pain."
-        anna.say "Oh, goodness."
-        anna.say "My poor, wounded hero!"
-        anna.say "Come on - let's get you up to the balcony."
+        "Until I wince in pain and she breaks it off."
+        anna.say "Oh, my poor wounded hero! Come on - let's get you up to the balcony."
         show anna happy
         anna.say "Nurse Anna prescribes a beer and all of her attention!"
-        "I nod and do my best to follow as Anna leads me away from the crowd."
-        "And if she wants to dote on me for the rest of the night, who am I to argue?"
-        "After all, she did say that I was her hero!"
+        "If she wants to dote on me the rest of the night, who am I to argue? She did say I was her hero."
     else:
-        "Though I manage to roll with the first body that hits me, the second is a different story."
+        "I roll with the first body, but the second winds me and I lose my grip on Anna."
         with hpunch
-        "Still staggering from the first, this one winds me and I lose my grip on Anna."
-        "Before I can even see which way I've been pushed, she's snatched away from me."
         hide anna at vshake with moveoutright
-        "Being so short, it's not even like I can pick her out in the sea of bobbing heads either."
-        anna.say "[hero.name]!"
-        anna.say "Help me!"
-        "Turning towards what I think is the direction of her voice, I plunge into the fray."
-        with hpunch
-        "But no matter how hard I push, shove and barge at the mass of bodies, it does no good."
-        "And the fact that I'm actively looking for Anna means that I can't defend myself too."
+        "She's snatched away into the sea of heads, and being so short I can't pick her out."
+        anna.say "[hero.name]! Help me!"
+        "I plunge after her voice, but no matter how I shove, it does no good - and looking for her means I can't defend myself."
         with vpunch
-        "Heads butt against mine, elbows slam into my ribs and more than one knee connects with my groin."
-        "At one point, I even bite down on my tongue and taste blood."
-        "Battered and bruised, I finally stagger out of the crowd when the song ends."
-        "Gasping for breath, I scan the crowd, desperately searching for a sign of Anna."
+        "Heads butt mine, elbows slam my ribs, a knee finds my groin, I taste blood. Battered, I finally stagger out when the song ends."
         anna.say "There you are!"
-        "Stunned to hear the sound of her voice, I spin around to face Anna."
         show anna annoyed with dissolve
-        "She's standing there, arms crossed over her chest and tapping her foot on the floor."
-        "Sure, she looks a little dishevelled."
-        "But it's nothing compared to the mess I must be in right now!"
-        mike.say "Anna..."
-        mike.say "How did you..."
+        "She's standing there, arms crossed, foot tapping - a little dishevelled, but nothing next to the mess I'm in."
+        mike.say "Anna... how did you...?"
         show anna normal
-        anna.say "One of the security guys pulled me out after a few seconds."
+        anna.say "Security pulled me out after a few seconds."
         show anna angry
-        anna.say "No thanks to you!"
-        anna.say "Did you push me in there on purpose so that'd happen, huh?"
+        anna.say "No thanks to you! Did you push me in there on purpose, huh?"
         show anna annoyed
-        "I stare at her for a moment."
-        "My mouth moving and no words coming out."
         $ anna.love -= 15
-        anna.say "Oh don't be such a big baby, [hero.name]!"
+        anna.say "Oh, don't be such a big baby, [hero.name]!"
         show anna normal
         anna.say "Let's go find a spot on the balcony - just like you wanted!"
-        "Anna grabs my wrist and drags me painfully after her."
-        "I spend the rest of the gig sulking and in pain from my many wounds."
-        "All the time marvelling at her assumption that I got my ass kicked on purpose!"
+        "She drags me off painfully, and I spend the rest of the gig sulking and in pain, marvelling that she thinks I got my ass kicked on purpose."
     return
 
 label anna_event_13:
@@ -2289,117 +2036,53 @@ label anna_sub_event_01:
 
 label anna_sub_event_02:
     show anna normal
-    "Anna and I genuinely tried to come up with something to do for our date tonight."
-    "I know that I racked my brain to think of an idea and she suggested some stuff too."
-    "But neither of us could agree on anything the other came up with."
-    "And so we've fallen back on the last resort of sitting down and watching a film at my place."
-    "Yeah, I know - it's not like that's the worst thing in the world to have to endure."
-    "But there's a whole world full of things to do out there!"
-    "And I can sit on my ass watching the TV when I'm not on a date too."
-    "I kind of get the feeling that Anna feels the same way too."
-    "She doesn't come out and say as much, probably to save my feelings."
-    "But she's pretty quiet and not her usual outgoing self tonight."
-    "All the same she nestles down beside me on the sofa."
-    "And feeling her so close to me does begin to make me feel a little better."
-    anna.say "So..."
-    anna.say "What are we watching tonight?"
-    "She chuckles and playfully elbows me in the ribs."
+    "Anna and I both tried to come up with something to do tonight, but we couldn't agree on anything - so we've fallen back on watching a film at my place."
+    "It's not the worst fate, but there's a whole world out there, and I can veg in front of the TV when I'm not on a date. I get the feeling Anna thinks the same, even if she's too kind to say it."
+    "Still, she nestles down beside me on the sofa, and having her this close makes me feel better."
+    anna.say "So... what are we watching tonight?"
     show anna wink
-    anna.say "Knowing you, it'll be some cult sci-fi film!"
-    anna.say "Or a horror flick that somebody made for like no money at all, right?"
-    mike.say "Actually it's a film that Sasha recommended we should watch."
+    anna.say "Knowing you, some cult sci-fi, or a horror flick made for no money at all, right?"
+    mike.say "Actually it's one Sasha recommended. 'Sixty-Nine Shades of Grey' or something - must be artsy."
     show anna normal
-    mike.say "It's called 'Sixty-Nine Shades of Grey' or something."
-    mike.say "Must be an artsy kind of thing, like that one 'Three Colours Red', I guess!"
-    anna.say "Ooh..."
-    anna.say "That sounds pretty high-brow!"
-    anna.say "Promise me you'll explain what's happening if it goes over my head?"
-    mike.say "I promise, Anna."
-    mike.say "I'll pay extra attention just for you."
-    "We both sit back and relax as the opening credits roll."
-    "And to begin with it seems like pretty familiar stuff."
-    "There's a cute young girl that's out to prove herself."
-    "Then there's a rich guy that comes off as arrogant and aloof."
-    mike.say "I bet you they hate each other at first."
-    mike.say "Then they'll get all angry and passionate."
-    mike.say "Which will make them realise they can't resist each other."
-    mike.say "You just wait and see, Anna!"
-    anna.say "[hero.name]!"
+    anna.say "Ooh, sounds high-brow! Promise you'll explain if it goes over my head?"
+    mike.say "I promise. I'll pay extra attention, just for you."
+    "The credits roll and it's familiar stuff at first - a cute girl out to prove herself, a rich, aloof guy."
+    mike.say "I bet they hate each other at first, then get all angry and passionate and can't resist each other. You wait and see, Anna!"
     show anna annoyed
-    anna.say "Will you just shut up and watch the film already?"
-    "Chastened by Anna's words, I do as I'm told."
+    anna.say "[hero.name]! Will you shut up and watch the film already?"
     show anna normal
-    "But as the film plays out, I see my predictions coming true."
-    "I'm all set to point at the screen and claim that I was right."
-    "And that's when things take an unexpected turn."
+    "My predictions start coming true - and then things take an unexpected turn."
     show anna surprised
     anna.say "Oh..."
     show anna blush
-    anna.say "Oh my..."
-    anna.say "Is that even possible in real life?!?"
-    mike.say "I have no idea, Anna!"
-    mike.say "It can't be without a harness, vaseline and being born double-jointed!"
-    "What we both thought was going to be an arty film turns into a parade of debauchery."
-    "Right before our eyes, things play out that I thought were the stuff of porn films."
-    "Not that I'm saying it shocks me, you understand?"
-    "I'm one hundred percent okay with the ropes, rubber and whips they employ."
-    "It's just that I wasn't prepared to see it tonight."
+    anna.say "Oh my... is that even possible in real life?!?"
+    mike.say "No idea, Anna! Not without a harness, vaseline and being born double-jointed!"
+    "What we thought was an arty film turns into a parade of debauchery - ropes, rubber and whips, the stuff I'd assumed was strictly for porn. Not that it shocks me. I just wasn't braced for it tonight."
     show anna dazed
-    "Anna seems to be spell-bound too, pressing herself into me the whole time."
-    "I can hear her gasping and sighing as things play out on the TV screen."
-    "At one point I swear that I can even feel her heart pounding in her chest!"
-    "Finally the end credits roll and the film ends."
+    "Anna's spellbound too, pressing into me, gasping and sighing. At one point I swear I can feel her heart pounding."
     show anna normal
-    "We sit there in silence for a while, neither of us speaking."
-    "It's like that strange, unreal feeling when you walk out of the cinema."
-    "But in this case it's also charged with sexual tension too."
+    "The film ends and we sit in silence a while - that strange, unreal feeling of leaving the cinema, only charged with sexual tension."
     show anna evil
-    anna.say "[hero.name]..."
-    mike.say "Yeah, Anna?"
-    anna.say "I'm feeling a little funny."
-    anna.say "Are you feeling a little funny too?"
-    mike.say "Yeah, Anna."
-    anna.say "I think the film affected me."
-    mike.say "Me too, Anna, me too."
-    anna.say "All I know is that I want to try that."
+    anna.say "[hero.name]... I'm feeling a little funny. Are you feeling a little funny too?"
+    mike.say "Yeah, Anna. Me too."
     show anna blush
-    anna.say "I want to try some of the stuff they were doing."
-    anna.say "Do you think, maybe, we could do some of that too?"
+    anna.say "All I know is I want to try that. Some of the stuff they were doing. Do you think maybe we could?"
     menu:
         "We can try":
-            "I nod my head, agreeing without a moment of hesitation."
-            mike.say "Anna, I don't think some of that stuff is actually possible."
-            mike.say "Some of it I think you need a license to practice in this country."
-            mike.say "And a little of it I think is still punishable by death in some parts of the world!"
-            mike.say "But I'm willing to try it, or die in the attempt!"
-            "Anna claps her hands together and then hugs me tightly."
-            anna.say "Ooh..."
+            mike.say "Anna, some of that isn't actually possible - some needs a license, and a little of it's still punishable by death in parts of the world!"
+            mike.say "But I'm willing to try, or die in the attempt!"
             show anna happy
-            anna.say "This is going to be so much fun!"
-            anna.say "We can swing by the hardware store and get all the stuff we're going to need..."
-            "I swallow at the mere mention of shopping for sensual pleasure in such a place."
-            "But I nod along all the same, already thinking about the possibilities."
-            "I guess that I should thank Sasha for recommending the film."
-            "And also for not bothering to tell me what the hell it was about too!"
+            anna.say "Ooh, this is going to be so much fun! We can swing by the hardware store and get everything we'll need..."
+            "I swallow at the thought of shopping for that in such a place, but I nod along, already picturing the possibilities. I guess I should thank Sasha for the recommendation - and for not warning me what it was about."
             $ game.active_date.score += 5
             if anna.sub.max < 100:
                 $ anna.sub.max = 100
         "I'm not sure":
-            "I shake my head firmly, dismissing the idea."
-            mike.say "Anna, I don't think some of that stuff is actually possible."
-            mike.say "Some of it I think you need a license to practice in this country."
-            mike.say "And a little of it I think is still punishable by death in some parts of the world!"
+            mike.say "Anna, some of that isn't actually possible - some needs a license, and a little of it's still punishable by death in parts of the world!"
             show anna annoyed
-            "Anna makes a disappointed sound and turns away from me."
-            anna.say "Huh..."
-            anna.say "I never thought you were such a prude!"
-            "I shake my head in sheer disbelief at the accusation."
-            mike.say "Anna, what are you talking about?"
-            mike.say "That film made what rockstars did back in the day look like kindergarten!"
-            mike.say "By those standards, ninety-nine percent of the world's population are prudes!"
-            "Anna keeps on sulking, regardless of what I have to say."
-            anna.say "I'm just trying to keep things fresh, [hero.name]!"
-            anna.say "Don't complain to me if you get bored in bed anytime soon!"
+            anna.say "Huh... I never thought you were such a prude!"
+            mike.say "A prude? That film made old-school rockstars look like kindergarten! By that standard ninety-nine percent of the world are prudes!"
+            anna.say "I'm just trying to keep things fresh, [hero.name]! Don't complain to me if you get bored in bed!"
             $ game.active_date.score += 2
     $ hero.replace_activity()
     return
@@ -2408,28 +2091,20 @@ label anna_birthday_date_male:
     $ DONE["anna_birthday_date_male"] = game.days_played
     $ game.active_date.clothes = "sport"
     scene bg forest with fade
-    "Ah...it sure feels good to get away from the hustle and bustle of the city."
-    "To swap all that noise and pollution for the clean air and the sounds of nature."
-    "Why, all I've heard since we got to the forest is the sound of birds in the trees."
-    "The sound of crystal clear water cascading down over the rocks."
+    "It feels good to escape the city - swapping noise and pollution for clean air, birdsong, and water cascading over the rocks."
     "And the sound of..."
     play sound hitting_bushes
     anna.say "OUCH!"
     anna.say "Ow, ow, ow!"
     anna.say "[hero.name], help me!"
     anna.say "I got hurt real bad!"
-    "Suddenly the spell of being lost in nature is shattered."
-    "And I find myself glancing back over my shoulder, looking for Anna."
-    "At first I can't see her at all, but then I rush back down the track."
+    "The spell of nature shattered, I glance back for Anna - can't see her - and rush back down the track."
     show anna a sport embarrassed at center, zoomAt (1.2, (1040, 900))
-    "And I soon find her around the last corner, sitting on a tree-stump."
-    "Not good, as we're supposed to be out here camping."
-    "Worse still, we're supposed to be doing it to celebrate Anna's birthday!"
+    "I find her around the last corner on a tree-stump - not ideal, since we're out here camping for her birthday."
     mike.say "Anna..."
     mike.say "Are you okay?"
     show anna a cry at startle
-    "At the sound of my voice, Anna looks up."
-    "And I can see that she's got a serious pout on right now."
+    "Anna looks up at my voice, a serious pout on her face."
     anna.say "[hero.name]!"
     anna.say "Where did you go?!?"
     anna.say "I thought you'd abandoned me!"
@@ -2441,22 +2116,16 @@ label anna_birthday_date_male:
     mike.say "I was just a little way down the trail, that's all."
     mike.say "Now what's wrong?"
     show anna b at center, zoomAt(1.5, (640, 1040)) with hpunch
-    "At this, Anna shoves her foot into my lap."
-    "And she points at it, her eyes wide as she does so."
+    "Anna shoves her foot into my lap and points at it, eyes wide."
     anna.say "My foot, [hero.name]!"
     anna.say "I think I broke it!"
     anna.say "I fell over, and it was all I could do to hobble over here!"
     mike.say "Well then, let's have a look at it..."
     show anna b embarrassed at startle
-    "Anna yelps and flinches as I take off her boot."
-    "And she keeps it up as I examine her foot too."
-    "I can see that there's nothing broken."
-    "Most likely Anna just twisted her ankle a little."
-    "But how am I going to explain that to her?"
+    "Anna yelps and flinches as I pull off her boot and check her foot. Nothing's broken - just a twisted ankle. But how do I tell her that?"
     menu:
         "Tell her that she'll be okay":
-            "I gently put Anna's sock back on and begin to slip her foot back into her boot."
-            "And that earns me a cry of surprise, but not pain, from Anna."
+            "I slip her sock and boot back on, earning a cry of surprise - but not pain."
             show anna b cry
             anna.say "[hero.name], what are you doing?"
             anna.say "Shouldn't you be calling an ambulance?"
@@ -2468,8 +2137,7 @@ label anna_birthday_date_male:
             mike.say "Putting your boot back on will stop it swelling up."
             mike.say "Walking it off will help too."
             show anna b normal
-            "Anna looks less than pleased with this diagnosis."
-            "So I make a point of helping her up and taking her backpack too."
+            "Anna looks less than pleased, so I help her up and take her backpack too."
             mike.say "It's not too far to the spot where we're camping now."
             mike.say "And I'll carry this for you too, okay?"
             $ game.active_date.score += 15
@@ -2491,13 +2159,9 @@ label anna_birthday_date_male:
             mike.say "Walking it off will help too."
             $ game.active_date.score -= 10
             show anna b unpleased
-            "Anna looks less than pleased with this diagnosis."
-            "But she seems to realise that there's no use arguing."
-            "So she gets up and shoulders her backpack."
-            "Though I see she makes a point of limping as we start to walk again."
+            "Anna looks less than pleased, but there's no use arguing - she shoulders her pack and starts off, making a point of limping."
         "Massage her swollen foot":
-            "I take Anna's bare foot in my hands and start to massage the swollen parts."
-            "And that earns me a cry of surprise, but not pain, from Anna."
+            "I take her bare foot and massage the swollen parts, earning a cry of surprise - but not pain."
             anna.say "[hero.name], what are you doing?"
             anna.say "Shouldn't you be calling an ambulance?"
             anna.say "Or maybe even a helicopter?"
@@ -2509,8 +2173,7 @@ label anna_birthday_date_male:
             mike.say "This massage will help to keep it from swelling up."
             show anna b dazed
             $ anna.sub += 2
-            "Anna nods and watches on as I massage her foot."
-            "And before too long, she looks like she's quite enjoying it!"
+            "Anna watches me work, and before long she's clearly enjoying it."
             anna.say "Ooh..."
             show anna b normal
             anna.say "That does feel a bit better!"
@@ -2518,8 +2181,7 @@ label anna_birthday_date_male:
             mike.say "Putting your boot back on will stop it swelling up."
             mike.say "Walking it off will help too."
             show anna b annoyed
-            "Anna looks less than pleased with this diagnosis."
-            "So I make a point of helping her up and taking her backpack too."
+            "Anna looks less than pleased, so I help her up and take her backpack too."
             mike.say "It's not too far to the spot where we're camping now."
             mike.say "And I'll carry this for you too, okay?"
             show anna b normal
@@ -2529,8 +2191,7 @@ label anna_birthday_date_male:
     hide anna
     show anna sport
     with fade
-    "It doesn't take us long to get to the spot I picked out for us to spend the night."
-    "And as soon as we get there, I take off my backpack, wanting to get down to pitching camp."
+    "We soon reach the spot I picked, and I shrug off my pack to pitch camp."
     show anna annoyed
     show fx question
     "But when I look up from what I'm doing, I see Anna giving me a questioning look."
@@ -2607,21 +2268,15 @@ label anna_birthday_date_male:
     "I shrug my shoulders and bend down to pick up some of the pieces."
     mike.say "Only one way to find out..."
     show anna normal
-    "With that, we set about pitching the tent."
-    "Pretty soon we're making real progress."
-    "The frame is up and we're ready to put the waterproof fabric over it."
+    "We set about pitching the tent, making good progress - the frame's up and ready for the waterproof fabric."
     mike.say "Anna..."
     mike.say "Throw it over the top."
     mike.say "I'll go inside and stretch it over the top."
     scene bg forest at blur(8) with dissolve
-    "Anna nods and I hurry inside the frame."
-    "Everything seems to be going to plan."
-    "But then I hear the frame collapsing."
+    "Anna nods and I duck inside the frame. All going to plan - until I hear it collapse."
     play sound body_fall
     scene bg forest at blur(16), dark with vpunch
-    "And everything comes down on top of me."
-    "Trapped under the whole of the tent, I struggle to get free."
-    "And the situation isn't helped by the fact I can hear Anna laughing."
+    "Everything comes down on me, and I struggle free - not helped by Anna laughing."
     scene bg forest
     show anna sport happy
     with dissolve
@@ -2636,18 +2291,13 @@ label anna_birthday_date_male:
             "Anna smiles and nods, accepting my apology."
             "Then she hurries over to help me out from under the tent."
             show anna normal
-            "Once we set about the task a second time, things go much better."
-            "With the two of us working together, we have the tent up in no time."
-            "To finish it off, we unroll our sleeping bags."
-            "And then we throw out backpacks in there too."
+            "The second attempt goes much better - together we have the tent up in no time, then unroll our sleeping bags and toss our packs inside."
         "Chastise her":
             mike.say "Anna!"
             mike.say "You're not helping!"
             "Anna doesn't seem in the least bit concerned as I try to chastise her."
             show anna at startle
-            "In fact she keeps right on laughing as I crawl out from under the collapsed tent."
-            "Once I've freed myself, I feel the need to stamp off and regain some composure."
-            "But when I come back, I'm surprised to see that Anna's got the tent up on her own."
+            "She laughs as I crawl out. I stamp off to regain composure - and come back to find Anna's pitched the tent on her own."
             show anna normal
             anna.say "Don't worry, [hero.name]."
             show anna evil
@@ -2673,13 +2323,7 @@ label anna_birthday_date_male:
             anna.say "Oh yeah!"
             anna.say "I remember my mom and dad singing by the campfire when I was a kid!"
             if hero.has_skill("guitar"):
-                "It seems like playing in the bosom of nature agrees with me."
-                "Because from the first time I strum the guitar, everything goes great."
-                "The instrument is perfectly in tune."
-                "My fingers dance over the strings with poise and grace."
-                "And the smoke from the fire even seems to add some timbre to my voice."
-                "It doesn't seem to matter what I play either."
-                "As Anna joins in, singing along the whole time."
+                "Playing in the bosom of nature agrees with me - the guitar's in tune, my fingers dance over the strings, and the smoke even lends my voice some timbre. Whatever I play, Anna sings along."
                 show anna close normal
                 "Afterwards she leans her head against my shoulder."
                 anna.say "Aww..."
@@ -2688,13 +2332,9 @@ label anna_birthday_date_male:
                 $ game.active_date.score += 15
                 anna.say "It totally reminded me of camping as a kid."
             else:
-                "I don't know what the problem is."
-                "But things start to go wrong almost from the start."
+                "From the start, it all goes wrong."
                 show anna embarrassed
-                "My guitar sounds like it's out of tune, even though I know it can't be."
-                "And I'm all fingers and thumbs, probably from chopping up the firewood."
-                "Worst of all, my voice is hoarse and cracked when I try to sing."
-                "But when I try to take a deep breath and clear it, I inhale smoke from the fire."
+                "The guitar sounds out of tune though it can't be, I'm all fingers and thumbs, and my voice is hoarse - and when I breathe deep to clear it, I just suck in campfire smoke."
                 mike.say "Urgh..."
                 mike.say "Aargh!"
                 $ game.active_date.score -= 10
@@ -2809,37 +2449,25 @@ label anna_birthday_date_male:
                 anna.say "What's the matter?"
                 mike.say "Be careful, Anna!"
                 mike.say "Badgers can be vicious, yeah?"
-                "Just as I'm saying this, I see the badgers make their move."
-                "As one, they leap into the air, showing their sharp teeth."
-                "And I watch in horror, convinced Anna's about to be attacked."
-                "Which means it's quite a surprise when the whole lot of them land on me!"
+                "Just then the badgers make their move, leaping as one with teeth bared. I brace for Anna to be attacked - so it's a shock when the whole lot land on ME!"
                 with hpunch
                 play sound [badger, badger]
-                "All of a sudden I have badgers climbing all over me."
-                "Badgers hanging off of me by their teeth and claws."
+                "Suddenly there are badgers all over me, hanging off by teeth and claws."
                 play sound badger
                 "And badgers snarling an inch from my face."
                 with hpunch
                 mike.say "AAARGH!"
                 mike.say "Get them off me!"
                 mike.say "Get them off me!"
-                "Anna does all that she can to help."
-                "But in the end I have to physically tear the badgers off of myself."
-                "And one by one, I hurl the little fuckers as far as I can."
+                "Anna tries to help, but in the end I tear them off myself and hurl the little fuckers as far as I can."
                 show anna normal
-                "After wards, Anna does the best she can with the first-aid kit we brought."
-                "But I'm still scratched and bitten to hell."
+                "Afterwards Anna does her best with the first-aid kit, but I'm still scratched and bitten to hell."
             else:
                 anna.say "[hero.name]..."
                 anna.say "What's the matter?"
                 mike.say "Be careful, Anna!"
                 mike.say "Badgers can be vicious, yeah?"
-                "Just as I'm saying this, I see the badgers coming closer."
-                "I wince and close my eyes, waiting to feel the first one bite me."
-                "But instead I feel it licking my hand."
-                "Opening my eyes, I see a scene like something out of a fairy-tale."
-                "All of the badgers are gathered around us."
-                "And Anna's feeding them like an enchanted princess!"
+                "I shut my eyes, braced for a bite - but instead feel a tongue lick my hand. I open them to a fairy-tale scene: the badgers gathered round, Anna feeding them like an enchanted princess."
                 show anna happy
                 $ game.active_date.score += 15
                 anna.say "One for you."
@@ -2854,12 +2482,9 @@ label anna_birthday_date_male:
     scene bg forest
     show anna sport
     with fade
-    "As evening starts to fall, so does the temperature."
-    "And it's now that we're really glad of the fire."
+    "As evening falls so does the temperature, and we're glad of the fire."
     show anna at center, zoomAt(1.5, (640, 1040))
-    "It's an added bonus for me that Anna huddles close to me too."
-    "I've brought a blanket for just this kind of occasion."
-    "And I love the feeling of her arms wrapped around me beneath it."
+    "Better still, Anna huddles close under the blanket I brought, her arms wrapped around me."
     anna.say "[hero.name]..."
     mike.say "Yes, Anna?"
     anna.say "You remember you said you were taking me camping for my birthday?"
@@ -2867,9 +2492,7 @@ label anna_birthday_date_male:
     anna.say "Well..."
     anna.say "Does that mean the trip is like...my birthday present?"
     if not hero.has_gifts:
-        "Damn it - I knew there was something I was supposed to do!"
-        "What with all the preparation for the trip, I forgot Anna's birthday present!"
-        "Looks like I'm going to have to improvise."
+        "Damn it - with all the trip prep, I forgot Anna's birthday present! I'll have to improvise."
         mike.say "Yeah, Anna..."
         mike.say "That's really perceptive of you."
         mike.say "I thought rather than buy you something..."
@@ -2925,9 +2548,7 @@ label anna_birthday_date_male:
                     "So all I can do is smile and do the same."
                     "All the time cursing my inability to pick out a decent gift for her."
             else:
-                "Damn it - I knew there was something I was supposed to do!"
-                "What with all the preparation for the trip, I forgot Anna's birthday present!"
-                "Looks like I'm going to have to improvise."
+                "Damn it - with all the trip prep, I forgot Anna's birthday present! I'll have to improvise."
                 mike.say "Yeah, Anna..."
                 mike.say "That's really perceptive of you."
                 mike.say "I thought rather than buy you something..."
@@ -2951,11 +2572,7 @@ label anna_birthday_date_male:
     show anna happy at center, traveling (1.5, 0.3, (640, 1040))
     anna.say "Let's roast these bad boys!"
     show anna normal
-    "Soon enough we have them on the end of the sticks."
-    "And we're toasting them over the flames."
-    "But then Anna seems to hold hers too close to the fire."
-    "Because the marshmallow bursts into flames."
-    "The sugary substance burning with an intense light."
+    "Soon we're toasting them over the flames - until Anna holds hers too close and it bursts into flames, burning with an intense light."
     show anna surprised
     anna.say "Oh no!"
     anna.say "What do I do?!?"
@@ -2994,8 +2611,7 @@ label anna_birthday_date_male:
             anna.say "I was really scared!"
             mike.say "I don't know, Anna..."
             mike.say "It looked pretty funny to me!"
-    "Once night has fallen for real, the sky slowly fills with stars."
-    "Anna and I spend a little time gazing up at them."
+    "Once night falls for real, the sky fills with stars, and we gaze up a while."
     show anna embarrassed at center, traveling (1.55, 0.6, (640, 1060))
     "But then she lets out a pretty huge yawn."
     anna.say "Oooh..."
@@ -3005,28 +2621,18 @@ label anna_birthday_date_male:
     mike.say "I know I could use some sleep too."
     "Anna nods and we crawl into the tent, and then into our sleeping-bags."
     if game.active_date.score >= 80 and anna.sexperience >= 1:
-        "Almost as soon as she's zipped up, Anna snuggles herself against me."
-        "Even thought we're both tired, the sensation begins to wake me up."
-        "And I mean that in a physical sense, if you follow me..."
-        "Oh yeah, Anna's definitely rubbing her ass against me."
-        "And in the most obvious way imaginable too!"
+        "The moment she's zipped up, Anna snuggles against me. Tired as we are, it wakes me - physically, if you follow me. She's rubbing her ass against me in the most obvious way imaginable."
         show anna blush
         anna.say "[hero.name]..."
         mike.say "Yeah, Anna?"
         anna.say "I might not be quite as tired as I thought."
         mike.say "Me too, Anna."
         anna.say "I think I have just a little bit of energy left..."
-        "I don't know who starts to unzip their sleeping-bag first."
-        "But a moment later, we're both wriggling towards each other..."
+        "I don't know who unzips first, but a moment later we're wriggling toward each other..."
         call anna_birthday_sex from _call_anna_birthday_sex
     else:
         hide anna with dissolve
-        "Almost as soon as she's zipped up, Anna turns her back to me."
-        "And a few moments later I hear her start to snore."
-        "That's a little disappointing, as I was hoping to fool around."
-        "And if not, even just cuddle a little."
-        "But I suppose we are both tired at the end of a long day."
-        "So I just turn over and try to get some much needed rest too."
+        "The moment she's zipped up, Anna turns her back and starts to snore. Disappointing - I'd hoped to fool around, or at least cuddle - but we're both wiped, so I turn over and rest too."
     return
 
 label anna_birthday_sex:

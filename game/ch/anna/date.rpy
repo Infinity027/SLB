@@ -554,9 +554,6 @@ label anna_halloween_sex:
     "Which means I can feel the sensation of her spandex costume against my skin."
     "And even better, the warmth of Anna's own skin underneath it."
     "Neither of us is talking anymore."
-
-
-
     "Anna's breasts are suddenly in my face."
     "And I swear I can catch the scent of her pussy too!"
     show anna missionary lookdown

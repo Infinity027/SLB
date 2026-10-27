@@ -3238,4 +3238,3 @@ label claire_sub_event_03:
     scene bg black with fade
     return
 return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

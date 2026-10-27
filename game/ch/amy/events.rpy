@@ -344,100 +344,52 @@ label amy_teaser_kiss:
         if amy.love.max < 60:
             $ amy.love.max = 60
     scene bg electronic
-    "I'm passing the electronics store where Shawn and Amy work, so I make a detour to pop in."
-    "It's always worth browsing around the place to see what they have on offer and what's new."
-    "And in the past there was the chance to catch up with Shawn too."
-    "But I've got to admit that recently, it's been more about getting to hang-out with Amy!"
-    "I walk into the place with a big, dumb smile on my face at the thought of seeing her."
-    "But that turns into a confused and disappointed frown when I hear and see what's going on inside."
+    "I swing by the electronics store where Shawn and Amy work - lately it's Amy I come in to see."
+    "But my grin fades the second I walk in on the two of them mid-argument."
     show shawn angry at center, zoomAt(1.0, (1140, 740)) with dissolve
-    shawn.say "How many time do I have to tell you this stuff, Amy?"
-    shawn.say "How many damn times?!?"
+    shawn.say "How many times do I have to tell you this stuff, Amy?!?"
     show amy work angry at right4 with dissolve
-    amy.say "Urgh!"
-    amy.say "I already said I was sorry, Shawn!"
-    amy.say "I promise it won't happen again."
-    amy.say "What more do you want?"
-    amy.say "Actual fucking blood?!?"
+    amy.say "I already said I was sorry! What more do you want, actual blood?!?"
     show shawn at center, zoomAt(1.0, (1140, 740)), startle
-    shawn.say "How about actually listening to me for once, huh?"
-    shawn.say "How about retaining some information in that empty head of yours?"
+    shawn.say "How about listening for once? How about retaining something in that empty head of yours?"
     show amy at right4, startle
     amy.say "I don't have to stand here and take this from you!"
-    amy.say "You can shove it up your..."
     show amy normal at center with move
-    "It's at that moment Amy turns on her heel a towards the door."
-    "And in doing so, she sees me standing there behind her."
+    "Amy spins toward the door - and sees me standing right behind her."
     show shawn normal at center, zoomAt(1.0, (1140, 740)), startle
-    "The move lets Shawn see me too, cutting off his next retort."
-    "Suddenly both of them are silently staring at me."
-    "And I can't help feeling more than a little awkward."
-    mike.say "Ah..."
-    mike.say "Hey, Shawn!"
-    mike.say "Hey, Amy!"
-    mike.say "Did I catch you at a bad time?"
-    "I can feel the muscles of my face straining as I smile at them."
-    "And part of me wants to just walk backwards out of the place."
-    "No matter how weird that would look right now."
-    "Amy seems to be able to regain control of herself first."
-    "I see her expression become one of resolute determination."
-    "She shoots a defiant look at Shawn."
+    "Shawn spots me too, and suddenly they're both just staring at me."
+    mike.say "Ah... hey, Shawn. Hey, Amy. Did I catch you at a bad time?"
+    "Amy recovers first. She shoots Shawn a defiant look, then strides straight over to me."
     show amy at center, zoomAt(1.5, (640, 1040))
-    "And then she strides straight over to where I'm standing."
-    "I open my mouth to say something."
-    "But that's when Amy reaches up and grabs me by the front of my shirt."
-    "Taken by surprise, she easily jerks me forwards."
+    "Before I can get a word out, she grabs me by the shirt and jerks me forward."
     hide shawn
     hide amy
     show amy kiss teaser
     with hpunch
-    "And then she plants a kiss squarely on my lips."
-    "Well, when I say kiss, I don't mean like a little affectionate peck."
-    "Amy literally pushes her tongue straight into my mouth."
-    "Then it explores in there like a snake hunting for prey!"
-    "In that moment I'm totally stunned and unable to move."
-    "It's like being transported from the most awkward situation imaginable."
-    "And ending up in a place of sheer indulgent paradise!"
-    "I find myself returning the kiss with mounting enthusiasm."
-    "Amy doesn't hesitate to press herself against me either."
-    "And the sensation of her body meeting mine makes me instantly hard."
-    "I'm forgetting where we are and who's watching us right now."
-    "I swear that if she put her hand in my pants I wouldn't be able to stop her."
-    "That if she offered me herself that I'd fuck her on the spot!"
-    "But then Amy breaks off the kiss."
+    "And kisses me - no little peck, but her tongue straight into my mouth."
+    "I'm stunned for a second, then I'm kissing her back, her body pressed hard against mine."
+    "I forget where we are or who's watching. If she offered herself right now, I'd take her on the spot."
+    "Then she breaks it off."
     hide amy
     show amy work blush at center, zoomAt(1.5, (640, 1040))
-    "And just like that I'm jolted back to reality."
-    hide amy
-    show amy work blush at center
-    "Which really sucks, as it means I'm standing with an awkward erection."
+    "And just like that I'm back to reality - standing there with an awkward erection and Shawn glaring at me."
     show shawn at center, zoomAt(1.0, (1140, 740)) with dissolve
-    "And I have Shawn glaring at me from the other side of the store."
-    "I look at Amy, hoping that she'll come to my rescue."
+    "I look to Amy for rescue, but she's already slipped away into the back of the store."
     hide amy with moveoutright
-    "But it looks like she's already slipped away into the back of the store."
     show shawn at center with move
-    "Shawn comes stalking over now that she's gone."
-    "And he doesn't look at all pleased with me!"
     shawn.say "You mind telling me what that was all about?"
-    mike.say "What?"
-    mike.say "I was going to ask you the same thing!"
-    mike.say "Does she normally behave like that with customers?"
+    mike.say "I was going to ask you the same thing! Does she always behave like that with customers?"
     show shawn sad
-    shawn.say "She doesn't even behave like that with me!"
-    shawn.say "More's the pity..."
-    "Shaking off the effects of Amy's unexpected kiss, I make my excuses and leave."
+    shawn.say "She doesn't even behave like that with me! More's the pity..."
+    "I make my excuses and leave."
     scene bg mall1 with fade
-    "I get the impression that I'm not Shawn's favourite person after what just happened."
-    "Plus I feel the need to make sense of why Amy chose to do what she did too."
-    "Maybe I need to talk to her alone, without Shawn there to listen in?"
-    "That way I can finally ask her what the hell's going on between us."
+    "I'm clearly not Shawn's favourite person now - and I still need to make sense of why Amy did that."
+    "Maybe I need to get her alone, away from Shawn, and finally ask what the hell's going on between us."
     $ game.room = "mall1"
     if Person.find("amy"):
         $ amy.flags.amydelay = TemporaryFlag(True, 2)
         $ amy.flags.kiss += 1
     return
-
 
 label amy_teaser_sex:
     if Person.find("amy"):

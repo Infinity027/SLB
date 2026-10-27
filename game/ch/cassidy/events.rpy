@@ -634,8 +634,7 @@ label cassidy_birthday_date_male:
     $ DONE["cassidy_birthday_date_male"] = game.days_played
     $ game.active_date.clothes = "date"
     scene bg mansionentrance with fade
-    "It's always hard to muster up the courage to pick up a girl from her parent's house."
-    "But imagine for a moment that the house in question is a massive mansion in the richest area of town."
+    "Working up the nerve to collect a girl from her parents' house is hard enough - worse when it's a mansion in the richest part of town."
     if not game.flags.dwaynedead:
         "And if that's not bad enough, the guy that lives in the mansion also just happens to be your boss!"
         "Oh yeah, I almost forgot - you're taking his little princess out to celebrate her birthday too!"
@@ -650,10 +649,7 @@ label cassidy_birthday_date_male:
     if not game.flags.dwaynedead:
         menu:
             "Wait patiently":
-                "I feel a pang of annoyance at being asked to wait outside."
-                "But then I remember that it means I don't have to actually go in there."
-                "And that also means that I won't be running into Dwayne either."
-                "So maybe waiting here isn't so bad after all."
+                "Being made to wait outside stings - until I realise it means not going in, and not running into Dwayne. Maybe it's not so bad."
                 mike.say "No problem, Cassidy."
                 mike.say "You take your time."
                 mike.say "I'll be right here waiting for you."
@@ -671,20 +667,14 @@ label cassidy_birthday_date_male:
                 cassidy.say "My dad was breathing down my neck the whole time."
                 cassidy.say "I think he was looking for an excuse to chew you out!"
                 show cassidy normal
-                "I nod and smile, trying to act like it's nothing to me."
-                "But the truth is I feel a surge of relief at the knowledge."
-                "Hopefully the fact that Dwayne kept out of it is a good thing."
-                "Maybe even proof that he approved of the way I treated his daughter."
+                "I act like it's nothing, but I'm flooded with relief - Dwayne staying out of it is hopefully a good sign, maybe even approval."
             "Complain":
                 "Huh?"
                 "Is she for real?"
                 "Am I not good enough to actually come in there?"
                 mike.say "You're not even going to invite me in?"
                 mike.say "You expect me to wait out here while you take your time?!?"
-                "It takes a moment for Cassidy to respond to this."
-                "And at first I think it's because she's shocked by my response."
-                "But then I hear another voice through the intercom."
-                "And I realise what the problem is."
+                "She takes a moment - I think she's shocked, until another voice comes through the intercom and I realise the problem."
                 dwayne.say "Now you listen here, you punk..."
                 dwayne.say "Nobody talks to my daughter like that!"
                 cassidy.say "Please, Daddy..."
@@ -705,8 +695,7 @@ label cassidy_birthday_date_male:
                 cassidy.say "Let's just get the hell out of here."
                 cassidy.say "Before he does something we'll all regret!"
                 show cassidy upset
-    "Now that I've actually been able to pick up my date, we can actually get going."
-    "And Cassidy seems more than a little interested in where we're headed."
+    "Date finally collected, we get going - and Cassidy's clearly curious where we're headed."
     scene bg street
     show cassidy date talk
     with fade
@@ -727,8 +716,7 @@ label cassidy_birthday_date_male:
     mike.say "Of course you can go on a date to the mall."
     mike.say "You can make a date anywhere special!"
     show cassidy annoyed at center with ease
-    "Cassidy frowns and shakes her head."
-    "She looks less than convinced."
+    "Cassidy frowns, unconvinced."
     cassidy.say "How is that even supposed to work?"
     if hero.charm >= 75:
         mike.say "You like all those movies from back in the day, right?"
@@ -754,8 +742,7 @@ label cassidy_birthday_date_male:
         mike.say "You've just got to use your imagination, Cassidy."
         mike.say "Step outside of the bubble of privilege you're used to."
         mike.say "You know, leave it behind and live in the real world for once?"
-        "It takes a moment for what I'm saying to sink in."
-        "But when it does, I don't get the reaction I was expecting."
+        "It takes a moment to sink in - and I don't get the reaction I expected."
         show cassidy upset
         "Instead, Cassidy's frown deepens."
         $ game.active_date.score -= 10
@@ -816,10 +803,7 @@ label cassidy_birthday_date_male:
             scene bg coffeeshop at center, zoomAt(1.5, (960, 940)), blur(5)
             show cassidy date at center, zoomAt(1.5, (640, 1140))
             with fade
-            "I don't waste any time in dragging Cassidy to the pizza place."
-            "Where I proceed to buy us two slices of cheese and tomato pizza."
-            "The slices are huge and pretty greasy, but they taste amazing."
-            "Or at least they do to me."
+            "I drag her to the pizza place and buy two huge, greasy slices of cheese and tomato. They taste amazing - to me, at least."
             mike.say "What's the matter, Cassidy?"
             mike.say "Aren't you enjoying your pizza?"
             show cassidy surprised
@@ -829,9 +813,7 @@ label cassidy_birthday_date_male:
             $ game.active_date.score -= 10
             cassidy.say "It's very nice."
             show cassidy sadsmile
-            "Cassidy smiles, but I can see that she's putting it on."
-            "But I console myself with the taste of the pizza."
-            "And that she'll eventually see I was right."
+            "Cassidy smiles, but it's forced. I console myself with the pizza, and the thought she'll come round."
         "Agree to getting hot-dogs":
             mike.say "Well..."
             mike.say "I do love that pizza, Cassidy."
@@ -842,9 +824,7 @@ label cassidy_birthday_date_male:
             cassidy.say "Yay!"
             cassidy.say "Let's go find some!"
             show cassidy normal
-            "Cassidy practically drags me to the food-hall."
-            "And we quickly find a vendor selling hot-dogs."
-            "We order two huge ones, with onions and mustard."
+            "Cassidy drags me to the food-hall, where we grab two huge hot-dogs with onions and mustard."
             scene bg coffeeshop at center, zoomAt(1.5, (360, 940)), blur(5)
             show cassidy date at center, zoomAt(1.5, (640, 1140))
             with fade
@@ -868,14 +848,11 @@ label cassidy_birthday_date_male:
             cassidy.say "With a big one in my mouth..."
             cassidy.say "I just know that he'd flip out!"
             show cassidy normal
-            "I nod, trying to keep from spitting out my own hot-dog."
-            "Afraid that I'll never be able to stop laughing."
+            "I nod, barely keeping from spitting out my own hot-dog, sure I'll never stop laughing."
     scene bg mall1
     show cassidy normal date
     with fade
-    "Once we've eaten, Cassidy and I take a slow stroll around the mall."
-    "As usual the place is packed with people as well as different stores."
-    "So we divide our attention between window-shopping and people watching."
+    "After eating, we stroll the packed mall, splitting our attention between window-shopping and people-watching."
     if randint(0, 1) == 0:
         "That is until Cassidy spots something that interests her outside the arcade."
         show cassidy surprised
@@ -895,27 +872,14 @@ label cassidy_birthday_date_male:
         show cassidy date at right with easeinright
         "Then we walk over to the machine."
         show cassidy at center with ease
-        "I pump some coins into the slot."
-        "And then we're ready to go."
-        "The screen comes to life in front of us."
-        "Two pixelated dancers appearing and showing off the moves."
-        "Then the music hits and Cassidy launches herself into the routine."
+        "I feed in coins and the screen lights up - two pixelated dancers demoing the moves. The music hits and Cassidy throws herself into the routine."
         show cassidy talk
         cassidy.say "Come on, [hero.name]!"
         cassidy.say "Try to keep up."
         cassidy.say "This is pretty basic stuff!"
         show cassidy normal
         if hero.fitness >= 45:
-            "I watch Cassidy's moves for a moment."
-            "And it doesn't take long to see that she's pretty good."
-            "I guess daddy paid for some pretty decent dancing classes!"
-            "But let's see if she's got the stamina to match."
-            "I turn my head and focus on the screen."
-            "And pretty soon I'm dancing for all I'm worth."
-            "Sure, I'm not as polished as Cassidy."
-            "But I can still keep up the same pace as her."
-            "Maybe even more so, as I seem to be pulling ahead."
-            "When the game ends, Cassidy seems genuinely impressed."
+            "She's good - daddy clearly paid for lessons - but let's test her stamina. I lock onto the screen and dance for all I'm worth. Not as polished, but I match her pace and maybe pull ahead, and by the end she's genuinely impressed."
             show cassidy surprised
             cassidy.say "Wow!"
             $ game.active_date.score += 15
@@ -926,15 +890,7 @@ label cassidy_birthday_date_male:
             mike.say "Ah, it's no big deal, Cassidy."
             mike.say "I just like to keep myself in shape, that's all!"
         else:
-            "I do the best I can to match the movements."
-            "But my eyes are constantly drawn away from the screen."
-            "And instead they're watching Cassidy as she dances."
-            "She moves without ease and grace, just like a professional."
-            "And then it hits me - of course she's had dancing lessons!"
-            "Her parents are loaded and they have aspirations for their little princess."
-            "But me, I'm just some jerk from the suburbs."
-            "Apparently also one with no coordination or stamina either!"
-            "All of which means that Cassidy out-dances me with little effort."
+            "I try to keep up, but my eyes keep drifting to Cassidy, dancing like a professional - of course, loaded parents and lessons for their princess. Me, I'm just an uncoordinated jerk from the suburbs, and she out-dances me with ease."
             show cassidy annoyed
             cassidy.say "Are you okay, [hero.name]?"
             show cassidy sadsmile
@@ -958,8 +914,7 @@ label cassidy_birthday_date_male:
         cassidy.say "I don't know about that..."
         cassidy.say "I left my clubs at home!"
         show cassidy sadsmile
-        "I can't help smiling."
-        "Figures that Cassidy would have her own set of clubs."
+        "I can't help smiling - of course Cassidy has her own clubs."
         mike.say "Don't worry about it, Cassidy."
         mike.say "You can hire a club!"
         show cassidy surprised
@@ -967,27 +922,20 @@ label cassidy_birthday_date_male:
         show cassidy stuned
         mike.say "I don't think that's anything to worry about!"
         if hero.has_skill("golf"):
-            "I should say that I'm not really intimidated by Cassidy's talk of her own clubs."
-            "I've been playing golf long enough to be aware of my skill-level and my limits."
-            "And this looks like a pretty basic crazy golf course as well."
+            "Her talk of her own clubs doesn't faze me - I know my game, and this is a basic crazy-golf course."
             show cassidy surprised
             cassidy.say "Oh my..."
             cassidy.say "This isn't like playing at the club!"
             cassidy.say "Or using the range!"
             show cassidy normal
-            "Nevertheless, she seems to pick it up quickly."
-            "But I'm rather more interested in her reaction to my game."
-            "From the start I can see Cassidy watching my form."
-            "And I can tell that she's seriously impressed."
-            "As we wrap up the game, she can't contain her curiosity any longer."
+            "She picks it up quickly, but I'm more interested in her watching my form - clearly impressed. As we finish, she can't hold her curiosity in."
             show cassidy surprised
             cassidy.say "[hero.name]..."
             cassidy.say "You never told me that you played golf too!"
             show cassidy normal
             mike.say "Well, you never asked!"
             mike.say "And it's not like I'm a professional or anything."
-            "My being humble doesn't seem to do anything to put Cassidy off."
-            "And she persists in talking about my skills with a club."
+            "My modesty doesn't put her off; she keeps gushing about my skill with a club."
             show cassidy talk
             cassidy.say "Seriously though..."
             $ game.active_date.score += 15
@@ -999,22 +947,15 @@ label cassidy_birthday_date_male:
             mike.say "That sounds like a great idea, Cassidy."
             mike.say "Let's do that soon."
         else:
-            "I'm pretty confident as we start the game."
-            "After all, this is only crazy golf."
-            "It's not like we're playing on a fancy private course."
+            "I'm confident starting out - it's only crazy golf, not some fancy private course."
             show cassidy surprised
             cassidy.say "Oh my..."
             cassidy.say "This isn't like playing at the club!"
             cassidy.say "Or using the range!"
             show cassidy normal
-            "Nevertheless, she seems to pick it up quickly."
-            "Which is more than can be said for me."
-            "No matter how hard I try, I can't catch a break."
-            "The ball always seems to go the opposite direction to the one I want."
-            "Or else it comes up short, missing every time."
+            "She picks it up quickly - more than I can say for myself. The ball always rolls the wrong way or comes up short."
             show cassidy normal
-            "Cassidy finishes the course long before me."
-            "And so I have to accept limping home in second place."
+            "Cassidy finishes long before me, and I limp home in second place."
             show cassidy talk
             cassidy.say "Did you finally finish?"
             show cassidy normal
@@ -1030,8 +971,7 @@ label cassidy_birthday_date_male:
     scene bg mall1
     show cassidy date happy
     with fade
-    "Cassidy seems to be really enjoying herself right now."
-    "Like she's fully into the spirit of our date at the mall."
+    "Cassidy's really enjoying herself now, fully into the spirit of the mall date."
     show cassidy surprised at startle
     "As we walk past a particular store, she suddenly stops dead."
     cassidy.say "Oh..."
@@ -1046,17 +986,11 @@ label cassidy_birthday_date_male:
     show cassidy happy
     cassidy.say "I'm going to get a TATTOO!"
     show cassidy normal
-    "It's only now that I realise the store is the tattoo parlour."
-    "And from the look on Cassidy's face, I can see that she's serious!"
+    "Only now do I realise the store's a tattoo parlour - and from her face, she's serious!"
     menu:
         "Encourage her to get inked":
             if not game.flags.dwaynedead:
-                "Part of me is sure that her dad'll be mad if he finds out."
-                "But then I remind myself that's only if he does find out."
-                "And even then Dwayne can't actually blame me for it, can he?"
-                "Maybe this is just the kick up the ass he needs."
-                "Something to remind him once and for all that Cassidy's an adult."
-                "That she's not his property."
+                "Her dad would be furious - if he finds out - but he can't blame me, can he? Maybe it's just the reminder he needs that Cassidy's an adult, not his property."
             mike.say "Wow..."
             mike.say "That is a pretty crazy idea, Cassidy!"
             show cassidy talk
@@ -1075,20 +1009,15 @@ label cassidy_birthday_date_male:
             scene bg tattooshop at center, zoomAt(1.5, (640, 740))
             show cassidy a date at center, zoomAt(1.5, (640, 740))
             with vpunch
-            "I gape in surprise as Cassidy points to her right buttock."
-            "But it seems that she's not kidding around."
-            "And before I know it, I'm watching the inking happen!"
+            "I gape as Cassidy points to her right buttock - she's not kidding, and before I know it the inking's underway!"
         "Encourage her not to get inked":
             if not game.flags.dwaynedead:
-                "Oh great, now she wants to get a tattoo!"
-                "Imagine if her dad found out that it happened on our date too."
-                "Forget firing me - Dwayne would fucking kill me!"
+                "Oh great, a tattoo - on our date. If her dad found out, forget firing me, Dwayne would kill me!"
             mike.say "Erm..."
             mike.say "There's crazy, like living in the moment."
             mike.say "And then there's crazy, like literally insane!"
             show cassidy upset
-            "Cassidy's face wrinkles up as she frowns at me."
-            "And I can see that's not the response she was expecting."
+            "Cassidy's face wrinkles into a frown - not the response she wanted."
             show cassidy whining
             cassidy.say "What do you mean?"
             cassidy.say "That I shouldn't do it?"
@@ -1097,8 +1026,7 @@ label cassidy_birthday_date_male:
             mike.say "It's not like dying your hair, Cassidy!"
             mike.say "You can't just let it grow out if you decide you don't really like it."
             mike.say "You have to pay someone to burn it off you with a goddamn laser!"
-            "Cassidy's frown becomes more pronounced."
-            "And she makes a little huffing noise too."
+            "Her frown deepens, and she huffs."
             $ game.active_date.score -= 10
             cassidy.say "Hmpf..."
             show cassidy angry
@@ -1108,10 +1036,7 @@ label cassidy_birthday_date_male:
     scene bg mall2
     show cassidy b date sad at center, zoomAt(1.5, (640, 1040))
     with fade
-    "We stop for a moment, just to take stock and figure out where to go next."
-    "But I can tell that there's something else on Cassidy's mind."
-    "She's trying to hide it as best she can, but it's not working."
-    "So I decide to call her out."
+    "We stop to figure out where to go next, but something's plainly on Cassidy's mind, and she's failing to hide it - so I call her out."
     mike.say "What's up, Cassidy?"
     show cassidy surprised at startle
     show fx question
@@ -1121,17 +1046,14 @@ label cassidy_birthday_date_male:
     cassidy.say "Why would you ask me that?"
     cassidy.say "Why would you think there was anything up?"
     show cassidy stuned
-    "Cassidy seems to realise how crazy she sounds."
-    "And so she stops talking and lets out a sigh."
+    "Cassidy realises how crazy she sounds, stops, and sighs."
     show cassidy whining
     cassidy.say "Okay, you got me."
     cassidy.say "I was wondering if..."
     show cassidy sadsmile
     cassidy.say "Well...if you got me anything for my birthday?"
     if not hero.has_gifts:
-        "Damn it!"
-        "I totally forgot to get Cassidy a birthday present!"
-        "It must have slipped my mind while I was worrying about pulling this off."
+        "Damn it - I totally forgot Cassidy's present! It slipped my mind while I fretted over pulling this off."
         mike.say "What do you mean, Cassidy?"
         mike.say "This date IS your gift!"
         mike.say "Because happy memories are priceless."
@@ -1146,8 +1068,7 @@ label cassidy_birthday_date_male:
         call give_a_gift (from_birthday_date=True) from _call_give_a_gift_7
         if _return != "done":
             if _return not in ["None", "exit"]:
-                "Right now I'm glad that I remembered Cassidy's birthday present."
-                "And this feels like the perfect moment to whip it out too."
+                "Glad I remembered her present, I pick this moment to produce it."
                 mike.say "Of course I did, Cassidy."
                 mike.say "Here you go."
                 mike.say "Happy birthday!"
@@ -1171,9 +1092,7 @@ label cassidy_birthday_date_male:
                     cassidy.say "Of course I am!"
                     cassidy.say "This is like...like the best gift ever!"
                     show cassidy normal
-                    "I can't help smiling at Cassidy's reaction to the gift."
-                    "Especially as she's literally the girl who has everything."
-                    "So being able to find something she loves on my salary is no mean feat!"
+                    "I can't help smiling at her reaction - finding something the girl who has everything loves, on my salary, is no mean feat."
                 else:
                     show cassidy sad
                     "But her face falls as soon as she sees what's inside."
@@ -1185,12 +1104,9 @@ label cassidy_birthday_date_male:
                     cassidy.say "Well...it's a bit lame, isn't it!"
                     show cassidy sadsmile
                     mike.say "I...I guess so..."
-                    "It's a slap in the face to know that Cassidy doesn't appreciate my gift."
-                    "But a total punch in the gut to have her actually come out and say as much!"
+                    "It stings that she doesn't appreciate the gift - and stings worse that she says so out loud."
             else:
-                "Damn it!"
-                "I totally forgot to get Cassidy a birthday present!"
-                "It must have slipped my mind while I was worrying about pulling this off."
+                "Damn it - I totally forgot Cassidy's present! It slipped my mind while I fretted over pulling this off."
                 mike.say "What do you mean, Cassidy?"
                 mike.say "This date IS your gift!"
                 mike.say "Because happy memories are priceless."
@@ -1204,15 +1120,9 @@ label cassidy_birthday_date_male:
     scene bg mall1
     show cassidy date
     with fade
-    "It feels like our date's coming to a natural end."
-    "We're walking towards the exit of the mall without conscious effort."
-    "And I'm fine with that, as I feel we've had a pretty good time."
+    "The date feels like it's winding down naturally, our feet carrying us toward the exit - and I'm fine with that; it's been a good time."
     if not bree.is_gone_forever and bree.flags.schedule == "working":
-        "But on the way, we happen to pass the Maid Cafe."
-        "And by sheer coincidence, [bree.name] just happens to be outside."
-        "She's in full uniform, collecting up empties from the tables out there."
-        "I'm not sure whether to say hi or not, worried about Cassidy's reaction."
-        "But then [bree.name] happens to look up and spots me, and she instantly waves with a smile."
+        "On the way we pass the Maid Cafe, where [bree.name]'s outside in full uniform clearing tables. Before I can decide whether to say hi, she looks up, spots me and waves with a smile."
         show cassidy surprised
         show bree maid at mostright4
         with easeinright
@@ -1223,13 +1133,10 @@ label cassidy_birthday_date_male:
         with ease
         bree.say "Ooh...who's your friend?"
         bree.say "Are you here on a date or something?"
-        "I glance over to see that Cassidy's staring at [bree.name]."
-        "And it doesn't look like she's very impressed."
+        "I glance over; Cassidy's staring at [bree.name], distinctly unimpressed."
         menu:
             "Side with Cassidy":
-                "I know that [bree.name]'s always friendly and eager to meet new people."
-                "But maybe this isn't the right scenario to introduce her to Cassidy."
-                "It's just too good of a chance for my date to revert to type and be a snob!"
+                "[bree.name]'s always friendly, but this isn't the moment to introduce her - too good a chance for Cassidy to revert to snob."
                 mike.say "Yeah, [bree.name]..."
                 mike.say "This is Cassidy."
                 mike.say "We're on a date, but we're also running a little late!"
@@ -1239,8 +1146,7 @@ label cassidy_birthday_date_male:
                 bree.say "I've got my hands full with work anyway."
                 bree.say "You can tell me all about it at home later."
                 hide bree with moveinright
-                "[bree.name] goes back to clearing the tables."
-                "Which leaves Cassidy and I to continue walking towards the exit."
+                "[bree.name] goes back to the tables, and we carry on toward the exit."
                 show cassidy annoyed at center with ease
                 cassidy.say "Hmm..."
                 cassidy.say "Where do you know that girl from?"
@@ -1251,9 +1157,7 @@ label cassidy_birthday_date_male:
                 show cassidy happy
                 "Cassidy nods and smiles, like she approves of my priorities."
             "Side with [bree.name]":
-                "But that's probably because she's used to being spoiled the whole time."
-                "[bree.name] hasn't done anything wrong here, just said hello to a friend."
-                "Cassidy could do with learning a lesson in manners and politeness!"
+                "That's just her being spoiled - [bree.name] only said hello, and Cassidy could use a lesson in manners."
                 mike.say "Yeah, [bree.name]..."
                 mike.say "This is Cassidy."
                 mike.say "Cassidy, this is [bree.name]."
@@ -1283,9 +1187,7 @@ label cassidy_birthday_date_male:
     scene bg street
     show cassidy date
     with fade
-    "At the exit to the mall, we stop."
-    "There's an awkward silence as we wait for each other to speak."
-    "And in the end, it falls to be to be the one to say something."
+    "At the exit we stop, an awkward silence hanging until I'm the one to break it."
     mike.say "So..."
     mike.say "I had a great time today, Cassidy."
     mike.say "Are you going to be heading home?"
@@ -1327,11 +1229,7 @@ label cassidy_birthday_date_male:
         mike.say "Let's get you a taxi home!"
         hide cassidy with dissolve
         play sound car_door
-        "As soon as Cassidy is safely in the taxi, I feel a flood of relief."
-        "Sure, she called an end to the date herself."
-        "But she also said that she had a good time."
-        "And if she makes it back on time, Dwayne can't be mad at me."
-        "So I'll have managed to keep them both happy."
+        "With Cassidy safely in the taxi, relief floods me. She ended the date herself but had a good time - and if she's home on time, Dwayne can't be mad. Both of them kept happy."
     return
 
 label cassidy_birthday_sex:
@@ -2129,10 +2027,6 @@ label cassidy_investigation_complete:
     if game.flags.workinvestigation > 99:
         call cassidy_investigation_good_ending from _call_cassidy_investigation_good_ending
     else:
-
-
-
-
         if game.flags.cassidyrecorded:
             call cassidy_investigation_blackmail from _call_cassidy_investigation_blackmail
         else:
@@ -4584,256 +4478,32 @@ label cassidy_dwayne_denouement:
     $ game.room = "bedroom1"
     return
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 label cassidy_sub_01:
     cassidy.say "[hero.name]!"
     cassidy.say "There you are..."
-    "I turn at the sound of a familiar voice calling my name."
-    "Because I can clearly hear that it's a girl doing so."
+    "I turn at the familiar voice - a girl's, calling my name."
     show cassidy upset at center, zoomAt(1.25, (640, 880)) with dissolve
-    "But my heart sinks as soon I see Cassidy hurrying towards me."
-    "Mainly on account of the fact she's got a face like thunder."
-    "And she looks like she really means business!"
+    "My heart sinks the moment I see Cassidy storming over, face like thunder and clearly meaning business."
     mike.say "Erm..."
     mike.say "Hi, Cassidy..."
     mike.say "What a nice surprise - I wasn't expecting to see you today!"
-    "Cassidy comes to a halt right in front of me."
-    "And she instantly plants one balled fist on her hip."
-    "The other hand she uses to jab a finger towards my face."
-    "In fact it's so close to my nose that I can't help taking a step backwards."
-    "But even as I do so, Cassidy follows, staying right on me."
+    "She halts in front of me, one fist on her hip, the other jabbing a finger so close to my nose I step back - and she follows, staying right on me."
     show cassidy angry
     cassidy.say "Don't give me that crap, mister..."
     cassidy.say "I know exactly what you've been getting up to behind my back!"
     show cassidy upset
-    "Okay, okay...so I was afraid when Cassidy came storming up to me."
-    "But now I'm actually starting to sweat as she starts throwing accusations my way."
-    "And no, it doesn't help that she's not being specific right now."
-    "Because I'm no saint."
-    "And you know that I have a couple of skeletons in my closet."
+    "Okay - I was scared when she came storming up, and now I'm sweating under the accusations, especially since she won't be specific. I'm no saint; I've a few skeletons in my closet."
     if not hero.has_item("danny_corpse") or not hero.has_item("dwayne_corpse"):
         "Metaphorically speaking, of course!"
     mike.say "Whoa, whoa, whoa..."
     mike.say "Slow down there, Cassidy."
     mike.say "It might help if you actually told me what you think I've done?"
-    "There, you see?"
-    "Even under pressure I can keep my cool and think clearly."
-    "I'm not just going to start confessing to or denying stuff."
-    "Not before I know what I need to confess or deny!"
-    "Unfortunately, Cassidy doesn't seem all that impressed."
+    "See? Even under pressure I keep my cool - no confessing or denying until I know what I'm confessing to. Cassidy, though, isn't impressed."
     show cassidy angry
     cassidy.say "You know very well what I mean, [hero.name]..."
     cassidy.say "I saw you the other day - with that slut of a girl!"
     show cassidy upset
-    "Okay, so now I know that Cassidy's accusing me of cheating on her."
-    "The problem is that I need more specific information than that."
-    "Because I don't want to admit to seeing one other girl on the side only to find she's talking about another!"
-    "Oh come on, don't act so surprised."
-    "I can have more than two girls on the go at once."
-    "You know that I'm a hot prospect that's always in demand!"
+    "So she's accusing me of cheating - but I need specifics; I'd hate to own up to one girl when she means another. Don't act surprised: I can juggle more than two at once. I'm a hot prospect, always in demand."
     mike.say "Girl, Cassidy?"
     mike.say "What girl?"
     show cassidy angry
@@ -4843,58 +4513,43 @@ label cassidy_sub_01:
     show cassidy annoyed blush
     cassidy.say "You were..."
     show cassidy upset blush at center, traveling(1.5, 0.3, (640, 1040))
-    "As Cassidy struggles to get her words out, she starts to lean in closer to me."
-    "And it's pretty clear that she doesn't want anyone to overhear what she's about to say."
-    "Which is a gift for me, as it means that pretty much figure out exactly what she's talking about."
+    "As she struggles with the words she leans in, clearly not wanting to be overheard - a gift, because now I can guess exactly what she means."
     mike.say "Oh..."
     mike.say "You mean you saw me doing a little...dog walking?"
     mike.say "Is that it?"
     show cassidy sad
-    "The moment the words are out of my mouth, I sense a change in the air."
-    "It's like a subtle shifting of balance in the exchange between Cassidy and me."
-    "Before now she was the one laying into me, accusing me of something."
-    "But now that a taboo subject's been raised, she's caught on the backfoot."
-    "And I have the advantage of calling her on the evident embarrassment it's causing her."
+    "The moment it's out, the balance shifts. She was on the attack - but with the taboo raised she's on the backfoot, and I can play on her obvious embarrassment."
     show cassidy annoyed
     cassidy.say "Is..."
     cassidy.say "Is that...what you call it?"
     show cassidy angry
     cassidy.say "[hero.name] - that girl was totally naked!"
     show cassidy upset
-    "Cassidy looks around as she says the words."
-    "Checking nobody could hear her say them out loud."
+    "Cassidy glances around, checking no one heard."
     mike.say "That's not strictly true, Cassidy."
     mike.say "If you looked that closely you'd have seen she has a collar on."
     mike.say "How else was she supposed to be attached to the leash?"
     show cassidy sad
-    "For a moment it seems like I've got Cassidy totally on the retreat."
-    "She's refusing to meet my eye, and struggling to find her words."
-    "But then she seems to get back to the core of the matter."
-    "And that gives her another boost of confidence."
+    "For a moment she's in full retreat, avoiding my eye - then she circles back to the point and finds her nerve again."
     show cassidy -blush
     cassidy.say "None of that matters, [hero.name]..."
     show cassidy angry
     cassidy.say "It doesn't change the fact you were out with another girl."
     cassidy.say "A naked girl too!"
     show cassidy upset
-    "So it seems that I'm not going to be able to quell Cassidy with the taboo element."
-    "And so we're going to have to lock horns over the issue of the other girl instead."
-    "So I hold up my hands in a gesture of surrender."
+    "The taboo angle won't silence her, so we lock horns over the other girl instead. I raise my hands in surrender."
     mike.say "I can't deny it, Cassidy..."
     mike.say "I was with another girl that night."
     show cassidy surprised
     mike.say "But the real question is what does that mean for us?"
-    "Oddly, the question seems to throw Cassidy off a little."
-    "Almost like it wasn't the thing she was driving for from me."
-    "Sensing a chink in her armour, I decide to press the point."
+    "Oddly, the question throws her - like it wasn't what she was after. Sensing a chink, I press."
     mike.say "Come on, Cassidy..."
     mike.say "Are you okay with me seeing other girls besides you?"
     mike.say "Or does this relationship have to be exclusive for it to work?"
     mike.say "Hell, does this mean you're ending it?!"
     mike.say "What's the score?"
     show cassidy sad blush
-    "Cassidy still looks more than a little flushed."
-    "But somehow she finds the will to answer my questions."
+    "Still flushed, she somehow finds the will to answer."
     show cassidy b surprised -blush
     cassidy.say "No, no, no..."
     cassidy.say "I'm not mad that you were with another girl."
@@ -4902,8 +4557,7 @@ label cassidy_sub_01:
     cassidy.say "Fucking hell, [hero.name]..."
     cassidy.say "I'm not even mad you were walking her naked on a leash!"
     show cassidy sad
-    "I keep the pressure up on Cassidy."
-    "Because I'm determined to keep her from changing the subject."
+    "I keep the pressure on, refusing to let her change the subject."
     mike.say "Then what, Cassidy?"
     mike.say "What exactly is the problem here?!?"
     mike.say "Because I'm not getting it!"
@@ -4913,10 +4567,7 @@ label cassidy_sub_01:
     cassidy.say "The point is I'm jealous..."
     show cassidy surprised
     cassidy.say "Jealous it wasn't me!"
-    "I can't help smiling as I come to understand what's really going on here."
-    "By comparison, Cassidy is standing there with her jaw hanging open."
-    "She seriously looks like she's been stunned by the admission."
-    "Or at least by the fact she's said it out loud."
+    "I can't help smiling as it clicks. Cassidy just stands there, jaw hanging, stunned she said it out loud."
     show cassidy upset
     "Cassidy lowers her head as she addresses me now."
     show cassidy normal
@@ -4931,10 +4582,7 @@ label cassidy_sub_01:
             show cassidy surprised -blush
             mike.say "Yes, Cassidy..."
             mike.say "Yes, I will!"
-            "This is the best of both worlds."
-            "I don't see how things could have turned out better for me."
-            "Not only have I gotten away with walking another girl, I get to do it to Cassidy too!"
-            "And she's delighted at the prospect, clapping her hands together with glee."
+            "Best of both worlds - I got away with walking another girl AND I get to do it to Cassidy. She claps with glee."
             $ cassidy.love += 2
             show cassidy happy
             cassidy.say "Oh...my...god!"
@@ -4947,11 +4595,7 @@ label cassidy_sub_01:
             $ cassidy.flags.agree_walk_outside = True
         "I won't do that":
             if not hero.flags.isceo and not game.flags.dwaynedead:
-                "Had it been any other girl, I'd have said yes in an instant."
-                "But Cassidy isn't just any girl, she's my boss's daughter!"
-                "Even if she wants this badly, I'm a dead man should he find out."
-                "And the very fact Cassidy spotted me the last time is a warning."
-                "As it means I've not been nearly as careful as I thought I had."
+                "Any other girl, I'd say yes instantly - but Cassidy's my boss's daughter, and if he found out I'm a dead man. Her spotting me last time is warning enough that I've been careless."
             show cassidy sad -blush
             mike.say "No way, Cassidy."
             if not game.flags.dwaynedead:
@@ -4962,8 +4606,7 @@ label cassidy_sub_01:
                 show cassidy wink
                 cassidy.say "I know lots of fancy parks and gardens we can use."
                 cassidy.say "Places where nobody would ever see us!"
-                "It's pretty fucking tempting."
-                "But I stick to my guns, and shake my head."
+                "It's tempting as hell, but I stick to my guns and shake my head."
                 show cassidy sad
                 mike.say "No, Cassidy..."
                 mike.say "My mind's made up."
@@ -4971,30 +4614,28 @@ label cassidy_sub_01:
             "Cassidy takes a step backwards."
             $ cassidy.love -= 2
             show cassidy upset
-            "And I can see that she has a determined look on her face."
-            "She turns to go, getting the last word as she does so."
+            "A determined look on her face, she turns to go, getting the last word."
             cassidy.say "This isn't over, [hero.name]..."
             cassidy.say "And you should know..."
             show cassidy angry
             cassidy.say "I'm used to getting what I want!"
             hide cassidy with easeoutleft
-            "With that, Cassidy walks away."
-            "Which leaves me alone and pondering what she could mean."
+            "With that she walks away, leaving me to wonder what she meant."
             $ cassidy.flags.agree_walk_outside = False
     return
 
 label cassidy_sub_02a:
     play sound door_knock
     scene expression f"bg {game.room}" with fade
-    "As soon as I hear the sound of someone knocking at the door, I hurry into the hallway."
-    "I put my eye to the peephole, straining to see who's standing out there on the porch."
-    "It's dark outside, but the streetlights provide enough illumination for me to be sure."
+    "As soon as I hear someone knocking at the door, I hurry into the hallway."
+    "I put my eye to the peephole, straining to see who's standing out there."
+    "It's dark outside, but the streetlights provide enough illumination to be sure."
     scene bg black with dissolve
     pause 0.1
     scene bg house
     show cassidy casual sad at center, zoomAt(1.0, (640, 720))
     with wiperight
-    "And the moment I recognise the person out there is Cassidy, I open the door as quickly as I can."
+    "The moment I recognise Cassidy out there, I open the door as quickly as I can."
     mike.say "Hey, Cassidy..."
     mike.say "Glad you could make..."
     show cassidy at center, traveling(1.25, 0.3, (640, 880))
@@ -5002,17 +4643,16 @@ label cassidy_sub_02a:
     hide cassidy with easeoutleft
     mike.say "Oof..." with hpunch
     "I'm trying to greet Cassidy one moment, and the next I'm shoved backwards into the hallway."
-    "It's all very confusing as I try to keep myself from falling onto my ass."
     play sound door_slam
     scene bg livingroom
     show cassidy casual sad at center, zoomAt(1.25, (1040, 880))
     with hpunch
-    "But then I see Cassidy is in the house and currently engaged in the act of slamming the door."
-    "Which means she must have hustled her way past me the moment I opened it."
+    "Cassidy is in the house and currently engaged in slamming the door."
+    "Which means she must have hustled past me the moment I opened it."
     mike.say "Erm..."
     mike.say "Just make yourself at home, Cassidy..."
     mike.say "Me casa, su casa...you know?"
-    "Cassidy doesn't stop what she's doing or even acknowledge me until she's done locking the door."
+    "Cassidy doesn't acknowledge me until she's done locking the door."
     show cassidy upset at center, zoomAt(1.25, (640, 880)) with ease
     "Only then does she turn around and look me in the face."
     show cassidy angry
@@ -5025,19 +4665,16 @@ label cassidy_sub_02a:
     "And so her nerves are something that I can totally understand."
     mike.say "It's okay, Cassidy..."
     mike.say "There's not going to be anyone to see you out there right now."
-    mike.say "And when we're actually going out there later..."
-    mike.say "Well, it'll be so dark that everyone else should be in bed."
+    mike.say "And when we actually go out later, it'll be so dark that everyone else should be in bed."
     "Cassidy nods, like she's trying to find reassurance in my words."
-    "But she still looks worried, and I can't really change the subject."
-    "So I decide to focus on a different part of it instead."
+    "But she still looks worried, so I decide to focus on a different part of it instead."
     "And that's something that begins with pulling out my phone."
     show cassidy surprised
     cassidy.say "What are you doing, [hero.name]?"
     show cassidy blush
     cassidy.say "You don't want to take pictures of me, do you?!?"
     mike.say "No, Cassidy..."
-    mike.say "This is just to check the weather report, yeah?"
-    mike.say "Oh, and the temperature too."
+    mike.say "This is just to check the weather report and the temperature."
     mike.say "Kind of essential when you're doing something like this."
     show cassidy normal -blush
     "Cassidy nods at this."
@@ -5045,8 +4682,7 @@ label cassidy_sub_02a:
     cassidy.say "At least a pretty mild night."
     show cassidy sadsmile
     "Cassidy seems to be saying all the right things."
-    "But she's still looking around all the time."
-    "Like she thinks someone's going to jump out at her any moment."
+    "But she's still looking around all the time, like she thinks someone's going to jump out at her any moment."
     "And it's then that the thought hits me."
     mike.say "It's okay, Cassidy..."
     mike.say "My housemates are all sleeping right now."
@@ -5056,8 +4692,7 @@ label cassidy_sub_02a:
     show cassidy sadsmile blush
     cassidy.say "I mean, I guessed they would be..."
     cassidy.say "But I didn't know if..."
-    "I hold up a hand to show Cassidy that it's okay."
-    "And she seems to get the idea."
+    "I hold up a hand to show Cassidy that it's okay, and she seems to get the idea."
     mike.say "So..."
     mike.say "Now that you know we're alone..."
     mike.say "Shall we get started?"
@@ -5067,18 +4702,15 @@ label cassidy_sub_02a:
     mike.say "Well..."
     show cassidy surprised blush
     mike.say "You should probably get naked!"
-    "Cassidy looks surprised for a moment."
-    "But then she seems to remember what the point of all this is."
+    "Cassidy looks surprised for a moment, then seems to remember what the point of all this is."
     show cassidy normal
     "And she nods, beginning to pull her top over her head."
-    "I do the best I can to keep myself busy while Cassidy strips off."
-    "Like, I select a leash that I think will work for her."
-    "And I go over the route that I have planned in my head a couple of times."
+    "I do my best to keep busy while Cassidy strips off."
+    "Like, I select a leash that I think will work for her, and go over the route I have planned in my head a couple of times."
     show cassidy topless with dissolve
-    "But I still can't keep from watching Cassidy as she undresses."
-    "Part of me can't actually believe she was the one that wanted this."
+    "But I still can't keep from watching as she undresses."
+    "Part of me can't believe she was the one that wanted this."
     "That her jealousy would be so strong as to make her desire it."
-    "And I try in vain to make myself feel like I'm just making one of her dreams a reality."
     "But who am I trying to kid?"
     "This is a dream come true for me, as well as for Cassidy!"
     if not hero.flags.isceo and not game.flags.dwaynedead:
@@ -5093,10 +4725,9 @@ label cassidy_sub_02a:
     cassidy.say "Okay, [hero.name]…"
     cassidy.say "I'm ready."
     "Trying to control my breathing, I step forwards and hold up the leash."
-    "Cassidy takes it from me and turns it over in her hands."
-    "I can see that her eyes are wide, as if with wonder."
+    "Cassidy takes it from me and turns it over in her hands, eyes wide as if with wonder."
     cassidy.say "Would you mind?"
-    "I nod and take hold of it, attaching it on Cassidy's collar."
+    "I nod and take hold of it, attaching it to Cassidy's collar."
     mike.say "There you go, Cassidy..."
     mike.say "How does it feel?"
     cassidy.say "It feels...good!"
@@ -5107,16 +4738,13 @@ label cassidy_sub_02a:
     show cassidy surprised -blush
     mike.say "That's not what you call me, Cassidy..."
     mike.say "Not while you're on that leash."
-    "Cassidy looks confused for a moment."
-    "But then realisation seems to dawn on her."
-    "And she nods her head."
+    "Cassidy looks confused for a moment, but then realisation dawns and she nods her head."
     show cassidy sadsmile blush
     cassidy.say "Yes...master?"
     mike.say "Now there's a good girl!"
     $ cassidy.sub += 2
     show cassidy happy
-    "The praise has the desired effect on Cassidy."
-    "As I see a smile spreading across her face."
+    "The praise has the desired effect, and a smile spreads across Cassidy's face."
     show cassidy normal
     "And without the need to be told, she begins to crouch down on the floor."
     "I watch as Cassidy gets onto all fours, marvelling at how good she looks."
@@ -5132,31 +4760,28 @@ label cassidy_sub_02a:
     mike.say "It's time for your evening walk."
     show cassidy happy -blush
     "Cassidy nods happily as I give a gentle tug on the leash while opening the door."
-    "I'm expecting Cassidy to object as she feels the pull."
+    "I'm expecting her to object as she feels the pull."
     show cassidy normal
     "But instead she leaps to obey, eagerly crawling out and onto the porch."
-    "I've tried to be nothing but confident for Cassidy's benefit tonight."
     scene bg house
     show cassidy naked at center, zoomAt(1.25, (640, 880))
     with fade
-    "But there's no way I can stop the butterflies in my stomach as I close the door behind us."
-    "And that's because I'm always nervous of the dangers of being seen."
-    "All I can do is balance them against the thrill of what we're doing."
+    "There's no way I can stop the butterflies in my stomach as I close the door behind us."
+    "I'm always nervous of the dangers of being seen, and all I can do is balance that against the thrill of what we're doing."
     "It's my usual method of coping, and it soon begins to pay off."
     "Because by the time we get to the sidewalk, I'm smiling and holding my head up high."
     show new petplay back cassidy leash_cassidy with fade
     "But that doesn't mean my eyes aren't on Cassidy most of the time."
     "The fact I could probably walk the route blindfolded really pays off."
-    "As it means that I can spend a lot of time staring down at her as we go."
+    "As it means I can spend a lot of time staring down at her as we go."
     "Of course I need to keep my pace slow to compensate for her being on all fours."
     "But Cassidy's enthusiasm seems to be making her go pretty fast too."
     "Though the strangest thing is how much she's obviously enjoying herself."
     "By the time we reach the park, I'm shaking my head in amazement."
-    "Because the Cassidy I know can be a bit of a spoiled brat at times."
-    "Quite unlike the girl on the end of the leash."
-    "The one that seems to be relishing the chance to behave like a dog!"
+    "The Cassidy I know can be a spoiled brat at times."
+    "Quite unlike the girl on the end of the leash, relishing the chance to behave like a dog!"
     "Cassidy's butt wiggles from side to side as she saunters onto the grass."
-    "And I'm pretty sure that she's aware of just how closely I'm watching her."
+    "And I'm pretty sure she's aware of just how closely I'm watching her."
     "Because she looks back over her shoulder a moment later and winks."
     show new petplay walk
     cassidy.say "Master..."
@@ -5174,7 +4799,6 @@ label cassidy_sub_02a:
     "And I watch as she hurries off into the deeper grass."
     "She really shouldn't be able to move very gracefully at all."
     "But somehow the sight of her cavorting out there is...quite something!"
-    "And I feel like my heart-rate is rising in sympathy with Cassidy's."
     "I know that she's doing this deliberately, showing off for attention."
     "But that doesn't mean I'm going to be able to take my eyes off her."
     "Or that I'll want to for an instant."
@@ -5190,17 +4814,17 @@ label cassidy_sub_02a:
     "Or maybe it's more that I'm embarrassed Cassidy cocked her leg."
     "Because it suggests she doesn't know an essential difference between a dog and an actual bitch!"
     show new petplay cassidy
-    "A few seconds later it seems to be over, as Cassidy comes bounding back over to me."
+    "A few seconds later, Cassidy comes bounding back over to me."
     "I watch as she runs in circles around the spot I'm standing on."
     show new petplay leash_cassidy
     "And when I hook the leash back onto her collar, she seems happier than ever."
     show new petplay back
     "Together we make a slow circuit of the park, taking it at our leisure."
-    "All the time we're walking, Cassidy is quieter and appears more content than I've ever seen her before."
-    "Every time I give even the slightest tug on the leash, she hurries to obey me too."
+    "All the time we're walking, Cassidy is quieter and appears more content than I've ever seen her."
+    "Every time I give even the slightest tug on the leash, she hurries to obey."
     "Almost like she's taking to being a dog better than she does dealing with her normal, human life."
-    "I'm starting to think that there might be some deeper philosophical point to all of this."
-    "Some way that Cassidy is being able to cast off the things that hold her back in the space of an average day."
+    "I'm starting to think there might be some deeper philosophical point to all of this."
+    "Some way that Cassidy is casting off the things that hold her back in the space of an average day."
     "But then I catch sight of just how good her breasts look as they're swaying beneath her."
     "And suddenly I lose track of where the previous thought was going."
     "Because now all I have on my mind is how boobies go bounce!"
@@ -5212,81 +4836,37 @@ label cassidy_sub_02a:
     with fade
     "So it comes as a minor disappointment to have to slip inside and take off the leash."
     "But I keep my thoughts to myself as Cassidy gets dressed."
-    "Because the last thing I want to do is ruin it all by saying something dumb at the end of a perfect night."
+    "Because the last thing I want is to ruin it all by saying something dumb at the end of a perfect night."
     $ cassidy.love += 5
     $ cassidy.flags.walk_outside = True
     return
 
-
 label cassidy_sub_02b:
     $ DONE["cassidy_sub_02b"] = game.days_played
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     "As usual I have Hanna on a standard leash."
     "But as we're stepping out of the door, I reach for the extendable one too."
-    "I just grab the thing on a whim, thinking that she might want to roam more freely than usual."
+    "I grab it on a whim, thinking that she might want to roam more freely than usual."
     "Though I almost drop the thing as Hanna begins to tug impatiently on her leash."
     "Stuffing the second leash into my pocket, I hurry to follow her out the door."
     show new petplay back hanna leash_hanna with fade
     "Once we're in the park, Hanna seems to settle down and begin to enjoy herself."
-    "By now she knows the route we take off by heart, and we're totally alone as we walk."
+    "By now she knows the route off by heart, and we're totally alone as we walk."
     "All of which means there's nothing to stop me enjoying the sight of her in motion."
-    "Sometimes I think that I could do the entire route without once looking ahead of me."
-    "Complete the whole circuit whilst just gazing down at Hanna's beautiful ass."
+    "Sometimes I think that I could do the entire circuit whilst just gazing down at Hanna's beautiful ass."
     "In fact the amount of attention I'm paying to it means I'm totally distracted."
     play sound hitting_bushes
     scene bg park with fade
     "And I only snap out of it once I hear an unfamiliar sound up ahead."
     "Based on past experience, we should be alone."
-    "But there's always the rare chance of running into someone or something on these walks."
-    "Maybe a drunk taking a shortcut home through the park, or even an actual stray dog."
-    "Hanna's already retreated until she's crouched at my side."
-    "And as I scan our surroundings for the source of the sound, she begins to hide behind me."
+    "But there's always the rare chance of running into a drunk taking a shortcut home, or even an actual stray dog."
+    "Hanna's already retreated until she's crouched at my side, hiding behind me as I scan our surroundings."
     "There's no clear plan agreed between us for moments like this."
-    "Just the vague plan to run back to my place if we're close enough to make it."
-    "Otherwise it basically comes down to hiding in the bushes to escape detection."
+    "Just the vague plan to run back to my place if we're close enough."
+    "Otherwise it comes down to hiding in the bushes to escape detection."
     "And after that, I guess it'd be up to me to defend Hanna's honour."
     "Or try to explain the whole thing to the cops..."
     mike.say "Just stay behind me, Hanna..."
-    mike.say "It was probably just fox or something."
+    mike.say "It was probably just a fox or something."
     "Female voice" "Arr...ruff!"
     "Female voice" "Ruff, ruff!"
     "That was obviously a human voice mimicking a dog, which is weird enough."
@@ -5295,21 +4875,21 @@ label cassidy_sub_02b:
     show cassidy naked happy at center, zoomAt(1.25, (640, 1080)) with easeinright
     "Because suddenly there's another naked girl, and she's bounding towards us."
     "Well, bounding as well as she can on all fours."
-    "It's obviously dark out this late, and there's very little lighting in the park."
+    "It's dark out this late and there's very little lighting in the park."
     "So it takes until she's almost on top of us for me to realise that I know her."
     mike.say "Cassidy?"
     mike.say "Is...is that really you?!?"
     show cassidy normal
     "Cassidy doesn't answer the question with words."
-    "She seems so committed to the act she's putting on that she remains silent."
+    "She seems so committed to the act that she remains silent."
     show cassidy happy at center, traveling(1.5, 0.3, (640, 1280))
     "But all the same she crawls right up to me and begins to rub herself against my leg."
     "All the time she's whining and whimpering, really trying to sell the idea that she's a dog."
-    "I'm totally stunned by what I'm seeing play out before me."
+    "I'm totally stunned by what I'm seeing."
     "That is until I feel Hanna pulling on her leash."
-    "A quick glance down at her lets me know that she's just as puzzled as me right now."
+    "A quick glance down tells me she's just as puzzled as me."
     "But I can also tell that she's eyeing Cassidy with more than surprise and suspicion."
-    "I know Hanna well enough to be able to tell that she's beginning to get jealous too!"
+    "I know Hanna well enough to tell that she's beginning to get jealous too!"
     menu:
         "Put her on the spare leash":
             "But then I remember which one of us is wearing a collar and leash."
@@ -5323,15 +4903,13 @@ label cassidy_sub_02b:
             "So I pull out the extendable lead and clip it onto Cassidy's collar."
             show new petplay walk hanna cassidy leash_hanna leash_cassidy cassidy_collar with fade
             "Then I take a leash in each hand, and continue to walk around the park."
-            "Of course this means that Cassidy is instantly in her element."
-            "She walks happily on all fours to one side of me the whole time."
+            "Cassidy is instantly in her element, walking happily on all fours to one side of me the whole time."
             "Hanna seems less pleased at first, holding back and refusing to look at Cassidy."
-            "But soon enough she seems to realise that her sulking isn't going to work."
-            "And so she slowly lets it drop, beginning to behave herself too."
+            "But soon enough she realises that her sulking isn't going to work, and slowly begins to behave herself too."
             show new petplay back
             "So much so that by the time we're on the way back to my place, everything is going well."
-            "In fact I'm getting so into the walk that I've totally forgotten that Cassidy turned up out of nowhere."
-            "And I'm assuming that she's going to tell me she has her clothes stashed somewhere close by."
+            "In fact I'm getting so into the walk that I've totally forgotten Cassidy turned up out of nowhere."
+            "And I'm assuming she has her clothes stashed somewhere close by."
             "Because if not, I have absolutely no idea how she's going to get home in her current state!"
             $ cassidy.flags.walk_outside = True
         "Shoo her away":
@@ -5341,7 +4919,7 @@ label cassidy_sub_02b:
             mike.say "Get out of here..."
             mike.say "Go on, go away!"
             "Cassidy looks up at me with genuine shock on her face."
-            "And it's not hard for me to understand why either."
+            "And it's not hard to understand why."
             "Doing all of this was a massive risk on her part."
             "She must have been hoping that I'd be impressed by her boldness."
             "It's just a shame that things aren't going to play out like that."
@@ -5349,11 +4927,11 @@ label cassidy_sub_02b:
             mike.say "We don't want any strays around here."
             mike.say "So get lost, before I call the dog-warden!"
             show cassidy sad
-            "Cassidy seems to be catching onto the fact her efforts aren't paying off."
-            "And so she risks one last, pleading look up at me as she turns her body."
+            "Cassidy seems to be catching on that her efforts aren't paying off."
+            "She risks one last, pleading look up at me as she turns her body."
             "But I keep the same hard expression on my face, making my feelings plain."
             hide cassidy with moveoutright
-            "I have to keep it up until she finally takes the hint and begins to retreat."
+            "I have to keep it up until she finally takes the hint and retreats."
             "And it's only when she disappears back into the bushes that I can let it go."
             "Which means letting out a sigh of relief and instantly turning on my heel."
             show new petplay walk hanna leash_hanna with fade
@@ -5466,10 +5044,6 @@ label cassidy_spanking_start:
 
 
 label cassidy_male_ending:
-
-
-
-
     if renpy.has_label("cassidy_achievement_3") and not game.flags.cheat:
         call cassidy_achievement_3 from _call_cassidy_achievement_3
     $ game.hour = 16
